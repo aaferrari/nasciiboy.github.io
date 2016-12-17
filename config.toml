@@ -1,0 +1,44 @@
+baseurl = "http://nasciiboy.github.io"
+title  = "nba - GNU's Rock"
+copyright = "GPL 3.0"
+
+editor = "emacs -nw"
+
+languageCode = "es"
+
+paginate     = 15
+buildDrafts  = true
+buildFuture  = false
+buildExpired = false
+relativeURLs = true
+canonifyURLs = true
+
+ignoreFiles  = [ "\\.~$" ]
+
+config       = "config.toml"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+staticDir    = "static"
+themesDir    = "themes"
+theme        = "nascii-theme"
+
+defaultExtension = "html"
+
+enableRobotsTXT  = false
+
+pygmentsCodeFencesGuessSyntax = false
+# color-codes for highlighting derived from this style
+pygmentsStyle =              "monokai"
+# true: use pygments-css or false: color-codes directly
+pygmentsUseClasses =        false
+
+
+[params]
+  AuthorName = "nasciiboy"
+  Email  = "nasciiboy@gmail.com"
+
+  Keywords    = [ "gnu", "emacs", "fish", "c", "lisp", "programming", "regexp" ]
+  Description = "nasciiboy adverture"
+  toc         = true
