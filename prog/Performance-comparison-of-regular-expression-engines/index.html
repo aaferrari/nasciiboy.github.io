@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Posts - nba - GNU&#39;s Rock</title>
+    <title>Performance comparison of regular expression engines - nba - GNU&#39;s Rock</title>
     
     
 <style media="screen">
@@ -159,26 +159,73 @@ img:hover { filter: none;
   <body>
     
 <main>
-  
-  <div class="thumb">
-  <h2 class="title"><a href="http://nasciiboy.github.io/post/Rei/">Rei</a></h2>
-
-  <ul class="meta">
-    <li><time datetime="2016-12-16 17:19:32 -0600 CST">Dec 16, 2016</time></li>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.iopost/"><span class="path-dir">post</span></a></li>
+    <li><a href="http://nasciiboy.github.ioprog/"><span class="path-dir">prog/</span></a></li>
     
+    <li><span class="path-pwd">Performance comparison of regular expression engines</span></li>
   </ul>
 
-  <div class="summary">El destino de la destruccion es tambien la alegria del renacimiento.
- Bienvenido al subreddit de Evangelion dominio de nasciiboy, un sitio sin acentos, buena ortografia, redaccion, javascript, cokkies, ni comentarios&hellip; (a menos que envies un pull request).</div>
+  <article>
+  <h1 class="title">Performance comparison of regular expression engines</h1>
+
+  <time datetime="2016-12-16 20:22:03 -0600 CST">Dec 16, 2016</time>
+
+  <div class="article-body"><p>Hola gente, hace unos meses tome el codigo de <strong>dark100</strong> &ldquo;Performance
+comparison of regular expression engines&rdquo; (pueden ver el orgininal
+<a href="http://sljit.sourceforge.net/regex_perf.html">aqui</a>) para hacer algunas pruebas
+a un pequeño <a href="https://github.com/nasciiboy/RecursiveRegexpRaptor">motor regexp</a>
+que programe en mi tiempo <em>libre?</em>, bueno &hellip; acabo de actualizar la prueba
+(<a href="https://github.com/nasciiboy/RecursiveRegexpRaptor-vs-Benchmarks">aqui</a>)</p>
+
+<p>El proceso fue el siguiente</p>
+
+<ol>
+<li><p>Optener el codigo fuente de cada motor (PCRE2, RE2, tre, oniguruma)</p></li>
+
+<li><p>Compilar cada motor localmente (intel x86-64 celeron 847), es
+decir</p>
+
+<ul>
+<li><code>./autogen</code></li>
+<li><code>./configure</code> (para PCRE con alguna consideracion especifica)</li>
+<li><code>make</code></li>
+</ul></li>
+
+<li><p>Copiar el código fuente al entorno</p></li>
+
+<li><p>Intentar con el makefile existente hasta que se logro compilar</p></li>
+
+<li><p>Modificar levemente el ambiente (no se si compilara en un sistema no GNU)</p></li>
+</ol>
+
+<p>En realidad no tengo ni idea si este es el proceso adecuado para actualizar el
+entorno, pero funciona ¯_(ツ)_/¯. Si conoces una mejor configuracion o como
+optimizar alguna prueba sera bien recibida, siempre y cuando los makefiles se
+mantengan KISS (aunque solo compile en x86-64)</p>
+
+<p>Para leer la prueba cómodamente tienes que descagar el fichero <code>readme.html</code> del
+repositorio y visualizarlo en tu navegador.</p>
+
+<p>por cierto la exprecion:</p>
+
+<pre><code>&quot;( )*&quot;
+</code></pre>
+
+<p>genera un bucle infinito en pcre, tre, oniguruma, re2. En principio esta fue la
+motivacion principal para actualizar el codigo de cada prueba&hellip; alguna pista?</p>
 </div>
+</article>
 
-  
-  
 
-  
-
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.ioprog/"><span class="path-dir">prog/</span></a></li>
+    
+    <li><span class="path-pwd">Performance comparison of regular expression engines</span></li>
+  </ul>
 </main>
 
 

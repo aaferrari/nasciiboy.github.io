@@ -4,12 +4,180 @@
 	<meta name="generator" content="Hugo 0.18-DEV" />
     <title>nba - GNU&#39;s Rock</title>
     
-    <link rel="stylesheet" href="http://nasciiboy.github.io/css/style.css" type="text/css" />
+    
+<style media="screen">
+:root {
+                            
+    --BGC      : #000000;   
+    --FGC      : #ffffff;   
+    --BGClogo  : #222222;   
+    --FGClogo  : #ffffff;   
+    --FGCtitle : #ff4500;   
+    --FGCstart1: #4B99D2;   
+    --FGCstart2: #00ffff;   
+    --FGCstart3: #ffa074;   
+    --FGCstart4: #98fb98;   
+    --FGCstart5: #b0c4de;   
+    --FGCstart6: #7fffd4;   
+    --FGCstart7: #db2e24;   
+    --FGCstart8: #ff4500;   
+    --FGCtext  : #ffffff;
+    --FGCemph  : #6fb336;   
+    --FGCtcode : #bbbbff;   
+    --FGCbcode : #b3b3b3;   
+    --FGCtkom  : #ffbbbb;   
+    --FGClink  : #00ffff;   
+    --BGClinkh : #556b2f;   
+    --FGClinkh : #ffffff;   
+    --BGCdt    : #b3b3b3;   
+    --FGCdt    : #ffffff;   
+    --FGCthead : #ff7f24;   
+    --BGCthead : #000000;   
+    --FGCtbody : #87cefa;   
+}
+
+@font-face { font-family: text;           src: local('sans-serif'   );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: local('monospace'    );                     }
+@font-face { font-family: codeblock;      src: local('monospace'    );                     }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em;
+                width: 70%;
+                float: left;
+               }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 2em;
+                width: 50%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height:1.5em;}
+
+.taxonomies { color: green; }
+ul.terms  { list-style: none; margin: 0em; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+}
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+
+.footer-title { color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }  
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }  
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }  
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }  
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }  
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }  
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+code { background-color: #000; color: #b3b3b3; font-size: 1em;  font-family: codetext;
+         padding: 0px 0.2em; }
+
+pre {
+    background-color: #000; color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+b { font-family: text_bold; }
+i { font-family: text_italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+ 
+dl { padding-bottom: 2em; }          
+dl dt { color: #daa520;              
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;              
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { filter: none;
+                             }
+</style>
+
   </head>
 
   <body>
     
 <main>
+  
+  <div class="thumb">
+  <h2 class="title"><a href="http://nasciiboy.github.io/prog/Performance-comparison-of-regular-expression-engines/">Performance comparison of regular expression engines</a></h2>
+
+  <ul class="meta">
+    <li><time datetime="2016-12-16 20:22:03 -0600 CST">Dec 16, 2016</time></li>
+    
+    <li><a href="http://nasciiboy.github.ioprog/"><span class="path-dir">prog</span></a></li>
+    
+  </ul>
+
+  <div class="summary">Hola gente, hace unos meses tome el codigo de dark100 &ldquo;Performance comparison of regular expression engines&rdquo; (pueden ver el orgininal aqui) para hacer algunas pruebas a un pequeño motor regexp que programe en mi tiempo libre?, bueno &hellip; acabo de actualizar la prueba (aqui)
+El proceso fue el siguiente
+ Optener el codigo fuente de cada motor (PCRE2, RE2, tre, oniguruma)
+ Compilar cada motor localmente (intel x86-64 celeron 847), es decir</div>
+</div>
+
+  
   
   <div class="thumb">
   <h2 class="title"><a href="http://nasciiboy.github.io/post/Rei/">Rei</a></h2>
@@ -22,7 +190,7 @@
   </ul>
 
   <div class="summary">El destino de la destruccion es tambien la alegria del renacimiento.
- Bienvenido al subreddit de Evangelion dominio de nasciiboy, un sitio sin acentos, buena ortografia, redaccion y sin comentarios&hellip; (a menos que envies un pull request).</div>
+ Bienvenido al subreddit de Evangelion dominio de nasciiboy, un sitio sin acentos, buena ortografia, redaccion, javascript, cokkies, ni comentarios&hellip; (a menos que envies un pull request).</div>
 </div>
 
   
@@ -39,7 +207,7 @@
     <header class="taxonomies">category</header>
     <div>
       <ul class="terms">
-        <li><a href="http://nasciiboy.github.iocategories/post">post</a></li>
+        <li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li>
       </ul>
     </div>
   </section>
@@ -48,7 +216,7 @@
     <header class="taxonomies">tag</header>
     <div>
       <ul class="terms">
-        <li><a href="http://nasciiboy.github.iotags/post">post</a></li>
+        <li><a href="http://nasciiboy.github.io/tags/post">post</a></li><li><a href="http://nasciiboy.github.io/tags/prog">prog</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li>
       </ul>
     </div>
   </section>
@@ -56,6 +224,21 @@
 
   <section>
     <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/Performance-comparison-of-regular-expression-engines/">Performance comparison of regular expression engines</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2016-12-16 20:22:03 -0600 CST">Dec 16, 2016</time></li>
+      
+      <li><a href="http://nasciiboy.github.ioprog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
     
     <div class="thumb-sm">
   <header>
@@ -72,6 +255,7 @@
 
     
     
+    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/categories/">Categories</a></h2>
@@ -83,7 +267,6 @@
   </header>
 </div>
 
-    
     
     
     <div class="thumb-sm">
@@ -99,6 +282,7 @@
 
     
     
+    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/categories/post/">Post</a></h2>
@@ -110,7 +294,6 @@
   </header>
 </div>
 
-    
     
     
     <div class="thumb-sm">
@@ -126,12 +309,26 @@
 
     
     
+    
     <div class="thumb-sm">
   <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/tags/">Tags</a></h2>
+    <h2 class="title"><a href="http://nasciiboy.github.io/tags/prog/">Prog</a></h2>
 
     <ul class="meta">
-      <li><time datetime="0001-01-01 00:00:00 &#43;0000 UTC">Jan 1, 0001</time></li>
+      <li><time datetime="2016-12-16 20:22:03 -0600 CST">Dec 16, 2016</time></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/categories/prog/">Prog</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2016-12-16 20:22:03 -0600 CST">Dec 16, 2016</time></li>
       
     </ul>
   </header>
@@ -142,15 +339,29 @@
     
     <div class="thumb-sm">
   <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/">nba - GNU&#39;s Rock</a></h2>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/">Progs</a></h2>
 
     <ul class="meta">
-      <li><time datetime="2016-12-16 17:19:32 -0600 CST">Dec 16, 2016</time></li>
+      <li><time datetime="2016-12-16 20:22:03 -0600 CST">Dec 16, 2016</time></li>
       
     </ul>
   </header>
 </div>
 
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/tags/regexp/">Regexp</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2016-12-16 20:22:03 -0600 CST">Dec 16, 2016</time></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
     
     
   </section>
