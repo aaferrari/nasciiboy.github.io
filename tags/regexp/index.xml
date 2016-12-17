@@ -6,6 +6,7 @@
     <description>Recent content in Regexp on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
+    <copyright>GPL 3.0</copyright>
     <atom:link href="http://nasciiboy.github.io/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -15,7 +16,7 @@
       
       <guid>http://nasciiboy.github.io/prog/Performance-comparison-of-regular-expression-engines/</guid>
       <description>&lt;p&gt;Hola gente, hace unos meses tome el codigo de &lt;strong&gt;dark100&lt;/strong&gt; &amp;ldquo;Performance
-comparison of regular expression engines&amp;rdquo; (pueden ver el orgininal
+comparison of regular expression engines&amp;rdquo; (pueden ver el orginal
 &lt;a href=&#34;http://sljit.sourceforge.net/regex_perf.html&#34;&gt;aqui&lt;/a&gt;) para hacer algunas pruebas
 a un pequeño &lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor&#34;&gt;motor regexp&lt;/a&gt;
 que programe en mi tiempo &lt;em&gt;libre?&lt;/em&gt;, bueno &amp;hellip; acabo de actualizar la prueba

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nasciiboy.github.io/vg/H-Craft/</loc>
+    <lastmod>2016-12-17T08:29:18-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/Performance-comparison-of-regular-expression-engines/</loc>
     <lastmod>2016-12-16T20:22:03-06:00</lastmod>
   </url>
@@ -12,18 +17,18 @@
   </url>
   
   <url>
+    <loc>http://nasciiboy.github.io/tags/</loc>
+    <lastmod>2016-12-16T17:19:32-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/categories/post/</loc>
-    <lastmod>2016-12-16T17:19:32-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://nasciiboy.github.io/tags/post/</loc>
     <lastmod>2016-12-16T17:19:32-06:00</lastmod>
     <priority>0</priority>
   </url>
@@ -41,14 +46,14 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/tags/prog/</loc>
+    <loc>http://nasciiboy.github.io/prog/</loc>
     <lastmod>2016-12-16T20:22:03-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2016-12-16T20:22:03-06:00</lastmod>
+    <loc>http://nasciiboy.github.io/tags/racer/</loc>
+    <lastmod>2016-12-17T08:29:18-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -64,8 +69,20 @@
   </url>
   
   <url>
+    <loc>http://nasciiboy.github.io/categories/vg/</loc>
+    <lastmod>2016-12-17T08:29:18-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nasciiboy.github.io/vg/</loc>
+    <lastmod>2016-12-17T08:29:18-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2016-12-16T20:22:03-06:00</lastmod>
+    <lastmod>2016-12-17T08:29:18-06:00</lastmod>
     <priority>0</priority>
   </url>
   
