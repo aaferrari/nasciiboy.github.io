@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vg on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/categories/vg/index.xml</link>
-    <description>Recent content in Vg on nba - GNU&#39;s Rock</description>
+    <title>Dokutsu Monogatari on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/tags/dokutsu-monogatari/index.xml</link>
+    <description>Recent content in Dokutsu Monogatari on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <atom:link href="http://nasciiboy.github.io/categories/vg/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://nasciiboy.github.io/tags/dokutsu-monogatari/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>nxEngine</title>
@@ -63,68 +63,6 @@ dispone de varios finales, como minimo pasatelo 2 veces.&lt;/p&gt;
 
 &lt;p&gt;Puedes encontrar achivos de salvamento, ports diversos y muchas cosas mas en
 &lt;a href=&#34;http://www.cavestory.org/&#34;&gt;http://www.cavestory.org/&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>H Craft Championship</title>
-      <link>http://nasciiboy.github.io/vg/H-Craft/</link>
-      <pubDate>Sat, 17 Dec 2016 08:29:18 -0600</pubDate>
-      
-      <guid>http://nasciiboy.github.io/vg/H-Craft/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;../hcraft01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;H-Craft es un juego de &amp;ldquo;carreras&amp;rdquo; con &lt;em&gt;Hovercrafts&lt;/em&gt; (aerodeslizadores)
-estupendo disponible libremente para GNU/linux (tambien hay vercion para android
-y windows)&lt;/p&gt;
-
-&lt;h2 id=&#34;hardware&#34;&gt;hardware&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1 Ghz Processor&lt;/li&gt;
-&lt;li&gt;512 MB Memory&lt;/li&gt;
-&lt;li&gt;A 3D-Card with the power of a Geforce3 or Radeon 7500 (or better)&lt;/li&gt;
-&lt;li&gt;OpenGL 1.3&lt;/li&gt;
-&lt;li&gt;GNU/linux (32 Bit / 64 Bit) or winbug$ 98, mp, xp, 2000, vista&lt;/li&gt;
-&lt;li&gt;150 MB free space on hard-disk&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;build-debian&#34;&gt;build (debian)&lt;/h2&gt;
-
-&lt;p&gt;Este es el proceso que segui para compilarlo en debian 7. No me gustan los
-&lt;em&gt;IDEs&lt;/em&gt; y como en este caso se utiliza CodeBlocks, mejor invocarlo desde la
-terminal&lt;/p&gt;
-
-&lt;p&gt;Por cierto, actualice al codigo para compilarlo desde freidora 25&amp;hellip; la
-compilacion no se logro&amp;hellip;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;su
-aptitude install bash gcc cmake codeblocks mercurial
-exit
-
-mkdir ~/h-craft
-cd ~/h-craft
-hg clone https://bitbucket.org/mzeilfelder/trunk_hc1
-hg clone https://bitbucket.org/mzeilfelder/media_hc1
-cd trunk_hc1/build
-
-# necesario ejecutarlo con bash o colocar #! /bin/bash
-# a estos scripts
-./copy-media-linux.sh
-./make-libs-linux.sh
-
-cd ..
-codeblocks --build --target=&amp;quot;Linux - Release - accurate math - static&amp;quot; \
-           --no-batch-window-close libs/irrlicht/source/Irrlicht/Irrlicht-gcc.cbp
-codeblocks --build --target=&amp;quot;linux64 release&amp;quot; --no-batch-window-close src/hover.cbp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;tuning&#34;&gt;tuning&lt;/h2&gt;
-
-&lt;p&gt;existe una traduccion del los menus realizada por &lt;strong&gt;Caleb&lt;/strong&gt;, puedes encontrarla  en
-&lt;a href=&#34;http://cadetesdelespacio.es/node/1362&#34;&gt;http://cadetesdelespacio.es/node/1362&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
