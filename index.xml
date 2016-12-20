@@ -7,8 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Mon, 19 Dec 2016 11:29:56 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 19 Dec 2016 21:45:05 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ncurses</title>
+      <link>http://nasciiboy.github.io/prog/ncurses/</link>
+      <pubDate>Mon, 19 Dec 2016 21:45:05 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/ncurses/</guid>
+      <description>
+
+&lt;h2 id=&#34;que-es-ncurses&#34;&gt;Que es Ncurses&lt;/h2&gt;
+
+&lt;p&gt;Es una libreria (parte del proyecto GNU) que nos permite crear &lt;strong&gt;TUIs&lt;/strong&gt; (Text
+User Interface) escrita en lenguaje de programacion &lt;strong&gt;C&lt;/strong&gt; con &lt;em&gt;envoltorios&lt;/em&gt; para
+algunos otros lenguajes. Se utiliza principalmente en el sistema GNU/linux y en
+los derivados de BSD y probablemente tambien corra en el sistema de las ventanas
+mediante minGW (Minimalist GNU for Windows).&lt;/p&gt;
+
+&lt;p&gt;Proporciona funciones para «dibujar» caracteres en la pantalla con hasta 256
+colores disponibles (si la terminal lo permite). Despues de conocer &lt;code&gt;mvwprintw&lt;/code&gt;
+utilizar &lt;code&gt;printf&lt;/code&gt; es igual a sufrir alguna incapacidad. Tambien nos da la
+posibilidad de modificar varios atributos de la tipografia como pueden ser
+&lt;strong&gt;negrita&lt;/strong&gt;, &lt;em&gt;italica&lt;/em&gt; o &lt;u&gt;subrayado&lt;/u&gt;.&lt;/p&gt;
+
+&lt;p&gt;finalmente nos ofrece la posibilidad de tener acceso completo al teclado y
+raton.&lt;/p&gt;
+
+&lt;h2 id=&#34;por-que-programar-tuis&#34;&gt;Por que programar TUIs&lt;/h2&gt;
+
+&lt;p&gt;Bueno, es una foma muy sencilla de crear una interfaz «visual» sin morir en el
+intento y como fiel creyente de la iglesia de Emacs creo que &lt;em&gt;el texto es la
+unica interfaz verdadera&lt;/em&gt;. Si planeas aprender programacion de videojuegos
+tambien encontraras que es mas sencillo interactuar con caracteres en lugar de
+con pixeles (aunque en el fondo sean lo mismo)&lt;/p&gt;
+
+&lt;h2 id=&#34;como-aprender-a-programar-con-ncurses&#34;&gt;Como aprender a programar con Ncurses?&lt;/h2&gt;
+
+&lt;p&gt;complicado lo tienes&amp;hellip; solo existe un mini-manual (NCURSES Programming HOWTO) y
+un libro (Programmer&amp;rsquo;s Guide to NCurses) (ambos en ingles) para aprender lo
+basico del tema.&lt;/p&gt;
+
+&lt;p&gt;Tampoco leer codigo ayuda mucho, sobre todo el codigo fuente de la propia
+libreria (es muy raro).&lt;/p&gt;
+
+&lt;p&gt;Hace ya un tiempo dedique algunas tardes a traducir el minimanual, puedes encontrar
+lo fundamental en este &lt;a href=&#34;ncurses-programming-howto.zip&#34;&gt;zip&lt;/a&gt; y el resto en un
+repositorio en &lt;a href=&#34;https://github.com/nasciiboy/NCURSES-Programming-HOWTO&#34;&gt;github&lt;/a&gt;.
+No ha sido revisado, y la traduccion  se realizo con el &amp;ldquo;traductor de
+internet&amp;rdquo;. En el repositorio encontraras los fuentes en formato org-mode de
+emacs, en algun momento (o años) le dare alguna revicion y quizo se
+actualice. Si te es de &lt;code&gt;interes &amp;amp;&amp;amp; utilidad &amp;amp;&amp;amp; y-lo-mejoras&lt;/code&gt; no dudes en
+enviarme el resultado&lt;/p&gt;
+
+&lt;p&gt;quiza en un post/tutorial futuro ponga algun codigo interesante del tipo &amp;ldquo;como
+programar un tetris&amp;rdquo; o algo asi&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;ps: tengo una traduccion (ilegal) de el libro casi terminada&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;ps 2: actualmente no me gusta ncurses, principalmente por que no entiendo su
+codigo fuente, y porque es un &amp;ldquo;todo en uno&amp;rdquo;, preferiria que la interaccion con
+el teclado, el mouse e incluso joystick fuesen librerias independientes&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>nxEngine</title>
@@ -22,19 +84,18 @@
 cueva) es un videojuego de plataformas con un toque de RPG desarrollado por una
 sola persona (Daisuke Amaya, alias &amp;ldquo;pixel&amp;rdquo;) a lo largo de 5 años. Originalmente
 fue liberado como &lt;em&gt;freeware&lt;/em&gt; para la plataforma pc de microsoft, no obstante por
-su sobresaliente calidad ha sido portado a una gran cantidad de plataformas
-entre las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast,
-GP2X, &amp;hellip;, y por supuesto GNU/linux.&lt;/p&gt;
+su sobresaliente calidad ha sido portado a una gran cantidad de sistemas entre
+las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast, GP2X,
+&amp;hellip;, y por supuesto GNU/linux.&lt;/p&gt;
 
 &lt;p&gt;Pese a que la licencia de distribucion no es libre, se cuenta con una
 implementacion del motor (en C++) bajo la licencia GNU GPL v3 llamada
 &lt;a href=&#34;http://nxengine.sourceforge.net/&#34;&gt;nxEngine&lt;/a&gt; y un par de traducciones al español
 (utilizare &lt;a href=&#34;http://www.romhacking.net/translations/2172/&#34;&gt;esta&lt;/a&gt;)&lt;/p&gt;
 
-&lt;p&gt;Si bien podemos disfrutar Dōkutsu Monogatari mediante &lt;strong&gt;wine&lt;/strong&gt;, al disponer del
-codigo fuente podemos compilar una vercion nativa y hechar mano de la traduccion
-al español. He colocado lo necesario en este &lt;a href=&#34;../nx.zip&#34;&gt;zip&lt;/a&gt;. Descargalo y abre
-un terminal&lt;/p&gt;
+&lt;p&gt;Si bien podemos disfrutar Dōkutsu Monogatari mediante &lt;strong&gt;wine&lt;/strong&gt; (asunto con poco
+misterio) vamos a compilar una vercion nativa con nxEngine. Todo lo que
+necesitas lo encontraras en este &lt;a href=&#34;../nx.zip&#34;&gt;zip&lt;/a&gt;. Descargalo y abre un terminal&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;su
 # nxEngine depende de la libreria SDL. En freidora
@@ -192,9 +253,10 @@ motivacion principal para actualizar el codigo de cada prueba&amp;hellip; alguna
 &lt;/blockquote&gt;
 
 &lt;p&gt;Bienvenido al &lt;del&gt;subreddit de Evangelion&lt;/del&gt; dominio de nasciiboy, un sitio sin
-acentos, buena ortografia, redaccion, javascript, cokkies, ni comentarios&amp;hellip; (a
-menos que envies un
-&lt;a href=&#34;https://github.com/nasciiboy/nasciiboy.github.io&#34;&gt;pull request&lt;/a&gt;).&lt;/p&gt;
+acentos, buena ortografia, redaccion, javascript, cokkies, publicidad,
+estadisticas, &amp;hellip; ni comentarios (a menos que envies un
+&lt;a href=&#34;https://github.com/nasciiboy/nasciiboy.github.io&#34;&gt;pull request&lt;/a&gt; o un
+&lt;a href=&#34;mailto:nasciiboy@gmail.com&#34;&gt;correo&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../Rei-000.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>

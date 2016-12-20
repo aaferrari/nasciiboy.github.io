@@ -22,19 +22,18 @@
 cueva) es un videojuego de plataformas con un toque de RPG desarrollado por una
 sola persona (Daisuke Amaya, alias &amp;ldquo;pixel&amp;rdquo;) a lo largo de 5 años. Originalmente
 fue liberado como &lt;em&gt;freeware&lt;/em&gt; para la plataforma pc de microsoft, no obstante por
-su sobresaliente calidad ha sido portado a una gran cantidad de plataformas
-entre las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast,
-GP2X, &amp;hellip;, y por supuesto GNU/linux.&lt;/p&gt;
+su sobresaliente calidad ha sido portado a una gran cantidad de sistemas entre
+las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast, GP2X,
+&amp;hellip;, y por supuesto GNU/linux.&lt;/p&gt;
 
 &lt;p&gt;Pese a que la licencia de distribucion no es libre, se cuenta con una
 implementacion del motor (en C++) bajo la licencia GNU GPL v3 llamada
 &lt;a href=&#34;http://nxengine.sourceforge.net/&#34;&gt;nxEngine&lt;/a&gt; y un par de traducciones al español
 (utilizare &lt;a href=&#34;http://www.romhacking.net/translations/2172/&#34;&gt;esta&lt;/a&gt;)&lt;/p&gt;
 
-&lt;p&gt;Si bien podemos disfrutar Dōkutsu Monogatari mediante &lt;strong&gt;wine&lt;/strong&gt;, al disponer del
-codigo fuente podemos compilar una vercion nativa y hechar mano de la traduccion
-al español. He colocado lo necesario en este &lt;a href=&#34;../nx.zip&#34;&gt;zip&lt;/a&gt;. Descargalo y abre
-un terminal&lt;/p&gt;
+&lt;p&gt;Si bien podemos disfrutar Dōkutsu Monogatari mediante &lt;strong&gt;wine&lt;/strong&gt; (asunto con poco
+misterio) vamos a compilar una vercion nativa con nxEngine. Todo lo que
+necesitas lo encontraras en este &lt;a href=&#34;../nx.zip&#34;&gt;zip&lt;/a&gt;. Descargalo y abre un terminal&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;su
 # nxEngine depende de la libreria SDL. En freidora
