@@ -1,7 +1,7 @@
 +++
 title      = ""
 tags       = [ "" ]
-categories = [ "prog" ]
+categories = [ "vg" ]
 date       = ""
 draft      = true
 +++
