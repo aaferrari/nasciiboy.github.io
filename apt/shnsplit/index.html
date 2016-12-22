@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ncurses - nba - GNU&#39;s Rock</title>
+    <title>Como dividir un album contenido en una solo pista flac - nba - GNU&#39;s Rock</title>
     
     
 <style media="screen">
@@ -173,69 +173,56 @@ img:hover { filter: none;
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt/</span></a></li>
     
-    <li><span class="path-pwd">Ncurses</span></li>
+    <li><span class="path-pwd">Como dividir un album contenido en una solo pista flac</span></li>
   </ul>
 
   <article>
-  <h1 class="title">Ncurses</h1>
+  <h1 class="title">Como dividir un album contenido en una solo pista flac</h1>
 
-  <time datetime="2016-12-19 21:45:05 -0600 CST">Dec 19, 2016</time>
+  <time datetime="2016-12-22 09:56:05 -0600 CST">Dec 22, 2016</time>
 
-  <div class="article-body">
+  <div class="article-body"><p>En este mundo existen algunos seres extraños con tanto amor (libros, musica,
+series, peliculas, porno, &hellip;) que no les cabe en su disco duro y tienen que
+compartirlo.</p>
 
-<h2 id="que-es-ncurses">Que es Ncurses</h2>
+<p>Si el amor viene en forma de <strong>una sola pista flac</strong>, no hagas como yo y la
+mandes a la mierda, todo muestra de afecto merece respeto&hellip; exepto si proviene
+de un degenerado que graba viniles en digital a maxima calidad, si formas parte
+de este grupo no mereces tener oidos.</p>
 
-<p>Es una libreria (parte del proyecto GNU) que nos permite crear <strong>TUIs</strong> (Text
-User Interface) escrita en lenguaje de programacion <strong>C</strong> con <em>envoltorios</em> para
-algunos otros lenguajes. Se utiliza principalmente en el sistema GNU/linux y en
-los derivados de BSD y probablemente tambien corra en el sistema de las ventanas
-mediante minGW (Minimalist GNU for Windows).</p>
+<p>Bueno, podemos optener las pistas individuales siempre y cuando la pista este
+acompañada de un fichero con terminacion <strong>.cue</strong>. Primero necesitamos instalar
+unas cuantas herramientas, tanto en debian como en freidora son las siguientes</p>
 
-<p>Proporciona funciones para «dibujar» caracteres en la pantalla con hasta 256
-colores disponibles (si la terminal lo permite). Despues de conocer <code>mvwprintw</code>
-utilizar <code>printf</code> es igual a sufrir alguna incapacidad. Tambien nos da la
-posibilidad de modificar varios atributos de la tipografia como pueden ser
-<strong>negrita</strong>, <em>italica</em> o <u>subrayado</u>.</p>
+<pre><code>gestor-de-paquetes install cuetools shntool flac
+</code></pre>
 
-<p>finalmente nos ofrece la posibilidad de tener acceso completo al teclado y
-raton.</p>
+<p>luego vamos hasta la carpeta que tiene la pista a dividir y ejecutamos el
+siguiente comando</p>
 
-<h2 id="por-que-programar-tuis">Por que programar TUIs</h2>
+<pre><code>shnsplit -f pista.cue -o flac pista.flac
+</code></pre>
 
-<p>Bueno, es una foma muy sencilla de crear una interfaz «visual» sin morir en el
-intento y como fiel creyente de la iglesia de Emacs creo que <em>el texto es la
-unica interfaz verdadera</em>. Si planeas aprender programacion de videojuegos
-tambien encontraras que es mas sencillo interactuar con caracteres en lugar de
-con pixeles (aunque en el fondo sean lo mismo)</p>
+<p>modificando <code>pista</code>, por el nombre especifico de <strong>tu</strong> pista. Luego de ejecutar
+esto tendremos pistas independientes con el formato <code>split-track01.flac</code>,
+<code>split-track02.flac</code>, <code>split-track</code>&hellip;</p>
 
-<h2 id="como-aprender-a-programar-con-ncurses">Como aprender a programar con Ncurses?</h2>
+<p>para colocar los metadatos (titulo, autor) en las pistas invocamos lo siguiente</p>
 
-<p>complicado lo tienes&hellip; solo existe un mini-manual (NCURSES Programming HOWTO) y
-un libro (Programmer&rsquo;s Guide to NCurses) (ambos en ingles) para aprender lo
-basico del tema.</p>
+<pre><code>cuetag.sh pista.cue split-track*
+</code></pre>
 
-<p>Tampoco leer codigo ayuda mucho, sobre todo el codigo fuente de la propia
-libreria (es muy raro).</p>
+<p>en ocaciones, este comando puede informarnos que el numero de pistas no
+coincide, si se presenta dicha circunstancia revisa si tienes una pista con
+nombre <code>split-track00.flac</code>, te la cargas y vuelves a intentar.</p>
 
-<p>Hace ya un tiempo dedique algunas tardes a traducir el minimanual, puedes encontrar
-lo fundamental en este <a href="../ncurses-programming-howto.zip">zip</a> y el resto en un
-repositorio en <a href="https://github.com/nasciiboy/NCURSES-Programming-HOWTO">github</a>.
-No ha sido revisado, y la traduccion  se realizo con el &ldquo;traductor de
-internet&rdquo;. En el repositorio encontraras los fuentes en formato org-mode de
-emacs, en algun momento (o años) le dare alguna revicion y quizo se
-actualice. Si te es de <code>interes &amp;&amp; utilidad &amp;&amp; y-lo-mejoras</code> no dudes en
-enviarme el resultado</p>
-
-<p>quiza en un post/tutorial futuro ponga algun codigo interesante del tipo &ldquo;como
-programar un tetris&rdquo; o algo asi&hellip;</p>
-
-<p>ps: tengo una traduccion (ilegal) de el libro casi terminada&hellip;</p>
-
-<p>ps 2: actualmente no me gusta ncurses, principalmente por que no entiendo su
-codigo fuente, y porque es un &ldquo;todo en uno&rdquo;, preferiria que la interaccion con
-el teclado, el mouse e incluso joystick fuesen librerias independientes</p>
+<p>Pero&hellip; y todo esto aun nos deja las pistas con nombre <code>split-track*</code>, para eso
+no conosco una solucion elegante desde linea de comandos. La solucion que
+utilizo es abrir moc (<strong>Music On Console</strong>) copiar todos las nombres de las
+pistas (el titulo se muestra a partir de los metadatos) y con Emacs cambiar los
+nombres &ldquo;a mano&rdquo; en <code>wdired-change-to-wdired-mode</code></p>
 </div>
 </article>
 
@@ -243,9 +230,9 @@ el teclado, el mouse e incluso joystick fuesen librerias independientes</p>
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt/</span></a></li>
     
-    <li><span class="path-pwd">Ncurses</span></li>
+    <li><span class="path-pwd">Como dividir un album contenido en una solo pista flac</span></li>
   </ul>
 </main>
 
