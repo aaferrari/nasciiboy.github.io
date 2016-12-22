@@ -7,8 +7,73 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Thu, 22 Dec 2016 09:56:05 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 22 Dec 2016 11:56:44 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/apt/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>moc</title>
+      <link>http://nasciiboy.github.io/apt/moc/</link>
+      <pubDate>Thu, 22 Dec 2016 11:56:44 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/apt/moc/</guid>
+      <description>&lt;p&gt;En GNU existe una cantidad ridicula de &lt;strong&gt;reproductores de audio&lt;/strong&gt;, por
+participar hasta el vlc o video (gnome) se meten en esos temas.&lt;/p&gt;
+
+&lt;p&gt;En general este tipo de aplicaciones te piden una carpeta &amp;ldquo;especial&amp;rdquo; donde
+coloques la musica y luego exitienden sus tentaculos para optener portadas,
+letras, titulos, generar listas de reproduccion por autor/mas escuchados/genero,
+y un sin numero mas de caracteristicas que incluyen conectarse a la red, claro
+mientras te roban un espacio con una interfaz de lo mas mona, pensada para mover
+el raton de un lado a otro&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;si por el contrario, &lt;strong&gt;el album es tu lista de reproduccion&lt;/strong&gt;, la carpeta con
+el nombre del grupo el unico metadato que necesitas y mover la mano con el raton
+no te genera ningun placer, existe &lt;strong&gt;moc&lt;/strong&gt; (&lt;a href=&#34;https://moc.daper.net/&#34;&gt;Music On Console&lt;/a&gt;)
+un eficiente reproductor de todo tipo de ficheros de audio desde la consola, con
+una interfaz tipo &amp;ldquo;navegador de ficheros&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;si tienes una distro descente (como debian) estara en los repositorios, en el
+caso de freidora la encontraras en rpm-fusion, instalarla no cuesta nada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gestor-de-pagetes install moc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para ejecutarla simplemente escribimos &lt;code&gt;mocp&lt;/code&gt; en la consola (en freidora por
+alguna obscura razon primero tenemos que crear un fichero en blanco (como root)
+&lt;code&gt;touch /etc/popt.d/empty_file&lt;/code&gt;) y optenemos esto&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../moc-default.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;como soy un ser de la noche, fue necesario realizar alguna modificacion dejando
+el tema asi&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../moc-nascii.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;en este &lt;a href=&#34;moc-nascii-theme.zip&#34;&gt;zip&lt;/a&gt; encontraras el tema &amp;ldquo;nascii-theme&amp;rdquo; y una
+configuracion basica. debes colocar el contenido en tu home dendro del
+directorio &lt;code&gt;.moc&lt;/code&gt;, no sin antes modificar las siguientes lineas del fichero
+&lt;code&gt;config&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# substituye &amp;quot;user&amp;quot; por tu nombre de usuario
+# linea  72 - directorio por defecto
+MusicDir = &amp;quot;/home/user/fonos&amp;quot;
+# linea  92 - reproducir siguiente pista
+AutoNext = yes
+# linea 194 - tema por defecto
+Theme = /home/user/.moc/themes/nascii_theme
+# linea 242 - guardar playlist para la siguiente secion
+SavePlaylist = yes
+# En la posicion 277 puedes configurar el acceso
+# rapido a algunos directorios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;presionando &lt;code&gt;h&lt;/code&gt; se muestran los comandos (teclas) que puedes ejecutar.&lt;/p&gt;
+
+&lt;p&gt;Listo, a disfrutar de buena musica&lt;/p&gt;
+
+&lt;p&gt;ps: ese album de la cura esta&amp;hellip; bueno, en contrasto al algunos otros.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Como dividir un album contenido en una solo pista flac</title>

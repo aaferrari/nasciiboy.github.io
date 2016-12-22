@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shntool - nba - GNU&#39;s Rock</title>
+    <title>moc - nba - GNU&#39;s Rock</title>
     
     
 <style media="screen">
@@ -170,26 +170,86 @@ img:hover { filter: none;
   <body>
     
 <main>
-  
-  <div class="thumb">
-  <h2 class="title"><a href="http://nasciiboy.github.io/apt/shnsplit/">Como dividir un album contenido en una solo pista flac</a></h2>
-
-  <ul class="meta">
-    <li><time datetime="2016-12-22 09:56:05 -0600 CST">Dec 22, 2016</time></li>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt</span></a></li>
+    <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt/</span></a></li>
     
+    <li><span class="path-pwd">moc</span></li>
   </ul>
 
-  <div class="summary">En este mundo existen algunos seres extraños con tanto amor (libros, musica, series, peliculas, porno, &hellip;) que no les cabe en su disco duro y tienen que compartirlo.
-Si el amor viene en forma de una sola pista flac, no hagas como yo y la mandes a la mierda, toda muestra de afecto merece respeto&hellip; exepto si proviene de un degenerado que graba viniles en digital a maxima calidad, si formas parte de este grupo no mereces tener oidos.</div>
+  <article>
+  <h1 class="title">moc</h1>
+
+  <time datetime="2016-12-22 11:56:44 -0600 CST">Dec 22, 2016</time>
+
+  <div class="article-body"><p>En GNU existe una cantidad ridicula de <strong>reproductores de audio</strong>, por
+participar hasta el vlc o video (gnome) se meten en esos temas.</p>
+
+<p>En general este tipo de aplicaciones te piden una carpeta &ldquo;especial&rdquo; donde
+coloques la musica y luego exitienden sus tentaculos para optener portadas,
+letras, titulos, generar listas de reproduccion por autor/mas escuchados/genero,
+y un sin numero mas de caracteristicas que incluyen conectarse a la red, claro
+mientras te roban un espacio con una interfaz de lo mas mona, pensada para mover
+el raton de un lado a otro&hellip;</p>
+
+<p>si por el contrario, <strong>el album es tu lista de reproduccion</strong>, la carpeta con
+el nombre del grupo el unico metadato que necesitas y mover la mano con el raton
+no te genera ningun placer, existe <strong>moc</strong> (<a href="https://moc.daper.net/">Music On Console</a>)
+un eficiente reproductor de todo tipo de ficheros de audio desde la consola, con
+una interfaz tipo &ldquo;navegador de ficheros&rdquo;.</p>
+
+<p>si tienes una distro descente (como debian) estara en los repositorios, en el
+caso de freidora la encontraras en rpm-fusion, instalarla no cuesta nada</p>
+
+<pre><code>gestor-de-pagetes install moc
+</code></pre>
+
+<p>para ejecutarla simplemente escribimos <code>mocp</code> en la consola (en freidora por
+alguna obscura razon primero tenemos que crear un fichero en blanco (como root)
+<code>touch /etc/popt.d/empty_file</code>) y optenemos esto</p>
+
+<p><img src="../moc-default.png" alt="" /></p>
+
+<p>como soy un ser de la noche, fue necesario realizar alguna modificacion dejando
+el tema asi</p>
+
+<p><img src="../moc-nascii.png" alt="" /></p>
+
+<p>en este <a href="moc-nascii-theme.zip">zip</a> encontraras el tema &ldquo;nascii-theme&rdquo; y una
+configuracion basica. debes colocar el contenido en tu home dendro del
+directorio <code>.moc</code>, no sin antes modificar las siguientes lineas del fichero
+<code>config</code></p>
+
+<pre><code># substituye &quot;user&quot; por tu nombre de usuario
+# linea  72 - directorio por defecto
+MusicDir = &quot;/home/user/fonos&quot;
+# linea  92 - reproducir siguiente pista
+AutoNext = yes
+# linea 194 - tema por defecto
+Theme = /home/user/.moc/themes/nascii_theme
+# linea 242 - guardar playlist para la siguiente secion
+SavePlaylist = yes
+# En la posicion 277 puedes configurar el acceso
+# rapido a algunos directorios
+</code></pre>
+
+<p>presionando <code>h</code> se muestran los comandos (teclas) que puedes ejecutar.</p>
+
+<p>Listo, a disfrutar de buena musica</p>
+
+<p>ps: ese album de la cura esta&hellip; bueno, en contrasto al algunos otros.</p>
 </div>
+</article>
 
-  
-  
 
-  
-
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt/</span></a></li>
+    
+    <li><span class="path-pwd">moc</span></li>
+  </ul>
 </main>
 
 
