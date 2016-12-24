@@ -1,7 +1,7 @@
 +++
 title      = ""
 tags       = [ "" ]
-categories = [ "emacs" ]
+categories = [ "apt" ]
 date       = ""
 draft      = true
 +++

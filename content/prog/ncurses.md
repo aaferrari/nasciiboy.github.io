@@ -2,7 +2,7 @@
 tags = [
   "ncurses", "howto",
 ]
-title = "ncurses"
+title = "Ncurses"
 draft = true
 date = "2016-12-19T21:45:05-06:00"
 categories = [
@@ -47,7 +47,7 @@ Tampoco leer codigo ayuda mucho, sobre todo el codigo fuente de la propia
 libreria (es muy raro).
 
 Hace ya un tiempo dedique algunas tardes a traducir el minimanual, puedes encontrar
-lo fundamental en este [zip](ncurses-programming-howto.zip) y el resto en un
+lo fundamental en este [zip](../ncurses-programming-howto.zip) y el resto en un
 repositorio en [github](https://github.com/nasciiboy/NCURSES-Programming-HOWTO).
 No ha sido revisado, y la traduccion  se realizo con el "traductor de
 internet". En el repositorio encontraras los fuentes en formato org-mode de
