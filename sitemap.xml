@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nasciiboy.github.io/apt/fish/</loc>
+    <lastmod>2016-12-24T10:04:44-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/emacs/que-es-emacs/</loc>
     <lastmod>2016-12-23T20:43:19-06:00</lastmod>
   </url>
@@ -49,13 +54,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/apt/</loc>
-    <lastmod>2016-12-22T11:56:44-06:00</lastmod>
+    <lastmod>2016-12-24T10:04:44-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/apt/</loc>
-    <lastmod>2016-12-22T11:56:44-06:00</lastmod>
+    <lastmod>2016-12-24T10:04:44-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -79,6 +84,12 @@
   <url>
     <loc>http://nasciiboy.github.io/emacs/</loc>
     <lastmod>2016-12-23T20:43:19-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nasciiboy.github.io/tags/fish/</loc>
+    <lastmod>2016-12-24T10:04:44-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -185,7 +196,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2016-12-23T20:43:19-06:00</lastmod>
+    <lastmod>2016-12-24T10:04:44-06:00</lastmod>
     <priority>0</priority>
   </url>
   
