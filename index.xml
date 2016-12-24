@@ -74,7 +74,7 @@ tanto por las &lt;code&gt;F&lt;/code&gt;s como por el raton (esto ultimo es incr
 asimila la &lt;strong&gt;forma Emacs&lt;/strong&gt; inevitablemente termina por hacer a un lado el
 raton. ¿Quien demonios sigue programando esto?).&lt;/p&gt;
 
-&lt;p&gt;Tras usos dias (y con ayuda de algun tutorial) puede cambiar el tema, luego
+&lt;p&gt;Tras unos dias (y con ayuda de algun tutorial) puede cambiar el tema, luego
 descubri que se podia navegar por los ficheros desde emacs y que tenia
 terminales e interpretes y un tetris y un navegador web y gestor de paquetes y
 soporte para cualquier lenguaje de programacion (almenos resaltado) y un sin fin
@@ -93,12 +93,13 @@ Emacs?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;emacs-es&#34;&gt;Emacs Es&amp;hellip;&lt;/h2&gt;
 
-&lt;p&gt;Un interprete de un lenguaje intepretado derivado de Lisp (Emacs Lisp) con
-codigo precargado como para permitirte crear muevos programas, funcionalidades o
-modificar Emacs en si mismo&amp;hellip; existe un mejor diseño que ese?&lt;/p&gt;
+&lt;p&gt;El interprete de un lenguaje derivado de Lisp (Emacs Lisp). De hecho es el
+interprete mas sofisticado que existe y probablemente existira, ya que biene con
+el suficiente codigo precargado como para permitirte crear nuevos programas (y
+de paso hacerte creer que es un editor), funcionalidades o modificar Emacs en si
+mismo&amp;hellip; existe un mejor diseño que ese?&lt;/p&gt;
 
-&lt;p&gt;A diferencia de otros Hackers, los Hackers de Emacs comprenden que el texto es
-la interfaz&lt;/p&gt;
+&lt;h2 id=&#34;enfoques-sobre-el-texto&#34;&gt;Enfoques sobre el texto&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;teco&lt;/strong&gt;: un leguaje para forjar texto&lt;/p&gt;
 
