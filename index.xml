@@ -64,7 +64,7 @@ $ gestor-de-paquetes install fish
 &lt;pre&gt;&lt;code&gt;$ cat /etc/shells
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;de no encantrarse una linea que termine con &lt;code&gt;fish&lt;/code&gt; ejecuta&lt;/p&gt;
+&lt;p&gt;de no encontrarse una linea que termine con &lt;code&gt;fish&lt;/code&gt; ejecuta&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ whereis fish
 fish: /usr/bin/fish /etc/fish /usr/share/fish /usr/share/man/man1/fish.1.gz
