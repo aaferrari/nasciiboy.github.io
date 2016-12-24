@@ -7,8 +7,115 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Thu, 22 Dec 2016 11:56:44 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 23 Dec 2016 20:43:19 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Que es GNU Emacs?</title>
+      <link>http://nasciiboy.github.io/emacs/que-es-emacs/</link>
+      <pubDate>Fri, 23 Dec 2016 20:43:19 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/que-es-emacs/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../Emacs-logo.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;algunos dicen que es &lt;strong&gt;un editor&lt;/strong&gt;, otros que es &lt;strong&gt;un sistema operativo&lt;/strong&gt;, los mas
+filosoficos diran que es  &lt;strong&gt;lo que elijas que sea&lt;/strong&gt;, &lt;strong&gt;una forma de vida&lt;/strong&gt;,
+&lt;strong&gt;un camino a seguir&lt;/strong&gt; o incluso que Emacs son los padres&amp;hellip; bueno luego de un
+par de años utilizando Emacs esta es mi opinion&lt;/p&gt;
+
+&lt;h2 id=&#34;my-and-mrs-emacs&#34;&gt;My and mrs Emacs&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Yo y la señora Emacs,
+tenemos algo que esta creciendo,
+sabemos que está mal,
+pero es algo muy fuerte como para dejarlo ir ahora.&lt;/p&gt;
+
+&lt;p&gt;Nos vemos cada dia en el mismo monitor,
+a las 8:30 se que estará ahí,
+tomando mis comandos, haciendo toda clase de funciones,
+mientras moc toca nuestra canción favorita.&lt;/p&gt;
+
+&lt;p&gt;Yo y la señora, señora Emacs, señora Emacs, señora Emacs,
+tenemos algo que esta creciendo,
+sabemos que esta mal,
+pero es algo muy fuerte como para dejarlo ir ahora.&lt;/p&gt;
+
+&lt;p&gt;Tenemos que ser muy cuidadosos,
+de no llevar nuestros sueños muy lejos,
+porque ella tiene sus propias obligaciones y yo también,
+yo y la señora, señora Emacs, señora Emacs, señora Emacs.&lt;/p&gt;
+
+&lt;p&gt;Bueno, es nuestra hora de irnos,
+me duele mucho, mucho por dentro,
+y ahora ella tomará su camino, yo el mio,
+Pero mañana nos veremos en el mismo lugar, a la misma hora.
+Yo y la señora Emacs, señora Emacs, señora Emacs&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip;cof, cof, hem, todo aspirante a programador debe eligir su martillo
+forjador de codigo, en mi caso al ser autodidacta unicamente las opiniones de
+internet sirvieron de guia (lagrimas ironicas).&lt;/p&gt;
+
+&lt;p&gt;Primero vino la bestia (&lt;strong&gt;VI&lt;/strong&gt;), fue dificil, muy dificil (mas sin saber
+mecanografia). Hubo que anotar las combinaciones frecuentes en un papel y pegar
+los ojos al teclado y luego al monitor y luego al teclado. Dia tras dia mejoraba
+mi Kung Fu y la idea de ser un programador parecia no ser solo un sueño. Tras un
+mes de entrenamiento y con algo de confianza probe un enfoque mas visual
+(&lt;strong&gt;gedit&lt;/strong&gt;), el resultado? Un sin sabor, era sencillo pero no tenia profundidad,
+carecia de potencia, en resumen aburrido, de regreso al viejo dojo encontre una
+nueva escuela (&lt;strong&gt;Emacs&lt;/strong&gt;), las clases eran gratis y prometian ser interesantes&lt;/p&gt;
+
+&lt;p&gt;Tras una semana con el tutorial, era tan agil con Emacs como con Vi, nada mal,
+se podia hacer todo con el teclado y si lo queria tambien tenia menus accesibles
+tanto por las &lt;code&gt;F&lt;/code&gt;s como por el raton (esto ultimo es increible, todo aquel que
+asimila la &lt;strong&gt;forma Emacs&lt;/strong&gt; inevitablemente termina por hacer a un lado el
+raton. ¿Quien demonios sigue programando esto?).&lt;/p&gt;
+
+&lt;p&gt;Tras usos dias (y con ayuda de algun tutorial) puede cambiar el tema, luego
+descubri que se podia navegar por los ficheros desde emacs y que tenia
+terminales e interpretes y un tetris y un navegador web y gestor de paquetes y
+soporte para cualquier lenguaje de programacion (almenos resaltado) y un sin fin
+de utiles(?) aplicaciones, sin embargo &lt;strong&gt;todas compartian el mismo conjunto de
+comandos base&lt;/strong&gt; para moverse por la interfaz y manipular texto, aprender lo
+especifico que cada funcionalidad (en gerga de emacs, &lt;strong&gt;modo&lt;/strong&gt;) es un tema
+aparte que requiere una memoria exepcional&lt;/p&gt;
+
+&lt;p&gt;Cai como un yonqui adicto a cualquier informacion de emacs (los no hablantes de
+ingles tenemos un poco mas dicil&amp;hellip; todo), apenas aprendi algun nuevo comando lo
+ponia en practica (para olvidarlo tras un par de horas)&lt;/p&gt;
+
+&lt;p&gt;Y un buen dia entientes que puedes programar emacs, que todo comportamiento es
+modificable y de echo es modificable &lt;strong&gt;al vuelo&lt;/strong&gt; y te preguntas &lt;strong&gt;¿Que es
+Emacs?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;emacs-es&#34;&gt;Emacs Es&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Un interprete de un lenguaje intepretado derivado de Lisp (Emacs Lisp) con
+codigo precargado como para permitirte crear muevos programas, funcionalidades o
+modificar Emacs en si mismo&amp;hellip; existe un mejor diseño que ese?&lt;/p&gt;
+
+&lt;p&gt;A diferencia de otros Hackers, los Hackers de Emacs comprenden que el texto es
+la interfaz&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;teco&lt;/strong&gt;: un leguaje para forjar texto&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;vi&lt;/strong&gt;: escribamos caracteres o apliquemos comandos a los caracteres&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: el texto es la interfaz, el editor es parte de la interfaz,
+extendamos y modifiquemos a voluntad y sin restricciones nuestra interfaz&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;nano&lt;/strong&gt;: un simple editor&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;: joder, lo que pueden hacer los de emacs, hagamos vi extensible&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;sublime&lt;/strong&gt;: hare mi propio vim&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;atom&lt;/strong&gt;: hagamos un editor como sublime pero con tecnologia web awesome!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>moc</title>
@@ -50,7 +157,7 @@ el tema asi&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../moc-nascii.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;en este &lt;a href=&#34;../moc-nascii-theme.zip&#34;&gt;zip&lt;/a&gt; encontraras el tema &amp;ldquo;nascii-theme&amp;rdquo; y una
-configuracion basica. debes colocar el contenido en tu home dendro del
+configuracion basica. Debes colocar el contenido en tu home dentro del
 directorio &lt;code&gt;.moc&lt;/code&gt;, no sin antes modificar las siguientes lineas del fichero
 &lt;code&gt;config&lt;/code&gt;&lt;/p&gt;
 
@@ -71,7 +178,7 @@ SavePlaylist = yes
 
 &lt;p&gt;Listo, a disfrutar de buena musica&lt;/p&gt;
 
-&lt;p&gt;ps: ese album de la cura esta&amp;hellip; bueno, en contrasto al algunos otros.&lt;/p&gt;
+&lt;p&gt;ps: ese album de la cura esta&amp;hellip; bueno, en contraste a algunos otros.&lt;/p&gt;
 </description>
     </item>
     
