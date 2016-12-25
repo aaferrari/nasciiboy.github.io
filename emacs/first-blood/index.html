@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fonos - nba - GNU&#39;s Rock</title>
+    <title>Emacs - fist blood - nba - GNU&#39;s Rock</title>
     
     
 <style media="screen">
@@ -171,42 +171,142 @@ img:hover { filter: none;
   <body>
     
 <main>
-  
-  <div class="thumb">
-  <h2 class="title"><a href="http://nasciiboy.github.io/apt/moc/">moc</a></h2>
-
-  <ul class="meta">
-    <li><time datetime="2016-12-22 11:56:44 -0600 CST">Dec 22, 2016</time></li>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt</span></a></li>
+    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
     
+    <li><span class="path-pwd">Emacs - fist blood</span></li>
   </ul>
 
-  <div class="summary">En GNU existe una cantidad ridicula de reproductores de audio, por participar hasta el vlc o video (gnome) se meten en esos temas.
-En general este tipo de aplicaciones te piden una carpeta &ldquo;especial&rdquo; donde coloques la musica y luego exitienden sus tentaculos para optener portadas, letras, titulos, generar listas de reproduccion por autor/mas escuchados/genero, y un sin numero mas de caracteristicas que incluyen conectarse a la red, claro mientras te roban un espacio con una interfaz de lo mas mona, pensada para mover el raton de un lado a otro&hellip;</div>
+  <article>
+  <h1 class="title">Emacs - fist blood</h1>
+
+  <time datetime="2016-12-25 15:13:24 -0600 CST">Dec 25, 2016</time>
+
+  <div class="article-body">
+
+<p><img src="../first-blood.jpg" alt="" /></p>
+
+<h2 id="instalacion">instalacion</h2>
+
+<p>en general utilizo emacs apartir del codigo fuente, no obstante tambien tengo
+disponible el que ofresca la distribucion de turno, ya sea para probar algo o
+por si alguna presenta algun comportamiento extraño.</p>
+
+<p>la vercion compilada nunca la he instalado en el sistema, pero tengo un atajo de
+teclado para su invocacion</p>
+
+<h3 id="desde-repositorios">desde repositorios</h3>
+
+<pre><code># en debian
+apt-get install emacs
+# en fedora
+dnf install emacs
+</code></pre>
+
+<h3 id="compilar-desde-el-codigo-fuente">compilar desde el codigo fuente</h3>
+
+<p>instalamos las dependencias</p>
+
+<pre><code>su
+# en debian
+apt-get build-dep emacs
+# en fedora
+dnf builddep emacs
+exit
+</code></pre>
+
+<p>por motivos muy tristes no tengo debian, la ultima ves que compile
+emacs en debian fue con <code>apt-get build-dep emacs-24</code>, intenta simplemente con
+<code>emacs</code>, de lo contrario prueba con <code>emacs-25</code></p>
+
+<p>(si no tienes <code>git</code> instalalo)</p>
+
+<pre><code>git clone git://git.sv.gnu.org/emacs.git
+./autogen.sh
+./autogen.sh git
+./configure
+make
+# ya podemos utilizar emacs
+./src/emacs
+# si deseamos intalarlo
+su
+make install
+exit
+</code></pre>
+
+<h2 id="configuracion-base">configuracion base</h2>
+
+<p>tenia mucho tiempo sin &ldquo;purgar&rdquo; la configuracion de Emacs, el resultado esta en
+este <a href="../emacs-config.zip">zip</a> (33mb). Para utilizarla necesitas:</p>
+
+<ol>
+<li>descompribir</li>
+<li>renombrar la carpeta como <code>.emacs.d</code></li>
+<li>y moverla a home.</li>
+</ol>
+
+<p>Contenido</p>
+
+<pre><code>- init.el         # fichero de configuracion de emacs
+- nascii-theme.el # tema nascii
+- plugins/        # todas las carpetas proceden directamente de git
+         company-mode               # autocompletado
+         magit                      # interfaz avanzada git emacs-style
+         dash.el                    #   dependencia de magit
+         with-editor                #   dependencia de magit
+         emacs-fish                 # modo para scripts fish
+         expand-region.el           # seleccion segun el contexto
+         go-mode.el                 # modo para golang
+         haskell-mode               # modo para haskell
+         markdown-mode              # modo para markdown
+         multiple-cursors.el        # cursores multiples
+</code></pre>
+
+<p>Emacs posee un magnifico gestor de pagetes, pero soy un romantico e instale
+todos los &ldquo;plugins&rdquo; directamente de los fuentes, es decir, cada carpeta en
+<code>plugins</code> tiene su <code>.git</code>. En teoria esto hara que la configuracion este lista
+solo con copiar y pegar. Para ser especifico lo he probado con las versiones
+25.1.1 y 26.0.50, ambas en fedora.</p>
+
+<p>Esto tambien significa que los repositorios no estan activados, tendras que
+hacerlo como antaño: llendo al navegador y averiguado como.</p>
+
+<p>Los modos <strong>magit</strong> y <strong>haskell</strong> estan compilados (son los ficheros que
+terminan con <code>.elc</code>) y es posible que se genere un error durante la carga aunque
+no estoy seguro de ese hecho. Si esto sucede, existen dos soluciones posibles</p>
+
+<ol>
+<li>elimina la seccion correspondiente a dichos modos dentro de <code>init.el</code></li>
+<li>o sigue las instrucciones dentro de <code>init.el</code> y compila los modos</li>
+</ol>
+
+<p>como notas adicionales los atajos estan pensados en la distribucion de teclado
+<strong>programmer dvorak</strong>  con algunas  5 teclas modificadas (los dos control,
+mayus, @ y \) y el modo go depende de que tengas una instalacion de go. Puedes
+seguir los dos pasos anteriores si encuentras algun problema (<strong>no olvides
+revisar la correcta ubicacion de las rutas en</strong> <code>init.el</code>)</p>
+
+<p>programo en haskell? no pero me hace gracia tener el modo</p>
+
+<h2 id="iniciando">Iniciando</h2>
+
+<p>Una vez Emacs esta en el sistema y ha sido invocado presiona <code>C-h t</code> (Control y
+&lsquo;h&rsquo; a la vez y luego &rsquo;t&rsquo;) esto abre el tutorial&hellip; <strong>bienvenido a Emacs!</strong></p>
+
+<p>La proxima entrega sera &ldquo;Emacs - Como crear un tema&rdquo;&hellip; o algo asi.</p>
 </div>
+</article>
 
-  
-  
-  <div class="thumb">
-  <h2 class="title"><a href="http://nasciiboy.github.io/apt/shnsplit/">Como dividir un album contenido en una sola pista flac</a></h2>
 
-  <ul class="meta">
-    <li><time datetime="2016-12-22 09:56:05 -0600 CST">Dec 22, 2016</time></li>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt</span></a></li>
+    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
     
+    <li><span class="path-pwd">Emacs - fist blood</span></li>
   </ul>
-
-  <div class="summary">En este mundo existen algunos seres extraños con tanto amor (libros, musica, series, peliculas, porno, &hellip;) que no les cabe en su disco duro y tienen que compartirlo.
-Si el amor viene en forma de una sola pista flac, no hagas como yo y la mandes a la mierda, toda muestra de afecto merece respeto&hellip; exepto si proviene de un degenerado que graba viniles en digital a maxima calidad, si formas parte de este grupo no mereces tener oidos.</div>
-</div>
-
-  
-  
-
-  
-
 </main>
 
 
