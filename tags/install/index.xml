@@ -121,7 +121,12 @@ revisar la correcta ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el
 
 &lt;p&gt;programo en haskell? no pero me hace gracia tener el modo&lt;/p&gt;
 
-&lt;p&gt;La proxima entrega sera &amp;ldquo;Emacs - Como crear un tema&amp;rdquo; o algo asi&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;iniciando&#34;&gt;Iniciando&lt;/h2&gt;
+
+&lt;p&gt;Una vez Emacs esta en el sistema y ha sido invocado presiona &lt;code&gt;C-h t&lt;/code&gt; (Control y
+&amp;lsquo;h&amp;rsquo; a la vez y luego &amp;rsquo;t&amp;rsquo;) esto abre el tutorial&amp;hellip; &lt;strong&gt;bienvenido a Emacs!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;La proxima entrega sera &amp;ldquo;Emacs - Como crear un tema&amp;rdquo;&amp;hellip; o algo asi.&lt;/p&gt;
 </description>
     </item>
     
