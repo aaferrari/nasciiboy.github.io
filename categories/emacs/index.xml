@@ -131,25 +131,6 @@ ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el&lt;/code&gt;)&lt;/p
     </item>
     
     <item>
-      <title>theme</title>
-      <link>http://nasciiboy.github.io/emacs/theme/</link>
-      <pubDate>Sat, 24 Dec 2016 16:26:28 -0600</pubDate>
-      
-      <guid>http://nasciiboy.github.io/emacs/theme/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&#34;&gt;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;info:emacs#Creating%20Custom%20Themes&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;M-x customize-themes&lt;/code&gt; lista los temas disponibles si nos gusta algun tema luego
-de probar  presionamos (Enter) en el boton Save Theme Settings&lt;/p&gt;
-
-&lt;p&gt;con &lt;code&gt;customize-create-theme&lt;/code&gt; podemos crear un tema, nos preguntara si deseamos
-incluir las caracteriscitas del tema actual  pulsando en el flecha podemos
-editar el atributo, cuando terminemos de editar guardamos con C-x C-s&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Que es GNU Emacs?</title>
       <link>http://nasciiboy.github.io/emacs/que-es-emacs/</link>
       <pubDate>Fri, 23 Dec 2016 20:43:19 -0600</pubDate>
