@@ -48,7 +48,7 @@ dnf builddep emacs
 exit
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;por motivos muy tristes no tengo debian, la ultima ves que compile
+&lt;p&gt;por motivos muy tristes no tengo debian, la ultima ocacion que compile
 emacs en debian fue con &lt;code&gt;apt-get build-dep emacs-24&lt;/code&gt;, intenta simplemente con
 &lt;code&gt;emacs&lt;/code&gt;, de lo contrario prueba con &lt;code&gt;emacs-25&lt;/code&gt;&lt;/p&gt;
 
@@ -114,10 +114,10 @@ no estoy seguro de ese hecho. Si esto sucede, existen dos soluciones posibles&lt
 &lt;/ol&gt;
 
 &lt;p&gt;como notas adicionales los atajos estan pensados en la distribucion de teclado
-&lt;strong&gt;programmer dvorak&lt;/strong&gt;  con algunas  5 teclas modificadas (los dos control,
-mayus, @ y \) y el modo go depende de que tengas una instalacion de go. Puedes
-seguir los dos pasos anteriores si encuentras algun problema (&lt;strong&gt;no olvides
-revisar la correcta ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el&lt;/code&gt;)&lt;/p&gt;
+&lt;strong&gt;programmer dvorak&lt;/strong&gt;  con 5 teclas modificadas (los dos control, mayus, @ y \)
+y el modo go depende de que tengas una instalacion de go. Puedes seguir los dos
+pasos anteriores si encuentras algun problema (&lt;strong&gt;no olvides revisar la correcta
+ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el&lt;/code&gt;)&lt;/p&gt;
 
 &lt;p&gt;programo en haskell? no pero me hace gracia tener el modo&lt;/p&gt;
 
