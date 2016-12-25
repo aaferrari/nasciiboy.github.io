@@ -7,8 +7,143 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 24 Dec 2016 10:04:44 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 25 Dec 2016 15:13:24 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Emacs - fist blood</title>
+      <link>http://nasciiboy.github.io/emacs/fist-blood/</link>
+      <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/fist-blood/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../first-blood.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalacion&#34;&gt;instalacion&lt;/h2&gt;
+
+&lt;p&gt;en general utilizo emacs apartir del codigo fuente, no obstante tambien tengo
+disponible el que ofresca la distribucion de turno, ya sea para probar algo o
+por si alguna presenta algun comportamiento extraño.&lt;/p&gt;
+
+&lt;p&gt;la vercion compilada nunca la he instalado en el sistema, pero tengo un atajo de
+teclado para su invocacion&lt;/p&gt;
+
+&lt;h3 id=&#34;desde-repositorios&#34;&gt;desde repositorios&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;# en debian
+apt-get install emacs
+# en fedora
+dnf install emacs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;compilar-desde-el-codigo-fuente&#34;&gt;compilar desde el codigo fuente&lt;/h3&gt;
+
+&lt;p&gt;instalamos las dependencias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;su
+# en debian
+apt-get build-dep emacs
+# en fedora
+dnf builddep emacs
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por motivos muy tristes no tengo debian, la ultima ves que compile
+emacs en debian fue con &lt;code&gt;apt-get build-dep emacs-24&lt;/code&gt;, intenta simplemente con
+&lt;code&gt;emacs&lt;/code&gt;, de lo contrario prueba con &lt;code&gt;emacs-25&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;(si no tienes &lt;code&gt;git&lt;/code&gt; instalalo)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone git://git.sv.gnu.org/emacs.git
+./autogen.sh
+./autogen.sh git
+./configure
+make
+# ya podemos utilizar emacs
+./src/emacs
+# si deseamos intalarlo
+su
+make install
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuracion-base&#34;&gt;configuracion base&lt;/h2&gt;
+
+&lt;p&gt;tenia mucho tiempo sin &amp;ldquo;purgar&amp;rdquo; la configuracion de Emacs, el resultado esta en
+este &lt;a href=&#34;../emacs-config.zip&#34;&gt;zip&lt;/a&gt; (33mb). Para utilizarla necesitas:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;descompribir&lt;/li&gt;
+&lt;li&gt;renombrar la carpeta como &lt;code&gt;.emacs.d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;y moverla a home.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Contenido&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- init.el         # fichero de configuracion de emacs
+- nascii-theme.el # tema nascii
+- plugins/        # todas las carpetas proceden directamente de git
+         company-mode               # autocompletado
+         magit                      # interfaz avanzada git emacs-style
+         dash.el                    #   dependencia de magit
+         with-editor                #   dependencia de magit
+         emacs-fish                 # modo para scripts fish
+         expand-region.el           # seleccion segun el contexto
+         go-mode.el                 # modo para golang
+         haskell-mode               # modo para haskell
+         markdown-mode              # modo para markdown
+         multiple-cursors.el        # cursores multiples
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Emacs posee un magnifico gestor de pagetes, pero soy un romantico e instale
+todos los &amp;ldquo;plugins&amp;rdquo; directamente de los fuentes, es decir, cada carpeta en
+&lt;code&gt;plugins&lt;/code&gt; tiene su &lt;code&gt;.git&lt;/code&gt;. En teoria esto hara que la configuracion este lista
+solo con copiar y pegar. Para ser especifico lo he probado con las versiones
+25.1.1 y 26.0.50, ambas en fedora.&lt;/p&gt;
+
+&lt;p&gt;Esto tambien significa que los repositorios no estan activados, tendras que
+hacerlo como antaño: llendo al navegador y averiguado como.&lt;/p&gt;
+
+&lt;p&gt;Los modos &lt;strong&gt;magit&lt;/strong&gt; y &lt;strong&gt;haskell&lt;/strong&gt; estan compilados (son los ficheros que
+terminan con &lt;code&gt;.elc&lt;/code&gt;) y es posible que se genere un error durante la carga aunque
+no estoy seguro de ese hecho. Si esto sucede, existen dos soluciones posibles&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;elimina la seccion correspondiente a dichos modos dentro de &lt;code&gt;init.el&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;o sigue las instrucciones dentro de &lt;code&gt;init.el&lt;/code&gt; y compila los modos&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;como notas adicionales los atajos estan pensados en la distribucion de teclado
+&lt;strong&gt;programmer dvorak&lt;/strong&gt;  con algunas  5 teclas modificadas (los dos control,
+mayus, @ y \) y el modo go depende de que tengas una instalacion de go. Puedes
+seguir los dos pasos anteriores si encuentras algun problema (&lt;strong&gt;no olvides
+revisar la correcta ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;programo en haskell? no pero me hace gracia tener el modo&lt;/p&gt;
+
+&lt;p&gt;La proxima entrega sera &amp;ldquo;Emacs - Como crear un tema&amp;rdquo; o algo asi&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>theme</title>
+      <link>http://nasciiboy.github.io/emacs/theme/</link>
+      <pubDate>Sat, 24 Dec 2016 16:26:28 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/theme/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&#34;&gt;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;info:emacs#Creating%20Custom%20Themes&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;M-x customize-themes&lt;/code&gt; lista los temas disponibles si nos gusta algun tema luego
+de probar  presionamos (Enter) en el boton Save Theme Settings&lt;/p&gt;
+
+&lt;p&gt;con &lt;code&gt;customize-create-theme&lt;/code&gt; podemos crear un tema, nos preguntara si deseamos
+incluir las caracteriscitas del tema actual  pulsando en el flecha podemos
+editar el atributo, cuando terminemos de editar guardamos con C-x C-s&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>fish</title>
@@ -300,12 +435,12 @@ terminales e interpretes y un tetris y un navegador web y gestor de paquetes y
 soporte para cualquier lenguaje de programacion (almenos resaltado) y un sin fin
 de utiles(?) aplicaciones, sin embargo &lt;strong&gt;todas compartian el mismo conjunto de
 comandos base&lt;/strong&gt; para moverse por la interfaz y manipular texto, aprender lo
-especifico que cada funcionalidad (en gerga de emacs, &lt;strong&gt;modo&lt;/strong&gt;) es un tema
+especifico de cada funcionalidad (en gerga de emacs, &lt;strong&gt;modo&lt;/strong&gt;) es un tema
 aparte que requiere una memoria exepcional&lt;/p&gt;
 
 &lt;p&gt;Cai como un yonqui adicto a cualquier informacion de emacs (los no hablantes de
 ingles tenemos un poco mas dicil&amp;hellip; todo), apenas aprendi algun nuevo comando lo
-ponia en practica (para olvidarlo tras un par de horas)&lt;/p&gt;
+ponia en practica (para olvidarlo un par de horas despues)&lt;/p&gt;
 
 &lt;p&gt;Y un buen dia entientes que puedes programar emacs, que todo comportamiento es
 modificable y de echo es modificable &lt;strong&gt;al vuelo&lt;/strong&gt; y te preguntas &lt;strong&gt;¿Que es
@@ -314,9 +449,9 @@ Emacs?&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;emacs-es&#34;&gt;Emacs Es&amp;hellip;&lt;/h2&gt;
 
 &lt;p&gt;El interprete de un lenguaje derivado de Lisp (Emacs Lisp). De hecho es el
-interprete mas sofisticado que existe y probablemente existira, ya que biene con
-el suficiente codigo precargado como para permitirte crear nuevos programas (y
-de paso hacerte creer que es un editor), funcionalidades o modificar Emacs en si
+interprete mas sofisticado que existe y probablemente existira, ya que viene con
+el suficiente codigo precargado como para (hacerte creer que es un editor y)
+permitirte crear nuevos programas, funcionalidades o modificar Emacs en si
 mismo&amp;hellip; existe un mejor diseño que ese?&lt;/p&gt;
 
 &lt;h2 id=&#34;enfoques-sobre-el-texto&#34;&gt;Enfoques sobre el texto&lt;/h2&gt;
@@ -330,7 +465,7 @@ extendamos y modifiquemos a voluntad y sin restricciones nuestra interfaz&lt;/p&
 
 &lt;p&gt;&lt;strong&gt;nano&lt;/strong&gt;: un simple editor&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;: joder, lo que pueden hacer los de emacs, hagamos vi extensible&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;: joder, lo que pueden hacer los de emacs, haremos a vi extensible&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;sublime&lt;/strong&gt;: hare mi propio vim&lt;/p&gt;
 

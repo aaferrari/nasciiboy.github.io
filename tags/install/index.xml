@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Install on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/tags/install/index.xml</link>
+    <description>Recent content in Install on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL 3.0</copyright>
+    <atom:link href="http://nasciiboy.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Emacs - fist blood</title>
+      <link>http://nasciiboy.github.io/emacs/fist-blood/</link>
+      <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/fist-blood/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../first-blood.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalacion&#34;&gt;instalacion&lt;/h2&gt;
+
+&lt;p&gt;en general utilizo emacs apartir del codigo fuente, no obstante tambien tengo
+disponible el que ofresca la distribucion de turno, ya sea para probar algo o
+por si alguna presenta algun comportamiento extraño.&lt;/p&gt;
+
+&lt;p&gt;la vercion compilada nunca la he instalado en el sistema, pero tengo un atajo de
+teclado para su invocacion&lt;/p&gt;
+
+&lt;h3 id=&#34;desde-repositorios&#34;&gt;desde repositorios&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;# en debian
+apt-get install emacs
+# en fedora
+dnf install emacs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;compilar-desde-el-codigo-fuente&#34;&gt;compilar desde el codigo fuente&lt;/h3&gt;
+
+&lt;p&gt;instalamos las dependencias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;su
+# en debian
+apt-get build-dep emacs
+# en fedora
+dnf builddep emacs
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por motivos muy tristes no tengo debian, la ultima ves que compile
+emacs en debian fue con &lt;code&gt;apt-get build-dep emacs-24&lt;/code&gt;, intenta simplemente con
+&lt;code&gt;emacs&lt;/code&gt;, de lo contrario prueba con &lt;code&gt;emacs-25&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;(si no tienes &lt;code&gt;git&lt;/code&gt; instalalo)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone git://git.sv.gnu.org/emacs.git
+./autogen.sh
+./autogen.sh git
+./configure
+make
+# ya podemos utilizar emacs
+./src/emacs
+# si deseamos intalarlo
+su
+make install
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuracion-base&#34;&gt;configuracion base&lt;/h2&gt;
+
+&lt;p&gt;tenia mucho tiempo sin &amp;ldquo;purgar&amp;rdquo; la configuracion de Emacs, el resultado esta en
+este &lt;a href=&#34;../emacs-config.zip&#34;&gt;zip&lt;/a&gt; (33mb). Para utilizarla necesitas:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;descompribir&lt;/li&gt;
+&lt;li&gt;renombrar la carpeta como &lt;code&gt;.emacs.d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;y moverla a home.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Contenido&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- init.el         # fichero de configuracion de emacs
+- nascii-theme.el # tema nascii
+- plugins/        # todas las carpetas proceden directamente de git
+         company-mode               # autocompletado
+         magit                      # interfaz avanzada git emacs-style
+         dash.el                    #   dependencia de magit
+         with-editor                #   dependencia de magit
+         emacs-fish                 # modo para scripts fish
+         expand-region.el           # seleccion segun el contexto
+         go-mode.el                 # modo para golang
+         haskell-mode               # modo para haskell
+         markdown-mode              # modo para markdown
+         multiple-cursors.el        # cursores multiples
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Emacs posee un magnifico gestor de pagetes, pero soy un romantico e instale
+todos los &amp;ldquo;plugins&amp;rdquo; directamente de los fuentes, es decir, cada carpeta en
+&lt;code&gt;plugins&lt;/code&gt; tiene su &lt;code&gt;.git&lt;/code&gt;. En teoria esto hara que la configuracion este lista
+solo con copiar y pegar. Para ser especifico lo he probado con las versiones
+25.1.1 y 26.0.50, ambas en fedora.&lt;/p&gt;
+
+&lt;p&gt;Esto tambien significa que los repositorios no estan activados, tendras que
+hacerlo como antaño: llendo al navegador y averiguado como.&lt;/p&gt;
+
+&lt;p&gt;Los modos &lt;strong&gt;magit&lt;/strong&gt; y &lt;strong&gt;haskell&lt;/strong&gt; estan compilados (son los ficheros que
+terminan con &lt;code&gt;.elc&lt;/code&gt;) y es posible que se genere un error durante la carga aunque
+no estoy seguro de ese hecho. Si esto sucede, existen dos soluciones posibles&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;elimina la seccion correspondiente a dichos modos dentro de &lt;code&gt;init.el&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;o sigue las instrucciones dentro de &lt;code&gt;init.el&lt;/code&gt; y compila los modos&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;como notas adicionales los atajos estan pensados en la distribucion de teclado
+&lt;strong&gt;programmer dvorak&lt;/strong&gt;  con algunas  5 teclas modificadas (los dos control,
+mayus, @ y \) y el modo go depende de que tengas una instalacion de go. Puedes
+seguir los dos pasos anteriores si encuentras algun problema (&lt;strong&gt;no olvides
+revisar la correcta ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;programo en haskell? no pero me hace gracia tener el modo&lt;/p&gt;
+
+&lt;p&gt;La proxima entrega sera &amp;ldquo;Emacs - Como crear un tema&amp;rdquo; o algo asi&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>fish</title>
+      <link>http://nasciiboy.github.io/apt/fish/</link>
+      <pubDate>Sat, 24 Dec 2016 10:04:44 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/apt/fish/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../ascii_fish.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;fish &lt;strong&gt;&amp;ldquo;El Shell de los 90s&amp;rdquo;&lt;/strong&gt;, es un shell como los son bash o zsh. Esta
+programado en C++ y se distribuye con la licencia GNU GPL version 2.&lt;/p&gt;
+
+&lt;p&gt;Segun &lt;a href=&#34;https://fishshell.com/&#34;&gt;su pagina&lt;/a&gt; tiene autocompletado, autosugerencias,
+colores VGA, se puede configurar con una interfaz web, todo funciona sin
+necesidad de mover nada y sus scripts son los mas bonitos del
+barrio&amp;hellip; &lt;strong&gt;MENTIRA&lt;/strong&gt; todos los scripts de shell son feos&lt;/p&gt;
+
+&lt;h2 id=&#34;como-cambiar-bash&#34;&gt;como? cambiar &lt;code&gt;bash&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;dialogo interno&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;luego de aprender lo basico de &lt;code&gt;bash&lt;/code&gt; (que ya funciona y lo hace bien) pasar a
+utilizar un shell que programa gente salida no se donde solo porque tiene
+colorines&amp;hellip; ja, ja, ja&amp;hellip; ni muerto, solo probare, para confirmar su
+inferioridad&amp;hellip; mierda, tiene autosugerencias/autocompletado automagico sin
+configurar nada&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;y asi es como pase a utilizar &lt;code&gt;fish&lt;/code&gt; y &lt;code&gt;bash&lt;/code&gt; dejo de ser suficiente.&lt;/p&gt;
+
+&lt;p&gt;Son mas bonitos los scripts fish? No.&lt;/p&gt;
+
+&lt;p&gt;Tiene tantos adeptos como bash? No.&lt;/p&gt;
+
+&lt;p&gt;Una interfaz de configuracion web es mejor? No.&lt;/p&gt;
+
+&lt;p&gt;Los colores de resaltado son mas llamativos? No, pero se pueden configurar.&lt;/p&gt;
+
+&lt;p&gt;El autocompletado/autosugerencias son perfectos? No, y sin embargo ya no puedo
+vivir sin esto&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalacion&#34;&gt;instalacion&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;$ su
+$ gestor-de-paquetes install fish
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;sin dejar el modo root revisa si fish se agrego a la &amp;ldquo;lista de shells&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cat /etc/shells
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de no encontrarse una linea que termine con &lt;code&gt;fish&lt;/code&gt; ejecuta&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ whereis fish
+fish: /usr/bin/fish /etc/fish /usr/share/fish /usr/share/man/man1/fish.1.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;acorde a la buenas costumbres &lt;code&gt;fish&lt;/code&gt; esta en &lt;code&gt;/usr/bin/&lt;/code&gt;. Agregamos la ruta
+a la lista de shells&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ echo &amp;quot;/usr/bin/shells&amp;quot; &amp;gt;&amp;gt; /etc/shells
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora cambiamos la shell por defecto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ chsh
+Cambiando intérprete de órdenes para nasciiboy.
+Nuevo intérprete de órdenes [/usr/bin/bash]: /usr/bin/fish
+$ exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si tenemos un terminal grafico, quiza sea necesario configurar el cambio
+(proceda segun el caso).&lt;/p&gt;
+
+&lt;p&gt;Ejecutamos &lt;code&gt;fish&lt;/code&gt;, o abrimos una nueva secion y optenemos esto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Welcome to fish, the friendly interactive shell
+Type help for instructions on how to use fish
+you@hostname ~&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si ejecutamos &lt;code&gt;help&lt;/code&gt; optenemos la documentacion en una pestaña del navegador por
+defecto&amp;hellip; claro siempre que estes en modo grafico de lo contrario
+optendras un error&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;configuracion&#34;&gt;configuracion&lt;/h2&gt;
+
+&lt;p&gt;si ejecutomos &lt;code&gt;fish_config&lt;/code&gt; se abrira una intefaz web (en el navegador web por
+defecto) donde podemos configurar el tema, el prompt y demas&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../fish_customize.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;si bien no esta aconsejado, podemos hacer lo mismo a mano con nuestro editor de
+confianza la ruta es &lt;code&gt;~/.config/fish/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;La configuracion basica (equivalente al &lt;code&gt;~/.bashrc&lt;/code&gt;) esta en &lt;code&gt;config.fish&lt;/code&gt;. Esta es
+la configuracion de nasciiboy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set -g -x fish_greeting &#39;&#39;              # elimina el mensaje de inicio
+set --export GOPATH /home/nasciiboy/go  # asi configuras una variable
+set --export PATH $GOPATH/bin $PATH     # asi agregas una ruta al PATH
+set --export EDITOR &amp;quot;emacs -nw&amp;quot;         # con esto se establece el editor
+
+# screenfetch -D debian                 # esto es un comentario comentado
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el prompt se establece en la carpeta &lt;code&gt;functions&lt;/code&gt; en el fichero
+&lt;code&gt;fish_prompt.fish&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function fish_prompt
+        set_color -o fff
+        printf &#39;--( &#39;
+
+        switch (whoami)
+                case nasciiboy
+                        set_color cyan
+                case root
+                        set_color red
+                case &#39;*&#39;
+                        set_color yellow
+        end
+
+        printf &amp;quot;%s&amp;quot; (whoami)
+
+        set_color fff
+        printf &#39; ) - { &#39;
+
+        set_color 54ffff
+        printf &#39;%s&#39; (prompt_pwd)
+
+        set_color fff
+        printf &amp;quot; }\n--| &amp;quot;
+
+        set_color normal
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto genera este prompt&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../nascii_prompt.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;para terminar el esquema de color y los alias se encuentran el el fichero
+&lt;code&gt;fishd.localhost.localdomain&lt;/code&gt; el &lt;code&gt;localdomain&lt;/code&gt; puede ser tu local domain en mi
+caso &lt;code&gt;localnasciiboy&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# This file is automatically generated by the fish.
+# Do NOT edit it directly, your changes will be overwritten.
+SET __fish_classic_git_prompt_initialized:\x1d
+SET __fish_init_1_50_0:\x1d
+SET __fish_init_2_3_0:\x1d
+SET fish_color_autosuggestion:ffffff
+SET fish_color_command:5fffff
+SET fish_color_comment:ff0000
+SET fish_color_cwd:green
+SET fish_color_cwd_root:red
+SET fish_color_end:ffffff
+SET fish_color_error:ffff00
+SET fish_color_escape:cyan
+SET fish_color_history_current:cyan
+SET fish_color_host:normal
+SET fish_color_match:cyan
+SET fish_color_normal:normal
+SET fish_color_operator:cyan
+SET fish_color_param:ffffff
+SET fish_color_quote:ffffff
+SET fish_color_redirection:ff5f00
+SET fish_color_search_match:\x2d\x2dbackground\x3dpurple
+SET fish_color_selection:\x2d\x2dbackground\x3dpurple
+SET fish_color_status:red
+SET fish_color_user:green
+SET fish_color_valid_path:\x2d\x2dunderline
+SET fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell\x0aType\x20\x1b\x5b32mhelp\x1b\x5b30m\x1b\x28B\x1b\x5bm\x20for\x20instructions\x20on\x20how\x20to\x20use\x20fish
+SET fish_key_bindings:fish_default_key_bindings
+SET fish_pager_color_completion:normal
+SET fish_pager_color_description:555\x1eyellow
+SET fish_pager_color_prefix:cyan
+SET fish_pager_color_progress:cyan
+SET fish_user_abbreviations:\x2b\x2b\x20ls\x20\x2dFalh\x20\x2d\x2dcolor\x3dauto\x1e\x2b\x20ls\x20\x2dF\x20\x2d\x2dcolor\x3dauto\x1e\u00e7\x20mocp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tengo tres alias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;+&amp;quot;  para &amp;quot;ls -F --color=auto&amp;quot;
+&amp;quot;++&amp;quot; para &amp;quot;ls -Falh --color=auto&amp;quot;
+&amp;quot;ç&amp;quot;  para &amp;quot;mocp&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;he probado la configuracion en varios sistemas y para root y ha funcionado sin
+inconvenientes&lt;/p&gt;
+
+&lt;h2 id=&#34;detalles&#34;&gt;detalles&lt;/h2&gt;
+
+&lt;p&gt;la mayoria de atajos de bash sirven en fish, tambien se pueden personalizar a
+exepcion de uno muy importante Ctrl-r (revizar el historial). fish soluciona
+esto de una forma mas elegante: siempre estas en el historial, con
+Ctrl-P/flecha-arriba para anterior, Ctrl-N/flecha-abajo para siguiente&lt;/p&gt;
+
+&lt;p&gt;quiza lo que menos me gusta de fish es su manera de ejecutar una tarea si la anterir se
+realiza. En bash es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ comando-1 &amp;amp;&amp;amp; comando-2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en fish es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ comando-1; and comando-2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;manipular-scrips-fish-en-emacs&#34;&gt;Manipular scrips fish en emacs&lt;/h2&gt;
+
+&lt;p&gt;abre emacs y ejecuta esto (necesario tener melpa)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;M-x package-install fish-mode
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>moc</title>
+      <link>http://nasciiboy.github.io/apt/moc/</link>
+      <pubDate>Thu, 22 Dec 2016 11:56:44 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/apt/moc/</guid>
+      <description>&lt;p&gt;En GNU existe una cantidad ridicula de &lt;strong&gt;reproductores de audio&lt;/strong&gt;, por
+participar hasta el vlc o video (gnome) se meten en esos temas.&lt;/p&gt;
+
+&lt;p&gt;En general este tipo de aplicaciones te piden una carpeta &amp;ldquo;especial&amp;rdquo; donde
+coloques la musica y luego exitienden sus tentaculos para optener portadas,
+letras, titulos, generar listas de reproduccion por autor/mas escuchados/genero,
+y un sin numero mas de caracteristicas que incluyen conectarse a la red, claro
+mientras te roban un espacio con una interfaz de lo mas mona, pensada para mover
+el raton de un lado a otro&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;si por el contrario, &lt;strong&gt;el album es tu lista de reproduccion&lt;/strong&gt;, la carpeta con
+el nombre del grupo el unico metadato que necesitas y mover la mano con el raton
+no te genera ningun placer, existe &lt;strong&gt;moc&lt;/strong&gt; (&lt;a href=&#34;https://moc.daper.net/&#34;&gt;Music On Console&lt;/a&gt;)
+un eficiente reproductor de todo tipo de ficheros de audio desde la consola, con
+una interfaz tipo &amp;ldquo;navegador de ficheros&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;si tienes una distro descente (como debian) estara en los repositorios, en el
+caso de freidora la encontraras en rpm-fusion, instalarla no cuesta nada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gestor-de-pagetes install moc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para ejecutarla simplemente escribimos &lt;code&gt;mocp&lt;/code&gt; en la consola (en freidora por
+alguna obscura razon primero tenemos que crear un fichero en blanco (como root)
+&lt;code&gt;touch /etc/popt.d/empty_file&lt;/code&gt;) y optenemos esto&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../moc-default.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;como soy un ser de la noche, fue necesario realizar alguna modificacion dejando
+el tema asi&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../moc-nascii.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;en este &lt;a href=&#34;../moc-nascii-theme.zip&#34;&gt;zip&lt;/a&gt; encontraras el tema &amp;ldquo;nascii-theme&amp;rdquo; y una
+configuracion basica. Debes colocar el contenido en tu home dentro del
+directorio &lt;code&gt;.moc&lt;/code&gt;, no sin antes modificar las siguientes lineas del fichero
+&lt;code&gt;config&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# substituye &amp;quot;user&amp;quot; por tu nombre de usuario
+# linea  72 - directorio por defecto
+MusicDir = &amp;quot;/home/user/fonos&amp;quot;
+# linea  92 - reproducir siguiente pista
+AutoNext = yes
+# linea 194 - tema por defecto
+Theme = /home/user/.moc/themes/nascii_theme
+# linea 242 - guardar playlist para la siguiente secion
+SavePlaylist = yes
+# En la posicion 277 puedes configurar el acceso
+# rapido a algunos directorios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;presionando &lt;code&gt;h&lt;/code&gt; se muestran los comandos (teclas) que puedes ejecutar.&lt;/p&gt;
+
+&lt;p&gt;Listo, a disfrutar de buena musica&lt;/p&gt;
+
+&lt;p&gt;ps: ese album de la cura esta&amp;hellip; bueno, en contraste a algunos otros.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

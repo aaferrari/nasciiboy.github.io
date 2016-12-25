@@ -10,6 +10,25 @@
     <atom:link href="http://nasciiboy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>theme</title>
+      <link>http://nasciiboy.github.io/emacs/theme/</link>
+      <pubDate>Sat, 24 Dec 2016 16:26:28 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/theme/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&#34;&gt;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;info:emacs#Creating%20Custom%20Themes&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;M-x customize-themes&lt;/code&gt; lista los temas disponibles si nos gusta algun tema luego
+de probar  presionamos (Enter) en el boton Save Theme Settings&lt;/p&gt;
+
+&lt;p&gt;con &lt;code&gt;customize-create-theme&lt;/code&gt; podemos crear un tema, nos preguntara si deseamos
+incluir las caracteriscitas del tema actual  pulsando en el flecha podemos
+editar el atributo, cuando terminemos de editar guardamos con C-x C-s&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Que es GNU Emacs?</title>
       <link>http://nasciiboy.github.io/emacs/que-es-emacs/</link>
       <pubDate>Fri, 23 Dec 2016 20:43:19 -0600</pubDate>
@@ -79,12 +98,12 @@ terminales e interpretes y un tetris y un navegador web y gestor de paquetes y
 soporte para cualquier lenguaje de programacion (almenos resaltado) y un sin fin
 de utiles(?) aplicaciones, sin embargo &lt;strong&gt;todas compartian el mismo conjunto de
 comandos base&lt;/strong&gt; para moverse por la interfaz y manipular texto, aprender lo
-especifico que cada funcionalidad (en gerga de emacs, &lt;strong&gt;modo&lt;/strong&gt;) es un tema
+especifico de cada funcionalidad (en gerga de emacs, &lt;strong&gt;modo&lt;/strong&gt;) es un tema
 aparte que requiere una memoria exepcional&lt;/p&gt;
 
 &lt;p&gt;Cai como un yonqui adicto a cualquier informacion de emacs (los no hablantes de
 ingles tenemos un poco mas dicil&amp;hellip; todo), apenas aprendi algun nuevo comando lo
-ponia en practica (para olvidarlo tras un par de horas)&lt;/p&gt;
+ponia en practica (para olvidarlo un par de horas despues)&lt;/p&gt;
 
 &lt;p&gt;Y un buen dia entientes que puedes programar emacs, que todo comportamiento es
 modificable y de echo es modificable &lt;strong&gt;al vuelo&lt;/strong&gt; y te preguntas &lt;strong&gt;¿Que es
@@ -93,9 +112,9 @@ Emacs?&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;emacs-es&#34;&gt;Emacs Es&amp;hellip;&lt;/h2&gt;
 
 &lt;p&gt;El interprete de un lenguaje derivado de Lisp (Emacs Lisp). De hecho es el
-interprete mas sofisticado que existe y probablemente existira, ya que biene con
-el suficiente codigo precargado como para permitirte crear nuevos programas (y
-de paso hacerte creer que es un editor), funcionalidades o modificar Emacs en si
+interprete mas sofisticado que existe y probablemente existira, ya que viene con
+el suficiente codigo precargado como para (hacerte creer que es un editor y)
+permitirte crear nuevos programas, funcionalidades o modificar Emacs en si
 mismo&amp;hellip; existe un mejor diseño que ese?&lt;/p&gt;
 
 &lt;h2 id=&#34;enfoques-sobre-el-texto&#34;&gt;Enfoques sobre el texto&lt;/h2&gt;
@@ -109,7 +128,7 @@ extendamos y modifiquemos a voluntad y sin restricciones nuestra interfaz&lt;/p&
 
 &lt;p&gt;&lt;strong&gt;nano&lt;/strong&gt;: un simple editor&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;: joder, lo que pueden hacer los de emacs, hagamos vi extensible&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;: joder, lo que pueden hacer los de emacs, haremos a vi extensible&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;sublime&lt;/strong&gt;: hare mi propio vim&lt;/p&gt;
 
