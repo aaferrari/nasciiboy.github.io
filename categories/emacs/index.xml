@@ -23,9 +23,9 @@
 
 &lt;p&gt;en general utilizo emacs apartir del codigo fuente, no obstante tambien tengo
 disponible el que ofresca la distribucion de turno, ya sea para probar algo o
-por si alguna presenta algun comportamiento extraño.&lt;/p&gt;
+por si alguna version presenta algun comportamiento extraño.&lt;/p&gt;
 
-&lt;p&gt;la vercion compilada nunca la he instalado en el sistema, pero tengo un atajo de
+&lt;p&gt;la version compilada nunca la he instalado en el sistema, en su lugar tengo un atajo de
 teclado para su invocacion&lt;/p&gt;
 
 &lt;h3 id=&#34;desde-repositorios&#34;&gt;desde repositorios&lt;/h3&gt;
@@ -73,7 +73,7 @@ exit
 este &lt;a href=&#34;../emacs-config.zip&#34;&gt;zip&lt;/a&gt; (33mb). Para utilizarla necesitas:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;descompribir&lt;/li&gt;
+&lt;li&gt;descomprimir&lt;/li&gt;
 &lt;li&gt;renombrar la carpeta como &lt;code&gt;.emacs.d&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;y moverla a home.&lt;/li&gt;
 &lt;/ol&gt;
@@ -119,7 +119,7 @@ y el modo go depende de que tengas una instalacion de go. Puedes seguir los dos
 pasos anteriores si encuentras algun problema (&lt;strong&gt;no olvides revisar la correcta
 ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el&lt;/code&gt;)&lt;/p&gt;
 
-&lt;p&gt;programo en haskell? no pero me hace gracia tener el modo&lt;/p&gt;
+&lt;p&gt;programo en haskell? no, pero me hace gracia tener el modo&lt;/p&gt;
 
 &lt;h2 id=&#34;iniciando&#34;&gt;Iniciando&lt;/h2&gt;
 

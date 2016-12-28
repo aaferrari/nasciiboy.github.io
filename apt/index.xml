@@ -73,7 +73,7 @@ fish: /usr/bin/fish /etc/fish /usr/share/fish /usr/share/man/man1/fish.1.gz
 &lt;p&gt;acorde a la buenas costumbres &lt;code&gt;fish&lt;/code&gt; esta en &lt;code&gt;/usr/bin/&lt;/code&gt;. Agregamos la ruta
 a la lista de shells&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ echo &amp;quot;/usr/bin/shells&amp;quot; &amp;gt;&amp;gt; /etc/shells
+&lt;pre&gt;&lt;code&gt;$ echo &amp;quot;/usr/bin/fish&amp;quot; &amp;gt;&amp;gt; /etc/shells
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;ahora cambiamos la shell por defecto&lt;/p&gt;
