@@ -199,7 +199,7 @@ SET fish_user_abbreviations:\x2b\x2b\x20ls\x20\x2dFalh\x20\x2d\x2dcolor\x3dauto\
 &amp;quot;ç&amp;quot;  para &amp;quot;mocp&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;he probado la configuracion en varios sistemas y para root y ha funcionado sin
+&lt;p&gt;he probado la configuracion en varios sistemas y para root, ha funcionado sin
 inconvenientes&lt;/p&gt;
 
 &lt;h2 id=&#34;detalles&#34;&gt;detalles&lt;/h2&gt;
@@ -222,10 +222,24 @@ realiza. En bash es&lt;/p&gt;
 
 &lt;h2 id=&#34;manipular-scrips-fish-en-emacs&#34;&gt;Manipular scrips fish en emacs&lt;/h2&gt;
 
-&lt;p&gt;abre emacs y ejecuta esto (necesario tener melpa)&lt;/p&gt;
+&lt;p&gt;sencillo instalamos el paquete &lt;code&gt;fish-mode&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;mediante-melpa&#34;&gt;Mediante melpa&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;M-x package-install fish-mode
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;manualmente&#34;&gt;Manualmente&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/wwwjfy/emacs-fish.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y luego, dentro de emacs cargamos el paquete con:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(load-file &amp;quot;/RUTA/A/REPOSITORIO/emacs-fish/fish-mode.el&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para que el cambio sea permanente agregamos la enterior linea a &lt;code&gt;init.el&lt;/code&gt;&lt;/p&gt;
 </description>
     </item>
     
