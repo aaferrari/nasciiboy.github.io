@@ -38,15 +38,15 @@ de &lt;a href=&#34;../color-theme-6.6.0.zip&#34;&gt;zip&lt;/a&gt; (con un tema p
 (require &#39;color-theme)
 (color-theme-initialize)
 
-## para cargar un tema en especifico
-## (color-theme-nombreDelTema)
+;; para cargar un tema en especifico
+;; (color-theme-nombreDelTema)
 (color-theme-nascii)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;modificar-el-tema-por-defecto&#34;&gt;modificar el tema por defecto&lt;/h3&gt;
+&lt;h3 id=&#34;establecer-el-tema-por-defecto&#34;&gt;establecer el tema por defecto&lt;/h3&gt;
 
-&lt;p&gt;apartir de la version 24 de emacs podemos cambiar el tema sin instalar nada con
-el comando &lt;code&gt;customize-themes&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;apartir de emacs version 24 podemos cambiar el tema sin instalar nada con el
+comando &lt;code&gt;customize-themes&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../custom-themes.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -54,11 +54,18 @@ el comando &lt;code&gt;customize-themes&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../custom-themes-ligth-blue.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;para guardar el cambio colocamos el cursor en el &amp;ldquo;boton&amp;rdquo; &lt;strong&gt;Save Theme Setting&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;para guardar el cambio colocamos el cursor en el &amp;ldquo;boton&amp;rdquo; &lt;strong&gt;Save Theme
+Setting&lt;/strong&gt; + un enter, accion que colocara automagicamente unas lineas de codigo
+extra en nuestro &lt;code&gt;init.el&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si no te van las cosas automagicas, puedes establecer la carga de un tema
+directamente en el fichero de configuracion &lt;code&gt;init.el&lt;/code&gt; con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(load-file &amp;quot;~/RUTA/A/miTema-theme.el&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;si queremos que el menu de seleccion cargue un tema automaticamente, tiene que
-estar en nuestro directorio de configuracion
-&lt;code&gt;~/.emacs.d/&lt;/code&gt;&lt;strong&gt;nombreTema&lt;/strong&gt;&lt;code&gt;-theme.el&lt;/code&gt;&lt;/p&gt;
+estar en nuestro directorio de configuracion &lt;code&gt;~/.emacs.d/&lt;/code&gt;&lt;strong&gt;nombreTema&lt;/strong&gt;&lt;code&gt;-theme.el&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;crear-un-tema&#34;&gt;crear un tema&lt;/h3&gt;
 
@@ -71,13 +78,14 @@ un tema a partir de cero segun indiquemos al comando &lt;code&gt;customize-creat
 &lt;strong&gt;Description&lt;/strong&gt; dejamos la fecha de creacion o en su lugar colocamos una
 descripcion del tema, por ejemplo &lt;code&gt;&amp;quot;nascii-theme un tema obscuro mas...&amp;quot;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;establecemos las varibles a gusto y guardamos el tema con &lt;code&gt;C-x C-s&lt;/code&gt; o con un
+&lt;p&gt;establecemos las variables a gusto y guardamos el tema con &lt;code&gt;C-x C-s&lt;/code&gt; o con un
 intro sobre el recuadro &lt;strong&gt;Save Theme&lt;/strong&gt;. Regresamos a &lt;code&gt;customize-themes&lt;/code&gt; y
 automagicamente nuestro tema estara disponible.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Nota&lt;/strong&gt;: Si creamos el tema apartir de la configuracion actual y queremos
 compartirlo con los demas habitantes de la red, debemos evitar incluir algunas
-variables en el codigo fuente del tema como el tipo de tipografia.&lt;/p&gt;
+variables especificas de nuestro sistema en el codigo fuente del tema, por
+ejemplo, el tipo de tipografia.&lt;/p&gt;
 
 &lt;h3 id=&#34;ver-los-cambios-al-vuelo&#34;&gt;ver los cambios &amp;ldquo;al vuelo&amp;rdquo;&lt;/h3&gt;
 
@@ -169,6 +177,14 @@ recargar los cambios estilo navegador web.&lt;/p&gt;
 
 (provide-theme &#39;nascii)
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para cargar el tema, copiar y guardar en &lt;code&gt;&amp;quot;~/.emacs.d/nascii-theme.el&amp;quot;&lt;/code&gt;, luego se
+puede cargar/probar ejecutando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(load-file &amp;quot;~/.emacs.d/nascii-theme.el&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o mediante &lt;code&gt;customize-themes&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;referencias&#34;&gt;referencias&lt;/h2&gt;
 

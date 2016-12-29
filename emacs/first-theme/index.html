@@ -3,8 +3,7 @@
   <head>
     <title>first theme - nba - GNU&#39;s Rock</title>
     
-    
-<style media="screen">
+    <style media="screen">
 :root {
                             
     --BGC      : #000000;   
@@ -206,15 +205,15 @@ de <a href="../color-theme-6.6.0.zip">zip</a> (con un tema personalizado de rega
 (require 'color-theme)
 (color-theme-initialize)
 
-## para cargar un tema en especifico
-## (color-theme-nombreDelTema)
+;; para cargar un tema en especifico
+;; (color-theme-nombreDelTema)
 (color-theme-nascii)
 </code></pre>
 
-<h3 id="modificar-el-tema-por-defecto">modificar el tema por defecto</h3>
+<h3 id="establecer-el-tema-por-defecto">establecer el tema por defecto</h3>
 
-<p>apartir de la version 24 de emacs podemos cambiar el tema sin instalar nada con
-el comando <code>customize-themes</code></p>
+<p>apartir de emacs version 24 podemos cambiar el tema sin instalar nada con el
+comando <code>customize-themes</code></p>
 
 <p><img src="../custom-themes.png" alt="" /></p>
 
@@ -222,11 +221,18 @@ el comando <code>customize-themes</code></p>
 
 <p><img src="../custom-themes-ligth-blue.png" alt="" /></p>
 
-<p>para guardar el cambio colocamos el cursor en el &ldquo;boton&rdquo; <strong>Save Theme Setting</strong></p>
+<p>para guardar el cambio colocamos el cursor en el &ldquo;boton&rdquo; <strong>Save Theme
+Setting</strong> + un enter, accion que colocara automagicamente unas lineas de codigo
+extra en nuestro <code>init.el</code>.</p>
+
+<p>Si no te van las cosas automagicas, puedes establecer la carga de un tema
+directamente en el fichero de configuracion <code>init.el</code> con</p>
+
+<pre><code>(load-file &quot;~/RUTA/A/miTema-theme.el&quot;)
+</code></pre>
 
 <p>si queremos que el menu de seleccion cargue un tema automaticamente, tiene que
-estar en nuestro directorio de configuracion
-<code>~/.emacs.d/</code><strong>nombreTema</strong><code>-theme.el</code></p>
+estar en nuestro directorio de configuracion <code>~/.emacs.d/</code><strong>nombreTema</strong><code>-theme.el</code></p>
 
 <h3 id="crear-un-tema">crear un tema</h3>
 
@@ -239,13 +245,14 @@ un tema a partir de cero segun indiquemos al comando <code>customize-create-them
 <strong>Description</strong> dejamos la fecha de creacion o en su lugar colocamos una
 descripcion del tema, por ejemplo <code>&quot;nascii-theme un tema obscuro mas...&quot;</code></p>
 
-<p>establecemos las varibles a gusto y guardamos el tema con <code>C-x C-s</code> o con un
+<p>establecemos las variables a gusto y guardamos el tema con <code>C-x C-s</code> o con un
 intro sobre el recuadro <strong>Save Theme</strong>. Regresamos a <code>customize-themes</code> y
 automagicamente nuestro tema estara disponible.</p>
 
 <p><strong>Nota</strong>: Si creamos el tema apartir de la configuracion actual y queremos
 compartirlo con los demas habitantes de la red, debemos evitar incluir algunas
-variables en el codigo fuente del tema como el tipo de tipografia.</p>
+variables especificas de nuestro sistema en el codigo fuente del tema, por
+ejemplo, el tipo de tipografia.</p>
 
 <h3 id="ver-los-cambios-al-vuelo">ver los cambios &ldquo;al vuelo&rdquo;</h3>
 
@@ -337,6 +344,14 @@ recargar los cambios estilo navegador web.</p>
 
 (provide-theme 'nascii)
 </code></pre>
+
+<p>para cargar el tema, copiar y guardar en <code>&quot;~/.emacs.d/nascii-theme.el&quot;</code>, luego se
+puede cargar/probar ejecutando</p>
+
+<pre><code>(load-file &quot;~/.emacs.d/nascii-theme.el&quot;)
+</code></pre>
+
+<p>o mediante <code>customize-themes</code></p>
 
 <h2 id="referencias">referencias</h2>
 
