@@ -57,13 +57,13 @@ comando &lt;code&gt;customize-themes&lt;/code&gt;&lt;/p&gt;
 Setting&lt;/strong&gt; + un enter, accion que colocara automagicamente unas lineas de codigo
 extra en nuestro &lt;code&gt;init.el&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Si no te van las cosas automagicas, puedes establecer la carga de un tema
+&lt;p&gt;No te van las cosas automagicas? puedes establecer la carga de un tema
 directamente en el fichero de configuracion &lt;code&gt;init.el&lt;/code&gt; con&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;(load-file &amp;quot;~/RUTA/A/miTema-theme.el&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;si queremos que el menu de seleccion cargue un tema automaticamente, tiene que
+&lt;p&gt;Si queremos que el menu de seleccion cargue un tema automaticamente, tiene que
 estar en nuestro directorio de configuracion &lt;code&gt;~/.emacs.d/&lt;/code&gt;&lt;strong&gt;nombreTema&lt;/strong&gt;&lt;code&gt;-theme.el&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;crear-un-tema&#34;&gt;crear un tema&lt;/h3&gt;
@@ -189,8 +189,13 @@ puede cargar/probar ejecutando&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&#34;&gt;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;si estas dentro de emacs y cambias a org-mode puedes ir al manual en info pulsando &lt;code&gt;C-c
-C-o&lt;/code&gt; sobre -&amp;gt;&amp;gt; [[info:emacs#Creating%20Custom%20Themes]]&lt;/p&gt;
+&lt;p&gt;tambien puede acceder directamente al manual dentro de emacs. Copia esto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[info:emacs#Creating%20Custom%20Themes]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pegalo en algun buffer, cambia a modo-org, coloca el cursor sobre el texto y
+presiona &lt;code&gt;C-c C-o&lt;/code&gt;&lt;/p&gt;
 </description>
     </item>
     
