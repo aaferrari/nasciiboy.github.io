@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nasciiboy.github.io/vg/solarus/</loc>
+    <lastmod>2017-01-01T14:56:59-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/post/Krautrock-Albums/</loc>
     <lastmod>2016-12-30T18:21:44-06:00</lastmod>
   </url>
@@ -116,12 +121,6 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/fonos/</loc>
-    <lastmod>2016-12-22T11:56:44-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://nasciiboy.github.io/categories/fonos/</loc>
     <lastmod>2016-12-30T18:21:44-06:00</lastmod>
     <priority>0</priority>
   </url>
@@ -157,14 +156,8 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/tags/post/</loc>
-    <lastmod>2016-12-30T18:21:44-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://nasciiboy.github.io/categories/post/</loc>
-    <lastmod>2016-12-16T17:19:32-06:00</lastmod>
+    <lastmod>2016-12-30T18:21:44-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -205,19 +198,25 @@
   </url>
   
   <url>
+    <loc>http://nasciiboy.github.io/tags/solarus/</loc>
+    <lastmod>2017-01-01T14:56:59-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/categories/vg/</loc>
-    <lastmod>2016-12-19T11:29:56-06:00</lastmod>
+    <lastmod>2017-01-01T14:56:59-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/vg/</loc>
-    <lastmod>2016-12-19T11:29:56-06:00</lastmod>
+    <lastmod>2017-01-01T14:56:59-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -229,7 +228,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2016-12-30T18:21:44-06:00</lastmod>
+    <lastmod>2017-01-01T14:56:59-06:00</lastmod>
     <priority>0</priority>
   </url>
   

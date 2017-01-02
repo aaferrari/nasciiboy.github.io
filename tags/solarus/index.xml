@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Solarus on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/tags/solarus/index.xml</link>
+    <description>Recent content in Solarus on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL 3.0</copyright>
+    <atom:link href="http://nasciiboy.github.io/tags/solarus/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Zelda solarus</title>
+      <link>http://nasciiboy.github.io/vg/solarus/</link>
+      <pubDate>Sun, 01 Jan 2017 14:56:59 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/vg/solarus/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../solarus_logo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Segun la propia &lt;a href=&#34;http://www.solarus-games.org/&#34;&gt;web del proyecto&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Solarus es un motor de juegos Action-RPG gratuito y de codigo abierto, con
+licencia GPL y esta escrito en C++. Ejecuta quest (campañas?) en Lua y puede
+trabajar en un gran numero de plataformas.&lt;/p&gt;
+
+&lt;p&gt;Solarus tambien cuenta con un editor de juegos llamado Solarus Quest Editor
+escrito en C++ con Qt para ayudarte a crear un juego.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Por que los proyectos utilizan el palabro &amp;ldquo;open source&amp;rdquo; si estan bajo la
+licencia GPL?&lt;/p&gt;
+
+&lt;p&gt;Aunque en la web no se especifa, en la practica el motor fue creado para hacer
+un videojuego fan-tributo de Zelda, y todos las juegos que de el han nacido
+tiene que ver con Zelda, al parecer utilizan recursos salidos directamente de un
+titulo de nintendo, ni idea de cual, supongo sera de snes. Por suerte el
+proyecto parace no tener problemas legales de ningun tipo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../logo_2x.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;THE LEGEND OF ZELDA Mystery Of Solarus DX&lt;/strong&gt; es el primer titulo que pruebo con
+respecto a la saga zelda, sin importar ser o no un fan-game tiene una calidad
+brutal, dificultad imposible y es muy adictivo. Reconosco que para terminarlo
+fue necesario ver una guia (del propio creador) en no pocas ocaciones, no sin
+antes pasar horas sin saber que hacer&amp;hellip; tambien modifique el fichero de
+salvamento para poner el dinero y municion a tope.&lt;/p&gt;
+
+&lt;p&gt;En definitiva si tuviese dinero compraria una consola e intentaria con algun
+titulo oficial. Si tuviese mas dinero compraria nintentdo y pondria su
+hardware/software libre tras un perido no mayor a 5 años luego del lanzamiento
+del titulo&amp;hellip; un hombre debe tener sueños.&lt;/p&gt;
+
+&lt;h2 id=&#34;compilar-solarus-engine-desde-repositorios&#34;&gt;Compilar solarus-engine desde repositorios&lt;/h2&gt;
+
+&lt;p&gt;La lista de dependencias en Debian salio directamete del sitio web, si ya tienes el
+codigo fuente de solarus puedes ver los pasos en el fichero &lt;code&gt;compilation.txt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;instalar dependencias en Debian&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libmodplug-dev libvorbis-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En el caso de fedora me he limitado a buscar el equivalente. Compilo cosas por
+pasatiempo y mi sistema ya tiene un monton de librerias, a modo de prueba intete
+compilar sin instalar nada mas y&amp;hellip; compilo, si encuentras algun inconveniente
+no dudes en enviar un &lt;a href=&#34;mailto:nasciiboy@gmail.com&#34;&gt;correo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;instalar dependencias en fedora&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnf -y install SDL2-devel SDL2-image-devel SDL2-ttf-devel luajit-devel physfs-devel openal-soft-devel libmodplug-devel libvorbis-devel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;creamos una carpeta donde estara el codigo del motor y el de los tres juegos que
+aparecen listados en la pagina de solarus&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir solarus
+cd solarus
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;clonamos el motor y los tres juegos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/solarus-games/solarus.git
+git clone https://github.com/solarus-games/zsdx.git
+git clone https://github.com/solarus-games/zsxd.git
+git clone https://github.com/solarus-games/zelda-roth-se.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;compilamos el motor&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd solarus
+mkdir build
+cd build
+cmake ..
+make
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si la compilacion fue exitosa ya podemos ejecutar los juegos. Sin cambiar de
+directorio ejecutamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./solarus_run ../../zsdx/
+
+./solarus_run ../../zsxd/
+
+./solarus_run ../../zelda-roth-se/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;los tres titulos se encuentran traducidos al español, las teclas de
+funcionamiento son ajustables y tambien tiene soporte para joystick (en concreto
+tengo el Logiteth 710, que funciona de forma nativa sin instalar nada)&lt;/p&gt;
+
+&lt;p&gt;recientemente inicie zelda-roth-se por motivos desconocidos los caracteres
+&amp;ldquo;raros&amp;rdquo; del español (acentos y eñes) no se ven.&lt;/p&gt;
+
+&lt;p&gt;puedes encontrar mas juegos (de zelda) basados en el motor solarus en
+el &lt;a href=&#34;http://forum.solarus-games.org&#34;&gt;foro&lt;/a&gt; en la seccion
+de &lt;a href=&#34;http://forum.solarus-games.org/index.php/board,5.0.html?PHPSESSID=mir01idorf2lfdchofmrhmthv7&#34;&gt;proyectos&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

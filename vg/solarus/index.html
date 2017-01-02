@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Post - nba - GNU&#39;s Rock</title>
+    <title>Zelda solarus - nba - GNU&#39;s Rock</title>
     
     <style media="screen">
 :root {
@@ -170,27 +170,132 @@ img:hover { filter: none;
   <body>
     
 <main>
-  
-  <div class="thumb">
-  <h2 class="title"><a href="http://nasciiboy.github.io/post/Krautrock-Albums/">Krautrock Albums</a></h2>
-
-  <ul class="meta">
-    <li><time datetime="2016-12-30 18:21:44 -0600 CST">Dec 30, 2016</time></li>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+    <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg/</span></a></li>
     
+    <li><span class="path-pwd">Zelda solarus</span></li>
   </ul>
 
-  <div class="summary">Segun wikipedia
- Se le llama Krautrock o Kraut Rock (también conocida como Kosmische Musik) a una corriente musical de rock y electrónica surgida en Alemania Occidental a fines de los años 60.
-Se usa para referirse a una gran cantidad de artistas alemanes que habían sido influidos por géneros como el rock psicodélico, el rock progresivo, la música avant-garde y el jazz, que utilizaban nuevas tecnologías y nuevas formas de usar las tecnologías de grabación, amplificación y mezcla musical, con nuevas estructuras formales.</div>
+  <article>
+  <h1 class="title">Zelda solarus</h1>
+
+  <time datetime="2017-01-01 14:56:59 -0600 CST">Jan 1, 2017</time>
+
+  <div class="article-body">
+
+<p><img src="../solarus_logo.png" alt="" /></p>
+
+<p>Segun la propia <a href="http://www.solarus-games.org/">web del proyecto</a></p>
+
+<blockquote>
+<p>Solarus es un motor de juegos Action-RPG gratuito y de codigo abierto, con
+licencia GPL y esta escrito en C++. Ejecuta quest (campañas?) en Lua y puede
+trabajar en un gran numero de plataformas.</p>
+
+<p>Solarus tambien cuenta con un editor de juegos llamado Solarus Quest Editor
+escrito en C++ con Qt para ayudarte a crear un juego.</p>
+</blockquote>
+
+<p>Por que los proyectos utilizan el palabro &ldquo;open source&rdquo; si estan bajo la
+licencia GPL?</p>
+
+<p>Aunque en la web no se especifa, en la practica el motor fue creado para hacer
+un videojuego fan-tributo de Zelda, y todos las juegos que de el han nacido
+tiene que ver con Zelda, al parecer utilizan recursos salidos directamente de un
+titulo de nintendo, ni idea de cual, supongo sera de snes. Por suerte el
+proyecto parace no tener problemas legales de ningun tipo.</p>
+
+<p><img src="../logo_2x.png" alt="" /></p>
+
+<p><strong>THE LEGEND OF ZELDA Mystery Of Solarus DX</strong> es el primer titulo que pruebo con
+respecto a la saga zelda, sin importar ser o no un fan-game tiene una calidad
+brutal, dificultad imposible y es muy adictivo. Reconosco que para terminarlo
+fue necesario ver una guia (del propio creador) en no pocas ocaciones, no sin
+antes pasar horas sin saber que hacer&hellip; tambien modifique el fichero de
+salvamento para poner el dinero y municion a tope.</p>
+
+<p>En definitiva si tuviese dinero compraria una consola e intentaria con algun
+titulo oficial. Si tuviese mas dinero compraria nintentdo y pondria su
+hardware/software libre tras un perido no mayor a 5 años luego del lanzamiento
+del titulo&hellip; un hombre debe tener sueños.</p>
+
+<h2 id="compilar-solarus-engine-desde-repositorios">Compilar solarus-engine desde repositorios</h2>
+
+<p>La lista de dependencias en Debian salio directamete del sitio web, si ya tienes el
+codigo fuente de solarus puedes ver los pasos en el fichero <code>compilation.txt</code>.</p>
+
+<p>instalar dependencias en Debian</p>
+
+<pre><code>apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libmodplug-dev libvorbis-dev
+</code></pre>
+
+<p>En el caso de fedora me he limitado a buscar el equivalente. Compilo cosas por
+pasatiempo y mi sistema ya tiene un monton de librerias, a modo de prueba intete
+compilar sin instalar nada mas y&hellip; compilo, si encuentras algun inconveniente
+no dudes en enviar un <a href="mailto:nasciiboy@gmail.com">correo</a>.</p>
+
+<p>instalar dependencias en fedora</p>
+
+<pre><code>dnf -y install SDL2-devel SDL2-image-devel SDL2-ttf-devel luajit-devel physfs-devel openal-soft-devel libmodplug-devel libvorbis-devel
+</code></pre>
+
+<p>creamos una carpeta donde estara el codigo del motor y el de los tres juegos que
+aparecen listados en la pagina de solarus</p>
+
+<pre><code>mkdir solarus
+cd solarus
+</code></pre>
+
+<p>clonamos el motor y los tres juegos</p>
+
+<pre><code>git clone https://github.com/solarus-games/solarus.git
+git clone https://github.com/solarus-games/zsdx.git
+git clone https://github.com/solarus-games/zsxd.git
+git clone https://github.com/solarus-games/zelda-roth-se.git
+</code></pre>
+
+<p>compilamos el motor</p>
+
+<pre><code>cd solarus
+mkdir build
+cd build
+cmake ..
+make
+</code></pre>
+
+<p>Si la compilacion fue exitosa ya podemos ejecutar los juegos. Sin cambiar de
+directorio ejecutamos</p>
+
+<pre><code>./solarus_run ../../zsdx/
+
+./solarus_run ../../zsxd/
+
+./solarus_run ../../zelda-roth-se/
+</code></pre>
+
+<p>los tres titulos se encuentran traducidos al español, las teclas de
+funcionamiento son ajustables y tambien tiene soporte para joystick (en concreto
+tengo el Logiteth 710, que funciona de forma nativa sin instalar nada)</p>
+
+<p>recientemente inicie zelda-roth-se por motivos desconocidos los caracteres
+&ldquo;raros&rdquo; del español (acentos y eñes) no se ven.</p>
+
+<p>puedes encontrar mas juegos (de zelda) basados en el motor solarus en
+el <a href="http://forum.solarus-games.org">foro</a> en la seccion
+de <a href="http://forum.solarus-games.org/index.php/board,5.0.html?PHPSESSID=mir01idorf2lfdchofmrhmthv7">proyectos</a></p>
 </div>
+</article>
 
-  
-  
 
-  
-
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg/</span></a></li>
+    
+    <li><span class="path-pwd">Zelda solarus</span></li>
+  </ul>
 </main>
 
 
@@ -200,7 +305,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
     <header class="taxonomies">category</header>
     <div>
       <ul class="terms">
-        <li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li><li><a href="http://nasciiboy.github.io/categories/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li>
+        <li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li>
       </ul>
     </div>
   </section>
@@ -209,7 +314,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
     <header class="taxonomies">tag</header>
     <div>
       <ul class="terms">
-        <li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine</a></li>
+        <li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine</a></li>
       </ul>
     </div>
   </section>
@@ -217,6 +322,21 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
 
   <section>
     <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/vg/solarus/">Zelda solarus</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-01 14:56:59 -0600 CST">Jan 1, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
     
     <div class="thumb-sm">
   <header>
@@ -231,6 +351,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -248,7 +369,6 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/emacs/first-blood/">Emacs - first blood</a></h2>
@@ -262,6 +382,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -279,7 +400,6 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/emacs/que-es-emacs/">Que es GNU Emacs?</a></h2>
@@ -293,6 +413,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -310,7 +431,6 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/apt/shnsplit/">Como dividir un album contenido en una sola pista flac</a></h2>
@@ -324,6 +444,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -341,28 +462,12 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/vg/nxEngine/">nxEngine</a></h2>
 
     <ul class="meta">
       <li><time datetime="2016-12-19 11:29:56 -0600 CST">Dec 19, 2016</time></li>
-      
-      <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg</span></a></li>
-      
-    </ul>
-  </header>
-</div>
-
-    
-    
-    <div class="thumb-sm">
-  <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/vg/H-Craft/">H Craft Championship</a></h2>
-
-    <ul class="meta">
-      <li><time datetime="2016-12-17 08:29:18 -0600 CST">Dec 17, 2016</time></li>
       
       <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg</span></a></li>
       
