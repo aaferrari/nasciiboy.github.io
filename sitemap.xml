@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nasciiboy.github.io/prog/2017Challenges/</loc>
+    <lastmod>2017-01-04T20:41:22-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/vg/solarus/</loc>
     <lastmod>2017-01-01T14:56:59-06:00</lastmod>
   </url>
@@ -68,7 +73,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/</loc>
-    <lastmod>2016-12-28T17:17:04-06:00</lastmod>
+    <lastmod>2017-01-04T20:41:22-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -169,13 +174,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2016-12-19T21:45:05-06:00</lastmod>
+    <lastmod>2017-01-04T20:41:22-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2016-12-19T21:45:05-06:00</lastmod>
+    <lastmod>2017-01-04T20:41:22-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -228,7 +233,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-01-01T14:56:59-06:00</lastmod>
+    <lastmod>2017-01-04T20:41:22-06:00</lastmod>
     <priority>0</priority>
   </url>
   

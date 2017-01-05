@@ -10,6 +10,65 @@
     <atom:link href="http://nasciiboy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>2017Challenges</title>
+      <link>http://nasciiboy.github.io/prog/2017Challenges/</link>
+      <pubDate>Wed, 04 Jan 2017 20:41:22 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/2017Challenges/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;../orange.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hace unos dias (presuntamente a principio de año) aparecio en reddit
+(r/programming) un enlace a una competencia para programadores mediante github &lt;a href=&#34;https://github.com/YearOfProgramming/2017Challenges&#34;&gt;2017Challenges&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Aparentemente, el premio es el reto, la busqueda de nuevo conocimiento y la
+alegria interior de ser el primero en publicar una solucion (ingeniosa) para un
+lenguaje determinado&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;iniciaron con cuatro pruebas&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Hello World: escribir un programa &amp;ldquo;hola mundo&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Reverse String: invertir el orden de una cadena&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Lonely: encontrar elementos no repetidos en un arreglo con longitud y valores
+aleatorios, con opcion de mesclar enteros y caracteres&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Majority Element: dentro de un arreglo de longitud y elementos aleatorios,
+localizar el valor que se repita almenos la mitad de la dimencion del arreglo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Invert Binary Tree: invertir un arbol binario&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;El dia de hoy se incluyo un nuevo reto&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Find the Difference: comparar dos cadenas donde una difiere en incluir un
+caracter adicional, el punto es desplegar el caracter discordante&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cualquier lenguaje de programacion es valido&amp;hellip; he? pues si, lo que mas abunda
+son python, seguido por java y javascript&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Todo lo necesario para que el codigo se incluya en el repositorio esta explicado
+en el &lt;code&gt;readme.md&lt;/code&gt; del proyecto (o en internet)&lt;/p&gt;
+
+&lt;p&gt;No ser un guru de la programacion es un buen motivo para participar, como
+tambien aprender a colaborar en un proyecto mediante git(hub) (no tengo ni idea
+que hacen fetch, merge, o el orden en que dema realizar el pull), ademas puedes
+poner en practica estructuras &amp;ldquo;complejas&amp;rdquo; como los arboles binarios, que en mi
+caso solo los habia visto de lejos con respeto y admiracion en el &amp;ldquo;k&amp;amp;r&amp;rdquo; y &amp;ldquo;C
+como programar&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;de momento llebo los 4 primeros retos en c (&lt;a href=&#34;https://github.com/nasciiboy/2017Challenges&#34;&gt;aqui&lt;/a&gt;) (aun pendientes de aprobacion los
+ultimos 2), cuando tenga mas confianza intentare con go y en algun futuro lejano
+quiza con lisp.&lt;/p&gt;
+
+&lt;p&gt;Happy Hacking!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>first theme</title>
       <link>http://nasciiboy.github.io/emacs/first-theme/</link>
       <pubDate>Wed, 28 Dec 2016 17:17:04 -0600</pubDate>
