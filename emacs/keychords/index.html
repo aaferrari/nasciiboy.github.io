@@ -247,7 +247,7 @@ en blanco entre los nombres de las teclas. Dentro de la cadena, para hacer
 referencia a la tecla control, colocamos <code>C</code>, para meta/esc <code>M</code>, y para
 super <code>s</code>, las tres siempre van en conjunto con alguna otra tecla siguiendo el
 formato <code>C-tecla</code>, <code>M-tecla</code> o <code>s-tecla</code>. Finalmente podemos hacer referencia
-al nombre interno de una tecla al colocarlo entre mayor que y menor que, por
+al nombre interno de una tecla, al colocarlo entre mayor que y menor que, por
 ejemplo <code>(kbd &quot;&lt;f8&gt;&quot;)</code> sera la tecla F8</p></li>
 </ul>
 
@@ -291,11 +291,8 @@ ejemplo <code>(kbd &quot;&lt;f8&gt;&quot;)</code> sera la tecla F8</p></li>
 
 (global-set-key [return] 'backward-char)
 (global-set-key (kbd &quot;&lt;return&gt;&quot;) 'backward-char)
-(global-set-key (kbd &quot;RET&quot;) 'forward-char)
 (global-set-key (kbd &quot;&lt;f7&gt; &lt;f8&gt;&quot;) 'calendar)
 </code></pre>
-
-<p>```</p>
 
 <h2 id="conocer-el-comando-ligado-a-un-atajo">Conocer el comando ligado a un atajo</h2>
 
@@ -344,8 +341,8 @@ definiciones, y no causan ningun problema en la practica</p>
 <li><p><code>F5</code>, <code>F6</code>, <code>F7</code>, <code>F8</code>, <code>F9</code>, <code>F12</code>. Puden combinarse sin problemas con
 Ctrl. Asegurate que no los utilize el sistema operativo.</p></li>
 
-<li><p>Super o Hyper. Cualquier combianacion con estas es buena. Es posible que en
-modo terminal no reconosca Super o Hyper.</p></li>
+<li><p>Super o Hyper. Cualquier combinacion con estas es buena, pero es posible que
+el terminal no reconosca las teclas Super o Hyper.</p></li>
 </ul>
 
 <h2 id="fuentes">fuentes</h2>
