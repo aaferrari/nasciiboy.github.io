@@ -10,6 +10,187 @@
     <atom:link href="http://nasciiboy.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Definir atajos en Emacs</title>
+      <link>http://nasciiboy.github.io/emacs/keychords/</link>
+      <pubDate>Sat, 07 Jan 2017 09:38:46 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/keychords/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../kara.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En emacs, tu puedes crear cualquier atajo de teclado para cualquier comando&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de
+configuracion de emacs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key (kbd &amp;quot;&amp;lt;f7&amp;gt;&amp;quot;) &#39;calendar)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si estas experimentando y no deseas reiniciar emacs cada vez que intentas
+definir un nuevo atajo, puedes colocar el cursor al final del ultimo parantesis
+e invocar a (&lt;code&gt;M-x&lt;/code&gt;) &lt;code&gt;eval-last-sexp&lt;/code&gt; (comando ligado a &lt;code&gt;C-x C-e&lt;/code&gt;). El atajo se
+activa de inmediato. Para salir del buffer calendario presiona &lt;code&gt;q&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si cometes algun error y necesitas iniciar emacs sin cargar el archivo de
+configuracion, puedes iniciar emacs desde el terminal con este comando:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;emacs --no-init-file
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;sintaxis&#34;&gt;sintaxis&lt;/h2&gt;
+
+&lt;p&gt;La funcion para definir atajos es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(define-key map COMBINACION &#39;FUNCION)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde &lt;code&gt;map&lt;/code&gt; es un mapa de combinaciones, o por decirlo de alguna forma, un
+prefijo que precede a la combinacion en si&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ctl-x-map&lt;/code&gt; con prefijo &lt;code&gt;C-x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctl-x-4-map&lt;/code&gt; con prefijo &lt;code&gt;C-x 4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctl-x-5-map&lt;/code&gt; con prefijo &lt;code&gt;C-x 5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctl-x-r-map&lt;/code&gt; con prefijo &lt;code&gt;C-x r&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;esc-map&lt;/code&gt;  con prefijo &lt;code&gt;ESC&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;help-map&lt;/code&gt;  con prefijo &lt;code&gt;C-h&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;global-map&lt;/code&gt; (sin prefijo) para cualquier combinacion. Esta ultima tiene una
+funcion dedicada y en ella centraremos la explicacion&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key COMBINACION &#39;FUNCION)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La &lt;code&gt;COMBINACION&lt;/code&gt; de teclas puede ser cualquiera de estras 4 formas&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;quot;letra&amp;quot;&lt;/code&gt;. Una unica letra de a-z o 1-9 dentro de parentesis&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;[nombre]&lt;/code&gt;. &lt;code&gt;nombre&lt;/code&gt;, se substiye por el nombre interno o por el codigo que
+emacs asigna a cada tecla, la combinacion puede contener mas de una tecla pero
+siempre se efectua en un solo paso, por ejemplo &lt;code&gt;[s-left]&lt;/code&gt; es presionar la
+tecla super + la tecla fecha izquierda, &lt;code&gt;[s-kp-5]&lt;/code&gt; es presionar la
+tecla super + la tecla 5 del pad numerico.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;(kbd &amp;quot;sequencia&amp;quot;)&lt;/code&gt;. &lt;code&gt;sequencia&lt;/code&gt; es cualquier combinacion del teclado colocada
+entre parentesis, esta puede separarse en varios pasos si se coloca un espacio
+en blanco entre los nombres de las teclas. Dentro de la cadena para hacer
+referencia a la tecla control control colocamos &lt;code&gt;C&lt;/code&gt;, para meta/esc &lt;code&gt;M&lt;/code&gt;, y para
+super &lt;code&gt;s&lt;/code&gt;, las tres siempre van en conjunto con alguna otra tecla siguiendo el
+formato &lt;code&gt;C-tecla&lt;/code&gt;, &lt;code&gt;M-tecla&lt;/code&gt; o &lt;code&gt;s-tecla&lt;/code&gt;. Finalmente podemos hacer referencia
+al nombre interno de una tecla al colocarlo entre mayor que y menor que, por
+ejemplo &lt;code&gt;(kbd &amp;quot;&amp;lt;f8&amp;gt;&amp;quot;)&lt;/code&gt; sera la tecla F8&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;este es el nombre interno de algunas teclas&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;backspace&lt;/code&gt; retroceso&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;return&lt;/code&gt; enter&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;delete&lt;/code&gt; suprimir&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;up&lt;/code&gt; flecha arriba&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;down&lt;/code&gt; flecha abajo&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;right&lt;/code&gt; flecha derecha&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;left&lt;/code&gt; flecha izquierda&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f1&lt;/code&gt;..&lt;code&gt;f35&lt;/code&gt;tecla de funcion de F1 a F35&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;home&lt;/code&gt; Inicio&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;end&lt;/code&gt; Fin&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;help&lt;/code&gt; Ayuda&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kp-0&lt;/code&gt;.. &lt;code&gt;kp-9&lt;/code&gt; numeros del pad numerico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kp-subtract&lt;/code&gt; menos del pad numerico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kp-add&lt;/code&gt; mas del pad numerico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kp-enter&lt;/code&gt; enter del teclado numérico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kp-decimal&lt;/code&gt; punto decimal del teclado numérico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;next&lt;/code&gt; AvPag&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;prior&lt;/code&gt; RePag&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ejemplos&#34;&gt;ejemplos&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key [s-left]  &#39;windmove-left)
+(global-set-key [s-right] &#39;windmove-right)
+(global-set-key [s-up]    &#39;windmove-up)
+(global-set-key [s-down]  &#39;windmove-down)
+
+(global-set-key (kbd &amp;quot;C-c &amp;lt;left&amp;gt;&amp;quot;)  &#39;windmove-left)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;right&amp;gt;&amp;quot;) &#39;windmove-right)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;up&amp;gt;&amp;quot;)    &#39;windmove-up)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;down&amp;gt;&amp;quot;)  &#39;windmove-down)
+
+(global-set-key (kbd &amp;quot;C-c o&amp;quot;) &#39;recentf-open-files)
+(global-set-key (kbd &amp;quot;C-x C-b&amp;quot;) &#39;ibuffer)
+
+(global-set-key [return] &#39;backward-char)
+(global-set-key (kbd &amp;quot;&amp;lt;return&amp;gt;&amp;quot;) &#39;backward-char)
+(global-set-key (kbd &amp;quot;RET&amp;quot;) &#39;forward-char)
+(global-set-key (kbd &amp;quot;&amp;lt;f7&amp;gt; &amp;lt;f8&amp;gt;&amp;quot;) &#39;calendar)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;h2 id=&#34;conocer-el-comando-ligado-a-un-atajo&#34;&gt;Conocer el comando ligado a un atajo&lt;/h2&gt;
+
+&lt;p&gt;Si invocamos a &lt;code&gt;describe-key&lt;/code&gt; (&lt;code&gt;C-h k&lt;/code&gt;) y, a continuacion, se presiona un atajo,
+emacs mostrara el comando al que esta ligado.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, supongamos que deseamos conocer el comando ligado a
+&lt;code&gt;C-M-g&lt;/code&gt;. Primero se llama a &lt;code&gt;describe-key&lt;/code&gt;, luego se presiona la combinacion de
+teclado, entonces emacs imprimira &lt;code&gt;C-M-g is undefined&lt;/code&gt;. Esto significa que
+puedes utilizar &lt;code&gt;(kbd &amp;quot;C-M-g&amp;quot;)&lt;/code&gt; para representar una combinacion de teclas en
+codigo lisp.&lt;/p&gt;
+
+&lt;h2 id=&#34;combinaciones-a-evitar&#34;&gt;Combinaciones a evitar&lt;/h2&gt;
+
+&lt;p&gt;Emacs tiene sus caprichos. Es mejor no definir las siguientes combinaciones, a
+menos que sepas lo que estas haciendo.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-cualquierLetra&lt;/code&gt;. Dada la forma en que emacs esta implementado utiliza la
+sintaxis &amp;ldquo;C-letra&amp;rdquo; para un monton de atajos preestablecidos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;F1&lt;/code&gt; o &lt;code&gt;C-h&lt;/code&gt;. Emacs utiliza esta combinacion para el sistema de ayuda de emacs
+y tiene un estado especial en el sistema de comandos de emacs.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;ESC&lt;/code&gt; o &lt;code&gt;C-[&lt;/code&gt;. Esta combinacion por si misma tiene un significado complicado,
+dependiendo de cauntas veces se presione&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-Shift-letra&lt;/code&gt;. Algunos terminales no pueben dintingur las versiones de la
+combinacion con Shift de la version sin Shift&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;buenas-opciones&#34;&gt;Buenas opciones&lt;/h2&gt;
+
+&lt;p&gt;Emacs tiene unos siete mill comandos. De forma predeterminada, 800 de ellos
+tiene un atajo. Si defines tus propios atajos sin cuidado es posible que muchos
+modos primarios o secundarios anulen tus combinaciones, ya que estas tiene
+prioridad.&lt;/p&gt;
+
+&lt;p&gt;En la documentacion oficial de emacs, Las combinaciones libres para el usuario
+son de F5 a F9 y &lt;code&gt;C-c letra&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Las siguientes combinaciones son buenos puntos de partida para tus propias
+definiciones, y no causan ningun problema en la practica&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;F5&lt;/code&gt;, &lt;code&gt;F6&lt;/code&gt;, &lt;code&gt;F7&lt;/code&gt;, &lt;code&gt;F8&lt;/code&gt;, &lt;code&gt;F9&lt;/code&gt;, &lt;code&gt;F12&lt;/code&gt;. Puden combinarse sin problemas con
+Ctrl. Asegurate que no los utilize el sistema operativo.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Super o Hyper. Cualquier combianacion con estas es buena. Es posible que en
+modo terminal no reconosca Super o Hyper.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;fuentes&#34;&gt;fuentes&lt;/h2&gt;
+
+&lt;p&gt;buena parte del articulo es una pseudo-traduccion de&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ergoemacs.org/emacs/keyboard_shortcuts.html&#34;&gt;http://ergoemacs.org/emacs/keyboard_shortcuts.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;otra, es una invencion no contrastada con el manual&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>first theme</title>
       <link>http://nasciiboy.github.io/emacs/first-theme/</link>
       <pubDate>Wed, 28 Dec 2016 17:17:04 -0600</pubDate>
