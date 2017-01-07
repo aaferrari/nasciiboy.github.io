@@ -75,8 +75,8 @@ tecla super + la tecla 5 del pad numerico.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;code&gt;(kbd &amp;quot;sequencia&amp;quot;)&lt;/code&gt;. &lt;code&gt;sequencia&lt;/code&gt; es cualquier combinacion del teclado colocada
 entre parentesis, esta puede separarse en varios pasos si se coloca un espacio
-en blanco entre los nombres de las teclas. Dentro de la cadena para hacer
-referencia a la tecla control control colocamos &lt;code&gt;C&lt;/code&gt;, para meta/esc &lt;code&gt;M&lt;/code&gt;, y para
+en blanco entre los nombres de las teclas. Dentro de la cadena, para hacer
+referencia a la tecla control, colocamos &lt;code&gt;C&lt;/code&gt;, para meta/esc &lt;code&gt;M&lt;/code&gt;, y para
 super &lt;code&gt;s&lt;/code&gt;, las tres siempre van en conjunto con alguna otra tecla siguiendo el
 formato &lt;code&gt;C-tecla&lt;/code&gt;, &lt;code&gt;M-tecla&lt;/code&gt; o &lt;code&gt;s-tecla&lt;/code&gt;. Finalmente podemos hacer referencia
 al nombre interno de una tecla al colocarlo entre mayor que y menor que, por
