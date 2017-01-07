@@ -63,10 +63,10 @@ funcion dedicada y en ella centraremos la explicacion&lt;/li&gt;
 &lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key COMBINACION &#39;FUNCION)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;La &lt;code&gt;COMBINACION&lt;/code&gt; de teclas puede ser cualquiera de estras 4 formas&lt;/p&gt;
+&lt;p&gt;La &lt;code&gt;COMBINACION&lt;/code&gt; de teclas puede ser cualquiera de estas 3 formas&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;quot;letra&amp;quot;&lt;/code&gt;. Una unica letra de a-z o 1-9 dentro de parentesis&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;quot;letra&amp;quot;&lt;/code&gt;. Una unica letra de a-z o 1-9 dentro de comillas&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;code&gt;[nombre]&lt;/code&gt;. &lt;code&gt;nombre&lt;/code&gt;, se substiye por el nombre interno o por el codigo que
 emacs asigna a cada tecla, la combinacion puede contener mas de una tecla pero
