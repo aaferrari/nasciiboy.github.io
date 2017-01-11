@@ -1,7 +1,7 @@
 +++
 title      = ""
-tags       = [ "post" ]
-categories = [ "" ]
+tags       = [ "" ]
+categories = [ "post" ]
 date       = ""
 draft      = true
 +++

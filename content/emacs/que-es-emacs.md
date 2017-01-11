@@ -71,12 +71,12 @@ terminales e interpretes y un tetris y un navegador web y gestor de paquetes y
 soporte para cualquier lenguaje de programacion (almenos resaltado) y un sin fin
 de utiles(?) aplicaciones, sin embargo **todas compartian el mismo conjunto de
 comandos base** para moverse por la interfaz y manipular texto, aprender lo
-especifico que cada funcionalidad (en gerga de emacs, **modo**) es un tema
+especifico de cada funcionalidad (en gerga de emacs, **modo**) es un tema
 aparte que requiere una memoria exepcional
 
 Cai como un yonqui adicto a cualquier informacion de emacs (los no hablantes de
 ingles tenemos un poco mas dicil... todo), apenas aprendi algun nuevo comando lo
-ponia en practica (para olvidarlo tras un par de horas)
+ponia en practica (para olvidarlo un par de horas despues)
 
 Y un buen dia entientes que puedes programar emacs, que todo comportamiento es
 modificable y de echo es modificable **al vuelo** y te preguntas **¿Que es
@@ -85,9 +85,9 @@ Emacs?**
 ## Emacs Es...
 
 El interprete de un lenguaje derivado de Lisp (Emacs Lisp). De hecho es el
-interprete mas sofisticado que existe y probablemente existira, ya que biene con
-el suficiente codigo precargado como para permitirte crear nuevos programas (y
-de paso hacerte creer que es un editor), funcionalidades o modificar Emacs en si
+interprete mas sofisticado que existe y probablemente existira, ya que viene con
+el suficiente codigo precargado como para (hacerte creer que es un editor y)
+permitirte crear nuevos programas, funcionalidades o modificar Emacs en si
 mismo... existe un mejor diseño que ese?
 
 ## Enfoques sobre el texto
@@ -101,7 +101,7 @@ extendamos y modifiquemos a voluntad y sin restricciones nuestra interfaz
 
 **nano**: un simple editor
 
-**vim**: joder, lo que pueden hacer los de emacs, hagamos vi extensible
+**vim**: joder, lo que pueden hacer los de emacs, haremos a vi extensible
 
 **sublime**: hare mi propio vim
 

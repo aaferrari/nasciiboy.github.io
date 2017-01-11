@@ -6,7 +6,7 @@ categories = [
   "apt",
 ]
 tags = [
-  "moc", "fonos"
+  "moc", "fonos", "install",
 ]
 
 +++

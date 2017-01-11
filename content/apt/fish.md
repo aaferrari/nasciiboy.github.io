@@ -6,7 +6,7 @@ categories = [
   "apt",
 ]
 tags = [
-  "fish",
+  "fish", "install",
 ]
 
 +++
@@ -61,7 +61,7 @@ de no encontrarse una linea que termine con `fish` ejecuta
 acorde a la buenas costumbres `fish` esta en `/usr/bin/`. Agregamos la ruta
 a la lista de shells
 
-    $ echo "/usr/bin/shells" >> /etc/shells
+    $ echo "/usr/bin/fish" >> /etc/shells
 
 ahora cambiamos la shell por defecto
 
@@ -181,7 +181,7 @@ tengo tres alias
     "++" para "ls -Falh --color=auto"
     "ç"  para "mocp"
 
-he probado la configuracion en varios sistemas y para root y ha funcionado sin
+he probado la configuracion en varios sistemas y para root, ha funcionado sin
 inconvenientes
 
 ## detalles
@@ -202,6 +202,18 @@ en fish es
 
 ## Manipular scrips fish en emacs
 
-abre emacs y ejecuta esto (necesario tener melpa)
+sencillo instalamos el paquete `fish-mode`
+
+### Mediante melpa
 
     M-x package-install fish-mode
+
+### Manualmente
+
+    git clone https://github.com/wwwjfy/emacs-fish.git
+
+y luego, dentro de emacs cargamos el paquete con:
+
+    (load-file "/RUTA/A/REPOSITORIO/emacs-fish/fish-mode.el")
+
+Para que el cambio sea permanente agregamos la enterior linea a `init.el`
