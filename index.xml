@@ -7,8 +7,57 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Wed, 11 Jan 2017 10:03:58 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 16 Jan 2017 20:27:28 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Shin Godzilla</title>
+      <link>http://nasciiboy.github.io/post/Shin-Godzilla/</link>
+      <pubDate>Mon, 16 Jan 2017 20:27:28 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/Shin-Godzilla/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;../hey-godzilla.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mi amigo el &lt;strong&gt;Goad Floyd&lt;/strong&gt; me ha recomendado una variada serie de peliculas, que
+con el tiempo termine por clasificar como &lt;q&gt;&lt;em&gt;peliculas que van de la vida&lt;/em&gt;&lt;/q&gt;,
+entre algunas de sus recomendaciones estan (nombre original) &lt;strong&gt;Altered States&lt;/strong&gt;,
+&lt;strong&gt;One Flew Over The Cuckoo&amp;rsquo;s Nest&lt;/strong&gt;, &lt;strong&gt;A Clockwork Orange&lt;/strong&gt;, &lt;strong&gt;O Lucky Man&lt;/strong&gt;,
+&lt;strong&gt;The Shining&lt;/strong&gt;, &lt;strong&gt;Led Zeppelin Live In London&lt;/strong&gt;, entre otras cuantas obras mas.&lt;/p&gt;
+
+&lt;p&gt;y que son las &lt;q&gt;peliculas que van de la vida&lt;/q&gt;? una serie de eventos
+eratico/aleatorios con no mucho sentido con un toque bizarro, propisio para una
+reflexion melancolica acompañada de un toque y buena musica en absoluta soledad.&lt;/p&gt;
+
+&lt;p&gt;Es cierto que en el estado mental correcto, toda obra es propensa de ascender a
+dicha categoria, no obstante solo las obras mas selectas son capaces de llegar a
+tal estado sin recurrir a sustancias psicotropicas.&lt;/p&gt;
+
+&lt;p&gt;Precisamente hoy he visto una de esas peliculas de tematica difusa, abierta a un
+diversas interpretaciones en las cuales el director se resiste en profundisar (o
+no). &lt;strong&gt;Shin Godzilla&lt;/strong&gt; puede ser una pelicula de godzilla, una critica a la
+sociedad japonesa, a la juventud, a los viejos, a la humanidad, un &lt;q&gt;dios nos
+la pela, tenemos la ciencia&lt;/q&gt;, quien puede saberlo? quiza lo es todo y nada a
+la vez.&lt;/p&gt;
+
+&lt;p&gt;Acudi a verla no por ser un fan incondicional del lagarto, mas bien, por el
+director/escritor, un tipo llamado Hideaki Anno, creador de la que considero la
+mas grande obra audiovisual humana &lt;strong&gt;Neon Genesis Evangelion&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;El resultado es magnifico, la creatura es un muñeco, la musica se aprobecha de
+los otukus evangelistas, los efectos y actuaciones son una reivindicacion del
+cine japones no una copia yanky&amp;hellip; &lt;strong&gt;Hidaki&lt;/strong&gt; (Anno, ehh, suena raro) es un troll
+de sus fans a la ves que los utiliza para hacer pasta, Evangelion 3.0 es la mejor
+muestra, aun asi, esta obra sin ser exelente va directo a la lista de archivos a
+preservar.&lt;/p&gt;
+
+&lt;p&gt;La vi en el templo (el cine), posiblemente la vea una ves mas solo por apoyar
+este tipo de creaciones, si puedes, acude a pasar un buen rato.&lt;/p&gt;
+
+&lt;p&gt;Hace tiempo, entre uno de tantos proyectos muertos, grabe un episodio de un
+audio de nombre lizagico donde hago el monger, lo dejo por que asi parece que
+soy mas fan del lagarto&amp;hellip; &lt;a href=&#34;../3.0_Lizargico_lado_A.ogg&#34;&gt;lizargico-ogg&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Raptor-Book</title>
@@ -1400,58 +1449,6 @@ codeblocks --build --target=&amp;quot;linux64 release&amp;quot; --no-batch-windo
 
 &lt;p&gt;existe una traduccion del los menus realizada por &lt;strong&gt;Caleb&lt;/strong&gt;, puedes encontrarla  en
 &lt;a href=&#34;http://cadetesdelespacio.es/node/1362&#34;&gt;http://cadetesdelespacio.es/node/1362&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Performance comparison of regular expression engines</title>
-      <link>http://nasciiboy.github.io/prog/Performance-comparison-of-regular-expression-engines/</link>
-      <pubDate>Fri, 16 Dec 2016 20:22:03 -0600</pubDate>
-      
-      <guid>http://nasciiboy.github.io/prog/Performance-comparison-of-regular-expression-engines/</guid>
-      <description>&lt;p&gt;Hola gente, hace unos meses tome el codigo de &lt;strong&gt;dark100&lt;/strong&gt; &amp;ldquo;Performance
-comparison of regular expression engines&amp;rdquo; (pueden ver el orginal
-&lt;a href=&#34;http://sljit.sourceforge.net/regex_perf.html&#34;&gt;aqui&lt;/a&gt;) para hacer algunas pruebas
-a un pequeño &lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor&#34;&gt;motor regexp&lt;/a&gt;
-que programe en mi tiempo &lt;em&gt;libre?&lt;/em&gt;, bueno &amp;hellip; acabo de actualizar la prueba
-(&lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor-vs-Benchmarks&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;El proceso fue el siguiente&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Optener el codigo fuente de cada motor (PCRE2, RE2, tre, oniguruma)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Compilar cada motor localmente (intel x86-64 celeron 847), es
-decir&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;./autogen&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;./configure&lt;/code&gt; (para PCRE con alguna consideracion especifica)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Copiar el código fuente al entorno&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Intentar con el makefile existente hasta que se logro compilar&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Modificar levemente el ambiente (no se si compilara en un sistema no GNU)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;En realidad no tengo ni idea si este es el proceso adecuado para actualizar el
-entorno, pero funciona ¯_(ツ)_/¯. Si conoces una mejor configuracion o como
-optimizar alguna prueba sera bien recibida, siempre y cuando los makefiles se
-mantengan KISS (aunque solo compile en x86-64)&lt;/p&gt;
-
-&lt;p&gt;Para leer la prueba cómodamente tienes que descagar el fichero &lt;code&gt;readme.html&lt;/code&gt; del
-repositorio y visualizarlo en tu navegador.&lt;/p&gt;
-
-&lt;p&gt;por cierto la exprecion:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;quot;^( )*&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;genera un bucle infinito en pcre, tre, oniguruma, re2. En principio esta fue la
-motivacion principal para actualizar el codigo de cada prueba&amp;hellip; alguna pista?&lt;/p&gt;
 </description>
     </item>
     

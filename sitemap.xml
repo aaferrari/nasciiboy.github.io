@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nasciiboy.github.io/post/Shin-Godzilla/</loc>
+    <lastmod>2017-01-16T20:27:28-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/raptor-book/</loc>
     <lastmod>2017-01-11T10:03:58-06:00</lastmod>
   </url>
@@ -159,6 +164,12 @@
   </url>
   
   <url>
+    <loc>http://nasciiboy.github.io/tags/movs/</loc>
+    <lastmod>2017-01-16T20:27:28-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/tags/ncurses/</loc>
     <lastmod>2016-12-19T21:45:05-06:00</lastmod>
     <priority>0</priority>
@@ -172,13 +183,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/post/</loc>
-    <lastmod>2016-12-30T18:21:44-06:00</lastmod>
+    <lastmod>2017-01-16T20:27:28-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/post/</loc>
-    <lastmod>2016-12-30T18:21:44-06:00</lastmod>
+    <lastmod>2017-01-16T20:27:28-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -243,7 +254,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-01-11T10:03:58-06:00</lastmod>
+    <lastmod>2017-01-16T20:27:28-06:00</lastmod>
     <priority>0</priority>
   </url>
   
