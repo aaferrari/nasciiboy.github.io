@@ -7,8 +7,274 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Wed, 18 Jan 2017 09:29:17 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 18 Jan 2017 20:57:15 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Gnome Keys</title>
+      <link>http://nasciiboy.github.io/prog/gnome-keys/</link>
+      <pubDate>Wed, 18 Jan 2017 20:57:15 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/gnome-keys/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../kp-01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;He utilizado gnome 2 (mas de un año en Debian 6), tambien xfce, lxde, dwm, ratpoison,
+stumpwm, kde 4, kde 5, fluxbox y openbox (y visto unity&amp;hellip;) con todo, mi
+escritorio es y sera &lt;strong&gt;Gnome Shell&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo unico que evita que &lt;strong&gt;Gnome Shell&lt;/strong&gt; sea perfecto es la capacidad de
+personalizar el teclado a gusto, como puede  ofreser kde, o eso creia.&lt;/p&gt;
+
+&lt;p&gt;Hace un par de dias comence a utilizar un emulador grafico nuevo llamado
+&lt;code&gt;terminix&lt;/code&gt; el cual tambien adolece de una personalizacion profunda de los atajos
+de teclado, asi que me pase por su proyecto y les deje una lista de
+deseos. Imbuido del espiritu coloborativo en forma de peticion, ocurrioseme
+pasar y hacer lo mismo en el repositorio del proyecto gnome, que igual, cual
+seres cosmicos-imaginarios cumplian mis solicitud. Oh, sorpresa! descubrir que
+otros habian pasado ha solicitar lo mismo (en english) con bonito descenlace&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;gnome-shell-keybindings-like-a-pro&#34;&gt;Gnome-Shell keybindings like a PRO&lt;/h2&gt;
+
+&lt;p&gt;Abrimos un terminal. Muestro la version desde la que realizo las pruebas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gnome-shell --version
+GNOME Shell 3.22.2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gnome posee un comando con el cual podemos configurar, mostrar y restaurar
+(creo) todas las variables de las que haga uso el entorno, desde establecer con
+que programa se debe abrir determinada extension a configurar los atajos de
+teclado, su nombre es &lt;code&gt;gsettings&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Con el siguiente comando podemos ver cuantas variables pueden (o no)
+configurarse&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gsettings list-recursively | wc -l
+3057
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Y con el siguiente, podemos ver cuantos atajos tenemos disponibles para
+interactuar con el entorno de escritorio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gsettings list-recursively org.gnome.desktop.wm.keybindings  | wc -l
+85
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El esquema del comando es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gsettings comando esquema argumentos
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;comando&lt;/code&gt;, es&amp;hellip; el comando&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;esquema&lt;/code&gt; es una ruta a la seccion que nos interesa conocer/modificar, en el
+comando anterior seria &lt;code&gt;org&lt;/code&gt; -&amp;gt; &lt;code&gt;gnome&lt;/code&gt; -&amp;gt; &lt;code&gt;desktop&lt;/code&gt; -&amp;gt; &lt;code&gt;wm&lt;/code&gt; -&amp;gt;
+&lt;code&gt;keybindings&lt;/code&gt;. Existen muchos mas esquemas, pero solo me limitare a este.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;argumentos&lt;/code&gt; aqui van los nombres de valores de un esquema y/o una varible en
+especifico&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Veamos un ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gsettings get org.gnome.desktop.wm.keybindings toggle-fullscreen
+@as []
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el comando es &lt;code&gt;get&lt;/code&gt;, es decir, &lt;strong&gt;optener&lt;/strong&gt;. El esquema, son los atajos de entorno
+de escritorio, la variable es &lt;code&gt;toggle-fullscreen&lt;/code&gt;, es decir, optener que
+combinacion activa el comando &lt;code&gt;toggle-fullscreen&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Cuando la salida es &lt;code&gt;@as []&lt;/code&gt; significa que el comando no esta asignado a ninguna
+combinacion, vamos a asignar &lt;code&gt;Super+KP_9&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el comando es &lt;code&gt;set&lt;/code&gt;, es decir, &lt;strong&gt;asignar&lt;/strong&gt;, el esquema son los atajos de entorno
+de escritorio, la variable es &lt;code&gt;toggle-fullscreen&lt;/code&gt; y el valor que estamos
+asignando es &lt;code&gt;[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]&lt;/code&gt; (las comillas son para escapar el &lt;code&gt;&#39;&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;comprobemos que el cambio se ha realizado&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gsettings get org.gnome.desktop.wm.keybindings toggle-fullscreen
+[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora, al presionar &lt;code&gt;Super+KP_9&lt;/code&gt; la ventana activa entra/sale del modo pantalla
+completa.&lt;/p&gt;
+
+&lt;p&gt;para restaurar el comando a la configuracion inicial&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gsettings reset org.gnome.desktop.wm.keybindings toggle-fullscreen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si por alguna razon queremos reestablecer todos los comandos del entorno de
+escritorio a su configuracion inicial&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gsettings reset-recursively org.gnome.desktop.wm.keybindings toggle-fullscreen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Existen, otros dos modos de modificar una variable, si tenemos el comando
+&lt;code&gt;dconf&lt;/code&gt;, estableceriamos la variable &lt;code&gt;toggle-fullscreen&lt;/code&gt; de esta manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;dconf write /org/gnome/desktop/wm/keybindings/toggle-fullscreen &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Como vemos el esquema, ahora inicia y se separa mediante &lt;code&gt;/&lt;/code&gt; hasta llegar a la
+variable o &lt;q&gt;directorio&lt;/q&gt; de interes. El valor a establecer es identico a la
+version de &lt;code&gt;gsettings&lt;/code&gt;, mientras que los comandos pasan a ser &lt;code&gt;list&lt;/code&gt;, &lt;code&gt;reset&lt;/code&gt; y
+&lt;code&gt;write&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;finalmente tenemos una interfaz grafica de &lt;code&gt;dconf&lt;/code&gt; llamada &lt;code&gt;dconf-editor&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../dconf-editor.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;podemos navegar entre los esquemos mediante el raton, clicando en la ruta que
+esta en el titulo de la ventana.&lt;/p&gt;
+
+&lt;h2 id=&#34;gnome-shell-mas-alla-del-workspace-4&#34;&gt;Gnome-Shell Mas alla del workspace #4&lt;/h2&gt;
+
+&lt;p&gt;Bueno, todo esto tenia un proposito, la aplicacion de configuracion de gnome
+solo nos permite establecer atajos para los primeros cuatro escritorios, un
+problema cuando necesitas 5 o mas escritorios como en mi caso que utilizo 7 con
+dos monitores.&lt;/p&gt;
+
+&lt;p&gt;Asi es como estableci los atajos a &lt;code&gt;Super+KP_algo&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# combinaciones para moverse al workspace x
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
+
+# combinaciones para mover ventana al workspace x
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;lo mismo mediante dconf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-1 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-2 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-3 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-4 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-5 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-6 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-7 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
+
+dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-1 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-2 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-3 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-4 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-5 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-6 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-7 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;nascii-keys&#34;&gt;nascii keys&lt;/h2&gt;
+
+&lt;p&gt;Por ultimo dejo la lista de todos los atajos que tengo (o no) establecidos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;gsettings set org.gnome.desktop.wm.keybindings activate-window-menu         &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings always-on-top                &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings begin-move                   &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings begin-resize                 &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings close                        &amp;quot;[&#39;&amp;lt;Super&amp;gt;q&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-group                  &amp;quot;[&#39;&amp;lt;Super&amp;gt;Home&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-group-backward         &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;Home&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-panels                 &amp;quot;[&#39;&amp;lt;Primary&amp;gt;&amp;lt;Alt&amp;gt;Escape&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-panels-backward        &amp;quot;[&#39;&amp;lt;Primary&amp;gt;&amp;lt;Shift&amp;gt;&amp;lt;Alt&amp;gt;Escape&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-windows                &amp;quot;[&#39;&amp;lt;Super&amp;gt;space&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-windows-backward       &amp;quot;[&#39;&amp;lt;Shift&amp;gt;&amp;lt;Super&amp;gt;space&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings lower                        &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings maximize                     &amp;quot;[&#39;&amp;lt;Primary&amp;gt;&amp;lt;Super&amp;gt;Up&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings maximize-horizontally        &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings maximize-vertically          &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings minimize                     &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_7&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-center               &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-corner-ne            &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-corner-nw            &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-corner-se            &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-corner-sw            &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down         &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left         &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;Left&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right        &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;Right&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up           &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-side-e               &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-side-n               &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-side-s               &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-side-w               &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8          &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9          &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10         &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-11         &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-12         &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down       &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;Page_Down&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-last       &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;End&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left       &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right      &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up         &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;Page_Up&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings panel-main-menu              &amp;quot;[&#39;&amp;lt;Super&amp;gt;s&#39;, &#39;&amp;lt;Alt&amp;gt;F1&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog             &amp;quot;[&#39;&amp;lt;Alt&amp;gt;F2&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings raise                        &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings raise-or-lower               &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings set-spew-mark                &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings show-desktop                 &amp;quot;[&#39;&amp;lt;Super&amp;gt;d&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-applications          &amp;quot;[&#39;&amp;lt;Super&amp;gt;BackSpace&#39;, &#39;&amp;lt;Alt&amp;gt;Tab&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward &amp;quot;[&#39;&amp;lt;Shift&amp;gt;&amp;lt;Super&amp;gt;BackSpace&#39;, &#39;&amp;lt;Shift&amp;gt;&amp;lt;Alt&amp;gt;Tab&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-group                 &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-group-backward        &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source          &amp;quot;[&#39;&amp;lt;Super&amp;gt;F4&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-panels                &amp;quot;[&#39;&amp;lt;Control&amp;gt;&amp;lt;Alt&amp;gt;Tab&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-panels-backward       &amp;quot;[&#39;&amp;lt;Shift&amp;gt;&amp;lt;Control&amp;gt;&amp;lt;Alt&amp;gt;Tab&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8        &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9        &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10       &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-11       &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-12       &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down     &amp;quot;[&#39;&amp;lt;Super&amp;gt;Page_Down&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-last     &amp;quot;[&#39;&amp;lt;Super&amp;gt;End&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left     &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right    &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up       &amp;quot;[&#39;&amp;lt;Super&amp;gt;Page_Up&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-windows               &amp;quot;[&#39;&amp;lt;Super&amp;gt;Return&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward      &amp;quot;[&#39;&amp;lt;Shift&amp;gt;&amp;lt;Super&amp;gt;Return&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-above                 &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen            &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-maximized             &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_8&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-on-all-workspaces     &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-shaded                &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings unmaximize                   &amp;quot;[]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Emacs web y noticias en modo texto</title>
@@ -20,7 +286,7 @@
 
 &lt;p&gt;&lt;img src=&#34;../reunian-fieles-huespedes-cocinaban-asistentes.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;eso de los &lt;strong&gt;rss&lt;/strong&gt; parece ser mas bueno que encontrar un billete de alta
+&lt;p&gt;Eso de los &lt;strong&gt;rss&lt;/strong&gt; parece ser mas bueno que encontrar un billete de alta
 denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las
 paginas incluyen el icono naranja con unas barras.&lt;/p&gt;
 
@@ -138,8 +404,8 @@ leector&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../elfeed-show.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;si nos posicionamos en el enlace y damos enter mas, la entrada se abrira en el
-navegador del sistema!, para regresar a las entradas presionamos &lt;code&gt;q&lt;/code&gt; y para
+&lt;p&gt;si nos posicionamos en el enlace y damos enter una ves mas, la entrada se abrira
+en el navegador del sistema! para regresar a las entradas presionamos &lt;code&gt;q&lt;/code&gt; y para
 marcar una entrada como leeida &lt;code&gt;r&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;elfeed-eww&#34;&gt;&lt;code&gt;elfeed&lt;/code&gt; + &lt;code&gt;eww&lt;/code&gt;&lt;/h2&gt;
@@ -152,7 +418,7 @@ aparece el enlace como parametro por defecto, luego damos un enter y ya esta&lt;
 
 &lt;p&gt;&lt;img src=&#34;../eww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;para sarir de &lt;code&gt;eww&lt;/code&gt; y regresar a &lt;code&gt;elfeed&lt;/code&gt; pulsamos otro &lt;code&gt;q&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;para salir de &lt;code&gt;eww&lt;/code&gt; y regresar a &lt;code&gt;elfeed&lt;/code&gt; pulsamos otro &lt;code&gt;q&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;hagamos mas sencilla la cuestion agregando algunos atajos a &lt;code&gt;eww&lt;/code&gt; en nuestra
 configuracion&lt;/p&gt;
@@ -167,7 +433,7 @@ configuracion&lt;/p&gt;
 &lt;p&gt;ahora para abrir los enlaces, colocamos el cursor en el enlace y pulsamos &lt;code&gt;F5&lt;/code&gt; o
 &lt;code&gt;C-x w o&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Listo, vive la web en texto plano, el tiempo extra lo puedes utilazar para ver
+&lt;p&gt;Listo, vive la web en texto plano, el tiempo extra lo puedes utilizar para ver
 porno, escribir un blog o lo que sea&amp;hellip; &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/p&gt;
 </description>
     </item>
@@ -194,7 +460,7 @@ reflexion melancolica acompañada de un toque y buena musica en absoluta soledad
 dicha categoria, no obstante solo las obras mas selectas son capaces de llegar a
 tal estado sin recurrir a sustancias psicotropicas.&lt;/p&gt;
 
-&lt;p&gt;Precisamente hoy he visto una de esas peliculas de tematica difusa, abierta a un
+&lt;p&gt;Precisamente hoy he visto una de esas peliculas de tematica difusa, abierta a
 diversas interpretaciones en las cuales el director se resiste en profundisar (o
 no). &lt;strong&gt;Shin Godzilla&lt;/strong&gt; puede ser una pelicula de godzilla, una critica a la
 sociedad japonesa, a la juventud, a los viejos, a la humanidad, un &lt;q&gt;dios nos
@@ -1493,62 +1759,6 @@ programar un tetris&amp;rdquo; o algo asi&amp;hellip;&lt;/p&gt;
 &lt;p&gt;ps 2: actualmente no me gusta ncurses, principalmente por que no entiendo su
 codigo fuente, y porque es un &amp;ldquo;todo en uno&amp;rdquo;, preferiria que la interaccion con
 el teclado, el mouse e incluso joystick fuesen librerias independientes&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>nxEngine</title>
-      <link>http://nasciiboy.github.io/vg/nxEngine/</link>
-      <pubDate>Mon, 19 Dec 2016 11:29:56 -0600</pubDate>
-      
-      <guid>http://nasciiboy.github.io/vg/nxEngine/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;../Dokutsu.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Dōkutsu Monogatari mejor conocido en oxidente como Cave Story (La historia de la
-cueva) es un videojuego de plataformas con un toque de RPG desarrollado por una
-sola persona (Daisuke Amaya, alias &amp;ldquo;pixel&amp;rdquo;) a lo largo de 5 años. Originalmente
-fue liberado como &lt;em&gt;freeware&lt;/em&gt; para la plataforma pc de microsoft, no obstante por
-su sobresaliente calidad ha sido portado a una gran cantidad de sistemas entre
-las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast, GP2X,
-&amp;hellip;, y por supuesto GNU/linux.&lt;/p&gt;
-
-&lt;p&gt;Pese a que la licencia de distribucion no es libre, se cuenta con una
-implementacion del motor (en C++) bajo la licencia GNU GPL v3 llamada
-&lt;a href=&#34;http://nxengine.sourceforge.net/&#34;&gt;nxEngine&lt;/a&gt; y un par de traducciones al español
-(utilizare &lt;a href=&#34;http://www.romhacking.net/translations/2172/&#34;&gt;esta&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Si bien podemos disfrutar Dōkutsu Monogatari mediante &lt;strong&gt;wine&lt;/strong&gt; (asunto con poco
-misterio) vamos a compilar una vercion nativa con nxEngine. Todo lo que
-necesitas lo encontraras en este &lt;a href=&#34;../nx.zip&#34;&gt;zip&lt;/a&gt;. Descargalo y abre un terminal&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;su
-# nxEngine depende de la libreria SDL. En freidora
-dnf -y install SDL-devel SDL_ttf-devel
-exit
-
-unzip nx.zip -d nx
-cd nx
-make
-./nx # luego presiona &#39; &#39; (espacio) y &#39;a&#39; (letra a)
-# listo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;La vercion nativa no maneja apropiadamente los acentos ni los caracteres raros
-del español, aun asi puede entenderse perfectamente.&lt;/p&gt;
-
-&lt;p&gt;Mi amor por esta obra es proporcional a su dificultad, moriras y moriras y
-moriras y volveras a morir y cuando lleges al tramo final moriras muchas veces
-mas. Recuerda salvar cada ves que se presente la oportunidad o te puedes pegar
-un cabreo.&lt;/p&gt;
-
-&lt;p&gt;El unico defecto de este magnifico titulo, es la imposibilidad de saltarse los
-dialogos. Cuando apreda a programar&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;La duracion ronda entre 4-8 horas, (la primer vez que lo termine tarde 6). Como
-dispone de varios finales, como minimo pasatelo 2 veces.&lt;/p&gt;
-
-&lt;p&gt;Puedes encontrar achivos de salvamento, ports diversos y muchas cosas mas en
-&lt;a href=&#34;http://www.cavestory.org/&#34;&gt;http://www.cavestory.org/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

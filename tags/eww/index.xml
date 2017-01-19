@@ -19,7 +19,7 @@
 
 &lt;p&gt;&lt;img src=&#34;../reunian-fieles-huespedes-cocinaban-asistentes.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;eso de los &lt;strong&gt;rss&lt;/strong&gt; parece ser mas bueno que encontrar un billete de alta
+&lt;p&gt;Eso de los &lt;strong&gt;rss&lt;/strong&gt; parece ser mas bueno que encontrar un billete de alta
 denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las
 paginas incluyen el icono naranja con unas barras.&lt;/p&gt;
 
@@ -137,8 +137,8 @@ leector&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../elfeed-show.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;si nos posicionamos en el enlace y damos enter mas, la entrada se abrira en el
-navegador del sistema!, para regresar a las entradas presionamos &lt;code&gt;q&lt;/code&gt; y para
+&lt;p&gt;si nos posicionamos en el enlace y damos enter una ves mas, la entrada se abrira
+en el navegador del sistema! para regresar a las entradas presionamos &lt;code&gt;q&lt;/code&gt; y para
 marcar una entrada como leeida &lt;code&gt;r&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;elfeed-eww&#34;&gt;&lt;code&gt;elfeed&lt;/code&gt; + &lt;code&gt;eww&lt;/code&gt;&lt;/h2&gt;
@@ -151,7 +151,7 @@ aparece el enlace como parametro por defecto, luego damos un enter y ya esta&lt;
 
 &lt;p&gt;&lt;img src=&#34;../eww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;para sarir de &lt;code&gt;eww&lt;/code&gt; y regresar a &lt;code&gt;elfeed&lt;/code&gt; pulsamos otro &lt;code&gt;q&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;para salir de &lt;code&gt;eww&lt;/code&gt; y regresar a &lt;code&gt;elfeed&lt;/code&gt; pulsamos otro &lt;code&gt;q&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;hagamos mas sencilla la cuestion agregando algunos atajos a &lt;code&gt;eww&lt;/code&gt; en nuestra
 configuracion&lt;/p&gt;
@@ -166,7 +166,7 @@ configuracion&lt;/p&gt;
 &lt;p&gt;ahora para abrir los enlaces, colocamos el cursor en el enlace y pulsamos &lt;code&gt;F5&lt;/code&gt; o
 &lt;code&gt;C-x w o&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Listo, vive la web en texto plano, el tiempo extra lo puedes utilazar para ver
+&lt;p&gt;Listo, vive la web en texto plano, el tiempo extra lo puedes utilizar para ver
 porno, escribir un blog o lo que sea&amp;hellip; &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/p&gt;
 </description>
     </item>
