@@ -61,7 +61,7 @@ interactuar con el entorno de escritorio&lt;/p&gt;
 85
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;El esquema del comando es&lt;/p&gt;
+&lt;p&gt;El esquema del comando es el siguiente&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;gsettings comando esquema argumentos
 &lt;/code&gt;&lt;/pre&gt;
@@ -114,7 +114,7 @@ completa.&lt;/p&gt;
 &lt;p&gt;Si por alguna razon queremos reestablecer todos los comandos del entorno de
 escritorio a su configuracion inicial&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gsettings reset-recursively org.gnome.desktop.wm.keybindings toggle-fullscreen
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gsettings reset-recursively org.gnome.desktop.wm.keybindings
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Existen, otros dos modos de modificar una variable, si tenemos el comando
