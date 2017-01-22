@@ -121,7 +121,7 @@ escritorio a su configuracion inicial&lt;/p&gt;
 &lt;p&gt;Existen, otros dos modos de modificar una variable, si tenemos el comando
 &lt;code&gt;dconf&lt;/code&gt;, estableceriamos la variable &lt;code&gt;toggle-fullscreen&lt;/code&gt; de esta manera&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;dconf write /org/gnome/desktop/wm/keybindings/toggle-fullscreen &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ dconf write /org/gnome/desktop/wm/keybindings/toggle-fullscreen &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Como vemos el esquema, ahora inicia y se separa mediante &lt;code&gt;/&lt;/code&gt; hasta llegar a la
@@ -133,54 +133,66 @@ version de &lt;code&gt;gsettings&lt;/code&gt;, mientras que los comandos pasan a
 
 &lt;p&gt;&lt;img src=&#34;../dconf-editor.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;podemos navegar entre los esquemos mediante el raton, clicando en la ruta que
+&lt;p&gt;podemos navegar entre los esquemas mediante el raton, clicando en la ruta que
 esta en el titulo de la ventana.&lt;/p&gt;
 
 &lt;h2 id=&#34;gnome-shell-mas-alla-del-workspace-4&#34;&gt;Gnome-Shell Mas alla del workspace #4&lt;/h2&gt;
 
 &lt;p&gt;Bueno, todo esto tenia un proposito, la aplicacion de configuracion de gnome
 solo nos permite establecer atajos para los primeros cuatro escritorios, un
-problema cuando necesitas 5 o mas escritorios como en mi caso que utilizo 7 con
-dos monitores.&lt;/p&gt;
+problema cuando necesitas 5 o mas escritorios como en mi caso que utilizo
+almenos 7 con dos monitores.&lt;/p&gt;
 
 &lt;p&gt;Asi es como estableci los atajos a &lt;code&gt;Super+KP_algo&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# combinaciones para moverse al workspace x
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_7&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_8&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
 
 # combinaciones para mover ventana al workspace x
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_7&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_8&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10   &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;lo mismo mediante dconf&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-1 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-2 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-3 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-4 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-5 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-6 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/switch-to-workspace-7 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-1  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_7&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-2  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_8&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-3  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-4  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-5  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-6  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-7  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-8  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-9  &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-10 &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
 
-dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-1 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-2 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-3 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-4 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-5 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-6 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
-dconf write org/gnome/desktop/wm/keybindings/move-to-workspace-7 &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-1    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_7&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-2    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_8&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-3    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-4    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-5    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-6    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-7    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-8    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-9    &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-10   &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;nascii-keys&#34;&gt;nascii keys&lt;/h2&gt;
@@ -202,7 +214,7 @@ gsettings set org.gnome.desktop.wm.keybindings lower                        &amp
 gsettings set org.gnome.desktop.wm.keybindings maximize                     &amp;quot;[&#39;&amp;lt;Primary&amp;gt;&amp;lt;Super&amp;gt;Up&#39;]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings maximize-horizontally        &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings maximize-vertically          &amp;quot;[]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings minimize                     &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_7&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings minimize                     &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_Subtract&#39;]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings move-to-center               &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings move-to-corner-ne            &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings move-to-corner-nw            &amp;quot;[]&amp;quot;
@@ -216,16 +228,16 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-side-e               &amp
 gsettings set org.gnome.desktop.wm.keybindings move-to-side-n               &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings move-to-side-s               &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings move-to-side-w               &amp;quot;[]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8          &amp;quot;[]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9          &amp;quot;[]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10         &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_7&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_8&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9          &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10         &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-11         &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-12         &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down       &amp;quot;[&#39;&amp;lt;Alt&amp;gt;&amp;lt;Super&amp;gt;Page_Down&#39;]&amp;quot;
@@ -247,16 +259,16 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source          &amp
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings switch-panels                &amp;quot;[&#39;&amp;lt;Control&amp;gt;&amp;lt;Alt&amp;gt;Tab&#39;]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings switch-panels-backward       &amp;quot;[&#39;&amp;lt;Shift&amp;gt;&amp;lt;Control&amp;gt;&amp;lt;Alt&amp;gt;Tab&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8        &amp;quot;[]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9        &amp;quot;[]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10       &amp;quot;[]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_7&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_8&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_4&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_5&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_6&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_1&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_2&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9        &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_3&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10       &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_0&#39;]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-11       &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-12       &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down     &amp;quot;[&#39;&amp;lt;Super&amp;gt;Page_Down&#39;]&amp;quot;
@@ -267,8 +279,8 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up       &amp
 gsettings set org.gnome.desktop.wm.keybindings switch-windows               &amp;quot;[&#39;&amp;lt;Super&amp;gt;Return&#39;]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward      &amp;quot;[&#39;&amp;lt;Shift&amp;gt;&amp;lt;Super&amp;gt;Return&#39;]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings toggle-above                 &amp;quot;[]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen            &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_9&#39;]&amp;quot;
-gsettings set org.gnome.desktop.wm.keybindings toggle-maximized             &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_8&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen            &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_Multiply&#39;]&amp;quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-maximized             &amp;quot;[&#39;&amp;lt;Super&amp;gt;KP_Divide&#39;]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings toggle-on-all-workspaces     &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings toggle-shaded                &amp;quot;[]&amp;quot;
 gsettings set org.gnome.desktop.wm.keybindings unmaximize                   &amp;quot;[]&amp;quot;

@@ -31,7 +31,7 @@ como es esto de los rss (pese a que este blog los genera automagicamente)&lt;/p&
 
 &lt;p&gt;bien, un rss, no es mas que un fichero de texto plano formateado en xml, es
 decir, etiquetas que &lt;code&gt;&amp;lt;abren&amp;gt;&lt;/code&gt; y etiquetas que &lt;code&gt;&amp;lt;/cierran&amp;gt;&lt;/code&gt;. Este fichero
-almecena un resume del contenido de un sitio o cosa, por ejemplo titulo de
+almecena un resumen del contenido de un sitio o cosa, por ejemplo titulo de
 entradas, fechas de publicacion, resumen de la entrada, autor, enlace y
 demas&amp;hellip; luego si tenemos un programa que sea capas de analizar dichos ficheros,
 podemos enterarnos de los cambios realizados en el sitio de nuestro interes.. y
@@ -44,9 +44,9 @@ gente sencilla como tu y como yo, su nombre es &lt;strong&gt;elfeed&lt;/strong&g
 
 &lt;h2 id=&#34;instalar-elfeed&#34;&gt;Instalar &lt;code&gt;elfeed&lt;/code&gt;&lt;/h2&gt;
 
-&lt;p&gt;Para instalar &lt;code&gt;elfeed&lt;/code&gt; puedes utilizar el gestor de paquetes de emacs (melpa),
-mas, el metodo que aqui se muestra es para romanticos que quieren hacer las
-cosas a mano.&lt;/p&gt;
+&lt;p&gt;Para instalar &lt;code&gt;elfeed&lt;/code&gt; puedes utilizar el gestor de paquetes de emacs
+(repositorio melpa), o seguir el siguiente metodo apto solo para romanticos de
+manos inquietas.&lt;/p&gt;
 
 &lt;p&gt;desde la terminal vamos a la ruta donde tengamos nuestros complementos para
 emacs, en mi caso es&lt;/p&gt;
@@ -120,8 +120,8 @@ emacs, en mi caso es&lt;/p&gt;
         ))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;evaluamos el codigo, y ya tenemos nuestro leector rss, para modificar o añadir
-nuevos feeds simplemento modifica las cadenas en &lt;code&gt;elfeed-feeds&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;evaluamos el codigo, y ya tenemos nuestro leector rss. Para modificar o añadir
+nuevos feeds modifica las cadenas de la variable &lt;code&gt;elfeed-feeds&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;para hacer mas comodo el asunto, agreguemos un par de accesos directos a nuestro
 leector&lt;/p&gt;
@@ -147,14 +147,20 @@ marcar una entrada como leeida &lt;code&gt;r&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;ver la entrada en el navegador esta muy bien, pero no me gustan el javascript,
 los anuncios ni las cosas modernas, que puedo hacer? Emacs incorpora un
 navegador de texto plano &lt;code&gt;eww&lt;/code&gt;, podemos abrir los enlaces desde el visor de
-entradas de elfeed: colocamos el cursor en el enlace y presionamos &lt;code&gt;M-x eww&lt;/code&gt;,
-aparece el enlace como parametro por defecto, luego damos un enter y ya esta&lt;/p&gt;
+entradas de elfeed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;primero colocamos el cursor en el enlace y presionamos &lt;code&gt;M-x eww&lt;/code&gt;,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;veras que aparece el enlace como el parametro por defecto, damos enter o
+colocamos una direccion distinta + un enter&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;../eww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;para salir de &lt;code&gt;eww&lt;/code&gt; y regresar a &lt;code&gt;elfeed&lt;/code&gt; pulsamos otro &lt;code&gt;q&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;para salir de &lt;code&gt;eww&lt;/code&gt; y regresar a &lt;code&gt;elfeed&lt;/code&gt; pulsamos &lt;code&gt;q&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;hagamos mas sencilla la cuestion agregando algunos atajos a &lt;code&gt;eww&lt;/code&gt; en nuestra
+&lt;p&gt;hagamos mas sencilla la operacion agregando algunos atajos para &lt;code&gt;eww&lt;/code&gt; en nuestra
 configuracion&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key [f5] &#39;eww)
