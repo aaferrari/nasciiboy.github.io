@@ -7,8 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Fri, 20 Jan 2017 22:16:06 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 31 Jan 2017 12:06:31 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Samurai Champloo ♪</title>
+      <link>http://nasciiboy.github.io/post/SamuraiChamploo/</link>
+      <pubDate>Tue, 31 Jan 2017 12:06:31 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/SamuraiChamploo/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;../samurai-champloo.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La musica de Samurai Champloo es Electro Rapera Anime, sirve para entrar en
+estado &lt;s&gt;avatar&lt;/s&gt; &lt;b&gt;afro&lt;/b&gt; algo asi como sentirse maloso, ponerse
+cariñoso&amp;hellip; programar, pero nunca para bailar, que los programadores no
+bailan&amp;hellip; amenos que sean afro.&lt;/p&gt;
+
+&lt;p&gt;En todo album digno de ser escuchado &lt;em&gt;las pistas son el playlist&lt;/em&gt;, y todo
+album que alcanza dicho estado merece, digo &lt;em&gt;exige&lt;/em&gt; se ser compartido&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:0106f2c2d2cee981836926fc55d8008788fc4e9e&amp;amp;dn=Samurai%20Champloo%20OST&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;algunas pistas, para repetir una y otra ves son&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Aruarian Dance&lt;/li&gt;
+&lt;li&gt;Who&amp;rsquo;s Theme&lt;/li&gt;
+&lt;li&gt;World Without Words&lt;/li&gt;
+&lt;li&gt;What YOU Want&lt;/li&gt;
+&lt;li&gt;Still Think Different&lt;/li&gt;
+&lt;li&gt;Sacrifice&lt;/li&gt;
+&lt;li&gt;Enjoy Yourself&lt;/li&gt;
+&lt;li&gt;The Space Between Two World&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>la forma en que trabajo</title>
@@ -651,7 +685,7 @@ mas grande obra audiovisual humana &lt;strong&gt;Neon Genesis Evangelion&lt;/str
 
 &lt;p&gt;El resultado es magnifico, la creatura es un muñeco, la musica se aprobecha de
 los otakus evangelistas, los efectos y actuaciones son una reivindicacion del
-cine japones no una copia yanky&amp;hellip; &lt;strong&gt;Hidaki&lt;/strong&gt; (Anno, ehh, suena raro) es un troll
+cine japones no una copia yanky&amp;hellip; &lt;strong&gt;Hideaki&lt;/strong&gt; (Anno, ehh, suena raro) es un troll
 de sus fans a la ves que los utiliza para hacer pasta, Evangelion 3.0 es la mejor
 muestra, aun asi, esta obra sin ser exelente va directo a la lista de archivos a
 preservar.&lt;/p&gt;
@@ -1826,55 +1860,6 @@ SavePlaylist = yes
 &lt;p&gt;Listo, a disfrutar de buena musica&lt;/p&gt;
 
 &lt;p&gt;ps: ese album de la cura esta&amp;hellip; bueno, en contraste a algunos otros.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Como dividir un album contenido en una sola pista flac</title>
-      <link>http://nasciiboy.github.io/apt/shnsplit/</link>
-      <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
-      
-      <guid>http://nasciiboy.github.io/apt/shnsplit/</guid>
-      <description>&lt;p&gt;En este mundo existen algunos seres extraños con tanto amor (libros, musica,
-series, peliculas, porno, &amp;hellip;) que no les cabe en su disco duro y tienen que
-compartirlo.&lt;/p&gt;
-
-&lt;p&gt;Si el amor viene en forma de &lt;strong&gt;una sola pista flac&lt;/strong&gt;, no hagas como yo y la
-mandes a la mierda, toda muestra de afecto merece respeto&amp;hellip; exepto si proviene
-de un degenerado que graba viniles en digital a maxima calidad, si formas parte
-de este grupo no mereces tener oidos.&lt;/p&gt;
-
-&lt;p&gt;Bueno, podemos optener las pistas individuales siempre y cuando la pista este
-acompañada de un fichero con terminacion &lt;strong&gt;.cue&lt;/strong&gt;. Primero necesitamos instalar
-unas cuantas herramientas, tanto en debian como en freidora son las siguientes&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;gestor-de-paquetes install cuetools shntool flac
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;luego vamos hasta la carpeta que tiene la pista a dividir y ejecutamos el
-siguiente comando&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;shnsplit -f pista.cue -o flac pista.flac
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;modificando &lt;code&gt;pista&lt;/code&gt;, por el nombre especifico de &lt;strong&gt;tu&lt;/strong&gt; pista. Luego de ejecutar
-esto tendremos pistas independientes con el formato &lt;code&gt;split-track01.flac&lt;/code&gt;,
-&lt;code&gt;split-track02.flac&lt;/code&gt;, &lt;code&gt;split-track&lt;/code&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;para colocar los metadatos (titulo, autor) en las pistas invocamos lo siguiente&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cuetag.sh pista.cue split-track*
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;en ocaciones, este comando puede informarnos que el numero de pistas no
-coincide, si se presenta dicha circunstancia revisa si tienes una pista con
-nombre &lt;code&gt;split-track00.flac&lt;/code&gt;, te la cargas y vuelves a intentar.&lt;/p&gt;
-
-&lt;p&gt;Pero&amp;hellip; y todo esto aun nos deja las pistas con nombre &lt;code&gt;split-track*&lt;/code&gt;, para eso
-no conosco una solucion elegante desde linea de comandos. La solucion que
-utilizo es abrir moc (&lt;strong&gt;Music On Console&lt;/strong&gt;) copiar todos las nombres de las
-pistas (el titulo se muestra a partir de los metadatos) y con Emacs cambiar los
-nombres &amp;ldquo;a mano&amp;rdquo; en &lt;code&gt;wdired-change-to-wdired-mode&lt;/code&gt;&lt;/p&gt;
 </description>
     </item>
     

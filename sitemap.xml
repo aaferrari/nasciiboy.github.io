@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nasciiboy.github.io/post/SamuraiChamploo/</loc>
+    <lastmod>2017-01-31T12:06:31-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/post/workspace/</loc>
     <lastmod>2017-01-20T22:16:06-06:00</lastmod>
   </url>
@@ -168,7 +173,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/fonos/</loc>
-    <lastmod>2016-12-30T18:21:44-06:00</lastmod>
+    <lastmod>2017-01-31T12:06:31-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -216,13 +221,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/post/</loc>
-    <lastmod>2017-01-20T22:16:06-06:00</lastmod>
+    <lastmod>2017-01-31T12:06:31-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/post/</loc>
-    <lastmod>2017-01-20T22:16:06-06:00</lastmod>
+    <lastmod>2017-01-31T12:06:31-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -293,7 +298,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-01-20T22:16:06-06:00</lastmod>
+    <lastmod>2017-01-31T12:06:31-06:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -20,11 +20,14 @@
     --FGCstart7: #db2e24;   
     --FGCstart8: #ff4500;   
     --FGCtext  : #ffffff;
-    --FGCemph  : #6fb336;   
+    --FGCemph  : #ffffff;   
     --FGCbtcode: #333333;   
     --FGCftcode: #ffffff;   
     --FGCbcode : #b3b3b3;   
-    --FGCtkom  : #ffbbbb;   
+    --FGCtcomm : #ff4500;   
+    --FGCtcode : #bfbfff;   
+    --FGCfile  : #eedd82;   
+    --FGCmath  : #98fb98;   
     --FGClink  : #00ffff;   
     --BGClinkh : #556b2f;   
     --FGClinkh : #ffffff;   
@@ -35,7 +38,7 @@
     --FGCtbody : #87cefa;   
 }
 
-@font-face { font-family: text;           src: local('sans-serif'   );                     }
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
 @font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
 @font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
 @font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
@@ -132,8 +135,6 @@ h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-he
 .path li a { text-decoration: none; color: #87cefa; }
 .path-pwd { color: yellow; }
 
-code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
-         padding: 0px 0.2em; }
 
 pre {
     background-color: var( --FGCbtcode ); color: white;
@@ -142,8 +143,17 @@ pre {
     overflow: auto;
 }
 
-b { font-family: text_bold; }
-i { font-family: text_italic; }
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
 
 a { color: #00ffff; text-decoration: underline; }
 a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
@@ -170,6 +180,23 @@ img:hover { filter: none;
   <body>
     
 <main>
+  
+  <div class="thumb">
+  <h2 class="title"><a href="http://nasciiboy.github.io/post/SamuraiChamploo/">Samurai Champloo ♪</a></h2>
+
+  <ul class="meta">
+    <li><time datetime="2017-01-31 12:06:31 -0600 CST">Jan 31, 2017</time></li>
+    
+    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+    
+  </ul>
+
+  <div class="summary">La musica de Samurai Champloo es Electro Rapera Anime, sirve para entrar en estado avatar afro algo asi como sentirse maloso, ponerse cariñoso&hellip; programar, pero nunca para bailar, que los programadores no bailan&hellip; amenos que sean afro.
+En todo album digno de ser escuchado las pistas son el playlist, y todo album que alcanza dicho estado merece, digo exige se ser compartido
+magnet:?xt=urn:btih:0106f2c2d2cee981836926fc55d8008788fc4e9e&amp;dn=Samurai%20Champloo%20OST&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce  algunas pistas, para repetir una y otra ves son</div>
+</div>
+
+  
   
   <div class="thumb">
   <h2 class="title"><a href="http://nasciiboy.github.io/post/workspace/">la forma en que trabajo</a></h2>
@@ -250,7 +277,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
     <header class="taxonomies">category</header>
     <div>
       <ul class="terms">
-        <li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
+        <li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
       </ul>
     </div>
   </section>
@@ -270,6 +297,21 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
     
     <div class="thumb-sm">
   <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/SamuraiChamploo/">Samurai Champloo ♪</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-31 12:06:31 -0600 CST">Jan 31, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/post/workspace/">la forma en que trabajo</a></h2>
 
     <ul class="meta">
@@ -281,6 +323,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -298,7 +341,6 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/emacs/rssPlusEww/">Emacs web y noticias en modo texto</a></h2>
@@ -312,6 +354,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -329,7 +372,6 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/raptor-book/">Raptor-Book</a></h2>
@@ -343,6 +385,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -360,7 +403,6 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/2017Challenges/">2017Challenges</a></h2>
@@ -374,6 +416,7 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -391,7 +434,6 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/post/Krautrock-Albums/">Krautrock Albums</a></h2>
@@ -400,21 +442,6 @@ Se usa para referirse a una gran cantidad de artistas alemanes que habían sido 
       <li><time datetime="2016-12-30 18:21:44 -0600 CST">Dec 30, 2016</time></li>
       
       <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
-      
-    </ul>
-  </header>
-</div>
-
-    
-    
-    <div class="thumb-sm">
-  <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/first-theme/">first theme</a></h2>
-
-    <ul class="meta">
-      <li><time datetime="2016-12-28 17:17:04 -0600 CST">Dec 28, 2016</time></li>
-      
-      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
       
     </ul>
   </header>
