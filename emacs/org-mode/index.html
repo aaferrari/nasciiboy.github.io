@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>org mode - nba - GNU&#39;s Rock</title>
+    
+    <style media="screen">
+:root {
+                            
+    --BGC      : #000000;   
+    --FGC      : #ffffff;   
+    --BGClogo  : #222222;   
+    --FGClogo  : #ffffff;   
+    --FGCtitle : #ff4500;   
+    --FGCstart1: #4B99D2;   
+    --FGCstart2: #00ffff;   
+    --FGCstart3: #ffa074;   
+    --FGCstart4: #98fb98;   
+    --FGCstart5: #b0c4de;   
+    --FGCstart6: #7fffd4;   
+    --FGCstart7: #db2e24;   
+    --FGCstart8: #ff4500;   
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;   
+    --FGCbtcode: #333333;   
+    --FGCftcode: #ffffff;   
+    --FGCbcode : #b3b3b3;   
+    --FGCtcomm : #ff4500;   
+    --FGCtcode : #bfbfff;   
+    --FGCfile  : #eedd82;   
+    --FGCmath  : #98fb98;   
+    --FGClink  : #00ffff;   
+    --BGClinkh : #556b2f;   
+    --FGClinkh : #ffffff;   
+    --BGCdt    : #b3b3b3;   
+    --FGCdt    : #ffffff;   
+    --FGCthead : #ff7f24;   
+    --BGCthead : #000000;   
+    --FGCtbody : #87cefa;   
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: local('monospace'    );                     }
+@font-face { font-family: codeblock;      src: local('monospace'    );                     }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em;
+                width: 70%;
+                float: left;
+               }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 2em;
+                width: 50%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+ul.terms    { list-style: none; margin: 0em; padding: 0em; }
+ul.terms li { display: block;
+              float: left;
+              margin: .1em .5em .1em .5em;
+}
+ul.terms a { text-decoration: none;
+}
+
+ul.terms a:hover { text-decoration: none;
+                   background-color: #333;
+                   color: #fff;
+}
+
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+}
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }  
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }  
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }  
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }  
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }  
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }  
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+ 
+dl { padding-bottom: 2em; }          
+dl dt { color: #daa520;              
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;              
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { filter: none;
+                             }
+</style>
+
+  </head>
+
+  <body>
+    
+<main>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    
+    <li><span class="path-pwd">org mode</span></li>
+  </ul>
+
+  <article>
+  <h1 class="title">org mode</h1>
+
+  <time datetime="2017-01-31 14:40:54 -0600 CST">Jan 31, 2017</time>
+
+  <div class="article-body">
+
+<p><code>org-mode</code> es un lenguaje de marcas ligeras nacido de, por, y para <code
+class="command">emacs</code> y como emacs, org tambien tiene aplicaciones
+varias, puede ser una agenta, una lista de pendientes, hoja de calculo, blog de
+notas, sistema de documentacion e investigacion reproducible, todo junto y
+revuelto, encima da la posibilidad de exportar el contenido a pdf, latex, html,
+markdown, odt y groff (algunas opciones vienen por separado y requieren
+configuracion).</p>
+
+<p>que bueno&hellip; no? la devilidad de org esta en su diversidad, al no tener un
+proposito especifico, algunos aspectos no han sido resueltos, especialmente lo
+que respecta a ser un sistema de documentacion. Con todo, si no exiges demasiado
+vasta y sobra.</p>
+
+<p>Imaginemos que no conoces org, odias <code>html</code> y tienes necesidad de generar
+contenido en formato html, listo?, de eso va esta entrada</p>
+
+<h3 id="configuracion">Configuracion</h3>
+
+<p>Para comenzar a utilizar org solo hace falta abrir emacs y crear un fichero con
+terminacion <code>.org</code> o en su defecto agregar lo siguiente en la primer linea de
+cualquier fichero y recargar (<code>C-x C-v</code>)</p>
+
+<pre><code>-*- mode: org; -*-
+</code></pre>
+
+<p>org utiliza unas marcas especiales (opcionales) al inicio del documento, para
+establecer el titulo, autor, correo, encender y apagar algunas caracteristicas.</p>
+
+<pre><code class="language-org-mode">#+TITLE: Cosas de Emacs: org-mode
+#+LANGUAGE: es
+#+AUTHOR: nasciiboy
+#+EMAIL: miCorreoCamello@aya.org
+#+DATE: 2015-22-06
+#+DESCRIPTION: experimento org-mode
+#+KEYWORDS: emacs org-mode tutorial
+</code></pre>
+
+<p>supongo que se explican por si mismas&hellip;</p>
+
+<h3 id="encabezados">Encabezados</h3>
+
+<p>Cualquier cosa que escribamos inmediatamente despues de la configuaracion, sera
+lo primero que aparezca dentro del documento, aunque, al igual que en html,
+tambien podemos agrupar el contenido dentro de secciones/encabezados segun
+convenga.</p>
+
+<p>La sintaxis de un encabezado muy simple:</p>
+
+<pre><code class="language-org-mode">* Encabezado principal
+** Segundo nivel
+*** 3er. nivel
+    algo de texto
+*** 3er. nivel
+    mas texto
+
+* Otro encabezado principal
+</code></pre>
+
+<p>Toda linea que inicia con uno o varios <code>*</code> seguido por almenos un espacio en
+blanco, es un encabezado.</p>
+
+<p>El texto (en la misma linea) donde esta el o los <code>*</code> sera el titulo del encabezado.</p>
+
+<p>El nivel del encabezado depende del numero de <code>*</code> al inicio de la linea, es
+decir</p>
+
+<ul>
+<li><code>*</code> == <code>h1</code></li>
+<li><code>**</code> == <code>h2</code></li>
+<li><code>***</code> == <code>h3</code></li>
+<li><code>****</code> == <code>h4</code></li>
+<li><code>*****</code> == <code>h5</code></li>
+</ul>
+
+<p>(en realidad, al exportar a html, los encabezados se desplazan en uno, el titulo
+del documento es el que se corresponde con <code>h1</code>, pero lo dejo asi para evitar
+esfuerzo mental)</p>
+
+<p>A que encabezado pertenece el texto? al primero que aparezca por encima de
+el. Si no tiene un encabezado encima pertenece al <q>titulo</q> del documento</p>
+
+<p><b>NOTA:</b> en org no existe un limite en cuanto el nivel que puede tener un
+encabezado. No es asi en html, segun recuerdo el encabezado de menor nivel que
+existe en html es <code>h7</code></p>
+
+<p>Un ejemplo mas extenso:</p>
+
+<pre><code>* Encabezado H1
+
+  Primer parrofo del encabezado H1
+
+  Segundo parrafo del encabezado H1
+
+** Encabezado H2
+
+   Algo,
+   y algo mas (sin una linea en blanco no hay cambio de parrafo)
+
+** Otro Encabezado H2
+
+   Hey
+
+*** Encabezado H3
+
+    coloca algo aqui
+
+**** Encabezado H4
+
+     y aqui
+
+***** Encabezado H5
+
+      tambien aqui
+
+* Otro Encabezado H1
+</code></pre>
+
+<p>como vez, he indentado el texto que pertenece a cada encabezado (no es
+necesario, pero a mi me gusta que se vea asi).</p>
+
+<p>Por cierto como no podia ser de otra forma podemos crear encabezados haciendo
+uso de atajos de teclado.</p>
+
+<p>Con <code>M-Intro</code> si no hay ningun encabezado, aparece uno de primer nivel, de otra
+forma, el nivel es igual al del encabezado anterior.</p>
+
+<p>otros atajos interesantes</p>
+
+<ul>
+<li><p><code>TAB</code> sobre un encabezado, oculta o muestra el contenido</p></li>
+
+<li><p><code>Shift-TAB</code> En cualquier posicion, oculta o muestra el contenido de todos los
+encabezados</p></li>
+
+<li><p><code>C-n</code> ir al siguiente encabezado</p></li>
+
+<li><p><code>C-p</code> ir al encabezado anterior</p></li>
+
+<li><p><code>C-c C-f</code> ir al siguiente encabezado del mismo nivel</p></li>
+
+<li><p><code>C-c C-b</code> ir al encabezado anterior del mismo nivel</p></li>
+
+<li><p><code>C-c C-u</code> ir al encabezado padre</p></li>
+
+<li><p><code>M-FlechaDerecha</code> agregar un <code>*</code> al encabezado</p></li>
+
+<li><p><code>M-FlechaIzquierda</code> quitar un <code>*</code> al encabezado</p></li>
+
+<li><p><code>M-FlechaArriba</code> Si el encabezado superior es del mismo nivel, intercambia
+el lugar de los encabezados, es decir mueve el actual hacia arriba</p></li>
+
+<li><p><code>M-FlechaAbajo</code> Si el encabezado siguiente es del mismo nivel, intercambia
+el lugar de los encabezados, es decir mueve el actual hacia abajo</p></li>
+</ul>
+
+<h3 id="listas">Listas</h3>
+
+<p>Como en html, disponemos de dos tipos de listas, ordenadas (numeradas) y no
+ordenadas, para las primeras colocamos un numero (el que sea) seguido de un
+punto y comenzamos a escribir</p>
+
+<pre><code class="language-org-mode">1. primer elemento de la lista
+2. segundo elemento de la lista
+3. tercer elemento de la lista
+   con una linea adicional
+
+   este parrafo tambien es parte del tercer elemento
+
+
+este parrafo esta fuera de la lista
+</code></pre>
+
+<p>en este caso el contenido que sea parte de un elemento de la lista, debe
+respetar cierta indentacion.</p>
+
+<p>El numero que coloques al inicio de la lista, es irrelevante, org lo ignora por
+completo y lo substituye por un <code>ol</code> -&gt; <code>li</code> al exportar.</p>
+
+<p>Como en los encabezados, podemos generar/saltar al siguiente elemento con la
+combinacion <code>M-Intro</code>. Este atajo tiene un efecto secundario, org pasa de
+nuestro numero y reenumera la lista apartir de 1.</p>
+
+<p>Para salir de la lista, dejamos una linea en blanco. Org tambien considera, de
+forma <q>automatica</q> que estamos fuera de un listado si dejamos dos espacios
+en blanco.</p>
+
+<p>Si estamos dentro de un parrafo y alguna de sus lineas tiene <em>apariencia de
+listado</em> al exportar, org toma la linea y la considera una lista. No tengas
+lineas que inicien con algo similar a una lista.</p>
+
+<p>El resto, asi son las listas ordenadas</p>
+
+<pre><code class="language-org-mode">1. elemento uno
+2. elemento dos
+3. elemento tres
+
+
+1) elemento uno
+2) elemento dos
+3) elemento tres
+</code></pre>
+
+<p>listas no ordenadas</p>
+
+<pre><code class="language-org-mode">+ elemento uno
++ elemento dos
++ elemento tres
+
+
+- elemento uno
+- elemento dos
+- elemento tres
+</code></pre>
+
+<p>Algunos comandos en listados</p>
+
+<ul>
+<li><p><code>Shift-FlechaDerecha</code> rotacion por el estido del listado</p></li>
+
+<li><p><code>M-FlechaIzquierda</code> rotacion por el estido del listado</p></li>
+
+<li><p><code>M-FlechaDerecha</code> convierte al elemento en un miembro del elemento superior</p></li>
+
+<li><p><code>M-FlechaIzquierda</code> convierte al elemento en un elemento de nivel superior</p></li>
+
+<li><p><code>M-FlechaArriba</code> si el elemento superior es del mismo nivel, intercambia
+el lugar de los elementos, es decir mueve el actual hacia arriba</p></li>
+
+<li><p><code>M-FlechaAbajo</code> si el elemento siguiente es del mismo nivel, intercambia el
+lugar de los elementos, es decir mueve el actual hacia abajo</p></li>
+</ul>
+
+<h4 id="definiciones">Definiciones</h4>
+
+<p>Este elemento tiene las mismas reglas que una lista no ordenada, es decir, el
+contenido que forma parte de la definicion ha de tener indentacion.</p>
+
+<pre><code class="language-org-mode">+ Palabra :: definicion
+
+- Palabra :: definicion
+</code></pre>
+
+<p>los dos puntos (<code>::</code>) que separan la <code>palabra</code> de la <code>definicion</code> tiene que estar
+en la misma linea que el signo <code>-</code> o <code>+</code>. La <code>definicion</code> puede extenderse en
+varias lineas, parrafos e incluir bloques varios.</p>
+
+<p>Al igual que una lista, las definiciones terminan dejando dos linas en
+blanco.</p>
+
+<h3 id="resaltado">Resaltado</h3>
+
+<ul>
+<li><code>*bold*</code> ==&gt; <b>bold</b></li>
+<li><code>~code~</code> ==&gt; <code>code</code></li>
+<li><code>+strike+</code> ==&gt; <s>strike</s></li>
+<li><code>/italic/</code> ==&gt; <i>italic</i></li>
+<li><code>=verbatim=</code> ==&gt; <code>code</code></li>
+<li><code>_underline_</code> ==&gt; <u>underline</u></li>
+</ul>
+
+<p>tambien se pueden crear superindices</p>
+
+<pre><code class="language-org-mode">elemento^superinidice
+
+</code></pre>
+
+<p>el elemento y el superindice no deben tener espacios en blanco, por ejemplo</p>
+
+<ul>
+<li><code>2^30</code> ==&gt; <code>2<sup>30</sup></code></li>
+</ul>
+
+<p>en caso de los subindices</p>
+
+<pre><code class="language-org-mode">elemento_subinidice
+
+</code></pre>
+
+<p>el elemento y el subindice no deben tener espacios en blanco, por ejemplo</p>
+
+<ul>
+<li><code>2_30</code> ==&gt; <code>2<sub>30</sub></code></li>
+</ul>
+
+<p>finalmente podemos meter formulas LaTex dentro del texto (inline) con la
+sintaxis <code>$formula$</code>, por ejemplo</p>
+
+<ul>
+<li><code>$ne^{123^{a}}$</code> ==&gt; <code>ne<sup>123<sup>a</sup></sup></code></li>
+</ul>
+
+<h3 id="enlaces">Enlaces</h3>
+
+<pre><code class="language-org-mode">[[prefijo:ruta][descripcion]]
+</code></pre>
+
+<p>la descripcion puede omitirse, quedando</p>
+
+<pre><code class="language-org-mode">[[prefijo:ruta]]
+</code></pre>
+
+<p>enlaces soportados</p>
+
+<pre><code>http://www.astro.uva.nl/~dominik          en la red
+doi:10.1000/182                           DOI para un recurso electronico
+file:/home/dominik/images/jupiter.jpg     fichero, ruta absoluta
+/home/dominik/images/jupiter.jpg          igual que arriba
+file:papers/last.pdf                      fichero, ruta relativa
+./papers/last.pdf                         igual que arriba
+file:/myself@some.where:papers/last.pdf   fichero, ruta a una maquina remota
+/myself@some.where:papers/last.pdf        igual que arriba
+file:sometextfile::NNN                    fichero, saltar al numero de linea
+file:projects.org                         otro fichero Org
+file:projects.org::some words             buscar texto en fichero Org[fn:35]
+file:projects.org::*task title            buscar encabezado en fichero Org[fn:36]
+file+sys:/path/to/file                    abrir via OS, como doble-click
+file+emacs:/path/to/file                  fuerza apertura con Emacs
+docview:papers/last.pdf::NNN              abrir en modo doc-view en la pagina
+id:B7423F4D-2E8A-471B-8810-C40F074717E9   Enlazar con ecabezado por ID
+news:comp.emacs                           enlace Usenet
+mailto:adent@galaxy.net                   enlace Mail
+mhe:folder                                enlace a carpeta MH-E
+mhe:folder#id                             enlace a mensage MH-E
+rmail:folder                              enlace a carpeta RMAIL
+rmail:folder#id                           enlace a mensaje RMAIL
+gnus:group                                enlace a grupo Gnus
+gnus:group#id                             enlace a articulo Gnus
+bbdb:R.*Stallman                          enlace BBDB (con regexp)
+irc:/irc.com/#emacs/bob                   enlace IRC
+info:org#External links                   enlace a nodo o indice Info
+shell:ls *.org                            Un comando shell
+elisp:org-agenda                          Comando Interactivo Elisp
+elisp:(find-file-other-frame &quot;Elisp.org&quot;) formate de evaluacion Elisp
+</code></pre>
+
+<p>Ademas podemos poner enlaces a secciones (encabezados) dentro de nuestro
+documento con la estructura</p>
+
+<pre><code class="language-org-mode">[[*Encabezado][descripcion]]
+</code></pre>
+
+<p>recuerda, la descripcion es opcional</p>
+
+<p>Si te encuentras en el modo org, y deseas segir un enlace presiona <code>C-c C-o</code>.
+Para regresar a la posicion original <code>C-c &amp;</code>.</p>
+
+<p>Tambien puedes colocar una marca temporal <code>C-c %</code> y luego regeresar con <code>C-c
+&amp;</code>. Esto es similar al comando <code>C-u C-ESP</code> que permite recorrer el circulo de
+marcas.</p>
+
+<p>Para modificar la direccion de un enlace o su descripcion presiona <code>C-c C-l</code></p>
+
+<p>Por cierto, para colocar imagenes dentro del contenido que exportes simplemente
+coloca la direccion de la imagen, asi:</p>
+
+<pre><code class="language-org-mode">[[mi-imagen.png]]
+</code></pre>
+
+<h4 id="radio-targets">Radio Targets</h4>
+
+<p>Los <em>Radio Objetivos</em>, son un metodo automagico de convertir una frace en
+un enlace a algun punto del documento, lo onico que tenemos que hacer es
+encerrar el objetivo entre tres pares de <code>&lt;</code> <code>&gt;</code> asi:</p>
+
+<pre><code class="language-org-mode">&lt;&lt;&lt;Mi objetivo&gt;&gt;&gt;
+</code></pre>
+
+<p>ahora todo el texto que coincida con <code>Mi objetivo</code> apunta al radio objetivo, no
+importa si esta separado por espacios (exepto nuevas lineas) o si esta en
+minusculas o mayusculas.</p>
+
+<h3 id="codigo">Codigo</h3>
+
+<p>Org tiene distintos tipos de bloques, todos con esta sintaxis</p>
+
+<pre><code class="language-org-mode">#+BEGIN_Tipo-Bloque algun-parametro
+  contenido
+#+END_TIpo-Bloque
+</code></pre>
+
+<p>donde <code>Tipo-Bloque</code> puede ser</p>
+
+<ul>
+<li><code>EXAMPLE</code> ejemplos (como <code>&lt;pre&gt;</code>)</li>
+<li><code>HTML</code> seccion de codigo a exportar tal cual</li>
+<li><code>LaTex</code> seccion de codigo a exportar tal cual</li>
+<li><code>SRC</code> bloque de codigo</li>
+<li><code>QUOTE</code> bloque de cita</li>
+</ul>
+
+<p>hay un truco, que evita escribir a mano todo el bloque. En una linea vacia o con
+espacios en blanco escribimos <code>&lt;</code> segudio por</p>
+
+<ul>
+<li><code>e</code> ==&gt; <code>EXAMPLE</code></li>
+<li><code>h</code> ==&gt; <code>HTML</code></li>
+<li><code>l</code> ==&gt; <code>LaTex</code></li>
+<li><code>s</code> ==&gt; <code>SRC</code></li>
+<li><code>q</code> ==&gt; <code>QUOTE</code></li>
+</ul>
+
+<p>y mas un <code>tab</code> el bloque aparece!</p>
+
+<p>Es necesario ahondar un poco en los bloques de codigo fuente</p>
+
+<pre><code>#+BEGIN_SRC c
+  /* strlen: regresa la longitud de s */
+  int strlen(char s[])
+  {
+    int i;
+
+    i = 0;
+    while (s[i] != '\0')
+      ++i;
+    return i;
+  }
+#+END_SRC
+</code></pre>
+
+<p>el lenguaje se especifica luego de <code>#+BEGIN_SRC</code>, en este caso, lenguaje <code>c</code>,
+tambien podemos hacer que el codigo aparesca numerado si agregamos el parametro
+<code>-n</code>. Si se desea que la numeracion inicie a partir de un numero concreto
+colocamos <code>-n numero</code>.</p>
+
+<p>Antes mencione que org nacio de, por y para emacs, pues resulta que esto se
+demuestra en los bloques de codigo. Sea cual sea el lenguaje que coloques
+delante de un bloque de codigo (digo, si esta soportado) al presionar <code>C-c '</code> se
+abre una ventana con un modo para editar dicho lenguaje con resaltado, con
+teclas de emacs y funciones de emacs, con otro <code>C-c '</code> regresas al
+documento.</p>
+
+<p>Puedes imaginar el colosal esfuerzo que requiere emular esta funcion en otro
+sitio que no sea emacs?</p>
+
+<p>asi se ve org-mode en mi emacs</p>
+
+<p><img src="../raptor-book.png" alt="" /></p>
+
+<p><b>NOTA:</b> a veces en versiones experimentales de emacs, la convinacion <code>C-c
+'</code> abre un buffer de edicion para el bloque de codigo, pero al repetir el
+comando, este no se reconoce, si ocurre esa situacion, intenta con los comandos
+por su nombre directamente. Para entrar es <code>org-edit-src-code</code> y para salir
+<code>org-edit-src-exit</code></p>
+
+<h2 id="exportacion">Exportacion</h2>
+
+<p>En principio exportar apartir de org es sencillo, presionamos <code>C-c C-e</code>.</p>
+
+<p><img src="../org-export.png" alt="" /></p>
+
+<p>Esto abre una interfaz de exportacion con opciones varias, por ejemplo para
+exportar a html (un fichero con el mismo nombre del documento pero con
+terminacion <code>.html</code>) el comando completo seria <code>C-c C-e h h</code>, o si estas ya en
+la interfaz <strong>Org Export Dispatcher</strong>, solo <code>h h</code>.</p>
+
+<p>Pero antes de exportar vamos a modificar algunas cosas. En la configuracion del
+documento agrega estas lineas:</p>
+
+<pre><code>#+OPTIONS: toc:nil num:nil h:7 html-preamble:nil html-postamble:nil html-scripts:nil html-tyle:nil
+#+HTML_HEAD: &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;worg-data/worg.css&quot; /&gt;
+</code></pre>
+
+<p><code>#+HTML_HEAD:</code> coloca alguna cosa dentro de la etiqueta <code>head</code> del html,
+para ser precisos, se indica la direccion de una hoja de estilo.
+<a href="../worg-data.zip">Aqui</a> encontraras la que utilizo.</p>
+
+<p>cuando se exporta por defecto, se crea una <strong>tabla de contenidos</strong>, si no la
+quieres deja el <code>toc:nil</code>, tambien se numeran las secciones, como <code>1</code>, <code>1.1</code>,
+<code>2</code>, <code>2.1.2</code> y asi, <code>num:nil</code> indica que no queremos numeracion.</p>
+
+<p><code>h:7</code> indica cuantos niveles de encabezados deseamos exportar como <code>H</code>s. Si hay
+encabezados que superen el nivel, seran incluidos, pero en forma de lista.</p>
+
+<p><code>html-postamble:nil</code> elimina una seccion al final del html que contiene el
+autor, fecha y correo(?), <code>html-preamble-nil</code> no se que haga pero tampoco lo
+quiero&hellip;</p>
+
+<p>veras que org es generoso, nos regala una hoja de estilo y scripts
+<code>html-scripts:nil</code> y <code>html-tyle:nil</code> se las regresan&hellip; de buena forma&hellip; pero
+org insiste, pasa de nosotros y las coloca de todas formas (por lo genera como comentario)</p>
+
+<p>por cierto, para mostrar las formulas Tex en html, org coloca esta linea</p>
+
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;http://orgmode.org/mathjax/MathJax.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<h4 id="colorear-codigo">Colorear Codigo</h4>
+
+<p>Esto requiere algo de codigo, primero ve a tu carpeta de configuracion. En mi
+caso es</p>
+
+<pre><code class="language-sh">cd ~/.emacs.d/plugins/
+</code></pre>
+
+<p>luego</p>
+
+<pre><code class="language-sh">git clone https://github.com/emacsmirror/htmlize.git
+</code></pre>
+
+<p>y agrega esto en tu archivo de configuracion</p>
+
+<pre><code class="language-elisp">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: org-mode             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; source: https://github.com/emacsmirror/htmlize.git
+(load-file &quot;~/.emacs.d/plugins/htmlize/htmlize.el&quot;)
+
+;; esto activa el coloreado
+(setq org-src-fontify-natively t)
+
+;; por defecto se coloca el color en linea, descomenta
+;; si quieres este comportamiento
+;; (setq org-html-htmlize-output-type 'inline-css)
+
+;; en mi caso prefiero tomar el estilo de una hoja css
+;; comenta si eliges lo anterior
+(setq org-html-htmlize-output-type 'css)
+
+;; las siguientes lineas son para colocar o no un prefijo a
+;; las etiquetas de codigo (todas son de tipo &lt;span&gt;)
+;; (setq org-html-htmlize-font-prefix &quot;&quot;) ;; default
+(setq org-html-htmlize-font-prefix &quot;src-&quot;)
+</code></pre>
+
+<p>podria interesarte saber que puedes convertir cualquier buffer de org, en una
+pagina html. El comando es <code>htmlfontify-buffer</code>.</p>
+
+<p>Al parecer, <code>htmlize</code> es una vesion <q>vieja</q> del modo <code>htmlfontify</code>
+(incluido por defecto), a saber por que org, requiere de <code>htmlize</code></p>
+
+<h3 id="cosideraciones-adicionales">Cosideraciones adicionales</h3>
+
+<p>org, y otros lenguajes de marcas ligeros tiene carencias severas de base, no
+solo por utilizar signos comunes para el resaltado, lo que proboca que en
+ocaciones se interprete de manera inesperada el resaltado o simplemente no se
+interpreta. Tambien estamos limitados a 4-5 opciones de resaltado.</p>
+
+<p>Segun el manual, podemos evitar comportamientos extraños escapando caracteres
+con <code>\</code> peeeero esto no funciona del todo bien. Como alternativa se ofrece
+escribir simbolos al estilo LaTex <code>\nombre-simbolo</code> peeero esto tampoco funciona
+del todo bien.</p>
+
+<p>en mi caso paso del resaltado y lo desactivo con la opcion
+<code>*:nil</code>, para eliminar la interpretacion de (super|sub)indices  <code>^:nil</code></p>
+
+<p>para poner etiquetas html directamente</p>
+
+<pre><code>@@html:lo-que-sea@@texto@@html:lo-que-sea@@
+</code></pre>
+
+<p>por ejemplo</p>
+
+<pre><code>@@html:&lt;b&gt;@@texto@@html:&lt;/b&gt;@@
+</code></pre>
+
+<p>je, je, je&hellip; que comodo!</p>
+
+<p>Si estas creando un documento <q>en partes</q> para incluirlo, coloca esta linea
+en la posicion donde debe aparecer el contenido de otra seccion</p>
+
+<pre><code>#+INCLUDE: &quot;~/my-book/chapter2.org&quot; :minlevel 1
+</code></pre>
+
+<p>Para terminar Org tiene muchos atajos, la mayoria con prefijo <code>C-C</code> que
+supuestamente es el espacio donde el usuario (y los modos) define(n) sus propios
+comandos. Como resultado tus comandos seran ignorados. La solucion? pues yo pase
+mis comandos a <code>s-c</code> (Super-c).`</p>
+
+<h2 id="recursos-enlaces-y-fuentes">Recursos, Enlaces y Fuentes</h2>
+
+<p>Org es amplio, tanto que tiene un manual-libro incluido dentro de emacs en el
+modo <code>info</code>, date una vuelta que no muerde</p>
+
+<ul>
+<li><p><a href="http://orgmode.org/worg/org-tutorials/org-reference-guide-es.html">Guia de referencia</a></p></li>
+
+<li><p><a href="http://orgmode.org/worg/org-tutorials/orgtutorial_dto-es.html">Turorial</a></p></li>
+
+<li><p><a href="http://www.davidam.com/docu/orgguide.es.html">Traducción de Guía Compacta de Org Mode</a></p></li>
+
+<li><p>Introduccion a org-mode <a href="org-mode-intro.org">org</a> <a href="org-mode-intro.pdf">pdf</a></p></li>
+
+<li><p><a href="http://www.danielclemente.com/hacer/org.html">Cómo gestiono mis tareas y notas con org-mode</a></p></li>
+
+<li><p>Graficos en org-mode  <a href="http://www.lapipaplena.net/graficos-con-org-mode-ditaa-y-plantuml/">http://www.lapipaplena.net/graficos-con-org-mode-ditaa-y-plantuml/</a></p></li>
+
+<li><p><a href="https://github.com/nasciiboy/TheOrgManual">Traduccion parcial</a>, de mala
+calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
+</ul>
+</div>
+</article>
+
+
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    
+    <li><span class="path-pwd">org mode</span></li>
+  </ul>
+</main>
+
+
+    <aside>
+  
+  <section>
+    <header class="taxonomies">category</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header class="taxonomies">tag</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section>
+    <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/org-mode/">org mode</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-31 14:40:54 -0600 CST">Jan 31, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/SamuraiChamploo/">Samurai Champloo ♪</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-31 12:06:31 -0600 CST">Jan 31, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/workspace/">la forma en que trabajo</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-20 22:16:06 -0600 CST">Jan 20, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/gnome-keys/">Gnome Keys</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-18 20:57:15 -0600 CST">Jan 18, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/rssPlusEww/">Emacs web y noticias en modo texto</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-18 09:29:17 -0600 CST">Jan 18, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/Shin-Godzilla/">Shin Godzilla</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-16 20:27:28 -0600 CST">Jan 16, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/raptor-book/">Raptor-Book</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-11 10:03:58 -0600 CST">Jan 11, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/keychords/">Definir atajos en Emacs</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-07 09:38:46 -0600 CST">Jan 7, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/2017Challenges/">2017Challenges</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-04 20:41:22 -0600 CST">Jan 4, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/vg/solarus/">Zelda solarus</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-01 14:56:59 -0600 CST">Jan 1, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+  </section>
+</aside>
+
+
+    <footer>
+      <p><span class="footer-title"><a href="http://nasciiboy.github.io">nba - GNU&#39;s Rock</a></span></p>
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a>–Theme <a href="https://github.com/nasciiboy/hugo_theme_nascii">nascii</a>–feed <a href="http://nasciiboy.github.io/index.xml">rss</a>–mail <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a>–gpg <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a></p>
+    </footer>
+
+  </body>
+</html>

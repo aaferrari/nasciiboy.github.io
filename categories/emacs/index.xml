@@ -10,6 +10,606 @@
     <atom:link href="http://nasciiboy.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>org mode</title>
+      <link>http://nasciiboy.github.io/emacs/org-mode/</link>
+      <pubDate>Tue, 31 Jan 2017 14:40:54 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/org-mode/</guid>
+      <description>
+
+&lt;p&gt;&lt;code&gt;org-mode&lt;/code&gt; es un lenguaje de marcas ligeras nacido de, por, y para &lt;code
+class=&#34;command&#34;&gt;emacs&lt;/code&gt; y como emacs, org tambien tiene aplicaciones
+varias, puede ser una agenta, una lista de pendientes, hoja de calculo, blog de
+notas, sistema de documentacion e investigacion reproducible, todo junto y
+revuelto, encima da la posibilidad de exportar el contenido a pdf, latex, html,
+markdown, odt y groff (algunas opciones vienen por separado y requieren
+configuracion).&lt;/p&gt;
+
+&lt;p&gt;que bueno&amp;hellip; no? la devilidad de org esta en su diversidad, al no tener un
+proposito especifico, algunos aspectos no han sido resueltos, especialmente lo
+que respecta a ser un sistema de documentacion. Con todo, si no exiges demasiado
+vasta y sobra.&lt;/p&gt;
+
+&lt;p&gt;Imaginemos que no conoces org, odias &lt;code&gt;html&lt;/code&gt; y tienes necesidad de generar
+contenido en formato html, listo?, de eso va esta entrada&lt;/p&gt;
+
+&lt;h3 id=&#34;configuracion&#34;&gt;Configuracion&lt;/h3&gt;
+
+&lt;p&gt;Para comenzar a utilizar org solo hace falta abrir emacs y crear un fichero con
+terminacion &lt;code&gt;.org&lt;/code&gt; o en su defecto agregar lo siguiente en la primer linea de
+cualquier fichero y recargar (&lt;code&gt;C-x C-v&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-*- mode: org; -*-
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;org utiliza unas marcas especiales (opcionales) al inicio del documento, para
+establecer el titulo, autor, correo, encender y apagar algunas caracteristicas.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;#+TITLE: Cosas de Emacs: org-mode
+#+LANGUAGE: es
+#+AUTHOR: nasciiboy
+#+EMAIL: miCorreoCamello@aya.org
+#+DATE: 2015-22-06
+#+DESCRIPTION: experimento org-mode
+#+KEYWORDS: emacs org-mode tutorial
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;supongo que se explican por si mismas&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;encabezados&#34;&gt;Encabezados&lt;/h3&gt;
+
+&lt;p&gt;Cualquier cosa que escribamos inmediatamente despues de la configuaracion, sera
+lo primero que aparezca dentro del documento, aunque, al igual que en html,
+tambien podemos agrupar el contenido dentro de secciones/encabezados segun
+convenga.&lt;/p&gt;
+
+&lt;p&gt;La sintaxis de un encabezado muy simple:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;* Encabezado principal
+** Segundo nivel
+*** 3er. nivel
+    algo de texto
+*** 3er. nivel
+    mas texto
+
+* Otro encabezado principal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Toda linea que inicia con uno o varios &lt;code&gt;*&lt;/code&gt; seguido por almenos un espacio en
+blanco, es un encabezado.&lt;/p&gt;
+
+&lt;p&gt;El texto (en la misma linea) donde esta el o los &lt;code&gt;*&lt;/code&gt; sera el titulo del encabezado.&lt;/p&gt;
+
+&lt;p&gt;El nivel del encabezado depende del numero de &lt;code&gt;*&lt;/code&gt; al inicio de la linea, es
+decir&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt; == &lt;code&gt;h1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;**&lt;/code&gt; == &lt;code&gt;h2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;***&lt;/code&gt; == &lt;code&gt;h3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;****&lt;/code&gt; == &lt;code&gt;h4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*****&lt;/code&gt; == &lt;code&gt;h5&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(en realidad, al exportar a html, los encabezados se desplazan en uno, el titulo
+del documento es el que se corresponde con &lt;code&gt;h1&lt;/code&gt;, pero lo dejo asi para evitar
+esfuerzo mental)&lt;/p&gt;
+
+&lt;p&gt;A que encabezado pertenece el texto? al primero que aparezca por encima de
+el. Si no tiene un encabezado encima pertenece al &lt;q&gt;titulo&lt;/q&gt; del documento&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;NOTA:&lt;/b&gt; en org no existe un limite en cuanto el nivel que puede tener un
+encabezado. No es asi en html, segun recuerdo el encabezado de menor nivel que
+existe en html es &lt;code&gt;h7&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo mas extenso:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* Encabezado H1
+
+  Primer parrofo del encabezado H1
+
+  Segundo parrafo del encabezado H1
+
+** Encabezado H2
+
+   Algo,
+   y algo mas (sin una linea en blanco no hay cambio de parrafo)
+
+** Otro Encabezado H2
+
+   Hey
+
+*** Encabezado H3
+
+    coloca algo aqui
+
+**** Encabezado H4
+
+     y aqui
+
+***** Encabezado H5
+
+      tambien aqui
+
+* Otro Encabezado H1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;como vez, he indentado el texto que pertenece a cada encabezado (no es
+necesario, pero a mi me gusta que se vea asi).&lt;/p&gt;
+
+&lt;p&gt;Por cierto como no podia ser de otra forma podemos crear encabezados haciendo
+uso de atajos de teclado.&lt;/p&gt;
+
+&lt;p&gt;Con &lt;code&gt;M-Intro&lt;/code&gt; si no hay ningun encabezado, aparece uno de primer nivel, de otra
+forma, el nivel es igual al del encabezado anterior.&lt;/p&gt;
+
+&lt;p&gt;otros atajos interesantes&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;TAB&lt;/code&gt; sobre un encabezado, oculta o muestra el contenido&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Shift-TAB&lt;/code&gt; En cualquier posicion, oculta o muestra el contenido de todos los
+encabezados&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-n&lt;/code&gt; ir al siguiente encabezado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-p&lt;/code&gt; ir al encabezado anterior&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-f&lt;/code&gt; ir al siguiente encabezado del mismo nivel&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-b&lt;/code&gt; ir al encabezado anterior del mismo nivel&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-u&lt;/code&gt; ir al encabezado padre&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaDerecha&lt;/code&gt; agregar un &lt;code&gt;*&lt;/code&gt; al encabezado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaIzquierda&lt;/code&gt; quitar un &lt;code&gt;*&lt;/code&gt; al encabezado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaArriba&lt;/code&gt; Si el encabezado superior es del mismo nivel, intercambia
+el lugar de los encabezados, es decir mueve el actual hacia arriba&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaAbajo&lt;/code&gt; Si el encabezado siguiente es del mismo nivel, intercambia
+el lugar de los encabezados, es decir mueve el actual hacia abajo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;listas&#34;&gt;Listas&lt;/h3&gt;
+
+&lt;p&gt;Como en html, disponemos de dos tipos de listas, ordenadas (numeradas) y no
+ordenadas, para las primeras colocamos un numero (el que sea) seguido de un
+punto y comenzamos a escribir&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;1. primer elemento de la lista
+2. segundo elemento de la lista
+3. tercer elemento de la lista
+   con una linea adicional
+
+   este parrafo tambien es parte del tercer elemento
+
+
+este parrafo esta fuera de la lista
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en este caso el contenido que sea parte de un elemento de la lista, debe
+respetar cierta indentacion.&lt;/p&gt;
+
+&lt;p&gt;El numero que coloques al inicio de la lista, es irrelevante, org lo ignora por
+completo y lo substituye por un &lt;code&gt;ol&lt;/code&gt; -&amp;gt; &lt;code&gt;li&lt;/code&gt; al exportar.&lt;/p&gt;
+
+&lt;p&gt;Como en los encabezados, podemos generar/saltar al siguiente elemento con la
+combinacion &lt;code&gt;M-Intro&lt;/code&gt;. Este atajo tiene un efecto secundario, org pasa de
+nuestro numero y reenumera la lista apartir de 1.&lt;/p&gt;
+
+&lt;p&gt;Para salir de la lista, dejamos una linea en blanco. Org tambien considera, de
+forma &lt;q&gt;automatica&lt;/q&gt; que estamos fuera de un listado si dejamos dos espacios
+en blanco.&lt;/p&gt;
+
+&lt;p&gt;Si estamos dentro de un parrafo y alguna de sus lineas tiene &lt;em&gt;apariencia de
+listado&lt;/em&gt; al exportar, org toma la linea y la considera una lista. No tengas
+lineas que inicien con algo similar a una lista.&lt;/p&gt;
+
+&lt;p&gt;El resto, asi son las listas ordenadas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;1. elemento uno
+2. elemento dos
+3. elemento tres
+
+
+1) elemento uno
+2) elemento dos
+3) elemento tres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;listas no ordenadas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;+ elemento uno
++ elemento dos
++ elemento tres
+
+
+- elemento uno
+- elemento dos
+- elemento tres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Algunos comandos en listados&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Shift-FlechaDerecha&lt;/code&gt; rotacion por el estido del listado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaIzquierda&lt;/code&gt; rotacion por el estido del listado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaDerecha&lt;/code&gt; convierte al elemento en un miembro del elemento superior&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaIzquierda&lt;/code&gt; convierte al elemento en un elemento de nivel superior&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaArriba&lt;/code&gt; si el elemento superior es del mismo nivel, intercambia
+el lugar de los elementos, es decir mueve el actual hacia arriba&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaAbajo&lt;/code&gt; si el elemento siguiente es del mismo nivel, intercambia el
+lugar de los elementos, es decir mueve el actual hacia abajo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;definiciones&#34;&gt;Definiciones&lt;/h4&gt;
+
+&lt;p&gt;Este elemento tiene las mismas reglas que una lista no ordenada, es decir, el
+contenido que forma parte de la definicion ha de tener indentacion.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;+ Palabra :: definicion
+
+- Palabra :: definicion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;los dos puntos (&lt;code&gt;::&lt;/code&gt;) que separan la &lt;code&gt;palabra&lt;/code&gt; de la &lt;code&gt;definicion&lt;/code&gt; tiene que estar
+en la misma linea que el signo &lt;code&gt;-&lt;/code&gt; o &lt;code&gt;+&lt;/code&gt;. La &lt;code&gt;definicion&lt;/code&gt; puede extenderse en
+varias lineas, parrafos e incluir bloques varios.&lt;/p&gt;
+
+&lt;p&gt;Al igual que una lista, las definiciones terminan dejando dos linas en
+blanco.&lt;/p&gt;
+
+&lt;h3 id=&#34;resaltado&#34;&gt;Resaltado&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*bold*&lt;/code&gt; ==&amp;gt; &lt;b&gt;bold&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~code~&lt;/code&gt; ==&amp;gt; &lt;code&gt;code&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+strike+&lt;/code&gt; ==&amp;gt; &lt;s&gt;strike&lt;/s&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/italic/&lt;/code&gt; ==&amp;gt; &lt;i&gt;italic&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;=verbatim=&lt;/code&gt; ==&amp;gt; &lt;code&gt;code&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_underline_&lt;/code&gt; ==&amp;gt; &lt;u&gt;underline&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;tambien se pueden crear superindices&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;elemento^superinidice
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el elemento y el superindice no deben tener espacios en blanco, por ejemplo&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2^30&lt;/code&gt; ==&amp;gt; &lt;code&gt;2&lt;sup&gt;30&lt;/sup&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;en caso de los subindices&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;elemento_subinidice
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el elemento y el subindice no deben tener espacios en blanco, por ejemplo&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2_30&lt;/code&gt; ==&amp;gt; &lt;code&gt;2&lt;sub&gt;30&lt;/sub&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;finalmente podemos meter formulas LaTex dentro del texto (inline) con la
+sintaxis &lt;code&gt;$formula$&lt;/code&gt;, por ejemplo&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ne^{123^{a}}$&lt;/code&gt; ==&amp;gt; &lt;code&gt;ne&lt;sup&gt;123&lt;sup&gt;a&lt;/sup&gt;&lt;/sup&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;[[prefijo:ruta][descripcion]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;la descripcion puede omitirse, quedando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;[[prefijo:ruta]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;enlaces soportados&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://www.astro.uva.nl/~dominik          en la red
+doi:10.1000/182                           DOI para un recurso electronico
+file:/home/dominik/images/jupiter.jpg     fichero, ruta absoluta
+/home/dominik/images/jupiter.jpg          igual que arriba
+file:papers/last.pdf                      fichero, ruta relativa
+./papers/last.pdf                         igual que arriba
+file:/myself@some.where:papers/last.pdf   fichero, ruta a una maquina remota
+/myself@some.where:papers/last.pdf        igual que arriba
+file:sometextfile::NNN                    fichero, saltar al numero de linea
+file:projects.org                         otro fichero Org
+file:projects.org::some words             buscar texto en fichero Org[fn:35]
+file:projects.org::*task title            buscar encabezado en fichero Org[fn:36]
+file+sys:/path/to/file                    abrir via OS, como doble-click
+file+emacs:/path/to/file                  fuerza apertura con Emacs
+docview:papers/last.pdf::NNN              abrir en modo doc-view en la pagina
+id:B7423F4D-2E8A-471B-8810-C40F074717E9   Enlazar con ecabezado por ID
+news:comp.emacs                           enlace Usenet
+mailto:adent@galaxy.net                   enlace Mail
+mhe:folder                                enlace a carpeta MH-E
+mhe:folder#id                             enlace a mensage MH-E
+rmail:folder                              enlace a carpeta RMAIL
+rmail:folder#id                           enlace a mensaje RMAIL
+gnus:group                                enlace a grupo Gnus
+gnus:group#id                             enlace a articulo Gnus
+bbdb:R.*Stallman                          enlace BBDB (con regexp)
+irc:/irc.com/#emacs/bob                   enlace IRC
+info:org#External links                   enlace a nodo o indice Info
+shell:ls *.org                            Un comando shell
+elisp:org-agenda                          Comando Interactivo Elisp
+elisp:(find-file-other-frame &amp;quot;Elisp.org&amp;quot;) formate de evaluacion Elisp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ademas podemos poner enlaces a secciones (encabezados) dentro de nuestro
+documento con la estructura&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;[[*Encabezado][descripcion]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;recuerda, la descripcion es opcional&lt;/p&gt;
+
+&lt;p&gt;Si te encuentras en el modo org, y deseas segir un enlace presiona &lt;code&gt;C-c C-o&lt;/code&gt;.
+Para regresar a la posicion original &lt;code&gt;C-c &amp;amp;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tambien puedes colocar una marca temporal &lt;code&gt;C-c %&lt;/code&gt; y luego regeresar con &lt;code&gt;C-c
+&amp;amp;&lt;/code&gt;. Esto es similar al comando &lt;code&gt;C-u C-ESP&lt;/code&gt; que permite recorrer el circulo de
+marcas.&lt;/p&gt;
+
+&lt;p&gt;Para modificar la direccion de un enlace o su descripcion presiona &lt;code&gt;C-c C-l&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Por cierto, para colocar imagenes dentro del contenido que exportes simplemente
+coloca la direccion de la imagen, asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;[[mi-imagen.png]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;radio-targets&#34;&gt;Radio Targets&lt;/h4&gt;
+
+&lt;p&gt;Los &lt;em&gt;Radio Objetivos&lt;/em&gt;, son un metodo automagico de convertir una frace en
+un enlace a algun punto del documento, lo onico que tenemos que hacer es
+encerrar el objetivo entre tres pares de &lt;code&gt;&amp;lt;&lt;/code&gt; &lt;code&gt;&amp;gt;&lt;/code&gt; asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;&amp;lt;&amp;lt;&amp;lt;Mi objetivo&amp;gt;&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora todo el texto que coincida con &lt;code&gt;Mi objetivo&lt;/code&gt; apunta al radio objetivo, no
+importa si esta separado por espacios (exepto nuevas lineas) o si esta en
+minusculas o mayusculas.&lt;/p&gt;
+
+&lt;h3 id=&#34;codigo&#34;&gt;Codigo&lt;/h3&gt;
+
+&lt;p&gt;Org tiene distintos tipos de bloques, todos con esta sintaxis&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;#+BEGIN_Tipo-Bloque algun-parametro
+  contenido
+#+END_TIpo-Bloque
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde &lt;code&gt;Tipo-Bloque&lt;/code&gt; puede ser&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;EXAMPLE&lt;/code&gt; ejemplos (como &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HTML&lt;/code&gt; seccion de codigo a exportar tal cual&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LaTex&lt;/code&gt; seccion de codigo a exportar tal cual&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SRC&lt;/code&gt; bloque de codigo&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;QUOTE&lt;/code&gt; bloque de cita&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;hay un truco, que evita escribir a mano todo el bloque. En una linea vacia o con
+espacios en blanco escribimos &lt;code&gt;&amp;lt;&lt;/code&gt; segudio por&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;e&lt;/code&gt; ==&amp;gt; &lt;code&gt;EXAMPLE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;h&lt;/code&gt; ==&amp;gt; &lt;code&gt;HTML&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;l&lt;/code&gt; ==&amp;gt; &lt;code&gt;LaTex&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; ==&amp;gt; &lt;code&gt;SRC&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q&lt;/code&gt; ==&amp;gt; &lt;code&gt;QUOTE&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;y mas un &lt;code&gt;tab&lt;/code&gt; el bloque aparece!&lt;/p&gt;
+
+&lt;p&gt;Es necesario ahondar un poco en los bloques de codigo fuente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#+BEGIN_SRC c
+  /* strlen: regresa la longitud de s */
+  int strlen(char s[])
+  {
+    int i;
+
+    i = 0;
+    while (s[i] != &#39;\0&#39;)
+      ++i;
+    return i;
+  }
+#+END_SRC
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el lenguaje se especifica luego de &lt;code&gt;#+BEGIN_SRC&lt;/code&gt;, en este caso, lenguaje &lt;code&gt;c&lt;/code&gt;,
+tambien podemos hacer que el codigo aparesca numerado si agregamos el parametro
+&lt;code&gt;-n&lt;/code&gt;. Si se desea que la numeracion inicie a partir de un numero concreto
+colocamos &lt;code&gt;-n numero&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Antes mencione que org nacio de, por y para emacs, pues resulta que esto se
+demuestra en los bloques de codigo. Sea cual sea el lenguaje que coloques
+delante de un bloque de codigo (digo, si esta soportado) al presionar &lt;code&gt;C-c &#39;&lt;/code&gt; se
+abre una ventana con un modo para editar dicho lenguaje con resaltado, con
+teclas de emacs y funciones de emacs, con otro &lt;code&gt;C-c &#39;&lt;/code&gt; regresas al
+documento.&lt;/p&gt;
+
+&lt;p&gt;Puedes imaginar el colosal esfuerzo que requiere emular esta funcion en otro
+sitio que no sea emacs?&lt;/p&gt;
+
+&lt;p&gt;asi se ve org-mode en mi emacs&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../raptor-book.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;NOTA:&lt;/b&gt; a veces en versiones experimentales de emacs, la convinacion &lt;code&gt;C-c
+&#39;&lt;/code&gt; abre un buffer de edicion para el bloque de codigo, pero al repetir el
+comando, este no se reconoce, si ocurre esa situacion, intenta con los comandos
+por su nombre directamente. Para entrar es &lt;code&gt;org-edit-src-code&lt;/code&gt; y para salir
+&lt;code&gt;org-edit-src-exit&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;exportacion&#34;&gt;Exportacion&lt;/h2&gt;
+
+&lt;p&gt;En principio exportar apartir de org es sencillo, presionamos &lt;code&gt;C-c C-e&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../org-export.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Esto abre una interfaz de exportacion con opciones varias, por ejemplo para
+exportar a html (un fichero con el mismo nombre del documento pero con
+terminacion &lt;code&gt;.html&lt;/code&gt;) el comando completo seria &lt;code&gt;C-c C-e h h&lt;/code&gt;, o si estas ya en
+la interfaz &lt;strong&gt;Org Export Dispatcher&lt;/strong&gt;, solo &lt;code&gt;h h&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pero antes de exportar vamos a modificar algunas cosas. En la configuracion del
+documento agrega estas lineas:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#+OPTIONS: toc:nil num:nil h:7 html-preamble:nil html-postamble:nil html-scripts:nil html-tyle:nil
+#+HTML_HEAD: &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;worg-data/worg.css&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;#+HTML_HEAD:&lt;/code&gt; coloca alguna cosa dentro de la etiqueta &lt;code&gt;head&lt;/code&gt; del html,
+para ser precisos, se indica la direccion de una hoja de estilo.
+&lt;a href=&#34;../worg-data.zip&#34;&gt;Aqui&lt;/a&gt; encontraras la que utilizo.&lt;/p&gt;
+
+&lt;p&gt;cuando se exporta por defecto, se crea una &lt;strong&gt;tabla de contenidos&lt;/strong&gt;, si no la
+quieres deja el &lt;code&gt;toc:nil&lt;/code&gt;, tambien se numeran las secciones, como &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;1.1&lt;/code&gt;,
+&lt;code&gt;2&lt;/code&gt;, &lt;code&gt;2.1.2&lt;/code&gt; y asi, &lt;code&gt;num:nil&lt;/code&gt; indica que no queremos numeracion.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;h:7&lt;/code&gt; indica cuantos niveles de encabezados deseamos exportar como &lt;code&gt;H&lt;/code&gt;s. Si hay
+encabezados que superen el nivel, seran incluidos, pero en forma de lista.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;html-postamble:nil&lt;/code&gt; elimina una seccion al final del html que contiene el
+autor, fecha y correo(?), &lt;code&gt;html-preamble-nil&lt;/code&gt; no se que haga pero tampoco lo
+quiero&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;veras que org es generoso, nos regala una hoja de estilo y scripts
+&lt;code&gt;html-scripts:nil&lt;/code&gt; y &lt;code&gt;html-tyle:nil&lt;/code&gt; se las regresan&amp;hellip; de buena forma&amp;hellip; pero
+org insiste, pasa de nosotros y las coloca de todas formas (por lo genera como comentario)&lt;/p&gt;
+
+&lt;p&gt;por cierto, para mostrar las formulas Tex en html, org coloca esta linea&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://orgmode.org/mathjax/MathJax.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;colorear-codigo&#34;&gt;Colorear Codigo&lt;/h4&gt;
+
+&lt;p&gt;Esto requiere algo de codigo, primero ve a tu carpeta de configuracion. En mi
+caso es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cd ~/.emacs.d/plugins/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/emacsmirror/htmlize.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y agrega esto en tu archivo de configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: org-mode             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; source: https://github.com/emacsmirror/htmlize.git
+(load-file &amp;quot;~/.emacs.d/plugins/htmlize/htmlize.el&amp;quot;)
+
+;; esto activa el coloreado
+(setq org-src-fontify-natively t)
+
+;; por defecto se coloca el color en linea, descomenta
+;; si quieres este comportamiento
+;; (setq org-html-htmlize-output-type &#39;inline-css)
+
+;; en mi caso prefiero tomar el estilo de una hoja css
+;; comenta si eliges lo anterior
+(setq org-html-htmlize-output-type &#39;css)
+
+;; las siguientes lineas son para colocar o no un prefijo a
+;; las etiquetas de codigo (todas son de tipo &amp;lt;span&amp;gt;)
+;; (setq org-html-htmlize-font-prefix &amp;quot;&amp;quot;) ;; default
+(setq org-html-htmlize-font-prefix &amp;quot;src-&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;podria interesarte saber que puedes convertir cualquier buffer de org, en una
+pagina html. El comando es &lt;code&gt;htmlfontify-buffer&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Al parecer, &lt;code&gt;htmlize&lt;/code&gt; es una vesion &lt;q&gt;vieja&lt;/q&gt; del modo &lt;code&gt;htmlfontify&lt;/code&gt;
+(incluido por defecto), a saber por que org, requiere de &lt;code&gt;htmlize&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;cosideraciones-adicionales&#34;&gt;Cosideraciones adicionales&lt;/h3&gt;
+
+&lt;p&gt;org, y otros lenguajes de marcas ligeros tiene carencias severas de base, no
+solo por utilizar signos comunes para el resaltado, lo que proboca que en
+ocaciones se interprete de manera inesperada el resaltado o simplemente no se
+interpreta. Tambien estamos limitados a 4-5 opciones de resaltado.&lt;/p&gt;
+
+&lt;p&gt;Segun el manual, podemos evitar comportamientos extraños escapando caracteres
+con &lt;code&gt;\&lt;/code&gt; peeeero esto no funciona del todo bien. Como alternativa se ofrece
+escribir simbolos al estilo LaTex &lt;code&gt;\nombre-simbolo&lt;/code&gt; peeero esto tampoco funciona
+del todo bien.&lt;/p&gt;
+
+&lt;p&gt;en mi caso paso del resaltado y lo desactivo con la opcion
+&lt;code&gt;*:nil&lt;/code&gt;, para eliminar la interpretacion de (super|sub)indices  &lt;code&gt;^:nil&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;para poner etiquetas html directamente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@@html:lo-que-sea@@texto@@html:lo-que-sea@@
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@@html:&amp;lt;b&amp;gt;@@texto@@html:&amp;lt;/b&amp;gt;@@
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;je, je, je&amp;hellip; que comodo!&lt;/p&gt;
+
+&lt;p&gt;Si estas creando un documento &lt;q&gt;en partes&lt;/q&gt; para incluirlo, coloca esta linea
+en la posicion donde debe aparecer el contenido de otra seccion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#+INCLUDE: &amp;quot;~/my-book/chapter2.org&amp;quot; :minlevel 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para terminar Org tiene muchos atajos, la mayoria con prefijo &lt;code&gt;C-C&lt;/code&gt; que
+supuestamente es el espacio donde el usuario (y los modos) define(n) sus propios
+comandos. Como resultado tus comandos seran ignorados. La solucion? pues yo pase
+mis comandos a &lt;code&gt;s-c&lt;/code&gt; (Super-c).`&lt;/p&gt;
+
+&lt;h2 id=&#34;recursos-enlaces-y-fuentes&#34;&gt;Recursos, Enlaces y Fuentes&lt;/h2&gt;
+
+&lt;p&gt;Org es amplio, tanto que tiene un manual-libro incluido dentro de emacs en el
+modo &lt;code&gt;info&lt;/code&gt;, date una vuelta que no muerde&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://orgmode.org/worg/org-tutorials/org-reference-guide-es.html&#34;&gt;Guia de referencia&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://orgmode.org/worg/org-tutorials/orgtutorial_dto-es.html&#34;&gt;Turorial&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.davidam.com/docu/orgguide.es.html&#34;&gt;Traducción de Guía Compacta de Org Mode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Introduccion a org-mode &lt;a href=&#34;org-mode-intro.org&#34;&gt;org&lt;/a&gt; &lt;a href=&#34;org-mode-intro.pdf&#34;&gt;pdf&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.danielclemente.com/hacer/org.html&#34;&gt;Cómo gestiono mis tareas y notas con org-mode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Graficos en org-mode  &lt;a href=&#34;http://www.lapipaplena.net/graficos-con-org-mode-ditaa-y-plantuml/&#34;&gt;http://www.lapipaplena.net/graficos-con-org-mode-ditaa-y-plantuml/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/nasciiboy/TheOrgManual&#34;&gt;Traduccion parcial&lt;/a&gt;, de mala
+calidad e intento de adaptar el manual de org-mode a org-mode&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Emacs web y noticias en modo texto</title>
       <link>http://nasciiboy.github.io/emacs/rssPlusEww/</link>
       <pubDate>Wed, 18 Jan 2017 09:29:17 -0600</pubDate>
