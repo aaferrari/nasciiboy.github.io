@@ -276,7 +276,7 @@ esfuerzo mental)</p>
 <p>A que encabezado pertenece el texto? al primero que aparezca por encima de
 el. Si no tiene un encabezado encima pertenece al <q>titulo</q> del documento</p>
 
-<p><b>NOTA:</b> en org no existe un limite en cuanto el nivel que puede tener un
+<p><b>NOTA:</b> en org no existe un limite en cuanto a el nivel que puede tener un
 encabezado. No es asi en html, segun recuerdo el encabezado de menor nivel que
 existe en html es <code>h7</code></p>
 
@@ -284,7 +284,7 @@ existe en html es <code>h7</code></p>
 
 <pre><code>* Encabezado H1
 
-  Primer parrofo del encabezado H1
+  Primer parrafo del encabezado H1
 
   Segundo parrafo del encabezado H1
 
@@ -329,9 +329,9 @@ forma, el nivel es igual al del encabezado anterior.</p>
 <li><p><code>Shift-TAB</code> En cualquier posicion, oculta o muestra el contenido de todos los
 encabezados</p></li>
 
-<li><p><code>C-n</code> ir al siguiente encabezado</p></li>
+<li><p><code>C-c C-n</code> ir al siguiente encabezado</p></li>
 
-<li><p><code>C-p</code> ir al encabezado anterior</p></li>
+<li><p><code>C-c C-p</code> ir al encabezado anterior</p></li>
 
 <li><p><code>C-c C-f</code> ir al siguiente encabezado del mismo nivel</p></li>
 
@@ -367,13 +367,13 @@ punto y comenzamos a escribir</p>
 este parrafo esta fuera de la lista
 </code></pre>
 
-<p>en este caso el contenido que sea parte de un elemento de la lista, debe
+<p>en este, caso el contenido que sea parte de un elemento de la lista, debe
 respetar cierta indentacion.</p>
 
 <p>El numero que coloques al inicio de la lista, es irrelevante, org lo ignora por
 completo y lo substituye por un <code>ol</code> -&gt; <code>li</code> al exportar.</p>
 
-<p>Como en los encabezados, podemos generar/saltar al siguiente elemento con la
+<p>Como en los encabezados, podemos generar-saltar al siguiente elemento con la
 combinacion <code>M-Intro</code>. Este atajo tiene un efecto secundario, org pasa de
 nuestro numero y reenumera la lista apartir de 1.</p>
 
@@ -430,7 +430,7 @@ lugar de los elementos, es decir mueve el actual hacia abajo</p></li>
 <h4 id="definiciones">Definiciones</h4>
 
 <p>Este elemento tiene las mismas reglas que una lista no ordenada, es decir, el
-contenido que forma parte de la definicion ha de tener indentacion.</p>
+contenido que forme parte de la definicion ha de tener indentacion.</p>
 
 <pre><code class="language-org-mode">+ Palabra :: definicion
 
@@ -676,7 +676,7 @@ quiero&hellip;</p>
 <code>html-scripts:nil</code> y <code>html-tyle:nil</code> se las regresan&hellip; de buena forma&hellip; pero
 org insiste, pasa de nosotros y las coloca de todas formas (por lo genera como comentario)</p>
 
-<p>por cierto, para mostrar las formulas Tex en html, org coloca esta linea</p>
+<p>por cierto, para mostrar las formulas LaTex en html, org coloca esta linea</p>
 
 <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;http://orgmode.org/mathjax/MathJax.js&quot;&gt;&lt;/script&gt;
 </code></pre>
@@ -719,7 +719,7 @@ caso es</p>
 (setq org-html-htmlize-font-prefix &quot;src-&quot;)
 </code></pre>
 
-<p>podria interesarte saber que puedes convertir cualquier buffer de org, en una
+<p>podria interesarte saber que puedes convertir cualquier buffer de emacs, en una
 pagina html. El comando es <code>htmlfontify-buffer</code>.</p>
 
 <p>Al parecer, <code>htmlize</code> es una vesion <q>vieja</q> del modo <code>htmlfontify</code>
@@ -752,13 +752,13 @@ del todo bien.</p>
 
 <p>je, je, je&hellip; que comodo!</p>
 
-<p>Si estas creando un documento <q>en partes</q> para incluirlo, coloca esta linea
-en la posicion donde debe aparecer el contenido de otra seccion</p>
+<p>Si estas creando un documento <q>en partes</q> para incluir las secciones, coloca
+esta linea en la posicion donde debe aparecer el contenido de otra seccion</p>
 
 <pre><code>#+INCLUDE: &quot;~/my-book/chapter2.org&quot; :minlevel 1
 </code></pre>
 
-<p>Para terminar Org tiene muchos atajos, la mayoria con prefijo <code>C-C</code> que
+<p>Para terminar Org tiene muchos atajos, la mayoria con prefijo <code>C-c</code> que
 supuestamente es el espacio donde el usuario (y los modos) define(n) sus propios
 comandos. Como resultado tus comandos seran ignorados. La solucion? pues yo pase
 mis comandos a <code>s-c</code> (Super-c).`</p>
@@ -771,7 +771,7 @@ modo <code>info</code>, date una vuelta que no muerde</p>
 <ul>
 <li><p><a href="http://orgmode.org/worg/org-tutorials/org-reference-guide-es.html">Guia de referencia</a></p></li>
 
-<li><p><a href="http://orgmode.org/worg/org-tutorials/orgtutorial_dto-es.html">Turorial</a></p></li>
+<li><p><a href="http://orgmode.org/worg/org-tutorials/orgtutorial_dto-es.html">Tutorial</a></p></li>
 
 <li><p><a href="http://www.davidam.com/docu/orgguide.es.html">Traducción de Guía Compacta de Org Mode</a></p></li>
 

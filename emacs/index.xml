@@ -99,7 +99,7 @@ esfuerzo mental)&lt;/p&gt;
 &lt;p&gt;A que encabezado pertenece el texto? al primero que aparezca por encima de
 el. Si no tiene un encabezado encima pertenece al &lt;q&gt;titulo&lt;/q&gt; del documento&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;NOTA:&lt;/b&gt; en org no existe un limite en cuanto el nivel que puede tener un
+&lt;p&gt;&lt;b&gt;NOTA:&lt;/b&gt; en org no existe un limite en cuanto a el nivel que puede tener un
 encabezado. No es asi en html, segun recuerdo el encabezado de menor nivel que
 existe en html es &lt;code&gt;h7&lt;/code&gt;&lt;/p&gt;
 
@@ -107,7 +107,7 @@ existe en html es &lt;code&gt;h7&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;* Encabezado H1
 
-  Primer parrofo del encabezado H1
+  Primer parrafo del encabezado H1
 
   Segundo parrafo del encabezado H1
 
@@ -152,9 +152,9 @@ forma, el nivel es igual al del encabezado anterior.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;Shift-TAB&lt;/code&gt; En cualquier posicion, oculta o muestra el contenido de todos los
 encabezados&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;code&gt;C-n&lt;/code&gt; ir al siguiente encabezado&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-n&lt;/code&gt; ir al siguiente encabezado&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;code&gt;C-p&lt;/code&gt; ir al encabezado anterior&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-p&lt;/code&gt; ir al encabezado anterior&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-f&lt;/code&gt; ir al siguiente encabezado del mismo nivel&lt;/p&gt;&lt;/li&gt;
 
@@ -190,13 +190,13 @@ punto y comenzamos a escribir&lt;/p&gt;
 este parrafo esta fuera de la lista
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;en este caso el contenido que sea parte de un elemento de la lista, debe
+&lt;p&gt;en este, caso el contenido que sea parte de un elemento de la lista, debe
 respetar cierta indentacion.&lt;/p&gt;
 
 &lt;p&gt;El numero que coloques al inicio de la lista, es irrelevante, org lo ignora por
 completo y lo substituye por un &lt;code&gt;ol&lt;/code&gt; -&amp;gt; &lt;code&gt;li&lt;/code&gt; al exportar.&lt;/p&gt;
 
-&lt;p&gt;Como en los encabezados, podemos generar/saltar al siguiente elemento con la
+&lt;p&gt;Como en los encabezados, podemos generar-saltar al siguiente elemento con la
 combinacion &lt;code&gt;M-Intro&lt;/code&gt;. Este atajo tiene un efecto secundario, org pasa de
 nuestro numero y reenumera la lista apartir de 1.&lt;/p&gt;
 
@@ -253,7 +253,7 @@ lugar de los elementos, es decir mueve el actual hacia abajo&lt;/p&gt;&lt;/li&gt
 &lt;h4 id=&#34;definiciones&#34;&gt;Definiciones&lt;/h4&gt;
 
 &lt;p&gt;Este elemento tiene las mismas reglas que una lista no ordenada, es decir, el
-contenido que forma parte de la definicion ha de tener indentacion.&lt;/p&gt;
+contenido que forme parte de la definicion ha de tener indentacion.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;+ Palabra :: definicion
 
@@ -499,7 +499,7 @@ quiero&amp;hellip;&lt;/p&gt;
 &lt;code&gt;html-scripts:nil&lt;/code&gt; y &lt;code&gt;html-tyle:nil&lt;/code&gt; se las regresan&amp;hellip; de buena forma&amp;hellip; pero
 org insiste, pasa de nosotros y las coloca de todas formas (por lo genera como comentario)&lt;/p&gt;
 
-&lt;p&gt;por cierto, para mostrar las formulas Tex en html, org coloca esta linea&lt;/p&gt;
+&lt;p&gt;por cierto, para mostrar las formulas LaTex en html, org coloca esta linea&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://orgmode.org/mathjax/MathJax.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -542,7 +542,7 @@ caso es&lt;/p&gt;
 (setq org-html-htmlize-font-prefix &amp;quot;src-&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;podria interesarte saber que puedes convertir cualquier buffer de org, en una
+&lt;p&gt;podria interesarte saber que puedes convertir cualquier buffer de emacs, en una
 pagina html. El comando es &lt;code&gt;htmlfontify-buffer&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Al parecer, &lt;code&gt;htmlize&lt;/code&gt; es una vesion &lt;q&gt;vieja&lt;/q&gt; del modo &lt;code&gt;htmlfontify&lt;/code&gt;
@@ -575,13 +575,13 @@ del todo bien.&lt;/p&gt;
 
 &lt;p&gt;je, je, je&amp;hellip; que comodo!&lt;/p&gt;
 
-&lt;p&gt;Si estas creando un documento &lt;q&gt;en partes&lt;/q&gt; para incluirlo, coloca esta linea
-en la posicion donde debe aparecer el contenido de otra seccion&lt;/p&gt;
+&lt;p&gt;Si estas creando un documento &lt;q&gt;en partes&lt;/q&gt; para incluir las secciones, coloca
+esta linea en la posicion donde debe aparecer el contenido de otra seccion&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;#+INCLUDE: &amp;quot;~/my-book/chapter2.org&amp;quot; :minlevel 1
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Para terminar Org tiene muchos atajos, la mayoria con prefijo &lt;code&gt;C-C&lt;/code&gt; que
+&lt;p&gt;Para terminar Org tiene muchos atajos, la mayoria con prefijo &lt;code&gt;C-c&lt;/code&gt; que
 supuestamente es el espacio donde el usuario (y los modos) define(n) sus propios
 comandos. Como resultado tus comandos seran ignorados. La solucion? pues yo pase
 mis comandos a &lt;code&gt;s-c&lt;/code&gt; (Super-c).`&lt;/p&gt;
@@ -594,7 +594,7 @@ modo &lt;code&gt;info&lt;/code&gt;, date una vuelta que no muerde&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://orgmode.org/worg/org-tutorials/org-reference-guide-es.html&#34;&gt;Guia de referencia&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://orgmode.org/worg/org-tutorials/orgtutorial_dto-es.html&#34;&gt;Turorial&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://orgmode.org/worg/org-tutorials/orgtutorial_dto-es.html&#34;&gt;Tutorial&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.davidam.com/docu/orgguide.es.html&#34;&gt;Traducción de Guía Compacta de Org Mode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
