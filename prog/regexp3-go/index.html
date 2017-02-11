@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vg - nba - GNU&#39;s Rock</title>
+    <title>regexp3-go (dia cero) - nba - GNU&#39;s Rock</title>
     
     <style media="screen">
 :root {
@@ -180,59 +180,101 @@ img:hover { filter: none;
   <body>
     
 <main>
-  
-  <div class="thumb">
-  <h2 class="title"><a href="http://nasciiboy.github.io/vg/solarus/">Zelda solarus</a></h2>
-
-  <ul class="meta">
-    <li><time datetime="2017-01-01 14:56:59 -0600 CST">Jan 1, 2017</time></li>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg</span></a></li>
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
+    <li><span class="path-pwd">regexp3-go (dia cero)</span></li>
   </ul>
 
-  <div class="summary">Segun la propia web del proyecto
- Solarus es un motor de juegos Action-RPG gratuito y de codigo abierto, con licencia GPL y esta escrito en C++. Ejecuta quest (campañas?) en Lua y puede trabajar en un gran numero de plataformas.
-Solarus tambien cuenta con un editor de juegos llamado Solarus Quest Editor escrito en C++ con Qt para ayudarte a crear un juego.
- Por que los proyectos utilizan el palabro &ldquo;open source&rdquo; si estan bajo la licencia GPL?</div>
+  <article>
+  <h1 class="title">regexp3-go (dia cero)</h1>
+
+  <time datetime="2017-02-11 10:26:04 -0600 CST">Feb 11, 2017</time>
+
+  <div class="article-body"><p>Hace un año luego de &ldquo;maquetar&rdquo; algunos libros en org-mode, decidi crear mi
+propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar
+un substituto del comando man/info y aniquilar a html/latex como sistema de
+documentacion.</p>
+
+<p>Un mes mas tarde fruto de la necesidad de <em>parsear</em> el texto del nuevo lenguaje
+y mi incapacidad de entender como utilizar una libreria de expresiones
+regulares, nacio Recursive Regexp Raptor (alias regexp3) que es un motor de
+expresiones regulares para C, otro mes mas tarde salio a la web la primer
+version en forma de repositorio
+en <a href="https://github.com/nasciiboy/RecursiveRegexpRaptor/">github</a> y ahora&hellip; ni
+hay un nuevo lenguaje, ni un substituto de man/info, ni ha muerto html y he
+dedicado mas horas de las que jamas pense en regexp3 (y regexp4 &ldquo;el sucesor&rdquo;)</p>
+
+<p>Por un mes (entero) intente programar el interprete del lenguaje de marcas
+ligero y fracase, asi que pase al plan de emergencia, ver como estaban hechos
+otros interpretes como el de <em>org-mode</em> o el de <em>reStructured Text</em>, lo que trajo
+un nuevo problema: aprender (e)lisp o aprender python(2|3).</p>
+
+<p>Lo primero implicaba aprender ingles, encortrar un buen libro y ponerme a
+traducir cosas, lo segundo encontrar un buen libro (e intentar por segunda vez
+con python), termine llendo por la primer opcion y cuando llego la desesperacion
+se mezclo con la segunda.</p>
+
+<p>Lisp es interesante, asombroso en su simplesa e incomodo en su escritura</p>
+
+<p>Python&hellip; no puedo con python, lo encuentro aburrido, un pegote de muchas cosas
+en un mismo lenguaje e indentar a mano pelada por ahorrar unas llaves es un
+sufrimiento carente de toda elegancia</p>
+
+<p>en fin, que no aprendi mucho de nada&hellip; cerca de octubre del año pasado con la
+inquietud de hacer un blog (de nuevo) y tras probar algunos cms llege a <em><a href="https://github.com/spf13/hugo">hugo</a></em>,
+me parecio que era sencillo y digno de investigacion, luego de un par de semanas
+nacio este blog y decidi aprender algo de su motor de renderizado markdown
+llamado <a href="https://github.com/russross/blackfriday">blackfriday</a>&hellip;</p>
+
+<p>entonces? habia que aprender go</p>
+
+<p>entonces? mas ingles (solo hay una pequeña guia traducida al
+español <a href="https://github.com/karlseguin/the-little-go-book">aqui</a>)</p>
+
+<p>y haci, pase a buscar un pdf en la web, aparecio <em>The way to go</em>, luego de unas
+semanas viendo ejemplos y como no hay mejor manera de apreder algo que ponerlo
+en practica, comenzo el port de lo unico que entiendo a la perfeccion y estoy
+orgulloso, asi es, el motor de expresiones regulares (terminen con mi
+sufrimiento)</p>
+
+<p>De momento funciona, aunque no es mas que una copia medio usable de C a Go, sin
+ninguna orientacion a objetos.</p>
+
+<p>Hace ya unos años que di un recorrido ninja por sdl 1.2 y C++ (deitel y como
+pensar en c++) medio aprendi algo de OO, pero di media vuelta hacia atras, tome
+el C de k&amp;r (+ deitel), algo de ncurses y prometi no programar nada hasta no
+dominar C.</p>
+
+<p>asi que? no me acuerdo de como programar OO</p>
+
+<p>y que con go? podria ser un buen sucesor de C, si tubiese punteros de verdad,
+cadenas de caracteres de verdad, un tipado menos estricto, pero sobre todo, si
+presindiera de su estupido autoformateo, guia de estilo y llaves para
+instrucciones simples, te maldigo <code>gofmt</code>!</p>
+
+<p>y <em>regexp3-go</em> que? <a href="https://github.com/nasciiboy/regexp3/">aqui</a>, algo mas de
+informacion en el readme</p>
+
+<p>que sigue? transitar la aleatoriedad.</p>
+
+<p>Bueno hasta aqui con mis cosas, pronto (una semana, un mes o mas) una version
+simplificada del lenguaje de marcas ligeras.</p>
+
+<p><img src="../gotor.jpg" alt="" /></p>
 </div>
+</article>
 
-  
-  
-  <div class="thumb">
-  <h2 class="title"><a href="http://nasciiboy.github.io/vg/nxEngine/">nxEngine</a></h2>
 
-  <ul class="meta">
-    <li><time datetime="2016-12-19 11:29:56 -0600 CST">Dec 19, 2016</time></li>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg</span></a></li>
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
+    <li><span class="path-pwd">regexp3-go (dia cero)</span></li>
   </ul>
-
-  <div class="summary">Dōkutsu Monogatari mejor conocido en oxidente como Cave Story (La historia de la cueva) es un videojuego de plataformas con un toque de RPG desarrollado por una sola persona (Daisuke Amaya, alias &ldquo;pixel&rdquo;) a lo largo de 5 años. Originalmente fue liberado como freeware para la plataforma pc de microsoft, no obstante por su sobresaliente calidad ha sido portado a una gran cantidad de sistemas entre las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast, GP2X, &hellip;, y por supuesto GNU/linux.</div>
-</div>
-
-  
-  
-  <div class="thumb">
-  <h2 class="title"><a href="http://nasciiboy.github.io/vg/H-Craft/">H Craft Championship</a></h2>
-
-  <ul class="meta">
-    <li><time datetime="2016-12-17 08:29:18 -0600 CST">Dec 17, 2016</time></li>
-    
-    <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg</span></a></li>
-    
-  </ul>
-
-  <div class="summary">H-Craft es un juego de &ldquo;carreras&rdquo; con Hovercrafts (aerodeslizadores) estupendo disponible libremente para GNU/linux (tambien hay vercion para android y windows)
-hardware  1 Ghz Processor 512 MB Memory A 3D-Card with the power of a Geforce3 or Radeon 7500 (or better) OpenGL 1.3 GNU/linux (32 Bit / 64 Bit) or winbug$ 98, mp, xp, 2000, vista 150 MB free space on hard-disk  build (debian) Este es el proceso que segui para compilarlo en debian 7.</div>
-</div>
-
-  
-  
-
-  
-
 </main>
 
 

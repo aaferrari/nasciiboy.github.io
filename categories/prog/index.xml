@@ -10,6 +10,86 @@
     <atom:link href="http://nasciiboy.github.io/categories/prog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>regexp3-go (dia cero)</title>
+      <link>http://nasciiboy.github.io/prog/regexp3-go/</link>
+      <pubDate>Sat, 11 Feb 2017 10:26:04 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/regexp3-go/</guid>
+      <description>&lt;p&gt;Hace un año luego de &amp;ldquo;maquetar&amp;rdquo; algunos libros en org-mode, decidi crear mi
+propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar
+un substituto del comando man/info y aniquilar a html/latex como sistema de
+documentacion.&lt;/p&gt;
+
+&lt;p&gt;Un mes mas tarde fruto de la necesidad de &lt;em&gt;parsear&lt;/em&gt; el texto del nuevo lenguaje
+y mi incapacidad de entender como utilizar una libreria de expresiones
+regulares, nacio Recursive Regexp Raptor (alias regexp3) que es un motor de
+expresiones regulares para C, otro mes mas tarde salio a la web la primer
+version en forma de repositorio
+en &lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor/&#34;&gt;github&lt;/a&gt; y ahora&amp;hellip; ni
+hay un nuevo lenguaje, ni un substituto de man/info, ni ha muerto html y he
+dedicado mas horas de las que jamas pense en regexp3 (y regexp4 &amp;ldquo;el sucesor&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;Por un mes (entero) intente programar el interprete del lenguaje de marcas
+ligero y fracase, asi que pase al plan de emergencia, ver como estaban hechos
+otros interpretes como el de &lt;em&gt;org-mode&lt;/em&gt; o el de &lt;em&gt;reStructured Text&lt;/em&gt;, lo que trajo
+un nuevo problema: aprender (e)lisp o aprender python(2|3).&lt;/p&gt;
+
+&lt;p&gt;Lo primero implicaba aprender ingles, encortrar un buen libro y ponerme a
+traducir cosas, lo segundo encontrar un buen libro (e intentar por segunda vez
+con python), termine llendo por la primer opcion y cuando llego la desesperacion
+se mezclo con la segunda.&lt;/p&gt;
+
+&lt;p&gt;Lisp es interesante, asombroso en su simplesa e incomodo en su escritura&lt;/p&gt;
+
+&lt;p&gt;Python&amp;hellip; no puedo con python, lo encuentro aburrido, un pegote de muchas cosas
+en un mismo lenguaje e indentar a mano pelada por ahorrar unas llaves es un
+sufrimiento carente de toda elegancia&lt;/p&gt;
+
+&lt;p&gt;en fin, que no aprendi mucho de nada&amp;hellip; cerca de octubre del año pasado con la
+inquietud de hacer un blog (de nuevo) y tras probar algunos cms llege a &lt;em&gt;&lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;hugo&lt;/a&gt;&lt;/em&gt;,
+me parecio que era sencillo y digno de investigacion, luego de un par de semanas
+nacio este blog y decidi aprender algo de su motor de renderizado markdown
+llamado &lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;blackfriday&lt;/a&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;entonces? habia que aprender go&lt;/p&gt;
+
+&lt;p&gt;entonces? mas ingles (solo hay una pequeña guia traducida al
+español &lt;a href=&#34;https://github.com/karlseguin/the-little-go-book&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;y haci, pase a buscar un pdf en la web, aparecio &lt;em&gt;The way to go&lt;/em&gt;, luego de unas
+semanas viendo ejemplos y como no hay mejor manera de apreder algo que ponerlo
+en practica, comenzo el port de lo unico que entiendo a la perfeccion y estoy
+orgulloso, asi es, el motor de expresiones regulares (terminen con mi
+sufrimiento)&lt;/p&gt;
+
+&lt;p&gt;De momento funciona, aunque no es mas que una copia medio usable de C a Go, sin
+ninguna orientacion a objetos.&lt;/p&gt;
+
+&lt;p&gt;Hace ya unos años que di un recorrido ninja por sdl 1.2 y C++ (deitel y como
+pensar en c++) medio aprendi algo de OO, pero di media vuelta hacia atras, tome
+el C de k&amp;amp;r (+ deitel), algo de ncurses y prometi no programar nada hasta no
+dominar C.&lt;/p&gt;
+
+&lt;p&gt;asi que? no me acuerdo de como programar OO&lt;/p&gt;
+
+&lt;p&gt;y que con go? podria ser un buen sucesor de C, si tubiese punteros de verdad,
+cadenas de caracteres de verdad, un tipado menos estricto, pero sobre todo, si
+presindiera de su estupido autoformateo, guia de estilo y llaves para
+instrucciones simples, te maldigo &lt;code&gt;gofmt&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;y &lt;em&gt;regexp3-go&lt;/em&gt; que? &lt;a href=&#34;https://github.com/nasciiboy/regexp3/&#34;&gt;aqui&lt;/a&gt;, algo mas de
+informacion en el readme&lt;/p&gt;
+
+&lt;p&gt;que sigue? transitar la aleatoriedad.&lt;/p&gt;
+
+&lt;p&gt;Bueno hasta aqui con mis cosas, pronto (una semana, un mes o mas) una version
+simplificada del lenguaje de marcas ligeras.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../gotor.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Gnome Keys</title>
       <link>http://nasciiboy.github.io/prog/gnome-keys/</link>
       <pubDate>Wed, 18 Jan 2017 20:57:15 -0600</pubDate>

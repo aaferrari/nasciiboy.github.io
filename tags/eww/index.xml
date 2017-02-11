@@ -70,17 +70,30 @@ emacs, en mi caso es&lt;/p&gt;
 ;; aqui van los feeds que nos interesen
 (setq elfeed-feeds
       &#39;(
+        &amp;quot;http://blog.chuidiang.com/feed/&amp;quot;
+        &amp;quot;http://blog.desdelinux.net/feed/&amp;quot;
+        &amp;quot;http://blogubuntu.com/feed&amp;quot;
+        &amp;quot;http://cucarachasracing.blogspot.com/feeds/posts/default?alt=rss&amp;quot;
         &amp;quot;http://elarmarioinformatico.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://es.xkcd.com/rss/&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/diegocg?format=xml&amp;quot;
         &amp;quot;http://feeds.feedburner.com/Esbuntucom?format=xml&amp;quot;
         &amp;quot;http://feeds.feedburner.com/GabuntuBlog&amp;quot;
-        &amp;quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&amp;quot;
         &amp;quot;http://feeds.feedburner.com/ramonramon&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/teknoplof/muQI?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Ubunlog?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&amp;quot;
+        &amp;quot;http://fernand0.github.io/feed.xml&amp;quot;
+        &amp;quot;http://humanos.uci.cu/feed/&amp;quot;
         &amp;quot;http://lamiradadelreplicante.com/feed/&amp;quot;
         &amp;quot;http://linuxmanr4.com/feed/&amp;quot;
+        &amp;quot;http://misnotaslinux.blogspot.com/feeds/posts/default&amp;quot;
         &amp;quot;http://nasciiboy.github.io/index.xml&amp;quot;
         &amp;quot;http://planet.emacsen.org/atom.xml&amp;quot;
         &amp;quot;http://quijotelibre.com/feed/&amp;quot;
         &amp;quot;http://radioela.org/spip.php?page=backend&amp;quot;
+        &amp;quot;http://ranchoelectronico.org/feed/&amp;quot;
+        &amp;quot;http://red-orbita.com/?feed=rss2&amp;quot;
         &amp;quot;http://rufianenlared.com/feed/&amp;quot;
         &amp;quot;http://softwarelibre.deusto.es/feed/&amp;quot;
         &amp;quot;http://totaki.com/poesiabinaria/feed/&amp;quot;
@@ -93,29 +106,44 @@ emacs, en mi caso es&lt;/p&gt;
         &amp;quot;http://www.muylinux.com/feed/&amp;quot;
         &amp;quot;http://www.portallinux.es/feed&amp;quot;
         &amp;quot;http://www.tomatesasesinos.com/feed/&amp;quot;
+        &amp;quot;http://www.tomatuordenador.net/feed/&amp;quot;
+        &amp;quot;http://www.ubuntizando.com/feed/&amp;quot;
+        &amp;quot;https://asm86.wordpress.com/feed/&amp;quot;
         &amp;quot;https://autodefensainformatica.radioalmaina.org/feed/&amp;quot;
+        &amp;quot;https://birrasybits.wordpress.com/feed/&amp;quot;
         &amp;quot;https://blog.adrianistan.eu/feed/&amp;quot;
-        &amp;quot;https://blog.gvsig.org/feed/&amp;quot;
         &amp;quot;https://cartaslinux.wordpress.com/feed/&amp;quot;
         &amp;quot;https://colaboratorio.net/feed/&amp;quot;
         &amp;quot;https://comunicatelibremente.wordpress.com/feed/&amp;quot;
         &amp;quot;https://daemons.cf/rss.xml&amp;quot;
+        &amp;quot;https://diariodeunalinuxera.com/feed/&amp;quot;
         &amp;quot;https://elbinario.net/feed/&amp;quot;
+        &amp;quot;https://eliasbrasa.wordpress.com/feed/&amp;quot;
         &amp;quot;https://elpinguinotolkiano.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://elzorrolibre.noblogs.org/feed/&amp;quot;
         &amp;quot;https://enekoamieva.com/blog/feed/&amp;quot;
         &amp;quot;https://gutl.jovenclub.cu/feed/&amp;quot;
+        &amp;quot;https://h4ckseed.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://jummp.wordpress.com/feed/&amp;quot;
         &amp;quot;https://jvare.com/feed/&amp;quot;
         &amp;quot;https://kernelpanicblog.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://lasindias.blog/feed&amp;quot;
+        &amp;quot;https://leninmhs.wordpress.com/feed/&amp;quot;
         &amp;quot;https://lignux.com/feed/&amp;quot;
         &amp;quot;https://linuxgnublog.org/es/feed&amp;quot;
         &amp;quot;https://mierda.tv/feed/&amp;quot;
+        &amp;quot;https://miguelpinia.wordpress.com/feed/&amp;quot;
         &amp;quot;https://ondahostil.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://otroespacioblog.wordpress.com/feed/&amp;quot;
         &amp;quot;https://pfctelepathy.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://picodotdev.github.io/blog-bitix/index.xml&amp;quot;
+        &amp;quot;https://radioslibres.net/rss/&amp;quot;
         &amp;quot;https://victorhckinthefreeworld.com/feed/&amp;quot;
+        &amp;quot;https://vidaembebida.wordpress.com/feed/&amp;quot;
         &amp;quot;https://www.atareao.es/blog/feed/&amp;quot;
         &amp;quot;https://www.linuxito.com/?format=feed&amp;amp;type=rss&amp;quot;
         &amp;quot;https://www.ochobitshacenunbyte.com/feed/&amp;quot;
-        ;; &amp;quot;https://humanos.uci.cu/feed/&amp;quot; tiene problemas con su certificado o algo asi
+        &amp;quot;https://xkcd.com/rss.xml&amp;quot;
         ))
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -137,9 +165,12 @@ leector&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../elfeed-show.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;si nos posicionamos en el enlace y damos enter una ves mas, la entrada se abrira
-en el navegador del sistema! para regresar a las entradas presionamos &lt;code&gt;q&lt;/code&gt; y para
-marcar una entrada como leeida &lt;code&gt;r&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;si presionamos &lt;code&gt;b&lt;/code&gt; o nos posicionamos en el enlace + un enter, la entrada se
+abrira en el navegador del sistema! Tambien podemos copiar la ruta de enlace
+pulsando &lt;code&gt;y&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;para regresar a las entradas presionamos &lt;code&gt;q&lt;/code&gt; y para marcar una entrada como
+leeida &lt;code&gt;r&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;elfeed-eww&#34;&gt;&lt;code&gt;elfeed&lt;/code&gt; + &lt;code&gt;eww&lt;/code&gt;&lt;/h2&gt;
 

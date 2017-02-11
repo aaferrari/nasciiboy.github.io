@@ -7,8 +7,88 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Tue, 31 Jan 2017 14:40:54 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 11 Feb 2017 10:26:04 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>regexp3-go (dia cero)</title>
+      <link>http://nasciiboy.github.io/prog/regexp3-go/</link>
+      <pubDate>Sat, 11 Feb 2017 10:26:04 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/regexp3-go/</guid>
+      <description>&lt;p&gt;Hace un año luego de &amp;ldquo;maquetar&amp;rdquo; algunos libros en org-mode, decidi crear mi
+propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar
+un substituto del comando man/info y aniquilar a html/latex como sistema de
+documentacion.&lt;/p&gt;
+
+&lt;p&gt;Un mes mas tarde fruto de la necesidad de &lt;em&gt;parsear&lt;/em&gt; el texto del nuevo lenguaje
+y mi incapacidad de entender como utilizar una libreria de expresiones
+regulares, nacio Recursive Regexp Raptor (alias regexp3) que es un motor de
+expresiones regulares para C, otro mes mas tarde salio a la web la primer
+version en forma de repositorio
+en &lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor/&#34;&gt;github&lt;/a&gt; y ahora&amp;hellip; ni
+hay un nuevo lenguaje, ni un substituto de man/info, ni ha muerto html y he
+dedicado mas horas de las que jamas pense en regexp3 (y regexp4 &amp;ldquo;el sucesor&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;Por un mes (entero) intente programar el interprete del lenguaje de marcas
+ligero y fracase, asi que pase al plan de emergencia, ver como estaban hechos
+otros interpretes como el de &lt;em&gt;org-mode&lt;/em&gt; o el de &lt;em&gt;reStructured Text&lt;/em&gt;, lo que trajo
+un nuevo problema: aprender (e)lisp o aprender python(2|3).&lt;/p&gt;
+
+&lt;p&gt;Lo primero implicaba aprender ingles, encortrar un buen libro y ponerme a
+traducir cosas, lo segundo encontrar un buen libro (e intentar por segunda vez
+con python), termine llendo por la primer opcion y cuando llego la desesperacion
+se mezclo con la segunda.&lt;/p&gt;
+
+&lt;p&gt;Lisp es interesante, asombroso en su simplesa e incomodo en su escritura&lt;/p&gt;
+
+&lt;p&gt;Python&amp;hellip; no puedo con python, lo encuentro aburrido, un pegote de muchas cosas
+en un mismo lenguaje e indentar a mano pelada por ahorrar unas llaves es un
+sufrimiento carente de toda elegancia&lt;/p&gt;
+
+&lt;p&gt;en fin, que no aprendi mucho de nada&amp;hellip; cerca de octubre del año pasado con la
+inquietud de hacer un blog (de nuevo) y tras probar algunos cms llege a &lt;em&gt;&lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;hugo&lt;/a&gt;&lt;/em&gt;,
+me parecio que era sencillo y digno de investigacion, luego de un par de semanas
+nacio este blog y decidi aprender algo de su motor de renderizado markdown
+llamado &lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;blackfriday&lt;/a&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;entonces? habia que aprender go&lt;/p&gt;
+
+&lt;p&gt;entonces? mas ingles (solo hay una pequeña guia traducida al
+español &lt;a href=&#34;https://github.com/karlseguin/the-little-go-book&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;y haci, pase a buscar un pdf en la web, aparecio &lt;em&gt;The way to go&lt;/em&gt;, luego de unas
+semanas viendo ejemplos y como no hay mejor manera de apreder algo que ponerlo
+en practica, comenzo el port de lo unico que entiendo a la perfeccion y estoy
+orgulloso, asi es, el motor de expresiones regulares (terminen con mi
+sufrimiento)&lt;/p&gt;
+
+&lt;p&gt;De momento funciona, aunque no es mas que una copia medio usable de C a Go, sin
+ninguna orientacion a objetos.&lt;/p&gt;
+
+&lt;p&gt;Hace ya unos años que di un recorrido ninja por sdl 1.2 y C++ (deitel y como
+pensar en c++) medio aprendi algo de OO, pero di media vuelta hacia atras, tome
+el C de k&amp;amp;r (+ deitel), algo de ncurses y prometi no programar nada hasta no
+dominar C.&lt;/p&gt;
+
+&lt;p&gt;asi que? no me acuerdo de como programar OO&lt;/p&gt;
+
+&lt;p&gt;y que con go? podria ser un buen sucesor de C, si tubiese punteros de verdad,
+cadenas de caracteres de verdad, un tipado menos estricto, pero sobre todo, si
+presindiera de su estupido autoformateo, guia de estilo y llaves para
+instrucciones simples, te maldigo &lt;code&gt;gofmt&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;y &lt;em&gt;regexp3-go&lt;/em&gt; que? &lt;a href=&#34;https://github.com/nasciiboy/regexp3/&#34;&gt;aqui&lt;/a&gt;, algo mas de
+informacion en el readme&lt;/p&gt;
+
+&lt;p&gt;que sigue? transitar la aleatoriedad.&lt;/p&gt;
+
+&lt;p&gt;Bueno hasta aqui con mis cosas, pronto (una semana, un mes o mas) una version
+simplificada del lenguaje de marcas ligeras.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../gotor.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>org mode</title>
@@ -1143,17 +1223,30 @@ emacs, en mi caso es&lt;/p&gt;
 ;; aqui van los feeds que nos interesen
 (setq elfeed-feeds
       &#39;(
+        &amp;quot;http://blog.chuidiang.com/feed/&amp;quot;
+        &amp;quot;http://blog.desdelinux.net/feed/&amp;quot;
+        &amp;quot;http://blogubuntu.com/feed&amp;quot;
+        &amp;quot;http://cucarachasracing.blogspot.com/feeds/posts/default?alt=rss&amp;quot;
         &amp;quot;http://elarmarioinformatico.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://es.xkcd.com/rss/&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/diegocg?format=xml&amp;quot;
         &amp;quot;http://feeds.feedburner.com/Esbuntucom?format=xml&amp;quot;
         &amp;quot;http://feeds.feedburner.com/GabuntuBlog&amp;quot;
-        &amp;quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&amp;quot;
         &amp;quot;http://feeds.feedburner.com/ramonramon&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/teknoplof/muQI?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Ubunlog?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&amp;quot;
+        &amp;quot;http://fernand0.github.io/feed.xml&amp;quot;
+        &amp;quot;http://humanos.uci.cu/feed/&amp;quot;
         &amp;quot;http://lamiradadelreplicante.com/feed/&amp;quot;
         &amp;quot;http://linuxmanr4.com/feed/&amp;quot;
+        &amp;quot;http://misnotaslinux.blogspot.com/feeds/posts/default&amp;quot;
         &amp;quot;http://nasciiboy.github.io/index.xml&amp;quot;
         &amp;quot;http://planet.emacsen.org/atom.xml&amp;quot;
         &amp;quot;http://quijotelibre.com/feed/&amp;quot;
         &amp;quot;http://radioela.org/spip.php?page=backend&amp;quot;
+        &amp;quot;http://ranchoelectronico.org/feed/&amp;quot;
+        &amp;quot;http://red-orbita.com/?feed=rss2&amp;quot;
         &amp;quot;http://rufianenlared.com/feed/&amp;quot;
         &amp;quot;http://softwarelibre.deusto.es/feed/&amp;quot;
         &amp;quot;http://totaki.com/poesiabinaria/feed/&amp;quot;
@@ -1166,29 +1259,44 @@ emacs, en mi caso es&lt;/p&gt;
         &amp;quot;http://www.muylinux.com/feed/&amp;quot;
         &amp;quot;http://www.portallinux.es/feed&amp;quot;
         &amp;quot;http://www.tomatesasesinos.com/feed/&amp;quot;
+        &amp;quot;http://www.tomatuordenador.net/feed/&amp;quot;
+        &amp;quot;http://www.ubuntizando.com/feed/&amp;quot;
+        &amp;quot;https://asm86.wordpress.com/feed/&amp;quot;
         &amp;quot;https://autodefensainformatica.radioalmaina.org/feed/&amp;quot;
+        &amp;quot;https://birrasybits.wordpress.com/feed/&amp;quot;
         &amp;quot;https://blog.adrianistan.eu/feed/&amp;quot;
-        &amp;quot;https://blog.gvsig.org/feed/&amp;quot;
         &amp;quot;https://cartaslinux.wordpress.com/feed/&amp;quot;
         &amp;quot;https://colaboratorio.net/feed/&amp;quot;
         &amp;quot;https://comunicatelibremente.wordpress.com/feed/&amp;quot;
         &amp;quot;https://daemons.cf/rss.xml&amp;quot;
+        &amp;quot;https://diariodeunalinuxera.com/feed/&amp;quot;
         &amp;quot;https://elbinario.net/feed/&amp;quot;
+        &amp;quot;https://eliasbrasa.wordpress.com/feed/&amp;quot;
         &amp;quot;https://elpinguinotolkiano.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://elzorrolibre.noblogs.org/feed/&amp;quot;
         &amp;quot;https://enekoamieva.com/blog/feed/&amp;quot;
         &amp;quot;https://gutl.jovenclub.cu/feed/&amp;quot;
+        &amp;quot;https://h4ckseed.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://jummp.wordpress.com/feed/&amp;quot;
         &amp;quot;https://jvare.com/feed/&amp;quot;
         &amp;quot;https://kernelpanicblog.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://lasindias.blog/feed&amp;quot;
+        &amp;quot;https://leninmhs.wordpress.com/feed/&amp;quot;
         &amp;quot;https://lignux.com/feed/&amp;quot;
         &amp;quot;https://linuxgnublog.org/es/feed&amp;quot;
         &amp;quot;https://mierda.tv/feed/&amp;quot;
+        &amp;quot;https://miguelpinia.wordpress.com/feed/&amp;quot;
         &amp;quot;https://ondahostil.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://otroespacioblog.wordpress.com/feed/&amp;quot;
         &amp;quot;https://pfctelepathy.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://picodotdev.github.io/blog-bitix/index.xml&amp;quot;
+        &amp;quot;https://radioslibres.net/rss/&amp;quot;
         &amp;quot;https://victorhckinthefreeworld.com/feed/&amp;quot;
+        &amp;quot;https://vidaembebida.wordpress.com/feed/&amp;quot;
         &amp;quot;https://www.atareao.es/blog/feed/&amp;quot;
         &amp;quot;https://www.linuxito.com/?format=feed&amp;amp;type=rss&amp;quot;
         &amp;quot;https://www.ochobitshacenunbyte.com/feed/&amp;quot;
-        ;; &amp;quot;https://humanos.uci.cu/feed/&amp;quot; tiene problemas con su certificado o algo asi
+        &amp;quot;https://xkcd.com/rss.xml&amp;quot;
         ))
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1210,9 +1318,12 @@ leector&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../elfeed-show.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;si nos posicionamos en el enlace y damos enter una ves mas, la entrada se abrira
-en el navegador del sistema! para regresar a las entradas presionamos &lt;code&gt;q&lt;/code&gt; y para
-marcar una entrada como leeida &lt;code&gt;r&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;si presionamos &lt;code&gt;b&lt;/code&gt; o nos posicionamos en el enlace + un enter, la entrada se
+abrira en el navegador del sistema! Tambien podemos copiar la ruta de enlace
+pulsando &lt;code&gt;y&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;para regresar a las entradas presionamos &lt;code&gt;q&lt;/code&gt; y para marcar una entrada como
+leeida &lt;code&gt;r&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;elfeed-eww&#34;&gt;&lt;code&gt;elfeed&lt;/code&gt; + &lt;code&gt;eww&lt;/code&gt;&lt;/h2&gt;
 
@@ -2287,114 +2398,6 @@ realiza. En bash es&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Para que el cambio sea permanente agregamos la enterior linea a &lt;code&gt;init.el&lt;/code&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Que es GNU Emacs?</title>
-      <link>http://nasciiboy.github.io/emacs/que-es-emacs/</link>
-      <pubDate>Fri, 23 Dec 2016 20:43:19 -0600</pubDate>
-      
-      <guid>http://nasciiboy.github.io/emacs/que-es-emacs/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;../Emacs-logo.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;algunos dicen que es &lt;strong&gt;un editor&lt;/strong&gt;, otros que es &lt;strong&gt;un sistema operativo&lt;/strong&gt;, los mas
-filosoficos diran que es  &lt;strong&gt;lo que elijas que sea&lt;/strong&gt;, &lt;strong&gt;una forma de vida&lt;/strong&gt;,
-&lt;strong&gt;un camino a seguir&lt;/strong&gt; o incluso que Emacs son los padres&amp;hellip; bueno luego de un
-par de años utilizando Emacs esta es mi opinion&lt;/p&gt;
-
-&lt;h2 id=&#34;my-and-mrs-emacs&#34;&gt;My and mrs Emacs&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Yo y la señora Emacs,
-tenemos algo que esta creciendo,
-sabemos que está mal,
-pero es algo muy fuerte como para dejarlo ir ahora.&lt;/p&gt;
-
-&lt;p&gt;Nos vemos cada dia en el mismo monitor,
-a las 8:30 se que estará ahí,
-tomando mis comandos, haciendo toda clase de funciones,
-mientras moc toca nuestra canción favorita.&lt;/p&gt;
-
-&lt;p&gt;Yo y la señora, señora Emacs, señora Emacs, señora Emacs,
-tenemos algo que esta creciendo,
-sabemos que esta mal,
-pero es algo muy fuerte como para dejarlo ir ahora.&lt;/p&gt;
-
-&lt;p&gt;Tenemos que ser muy cuidadosos,
-de no llevar nuestros sueños muy lejos,
-porque ella tiene sus propias obligaciones y yo también,
-yo y la señora, señora Emacs, señora Emacs, señora Emacs.&lt;/p&gt;
-
-&lt;p&gt;Bueno, es nuestra hora de irnos,
-me duele mucho, mucho por dentro,
-y ahora ella tomará su camino, yo el mio,
-Pero mañana nos veremos en el mismo lugar, a la misma hora.
-Yo y la señora Emacs, señora Emacs, señora Emacs&amp;hellip;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&amp;hellip;cof, cof, hem, todo aspirante a programador debe eligir su martillo
-forjador de codigo, en mi caso al ser autodidacta unicamente las opiniones de
-internet sirvieron de guia (lagrimas ironicas).&lt;/p&gt;
-
-&lt;p&gt;Primero vino la bestia (&lt;strong&gt;VI&lt;/strong&gt;), fue dificil, muy dificil (mas sin saber
-mecanografia). Hubo que anotar las combinaciones frecuentes en un papel y pegar
-los ojos al teclado y luego al monitor y luego al teclado. Dia tras dia mejoraba
-mi Kung Fu y la idea de ser un programador parecia no ser solo un sueño. Tras un
-mes de entrenamiento y con algo de confianza probe un enfoque mas visual
-(&lt;strong&gt;gedit&lt;/strong&gt;), el resultado? Un sin sabor, era sencillo pero no tenia profundidad,
-carecia de potencia, en resumen aburrido, de regreso al viejo dojo encontre una
-nueva escuela (&lt;strong&gt;Emacs&lt;/strong&gt;), las clases eran gratis y prometian ser interesantes&lt;/p&gt;
-
-&lt;p&gt;Tras una semana con el tutorial, era tan agil con Emacs como con Vi, nada mal,
-se podia hacer todo con el teclado y si lo queria tambien tenia menus accesibles
-tanto por las &lt;code&gt;F&lt;/code&gt;s como por el raton (esto ultimo es increible, todo aquel que
-asimila la &lt;strong&gt;forma Emacs&lt;/strong&gt; inevitablemente termina por hacer a un lado el
-raton. ¿Quien demonios sigue programando esto?).&lt;/p&gt;
-
-&lt;p&gt;Tras unos dias (y con ayuda de algun tutorial) puede cambiar el tema, luego
-descubri que se podia navegar por los ficheros desde emacs y que tenia
-terminales e interpretes y un tetris y un navegador web y gestor de paquetes y
-soporte para cualquier lenguaje de programacion (almenos resaltado) y un sin fin
-de utiles(?) aplicaciones, sin embargo &lt;strong&gt;todas compartian el mismo conjunto de
-comandos base&lt;/strong&gt; para moverse por la interfaz y manipular texto, aprender lo
-especifico de cada funcionalidad (en gerga de emacs, &lt;strong&gt;modo&lt;/strong&gt;) es un tema
-aparte que requiere una memoria exepcional&lt;/p&gt;
-
-&lt;p&gt;Cai como un yonqui adicto a cualquier informacion de emacs (los no hablantes de
-ingles tenemos un poco mas dicil&amp;hellip; todo), apenas aprendi algun nuevo comando lo
-ponia en practica (para olvidarlo un par de horas despues)&lt;/p&gt;
-
-&lt;p&gt;Y un buen dia entientes que puedes programar emacs, que todo comportamiento es
-modificable y de echo es modificable &lt;strong&gt;al vuelo&lt;/strong&gt; y te preguntas &lt;strong&gt;¿Que es
-Emacs?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;emacs-es&#34;&gt;Emacs Es&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;El interprete de un lenguaje derivado de Lisp (Emacs Lisp). De hecho es el
-interprete mas sofisticado que existe y probablemente existira, ya que viene con
-el suficiente codigo precargado como para (hacerte creer que es un editor y)
-permitirte crear nuevos programas, funcionalidades o modificar Emacs en si
-mismo&amp;hellip; existe un mejor diseño que ese?&lt;/p&gt;
-
-&lt;h2 id=&#34;enfoques-sobre-el-texto&#34;&gt;Enfoques sobre el texto&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;teco&lt;/strong&gt;: un leguaje para forjar texto&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;vi&lt;/strong&gt;: escribamos caracteres o apliquemos comandos a los caracteres&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: el texto es la interfaz, el editor es parte de la interfaz,
-extendamos y modifiquemos a voluntad y sin restricciones nuestra interfaz&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;nano&lt;/strong&gt;: un simple editor&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;: joder, lo que pueden hacer los de emacs, haremos a vi extensible&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;sublime&lt;/strong&gt;: hare mi propio vim&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;atom&lt;/strong&gt;: hagamos un editor como sublime pero con tecnologia web awesome!&lt;/p&gt;
 </description>
     </item>
     

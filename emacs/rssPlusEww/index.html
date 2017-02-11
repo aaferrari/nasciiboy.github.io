@@ -248,17 +248,30 @@ emacs, en mi caso es</p>
 ;; aqui van los feeds que nos interesen
 (setq elfeed-feeds
       '(
+        &quot;http://blog.chuidiang.com/feed/&quot;
+        &quot;http://blog.desdelinux.net/feed/&quot;
+        &quot;http://blogubuntu.com/feed&quot;
+        &quot;http://cucarachasracing.blogspot.com/feeds/posts/default?alt=rss&quot;
         &quot;http://elarmarioinformatico.blogspot.com/feeds/posts/default&quot;
+        &quot;http://es.xkcd.com/rss/&quot;
+        &quot;http://feeds.feedburner.com/diegocg?format=xml&quot;
         &quot;http://feeds.feedburner.com/Esbuntucom?format=xml&quot;
         &quot;http://feeds.feedburner.com/GabuntuBlog&quot;
-        &quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&quot;
         &quot;http://feeds.feedburner.com/ramonramon&quot;
+        &quot;http://feeds.feedburner.com/teknoplof/muQI?format=xml&quot;
+        &quot;http://feeds.feedburner.com/Ubunlog?format=xml&quot;
+        &quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&quot;
+        &quot;http://fernand0.github.io/feed.xml&quot;
+        &quot;http://humanos.uci.cu/feed/&quot;
         &quot;http://lamiradadelreplicante.com/feed/&quot;
         &quot;http://linuxmanr4.com/feed/&quot;
+        &quot;http://misnotaslinux.blogspot.com/feeds/posts/default&quot;
         &quot;http://nasciiboy.github.io/index.xml&quot;
         &quot;http://planet.emacsen.org/atom.xml&quot;
         &quot;http://quijotelibre.com/feed/&quot;
         &quot;http://radioela.org/spip.php?page=backend&quot;
+        &quot;http://ranchoelectronico.org/feed/&quot;
+        &quot;http://red-orbita.com/?feed=rss2&quot;
         &quot;http://rufianenlared.com/feed/&quot;
         &quot;http://softwarelibre.deusto.es/feed/&quot;
         &quot;http://totaki.com/poesiabinaria/feed/&quot;
@@ -271,29 +284,44 @@ emacs, en mi caso es</p>
         &quot;http://www.muylinux.com/feed/&quot;
         &quot;http://www.portallinux.es/feed&quot;
         &quot;http://www.tomatesasesinos.com/feed/&quot;
+        &quot;http://www.tomatuordenador.net/feed/&quot;
+        &quot;http://www.ubuntizando.com/feed/&quot;
+        &quot;https://asm86.wordpress.com/feed/&quot;
         &quot;https://autodefensainformatica.radioalmaina.org/feed/&quot;
+        &quot;https://birrasybits.wordpress.com/feed/&quot;
         &quot;https://blog.adrianistan.eu/feed/&quot;
-        &quot;https://blog.gvsig.org/feed/&quot;
         &quot;https://cartaslinux.wordpress.com/feed/&quot;
         &quot;https://colaboratorio.net/feed/&quot;
         &quot;https://comunicatelibremente.wordpress.com/feed/&quot;
         &quot;https://daemons.cf/rss.xml&quot;
+        &quot;https://diariodeunalinuxera.com/feed/&quot;
         &quot;https://elbinario.net/feed/&quot;
+        &quot;https://eliasbrasa.wordpress.com/feed/&quot;
         &quot;https://elpinguinotolkiano.wordpress.com/feed/&quot;
+        &quot;https://elzorrolibre.noblogs.org/feed/&quot;
         &quot;https://enekoamieva.com/blog/feed/&quot;
         &quot;https://gutl.jovenclub.cu/feed/&quot;
+        &quot;https://h4ckseed.wordpress.com/feed/&quot;
+        &quot;https://jummp.wordpress.com/feed/&quot;
         &quot;https://jvare.com/feed/&quot;
         &quot;https://kernelpanicblog.wordpress.com/feed/&quot;
+        &quot;https://lasindias.blog/feed&quot;
+        &quot;https://leninmhs.wordpress.com/feed/&quot;
         &quot;https://lignux.com/feed/&quot;
         &quot;https://linuxgnublog.org/es/feed&quot;
         &quot;https://mierda.tv/feed/&quot;
+        &quot;https://miguelpinia.wordpress.com/feed/&quot;
         &quot;https://ondahostil.wordpress.com/feed/&quot;
+        &quot;https://otroespacioblog.wordpress.com/feed/&quot;
         &quot;https://pfctelepathy.wordpress.com/feed/&quot;
+        &quot;https://picodotdev.github.io/blog-bitix/index.xml&quot;
+        &quot;https://radioslibres.net/rss/&quot;
         &quot;https://victorhckinthefreeworld.com/feed/&quot;
+        &quot;https://vidaembebida.wordpress.com/feed/&quot;
         &quot;https://www.atareao.es/blog/feed/&quot;
         &quot;https://www.linuxito.com/?format=feed&amp;type=rss&quot;
         &quot;https://www.ochobitshacenunbyte.com/feed/&quot;
-        ;; &quot;https://humanos.uci.cu/feed/&quot; tiene problemas con su certificado o algo asi
+        &quot;https://xkcd.com/rss.xml&quot;
         ))
 </code></pre>
 
@@ -315,9 +343,12 @@ leector</p>
 
 <p><img src="../elfeed-show.png" alt="" /></p>
 
-<p>si nos posicionamos en el enlace y damos enter una ves mas, la entrada se abrira
-en el navegador del sistema! para regresar a las entradas presionamos <code>q</code> y para
-marcar una entrada como leeida <code>r</code></p>
+<p>si presionamos <code>b</code> o nos posicionamos en el enlace + un enter, la entrada se
+abrira en el navegador del sistema! Tambien podemos copiar la ruta de enlace
+pulsando <code>y</code></p>
+
+<p>para regresar a las entradas presionamos <code>q</code> y para marcar una entrada como
+leeida <code>r</code></p>
 
 <h2 id="elfeed-eww"><code>elfeed</code> + <code>eww</code></h2>
 
@@ -372,7 +403,7 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
     <header class="taxonomies">category</header>
     <div>
       <ul class="terms">
-        <li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
+        <li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
       </ul>
     </div>
   </section>
@@ -381,7 +412,7 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
     <header class="taxonomies">tag</header>
     <div>
       <ul class="terms">
-        <li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac</a></li>
+        <li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish</a></li>
       </ul>
     </div>
   </section>
@@ -389,6 +420,21 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
 
   <section>
     <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/regexp3-go/">regexp3-go (dia cero)</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-11 10:26:04 -0600 CST">Feb 11, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
     
     <div class="thumb-sm">
   <header>
@@ -403,6 +449,7 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -420,7 +467,6 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/post/workspace/">la forma en que trabajo</a></h2>
@@ -434,6 +480,7 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -451,7 +498,6 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/emacs/rssPlusEww/">Emacs web y noticias en modo texto</a></h2>
@@ -465,6 +511,7 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -482,7 +529,6 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/raptor-book/">Raptor-Book</a></h2>
@@ -496,6 +542,7 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -513,7 +560,6 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/2017Challenges/">2017Challenges</a></h2>
@@ -522,21 +568,6 @@ porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
       <li><time datetime="2017-01-04 20:41:22 -0600 CST">Jan 4, 2017</time></li>
       
       <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
-      
-    </ul>
-  </header>
-</div>
-
-    
-    
-    <div class="thumb-sm">
-  <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/vg/solarus/">Zelda solarus</a></h2>
-
-    <ul class="meta">
-      <li><time datetime="2017-01-01 14:56:59 -0600 CST">Jan 1, 2017</time></li>
-      
-      <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg</span></a></li>
       
     </ul>
   </header>
