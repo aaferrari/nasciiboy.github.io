@@ -42,7 +42,7 @@ modificacion&lt;/p&gt;
 
 &lt;p&gt;Perfecto! subo un repositorio de codigo en go a github y por curiosidad veo el
 codigo ya en el repo&amp;hellip; la indentacion es un jodido desastre! los tabs son
-tabs&amp;hellip; pero, pero si en el jodido modo todo go se ve perfecto, que esta
+tabs&amp;hellip; pero, pero, si en el jodido modo go, todo se ve perfecto, que esta
 pasando es cosa de github o un problema interno?&lt;/p&gt;
 
 &lt;p&gt;paso abrir el codigo en emacs y cambio a &lt;code&gt;fundamental-mode&lt;/code&gt; para visualizar la
