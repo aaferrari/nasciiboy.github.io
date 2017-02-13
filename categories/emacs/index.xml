@@ -57,7 +57,7 @@ cambio la busqueda a cosas que contengan la palabra &lt;code&gt;indent&lt;/code&
   (setq indent-tabs-mode t)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;(commit 5737e59cbac9bc480546766c9502c527fa2be26f, lienea 985)&lt;/p&gt;
+&lt;p&gt;(commit 5737e59cbac9bc480546766c9502c527fa2be26f, linea 985)&lt;/p&gt;
 
 &lt;p&gt;Su funcion es dejar los tabs como tabs y no como espacios, la solucion? cambiar
 &lt;code&gt;t&lt;/code&gt; por &lt;code&gt;nil&lt;/code&gt; directamente en el codigo de &lt;span class=&#34;file&#34;&gt;go-mode.el&lt;/span&gt;
