@@ -197,7 +197,7 @@ img:hover { filter: none;
 
 <p><code>org-mode</code> es un lenguaje de marcas ligeras nacido de, por, y para <code
 class="command">emacs</code> y como emacs, org tambien tiene aplicaciones
-varias, puede ser una agenta, una lista de pendientes, hoja de calculo, blog de
+varias, puede ser una agenda, una lista de pendientes, hoja de calculo, blog de
 notas, sistema de documentacion e investigacion reproducible, todo junto y
 revuelto, encima da la posibilidad de exportar el contenido a pdf, latex, html,
 markdown, odt y groff (algunas opciones vienen por separado y requieren
@@ -241,7 +241,7 @@ lo primero que aparezca dentro del documento, aunque, al igual que en html,
 tambien podemos agrupar el contenido dentro de secciones/encabezados segun
 convenga.</p>
 
-<p>La sintaxis de un encabezado muy simple:</p>
+<p>La sintaxis de un encabezado es muy simple:</p>
 
 <pre><code class="language-org-mode">* Encabezado principal
 ** Segundo nivel
@@ -253,7 +253,7 @@ convenga.</p>
 * Otro encabezado principal
 </code></pre>
 
-<p>Toda linea que inicia con uno o varios <code>*</code> seguido por almenos un espacio en
+<p>Toda linea que inicia con uno o varios <code>*</code> seguido por al menos un espacio en
 blanco, es un encabezado.</p>
 
 <p>El texto (en la misma linea) donde esta el o los <code>*</code> sera el titulo del encabezado.</p>
@@ -367,7 +367,7 @@ punto y comenzamos a escribir</p>
 este parrafo esta fuera de la lista
 </code></pre>
 
-<p>en este, caso el contenido que sea parte de un elemento de la lista, debe
+<p>en este caso, el contenido que sea parte de un elemento de la lista, debe
 respetar cierta indentacion.</p>
 
 <p>El numero que coloques al inicio de la lista, es irrelevante, org lo ignora por
@@ -412,9 +412,9 @@ lineas que inicien con algo similar a una lista.</p>
 <p>Algunos comandos en listados</p>
 
 <ul>
-<li><p><code>Shift-FlechaDerecha</code> rotacion por el estido del listado</p></li>
+<li><p><code>Shift-FlechaDerecha</code> rotacion por el estilo del listado</p></li>
 
-<li><p><code>M-FlechaIzquierda</code> rotacion por el estido del listado</p></li>
+<li><p><code>M-FlechaIzquierda</code> rotacion por el estilo del listado</p></li>
 
 <li><p><code>M-FlechaDerecha</code> convierte al elemento en un miembro del elemento superior</p></li>
 
@@ -556,7 +556,7 @@ coloca la direccion de la imagen, asi:</p>
 <h4 id="radio-targets">Radio Targets</h4>
 
 <p>Los <em>Radio Objetivos</em>, son un metodo automagico de convertir una frace en
-un enlace a algun punto del documento, lo onico que tenemos que hacer es
+un enlace a algun punto del documento, lo unico que tenemos que hacer es
 encerrar el objetivo entre tres pares de <code>&lt;</code> <code>&gt;</code> asi:</p>
 
 <pre><code class="language-org-mode">&lt;&lt;&lt;Mi objetivo&gt;&gt;&gt;
@@ -615,16 +615,15 @@ espacios en blanco escribimos <code>&lt;</code> segudio por</p>
 </code></pre>
 
 <p>el lenguaje se especifica luego de <code>#+BEGIN_SRC</code>, en este caso, lenguaje <code>c</code>,
-tambien podemos hacer que el codigo aparesca numerado si agregamos el parametro
+tambien podemos hacer que el codigo aparesca numerado, si agregamos el parametro
 <code>-n</code>. Si se desea que la numeracion inicie a partir de un numero concreto
 colocamos <code>-n numero</code>.</p>
 
 <p>Antes mencione que org nacio de, por y para emacs, pues resulta que esto se
 demuestra en los bloques de codigo. Sea cual sea el lenguaje que coloques
 delante de un bloque de codigo (digo, si esta soportado) al presionar <code>C-c '</code> se
-abre una ventana con un modo para editar dicho lenguaje con resaltado, con
-teclas de emacs y funciones de emacs, con otro <code>C-c '</code> regresas al
-documento.</p>
+abre un buffer con un modo para editar dicho lenguaje con resaltado, con teclas
+de emacs y funciones de emacs. Otro <code>C-c '</code>te regresa al documento.</p>
 
 <p>Puedes imaginar el colosal esfuerzo que requiere emular esta funcion en otro
 sitio que no sea emacs?</p>
@@ -641,7 +640,7 @@ por su nombre directamente. Para entrar es <code>org-edit-src-code</code> y para
 
 <h2 id="exportacion">Exportacion</h2>
 
-<p>En principio exportar apartir de org es sencillo, presionamos <code>C-c C-e</code>.</p>
+<p>En principio, exportar apartir de org es sencillo, presionamos <code>C-c C-e</code>.</p>
 
 <p><img src="../org-export.png" alt="" /></p>
 
@@ -653,7 +652,7 @@ la interfaz <strong>Org Export Dispatcher</strong>, solo <code>h h</code>.</p>
 <p>Pero antes de exportar vamos a modificar algunas cosas. En la configuracion del
 documento agrega estas lineas:</p>
 
-<pre><code>#+OPTIONS: toc:nil num:nil h:7 html-preamble:nil html-postamble:nil html-scripts:nil html-tyle:nil
+<pre><code>#+OPTIONS: toc:nil num:nil h:7 html-preamble:nil html-postamble:nil html-scripts:nil html-style:nil
 #+HTML_HEAD: &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;worg-data/worg.css&quot; /&gt;
 </code></pre>
 
@@ -673,18 +672,18 @@ autor, fecha y correo(?), <code>html-preamble-nil</code> no se que haga pero tam
 quiero&hellip;</p>
 
 <p>veras que org es generoso, nos regala una hoja de estilo y scripts
-<code>html-scripts:nil</code> y <code>html-tyle:nil</code> se las regresan&hellip; de buena forma&hellip; pero
-org insiste, pasa de nosotros y las coloca de todas formas (por lo genera como comentario)</p>
+<code>html-scripts:nil</code> y <code>html-style:nil</code> se las regresan&hellip; de buena forma&hellip; pero
+org insiste, pasa de nosotros y las coloca de todas formas (por lo general, como comentario)</p>
 
-<p>por cierto, para mostrar las formulas LaTex en html, org coloca esta linea</p>
+<p>por cierto, para mostrar las formulas LaTex en html, org coloca por su cuenta esta linea</p>
 
 <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;http://orgmode.org/mathjax/MathJax.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 
-<h4 id="colorear-codigo">Colorear Codigo</h4>
+<h4 id="colorear-codigo-al-exportar">Colorear Codigo (al exportar)</h4>
 
-<p>Esto requiere algo de codigo, primero ve a tu carpeta de configuracion. En mi
-caso es</p>
+<p>Esto requiere algo de codigo (ha, ha, ha&hellip;), primero ve a tu carpeta de
+configuracion. En mi caso es</p>
 
 <pre><code class="language-sh">cd ~/.emacs.d/plugins/
 </code></pre>
@@ -723,7 +722,7 @@ caso es</p>
 pagina html. El comando es <code>htmlfontify-buffer</code>.</p>
 
 <p>Al parecer, <code>htmlize</code> es una vesion <q>vieja</q> del modo <code>htmlfontify</code>
-(incluido por defecto), a saber por que org, requiere de <code>htmlize</code></p>
+(incluido por defecto), a saber por que org requiere de <code>htmlize</code></p>
 
 <h3 id="cosideraciones-adicionales">Cosideraciones adicionales</h3>
 
@@ -813,7 +812,7 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
     <header class="taxonomies">tag</header>
     <div>
       <ul class="terms">
-        <li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish</a></li>
+        <li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish</a></li>
       </ul>
     </div>
   </section>
@@ -821,6 +820,21 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
 
   <section>
     <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/inbo/">INBO</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-13 22:14:42 -0600 CST">Feb 13, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
     
     <div class="thumb-sm">
   <header>
@@ -835,6 +849,7 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -852,7 +867,6 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/emacs/org-mode/">org mode</a></h2>
@@ -866,6 +880,7 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -883,7 +898,6 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/post/workspace/">la forma en que trabajo</a></h2>
@@ -897,6 +911,7 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -914,7 +929,6 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/emacs/rssPlusEww/">Emacs web y noticias en modo texto</a></h2>
@@ -928,6 +942,7 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -945,7 +960,6 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/raptor-book/">Raptor-Book</a></h2>
@@ -954,21 +968,6 @@ calidad e intento de adaptar el manual de org-mode a org-mode</p></li>
       <li><time datetime="2017-01-11 10:03:58 -0600 CST">Jan 11, 2017</time></li>
       
       <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
-      
-    </ul>
-  </header>
-</div>
-
-    
-    
-    <div class="thumb-sm">
-  <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/keychords/">Definir atajos en Emacs</a></h2>
-
-    <ul class="meta">
-      <li><time datetime="2017-01-07 09:38:46 -0600 CST">Jan 7, 2017</time></li>
-      
-      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
       
     </ul>
   </header>

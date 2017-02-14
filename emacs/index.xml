@@ -45,9 +45,9 @@ codigo ya en el repo&amp;hellip; la indentacion es un jodido desastre! los tabs 
 tabs&amp;hellip; pero, pero, si en el jodido modo go, todo se ve perfecto, que esta
 pasando es cosa de github o un problema interno?&lt;/p&gt;
 
-&lt;p&gt;paso abrir el codigo en emacs y cambio a &lt;code&gt;fundamental-mode&lt;/code&gt; para visualizar la
+&lt;p&gt;paso a abrir el codigo en emacs y cambio a &lt;code&gt;fundamental-mode&lt;/code&gt; para visualizar la
 realidad, resultado, el problema esta en go-mode, en efecto los tabs se
-visualizan como 2 espacios, pero en el fichero &lt;em&gt;no se subsituyen por espacios,
+visualizan como 2 espacios, pero en el fichero &lt;em&gt;no se substituyen por espacios,
 siguen siendo tabs&lt;/em&gt;, donde esta el culpable?&lt;/p&gt;
 
 &lt;p&gt;paso a ver el codigo de go-mode, en busca de expresiones regulares y cosas como
@@ -71,7 +71,7 @@ o en un &lt;em&gt;hook&lt;/em&gt; en la configuracion.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;ahora, si abres tu codigo los cambios se realizan solo a las lineas que
-modifiques, no a las lineas ya existentes. Es necesario reeindetar todo y no
+modifiques, no a las lineas ya existentes. Es necesario reeindentar todo y no
 funciona &lt;code&gt;C-x h tab&lt;/code&gt;, hay que quitar la indentacion e indentar de nuevo, hice
 una macro que recorria todas las lineas eliminando los espacios al inicio, luego
 si seleccione todo + tab (&lt;code&gt;C-x h tab&lt;/code&gt;).&lt;/p&gt;
@@ -92,7 +92,7 @@ si seleccione todo + tab (&lt;code&gt;C-x h tab&lt;/code&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;org-mode&lt;/code&gt; es un lenguaje de marcas ligeras nacido de, por, y para &lt;code
 class=&#34;command&#34;&gt;emacs&lt;/code&gt; y como emacs, org tambien tiene aplicaciones
-varias, puede ser una agenta, una lista de pendientes, hoja de calculo, blog de
+varias, puede ser una agenda, una lista de pendientes, hoja de calculo, blog de
 notas, sistema de documentacion e investigacion reproducible, todo junto y
 revuelto, encima da la posibilidad de exportar el contenido a pdf, latex, html,
 markdown, odt y groff (algunas opciones vienen por separado y requieren
@@ -136,7 +136,7 @@ lo primero que aparezca dentro del documento, aunque, al igual que en html,
 tambien podemos agrupar el contenido dentro de secciones/encabezados segun
 convenga.&lt;/p&gt;
 
-&lt;p&gt;La sintaxis de un encabezado muy simple:&lt;/p&gt;
+&lt;p&gt;La sintaxis de un encabezado es muy simple:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;* Encabezado principal
 ** Segundo nivel
@@ -148,7 +148,7 @@ convenga.&lt;/p&gt;
 * Otro encabezado principal
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Toda linea que inicia con uno o varios &lt;code&gt;*&lt;/code&gt; seguido por almenos un espacio en
+&lt;p&gt;Toda linea que inicia con uno o varios &lt;code&gt;*&lt;/code&gt; seguido por al menos un espacio en
 blanco, es un encabezado.&lt;/p&gt;
 
 &lt;p&gt;El texto (en la misma linea) donde esta el o los &lt;code&gt;*&lt;/code&gt; sera el titulo del encabezado.&lt;/p&gt;
@@ -262,7 +262,7 @@ punto y comenzamos a escribir&lt;/p&gt;
 este parrafo esta fuera de la lista
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;en este, caso el contenido que sea parte de un elemento de la lista, debe
+&lt;p&gt;en este caso, el contenido que sea parte de un elemento de la lista, debe
 respetar cierta indentacion.&lt;/p&gt;
 
 &lt;p&gt;El numero que coloques al inicio de la lista, es irrelevante, org lo ignora por
@@ -307,9 +307,9 @@ lineas que inicien con algo similar a una lista.&lt;/p&gt;
 &lt;p&gt;Algunos comandos en listados&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Shift-FlechaDerecha&lt;/code&gt; rotacion por el estido del listado&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Shift-FlechaDerecha&lt;/code&gt; rotacion por el estilo del listado&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaIzquierda&lt;/code&gt; rotacion por el estido del listado&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaIzquierda&lt;/code&gt; rotacion por el estilo del listado&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaDerecha&lt;/code&gt; convierte al elemento en un miembro del elemento superior&lt;/p&gt;&lt;/li&gt;
 
@@ -451,7 +451,7 @@ coloca la direccion de la imagen, asi:&lt;/p&gt;
 &lt;h4 id=&#34;radio-targets&#34;&gt;Radio Targets&lt;/h4&gt;
 
 &lt;p&gt;Los &lt;em&gt;Radio Objetivos&lt;/em&gt;, son un metodo automagico de convertir una frace en
-un enlace a algun punto del documento, lo onico que tenemos que hacer es
+un enlace a algun punto del documento, lo unico que tenemos que hacer es
 encerrar el objetivo entre tres pares de &lt;code&gt;&amp;lt;&lt;/code&gt; &lt;code&gt;&amp;gt;&lt;/code&gt; asi:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;&amp;lt;&amp;lt;&amp;lt;Mi objetivo&amp;gt;&amp;gt;&amp;gt;
@@ -510,16 +510,15 @@ espacios en blanco escribimos &lt;code&gt;&amp;lt;&lt;/code&gt; segudio por&lt;/
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;el lenguaje se especifica luego de &lt;code&gt;#+BEGIN_SRC&lt;/code&gt;, en este caso, lenguaje &lt;code&gt;c&lt;/code&gt;,
-tambien podemos hacer que el codigo aparesca numerado si agregamos el parametro
+tambien podemos hacer que el codigo aparesca numerado, si agregamos el parametro
 &lt;code&gt;-n&lt;/code&gt;. Si se desea que la numeracion inicie a partir de un numero concreto
 colocamos &lt;code&gt;-n numero&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Antes mencione que org nacio de, por y para emacs, pues resulta que esto se
 demuestra en los bloques de codigo. Sea cual sea el lenguaje que coloques
 delante de un bloque de codigo (digo, si esta soportado) al presionar &lt;code&gt;C-c &#39;&lt;/code&gt; se
-abre una ventana con un modo para editar dicho lenguaje con resaltado, con
-teclas de emacs y funciones de emacs, con otro &lt;code&gt;C-c &#39;&lt;/code&gt; regresas al
-documento.&lt;/p&gt;
+abre un buffer con un modo para editar dicho lenguaje con resaltado, con teclas
+de emacs y funciones de emacs. Otro &lt;code&gt;C-c &#39;&lt;/code&gt;te regresa al documento.&lt;/p&gt;
 
 &lt;p&gt;Puedes imaginar el colosal esfuerzo que requiere emular esta funcion en otro
 sitio que no sea emacs?&lt;/p&gt;
@@ -536,7 +535,7 @@ por su nombre directamente. Para entrar es &lt;code&gt;org-edit-src-code&lt;/cod
 
 &lt;h2 id=&#34;exportacion&#34;&gt;Exportacion&lt;/h2&gt;
 
-&lt;p&gt;En principio exportar apartir de org es sencillo, presionamos &lt;code&gt;C-c C-e&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En principio, exportar apartir de org es sencillo, presionamos &lt;code&gt;C-c C-e&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../org-export.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -548,7 +547,7 @@ la interfaz &lt;strong&gt;Org Export Dispatcher&lt;/strong&gt;, solo &lt;code&gt
 &lt;p&gt;Pero antes de exportar vamos a modificar algunas cosas. En la configuracion del
 documento agrega estas lineas:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#+OPTIONS: toc:nil num:nil h:7 html-preamble:nil html-postamble:nil html-scripts:nil html-tyle:nil
+&lt;pre&gt;&lt;code&gt;#+OPTIONS: toc:nil num:nil h:7 html-preamble:nil html-postamble:nil html-scripts:nil html-style:nil
 #+HTML_HEAD: &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;worg-data/worg.css&amp;quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -568,18 +567,18 @@ autor, fecha y correo(?), &lt;code&gt;html-preamble-nil&lt;/code&gt; no se que h
 quiero&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;veras que org es generoso, nos regala una hoja de estilo y scripts
-&lt;code&gt;html-scripts:nil&lt;/code&gt; y &lt;code&gt;html-tyle:nil&lt;/code&gt; se las regresan&amp;hellip; de buena forma&amp;hellip; pero
-org insiste, pasa de nosotros y las coloca de todas formas (por lo genera como comentario)&lt;/p&gt;
+&lt;code&gt;html-scripts:nil&lt;/code&gt; y &lt;code&gt;html-style:nil&lt;/code&gt; se las regresan&amp;hellip; de buena forma&amp;hellip; pero
+org insiste, pasa de nosotros y las coloca de todas formas (por lo general, como comentario)&lt;/p&gt;
 
-&lt;p&gt;por cierto, para mostrar las formulas LaTex en html, org coloca esta linea&lt;/p&gt;
+&lt;p&gt;por cierto, para mostrar las formulas LaTex en html, org coloca por su cuenta esta linea&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://orgmode.org/mathjax/MathJax.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;colorear-codigo&#34;&gt;Colorear Codigo&lt;/h4&gt;
+&lt;h4 id=&#34;colorear-codigo-al-exportar&#34;&gt;Colorear Codigo (al exportar)&lt;/h4&gt;
 
-&lt;p&gt;Esto requiere algo de codigo, primero ve a tu carpeta de configuracion. En mi
-caso es&lt;/p&gt;
+&lt;p&gt;Esto requiere algo de codigo (ha, ha, ha&amp;hellip;), primero ve a tu carpeta de
+configuracion. En mi caso es&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cd ~/.emacs.d/plugins/
 &lt;/code&gt;&lt;/pre&gt;
@@ -618,7 +617,7 @@ caso es&lt;/p&gt;
 pagina html. El comando es &lt;code&gt;htmlfontify-buffer&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Al parecer, &lt;code&gt;htmlize&lt;/code&gt; es una vesion &lt;q&gt;vieja&lt;/q&gt; del modo &lt;code&gt;htmlfontify&lt;/code&gt;
-(incluido por defecto), a saber por que org, requiere de &lt;code&gt;htmlize&lt;/code&gt;&lt;/p&gt;
+(incluido por defecto), a saber por que org requiere de &lt;code&gt;htmlize&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;cosideraciones-adicionales&#34;&gt;Cosideraciones adicionales&lt;/h3&gt;
 

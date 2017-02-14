@@ -7,8 +7,179 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sun, 12 Feb 2017 21:52:24 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 13 Feb 2017 22:14:42 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>INBO</title>
+      <link>http://nasciiboy.github.io/prog/inbo/</link>
+      <pubDate>Mon, 13 Feb 2017 22:14:42 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/inbo/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;../steins:gate.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Despues de año y medio de desepleo (y quiza de ser un inutil) aparecio una idea
+&lt;em&gt;&lt;q&gt;voy a programar un juego como MegaMan II&lt;/q&gt;&lt;/em&gt;. Por supuesto, no tenia
+ningun conocimiento de programacion (ni conputadora), solo tiempo y
+&lt;q&gt;patrocinadores&lt;/q&gt; que gentilmente me proporcionaron un pc pentium 4 con un
+monitor lcd de imagen difuminada aderesada por unas lineas misteriosas capaces
+de disminuir la vida util de tus ojos 10 años (como la edad (minima) del pc,
+coincidencia? no lo creo).&lt;/p&gt;
+
+&lt;p&gt;Asi dio inicio mi aventura ninja por el mundo de la programacion, el software
+libre y como yonki de internet.&lt;/p&gt;
+
+&lt;p&gt;Siguiendo la filosofia de &lt;em&gt;&lt;q&gt;crea una meta tan alta, que despues no puedas
+cumplir&lt;/q&gt;&lt;/em&gt;, no solo el juego deberia ser una maravilla, el codigo y cada elemento
+que se utilizara deberia ser una obra de arte por si misma. Tras leer la
+wikipedia y algunos foros elegi aprender C, una busqueda mas tarde tenia el
+libro &amp;ldquo;Como programar en C/C++ y Java&amp;rdquo; (cuarta edicion) de Deitel &amp;amp; Deitel, en
+bonito formato pdf salido de fotocopias.&lt;/p&gt;
+
+&lt;p&gt;Llego la flamante pc con un windows xp, intente ver que se podia hacer, como
+instalar algo, eclipse (lol), visual estudio (shame, shame, shame) y luego de una
+semana de llenar formularios que pedian mi correo, buscar cracks, uno o varios
+virus e intentar formatear, no podia tener mas odio hacia el engendro ese
+llamado windos, tanto que recorde que en un podcast bdsm un tecnico sado, decia
+entusiasmado algo de un sistema llamado linux, que su comunidad era una pasada y
+otras cosas.&lt;/p&gt;
+
+&lt;p&gt;Asi llego linux Mint, una instalacion fallida de ubunto (que suerte) y luego
+Debian. No olvidare esos reformateos fruto del desconocimento (en serio? si
+borras una particion deja de funcionar?).&lt;/p&gt;
+
+&lt;p&gt;Superada la instalacion (con visitas constantes al ocaso de &lt;q&gt;desde linux&lt;/q&gt;)&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Que? para aprender C debo apreder a usar un editor?&lt;/p&gt;
+
+&lt;p&gt;Que? para apreder C debo apreder a usar un compilador?&lt;/p&gt;
+
+&lt;p&gt;Que? para aprender a usar el compilador tengo que usar un terminal?&lt;/p&gt;
+
+&lt;p&gt;Que? para el terminal tengo que aprender a usar bash?&lt;/p&gt;
+
+&lt;p&gt;frustracion mucha, pero tambien diversion, pase tres meses obsesionado, estaba
+aprendiendo como nunca, conoci &lt;code class=&#34;command&#34;&gt;vi&lt;/code&gt;, &lt;code
+class=&#34;command&#34;&gt;gedit&lt;/code&gt;, tambien gnome 2 (que pasada son los escritorios),
+&lt;code class=&#34;command&#34;&gt;transmision&lt;/code&gt;, &lt;code class=&#34;command&#34;&gt;firefox&lt;/code&gt;, &lt;code
+class=&#34;command&#34;&gt;moc&lt;/code&gt;, &amp;hellip; &lt;code class=&#34;command&#34;&gt;apt&lt;/code&gt;, &lt;code
+class=&#34;command&#34;&gt;aptitude&lt;/code&gt;, &lt;code class=&#34;command&#34;&gt;synaptic&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;luego de medio aprender C, encontre un libro para programar videojuegos, el
+&lt;em&gt;&lt;q&gt;Tutorial de libSDL para la programacion de videojuegos&lt;/q&gt;&lt;/em&gt; de
+Antonio Garcia Alba.&lt;/p&gt;
+
+&lt;p&gt;En realidad encontre muchos libros, pero este fue el mas decente y hasta el
+momento el unico que he leido del tema. Son casi 700 paginas, creo que por el
+empece a utilizar &lt;em&gt;&lt;code class=&#34;command&#34;&gt;Emacs&lt;/code&gt;&lt;/em&gt;. Gran trabajo, aunque el
+codigo no es lo mejor y como dice el titulo es mas un tutorial de SDL que un
+libro de progracion de videojuegos, lo digo, por que cuando llega el momento de
+programar el motor, termina abruptamente, te quedas desamparado y con mucho
+codigo del que debes averiguar como demonios funciona.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../TutorialSDL.pdf&#34;&gt;aqui&lt;/a&gt; el libro y
+&lt;a href=&#34;../TutorialSDL-material.tar.gz&#34;&gt;aqui&lt;/a&gt; su material.&lt;/p&gt;
+
+&lt;p&gt;perfecto no? no, el libro estaba en C++ y apenas era un novato en C&lt;/p&gt;
+
+&lt;p&gt;bueno que mas da? nahh, a aprender C++ y SDL (1.2) al mismo tiempo.&lt;/p&gt;
+
+&lt;p&gt;Tres meses mas tarde&amp;hellip; medio sabia SDL, muy poco de C++, habia olvidado C,
+llegado al fin del libro y tenia un motor de videjuegos que no tenia ni idea de
+como modificar, menos corregir.&lt;/p&gt;
+
+&lt;p&gt;Otro mes mas tarde, habia reescrito (transcrito es mas correcto) todo el codigo, con
+algunos dibujos de como se conectaba cada componente.&lt;/p&gt;
+
+&lt;p&gt;Un par de meses despues tenia un videojuego al que nombre como INBO. El nombre
+salio de un anime llamado &lt;em&gt;Welcome to the NHK&lt;/em&gt; (NHK ni Youkoso!) donde un
+hikikomori (nini) y un soñador se proponen hacer un videojuego, mientras el
+mundo y las limitaciones mentales de los protagonistas paracen conspirar
+(conspiracion ==&amp;gt; inbo) para que todo se vaya a la mierda, llamo a este
+fenomeno &lt;q&gt;vivir&lt;/q&gt;.&lt;/p&gt;
+
+&lt;p&gt;(La imagen que inicia el post, coresponte a otro anime &lt;em&gt;Stains;Gate&lt;/em&gt;
+tambien de mis preferidos, no encontre un fanart a la altura de NHK)&lt;/p&gt;
+
+&lt;p&gt;Y que paso con el videojuego? bueno, aqui esta lo mas importante, el icono (al final,
+no se utilizo, apenas se distinguia algo en 32x32 pixeles)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../icon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(es e.t.? un robot? ninja? lo dibujo un niño?)&lt;/p&gt;
+
+&lt;p&gt;La bienvenida&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../inbo-0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../inbo-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Menu&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../inbo-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una Captura&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../inbo-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El editor&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../inbo-4.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;../inbo-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Exeptuando SDL y C++, el resto esta programado a mano, son como 5,000 lineas de
+codigo de mala calidad con muchos comentarios. Je, en aquel tiempo hacia una
+copia de cada modificacion, una version hasta tiene imagenes de fondo en lugar
+de tiles.&lt;/p&gt;
+
+&lt;p&gt;Entonces? El codigo es una basura, en realidad, ni sabia C++, ni C, ni tenia un
+libro al cual recurrir, tire todo, comence a documentar SDL y C en groff (man),
+regrese a C y me propuse no programar nada hasta que fuera un guru del lenguaje,
+aprender a hacer juegos sencillos como el tetris o la serpiente, documentar todo
+y de paso hacer un libro para que ningun tipo tubiera que ir por hay, hurgando
+en uno y otro libro, en busca del conocimiento para programar de cero a guru.&lt;/p&gt;
+
+&lt;p&gt;Despues llegaron los juegos en c con ayuda de ncurses y mas tarde, el empleo se
+apodero de mi vida un par de años y olvide como programar, luego el desempleo
+regreso por venganza y aqui estoy.&lt;/p&gt;
+
+&lt;p&gt;El empleo regresara? encontrare(/hare) un sistema de documentacion que cumpla
+con mis exigencias? algun dia sere un haker? o solo un juanker?&lt;/p&gt;
+
+&lt;p&gt;Nunca pense mostrar el codigo de INBO al munto, asi que nunca pase nada a
+git&amp;hellip; &lt;a href=&#34;../jumpman_BPA_final.zip&#34;&gt;aqui&lt;/a&gt; el codigo.&lt;/p&gt;
+
+&lt;p&gt;Este sitio carese de cualquier tipo de estadistica o registro, si el morbo le
+puede y no tiene nada que hacer:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;descomprimase&lt;/li&gt;
+&lt;li&gt;instale SDL1.2 (image, ttf y mixer)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make&lt;/code&gt; y &lt;code&gt;./test&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Las imagenes fueron hechas con inskape, el protagonista se basa en goku, los
+enemigos en nada, hay dos niveles mal echos, no recuendo de donde salieron los
+efectos/musica y las teclas son&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;a&lt;/code&gt; ==&amp;gt; salto&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; ==&amp;gt; ataque&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x&lt;/code&gt; ==&amp;gt; ataque especial (con la barra de vida en rojo)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f&lt;/code&gt; ==&amp;gt; entrar/salir a pantalla completa&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ESC&lt;/code&gt; ==&amp;gt; terminar&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;RET&lt;/code&gt; ==&amp;gt; regresar al menu&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;INTRO&lt;/code&gt; ==&amp;gt; selecionar&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;recuerdo el orgullo tras hacer que el motor liberara recursos o programar un
+scroll sin crasheos, tambien que el pc se moria cada ves que abria inskape o
+firefox!&lt;/p&gt;
+
+&lt;p&gt;Nos vemos, sin Software Libre, no tendria un pasatiempo, una coleccion de musica
+fantastica y seria mas estupido de lo que soy! Happy Hacking!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>no mas tabs en go-mode</title>
@@ -45,9 +216,9 @@ codigo ya en el repo&amp;hellip; la indentacion es un jodido desastre! los tabs 
 tabs&amp;hellip; pero, pero, si en el jodido modo go, todo se ve perfecto, que esta
 pasando es cosa de github o un problema interno?&lt;/p&gt;
 
-&lt;p&gt;paso abrir el codigo en emacs y cambio a &lt;code&gt;fundamental-mode&lt;/code&gt; para visualizar la
+&lt;p&gt;paso a abrir el codigo en emacs y cambio a &lt;code&gt;fundamental-mode&lt;/code&gt; para visualizar la
 realidad, resultado, el problema esta en go-mode, en efecto los tabs se
-visualizan como 2 espacios, pero en el fichero &lt;em&gt;no se subsituyen por espacios,
+visualizan como 2 espacios, pero en el fichero &lt;em&gt;no se substituyen por espacios,
 siguen siendo tabs&lt;/em&gt;, donde esta el culpable?&lt;/p&gt;
 
 &lt;p&gt;paso a ver el codigo de go-mode, en busca de expresiones regulares y cosas como
@@ -71,7 +242,7 @@ o en un &lt;em&gt;hook&lt;/em&gt; en la configuracion.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;ahora, si abres tu codigo los cambios se realizan solo a las lineas que
-modifiques, no a las lineas ya existentes. Es necesario reeindetar todo y no
+modifiques, no a las lineas ya existentes. Es necesario reeindentar todo y no
 funciona &lt;code&gt;C-x h tab&lt;/code&gt;, hay que quitar la indentacion e indentar de nuevo, hice
 una macro que recorria todas las lineas eliminando los espacios al inicio, luego
 si seleccione todo + tab (&lt;code&gt;C-x h tab&lt;/code&gt;).&lt;/p&gt;
@@ -172,7 +343,7 @@ simplificada del lenguaje de marcas ligeras.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;org-mode&lt;/code&gt; es un lenguaje de marcas ligeras nacido de, por, y para &lt;code
 class=&#34;command&#34;&gt;emacs&lt;/code&gt; y como emacs, org tambien tiene aplicaciones
-varias, puede ser una agenta, una lista de pendientes, hoja de calculo, blog de
+varias, puede ser una agenda, una lista de pendientes, hoja de calculo, blog de
 notas, sistema de documentacion e investigacion reproducible, todo junto y
 revuelto, encima da la posibilidad de exportar el contenido a pdf, latex, html,
 markdown, odt y groff (algunas opciones vienen por separado y requieren
@@ -216,7 +387,7 @@ lo primero que aparezca dentro del documento, aunque, al igual que en html,
 tambien podemos agrupar el contenido dentro de secciones/encabezados segun
 convenga.&lt;/p&gt;
 
-&lt;p&gt;La sintaxis de un encabezado muy simple:&lt;/p&gt;
+&lt;p&gt;La sintaxis de un encabezado es muy simple:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;* Encabezado principal
 ** Segundo nivel
@@ -228,7 +399,7 @@ convenga.&lt;/p&gt;
 * Otro encabezado principal
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Toda linea que inicia con uno o varios &lt;code&gt;*&lt;/code&gt; seguido por almenos un espacio en
+&lt;p&gt;Toda linea que inicia con uno o varios &lt;code&gt;*&lt;/code&gt; seguido por al menos un espacio en
 blanco, es un encabezado.&lt;/p&gt;
 
 &lt;p&gt;El texto (en la misma linea) donde esta el o los &lt;code&gt;*&lt;/code&gt; sera el titulo del encabezado.&lt;/p&gt;
@@ -342,7 +513,7 @@ punto y comenzamos a escribir&lt;/p&gt;
 este parrafo esta fuera de la lista
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;en este, caso el contenido que sea parte de un elemento de la lista, debe
+&lt;p&gt;en este caso, el contenido que sea parte de un elemento de la lista, debe
 respetar cierta indentacion.&lt;/p&gt;
 
 &lt;p&gt;El numero que coloques al inicio de la lista, es irrelevante, org lo ignora por
@@ -387,9 +558,9 @@ lineas que inicien con algo similar a una lista.&lt;/p&gt;
 &lt;p&gt;Algunos comandos en listados&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Shift-FlechaDerecha&lt;/code&gt; rotacion por el estido del listado&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Shift-FlechaDerecha&lt;/code&gt; rotacion por el estilo del listado&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaIzquierda&lt;/code&gt; rotacion por el estido del listado&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaIzquierda&lt;/code&gt; rotacion por el estilo del listado&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaDerecha&lt;/code&gt; convierte al elemento en un miembro del elemento superior&lt;/p&gt;&lt;/li&gt;
 
@@ -531,7 +702,7 @@ coloca la direccion de la imagen, asi:&lt;/p&gt;
 &lt;h4 id=&#34;radio-targets&#34;&gt;Radio Targets&lt;/h4&gt;
 
 &lt;p&gt;Los &lt;em&gt;Radio Objetivos&lt;/em&gt;, son un metodo automagico de convertir una frace en
-un enlace a algun punto del documento, lo onico que tenemos que hacer es
+un enlace a algun punto del documento, lo unico que tenemos que hacer es
 encerrar el objetivo entre tres pares de &lt;code&gt;&amp;lt;&lt;/code&gt; &lt;code&gt;&amp;gt;&lt;/code&gt; asi:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;&amp;lt;&amp;lt;&amp;lt;Mi objetivo&amp;gt;&amp;gt;&amp;gt;
@@ -590,16 +761,15 @@ espacios en blanco escribimos &lt;code&gt;&amp;lt;&lt;/code&gt; segudio por&lt;/
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;el lenguaje se especifica luego de &lt;code&gt;#+BEGIN_SRC&lt;/code&gt;, en este caso, lenguaje &lt;code&gt;c&lt;/code&gt;,
-tambien podemos hacer que el codigo aparesca numerado si agregamos el parametro
+tambien podemos hacer que el codigo aparesca numerado, si agregamos el parametro
 &lt;code&gt;-n&lt;/code&gt;. Si se desea que la numeracion inicie a partir de un numero concreto
 colocamos &lt;code&gt;-n numero&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Antes mencione que org nacio de, por y para emacs, pues resulta que esto se
 demuestra en los bloques de codigo. Sea cual sea el lenguaje que coloques
 delante de un bloque de codigo (digo, si esta soportado) al presionar &lt;code&gt;C-c &#39;&lt;/code&gt; se
-abre una ventana con un modo para editar dicho lenguaje con resaltado, con
-teclas de emacs y funciones de emacs, con otro &lt;code&gt;C-c &#39;&lt;/code&gt; regresas al
-documento.&lt;/p&gt;
+abre un buffer con un modo para editar dicho lenguaje con resaltado, con teclas
+de emacs y funciones de emacs. Otro &lt;code&gt;C-c &#39;&lt;/code&gt;te regresa al documento.&lt;/p&gt;
 
 &lt;p&gt;Puedes imaginar el colosal esfuerzo que requiere emular esta funcion en otro
 sitio que no sea emacs?&lt;/p&gt;
@@ -616,7 +786,7 @@ por su nombre directamente. Para entrar es &lt;code&gt;org-edit-src-code&lt;/cod
 
 &lt;h2 id=&#34;exportacion&#34;&gt;Exportacion&lt;/h2&gt;
 
-&lt;p&gt;En principio exportar apartir de org es sencillo, presionamos &lt;code&gt;C-c C-e&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En principio, exportar apartir de org es sencillo, presionamos &lt;code&gt;C-c C-e&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../org-export.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -628,7 +798,7 @@ la interfaz &lt;strong&gt;Org Export Dispatcher&lt;/strong&gt;, solo &lt;code&gt
 &lt;p&gt;Pero antes de exportar vamos a modificar algunas cosas. En la configuracion del
 documento agrega estas lineas:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#+OPTIONS: toc:nil num:nil h:7 html-preamble:nil html-postamble:nil html-scripts:nil html-tyle:nil
+&lt;pre&gt;&lt;code&gt;#+OPTIONS: toc:nil num:nil h:7 html-preamble:nil html-postamble:nil html-scripts:nil html-style:nil
 #+HTML_HEAD: &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;worg-data/worg.css&amp;quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -648,18 +818,18 @@ autor, fecha y correo(?), &lt;code&gt;html-preamble-nil&lt;/code&gt; no se que h
 quiero&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;veras que org es generoso, nos regala una hoja de estilo y scripts
-&lt;code&gt;html-scripts:nil&lt;/code&gt; y &lt;code&gt;html-tyle:nil&lt;/code&gt; se las regresan&amp;hellip; de buena forma&amp;hellip; pero
-org insiste, pasa de nosotros y las coloca de todas formas (por lo genera como comentario)&lt;/p&gt;
+&lt;code&gt;html-scripts:nil&lt;/code&gt; y &lt;code&gt;html-style:nil&lt;/code&gt; se las regresan&amp;hellip; de buena forma&amp;hellip; pero
+org insiste, pasa de nosotros y las coloca de todas formas (por lo general, como comentario)&lt;/p&gt;
 
-&lt;p&gt;por cierto, para mostrar las formulas LaTex en html, org coloca esta linea&lt;/p&gt;
+&lt;p&gt;por cierto, para mostrar las formulas LaTex en html, org coloca por su cuenta esta linea&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://orgmode.org/mathjax/MathJax.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;colorear-codigo&#34;&gt;Colorear Codigo&lt;/h4&gt;
+&lt;h4 id=&#34;colorear-codigo-al-exportar&#34;&gt;Colorear Codigo (al exportar)&lt;/h4&gt;
 
-&lt;p&gt;Esto requiere algo de codigo, primero ve a tu carpeta de configuracion. En mi
-caso es&lt;/p&gt;
+&lt;p&gt;Esto requiere algo de codigo (ha, ha, ha&amp;hellip;), primero ve a tu carpeta de
+configuracion. En mi caso es&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cd ~/.emacs.d/plugins/
 &lt;/code&gt;&lt;/pre&gt;
@@ -698,7 +868,7 @@ caso es&lt;/p&gt;
 pagina html. El comando es &lt;code&gt;htmlfontify-buffer&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Al parecer, &lt;code&gt;htmlize&lt;/code&gt; es una vesion &lt;q&gt;vieja&lt;/q&gt; del modo &lt;code&gt;htmlfontify&lt;/code&gt;
-(incluido por defecto), a saber por que org, requiere de &lt;code&gt;htmlize&lt;/code&gt;&lt;/p&gt;
+(incluido por defecto), a saber por que org requiere de &lt;code&gt;htmlize&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;cosideraciones-adicionales&#34;&gt;Cosideraciones adicionales&lt;/h3&gt;
 
@@ -2115,127 +2285,6 @@ puede cargar/probar ejecutando&lt;/p&gt;
 
 &lt;p&gt;pegalo en algun buffer, cambia a modo-org, coloca el cursor sobre el texto y
 presiona &lt;code&gt;C-c C-o&lt;/code&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Emacs - first blood</title>
-      <link>http://nasciiboy.github.io/emacs/first-blood/</link>
-      <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
-      
-      <guid>http://nasciiboy.github.io/emacs/first-blood/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;../first-blood.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;instalando-gnu-emacs&#34;&gt;Instalando GNU Emacs&lt;/h2&gt;
-
-&lt;p&gt;En general utilizo emacs apartir del codigo fuente, no obstante tambien tengo
-disponible el que brinde la distribucion de turno, ya sea para probar algo o por
-si alguna version presenta algun comportamiento extraño.&lt;/p&gt;
-
-&lt;p&gt;Nunca la he instalado en el sistema emacs compilado a partir del codigo, en su
-lugar tengo un atajo de teclado para su invocacion&lt;/p&gt;
-
-&lt;h3 id=&#34;desde-repositorios&#34;&gt;desde repositorios&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;# en debian
-apt-get install emacs
-# en fedora
-dnf install emacs
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;compilar-desde-el-codigo-fuente&#34;&gt;compilar desde el codigo fuente&lt;/h3&gt;
-
-&lt;p&gt;instalamos las dependencias&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;su
-# en debian
-apt-get build-dep emacs
-# en fedora
-dnf builddep emacs
-exit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;por motivos muy tristes no tengo debian, la ultima ocacion que compile
-emacs en debian fue con &lt;code&gt;apt-get build-dep emacs-24&lt;/code&gt;, intenta simplemente con
-&lt;code&gt;emacs&lt;/code&gt;, de lo contrario prueba con &lt;code&gt;emacs-25&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;(si no tienes &lt;code&gt;git&lt;/code&gt; instalalo)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone git://git.sv.gnu.org/emacs.git
-./autogen.sh
-./autogen.sh git
-./configure
-make
-# ya podemos utilizar emacs
-./src/emacs
-# si deseamos intalarlo
-su
-make install
-exit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;configuracion-base&#34;&gt;configuracion base&lt;/h2&gt;
-
-&lt;p&gt;tenia mucho tiempo sin &amp;ldquo;purgar&amp;rdquo; la configuracion de Emacs, el resultado esta en
-este &lt;a href=&#34;../emacs-config.zip&#34;&gt;zip&lt;/a&gt; (33mb). Para utilizarla necesitas:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;descomprimir&lt;/li&gt;
-&lt;li&gt;renombrar la carpeta como &lt;code&gt;.emacs.d&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;y moverla a home.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Contenido&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;- init.el         # fichero de configuracion de emacs
-- nascii-theme.el # tema nascii
-- plugins/        # todas las carpetas proceden directamente de git
-         company-mode               # autocompletado
-         magit                      # interfaz avanzada git emacs-style
-         dash.el                    #   dependencia de magit
-         with-editor                #   dependencia de magit
-         emacs-fish                 # modo para scripts fish
-         expand-region.el           # seleccion segun el contexto
-         go-mode.el                 # modo para golang
-         haskell-mode               # modo para haskell
-         markdown-mode              # modo para markdown
-         multiple-cursors.el        # cursores multiples
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Emacs posee un magnifico gestor de pagetes, pero soy un romantico e instale
-todos los &amp;ldquo;plugins&amp;rdquo; directamente de los fuentes, es decir, cada carpeta en
-&lt;code&gt;plugins&lt;/code&gt; tiene su &lt;code&gt;.git&lt;/code&gt;. En teoria esto hara que la configuracion este lista
-solo con copiar y pegar. Para ser especifico lo he probado con las versiones
-25.1.1 y 26.0.50, ambas en fedora.&lt;/p&gt;
-
-&lt;p&gt;Esto tambien significa que los repositorios no estan activados, tendras que
-hacerlo como antaño: llendo al navegador y averiguado como.&lt;/p&gt;
-
-&lt;p&gt;Los modos &lt;strong&gt;magit&lt;/strong&gt; y &lt;strong&gt;haskell&lt;/strong&gt; estan compilados (son los ficheros que
-terminan con &lt;code&gt;.elc&lt;/code&gt;) y es posible que se genere un error durante la carga aunque
-no estoy seguro de ese hecho. Si esto sucede, existen dos soluciones posibles&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;elimina la seccion correspondiente a dichos modos dentro de &lt;code&gt;init.el&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;o sigue las instrucciones dentro de &lt;code&gt;init.el&lt;/code&gt; y compila los modos&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;como notas adicionales los atajos estan pensados en la distribucion de teclado
-&lt;strong&gt;programmer dvorak&lt;/strong&gt;  con 5 teclas modificadas (los dos control, mayus, @ y \)
-y el modo go depende de que tengas una instalacion de go. Puedes seguir los dos
-pasos anteriores si encuentras algun problema (&lt;strong&gt;no olvides revisar la correcta
-ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el&lt;/code&gt;)&lt;/p&gt;
-
-&lt;p&gt;programo en haskell? no, pero me hace gracia tener el modo&lt;/p&gt;
-
-&lt;h2 id=&#34;iniciando&#34;&gt;Iniciando&lt;/h2&gt;
-
-&lt;p&gt;Una vez Emacs esta en el sistema y ha sido invocado presiona &lt;code&gt;C-h t&lt;/code&gt; (Control y
-&amp;lsquo;h&amp;rsquo; a la vez y luego &amp;rsquo;t&amp;rsquo;) esto abre el tutorial&amp;hellip; &lt;strong&gt;bienvenido a Emacs!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;La proxima entrega sera &amp;ldquo;Emacs - Como crear un tema&amp;rdquo;&amp;hellip; o algo asi.&lt;/p&gt;
 </description>
     </item>
     

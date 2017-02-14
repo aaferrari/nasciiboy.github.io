@@ -7,8 +7,179 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 11 Feb 2017 10:26:04 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 13 Feb 2017 22:14:42 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/prog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>INBO</title>
+      <link>http://nasciiboy.github.io/prog/inbo/</link>
+      <pubDate>Mon, 13 Feb 2017 22:14:42 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/inbo/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;../steins:gate.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Despues de año y medio de desepleo (y quiza de ser un inutil) aparecio una idea
+&lt;em&gt;&lt;q&gt;voy a programar un juego como MegaMan II&lt;/q&gt;&lt;/em&gt;. Por supuesto, no tenia
+ningun conocimiento de programacion (ni conputadora), solo tiempo y
+&lt;q&gt;patrocinadores&lt;/q&gt; que gentilmente me proporcionaron un pc pentium 4 con un
+monitor lcd de imagen difuminada aderesada por unas lineas misteriosas capaces
+de disminuir la vida util de tus ojos 10 años (como la edad (minima) del pc,
+coincidencia? no lo creo).&lt;/p&gt;
+
+&lt;p&gt;Asi dio inicio mi aventura ninja por el mundo de la programacion, el software
+libre y como yonki de internet.&lt;/p&gt;
+
+&lt;p&gt;Siguiendo la filosofia de &lt;em&gt;&lt;q&gt;crea una meta tan alta, que despues no puedas
+cumplir&lt;/q&gt;&lt;/em&gt;, no solo el juego deberia ser una maravilla, el codigo y cada elemento
+que se utilizara deberia ser una obra de arte por si misma. Tras leer la
+wikipedia y algunos foros elegi aprender C, una busqueda mas tarde tenia el
+libro &amp;ldquo;Como programar en C/C++ y Java&amp;rdquo; (cuarta edicion) de Deitel &amp;amp; Deitel, en
+bonito formato pdf salido de fotocopias.&lt;/p&gt;
+
+&lt;p&gt;Llego la flamante pc con un windows xp, intente ver que se podia hacer, como
+instalar algo, eclipse (lol), visual estudio (shame, shame, shame) y luego de una
+semana de llenar formularios que pedian mi correo, buscar cracks, uno o varios
+virus e intentar formatear, no podia tener mas odio hacia el engendro ese
+llamado windos, tanto que recorde que en un podcast bdsm un tecnico sado, decia
+entusiasmado algo de un sistema llamado linux, que su comunidad era una pasada y
+otras cosas.&lt;/p&gt;
+
+&lt;p&gt;Asi llego linux Mint, una instalacion fallida de ubunto (que suerte) y luego
+Debian. No olvidare esos reformateos fruto del desconocimento (en serio? si
+borras una particion deja de funcionar?).&lt;/p&gt;
+
+&lt;p&gt;Superada la instalacion (con visitas constantes al ocaso de &lt;q&gt;desde linux&lt;/q&gt;)&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Que? para aprender C debo apreder a usar un editor?&lt;/p&gt;
+
+&lt;p&gt;Que? para apreder C debo apreder a usar un compilador?&lt;/p&gt;
+
+&lt;p&gt;Que? para aprender a usar el compilador tengo que usar un terminal?&lt;/p&gt;
+
+&lt;p&gt;Que? para el terminal tengo que aprender a usar bash?&lt;/p&gt;
+
+&lt;p&gt;frustracion mucha, pero tambien diversion, pase tres meses obsesionado, estaba
+aprendiendo como nunca, conoci &lt;code class=&#34;command&#34;&gt;vi&lt;/code&gt;, &lt;code
+class=&#34;command&#34;&gt;gedit&lt;/code&gt;, tambien gnome 2 (que pasada son los escritorios),
+&lt;code class=&#34;command&#34;&gt;transmision&lt;/code&gt;, &lt;code class=&#34;command&#34;&gt;firefox&lt;/code&gt;, &lt;code
+class=&#34;command&#34;&gt;moc&lt;/code&gt;, &amp;hellip; &lt;code class=&#34;command&#34;&gt;apt&lt;/code&gt;, &lt;code
+class=&#34;command&#34;&gt;aptitude&lt;/code&gt;, &lt;code class=&#34;command&#34;&gt;synaptic&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;luego de medio aprender C, encontre un libro para programar videojuegos, el
+&lt;em&gt;&lt;q&gt;Tutorial de libSDL para la programacion de videojuegos&lt;/q&gt;&lt;/em&gt; de
+Antonio Garcia Alba.&lt;/p&gt;
+
+&lt;p&gt;En realidad encontre muchos libros, pero este fue el mas decente y hasta el
+momento el unico que he leido del tema. Son casi 700 paginas, creo que por el
+empece a utilizar &lt;em&gt;&lt;code class=&#34;command&#34;&gt;Emacs&lt;/code&gt;&lt;/em&gt;. Gran trabajo, aunque el
+codigo no es lo mejor y como dice el titulo es mas un tutorial de SDL que un
+libro de progracion de videojuegos, lo digo, por que cuando llega el momento de
+programar el motor, termina abruptamente, te quedas desamparado y con mucho
+codigo del que debes averiguar como demonios funciona.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../TutorialSDL.pdf&#34;&gt;aqui&lt;/a&gt; el libro y
+&lt;a href=&#34;../TutorialSDL-material.tar.gz&#34;&gt;aqui&lt;/a&gt; su material.&lt;/p&gt;
+
+&lt;p&gt;perfecto no? no, el libro estaba en C++ y apenas era un novato en C&lt;/p&gt;
+
+&lt;p&gt;bueno que mas da? nahh, a aprender C++ y SDL (1.2) al mismo tiempo.&lt;/p&gt;
+
+&lt;p&gt;Tres meses mas tarde&amp;hellip; medio sabia SDL, muy poco de C++, habia olvidado C,
+llegado al fin del libro y tenia un motor de videjuegos que no tenia ni idea de
+como modificar, menos corregir.&lt;/p&gt;
+
+&lt;p&gt;Otro mes mas tarde, habia reescrito (transcrito es mas correcto) todo el codigo, con
+algunos dibujos de como se conectaba cada componente.&lt;/p&gt;
+
+&lt;p&gt;Un par de meses despues tenia un videojuego al que nombre como INBO. El nombre
+salio de un anime llamado &lt;em&gt;Welcome to the NHK&lt;/em&gt; (NHK ni Youkoso!) donde un
+hikikomori (nini) y un soñador se proponen hacer un videojuego, mientras el
+mundo y las limitaciones mentales de los protagonistas paracen conspirar
+(conspiracion ==&amp;gt; inbo) para que todo se vaya a la mierda, llamo a este
+fenomeno &lt;q&gt;vivir&lt;/q&gt;.&lt;/p&gt;
+
+&lt;p&gt;(La imagen que inicia el post, coresponte a otro anime &lt;em&gt;Stains;Gate&lt;/em&gt;
+tambien de mis preferidos, no encontre un fanart a la altura de NHK)&lt;/p&gt;
+
+&lt;p&gt;Y que paso con el videojuego? bueno, aqui esta lo mas importante, el icono (al final,
+no se utilizo, apenas se distinguia algo en 32x32 pixeles)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../icon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(es e.t.? un robot? ninja? lo dibujo un niño?)&lt;/p&gt;
+
+&lt;p&gt;La bienvenida&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../inbo-0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../inbo-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Menu&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../inbo-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una Captura&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../inbo-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El editor&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../inbo-4.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;../inbo-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Exeptuando SDL y C++, el resto esta programado a mano, son como 5,000 lineas de
+codigo de mala calidad con muchos comentarios. Je, en aquel tiempo hacia una
+copia de cada modificacion, una version hasta tiene imagenes de fondo en lugar
+de tiles.&lt;/p&gt;
+
+&lt;p&gt;Entonces? El codigo es una basura, en realidad, ni sabia C++, ni C, ni tenia un
+libro al cual recurrir, tire todo, comence a documentar SDL y C en groff (man),
+regrese a C y me propuse no programar nada hasta que fuera un guru del lenguaje,
+aprender a hacer juegos sencillos como el tetris o la serpiente, documentar todo
+y de paso hacer un libro para que ningun tipo tubiera que ir por hay, hurgando
+en uno y otro libro, en busca del conocimiento para programar de cero a guru.&lt;/p&gt;
+
+&lt;p&gt;Despues llegaron los juegos en c con ayuda de ncurses y mas tarde, el empleo se
+apodero de mi vida un par de años y olvide como programar, luego el desempleo
+regreso por venganza y aqui estoy.&lt;/p&gt;
+
+&lt;p&gt;El empleo regresara? encontrare(/hare) un sistema de documentacion que cumpla
+con mis exigencias? algun dia sere un haker? o solo un juanker?&lt;/p&gt;
+
+&lt;p&gt;Nunca pense mostrar el codigo de INBO al munto, asi que nunca pase nada a
+git&amp;hellip; &lt;a href=&#34;../jumpman_BPA_final.zip&#34;&gt;aqui&lt;/a&gt; el codigo.&lt;/p&gt;
+
+&lt;p&gt;Este sitio carese de cualquier tipo de estadistica o registro, si el morbo le
+puede y no tiene nada que hacer:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;descomprimase&lt;/li&gt;
+&lt;li&gt;instale SDL1.2 (image, ttf y mixer)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make&lt;/code&gt; y &lt;code&gt;./test&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Las imagenes fueron hechas con inskape, el protagonista se basa en goku, los
+enemigos en nada, hay dos niveles mal echos, no recuendo de donde salieron los
+efectos/musica y las teclas son&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;a&lt;/code&gt; ==&amp;gt; salto&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; ==&amp;gt; ataque&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x&lt;/code&gt; ==&amp;gt; ataque especial (con la barra de vida en rojo)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f&lt;/code&gt; ==&amp;gt; entrar/salir a pantalla completa&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ESC&lt;/code&gt; ==&amp;gt; terminar&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;RET&lt;/code&gt; ==&amp;gt; regresar al menu&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;INTRO&lt;/code&gt; ==&amp;gt; selecionar&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;recuerdo el orgullo tras hacer que el motor liberara recursos o programar un
+scroll sin crasheos, tambien que el pc se moria cada ves que abria inskape o
+firefox!&lt;/p&gt;
+
+&lt;p&gt;Nos vemos, sin Software Libre, no tendria un pasatiempo, una coleccion de musica
+fantastica y seria mas estupido de lo que soy! Happy Hacking!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>regexp3-go (dia cero)</title>
