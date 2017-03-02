@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+  <head>
+    <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>morg - nba - GNU&#39;s Rock</title>
+    
+    <style media="screen">
+:root {
+                            
+    --BGC      : #000000;   
+    --FGC      : #ffffff;   
+    --BGClogo  : #222222;   
+    --FGClogo  : #ffffff;   
+    --FGCtitle : #ff4500;   
+    --FGCstart1: #4B99D2;   
+    --FGCstart2: #00ffff;   
+    --FGCstart3: #ffa074;   
+    --FGCstart4: #98fb98;   
+    --FGCstart5: #b0c4de;   
+    --FGCstart6: #7fffd4;   
+    --FGCstart7: #db2e24;   
+    --FGCstart8: #ff4500;   
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;   
+    --FGCbtcode: #333333;   
+    --FGCftcode: #ffffff;   
+    --FGCbcode : #b3b3b3;   
+    --FGCtcomm : #ff4500;   
+    --FGCtcode : #bfbfff;   
+    --FGCfile  : #eedd82;   
+    --FGCmath  : #98fb98;   
+    --FGClink  : #00ffff;   
+    --BGClinkh : #556b2f;   
+    --FGClinkh : #ffffff;   
+    --BGCdt    : #b3b3b3;   
+    --FGCdt    : #ffffff;   
+    --FGCthead : #ff7f24;   
+    --BGCthead : #000000;   
+    --FGCtbody : #87cefa;   
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url(/font/DejaVuSansMono.ttf  ); }
+@font-face { font-family: codeblock;      src: url(/font/DejaVuSansMono.ttf  ); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em;
+                width: 70%;
+                float: left;
+               }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 2em;
+                width: 50%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+ul.terms    { list-style: none; margin: 0em; padding: 0em; }
+ul.terms li { display: block;
+              float: left;
+              margin: .1em .5em .1em .5em;
+}
+ul.terms a { text-decoration: none;
+}
+
+ul.terms a:hover { text-decoration: none;
+                   background-color: #333;
+                   color: #fff;
+}
+
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+}
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }  
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }  
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }  
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }  
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }  
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }  
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+ 
+dl { padding-bottom: 2em; }          
+dl dt { color: #daa520;              
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;              
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { filter: none;
+                             }
+</style>
+
+  </head>
+
+  <body>
+    
+<main>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
+    
+    <li><span class="path-pwd">morg</span></li>
+  </ul>
+
+  <article>
+  <h1 class="title">morg</h1>
+
+  <time datetime="2017-03-02 06:37:35 -0600 CST">Mar 2, 2017</time>
+
+  <div class="article-body">
+
+<p>Que tal, por fin tras un año de hacer el vago ha surgido el primer exportador
+del lenguaje de marcas ligeras <strong>morg</strong> (nombre tentativo). Aun esta en una fase
+de programacion, con muchos apaños y trucos sucios&hellip; pero funciona! toma eso
+internet!</p>
+
+<p>Que igual y no era tan dificil, pero que me hice lio y termine programando un
+motor de expresiones regulares y por puro orgullo lo incluyo en el programa</p>
+
+<p>que es <strong>morg</strong>?</p>
+
+<p>otro sistema de documentacion de marcas ligeras, basado en otros sistemas de
+documentacion (de marcas ligeras), que intenta dominar el mundo, transformar a
+la humanidad, terminar con el trabajo, la propiedad intelectual y forrar a su
+creador</p>
+
+<h2 id="por-que">por que?</h2>
+
+<p>Como toda creacion humana la informatica ha respondido a las necesidades de los
+presentes deacuerdo a los conocimientos y habilidades disponibles. Acaso al
+inicio alguien cosidero la necesidad de codificar informacion mas alla del
+conjunto de caracteres USAmericano? claro que no, los humanos no somos tan
+inteligentes, y avansamos a base de apaños, resolviendo unas pocas dificultades
+de vez en vez, lamentablemente solo mirando en retrospectiva esto se torna
+evidente, y al hacerlo quedamos obligados a cuestionar nuestra realidad.</p>
+
+<p>En esta ocacion veamos en perspectiva hacia al pasado al mas
+importante recurso de la humanidad <q>la informacion</q> y los medios a
+nuestro alcance para crearla e interactuar con ella.</p>
+
+<blockquote>
+<em>seccion pendiente</em> llena de palabras con muchas letras, donde se
+describe el trayecto de los sistemas para documentar informacion
+</blockquote>
+
+<p>Con lo anterior llegamos a la siguente conclucion, <em>tener libros impresos
+esta chulo, aunque poco practico e ineficiente es, si se compara con otos
+formatos de documentacion</em>, por ello surgieron las paginas man, los
+derivados de TeX, XML, la web y sobre ella la wikipedia. Sin embargo seguimos
+forjando informacion, pensando imprimir en papel, con la consecuencia directa de
+que todos los formatos de documentacion surgidos despues del transistor son un
+dolor en el culo, y es momento de forjar un sistema a la altura, apenas mas
+complicado que ascii, e igual de valido que cualquier hijo vastardo de
+GML-&gt;SGML-&gt;XML-&gt;HTML</p>
+
+<h2 id="como-debe-ser-un-sistema-de-documentacion-ideal">Como debe ser un sistema de documentacion ideal</h2>
+
+<h3 id="inmediato"><strong>Inmediato</strong></h3>
+
+<p>Debe estar disponible en todo momento. Las paginas man, fueron un gran acierto
+de nuestros ancestros. El problema? <code class="command" >cat</code> o <code
+class="command" >less</code> con una base de datos de documentos en texto
+plano serian igualmente eficientes. No tendriamos colores, pero a cambio
+podriamos agregar nuevas paginas y/o secciones de forma mas elegante y rapida.</p>
+
+<h3 id="sencillo">Sencillo</h3>
+
+<p>Si la wikipedia existe no es por algun genio del marketing vende motos, o por
+un loco programador hasta arriba de flow, no, no, no, la razon es <em>roff</em>,
+<em>groff</em> o alguna de sus variantes, si has intentado crear una pagina man, o
+incluso has sido tan intrepido como para documentar tus cosas en man, habras
+decistido al poco tiempo, no hay nada mas feo he inteligible que una pagina de
+manual en groff. Por ello GNU lanzo <strong>info</strong> que sin duda es mas util que man,
+ademas TexInfo es menos feo que groff.</p>
+
+<p>Entoces por que no utilizamos info para escribir la wikipedia?</p>
+
+<ul>
+<li><p>Hay que leer un manual (en ingles) de muchas paginas para utilizarlo como es
+debido</p></li>
+
+<li><p>Esta lleno de marcas y cosas misticas (pensadas para imprimir libros)</p></li>
+
+<li><p>Una ves finalizado el documento hay que &ldquo;compilar&rdquo; para exportar a otros
+formato mas manejables, es decir pasar del fuente <span class="file" >.texi</span> a info, html, pdf,
+&hellip; y si no campila te comes los mocos!</p></li>
+</ul>
+
+<h3 id="practico">Practico</h3>
+
+<p>El formato pdf se utiliza mucho, ha de ser bueno, si no por que
+habria tantos libros escaneados?</p>
+
+<p>Si no puedes realizar una busqueda de culquier palabra dentro del documento <em>no</em>
+puede ser bueno, si la forma de acceder al fuente para modificar algun error no
+esta a tu alcance <em>es</em> infame y si has de recorrerlo por paginas es <em>perverso</em></p>
+
+<h3 id="modificable-por-humanos">Modificable (por humanos)</h3>
+
+<p>Si aspiras a ser un <em>heroe del teclado</em> y por &ldquo;curiosidad&rdquo; se te ha ocurrido
+mirar el codigo html de cualquer pagina web, habras llegado a la conclucion de
+que el mejor lugar para guardar un mensaje que nadie ha de ver jamas esta dentro
+de una etiqueta html anidada sobre cientos de etiquetas html en una linea unica
+sin ningun salto de linea.</p>
+
+<p>Un formato que acepta tales aberraciones deberia ser prohibido o almenos
+intervenido por un consejo de sabios, para evitar tal desgracia.</p>
+
+<h3 id="wysiwymag">WYSIWYMAG</h3>
+
+<p>What You See Is What You Mean And Get (Lo que ves es lo que quieres decir y
+obtener)</p>
+
+<p>La estructura del documento ha de ser minimamente agradable a la vista y
+proporcionar la herramientas necesarias para utilizarlo en la creacion de
+cualquier timpo de documento, desde un post a un libro o publicaciones
+cientificas de cualquier indole, teniendo siempre en cosideracion que el
+proposito y fin ultimo es la documentacion, no convertirse en la base para crear
+interfaces visuales.</p>
+
+<p>Animaciones neon, anuncios publicitarios, botones &ldquo;sociales&rdquo;, typografias con
+sombras, colores que afectan la vista (y el buen gusto), no son el objetivo del
+formato, de eso ya seguiran encargandose los formatos existentes</p>
+
+<h2 id="propuesta">Propuesta</h2>
+
+<p>html es tan feo que la wikipedia utiliza mediawiki (uno de los tantos lenguajes
+de marcas ligeros que existen). Por su parte sitios como github directamente
+pasan de html, fomentando el uso de markdown, org, ReStructured Text, texto
+plano, etc. Algo similar ocurre con plataformas de gestion de contenido y
+herramientas para la creacion de blogs como en el caso de wordPress</p>
+
+<p>Por alguna razon desconocida los sistemas de marcado ligero son comodos, sin
+embargo, si algun error se les ha de atribuir (que probablemente sea la razon de
+que existan tantos) es, <strong>no valerse por si mismos</strong>, al mas minimo
+inconveniente se recurre a trozos de codigo html o latex. El formato que creemos
+ha de ser tan agradable a la vista que incluso no requiera ninguna herramienta
+para su uso, los mas intrepidos haran alarde de valerse solo con <code>less</code>, <code>more</code>,
+<code>cat</code> o mariposas.</p>
+
+<p>Ya, esta bonito, sencillo y autosuficiente! algo mas? que tal un <strong>Proyecto de
+<s>Complementacion</s> Documentacion Humana</strong>, por que no crear un super
+repositorio (distribuido/federado) que contenga (al menos) toda obra escrita, ya
+sea un blog, un libro e incluso la wikipedia, todo con el mismo formato,
+separado en secciones elegibles y descargables a medida del disco duro</p>
+
+<pre><code>origen
+   .
+   ├── recursos
+   │   ├── imgenes
+   │   ├── videos
+   │   ├── programas
+   │   ├── codigo
+   │   └── musica
+   ├── man
+   │   ├── 1
+   │   ├── 2
+   │   ...
+   │   └── N
+   ├── blog
+   │   ├── gnusr
+   │   ├── nasciiboy
+   │   ... cualquiera
+   │   └── emacsChan
+   ├── books
+   │   ├── scifi
+   │   ├── math
+   │   ...
+   │   └── ajedrez
+
+   ...
+
+   └── wikipedia
+</code></pre>
+
+<p>un error es, permitir que la informacion desaparesca, mas aun dejarla en custodia
+de entes que solo permiten el acceso a unos cuantos elegidos.</p>
+
+<p>A un lado el copyrigth, los bytes no tienen dueños!</p>
+
+<p>Sobre la implementacion&hellip; solo hay ideas, informacion mas adelante</p>
+
+<h3 id="sintaxis">sintaxis</h3>
+
+<h4 id="estructura-e-indentacion">Estructura e indentacion</h4>
+
+<p>Un buen sistema de documentacion priorisa la estructura sobre el aspecto.</p>
+
+<p>La estructura minima, consiste en separar el documento en secciones
+(encabezados) gerarquizados</p>
+
+<p><em>una marca un nivel</em>: un titular inicia con el signo <code>*</code> seguido por (un)
+espacio(s) y el nombre de la seccion.</p>
+
+<p>El numero de <code>*</code> indica el nivel del titular, su equivalente  en html seria</p>
+
+<ul>
+<li><code>*</code> == <code>h1</code></li>
+<li><code>**</code> == <code>h2</code></li>
+<li><code>***</code> == <code>h3</code></li>
+<li><code>****</code> == <code>h4</code></li>
+<li><code>*****</code> == <code>h5</code></li>
+</ul>
+
+<pre><code>* nivel Uno
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+  eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+  enim ad minim veniam.
+
+** nivel dos
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+   eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+   enim ad minim veniam.
+
+*** nivel tres
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+    eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+    enim ad minim veniam.
+</code></pre>
+
+<p>El contenido de cada encabezado inicia tras dejar una linea de espacio en blanco
+y ha de indentarse (opcional y a gusto) con un numero de espacios igual al
+numero de <code>*</code>, mas un espacio.</p>
+
+<p>Para mantener una estetica agradable los titulares extensos
+pueden colocarse de la forma</p>
+
+<pre><code>* encabezado muy muy muy muy muy muy muy
+  muy muy muy muy muy muymuy muy muy muy
+  muy muy extenso
+</code></pre>
+
+<h4 id="listas">Listas</h4>
+
+<pre><code>- lista desordenada
+
+  contenido de elemento
+
++ lista desordenada
+
+1. lista ordenada numericamente
+
+1) lista ordenada numericamente
+
+a. lista ordenada alfabeticamente
+
+a) lista ordenada alfabeticamente
+
+   contenido de elemento [a]
+</code></pre>
+
+<p>El contenido de una lista debe indentarse segun la seccion de la que forme
+parte. Se permite anidar listas dentro de otras listas, asi como otro tipo de
+elemnentos del formato</p>
+
+<pre><code>* nivel uno
+
+  1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+
+     a) Lorem ipsum dolor sit amet.
+
+        - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+  2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+</code></pre>
+
+<h4 id="y-si-tengo-una-novela">y si tengo una novela</h4>
+
+<pre><code>&gt; &quot;Dialogo, Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit, sed eiusmod tempor incidunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam.&quot;
+</code></pre>
+
+<p>los dialogos tienen la mismas normas que una lista.</p>
+
+<h4 id="definiciones">definiciones</h4>
+
+<pre><code>- elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed eiusmod tempor incidunt ut labore et
+  dolore magna aliqua. Ut enim ad minim veniam.
+
++ elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed eiusmod tempor incidunt ut labore et
+  dolore magna aliqua. Ut enim ad minim veniam.
+</code></pre>
+
+<h4 id="about-s">about&rsquo;s</h4>
+
+<p>en realidad no se como nombrar estos elementos, asi que por ahora se llaman
+<q>acerca de</q> o about&rsquo;s. Son comunes en muchos libros, por lo tienen sintaxis
+propia</p>
+
+<pre><code>:: NOTA ::  Lorem ipsum dolor sit amet, consectetur
+   adipiscing elit, sed eiusmod tempor incidunt ut labore et
+   dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ::  Lorem ipsum dolor sit amet, consectetur
+   adipiscing elit, sed eiusmod tempor incidunt ut labore et
+   dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ADVERTENCIA ADVERTENCIA ADVERTENCIA ::
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
+   incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ADVERTENCIA ADVERTENCIA ADVERTENCIA
+
+   ::
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
+   incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+</code></pre>
+
+<h4 id="resaltado">resaltado</h4>
+
+<p>nadie quiere tener etiquetas a lo html</p>
+
+<pre><code>&lt;etiqueta&gt;
+  &lt;etiqueta&gt;
+    contenido
+  &lt;/fin_etiqueta&gt;
+&lt;/fin_etiqueta&gt;
+</code></pre>
+
+<p>los lenguajes de marcas ligeras lo manejan de forma un poco mas agradable</p>
+
+<pre><code>(org)       *bold*
+(markdown)  **bold**
+(mediawiki) '''bold'''
+
+algun otro  &lt;^bold^&gt;
+</code></pre>
+
+<p>no obstante con esta aproximacion pronto se crean ambiguedades, ademas de
+limitarse a 3 o 4 formas de etiquetar el contenido antes de recurrir a marcas
+exoticas o recaer en etiquetas html.</p>
+
+<p>A espera de una mejor alternativa, podria recurrirse al estilo de marcas de
+texinfo… con un leve retoque al formato.</p>
+
+<pre><code>@x()
+@x[]
+@x{}
+@x&lt;&gt;
+</code></pre>
+
+<p>donde <code>@</code> indica <em>a continuacion contenido especial</em>, <code>x</code> es un caracter
+ascii imprimible, que describe el comando o accion a aplicar al contenido
+delimitado por <code>{…}</code>, <code>(…)</code>, <code>&lt;…&gt;</code> o <code>[…]</code></p>
+
+<p><em>por que una <code>@</code>?</em> Fuera de algun lenguaje exotico o el correo, podria
+ser el signo menos utilizado y mas aun con la estructura <code>@x{}</code></p>
+
+<p><em>y la <code>x</code>?</em> Un caracter ascii imprimible. Si hemos de necesitar mas
+marcas que los caracteres ascii algo estaremos haciendo mal.</p>
+
+<p>Algunas propuestas:</p>
+
+<pre><code>- A :: acronym      - a :: abbr       - 0 ::            - : :: def
+- B ::              - b :: bold       - 1 ::            - ; ::
+- C :: smallCaps    - c :: code       - 2 ::            - = ::
+- D ::              - d :: data       - 3 ::            - ? ::
+- E :: error        - e :: emph       - 4 ::            - @ :: escape
+- F :: func         - f :: file       - 5 ::            - ` ::
+- G ::              - g ::            - 6 ::            - ' :: ‘samp’
+- H ::              - h ::            - 7 ::            - &quot; :: “quote”
+- I ::              - i :: italic     - 8 ::            - # :: path
+- J ::              - j ::            - 9 ::
+- K :: keyword      - k :: kbd        - ^ :: sup
+- L :: label        - l :: link       - _ :: sub
+- M ::              - m :: math       - \ ::
+- N :: defnote      - n :: note       - | ::
+- O :: option       - o ::            - * ::
+- P ::              - p ::            - + ::
+- Q ::              - q :: quote      - , ::
+- R :: result       - r :: ref        - - :: —exp—
+- S ::              - s :: strike     - . ::
+- T :: radiotarget  - t :: target     - / ::
+- U ::              - u :: underline  - % :: (parentesis)
+- V :: var          - v :: verbatim   - &amp; :: symbol
+- W :: warnig       - w ::            - $ :: command
+- X ::              - x ::            - ~ ::
+- Y ::              - y ::            - ! ::
+- Z ::              - z ::
+</code></pre>
+
+<p>que cada caracter solo tenga un significado permite concatenar acciones como en</p>
+
+<pre><code>@uisb(underlineItalicStrikeBold)
+</code></pre>
+
+<p>su equivalente html seria</p>
+
+<pre><code>&lt;u&gt;&lt;i&gt;&lt;strike&gt;&lt;b&gt;underlineItalicStrikeBold&lt;/b&gt;&lt;/strike&gt;&lt;/i&gt;&lt;/u&gt;
+</code></pre>
+
+<p><em>y los <code>({[&lt;&gt;]})</code>?</em> Mas opciones, mas diversion.</p>
+
+<p>Segun sea el contexto <code>{}</code> o <code>()</code> podrian requerir el <em>escape</em> de algun
+caracter. Para minimizar la inclucion de signo extraños, los delimitadores se
+aplican deacuerdo a la necesidad y gusto del <q>creador</q>.</p>
+
+<p>cuando no haya <em>escapatoria</em>, para anular el es significado de un caracter se
+antecede con <code>@</code> (nota: para que aparesca <code>@</code> hay que colocar <code>@@</code>)</p>
+
+<pre><code>@b(1@). punto uno)
+</code></pre>
+
+<p>al expandir la etiqueta <code>@)</code> se substituye por <code>)</code></p>
+
+<p>asi</p>
+
+<pre><code>&lt;b&gt;1). Punto uno&lt;/b&gt;
+</code></pre>
+
+<h5 id="comentarios">comentarios</h5>
+
+<pre><code>@ linea comentada
+</code></pre>
+
+<p>una <code>@</code> al inicio de linea con almenos uno o mas espacios en blanco comenta la
+linea en cuestion</p>
+
+<h4 id="mas-alla-del-ascii">mas alla del ASCII</h4>
+
+<p>preferiblemente se utilizara un sistema de codificacion <q>moderno</q> como
+UTF-8.</p>
+
+<p>Opcionalmente (y para no vernos en la necesidad de buscar un caracter
+complicado) se puede echar mano del <q>comando</q> <code>&amp;</code>, por ejemplo</p>
+
+<pre><code>@&amp;{nombreGenericoDeCaracterComplicado}
+@&amp;{leftarrow}
+</code></pre>
+
+<h4 id="math">math</h4>
+
+<p>para las formulas matematicas (inline) y ya que desconosco bastante en este
+tema, podriamos no reinventar la rueda y tomar las formulas Tex</p>
+
+<pre><code>@m{\formula\Matematica\Tex}
+</code></pre>
+
+<h4 id="enlaces">enlaces</h4>
+
+<pre><code>@l{ruta}
+</code></pre>
+
+<p>equivalente a</p>
+
+<pre><code>&lt;a href=&quot;ruta&quot;&gt;ruta&lt;/a&gt;
+</code></pre>
+
+<p>y</p>
+
+<pre><code>@l{ruta&lt;&gt;descripcion}
+</code></pre>
+
+<p>equivalente a</p>
+
+<pre><code>&lt;a href=&quot;ruta&quot;&gt;descripcion&lt;/a&gt;
+</code></pre>
+
+<p>ahora, todos los encabezados generan un indentificador interno apartir de su
+nombre, por ejemplo</p>
+
+<pre><code>* encabezado
+</code></pre>
+
+<p>se traduce en html como</p>
+
+<pre><code>&lt;h1 id=&quot;encabezado&quot; &gt;encabezado&lt;/h1&gt;
+</code></pre>
+
+<p>y por ejemplo</p>
+
+<pre><code>* @b(encabezado) con @e(enfasis)
+</code></pre>
+
+<p>se traduce en html como</p>
+
+<pre><code>&lt;h1 id=&quot;encabezado-con-enfasis&quot; &gt;&lt;b&gt;encabezado&lt;/b&gt; con &lt;em&gt;enfasis&lt;/em&gt;&lt;/h1&gt;
+</code></pre>
+
+<p>y un enlace dentro de un encabezado con enfasis</p>
+
+<pre><code>* @l(http://fsf.org/&lt;&gt;@b(link-encabezado)) con @e(enfasis)
+</code></pre>
+
+<p>se traduce en html como</p>
+
+<pre><code>&lt;h1 id=&quot;link-encabezado-con-enfasis&quot; &gt;&lt;a href=&quot;http://fsf.org/&quot; &gt;&lt;b&gt;link-encabezado&lt;/b&gt;&lt;/a&gt; con &lt;em&gt;enfasis&lt;/em&gt;&lt;/h1&gt;
+</code></pre>
+
+<p>para hacer una referencia interna a un encabezado hariamos asi</p>
+
+<pre><code>@l(#encabezado)
+</code></pre>
+
+<p>que se traduce en</p>
+
+<pre><code>&lt;a href=&quot;#encabezado&quot; &gt;encabezado&lt;/a&gt;
+</code></pre>
+
+<p>o</p>
+
+<pre><code>@l(#encabezado&lt;&gt;lo que sea)
+</code></pre>
+
+<p>que se traduce en</p>
+
+<pre><code>&lt;a href=&quot;#encabezado&quot; &gt;lo que sea&lt;/a&gt;
+</code></pre>
+
+<p>(nota: en el futuro se planea presindir del signo <code>#</code> haciendo primero una
+revicion a todas las referencias internas del documento)</p>
+
+<h5 id="como-funciona-esta-magia">como funciona esta magia?</h5>
+
+<p>todas los <q>comandos</q> tienen esta estructura <code>@x(custom&lt;&gt;contenido)</code>. Donde
+<code>custom</code> es un parametro personalizado y <code>contenido</code> el contenido del comando</p>
+
+<p>Cuando un comando, por ejemplo los enlaces requieren un <code>custom</code> y este no se ha
+especificado, se genera apartir del <code>contenido</code>, extrayendo las marcas expeciales
+dejando unicamente texto.</p>
+
+<p>Cuando el comando no requiere de un <code>custom</code> este se ignora o se utiliza como
+identificador o etiqueta segun sea el caso (nota: esto esta a consideracion)</p>
+
+<p>Cuando el comando esta dentro de otro comando, el comando interno <em>pasa</em> su
+contenido al comando exterior, por ejemplo:</p>
+
+<pre><code>@l(#encabezado&lt;&gt;lo que sea con @e(enfasis con @b(algo&lt;&gt;bold)))
+</code></pre>
+
+<p>genera</p>
+
+<pre><code>&lt;a href=&quot;#encabezado&quot; &gt;lo que sea con &lt;em&gt;enfasis con &lt;b&gt;bold&lt;/b&gt;&lt;/em&gt;&lt;/a&gt;
+</code></pre>
+
+<p>y</p>
+
+<pre><code>@l(lo que sea con @e(enfasis con @b(algo&lt;&gt;bold)))
+</code></pre>
+
+<p>genera</p>
+
+<pre><code>&lt;a href=&quot;lo-que-sea-con-enfasis-con-bold&quot; &gt;lo que sea con &lt;em&gt;enfasis con &lt;b&gt;bold&lt;/b&gt;&lt;/em&gt;&lt;/a&gt;
+</code></pre>
+
+<p>y finalmente</p>
+
+<pre><code>@l(@b(bold)&lt;&gt;lo que sea)
+</code></pre>
+
+<p>genera</p>
+
+<pre><code>&lt;a href=&quot;bold&quot; &gt;lo que sea&lt;/a&gt;
+</code></pre>
+
+<p>tambien se pueden crear enlaces internos mediante el comando <code>t</code></p>
+
+<pre><code>@t{target}
+@t{target&lt;&gt;descripcion}
+</code></pre>
+
+<p>y radio objetivos con</p>
+
+<pre><code>@T{radioTarget}
+@T{radioTarget,descripcion}
+</code></pre>
+
+<p>un <em>radio target</em> convierte en enlace que referencia a la definicion del radio
+objetivo a culquier texto que coincida con =target= (insensible a minusculas
+o mayusculas) detro del documento, exeptuado bloques de codigo.</p>
+
+<h4 id="notas">notas</h4>
+
+<pre><code>@n{enlace-a-nota}
+@n{enlace-a-nota&lt;&gt;descripcion}
+@n{nota en linea&lt;&gt;descripcion}
+@N{objetivo-descripcion}
+</code></pre>
+
+<p>(nota: a esto aun le falta mas trabajo)</p>
+
+<h4 id="comandos-de-bloque">comandos de bloque</h4>
+
+<pre><code>.. comando &gt; contenido
+</code></pre>
+
+<p>o en su forma &ldquo;simetrica&rdquo;</p>
+
+<pre><code>.. comando &gt;
+  contenido
+&lt; comando ..
+</code></pre>
+
+<p>el contenido tiene que estar indentado con dos espacios por ejemplo</p>
+
+<pre><code>..comando &gt;
+  contenido
+
+  mas contenido
+</code></pre>
+
+<p>o</p>
+
+<pre><code>..comando &gt;
+  contenido
+
+  mas contenido
+
+  ..otro-comando &gt;
+    contenido
+
+    mas contenido
+</code></pre>
+
+<p>Bien? hay varios tipos de comandos y varias formas de optener su contenido. Por
+un lado tenemo comandos donde el cuerpo se define en una sola linea o mas
+indentadas, sin lineas de espacio</p>
+
+<pre><code>..comando &gt; contenido contenido contenido
+  contenido
+</code></pre>
+
+<p>en este tipo de comandos se encuentran los de configuracion del documento</p>
+
+<pre><code>..title    &gt; titulo del documento
+  puede abarcar varias lineas (siempre con indentacion
+
+  esto queda fuera del comando titulo
+
+..author   &gt; nasciiboy
+..mail     &gt; nasciiboy@gmail.com
+..style    &gt; worg/worg.css
+..options  &gt; highlight
+</code></pre>
+
+<p>El contenido o <em>argumentos</em> abarcan hasta la aparicion de la primer linea en
+blanco o sin la indentacion apropiada. Adicionalmente los comandos de
+configuracion se colocan al inicio del documento, uno en cada linea y sin
+espacios en blanco al inicio y no tiene cierre, es decir <code>&lt; title..</code> no
+significa nada para el comando <code>title</code>.</p>
+
+<p>tambien tenemos comandos que solo tiene cuerpo</p>
+
+<pre><code>..emph &gt;
+  toda esta seccion tiene enfasis
+&lt; emph..
+
+..emph &gt;
+  tambien esta
+
+..bold &gt;
+  esta es bold
+
+..center &gt;
+  y esto va centrada
+&lt; center..
+
+..quote &gt;
+  Cuando hago esto, la gente piensa que es porque quiero alimentar mi
+  ego, ¿verdad? Por supuesto, ¡no pido que se le llame “Stallmanix!”
+
+  --Richard Matthew Stallman
+</code></pre>
+
+<p>esta diseñada para resaltar o aplicar alguna configuracion a una parrafo o
+bloque extenso del documento</p>
+
+<p>luego tenemos comandos con <em>argumentos</em> y <em>cuerpo</em>, como pueden ser los bloques
+de codigo</p>
+
+<pre><code>..src &gt; c
+  #include &lt;stdio.h&gt; # esto es codigo en C
+&lt; src..
+
+..src &gt; go
+
+  package biskana
+
+  import &quot;github.com/nasciiboy/regexp3&quot;
+
+  // esto es codigo en go
+
+
+..src &gt; sh
+  echo &quot;hola que hace&quot;
+</code></pre>
+
+<p>aqui el contenido despues del (y en la misma linea que) <code>&gt;</code> especifica el
+lenguaje, por su parte el cuerpo del bloque es toda linea que cumpla con la
+indentacion</p>
+
+<p>por ultimo teneos bloque con <em>argumentos</em> de multiples lineas y <em>cuerpo</em></p>
+
+<pre><code>..figure &gt; esto el el titulo
+  de una mini seccion
+
+  este es el contenido de la mini seccion
+</code></pre>
+
+<p>donde el <em>contenido</em> empieza luego de la primer linea en blanco.</p>
+
+<p>Como vez, todo depende del comando que se utilize, en terminos generales
+un comando tiene esta estructura</p>
+
+<pre><code>..comando parametros-especiales &gt; argumentos
+
+  //
+  cuerpo
+  //
+</code></pre>
+
+<p>tambien hay lugar para imagenes y video</p>
+
+<pre><code>..img parametros-especiales &gt; fuente
+
+  descripcion, contenido o lo que sea
+
+..video parametros-especiales &gt; fuente
+
+  descripcion, contenido o lo que sea
+</code></pre>
+
+<p>ya vimos que son los argumentos y el cuerpo, los <code>parametros</code> son modificadores
+para el bloque, como podrian ser interpretar algun tipo de enfasis dentro de un
+bloque de codigo, agregar un identificador o algun tipo de resaltado. Aunque los
+parametros pueden ser variados, deben ser pocos, uno, dos o tres por comando de
+bloque, remarcar que el formato no es para crear espectaculos visuales.</p>
+
+<p>los bloques propuestos</p>
+
+<pre><code>block o custom // como bloques personalizables
+img
+video
+figure
+quote
+emph
+center
+bold
+italic
+src
+example/pre
+cols
+math
+diagram
+</code></pre>
+
+<p>para la configuracion del documento</p>
+
+<pre><code>title
+subtitle
+author
+translator
+mail
+licence
+style
+date
+tags
+description
+id
+options
+lang o language
+</code></pre>
+
+<p>a resaltar <code>options</code>, que sirve para especificar como ha de comportarse el
+traductor/visualisador del formato</p>
+
+<h4 id="tablas">Tablas</h4>
+
+<p>Sin duda un tema complejo, podria tenerse una tabla totalmente funcional con
+formulas y demas, pero para inciar:</p>
+
+<pre><code>| encabezado    | otro e  |
+|===============|=========|
+| elemento uno  | algo x  |
+|---------------|---------|
+| elemento dos  | algo a  |
+|               |---------|
+|               | algo b  |
+|---------------|---------|
+| d o s  c e l d a s      |
+</code></pre>
+
+<p>el encabezado se coloca a la cima, delimitado con <code>|===|==|</code></p>
+
+<p>cada elemento se separa con <code>|----|---|</code></p>
+
+<p>unir celdas es complicado podria tomarse en consideracion el numero exacto de
+caracteres para obtener esta informacion, o colocar un signo <q>invisible</q> de
+alineacion dentro la la tabla como <code>^</code></p>
+
+<h4 id="a-considerar">a considerar</h4>
+
+<p>En algunos documentos se agrega un subtitulo en lugar de crear una subseccion
+para esto pobria ofreserse algo como:</p>
+
+<pre><code>* encabezado
+  @ subencabezado
+</code></pre>
+
+<p>donde un una <code>@</code> al mismo nivel de indentacion del inicio del
+nombre del encabezado seguido por un espacio en blanco establece
+un subencabezado</p>
+
+<p>poder concatenar varias definiciones</p>
+
+<pre><code>- A ::
+  B ::
+  C :: exadecimal
+</code></pre>
+
+<p>o</p>
+
+<pre><code>- A :: B :: C :: exadecimal
+</code></pre>
+
+<p>variables de substitucion</p>
+
+<pre><code>@V{variable definida en alguna parte}
+</code></pre>
+
+<p>(la siguiente es una idea que abandone en pro de parametros en los bloque, pero igual
+resulta interesante)</p>
+
+<p>En algunos bloques poder establecer la orientacion del contenido, o agregar una
+sintaxis especifica, como:</p>
+
+<pre><code>^^ elemento :: descripcion
+&gt;&gt; elemento :: descripcion
+&lt;&lt; elemento :: descripcion
+__ elemento :: descripcion
+</code></pre>
+
+<p>La posicion del elemento se establece de la combinacion de dos caracteres, a
+elegir <code>&lt;</code>, <code>&gt;</code>, <code>^</code> y <code>_</code>. El primer caracter indica la posicion del elemento
+(<code>^</code>) superior, (<code>_</code>) inferior, (<code>&gt;</code>) derecha o (<code>&lt;</code>) izquierda.</p>
+
+<p>La segunda combninacion establece la alineacion del contenido.
+(<code>::</code>) justificado, (<code>&lt;:</code>) a la izquierda, (<code>:&gt;</code>) a la
+derecha o (<code>&gt;:&lt;</code>) centrado.</p>
+
+<pre><code>&lt;&lt; elemento :: descripcion
+</code></pre>
+
+<p>genera</p>
+
+<pre><code>|------------------+-----------------------|
+|                  | descripcion           |
+|                  |                       |
+|     elemento     |                       |
+|                  |                       |
+|                  |                       |
+|------------------+-----------------------|
+</code></pre>
+
+<pre><code>&lt;^elemento &gt;:&lt; descripcion
+</code></pre>
+
+<p>genera</p>
+
+<pre><code>|------------------+-----------------------|
+|    elemento      |      descripcion      |
+|                  |                       |
+|                  |                       |
+|                  |                       |
+|                  |                       |
+|------------------+-----------------------|
+</code></pre>
+
+<pre><code>^&gt; elemento &gt;:&lt; descripcion
+</code></pre>
+
+<p>genera</p>
+
+<pre><code>|-----------------------------------------|
+|                                         |
+|                                         |
+|                           elemento      |
+|                                         |
+|                                         |
+|-----------------------------------------|
+|              descripcion                |
+|                                         |
+|                                         |
+|                                         |
+|                                         |
+|-----------------------------------------|
+</code></pre>
+
+<p>en org-mode, existe una forma para colacar el resultado de ejecutar un bloque de
+codigo fuente, es asi</p>
+
+<pre><code>#+BEGIN_SRC elisp
+  (message &quot;hola lisp&quot;)
+#+END_SRC
+
+#+RESULTS:
+: hola lisp
+</code></pre>
+
+<p>en morg podria ser</p>
+
+<pre><code>..src &gt; elisp
+  (message &quot;hola lisp&quot;)
+
+&gt;&gt; hola lisp
+</code></pre>
+
+<p>o</p>
+
+<pre><code>..src &gt; c
+  #include &lt;stdio.h&gt;
+
+  int main(){
+    printf( &quot;Hola mundo\n&quot; );
+    return 0;
+  }
+
+..result &gt;
+  &quot;Hola mundo&quot;
+&lt; src..
+</code></pre>
+
+<p>otra duda surge, los comandos <code>@</code> deberian poderse concateran de la forma
+<code>@abcd(cosas)</code> o ser de una orden unica? si pueden concatenarse cuales? y en que
+orden de ejecucion?</p>
+
+<p>para terminar dos opciones para establecer un encabezado/bloque con un
+idetificador</p>
+
+<pre><code>** @t(identificador-personalizado&lt;&gt;contenido del encabezado)
+
+..figure &gt; @t(identificador-personalizado&lt;&gt;argumento)
+</code></pre>
+
+<p>si el encabezado inicio con un comando <code>t</code> especifica el identificador y texto a
+utilizar</p>
+
+<p>tambien podria ser</p>
+
+<pre><code>** identificador-personalizado &lt;&gt; contenido del encabezado
+
+..figure &gt; identificador-personalizado &lt;&gt; argumento
+</code></pre>
+
+<h4 id="porg">porg</h4>
+
+<p>los ficheros <code>po</code> producidos con <code>gettext</code> se utilizan para traducir documentos
+de un lenguaje a otro, si gettext no muere en el intento&hellip; con morg podemos
+hacer algo mucho mas sencillo para traducir documentos</p>
+
+<p>imaginemos que tenomos este texto</p>
+
+<pre><code>* nivel uno
+
+  1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+
+     a) Lorem ipsum dolor sit amet.
+
+        - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+  2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+</code></pre>
+
+<p>a si se ve como documento <code>porg</code></p>
+
+<pre><code>#* nivel uno
+* nivel uno
+
+#   1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+#      eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+#      enim ad minim veniam.
+  1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+
+#      a) Lorem ipsum dolor sit amet.
+     a) Lorem ipsum dolor sit amet.
+
+#         - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+#   2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+#      eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+#      enim ad minim veniam.
+  2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+</code></pre>
+
+<p>se toma el contenido fuente, se duplica cada seccion, se coloca justo debajo
+del original y se marca con algun signo especial el contenido original.</p>
+
+<p>por que esto es sencillo? estas trabajando con el contenido original, se puede
+contrastar la traduccion directamente y no requiere compilaciones y trucos
+complejos&hellip; para generar la traduccion, necesario es solo borrar las lineas con
+la marca especial!</p>
+
+<p>Si agregamos un programa que haga todo automagicamente, con una pretraduccion,
+el tabajo sera pan comido!</p>
+
+<p>incluso y fantaceando, podria haber ficheros rorg, (rss org), las fantacias no
+custan nada.</p>
+
+<h3 id="biskana">biskana</h3>
+
+<p><code>biskana</code> es lo que hay hasta el momento, una primitiva libreria escrita en
+lenguaje de programacion go para exportar el formato <em>morg</em> a html, funcionan
+muchos de los comandos <code>@</code> de forma limitada, aunque el sistema
+<code>@x(identificador&lt;&gt;contenido)</code> extrae los datos perfectamente, ademas si un
+comando no cuenta con llave de cierre, el resaltado abarca hasta el final del
+parrafo y se cierra automaticamente</p>
+
+<p>tambien el sistema para extraer el contenido de un bloque de comando funciona de
+manera correcta, claro esta, solo para los casos definidos</p>
+
+<p>para los bloques de codigo funte se brinda la posibilidad de resaltado de
+sintaxis agregando un enlace de java-script a la configuracion.</p>
+
+<p>Existe un wrapper en go de pygments con el cual podemos resaltar la sintaxis
+mediente un simple css, obviamente requiere tener instalado pygments y esperar
+un tiempo consideramlemente mayor para generar el resultado</p>
+
+<p>aun no hay codigo para manejar las tablas de datos (proximamente)</p>
+
+<h4 id="como-usar">Como usar</h4>
+
+<p>Primero tenemos que tener instalado <em>go</em> en el sistema, esta el la guia de
+<a href="https://golang.org/doc/install">instalacion oficial</a> (la verdad no recuerdo
+como lo instale)</p>
+
+<p><code>biskana</code> es solo un componete del proyecto, de momento el unico escrito, para
+su uso se envolvio en el comando <code>morg</code> (<a href="https://github.com/nasciiboy/morg">aqui</a> el codigo en todo su explendor), el cual hara muchas mas cosas, pero de
+momento solo se encarga de exportar a html los fichereso que le indiquemos.</p>
+
+<p>Asi optenemos el codigo y generamos el ejecutable</p>
+
+<pre><code class="language-sh">go get -v github.com/nasciiboy/morg
+</code></pre>
+
+<p>(desconosco la funcion de <code>-v</code>)</p>
+
+<p>si ya tenemos intalado morg, para actualizar</p>
+
+<pre><code class="language-sh">go get -u -v github.com/nasciiboy/morg
+</code></pre>
+
+<p>para utilizar el comando</p>
+
+<pre><code class="language-sh">morg fichero-uno.mog fichero-dos.morg ...
+</code></pre>
+
+<p>el resultado es un fichero en el directorio actual de tabajo con terminacion <code>.html</code></p>
+
+<p>para activar el resaltado con <a href="https://highlightjs.org/">highlight.js</a>
+(java-script) tienes que colocar la siguiente opcion de configuracion dentro del
+fichero morg</p>
+
+<pre><code class="language-morg">..options &gt; highlight
+</code></pre>
+
+<p>coloque un estilo por defecto en el codigo fuente, para modificarlo lo mas
+sencillo es hacerlo en el fichero resultado a mano, ademas para esta opcion
+debes tener la capeta <code>highlight</code> en la misma dereccion del resultado</p>
+
+<p>para optener tu carpeta <code>highlight</code> ve a <a href="https://highlightjs.org/download/">esta</a> pagina y especifica que lenguages
+deseas, descarga, descomprime y coloca en la misma carpeta del resaltado</p>
+
+<p>Si por el contrario si (tienes instalado y) quieres marcar de resaltado de
+codigo utilizando <code>pygments</code> debes utilazar esta opcion de configuracion</p>
+
+<pre><code class="language-morg">..options &gt; pygments
+</code></pre>
+
+<p>luego especificar mediante una hoja de estilos css el estilo de
+resaltado. Puedes opteren estilos css para
+pygments <a href="https://github.com/jwarby/jekyll-pygments-themes/">aqui</a></p>
+
+<p>la hoja de estilo se especifica asi</p>
+
+<pre><code class="language-morg">..style &gt; direccion/a/mi/style.css
+</code></pre>
+
+<p>no asuro que el programa te explote en la cara, de momento ha servido para dos
+pequeñas pruebas</p>
+
+<h4 id="porque-go">porque Go</h4>
+
+<p>por nada en especial&hellip; cuando empece a escribir el codigo hace cosa de un año
+en C mis habilidades no daban para mucho, no es que ahora sea un jodido guru,
+pero algo he aprendido, he? por que C? por velocidad y eficiencia, si vas a
+hacer un proyecto tan ambicioso mal seria que fuese lagueado. Aun si el proyecto
+se escribiese en un lenguaje interpretado en algun momento deberia portarse a C
+o similar.</p>
+
+<p>podria haber elegido C++&hellip; pero me cruce con Go, no es un lenguage que proboque
+facinacion en mi, pero solo es 3 veces mas lento que C y tiene ideas muy
+interesantes. Por añadir creo que su tipado fuerte es un fastidio, al igual que
+el estilo de codificacion, llaves forsosas para instrucciones simples y el no
+contar con punteros de verdad (al menos con un nivel de indireccion) obliga a
+hacer apaños impresionantes. Desde luego, como recien llegado a go y tras una
+ligera prueba del lenguaje este comentario puede ser una cagada, disculpad mi
+ignorancia.</p>
+
+<h4 id="el-codigo">el codigo</h4>
+
+<p>sin importar el lenguaje, el codigo debe ser elegante o almenos claro y
+sencillo, evintando dependencias inecesarias que dificulten su adaptacion a
+otros lenguajes o peor aun el aprendisaje de otros programadores. En resumen se
+buscara siempre ser una implementacion de referencia con toques didacticos en la
+que cualquier indicio de aparicion de cruft sera señal de refleccion y futura
+refactorizacion e incluso reescritura</p>
+
+<p><code>biskana</code> no es el programa definitivo, lo pienso como un componente <em>el
+traductor</em> a otros lenguajes o dicho de otra manera el <em>renderizador</em> de texto a
+texto, cuando el codigo alcance cierto grado de madures sera dividido en otro
+companente <code>katana</code> este sera el parser del formato que genere una estructura o
+formato de aun mas facil traduccion, clasificando cada seccion del documento.</p>
+
+<p>Luego con esto ya sea <code>biscana</code> para traducir o <code>*ana</code> (<code>*</code>? algun buen nombre
+que termine en ana? se me ocurre <code>nirvana</code> y <code>hana</code>) para desplegar el documento
+en una terminal o aplicacion grafica</p>
+
+<p>momentaneamente supongo que la mejor manera en que de deben
+clasificarse/generarse las seccionos es como entes independientes sin estar
+influenciados por el nivel de anidamento por ejemplo</p>
+
+<pre><code>* seccion 1
+** seccion 2
+*** seccion 3
+</code></pre>
+
+<p>no se traduce como</p>
+
+<pre><code>&lt;div&gt;&lt;h1&gt;seccion 1&lt;/h1&gt;
+  &lt;div&gt;&lt;h2&gt;seccion 2&lt;/h3&gt;
+    &lt;div&gt;&lt;h3&gt;seccion 3&lt;/h3&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>en su lugar se traduce como</p>
+
+<pre><code>&lt;h1&gt;seccion 1&lt;/h1&gt;
+&lt;div class=&quot;h1&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;seccion 2&lt;/h2&gt;
+&lt;div class=&quot;h2&quot;&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;seccion 3&lt;/h3&gt;
+&lt;div class=&quot;h3&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>cada seccion es &ldquo;relativamente&rdquo; independiente de otra, pues contiene toda la
+informacion para visualirarse por si misma, unicamente su contenido tiene un
+nivel de anidamiento</p>
+
+<p>aunque de momento no es asi, lo mismo planeo para las listas</p>
+
+<pre><code>- elemento 1
+- elemento 2
+
+  + subelemento 2.1
+
+- elemento 3
+</code></pre>
+
+<p>no se traduce como</p>
+
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;elemento 1&lt;/li&gt;
+  &lt;li&gt;elemento 2&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;subelemento 2.1&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;li&gt;elemento 3&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>si no como</p>
+
+<pre><code>&lt;p class=&quot;li-1&quot; &gt;elemento 1&lt;/p&gt;
+&lt;p class=&quot;li-1&quot; &gt;elemento 2&lt;/p&gt;
+  &lt;p class=&quot;li-2&quot; &gt;subelemento 2.1&lt;/p&gt;
+&lt;p class=&quot;li-1&quot; &gt;elemento 3&lt;/p&gt;
+</code></pre>
+
+<p>este enfoque requiere de un monton de nuevas etiquetas, en el caso de exportar a
+html, por el otro lado en un programa, esto no tiene ningun inconveniente,
+incluso sera mas sencillo la visualizacion</p>
+
+<p>varios modulos, necesario sera implementar, uno, encargado de la busqueda (local
+y web) del un documento, <code>katana</code> para parsear el documento, <code>biscana</code> como
+exportador, <code>*ana</code> como visualizador/navegador del documento y <code>morg</code> (nombre
+tentativo) como cohesianador de todo</p>
+
+<p>son solo ideas, que tal?</p>
+
+<p>por cierto <code>biskana</code> hace uso de un motor de expresiones regulares elaborado
+desde cero llamado <code>regexp3</code> que por mera casualidad programe, este motor esta
+en desarrollo y en algun momento sera substituido por <code>regexp4</code>. Ambos utilizan
+la misma sintaxis y aunque esta limitado solo a exrpesiones regulares, capturas
+y pocas cosas mas. Lo utilizo por estas razones</p>
+
+<ol>
+<li><p>funciona!</p></li>
+
+<li><p>no ha aparecido alguna exprecion que revase su limitada capacidad</p></li>
+
+<li><p>es sencillo y facil de modificar (por mi, almenos), ademas cuando surge un
+error se donde buscar</p></li>
+
+<li><p>puede port-arse con relativa facilidad a cualquier lenguaje (creo), el
+desarrollo original fue hecho en C. Cuando digo en C me refiero a solo C, sin
+recurrir a ninguna libreria, ni siquiera la libreria estandar. Su port a go
+no fue demasiado traumatico, encima se vio veneficiado por la orientacion a
+objetos</p></li>
+</ol>
+
+<h4 id="primer-ejemplo">primer ejemplo</h4>
+
+<p>seria grosero no monstrar ni un poco, asi que aqui estan dos ejemplos con el
+<code>biskana</code> (<code>morg</code>) y el formato actual (exportacion a html)</p>
+
+<p>El primero es un libro (aun en proceso de escritura) sobre el motor de
+expresiones regulares Recursive Regexp
+Raptor <a href="https://github.com/nasciiboy/raptor-book">aqui</a> el repo, el resultado
+es
+<a href="https://github.com/nasciiboy/raptor-book/blob/master/raptor-book.html">este</a>.</p>
+
+<p>Para ver el resultado en todo su esplendor, clona o baja una copia del repo y
+visualiza en el navegador el html.</p>
+
+<p>El segundo, es una colaboracion que estaba haciendo para traducir un manual de
+emacs. Por motivos varios no he terminado y necesita una serio correccion.</p>
+
+<p>Por que poner algo tan vago? en el se muestra el concepto de utilizar morg para
+traducir manuales de forma
+sencilla. <a href="https://github.com/nasciiboy/emacs-lisp-intro-es">aqui</a> el repo, el
+resultado (no muy bueno por no actualizar el formato)
+es
+<a href="https://github.com/nasciiboy/emacs-lisp-intro-es/blob/master/emacs-lisp-intro_es.html">este</a> y
+el fichero protagonista, el
+<em>.porg</em>
+<a href="https://github.com/nasciiboy/emacs-lisp-intro-es/blob/master/emacs-lisp-intro_es.porg">aqui</a></p>
+
+<p>como se hace el <em>po</em>-org? primero se pasa el material a traducir a <em>morg</em>, luego
+se duplica cada seccion, poniendo el duplicado justo debajo y comentando el
+original con alguna marca especial, para el caso utilice <code>#</code> y se va
+traducciondo cada seccion.</p>
+
+<p>El proceso de exportar la traduccion es igual de sencillo, copias el <em>porg</em> y le
+cambias de nombre, luego le aplicas una regexp de substitucion con el programa
+de preferencia que elimine todas las lineas que inicien con la marca especiol y
+voala, el documento traducido!</p>
+
+<h3 id="zen">zen</h3>
+
+<p>Extenso esto es ya, momento y pausa, el codigo no es elegante, apenas soy un
+programador al inicio de su travesia y recien llegado a golang. Antes de empezar
+a programar, modificar o agregar funciones debe establece una especificacion
+para el formato y de ser posible un consenso global.</p>
+
+<p>Mas tarde, como calentamiento hacer un exportador robusto y luego sus
+componentes. De camino integrarlo en algunos cms (como hugo), Darle soporte en
+nuestros editores faboritos, al tiempo de otorgarle facilidas de autocompletado y
+resaltado.</p>
+
+<p>Luego establecer una estructura capaz de mantenerse por cuenta propia y/o por
+la coperacion desinteresado de empresas y gobiernos, absorver todo el contenido
+que sea posible y dominar la galaxia</p>
+
+<h2 id="como-puedo-ayudar">como puedo ayudar</h2>
+
+<p>Pagameeeee un salario, enserio! (que medio te es ma sencillo?, contactame por
+correo)</p>
+
+<p>Contrata a un grupo de programadores motivados, que compartan este sueño, y
+pagame un salario!</p>
+
+<p>Programa, traduce, discute y comenta</p>
+
+<p>Estas en una organizacion afin a este ideal, acupas un cargo de gobierno?
+comenta y difunde</p>
+
+<h2 id="todo">TODO</h2>
+
+<ul>
+<li><p>definir el formato</p></li>
+
+<li><p>crear exportador robusto. De inicio a html, luego a otros formatos</p></li>
+
+<li><p>programar el resto de componentes</p></li>
+
+<li><p>estructura operativa, para poner en marcha el/los repositorios que albergaran
+blogs, libros, wikipedia y lo que se deje, para formar un repositorio global
+de conocimiento libre, permanente e imparable</p></li>
+
+<li><p>difusion, expansion y dominacion</p></li>
+</ul>
+
+<p>Quiero terminar, aclarando lo siguiente: difundo estas ideas y codigo bajo la
+licencia GNU AGPL v3, si tienes las habilidades para hacer lo planteado
+programando todo por cuenta propia, te pido que lo hagas bajo esta licencia.</p>
+
+<p>Incluso sin financiacion, programare lo que pueda, cuando pueda, simplemente por
+ser un reto emocionante, empesando por incorporar el formato a hugo (en unos
+meses o mas), y asi escribir este blog a gusto.</p>
+
+<p>Happy Hacking!</p>
+</div>
+</article>
+
+
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
+    
+    <li><span class="path-pwd">morg</span></li>
+  </ul>
+</main>
+
+
+    <aside>
+  
+  <section>
+    <header class="taxonomies">category</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header class="taxonomies">tag</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section>
+    <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg/">morg</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-02 06:37:35 -0600 CST">Mar 2, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/Kuzu-no-Honkai/">Kuzu no Honkai</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-22 21:08:41 -0600 CST">Feb 22, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/inbo/">INBO</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-13 22:14:42 -0600 CST">Feb 13, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/noTabs-for-goMode/">no mas tabs en go-mode</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-12 21:52:24 -0600 CST">Feb 12, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/regexp3-go/">regexp3-go (dia cero)</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-11 10:26:04 -0600 CST">Feb 11, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/org-mode/">org mode</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-31 14:40:54 -0600 CST">Jan 31, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/SamuraiChamploo/">Samurai Champloo ♪</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-31 12:06:31 -0600 CST">Jan 31, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/workspace/">la forma en que trabajo</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-20 22:16:06 -0600 CST">Jan 20, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/gnome-keys/">Gnome Keys</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-18 20:57:15 -0600 CST">Jan 18, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/rssPlusEww/">Emacs web y noticias en modo texto</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-18 09:29:17 -0600 CST">Jan 18, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+  </section>
+</aside>
+
+
+    <footer>
+      <p><span class="footer-title"><a href="http://nasciiboy.github.io">nba - GNU&#39;s Rock</a></span></p>
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a>–Theme <a href="https://github.com/nasciiboy/hugo_theme_nascii">nascii</a>–feed <a href="http://nasciiboy.github.io/index.xml">rss</a>–mail <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a>–gpg <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a></p>
+    </footer>
+
+  </body>
+</html>

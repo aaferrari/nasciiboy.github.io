@@ -1477,5 +1477,392 @@ extendamos y modifiquemos a voluntad y sin restricciones nuestra interfaz&lt;/p&
 </description>
     </item>
     
+    <item>
+      <title>ORG-MODE PARA TORPES</title>
+      <link>http://nasciiboy.github.io/emacs/org-mode-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/org-mode-intro/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;logo.png&#34; alt=&#34;logo.png&#34; title=&#34;logo.png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;instalar-el-editor-de-texto-emacs-en-debian&#34;&gt;Instalar el editor de texto Emacs en Debian&lt;/h1&gt;
+
+&lt;p&gt;Es necesario que tengas la distribución &lt;strong&gt;Debian&lt;/strong&gt; del sistema operativo&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;GNU/Linux&lt;/strong&gt;. Si ya la tienes instalada has de usar este comando para&lt;/p&gt;
+
+&lt;p&gt;*instalar Emacs*:&lt;/p&gt;
+
+&lt;p&gt;#+BEGIN_SRC shell&lt;/p&gt;
+
+&lt;p&gt;# apt-get update&lt;/p&gt;
+
+&lt;p&gt;# apt-get install emacs&lt;/p&gt;
+
+&lt;p&gt;#+END_SRC&lt;/p&gt;
+
+&lt;p&gt;La forma que se recomienda para &lt;strong&gt;ejecutar Emacs&lt;/strong&gt; en este documento es&lt;/p&gt;
+
+&lt;p&gt;la siguiente:&lt;/p&gt;
+
+&lt;p&gt;#+BEGIN_SRC shell&lt;/p&gt;
+
+&lt;p&gt;$ emacs -nw nombrearchivo.org&lt;/p&gt;
+
+&lt;p&gt;#+END_SRC&lt;/p&gt;
+
+&lt;p&gt;Eso ejecuta emacs sin interface grafica en la consola y abrirá un&lt;/p&gt;
+
+&lt;p&gt;archivo exista o no exista.&lt;/p&gt;
+
+&lt;h1 id=&#34;para-los-y-las-que-vienen-de-otros-editores-de-texto&#34;&gt;Para los y las que vienen de otros editores de texto&lt;/h1&gt;
+
+&lt;p&gt;Para quienes vienen de vi/vim o vienen de joe, nano, ... y en&lt;/p&gt;
+
+&lt;p&gt;definitiva vienen de usar otros editores de texto es buena cosa cortar&lt;/p&gt;
+
+&lt;p&gt;de raíz sus costumbres.  Para esto es aconsejable crearse lo que se&lt;/p&gt;
+
+&lt;p&gt;llaman en bash &lt;em&gt;alias&lt;/em&gt; .&lt;/p&gt;
+
+&lt;p&gt;La forma de crear un alias para que cada vez que ejecutemos alguno de&lt;/p&gt;
+
+&lt;p&gt;esos editores se ejecute emacs es así:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+alias emacs=&#39;emacs -nw&#39;
+alias nano=&#39;emacs -nw&#39;
+alias vi=&#39;emacs -nw&#39;
+alias joe=&#39;emacs -nw&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pero ejecutar eso cada vez que abrimos un emulador de terminal o una&lt;/p&gt;
+
+&lt;p&gt;consola es un rollo.  Lo que hemos de hacer es meter esos alias en el&lt;/p&gt;
+
+&lt;p&gt;archivo .bashrc para que así nos olvidemos de ellos y cada vez que&lt;/p&gt;
+
+&lt;p&gt;ejecutemos tanto vi, como joe, nano o incluso emacs se abra siempre&lt;/p&gt;
+
+&lt;p&gt;como &lt;em&gt;emacs -nw&lt;/em&gt; y no con la interface grafica tan fea que tiene.&lt;/p&gt;
+
+&lt;h1 id=&#34;nociones-base-para-manejar-emacs&#34;&gt;Nociones base para manejar Emacs&lt;/h1&gt;
+
+&lt;p&gt;Abrirlo es sencillo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+$ emacs mierda.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Eso abrirá el archivo llamado mierda.txt en el que podemos empezar a escribir lo que gustemos.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Guardar los cambios&lt;/strong&gt; es sencillo. Para ello usaremos &lt;em&gt;Control-x + s&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cerrar emacs&lt;/strong&gt; se hace con &lt;em&gt;Control-x + c&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Si deseamos &lt;strong&gt;guardar un archivo con otro nombre&lt;/strong&gt; podemos usar /control+x  + w/y de ese modo vamos a poder escribir el nombre y darle a intro.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Buscar en un archivo una palabra&lt;/strong&gt; se hace con &lt;strong&gt;Control-s&lt;/strong&gt; y escribimos la palabra que deseamos buscar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reemplazar una cadena por otra&lt;/strong&gt; se hace con &lt;strong&gt;Alt+x&lt;/strong&gt; y luego se escribe &lt;strong&gt;replace-string&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ir a una línea determinada&lt;/strong&gt; se hace con &lt;strong&gt;Alt+x&lt;/strong&gt; y luego se escribe &lt;strong&gt;goto-line&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si nos confundimos con alguna combinación de teclas pulsamos varias veces &lt;strong&gt;ESC&lt;/strong&gt; para comenzar de nuevo.&lt;/p&gt;
+
+&lt;p&gt;Si deseas &lt;strong&gt;más información&lt;/strong&gt; puedes leer el manual de emacs en castellano aquí: &lt;a href=&#34;http://www.nongnu.org/emacs-man-es/&#34; title=&#34;http://www.nongnu.org/emacs-man-es/&#34;&gt;http://www.nongnu.org/emacs-man-es/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;instalar-org-mode-en-emacs&#34;&gt;Instalar Org-mode en Emacs&lt;/h1&gt;
+
+&lt;p&gt;En debian podemos instalar org-mode para poder usarlo con Emacs así:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+# apt-get install org-mode
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tras la instalación si abrimos con emacs un archivo con extensión org nos activará automáticamente el modo org.&lt;/p&gt;
+
+&lt;p&gt;En caso de acceder a emacs sin indicar el nombre del archivo a abrir se puede &lt;strong&gt;activar el modo emacs&lt;/strong&gt; pulsando &lt;em&gt;Alt + x&lt;/em&gt; y luego escribiendo &lt;em&gt;org-mode&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;mi-primer-archivo-org&#34;&gt;Mi primer archivo org&lt;/h1&gt;
+
+&lt;p&gt;Vamos a probar a crear un archivo llamado primero.org donde vamos simplemente a aprender a plegar y desplegar texto.&lt;/p&gt;
+
+&lt;p&gt;Para crearlo escribiremos esto en la consola:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+emacs -nw primero.org
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Allí vamos a escribir estas líneas con este contenido:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+ * texto de prueba 1
+ ** texto 1 anidado dentro de texto de prueba 1
+ Hola mundo mundial.
+ ** texto 2 anidado dentro de texto de prueba 1
+ Adiós mundo mundial.
+ * texto de prueba 2
+ ** texto anidado
+ *** texto anidado
+ **** texto anidado
+ ***** texto anidado
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Guardamos con &lt;em&gt;Control-x + s&lt;/em&gt; y nos posicionamos con los cursores sobre &lt;em&gt;texto de prueba 1&lt;/em&gt; para plegarlo pulsando &lt;strong&gt;la tecla tabulador&lt;/strong&gt; (Tab).&lt;/p&gt;
+
+&lt;p&gt;Si pulsamos varias veces &lt;strong&gt;la tecla tabulador&lt;/strong&gt; se plegarán o desplegarán los textos anidados.&lt;/p&gt;
+
+&lt;p&gt;Lo ideal es practicar un poco a plegar y desplegar.&lt;/p&gt;
+
+&lt;p&gt;Este es nuestro primer archivo org de modo que es suficiente con conocer esto.&lt;/p&gt;
+
+&lt;p&gt;Ya solamente con esto podemos tener en un mismo archivo 50 artículos por ejemplo y navegar rápidamente entre unos u otros plegando y desplegando :).&lt;/p&gt;
+
+&lt;h1 id=&#34;un-archivo-org-para-gestión-to-do&#34;&gt;Un archivo org para gestión TO-DO&lt;/h1&gt;
+
+&lt;p&gt;Creamos un archivo llamado TO-DO.org así:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+emacs -nw TO-DO.org
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vamos a imaginar que tenemos un proyecto de software y que nos están&lt;/p&gt;
+
+&lt;p&gt;reportando errores. Son cosas que tenemos que hacer de modo que las&lt;/p&gt;
+
+&lt;p&gt;vamos metiendo así:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+ * Falla el registro cuando se introduce la fecha de nacimiento.
+ * Con monitores de pequeñas resoluciones  no se ve bien el diagrama de flujo.
+ * Los colores de la cabecera a nadie le gustan.
+ * Es posible robar cookies y sesiones.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ahora vamos a activar el estado de cada una de las tareas (de las&lt;/p&gt;
+
+&lt;p&gt;líneas). Para esto vamos a la primera línea y pulsamos esto:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Control-x + Control-t&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Veremos que si lo pulsamos de nuevo va cambiando. De esta forma&lt;/p&gt;
+
+&lt;p&gt;podemos poner estados a las líneas.  Lo normal es poner todo en rojo&lt;/p&gt;
+
+&lt;p&gt;(TO-DO) cuando diseñamos algún proyecto. De esa forma conforme vamos&lt;/p&gt;
+
+&lt;p&gt;realizando tareas vamos colocándolas como DONE.&lt;/p&gt;
+
+&lt;h1 id=&#34;listas-en-archivos-org&#34;&gt;Listas en archivos org&lt;/h1&gt;
+
+&lt;p&gt;Listas con orden o sin orden son sencillas de crear en org-mode. Pongamos un ejemplo creando un archivo llamado listas.org donde trastearemos con las listas.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo de lista es el siguiente:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+ - azul
+ - rojo
+ - amarillo
+ - morado
+ - verde
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;De esta forma también se pueden crear listas con + en vez de - :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+ + azul
+ + rojo
+ + amarillo
+ + morado
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si las deseamos numeradas pues así:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+ 1. azul
+ 2. rojo
+ 3. asdfas
+ 4. hola mundo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Aquí el truco del almendruco. Algo que mola bastante es crear Check-lists&lt;/p&gt;
+
+&lt;p&gt;Eso se hace así:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+ + [ ] hola
+ + [ ] Mundo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nos colocamos en una de las lineas en las que hemos escrito los&lt;/p&gt;
+
+&lt;p&gt;corchetes y pulsamos &lt;strong&gt;Control-c + Control-c&lt;/strong&gt; Veremos como se marca o&lt;/p&gt;
+
+&lt;p&gt;desmarca. Esto esta guay para usarlo con el TO-DO para las tareas.&lt;/p&gt;
+
+&lt;h1 id=&#34;tablas-en-archivos-org&#34;&gt;Tablas en archivos org&lt;/h1&gt;
+
+&lt;p&gt;Las tablas son buena cosa. Podemos crearlas de forma muy sencilla.&lt;/p&gt;
+
+&lt;p&gt;Para poder crearlas vamos a utilizar la tecla de las tuberías, es decir, &lt;strong&gt;alt Gr + 1&lt;/strong&gt; escribirá |&lt;/p&gt;
+
+&lt;p&gt;Vamos a crear una tabla sencilla así de 3 columnas y 6 filas. Para ello usaremos &lt;strong&gt;Control-C + Alt Gr-|&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Indicaremos 3x6 y nos generará la tabla con las correspondientes columnas y filas indicadas.&lt;/p&gt;
+
+&lt;p&gt;La rellenamos con esto por ejemplo:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Nombre&lt;/th&gt;
+&lt;th&gt;Apellidos&lt;/th&gt;
+&lt;th&gt;Edad&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Carlos&lt;/td&gt;
+&lt;td&gt;Garcia&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Benito&lt;/td&gt;
+&lt;td&gt;Camelas&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Rodrigo&lt;/td&gt;
+&lt;td&gt;Rodriguez&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Beatriz&lt;/td&gt;
+&lt;td&gt;Asensio&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;76&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Podemos realizar operaciones entre las celdas. Sumar por ejemplo.&lt;/p&gt;
+
+&lt;p&gt;Nos colocamos en la celda C6 y escribimos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+ =C2+C3+C4+C5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Al darle a &lt;strong&gt;ENTER&lt;/strong&gt; se ejecutará la operación y tendremos el total de&lt;/p&gt;
+
+&lt;p&gt;años. Es un ejemplo sin mucho sentido pero que sirve para entender que&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;podemos realizar operaciones&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;exportar-a-otros-formatos&#34;&gt;Exportar a otros formatos&lt;/h1&gt;
+
+&lt;p&gt;Antes de exportar es bueno &lt;strong&gt;guardar&lt;/strong&gt;. Usaremos &lt;strong&gt;control-x + s&lt;/strong&gt; para esta tarea.&lt;/p&gt;
+
+&lt;p&gt;Es bueno saber que versión de org-mode tenemos instalada en nuestro emacs.&lt;/p&gt;
+
+&lt;p&gt;Para ver la versión usaremos &lt;strong&gt;Alt+x&lt;/strong&gt; y escribiremos *org-version*:&lt;/p&gt;
+
+&lt;p&gt;En el caso de &lt;em&gt;Org-mode version 7.8.11&lt;/em&gt; para &lt;strong&gt;exportar a html&lt;/strong&gt; y&lt;/p&gt;
+
+&lt;p&gt;visualizar al mismo tiempo vamos a usar &lt;strong&gt;alt + x&lt;/strong&gt; y luego escribir:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;org-export-as-html-and-open&lt;/strong&gt; eso abrirá el navegador por defecto que&lt;/p&gt;
+
+&lt;p&gt;tengamos en nuestro sistema y veremos nuestro documento en html.&lt;/p&gt;
+
+&lt;p&gt;En el caso de usar una versión más moderna quizás el comando cambia y&lt;/p&gt;
+
+&lt;p&gt;en tal caso usaremos *control-c + control-e&#34; y veremos las opciones.&lt;/p&gt;
+
+&lt;p&gt;Has de saber que puedes exportar a pdf, odt, ...&lt;/p&gt;
+
+&lt;h1 id=&#34;crear-un-articulo&#34;&gt;Crear un articulo&lt;/h1&gt;
+
+&lt;p&gt;Por defecto un articulo en org-mode estará en inglés, es decir, al exportar nos pondrá &#34;Table of contents&#34; en vez de &#34;Índice&#34;.&lt;/p&gt;
+
+&lt;p&gt;Lo primero por tanto que hemos de incluir en un archivo org que busca ser un articulo es lo siguiente:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+ #+LANGUAGE: es
+ #+AUTHOR: Fanta
+ #+EMAIL: fanta@elbinario.net
+ #+TITLE: ORG-MODE PARA TORPES
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;De esta forma tendremos definidas algunas variables importantes que afectarán a todo el documento a la hora de exportarlo.&lt;/p&gt;
+
+&lt;p&gt;Ahora es cuando nos enfocamos en &lt;strong&gt;pensar el articulo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Org-mode es crema para estas cosas. Permite diseñar los articulos partiendo de una estructura previa.&lt;/p&gt;
+
+&lt;p&gt;Lo primero que se hace es construir la estructura. El diseño de Org-mode nos obliga a tener que hacerlo de esta forma y es uno de los motivos por los que &lt;strong&gt;es bueno para escribir articulos&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Vamos a ir creando la estructura de nuestro articulo y posteriormente rellenaremos el contenido.&lt;/p&gt;
+
+&lt;p&gt;Para la Negrita así:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+ *Negrita*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para la cursiva así:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+ /Cursiva/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;cifrando-los-archivos-org&#34;&gt;Cifrando los archivos org&lt;/h1&gt;
+
+&lt;p&gt;Cuando creamos un archivo org es posible que nos interese por ejemplo cifrar uno de ellos.&lt;/p&gt;
+
+&lt;p&gt;No queremos que vean su contenido gente mala y cotillas de mierda.&lt;/p&gt;
+
+&lt;p&gt;Solamente tendremos que teclear una vez lo siguiente:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;
+$ gpg -c -v org-mode-intro.org
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Con eso ya tendremos cifrado el archivo &lt;em&gt;org-mode-intro.org&lt;/em&gt; con el&lt;/p&gt;
+
+&lt;p&gt;nombre &lt;em&gt;org-mode-intro.org.gpg&lt;/em&gt;.  A partir de ahora cada vez que&lt;/p&gt;
+
+&lt;p&gt;intentemos abrir el archivo con emacs nos pedirá la clave que le hemos&lt;/p&gt;
+
+&lt;p&gt;puesto.  Cuando guardemos nos pedirá de nuevo la clave.&lt;/p&gt;
+
+&lt;p&gt;Esto es de gran utilidad para almacenar un archivo de claves, lo que&lt;/p&gt;
+
+&lt;p&gt;se llama coloquialmente en el barrio &lt;em&gt;&#34;un llavero&#34;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Puedes ir plegando y desplegando de modo que si lo abres delante de&lt;/p&gt;
+
+&lt;p&gt;gente no verán la clave salvo que se la despliegues en la cara.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

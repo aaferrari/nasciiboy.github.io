@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Morg on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/tags/morg/index.xml</link>
+    <description>Recent content in Morg on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL 3.0</copyright>
+    <atom:link href="http://nasciiboy.github.io/tags/morg/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>morg</title>
+      <link>http://nasciiboy.github.io/prog/morg/</link>
+      <pubDate>Thu, 02 Mar 2017 06:37:35 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/morg/</guid>
+      <description>
+
+&lt;p&gt;Que tal, por fin tras un año de hacer el vago ha surgido el primer exportador
+del lenguaje de marcas ligeras &lt;strong&gt;morg&lt;/strong&gt; (nombre tentativo). Aun esta en una fase
+de programacion, con muchos apaños y trucos sucios&amp;hellip; pero funciona! toma eso
+internet!&lt;/p&gt;
+
+&lt;p&gt;Que igual y no era tan dificil, pero que me hice lio y termine programando un
+motor de expresiones regulares y por puro orgullo lo incluyo en el programa&lt;/p&gt;
+
+&lt;p&gt;que es &lt;strong&gt;morg&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;p&gt;otro sistema de documentacion de marcas ligeras, basado en otros sistemas de
+documentacion (de marcas ligeras), que intenta dominar el mundo, transformar a
+la humanidad, terminar con el trabajo, la propiedad intelectual y forrar a su
+creador&lt;/p&gt;
+
+&lt;h2 id=&#34;por-que&#34;&gt;por que?&lt;/h2&gt;
+
+&lt;p&gt;Como toda creacion humana la informatica ha respondido a las necesidades de los
+presentes deacuerdo a los conocimientos y habilidades disponibles. Acaso al
+inicio alguien cosidero la necesidad de codificar informacion mas alla del
+conjunto de caracteres USAmericano? claro que no, los humanos no somos tan
+inteligentes, y avansamos a base de apaños, resolviendo unas pocas dificultades
+de vez en vez, lamentablemente solo mirando en retrospectiva esto se torna
+evidente, y al hacerlo quedamos obligados a cuestionar nuestra realidad.&lt;/p&gt;
+
+&lt;p&gt;En esta ocacion veamos en perspectiva hacia al pasado al mas
+importante recurso de la humanidad &lt;q&gt;la informacion&lt;/q&gt; y los medios a
+nuestro alcance para crearla e interactuar con ella.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;em&gt;seccion pendiente&lt;/em&gt; llena de palabras con muchas letras, donde se
+describe el trayecto de los sistemas para documentar informacion
+&lt;/blockquote&gt;
+
+&lt;p&gt;Con lo anterior llegamos a la siguente conclucion, &lt;em&gt;tener libros impresos
+esta chulo, aunque poco practico e ineficiente es, si se compara con otos
+formatos de documentacion&lt;/em&gt;, por ello surgieron las paginas man, los
+derivados de TeX, XML, la web y sobre ella la wikipedia. Sin embargo seguimos
+forjando informacion, pensando imprimir en papel, con la consecuencia directa de
+que todos los formatos de documentacion surgidos despues del transistor son un
+dolor en el culo, y es momento de forjar un sistema a la altura, apenas mas
+complicado que ascii, e igual de valido que cualquier hijo vastardo de
+GML-&amp;gt;SGML-&amp;gt;XML-&amp;gt;HTML&lt;/p&gt;
+
+&lt;h2 id=&#34;como-debe-ser-un-sistema-de-documentacion-ideal&#34;&gt;Como debe ser un sistema de documentacion ideal&lt;/h2&gt;
+
+&lt;h3 id=&#34;inmediato&#34;&gt;&lt;strong&gt;Inmediato&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Debe estar disponible en todo momento. Las paginas man, fueron un gran acierto
+de nuestros ancestros. El problema? &lt;code class=&#34;command&#34; &gt;cat&lt;/code&gt; o &lt;code
+class=&#34;command&#34; &gt;less&lt;/code&gt; con una base de datos de documentos en texto
+plano serian igualmente eficientes. No tendriamos colores, pero a cambio
+podriamos agregar nuevas paginas y/o secciones de forma mas elegante y rapida.&lt;/p&gt;
+
+&lt;h3 id=&#34;sencillo&#34;&gt;Sencillo&lt;/h3&gt;
+
+&lt;p&gt;Si la wikipedia existe no es por algun genio del marketing vende motos, o por
+un loco programador hasta arriba de flow, no, no, no, la razon es &lt;em&gt;roff&lt;/em&gt;,
+&lt;em&gt;groff&lt;/em&gt; o alguna de sus variantes, si has intentado crear una pagina man, o
+incluso has sido tan intrepido como para documentar tus cosas en man, habras
+decistido al poco tiempo, no hay nada mas feo he inteligible que una pagina de
+manual en groff. Por ello GNU lanzo &lt;strong&gt;info&lt;/strong&gt; que sin duda es mas util que man,
+ademas TexInfo es menos feo que groff.&lt;/p&gt;
+
+&lt;p&gt;Entoces por que no utilizamos info para escribir la wikipedia?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Hay que leer un manual (en ingles) de muchas paginas para utilizarlo como es
+debido&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Esta lleno de marcas y cosas misticas (pensadas para imprimir libros)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Una ves finalizado el documento hay que &amp;ldquo;compilar&amp;rdquo; para exportar a otros
+formato mas manejables, es decir pasar del fuente &lt;span class=&#34;file&#34; &gt;.texi&lt;/span&gt; a info, html, pdf,
+&amp;hellip; y si no campila te comes los mocos!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;practico&#34;&gt;Practico&lt;/h3&gt;
+
+&lt;p&gt;El formato pdf se utiliza mucho, ha de ser bueno, si no por que
+habria tantos libros escaneados?&lt;/p&gt;
+
+&lt;p&gt;Si no puedes realizar una busqueda de culquier palabra dentro del documento &lt;em&gt;no&lt;/em&gt;
+puede ser bueno, si la forma de acceder al fuente para modificar algun error no
+esta a tu alcance &lt;em&gt;es&lt;/em&gt; infame y si has de recorrerlo por paginas es &lt;em&gt;perverso&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;modificable-por-humanos&#34;&gt;Modificable (por humanos)&lt;/h3&gt;
+
+&lt;p&gt;Si aspiras a ser un &lt;em&gt;heroe del teclado&lt;/em&gt; y por &amp;ldquo;curiosidad&amp;rdquo; se te ha ocurrido
+mirar el codigo html de cualquer pagina web, habras llegado a la conclucion de
+que el mejor lugar para guardar un mensaje que nadie ha de ver jamas esta dentro
+de una etiqueta html anidada sobre cientos de etiquetas html en una linea unica
+sin ningun salto de linea.&lt;/p&gt;
+
+&lt;p&gt;Un formato que acepta tales aberraciones deberia ser prohibido o almenos
+intervenido por un consejo de sabios, para evitar tal desgracia.&lt;/p&gt;
+
+&lt;h3 id=&#34;wysiwymag&#34;&gt;WYSIWYMAG&lt;/h3&gt;
+
+&lt;p&gt;What You See Is What You Mean And Get (Lo que ves es lo que quieres decir y
+obtener)&lt;/p&gt;
+
+&lt;p&gt;La estructura del documento ha de ser minimamente agradable a la vista y
+proporcionar la herramientas necesarias para utilizarlo en la creacion de
+cualquier timpo de documento, desde un post a un libro o publicaciones
+cientificas de cualquier indole, teniendo siempre en cosideracion que el
+proposito y fin ultimo es la documentacion, no convertirse en la base para crear
+interfaces visuales.&lt;/p&gt;
+
+&lt;p&gt;Animaciones neon, anuncios publicitarios, botones &amp;ldquo;sociales&amp;rdquo;, typografias con
+sombras, colores que afectan la vista (y el buen gusto), no son el objetivo del
+formato, de eso ya seguiran encargandose los formatos existentes&lt;/p&gt;
+
+&lt;h2 id=&#34;propuesta&#34;&gt;Propuesta&lt;/h2&gt;
+
+&lt;p&gt;html es tan feo que la wikipedia utiliza mediawiki (uno de los tantos lenguajes
+de marcas ligeros que existen). Por su parte sitios como github directamente
+pasan de html, fomentando el uso de markdown, org, ReStructured Text, texto
+plano, etc. Algo similar ocurre con plataformas de gestion de contenido y
+herramientas para la creacion de blogs como en el caso de wordPress&lt;/p&gt;
+
+&lt;p&gt;Por alguna razon desconocida los sistemas de marcado ligero son comodos, sin
+embargo, si algun error se les ha de atribuir (que probablemente sea la razon de
+que existan tantos) es, &lt;strong&gt;no valerse por si mismos&lt;/strong&gt;, al mas minimo
+inconveniente se recurre a trozos de codigo html o latex. El formato que creemos
+ha de ser tan agradable a la vista que incluso no requiera ninguna herramienta
+para su uso, los mas intrepidos haran alarde de valerse solo con &lt;code&gt;less&lt;/code&gt;, &lt;code&gt;more&lt;/code&gt;,
+&lt;code&gt;cat&lt;/code&gt; o mariposas.&lt;/p&gt;
+
+&lt;p&gt;Ya, esta bonito, sencillo y autosuficiente! algo mas? que tal un &lt;strong&gt;Proyecto de
+&lt;s&gt;Complementacion&lt;/s&gt; Documentacion Humana&lt;/strong&gt;, por que no crear un super
+repositorio (distribuido/federado) que contenga (al menos) toda obra escrita, ya
+sea un blog, un libro e incluso la wikipedia, todo con el mismo formato,
+separado en secciones elegibles y descargables a medida del disco duro&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;origen
+   .
+   ├── recursos
+   │   ├── imgenes
+   │   ├── videos
+   │   ├── programas
+   │   ├── codigo
+   │   └── musica
+   ├── man
+   │   ├── 1
+   │   ├── 2
+   │   ...
+   │   └── N
+   ├── blog
+   │   ├── gnusr
+   │   ├── nasciiboy
+   │   ... cualquiera
+   │   └── emacsChan
+   ├── books
+   │   ├── scifi
+   │   ├── math
+   │   ...
+   │   └── ajedrez
+
+   ...
+
+   └── wikipedia
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;un error es, permitir que la informacion desaparesca, mas aun dejarla en custodia
+de entes que solo permiten el acceso a unos cuantos elegidos.&lt;/p&gt;
+
+&lt;p&gt;A un lado el copyrigth, los bytes no tienen dueños!&lt;/p&gt;
+
+&lt;p&gt;Sobre la implementacion&amp;hellip; solo hay ideas, informacion mas adelante&lt;/p&gt;
+
+&lt;h3 id=&#34;sintaxis&#34;&gt;sintaxis&lt;/h3&gt;
+
+&lt;h4 id=&#34;estructura-e-indentacion&#34;&gt;Estructura e indentacion&lt;/h4&gt;
+
+&lt;p&gt;Un buen sistema de documentacion priorisa la estructura sobre el aspecto.&lt;/p&gt;
+
+&lt;p&gt;La estructura minima, consiste en separar el documento en secciones
+(encabezados) gerarquizados&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;una marca un nivel&lt;/em&gt;: un titular inicia con el signo &lt;code&gt;*&lt;/code&gt; seguido por (un)
+espacio(s) y el nombre de la seccion.&lt;/p&gt;
+
+&lt;p&gt;El numero de &lt;code&gt;*&lt;/code&gt; indica el nivel del titular, su equivalente  en html seria&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt; == &lt;code&gt;h1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;**&lt;/code&gt; == &lt;code&gt;h2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;***&lt;/code&gt; == &lt;code&gt;h3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;****&lt;/code&gt; == &lt;code&gt;h4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*****&lt;/code&gt; == &lt;code&gt;h5&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;* nivel Uno
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+  eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+  enim ad minim veniam.
+
+** nivel dos
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+   eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+   enim ad minim veniam.
+
+*** nivel tres
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+    eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+    enim ad minim veniam.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El contenido de cada encabezado inicia tras dejar una linea de espacio en blanco
+y ha de indentarse (opcional y a gusto) con un numero de espacios igual al
+numero de &lt;code&gt;*&lt;/code&gt;, mas un espacio.&lt;/p&gt;
+
+&lt;p&gt;Para mantener una estetica agradable los titulares extensos
+pueden colocarse de la forma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* encabezado muy muy muy muy muy muy muy
+  muy muy muy muy muy muymuy muy muy muy
+  muy muy extenso
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;listas&#34;&gt;Listas&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;- lista desordenada
+
+  contenido de elemento
+
++ lista desordenada
+
+1. lista ordenada numericamente
+
+1) lista ordenada numericamente
+
+a. lista ordenada alfabeticamente
+
+a) lista ordenada alfabeticamente
+
+   contenido de elemento [a]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El contenido de una lista debe indentarse segun la seccion de la que forme
+parte. Se permite anidar listas dentro de otras listas, asi como otro tipo de
+elemnentos del formato&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* nivel uno
+
+  1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+
+     a) Lorem ipsum dolor sit amet.
+
+        - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+  2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;y-si-tengo-una-novela&#34;&gt;y si tengo una novela&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; &amp;quot;Dialogo, Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit, sed eiusmod tempor incidunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;los dialogos tienen la mismas normas que una lista.&lt;/p&gt;
+
+&lt;h4 id=&#34;definiciones&#34;&gt;definiciones&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;- elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed eiusmod tempor incidunt ut labore et
+  dolore magna aliqua. Ut enim ad minim veniam.
+
++ elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed eiusmod tempor incidunt ut labore et
+  dolore magna aliqua. Ut enim ad minim veniam.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;about-s&#34;&gt;about&amp;rsquo;s&lt;/h4&gt;
+
+&lt;p&gt;en realidad no se como nombrar estos elementos, asi que por ahora se llaman
+&lt;q&gt;acerca de&lt;/q&gt; o about&amp;rsquo;s. Son comunes en muchos libros, por lo tienen sintaxis
+propia&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:: NOTA ::  Lorem ipsum dolor sit amet, consectetur
+   adipiscing elit, sed eiusmod tempor incidunt ut labore et
+   dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ::  Lorem ipsum dolor sit amet, consectetur
+   adipiscing elit, sed eiusmod tempor incidunt ut labore et
+   dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ADVERTENCIA ADVERTENCIA ADVERTENCIA ::
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
+   incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ADVERTENCIA ADVERTENCIA ADVERTENCIA
+
+   ::
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
+   incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;resaltado&#34;&gt;resaltado&lt;/h4&gt;
+
+&lt;p&gt;nadie quiere tener etiquetas a lo html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;etiqueta&amp;gt;
+  &amp;lt;etiqueta&amp;gt;
+    contenido
+  &amp;lt;/fin_etiqueta&amp;gt;
+&amp;lt;/fin_etiqueta&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;los lenguajes de marcas ligeras lo manejan de forma un poco mas agradable&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(org)       *bold*
+(markdown)  **bold**
+(mediawiki) &#39;&#39;&#39;bold&#39;&#39;&#39;
+
+algun otro  &amp;lt;^bold^&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;no obstante con esta aproximacion pronto se crean ambiguedades, ademas de
+limitarse a 3 o 4 formas de etiquetar el contenido antes de recurrir a marcas
+exoticas o recaer en etiquetas html.&lt;/p&gt;
+
+&lt;p&gt;A espera de una mejor alternativa, podria recurrirse al estilo de marcas de
+texinfo… con un leve retoque al formato.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@x()
+@x[]
+@x{}
+@x&amp;lt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde &lt;code&gt;@&lt;/code&gt; indica &lt;em&gt;a continuacion contenido especial&lt;/em&gt;, &lt;code&gt;x&lt;/code&gt; es un caracter
+ascii imprimible, que describe el comando o accion a aplicar al contenido
+delimitado por &lt;code&gt;{…}&lt;/code&gt;, &lt;code&gt;(…)&lt;/code&gt;, &lt;code&gt;&amp;lt;…&amp;gt;&lt;/code&gt; o &lt;code&gt;[…]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;por que una &lt;code&gt;@&lt;/code&gt;?&lt;/em&gt; Fuera de algun lenguaje exotico o el correo, podria
+ser el signo menos utilizado y mas aun con la estructura &lt;code&gt;@x{}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;y la &lt;code&gt;x&lt;/code&gt;?&lt;/em&gt; Un caracter ascii imprimible. Si hemos de necesitar mas
+marcas que los caracteres ascii algo estaremos haciendo mal.&lt;/p&gt;
+
+&lt;p&gt;Algunas propuestas:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- A :: acronym      - a :: abbr       - 0 ::            - : :: def
+- B ::              - b :: bold       - 1 ::            - ; ::
+- C :: smallCaps    - c :: code       - 2 ::            - = ::
+- D ::              - d :: data       - 3 ::            - ? ::
+- E :: error        - e :: emph       - 4 ::            - @ :: escape
+- F :: func         - f :: file       - 5 ::            - ` ::
+- G ::              - g ::            - 6 ::            - &#39; :: ‘samp’
+- H ::              - h ::            - 7 ::            - &amp;quot; :: “quote”
+- I ::              - i :: italic     - 8 ::            - # :: path
+- J ::              - j ::            - 9 ::
+- K :: keyword      - k :: kbd        - ^ :: sup
+- L :: label        - l :: link       - _ :: sub
+- M ::              - m :: math       - \ ::
+- N :: defnote      - n :: note       - | ::
+- O :: option       - o ::            - * ::
+- P ::              - p ::            - + ::
+- Q ::              - q :: quote      - , ::
+- R :: result       - r :: ref        - - :: —exp—
+- S ::              - s :: strike     - . ::
+- T :: radiotarget  - t :: target     - / ::
+- U ::              - u :: underline  - % :: (parentesis)
+- V :: var          - v :: verbatim   - &amp;amp; :: symbol
+- W :: warnig       - w ::            - $ :: command
+- X ::              - x ::            - ~ ::
+- Y ::              - y ::            - ! ::
+- Z ::              - z ::
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;que cada caracter solo tenga un significado permite concatenar acciones como en&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@uisb(underlineItalicStrikeBold)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;su equivalente html seria&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;u&amp;gt;&amp;lt;i&amp;gt;&amp;lt;strike&amp;gt;&amp;lt;b&amp;gt;underlineItalicStrikeBold&amp;lt;/b&amp;gt;&amp;lt;/strike&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/u&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;y los &lt;code&gt;({[&amp;lt;&amp;gt;]})&lt;/code&gt;?&lt;/em&gt; Mas opciones, mas diversion.&lt;/p&gt;
+
+&lt;p&gt;Segun sea el contexto &lt;code&gt;{}&lt;/code&gt; o &lt;code&gt;()&lt;/code&gt; podrian requerir el &lt;em&gt;escape&lt;/em&gt; de algun
+caracter. Para minimizar la inclucion de signo extraños, los delimitadores se
+aplican deacuerdo a la necesidad y gusto del &lt;q&gt;creador&lt;/q&gt;.&lt;/p&gt;
+
+&lt;p&gt;cuando no haya &lt;em&gt;escapatoria&lt;/em&gt;, para anular el es significado de un caracter se
+antecede con &lt;code&gt;@&lt;/code&gt; (nota: para que aparesca &lt;code&gt;@&lt;/code&gt; hay que colocar &lt;code&gt;@@&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@b(1@). punto uno)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;al expandir la etiqueta &lt;code&gt;@)&lt;/code&gt; se substituye por &lt;code&gt;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;b&amp;gt;1). Punto uno&amp;lt;/b&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;comentarios&#34;&gt;comentarios&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;@ linea comentada
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;una &lt;code&gt;@&lt;/code&gt; al inicio de linea con almenos uno o mas espacios en blanco comenta la
+linea en cuestion&lt;/p&gt;
+
+&lt;h4 id=&#34;mas-alla-del-ascii&#34;&gt;mas alla del ASCII&lt;/h4&gt;
+
+&lt;p&gt;preferiblemente se utilizara un sistema de codificacion &lt;q&gt;moderno&lt;/q&gt; como
+UTF-8.&lt;/p&gt;
+
+&lt;p&gt;Opcionalmente (y para no vernos en la necesidad de buscar un caracter
+complicado) se puede echar mano del &lt;q&gt;comando&lt;/q&gt; &lt;code&gt;&amp;amp;&lt;/code&gt;, por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@&amp;amp;{nombreGenericoDeCaracterComplicado}
+@&amp;amp;{leftarrow}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;math&#34;&gt;math&lt;/h4&gt;
+
+&lt;p&gt;para las formulas matematicas (inline) y ya que desconosco bastante en este
+tema, podriamos no reinventar la rueda y tomar las formulas Tex&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@m{\formula\Matematica\Tex}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;enlaces&#34;&gt;enlaces&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;@l{ruta}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;equivalente a&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;ruta&amp;quot;&amp;gt;ruta&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@l{ruta&amp;lt;&amp;gt;descripcion}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;equivalente a&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;ruta&amp;quot;&amp;gt;descripcion&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora, todos los encabezados generan un indentificador interno apartir de su
+nombre, por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* encabezado
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se traduce en html como&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h1 id=&amp;quot;encabezado&amp;quot; &amp;gt;encabezado&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* @b(encabezado) con @e(enfasis)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se traduce en html como&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h1 id=&amp;quot;encabezado-con-enfasis&amp;quot; &amp;gt;&amp;lt;b&amp;gt;encabezado&amp;lt;/b&amp;gt; con &amp;lt;em&amp;gt;enfasis&amp;lt;/em&amp;gt;&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y un enlace dentro de un encabezado con enfasis&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* @l(http://fsf.org/&amp;lt;&amp;gt;@b(link-encabezado)) con @e(enfasis)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se traduce en html como&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h1 id=&amp;quot;link-encabezado-con-enfasis&amp;quot; &amp;gt;&amp;lt;a href=&amp;quot;http://fsf.org/&amp;quot; &amp;gt;&amp;lt;b&amp;gt;link-encabezado&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt; con &amp;lt;em&amp;gt;enfasis&amp;lt;/em&amp;gt;&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para hacer una referencia interna a un encabezado hariamos asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@l(#encabezado)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;que se traduce en&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;#encabezado&amp;quot; &amp;gt;encabezado&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@l(#encabezado&amp;lt;&amp;gt;lo que sea)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;que se traduce en&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;#encabezado&amp;quot; &amp;gt;lo que sea&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(nota: en el futuro se planea presindir del signo &lt;code&gt;#&lt;/code&gt; haciendo primero una
+revicion a todas las referencias internas del documento)&lt;/p&gt;
+
+&lt;h5 id=&#34;como-funciona-esta-magia&#34;&gt;como funciona esta magia?&lt;/h5&gt;
+
+&lt;p&gt;todas los &lt;q&gt;comandos&lt;/q&gt; tienen esta estructura &lt;code&gt;@x(custom&amp;lt;&amp;gt;contenido)&lt;/code&gt;. Donde
+&lt;code&gt;custom&lt;/code&gt; es un parametro personalizado y &lt;code&gt;contenido&lt;/code&gt; el contenido del comando&lt;/p&gt;
+
+&lt;p&gt;Cuando un comando, por ejemplo los enlaces requieren un &lt;code&gt;custom&lt;/code&gt; y este no se ha
+especificado, se genera apartir del &lt;code&gt;contenido&lt;/code&gt;, extrayendo las marcas expeciales
+dejando unicamente texto.&lt;/p&gt;
+
+&lt;p&gt;Cuando el comando no requiere de un &lt;code&gt;custom&lt;/code&gt; este se ignora o se utiliza como
+identificador o etiqueta segun sea el caso (nota: esto esta a consideracion)&lt;/p&gt;
+
+&lt;p&gt;Cuando el comando esta dentro de otro comando, el comando interno &lt;em&gt;pasa&lt;/em&gt; su
+contenido al comando exterior, por ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@l(#encabezado&amp;lt;&amp;gt;lo que sea con @e(enfasis con @b(algo&amp;lt;&amp;gt;bold)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;genera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;#encabezado&amp;quot; &amp;gt;lo que sea con &amp;lt;em&amp;gt;enfasis con &amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@l(lo que sea con @e(enfasis con @b(algo&amp;lt;&amp;gt;bold)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;genera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;lo-que-sea-con-enfasis-con-bold&amp;quot; &amp;gt;lo que sea con &amp;lt;em&amp;gt;enfasis con &amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y finalmente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@l(@b(bold)&amp;lt;&amp;gt;lo que sea)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;genera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;bold&amp;quot; &amp;gt;lo que sea&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tambien se pueden crear enlaces internos mediante el comando &lt;code&gt;t&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@t{target}
+@t{target&amp;lt;&amp;gt;descripcion}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y radio objetivos con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@T{radioTarget}
+@T{radioTarget,descripcion}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;un &lt;em&gt;radio target&lt;/em&gt; convierte en enlace que referencia a la definicion del radio
+objetivo a culquier texto que coincida con =target= (insensible a minusculas
+o mayusculas) detro del documento, exeptuado bloques de codigo.&lt;/p&gt;
+
+&lt;h4 id=&#34;notas&#34;&gt;notas&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;@n{enlace-a-nota}
+@n{enlace-a-nota&amp;lt;&amp;gt;descripcion}
+@n{nota en linea&amp;lt;&amp;gt;descripcion}
+@N{objetivo-descripcion}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(nota: a esto aun le falta mas trabajo)&lt;/p&gt;
+
+&lt;h4 id=&#34;comandos-de-bloque&#34;&gt;comandos de bloque&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;.. comando &amp;gt; contenido
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o en su forma &amp;ldquo;simetrica&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.. comando &amp;gt;
+  contenido
+&amp;lt; comando ..
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el contenido tiene que estar indentado con dos espacios por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..comando &amp;gt;
+  contenido
+
+  mas contenido
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..comando &amp;gt;
+  contenido
+
+  mas contenido
+
+  ..otro-comando &amp;gt;
+    contenido
+
+    mas contenido
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bien? hay varios tipos de comandos y varias formas de optener su contenido. Por
+un lado tenemo comandos donde el cuerpo se define en una sola linea o mas
+indentadas, sin lineas de espacio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..comando &amp;gt; contenido contenido contenido
+  contenido
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en este tipo de comandos se encuentran los de configuracion del documento&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..title    &amp;gt; titulo del documento
+  puede abarcar varias lineas (siempre con indentacion
+
+  esto queda fuera del comando titulo
+
+..author   &amp;gt; nasciiboy
+..mail     &amp;gt; nasciiboy@gmail.com
+..style    &amp;gt; worg/worg.css
+..options  &amp;gt; highlight
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El contenido o &lt;em&gt;argumentos&lt;/em&gt; abarcan hasta la aparicion de la primer linea en
+blanco o sin la indentacion apropiada. Adicionalmente los comandos de
+configuracion se colocan al inicio del documento, uno en cada linea y sin
+espacios en blanco al inicio y no tiene cierre, es decir &lt;code&gt;&amp;lt; title..&lt;/code&gt; no
+significa nada para el comando &lt;code&gt;title&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;tambien tenemos comandos que solo tiene cuerpo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..emph &amp;gt;
+  toda esta seccion tiene enfasis
+&amp;lt; emph..
+
+..emph &amp;gt;
+  tambien esta
+
+..bold &amp;gt;
+  esta es bold
+
+..center &amp;gt;
+  y esto va centrada
+&amp;lt; center..
+
+..quote &amp;gt;
+  Cuando hago esto, la gente piensa que es porque quiero alimentar mi
+  ego, ¿verdad? Por supuesto, ¡no pido que se le llame “Stallmanix!”
+
+  --Richard Matthew Stallman
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esta diseñada para resaltar o aplicar alguna configuracion a una parrafo o
+bloque extenso del documento&lt;/p&gt;
+
+&lt;p&gt;luego tenemos comandos con &lt;em&gt;argumentos&lt;/em&gt; y &lt;em&gt;cuerpo&lt;/em&gt;, como pueden ser los bloques
+de codigo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..src &amp;gt; c
+  #include &amp;lt;stdio.h&amp;gt; # esto es codigo en C
+&amp;lt; src..
+
+..src &amp;gt; go
+
+  package biskana
+
+  import &amp;quot;github.com/nasciiboy/regexp3&amp;quot;
+
+  // esto es codigo en go
+
+
+..src &amp;gt; sh
+  echo &amp;quot;hola que hace&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aqui el contenido despues del (y en la misma linea que) &lt;code&gt;&amp;gt;&lt;/code&gt; especifica el
+lenguaje, por su parte el cuerpo del bloque es toda linea que cumpla con la
+indentacion&lt;/p&gt;
+
+&lt;p&gt;por ultimo teneos bloque con &lt;em&gt;argumentos&lt;/em&gt; de multiples lineas y &lt;em&gt;cuerpo&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..figure &amp;gt; esto el el titulo
+  de una mini seccion
+
+  este es el contenido de la mini seccion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde el &lt;em&gt;contenido&lt;/em&gt; empieza luego de la primer linea en blanco.&lt;/p&gt;
+
+&lt;p&gt;Como vez, todo depende del comando que se utilize, en terminos generales
+un comando tiene esta estructura&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..comando parametros-especiales &amp;gt; argumentos
+
+  //
+  cuerpo
+  //
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tambien hay lugar para imagenes y video&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..img parametros-especiales &amp;gt; fuente
+
+  descripcion, contenido o lo que sea
+
+..video parametros-especiales &amp;gt; fuente
+
+  descripcion, contenido o lo que sea
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ya vimos que son los argumentos y el cuerpo, los &lt;code&gt;parametros&lt;/code&gt; son modificadores
+para el bloque, como podrian ser interpretar algun tipo de enfasis dentro de un
+bloque de codigo, agregar un identificador o algun tipo de resaltado. Aunque los
+parametros pueden ser variados, deben ser pocos, uno, dos o tres por comando de
+bloque, remarcar que el formato no es para crear espectaculos visuales.&lt;/p&gt;
+
+&lt;p&gt;los bloques propuestos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;block o custom // como bloques personalizables
+img
+video
+figure
+quote
+emph
+center
+bold
+italic
+src
+example/pre
+cols
+math
+diagram
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para la configuracion del documento&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;title
+subtitle
+author
+translator
+mail
+licence
+style
+date
+tags
+description
+id
+options
+lang o language
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;a resaltar &lt;code&gt;options&lt;/code&gt;, que sirve para especificar como ha de comportarse el
+traductor/visualisador del formato&lt;/p&gt;
+
+&lt;h4 id=&#34;tablas&#34;&gt;Tablas&lt;/h4&gt;
+
+&lt;p&gt;Sin duda un tema complejo, podria tenerse una tabla totalmente funcional con
+formulas y demas, pero para inciar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;| encabezado    | otro e  |
+|===============|=========|
+| elemento uno  | algo x  |
+|---------------|---------|
+| elemento dos  | algo a  |
+|               |---------|
+|               | algo b  |
+|---------------|---------|
+| d o s  c e l d a s      |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el encabezado se coloca a la cima, delimitado con &lt;code&gt;|===|==|&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;cada elemento se separa con &lt;code&gt;|----|---|&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;unir celdas es complicado podria tomarse en consideracion el numero exacto de
+caracteres para obtener esta informacion, o colocar un signo &lt;q&gt;invisible&lt;/q&gt; de
+alineacion dentro la la tabla como &lt;code&gt;^&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;a-considerar&#34;&gt;a considerar&lt;/h4&gt;
+
+&lt;p&gt;En algunos documentos se agrega un subtitulo en lugar de crear una subseccion
+para esto pobria ofreserse algo como:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* encabezado
+  @ subencabezado
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde un una &lt;code&gt;@&lt;/code&gt; al mismo nivel de indentacion del inicio del
+nombre del encabezado seguido por un espacio en blanco establece
+un subencabezado&lt;/p&gt;
+
+&lt;p&gt;poder concatenar varias definiciones&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- A ::
+  B ::
+  C :: exadecimal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- A :: B :: C :: exadecimal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;variables de substitucion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@V{variable definida en alguna parte}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(la siguiente es una idea que abandone en pro de parametros en los bloque, pero igual
+resulta interesante)&lt;/p&gt;
+
+&lt;p&gt;En algunos bloques poder establecer la orientacion del contenido, o agregar una
+sintaxis especifica, como:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;^^ elemento :: descripcion
+&amp;gt;&amp;gt; elemento :: descripcion
+&amp;lt;&amp;lt; elemento :: descripcion
+__ elemento :: descripcion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La posicion del elemento se establece de la combinacion de dos caracteres, a
+elegir &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;^&lt;/code&gt; y &lt;code&gt;_&lt;/code&gt;. El primer caracter indica la posicion del elemento
+(&lt;code&gt;^&lt;/code&gt;) superior, (&lt;code&gt;_&lt;/code&gt;) inferior, (&lt;code&gt;&amp;gt;&lt;/code&gt;) derecha o (&lt;code&gt;&amp;lt;&lt;/code&gt;) izquierda.&lt;/p&gt;
+
+&lt;p&gt;La segunda combninacion establece la alineacion del contenido.
+(&lt;code&gt;::&lt;/code&gt;) justificado, (&lt;code&gt;&amp;lt;:&lt;/code&gt;) a la izquierda, (&lt;code&gt;:&amp;gt;&lt;/code&gt;) a la
+derecha o (&lt;code&gt;&amp;gt;:&amp;lt;&lt;/code&gt;) centrado.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;&amp;lt; elemento :: descripcion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;genera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;|------------------+-----------------------|
+|                  | descripcion           |
+|                  |                       |
+|     elemento     |                       |
+|                  |                       |
+|                  |                       |
+|------------------+-----------------------|
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;^elemento &amp;gt;:&amp;lt; descripcion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;genera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;|------------------+-----------------------|
+|    elemento      |      descripcion      |
+|                  |                       |
+|                  |                       |
+|                  |                       |
+|                  |                       |
+|------------------+-----------------------|
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;^&amp;gt; elemento &amp;gt;:&amp;lt; descripcion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;genera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;|-----------------------------------------|
+|                                         |
+|                                         |
+|                           elemento      |
+|                                         |
+|                                         |
+|-----------------------------------------|
+|              descripcion                |
+|                                         |
+|                                         |
+|                                         |
+|                                         |
+|-----------------------------------------|
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en org-mode, existe una forma para colacar el resultado de ejecutar un bloque de
+codigo fuente, es asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#+BEGIN_SRC elisp
+  (message &amp;quot;hola lisp&amp;quot;)
+#+END_SRC
+
+#+RESULTS:
+: hola lisp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en morg podria ser&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..src &amp;gt; elisp
+  (message &amp;quot;hola lisp&amp;quot;)
+
+&amp;gt;&amp;gt; hola lisp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..src &amp;gt; c
+  #include &amp;lt;stdio.h&amp;gt;
+
+  int main(){
+    printf( &amp;quot;Hola mundo\n&amp;quot; );
+    return 0;
+  }
+
+..result &amp;gt;
+  &amp;quot;Hola mundo&amp;quot;
+&amp;lt; src..
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;otra duda surge, los comandos &lt;code&gt;@&lt;/code&gt; deberian poderse concateran de la forma
+&lt;code&gt;@abcd(cosas)&lt;/code&gt; o ser de una orden unica? si pueden concatenarse cuales? y en que
+orden de ejecucion?&lt;/p&gt;
+
+&lt;p&gt;para terminar dos opciones para establecer un encabezado/bloque con un
+idetificador&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;** @t(identificador-personalizado&amp;lt;&amp;gt;contenido del encabezado)
+
+..figure &amp;gt; @t(identificador-personalizado&amp;lt;&amp;gt;argumento)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si el encabezado inicio con un comando &lt;code&gt;t&lt;/code&gt; especifica el identificador y texto a
+utilizar&lt;/p&gt;
+
+&lt;p&gt;tambien podria ser&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;** identificador-personalizado &amp;lt;&amp;gt; contenido del encabezado
+
+..figure &amp;gt; identificador-personalizado &amp;lt;&amp;gt; argumento
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;porg&#34;&gt;porg&lt;/h4&gt;
+
+&lt;p&gt;los ficheros &lt;code&gt;po&lt;/code&gt; producidos con &lt;code&gt;gettext&lt;/code&gt; se utilizan para traducir documentos
+de un lenguaje a otro, si gettext no muere en el intento&amp;hellip; con morg podemos
+hacer algo mucho mas sencillo para traducir documentos&lt;/p&gt;
+
+&lt;p&gt;imaginemos que tenomos este texto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* nivel uno
+
+  1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+
+     a) Lorem ipsum dolor sit amet.
+
+        - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+  2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;a si se ve como documento &lt;code&gt;porg&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#* nivel uno
+* nivel uno
+
+#   1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+#      eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+#      enim ad minim veniam.
+  1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+
+#      a) Lorem ipsum dolor sit amet.
+     a) Lorem ipsum dolor sit amet.
+
+#         - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+#   2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+#      eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+#      enim ad minim veniam.
+  2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+     enim ad minim veniam.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se toma el contenido fuente, se duplica cada seccion, se coloca justo debajo
+del original y se marca con algun signo especial el contenido original.&lt;/p&gt;
+
+&lt;p&gt;por que esto es sencillo? estas trabajando con el contenido original, se puede
+contrastar la traduccion directamente y no requiere compilaciones y trucos
+complejos&amp;hellip; para generar la traduccion, necesario es solo borrar las lineas con
+la marca especial!&lt;/p&gt;
+
+&lt;p&gt;Si agregamos un programa que haga todo automagicamente, con una pretraduccion,
+el tabajo sera pan comido!&lt;/p&gt;
+
+&lt;p&gt;incluso y fantaceando, podria haber ficheros rorg, (rss org), las fantacias no
+custan nada.&lt;/p&gt;
+
+&lt;h3 id=&#34;biskana&#34;&gt;biskana&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;biskana&lt;/code&gt; es lo que hay hasta el momento, una primitiva libreria escrita en
+lenguaje de programacion go para exportar el formato &lt;em&gt;morg&lt;/em&gt; a html, funcionan
+muchos de los comandos &lt;code&gt;@&lt;/code&gt; de forma limitada, aunque el sistema
+&lt;code&gt;@x(identificador&amp;lt;&amp;gt;contenido)&lt;/code&gt; extrae los datos perfectamente, ademas si un
+comando no cuenta con llave de cierre, el resaltado abarca hasta el final del
+parrafo y se cierra automaticamente&lt;/p&gt;
+
+&lt;p&gt;tambien el sistema para extraer el contenido de un bloque de comando funciona de
+manera correcta, claro esta, solo para los casos definidos&lt;/p&gt;
+
+&lt;p&gt;para los bloques de codigo funte se brinda la posibilidad de resaltado de
+sintaxis agregando un enlace de java-script a la configuracion.&lt;/p&gt;
+
+&lt;p&gt;Existe un wrapper en go de pygments con el cual podemos resaltar la sintaxis
+mediente un simple css, obviamente requiere tener instalado pygments y esperar
+un tiempo consideramlemente mayor para generar el resultado&lt;/p&gt;
+
+&lt;p&gt;aun no hay codigo para manejar las tablas de datos (proximamente)&lt;/p&gt;
+
+&lt;h4 id=&#34;como-usar&#34;&gt;Como usar&lt;/h4&gt;
+
+&lt;p&gt;Primero tenemos que tener instalado &lt;em&gt;go&lt;/em&gt; en el sistema, esta el la guia de
+&lt;a href=&#34;https://golang.org/doc/install&#34;&gt;instalacion oficial&lt;/a&gt; (la verdad no recuerdo
+como lo instale)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;biskana&lt;/code&gt; es solo un componete del proyecto, de momento el unico escrito, para
+su uso se envolvio en el comando &lt;code&gt;morg&lt;/code&gt; (&lt;a href=&#34;https://github.com/nasciiboy/morg&#34;&gt;aqui&lt;/a&gt; el codigo en todo su explendor), el cual hara muchas mas cosas, pero de
+momento solo se encarga de exportar a html los fichereso que le indiquemos.&lt;/p&gt;
+
+&lt;p&gt;Asi optenemos el codigo y generamos el ejecutable&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;go get -v github.com/nasciiboy/morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(desconosco la funcion de &lt;code&gt;-v&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;si ya tenemos intalado morg, para actualizar&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;go get -u -v github.com/nasciiboy/morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para utilizar el comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;morg fichero-uno.mog fichero-dos.morg ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el resultado es un fichero en el directorio actual de tabajo con terminacion &lt;code&gt;.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;para activar el resaltado con &lt;a href=&#34;https://highlightjs.org/&#34;&gt;highlight.js&lt;/a&gt;
+(java-script) tienes que colocar la siguiente opcion de configuracion dentro del
+fichero morg&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-morg&#34;&gt;..options &amp;gt; highlight
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;coloque un estilo por defecto en el codigo fuente, para modificarlo lo mas
+sencillo es hacerlo en el fichero resultado a mano, ademas para esta opcion
+debes tener la capeta &lt;code&gt;highlight&lt;/code&gt; en la misma dereccion del resultado&lt;/p&gt;
+
+&lt;p&gt;para optener tu carpeta &lt;code&gt;highlight&lt;/code&gt; ve a &lt;a href=&#34;https://highlightjs.org/download/&#34;&gt;esta&lt;/a&gt; pagina y especifica que lenguages
+deseas, descarga, descomprime y coloca en la misma carpeta del resaltado&lt;/p&gt;
+
+&lt;p&gt;Si por el contrario si (tienes instalado y) quieres marcar de resaltado de
+codigo utilizando &lt;code&gt;pygments&lt;/code&gt; debes utilazar esta opcion de configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-morg&#34;&gt;..options &amp;gt; pygments
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego especificar mediante una hoja de estilos css el estilo de
+resaltado. Puedes opteren estilos css para
+pygments &lt;a href=&#34;https://github.com/jwarby/jekyll-pygments-themes/&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;la hoja de estilo se especifica asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-morg&#34;&gt;..style &amp;gt; direccion/a/mi/style.css
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;no asuro que el programa te explote en la cara, de momento ha servido para dos
+pequeñas pruebas&lt;/p&gt;
+
+&lt;h4 id=&#34;porque-go&#34;&gt;porque Go&lt;/h4&gt;
+
+&lt;p&gt;por nada en especial&amp;hellip; cuando empece a escribir el codigo hace cosa de un año
+en C mis habilidades no daban para mucho, no es que ahora sea un jodido guru,
+pero algo he aprendido, he? por que C? por velocidad y eficiencia, si vas a
+hacer un proyecto tan ambicioso mal seria que fuese lagueado. Aun si el proyecto
+se escribiese en un lenguaje interpretado en algun momento deberia portarse a C
+o similar.&lt;/p&gt;
+
+&lt;p&gt;podria haber elegido C++&amp;hellip; pero me cruce con Go, no es un lenguage que proboque
+facinacion en mi, pero solo es 3 veces mas lento que C y tiene ideas muy
+interesantes. Por añadir creo que su tipado fuerte es un fastidio, al igual que
+el estilo de codificacion, llaves forsosas para instrucciones simples y el no
+contar con punteros de verdad (al menos con un nivel de indireccion) obliga a
+hacer apaños impresionantes. Desde luego, como recien llegado a go y tras una
+ligera prueba del lenguaje este comentario puede ser una cagada, disculpad mi
+ignorancia.&lt;/p&gt;
+
+&lt;h4 id=&#34;el-codigo&#34;&gt;el codigo&lt;/h4&gt;
+
+&lt;p&gt;sin importar el lenguaje, el codigo debe ser elegante o almenos claro y
+sencillo, evintando dependencias inecesarias que dificulten su adaptacion a
+otros lenguajes o peor aun el aprendisaje de otros programadores. En resumen se
+buscara siempre ser una implementacion de referencia con toques didacticos en la
+que cualquier indicio de aparicion de cruft sera señal de refleccion y futura
+refactorizacion e incluso reescritura&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;biskana&lt;/code&gt; no es el programa definitivo, lo pienso como un componente &lt;em&gt;el
+traductor&lt;/em&gt; a otros lenguajes o dicho de otra manera el &lt;em&gt;renderizador&lt;/em&gt; de texto a
+texto, cuando el codigo alcance cierto grado de madures sera dividido en otro
+companente &lt;code&gt;katana&lt;/code&gt; este sera el parser del formato que genere una estructura o
+formato de aun mas facil traduccion, clasificando cada seccion del documento.&lt;/p&gt;
+
+&lt;p&gt;Luego con esto ya sea &lt;code&gt;biscana&lt;/code&gt; para traducir o &lt;code&gt;*ana&lt;/code&gt; (&lt;code&gt;*&lt;/code&gt;? algun buen nombre
+que termine en ana? se me ocurre &lt;code&gt;nirvana&lt;/code&gt; y &lt;code&gt;hana&lt;/code&gt;) para desplegar el documento
+en una terminal o aplicacion grafica&lt;/p&gt;
+
+&lt;p&gt;momentaneamente supongo que la mejor manera en que de deben
+clasificarse/generarse las seccionos es como entes independientes sin estar
+influenciados por el nivel de anidamento por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* seccion 1
+** seccion 2
+*** seccion 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;no se traduce como&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div&amp;gt;&amp;lt;h1&amp;gt;seccion 1&amp;lt;/h1&amp;gt;
+  &amp;lt;div&amp;gt;&amp;lt;h2&amp;gt;seccion 2&amp;lt;/h3&amp;gt;
+    &amp;lt;div&amp;gt;&amp;lt;h3&amp;gt;seccion 3&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en su lugar se traduce como&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h1&amp;gt;seccion 1&amp;lt;/h1&amp;gt;
+&amp;lt;div class=&amp;quot;h1&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;h2&amp;gt;seccion 2&amp;lt;/h2&amp;gt;
+&amp;lt;div class=&amp;quot;h2&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;h3&amp;gt;seccion 3&amp;lt;/h3&amp;gt;
+&amp;lt;div class=&amp;quot;h3&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;cada seccion es &amp;ldquo;relativamente&amp;rdquo; independiente de otra, pues contiene toda la
+informacion para visualirarse por si misma, unicamente su contenido tiene un
+nivel de anidamiento&lt;/p&gt;
+
+&lt;p&gt;aunque de momento no es asi, lo mismo planeo para las listas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- elemento 1
+- elemento 2
+
+  + subelemento 2.1
+
+- elemento 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;no se traduce como&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;elemento 1&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;elemento 2&amp;lt;/li&amp;gt;
+    &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;subelemento 2.1&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;li&amp;gt;elemento 3&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si no como&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p class=&amp;quot;li-1&amp;quot; &amp;gt;elemento 1&amp;lt;/p&amp;gt;
+&amp;lt;p class=&amp;quot;li-1&amp;quot; &amp;gt;elemento 2&amp;lt;/p&amp;gt;
+  &amp;lt;p class=&amp;quot;li-2&amp;quot; &amp;gt;subelemento 2.1&amp;lt;/p&amp;gt;
+&amp;lt;p class=&amp;quot;li-1&amp;quot; &amp;gt;elemento 3&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;este enfoque requiere de un monton de nuevas etiquetas, en el caso de exportar a
+html, por el otro lado en un programa, esto no tiene ningun inconveniente,
+incluso sera mas sencillo la visualizacion&lt;/p&gt;
+
+&lt;p&gt;varios modulos, necesario sera implementar, uno, encargado de la busqueda (local
+y web) del un documento, &lt;code&gt;katana&lt;/code&gt; para parsear el documento, &lt;code&gt;biscana&lt;/code&gt; como
+exportador, &lt;code&gt;*ana&lt;/code&gt; como visualizador/navegador del documento y &lt;code&gt;morg&lt;/code&gt; (nombre
+tentativo) como cohesianador de todo&lt;/p&gt;
+
+&lt;p&gt;son solo ideas, que tal?&lt;/p&gt;
+
+&lt;p&gt;por cierto &lt;code&gt;biskana&lt;/code&gt; hace uso de un motor de expresiones regulares elaborado
+desde cero llamado &lt;code&gt;regexp3&lt;/code&gt; que por mera casualidad programe, este motor esta
+en desarrollo y en algun momento sera substituido por &lt;code&gt;regexp4&lt;/code&gt;. Ambos utilizan
+la misma sintaxis y aunque esta limitado solo a exrpesiones regulares, capturas
+y pocas cosas mas. Lo utilizo por estas razones&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;funciona!&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;no ha aparecido alguna exprecion que revase su limitada capacidad&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;es sencillo y facil de modificar (por mi, almenos), ademas cuando surge un
+error se donde buscar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;puede port-arse con relativa facilidad a cualquier lenguaje (creo), el
+desarrollo original fue hecho en C. Cuando digo en C me refiero a solo C, sin
+recurrir a ninguna libreria, ni siquiera la libreria estandar. Su port a go
+no fue demasiado traumatico, encima se vio veneficiado por la orientacion a
+objetos&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;primer-ejemplo&#34;&gt;primer ejemplo&lt;/h4&gt;
+
+&lt;p&gt;seria grosero no monstrar ni un poco, asi que aqui estan dos ejemplos con el
+&lt;code&gt;biskana&lt;/code&gt; (&lt;code&gt;morg&lt;/code&gt;) y el formato actual (exportacion a html)&lt;/p&gt;
+
+&lt;p&gt;El primero es un libro (aun en proceso de escritura) sobre el motor de
+expresiones regulares Recursive Regexp
+Raptor &lt;a href=&#34;https://github.com/nasciiboy/raptor-book&#34;&gt;aqui&lt;/a&gt; el repo, el resultado
+es
+&lt;a href=&#34;https://github.com/nasciiboy/raptor-book/blob/master/raptor-book.html&#34;&gt;este&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para ver el resultado en todo su esplendor, clona o baja una copia del repo y
+visualiza en el navegador el html.&lt;/p&gt;
+
+&lt;p&gt;El segundo, es una colaboracion que estaba haciendo para traducir un manual de
+emacs. Por motivos varios no he terminado y necesita una serio correccion.&lt;/p&gt;
+
+&lt;p&gt;Por que poner algo tan vago? en el se muestra el concepto de utilizar morg para
+traducir manuales de forma
+sencilla. &lt;a href=&#34;https://github.com/nasciiboy/emacs-lisp-intro-es&#34;&gt;aqui&lt;/a&gt; el repo, el
+resultado (no muy bueno por no actualizar el formato)
+es
+&lt;a href=&#34;https://github.com/nasciiboy/emacs-lisp-intro-es/blob/master/emacs-lisp-intro_es.html&#34;&gt;este&lt;/a&gt; y
+el fichero protagonista, el
+&lt;em&gt;.porg&lt;/em&gt;
+&lt;a href=&#34;https://github.com/nasciiboy/emacs-lisp-intro-es/blob/master/emacs-lisp-intro_es.porg&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;como se hace el &lt;em&gt;po&lt;/em&gt;-org? primero se pasa el material a traducir a &lt;em&gt;morg&lt;/em&gt;, luego
+se duplica cada seccion, poniendo el duplicado justo debajo y comentando el
+original con alguna marca especial, para el caso utilice &lt;code&gt;#&lt;/code&gt; y se va
+traducciondo cada seccion.&lt;/p&gt;
+
+&lt;p&gt;El proceso de exportar la traduccion es igual de sencillo, copias el &lt;em&gt;porg&lt;/em&gt; y le
+cambias de nombre, luego le aplicas una regexp de substitucion con el programa
+de preferencia que elimine todas las lineas que inicien con la marca especiol y
+voala, el documento traducido!&lt;/p&gt;
+
+&lt;h3 id=&#34;zen&#34;&gt;zen&lt;/h3&gt;
+
+&lt;p&gt;Extenso esto es ya, momento y pausa, el codigo no es elegante, apenas soy un
+programador al inicio de su travesia y recien llegado a golang. Antes de empezar
+a programar, modificar o agregar funciones debe establece una especificacion
+para el formato y de ser posible un consenso global.&lt;/p&gt;
+
+&lt;p&gt;Mas tarde, como calentamiento hacer un exportador robusto y luego sus
+componentes. De camino integrarlo en algunos cms (como hugo), Darle soporte en
+nuestros editores faboritos, al tiempo de otorgarle facilidas de autocompletado y
+resaltado.&lt;/p&gt;
+
+&lt;p&gt;Luego establecer una estructura capaz de mantenerse por cuenta propia y/o por
+la coperacion desinteresado de empresas y gobiernos, absorver todo el contenido
+que sea posible y dominar la galaxia&lt;/p&gt;
+
+&lt;h2 id=&#34;como-puedo-ayudar&#34;&gt;como puedo ayudar&lt;/h2&gt;
+
+&lt;p&gt;Pagameeeee un salario, enserio! (que medio te es ma sencillo?, contactame por
+correo)&lt;/p&gt;
+
+&lt;p&gt;Contrata a un grupo de programadores motivados, que compartan este sueño, y
+pagame un salario!&lt;/p&gt;
+
+&lt;p&gt;Programa, traduce, discute y comenta&lt;/p&gt;
+
+&lt;p&gt;Estas en una organizacion afin a este ideal, acupas un cargo de gobierno?
+comenta y difunde&lt;/p&gt;
+
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;definir el formato&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;crear exportador robusto. De inicio a html, luego a otros formatos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;programar el resto de componentes&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;estructura operativa, para poner en marcha el/los repositorios que albergaran
+blogs, libros, wikipedia y lo que se deje, para formar un repositorio global
+de conocimiento libre, permanente e imparable&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;difusion, expansion y dominacion&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Quiero terminar, aclarando lo siguiente: difundo estas ideas y codigo bajo la
+licencia GNU AGPL v3, si tienes las habilidades para hacer lo planteado
+programando todo por cuenta propia, te pido que lo hagas bajo esta licencia.&lt;/p&gt;
+
+&lt;p&gt;Incluso sin financiacion, programare lo que pueda, cuando pueda, simplemente por
+ser un reto emocionante, empesando por incorporar el formato a hugo (en unos
+meses o mas), y asi escribir este blog a gusto.&lt;/p&gt;
+
+&lt;p&gt;Happy Hacking!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

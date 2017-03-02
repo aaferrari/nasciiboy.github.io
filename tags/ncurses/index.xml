@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ncurses on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/tags/ncurses/index.xml</link>
+    <description>Recent content in Ncurses on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL 3.0</copyright>
+    <atom:link href="http://nasciiboy.github.io/tags/ncurses/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ncurses</title>
+      <link>http://nasciiboy.github.io/prog/ncurses/</link>
+      <pubDate>Mon, 19 Dec 2016 21:45:05 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/ncurses/</guid>
+      <description>
+
+&lt;h2 id=&#34;que-es-ncurses&#34;&gt;Que es Ncurses&lt;/h2&gt;
+
+&lt;p&gt;Es una libreria (parte del proyecto GNU) que nos permite crear &lt;strong&gt;TUIs&lt;/strong&gt; (Text
+User Interface) escrita en lenguaje de programacion &lt;strong&gt;C&lt;/strong&gt; con &lt;em&gt;envoltorios&lt;/em&gt; para
+algunos otros lenguajes. Se utiliza principalmente en el sistema GNU/linux y en
+los derivados de BSD y probablemente tambien corra en el sistema de las ventanas
+mediante minGW (Minimalist GNU for Windows).&lt;/p&gt;
+
+&lt;p&gt;Proporciona funciones para «dibujar» caracteres en la pantalla con hasta 256
+colores disponibles (si la terminal lo permite). Despues de conocer &lt;code&gt;mvwprintw&lt;/code&gt;
+utilizar &lt;code&gt;printf&lt;/code&gt; es igual a sufrir alguna incapacidad. Tambien nos da la
+posibilidad de modificar varios atributos de la tipografia como pueden ser
+&lt;strong&gt;negrita&lt;/strong&gt;, &lt;em&gt;italica&lt;/em&gt; o &lt;u&gt;subrayado&lt;/u&gt;.&lt;/p&gt;
+
+&lt;p&gt;finalmente nos ofrece la posibilidad de tener acceso completo al teclado y
+raton.&lt;/p&gt;
+
+&lt;h2 id=&#34;por-que-programar-tuis&#34;&gt;Por que programar TUIs&lt;/h2&gt;
+
+&lt;p&gt;Bueno, es una foma muy sencilla de crear una interfaz «visual» sin morir en el
+intento y como fiel creyente de la iglesia de Emacs creo que &lt;em&gt;el texto es la
+unica interfaz verdadera&lt;/em&gt;. Si planeas aprender programacion de videojuegos
+tambien encontraras que es mas sencillo interactuar con caracteres en lugar de
+con pixeles (aunque en el fondo sean lo mismo)&lt;/p&gt;
+
+&lt;h2 id=&#34;como-aprender-a-programar-con-ncurses&#34;&gt;Como aprender a programar con Ncurses?&lt;/h2&gt;
+
+&lt;p&gt;complicado lo tienes&amp;hellip; solo existe un mini-manual (NCURSES Programming HOWTO) y
+un libro (Programmer&amp;rsquo;s Guide to NCurses) (ambos en ingles) para aprender lo
+basico del tema.&lt;/p&gt;
+
+&lt;p&gt;Tampoco leer codigo ayuda mucho, sobre todo el codigo fuente de la propia
+libreria (es muy raro).&lt;/p&gt;
+
+&lt;p&gt;Hace ya un tiempo dedique algunas tardes a traducir el minimanual, puedes encontrar
+lo fundamental en este &lt;a href=&#34;../ncurses-programming-howto.zip&#34;&gt;zip&lt;/a&gt; y el resto en un
+repositorio en &lt;a href=&#34;https://github.com/nasciiboy/NCURSES-Programming-HOWTO&#34;&gt;github&lt;/a&gt;.
+No ha sido revisado, y la traduccion  se realizo con el &amp;ldquo;traductor de
+internet&amp;rdquo;. En el repositorio encontraras los fuentes en formato org-mode de
+emacs, en algun momento (o años) le dare alguna revicion y quizo se
+actualice. Si te es de &lt;code&gt;interes &amp;amp;&amp;amp; utilidad &amp;amp;&amp;amp; y-lo-mejoras&lt;/code&gt; no dudes en
+enviarme el resultado&lt;/p&gt;
+
+&lt;p&gt;quiza en un post/tutorial futuro ponga algun codigo interesante del tipo &amp;ldquo;como
+programar un tetris&amp;rdquo; o algo asi&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;ps: tengo una traduccion (ilegal) de el libro casi terminada&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;ps 2: actualmente no me gusta ncurses, principalmente por que no entiendo su
+codigo fuente, y porque es un &amp;ldquo;todo en uno&amp;rdquo;, preferiria que la interaccion con
+el teclado, el mouse e incluso joystick fuesen librerias independientes&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
