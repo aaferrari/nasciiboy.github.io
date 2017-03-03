@@ -45,8 +45,8 @@
 @font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
 @font-face { font-family: title;          src: local('cursive'      );                     }
 @font-face { font-family: heatline;       src: local('cursive'      );                     }
-@font-face { font-family: codetext;       src: url(/font/DejaVuSansMono.ttf  ); }
-@font-face { font-family: codeblock;      src: url(/font/DejaVuSansMono.ttf  ); }
+@font-face { font-family: codetext;       src: local('monospace'    );                     }
+@font-face { font-family: codeblock;      src: local('monospace'    );                     }
 @font-face { font-family: description_dt; src: local('cursive'      );                     }
 @font-face { font-family: description_dd; src: local('sans'         );                     }
 
@@ -215,15 +215,15 @@ creador</p>
 
 <p>Como toda creacion humana la informatica ha respondido a las necesidades de los
 presentes deacuerdo a los conocimientos y habilidades disponibles. Acaso al
-inicio alguien cosidero la necesidad de codificar informacion mas alla del
+inicio alguien considero la necesidad de codificar informacion mas alla del
 conjunto de caracteres USAmericano? claro que no, los humanos no somos tan
 inteligentes, y avansamos a base de apaños, resolviendo unas pocas dificultades
 de vez en vez, lamentablemente solo mirando en retrospectiva esto se torna
 evidente, y al hacerlo quedamos obligados a cuestionar nuestra realidad.</p>
 
-<p>En esta ocacion veamos en perspectiva hacia al pasado al mas
-importante recurso de la humanidad <q>la informacion</q> y los medios a
-nuestro alcance para crearla e interactuar con ella.</p>
+<p>En esta ocacion veamos en perspectiva al mas importante recurso de la humanidad
+<q>la informacion</q> y los medios a nuestro alcance para crearla e interactuar
+con ella.</p>
 
 <blockquote>
 <em>seccion pendiente</em> llena de palabras con muchas letras, donde se
@@ -234,7 +234,7 @@ describe el trayecto de los sistemas para documentar informacion
 esta chulo, aunque poco practico e ineficiente es, si se compara con otos
 formatos de documentacion</em>, por ello surgieron las paginas man, los
 derivados de TeX, XML, la web y sobre ella la wikipedia. Sin embargo seguimos
-forjando informacion, pensando imprimir en papel, con la consecuencia directa de
+forjando informacion, pensando en imprimir en papel, con la consecuencia directa de
 que todos los formatos de documentacion surgidos despues del transistor son un
 dolor en el culo, y es momento de forjar un sistema a la altura, apenas mas
 complicado que ascii, e igual de valido que cualquier hijo vastardo de
@@ -269,8 +269,8 @@ debido</p></li>
 <li><p>Esta lleno de marcas y cosas misticas (pensadas para imprimir libros)</p></li>
 
 <li><p>Una ves finalizado el documento hay que &ldquo;compilar&rdquo; para exportar a otros
-formato mas manejables, es decir pasar del fuente <span class="file" >.texi</span> a info, html, pdf,
-&hellip; y si no campila te comes los mocos!</p></li>
+formato mas manejables, es decir, pasar del fuente <span class="file" >.texi</span> a info, html, pdf,
+&hellip; y si no compila te comes los mocos!</p></li>
 </ul>
 
 <h3 id="practico">Practico</h3>
@@ -286,7 +286,7 @@ esta a tu alcance <em>es</em> infame y si has de recorrerlo por paginas es <em>p
 
 <p>Si aspiras a ser un <em>heroe del teclado</em> y por &ldquo;curiosidad&rdquo; se te ha ocurrido
 mirar el codigo html de cualquer pagina web, habras llegado a la conclucion de
-que el mejor lugar para guardar un mensaje que nadie ha de ver jamas esta dentro
+que el mejor lugar para guardar un mensaje que nadie ha de ver jamas, esta dentro
 de una etiqueta html anidada sobre cientos de etiquetas html en una linea unica
 sin ningun salto de linea.</p>
 
@@ -312,7 +312,7 @@ formato, de eso ya seguiran encargandose los formatos existentes</p>
 <h2 id="propuesta">Propuesta</h2>
 
 <p>html es tan feo que la wikipedia utiliza mediawiki (uno de los tantos lenguajes
-de marcas ligeros que existen). Por su parte sitios como github directamente
+de marcas ligeros que existen). Por su parte, sitios como github directamente
 pasan de html, fomentando el uso de markdown, org, ReStructured Text, texto
 plano, etc. Algo similar ocurre con plataformas de gestion de contenido y
 herramientas para la creacion de blogs como en el caso de wordPress</p>
@@ -320,10 +320,12 @@ herramientas para la creacion de blogs como en el caso de wordPress</p>
 <p>Por alguna razon desconocida los sistemas de marcado ligero son comodos, sin
 embargo, si algun error se les ha de atribuir (que probablemente sea la razon de
 que existan tantos) es, <strong>no valerse por si mismos</strong>, al mas minimo
-inconveniente se recurre a trozos de codigo html o latex. El formato que creemos
-ha de ser tan agradable a la vista que incluso no requiera ninguna herramienta
-para su uso, los mas intrepidos haran alarde de valerse solo con <code>less</code>, <code>more</code>,
-<code>cat</code> o mariposas.</p>
+inconveniente se recurre a trozos de codigo html o latex, resultando en
+horrendos engendros <q><em>facilitadores</em></q> de estos ultimos.</p>
+
+<p>El formato que creemos ha de ser tan agradable a la vista que incluso no
+requiera ninguna herramienta especial para su visualizacion y creacion, los mas
+intrepidos haran alarde de valerse solo con <code>less</code>, <code>more</code>, <code>cat</code> o mariposas.</p>
 
 <p>Ya, esta bonito, sencillo y autosuficiente! algo mas? que tal un <strong>Proyecto de
 <s>Complementacion</s> Documentacion Humana</strong>, por que no crear un super
@@ -360,7 +362,7 @@ separado en secciones elegibles y descargables a medida del disco duro</p>
    └── wikipedia
 </code></pre>
 
-<p>un error es, permitir que la informacion desaparesca, mas aun dejarla en custodia
+<p>un error es, permitir que la informacion desaparesca, mas aun, dejarla en custodia
 de entes que solo permiten el acceso a unos cuantos elegidos.</p>
 
 <p>A un lado el copyrigth, los bytes no tienen dueños!</p>
@@ -373,13 +375,13 @@ de entes que solo permiten el acceso a unos cuantos elegidos.</p>
 
 <p>Un buen sistema de documentacion priorisa la estructura sobre el aspecto.</p>
 
-<p>La estructura minima, consiste en separar el documento en secciones
-(encabezados) gerarquizados</p>
+<p>La estructura minima, consiste en separar el documento en secciones,
+encabezados gerarquizados</p>
 
-<p><em>una marca un nivel</em>: un titular inicia con el signo <code>*</code> seguido por (un)
+<p><em>una marca un nivel</em>: un encabezado inicia con el signo <code>*</code> seguido por (un)
 espacio(s) y el nombre de la seccion.</p>
 
-<p>El numero de <code>*</code> indica el nivel del titular, su equivalente  en html seria</p>
+<p>El numero de <code>*</code> indica el nivel del encabezado, su equivalente  en html seria</p>
 
 <ul>
 <li><code>*</code> == <code>h1</code></li>
@@ -436,7 +438,7 @@ a. lista ordenada alfabeticamente
 
 a) lista ordenada alfabeticamente
 
-   contenido de elemento [a]
+   contenido de elemento a
 </code></pre>
 
 <p>El contenido de una lista debe indentarse segun la seccion de la que forme
@@ -591,18 +593,16 @@ marcas que los caracteres ascii algo estaremos haciendo mal.</p>
 <p><em>y los <code>({[&lt;&gt;]})</code>?</em> Mas opciones, mas diversion.</p>
 
 <p>Segun sea el contexto <code>{}</code> o <code>()</code> podrian requerir el <em>escape</em> de algun
-caracter. Para minimizar la inclucion de signo extraños, los delimitadores se
+caracter. Para minimizar la inclucion de signos extraños, los delimitadores se
 aplican deacuerdo a la necesidad y gusto del <q>creador</q>.</p>
 
-<p>cuando no haya <em>escapatoria</em>, para anular el es significado de un caracter se
+<p>cuando no haya <em>escapatoria</em>, para anular el significado de un caracter se
 antecede con <code>@</code> (nota: para que aparesca <code>@</code> hay que colocar <code>@@</code>)</p>
 
 <pre><code>@b(1@). punto uno)
 </code></pre>
 
-<p>al expandir la etiqueta <code>@)</code> se substituye por <code>)</code></p>
-
-<p>asi</p>
+<p>al expandir la etiqueta <code>@)</code> se substituye por <code>)</code>, asi:</p>
 
 <pre><code>&lt;b&gt;1). Punto uno&lt;/b&gt;
 </code></pre>
@@ -707,22 +707,25 @@ nombre, por ejemplo</p>
 </code></pre>
 
 <p>(nota: en el futuro se planea presindir del signo <code>#</code> haciendo primero una
-revicion a todas las referencias internas del documento)</p>
+busqueda en todas las referencias internas del documento. En caso de no encotrar
+coincidencias dejar la referencia tal cual)</p>
 
 <h5 id="como-funciona-esta-magia">como funciona esta magia?</h5>
 
 <p>todas los <q>comandos</q> tienen esta estructura <code>@x(custom&lt;&gt;contenido)</code>. Donde
-<code>custom</code> es un parametro personalizado y <code>contenido</code> el contenido del comando</p>
+<code>custom</code> es un parametro personalizado y opcional. Por su parte <code>contenido</code> es
+el contenido del comando</p>
 
-<p>Cuando un comando, por ejemplo los enlaces requieren un <code>custom</code> y este no se ha
+<p>Cuando un comando, por ejemplo, los enlaces requieren un <code>custom</code> y este no se ha
 especificado, se genera apartir del <code>contenido</code>, extrayendo las marcas expeciales
-dejando unicamente texto.</p>
+dejando unicamente el texto.</p>
 
-<p>Cuando el comando no requiere de un <code>custom</code> este se ignora o se utiliza como
-identificador o etiqueta segun sea el caso (nota: esto esta a consideracion)</p>
+<p>Cuando el comando no requiere de un <code>custom</code> y este es proporcionado, el comando
+o lo ignora o se utiliza como identificador o etiqueta segun sea el caso (nota:
+esto esta a consideracion y podria requerir sintaxis adicional)</p>
 
 <p>Cuando el comando esta dentro de otro comando, el comando interno <em>pasa</em> su
-contenido al comando exterior, por ejemplo:</p>
+contenido al comando externo, por ejemplo:</p>
 
 <pre><code>@l(#encabezado&lt;&gt;lo que sea con @e(enfasis con @b(algo&lt;&gt;bold)))
 </code></pre>
@@ -764,9 +767,10 @@ contenido al comando exterior, por ejemplo:</p>
 @T{radioTarget,descripcion}
 </code></pre>
 
-<p>un <em>radio target</em> convierte en enlace que referencia a la definicion del radio
-objetivo a culquier texto que coincida con =target= (insensible a minusculas
-o mayusculas) detro del documento, exeptuado bloques de codigo.</p>
+<p>un <em>radio target</em> conbierte en un enlace a cualquier palabra que encaja con la
+descripcion del radio opjetivo (ignorando entre mayusculas y minusculas), el
+objetivo de todos los enlaces, es la declaracion misma del objetivo. Los bloques
+de codigo quedan exentos de este comportamiento</p>
 
 <h4 id="notas">notas</h4>
 
@@ -811,18 +815,22 @@ o mayusculas) detro del documento, exeptuado bloques de codigo.</p>
     mas contenido
 </code></pre>
 
-<p>Bien? hay varios tipos de comandos y varias formas de optener su contenido. Por
+<p>Bien? Hay varios tipos de comandos y varias formas de optener su contenido. Por
 un lado tenemo comandos donde el cuerpo se define en una sola linea o mas
-indentadas, sin lineas de espacio</p>
+indentadas.</p>
 
 <pre><code>..comando &gt; contenido contenido contenido
   contenido
 </code></pre>
 
+<p>El contenido o <em>argumentos</em> abarcan hasta la aparicion de la primer linea en
+blanco o sin la indentacion apropiada.</p>
+
 <p>en este tipo de comandos se encuentran los de configuracion del documento</p>
 
 <pre><code>..title    &gt; titulo del documento
-  puede abarcar varias lineas (siempre con indentacion
+  puede abarcar varias lineas, siempre con indentacion y sin lineas
+  en blanco
 
   esto queda fuera del comando titulo
 
@@ -832,11 +840,10 @@ indentadas, sin lineas de espacio</p>
 ..options  &gt; highlight
 </code></pre>
 
-<p>El contenido o <em>argumentos</em> abarcan hasta la aparicion de la primer linea en
-blanco o sin la indentacion apropiada. Adicionalmente los comandos de
-configuracion se colocan al inicio del documento, uno en cada linea y sin
-espacios en blanco al inicio y no tiene cierre, es decir <code>&lt; title..</code> no
-significa nada para el comando <code>title</code>.</p>
+<p>Adicionalmente, los comandos de configuracion se colocan al inicio del documento
+y terminan cuando aparece el primer parrafo o encabezado. Los comandos de
+configuracion no deben tener espacios en blanco al inicio, ni etiqueta de
+cierre, es decir <code>&lt; title..</code> no significa nada para el comando <code>title</code>.</p>
 
 <p>tambien tenemos comandos que solo tiene cuerpo</p>
 
@@ -851,7 +858,7 @@ significa nada para el comando <code>title</code>.</p>
   esta es bold
 
 ..center &gt;
-  y esto va centrada
+  y esta va centrada
 &lt; center..
 
 ..quote &gt;
@@ -885,12 +892,12 @@ de codigo</p>
 </code></pre>
 
 <p>aqui el contenido despues del (y en la misma linea que) <code>&gt;</code> especifica el
-lenguaje, por su parte el cuerpo del bloque es toda linea que cumpla con la
+lenguaje, por su parte, el cuerpo del bloque es toda linea que cumpla con la
 indentacion</p>
 
-<p>por ultimo teneos bloque con <em>argumentos</em> de multiples lineas y <em>cuerpo</em></p>
+<p>por ultimo, teneos bloque con <em>argumentos</em> de multiples lineas y <em>cuerpo</em></p>
 
-<pre><code>..figure &gt; esto el el titulo
+<pre><code>..figure &gt; esto el titulo
   de una mini seccion
 
   este es el contenido de la mini seccion
@@ -910,20 +917,32 @@ un comando tiene esta estructura</p>
 
 <p>tambien hay lugar para imagenes y video</p>
 
-<pre><code>..img parametros-especiales &gt; fuente
+<pre><code>..img parametros-especiales &gt; direccion/a/mi/imagen.jpg
 
   descripcion, contenido o lo que sea
 
-..video parametros-especiales &gt; fuente
+..video parametros-especiales &gt; direccion/a/mi/video.mkv
 
   descripcion, contenido o lo que sea
 </code></pre>
 
 <p>ya vimos que son los argumentos y el cuerpo, los <code>parametros</code> son modificadores
-para el bloque, como podrian ser interpretar algun tipo de enfasis dentro de un
-bloque de codigo, agregar un identificador o algun tipo de resaltado. Aunque los
-parametros pueden ser variados, deben ser pocos, uno, dos o tres por comando de
-bloque, remarcar que el formato no es para crear espectaculos visuales.</p>
+para el comando, como podrian ser:</p>
+
+<ul>
+<li><p>interpretar algun tipo de enfasis dentro de un
+bloque de codigo</p></li>
+
+<li><p>agregar un identificador</p></li>
+
+<li><p>establecer la orientacion visual de los elementos</p></li>
+
+<li><p>&hellip;</p></li>
+</ul>
+
+<p>Aunque los parametros pueden ser variados, deben ser pocos, uno, dos maxime tres
+por comando de bloque. Remarcar que el formato no es para crear espectaculos
+visuales.</p>
 
 <p>los bloques propuestos</p>
 
@@ -932,6 +951,7 @@ img
 video
 figure
 quote
+verse
 emph
 center
 bold
@@ -957,11 +977,13 @@ tags
 description
 id
 options
-lang o language
+lang/language
 </code></pre>
 
 <p>a resaltar <code>options</code>, que sirve para especificar como ha de comportarse el
-traductor/visualisador del formato</p>
+traductor/visualisador del formato, de este, al igual que los parametros aun no
+defino su estructura (las mas comunes son: <code>cosa</code>, <code>bandera:valor</code>,
+<code>bandera=valor</code>)</p>
 
 <h4 id="tablas">Tablas</h4>
 
@@ -996,9 +1018,8 @@ para esto pobria ofreserse algo como:</p>
   @ subencabezado
 </code></pre>
 
-<p>donde un una <code>@</code> al mismo nivel de indentacion del inicio del
-nombre del encabezado seguido por un espacio en blanco establece
-un subencabezado</p>
+<p>donde un una <code>@</code> al mismo nivel de indentacion del inicio del nombre del
+encabezado seguido por un espacio en blanco establece un subencabezado</p>
 
 <p>poder concatenar varias definiciones</p>
 
@@ -1017,7 +1038,7 @@ un subencabezado</p>
 <pre><code>@V{variable definida en alguna parte}
 </code></pre>
 
-<p>(la siguiente es una idea que abandone en pro de parametros en los bloque, pero igual
+<p>(la siguiente, es una idea que abandone en pro de parametros en los bloque, pero igual
 resulta interesante)</p>
 
 <p>En algunos bloques poder establecer la orientacion del contenido, o agregar una
@@ -1085,8 +1106,8 @@ derecha o (<code>&gt;:&lt;</code>) centrado.</p>
 |-----------------------------------------|
 </code></pre>
 
-<p>en org-mode, existe una forma para colacar el resultado de ejecutar un bloque de
-codigo fuente, es asi</p>
+<p>en org-mode, existe una forma para colocar el resultado de ejecutar un bloque de
+codigo fuente. Es asi:</p>
 
 <pre><code>#+BEGIN_SRC elisp
   (message &quot;hola lisp&quot;)
@@ -1119,9 +1140,10 @@ codigo fuente, es asi</p>
 &lt; src..
 </code></pre>
 
-<p>otra duda surge, los comandos <code>@</code> deberian poderse concateran de la forma
-<code>@abcd(cosas)</code> o ser de una orden unica? si pueden concatenarse cuales? y en que
-orden de ejecucion?</p>
+<p>otra duda surge y aunque antes se expuso como posibilidad es la forma de
+concatenar los comandos <code>@</code>. Deberian poderse concateran de la forma
+<code>@abcd(cosas)</code>? o solo deberia haber ordenes sencillas? si pueden concatenarse
+cuales? y en que orden de ejecucion?</p>
 
 <p>para terminar dos opciones para establecer un encabezado/bloque con un
 idetificador</p>
@@ -1131,14 +1153,29 @@ idetificador</p>
 ..figure &gt; @t(identificador-personalizado&lt;&gt;argumento)
 </code></pre>
 
-<p>si el encabezado inicio con un comando <code>t</code> especifica el identificador y texto a
+<p>si el encabezado, inicia con un comando <code>t</code> especifica el identificador y texto a
 utilizar</p>
 
-<p>tambien podria ser</p>
+<p>es decir, con</p>
 
-<pre><code>** identificador-personalizado &lt;&gt; contenido del encabezado
+<pre><code>** @t(identificador&lt;&gt;titulo del encabezado)
+</code></pre>
 
-..figure &gt; identificador-personalizado &lt;&gt; argumento
+<p>y</p>
+
+<pre><code>** @t(identificador) titulo del encabezado
+</code></pre>
+
+<p>generar</p>
+
+<pre><code>&lt;h2 id=&quot;identificador&quot; &gt;titulo del encabezado&lt;/h2&gt;
+</code></pre>
+
+<p>aunque considero mas congruente utilizar</p>
+
+<pre><code>** identificador &lt;&gt; contenido del encabezado
+
+..figure &gt; identificador &lt;&gt; argumento
 </code></pre>
 
 <h4 id="porg">porg</h4>
@@ -1147,7 +1184,7 @@ utilizar</p>
 de un lenguaje a otro, si gettext no muere en el intento&hellip; con morg podemos
 hacer algo mucho mas sencillo para traducir documentos</p>
 
-<p>imaginemos que tenomos este texto</p>
+<p>imaginemos que tenemos este texto</p>
 
 <pre><code>* nivel uno
 
@@ -1193,16 +1230,19 @@ hacer algo mucho mas sencillo para traducir documentos</p>
 <p>se toma el contenido fuente, se duplica cada seccion, se coloca justo debajo
 del original y se marca con algun signo especial el contenido original.</p>
 
-<p>por que esto es sencillo? estas trabajando con el contenido original, se puede
-contrastar la traduccion directamente y no requiere compilaciones y trucos
-complejos&hellip; para generar la traduccion, necesario es solo borrar las lineas con
-la marca especial!</p>
+<p><em>por que esto es sencillo?</em> estas trabajando con el contenido original, se puede
+contrastar la traduccion directamente y no requiere compilaciones ni trucos
+complejos.</p>
 
-<p>Si agregamos un programa que haga todo automagicamente, con una pretraduccion,
+<p>Para generar la traduccion, solo es necesario borrar las lineas con la marca
+especial, por que la estructura del documento siempre esta precente, es decir,
+siempre tenemos el producto final, solo eliminamos lo inecesario!</p>
+
+<p>Si agregamos un programa que haga todo automagicamente, con una pre-traduccion,
 el tabajo sera pan comido!</p>
 
-<p>incluso y fantaceando, podria haber ficheros rorg, (rss org), las fantacias no
-custan nada.</p>
+<p>incluso y fantaceando, podria haber ficheros para reemplazar rss (rorg) y que el
+navegador interprete directamente morg. Las fantacias no cuestan nada.</p>
 
 <h3 id="biskana">biskana</h3>
 
@@ -1227,13 +1267,15 @@ un tiempo consideramlemente mayor para generar el resultado</p>
 
 <h4 id="como-usar">Como usar</h4>
 
-<p>Primero tenemos que tener instalado <em>go</em> en el sistema, esta el la guia de
-<a href="https://golang.org/doc/install">instalacion oficial</a> (la verdad no recuerdo
-como lo instale)</p>
+<p>Primero tenemos que tener instalado <em>go</em> en el
+sistema, <a href="https://golang.org/doc/install">esta</a> es la guia de instalacion
+oficial (la verdad no recuerdo como lo instale)</p>
 
 <p><code>biskana</code> es solo un componete del proyecto, de momento el unico escrito, para
-su uso se envolvio en el comando <code>morg</code> (<a href="https://github.com/nasciiboy/morg">aqui</a> el codigo en todo su explendor), el cual hara muchas mas cosas, pero de
-momento solo se encarga de exportar a html los fichereso que le indiquemos.</p>
+su uso se envolvio en el comando <code>morg</code>
+(<a href="https://github.com/nasciiboy/morg">aqui</a> el codigo en todo su explendor), el
+cual hara muchas mas cosas, mientras tanto se limita a exportar a html los
+ficheros que le indiquemos.</p>
 
 <p>Asi optenemos el codigo y generamos el ejecutable</p>
 
@@ -1249,7 +1291,7 @@ momento solo se encarga de exportar a html los fichereso que le indiquemos.</p>
 
 <p>para utilizar el comando</p>
 
-<pre><code class="language-sh">morg fichero-uno.mog fichero-dos.morg ...
+<pre><code class="language-sh">morg fichero-uno.morg fichero-dos.morg ...
 </code></pre>
 
 <p>el resultado es un fichero en el directorio actual de tabajo con terminacion <code>.html</code></p>
@@ -1262,11 +1304,11 @@ fichero morg</p>
 </code></pre>
 
 <p>coloque un estilo por defecto en el codigo fuente, para modificarlo lo mas
-sencillo es hacerlo en el fichero resultado a mano, ademas para esta opcion
+sencillo es hacerlo en el fichero resultado (a mano), ademas para esta opcion
 debes tener la capeta <code>highlight</code> en la misma dereccion del resultado</p>
 
-<p>para optener tu carpeta <code>highlight</code> ve a <a href="https://highlightjs.org/download/">esta</a> pagina y especifica que lenguages
-deseas, descarga, descomprime y coloca en la misma carpeta del resaltado</p>
+<p>para optener tu carpeta <code>highlight</code> ve a <a href="https://highlightjs.org/download/">esta</a> pagina y especifica que lenguajes
+deseas, descarga, descomprime y coloca en la misma carpeta del resultado</p>
 
 <p>Si por el contrario si (tienes instalado y) quieres marcar de resaltado de
 codigo utilizando <code>pygments</code> debes utilazar esta opcion de configuracion</p>
@@ -1283,17 +1325,19 @@ pygments <a href="https://github.com/jwarby/jekyll-pygments-themes/">aqui</a></p
 <pre><code class="language-morg">..style &gt; direccion/a/mi/style.css
 </code></pre>
 
-<p>no asuro que el programa te explote en la cara, de momento ha servido para dos
-pequeñas pruebas</p>
+<p>no aseguro que el programa no te explote en la cara, de momento ha servido para
+dos pequeñas pruebas</p>
 
 <h4 id="porque-go">porque Go</h4>
 
 <p>por nada en especial&hellip; cuando empece a escribir el codigo hace cosa de un año
 en C mis habilidades no daban para mucho, no es que ahora sea un jodido guru,
-pero algo he aprendido, he? por que C? por velocidad y eficiencia, si vas a
-hacer un proyecto tan ambicioso mal seria que fuese lagueado. Aun si el proyecto
-se escribiese en un lenguaje interpretado en algun momento deberia portarse a C
-o similar.</p>
+pero algo he aprendido, he? pero por que C? por velocidad y eficiencia, si vas a
+hacer un proyecto tan ambicioso, mal seria que fuese lagueado y demorara aun
+unos pocos segundos en mostrar el contenido.</p>
+
+<p>Aun si el proyecto se escribiese en un lenguaje interpretado en algun momento
+deberia portarse a C o similar.</p>
 
 <p>podria haber elegido C++&hellip; pero me cruce con Go, no es un lenguage que proboque
 facinacion en mi, pero solo es 3 veces mas lento que C y tiene ideas muy
@@ -1303,6 +1347,10 @@ contar con punteros de verdad (al menos con un nivel de indireccion) obliga a
 hacer apaños impresionantes. Desde luego, como recien llegado a go y tras una
 ligera prueba del lenguaje este comentario puede ser una cagada, disculpad mi
 ignorancia.</p>
+
+<p>Por cierto, pygments, en un tremendo consumidor de tiempo, desconosco si es por
+estar escrito en python, o por la naturaleza compleja de su labor. Habra que
+reescribir una version mas veloz.</p>
 
 <h4 id="el-codigo">el codigo</h4>
 
@@ -1314,17 +1362,14 @@ que cualquier indicio de aparicion de cruft sera señal de refleccion y futura
 refactorizacion e incluso reescritura</p>
 
 <p><code>biskana</code> no es el programa definitivo, lo pienso como un componente <em>el
-traductor</em> a otros lenguajes o dicho de otra manera el <em>renderizador</em> de texto a
-texto, cuando el codigo alcance cierto grado de madures sera dividido en otro
-companente <code>katana</code> este sera el parser del formato que genere una estructura o
-formato de aun mas facil traduccion, clasificando cada seccion del documento.</p>
+traductor</em> a otros lenguajes o dicho de otra manera el <em>renderizador</em> (que hace
+realidad nuesras fantacias) de texto a texto, cuando el codigo alcance cierto
+grado de madures sera dividido en otro companente <code>katana</code> este sera el parser
+del formato que genere una estructura o formato de aun mas facil traduccion,
+clasificando cada seccion del documento.</p>
 
-<p>Luego con esto ya sea <code>biscana</code> para traducir o <code>*ana</code> (<code>*</code>? algun buen nombre
-que termine en ana? se me ocurre <code>nirvana</code> y <code>hana</code>) para desplegar el documento
-en una terminal o aplicacion grafica</p>
-
-<p>momentaneamente supongo que la mejor manera en que de deben
-clasificarse/generarse las seccionos es como entes independientes sin estar
+<p>Momentaneamente supongo que la mejor manera en que de deben
+clasificarse/generarse las secciones es como entes independientes sin estar
 influenciados por el nivel de anidamento por ejemplo</p>
 
 <pre><code>* seccion 1
@@ -1387,7 +1432,7 @@ nivel de anidamiento</p>
 
 <pre><code>&lt;p class=&quot;li-1&quot; &gt;elemento 1&lt;/p&gt;
 &lt;p class=&quot;li-1&quot; &gt;elemento 2&lt;/p&gt;
-  &lt;p class=&quot;li-2&quot; &gt;subelemento 2.1&lt;/p&gt;
+&lt;p class=&quot;li-2&quot; &gt;subelemento 2.1&lt;/p&gt;
 &lt;p class=&quot;li-1&quot; &gt;elemento 3&lt;/p&gt;
 </code></pre>
 
@@ -1395,9 +1440,10 @@ nivel de anidamiento</p>
 html, por el otro lado en un programa, esto no tiene ningun inconveniente,
 incluso sera mas sencillo la visualizacion</p>
 
-<p>varios modulos, necesario sera implementar, uno, encargado de la busqueda (local
-y web) del un documento, <code>katana</code> para parsear el documento, <code>biscana</code> como
-exportador, <code>*ana</code> como visualizador/navegador del documento y <code>morg</code> (nombre
+<p>Varios modulos, necesario sera implementar, uno, encargado de la busqueda (local
+y web) del un documento, <code>katana</code> para parsear el documento, <code>biskana</code> como
+exportador, <code>*ana</code> (<code>*</code>? algun buen nombre que termine en ana? se me ocurre
+<code>nirvana</code> y <code>hana</code>) como visualizador/navegador del documento y <code>morg</code> (nombre
 tentativo) como cohesianador de todo</p>
 
 <p>son solo ideas, que tal?</p>
@@ -1440,7 +1486,7 @@ visualiza en el navegador el html.</p>
 <p>El segundo, es una colaboracion que estaba haciendo para traducir un manual de
 emacs. Por motivos varios no he terminado y necesita una serio correccion.</p>
 
-<p>Por que poner algo tan vago? en el se muestra el concepto de utilizar morg para
+<p><em>Por que poner algo tan vago?</em> en el se muestra el concepto de utilizar morg para
 traducir manuales de forma
 sencilla. <a href="https://github.com/nasciiboy/emacs-lisp-intro-es">aqui</a> el repo, el
 resultado (no muy bueno por no actualizar el formato)
@@ -1507,11 +1553,12 @@ de conocimiento libre, permanente e imparable</p></li>
 
 <p>Quiero terminar, aclarando lo siguiente: difundo estas ideas y codigo bajo la
 licencia GNU AGPL v3, si tienes las habilidades para hacer lo planteado
-programando todo por cuenta propia, te pido que lo hagas bajo esta licencia.</p>
+programando todo por cuenta propia, te pido que lo hagas (aunque no estas
+obligado) bajo esta licencia.</p>
 
 <p>Incluso sin financiacion, programare lo que pueda, cuando pueda, simplemente por
 ser un reto emocionante, empesando por incorporar el formato a hugo (en unos
-meses o mas), y asi escribir este blog a gusto.</p>
+meses o mas) y asi escribir este blog a gusto.</p>
 
 <p>Happy Hacking!</p>
 </div>
