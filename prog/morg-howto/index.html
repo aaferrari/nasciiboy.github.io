@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+  <head>
+    <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>morg: como usar - nba - GNU&#39;s Rock</title>
+    
+    <style media="screen">
+:root {
+                            
+    --BGC      : #000000;   
+    --FGC      : #ffffff;   
+    --BGClogo  : #222222;   
+    --FGClogo  : #ffffff;   
+    --FGCtitle : #ff4500;   
+    --FGCstart1: #4B99D2;   
+    --FGCstart2: #00ffff;   
+    --FGCstart3: #ffa074;   
+    --FGCstart4: #98fb98;   
+    --FGCstart5: #b0c4de;   
+    --FGCstart6: #7fffd4;   
+    --FGCstart7: #db2e24;   
+    --FGCstart8: #ff4500;   
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;   
+    --FGCbtcode: #333333;   
+    --FGCftcode: #ffffff;   
+    --FGCbcode : #b3b3b3;   
+    --FGCtcomm : #ff4500;   
+    --FGCtcode : #bfbfff;   
+    --FGCfile  : #eedd82;   
+    --FGCmath  : #98fb98;   
+    --FGClink  : #00ffff;   
+    --BGClinkh : #556b2f;   
+    --FGClinkh : #ffffff;   
+    --BGCdt    : #b3b3b3;   
+    --FGCdt    : #ffffff;   
+    --FGCthead : #ff7f24;   
+    --BGCthead : #000000;   
+    --FGCtbody : #87cefa;   
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: local('monospace'    );                     }
+@font-face { font-family: codeblock;      src: local('monospace'    );                     }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em;
+                width: 70%;
+                float: left;
+               }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 2em;
+                width: 50%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+ul.terms    { list-style: none; margin: 0em; padding: 0em; }
+ul.terms li { display: block;
+              float: left;
+              margin: .1em .5em .1em .5em;
+}
+ul.terms a { text-decoration: none;
+}
+
+ul.terms a:hover { text-decoration: none;
+                   background-color: #333;
+                   color: #fff;
+}
+
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+}
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }  
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }  
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }  
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }  
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }  
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }  
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+ 
+dl { padding-bottom: 2em; }          
+dl dt { color: #daa520;              
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;              
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { filter: none;
+                             }
+</style>
+
+  </head>
+
+  <body>
+    
+<main>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
+    
+    <li><span class="path-pwd">morg: como usar</span></li>
+  </ul>
+
+  <article>
+  <h1 class="title">morg: como usar</h1>
+
+  <time datetime="2017-03-12 09:33:15 -0600 CST">Mar 12, 2017</time>
+
+  <div class="article-body">
+
+<p><img src="../hello.jpg" alt="" /></p>
+
+<p>la aleatoriadad llevo a programar morg en golang (aunque creo que ya se como
+portarlo a c) de momento a instalar go</p>
+
+<h2 id="instalar-go-version-gnu">instalar go (version GNU)</h2>
+
+<p>primero ve a la direccion <a href="https://golang.org/dl/">https://golang.org/dl/</a> y clica el enlace de descarga
+donde diga algo como (al dia de escribir esto)
+<em>go1.8.linux-amd64.tar.gz</em> (Cambia el <em>amd64</em> por la arquitectura
+de tu equipo)</p>
+
+<p>Si todo va bien tendras el comprimido en <code>$HOME/Downloads</code>, abrimos un terminal
+y vamos hay</p>
+
+<h3 id="segun-la-guia-oficial">segun la guia oficial</h3>
+
+<p>pasa a modo root, y ejecuta</p>
+
+<pre><code class="language-sh">tar -C /usr/local -xzf go*.tar.gz
+rm go*.tar.gz
+</code></pre>
+
+<p>esto crea la carpeta <code>/usr/local/go</code> que en su interior contiene todo lo
+necesario para ejecutar go y sus cosillas. Si la curiosidad te puede ve a dicha
+carpeta y observa que regalos contiene (me parecio interesante la estructura de
+los articulos en la carpeta<code>blog</code>, al parecer tambien estan ideando su lenguaje
+de marcas ligeras).</p>
+
+<p>Ahora bien, la carpeta <code>/usr/local/go</code> tiene un directorio <code>bin</code> donde se
+encuetra el compilador/interprete/formateador y otras cosas del lenguaje.</p>
+
+<p>Da la casualidad, que nuestro shell no sabe eso, asi que hay que informarle
+donde buscar estos binarios, para que luego, de forma comoda se pueda escribir
+<code>go algo</code> y se ejecute sin mas.</p>
+
+<p>pero antes, de configurar <code>$PATH</code>&hellip; go necesita una ruta donde colocara el
+codigo de los proyectos, dependencias y demas cosas que descarguemos, esto se
+establece en la variable de entorno <code>GOPATH</code>, en mi caso</p>
+
+<pre><code class="language-sh">export GOPATH=/home/nasciiboy/go
+</code></pre>
+
+<p>ahora cuando le pida a <code>go</code>, que me instale algo, lo colacara dentro de la
+carpeta <span class="file" >go</span> en mi
+home&hellip; peero para ejecutar los binarios que se creen en dicha direccion tambien
+debe agregarse esta direccion a <code>$PATH</code>. Vamos con ello</p>
+
+<pre><code class="language-sh">export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin:
+</code></pre>
+
+<p>es decir, al final tenemos</p>
+
+<pre><code class="language-sh">export GOPATH=/home/nasciiboy/go
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin:
+</code></pre>
+
+<p>obviamente, queremos que los cambios sean permanentes, asi que agregamos la
+configuracion en <code>~/.bashrc</code> o similar</p>
+
+<h3 id="opcion-personalizada">opcion personalizada</h3>
+
+<p>no me fio mucho de google, para reducir los daños, prefiero colocar los binarios
+y todo lo demas en mi <code>$HOME</code></p>
+
+<p>sin pasar a root, ni naaah</p>
+
+<pre><code class="language-sh"># se asume estar en ~/Downloads
+tar -C . -xzf go*.tar.gz
+rm go*.tar.gz
+mv go ../.go
+</code></pre>
+
+<p>con esto dejamos los binarios y cosas de go en la carpeta <code>.go</code> en nuestro
+<code>$HOME</code> configuramos variables de entorno</p>
+
+<pre><code class="language-sh">export GOROOT=/home/nasciiboy/.go
+export GOPATH=/home/nasciiboy/go
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin/
+</code></pre>
+
+<p>(<code>GOROOT</code> segun la pagina de instalacion de golang, se necesita para
+instalaciones a medida como en este caso)</p>
+
+<p>Si utilizas <code>fish</code> en lugar de <code>bash</code>, como en mi caso, la configuracion se
+agrega de la siguiente manera</p>
+
+<pre><code class="language-sh">set --export GOROOT /home/nasciiboy/.go
+set --export GOPATH /home/nasciiboy/go
+set --export PATH   $GOPATH/bin $PATH $GOROOT/bin/
+</code></pre>
+
+<p>en  <code>~/.config/fish/config.fish</code></p>
+
+<h2 id="morg">morg</h2>
+
+<p>vamos al meollo del asunto, ya con <code>go</code> en el sistema, instalamos morg:</p>
+
+<pre><code class="language-sh">go get -v github.com/nasciiboy/morg
+</code></pre>
+
+<p>si ya tenemos morg y queremos actualizar</p>
+
+<pre><code class="language-sh">go get -u -v github.com/nasciiboy/morg
+</code></pre>
+
+<p>(nota: no se para que sea la <code>v</code>, asi lo vi en un proyecto&hellip; y asi lo dejo)</p>
+
+<p>para quien no lo sepa, morg es un lenguaje de marcas ligeras que pretende
+dominar el mundo, terminar con el empleo, y otras cosas (probablemente demasiado
+ambisiosas)</p>
+
+<p>el sistema de documentacion aun esta en fase inicial y no es mi proposito ni
+intencion definir o programar todos los aspectos, pero vamos a lo basico</p>
+
+<h3 id="primer-paso">primer paso</h3>
+
+<p>creamos en nuestro editor de confiansa un fichero con (o sin) terminacion
+<code>.morg</code>, para el caso pongamos <em>ejemplo.morg</em></p>
+
+<p>en su interior ponemos algo como</p>
+
+<pre><code>hola morg
+</code></pre>
+
+<p>y exportamos a html, que por el momento es lo unico que morg sabe hacer</p>
+
+<pre><code class="language-sh">morg ejemplo.morg
+</code></pre>
+
+<p>listo, se genera un fichero de nombre <code>ejemplo.html</code> con nuestro documento.</p>
+
+<p>Agregemos mas cosas. morg utiliza <strong>comandos</strong> para configurar el documento:</p>
+
+<pre><code>..title    &gt;  Morg, ejemplo y otras cosas
+..author   &gt;  nasciiboy
+..language &gt;  es
+..date     &gt;  2016
+..tags     &gt;  regex regexp c-prog algorithm
+..licence  &gt;  GNU FDL v1.3
+..style    &gt;  worg-data/worg.css
+..options  &gt;  toc
+</code></pre>
+
+<p>todos los comandos tienen la estructura <code>..</code> (dos puntos) <code>comando</code> (el comando)
+y <code>&gt;</code> (mayor que) luego puede ir el argumento, cuerpo, o cuerpo y argumento,
+pero los comandos de configuracion solo tienen argumento, que es todo lo que se
+encuentre en la misma linea, aunque puede expandirse en lineas multiples,
+siempre y cuando no se dejen espacios en blanco y se cumpla con la indentacion,
+como en</p>
+
+<pre><code>..title &gt; este es un tutulo de documento muy muy
+  extenso, como para ocupar multiples lineas
+  y mas
+</code></pre>
+
+<p>un comando de configuracion finaliza cuando se encuentra la primer linea en
+blanco o se incumple la indentacion de dos espacios para las lineas multiples</p>
+
+<p>Ademas los comandos de configuracion se colocan al inicio del documento, sin
+espacios en blanco al inicio de la linea, y terminan cuando se encuetra el
+primer parrafo, o encabezado</p>
+
+<p>el comando <code>style</code> sirve para establecer la ruta a una hoja de estilos, para el
+caso un css, de momento <a href="../worg-data.zip">este</a> es el que utilizo, puedes
+encontrar la version <em>de desarrollo</em> dentro del codigo fuente, si vas a
+<code>~/go/src/github.com/nasciiboy/morg/biskana/testdata/worg-data/worg.css</code></p>
+
+<h3 id="estructura">estructura</h3>
+
+<p>la estructura es fundamental en un lenguaje de marcas que se precie. En el caso
+de morg (basado en org, md reestructure text, textinfo y otras cosas) se opta
+por dividir el documento en secciones o encabezados</p>
+
+<p>La sintaxis de un encabezado es muy simple:</p>
+
+<pre><code class="language-org-mode">* Encabezado principal
+** Segundo nivel
+*** 3er. nivel
+
+    algo de texto
+
+*** 3er. nivel
+    mas texto
+
+* Otro encabezado principal
+</code></pre>
+
+<p>Toda linea que inicia con uno o varios <code>*</code> seguido por al menos un espacio en
+blanco, es un encabezado.</p>
+
+<p>El texto (en la misma linea) donde esta el o los <code>*</code> sera el titulo del encabezado.</p>
+
+<p>El nivel del encabezado depende del numero de <code>*</code> al inicio de la linea, es
+decir</p>
+
+<ul>
+<li><code>*</code> == <code>h1</code></li>
+<li><code>**</code> == <code>h2</code></li>
+<li><code>***</code> == <code>h3</code></li>
+<li><code>****</code> == <code>h4</code></li>
+<li><code>*****</code> == <code>h5</code></li>
+</ul>
+
+<p>(en realidad, al exportar a html, los encabezados se desplazan en uno, el titulo
+del documento es el que se corresponde con <code>h1</code>, pero lo dejo asi para evitar
+esfuerzo mental)</p>
+
+<p>A que encabezado pertenece el texto? al primero que aparezca por encima de
+el. Si no tiene un encabezado encima pertenece al <q>titulo</q> del documento</p>
+
+<p>por cierto, el titulo de los encabezados (al igual que el argumento de los
+comandos de configuracion) puede extenderse en varias lineas siempre y cuando se
+respete la indentacion</p>
+
+<p>un ejemplo mas extenso</p>
+
+<pre><code>* Encabezado H1
+
+  Primer parrafo del encabezado H1
+
+  Segundo parrafo del encabezado H1
+
+** Encabezado H2
+
+   Algo,
+   y algo mas (sin una linea en blanco no hay cambio de parrafo)
+
+** Otro Encabezado H2
+
+   Hey
+
+*** Encabezado H3
+
+    coloca algo aqui
+
+**** Encabezado H4
+
+     y aqui
+
+***** Encabezado H5
+
+      tambien aqui
+
+* Otro Encabezado H1
+</code></pre>
+
+<p>como vez, he indentado el texto que pertenece a cada encabezado (no es
+necesario, pero a mi me gusta que se vea asi).</p>
+
+<p>por cierto, todos los encabezados generan una referencia dentro del documento,
+substituyendo los espacios en blanco por <code>-</code> (menos)</p>
+
+<p>Si deseamos especificar el nombre de la referencia, se utiliza la sintaxis</p>
+
+<pre><code>** referencia-personalizada &lt;&gt; texto del encabezado
+</code></pre>
+
+<h3 id="enfasis-bold-links-el-comando">enfasis, bold, links, el comando <code>@</code></h3>
+
+<p>otros lenguajes de marcas ligeras utilizan marcas varias, el problema con este
+enfoque radica en naturaleza exotica de las marcas, que los limitan a dos o tres
+formas de resaltado, antes de recurrir a etiquetas html (blasfemia).</p>
+
+<p>luego de meditar por 15 dias, 10 noches, ver textinfo y realizar una
+investigacion con fondos provenientes del gobierno (nada extraordinario, solo un
+par de millones) se descubrio <em>la sintaxis</em> de marcas perfecta</p>
+
+<pre><code>@x()
+@x[]
+@x{}
+@x&lt;&gt;
+</code></pre>
+
+<p>donde <code>@</code> indica <em>a continuacion contenido especial</em>, <code>x</code> es un caracter
+ascii imprimible, que describe el comando o accion a aplicar al contenido
+delimitado por <code>{…}</code>, <code>(…)</code>, <code>&lt;…&gt;</code> o <code>[…]</code></p>
+
+<p><em>por que una <code>@</code>?</em> Fuera de algun lenguaje exotico o el correo, podria
+ser el signo menos utilizado y mas aun con la estructura <code>@x{}</code></p>
+
+<p><em>y la <code>x</code>?</em> Un caracter ascii imprimible. Si hemos de necesitar mas
+marcas que los caracteres ascii mal vamos.</p>
+
+<p>de momento, puedes utilizar las marcas de resaltado</p>
+
+<pre><code>- A :: acronym
+- a :: abbr
+- b :: bold
+- c :: code
+- e :: emph
+- f :: file
+- ' :: ‘samp’
+- &quot; :: “quote”
+- i :: italic
+- k :: kbd
+- ^ :: sup
+- _ :: sub
+- m :: math
+- q :: quote
+- - :: —exp—
+- s :: strike
+- u :: underline
+- v :: verbatim
+- $ :: command
+</code></pre>
+
+<p><code>^</code> para generar superindices y <code>_</code> para los subindices</p>
+
+<p>Segun sea el contexto <code>{}</code> o <code>()</code> podrian requerir el <em>escape</em> de algun
+caracter. Para minimizar la inclucion de signos extraños, los delimitadores se
+aplican deacuerdo a la necesidad y gusto del <q>creador</q>.</p>
+
+<p>cuando no haya <em>escapatoria</em>, para anular el significado de un caracter se
+antecede con <code>@</code> (nota: para que aparesca <code>@</code> hay que colocar <code>@@</code>)</p>
+
+<p>los <q>comandos</q> <code>@</code> soportan anidamiento de otros comandos como en <code>@b(bold
+@e(emph @i(italic))</code></p>
+
+<p>por si esto no fuera suficiente para colocar enlaces tenemos</p>
+
+<pre><code>- l :: link
+</code></pre>
+
+<p>donde <code>@l(https://direccion)</code>, convierte en un enlace a su contenido, para que
+aparesca un texto distinto al de la direccion seria <code>@l(https://direccion&lt;&gt;texto
+distinto)</code>&hellip; he aqui la magia del comando <code>@</code>, todos los comandos <code>@</code> tienen la
+estructura</p>
+
+<pre><code>@x(custom&lt;&gt;contenido)
+</code></pre>
+
+<p>donde <code>custom</code> es un parametro personalizado y opcional. Por su parte
+<code>contenido</code> es el contenido del comando</p>
+
+<p>Cuando un comando, por ejemplo, los enlaces requieren un <code>custom</code> y este no se ha
+especificado, se genera apartir del <code>contenido</code>, extrayendo las marcas expeciales
+dejando unicamente el texto.</p>
+
+<p>Cuando el comando no requiere de un <code>custom</code> y este es proporcionado, el comando
+o lo ignora o se utiliza como identificador o etiqueta segun sea el caso (nota:
+esto esta a consideracion y podria requerir sintaxis adicional)</p>
+
+<p>Cuando el comando esta dentro de otro comando, el comando interno <em>pasa</em> su
+contenido al comando externo, por ejemplo:</p>
+
+<pre><code>@l(#encabezado&lt;&gt;lo que sea con @e(enfasis con @b(algo&lt;&gt;bold)))
+</code></pre>
+
+<p>(se utiliza un <code>#</code> (para hacer referencia a un identificador dentro del
+documento, en este caso para apuntar al encabezado <code>encabezado</code>)</p>
+
+<p>genera</p>
+
+<pre><code>&lt;a href=&quot;#encabezado&quot; &gt;lo que sea con &lt;em&gt;enfasis con &lt;b&gt;bold&lt;/b&gt;&lt;/em&gt;&lt;/a&gt;
+</code></pre>
+
+<p>y</p>
+
+<pre><code>@l(lo que sea con @e(enfasis con @b(algo&lt;&gt;bold)))
+</code></pre>
+
+<p>genera</p>
+
+<pre><code>&lt;a href=&quot;lo-que-sea-con-enfasis-con-bold&quot; &gt;lo que sea con &lt;em&gt;enfasis con &lt;b&gt;bold&lt;/b&gt;&lt;/em&gt;&lt;/a&gt;
+</code></pre>
+
+<p>y finalmente</p>
+
+<pre><code>@l(@b(bold)&lt;&gt;lo que sea)
+</code></pre>
+
+<p>genera</p>
+
+<pre><code>&lt;a href=&quot;bold&quot; &gt;lo que sea&lt;/a&gt;
+</code></pre>
+
+<p>el comando</p>
+
+<pre><code>- t :: target
+</code></pre>
+
+<p>sirve para crear una referencia dentro del documento, por ejemplo <code>@t(mi
+referencia</code></p>
+
+<h3 id="listados">listados</h3>
+
+<pre><code>- lista desordenada
+
+  contenido de elemento
+
++ lista desordenada
+
+1. lista ordenada numericamente
+
+1) lista ordenada numericamente
+
+a. lista ordenada alfabeticamente
+
+a) lista ordenada alfabeticamente
+
+   contenido de elemento a
+</code></pre>
+
+<p>El contenido de una lista debe indentarse segun la seccion de la que forme
+parte. Se permite anidar listas dentro de otras listas, asi como otro tipo de
+elemnentos del formato</p>
+
+<h3 id="dialogos">dialogos</h3>
+
+<pre><code>&gt; &quot;Dialogo, Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit, sed eiusmod tempor incidunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam.&quot;
+</code></pre>
+
+<p>los dialogos tienen la mismas normas que una lista.</p>
+
+<h4 id="definiciones">definiciones</h4>
+
+<pre><code>- elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed eiusmod tempor incidunt ut labore et
+  dolore magna aliqua. Ut enim ad minim veniam.
+
++ elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed eiusmod tempor incidunt ut labore et
+  dolore magna aliqua. Ut enim ad minim veniam.
+</code></pre>
+
+<h4 id="about-s">about&rsquo;s</h4>
+
+<p>en realidad no se como nombrar estos elementos, asi que por ahora se llaman
+<q>acerca de</q> o about&rsquo;s. Son comunes en muchos libros, por lo tienen sintaxis
+propia</p>
+
+<pre><code>:: NOTA ::  Lorem ipsum dolor sit amet, consectetur
+   adipiscing elit, sed eiusmod tempor incidunt ut labore et
+   dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ::  Lorem ipsum dolor sit amet, consectetur
+   adipiscing elit, sed eiusmod tempor incidunt ut labore et
+   dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ADVERTENCIA ADVERTENCIA ADVERTENCIA ::
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
+   incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ADVERTENCIA ADVERTENCIA ADVERTENCIA
+
+   ::
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
+   incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+</code></pre>
+
+<h3 id="comandos">..comandos &gt;</h3>
+
+<pre><code>.. comando &gt; contenido
+</code></pre>
+
+<p>o en su forma &ldquo;simetrica&rdquo;</p>
+
+<pre><code>.. comando &gt;
+  contenido
+&lt; comando ..
+</code></pre>
+
+<p>el contenido tiene que estar indentado con dos espacios por ejemplo</p>
+
+<pre><code>..comando &gt;
+  contenido
+
+  mas contenido
+</code></pre>
+
+<p>o</p>
+
+<pre><code>..comando &gt;
+  contenido
+
+  mas contenido
+
+  ..otro-comando &gt;
+    contenido
+
+    mas contenido
+</code></pre>
+
+<p>Bien? Hay varios tipos de comandos y varias formas de optener su contenido. Por
+un lado tenemos comandos donde el cuerpo se define en una sola linea o mas
+indentadas.</p>
+
+<pre><code>..comando &gt; contenido contenido contenido
+  contenido
+</code></pre>
+
+<p>El contenido o <em>argumentos</em> abarcan hasta la aparicion de la primer linea en
+blanco o sin la indentacion apropiada.</p>
+
+<p>en este tipo de comandos se encuentran los de configuracion del documento (que
+ya vimos al inicio)</p>
+
+<pre><code>..title    &gt; titulo del documento
+  puede abarcar varias lineas, siempre con indentacion y sin lineas
+  en blanco
+
+  esto queda fuera del comando titulo
+
+..author   &gt; nasciiboy
+..mail     &gt; nasciiboy@gmail.com
+..style    &gt; worg/worg.css
+..options  &gt; highlight
+</code></pre>
+
+<p>(resaltar que los comandos de configuracion, <em>no son simetricos</em>, es decir, no
+necesita (ni debe) escribirse el cierre del comando)</p>
+
+<p>tambien tenemos comandos que solo tiene cuerpo</p>
+
+<pre><code>..emph &gt;
+  toda esta seccion tiene enfasis
+&lt; emph..
+
+..emph &gt;
+  tambien esta
+
+..bold &gt;
+  esta es bold
+
+..center &gt;
+  y esta va centrada
+&lt; center..
+
+..quote &gt;
+  Cuando hago esto, la gente piensa que es porque quiero alimentar mi
+  ego, ¿verdad? Por supuesto, ¡no pido que se le llame “Stallmanix!”
+
+  --Richard Matthew Stallman
+</code></pre>
+
+<p>estan diseñados para resaltar o aplicar alguna configuracion a una parrafo o
+bloque extenso del documento</p>
+
+<p>luego tenemos comandos con <em>argumentos</em> y <em>cuerpo</em>, como pueden ser los bloques
+de codigo</p>
+
+<pre><code>..src &gt; c
+  #include &lt;stdio.h&gt; # esto es codigo en C
+&lt; src..
+
+..src &gt; go
+
+  package biskana
+
+  import &quot;github.com/nasciiboy/regexp3&quot;
+
+  // esto es codigo en go
+
+
+..src &gt; sh
+  echo &quot;hola que hace&quot;
+</code></pre>
+
+<p>aqui el contenido despues del (y en la misma linea que) <code>&gt;</code> especifica el
+lenguaje, por su parte, el cuerpo del bloque es toda linea que cumpla con la
+indentacion</p>
+
+<p>en este tipo de comandos estan <code>src</code>, <code>center</code>, <code>bold</code>, <code>emph</code>, <code>italic</code>,
+<code>quote</code>, <code>example</code>, <code>pre</code>, <code>diagram</code>, <code>art</code>, <code>cols</code></p>
+
+<p>solo <code>src</code> examina el contenido luego de <code>&gt;</code> para determinar el lenguaje del
+codigo fuente</p>
+
+<p><code>cols</code> tiene una sintaxis especial que nos premite crear columnas con cualquier
+tipo de contenido, su sintaxis es</p>
+
+<pre><code>..cols &gt;
+  primer columna
+
+  ::
+
+  segunda columna
+
+  ..src &gt; codigo-fuente
+    algo
+
+  ::
+
+  tercer columna
+
+  ..img &gt; ruta/a/imagen
+</code></pre>
+
+<p>donde el delimitador de las columnas es la secuencia <code>::</code>. Debe estar en
+solitario en su propia linea, con dos espacios de indentacion.</p>
+
+<p>por ultimo, tenemos bloques con <em>argumentos</em> de multiples lineas y <em>cuerpo</em></p>
+
+<pre><code>..figure &gt; esto el titulo
+  de una mini seccion
+
+  este es el contenido de la mini seccion
+</code></pre>
+
+<p>donde el <em>contenido</em> empieza luego de la primer linea en blanco.</p>
+
+<pre><code>..img &gt; direccion/a/mi/imagen.jpg
+
+  descripcion, contenido o lo que sea
+
+..video &gt; direccion/a/mi/video.ogg
+
+  descripcion, contenido o lo que sea
+</code></pre>
+
+<h4 id="tablas">Tablas</h4>
+
+<pre><code>| encabezado    | otro e  |
+|===============|=========|
+| elemento uno  | algo x  |
+|---------------|---------|
+| elemento dos  | algo    |
+|               | mas...  |
+|---------------|---------|
+| elemento tres | otra    |
+|               | cosa    |
+|               | @b(mas) |
+</code></pre>
+
+<p>el encabezado se coloca a la cima, delimitado con <code>|===|==|</code></p>
+
+<p>cada fila se separa con <code>|----|---|</code></p>
+
+<p>una tabla puede tener (o no) cuerpo o encabezado, pero las filas deben tener
+siempre el mismo numero de columnas, en el futuro se hara una tabla super
+dopada, de momento esto es lo que hay, por cierto, las tablas tienes soporte
+completo de comandos <code>@</code></p>
+
+<h2 id="el-mañana">el mañana</h2>
+
+<p>De momento, me encuentro adaptando el libro, <strong>The Go programming language</strong> a
+morg, por varias razones</p>
+
+<ol>
+<li><p>primero, programe esto con muy poca idea de golang, y por lo que veo el
+lenguaje tiene herramientas que haran el codigo abismalmente mejor</p></li>
+
+<li><p>para poner a prueba el formato</p></li>
+
+<li><p>para tener una referencia inmediata</p></li>
+
+<li><p>por joder (el copyright) (vera la luz el resultado? o se quedara en mi
+coleccion privada de cosas adaptadas a morg)</p></li>
+</ol>
+
+<p>asi que estare aprendiendo el lenguage la semana siguiente y luego mejorando el
+codigo, no se si un momento de debilidad me obligue a ofrecer el proyecto a
+alguna empresa, aver que sucede</p>
+
+<p>happy hacking!</p>
+</div>
+</article>
+
+
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
+    
+    <li><span class="path-pwd">morg: como usar</span></li>
+  </ul>
+</main>
+
+
+    <aside>
+  
+  <section>
+    <header class="taxonomies">category</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header class="taxonomies">tag</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section>
+    <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg-howto/">morg: como usar</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-12 09:33:15 -0600 CST">Mar 12, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/Mugen-no-junin/">Mugen no jūnin</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-05 11:49:56 -0600 CST">Mar 5, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg/">morg</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-02 06:37:35 -0600 CST">Mar 2, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/Kuzu-no-Honkai/">Kuzu no Honkai</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-22 21:08:41 -0600 CST">Feb 22, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/inbo/">INBO</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-13 22:14:42 -0600 CST">Feb 13, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/noTabs-for-goMode/">no mas tabs en go-mode</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-12 21:52:24 -0600 CST">Feb 12, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/regexp3-go/">regexp3-go (dia cero)</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-11 10:26:04 -0600 CST">Feb 11, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/org-mode/">org mode</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-31 14:40:54 -0600 CST">Jan 31, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/SamuraiChamploo/">Samurai Champloo ♪</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-31 12:06:31 -0600 CST">Jan 31, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/workspace/">la forma en que trabajo</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-01-20 22:16:06 -0600 CST">Jan 20, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+  </section>
+</aside>
+
+
+    <footer>
+      <p><span class="footer-title"><a href="http://nasciiboy.github.io">nba - GNU&#39;s Rock</a></span></p>
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a>–Theme <a href="https://github.com/nasciiboy/hugo_theme_nascii">nascii</a>–feed <a href="http://nasciiboy.github.io/index.xml">rss</a>–mail <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a>–gpg <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a></p>
+    </footer>
+
+  </body>
+</html>

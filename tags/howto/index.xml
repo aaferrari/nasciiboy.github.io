@@ -10,6 +10,677 @@
     <atom:link href="http://nasciiboy.github.io/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>morg: como usar</title>
+      <link>http://nasciiboy.github.io/prog/morg-howto/</link>
+      <pubDate>Sun, 12 Mar 2017 09:33:15 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/morg-howto/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../hello.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;la aleatoriadad llevo a programar morg en golang (aunque creo que ya se como
+portarlo a c) de momento a instalar go&lt;/p&gt;
+
+&lt;h2 id=&#34;instalar-go-version-gnu&#34;&gt;instalar go (version GNU)&lt;/h2&gt;
+
+&lt;p&gt;primero ve a la direccion &lt;a href=&#34;https://golang.org/dl/&#34;&gt;https://golang.org/dl/&lt;/a&gt; y clica el enlace de descarga
+donde diga algo como (al dia de escribir esto)
+&lt;em&gt;go1.8.linux-amd64.tar.gz&lt;/em&gt; (Cambia el &lt;em&gt;amd64&lt;/em&gt; por la arquitectura
+de tu equipo)&lt;/p&gt;
+
+&lt;p&gt;Si todo va bien tendras el comprimido en &lt;code&gt;$HOME/Downloads&lt;/code&gt;, abrimos un terminal
+y vamos hay&lt;/p&gt;
+
+&lt;h3 id=&#34;segun-la-guia-oficial&#34;&gt;segun la guia oficial&lt;/h3&gt;
+
+&lt;p&gt;pasa a modo root, y ejecuta&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;tar -C /usr/local -xzf go*.tar.gz
+rm go*.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto crea la carpeta &lt;code&gt;/usr/local/go&lt;/code&gt; que en su interior contiene todo lo
+necesario para ejecutar go y sus cosillas. Si la curiosidad te puede ve a dicha
+carpeta y observa que regalos contiene (me parecio interesante la estructura de
+los articulos en la carpeta&lt;code&gt;blog&lt;/code&gt;, al parecer tambien estan ideando su lenguaje
+de marcas ligeras).&lt;/p&gt;
+
+&lt;p&gt;Ahora bien, la carpeta &lt;code&gt;/usr/local/go&lt;/code&gt; tiene un directorio &lt;code&gt;bin&lt;/code&gt; donde se
+encuetra el compilador/interprete/formateador y otras cosas del lenguaje.&lt;/p&gt;
+
+&lt;p&gt;Da la casualidad, que nuestro shell no sabe eso, asi que hay que informarle
+donde buscar estos binarios, para que luego, de forma comoda se pueda escribir
+&lt;code&gt;go algo&lt;/code&gt; y se ejecute sin mas.&lt;/p&gt;
+
+&lt;p&gt;pero antes, de configurar &lt;code&gt;$PATH&lt;/code&gt;&amp;hellip; go necesita una ruta donde colocara el
+codigo de los proyectos, dependencias y demas cosas que descarguemos, esto se
+establece en la variable de entorno &lt;code&gt;GOPATH&lt;/code&gt;, en mi caso&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;export GOPATH=/home/nasciiboy/go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora cuando le pida a &lt;code&gt;go&lt;/code&gt;, que me instale algo, lo colacara dentro de la
+carpeta &lt;span class=&#34;file&#34; &gt;go&lt;/span&gt; en mi
+home&amp;hellip; peero para ejecutar los binarios que se creen en dicha direccion tambien
+debe agregarse esta direccion a &lt;code&gt;$PATH&lt;/code&gt;. Vamos con ello&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;es decir, al final tenemos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;export GOPATH=/home/nasciiboy/go
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;obviamente, queremos que los cambios sean permanentes, asi que agregamos la
+configuracion en &lt;code&gt;~/.bashrc&lt;/code&gt; o similar&lt;/p&gt;
+
+&lt;h3 id=&#34;opcion-personalizada&#34;&gt;opcion personalizada&lt;/h3&gt;
+
+&lt;p&gt;no me fio mucho de google, para reducir los daños, prefiero colocar los binarios
+y todo lo demas en mi &lt;code&gt;$HOME&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;sin pasar a root, ni naaah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# se asume estar en ~/Downloads
+tar -C . -xzf go*.tar.gz
+rm go*.tar.gz
+mv go ../.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;con esto dejamos los binarios y cosas de go en la carpeta &lt;code&gt;.go&lt;/code&gt; en nuestro
+&lt;code&gt;$HOME&lt;/code&gt; configuramos variables de entorno&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;export GOROOT=/home/nasciiboy/.go
+export GOPATH=/home/nasciiboy/go
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(&lt;code&gt;GOROOT&lt;/code&gt; segun la pagina de instalacion de golang, se necesita para
+instalaciones a medida como en este caso)&lt;/p&gt;
+
+&lt;p&gt;Si utilizas &lt;code&gt;fish&lt;/code&gt; en lugar de &lt;code&gt;bash&lt;/code&gt;, como en mi caso, la configuracion se
+agrega de la siguiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;set --export GOROOT /home/nasciiboy/.go
+set --export GOPATH /home/nasciiboy/go
+set --export PATH   $GOPATH/bin $PATH $GOROOT/bin/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en  &lt;code&gt;~/.config/fish/config.fish&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;morg&#34;&gt;morg&lt;/h2&gt;
+
+&lt;p&gt;vamos al meollo del asunto, ya con &lt;code&gt;go&lt;/code&gt; en el sistema, instalamos morg:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;go get -v github.com/nasciiboy/morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si ya tenemos morg y queremos actualizar&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;go get -u -v github.com/nasciiboy/morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(nota: no se para que sea la &lt;code&gt;v&lt;/code&gt;, asi lo vi en un proyecto&amp;hellip; y asi lo dejo)&lt;/p&gt;
+
+&lt;p&gt;para quien no lo sepa, morg es un lenguaje de marcas ligeras que pretende
+dominar el mundo, terminar con el empleo, y otras cosas (probablemente demasiado
+ambisiosas)&lt;/p&gt;
+
+&lt;p&gt;el sistema de documentacion aun esta en fase inicial y no es mi proposito ni
+intencion definir o programar todos los aspectos, pero vamos a lo basico&lt;/p&gt;
+
+&lt;h3 id=&#34;primer-paso&#34;&gt;primer paso&lt;/h3&gt;
+
+&lt;p&gt;creamos en nuestro editor de confiansa un fichero con (o sin) terminacion
+&lt;code&gt;.morg&lt;/code&gt;, para el caso pongamos &lt;em&gt;ejemplo.morg&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;en su interior ponemos algo como&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hola morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y exportamos a html, que por el momento es lo unico que morg sabe hacer&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;morg ejemplo.morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;listo, se genera un fichero de nombre &lt;code&gt;ejemplo.html&lt;/code&gt; con nuestro documento.&lt;/p&gt;
+
+&lt;p&gt;Agregemos mas cosas. morg utiliza &lt;strong&gt;comandos&lt;/strong&gt; para configurar el documento:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..title    &amp;gt;  Morg, ejemplo y otras cosas
+..author   &amp;gt;  nasciiboy
+..language &amp;gt;  es
+..date     &amp;gt;  2016
+..tags     &amp;gt;  regex regexp c-prog algorithm
+..licence  &amp;gt;  GNU FDL v1.3
+..style    &amp;gt;  worg-data/worg.css
+..options  &amp;gt;  toc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;todos los comandos tienen la estructura &lt;code&gt;..&lt;/code&gt; (dos puntos) &lt;code&gt;comando&lt;/code&gt; (el comando)
+y &lt;code&gt;&amp;gt;&lt;/code&gt; (mayor que) luego puede ir el argumento, cuerpo, o cuerpo y argumento,
+pero los comandos de configuracion solo tienen argumento, que es todo lo que se
+encuentre en la misma linea, aunque puede expandirse en lineas multiples,
+siempre y cuando no se dejen espacios en blanco y se cumpla con la indentacion,
+como en&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..title &amp;gt; este es un tutulo de documento muy muy
+  extenso, como para ocupar multiples lineas
+  y mas
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;un comando de configuracion finaliza cuando se encuentra la primer linea en
+blanco o se incumple la indentacion de dos espacios para las lineas multiples&lt;/p&gt;
+
+&lt;p&gt;Ademas los comandos de configuracion se colocan al inicio del documento, sin
+espacios en blanco al inicio de la linea, y terminan cuando se encuetra el
+primer parrafo, o encabezado&lt;/p&gt;
+
+&lt;p&gt;el comando &lt;code&gt;style&lt;/code&gt; sirve para establecer la ruta a una hoja de estilos, para el
+caso un css, de momento &lt;a href=&#34;../worg-data.zip&#34;&gt;este&lt;/a&gt; es el que utilizo, puedes
+encontrar la version &lt;em&gt;de desarrollo&lt;/em&gt; dentro del codigo fuente, si vas a
+&lt;code&gt;~/go/src/github.com/nasciiboy/morg/biskana/testdata/worg-data/worg.css&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;estructura&#34;&gt;estructura&lt;/h3&gt;
+
+&lt;p&gt;la estructura es fundamental en un lenguaje de marcas que se precie. En el caso
+de morg (basado en org, md reestructure text, textinfo y otras cosas) se opta
+por dividir el documento en secciones o encabezados&lt;/p&gt;
+
+&lt;p&gt;La sintaxis de un encabezado es muy simple:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;* Encabezado principal
+** Segundo nivel
+*** 3er. nivel
+
+    algo de texto
+
+*** 3er. nivel
+    mas texto
+
+* Otro encabezado principal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Toda linea que inicia con uno o varios &lt;code&gt;*&lt;/code&gt; seguido por al menos un espacio en
+blanco, es un encabezado.&lt;/p&gt;
+
+&lt;p&gt;El texto (en la misma linea) donde esta el o los &lt;code&gt;*&lt;/code&gt; sera el titulo del encabezado.&lt;/p&gt;
+
+&lt;p&gt;El nivel del encabezado depende del numero de &lt;code&gt;*&lt;/code&gt; al inicio de la linea, es
+decir&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt; == &lt;code&gt;h1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;**&lt;/code&gt; == &lt;code&gt;h2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;***&lt;/code&gt; == &lt;code&gt;h3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;****&lt;/code&gt; == &lt;code&gt;h4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*****&lt;/code&gt; == &lt;code&gt;h5&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(en realidad, al exportar a html, los encabezados se desplazan en uno, el titulo
+del documento es el que se corresponde con &lt;code&gt;h1&lt;/code&gt;, pero lo dejo asi para evitar
+esfuerzo mental)&lt;/p&gt;
+
+&lt;p&gt;A que encabezado pertenece el texto? al primero que aparezca por encima de
+el. Si no tiene un encabezado encima pertenece al &lt;q&gt;titulo&lt;/q&gt; del documento&lt;/p&gt;
+
+&lt;p&gt;por cierto, el titulo de los encabezados (al igual que el argumento de los
+comandos de configuracion) puede extenderse en varias lineas siempre y cuando se
+respete la indentacion&lt;/p&gt;
+
+&lt;p&gt;un ejemplo mas extenso&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* Encabezado H1
+
+  Primer parrafo del encabezado H1
+
+  Segundo parrafo del encabezado H1
+
+** Encabezado H2
+
+   Algo,
+   y algo mas (sin una linea en blanco no hay cambio de parrafo)
+
+** Otro Encabezado H2
+
+   Hey
+
+*** Encabezado H3
+
+    coloca algo aqui
+
+**** Encabezado H4
+
+     y aqui
+
+***** Encabezado H5
+
+      tambien aqui
+
+* Otro Encabezado H1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;como vez, he indentado el texto que pertenece a cada encabezado (no es
+necesario, pero a mi me gusta que se vea asi).&lt;/p&gt;
+
+&lt;p&gt;por cierto, todos los encabezados generan una referencia dentro del documento,
+substituyendo los espacios en blanco por &lt;code&gt;-&lt;/code&gt; (menos)&lt;/p&gt;
+
+&lt;p&gt;Si deseamos especificar el nombre de la referencia, se utiliza la sintaxis&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;** referencia-personalizada &amp;lt;&amp;gt; texto del encabezado
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;enfasis-bold-links-el-comando&#34;&gt;enfasis, bold, links, el comando &lt;code&gt;@&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;otros lenguajes de marcas ligeras utilizan marcas varias, el problema con este
+enfoque radica en naturaleza exotica de las marcas, que los limitan a dos o tres
+formas de resaltado, antes de recurrir a etiquetas html (blasfemia).&lt;/p&gt;
+
+&lt;p&gt;luego de meditar por 15 dias, 10 noches, ver textinfo y realizar una
+investigacion con fondos provenientes del gobierno (nada extraordinario, solo un
+par de millones) se descubrio &lt;em&gt;la sintaxis&lt;/em&gt; de marcas perfecta&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@x()
+@x[]
+@x{}
+@x&amp;lt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde &lt;code&gt;@&lt;/code&gt; indica &lt;em&gt;a continuacion contenido especial&lt;/em&gt;, &lt;code&gt;x&lt;/code&gt; es un caracter
+ascii imprimible, que describe el comando o accion a aplicar al contenido
+delimitado por &lt;code&gt;{…}&lt;/code&gt;, &lt;code&gt;(…)&lt;/code&gt;, &lt;code&gt;&amp;lt;…&amp;gt;&lt;/code&gt; o &lt;code&gt;[…]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;por que una &lt;code&gt;@&lt;/code&gt;?&lt;/em&gt; Fuera de algun lenguaje exotico o el correo, podria
+ser el signo menos utilizado y mas aun con la estructura &lt;code&gt;@x{}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;y la &lt;code&gt;x&lt;/code&gt;?&lt;/em&gt; Un caracter ascii imprimible. Si hemos de necesitar mas
+marcas que los caracteres ascii mal vamos.&lt;/p&gt;
+
+&lt;p&gt;de momento, puedes utilizar las marcas de resaltado&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- A :: acronym
+- a :: abbr
+- b :: bold
+- c :: code
+- e :: emph
+- f :: file
+- &#39; :: ‘samp’
+- &amp;quot; :: “quote”
+- i :: italic
+- k :: kbd
+- ^ :: sup
+- _ :: sub
+- m :: math
+- q :: quote
+- - :: —exp—
+- s :: strike
+- u :: underline
+- v :: verbatim
+- $ :: command
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;^&lt;/code&gt; para generar superindices y &lt;code&gt;_&lt;/code&gt; para los subindices&lt;/p&gt;
+
+&lt;p&gt;Segun sea el contexto &lt;code&gt;{}&lt;/code&gt; o &lt;code&gt;()&lt;/code&gt; podrian requerir el &lt;em&gt;escape&lt;/em&gt; de algun
+caracter. Para minimizar la inclucion de signos extraños, los delimitadores se
+aplican deacuerdo a la necesidad y gusto del &lt;q&gt;creador&lt;/q&gt;.&lt;/p&gt;
+
+&lt;p&gt;cuando no haya &lt;em&gt;escapatoria&lt;/em&gt;, para anular el significado de un caracter se
+antecede con &lt;code&gt;@&lt;/code&gt; (nota: para que aparesca &lt;code&gt;@&lt;/code&gt; hay que colocar &lt;code&gt;@@&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;los &lt;q&gt;comandos&lt;/q&gt; &lt;code&gt;@&lt;/code&gt; soportan anidamiento de otros comandos como en &lt;code&gt;@b(bold
+@e(emph @i(italic))&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;por si esto no fuera suficiente para colocar enlaces tenemos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- l :: link
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde &lt;code&gt;@l(https://direccion)&lt;/code&gt;, convierte en un enlace a su contenido, para que
+aparesca un texto distinto al de la direccion seria &lt;code&gt;@l(https://direccion&amp;lt;&amp;gt;texto
+distinto)&lt;/code&gt;&amp;hellip; he aqui la magia del comando &lt;code&gt;@&lt;/code&gt;, todos los comandos &lt;code&gt;@&lt;/code&gt; tienen la
+estructura&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@x(custom&amp;lt;&amp;gt;contenido)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde &lt;code&gt;custom&lt;/code&gt; es un parametro personalizado y opcional. Por su parte
+&lt;code&gt;contenido&lt;/code&gt; es el contenido del comando&lt;/p&gt;
+
+&lt;p&gt;Cuando un comando, por ejemplo, los enlaces requieren un &lt;code&gt;custom&lt;/code&gt; y este no se ha
+especificado, se genera apartir del &lt;code&gt;contenido&lt;/code&gt;, extrayendo las marcas expeciales
+dejando unicamente el texto.&lt;/p&gt;
+
+&lt;p&gt;Cuando el comando no requiere de un &lt;code&gt;custom&lt;/code&gt; y este es proporcionado, el comando
+o lo ignora o se utiliza como identificador o etiqueta segun sea el caso (nota:
+esto esta a consideracion y podria requerir sintaxis adicional)&lt;/p&gt;
+
+&lt;p&gt;Cuando el comando esta dentro de otro comando, el comando interno &lt;em&gt;pasa&lt;/em&gt; su
+contenido al comando externo, por ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@l(#encabezado&amp;lt;&amp;gt;lo que sea con @e(enfasis con @b(algo&amp;lt;&amp;gt;bold)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(se utiliza un &lt;code&gt;#&lt;/code&gt; (para hacer referencia a un identificador dentro del
+documento, en este caso para apuntar al encabezado &lt;code&gt;encabezado&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;genera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;#encabezado&amp;quot; &amp;gt;lo que sea con &amp;lt;em&amp;gt;enfasis con &amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@l(lo que sea con @e(enfasis con @b(algo&amp;lt;&amp;gt;bold)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;genera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;lo-que-sea-con-enfasis-con-bold&amp;quot; &amp;gt;lo que sea con &amp;lt;em&amp;gt;enfasis con &amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y finalmente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@l(@b(bold)&amp;lt;&amp;gt;lo que sea)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;genera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;bold&amp;quot; &amp;gt;lo que sea&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- t :: target
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;sirve para crear una referencia dentro del documento, por ejemplo &lt;code&gt;@t(mi
+referencia&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;listados&#34;&gt;listados&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;- lista desordenada
+
+  contenido de elemento
+
++ lista desordenada
+
+1. lista ordenada numericamente
+
+1) lista ordenada numericamente
+
+a. lista ordenada alfabeticamente
+
+a) lista ordenada alfabeticamente
+
+   contenido de elemento a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El contenido de una lista debe indentarse segun la seccion de la que forme
+parte. Se permite anidar listas dentro de otras listas, asi como otro tipo de
+elemnentos del formato&lt;/p&gt;
+
+&lt;h3 id=&#34;dialogos&#34;&gt;dialogos&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; &amp;quot;Dialogo, Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit, sed eiusmod tempor incidunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;los dialogos tienen la mismas normas que una lista.&lt;/p&gt;
+
+&lt;h4 id=&#34;definiciones&#34;&gt;definiciones&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;- elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed eiusmod tempor incidunt ut labore et
+  dolore magna aliqua. Ut enim ad minim veniam.
+
++ elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed eiusmod tempor incidunt ut labore et
+  dolore magna aliqua. Ut enim ad minim veniam.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;about-s&#34;&gt;about&amp;rsquo;s&lt;/h4&gt;
+
+&lt;p&gt;en realidad no se como nombrar estos elementos, asi que por ahora se llaman
+&lt;q&gt;acerca de&lt;/q&gt; o about&amp;rsquo;s. Son comunes en muchos libros, por lo tienen sintaxis
+propia&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:: NOTA ::  Lorem ipsum dolor sit amet, consectetur
+   adipiscing elit, sed eiusmod tempor incidunt ut labore et
+   dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ::  Lorem ipsum dolor sit amet, consectetur
+   adipiscing elit, sed eiusmod tempor incidunt ut labore et
+   dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ADVERTENCIA ADVERTENCIA ADVERTENCIA ::
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
+   incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+
+:: ADVERTENCIA ADVERTENCIA ADVERTENCIA ADVERTENCIA
+
+   ::
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
+   incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;comandos&#34;&gt;..comandos &amp;gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;.. comando &amp;gt; contenido
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o en su forma &amp;ldquo;simetrica&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.. comando &amp;gt;
+  contenido
+&amp;lt; comando ..
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el contenido tiene que estar indentado con dos espacios por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..comando &amp;gt;
+  contenido
+
+  mas contenido
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..comando &amp;gt;
+  contenido
+
+  mas contenido
+
+  ..otro-comando &amp;gt;
+    contenido
+
+    mas contenido
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bien? Hay varios tipos de comandos y varias formas de optener su contenido. Por
+un lado tenemos comandos donde el cuerpo se define en una sola linea o mas
+indentadas.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..comando &amp;gt; contenido contenido contenido
+  contenido
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El contenido o &lt;em&gt;argumentos&lt;/em&gt; abarcan hasta la aparicion de la primer linea en
+blanco o sin la indentacion apropiada.&lt;/p&gt;
+
+&lt;p&gt;en este tipo de comandos se encuentran los de configuracion del documento (que
+ya vimos al inicio)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..title    &amp;gt; titulo del documento
+  puede abarcar varias lineas, siempre con indentacion y sin lineas
+  en blanco
+
+  esto queda fuera del comando titulo
+
+..author   &amp;gt; nasciiboy
+..mail     &amp;gt; nasciiboy@gmail.com
+..style    &amp;gt; worg/worg.css
+..options  &amp;gt; highlight
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(resaltar que los comandos de configuracion, &lt;em&gt;no son simetricos&lt;/em&gt;, es decir, no
+necesita (ni debe) escribirse el cierre del comando)&lt;/p&gt;
+
+&lt;p&gt;tambien tenemos comandos que solo tiene cuerpo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..emph &amp;gt;
+  toda esta seccion tiene enfasis
+&amp;lt; emph..
+
+..emph &amp;gt;
+  tambien esta
+
+..bold &amp;gt;
+  esta es bold
+
+..center &amp;gt;
+  y esta va centrada
+&amp;lt; center..
+
+..quote &amp;gt;
+  Cuando hago esto, la gente piensa que es porque quiero alimentar mi
+  ego, ¿verdad? Por supuesto, ¡no pido que se le llame “Stallmanix!”
+
+  --Richard Matthew Stallman
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;estan diseñados para resaltar o aplicar alguna configuracion a una parrafo o
+bloque extenso del documento&lt;/p&gt;
+
+&lt;p&gt;luego tenemos comandos con &lt;em&gt;argumentos&lt;/em&gt; y &lt;em&gt;cuerpo&lt;/em&gt;, como pueden ser los bloques
+de codigo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..src &amp;gt; c
+  #include &amp;lt;stdio.h&amp;gt; # esto es codigo en C
+&amp;lt; src..
+
+..src &amp;gt; go
+
+  package biskana
+
+  import &amp;quot;github.com/nasciiboy/regexp3&amp;quot;
+
+  // esto es codigo en go
+
+
+..src &amp;gt; sh
+  echo &amp;quot;hola que hace&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aqui el contenido despues del (y en la misma linea que) &lt;code&gt;&amp;gt;&lt;/code&gt; especifica el
+lenguaje, por su parte, el cuerpo del bloque es toda linea que cumpla con la
+indentacion&lt;/p&gt;
+
+&lt;p&gt;en este tipo de comandos estan &lt;code&gt;src&lt;/code&gt;, &lt;code&gt;center&lt;/code&gt;, &lt;code&gt;bold&lt;/code&gt;, &lt;code&gt;emph&lt;/code&gt;, &lt;code&gt;italic&lt;/code&gt;,
+&lt;code&gt;quote&lt;/code&gt;, &lt;code&gt;example&lt;/code&gt;, &lt;code&gt;pre&lt;/code&gt;, &lt;code&gt;diagram&lt;/code&gt;, &lt;code&gt;art&lt;/code&gt;, &lt;code&gt;cols&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;solo &lt;code&gt;src&lt;/code&gt; examina el contenido luego de &lt;code&gt;&amp;gt;&lt;/code&gt; para determinar el lenguaje del
+codigo fuente&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;cols&lt;/code&gt; tiene una sintaxis especial que nos premite crear columnas con cualquier
+tipo de contenido, su sintaxis es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..cols &amp;gt;
+  primer columna
+
+  ::
+
+  segunda columna
+
+  ..src &amp;gt; codigo-fuente
+    algo
+
+  ::
+
+  tercer columna
+
+  ..img &amp;gt; ruta/a/imagen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde el delimitador de las columnas es la secuencia &lt;code&gt;::&lt;/code&gt;. Debe estar en
+solitario en su propia linea, con dos espacios de indentacion.&lt;/p&gt;
+
+&lt;p&gt;por ultimo, tenemos bloques con &lt;em&gt;argumentos&lt;/em&gt; de multiples lineas y &lt;em&gt;cuerpo&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..figure &amp;gt; esto el titulo
+  de una mini seccion
+
+  este es el contenido de la mini seccion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde el &lt;em&gt;contenido&lt;/em&gt; empieza luego de la primer linea en blanco.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..img &amp;gt; direccion/a/mi/imagen.jpg
+
+  descripcion, contenido o lo que sea
+
+..video &amp;gt; direccion/a/mi/video.ogg
+
+  descripcion, contenido o lo que sea
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;tablas&#34;&gt;Tablas&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;| encabezado    | otro e  |
+|===============|=========|
+| elemento uno  | algo x  |
+|---------------|---------|
+| elemento dos  | algo    |
+|               | mas...  |
+|---------------|---------|
+| elemento tres | otra    |
+|               | cosa    |
+|               | @b(mas) |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el encabezado se coloca a la cima, delimitado con &lt;code&gt;|===|==|&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;cada fila se separa con &lt;code&gt;|----|---|&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;una tabla puede tener (o no) cuerpo o encabezado, pero las filas deben tener
+siempre el mismo numero de columnas, en el futuro se hara una tabla super
+dopada, de momento esto es lo que hay, por cierto, las tablas tienes soporte
+completo de comandos &lt;code&gt;@&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;el-mañana&#34;&gt;el mañana&lt;/h2&gt;
+
+&lt;p&gt;De momento, me encuentro adaptando el libro, &lt;strong&gt;The Go programming language&lt;/strong&gt; a
+morg, por varias razones&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;primero, programe esto con muy poca idea de golang, y por lo que veo el
+lenguaje tiene herramientas que haran el codigo abismalmente mejor&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;para poner a prueba el formato&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;para tener una referencia inmediata&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;por joder (el copyright) (vera la luz el resultado? o se quedara en mi
+coleccion privada de cosas adaptadas a morg)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;asi que estare aprendiendo el lenguage la semana siguiente y luego mejorando el
+codigo, no se si un momento de debilidad me obligue a ofrecer el proyecto a
+alguna empresa, aver que sucede&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>no mas tabs en go-mode</title>
       <link>http://nasciiboy.github.io/emacs/noTabs-for-goMode/</link>
       <pubDate>Sun, 12 Feb 2017 21:52:24 -0600</pubDate>
@@ -668,7 +1339,7 @@ modo &lt;code&gt;info&lt;/code&gt;, date una vuelta que no muerde&lt;/p&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.davidam.com/docu/orgguide.es.html&#34;&gt;Traducción de Guía Compacta de Org Mode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Introduccion a org-mode &lt;a href=&#34;org-mode-intro.org&#34;&gt;org&lt;/a&gt; &lt;a href=&#34;org-mode-intro.pdf&#34;&gt;pdf&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;org-mode-intro.zip&#34;&gt;Introduccion a org-mode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.danielclemente.com/hacer/org.html&#34;&gt;Cómo gestiono mis tareas y notas con org-mode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
