@@ -44,8 +44,8 @@ rm go*.tar.gz
 &lt;p&gt;esto crea la carpeta &lt;code&gt;/usr/local/go&lt;/code&gt; que en su interior contiene todo lo
 necesario para ejecutar go y sus cosillas. Si la curiosidad te puede ve a dicha
 carpeta y observa que regalos contiene (me parecio interesante la estructura de
-los articulos en la carpeta&lt;code&gt;blog&lt;/code&gt;, al parecer tambien estan ideando su lenguaje
-de marcas ligeras).&lt;/p&gt;
+los articulos en la carpeta&lt;code&gt;blog&lt;/code&gt;, al parecer los de google tambien estan
+ideando su lenguaje de marcas ligeras).&lt;/p&gt;
 
 &lt;p&gt;Ahora bien, la carpeta &lt;code&gt;/usr/local/go&lt;/code&gt; tiene un directorio &lt;code&gt;bin&lt;/code&gt; donde se
 encuetra el compilador/interprete/formateador y otras cosas del lenguaje.&lt;/p&gt;
@@ -107,7 +107,7 @@ agrega de la siguiente manera&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;set --export GOROOT /home/nasciiboy/.go
 set --export GOPATH /home/nasciiboy/go
-set --export PATH   $GOPATH/bin $PATH $GOROOT/bin/
+set --export PATH   $PATH $GOPATH/bin $GOROOT/bin/
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;en  &lt;code&gt;~/.config/fish/config.fish&lt;/code&gt;&lt;/p&gt;
@@ -136,11 +136,13 @@ intencion definir o programar todos los aspectos, pero vamos a lo basico&lt;/p&g
 &lt;h3 id=&#34;primer-paso&#34;&gt;primer paso&lt;/h3&gt;
 
 &lt;p&gt;creamos en nuestro editor de confiansa un fichero con (o sin) terminacion
-&lt;code&gt;.morg&lt;/code&gt;, para el caso pongamos &lt;em&gt;ejemplo.morg&lt;/em&gt;&lt;/p&gt;
+&lt;code&gt;.morg&lt;/code&gt;, para el caso  &lt;em&gt;ejemplo.morg&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;en su interior ponemos algo como&lt;/p&gt;
+&lt;p&gt;en su interior ponemos algo de texto, como &lt;code&gt;hola morg&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;hola morg
+&lt;p&gt;o con un &lt;code&gt;echo&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;hola morg&amp;quot; &amp;gt; ejemplo.morg
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;y exportamos a html, que por el momento es lo unico que morg sabe hacer&lt;/p&gt;
@@ -154,7 +156,7 @@ intencion definir o programar todos los aspectos, pero vamos a lo basico&lt;/p&g
 
 &lt;pre&gt;&lt;code&gt;..title    &amp;gt;  Morg, ejemplo y otras cosas
 ..author   &amp;gt;  nasciiboy
-..language &amp;gt;  es
+..lang     &amp;gt;  es
 ..date     &amp;gt;  2016
 ..tags     &amp;gt;  regex regexp c-prog algorithm
 ..licence  &amp;gt;  GNU FDL v1.3
@@ -162,12 +164,11 @@ intencion definir o programar todos los aspectos, pero vamos a lo basico&lt;/p&g
 ..options  &amp;gt;  toc
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;todos los comandos tienen la estructura &lt;code&gt;..&lt;/code&gt; (dos puntos) &lt;code&gt;comando&lt;/code&gt; (el comando)
-y &lt;code&gt;&amp;gt;&lt;/code&gt; (mayor que) luego puede ir el argumento, cuerpo, o cuerpo y argumento,
-pero los comandos de configuracion solo tienen argumento, que es todo lo que se
-encuentre en la misma linea, aunque puede expandirse en lineas multiples,
-siempre y cuando no se dejen espacios en blanco y se cumpla con la indentacion,
-como en&lt;/p&gt;
+&lt;p&gt;los comandos de configuracion tienen la estructura &lt;code&gt;..&lt;/code&gt; (dos puntos) &lt;code&gt;comando&lt;/code&gt;
+(el comando) y &lt;code&gt;&amp;gt;&lt;/code&gt; (mayor que) y luego sigue &lt;code&gt;argumento&lt;/code&gt;, que es todo lo que se
+encuentre en la misma linea de la declaracion, aunque puede extenderse por
+varias lineas, siempre y cuando no se dejen lineas en blanco y se cumpla una
+indentacion de dos espacios, como en&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;..title &amp;gt; este es un tutulo de documento muy muy
   extenso, como para ocupar multiples lineas
@@ -175,21 +176,60 @@ como en&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;un comando de configuracion finaliza cuando se encuentra la primer linea en
-blanco o se incumple la indentacion de dos espacios para las lineas multiples&lt;/p&gt;
+blanco o se incumple con la indentacion (en caso de que el argumento abarca
+multiples lineas)&lt;/p&gt;
 
-&lt;p&gt;Ademas los comandos de configuracion se colocan al inicio del documento, sin
-espacios en blanco al inicio de la linea, y terminan cuando se encuetra el
-primer parrafo, o encabezado&lt;/p&gt;
+&lt;p&gt;Ademas los comandos de configuracion deben colocarse al inicio del documento,
+sin dejar espacios en blanco entre el inicio de la linea y la declaracion del
+comando. Este &lt;q&gt;bloque de configuracion&amp;lt;\q&amp;gt; terminara en cuanto aparesca el
+primer parrafo o encabezado&lt;/p&gt;
 
 &lt;p&gt;el comando &lt;code&gt;style&lt;/code&gt; sirve para establecer la ruta a una hoja de estilos, para el
-caso un css, de momento &lt;a href=&#34;../worg-data.zip&#34;&gt;este&lt;/a&gt; es el que utilizo, puedes
+caso un css. De momento &lt;a href=&#34;../worg-data.zip&#34;&gt;este&lt;/a&gt; es el que utilizo, puedes
 encontrar la version &lt;em&gt;de desarrollo&lt;/em&gt; dentro del codigo fuente, si vas a
 &lt;code&gt;~/go/src/github.com/nasciiboy/morg/biskana/testdata/worg-data/worg.css&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;si no se incluye un titulo (&lt;code&gt;..title &amp;gt; titulo&lt;/code&gt;) en el documento, se asigna el
+nombre del fichero como el titulo.&lt;/p&gt;
+
+&lt;p&gt;de momento el comando &lt;code&gt;options&lt;/code&gt; permite tres cosas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Si colocamos &lt;code&gt;toc&lt;/code&gt; se creara una tabla de contenido (indice)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Con &lt;code&gt;highlight&lt;/code&gt; se incluira el enlace a un script para resaltar el codigo
+fuente, este apunta a una carpeta de nombre &lt;code&gt;highlight&lt;/code&gt; que debe encontrarse
+en la misma ruta que el fichero resultado&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para optener tu carpeta &lt;code&gt;highlight&lt;/code&gt; ve
+  a &lt;a href=&#34;https://highlightjs.org/download/&#34;&gt;esta&lt;/a&gt; pagina y especifica que lenguajes
+  deseas, descarga, descomprime y coloca en la misma carpeta del resultado, o en
+  &lt;code&gt;~/go/src/github.com/nasciiboy/morg/biskana/testdata/&lt;/code&gt; encortraras la carpeta
+  &lt;code&gt;highlight&lt;/code&gt; con todos los lenguajes disponibles, copia y mueve a tu directorio
+  de trabajo&lt;/p&gt;
+
+&lt;p&gt;Coloque un estilo por defecto en el codigo fuente, la forma mas sencilla de
+  modificarlo es hacelo el fichero resultado (a mano), los estilos de resaltado
+  disponibles estan dentro de &lt;code&gt;highlight/styles&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Si por el contrario si (tienes instalado y) quieres que el resaltado se
+incluya con etiquetas utilizando &lt;code&gt;pygments&lt;/code&gt;, debes utilazar esta opcion en
+options &lt;code&gt;..options &amp;gt; pygments&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;encontraras tambien dentro del &lt;a href=&#34;../worg-data.zip&#34;&gt;css&lt;/a&gt;, etiquetas para
+  establecer el estilo del resaltado.&lt;/p&gt;
+
+&lt;p&gt;Puedes opteren mas estilos css para
+  pygments &lt;a href=&#34;https://github.com/jwarby/jekyll-pygments-themes/&#34;&gt;aqui&lt;/a&gt;, descarga
+  el estilo, y agrega un comando &lt;code&gt;..style &amp;gt; direccion/a/mi/pygments.css&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;estructura&#34;&gt;estructura&lt;/h3&gt;
 
 &lt;p&gt;la estructura es fundamental en un lenguaje de marcas que se precie. En el caso
-de morg (basado en org, md reestructure text, textinfo y otras cosas) se opta
+de morg (basado en org, md reestructure text, texinfo y otras cosas) se opta
 por dividir el documento en secciones o encabezados&lt;/p&gt;
 
 &lt;p&gt;La sintaxis de un encabezado es muy simple:&lt;/p&gt;
@@ -198,13 +238,19 @@ por dividir el documento en secciones o encabezados&lt;/p&gt;
 ** Segundo nivel
 *** 3er. nivel
 
-    algo de texto
+    primer parrafo del 3er. nivel
 
-*** 3er. nivel
+    segundo parrafo del 3er. nivel
+
+*** otro 3er. nivel
+
     mas texto
 
 * Otro encabezado principal
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(como vez, he indentado el texto que pertenece a cada encabezado (no es
+necesario, pero a mi me gusta que se vea asi).&lt;/p&gt;
 
 &lt;p&gt;Toda linea que inicia con uno o varios &lt;code&gt;*&lt;/code&gt; seguido por al menos un espacio en
 blanco, es un encabezado.&lt;/p&gt;
@@ -233,47 +279,30 @@ el. Si no tiene un encabezado encima pertenece al &lt;q&gt;titulo&lt;/q&gt; del 
 comandos de configuracion) puede extenderse en varias lineas siempre y cuando se
 respete la indentacion&lt;/p&gt;
 
-&lt;p&gt;un ejemplo mas extenso&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;* Encabezado H1
-
-  Primer parrafo del encabezado H1
-
-  Segundo parrafo del encabezado H1
-
-** Encabezado H2
-
-   Algo,
-   y algo mas (sin una linea en blanco no hay cambio de parrafo)
-
-** Otro Encabezado H2
-
-   Hey
-
-*** Encabezado H3
-
-    coloca algo aqui
-
-**** Encabezado H4
-
-     y aqui
-
-***** Encabezado H5
-
-      tambien aqui
-
-* Otro Encabezado H1
+&lt;pre&gt;&lt;code&gt;** encabezada dividido en multiples lineas
+   por ser demasiado extenso y a modo
+   de ejemplo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;como vez, he indentado el texto que pertenece a cada encabezado (no es
-necesario, pero a mi me gusta que se vea asi).&lt;/p&gt;
-
 &lt;p&gt;por cierto, todos los encabezados generan una referencia dentro del documento,
-substituyendo los espacios en blanco por &lt;code&gt;-&lt;/code&gt; (menos)&lt;/p&gt;
+donde se substituyen los espacios en blanco por &lt;code&gt;-&lt;/code&gt; (menos), por ejemplo&lt;/p&gt;
 
-&lt;p&gt;Si deseamos especificar el nombre de la referencia, se utiliza la sintaxis&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;** El Raptor
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code&gt;** referencia-personalizada &amp;lt;&amp;gt; texto del encabezado
+&lt;p&gt;generara&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h2 id=&amp;quot;El-Raptor&amp;quot; &amp;gt;El Raptor&amp;lt;/h2&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si deseamos especificar el contenido de la referencia, se utiliza la sintaxis&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;** referencia personalizada &amp;lt;&amp;gt; texto del encabezado
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;que genera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h2 id=&amp;quot;referencia-personalizada&amp;quot; &amp;gt;texto del encabezado&amp;lt;/h2&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;enfasis-bold-links-el-comando&#34;&gt;enfasis, bold, links, el comando &lt;code&gt;@&lt;/code&gt;&lt;/h3&gt;
@@ -282,7 +311,7 @@ substituyendo los espacios en blanco por &lt;code&gt;-&lt;/code&gt; (menos)&lt;/
 enfoque radica en naturaleza exotica de las marcas, que los limitan a dos o tres
 formas de resaltado, antes de recurrir a etiquetas html (blasfemia).&lt;/p&gt;
 
-&lt;p&gt;luego de meditar por 15 dias, 10 noches, ver textinfo y realizar una
+&lt;p&gt;luego de meditar por 15 dias, 10 noches, ver texinfo y realizar una
 investigacion con fondos provenientes del gobierno (nada extraordinario, solo un
 par de millones) se descubrio &lt;em&gt;la sintaxis&lt;/em&gt; de marcas perfecta&lt;/p&gt;
 
@@ -300,7 +329,7 @@ delimitado por &lt;code&gt;{…}&lt;/code&gt;, &lt;code&gt;(…)&lt;/code&gt;, &
 ser el signo menos utilizado y mas aun con la estructura &lt;code&gt;@x{}&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;y la &lt;code&gt;x&lt;/code&gt;?&lt;/em&gt; Un caracter ascii imprimible. Si hemos de necesitar mas
-marcas que los caracteres ascii mal vamos.&lt;/p&gt;
+marcas que los caracteres ascii, mal vamos.&lt;/p&gt;
 
 &lt;p&gt;de momento, puedes utilizar las marcas de resaltado&lt;/p&gt;
 
@@ -311,7 +340,7 @@ marcas que los caracteres ascii mal vamos.&lt;/p&gt;
 - e :: emph
 - f :: file
 - &#39; :: ‘samp’
-- &amp;quot; :: “quote”
+- &amp;quot; :: cite
 - i :: italic
 - k :: kbd
 - ^ :: sup
@@ -325,35 +354,56 @@ marcas que los caracteres ascii mal vamos.&lt;/p&gt;
 - $ :: command
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;code&gt;^&lt;/code&gt; para generar superindices y &lt;code&gt;_&lt;/code&gt; para los subindices&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;^&lt;/code&gt; sirve para generar superindices y &lt;code&gt;_&lt;/code&gt; para los subindices&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;y los &lt;code&gt;({[&amp;lt;&amp;gt;]})&lt;/code&gt;?&lt;/em&gt; Mas opciones, mas diversion.&lt;/p&gt;
 
 &lt;p&gt;Segun sea el contexto &lt;code&gt;{}&lt;/code&gt; o &lt;code&gt;()&lt;/code&gt; podrian requerir el &lt;em&gt;escape&lt;/em&gt; de algun
 caracter. Para minimizar la inclucion de signos extraños, los delimitadores se
 aplican deacuerdo a la necesidad y gusto del &lt;q&gt;creador&lt;/q&gt;.&lt;/p&gt;
 
-&lt;p&gt;cuando no haya &lt;em&gt;escapatoria&lt;/em&gt;, para anular el significado de un caracter se
-antecede con &lt;code&gt;@&lt;/code&gt; (nota: para que aparesca &lt;code&gt;@&lt;/code&gt; hay que colocar &lt;code&gt;@@&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;importante resaltar que el signo &lt;code&gt;@&lt;/code&gt; sirve tambien para escapar caracteres,
+cuando no se cumple la secuencia &lt;code&gt;@x()&lt;/code&gt;, por ejemplo, &lt;code&gt;@(&lt;/code&gt; se substituye por
+&lt;code&gt;(&lt;/code&gt;, &lt;code&gt;@}&lt;/code&gt; por &lt;code&gt;}&lt;/code&gt;. (nota: dentro del texto o un comado &lt;code&gt;@&lt;/code&gt; para que aparesca &lt;code&gt;@&lt;/code&gt;
+hay que colocar &lt;code&gt;@@&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;los comandos &lt;code&gt;@&lt;/code&gt; pueden utilizarse en cualquier sitio, inclusive dentro de la
+configuracion del titulo, encabezados, tablas y demas, (solo no colocar en otros
+comandos de configuracion que no sean &lt;code&gt;title&lt;/code&gt; no contemplo esta sitiacion y no
+tiene sentido&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;los &lt;q&gt;comandos&lt;/q&gt; &lt;code&gt;@&lt;/code&gt; soportan anidamiento de otros comandos como en &lt;code&gt;@b(bold
-@e(emph @i(italic))&lt;/code&gt;&lt;/p&gt;
+@e(emph @i(italic)))&lt;/code&gt;. En caso de no encontrar el operador de cierre de un
+comando, la accion de este tendra efecto hasta el final del parrafo o encabezado
+en cuestion&lt;/p&gt;
 
-&lt;p&gt;por si esto no fuera suficiente para colocar enlaces tenemos&lt;/p&gt;
+&lt;p&gt;por si esto no fuera suficiente tenemos un comando especifico para el manejo de
+enlaces&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;- l :: link
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;donde &lt;code&gt;@l(https://direccion)&lt;/code&gt;, convierte en un enlace a su contenido, para que
-aparesca un texto distinto al de la direccion seria &lt;code&gt;@l(https://direccion&amp;lt;&amp;gt;texto
-distinto)&lt;/code&gt;&amp;hellip; he aqui la magia del comando &lt;code&gt;@&lt;/code&gt;, todos los comandos &lt;code&gt;@&lt;/code&gt; tienen la
-estructura&lt;/p&gt;
+&lt;p&gt;donde &lt;code&gt;@l(https://direccion)&lt;/code&gt;, convierte en un enlace a su contenido, asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;https://direccion&amp;quot; &amp;gt;https://direccion&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para que aparesca un texto distinto al de la direccion seria
+&lt;code&gt;@l(https://direccion&amp;lt;&amp;gt;texto distinto)&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;https://direccion&amp;quot; &amp;gt;texto distinto&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;he? (movimiento de manos y aparece un arcoiris) la magia del comando &lt;code&gt;@&lt;/code&gt;. En
+realidad todos los comandos &lt;code&gt;@&lt;/code&gt; tienen la estructura&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;@x(custom&amp;lt;&amp;gt;contenido)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;donde &lt;code&gt;custom&lt;/code&gt; es un parametro personalizado y opcional. Por su parte
-&lt;code&gt;contenido&lt;/code&gt; es el contenido del comando&lt;/p&gt;
+&lt;p&gt;donde &lt;code&gt;custom&lt;/code&gt; es un parametro personalizado y opcional, y el &lt;code&gt;contenido&lt;/code&gt; es el
+contenido del comando, el cual siempre debe proporcionarse&lt;/p&gt;
 
-&lt;p&gt;Cuando un comando, por ejemplo, los enlaces requieren un &lt;code&gt;custom&lt;/code&gt; y este no se ha
+&lt;p&gt;Cuando un comando, por ejemplo, un enlace enlace, requiere un &lt;code&gt;custom&lt;/code&gt; y este no se ha
 especificado, se genera apartir del &lt;code&gt;contenido&lt;/code&gt;, extrayendo las marcas expeciales
 dejando unicamente el texto.&lt;/p&gt;
 
@@ -364,15 +414,12 @@ esto esta a consideracion y podria requerir sintaxis adicional)&lt;/p&gt;
 &lt;p&gt;Cuando el comando esta dentro de otro comando, el comando interno &lt;em&gt;pasa&lt;/em&gt; su
 contenido al comando externo, por ejemplo:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;@l(#encabezado&amp;lt;&amp;gt;lo que sea con @e(enfasis con @b(algo&amp;lt;&amp;gt;bold)))
+&lt;pre&gt;&lt;code&gt;@l(objetivo&amp;lt;&amp;gt;lo que sea con @e(enfasis con @b(algo&amp;lt;&amp;gt;bold)))
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(se utiliza un &lt;code&gt;#&lt;/code&gt; (para hacer referencia a un identificador dentro del
-documento, en este caso para apuntar al encabezado &lt;code&gt;encabezado&lt;/code&gt;)&lt;/p&gt;
 
 &lt;p&gt;genera&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;#encabezado&amp;quot; &amp;gt;lo que sea con &amp;lt;em&amp;gt;enfasis con &amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;objetivo&amp;quot; &amp;gt;lo que sea con &amp;lt;em&amp;gt;enfasis con &amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;y&lt;/p&gt;
@@ -400,51 +447,86 @@ documento, en este caso para apuntar al encabezado &lt;code&gt;encabezado&lt;/co
 &lt;pre&gt;&lt;code&gt;- t :: target
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;sirve para crear una referencia dentro del documento, por ejemplo &lt;code&gt;@t(mi
-referencia&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;sirve para crear una referencia dentro del documento. Por ejemplo&lt;/p&gt;
 
-&lt;h3 id=&#34;listados&#34;&gt;listados&lt;/h3&gt;
+&lt;p&gt;````
+@t(objetivo interno)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;- lista desordenada
+&lt;p&gt;@l(#objetivo interno)&lt;/p&gt;
 
-  contenido de elemento
+&lt;pre&gt;&lt;code&gt;
+donde `@t` declara el objetivo interno en el documento, y `@l` enlaza a dicho
+objetivo. Recordar que  para los encabezados, el exportador genera  el &amp;lt;q&amp;gt;objetivo&amp;lt;/q&amp;gt;
+automaticamente
 
-+ lista desordenada
+Cuando se exporta la referencia `@l(#referencia)` se elimina el signo `#` del
+texto, es decir, genera
 
-1. lista ordenada numericamente
-
-1) lista ordenada numericamente
-
-a. lista ordenada alfabeticamente
-
-a) lista ordenada alfabeticamente
-
-   contenido de elemento a
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;El contenido de una lista debe indentarse segun la seccion de la que forme
+&lt;p&gt;&lt;a href=&#34;#referencia&#34; &gt;referencia&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+### listados
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lista desordenada&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;contenido de elemento&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lista desordenada&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;lista ordenada numericamente&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) lista ordenada numericamente&lt;/p&gt;
+
+&lt;p&gt;a. lista ordenada alfabeticamente&lt;/p&gt;
+
+&lt;p&gt;a) lista ordenada alfabeticamente&lt;/p&gt;
+
+&lt;p&gt;contenido de elemento a&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+El contenido de una lista debe indentarse segun la seccion de la que forme
 parte. Se permite anidar listas dentro de otras listas, asi como otro tipo de
-elemnentos del formato&lt;/p&gt;
+elementos del formato
 
-&lt;h3 id=&#34;dialogos&#34;&gt;dialogos&lt;/h3&gt;
+### dialogos
 
-&lt;pre&gt;&lt;code&gt;&amp;gt; &amp;quot;Dialogo, Lorem ipsum dolor sit amet, consectetur adipiscing
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Dialogo, Lorem ipsum dolor sit amet, consectetur adipiscing
   elit, sed eiusmod tempor incidunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam.&amp;quot;
+  aliqua. Ut enim ad minim veniam.&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+los dialogos tienen la mismas normas que una lista.
+
+#### definiciones
+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;los dialogos tienen la mismas normas que una lista.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+adipiscing elit, sed eiusmod tempor incidunt ut labore et
+dolore magna aliqua. Ut enim ad minim veniam.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 
-&lt;h4 id=&#34;definiciones&#34;&gt;definiciones&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;- elemento :: definicion Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit, sed eiusmod tempor incidunt ut labore et
-  dolore magna aliqua. Ut enim ad minim veniam.
-
-+ elemento :: definicion Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit, sed eiusmod tempor incidunt ut labore et
-  dolore magna aliqua. Ut enim ad minim veniam.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+adipiscing elit, sed eiusmod tempor incidunt ut labore et
+dolore magna aliqua. Ut enim ad minim veniam.
+```&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&#34;about-s&#34;&gt;about&amp;rsquo;s&lt;/h4&gt;
 
@@ -475,47 +557,47 @@ propia&lt;/p&gt;
 
 &lt;h3 id=&#34;comandos&#34;&gt;..comandos &amp;gt;&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;.. comando &amp;gt; contenido
+&lt;p&gt;los comandos de configuracion del documento, son un subconjunto de la sistaxis
+&lt;code&gt;..comando &amp;gt;&lt;/code&gt; que cumple con la forma &lt;code&gt;..comando &amp;gt; argumento&lt;/code&gt;, sin embargo
+existen multiples formas de este comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..comando-de-configuracion &amp;gt; argumento
+
+..comando &amp;gt; argumento
+  cuerpo
+
+..comando &amp;gt; argumento en
+  multiples lineas
+
+  cuerpo
+
+..comando &amp;gt;
+  solo cuerpo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;o en su forma &amp;ldquo;simetrica&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;ademas estos pueden ser simentricos, es decir tener una marca de cierre, asi&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;.. comando &amp;gt;
-  contenido
-&amp;lt; comando ..
+&lt;pre&gt;&lt;code&gt;..comando &amp;gt; argumento
+  cuerpo
+&amp;lt; comando..
+
+..comando &amp;gt; argumento en
+  multiples lineas
+
+  cuerpo
+&amp;lt; comando..
+
+
+..comando &amp;gt;
+  solo cuerpo
+&amp;lt; comando..
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;el contenido tiene que estar indentado con dos espacios por ejemplo&lt;/p&gt;
+&lt;p&gt;(resaltar que los comandos de configuracion, &lt;em&gt;no son simetricos&lt;/em&gt;, es decir, no
+necesita (ni debe) escribirse el cierre del comando)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;..comando &amp;gt;
-  contenido
-
-  mas contenido
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;o&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;..comando &amp;gt;
-  contenido
-
-  mas contenido
-
-  ..otro-comando &amp;gt;
-    contenido
-
-    mas contenido
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bien? Hay varios tipos de comandos y varias formas de optener su contenido. Por
-un lado tenemos comandos donde el cuerpo se define en una sola linea o mas
-indentadas.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;..comando &amp;gt; contenido contenido contenido
-  contenido
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;El contenido o &lt;em&gt;argumentos&lt;/em&gt; abarcan hasta la aparicion de la primer linea en
-blanco o sin la indentacion apropiada.&lt;/p&gt;
+&lt;p&gt;Bien? Para el primer caso, el &lt;em&gt;argumento&lt;/em&gt; abarca hasta la aparicion de la primer
+linea en blanco o sin la indentacion apropiada.&lt;/p&gt;
 
 &lt;p&gt;en este tipo de comandos se encuentran los de configuracion del documento (que
 ya vimos al inicio)&lt;/p&gt;
@@ -524,7 +606,8 @@ ya vimos al inicio)&lt;/p&gt;
   puede abarcar varias lineas, siempre con indentacion y sin lineas
   en blanco
 
-  esto queda fuera del comando titulo
+  esto queda fuera del comando titulo, (de hecho termina el bloque de
+  comandos de configuracion)
 
 ..author   &amp;gt; nasciiboy
 ..mail     &amp;gt; nasciiboy@gmail.com
@@ -532,10 +615,7 @@ ya vimos al inicio)&lt;/p&gt;
 ..options  &amp;gt; highlight
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;(resaltar que los comandos de configuracion, &lt;em&gt;no son simetricos&lt;/em&gt;, es decir, no
-necesita (ni debe) escribirse el cierre del comando)&lt;/p&gt;
-
-&lt;p&gt;tambien tenemos comandos que solo tiene cuerpo&lt;/p&gt;
+&lt;p&gt;para los comandos que solo tienen &lt;code&gt;cuerpo&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;..emph &amp;gt;
   toda esta seccion tiene enfasis
@@ -558,38 +638,13 @@ necesita (ni debe) escribirse el cierre del comando)&lt;/p&gt;
   --Richard Matthew Stallman
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;estan diseñados para resaltar o aplicar alguna configuracion a una parrafo o
+&lt;p&gt;Estan diseñados para resaltar o aplicar alguna configuracion a una parrafo o
 bloque extenso del documento&lt;/p&gt;
 
-&lt;p&gt;luego tenemos comandos con &lt;em&gt;argumentos&lt;/em&gt; y &lt;em&gt;cuerpo&lt;/em&gt;, como pueden ser los bloques
-de codigo&lt;/p&gt;
+&lt;p&gt;En este tipo de comandos se encuentran: &lt;code&gt;center&lt;/code&gt;, &lt;code&gt;bold&lt;/code&gt;, &lt;code&gt;emph&lt;/code&gt;, &lt;code&gt;italic&lt;/code&gt;,
+&lt;code&gt;quote&lt;/code&gt;, &lt;code&gt;example&lt;/code&gt;, &lt;code&gt;pre&lt;/code&gt;, &lt;code&gt;diagram&lt;/code&gt;, &lt;code&gt;art&lt;/code&gt;, &lt;code&gt;cols&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;..src &amp;gt; c
-  #include &amp;lt;stdio.h&amp;gt; # esto es codigo en C
-&amp;lt; src..
-
-..src &amp;gt; go
-
-  package biskana
-
-  import &amp;quot;github.com/nasciiboy/regexp3&amp;quot;
-
-  // esto es codigo en go
-
-
-..src &amp;gt; sh
-  echo &amp;quot;hola que hace&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;aqui el contenido despues del (y en la misma linea que) &lt;code&gt;&amp;gt;&lt;/code&gt; especifica el
-lenguaje, por su parte, el cuerpo del bloque es toda linea que cumpla con la
-indentacion&lt;/p&gt;
-
-&lt;p&gt;en este tipo de comandos estan &lt;code&gt;src&lt;/code&gt;, &lt;code&gt;center&lt;/code&gt;, &lt;code&gt;bold&lt;/code&gt;, &lt;code&gt;emph&lt;/code&gt;, &lt;code&gt;italic&lt;/code&gt;,
-&lt;code&gt;quote&lt;/code&gt;, &lt;code&gt;example&lt;/code&gt;, &lt;code&gt;pre&lt;/code&gt;, &lt;code&gt;diagram&lt;/code&gt;, &lt;code&gt;art&lt;/code&gt;, &lt;code&gt;cols&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;solo &lt;code&gt;src&lt;/code&gt; examina el contenido luego de &lt;code&gt;&amp;gt;&lt;/code&gt; para determinar el lenguaje del
-codigo fuente&lt;/p&gt;
+&lt;p&gt;De proporcionar un &lt;code&gt;argumento&lt;/code&gt;, el exportador sencillamente lo ignora.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;cols&lt;/code&gt; tiene una sintaxis especial que nos premite crear columnas con cualquier
 tipo de contenido, su sintaxis es&lt;/p&gt;
@@ -614,7 +669,31 @@ tipo de contenido, su sintaxis es&lt;/p&gt;
 &lt;p&gt;donde el delimitador de las columnas es la secuencia &lt;code&gt;::&lt;/code&gt;. Debe estar en
 solitario en su propia linea, con dos espacios de indentacion.&lt;/p&gt;
 
-&lt;p&gt;por ultimo, tenemos bloques con &lt;em&gt;argumentos&lt;/em&gt; de multiples lineas y &lt;em&gt;cuerpo&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Por su parte los comandos con &lt;em&gt;argumento&lt;/em&gt; y &lt;em&gt;cuerpo&lt;/em&gt;, se utilizan pala bloques
+de tipo &lt;q&gt;codigo fuente&lt;/q&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..src &amp;gt; c
+  #include &amp;lt;stdio.h&amp;gt; # esto es codigo en C
+&amp;lt; src..
+
+..src &amp;gt; go
+
+  package biskana
+
+  import &amp;quot;github.com/nasciiboy/regexp3&amp;quot;
+
+  // esto es codigo en go
+
+
+..src &amp;gt; sh
+  echo &amp;quot;hola que hace&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aqui el contenido despues del (y en la misma linea que) &lt;code&gt;&amp;gt;&lt;/code&gt; especifica el
+lenguaje. Por su parte, el cuerpo del bloque, es toda linea que cumpla con la
+indentacion de dos espacios.&lt;/p&gt;
+
+&lt;p&gt;Por ultimo, los bloques con &lt;em&gt;argumentos&lt;/em&gt; de multiples lineas y &lt;em&gt;cuerpo&lt;/em&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;..figure &amp;gt; esto el titulo
   de una mini seccion
@@ -624,11 +703,11 @@ solitario en su propia linea, con dos espacios de indentacion.&lt;/p&gt;
 
 &lt;p&gt;donde el &lt;em&gt;contenido&lt;/em&gt; empieza luego de la primer linea en blanco.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;..img &amp;gt; direccion/a/mi/imagen.jpg
+&lt;pre&gt;&lt;code&gt;..img &amp;gt; ruta/a/mi/imagen.jpg
 
   descripcion, contenido o lo que sea
 
-..video &amp;gt; direccion/a/mi/video.ogg
+..video &amp;gt; ruta/a/mi/video.ogg
 
   descripcion, contenido o lo que sea
 &lt;/code&gt;&lt;/pre&gt;
@@ -663,14 +742,16 @@ morg, por varias razones&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;primero, programe esto con muy poca idea de golang, y por lo que veo el
-lenguaje tiene herramientas que haran el codigo abismalmente mejor&lt;/p&gt;&lt;/li&gt;
+lenguaje tiene herramientas que haran el codigo abismalmente mejor
+(suponiendo que algo bueno tiene)&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;para poner a prueba el formato&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;para tener una referencia inmediata&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;el texto plano es infinitamente superior como referencia comparandolo con un
+ebook, ya de un pdf ni se diga&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;por joder (el copyright) (vera la luz el resultado? o se quedara en mi
-coleccion privada de cosas adaptadas a morg)&lt;/p&gt;&lt;/li&gt;
+coleccion privada de cosas adaptadas a texto plano)&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;asi que estare aprendiendo el lenguage la semana siguiente y luego mejorando el
