@@ -176,12 +176,12 @@ indentacion de dos espacios, como en&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;un comando de configuracion finaliza cuando se encuentra la primer linea en
-blanco o se incumple con la indentacion (en caso de que el argumento abarca
+blanco o se incumple con la indentacion (en caso de que el argumento abarque
 multiples lineas)&lt;/p&gt;
 
 &lt;p&gt;Ademas los comandos de configuracion deben colocarse al inicio del documento,
 sin dejar espacios en blanco entre el inicio de la linea y la declaracion del
-comando. Este &lt;q&gt;bloque de configuracion&amp;lt;\q&amp;gt; terminara en cuanto aparesca el
+comando. Este &lt;q&gt;bloque de configuracion&lt;/q&gt; terminara en cuanto aparesca el
 primer parrafo o encabezado&lt;/p&gt;
 
 &lt;p&gt;el comando &lt;code&gt;style&lt;/code&gt; sirve para establecer la ruta a una hoja de estilos, para el
@@ -449,84 +449,63 @@ contenido al comando externo, por ejemplo:&lt;/p&gt;
 
 &lt;p&gt;sirve para crear una referencia dentro del documento. Por ejemplo&lt;/p&gt;
 
-&lt;p&gt;````
-@t(objetivo interno)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@t(objetivo interno)
 
-&lt;p&gt;@l(#objetivo interno)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-donde `@t` declara el objetivo interno en el documento, y `@l` enlaza a dicho
-objetivo. Recordar que  para los encabezados, el exportador genera  el &amp;lt;q&amp;gt;objetivo&amp;lt;/q&amp;gt;
-automaticamente
-
-Cuando se exporta la referencia `@l(#referencia)` se elimina el signo `#` del
-texto, es decir, genera
-
+@l(#objetivo interno)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;#referencia&#34; &gt;referencia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;donde &lt;code&gt;@t&lt;/code&gt; declara el objetivo interno en el documento, y &lt;code&gt;@l&lt;/code&gt; enlaza a dicho
+objetivo. Recordar que  para los encabezados, el exportador genera  el &lt;q&gt;objetivo&lt;/q&gt;
+automaticamente&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
-### listados
+&lt;p&gt;Cuando se exporta la referencia &lt;code&gt;@l(#referencia)&lt;/code&gt; se elimina el signo &lt;code&gt;#&lt;/code&gt; del
+texto, es decir, genera&lt;/p&gt;
 
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;#referencia&amp;quot; &amp;gt;referencia&amp;lt;/a&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ul&gt;
-&lt;li&gt;lista desordenada&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&#34;listados&#34;&gt;listados&lt;/h3&gt;
 
-&lt;p&gt;contenido de elemento&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- lista desordenada
 
-&lt;ul&gt;
-&lt;li&gt;lista desordenada&lt;/li&gt;
-&lt;/ul&gt;
+  contenido de elemento
 
-&lt;ol&gt;
-&lt;li&gt;lista ordenada numericamente&lt;/li&gt;
-&lt;/ol&gt;
++ lista desordenada
 
-&lt;p&gt;1) lista ordenada numericamente&lt;/p&gt;
+1. lista ordenada numericamente
 
-&lt;p&gt;a. lista ordenada alfabeticamente&lt;/p&gt;
+1) lista ordenada numericamente
 
-&lt;p&gt;a) lista ordenada alfabeticamente&lt;/p&gt;
+a. lista ordenada alfabeticamente
 
-&lt;p&gt;contenido de elemento a&lt;/p&gt;
+a) lista ordenada alfabeticamente
 
-&lt;pre&gt;&lt;code&gt;
-El contenido de una lista debe indentarse segun la seccion de la que forme
+   contenido de elemento a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El contenido de una lista debe indentarse segun la seccion de la que forme
 parte. Se permite anidar listas dentro de otras listas, asi como otro tipo de
-elementos del formato
+elementos del formato&lt;/p&gt;
 
-### dialogos
+&lt;h3 id=&#34;dialogos&#34;&gt;dialogos&lt;/h3&gt;
 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Dialogo, Lorem ipsum dolor sit amet, consectetur adipiscing
+&lt;pre&gt;&lt;code&gt;&amp;gt; &amp;quot;Dialogo, Lorem ipsum dolor sit amet, consectetur adipiscing
   elit, sed eiusmod tempor incidunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam.&amp;rdquo;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-los dialogos tienen la mismas normas que una lista.
-
-#### definiciones
-
+  aliqua. Ut enim ad minim veniam.&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ul&gt;
-&lt;li&gt;elemento :: definicion Lorem ipsum dolor sit amet, consectetur
-adipiscing elit, sed eiusmod tempor incidunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;los dialogos tienen la mismas normas que una lista.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;elemento :: definicion Lorem ipsum dolor sit amet, consectetur
-adipiscing elit, sed eiusmod tempor incidunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam.
-```&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&#34;definiciones&#34;&gt;definiciones&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;- elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed eiusmod tempor incidunt ut labore et
+  dolore magna aliqua. Ut enim ad minim veniam.
+
++ elemento :: definicion Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed eiusmod tempor incidunt ut labore et
+  dolore magna aliqua. Ut enim ad minim veniam.
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&#34;about-s&#34;&gt;about&amp;rsquo;s&lt;/h4&gt;
 
@@ -575,7 +554,7 @@ existen multiples formas de este comando&lt;/p&gt;
   solo cuerpo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;ademas estos pueden ser simentricos, es decir tener una marca de cierre, asi&lt;/p&gt;
+&lt;p&gt;ademas estos pueden ser simentricos, es decir tener una marca de cierre&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;..comando &amp;gt; argumento
   cuerpo
@@ -669,7 +648,7 @@ tipo de contenido, su sintaxis es&lt;/p&gt;
 &lt;p&gt;donde el delimitador de las columnas es la secuencia &lt;code&gt;::&lt;/code&gt;. Debe estar en
 solitario en su propia linea, con dos espacios de indentacion.&lt;/p&gt;
 
-&lt;p&gt;Por su parte los comandos con &lt;em&gt;argumento&lt;/em&gt; y &lt;em&gt;cuerpo&lt;/em&gt;, se utilizan pala bloques
+&lt;p&gt;Por su parte los comandos con &lt;em&gt;argumento&lt;/em&gt; y &lt;em&gt;cuerpo&lt;/em&gt;, se utilizan para bloques
 de tipo &lt;q&gt;codigo fuente&lt;/q&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;..src &amp;gt; c
