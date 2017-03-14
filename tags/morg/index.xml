@@ -10,6 +10,76 @@
     <atom:link href="http://nasciiboy.github.io/tags/morg/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>yorozuya</title>
+      <link>http://nasciiboy.github.io/prog/yorozuya/</link>
+      <pubDate>Tue, 14 Mar 2017 16:33:15 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/yorozuya/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Yorozuya&lt;/em&gt; en una tienda donde se toma cualquier tipo de trabajo por una
+tarifa&amp;hellip; bienvenidos los encargos!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../yorozuya.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;bueno, bueno, matizando un poco y conectado con la saga de post
+sobre &lt;a href=&#34;https://nasciiboy.github.io/tags/morg&#34;&gt;morg&lt;/a&gt;, me encontraba aprendiendo
+golang y para tener una referencia rapida del lenguaje, pase el libro oficial
+(apartir de un pdf) a morg (&lt;a href=&#34;../tgpl.zip&#34;&gt;AQUI&lt;/a&gt; el material, fuente, resultado e
+imagenes). Aun le falta una revision &lt;q&gt;fina&lt;/q&gt; que ire realizando a medida que
+avance su lectura, aunque la actualizacion quisa solo vea la luz cuando aparesca
+el proyecto morg al 100%.&lt;/p&gt;
+
+&lt;p&gt;Por cierto, aunque solo he leido (medio entendiendo english) hasta el capitulo
+2, el libro promete a lo grande, eso si como no se hagan los ejersicios dificil
+sera dominar el asunto.&lt;/p&gt;
+
+&lt;p&gt;Claro que hay mas cosas de donde salio esta! como: &lt;em&gt;The Land of Lisp&lt;/em&gt;, &lt;em&gt;Clean
+Code&lt;/em&gt;, &lt;em&gt;Programmer&amp;rsquo;s Guide to NCurses&lt;/em&gt;, &lt;em&gt;The C programming Languge&lt;/em&gt;, &lt;em&gt;In the
+Beginning was the Command Line&lt;/em&gt;, &lt;em&gt;matematicas para programadores&lt;/em&gt;, &lt;em&gt;elisp&lt;/em&gt;,
+&lt;em&gt;arduino projects for the evil genius&lt;/em&gt;, &lt;em&gt;openGL game programming&lt;/em&gt;, &lt;em&gt;rama&lt;/em&gt;,
+&lt;em&gt;dune&lt;/em&gt;, &lt;em&gt;el fin de la eternidad&lt;/em&gt;, &lt;em&gt;3012&lt;/em&gt;, &lt;em&gt;Fahrenheit 451&lt;/em&gt;, &lt;em&gt;El calculo de
+dios&lt;/em&gt;, y otros tantos a medio hacer. Las novelas las adapte para obligarme a
+leerlas y los libros para averiguar si eran interesantes, ademas de prara
+practicar mecanografia transcribiendo unos 5 de ellos (la dislexia y poca
+habilidad literaria es un defecto incorregible). El asunto es que este es el
+primero (o mejor dicho el ultimo) que cumple con la sintaxis actual&lt;/p&gt;
+
+&lt;p&gt;El proceso de adaptacion fue sencillo, pero fueron necesarios pequeños ajustes
+al exportador. Lo mas complejo fue hacer una funcion que convirtiese las tablas
+a html y agregar un comando para crear columnas. Siendo sincero no me complique
+mucho y dichos comandos son en realidad muy basicos.&lt;/p&gt;
+
+&lt;p&gt;Ademas descubri que mes mejor exportar el comando &lt;code&gt;&amp;quot;&lt;/code&gt; como &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; en lugar de
+&lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt; (internamente se ve mejor) y que no es buena idea colocar targets
+dentro de los encabezados, por que al generar la tabla de contenidos hay una
+coalicion de identificadores, a menos que se desactive la intepretacion de
+contenido en la tabla de contenidos, peeeroo, si el exportador ya genera un
+blaco automagicamente, por que habria que crear target adicional?&lt;/p&gt;
+
+&lt;p&gt;Como el documento no tiene formulas matematicas, no tuve que lidiar con latex,
+ni buscar un generador de texto a imagen, por otro lado, el material esta lleno
+de referencias (enlaces), y &lt;em&gt;&lt;q&gt;citas&lt;/q&gt;&lt;/em&gt; (commillas dobles), asunto que
+dificulta (pero no imposibilita) la lectura del documento fuente en texto plano&lt;/p&gt;
+
+&lt;p&gt;El resaltado de codigo se realiza con pygments, asi que si quieres comprobar que
+morg funciona tiene que tenerlo instalado (y esperar un rato, python es
+&lt;b&gt;lento&lt;/b&gt;), o en su defecto eliminar &lt;code&gt;pygments&lt;/code&gt; del comando de configuracion
+&lt;code&gt;..options &amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Por cierto, la imagenes las optuve con capturas en png. Para hacer ligero el
+resultado converti a jpg, ho, y un par de imagenes (graficos) las hice con texto
+plano, en el fuente se ven bien, pero en el html las exporto como codigo, asi
+que desentonan&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;En fin, si el resultado o el metodo es de tu agrado y deseas que adapte un
+documento o cooperar con la causa, recivo pedidos. El precio por algo de similar
+complejidad a la muestra, es de 500 euros/dolares (en nasciiboy inc. no hay
+sobreprecio). El proceso de adaptacion toma entre 1 o 2 semanas de tiempo ocioso&lt;/p&gt;
+
+&lt;p&gt;pd: tambien son bienvenidas las criticas al estilo visual&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>morg: como usar</title>
       <link>http://nasciiboy.github.io/prog/morg-howto/</link>
       <pubDate>Sun, 12 Mar 2017 09:33:15 -0600</pubDate>

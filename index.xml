@@ -7,8 +7,78 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sun, 12 Mar 2017 09:33:15 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 14 Mar 2017 16:33:15 -0600</lastBuildDate>
     <atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>yorozuya</title>
+      <link>http://nasciiboy.github.io/prog/yorozuya/</link>
+      <pubDate>Tue, 14 Mar 2017 16:33:15 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/yorozuya/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Yorozuya&lt;/em&gt; en una tienda donde se toma cualquier tipo de trabajo por una
+tarifa&amp;hellip; bienvenidos los encargos!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../yorozuya.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;bueno, bueno, matizando un poco y conectado con la saga de post
+sobre &lt;a href=&#34;https://nasciiboy.github.io/tags/morg&#34;&gt;morg&lt;/a&gt;, me encontraba aprendiendo
+golang y para tener una referencia rapida del lenguaje, pase el libro oficial
+(apartir de un pdf) a morg (&lt;a href=&#34;../tgpl.zip&#34;&gt;AQUI&lt;/a&gt; el material, fuente, resultado e
+imagenes). Aun le falta una revision &lt;q&gt;fina&lt;/q&gt; que ire realizando a medida que
+avance su lectura, aunque la actualizacion quisa solo vea la luz cuando aparesca
+el proyecto morg al 100%.&lt;/p&gt;
+
+&lt;p&gt;Por cierto, aunque solo he leido (medio entendiendo english) hasta el capitulo
+2, el libro promete a lo grande, eso si como no se hagan los ejersicios dificil
+sera dominar el asunto.&lt;/p&gt;
+
+&lt;p&gt;Claro que hay mas cosas de donde salio esta! como: &lt;em&gt;The Land of Lisp&lt;/em&gt;, &lt;em&gt;Clean
+Code&lt;/em&gt;, &lt;em&gt;Programmer&amp;rsquo;s Guide to NCurses&lt;/em&gt;, &lt;em&gt;The C programming Languge&lt;/em&gt;, &lt;em&gt;In the
+Beginning was the Command Line&lt;/em&gt;, &lt;em&gt;matematicas para programadores&lt;/em&gt;, &lt;em&gt;elisp&lt;/em&gt;,
+&lt;em&gt;arduino projects for the evil genius&lt;/em&gt;, &lt;em&gt;openGL game programming&lt;/em&gt;, &lt;em&gt;rama&lt;/em&gt;,
+&lt;em&gt;dune&lt;/em&gt;, &lt;em&gt;el fin de la eternidad&lt;/em&gt;, &lt;em&gt;3012&lt;/em&gt;, &lt;em&gt;Fahrenheit 451&lt;/em&gt;, &lt;em&gt;El calculo de
+dios&lt;/em&gt;, y otros tantos a medio hacer. Las novelas las adapte para obligarme a
+leerlas y los libros para averiguar si eran interesantes, ademas de prara
+practicar mecanografia transcribiendo unos 5 de ellos (la dislexia y poca
+habilidad literaria es un defecto incorregible). El asunto es que este es el
+primero (o mejor dicho el ultimo) que cumple con la sintaxis actual&lt;/p&gt;
+
+&lt;p&gt;El proceso de adaptacion fue sencillo, pero fueron necesarios pequeños ajustes
+al exportador. Lo mas complejo fue hacer una funcion que convirtiese las tablas
+a html y agregar un comando para crear columnas. Siendo sincero no me complique
+mucho y dichos comandos son en realidad muy basicos.&lt;/p&gt;
+
+&lt;p&gt;Ademas descubri que mes mejor exportar el comando &lt;code&gt;&amp;quot;&lt;/code&gt; como &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; en lugar de
+&lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt; (internamente se ve mejor) y que no es buena idea colocar targets
+dentro de los encabezados, por que al generar la tabla de contenidos hay una
+coalicion de identificadores, a menos que se desactive la intepretacion de
+contenido en la tabla de contenidos, peeeroo, si el exportador ya genera un
+blaco automagicamente, por que habria que crear target adicional?&lt;/p&gt;
+
+&lt;p&gt;Como el documento no tiene formulas matematicas, no tuve que lidiar con latex,
+ni buscar un generador de texto a imagen, por otro lado, el material esta lleno
+de referencias (enlaces), y &lt;em&gt;&lt;q&gt;citas&lt;/q&gt;&lt;/em&gt; (commillas dobles), asunto que
+dificulta (pero no imposibilita) la lectura del documento fuente en texto plano&lt;/p&gt;
+
+&lt;p&gt;El resaltado de codigo se realiza con pygments, asi que si quieres comprobar que
+morg funciona tiene que tenerlo instalado (y esperar un rato, python es
+&lt;b&gt;lento&lt;/b&gt;), o en su defecto eliminar &lt;code&gt;pygments&lt;/code&gt; del comando de configuracion
+&lt;code&gt;..options &amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Por cierto, la imagenes las optuve con capturas en png. Para hacer ligero el
+resultado converti a jpg, ho, y un par de imagenes (graficos) las hice con texto
+plano, en el fuente se ven bien, pero en el html las exporto como codigo, asi
+que desentonan&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;En fin, si el resultado o el metodo es de tu agrado y deseas que adapte un
+documento o cooperar con la causa, recivo pedidos. El precio por algo de similar
+complejidad a la muestra, es de 500 euros/dolares (en nasciiboy inc. no hay
+sobreprecio). El proceso de adaptacion toma entre 1 o 2 semanas de tiempo ocioso&lt;/p&gt;
+
+&lt;p&gt;pd: tambien son bienvenidas las criticas al estilo visual&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>morg: como usar</title>
@@ -3967,184 +4037,6 @@ clonar el repositiorio asi:&lt;/p&gt;
 libro segun esten listas, intentare ser constante.&lt;/p&gt;
 
 &lt;p&gt;happy hacking!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Definir atajos en Emacs</title>
-      <link>http://nasciiboy.github.io/emacs/keychords/</link>
-      <pubDate>Sat, 07 Jan 2017 09:38:46 -0600</pubDate>
-      
-      <guid>http://nasciiboy.github.io/emacs/keychords/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;../kara.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;En emacs, tu puedes crear cualquier atajo de teclado para cualquier comando&lt;/p&gt;
-
-&lt;p&gt;Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de
-configuracion de emacs&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key (kbd &amp;quot;&amp;lt;f7&amp;gt;&amp;quot;) &#39;calendar)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Si estas experimentando y no deseas reiniciar emacs cada vez que intentas
-definir un nuevo atajo, puedes colocar el cursor al final del ultimo parantesis
-e invocar a (&lt;code&gt;M-x&lt;/code&gt;) &lt;code&gt;eval-last-sexp&lt;/code&gt; (comando ligado a &lt;code&gt;C-x C-e&lt;/code&gt;). El atajo se
-activa de inmediato. Para salir del buffer calendario presiona &lt;code&gt;q&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Si cometes algun error y necesitas iniciar emacs sin cargar el archivo de
-configuracion, puedes iniciar emacs desde el terminal con este comando:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;emacs --no-init-file
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;sintaxis&#34;&gt;sintaxis&lt;/h2&gt;
-
-&lt;p&gt;La funcion para definir atajos es&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(define-key map COMBINACION &#39;FUNCION)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;donde &lt;code&gt;map&lt;/code&gt; es un mapa de combinaciones, o por decirlo de alguna forma, un
-prefijo que precede a la combinacion en si&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ctl-x-map&lt;/code&gt; con prefijo &lt;code&gt;C-x&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ctl-x-4-map&lt;/code&gt; con prefijo &lt;code&gt;C-x 4&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ctl-x-5-map&lt;/code&gt; con prefijo &lt;code&gt;C-x 5&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ctl-x-r-map&lt;/code&gt; con prefijo &lt;code&gt;C-x r&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;esc-map&lt;/code&gt;  con prefijo &lt;code&gt;ESC&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;help-map&lt;/code&gt;  con prefijo &lt;code&gt;C-h&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;global-map&lt;/code&gt; (sin prefijo) para cualquier combinacion. Esta ultima tiene una
-funcion dedicada y en ella centraremos la explicacion&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key COMBINACION &#39;FUNCION)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;La &lt;code&gt;COMBINACION&lt;/code&gt; de teclas puede ser cualquiera de estas 3 formas&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;quot;letra&amp;quot;&lt;/code&gt;. Una unica letra de a-z o 1-9 dentro de comillas&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;[nombre]&lt;/code&gt;. &lt;code&gt;nombre&lt;/code&gt;, se substiye por el nombre interno o por el codigo que
-emacs asigna a cada tecla, la combinacion puede contener mas de una tecla pero
-siempre se efectua en un solo paso, por ejemplo &lt;code&gt;[s-left]&lt;/code&gt; es presionar la
-tecla super + la tecla fecha izquierda, &lt;code&gt;[s-kp-5]&lt;/code&gt; es presionar la
-tecla super + la tecla 5 del pad numerico.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;(kbd &amp;quot;sequencia&amp;quot;)&lt;/code&gt;. &lt;code&gt;sequencia&lt;/code&gt; es cualquier combinacion del teclado colocada
-entre parentesis, esta puede separarse en varios pasos si se coloca un espacio
-en blanco entre los nombres de las teclas. Dentro de la cadena, para hacer
-referencia a la tecla control, colocamos &lt;code&gt;C&lt;/code&gt;, para meta/esc &lt;code&gt;M&lt;/code&gt;, y para
-super &lt;code&gt;s&lt;/code&gt;, las tres siempre van en conjunto con alguna otra tecla siguiendo el
-formato &lt;code&gt;C-tecla&lt;/code&gt;, &lt;code&gt;M-tecla&lt;/code&gt; o &lt;code&gt;s-tecla&lt;/code&gt;. Finalmente podemos hacer referencia
-al nombre interno de una tecla, al colocarlo entre mayor que y menor que, por
-ejemplo &lt;code&gt;(kbd &amp;quot;&amp;lt;f8&amp;gt;&amp;quot;)&lt;/code&gt; sera la tecla F8&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;este es el nombre interno de algunas teclas&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;backspace&lt;/code&gt; retroceso&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;return&lt;/code&gt; enter&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;delete&lt;/code&gt; suprimir&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;up&lt;/code&gt; flecha arriba&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;down&lt;/code&gt; flecha abajo&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;right&lt;/code&gt; flecha derecha&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;left&lt;/code&gt; flecha izquierda&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;f1&lt;/code&gt;..&lt;code&gt;f35&lt;/code&gt;tecla de funcion de F1 a F35&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;home&lt;/code&gt; Inicio&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;end&lt;/code&gt; Fin&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;help&lt;/code&gt; Ayuda&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;kp-0&lt;/code&gt;.. &lt;code&gt;kp-9&lt;/code&gt; numeros del pad numerico&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;kp-subtract&lt;/code&gt; menos del pad numerico&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;kp-add&lt;/code&gt; mas del pad numerico&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;kp-enter&lt;/code&gt; enter del teclado numérico&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;kp-decimal&lt;/code&gt; punto decimal del teclado numérico&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;next&lt;/code&gt; AvPag&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;prior&lt;/code&gt; RePag&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;ejemplos&#34;&gt;ejemplos&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key [s-left]  &#39;windmove-left)
-(global-set-key [s-right] &#39;windmove-right)
-(global-set-key [s-up]    &#39;windmove-up)
-(global-set-key [s-down]  &#39;windmove-down)
-
-(global-set-key (kbd &amp;quot;C-c &amp;lt;left&amp;gt;&amp;quot;)  &#39;windmove-left)
-(global-set-key (kbd &amp;quot;C-c &amp;lt;right&amp;gt;&amp;quot;) &#39;windmove-right)
-(global-set-key (kbd &amp;quot;C-c &amp;lt;up&amp;gt;&amp;quot;)    &#39;windmove-up)
-(global-set-key (kbd &amp;quot;C-c &amp;lt;down&amp;gt;&amp;quot;)  &#39;windmove-down)
-
-(global-set-key (kbd &amp;quot;C-c o&amp;quot;) &#39;recentf-open-files)
-(global-set-key (kbd &amp;quot;C-x C-b&amp;quot;) &#39;ibuffer)
-
-(global-set-key [return] &#39;backward-char)
-(global-set-key (kbd &amp;quot;&amp;lt;return&amp;gt;&amp;quot;) &#39;backward-char)
-(global-set-key (kbd &amp;quot;&amp;lt;f7&amp;gt; &amp;lt;f8&amp;gt;&amp;quot;) &#39;calendar)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conocer-el-comando-ligado-a-un-atajo&#34;&gt;Conocer el comando ligado a un atajo&lt;/h2&gt;
-
-&lt;p&gt;Si invocamos a &lt;code&gt;describe-key&lt;/code&gt; (&lt;code&gt;C-h k&lt;/code&gt;) y, a continuacion, se presiona un atajo,
-emacs mostrara el comando al que esta ligado.&lt;/p&gt;
-
-&lt;p&gt;Por ejemplo, supongamos que deseamos conocer el comando ligado a
-&lt;code&gt;C-M-g&lt;/code&gt;. Primero se llama a &lt;code&gt;describe-key&lt;/code&gt;, luego se presiona la combinacion de
-teclado, entonces emacs imprimira &lt;code&gt;C-M-g is undefined&lt;/code&gt;. Esto significa que
-puedes utilizar &lt;code&gt;(kbd &amp;quot;C-M-g&amp;quot;)&lt;/code&gt; para representar una combinacion de teclas en
-codigo lisp.&lt;/p&gt;
-
-&lt;h2 id=&#34;combinaciones-a-evitar&#34;&gt;Combinaciones a evitar&lt;/h2&gt;
-
-&lt;p&gt;Emacs tiene sus caprichos. Es mejor no definir las siguientes combinaciones, a
-menos que sepas lo que estas haciendo.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;C-cualquierLetra&lt;/code&gt;. Dada la forma en que emacs esta implementado utiliza la
-sintaxis &amp;ldquo;C-letra&amp;rdquo; para un monton de atajos preestablecidos&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;F1&lt;/code&gt; o &lt;code&gt;C-h&lt;/code&gt;. Emacs utiliza esta combinacion para el sistema de ayuda de emacs
-y tiene un estado especial en el sistema de comandos de emacs.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;ESC&lt;/code&gt; o &lt;code&gt;C-[&lt;/code&gt;. Esta combinacion por si misma tiene un significado complicado,
-dependiendo de cauntas veces se presione&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;C-Shift-letra&lt;/code&gt;. Algunos terminales no pueben dintingur las versiones de la
-combinacion con Shift de la version sin Shift&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;buenas-opciones&#34;&gt;Buenas opciones&lt;/h2&gt;
-
-&lt;p&gt;Emacs tiene unos siete mill comandos. De forma predeterminada, 800 de ellos
-tiene un atajo. Si defines tus propios atajos sin cuidado es posible que muchos
-modos primarios o secundarios anulen tus combinaciones, ya que estas tiene
-prioridad.&lt;/p&gt;
-
-&lt;p&gt;En la documentacion oficial de emacs, Las combinaciones libres para el usuario
-son de F5 a F9 y &lt;code&gt;C-c letra&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Las siguientes combinaciones son buenos puntos de partida para tus propias
-definiciones, y no causan ningun problema en la practica&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;F5&lt;/code&gt;, &lt;code&gt;F6&lt;/code&gt;, &lt;code&gt;F7&lt;/code&gt;, &lt;code&gt;F8&lt;/code&gt;, &lt;code&gt;F9&lt;/code&gt;, &lt;code&gt;F12&lt;/code&gt;. Puden combinarse sin problemas con
-Ctrl. Asegurate que no los utilize el sistema operativo.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Super o Hyper. Cualquier combinacion con estas es buena, pero es posible que
-el terminal no reconosca las teclas Super o Hyper.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;fuentes&#34;&gt;fuentes&lt;/h2&gt;
-
-&lt;p&gt;buena parte del articulo es una pseudo-traduccion de&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://ergoemacs.org/emacs/keyboard_shortcuts.html&#34;&gt;http://ergoemacs.org/emacs/keyboard_shortcuts.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;otra, es una invencion no contrastada con el manual&lt;/p&gt;
 </description>
     </item>
     
