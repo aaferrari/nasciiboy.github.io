@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
   <head>
     <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>first theme - nba - GNU&#39;s Rock</title>
+    <title>Ramen - nba - GNU&#39;s Rock</title>
     
     <style media="screen">
 :root {
@@ -181,211 +181,27 @@ img:hover { filter: none;
   <body>
     
 <main>
-  <ul class="path">
-    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+  
+  <div class="thumb">
+  <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-I/">Ramen I</a></h2>
+
+  <ul class="meta">
+    <li><time datetime="2017-04-02 21:08:41 -0600 -0600">Apr 2, 2017</time></li>
     
-    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
     
-    <li><span class="path-pwd">first theme</span></li>
   </ul>
 
-  <article>
-  <h1 class="title">first theme</h1>
-
-  <time datetime="2016-12-28 17:17:04 -0600 CST">Dec 28, 2016</time>
-
-  <div class="article-body">
-
-<h2 id="crear-un-tema-en-emacs">Crear un Tema en Emacs</h2>
-
-<h3 id="un-poco-de-historia">un poco de historia</h3>
-
-<p>Cuando comence a utilizar emacs (hace unos pocos años) para establecer un tema
-se utilizaba un paquete llamado <strong>color-theme</strong> parte del paquete
-<code>emacs-goodies-el</code> de Debian. Al parecer desde la version 24 de emacs se
-desaconseja su uso, pese a todo en mi instalacion se mantuvo en servicio hasta
-la version 26.0.50 sin generar inconvenientes.</p>
-
-<p>para la posteridad y los viajeros en el tiempo, dejo aqui el paquete en forma
-de <a href="../color-theme-6.6.0.zip">zip</a> (con un tema personalizado de regalo
-<code>color-theme-nascii</code>)</p>
-
-<p>asi es como se utilizaba</p>
-
-<pre><code>(add-to-list 'load-path &quot;~/ruta-a/color-theme-6.6.0&quot;)
-(require 'color-theme)
-(color-theme-initialize)
-
-;; para cargar un tema en especifico
-;; (color-theme-nombreDelTema)
-(color-theme-nascii)
-</code></pre>
-
-<h3 id="establecer-el-tema-por-defecto">establecer el tema por defecto</h3>
-
-<p>apartir de emacs version 24 podemos cambiar el tema sin instalar nada con el
-comando <code>customize-themes</code></p>
-
-<p><img src="../custom-themes.png" alt="" /></p>
-
-<p>para cambiar el tema se mueve el cursor al tema y se presiona enter</p>
-
-<p><img src="../custom-themes-ligth-blue.png" alt="" /></p>
-
-<p>para guardar el cambio colocamos el cursor en el &ldquo;boton&rdquo; <strong>Save Theme
-Setting</strong> + un enter, accion que colocara automagicamente unas lineas de codigo
-extra en nuestro <code>init.el</code>.</p>
-
-<p>No te van las cosas automagicas? puedes establecer la carga de un tema
-directamente en el fichero de configuracion <code>init.el</code> con</p>
-
-<pre><code>(load-file &quot;~/RUTA/A/miTema-theme.el&quot;)
-</code></pre>
-
-<p>Si queremos que el menu de seleccion cargue un tema automaticamente, tiene que
-estar en nuestro directorio de configuracion <code>~/.emacs.d/</code><strong>nombreTema</strong><code>-theme.el</code></p>
-
-<h3 id="crear-un-tema">crear un tema</h3>
-
-<p>Los temas se crean en base a la configuracion actual, pero tambien podemos crear
-un tema a partir de cero segun indiquemos al comando <code>customize-create-theme</code>.</p>
-
-<p><img src="../customize-create-theme.png" alt="" /></p>
-
-<p>en el recuadro <strong>Theme Name</strong> damos nombre al tema, en el recuandro
-<strong>Description</strong> dejamos la fecha de creacion o en su lugar colocamos una
-descripcion del tema, por ejemplo <code>&quot;nascii-theme un tema obscuro mas...&quot;</code></p>
-
-<p>establecemos las variables a gusto y guardamos el tema con <code>C-x C-s</code> o con un
-intro sobre el recuadro <strong>Save Theme</strong>. Regresamos a <code>customize-themes</code> y
-automagicamente nuestro tema estara disponible.</p>
-
-<p><strong>Nota</strong>: Si creamos el tema apartir de la configuracion actual y queremos
-compartirlo con los demas habitantes de la red, debemos evitar incluir algunas
-variables especificas de nuestro sistema en el codigo fuente del tema, por
-ejemplo, el tipo de tipografia.</p>
-
-<h3 id="ver-los-cambios-al-vuelo">ver los cambios &ldquo;al vuelo&rdquo;</h3>
-
-<p>Vamos al codigo fuente del tema <code>C-x C-f</code> <code>~/.emacs.d/miTema-theme.el</code>,
-modificamos el parametro de interes (los colorines se encuentran entre comillas
-en formato nombre o en formato hexadecimal de 3 o 6 digitos), luego evaluamos el
-buffer con el comando <code>eval-buffer</code>.</p>
-
-<p>Para hacer un poco menos lioso el asunto asignamos <code>eval-buffer</code> a una tecla</p>
-
-<pre><code>(global-set-key [f9] 'eval-buffer)
-</code></pre>
-
-<p>con esto tenemos asignado el comando a la tecla de funcion <strong>F9</strong>, asi podemos
-recargar los cambios estilo navegador web.</p>
-
-<h3 id="nascii-theme">nascii-theme</h3>
-
-<p><img src="../nascii-theme.png" alt="" /></p>
-
-<pre><code>;; This program is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
-
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-
-;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-
-;; ---------------------------
-;;
-;; nascii: Another dark theme
-;;
-;; ----------------------------
-
-(unless (&gt;= emacs-major-version 24)
-  (error &quot;requires Emacs 24 or later.&quot;))
-
-(deftheme nascii
-  &quot;Another dark theme&quot;)
-
-(custom-theme-set-faces
- 'nascii
- '(default ((t (:weight normal :slant normal :underline nil :overline nil :strike-through nil :foreground &quot;white&quot; :background &quot;black&quot; :stipple nil :inherit nil))))
- '(cursor ((t (:background &quot;yellow&quot;))))
- '(escape-glyph ((((background dark)) (:foreground &quot;cyan&quot;)) (((type pc)) (:foreground &quot;magenta&quot;)) (t (:foreground &quot;brown&quot;))))
- '(minibuffer-prompt ((((background dark)) (:foreground &quot;cyan&quot;)) (((type pc)) (:foreground &quot;magenta&quot;)) (t (:foreground &quot;medium blue&quot;))))
- '(highlight ((t (:background &quot;darkolivegreen&quot;))))
- '(region ((t (:background &quot;#222&quot; :foreground &quot;#87cefa&quot;))))
- '(shadow ((((class color grayscale) (min-colors 88) (background light)) (:foreground &quot;grey50&quot;)) (((class color grayscale) (min-colors 88) (background dark)) (:foreground &quot;grey70&quot;)) (((class color) (min-colors 8) (background light)) (:foreground &quot;green&quot;)) (((class color) (min-colors 8) (background dark)) (:foreground &quot;yellow&quot;))))
- '(secondary-selection ((t (:background &quot;darkslateblue&quot;))))
- '(trailing-whitespace ((t (:background &quot;red&quot;))))
- '(font-lock-builtin-face ((t (:foreground &quot;LightSteelBlue&quot;))))
- '(font-lock-comment-delimiter-face ((default (:inherit (font-lock-comment-face)))))
- '(font-lock-comment-face ((t (:foreground &quot;OrangeRed&quot;))))
- '(font-lock-constant-face ((t (:foreground &quot;Aquamarine&quot;))))
- '(font-lock-doc-face ((t (:foreground &quot;LightSalmon&quot;))))
- '(font-lock-function-name-face ((t (:foreground &quot;LightSkyBlue&quot;))))
- '(font-lock-keyword-face ((t (:foreground &quot;Cyan&quot;))))
- '(font-lock-negation-char-face ((t nil)))
- '(font-lock-preprocessor-face ((t (:inherit (font-lock-builtin-face)))))
- '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
- '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
- '(font-lock-string-face ((t (:foreground &quot;LightSalmon&quot;))))
- '(font-lock-type-face ((t (:foreground &quot;PaleGreen&quot;))))
- '(font-lock-variable-name-face ((t (:foreground &quot;LightGoldenrod&quot;))))
- '(font-lock-warning-face ((t (:weight bold :foreground &quot;Pink&quot;))))
- '(button ((t (:inherit (link)))))
- '(link ((((class color) (min-colors 88) (background light)) (:underline (:color foreground-color :style line) :foreground &quot;RoyalBlue3&quot;)) (((class color) (background light)) (:underline (:color foreground-color :style line) :foreground &quot;blue&quot;)) (((class color) (min-colors 88) (background dark)) (:underline (:color foreground-color :style line) :foreground &quot;cyan1&quot;)) (((class color) (background dark)) (:underline (:color foreground-color :style line) :foreground &quot;cyan&quot;)) (t (:inherit (underline)))))
- '(link-visited ((default (:inherit (link))) (((class color) (background light)) (:foreground &quot;magenta4&quot;)) (((class color) (background dark)) (:foreground &quot;violet&quot;))))
- '(fringe ((t (:background &quot;grey10&quot;))))
- '(header-line ((t (:box nil :foreground &quot;grey20&quot; :background &quot;grey90&quot;))))
- '(tooltip ((t (:foreground &quot;black&quot; :background &quot;lightyellow&quot;))))
- '(mode-line ((t (:box (:line-width -2 :color nil :style released-button) :background &quot;black&quot; :foreground &quot;white&quot;))))
- '(mode-line-buffer-id ((t (:weight bold))))
- '(mode-line-emphasis ((t (:weight bold))))
- '(mode-line-highlight ((((class color) (min-colors 88)) (:box (:line-width 2 :color &quot;grey40&quot; :style released-button))) (t (:inherit (highlight)))))
- '(mode-line-inactive ((default (:inherit (mode-line))) (((class color) (min-colors 88) (background light)) (:background &quot;grey90&quot; :foreground &quot;grey20&quot; :box (:line-width -1 :color &quot;grey75&quot; :style nil) :weight light)) (((class color) (min-colors 88) (background dark)) (:background &quot;grey30&quot; :foreground &quot;grey80&quot; :box (:line-width -1 :color &quot;grey40&quot; :style nil) :weight light))))
- '(isearch ((t (:foreground &quot;brown4&quot; :background &quot;palevioletred2&quot;))))
- '(isearch-fail ((((class color) (min-colors 88) (background light)) (:background &quot;RosyBrown1&quot;)) (((class color) (min-colors 88) (background dark)) (:background &quot;red4&quot;)) (((class color) (min-colors 16)) (:background &quot;red&quot;)) (((class color) (min-colors 8)) (:background &quot;red&quot;)) (((class color grayscale)) (:foreground &quot;grey&quot;)) (t (:inverse-video t))))
- '(lazy-highlight ((((class color) (min-colors 88) (background light)) (:background &quot;paleturquoise&quot;)) (((class color) (min-colors 88) (background dark)) (:background &quot;paleturquoise4&quot;)) (((class color) (min-colors 16)) (:background &quot;turquoise3&quot;)) (((class color) (min-colors 8)) (:background &quot;turquoise3&quot;)) (t (:underline (:color foreground-color :style line)))))
- '(match ((((class color) (min-colors 88) (background light)) (:background &quot;yellow1&quot;)) (((class color) (min-colors 88) (background dark)) (:background &quot;RoyalBlue3&quot;)) (((class color) (min-colors 8) (background light)) (:foreground &quot;black&quot; :background &quot;yellow&quot;)) (((class color) (min-colors 8) (background dark)) (:foreground &quot;white&quot; :background &quot;blue&quot;)) (((type tty) (class mono)) (:inverse-video t)) (t (:background &quot;gray&quot;))))
- '(next-error ((t (:inherit (region)))))
- '(query-replace ((t (:inherit (isearch))))))
-
-(provide-theme 'nascii)
-</code></pre>
-
-<p>para cargar el tema, copiar y guardar en <code>&quot;~/.emacs.d/nascii-theme.el&quot;</code>, luego se
-puede cargar/probar ejecutando</p>
-
-<pre><code>(load-file &quot;~/.emacs.d/nascii-theme.el&quot;)
-</code></pre>
-
-<p>o mediante <code>customize-themes</code></p>
-
-<h2 id="referencias">referencias</h2>
-
-<p><a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes">https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes</a></p>
-
-<p>tambien puede acceder directamente al manual dentro de emacs. Copia esto</p>
-
-<pre><code>[[info:emacs#Creating%20Custom%20Themes]]
-</code></pre>
-
-<p>pegalo en algun buffer, cambia a modo-org, coloca el cursor sobre el texto y
-presiona <code>C-c C-o</code></p>
+  <div class="summary">Hace unas semanas que no publico naha, que por haber cosas recomendaciones o temas no han faltado, pero entre la pereza y la programacion, no ha salido naha.
+Como paleativo e imitando otros blogs (kofff&hellip; onda hostil, quijote libre) abro esta seccion para contar en que ando, prefiero poner una post de una tematica particular, pero ya sera cuando termine este mes.
+Katata El motivo principal del silencio literario fue katana, un componenten del proyecto morg (que encontraran dentro de las etiquetas del lado derecho de este blog).</div>
 </div>
-</article>
 
+  
+  
 
-  <ul class="path">
-    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
-    
-    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
-    
-    <li><span class="path-pwd">first theme</span></li>
-  </ul>
+  
+
 </main>
 
 

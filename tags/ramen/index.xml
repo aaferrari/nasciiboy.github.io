@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ramen on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/tags/ramen/index.xml</link>
+    <description>Recent content in Ramen on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL 3.0</copyright>
+    <atom:link href="http://nasciiboy.github.io/tags/ramen/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ramen I</title>
+      <link>http://nasciiboy.github.io/post/ramen-I/</link>
+      <pubDate>Sun, 02 Apr 2017 21:08:41 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/ramen-I/</guid>
+      <description>
+
+&lt;p&gt;Hace unas semanas que no publico naha, que por haber cosas recomendaciones o
+temas no han faltado, pero entre la pereza y la programacion, no ha salido naha.&lt;/p&gt;
+
+&lt;p&gt;Como paleativo e imitando otros blogs (kofff&amp;hellip; &lt;a href=&#34;http://ondahostil.wordpress.com&#34;&gt;onda hostil&lt;/a&gt;, &lt;a href=&#34;http://quijotelibre.com&#34;&gt;quijote libre&lt;/a&gt;)
+abro esta seccion para contar en que ando, prefiero poner una post de una tematica particular, pero ya sera cuando
+termine este mes.&lt;/p&gt;
+
+&lt;h2 id=&#34;katata&#34;&gt;Katata&lt;/h2&gt;
+
+&lt;p&gt;El motivo principal del silencio literario fue &lt;em&gt;katana&lt;/em&gt;, un componenten del
+proyecto &lt;em&gt;morg&lt;/em&gt; (que encontraran dentro de las etiquetas del lado derecho de
+este blog). Dicho componente conseptualmente se encarga de tomar el formato de
+documentacion en texto plano y regresar una estructura &lt;em&gt;&lt;q&gt;sencilla&lt;/q&gt;&lt;/em&gt; con el
+documento digerido de forma &lt;em&gt;&lt;q&gt;sencilla&lt;/q&gt;&lt;/em&gt;, encabezados, &lt;q&gt;tabla de contenidos&lt;/q&gt;,
+parrafos, enfasis, listas, dialogos, abouts, tablas, comandos y configuracion&lt;/p&gt;
+
+&lt;p&gt;en el libro &lt;em&gt;The Go Programming Language&lt;/em&gt; (del que hare una reseña cuando
+termine de leerlo y del que recomiendo su lectura) muestran una &lt;q&gt;libreria&lt;/q&gt;
+de nombre &lt;code&gt;x/net/html&lt;/code&gt; con la cual parsear un documento html, para regresar una
+estructura en forma de lista gerarquica o algo asi. Esto sirvio de inspiracion
+para iniciar el modulo katana&amp;hellip; aunque como muchas otras cosas al enfrentar el
+codigo lo encontre demasiado complejo e innentendible, asi que pase de todo y
+comence a programar a lo loco.&lt;/p&gt;
+
+&lt;p&gt;Primero surgio el fichero &lt;code&gt;markup.go&lt;/code&gt; que es una estructura/objeto donde se
+almacena el resaltado, y los comandos &lt;code&gt;@&lt;/code&gt; de texto&lt;/p&gt;
+
+&lt;p&gt;Una vez que la cosa funciono, comence con la estructura del documento en si, que
+no deja de ser un nodo, con slices de nodos que en teoria representan la seccion
+y su contenido (todo recursivo), peeeeero no lo estructure de forma
+convencional, asi que tengo un arreglo (slice) de nodos que representan los
+encabezados del documento, y al mismo tiempo, sirve de tabla de contenidos, aunque
+los encabezados en si no estan anidados, todos son &lt;q&gt;hermanos&lt;/q&gt; la asociacion
+queda a juicio de quien utilize la estructura&lt;/p&gt;
+
+&lt;p&gt;asi tenemos que&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;TOC []DocNode
+    |- [0] Encabezado Uno
+    |- [1] Encabezado Dos
+    |- [2] Encabezado Tres
+    |- [3] Encabezado Cuatro
+    ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y cada encabezado&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Encabezado
+ Contenido []DocNode
+           |- [0] Parrafo
+           |- [1] Lista
+           |- [2] Otro Parrafo
+           |- [3] Tabla
+           ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y cada parrafo, lista, o cosa&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;parrafo, lista, o cosa
+ Contenido []DocNode
+           |- [0] Cosa
+           |- [1] Lista
+           |- [2] Otra cosa
+           |- [3] Otra cosa mas o no
+           ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;cada nodo, es un objeto de tipo interface, que tiene dos metodos, uno para
+optener el tipo de nodo y otro para optener su informacion, el contenido por
+otra parte se optiene con un simple bucle atravez de la estructura.&lt;/p&gt;
+
+&lt;p&gt;No me quiero extender demasiado, ya que la explicacion de esto y los motivos por
+los que lo estructura asi, pueden requerir unas horas de platica, dibujos y
+revisar el codigo (que como costumbre mia, no incluye ni un jodido
+comentario&amp;hellip;).&lt;/p&gt;
+
+&lt;p&gt;para concluir ahora &lt;em&gt;biskana&lt;/em&gt;, el modulo para exportar el ducumento adelgaso de
+forma compulsiva, y utiliza una pantilla de texto para crear el html, como hace
+el cms &lt;em&gt;hugo&lt;/em&gt;. Aun falta agregar muchas pruebas, corregir unos detalles, agregar
+opciones de exportacion y demas. De momento la siguiente semana voy a comenzar a
+programar una interfaz de texto para visualizar los documentos, despues el
+buscador&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;espero presentar esto en alguna charla del flisol, aunque si no consigo
+colaboradores, es posible que termine ofreciendo el tema a alguna
+organizacion/empresa y salir de mi miseria&amp;hellip; o dedicarle un año mas al tema,
+aunque esto ultimo lo veo dificil&lt;/p&gt;
+
+&lt;p&gt;en fin, el codigo esta en el repo, tengo algunos reparos con las plantillas de
+texto y no termino de visualizar como parcear las tablas, ni como dibujarlas&lt;/p&gt;
+
+&lt;p&gt;(pd: mientras leo, voy revisando el libro de Go, cuando publique la reseña, actualizo el
+matiral (o no), mas  o menos iba por el 50 y algo %, lo pause por ponerme a
+programar e implementar algunas cosas, hace dos semanas)&lt;/p&gt;
+
+&lt;h2 id=&#34;4k&#34;&gt;4k&lt;/h2&gt;
+
+&lt;h3 id=&#34;kuzu-no-honkai&#34;&gt;Kuzu no Honkai&lt;/h3&gt;
+
+&lt;p&gt;Ufffffff, que sabroso final, cada capitulo es una delicia extraña, actualizo el
+post del tema, con un enlace de descarga, lastimozamente no tengo espacio para
+mas cosas en mi disco duro, ni idea que que pueda borrar, el ciclo de
+eliminacion de materiales para vizualizar nuevas cosas ha llegado a su limite,
+te odio internet, deja de compartir o dame un disco con un chilion de teras (con
+un tera mas podria sobrevivir unos meses)&lt;/p&gt;
+
+&lt;p&gt;Pues eso, que pasen a ver, cuando resuelva el dilema de almacenamiento la
+volvere a ver!&lt;/p&gt;
+
+&lt;h3 id=&#34;otras-cosas&#34;&gt;otras cosas&lt;/h3&gt;
+
+&lt;p&gt;Tambien vi &lt;em&gt;Tekkon Kinkreet&lt;/em&gt;, m-a-r-a-v-i-l-l-o-s-a, peli de animacion de
+calidad sublime&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:299fd6aec4cfbdc5b250a433ee4fd21b390d4d04&amp;amp;dn=TekkonKinkreet%20720p%20%5bac3%20ITA%20ENG%20JAP%20sub%20ITA%20ENG%20FRA%20SPA%20POR%5d%20by%20Salvo.mkv&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.ex.ua%2fannounce&amp;amp;tr=http%3a%2f%2finferno.demonoid.ph%3a3389%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&amp;amp;tr=http%3a%2f%2fcpleft.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ffr33dom.h33t.to%3a3310%2fannounce&amp;amp;tr=http%3a%2f%2ffr33dom.h33t.to%3a3310%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;amp;tr=http%3a%2f%2f10.rarbg.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.publicbt.com%3a80%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.publicbt.com%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.istole.it%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.ccc.de%3a80%2fannounce&amp;amp;tr=http%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.1337x.org%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.tntvillage.scambioetico.org%3a2710%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.tntvillage.scambioetico.org%3a2710%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.torrentbay.to%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftorrentbay.to%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftorrentbay.to%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.yify-torrents.com%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337%2fannounce&amp;amp;tr=http%3a%2f%2fsalvotnt.xoom.it%2fannounce.php&amp;amp;tr=http%3a%2f%2finfo2.netsons.org%2fannounce.php&amp;amp;tr=http%3a%2f%2fsalvotnt.co.nf%2ftrack.php&amp;amp;tr=http%3a%2f%2fsalvotnt.altervista.org%2fannounce.php&amp;amp;tr=udp%3a%2f%2ftorrents.ddunlimited.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftorrents.ddunlimited.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.ilibr.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.istole.it%3a80&amp;amp;tr=http%3a%2f%2fexodus.desync.com%2fannounce&amp;amp;tr=http%3a%2f%2fsugoi.pomf.se%2fannounce&amp;amp;tr=http%3a%2f%2f94.228.192.98%2fannounce&amp;amp;tr=http%3a%2f%2fanimeita.url.ph%2fannounce.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Hasta el ultimo hombre&lt;/em&gt;, una peli del señor Mel Guibson, que no termino de
+enterder si intenta dejar una leccion o tener una excusa para ser &lt;em&gt;Violenta&lt;/em&gt;(?),
+je, je, mucha sangre, desmembramientos y perfosaciones, me gusta!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Arrival&lt;/em&gt; (la llegada), que bonita, en el podcast &lt;em&gt;La orbita de Endor&lt;/em&gt; se
+explayan (solo) un poco mas, recomendada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:9c1872923ca650adca73e4b863c2c13a85d5e9d5&amp;amp;dn=Arrival%202016%201080p%20BluRay%20x264%20DTS-JYK&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;amp;tr=udp%3a%2f%2fpublic.popcorn-tracker.org%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Train to Busan&lt;/em&gt;, zombies coreanos(?)!, que bien echa esta, la escena donde los
+zombies &lt;q&gt;frenan&lt;/q&gt; es cuando menos creible, si fuese el dictador de un pais,
+obligaria a mis basallos a representar una peli sangrienta, con sangre de verdad&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:168637b7a074323f92b4d233383df90e7eb88ce0&amp;amp;dn=Train%20To%20Busan%20(2016)%20%5b1080p%5d%20%5bYTS.AG%5d&amp;amp;tr=http%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.tfile.me%2fannounce&amp;amp;tr=http%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2feddie4.nl%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker4.piratux.com%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.trackerfix.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftorrent.gresille.org%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.me%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fglotorrents.pw%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.blackunicorn.xyz%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2fp4p.arenabg.ch%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.to%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;logre juntar unas monedas para ir al templo y dejar la cooperacion:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Logan&lt;/em&gt; mmmmmmm, pudo ser mejor. Si su proposito fue ser incomoda, lo
+logro. Buena sangre, lo de convertir una cruz en una &lt;em&gt;X mutante&lt;/em&gt; es de las cosas
+mas bonitas que he visto&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;John Wick: Chapter 2&lt;/em&gt;, no puedo resistir ver pelis donde salga el señor
+&lt;em&gt;neo&lt;/em&gt;, el principio es continuista, para el intermedio ya estas dentro de la
+temitica &lt;em&gt;&lt;q&gt;es Jhon Wick&lt;/q&gt;&lt;/em&gt;, y el final? Soberbio, quiero ver lo que sigue.
+Aun encuerto, lo de &lt;q&gt;por que es Jhon Wick&lt;/q&gt; dificil de aceptar, y la
+excusa para la secuela no tiene sentido, pero que mas da, diria que es mejor
+que la primera parte&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Kong Skull Island&lt;/em&gt;, mostruos!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;para terminar, una buena persona, subio un par de torrentes, con series magnificas:
+&lt;em&gt;Space Dandy&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:aa266b5fd7c7ca7ebd296820488caf71757b2320&amp;amp;dn=%5bAniHenjin%5d%20Space%20Dandy%20%5bTV%20720p%5d&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+magnet:?xt=urn:btih:bb17866b65881296f73a3bb443db833859e123a2&amp;amp;dn=%5bAniHenjin%5d%20Space%20Dandy%20Season%202%20%5bTV%20720p%5d&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;un anime de aventura espacial, un poco a lo cowboy bebop, pero muy, muy
+experimental, con capitulos literalmente lizergicos, una joya&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nichijou&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:5a899138b847a39a7c816ae94e08dba3e3566fc5&amp;amp;dn=%5bAniHenjin%5d%20Nichijou%20%5bTV%20720p%5d&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;anime que explora el humor japones hasta sus ultimas consecuencias, con&amp;hellip; una
+animacion que parece para crios y sin ningun tema cachondo. Visualizala o
+muere!&lt;/p&gt;
+
+&lt;h2 id=&#34;fonos&#34;&gt;fonos&lt;/h2&gt;
+
+&lt;p&gt;varios discos de Paul McCartney, mi beatle faborito (musicalmente) me gustan sus
+primeros 5-7 albums, los ochentas son raros, algo de Steve Vai (Alive In An
+Ultra World), tambien unos albums de Sonic Youth la que por muchos años fuese mi
+banda faborita, &lt;q&gt;Chrome Dreams (I)&lt;/q&gt; un disco unoficial de Neil Young, y un
+puñado mas de nuevas he interesantes escuchas, tantas que ni me acuerdo del
+orden/nombres&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
