@@ -2,394 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/categories/post/index.xml</link>
+    <link>http://nasciiboy.github.io/categories/post/</link>
     <description>Recent content in Post on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <atom:link href="http://nasciiboy.github.io/categories/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Apr 2017 21:08:41 -0600</lastBuildDate>
+    
+	<atom:link href="http://nasciiboy.github.io/categories/post/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Ramen I</title>
-      <link>http://nasciiboy.github.io/post/ramen-I/</link>
+      <link>http://nasciiboy.github.io/post/ramen-i/</link>
       <pubDate>Sun, 02 Apr 2017 21:08:41 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/ramen-I/</guid>
-      <description>
-
-&lt;p&gt;Hace unas semanas que no publico naha, que por haber cosas recomendaciones o
-temas no han faltado, pero entre la pereza y la programacion, no ha salido naha.&lt;/p&gt;
-
-&lt;p&gt;Como paleativo e imitando otros blogs (kofff&amp;hellip; &lt;a href=&#34;http://ondahostil.wordpress.com&#34;&gt;onda hostil&lt;/a&gt;, &lt;a href=&#34;http://quijotelibre.com&#34;&gt;quijote libre&lt;/a&gt;)
-abro esta seccion para contar en que ando, prefiero poner una post de una tematica particular, pero ya sera cuando
-termine este mes.&lt;/p&gt;
-
-&lt;h2 id=&#34;katata&#34;&gt;Katata&lt;/h2&gt;
-
-&lt;p&gt;El motivo principal del silencio literario fue &lt;em&gt;katana&lt;/em&gt;, un componenten del
-proyecto &lt;em&gt;morg&lt;/em&gt; (que encontraran dentro de las etiquetas del lado derecho de
-este blog). Dicho componente conseptualmente se encarga de tomar el formato de
-documentacion en texto plano y regresar una estructura &lt;em&gt;&lt;q&gt;sencilla&lt;/q&gt;&lt;/em&gt; con el
-documento digerido de forma &lt;em&gt;&lt;q&gt;sencilla&lt;/q&gt;&lt;/em&gt;, encabezados, &lt;q&gt;tabla de contenidos&lt;/q&gt;,
-parrafos, enfasis, listas, dialogos, abouts, tablas, comandos y configuracion&lt;/p&gt;
-
-&lt;p&gt;en el libro &lt;em&gt;The Go Programming Language&lt;/em&gt; (del que hare una reseña cuando
-termine de leerlo y del que recomiendo su lectura) muestran una &lt;q&gt;libreria&lt;/q&gt;
-de nombre &lt;code&gt;x/net/html&lt;/code&gt; con la cual parsear un documento html, para regresar una
-estructura en forma de lista gerarquica o algo asi. Esto sirvio de inspiracion
-para iniciar el modulo katana&amp;hellip; aunque como muchas otras cosas al enfrentar el
-codigo lo encontre demasiado complejo e innentendible, asi que pase de todo y
-comence a programar a lo loco.&lt;/p&gt;
-
-&lt;p&gt;Primero surgio el fichero &lt;code&gt;markup.go&lt;/code&gt; que es una estructura/objeto donde se
-almacena el resaltado, y los comandos &lt;code&gt;@&lt;/code&gt; de texto&lt;/p&gt;
-
-&lt;p&gt;Una vez que la cosa funciono, comence con la estructura del documento en si, que
-no deja de ser un nodo, con slices de nodos que en teoria representan la seccion
-y su contenido (todo recursivo), peeeeero no lo estructure de forma
-convencional, asi que tengo un arreglo (slice) de nodos que representan los
-encabezados del documento, y al mismo tiempo, sirve de tabla de contenidos, aunque
-los encabezados en si no estan anidados, todos son &lt;q&gt;hermanos&lt;/q&gt; la asociacion
-queda a juicio de quien utilize la estructura&lt;/p&gt;
-
-&lt;p&gt;asi tenemos que&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;TOC []DocNode
-    |- [0] Encabezado Uno
-    |- [1] Encabezado Dos
-    |- [2] Encabezado Tres
-    |- [3] Encabezado Cuatro
-    ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;y cada encabezado&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Encabezado
- Contenido []DocNode
-           |- [0] Parrafo
-           |- [1] Lista
-           |- [2] Otro Parrafo
-           |- [3] Tabla
-           ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;y cada parrafo, lista, o cosa&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;parrafo, lista, o cosa
- Contenido []DocNode
-           |- [0] Cosa
-           |- [1] Lista
-           |- [2] Otra cosa
-           |- [3] Otra cosa mas o no
-           ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;cada nodo, es un objeto de tipo interface, que tiene dos metodos, uno para
-optener el tipo de nodo y otro para optener su informacion, el contenido por
-otra parte se optiene con un simple bucle atravez de la estructura.&lt;/p&gt;
-
-&lt;p&gt;No me quiero extender demasiado, ya que la explicacion de esto y los motivos por
-los que lo estructura asi, pueden requerir unas horas de platica, dibujos y
-revisar el codigo (que como costumbre mia, no incluye ni un jodido
-comentario&amp;hellip;).&lt;/p&gt;
-
-&lt;p&gt;para concluir ahora &lt;em&gt;biskana&lt;/em&gt;, el modulo para exportar el ducumento adelgaso de
-forma compulsiva, y utiliza una pantilla de texto para crear el html, como hace
-el cms &lt;em&gt;hugo&lt;/em&gt;. Aun falta agregar muchas pruebas, corregir unos detalles, agregar
-opciones de exportacion y demas. De momento la siguiente semana voy a comenzar a
-programar una interfaz de texto para visualizar los documentos, despues el
-buscador&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;espero presentar esto en alguna charla del flisol, aunque si no consigo
-colaboradores, es posible que termine ofreciendo el tema a alguna
-organizacion/empresa y salir de mi miseria&amp;hellip; o dedicarle un año mas al tema,
-aunque esto ultimo lo veo dificil&lt;/p&gt;
-
-&lt;p&gt;en fin, el codigo esta en el repo, tengo algunos reparos con las plantillas de
-texto y no termino de visualizar como parcear las tablas, ni como dibujarlas&lt;/p&gt;
-
-&lt;p&gt;(pd: mientras leo, voy revisando el libro de Go, cuando publique la reseña, actualizo el
-matiral (o no), mas  o menos iba por el 50 y algo %, lo pause por ponerme a
-programar e implementar algunas cosas, hace dos semanas)&lt;/p&gt;
-
-&lt;h2 id=&#34;4k&#34;&gt;4k&lt;/h2&gt;
-
-&lt;h3 id=&#34;kuzu-no-honkai&#34;&gt;Kuzu no Honkai&lt;/h3&gt;
-
-&lt;p&gt;Ufffffff, que sabroso final, cada capitulo es una delicia extraña, actualizo el
-post del tema, con un enlace de descarga, lastimozamente no tengo espacio para
-mas cosas en mi disco duro, ni idea que que pueda borrar, el ciclo de
-eliminacion de materiales para vizualizar nuevas cosas ha llegado a su limite,
-te odio internet, deja de compartir o dame un disco con un chilion de teras (con
-un tera mas podria sobrevivir unos meses)&lt;/p&gt;
-
-&lt;p&gt;Pues eso, que pasen a ver, cuando resuelva el dilema de almacenamiento la
-volvere a ver!&lt;/p&gt;
-
-&lt;h3 id=&#34;otras-cosas&#34;&gt;otras cosas&lt;/h3&gt;
-
-&lt;p&gt;Tambien vi &lt;em&gt;Tekkon Kinkreet&lt;/em&gt;, m-a-r-a-v-i-l-l-o-s-a, peli de animacion de
-calidad sublime&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:299fd6aec4cfbdc5b250a433ee4fd21b390d4d04&amp;amp;dn=TekkonKinkreet%20720p%20%5bac3%20ITA%20ENG%20JAP%20sub%20ITA%20ENG%20FRA%20SPA%20POR%5d%20by%20Salvo.mkv&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.ex.ua%2fannounce&amp;amp;tr=http%3a%2f%2finferno.demonoid.ph%3a3389%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&amp;amp;tr=http%3a%2f%2fcpleft.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ffr33dom.h33t.to%3a3310%2fannounce&amp;amp;tr=http%3a%2f%2ffr33dom.h33t.to%3a3310%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;amp;tr=http%3a%2f%2f10.rarbg.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.publicbt.com%3a80%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.publicbt.com%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.istole.it%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.ccc.de%3a80%2fannounce&amp;amp;tr=http%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.1337x.org%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.tntvillage.scambioetico.org%3a2710%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.tntvillage.scambioetico.org%3a2710%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.torrentbay.to%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftorrentbay.to%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftorrentbay.to%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.yify-torrents.com%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337%2fannounce&amp;amp;tr=http%3a%2f%2fsalvotnt.xoom.it%2fannounce.php&amp;amp;tr=http%3a%2f%2finfo2.netsons.org%2fannounce.php&amp;amp;tr=http%3a%2f%2fsalvotnt.co.nf%2ftrack.php&amp;amp;tr=http%3a%2f%2fsalvotnt.altervista.org%2fannounce.php&amp;amp;tr=udp%3a%2f%2ftorrents.ddunlimited.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftorrents.ddunlimited.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.ilibr.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.istole.it%3a80&amp;amp;tr=http%3a%2f%2fexodus.desync.com%2fannounce&amp;amp;tr=http%3a%2f%2fsugoi.pomf.se%2fannounce&amp;amp;tr=http%3a%2f%2f94.228.192.98%2fannounce&amp;amp;tr=http%3a%2f%2fanimeita.url.ph%2fannounce.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;Hasta el ultimo hombre&lt;/em&gt;, una peli del señor Mel Guibson, que no termino de
-enterder si intenta dejar una leccion o tener una excusa para ser &lt;em&gt;Violenta&lt;/em&gt;(?),
-je, je, mucha sangre, desmembramientos y perfosaciones, me gusta!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Arrival&lt;/em&gt; (la llegada), que bonita, en el podcast &lt;em&gt;La orbita de Endor&lt;/em&gt; se
-explayan (solo) un poco mas, recomendada&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:9c1872923ca650adca73e4b863c2c13a85d5e9d5&amp;amp;dn=Arrival%202016%201080p%20BluRay%20x264%20DTS-JYK&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;amp;tr=udp%3a%2f%2fpublic.popcorn-tracker.org%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;Train to Busan&lt;/em&gt;, zombies coreanos(?)!, que bien echa esta, la escena donde los
-zombies &lt;q&gt;frenan&lt;/q&gt; es cuando menos creible, si fuese el dictador de un pais,
-obligaria a mis basallos a representar una peli sangrienta, con sangre de verdad&amp;hellip;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:168637b7a074323f92b4d233383df90e7eb88ce0&amp;amp;dn=Train%20To%20Busan%20(2016)%20%5b1080p%5d%20%5bYTS.AG%5d&amp;amp;tr=http%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.tfile.me%2fannounce&amp;amp;tr=http%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2feddie4.nl%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker4.piratux.com%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.trackerfix.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftorrent.gresille.org%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.me%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fglotorrents.pw%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.blackunicorn.xyz%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2fp4p.arenabg.ch%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.to%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;logre juntar unas monedas para ir al templo y dejar la cooperacion:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Logan&lt;/em&gt; mmmmmmm, pudo ser mejor. Si su proposito fue ser incomoda, lo
-logro. Buena sangre, lo de convertir una cruz en una &lt;em&gt;X mutante&lt;/em&gt; es de las cosas
-mas bonitas que he visto&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;John Wick: Chapter 2&lt;/em&gt;, no puedo resistir ver pelis donde salga el señor
-&lt;em&gt;neo&lt;/em&gt;, el principio es continuista, para el intermedio ya estas dentro de la
-temitica &lt;em&gt;&lt;q&gt;es Jhon Wick&lt;/q&gt;&lt;/em&gt;, y el final? Soberbio, quiero ver lo que sigue.
-Aun encuerto, lo de &lt;q&gt;por que es Jhon Wick&lt;/q&gt; dificil de aceptar, y la
-excusa para la secuela no tiene sentido, pero que mas da, diria que es mejor
-que la primera parte&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Kong Skull Island&lt;/em&gt;, mostruos!&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;para terminar, una buena persona, subio un par de torrentes, con series magnificas:
-&lt;em&gt;Space Dandy&lt;/em&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:aa266b5fd7c7ca7ebd296820488caf71757b2320&amp;amp;dn=%5bAniHenjin%5d%20Space%20Dandy%20%5bTV%20720p%5d&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
-magnet:?xt=urn:btih:bb17866b65881296f73a3bb443db833859e123a2&amp;amp;dn=%5bAniHenjin%5d%20Space%20Dandy%20Season%202%20%5bTV%20720p%5d&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;un anime de aventura espacial, un poco a lo cowboy bebop, pero muy, muy
-experimental, con capitulos literalmente lizergicos, una joya&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Nichijou&lt;/em&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:5a899138b847a39a7c816ae94e08dba3e3566fc5&amp;amp;dn=%5bAniHenjin%5d%20Nichijou%20%5bTV%20720p%5d&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;anime que explora el humor japones hasta sus ultimas consecuencias, con&amp;hellip; una
-animacion que parece para crios y sin ningun tema cachondo. Visualizala o
-muere!&lt;/p&gt;
-
-&lt;h2 id=&#34;fonos&#34;&gt;fonos&lt;/h2&gt;
-
-&lt;p&gt;varios discos de Paul McCartney, mi beatle faborito (musicalmente) me gustan sus
-primeros 5-7 albums, los ochentas son raros, algo de Steve Vai (Alive In An
-Ultra World), tambien unos albums de Sonic Youth la que por muchos años fuese mi
-banda faborita, &lt;q&gt;Chrome Dreams (I)&lt;/q&gt; un disco unoficial de Neil Young, y un
-puñado mas de nuevas he interesantes escuchas, tantas que ni me acuerdo del
-orden/nombres&amp;hellip;&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/post/ramen-i/</guid>
+      <description>Hace unas semanas que no publico naha, que por haber cosas recomendaciones o temas no han faltado, pero entre la pereza y la programacion, no ha salido naha.
+Como paleativo e imitando otros blogs (kofff&amp;hellip; onda hostil, quijote libre) abro esta seccion para contar en que ando, prefiero poner una post de una tematica particular, pero ya sera cuando termine este mes.
+Katata El motivo principal del silencio literario fue katana, un componenten del proyecto morg (que encontraran dentro de las etiquetas del lado derecho de este blog).</description>
     </item>
     
     <item>
       <title>Mugen no jūnin</title>
-      <link>http://nasciiboy.github.io/post/Mugen-no-junin/</link>
+      <link>http://nasciiboy.github.io/post/mugen-no-junin/</link>
       <pubDate>Sun, 05 Mar 2017 11:49:56 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/Mugen-no-junin/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;../manji.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;無限の住人 (Mugen no jūnin) literalmente (segun wikipedia) &lt;em&gt;El habitante del
-infinito&lt;/em&gt; o por el titulo al españøl &lt;em&gt;La espada del inmortal&lt;/em&gt; fue
-parte de un &lt;q&gt;proyecto&lt;/q&gt; titulado &lt;q&gt;voy a leer este manga en un trabajo que
-aparece de forma ocacional, dos o tres dias por mes&lt;/q&gt;.&lt;/p&gt;
-
-&lt;p&gt;Todo sea dicho, el proyecto tardo alrededor de 7 meses para concluir la lectura
-de los 30 tomos exclusivamente en tiempo laboral.&lt;/p&gt;
-
-&lt;p&gt;El primer contacto, con la obra fue en un cafe-manga, pedi un ramen y me quede
-como tres horas leyendo, el final de &lt;q&gt;la novia de acero 2&lt;sup&gt;da&lt;/sup&gt;&lt;/q&gt;
-(alias &lt;em&gt;NGE: Angelic Days&lt;/em&gt;) y luego algo desconocido&amp;hellip; el primer volumen
-del titulo en cuestion&lt;/p&gt;
-
-&lt;p&gt;Segun cuenta en el ultimo volumen el propio autor (Hiroaki Samura), el titulo le
-llebo la friolera cantidad de 19 años, toda una vida&amp;hellip; pero la rocanbolesca
-historia y lo potente de los dibujos no son para menos, cada viñeta es una obra
-de arte.&lt;/p&gt;
-
-&lt;p&gt;Desmembramientos, agreciones (con resultados sexuales) y una trama que da giros
-desconcertantes a la par de interesantes, es lo que encontraras.&lt;/p&gt;
-
-&lt;p&gt;Lo de la trama tiene chicha, el autor quiere romper la cuarta pared, fastidiarme
-o jugar con los topicos para llebarte a tramas imprevistas? todo esta a tope,
-nada de medias tintas, exeptuando al protagonista, que como en uno de sus
-dialogos dice el mismo, se pasa la mayoria de las peleas sin una o dos
-extremidades.&lt;/p&gt;
-
-&lt;p&gt;Pero por que esta fascinacion por lo extraordinario, guererros dopadisimos mas
-alla de lo humano, las feminas tienen figuras irresistibles, por que?&lt;/p&gt;
-
-&lt;p&gt;a saber&amp;hellip; continuo con esta reflexion otro dia, cuando la sensacion reflexiva
-regrese&amp;hellip;&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/post/mugen-no-junin/</guid>
+      <description>無限の住人 (Mugen no jūnin) literalmente (segun wikipedia) El habitante del infinito o por el titulo al españøl La espada del inmortal fue parte de un proyecto titulado voy a leer este manga en un trabajo que aparece de forma ocacional, dos o tres dias por mes.
+Todo sea dicho, el proyecto tardo alrededor de 7 meses para concluir la lectura de los 30 tomos exclusivamente en tiempo laboral.
+El primer contacto, con la obra fue en un cafe-manga, pedi un ramen y me quede como tres horas leyendo, el final de la novia de acero 2da (alias NGE: Angelic Days) y luego algo desconocido&amp;hellip; el primer volumen del titulo en cuestion</description>
     </item>
     
     <item>
       <title>Kuzu no Honkai</title>
-      <link>http://nasciiboy.github.io/post/Kuzu-no-Honkai/</link>
+      <link>http://nasciiboy.github.io/post/kuzu-no-honkai/</link>
       <pubDate>Wed, 22 Feb 2017 21:08:41 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/Kuzu-no-Honkai/</guid>
-      <description>
-
-&lt;p&gt;Era mi primer dia de instituto&amp;hellip; me alegre muchisimo, iba a poder verla todos
-los dias de clase ––pausa, respira y no parescas nervioso–– creo que los dos
-pensamos lo mismo ––es verdad, da igual–– tuku, tuku, tuku ––fue electrico––
-todo lo que quiero hacer&amp;hellip; &lt;em&gt;mierda, otro anime colegial&lt;/em&gt; &amp;hellip; bueno, las
-pantallas pueden mostrar cosas que me satisfacen plenamente, es decir, no es
-normal??&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../ushijima.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Asi es, &lt;em&gt;Kusu no Honkai&lt;/em&gt; actualmente en transmision (capitulo 7) merece su
-propio post. Ya no importa lo que suceda, ni como termine la historia, esta
-serie a subido al olimpo de creaciones audiovisuales personal&lt;/p&gt;
-
-&lt;h2 id=&#34;demasiado-humano&#34;&gt;Demasiado humano&lt;/h2&gt;
-
-&lt;p&gt;––Que se supone que es &lt;em&gt;esto&lt;/em&gt;?–– supongo que toda creacion tiene una intecion,
-aunque la intencion solo puede ser recreada si el creador y el destinatario
-comparten su forma de pensar. Entonces pues, dificil sera compartir la
-experiencia con otro ser, por ejemplo,&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;q&gt;la tumba de las luciernagas&lt;/q&gt; me parece comica y sarcastica, un mocoso
-que hace su voluntad, terminando jodido y (luego) muerto, que gracioso,
-enserio! (me senti identificado)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;Q&gt;Visitor Q&lt;/q&gt; es incluso mas divertida, aun asi alguno podria creer que es
-enfermisa.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Se comenta que &lt;q&gt;A servian film&lt;/q&gt; es grotesca, y&amp;hellip; me aburrio&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;creo que &lt;em&gt;Neon Genesis Evangelion&lt;/em&gt; deberia ser vista por todo humano y aun asi
-algun amigo no fue capaz de verla entera&amp;hellip;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;asi pues, que &lt;strong&gt;sensaciones&lt;/strong&gt; genera la obra en turno?&lt;/p&gt;
-
-&lt;p&gt;exitacion, mucha exitacion! aderesada por nostalgia, frustracion,
-deseos y algo de comiedia parodica autoreflejada&lt;/p&gt;
-
-&lt;p&gt;de que dices que trata? es un drama colombiano, humano-japones, erotico festivo
-con fraces chulas, pensonajes a mi parcer mas humanos que muchos humanos, que
-encima explican sus motivaciones de una forma creible e inusualmente clara&lt;/p&gt;
-
-&lt;h2 id=&#34;tu-cuerpo-lo-sabe&#34;&gt;Tu cuerpo lo sabe&lt;/h2&gt;
-
-&lt;p&gt;El anime/j-cine/manga es capas de mostrar a la humanidad de forma exarservada,
-violenta y sexosa con pocas (y a veces muchas) limitaciones de lo visualmente
-expuesto, una cultura contradictoria y misteriosa.&lt;/p&gt;
-
-&lt;p&gt;Se suguiere, mas de lo que se muestra, quiza la clave para volver morboso y
-exitante un simple roce de dos trozos de carne humana animados, llenos de
-pensamientos confusos, miedo, sudor, ignorancia, rush&amp;hellip; que bien se siente,
-vamos de nuevo?&lt;/p&gt;
-
-&lt;p&gt;Pues si, una semana es mucho tiempo, tanto como para ver los episodios otra
-vez. El subidon no fue igual, aunque mantiene la calidad.&lt;/p&gt;
-
-&lt;p&gt;Ahora he visto (o querido ver) algo, ademas del drama adolecente.&lt;/p&gt;
-
-&lt;p&gt;Un dia, alguien me pregunto que podia regalarle a alguna persona (a mi, ha, ha,
-ha, si soy lento para algunas cosas), le sugeri dar dinero asi el sujeto
-compraria algo de su agrado o necesidad. Pasaron de la recomendacion y dieron lo
-que les vino en gana, entonces pense, en lo egoista que es esperar algo de otra
-persona, puedo exigir algo a alguien? meresco un trato o reaccion a gusto mio?&lt;/p&gt;
-
-&lt;p&gt;Ya no recuerdo bien la respuesta mental a la pregunta, solo llegar a la
-conclucion de que &lt;em&gt;Toda accion humana es egoista&lt;/em&gt;, incluso si se hace sin
-esparar, esperar nada.&lt;/p&gt;
-
-&lt;p&gt;Como? pues eso, entiendo el egoismo como &lt;em&gt;la accion&lt;/em&gt; que emprende el humano
-apartir de su limitada y estrecha forma en que se configura su conciencia fruto
-de interacciones fuera de su comprension, sin proposito, mas no sin causas y
-efectos, algo que llamo aleatoriadad.&lt;/p&gt;
-
-&lt;p&gt;Aunque el egoismo tiene conotaciones negativas, que de negativo tiene lo
-anterior&amp;hellip; pero y una ves que ves las cosas asi entonces que? ni idea, siempre
-he sido un rick sanchez (poderes mentales no incluidos)&lt;/p&gt;
-
-&lt;p&gt;y a cuento de que la historia? kuzu no honkai podria ir en esa direccion, el
-descubrimiento del egoismo de todo individuo, luego si termina con locura y
-destruccion, mucho mejor, aunque no descarto una escena donde se froten todos de
-forma lasciva&lt;/p&gt;
-
-&lt;h2 id=&#34;dame-mas&#34;&gt;Dame mas&lt;/h2&gt;
-
-&lt;p&gt;Si te gusta esta serie y quieres un poco mas podrias ver&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;karekano&lt;/em&gt;, ternura nostalgica&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Nazo no Kanojo&lt;/em&gt;, romance erotico ligero&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:9307f6d16780dc2ad3f87828347cf1963c0a94c6&amp;amp;dn=Nazo%20no%20kanojo%20X&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Aku no Hana&lt;/em&gt;, recorrido tortuoso y confuso para ser persona&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;sayonara-baby&#34;&gt;sayonara baby&lt;/h2&gt;
-
-&lt;p&gt;(&lt;em&gt;Actualizacion&lt;/em&gt;) Era innevitable, a continuacion el enlace magnet, para descargar Kuzu no Honkai&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:6ff8439c951f3ccc03020011c61fe042980cfdef&amp;amp;dn=%5bYashiro%5d_Kuzu_no_Honkai_%5bHDTV%5d&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>http://nasciiboy.github.io/post/kuzu-no-honkai/</guid>
+      <description>Era mi primer dia de instituto&amp;hellip; me alegre muchisimo, iba a poder verla todos los dias de clase ––pausa, respira y no parescas nervioso–– creo que los dos pensamos lo mismo ––es verdad, da igual–– tuku, tuku, tuku ––fue electrico–– todo lo que quiero hacer&amp;hellip; mierda, otro anime colegial &amp;hellip; bueno, las pantallas pueden mostrar cosas que me satisfacen plenamente, es decir, no es normal??
+Asi es, Kusu no Honkai actualmente en transmision (capitulo 7) merece su propio post.</description>
     </item>
     
     <item>
       <title>Samurai Champloo ♪</title>
-      <link>http://nasciiboy.github.io/post/SamuraiChamploo/</link>
+      <link>http://nasciiboy.github.io/post/samuraichamploo/</link>
       <pubDate>Tue, 31 Jan 2017 12:06:31 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/SamuraiChamploo/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;../samurai-champloo.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;La musica de Samurai Champloo es Electro Rapera Anime, sirve para entrar en
-estado &lt;s&gt;avatar&lt;/s&gt; &lt;b&gt;afro&lt;/b&gt; algo asi como sentirse maloso, ponerse
-cariñoso&amp;hellip; programar, pero nunca para bailar, que los programadores no
-bailan&amp;hellip; amenos que sean afro.&lt;/p&gt;
-
-&lt;p&gt;En todo album digno de ser escuchado &lt;em&gt;las pistas son el playlist&lt;/em&gt;, y todo
-album que alcanza dicho estado merece, digo &lt;em&gt;exige&lt;/em&gt; se ser compartido&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:0106f2c2d2cee981836926fc55d8008788fc4e9e&amp;amp;dn=Samurai%20Champloo%20OST&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;algunas pistas, para repetir una y otra ves son&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Aruarian Dance&lt;/li&gt;
-&lt;li&gt;Who&amp;rsquo;s Theme&lt;/li&gt;
-&lt;li&gt;World Without Words&lt;/li&gt;
-&lt;li&gt;What YOU Want&lt;/li&gt;
-&lt;li&gt;Still Think Different&lt;/li&gt;
-&lt;li&gt;Sacrifice&lt;/li&gt;
-&lt;li&gt;Enjoy Yourself&lt;/li&gt;
-&lt;li&gt;The Space Between Two World&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>http://nasciiboy.github.io/post/samuraichamploo/</guid>
+      <description>La musica de Samurai Champloo es Electro Rapera Anime, sirve para entrar en estado avatar afro algo asi como sentirse maloso, ponerse cariñoso&amp;hellip; programar, pero nunca para bailar, que los programadores no bailan&amp;hellip; amenos que sean afro.
+En todo album digno de ser escuchado las pistas son el playlist, y todo album que alcanza dicho estado merece, digo exige se ser compartido
+magnet:?xt=urn:btih:0106f2c2d2cee981836926fc55d8008788fc4e9e&amp;amp;dn=Samurai%20Champloo%20OST&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce  algunas pistas, para repetir una y otra ves son</description>
     </item>
     
     <item>
@@ -398,279 +61,41 @@ album que alcanza dicho estado merece, digo &lt;em&gt;exige&lt;/em&gt; se ser co
       <pubDate>Fri, 20 Jan 2017 22:16:06 -0600</pubDate>
       
       <guid>http://nasciiboy.github.io/post/workspace/</guid>
-      <description>
-
-&lt;p&gt;Me gusta leer sobre la configuracion de otras personas, ver videos reseñando
-algun teclado, recorrer calles que no conosco&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Despues de algunos años de pruevas, recoleccion y pocas compras, esta es la
-configuracion con la que &lt;q&gt;trabajo&lt;/q&gt; (pasar el tiempo es mas apropiado). A
-pesar de estar lejos de ser la configuracion de mis sueños, cumple con su labor
-dia a dia.&lt;/p&gt;
-
-&lt;p&gt;Espero disfruten del cuento&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../workspace.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
-
-&lt;p&gt;El corazon de mi caballo de batalla, es una placa de gama baja de la marca asus,
-el modelo es C8HM70 en formato itx con un procesador (soldado) intel celeron 847
-de doble nucleo a 1.1GHz + un puerto PCI ocupado por una grafica asus 210
-silent + 2 slots de memoria ram DDR3 de 4GB + dos puertos SATA, uno para un ssd
-kingston 3k de 240GB, el otro para un hdd wenster digital blue de 1TB (y un hdd
-de 320GB no conectado).&lt;/p&gt;
-
-&lt;p&gt;El gabinete es una herencia de un pc armado que tenia una placa con un pentium
-4.&lt;/p&gt;
-
-&lt;p&gt;Dos monitores (imagen superior) uno de 1366x768 en 19&amp;rdquo; y otro 1024x768 15&amp;rdquo;,
-ambos con conector vga, uno conectado a la placa y otro a la grafica dedicada.&lt;/p&gt;
-
-&lt;p&gt;Un teclado mecanico corsair strafe rgb de switches rojos (con el tiempo,
-liquidos derramados y una capa de grasa en las teclas, ha venido el
-cariño&amp;hellip; cambiaria los switches por azules o cafes) + un raton logitech
-inalambrico m185 + gamepad logitech inalambrico f710.&lt;/p&gt;
-
-&lt;p&gt;Unos audifonos de diadema (los mas baratos) sony mdr-zx100.&lt;/p&gt;
-
-&lt;p&gt;Todo esta alimentado por un UPS CyberPower 750 VA que da unos 25min de respaldo,
-conectado a una barra de contactos de esas de switch con foco rojo. Por cierto
-la fuente del equipo es una Cooler Master 450.&lt;/p&gt;
-
-&lt;p&gt;Para complementar los utencilios: un cuaderno, una pluma roja y una hoja con la
-tabla de los operadores de C.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../hardware.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;el-sistema-operativo&#34;&gt;El sistema operativo&lt;/h2&gt;
-
-&lt;p&gt;Por tres años, Debian fue quien movia el aparato, hasta que la nacion del fuego
-ataco (monitor extra con vga) y la unica distribucion que hizo funcionar la
-grafica integrada en conjunto con la dedicada fue (redobles, luego el sonido
-previo a la aparicon de una creatura destructora) chan, chan, chan,
-fedora&amp;hellip; ademas del regreso del avatar tamben anelo el dia en que Debian o
-algun Arch esten de nuevo en el disco duro.&lt;/p&gt;
-
-&lt;h2 id=&#34;el-entorno-de-escritorio-y-lo-demas&#34;&gt;El entorno de escritorio&amp;hellip; y lo demas&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Gnome!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Es minimalista, elegante por defecto y con mi hardware va fenomenal.&lt;/p&gt;
-
-&lt;p&gt;Solo tiro de dos extensiones externas, &lt;a href=&#34;https://github.com/hedayaty/NetSpeed&#34;&gt;netspeed&lt;/a&gt; que muestra en la barra de estado
-las estadisticas de la red (subida/bajada) y &lt;a href=&#34;https://github.com/aleho/gnome-shell-volume-mixer&#34;&gt;Volume Mixer&lt;/a&gt; para controlar el volumen
-de manera independiente para cada aplicacion&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../fly-kp_5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Al princio tenia 4 espacios de trabajo, luego 6, despues 7 y finalmente pase a
-10. Cada escritorio tiene su propio atajo de teclado, &lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;KP_0..9&lt;/code&gt; para
-moverse entre los escritorios y &lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;Alt&lt;/code&gt; + &lt;code&gt;KP_0..9&lt;/code&gt; para mover ventanas
-a un escritorio distinto.&lt;/p&gt;
-
-&lt;p&gt;Tambien hay combinaciones para cambiar de una pantalla a otra y aunque suelo
-tener solo dos ventanas por espacio de trabajo (una en cada pantalla) dispuse
-cuatro combinaciones para cambiar entre las aplicaciones de cada escritorio
-&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;Esp&lt;/code&gt;, &lt;code&gt;Alt&lt;/code&gt; + &lt;code&gt;Tab&lt;/code&gt;, &lt;code&gt;Super&lt;/code&gt; (derecho) + &lt;code&gt;Enter&lt;/code&gt; y &lt;code&gt;Super&lt;/code&gt;
-(derecho) + &lt;code&gt;Retroceso&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Tres espacios de trabajo estan reservados para programacion (&lt;code&gt;Super&lt;/code&gt; +
-&lt;code&gt;KP_4..6&lt;/code&gt;). En estas habita una instancia de Emacs con 5 paneles y una consola
-con una o dos pestañas, todo a pantala completa.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../kp_5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vamos a los siguientes tres espacios (&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;KP_1..3&lt;/code&gt;). El primero con un
-navegador de ficheros con 5 o mas pestañas (en este espacio suelo ver videos,
-visualizar cosas y editar imagenes). El segundo, tiene una terminal donde
-escucho musica con &lt;code&gt;moc&lt;/code&gt; y un emacs con una lista de mi coleccion musical y las
-tareas que realizo (si son parte de un proyecto luego lo utilizo para el
-commit). En el tercer espacio estan qbittorrent y thunderbird&lt;/p&gt;
-
-&lt;p&gt;El espacio asignado a &lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;KP_0&lt;/code&gt; esta reservado para firefox, con pestañas en el
-traductor y en general para investigar lo que haga falta&lt;/p&gt;
-
-&lt;p&gt;Finalmente los espacios (&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;KP_7..9&lt;/code&gt;) son para eventualidades.
-Recientemente en &lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;KP_9&lt;/code&gt; puse un emacs dedicado a erc, elfeed, eww y un
-firefox abierto en reddit.&lt;/p&gt;
-
-&lt;p&gt;Por comodidad trato de utilizar el raton lo menos posible, su uso esta limitado
-a firefox y aplicaciones graficas&lt;/p&gt;
-
-&lt;p&gt;En el pasado cuando utilizaba solo un monitor (de &amp;ldquo;15) tenia que sobreponer las
-aplicaciones de extravagantes e incomodas formas, ahora cada una tiene su propia
-pantalla en su propio espacio de trabajo y combinacion, de esta forma puedo
-pasar de un lado a otra automaticamente sin pensarlo demasiado.&lt;/p&gt;
-
-&lt;h2 id=&#34;teclado&#34;&gt;Teclado&lt;/h2&gt;
-
-&lt;p&gt;El teclado tiene una distrubicion en lenguaje ingles mapeado como programmer dvorak
-con estas teclas modificadas&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;Caps Lock&lt;/code&gt; es &lt;code&gt;Control&lt;/code&gt; (izquierdo)&lt;/li&gt;
-&lt;li&gt;Sobre &lt;code&gt;Enter&lt;/code&gt; esta &lt;code&gt;Caps Lock&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Al lado del nuevo &lt;code&gt;Caps Lock&lt;/code&gt; esta &lt;code&gt;Control&lt;/code&gt; (Derecho)&lt;/li&gt;
-&lt;li&gt;Donde estaba &lt;code&gt;Control&lt;/code&gt; (izquierdo) esta &lt;code&gt;|&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Donde estaba &lt;code&gt;Control&lt;/code&gt; (derecho) esta &lt;code&gt;@&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Super&lt;/code&gt; derecho tambien esta mapeado como &lt;code&gt;Super&lt;/code&gt; izquierdo&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;La modificacion no esta hecha mediante un mapeo del teclado, en esencia porque
-desconosco de donde demonios tome gnome el mapeo. Como el teclado no es un
-teclado al uso, es mas bien un tablero con muchas teclas y luces independientes,
-requiere un software dedicado para funcionar llamado ckb, desde el cual realice
-el cambio.&lt;/p&gt;
-
-&lt;p&gt;Nota: El teclado tambien fuciona sin software&lt;/p&gt;
-
-&lt;p&gt;Al principio utilizaba el mapeo en español y pulsaba las teclas con dos dedos,
-luego aprendi mecanografia en mapeo qwerty español, despues salte a qwerty
-ingles y efectivamente es mas comodo para programar, no se si lo habras notado,
-pero qwerty requiere mover los dedos a posiciones poco practicas asi que
-investigando un poco pase a programmer dvork en ingles. Luego de 1 año con este
-mapeo puedo asegurar que es mucho mas comodo, veloz y eficiente, aunque no
-estoy seguro si sea o no mejor, tener las teclas numericas o los simbolos,
-supongo que hay que elegir&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;aplicaciones-y-emacs-con-atajos-especificos&#34;&gt;Aplicaciones (y Emacs) con atajos especificos&lt;/h2&gt;
-
-&lt;p&gt;Abras notado que los comandos del escritorio en mi configuracion involucran la
-tecla &lt;code&gt;Super&lt;/code&gt;, bien, los siguientes atajos no son la exepcion&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;e&lt;/code&gt; para emacs compilado desde el codigo&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;u&lt;/code&gt; para emacs optenido desde el repositorio de la distribucion&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;z&lt;/code&gt; para firefox&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;v&lt;/code&gt; para el visor de documentos pdf (evince)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;h&lt;/code&gt; para konsole&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;t&lt;/code&gt; para terminix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;fin&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <description>Me gusta leer sobre la configuracion de otras personas, ver videos reseñando algun teclado, recorrer calles que no conosco&amp;hellip;
+Despues de algunos años de pruevas, recoleccion y pocas compras, esta es la configuracion con la que trabajo (pasar el tiempo es mas apropiado). A pesar de estar lejos de ser la configuracion de mis sueños, cumple con su labor dia a dia.
+Espero disfruten del cuento
+Hardware El corazon de mi caballo de batalla, es una placa de gama baja de la marca asus, el modelo es C8HM70 en formato itx con un procesador (soldado) intel celeron 847 de doble nucleo a 1.</description>
     </item>
     
     <item>
       <title>Shin Godzilla</title>
-      <link>http://nasciiboy.github.io/post/Shin-Godzilla/</link>
+      <link>http://nasciiboy.github.io/post/shin-godzilla/</link>
       <pubDate>Mon, 16 Jan 2017 20:27:28 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/Shin-Godzilla/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;../hey-godzilla.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Mi amigo el &lt;strong&gt;Goad Floyd&lt;/strong&gt; me ha recomendado una variada serie de peliculas, que
-con el tiempo termine por clasificar como &lt;q&gt;&lt;em&gt;peliculas que van de la vida&lt;/em&gt;&lt;/q&gt;,
-entre algunas de sus recomendaciones estan (nombre original) &lt;strong&gt;Altered States&lt;/strong&gt;,
-&lt;strong&gt;One Flew Over The Cuckoo&amp;rsquo;s Nest&lt;/strong&gt;, &lt;strong&gt;A Clockwork Orange&lt;/strong&gt;, &lt;strong&gt;O Lucky Man&lt;/strong&gt;,
-&lt;strong&gt;The Shining&lt;/strong&gt;, &lt;strong&gt;Led Zeppelin Live In London&lt;/strong&gt;, entre otras cuantas obras mas.&lt;/p&gt;
-
-&lt;p&gt;y que son las &lt;q&gt;peliculas que van de la vida&lt;/q&gt;? una serie de eventos
-eratico/aleatorios con no mucho sentido con un toque bizarro, propisio para una
-reflexion melancolica acompañada de un toque y buena musica en absoluta soledad.&lt;/p&gt;
-
-&lt;p&gt;Es cierto que en el estado mental correcto, toda obra es propensa de ascender a
-dicha categoria, no obstante solo las obras mas selectas son capaces de llegar a
-tal estado sin recurrir a sustancias psicotropicas.&lt;/p&gt;
-
-&lt;p&gt;Precisamente hoy he visto una de esas peliculas de tematica difusa, abierta a
-diversas interpretaciones en las cuales el director se resiste en profundisar (o
-no). &lt;strong&gt;Shin Godzilla&lt;/strong&gt; puede ser una pelicula de godzilla, una critica a la
-sociedad japonesa, a la juventud, a los viejos, a la humanidad, un &lt;q&gt;dios nos
-la pela, tenemos la ciencia&lt;/q&gt;, quien puede saberlo? quiza lo es todo y nada a
-la vez.&lt;/p&gt;
-
-&lt;p&gt;Acudi a verla no por ser un fan incondicional del lagarto, mas bien, por el
-director/escritor, un tipo llamado Hideaki Anno, creador de la que considero la
-mas grande obra audiovisual humana &lt;strong&gt;Neon Genesis Evangelion&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;El resultado es magnifico, la creatura es un muñeco, la musica se aprobecha de
-los otakus evangelistas, los efectos y actuaciones son una reivindicacion del
-cine japones no una copia yanky&amp;hellip; &lt;strong&gt;Hideaki&lt;/strong&gt; (Anno, ehh, suena raro) es un troll
-de sus fans a la ves que los utiliza para hacer pasta, Evangelion 3.0 es la mejor
-muestra, aun asi, esta obra sin ser exelente va directo a la lista de archivos a
-preservar.&lt;/p&gt;
-
-&lt;p&gt;La vi en el templo (el cine), posiblemente la vea una ves mas solo por apoyar
-este tipo de creaciones, si puedes, acude a pasar un buen rato.&lt;/p&gt;
-
-&lt;p&gt;Hace tiempo, entre uno de tantos proyectos muertos, grabe un audio de nombre
-lizargico donde hago el monger, lo dejo por que asi parece que soy mas fan del
-lagarto&amp;hellip; &lt;a href=&#34;../3.0_Lizargico_lado_A.ogg&#34;&gt;lizargico-ogg&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/post/shin-godzilla/</guid>
+      <description>Mi amigo el Goad Floyd me ha recomendado una variada serie de peliculas, que con el tiempo termine por clasificar como peliculas que van de la vida, entre algunas de sus recomendaciones estan (nombre original) Altered States, One Flew Over The Cuckoo&amp;rsquo;s Nest, A Clockwork Orange, O Lucky Man, The Shining, Led Zeppelin Live In London, entre otras cuantas obras mas.
+y que son las peliculas que van de la vida?</description>
     </item>
     
     <item>
       <title>Krautrock Albums</title>
-      <link>http://nasciiboy.github.io/post/Krautrock-Albums/</link>
+      <link>http://nasciiboy.github.io/post/krautrock-albums/</link>
       <pubDate>Fri, 30 Dec 2016 18:21:44 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/Krautrock-Albums/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;../smile.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Segun &lt;a href=&#34;https://es.wikipedia.org/wiki/Krautrock&#34;&gt;wikipedia&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Se le llama &lt;strong&gt;Krautrock&lt;/strong&gt; o &lt;strong&gt;Kraut Rock&lt;/strong&gt; (también conocida como Kosmische
-Musik) a una corriente musical de rock y electrónica surgida en Alemania
-Occidental a fines de los años 60.&lt;/p&gt;
-
-&lt;p&gt;Se usa para referirse a una gran cantidad de artistas alemanes que habían sido
-influidos por géneros como el rock psicodélico, el rock progresivo, la música
-avant-garde y el jazz, que utilizaban nuevas tecnologías y nuevas formas de
-usar las tecnologías de grabación, amplificación y mezcla musical, con nuevas
-estructuras formales. El krautrock es muchas veces considerado un subgénero
-del rock progresivo.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Segun nasciiboy, es la etiqueta que le ponen a un monton de discos chidos
-grabados principalmente en los 70&amp;rsquo;s, que van del jazz a la musica ambiental
-experimental, pasando por el clasico y el progresivo sin llegar a lo
-Zeppelindroso.&lt;/p&gt;
-
-&lt;p&gt;Buscando nuevas experiencias sonoras encontre (qbittorrent) una compilacion de
-98 (o son 100?)  albums clasificados como Krautrock divididos en 5 enlaces de
-descarga:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;I   magnet:?xt=urn:btih:40632e48e8c7b8231a8d36475249da5d32b97839&amp;amp;dn=Top%20Krautrock%20Albums%20(according%20progarchives.com)%2c%20Part%20I&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
-II  magnet:?xt=urn:btih:fe69d2fa839551d30b7984fee974442b53625ee3&amp;amp;dn=Top%20Krautrock%20Albums%20(according%20progarchives.com)%2c%20Part%20II&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce
-III magnet:?xt=urn:btih:0a1fd1f7b473172702fb4900d5dcf9967546e7e8&amp;amp;dn=Top%20Krautrock%20Albums%20(according%20progarchives.com)%2c%20Part%20III%20(reseed)
-IV  magnet:?xt=urn:btih:d7c725e1b0f2ab14d916334b593fe1480dab7285&amp;amp;dn=Top%20Krautrock%20Albums%20(according%20progarchives.com)%2c%20Part%20IV&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce
-V   magnet:?xt=urn:btih:848fd0a1e0d1e84daaf0733c7a75fb866c7ce472&amp;amp;dn=Top%20Krautrock%20Albums%20(according%20progarchives.com)%2c%20Part%20V&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;De momento llebo escuchados 71. Todos son joyas raras dignas de un altar, en
-particular &lt;strong&gt;Can&lt;/strong&gt; y &lt;strong&gt;Electric Orange&lt;/strong&gt;. Muchas grabaciones son de calidad
-dudosa y algunas parecen salidas de una cinta/vinil, posiblemente sean la unica
-version en existencia.&lt;/p&gt;
-
-&lt;p&gt;Todas las pistas estan en formato flac a 800-1000 kbps. Cada enlace es de unos
-5GB. Al parecer solo un humano tiene completo el material y se conecta de forma
-esporadica con una velocidad de transmision de 1990. Luego de 2 meses se
-completaron los enlaces I, IV y V. II esta al 93%, III tardara algunas
-semanas/meses mas.&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/post/krautrock-albums/</guid>
+      <description>Segun wikipedia
+ Se le llama Krautrock o Kraut Rock (también conocida como Kosmische Musik) a una corriente musical de rock y electrónica surgida en Alemania Occidental a fines de los años 60.
+Se usa para referirse a una gran cantidad de artistas alemanes que habían sido influidos por géneros como el rock psicodélico, el rock progresivo, la música avant-garde y el jazz, que utilizaban nuevas tecnologías y nuevas formas de usar las tecnologías de grabación, amplificación y mezcla musical, con nuevas estructuras formales.</description>
     </item>
     
     <item>
       <title>Rei</title>
-      <link>http://nasciiboy.github.io/post/Rei/</link>
+      <link>http://nasciiboy.github.io/post/rei/</link>
       <pubDate>Fri, 16 Dec 2016 17:19:32 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/Rei/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;El destino de la destruccion es tambien la alegria del renacimiento.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Bienvenido al &lt;del&gt;subreddit de Evangelion&lt;/del&gt; dominio de nasciiboy, un sitio sin
-acentos, buena ortografia, redaccion, javascript, cokkies, publicidad,
-estadisticas, &amp;hellip; ni comentarios (a menos que envies un
-&lt;a href=&#34;https://github.com/nasciiboy/nasciiboy.github.io&#34;&gt;pull request&lt;/a&gt; o un
-&lt;a href=&#34;mailto:nasciiboy@gmail.com&#34;&gt;correo&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../Rei-000.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/post/rei/</guid>
+      <description>El destino de la destruccion es tambien la alegria del renacimiento.
+ Bienvenido al subreddit de Evangelion dominio de nasciiboy, un sitio sin acentos, buena ortografia, redaccion, javascript, cokkies, publicidad, estadisticas, &amp;hellip; ni comentarios (a menos que envies un pull request o un correo).</description>
     </item>
     
   </channel>

@@ -2,7 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://nasciiboy.github.io/post/ramen-I/</loc>
+    <loc>http://nasciiboy.github.io/prog/pg2ncurses/</loc>
+    <lastmod>2017-04-11T12:38:06-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nasciiboy.github.io/post/ramen-i/</loc>
     <lastmod>2017-04-02T21:08:41-06:00</lastmod>
   </url>
   
@@ -17,7 +22,7 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/post/Mugen-no-junin/</loc>
+    <loc>http://nasciiboy.github.io/post/mugen-no-junin/</loc>
     <lastmod>2017-03-05T11:49:56-06:00</lastmod>
   </url>
   
@@ -27,7 +32,7 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/post/Kuzu-no-Honkai/</loc>
+    <loc>http://nasciiboy.github.io/post/kuzu-no-honkai/</loc>
     <lastmod>2017-02-22T21:08:41-06:00</lastmod>
   </url>
   
@@ -37,7 +42,7 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/emacs/noTabs-for-goMode/</loc>
+    <loc>http://nasciiboy.github.io/emacs/notabs-for-gomode/</loc>
     <lastmod>2017-02-12T21:52:24-06:00</lastmod>
   </url>
   
@@ -52,7 +57,7 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/post/SamuraiChamploo/</loc>
+    <loc>http://nasciiboy.github.io/post/samuraichamploo/</loc>
     <lastmod>2017-01-31T12:06:31-06:00</lastmod>
   </url>
   
@@ -67,12 +72,12 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/emacs/rssPlusEww/</loc>
+    <loc>http://nasciiboy.github.io/emacs/rsspluseww/</loc>
     <lastmod>2017-01-18T09:29:17-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/post/Shin-Godzilla/</loc>
+    <loc>http://nasciiboy.github.io/post/shin-godzilla/</loc>
     <lastmod>2017-01-16T20:27:28-06:00</lastmod>
   </url>
   
@@ -87,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/prog/2017Challenges/</loc>
+    <loc>http://nasciiboy.github.io/prog/2017challenges/</loc>
     <lastmod>2017-01-04T20:41:22-06:00</lastmod>
   </url>
   
@@ -97,7 +102,7 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/post/Krautrock-Albums/</loc>
+    <loc>http://nasciiboy.github.io/post/krautrock-albums/</loc>
     <lastmod>2016-12-30T18:21:44-06:00</lastmod>
   </url>
   
@@ -137,22 +142,22 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/vg/nxEngine/</loc>
+    <loc>http://nasciiboy.github.io/vg/nxengine/</loc>
     <lastmod>2016-12-19T11:29:56-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/vg/H-Craft/</loc>
+    <loc>http://nasciiboy.github.io/vg/h-craft/</loc>
     <lastmod>2016-12-17T08:29:18-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/prog/Performance-comparison-of-regular-expression-engines/</loc>
+    <loc>http://nasciiboy.github.io/prog/performance-comparison-of-regular-expression-engines/</loc>
     <lastmod>2016-12-16T20:22:03-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/post/Rei/</loc>
+    <loc>http://nasciiboy.github.io/post/rei/</loc>
     <lastmod>2016-12-16T17:19:32-06:00</lastmod>
   </url>
   
@@ -182,6 +187,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/</loc>
+    <lastmod>2016-12-24T10:04:44-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -277,7 +283,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/ncurses/</loc>
-    <lastmod>2016-12-19T21:45:05-06:00</lastmod>
+    <lastmod>2017-04-11T12:38:06-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -301,13 +307,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2017-03-14T16:33:15-06:00</lastmod>
+    <lastmod>2017-04-11T12:38:06-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2017-03-14T16:33:15-06:00</lastmod>
+    <lastmod>2017-04-11T12:38:06-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -349,6 +355,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/</loc>
+    <lastmod>2017-02-13T22:14:42-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -372,7 +379,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-04-02T21:08:41-06:00</lastmod>
+    <lastmod>2017-04-11T12:38:06-05:00</lastmod>
     <priority>0</priority>
   </url>
   

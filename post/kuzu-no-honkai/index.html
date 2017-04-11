@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+  <head>
+    <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Kuzu no Honkai - nba - GNU&#39;s Rock</title>
+    
+    <style media="screen">
+:root {
+                            
+    --BGC      : #000000;   
+    --FGC      : #ffffff;   
+    --BGClogo  : #222222;   
+    --FGClogo  : #ffffff;   
+    --FGCtitle : #ff4500;   
+    --FGCstart1: #4B99D2;   
+    --FGCstart2: #00ffff;   
+    --FGCstart3: #ffa074;   
+    --FGCstart4: #98fb98;   
+    --FGCstart5: #b0c4de;   
+    --FGCstart6: #7fffd4;   
+    --FGCstart7: #db2e24;   
+    --FGCstart8: #ff4500;   
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;   
+    --FGCbtcode: #333333;   
+    --FGCftcode: #ffffff;   
+    --FGCbcode : #b3b3b3;   
+    --FGCtcomm : #ff4500;   
+    --FGCtcode : #bfbfff;   
+    --FGCfile  : #eedd82;   
+    --FGCmath  : #98fb98;   
+    --FGClink  : #00ffff;   
+    --BGClinkh : #556b2f;   
+    --FGClinkh : #ffffff;   
+    --BGCdt    : #b3b3b3;   
+    --FGCdt    : #ffffff;   
+    --FGCthead : #ff7f24;   
+    --BGCthead : #000000;   
+    --FGCtbody : #87cefa;   
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: local('monospace'    );                     }
+@font-face { font-family: codeblock;      src: local('monospace'    );                     }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em;
+                width: 70%;
+                float: left;
+               }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 2em;
+                width: 50%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+ul.terms    { list-style: none; margin: 0em; padding: 0em; }
+ul.terms li { display: block;
+              float: left;
+              margin: .1em .5em .1em .5em;
+}
+ul.terms a { text-decoration: none;
+}
+
+ul.terms a:hover { text-decoration: none;
+                   background-color: #333;
+                   color: #fff;
+}
+
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+}
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }  
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }  
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }  
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }  
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }  
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }  
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+ 
+dl { padding-bottom: 2em; }          
+dl dt { color: #daa520;              
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;              
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { filter: none;
+                             }
+</style>
+
+  </head>
+
+  <body>
+    
+<main>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post/</span></a></li>
+    
+    <li><span class="path-pwd">Kuzu no Honkai</span></li>
+  </ul>
+
+  <article>
+  <h1 class="title">Kuzu no Honkai</h1>
+
+  <time datetime="2017-02-22 21:08:41 -0600 CST">Feb 22, 2017</time>
+
+  <div class="article-body">
+
+<p>Era mi primer dia de instituto&hellip; me alegre muchisimo, iba a poder verla todos
+los dias de clase ––pausa, respira y no parescas nervioso–– creo que los dos
+pensamos lo mismo ––es verdad, da igual–– tuku, tuku, tuku ––fue electrico––
+todo lo que quiero hacer&hellip; <em>mierda, otro anime colegial</em> &hellip; bueno, las
+pantallas pueden mostrar cosas que me satisfacen plenamente, es decir, no es
+normal??</p>
+
+<p><img src="../ushijima.jpg" alt="" /></p>
+
+<p>Asi es, <em>Kusu no Honkai</em> actualmente en transmision (capitulo 7) merece su
+propio post. Ya no importa lo que suceda, ni como termine la historia, esta
+serie a subido al olimpo de creaciones audiovisuales personal</p>
+
+<h2 id="demasiado-humano">Demasiado humano</h2>
+
+<p>––Que se supone que es <em>esto</em>?–– supongo que toda creacion tiene una intecion,
+aunque la intencion solo puede ser recreada si el creador y el destinatario
+comparten su forma de pensar. Entonces pues, dificil sera compartir la
+experiencia con otro ser, por ejemplo,</p>
+
+<ul>
+<li><p><q>la tumba de las luciernagas</q> me parece comica y sarcastica, un mocoso
+que hace su voluntad, terminando jodido y (luego) muerto, que gracioso,
+enserio! (me senti identificado)</p></li>
+
+<li><p><Q>Visitor Q</q> es incluso mas divertida, aun asi alguno podria creer que es
+enfermisa.</p></li>
+
+<li><p>Se comenta que <q>A servian film</q> es grotesca, y&hellip; me aburrio</p></li>
+
+<li><p>creo que <em>Neon Genesis Evangelion</em> deberia ser vista por todo humano y aun asi
+algun amigo no fue capaz de verla entera&hellip;</p></li>
+</ul>
+
+<p>asi pues, que <strong>sensaciones</strong> genera la obra en turno?</p>
+
+<p>exitacion, mucha exitacion! aderesada por nostalgia, frustracion,
+deseos y algo de comiedia parodica autoreflejada</p>
+
+<p>de que dices que trata? es un drama colombiano, humano-japones, erotico festivo
+con fraces chulas, pensonajes a mi parcer mas humanos que muchos humanos, que
+encima explican sus motivaciones de una forma creible e inusualmente clara</p>
+
+<h2 id="tu-cuerpo-lo-sabe">Tu cuerpo lo sabe</h2>
+
+<p>El anime/j-cine/manga es capas de mostrar a la humanidad de forma exarservada,
+violenta y sexosa con pocas (y a veces muchas) limitaciones de lo visualmente
+expuesto, una cultura contradictoria y misteriosa.</p>
+
+<p>Se suguiere, mas de lo que se muestra, quiza la clave para volver morboso y
+exitante un simple roce de dos trozos de carne humana animados, llenos de
+pensamientos confusos, miedo, sudor, ignorancia, rush&hellip; que bien se siente,
+vamos de nuevo?</p>
+
+<p>Pues si, una semana es mucho tiempo, tanto como para ver los episodios otra
+vez. El subidon no fue igual, aunque mantiene la calidad.</p>
+
+<p>Ahora he visto (o querido ver) algo, ademas del drama adolecente.</p>
+
+<p>Un dia, alguien me pregunto que podia regalarle a alguna persona (a mi, ha, ha,
+ha, si soy lento para algunas cosas), le sugeri dar dinero asi el sujeto
+compraria algo de su agrado o necesidad. Pasaron de la recomendacion y dieron lo
+que les vino en gana, entonces pense, en lo egoista que es esperar algo de otra
+persona, puedo exigir algo a alguien? meresco un trato o reaccion a gusto mio?</p>
+
+<p>Ya no recuerdo bien la respuesta mental a la pregunta, solo llegar a la
+conclucion de que <em>Toda accion humana es egoista</em>, incluso si se hace sin
+esparar, esperar nada.</p>
+
+<p>Como? pues eso, entiendo el egoismo como <em>la accion</em> que emprende el humano
+apartir de su limitada y estrecha forma en que se configura su conciencia fruto
+de interacciones fuera de su comprension, sin proposito, mas no sin causas y
+efectos, algo que llamo aleatoriadad.</p>
+
+<p>Aunque el egoismo tiene conotaciones negativas, que de negativo tiene lo
+anterior&hellip; pero y una ves que ves las cosas asi entonces que? ni idea, siempre
+he sido un rick sanchez (poderes mentales no incluidos)</p>
+
+<p>y a cuento de que la historia? kuzu no honkai podria ir en esa direccion, el
+descubrimiento del egoismo de todo individuo, luego si termina con locura y
+destruccion, mucho mejor, aunque no descarto una escena donde se froten todos de
+forma lasciva</p>
+
+<h2 id="dame-mas">Dame mas</h2>
+
+<p>Si te gusta esta serie y quieres un poco mas podrias ver</p>
+
+<ul>
+<li><p><em>karekano</em>, ternura nostalgica</p></li>
+
+<li><p><em>Nazo no Kanojo</em>, romance erotico ligero</p></li>
+</ul>
+
+<pre><code>magnet:?xt=urn:btih:9307f6d16780dc2ad3f87828347cf1963c0a94c6&amp;dn=Nazo%20no%20kanojo%20X&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce
+</code></pre>
+
+<ul>
+<li><em>Aku no Hana</em>, recorrido tortuoso y confuso para ser persona</li>
+</ul>
+
+<h2 id="sayonara-baby">sayonara baby</h2>
+
+<p>(<em>Actualizacion</em>) Era innevitable, a continuacion el enlace magnet, para descargar Kuzu no Honkai</p>
+
+<pre><code>magnet:?xt=urn:btih:6ff8439c951f3ccc03020011c61fe042980cfdef&amp;dn=%5bYashiro%5d_Kuzu_no_Honkai_%5bHDTV%5d&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+</code></pre>
+</div>
+</article>
+
+
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post/</span></a></li>
+    
+    <li><span class="path-pwd">Kuzu no Honkai</span></li>
+  </ul>
+</main>
+
+
+    <aside>
+  
+  <section>
+    <header class="taxonomies">category</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header class="taxonomies">tag</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section>
+    <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/pg2ncurses/">Programmer&#39;s Guide to NCurses</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-04-11 12:38:06 -0500 CDT">Apr 11, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-i/">Ramen I</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-04-02 21:08:41 -0600 -0600">Apr 2, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/yorozuya/">yorozuya</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-14 16:33:15 -0600 CST">Mar 14, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg-howto/">morg: como usar</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-12 09:33:15 -0600 CST">Mar 12, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/mugen-no-junin/">Mugen no jūnin</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-05 11:49:56 -0600 CST">Mar 5, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg/">morg</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-02 06:37:35 -0600 CST">Mar 2, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/kuzu-no-honkai/">Kuzu no Honkai</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-22 21:08:41 -0600 CST">Feb 22, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/inbo/">INBO</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-13 22:14:42 -0600 CST">Feb 13, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/notabs-for-gomode/">no mas tabs en go-mode</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-12 21:52:24 -0600 CST">Feb 12, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/regexp3-go/">regexp3-go (dia cero)</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-11 10:26:04 -0600 CST">Feb 11, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+  </section>
+</aside>
+
+
+    <footer>
+      <p><span class="footer-title"><a href="http://nasciiboy.github.io">nba - GNU&#39;s Rock</a></span></p>
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a>–Theme <a href="https://github.com/nasciiboy/hugo_theme_nascii">nascii</a>–feed <a href="http://nasciiboy.github.io/index.xml">rss</a>–mail <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a>–gpg <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a></p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+  <head>
+    <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Emacs web y noticias en modo texto - nba - GNU&#39;s Rock</title>
+    
+    <style media="screen">
+:root {
+                            
+    --BGC      : #000000;   
+    --FGC      : #ffffff;   
+    --BGClogo  : #222222;   
+    --FGClogo  : #ffffff;   
+    --FGCtitle : #ff4500;   
+    --FGCstart1: #4B99D2;   
+    --FGCstart2: #00ffff;   
+    --FGCstart3: #ffa074;   
+    --FGCstart4: #98fb98;   
+    --FGCstart5: #b0c4de;   
+    --FGCstart6: #7fffd4;   
+    --FGCstart7: #db2e24;   
+    --FGCstart8: #ff4500;   
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;   
+    --FGCbtcode: #333333;   
+    --FGCftcode: #ffffff;   
+    --FGCbcode : #b3b3b3;   
+    --FGCtcomm : #ff4500;   
+    --FGCtcode : #bfbfff;   
+    --FGCfile  : #eedd82;   
+    --FGCmath  : #98fb98;   
+    --FGClink  : #00ffff;   
+    --BGClinkh : #556b2f;   
+    --FGClinkh : #ffffff;   
+    --BGCdt    : #b3b3b3;   
+    --FGCdt    : #ffffff;   
+    --FGCthead : #ff7f24;   
+    --BGCthead : #000000;   
+    --FGCtbody : #87cefa;   
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: local('monospace'    );                     }
+@font-face { font-family: codeblock;      src: local('monospace'    );                     }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em;
+                width: 70%;
+                float: left;
+               }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 2em;
+                width: 50%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+ul.terms    { list-style: none; margin: 0em; padding: 0em; }
+ul.terms li { display: block;
+              float: left;
+              margin: .1em .5em .1em .5em;
+}
+ul.terms a { text-decoration: none;
+}
+
+ul.terms a:hover { text-decoration: none;
+                   background-color: #333;
+                   color: #fff;
+}
+
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+}
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }  
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }  
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }  
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }  
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }  
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }  
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+ 
+dl { padding-bottom: 2em; }          
+dl dt { color: #daa520;              
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;              
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { filter: none;
+                             }
+</style>
+
+  </head>
+
+  <body>
+    
+<main>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    
+    <li><span class="path-pwd">Emacs web y noticias en modo texto</span></li>
+  </ul>
+
+  <article>
+  <h1 class="title">Emacs web y noticias en modo texto</h1>
+
+  <time datetime="2017-01-18 09:29:17 -0600 CST">Jan 18, 2017</time>
+
+  <div class="article-body">
+
+<p><img src="../reunian-fieles-huespedes-cocinaban-asistentes.jpg" alt="" /></p>
+
+<p>Eso de los <strong>rss</strong> parece ser mas bueno que encontrar un billete de alta
+denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las
+paginas incluyen el icono naranja con unas barras.</p>
+
+<p>Cierto es que intente utilizarlo un par de veces, solo que lo encortre muy
+complejo&hellip; asi pues he pasado cerca de cinco años abriendo todos los dias los
+marcadores del firefox en manada, hasta que hace unos pocos dias <q>descubri</q>
+como es esto de los rss (pese a que este blog los genera automagicamente)</p>
+
+<p>bien, un rss, no es mas que un fichero de texto plano formateado en xml, es
+decir, etiquetas que <code>&lt;abren&gt;</code> y etiquetas que <code>&lt;/cierran&gt;</code>. Este fichero
+almecena un resumen del contenido de un sitio o cosa, por ejemplo titulo de
+entradas, fechas de publicacion, resumen de la entrada, autor, enlace y
+demas&hellip; luego si tenemos un programa que sea capas de analizar dichos ficheros,
+podemos enterarnos de los cambios realizados en el sitio de nuestro interes.. y
+ya esta, no hay magia, javascript ni tecnologias web awesome y eso es bueno!</p>
+
+<p>te estaras preguntando, ¿como puedo yo, resivir los beneficios de estos ficheros
+de texto plano? <strong>Emacs!</strong>. que? <code>gnus</code> de nuevo, no, gracias que es muy raro,
+intente con eso y fracase&hellip; espera, no abandones, hay otro modo desarrollado para
+gente sencilla como tu y como yo, su nombre es <strong>elfeed</strong></p>
+
+<h2 id="instalar-elfeed">Instalar <code>elfeed</code></h2>
+
+<p>Para instalar <code>elfeed</code> puedes utilizar el gestor de paquetes de emacs
+(repositorio melpa), o seguir el siguiente metodo apto solo para romanticos de
+manos inquietas.</p>
+
+<p>desde la terminal vamos a la ruta donde tengamos nuestros complementos para
+emacs, en mi caso es</p>
+
+<pre><code class="language-sh">cd ~/.emacs.d/plugins/
+</code></pre>
+
+<p>luego descargamos el codigo</p>
+
+<pre><code class="language-sh">git clone https://github.com/skeeto/elfeed.git
+</code></pre>
+
+<p>ahora abrimos emacs, vamos a nuestro fichero de configuracion y agregamos esto</p>
+
+<pre><code class="language-elisp">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: elfeed               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; source: https://github.com/skeeto/elfeed.git
+(add-to-list 'load-path &quot;~/.emacs.d/plugins/elfeed/&quot;)
+(require 'elfeed)
+
+;; aqui van los feeds que nos interesen
+(setq elfeed-feeds
+      '(
+        &quot;http://blog.chuidiang.com/feed/&quot;
+        &quot;http://blog.desdelinux.net/feed/&quot;
+        &quot;http://blogubuntu.com/feed&quot;
+        &quot;http://cucarachasracing.blogspot.com/feeds/posts/default?alt=rss&quot;
+        &quot;http://elarmarioinformatico.blogspot.com/feeds/posts/default&quot;
+        &quot;http://es.xkcd.com/rss/&quot;
+        &quot;http://feeds.feedburner.com/diegocg?format=xml&quot;
+        &quot;http://feeds.feedburner.com/Esbuntucom?format=xml&quot;
+        &quot;http://feeds.feedburner.com/GabuntuBlog&quot;
+        &quot;http://feeds.feedburner.com/ramonramon&quot;
+        &quot;http://feeds.feedburner.com/teknoplof/muQI?format=xml&quot;
+        &quot;http://feeds.feedburner.com/Ubunlog?format=xml&quot;
+        &quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&quot;
+        &quot;http://fernand0.github.io/feed.xml&quot;
+        &quot;http://humanos.uci.cu/feed/&quot;
+        &quot;http://lamiradadelreplicante.com/feed/&quot;
+        &quot;http://linuxmanr4.com/feed/&quot;
+        &quot;http://misnotaslinux.blogspot.com/feeds/posts/default&quot;
+        &quot;http://nasciiboy.github.io/index.xml&quot;
+        &quot;http://planet.emacsen.org/atom.xml&quot;
+        &quot;http://quijotelibre.com/feed/&quot;
+        &quot;http://radioela.org/spip.php?page=backend&quot;
+        &quot;http://ranchoelectronico.org/feed/&quot;
+        &quot;http://red-orbita.com/?feed=rss2&quot;
+        &quot;http://rufianenlared.com/feed/&quot;
+        &quot;http://softwarelibre.deusto.es/feed/&quot;
+        &quot;http://totaki.com/poesiabinaria/feed/&quot;
+        &quot;http://www.blackhats.es/wordpress/?feed=rss2&quot;
+        &quot;http://www.kdeblog.com/feed/&quot;
+        &quot;http://www.lapipaplena.net/feed/&quot;
+        &quot;http://www.linuxadictos.com/feed&quot;
+        &quot;http://www.linuxhispano.net/feed/&quot;
+        &quot;http://www.maxxcan.com/feed/&quot;
+        &quot;http://www.muylinux.com/feed/&quot;
+        &quot;http://www.portallinux.es/feed&quot;
+        &quot;http://www.tomatesasesinos.com/feed/&quot;
+        &quot;http://www.tomatuordenador.net/feed/&quot;
+        &quot;http://www.ubuntizando.com/feed/&quot;
+        &quot;https://asm86.wordpress.com/feed/&quot;
+        &quot;https://autodefensainformatica.radioalmaina.org/feed/&quot;
+        &quot;https://birrasybits.wordpress.com/feed/&quot;
+        &quot;https://blog.adrianistan.eu/feed/&quot;
+        &quot;https://cartaslinux.wordpress.com/feed/&quot;
+        &quot;https://colaboratorio.net/feed/&quot;
+        &quot;https://comunicatelibremente.wordpress.com/feed/&quot;
+        &quot;https://daemons.cf/rss.xml&quot;
+        &quot;https://diariodeunalinuxera.com/feed/&quot;
+        &quot;https://elbinario.net/feed/&quot;
+        &quot;https://eliasbrasa.wordpress.com/feed/&quot;
+        &quot;https://elpinguinotolkiano.wordpress.com/feed/&quot;
+        &quot;https://elzorrolibre.noblogs.org/feed/&quot;
+        &quot;https://enekoamieva.com/blog/feed/&quot;
+        &quot;https://gutl.jovenclub.cu/feed/&quot;
+        &quot;https://h4ckseed.wordpress.com/feed/&quot;
+        &quot;https://jummp.wordpress.com/feed/&quot;
+        &quot;https://jvare.com/feed/&quot;
+        &quot;https://kernelpanicblog.wordpress.com/feed/&quot;
+        &quot;https://lasindias.blog/feed&quot;
+        &quot;https://leninmhs.wordpress.com/feed/&quot;
+        &quot;https://lignux.com/feed/&quot;
+        &quot;https://linuxgnublog.org/es/feed&quot;
+        &quot;https://mierda.tv/feed/&quot;
+        &quot;https://miguelpinia.wordpress.com/feed/&quot;
+        &quot;https://ondahostil.wordpress.com/feed/&quot;
+        &quot;https://otroespacioblog.wordpress.com/feed/&quot;
+        &quot;https://pfctelepathy.wordpress.com/feed/&quot;
+        &quot;https://picodotdev.github.io/blog-bitix/index.xml&quot;
+        &quot;https://radioslibres.net/rss/&quot;
+        &quot;https://victorhckinthefreeworld.com/feed/&quot;
+        &quot;https://vidaembebida.wordpress.com/feed/&quot;
+        &quot;https://www.atareao.es/blog/feed/&quot;
+        &quot;https://www.linuxito.com/?format=feed&amp;type=rss&quot;
+        &quot;https://www.ochobitshacenunbyte.com/feed/&quot;
+        &quot;https://xkcd.com/rss.xml&quot;
+        ))
+</code></pre>
+
+<p>evaluamos el codigo, y ya tenemos nuestro leector rss. Para modificar o añadir
+nuevos feeds modifica las cadenas de la variable <code>elfeed-feeds</code></p>
+
+<p>para hacer mas comodo el asunto, agreguemos un par de accesos directos a nuestro
+leector</p>
+
+<pre><code class="language-elisp">(global-set-key [f7] 'elfeed)
+(global-set-key [f8] 'elfeed-update)
+</code></pre>
+
+<p>al presionar <code>F7</code> se abre el lector, con <code>F8</code> actualizamos los feeds</p>
+
+<p><img src="../elfeed.png" alt="" /></p>
+
+<p>para ver la entrada, colocamos el cursor sobre esta y damos un enter</p>
+
+<p><img src="../elfeed-show.png" alt="" /></p>
+
+<p>si presionamos <code>b</code> o nos posicionamos en el enlace + un enter, la entrada se
+abrira en el navegador del sistema! Tambien podemos copiar la ruta de enlace
+pulsando <code>y</code></p>
+
+<p>para regresar a las entradas presionamos <code>q</code> y para marcar una entrada como
+leeida <code>r</code></p>
+
+<h2 id="elfeed-eww"><code>elfeed</code> + <code>eww</code></h2>
+
+<p>ver la entrada en el navegador esta muy bien, pero no me gustan el javascript,
+los anuncios ni las cosas modernas, que puedo hacer? Emacs incorpora un
+navegador de texto plano <code>eww</code>, podemos abrir los enlaces desde el visor de
+entradas de elfeed:</p>
+
+<ul>
+<li><p>primero colocamos el cursor en el enlace y presionamos <code>M-x eww</code>,</p></li>
+
+<li><p>veras que aparece el enlace como el parametro por defecto, damos enter o
+colocamos una direccion distinta + un enter</p></li>
+</ul>
+
+<p><img src="../eww.png" alt="" /></p>
+
+<p>para salir de <code>eww</code> y regresar a <code>elfeed</code> pulsamos <code>q</code></p>
+
+<p>hagamos mas sencilla la operacion agregando algunos atajos para <code>eww</code> en nuestra
+configuracion</p>
+
+<pre><code class="language-elisp">(global-set-key [f5] 'eww)
+(global-set-key (kbd &quot;C-x w o&quot;) 'eww)
+(global-set-key (kbd &quot;C-x w b&quot;) 'eww-add-bookmark)
+(global-set-key (kbd &quot;C-x w l&quot;) 'eww-list-bookmarks)
+(global-set-key (kbd &quot;C-x w f&quot;) 'eww-open-file)
+</code></pre>
+
+<p>ahora para abrir los enlaces, colocamos el cursor en el enlace y pulsamos <code>F5</code> o
+<code>C-x w o</code></p>
+
+<p>Listo, vive la web en texto plano, el tiempo extra lo puedes utilizar para ver
+porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
+</div>
+</article>
+
+
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    
+    <li><span class="path-pwd">Emacs web y noticias en modo texto</span></li>
+  </ul>
+</main>
+
+
+    <aside>
+  
+  <section>
+    <header class="taxonomies">category</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header class="taxonomies">tag</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section>
+    <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/pg2ncurses/">Programmer&#39;s Guide to NCurses</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-04-11 12:38:06 -0500 CDT">Apr 11, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-i/">Ramen I</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-04-02 21:08:41 -0600 -0600">Apr 2, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/yorozuya/">yorozuya</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-14 16:33:15 -0600 CST">Mar 14, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg-howto/">morg: como usar</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-12 09:33:15 -0600 CST">Mar 12, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/mugen-no-junin/">Mugen no jūnin</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-05 11:49:56 -0600 CST">Mar 5, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg/">morg</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-03-02 06:37:35 -0600 CST">Mar 2, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/kuzu-no-honkai/">Kuzu no Honkai</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-22 21:08:41 -0600 CST">Feb 22, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/inbo/">INBO</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-13 22:14:42 -0600 CST">Feb 13, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/notabs-for-gomode/">no mas tabs en go-mode</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-12 21:52:24 -0600 CST">Feb 12, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/regexp3-go/">regexp3-go (dia cero)</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-02-11 10:26:04 -0600 CST">Feb 11, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+  </section>
+</aside>
+
+
+    <footer>
+      <p><span class="footer-title"><a href="http://nasciiboy.github.io">nba - GNU&#39;s Rock</a></span></p>
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a>–Theme <a href="https://github.com/nasciiboy/hugo_theme_nascii">nascii</a>–feed <a href="http://nasciiboy.github.io/index.xml">rss</a>–mail <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a>–gpg <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a></p>
+    </footer>
+
+  </body>
+</html>

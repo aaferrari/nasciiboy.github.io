@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
   <head>
     <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>Krautrock Albums - nba - GNU&#39;s Rock</title>
+    <title>Programmer&#39;s Guide to NCurses - nba - GNU&#39;s Rock</title>
     
     <style media="screen">
 :root {
@@ -184,59 +184,141 @@ img:hover { filter: none;
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
-    <li><span class="path-pwd">Krautrock Albums</span></li>
+    <li><span class="path-pwd">Programmer&#39;s Guide to NCurses</span></li>
   </ul>
 
   <article>
-  <h1 class="title">Krautrock Albums</h1>
+  <h1 class="title">Programmer&#39;s Guide to NCurses</h1>
 
-  <time datetime="2016-12-30 18:21:44 -0600 CST">Dec 30, 2016</time>
+  <time datetime="2017-04-11 12:38:06 -0500 CDT">Apr 11, 2017</time>
 
-  <div class="article-body"><p><img src="../smile.jpg" alt="" /></p>
+  <div class="article-body">
 
-<p>Segun <a href="https://es.wikipedia.org/wiki/Krautrock">wikipedia</a></p>
+<p><img src="../gumy.jpg" alt="" /></p>
 
-<blockquote>
-<p>Se le llama <strong>Krautrock</strong> o <strong>Kraut Rock</strong> (también conocida como Kosmische
-Musik) a una corriente musical de rock y electrónica surgida en Alemania
-Occidental a fines de los años 60.</p>
+<p>Go, que no es un lenguaje nuevo (ya tiene sus añitos) carece de librerias
+nativas para desplegar guis, asi como tuis&hellip; bueno esto ultimo no es del todo
+cierto, pues cuenta con unas pocas librerias nativas para mostrar graficos por
+la terminal, solo queeee, estan muy verdes, me explico, tienes la habilidad de
+modificar los <q>caracteres</q>, conocer la dimencion de la terminal, leer la
+entrada del rator (y teclado) y poco mas, ni funciones para desplegar texto, ni
+scroll, ni todo el arsenal de funciones que por ejemplo, posee <strong>ncurses</strong>.</p>
 
-<p>Se usa para referirse a una gran cantidad de artistas alemanes que habían sido
-influidos por géneros como el rock psicodélico, el rock progresivo, la música
-avant-garde y el jazz, que utilizaban nuevas tecnologías y nuevas formas de
-usar las tecnologías de grabación, amplificación y mezcla musical, con nuevas
-estructuras formales. El krautrock es muchas veces considerado un subgénero
-del rock progresivo.</p>
-</blockquote>
+<p>Asi que lo mas logico fue <s>cambiar de lenguage</s> comenzar la escrutira de
+una nueva libreria para hacer cosas en la terminal, con casinos y colegialas
+japonesas!</p>
 
-<p>Segun nasciiboy, es la etiqueta que le ponen a un monton de discos chidos
-grabados principalmente en los 70&rsquo;s, que van del jazz a la musica ambiental
-experimental, pasando por el clasico y el progresivo sin llegar a lo
-Zeppelindroso.</p>
+<p>Da la  casualidad, que tenia la mano un libro <strong>Programmer&rsquo;s Guide to Ncurses</strong>
+de un tal Dang Gookin y ya que estaba en la labor hago una breve reseña del
+asunto (y otras cosas)</p>
 
-<p>Buscando nuevas experiencias sonoras encontre (qbittorrent) una compilacion de
-98 (o son 100?)  albums clasificados como Krautrock divididos en 5 enlaces de
-descarga:</p>
+<p>Por cierto si nos sabes que es ncurses, puedes visitar un post
+relacionado <a href="../ncurses/index.html">aqui</a></p>
 
-<pre><code>I   magnet:?xt=urn:btih:40632e48e8c7b8231a8d36475249da5d32b97839&amp;dn=Top%20Krautrock%20Albums%20(according%20progarchives.com)%2c%20Part%20I&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
-II  magnet:?xt=urn:btih:fe69d2fa839551d30b7984fee974442b53625ee3&amp;dn=Top%20Krautrock%20Albums%20(according%20progarchives.com)%2c%20Part%20II&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce
-III magnet:?xt=urn:btih:0a1fd1f7b473172702fb4900d5dcf9967546e7e8&amp;dn=Top%20Krautrock%20Albums%20(according%20progarchives.com)%2c%20Part%20III%20(reseed)
-IV  magnet:?xt=urn:btih:d7c725e1b0f2ab14d916334b593fe1480dab7285&amp;dn=Top%20Krautrock%20Albums%20(according%20progarchives.com)%2c%20Part%20IV&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce
-V   magnet:?xt=urn:btih:848fd0a1e0d1e84daaf0733c7a75fb866c7ce472&amp;dn=Top%20Krautrock%20Albums%20(according%20progarchives.com)%2c%20Part%20V&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce
-</code></pre>
+<h2 id="comor">comor?</h2>
 
-<p>De momento llebo escuchados 71. Todos son joyas raras dignas de un altar, en
-particular <strong>Can</strong> y <strong>Electric Orange</strong>. Muchas grabaciones son de calidad
-dudosa y algunas parecen salidas de una cinta/vinil, posiblemente sean la unica
-version en existencia.</p>
+<p>El libro asume que tienes conocimientos de programacion, especificamente
+programacion en C, que es el lenguaje con el que esta escrita la libreria ncurses,
+aunque tambien podrias utilizar C++.</p>
 
-<p>Todas las pistas estan en formato flac a 800-1000 kbps. Cada enlace es de unos
-5GB. Al parecer solo un humano tiene completo el material y se conecta de forma
-esporadica con una velocidad de transmision de 1990. Luego de 2 meses se
-completaron los enlaces I, IV y V. II esta al 93%, III tardara algunas
-semanas/meses mas.</p>
+<p>Tambien, que estas o vas a programar bajo un entorno *nix, con un arsenal
+formado por un terminal (con bash), editor y un compilador (gcc), aunque esto
+queda mas como una recomendacion. Aun asi se toma un par de secciones para
+enseñar lo mas basico antes de iniciar. Quedando como asignacion a quien tome el
+material, profundizar en el uso de estas herramientas</p>
+
+<p>Una vez aclarodo el tema, la estructura de la lectura es: plantear/mostrar unas
+cuantas funciones de la libreria, dejar el codigo fuente de un programa con
+dichas funciones y analizar un poco el asunto.</p>
+
+<p>La <q>dificultad</q> aumenta de forma incremental, a medida que se van
+introduciendo los conseptos propios de ncurses (estos ultimos son suficientes
+para hacerse de una idea de como esta implementada la libreria, o al menos sirve
+de guia para implementar una propia) pasando por mostrar texto, leer la entrada
+del teclado, refrescar la pantalla, ventanas, color, etc.</p>
+
+<p>Si bien todo es muy ameno, con un lenguaje relajado y no existen retos que
+puedan frustrar a quien inicia, lamentablemente el asunto no pasa de ser un
+<strong>paseo por la libreria</strong>. Puedes olvidarte de tener el codigo para construir
+una interfaz molona, menos, fantacear con programar un videojuego o un editor de
+texto.</p>
+
+<p>Digo el material (pdf) son 570 paginas, aunque tiene truco, de esas paginas lo
+didactico representa el 35% con letra grande y un monton de listados (esto esta
+bien), el resto es una <q>compilacion</q> de todas las funciones, con una
+pequeña explicacion, su formato, notas y ejemplos, muy del estilo de las paginas
+man (sospecho que con un pequeño retoque). Llega a dar la imprecion que solo fue
+hecho para sacar algunas monedas, algo lamentable, pues aparte de una
+pequeña guia oficial de la libreria, este es el unico material de consulta sobre
+el tema y encima los dos (estaban) en ingles.</p>
+
+<p>Entonces? es bueno para conocer los fundamentos de ncurses, salir de
+algunas dudas y como material de referencia. Si deseas profundizar y ejemplos
+mas elaborados, necesario acudir a la documentacion oficial de la libreria
+(Ncurses Howto).</p>
+
+<h2 id="prison-blues">Prison Blues</h2>
+
+<p>a bbeeee, boooohoo, hooo, beeep, beibe. Hace mucho, mucho tiempo, mientras
+experimentaba con org mode, el sujeto de este post sirvio
+de <a href="../cobaya.zip">cobaya</a> en la busqueda del sistema de documentacion
+definitivo(?), tambien como excusa para traducir cosas y aprender (o no) un poco
+ingles de forma salvage.</p>
+
+<p>Por aquel tiempo imaginaba que prodria finaciarme adaptando libros a formato
+digital, cobrando en $dolares. El asunto no fue muy bien e incluso fui llamado
+ladron, je, quiza con razon, como saberlo. Lo intente un par de veces mas
+enviando el material a algunas editoriales sin resivir respuesta, en fin.</p>
+
+<p>Al menos, sirvio para conocer los limites de org-mode, que cayo de mi gracia, al
+igual que ncurses, por cierto la hoja de estilos, no esta muy fina y lo
+referente al español, solo fue revisado mientras lo iba leyendo.</p>
+
+<p>Org-mode, tiene pocos estilos de resaltado y sus estructuras no estan pensadas
+para maquetar documentos extensos, asi que alguna seccion puede fallar, ademas
+la traduccion esta en bruto sobre el material original comentado. Se puede
+exportar del fuente, pero org es lento y puede fallar, por aquel tiempo un bug
+en alguna cosa hacia que emacs se colgara un rato y consumiera 3gb de ram el
+solito, motivo por el cual tuve que expardir la memoria a 8gb. No se por que
+sera pero no se resalta en colores el codigo fuente.</p>
+
+<h2 id="sobre-ncurses">sobre ncurses</h2>
+
+<p>Partiendo del principio de que ncurses es heredero de una libreria que permitia
+mayor control <strong>sobre un terminal</strong>, con hardware y software primigenios de
+limitadas capacidades, unica y exclusivamente para manejar texto codificado en
+ASCII&hellip; fue perfecto!</p>
+
+<p>Ahora bien, en el precente con equipo que es capaz de mostrar mas colores que el
+arcoiris, emuladores de terminal sobre entornos graficos y mas caracteres que
+chinos&hellip; es limitado.</p>
+
+<p>No se mal entienda un terminal es para ser un terminal, su deber es ser
+eficiente desplegando texto, no tiene sentido dedicar 4 bytes por caracter para
+almacenar colores, ni 2 bytes para atributos (negrita, italica, subrayado, etc),
+menos tener la capacidad de modificar los caracteres a nivel pixel (para generar
+imagenes), como tampoco tener velocidades de refresco de pantalla mayores a 10 o
+20 ciclos, o contar con <strong><q>modos graficos</q></strong>, soporte para mandos, o midi,
+o que la lectura de teclado y raton fuesen librerias independientes</p>
+
+<p>Pero por que tendria tener la necesidad de averiguar si el terminal puede hacer
+esto o aquello, tiene o no soporte para colores (8, 16, 256, etc), no puede
+haber un jodido estandar que me asegure para poder desplegar interfaces
+lizergicas basadas en texto, con midis y pad, si o si?</p>
+
+<p>La documentacion y ser software libre son importantes, tanto como lo es para mi
+el contar con codigo para subnormales (como yo), quiza es lentitud mia el
+encontrar indescifrable el codigo de Ncurses, seran las macros? los guiones
+bajos?&hellip; misterioso (ademas de digno de respeto) que un solo individuo lleve el
+desarrollo de esta libreria (que hace poco libero la vercion 6 (sin aparentes
+cambios)), los motivos, son un enigma digno de mayor analisis, te ha pasado
+actualizar la pantalla con algun <code>wrefresh</code> y no ver cambios?</p>
+
+<p>(narrador) Y asi mientras nasciiboy se cuestionava sobre el pasado, presente y
+futuro de las terminales, otro dia mas llegaba a su fin en la isla de los heroes
+del viento, no dejen de sintonizar la proxima entrega (/narrador)</p>
 </div>
 </article>
 
@@ -244,9 +326,9 @@ semanas/meses mas.</p>
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
-    <li><span class="path-pwd">Krautrock Albums</span></li>
+    <li><span class="path-pwd">Programmer&#39;s Guide to NCurses</span></li>
   </ul>
 </main>
 
@@ -266,7 +348,7 @@ semanas/meses mas.</p>
     <header class="taxonomies">tag</header>
     <div>
       <ul class="terms">
-        <li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed</a></li>
+        <li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li>
       </ul>
     </div>
   </section>
@@ -277,7 +359,22 @@ semanas/meses mas.</p>
     
     <div class="thumb-sm">
   <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-I/">Ramen I</a></h2>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/pg2ncurses/">Programmer&#39;s Guide to NCurses</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-04-11 12:38:06 -0500 CDT">Apr 11, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-i/">Ramen I</a></h2>
 
     <ul class="meta">
       <li><time datetime="2017-04-02 21:08:41 -0600 -0600">Apr 2, 2017</time></li>
@@ -288,6 +385,7 @@ semanas/meses mas.</p>
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -305,7 +403,6 @@ semanas/meses mas.</p>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg-howto/">morg: como usar</a></h2>
@@ -321,9 +418,10 @@ semanas/meses mas.</p>
 
     
     
+    
     <div class="thumb-sm">
   <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/post/Mugen-no-junin/">Mugen no jūnin</a></h2>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/mugen-no-junin/">Mugen no jūnin</a></h2>
 
     <ul class="meta">
       <li><time datetime="2017-03-05 11:49:56 -0600 CST">Mar 5, 2017</time></li>
@@ -334,7 +432,6 @@ semanas/meses mas.</p>
   </header>
 </div>
 
-    
     
     
     <div class="thumb-sm">
@@ -352,9 +449,10 @@ semanas/meses mas.</p>
 
     
     
+    
     <div class="thumb-sm">
   <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/post/Kuzu-no-Honkai/">Kuzu no Honkai</a></h2>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/kuzu-no-honkai/">Kuzu no Honkai</a></h2>
 
     <ul class="meta">
       <li><time datetime="2017-02-22 21:08:41 -0600 CST">Feb 22, 2017</time></li>
@@ -365,7 +463,6 @@ semanas/meses mas.</p>
   </header>
 </div>
 
-    
     
     
     <div class="thumb-sm">
@@ -383,9 +480,10 @@ semanas/meses mas.</p>
 
     
     
+    
     <div class="thumb-sm">
   <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/noTabs-for-goMode/">no mas tabs en go-mode</a></h2>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/notabs-for-gomode/">no mas tabs en go-mode</a></h2>
 
     <ul class="meta">
       <li><time datetime="2017-02-12 21:52:24 -0600 CST">Feb 12, 2017</time></li>
@@ -398,7 +496,6 @@ semanas/meses mas.</p>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/regexp3-go/">regexp3-go (dia cero)</a></h2>
@@ -407,21 +504,6 @@ semanas/meses mas.</p>
       <li><time datetime="2017-02-11 10:26:04 -0600 CST">Feb 11, 2017</time></li>
       
       <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
-      
-    </ul>
-  </header>
-</div>
-
-    
-    
-    <div class="thumb-sm">
-  <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/org-mode/">org mode</a></h2>
-
-    <ul class="meta">
-      <li><time datetime="2017-01-31 14:40:54 -0600 CST">Jan 31, 2017</time></li>
-      
-      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
       
     </ul>
   </header>

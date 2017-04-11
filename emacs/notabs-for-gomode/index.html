@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
   <head>
     <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>Mugen no jūnin - nba - GNU&#39;s Rock</title>
+    <title>no mas tabs en go-mode - nba - GNU&#39;s Rock</title>
     
     <style media="screen">
 :root {
@@ -184,50 +184,79 @@ img:hover { filter: none;
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
     
-    <li><span class="path-pwd">Mugen no jūnin</span></li>
+    <li><span class="path-pwd">no mas tabs en go-mode</span></li>
   </ul>
 
   <article>
-  <h1 class="title">Mugen no jūnin</h1>
+  <h1 class="title">no mas tabs en go-mode</h1>
 
-  <time datetime="2017-03-05 11:49:56 -0600 CST">Mar 5, 2017</time>
+  <time datetime="2017-02-12 21:52:24 -0600 CST">Feb 12, 2017</time>
 
-  <div class="article-body"><p><img src="../manji.jpg" alt="" /></p>
+  <div class="article-body"><p>Go tiene una ridicula guia de estilo para formatear codigo que no me agrada, de
+no seguir algunas reglas el compilador/interprete simplemente se niega a hacer
+nada. Otras reglas, son menos rigurosas, como la indentacion o colocar o no
+espacios, en algunos sitios.</p>
 
-<p>無限の住人 (Mugen no jūnin) literalmente (segun wikipedia) <em>El habitante del
-infinito</em> o por el titulo al españøl <em>La espada del inmortal</em> fue
-parte de un <q>proyecto</q> titulado <q>voy a leer este manga en un trabajo que
-aparece de forma ocacional, dos o tres dias por mes</q>.</p>
+<p>La indentacion oficial del lenguaje, tiene tabs equivalentes a 4 espacios en
+blanco y eso, eso, es algo que no puedo soportar, como tampoco tener tabs,
+porque cada editor los despliega como le viene en gana.</p>
 
-<p>Todo sea dicho, el proyecto tardo alrededor de 7 meses para concluir la lectura
-de los 30 tomos exclusivamente en tiempo laboral.</p>
+<p>Por eso, dentro de la configuracion de emacs tengo esta linea</p>
 
-<p>El primer contacto, con la obra fue en un cafe-manga, pedi un ramen y me quede
-como tres horas leyendo, el final de <q>la novia de acero 2<sup>da</sup></q>
-(alias <em>NGE: Angelic Days</em>) y luego algo desconocido&hellip; el primer volumen
-del titulo en cuestion</p>
+<pre><code class="language-elisp">(setq-default indent-tabs-mode nil)
+</code></pre>
 
-<p>Segun cuenta en el ultimo volumen el propio autor (Hiroaki Samura), el titulo le
-llebo la friolera cantidad de 19 años, toda una vida&hellip; pero la rocanbolesca
-historia y lo potente de los dibujos no son para menos, cada viñeta es una obra
-de arte.</p>
+<p>su funcion es substituir los tabs por espacios, y en el modo go tenia esta
+modificacion</p>
 
-<p>Desmembramientos, agreciones (con resultados sexuales) y una trama que da giros
-desconcertantes a la par de interesantes, es lo que encontraras.</p>
+<pre><code class="language-elisp">(add-hook 'go-mode-hook
+          (lambda ()
+            (setq tab-width 2)))
+</code></pre>
 
-<p>Lo de la trama tiene chicha, el autor quiere romper la cuarta pared, fastidiarme
-o jugar con los topicos para llebarte a tramas imprevistas? todo esta a tope,
-nada de medias tintas, exeptuando al protagonista, que como en uno de sus
-dialogos dice el mismo, se pasa la mayoria de las peleas sin una o dos
-extremidades.</p>
+<p>para que los tabs se representen como dos espacios en blanco.</p>
 
-<p>Pero por que esta fascinacion por lo extraordinario, guererros dopadisimos mas
-alla de lo humano, las feminas tienen figuras irresistibles, por que?</p>
+<p>Perfecto! subo un repositorio de codigo en go a github y por curiosidad veo el
+codigo ya en el repo&hellip; la indentacion es un jodido desastre! los tabs son
+tabs&hellip; pero, pero, si en el jodido modo go, todo se ve perfecto, que esta
+pasando es cosa de github o un problema interno?</p>
 
-<p>a saber&hellip; continuo con esta reflexion otro dia, cuando la sensacion reflexiva
-regrese&hellip;</p>
+<p>paso a abrir el codigo en emacs y cambio a <code>fundamental-mode</code> para visualizar la
+realidad, resultado, el problema esta en go-mode, en efecto los tabs se
+visualizan como 2 espacios, pero en el fichero <em>no se substituyen por espacios,
+siguen siendo tabs</em>, donde esta el culpable?</p>
+
+<p>paso a ver el codigo de go-mode, en busca de expresiones regulares y cosas como
+<code>\t</code>&hellip; no encuento el problema (y tampoco entiendo mucho de lisp)&hellip; entonces
+cambio la busqueda a cosas que contengan la palabra <code>indent</code> y aparece esta linea</p>
+
+<pre><code class="language-elisp">  ;; Go style
+  (setq indent-tabs-mode t)
+</code></pre>
+
+<p>(commit 5737e59cbac9bc480546766c9502c527fa2be26f, linea 985)</p>
+
+<p>Su funcion es dejar los tabs como tabs y no como espacios, la solucion? cambiar
+<code>t</code> por <code>nil</code> directamente en el codigo de <span class="file">go-mode.el</span>
+o en un <em>hook</em> en la configuracion.</p>
+
+<pre><code class="language-elisp">(add-hook 'go-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq tab-width 2)))
+</code></pre>
+
+<p>ahora, si abres tu codigo los cambios se realizan solo a las lineas que
+modifiques, no a las lineas ya existentes. Es necesario reeindentar todo y no
+funciona <code>C-x h tab</code>, hay que quitar la indentacion e indentar de nuevo, hice
+una macro que recorria todas las lineas eliminando los espacios al inicio, luego
+si seleccione todo + tab (<code>C-x h tab</code>).</p>
+
+<p>Tabs y espacios en armonia!</p>
+
+<p><img src="../space-friend.jpg" alt="" /></p>
 </div>
 </article>
 
@@ -235,9 +264,9 @@ regrese&hellip;</p>
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
     
-    <li><span class="path-pwd">Mugen no jūnin</span></li>
+    <li><span class="path-pwd">no mas tabs en go-mode</span></li>
   </ul>
 </main>
 
@@ -257,7 +286,7 @@ regrese&hellip;</p>
     <header class="taxonomies">tag</header>
     <div>
       <ul class="terms">
-        <li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed</a></li>
+        <li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/dokutsu-monogatari">dokutsu-monogatari</a></li>
       </ul>
     </div>
   </section>
@@ -268,7 +297,22 @@ regrese&hellip;</p>
     
     <div class="thumb-sm">
   <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-I/">Ramen I</a></h2>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/pg2ncurses/">Programmer&#39;s Guide to NCurses</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-04-11 12:38:06 -0500 CDT">Apr 11, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-i/">Ramen I</a></h2>
 
     <ul class="meta">
       <li><time datetime="2017-04-02 21:08:41 -0600 -0600">Apr 2, 2017</time></li>
@@ -279,6 +323,7 @@ regrese&hellip;</p>
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -296,7 +341,6 @@ regrese&hellip;</p>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg-howto/">morg: como usar</a></h2>
@@ -312,9 +356,10 @@ regrese&hellip;</p>
 
     
     
+    
     <div class="thumb-sm">
   <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/post/Mugen-no-junin/">Mugen no jūnin</a></h2>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/mugen-no-junin/">Mugen no jūnin</a></h2>
 
     <ul class="meta">
       <li><time datetime="2017-03-05 11:49:56 -0600 CST">Mar 5, 2017</time></li>
@@ -325,7 +370,6 @@ regrese&hellip;</p>
   </header>
 </div>
 
-    
     
     
     <div class="thumb-sm">
@@ -343,9 +387,10 @@ regrese&hellip;</p>
 
     
     
+    
     <div class="thumb-sm">
   <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/post/Kuzu-no-Honkai/">Kuzu no Honkai</a></h2>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/kuzu-no-honkai/">Kuzu no Honkai</a></h2>
 
     <ul class="meta">
       <li><time datetime="2017-02-22 21:08:41 -0600 CST">Feb 22, 2017</time></li>
@@ -356,7 +401,6 @@ regrese&hellip;</p>
   </header>
 </div>
 
-    
     
     
     <div class="thumb-sm">
@@ -374,9 +418,10 @@ regrese&hellip;</p>
 
     
     
+    
     <div class="thumb-sm">
   <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/noTabs-for-goMode/">no mas tabs en go-mode</a></h2>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/notabs-for-gomode/">no mas tabs en go-mode</a></h2>
 
     <ul class="meta">
       <li><time datetime="2017-02-12 21:52:24 -0600 CST">Feb 12, 2017</time></li>
@@ -389,7 +434,6 @@ regrese&hellip;</p>
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/regexp3-go/">regexp3-go (dia cero)</a></h2>
@@ -398,21 +442,6 @@ regrese&hellip;</p>
       <li><time datetime="2017-02-11 10:26:04 -0600 CST">Feb 11, 2017</time></li>
       
       <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
-      
-    </ul>
-  </header>
-</div>
-
-    
-    
-    <div class="thumb-sm">
-  <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/org-mode/">org mode</a></h2>
-
-    <ul class="meta">
-      <li><time datetime="2017-01-31 14:40:54 -0600 CST">Jan 31, 2017</time></li>
-      
-      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
       
     </ul>
   </header>

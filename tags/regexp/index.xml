@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Regexp on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/regexp/index.xml</link>
+    <link>http://nasciiboy.github.io/tags/regexp/</link>
     <description>Recent content in Regexp on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <atom:link href="http://nasciiboy.github.io/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Feb 2017 10:26:04 -0600</lastBuildDate>
+    
+	<atom:link href="http://nasciiboy.github.io/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>regexp3-go (dia cero)</title>
@@ -15,130 +18,20 @@
       <pubDate>Sat, 11 Feb 2017 10:26:04 -0600</pubDate>
       
       <guid>http://nasciiboy.github.io/prog/regexp3-go/</guid>
-      <description>&lt;p&gt;Hace un año, luego de &amp;ldquo;maquetar&amp;rdquo; algunos libros en org-mode, decidi crear mi
-propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar
-un substituto del comando man/info y aniquilar a html/latex como sistema de
-documentacion.&lt;/p&gt;
-
-&lt;p&gt;Un mes mas tarde fruto de la necesidad de &lt;em&gt;parsear&lt;/em&gt; el texto del nuevo lenguaje
-y mi incapacidad de entender como utilizar una libreria de expresiones
-regulares, nacio Recursive Regexp Raptor (alias regexp3) que es un motor de
-expresiones regulares para C, otro mes mas tarde salio a la web la primer
-version en forma de repositorio
-en &lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor/&#34;&gt;github&lt;/a&gt; y ahora&amp;hellip; ni
-hay un nuevo lenguaje, ni un substituto de man/info, ni ha muerto html y he
-dedicado mas horas de las que jamas pense en regexp3 (y regexp4 &amp;ldquo;el sucesor&amp;rdquo;)&lt;/p&gt;
-
-&lt;p&gt;Por un mes (entero) intente programar el interprete del lenguaje de marcas
-ligero y fracase, asi que pase al plan de emergencia, ver como estaban hechos
-otros interpretes como el de &lt;em&gt;org-mode&lt;/em&gt; o el de &lt;em&gt;reStructured Text&lt;/em&gt;, lo que trajo
-un nuevo problema: aprender (e)lisp o aprender python(2|3).&lt;/p&gt;
-
-&lt;p&gt;Lo primero implicaba aprender ingles, encortrar un buen libro y ponerme a
-traducir cosas, lo segundo encontrar un buen libro (e intentar por segunda vez
-con python), termine llendo por la primer opcion y cuando llego la desesperacion
-se mezclo con la segunda.&lt;/p&gt;
-
-&lt;p&gt;Lisp es interesante, asombroso en su simplesa e incomodo en su escritura&lt;/p&gt;
-
-&lt;p&gt;Python&amp;hellip; no puedo con python, lo encuentro aburrido, un pegote de muchas cosas
-en un mismo lenguaje e indentar a mano pelada por ahorrar unas llaves es un
-sufrimiento carente de toda elegancia&lt;/p&gt;
-
-&lt;p&gt;en fin, que no aprendi mucho de nada&amp;hellip; cerca de octubre del año pasado con la
-inquietud de hacer un blog (de nuevo) y tras probar algunos cms llege a &lt;em&gt;&lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;hugo&lt;/a&gt;&lt;/em&gt;,
-me parecio que era sencillo y digno de investigacion, luego de un par de semanas
-nacio este blog y decidi aprender algo de su motor de renderizado markdown
-llamado &lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;blackfriday&lt;/a&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;entonces? habia que aprender go&lt;/p&gt;
-
-&lt;p&gt;entonces? mas ingles (solo hay una pequeña guia traducida al
-español &lt;a href=&#34;https://github.com/karlseguin/the-little-go-book&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;y haci, pase a buscar un pdf en la web, aparecio &lt;em&gt;The way to go&lt;/em&gt;, luego de unas
-semanas viendo ejemplos y como no hay mejor manera de apreder algo que ponerlo
-en practica, comenzo el port de lo unico que entiendo a la perfeccion y estoy
-orgulloso, asi es, el motor de expresiones regulares (terminen con mi
-sufrimiento)&lt;/p&gt;
-
-&lt;p&gt;De momento funciona, aunque no es mas que una copia medio usable de C a Go, sin
-ninguna orientacion a objetos.&lt;/p&gt;
-
-&lt;p&gt;Hace ya unos años que di un recorrido ninja por sdl 1.2 y C++ (deitel y como
-pensar en c++) medio aprendi algo de OO, pero di media vuelta hacia atras, tome
-el C de k&amp;amp;r (+ deitel), algo de ncurses y prometi no programar nada hasta no
-dominar C.&lt;/p&gt;
-
-&lt;p&gt;asi que? no me acuerdo de como programar OO&lt;/p&gt;
-
-&lt;p&gt;y que con go? podria ser un buen sucesor de C, si tubiese punteros de verdad,
-cadenas de caracteres de verdad, un tipado menos estricto, pero sobre todo, si
-presindiera de su estupido autoformateo, guia de estilo y llaves para
-instrucciones simples, te maldigo &lt;code&gt;gofmt&lt;/code&gt;!&lt;/p&gt;
-
-&lt;p&gt;y &lt;em&gt;regexp3-go&lt;/em&gt; que? &lt;a href=&#34;https://github.com/nasciiboy/regexp3/&#34;&gt;aqui&lt;/a&gt;, algo mas de
-informacion en el readme&lt;/p&gt;
-
-&lt;p&gt;que sigue? transitar la aleatoriedad.&lt;/p&gt;
-
-&lt;p&gt;Bueno hasta aqui con mis cosas, pronto (una semana, un mes o mas) una version
-simplificada del lenguaje de marcas ligeras.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../gotor.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Hace un año, luego de &amp;ldquo;maquetar&amp;rdquo; algunos libros en org-mode, decidi crear mi propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar un substituto del comando man/info y aniquilar a html/latex como sistema de documentacion.
+Un mes mas tarde fruto de la necesidad de parsear el texto del nuevo lenguaje y mi incapacidad de entender como utilizar una libreria de expresiones regulares, nacio Recursive Regexp Raptor (alias regexp3) que es un motor de expresiones regulares para C, otro mes mas tarde salio a la web la primer version en forma de repositorio en github y ahora&amp;hellip; ni hay un nuevo lenguaje, ni un substituto de man/info, ni ha muerto html y he dedicado mas horas de las que jamas pense en regexp3 (y regexp4 &amp;ldquo;el sucesor&amp;rdquo;)</description>
     </item>
     
     <item>
       <title>Performance comparison of regular expression engines</title>
-      <link>http://nasciiboy.github.io/prog/Performance-comparison-of-regular-expression-engines/</link>
+      <link>http://nasciiboy.github.io/prog/performance-comparison-of-regular-expression-engines/</link>
       <pubDate>Fri, 16 Dec 2016 20:22:03 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/Performance-comparison-of-regular-expression-engines/</guid>
-      <description>&lt;p&gt;Hola gente, hace unos meses tome el codigo de &lt;strong&gt;dark100&lt;/strong&gt; &amp;ldquo;Performance
-comparison of regular expression engines&amp;rdquo; (pueden ver el orginal
-&lt;a href=&#34;http://sljit.sourceforge.net/regex_perf.html&#34;&gt;aqui&lt;/a&gt;) para hacer algunas pruebas
-a un pequeño &lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor&#34;&gt;motor regexp&lt;/a&gt;
-que programe en mi tiempo &lt;em&gt;libre?&lt;/em&gt;, bueno &amp;hellip; acabo de actualizar la prueba
-(&lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor-vs-Benchmarks&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;El proceso fue el siguiente&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Optener el codigo fuente de cada motor (PCRE2, RE2, tre, oniguruma)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Compilar cada motor localmente (intel x86-64 celeron 847), es
-decir&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;./autogen&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;./configure&lt;/code&gt; (para PCRE con alguna consideracion especifica)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Copiar el código fuente al entorno&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Intentar con el makefile existente hasta que se logro compilar&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Modificar levemente el ambiente (no se si compilara en un sistema no GNU)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;En realidad no tengo ni idea si este es el proceso adecuado para actualizar el
-entorno, pero funciona ¯_(ツ)_/¯. Si conoces una mejor configuracion o como
-optimizar alguna prueba sera bien recibida, siempre y cuando los makefiles se
-mantengan KISS (aunque solo compile en x86-64)&lt;/p&gt;
-
-&lt;p&gt;Para leer la prueba cómodamente tienes que descagar el fichero &lt;code&gt;readme.html&lt;/code&gt; del
-repositorio y visualizarlo en tu navegador.&lt;/p&gt;
-
-&lt;p&gt;por cierto la exprecion:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;quot;^( )*&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;genera un bucle infinito en pcre, tre, oniguruma, re2. En principio esta fue la
-motivacion principal para actualizar el codigo de cada prueba&amp;hellip; alguna pista?&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/prog/performance-comparison-of-regular-expression-engines/</guid>
+      <description>Hola gente, hace unos meses tome el codigo de dark100 &amp;ldquo;Performance comparison of regular expression engines&amp;rdquo; (pueden ver el orginal aqui) para hacer algunas pruebas a un pequeño motor regexp que programe en mi tiempo libre?, bueno &amp;hellip; acabo de actualizar la prueba (aqui)
+El proceso fue el siguiente
+ Optener el codigo fuente de cada motor (PCRE2, RE2, tre, oniguruma)
+ Compilar cada motor localmente (intel x86-64 celeron 847), es decir</description>
     </item>
     
   </channel>

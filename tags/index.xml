@@ -1,587 +1,231 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/index.xml</link>
-    <description>Recent content on nba - GNU&#39;s Rock</description>
+    <title>Tags on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/tags/</link>
+    <description>Recent content in Tags on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <atom:link href="http://nasciiboy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Feb 2017 22:14:42 -0600</lastBuildDate>
+    
+	<atom:link href="http://nasciiboy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>INBO</title>
-      <link>http://nasciiboy.github.io/prog/inbo/</link>
+      <title></title>
+      <link>http://nasciiboy.github.io/tags/</link>
       <pubDate>Mon, 13 Feb 2017 22:14:42 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/inbo/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;../steins:gate.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Despues de año y medio de desempleo (y quiza de ser un inutil) aparecio una idea
-&lt;em&gt;&lt;q&gt;voy a programar un juego como MegaMan II&lt;/q&gt;&lt;/em&gt;. Por supuesto, no tenia
-ningun conocimiento de programacion (ni conputadora), solo tiempo y
-&lt;q&gt;patrocinadores&lt;/q&gt; que gentilmente me proporcionaron un pc pentium 4 con un
-monitor lcd de imagen difuminada aderesada por unas lineas misteriosas capaces
-de disminuir la vida util de tus ojos 10 años (como la edad (minima) del pc,
-coincidencia? no lo creo).&lt;/p&gt;
-
-&lt;p&gt;Asi dio inicio mi aventura ninja por el mundo de la programacion, el software
-libre y como yonki de internet.&lt;/p&gt;
-
-&lt;p&gt;Siguiendo la filosofia de &lt;em&gt;&lt;q&gt;crea una meta tan alta, que despues no puedas
-cumplir&lt;/q&gt;&lt;/em&gt;, no solo el juego deberia ser una maravilla, el codigo y cada elemento
-que se utilizara deberia ser una obra de arte por si misma. Tras leer la
-wikipedia y algunos foros elegi aprender C, una busqueda mas tarde tenia el
-libro &amp;ldquo;Como programar en C/C++ y Java&amp;rdquo; (cuarta edicion) de Deitel &amp;amp; Deitel, en
-bonito formato pdf salido de fotocopias.&lt;/p&gt;
-
-&lt;p&gt;Llego la flamante pc con un windows xp, intente ver que se podia hacer, como
-instalar algo, eclipse (lol), visual estudio (shame, shame, shame) y luego de una
-semana de llenar formularios que pedian mi correo, buscar cracks, uno o varios
-virus e intentar formatear, no podia tener mas odio hacia el engendro ese
-llamado windos, tanto que recorde que en un podcast bdsm un tecnico sado, decia
-entusiasmado algo de un sistema llamado linux, que su comunidad era una pasada y
-otras cosas.&lt;/p&gt;
-
-&lt;p&gt;Asi llego linux Mint, una instalacion fallida de ubunto (que suerte) y luego
-Debian. No olvidare esos reformateos fruto del desconocimento (en serio? si
-borras una particion deja de funcionar?).&lt;/p&gt;
-
-&lt;p&gt;Superada la instalacion (con visitas constantes al ocaso de &lt;q&gt;desde linux&lt;/q&gt;)&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Que? para aprender C debo apreder a usar un editor?&lt;/p&gt;
-
-&lt;p&gt;Que? para apreder C debo apreder a usar un compilador?&lt;/p&gt;
-
-&lt;p&gt;Que? para aprender a usar el compilador tengo que usar un terminal?&lt;/p&gt;
-
-&lt;p&gt;Que? para el terminal tengo que aprender a usar bash?&lt;/p&gt;
-
-&lt;p&gt;frustracion mucha, pero tambien diversion, pase tres meses obsesionado, estaba
-aprendiendo como nunca, conoci &lt;code class=&#34;command&#34;&gt;vi&lt;/code&gt;, &lt;code
-class=&#34;command&#34;&gt;gedit&lt;/code&gt;, tambien gnome 2 (que pasada son los escritorios),
-&lt;code class=&#34;command&#34;&gt;transmision&lt;/code&gt;, &lt;code class=&#34;command&#34;&gt;firefox&lt;/code&gt;, &lt;code
-class=&#34;command&#34;&gt;moc&lt;/code&gt;, &amp;hellip; &lt;code class=&#34;command&#34;&gt;apt&lt;/code&gt;, &lt;code
-class=&#34;command&#34;&gt;aptitude&lt;/code&gt;, &lt;code class=&#34;command&#34;&gt;synaptic&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;luego de medio aprender C, encontre un libro para programar videojuegos, el
-&lt;em&gt;&lt;q&gt;Tutorial de libSDL para la programacion de videojuegos&lt;/q&gt;&lt;/em&gt; de
-Antonio Garcia Alba.&lt;/p&gt;
-
-&lt;p&gt;En realidad encontre muchos libros, pero este fue el mas decente y hasta el
-momento el unico que he leido del tema. Son casi 700 paginas, creo que por el
-empece a utilizar &lt;em&gt;&lt;code class=&#34;command&#34;&gt;Emacs&lt;/code&gt;&lt;/em&gt;. Gran trabajo, aunque el
-codigo no es lo mejor y como dice el titulo es mas un tutorial de SDL que un
-libro de progracion de videojuegos, lo digo, por que cuando llega el momento de
-programar el motor, termina abruptamente, te quedas desamparado y con mucho
-codigo del que debes averiguar como demonios funciona.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;../TutorialSDL.pdf&#34;&gt;aqui&lt;/a&gt; el libro y
-&lt;a href=&#34;../TutorialSDL-material.tar.gz&#34;&gt;aqui&lt;/a&gt; su material.&lt;/p&gt;
-
-&lt;p&gt;perfecto no? no, el libro estaba en C++ y apenas era un novato en C&lt;/p&gt;
-
-&lt;p&gt;bueno que mas da? nahh, a aprender C++ y SDL (1.2) al mismo tiempo.&lt;/p&gt;
-
-&lt;p&gt;Tres meses mas tarde&amp;hellip; medio sabia SDL, muy poco de C++, habia olvidado C,
-llegado al fin del libro y tenia un motor de videjuegos que no tenia ni idea de
-como modificar, menos corregir.&lt;/p&gt;
-
-&lt;p&gt;Otro mes mas tarde, habia reescrito (transcrito es mas correcto) todo el codigo, con
-algunos dibujos de como se conectaba cada componente.&lt;/p&gt;
-
-&lt;p&gt;Un par de meses despues tenia un videojuego al que nombre como INBO. El nombre
-salio de un anime llamado &lt;em&gt;Welcome to the NHK&lt;/em&gt; (NHK ni Youkoso!) donde un
-hikikomori (nini) y un soñador se proponen hacer un videojuego, mientras el
-mundo y las limitaciones mentales de los protagonistas paracen conspirar
-(conspiracion ==&amp;gt; inbo) para que todo se vaya a la mierda, llamo a este
-fenomeno &lt;q&gt;vivir&lt;/q&gt;.&lt;/p&gt;
-
-&lt;p&gt;(La imagen que inicia el post, coresponte a otro anime &lt;em&gt;Stains;Gate&lt;/em&gt;
-tambien de mis preferidos, no encontre un fanart a la altura de NHK)&lt;/p&gt;
-
-&lt;p&gt;Y que paso con el videojuego? bueno, aqui esta lo mas importante, el icono (al final,
-no se utilizo, apenas se distinguia algo en 32x32 pixeles)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../icon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(es e.t.? un robot? ninja? lo dibujo un niño?)&lt;/p&gt;
-
-&lt;p&gt;La bienvenida&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../inbo-0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../inbo-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Menu&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../inbo-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Una Captura&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../inbo-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;El editor&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../inbo-4.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;../inbo-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Exeptuando SDL y C++, el resto esta programado a mano, son como 5,000 lineas de
-codigo de mala calidad con muchos comentarios. Je, en aquel tiempo hacia una
-copia de cada modificacion, una version hasta tiene imagenes de fondo en lugar
-de tiles.&lt;/p&gt;
-
-&lt;p&gt;Entonces? El codigo es una basura, en realidad, ni sabia C++, ni C, ni tenia un
-libro al cual recurrir, tire todo, comence a documentar SDL y C en groff (man),
-regrese a C y me propuse no programar nada hasta que fuera un guru del lenguaje,
-aprender a hacer juegos sencillos como el tetris o la serpiente, documentar todo
-y de paso hacer un libro para que ningun tipo tubiera que ir por hay, hurgando
-en uno y otro libro, en busca del conocimiento para programar de cero a guru.&lt;/p&gt;
-
-&lt;p&gt;Despues llegaron los juegos en c con ayuda de ncurses y mas tarde, el empleo se
-apodero de mi vida un par de años y olvide como programar, luego el desempleo
-regreso por venganza y aqui estoy.&lt;/p&gt;
-
-&lt;p&gt;El empleo regresara? encontrare(/hare) un sistema de documentacion que cumpla
-con mis exigencias? algun dia sere un haker? o solo un juanker?&lt;/p&gt;
-
-&lt;p&gt;Nunca pense mostrar el codigo de INBO al munto, asi que nunca pase nada a
-git&amp;hellip; &lt;a href=&#34;../jumpman_BPA_final.zip&#34;&gt;aqui&lt;/a&gt; el codigo.&lt;/p&gt;
-
-&lt;p&gt;Este sitio carese de cualquier tipo de estadistica o registro, si el morbo le
-puede y no tiene nada que hacer:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;descomprimase&lt;/li&gt;
-&lt;li&gt;instale SDL1.2 (image, ttf y mixer)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make&lt;/code&gt; y &lt;code&gt;./test&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Las imagenes fueron hechas con inskape, el protagonista se basa en goku, los
-enemigos en nada, hay dos niveles mal echos, no recuendo de donde salieron los
-efectos/musica, la tipografia es una modificacion personalizada personal de otra
-tipografia y las teclas son&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;a&lt;/code&gt; ==&amp;gt; salto&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;s&lt;/code&gt; ==&amp;gt; ataque&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;x&lt;/code&gt; ==&amp;gt; ataque especial (con la barra de vida en rojo)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;f&lt;/code&gt; ==&amp;gt; entrar/salir a pantalla completa&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ESC&lt;/code&gt; ==&amp;gt; terminar&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;RET&lt;/code&gt; ==&amp;gt; regresar al menu&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;INTRO&lt;/code&gt; ==&amp;gt; selecionar&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;recuerdo el orgullo tras hacer que el motor liberara recursos o programar un
-scroll sin crasheos, tambien que el pc se moria cada ves que abria inskape o
-firefox!&lt;/p&gt;
-
-&lt;p&gt;Nos vemos, sin Software Libre, no tendria un pasatiempo, una coleccion de musica
-fantastica y seria mas estupido de lo que soy! Happy Hacking!&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/tags/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Raptor-Book</title>
-      <link>http://nasciiboy.github.io/prog/raptor-book/</link>
-      <pubDate>Wed, 11 Jan 2017 10:03:58 -0600</pubDate>
+      <title>Anime</title>
+      <link>http://nasciiboy.github.io/tags/anime/</link>
+      <pubDate>Wed, 22 Feb 2017 21:08:41 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/raptor-book/</guid>
-      <description>&lt;p&gt;Solo queria programar un juego similar a &lt;strong&gt;Megaman 2&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../MegaMan2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;y termine instalando debian, leyendo de bash, sdl, ncurses, c, c++, Emacs&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Desafortunadamente aun no hay un texto sagrado de nombre &lt;strong&gt;&amp;ldquo;De Cero a Motor
-3D&amp;rdquo;&lt;/strong&gt; (en solo 15 años) ni siminar. Entre intentar aprender ingles y buscar un
-sistema de documentacion decente, termine por programar un motor de expresiones
-regulares sin comprender la teoria de automatas finitos, lenguajes finitos ni
-recordar un poco de las clases de mate de nivel basico, pues no llegue al
-medio&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Con estos precedentes, el tiempo que brinda el desempleo en un mundo turbulento
-lleno de humanos, aleatoriedad incomprendida y falto de materiales
-psicotropicos, comence a escribir un libro lleno de palabras dilexicas que
-muestra lo aprendido hasta ahora, con la sucia intencion de ganar dinero&amp;hellip; y
-aportar conocimiento de libre disposicion a quien lo desee.&lt;/p&gt;
-
-&lt;p&gt;De que va el libro? Como programar un motor de expresiones regulares sin tener
-ni idea, el unico requisito es saber lenguaje de programacion C.&lt;/p&gt;
-
-&lt;p&gt;Por ahora estoy revisando y reescribiendo las primeras secciones, pueden
-colaborar con revision, anotaciones de que puntos se pueden mejorar y lo que les
-venga en gana. Hay una version en html y en el repositorio hay una explicacion
-un poco mas detallada.&lt;/p&gt;
-
-&lt;p&gt;Pueden descargar una copia en un comprimido zip &lt;a href=&#34;https://github.com/nasciiboy/raptor-book/archive/master.zip&#34;&gt;aqui&lt;/a&gt; o
-clonar el repositiorio asi:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/nasciiboy/raptor-book.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;aunque no me gustan los tutoriales en fasciculos, se iran agregando secciones al
-libro segun esten listas, intentare ser constante.&lt;/p&gt;
-
-&lt;p&gt;happy hacking!&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/tags/anime/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>2017Challenges</title>
-      <link>http://nasciiboy.github.io/prog/2017Challenges/</link>
-      <pubDate>Wed, 04 Jan 2017 20:41:22 -0600</pubDate>
+      <title>Dokutsu Monogatari</title>
+      <link>http://nasciiboy.github.io/tags/dokutsu-monogatari/</link>
+      <pubDate>Mon, 19 Dec 2016 11:29:56 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/2017Challenges/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;../orange.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hace unos dias (presuntamente a principio de año) aparecio en reddit
-(r/programming) un enlace a una competencia para programadores mediante github &lt;a href=&#34;https://github.com/YearOfProgramming/2017Challenges&#34;&gt;2017Challenges&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Aparentemente, el premio es el reto, la busqueda de nuevo conocimiento y la
-alegria interior de ser el primero en publicar una solucion (ingeniosa) para un
-lenguaje determinado&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;iniciaron con cuatro pruebas&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Hello World: escribir un programa &amp;ldquo;hola mundo&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Reverse String: invertir el orden de una cadena&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Lonely: encontrar elementos no repetidos en un arreglo con longitud y valores
-aleatorios, con opcion de mesclar enteros y caracteres&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Majority Element: dentro de un arreglo de longitud y elementos aleatorios,
-localizar el valor que se repita almenos la mitad de la dimencion del arreglo&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Invert Binary Tree: invertir un arbol binario&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;El dia de hoy se incluyo un nuevo reto&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Find the Difference: comparar dos cadenas donde una difiere en incluir un
-caracter adicional, el punto es desplegar el caracter discordante&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Cualquier lenguaje de programacion es valido&amp;hellip; he? pues si, lo que mas abunda
-son python, seguido por java y javascript&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Todo lo necesario para que el codigo se incluya en el repositorio esta explicado
-en el &lt;code&gt;readme.md&lt;/code&gt; del proyecto (o en internet)&lt;/p&gt;
-
-&lt;p&gt;No ser un guru de la programacion es un buen motivo para participar, como
-tambien aprender a colaborar en un proyecto mediante git(hub) (no tengo ni idea
-que hacen fetch, merge, o el orden en que deba realizarce el pull), ademas
-puedes poner en practica estructuras &amp;ldquo;complejas&amp;rdquo; como los arboles binarios, que
-en mi caso solo los habia visto de lejos con respeto y admiracion en el &amp;ldquo;k&amp;amp;r&amp;rdquo; y
-&amp;ldquo;C como programar&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;de momento llebo los 4 primeros retos en c (&lt;a href=&#34;https://github.com/nasciiboy/2017Challenges&#34;&gt;aqui&lt;/a&gt;) (aun pendientes de aprobacion los
-ultimos 2), cuando tenga mas confianza intentare con go y en algun futuro lejano
-quiza con lisp.&lt;/p&gt;
-
-&lt;p&gt;Happy Hacking!&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/tags/dokutsu-monogatari/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>first theme</title>
-      <link>http://nasciiboy.github.io/emacs/first-theme/</link>
-      <pubDate>Wed, 28 Dec 2016 17:17:04 -0600</pubDate>
+      <title>Elfeed</title>
+      <link>http://nasciiboy.github.io/tags/elfeed/</link>
+      <pubDate>Wed, 18 Jan 2017 09:29:17 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/first-theme/</guid>
-      <description>
-
-&lt;h2 id=&#34;crear-un-tema-en-emacs&#34;&gt;Crear un Tema en Emacs&lt;/h2&gt;
-
-&lt;h3 id=&#34;un-poco-de-historia&#34;&gt;un poco de historia&lt;/h3&gt;
-
-&lt;p&gt;Cuando comence a utilizar emacs (hace unos pocos años) para establecer un tema
-se utilizaba un paquete llamado &lt;strong&gt;color-theme&lt;/strong&gt; parte del paquete
-&lt;code&gt;emacs-goodies-el&lt;/code&gt; de Debian. Al parecer desde la version 24 de emacs se
-desaconseja su uso, pese a todo en mi instalacion se mantuvo en servicio hasta
-la version 26.0.50 sin generar inconvenientes.&lt;/p&gt;
-
-&lt;p&gt;para la posteridad y los viajeros en el tiempo, dejo aqui el paquete en forma
-de &lt;a href=&#34;../color-theme-6.6.0.zip&#34;&gt;zip&lt;/a&gt; (con un tema personalizado de regalo
-&lt;code&gt;color-theme-nascii&lt;/code&gt;)&lt;/p&gt;
-
-&lt;p&gt;asi es como se utilizaba&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(add-to-list &#39;load-path &amp;quot;~/ruta-a/color-theme-6.6.0&amp;quot;)
-(require &#39;color-theme)
-(color-theme-initialize)
-
-;; para cargar un tema en especifico
-;; (color-theme-nombreDelTema)
-(color-theme-nascii)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;establecer-el-tema-por-defecto&#34;&gt;establecer el tema por defecto&lt;/h3&gt;
-
-&lt;p&gt;apartir de emacs version 24 podemos cambiar el tema sin instalar nada con el
-comando &lt;code&gt;customize-themes&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../custom-themes.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;para cambiar el tema se mueve el cursor al tema y se presiona enter&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../custom-themes-ligth-blue.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;para guardar el cambio colocamos el cursor en el &amp;ldquo;boton&amp;rdquo; &lt;strong&gt;Save Theme
-Setting&lt;/strong&gt; + un enter, accion que colocara automagicamente unas lineas de codigo
-extra en nuestro &lt;code&gt;init.el&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;No te van las cosas automagicas? puedes establecer la carga de un tema
-directamente en el fichero de configuracion &lt;code&gt;init.el&lt;/code&gt; con&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(load-file &amp;quot;~/RUTA/A/miTema-theme.el&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Si queremos que el menu de seleccion cargue un tema automaticamente, tiene que
-estar en nuestro directorio de configuracion &lt;code&gt;~/.emacs.d/&lt;/code&gt;&lt;strong&gt;nombreTema&lt;/strong&gt;&lt;code&gt;-theme.el&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;crear-un-tema&#34;&gt;crear un tema&lt;/h3&gt;
-
-&lt;p&gt;Los temas se crean en base a la configuracion actual, pero tambien podemos crear
-un tema a partir de cero segun indiquemos al comando &lt;code&gt;customize-create-theme&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../customize-create-theme.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;en el recuadro &lt;strong&gt;Theme Name&lt;/strong&gt; damos nombre al tema, en el recuandro
-&lt;strong&gt;Description&lt;/strong&gt; dejamos la fecha de creacion o en su lugar colocamos una
-descripcion del tema, por ejemplo &lt;code&gt;&amp;quot;nascii-theme un tema obscuro mas...&amp;quot;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;establecemos las variables a gusto y guardamos el tema con &lt;code&gt;C-x C-s&lt;/code&gt; o con un
-intro sobre el recuadro &lt;strong&gt;Save Theme&lt;/strong&gt;. Regresamos a &lt;code&gt;customize-themes&lt;/code&gt; y
-automagicamente nuestro tema estara disponible.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Nota&lt;/strong&gt;: Si creamos el tema apartir de la configuracion actual y queremos
-compartirlo con los demas habitantes de la red, debemos evitar incluir algunas
-variables especificas de nuestro sistema en el codigo fuente del tema, por
-ejemplo, el tipo de tipografia.&lt;/p&gt;
-
-&lt;h3 id=&#34;ver-los-cambios-al-vuelo&#34;&gt;ver los cambios &amp;ldquo;al vuelo&amp;rdquo;&lt;/h3&gt;
-
-&lt;p&gt;Vamos al codigo fuente del tema &lt;code&gt;C-x C-f&lt;/code&gt; &lt;code&gt;~/.emacs.d/miTema-theme.el&lt;/code&gt;,
-modificamos el parametro de interes (los colorines se encuentran entre comillas
-en formato nombre o en formato hexadecimal de 3 o 6 digitos), luego evaluamos el
-buffer con el comando &lt;code&gt;eval-buffer&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Para hacer un poco menos lioso el asunto asignamos &lt;code&gt;eval-buffer&lt;/code&gt; a una tecla&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(global-set-key [f9] &#39;eval-buffer)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;con esto tenemos asignado el comando a la tecla de funcion &lt;strong&gt;F9&lt;/strong&gt;, asi podemos
-recargar los cambios estilo navegador web.&lt;/p&gt;
-
-&lt;h3 id=&#34;nascii-theme&#34;&gt;nascii-theme&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;../nascii-theme.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;;; This program is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
-
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-
-;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see &amp;lt;http://www.gnu.org/licenses/&amp;gt;.
-
-;; ---------------------------
-;;
-;; nascii: Another dark theme
-;;
-;; ----------------------------
-
-(unless (&amp;gt;= emacs-major-version 24)
-  (error &amp;quot;requires Emacs 24 or later.&amp;quot;))
-
-(deftheme nascii
-  &amp;quot;Another dark theme&amp;quot;)
-
-(custom-theme-set-faces
- &#39;nascii
- &#39;(default ((t (:weight normal :slant normal :underline nil :overline nil :strike-through nil :foreground &amp;quot;white&amp;quot; :background &amp;quot;black&amp;quot; :stipple nil :inherit nil))))
- &#39;(cursor ((t (:background &amp;quot;yellow&amp;quot;))))
- &#39;(escape-glyph ((((background dark)) (:foreground &amp;quot;cyan&amp;quot;)) (((type pc)) (:foreground &amp;quot;magenta&amp;quot;)) (t (:foreground &amp;quot;brown&amp;quot;))))
- &#39;(minibuffer-prompt ((((background dark)) (:foreground &amp;quot;cyan&amp;quot;)) (((type pc)) (:foreground &amp;quot;magenta&amp;quot;)) (t (:foreground &amp;quot;medium blue&amp;quot;))))
- &#39;(highlight ((t (:background &amp;quot;darkolivegreen&amp;quot;))))
- &#39;(region ((t (:background &amp;quot;#222&amp;quot; :foreground &amp;quot;#87cefa&amp;quot;))))
- &#39;(shadow ((((class color grayscale) (min-colors 88) (background light)) (:foreground &amp;quot;grey50&amp;quot;)) (((class color grayscale) (min-colors 88) (background dark)) (:foreground &amp;quot;grey70&amp;quot;)) (((class color) (min-colors 8) (background light)) (:foreground &amp;quot;green&amp;quot;)) (((class color) (min-colors 8) (background dark)) (:foreground &amp;quot;yellow&amp;quot;))))
- &#39;(secondary-selection ((t (:background &amp;quot;darkslateblue&amp;quot;))))
- &#39;(trailing-whitespace ((t (:background &amp;quot;red&amp;quot;))))
- &#39;(font-lock-builtin-face ((t (:foreground &amp;quot;LightSteelBlue&amp;quot;))))
- &#39;(font-lock-comment-delimiter-face ((default (:inherit (font-lock-comment-face)))))
- &#39;(font-lock-comment-face ((t (:foreground &amp;quot;OrangeRed&amp;quot;))))
- &#39;(font-lock-constant-face ((t (:foreground &amp;quot;Aquamarine&amp;quot;))))
- &#39;(font-lock-doc-face ((t (:foreground &amp;quot;LightSalmon&amp;quot;))))
- &#39;(font-lock-function-name-face ((t (:foreground &amp;quot;LightSkyBlue&amp;quot;))))
- &#39;(font-lock-keyword-face ((t (:foreground &amp;quot;Cyan&amp;quot;))))
- &#39;(font-lock-negation-char-face ((t nil)))
- &#39;(font-lock-preprocessor-face ((t (:inherit (font-lock-builtin-face)))))
- &#39;(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
- &#39;(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
- &#39;(font-lock-string-face ((t (:foreground &amp;quot;LightSalmon&amp;quot;))))
- &#39;(font-lock-type-face ((t (:foreground &amp;quot;PaleGreen&amp;quot;))))
- &#39;(font-lock-variable-name-face ((t (:foreground &amp;quot;LightGoldenrod&amp;quot;))))
- &#39;(font-lock-warning-face ((t (:weight bold :foreground &amp;quot;Pink&amp;quot;))))
- &#39;(button ((t (:inherit (link)))))
- &#39;(link ((((class color) (min-colors 88) (background light)) (:underline (:color foreground-color :style line) :foreground &amp;quot;RoyalBlue3&amp;quot;)) (((class color) (background light)) (:underline (:color foreground-color :style line) :foreground &amp;quot;blue&amp;quot;)) (((class color) (min-colors 88) (background dark)) (:underline (:color foreground-color :style line) :foreground &amp;quot;cyan1&amp;quot;)) (((class color) (background dark)) (:underline (:color foreground-color :style line) :foreground &amp;quot;cyan&amp;quot;)) (t (:inherit (underline)))))
- &#39;(link-visited ((default (:inherit (link))) (((class color) (background light)) (:foreground &amp;quot;magenta4&amp;quot;)) (((class color) (background dark)) (:foreground &amp;quot;violet&amp;quot;))))
- &#39;(fringe ((t (:background &amp;quot;grey10&amp;quot;))))
- &#39;(header-line ((t (:box nil :foreground &amp;quot;grey20&amp;quot; :background &amp;quot;grey90&amp;quot;))))
- &#39;(tooltip ((t (:foreground &amp;quot;black&amp;quot; :background &amp;quot;lightyellow&amp;quot;))))
- &#39;(mode-line ((t (:box (:line-width -2 :color nil :style released-button) :background &amp;quot;black&amp;quot; :foreground &amp;quot;white&amp;quot;))))
- &#39;(mode-line-buffer-id ((t (:weight bold))))
- &#39;(mode-line-emphasis ((t (:weight bold))))
- &#39;(mode-line-highlight ((((class color) (min-colors 88)) (:box (:line-width 2 :color &amp;quot;grey40&amp;quot; :style released-button))) (t (:inherit (highlight)))))
- &#39;(mode-line-inactive ((default (:inherit (mode-line))) (((class color) (min-colors 88) (background light)) (:background &amp;quot;grey90&amp;quot; :foreground &amp;quot;grey20&amp;quot; :box (:line-width -1 :color &amp;quot;grey75&amp;quot; :style nil) :weight light)) (((class color) (min-colors 88) (background dark)) (:background &amp;quot;grey30&amp;quot; :foreground &amp;quot;grey80&amp;quot; :box (:line-width -1 :color &amp;quot;grey40&amp;quot; :style nil) :weight light))))
- &#39;(isearch ((t (:foreground &amp;quot;brown4&amp;quot; :background &amp;quot;palevioletred2&amp;quot;))))
- &#39;(isearch-fail ((((class color) (min-colors 88) (background light)) (:background &amp;quot;RosyBrown1&amp;quot;)) (((class color) (min-colors 88) (background dark)) (:background &amp;quot;red4&amp;quot;)) (((class color) (min-colors 16)) (:background &amp;quot;red&amp;quot;)) (((class color) (min-colors 8)) (:background &amp;quot;red&amp;quot;)) (((class color grayscale)) (:foreground &amp;quot;grey&amp;quot;)) (t (:inverse-video t))))
- &#39;(lazy-highlight ((((class color) (min-colors 88) (background light)) (:background &amp;quot;paleturquoise&amp;quot;)) (((class color) (min-colors 88) (background dark)) (:background &amp;quot;paleturquoise4&amp;quot;)) (((class color) (min-colors 16)) (:background &amp;quot;turquoise3&amp;quot;)) (((class color) (min-colors 8)) (:background &amp;quot;turquoise3&amp;quot;)) (t (:underline (:color foreground-color :style line)))))
- &#39;(match ((((class color) (min-colors 88) (background light)) (:background &amp;quot;yellow1&amp;quot;)) (((class color) (min-colors 88) (background dark)) (:background &amp;quot;RoyalBlue3&amp;quot;)) (((class color) (min-colors 8) (background light)) (:foreground &amp;quot;black&amp;quot; :background &amp;quot;yellow&amp;quot;)) (((class color) (min-colors 8) (background dark)) (:foreground &amp;quot;white&amp;quot; :background &amp;quot;blue&amp;quot;)) (((type tty) (class mono)) (:inverse-video t)) (t (:background &amp;quot;gray&amp;quot;))))
- &#39;(next-error ((t (:inherit (region)))))
- &#39;(query-replace ((t (:inherit (isearch))))))
-
-(provide-theme &#39;nascii)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;para cargar el tema, copiar y guardar en &lt;code&gt;&amp;quot;~/.emacs.d/nascii-theme.el&amp;quot;&lt;/code&gt;, luego se
-puede cargar/probar ejecutando&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(load-file &amp;quot;~/.emacs.d/nascii-theme.el&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;o mediante &lt;code&gt;customize-themes&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;referencias&#34;&gt;referencias&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&#34;&gt;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;tambien puede acceder directamente al manual dentro de emacs. Copia esto&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[[info:emacs#Creating%20Custom%20Themes]]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;pegalo en algun buffer, cambia a modo-org, coloca el cursor sobre el texto y
-presiona &lt;code&gt;C-c C-o&lt;/code&gt;&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/tags/elfeed/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Que es GNU Emacs?</title>
-      <link>http://nasciiboy.github.io/emacs/que-es-emacs/</link>
-      <pubDate>Fri, 23 Dec 2016 20:43:19 -0600</pubDate>
+      <title>Eww</title>
+      <link>http://nasciiboy.github.io/tags/eww/</link>
+      <pubDate>Wed, 18 Jan 2017 09:29:17 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/que-es-emacs/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;../Emacs-logo.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;algunos dicen que es &lt;strong&gt;un editor&lt;/strong&gt;, otros que es &lt;strong&gt;un sistema operativo&lt;/strong&gt;, los mas
-filosoficos diran que es  &lt;strong&gt;lo que elijas que sea&lt;/strong&gt;, &lt;strong&gt;una forma de vida&lt;/strong&gt;,
-&lt;strong&gt;un camino a seguir&lt;/strong&gt; o incluso que Emacs son los padres&amp;hellip; bueno luego de un
-par de años utilizando Emacs esta es mi opinion&lt;/p&gt;
-
-&lt;h2 id=&#34;my-and-mrs-emacs&#34;&gt;My and mrs Emacs&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Yo y la señora Emacs,
-tenemos algo que esta creciendo,
-sabemos que está mal,
-pero es algo muy fuerte como para dejarlo ir ahora.&lt;/p&gt;
-
-&lt;p&gt;Nos vemos cada dia en el mismo monitor,
-a las 8:30 se que estará ahí,
-tomando mis comandos, haciendo toda clase de funciones,
-mientras moc toca nuestra canción favorita.&lt;/p&gt;
-
-&lt;p&gt;Yo y la señora, señora Emacs, señora Emacs, señora Emacs,
-tenemos algo que esta creciendo,
-sabemos que esta mal,
-pero es algo muy fuerte como para dejarlo ir ahora.&lt;/p&gt;
-
-&lt;p&gt;Tenemos que ser muy cuidadosos,
-de no llevar nuestros sueños muy lejos,
-porque ella tiene sus propias obligaciones y yo también,
-yo y la señora, señora Emacs, señora Emacs, señora Emacs.&lt;/p&gt;
-
-&lt;p&gt;Bueno, es nuestra hora de irnos,
-me duele mucho, mucho por dentro,
-y ahora ella tomará su camino, yo el mio,
-Pero mañana nos veremos en el mismo lugar, a la misma hora.
-Yo y la señora Emacs, señora Emacs, señora Emacs&amp;hellip;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&amp;hellip;cof, cof, hem, todo aspirante a programador debe eligir su martillo
-forjador de codigo, en mi caso al ser autodidacta unicamente las opiniones de
-internet sirvieron de guia (lagrimas ironicas).&lt;/p&gt;
-
-&lt;p&gt;Primero vino la bestia (&lt;strong&gt;VI&lt;/strong&gt;), fue dificil, muy dificil (mas sin saber
-mecanografia). Hubo que anotar las combinaciones frecuentes en un papel y pegar
-los ojos al teclado y luego al monitor y luego al teclado. Dia tras dia mejoraba
-mi Kung Fu y la idea de ser un programador parecia no ser solo un sueño. Tras un
-mes de entrenamiento y con algo de confianza probe un enfoque mas visual
-(&lt;strong&gt;gedit&lt;/strong&gt;), el resultado? Un sin sabor, era sencillo pero no tenia profundidad,
-carecia de potencia, en resumen aburrido, de regreso al viejo dojo encontre una
-nueva escuela (&lt;strong&gt;Emacs&lt;/strong&gt;), las clases eran gratis y prometian ser interesantes&lt;/p&gt;
-
-&lt;p&gt;Tras una semana con el tutorial, era tan agil con Emacs como con Vi, nada mal,
-se podia hacer todo con el teclado y si lo queria tambien tenia menus accesibles
-tanto por las &lt;code&gt;F&lt;/code&gt;s como por el raton (esto ultimo es increible, todo aquel que
-asimila la &lt;strong&gt;forma Emacs&lt;/strong&gt; inevitablemente termina por hacer a un lado el
-raton. ¿Quien demonios sigue programando esto?).&lt;/p&gt;
-
-&lt;p&gt;Tras unos dias (y con ayuda de algun tutorial) puede cambiar el tema, luego
-descubri que se podia navegar por los ficheros desde emacs y que tenia
-terminales e interpretes y un tetris y un navegador web y gestor de paquetes y
-soporte para cualquier lenguaje de programacion (almenos resaltado) y un sin fin
-de utiles(?) aplicaciones, sin embargo &lt;strong&gt;todas compartian el mismo conjunto de
-comandos base&lt;/strong&gt; para moverse por la interfaz y manipular texto, aprender lo
-especifico de cada funcionalidad (en gerga de emacs, &lt;strong&gt;modo&lt;/strong&gt;) es un tema
-aparte que requiere una memoria exepcional&lt;/p&gt;
-
-&lt;p&gt;Cai como un yonqui adicto a cualquier informacion de emacs (los no hablantes de
-ingles tenemos un poco mas dicil&amp;hellip; todo), apenas aprendi algun nuevo comando lo
-ponia en practica (para olvidarlo un par de horas despues)&lt;/p&gt;
-
-&lt;p&gt;Y un buen dia entientes que puedes programar emacs, que todo comportamiento es
-modificable y de echo es modificable &lt;strong&gt;al vuelo&lt;/strong&gt; y te preguntas &lt;strong&gt;¿Que es
-Emacs?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;emacs-es&#34;&gt;Emacs Es&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;El interprete de un lenguaje derivado de Lisp (Emacs Lisp). De hecho es el
-interprete mas sofisticado que existe y probablemente existira, ya que viene con
-el suficiente codigo precargado como para (hacerte creer que es un editor y)
-permitirte crear nuevos programas, funcionalidades o modificar Emacs en si
-mismo&amp;hellip; existe un mejor diseño que ese?&lt;/p&gt;
-
-&lt;h2 id=&#34;enfoques-sobre-el-texto&#34;&gt;Enfoques sobre el texto&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;teco&lt;/strong&gt;: un leguaje para forjar texto&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;vi&lt;/strong&gt;: escribamos caracteres o apliquemos comandos a los caracteres&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: el texto es la interfaz, el editor es parte de la interfaz,
-extendamos y modifiquemos a voluntad y sin restricciones nuestra interfaz&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;nano&lt;/strong&gt;: un simple editor&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;: joder, lo que pueden hacer los de emacs, haremos a vi extensible&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;sublime&lt;/strong&gt;: hare mi propio vim&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;atom&lt;/strong&gt;: hagamos un editor como sublime pero con tecnologia web awesome!&lt;/p&gt;
-</description>
+      <guid>http://nasciiboy.github.io/tags/eww/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fish</title>
+      <link>http://nasciiboy.github.io/tags/fish/</link>
+      <pubDate>Sat, 24 Dec 2016 10:04:44 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/fish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flac</title>
+      <link>http://nasciiboy.github.io/tags/flac/</link>
+      <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/flac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fonos</title>
+      <link>http://nasciiboy.github.io/tags/fonos/</link>
+      <pubDate>Tue, 31 Jan 2017 12:06:31 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/fonos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gnome</title>
+      <link>http://nasciiboy.github.io/tags/gnome/</link>
+      <pubDate>Fri, 20 Jan 2017 22:16:06 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/gnome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Howto</title>
+      <link>http://nasciiboy.github.io/tags/howto/</link>
+      <pubDate>Sun, 12 Mar 2017 09:33:15 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/howto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Install</title>
+      <link>http://nasciiboy.github.io/tags/install/</link>
+      <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Manga</title>
+      <link>http://nasciiboy.github.io/tags/manga/</link>
+      <pubDate>Sun, 05 Mar 2017 11:49:56 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/manga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Moc</title>
+      <link>http://nasciiboy.github.io/tags/moc/</link>
+      <pubDate>Thu, 22 Dec 2016 11:56:44 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/moc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Morg</title>
+      <link>http://nasciiboy.github.io/tags/morg/</link>
+      <pubDate>Tue, 14 Mar 2017 16:33:15 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/morg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Movs</title>
+      <link>http://nasciiboy.github.io/tags/movs/</link>
+      <pubDate>Mon, 16 Jan 2017 20:27:28 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/movs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ncurses</title>
+      <link>http://nasciiboy.github.io/tags/ncurses/</link>
+      <pubDate>Tue, 11 Apr 2017 12:38:06 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/ncurses/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nxengine</title>
+      <link>http://nasciiboy.github.io/tags/nxengine/</link>
+      <pubDate>Mon, 19 Dec 2016 11:29:56 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/nxengine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Racer</title>
+      <link>http://nasciiboy.github.io/tags/racer/</link>
+      <pubDate>Sat, 17 Dec 2016 08:29:18 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/racer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ramen</title>
+      <link>http://nasciiboy.github.io/tags/ramen/</link>
+      <pubDate>Sun, 02 Apr 2017 21:08:41 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/ramen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regexp</title>
+      <link>http://nasciiboy.github.io/tags/regexp/</link>
+      <pubDate>Sat, 11 Feb 2017 10:26:04 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/regexp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rss</title>
+      <link>http://nasciiboy.github.io/tags/rss/</link>
+      <pubDate>Wed, 18 Jan 2017 09:29:17 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/rss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shntool</title>
+      <link>http://nasciiboy.github.io/tags/shntool/</link>
+      <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/shntool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Solarus</title>
+      <link>http://nasciiboy.github.io/tags/solarus/</link>
+      <pubDate>Sun, 01 Jan 2017 14:56:59 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/solarus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zero</title>
+      <link>http://nasciiboy.github.io/tags/zero/</link>
+      <pubDate>Fri, 16 Dec 2016 17:19:32 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/zero/</guid>
+      <description></description>
     </item>
     
   </channel>
