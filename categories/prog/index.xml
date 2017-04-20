@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Tue, 11 Apr 2017 12:38:06 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 20 Apr 2017 11:54:03 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/categories/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nirvana</title>
+      <link>http://nasciiboy.github.io/prog/nirvana/</link>
+      <pubDate>Thu, 20 Apr 2017 11:54:03 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/nirvana/</guid>
+      <description>hu! ha!, imparable el proyecto de programacion morg (nombre temporal) es (o no), mientras tanto y a modo de respaldo (por si en algun momento me convierto al lado privativo de la fuerza&amp;hellip;) les presento las ultimas novedades codificadas del proyecto
+Primero se agrego katana que conceptualmente se encarga de parsear/cortar el texto plano formateado, y regresar una estructura convenientemente estructurada que facilita cualquier labor a realizar.
+Dentro de la estructura se enucuentran los datos del documento y opciones, ademas de un arreglo de nodos, llamado Toc donde cada elemento es un encabezado (de cualquier nivel) que contiene los parrafos, listas, abouts, tablas, comandos, etc.</description>
+    </item>
     
     <item>
       <title>Programmer&#39;s Guide to NCurses</title>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
   <head>
     <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>Que es GNU Emacs? - nba - GNU&#39;s Rock</title>
+    <title>Nirvana - nba - GNU&#39;s Rock</title>
     
     <style media="screen">
 :root {
@@ -183,115 +183,107 @@ img:hover { border: 0.05em solid #fff; }
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
-    <li><span class="path-pwd">Que es GNU Emacs?</span></li>
+    <li><span class="path-pwd">Nirvana</span></li>
   </ul>
 
   <article>
-  <h1 class="title">Que es GNU Emacs?</h1>
+  <h1 class="title">Nirvana</h1>
 
-  <time datetime="2016-12-23 20:43:19 -0600 CST">Dec 23, 2016</time>
+  <time datetime="2017-04-20 11:54:03 -0500 CDT">Apr 20, 2017</time>
 
   <div class="article-body">
 
-<p><img src="../Emacs-logo.svg" alt="" /></p>
+<p><img src="http://nasciiboy.github.io/img/katana-0.png" alt="" /></p>
 
-<p>algunos dicen que es <strong>un editor</strong>, otros que es <strong>un sistema operativo</strong>, los mas
-filosoficos diran que es  <strong>lo que elijas que sea</strong>, <strong>una forma de vida</strong>,
-<strong>un camino a seguir</strong> o incluso que Emacs son los padres&hellip; bueno luego de un
-par de años utilizando Emacs esta es mi opinion</p>
+<p><strong>hu! ha!</strong>, imparable el proyecto de programacion morg (nombre temporal) es (o
+no), mientras tanto y a modo de respaldo (por si en algun momento me convierto
+al lado privativo de la fuerza&hellip;) les presento las ultimas novedades
+codificadas del proyecto</p>
 
-<h2 id="my-and-mrs-emacs">My and mrs Emacs</h2>
+<p>Primero se agrego <strong>katana</strong> que conceptualmente se encarga de parsear/cortar el
+texto plano formateado, y regresar una estructura convenientemente estructurada
+que facilita cualquier labor a realizar.</p>
 
-<blockquote>
-<p>Yo y la señora Emacs,
-tenemos algo que esta creciendo,
-sabemos que está mal,
-pero es algo muy fuerte como para dejarlo ir ahora.</p>
+<p>Dentro de la estructura se enucuentran los datos del documento y opciones,
+ademas de un arreglo de <strong>nodos</strong>, llamado <code>Toc</code> donde cada elemento es un
+encabezado (de cualquier nivel) que contiene los parrafos, listas, abouts,
+tablas, comandos, etc.</p>
 
-<p>Nos vemos cada dia en el mismo monitor,
-a las 8:30 se que estará ahí,
-tomando mis comandos, haciendo toda clase de funciones,
-mientras moc toca nuestra canción favorita.</p>
+<p>Luego se agrego <strong>nirvana</strong> (nombre temporal) que conceptualmente se encarga de
+desplegar visualmente los documentos. Al momento de escribir esto, solamente hay
+un poco de codigo que muestra el documento en terminal.</p>
 
-<p>Yo y la señora, señora Emacs, señora Emacs, señora Emacs,
-tenemos algo que esta creciendo,
-sabemos que esta mal,
-pero es algo muy fuerte como para dejarlo ir ahora.</p>
+<p>Creo que este componente terminara por desaparecer, o incorparese de otra
+manera, en fin&hellip;</p>
 
-<p>Tenemos que ser muy cuidadosos,
-de no llevar nuestros sueños muy lejos,
-porque ella tiene sus propias obligaciones y yo también,
-yo y la señora, señora Emacs, señora Emacs, señora Emacs.</p>
+<p>Finalmente para que funsionase <strong>nirvana</strong> era necesario poder dibujar cosas en
+terminal, siguiendo la <q>Canonical Way</q> tome codigo de internet (termbox-go)
+sobre el cual edificar mi propia libreria de manejo de terminal, con casinos y
+colegialas japonesas! el nombre? <strong>tui</strong> (text user interface) que esta
+fuertemente impirado en ncurses, pero con un poco de orientacion a objetos</p>
 
-<p>Bueno, es nuestra hora de irnos,
-me duele mucho, mucho por dentro,
-y ahora ella tomará su camino, yo el mio,
-Pero mañana nos veremos en el mismo lugar, a la misma hora.
-Yo y la señora Emacs, señora Emacs, señora Emacs&hellip;</p>
-</blockquote>
+<p>Ahora, la integracion entre <strong>nirvana</strong> y <strong>tui</strong> fue compleja, pues aun con el
+documento parseado (katana), la interaccion entre el formato y su tratamiento a
+<q>imagen</q> no es un asunto trivial, lo que termine haciendo fue agregar
+interpretacion directa del formato en <strong>tui</strong> con un objeto llamado <code>Pad</code></p>
 
-<p>&hellip;cof, cof, hem, todo aspirante a programador debe eligir su martillo
-forjador de codigo, en mi caso al ser autodidacta unicamente las opiniones de
-internet sirvieron de guia (lagrimas ironicas).</p>
+<p>Bueno, bueno, estos son temas para charlas directas o libros extensos (escritos
+por gente competente), el codigo esta echo al vapor con porciones grandes de
+espageti, es decir, es un lio, aunque tiene un regusto, que deja la impresion de
+llegar a ser algo molon algun dia en un futuro proximo.</p>
 
-<p>Primero vino la bestia (<strong>VI</strong>), fue dificil, muy dificil (mas sin saber
-mecanografia). Hubo que anotar las combinaciones frecuentes en un papel y pegar
-los ojos al teclado y luego al monitor y luego al teclado. Dia tras dia mejoraba
-mi Kung Fu y la idea de ser un programador parecia no ser solo un sueño. Tras un
-mes de entrenamiento y con algo de confianza probe un enfoque mas visual
-(<strong>gedit</strong>), el resultado? Un sin sabor, era sencillo pero no tenia profundidad,
-carecia de potencia, en resumen aburrido, de regreso al viejo dojo encontre una
-nueva escuela (<strong>Emacs</strong>), las clases eran gratis y prometian ser interesantes</p>
+<p>Libero esta prematura version, con motivo de poder mostrarla en una sede del
+flisol, para agregar o convencer, a seres que se una al proyecto.</p>
 
-<p>Tras una semana con el tutorial, era tan agil con Emacs como con Vi, nada mal,
-se podia hacer todo con el teclado y si lo queria tambien tenia menus accesibles
-tanto por las <code>F</code>s como por el raton (esto ultimo es increible, todo aquel que
-asimila la <strong>forma Emacs</strong> inevitablemente termina por hacer a un lado el
-raton. ¿Quien demonios sigue programando esto?).</p>
+<p>No deja de ser una prueba de concepto. Muchas caracteristicas no fueron
+implementadas, con otras no se que hacer para la version de terminal
+(imagenes/videos), ademas la libreria grafica presenta algunos &ldquo;artefactos&rdquo;
+ocacionalmente, creo que debidos al unicode.</p>
 
-<p>Tras unos dias (y con ayuda de algun tutorial) puede cambiar el tema, luego
-descubri que se podia navegar por los ficheros desde emacs y que tenia
-terminales e interpretes y un tetris y un navegador web y gestor de paquetes y
-soporte para cualquier lenguaje de programacion (almenos resaltado) y un sin fin
-de utiles(?) aplicaciones, sin embargo <strong>todas compartian el mismo conjunto de
-comandos base</strong> para moverse por la interfaz y manipular texto, aprender lo
-especifico de cada funcionalidad (en gerga de emacs, <strong>modo</strong>) es un tema
-aparte que requiere una memoria exepcional</p>
+<p>Con todo, me sorprende el resultado, aun con la libreria de expresiones
+regulares hecha en casa, la lectura del fichero, el parseo, transformaciones y
+visualizacion, un documento que en pdf abarca casi 600 paginas, se despliega en
+terminal en cerca de 2 segundos (sin programacion paralela, que de eso, aun no
+conosco), alucinante! esta es la razon por la que utilizar lenguajes de
+scripting es un error, el <q>desarrolla rapido, ejecuta lento</q> es un
+desproposito! todo programa debe aspirar a la grandeza, a la eficiencia y ser
+veloz!</p>
 
-<p>Cai como un yonqui adicto a cualquier informacion de emacs (los no hablantes de
-ingles tenemos un poco mas dicil&hellip; todo), apenas aprendi algun nuevo comando lo
-ponia en practica (para olvidarlo un par de horas despues)</p>
+<p>oh, modifique un poco el comando. Ahora se utiliza <code>morg export
+mi-documento.morg</code> para convertir del funte a html y <code>morg tui
+mi-documento.morg</code> para mostrar el documento en terminal</p>
 
-<p>Y un buen dia entientes que puedes programar emacs, que todo comportamiento es
-modificable y de echo es modificable <strong>al vuelo</strong> y te preguntas <strong>¿Que es
-Emacs?</strong></p>
+<p>si aun no tienen instalado morg, pero ya cuentan con go</p>
 
-<h2 id="emacs-es">Emacs Es&hellip;</h2>
+<pre><code>go get -v github.com/nasciiboy/morg
+</code></pre>
 
-<p>El interprete de un lenguaje derivado de Lisp (Emacs Lisp). De hecho es el
-interprete mas sofisticado que existe y probablemente existira, ya que viene con
-el suficiente codigo precargado como para (hacerte creer que es un editor y)
-permitirte crear nuevos programas, funcionalidades o modificar Emacs en si
-mismo&hellip; existe un mejor diseño que ese?</p>
+<p>o si ya lo tienes, para actualizar</p>
 
-<h2 id="enfoques-sobre-el-texto">Enfoques sobre el texto</h2>
+<pre><code>go get -u -v github.com/nasciiboy/morg
+</code></pre>
 
-<p><strong>teco</strong>: un leguaje para forjar texto</p>
+<p>(nota: aun no actualizo los readmes de proyecto, quiza en un par de dias)</p>
 
-<p><strong>vi</strong>: escribamos caracteres o apliquemos comandos a los caracteres</p>
+<p>me gustaria decir <strong>Happy Haking</strong>&hellip; pero ni el codigo, ni el formato estan aun
+definidos por lo que trabajar en ellos en este momento puede ser (o no) una
+perdida de tiempo&hellip; veanlo como un adelanto del 🌈futuro🌈</p>
 
-<p><strong>Emacs</strong>: el texto es la interfaz, el editor es parte de la interfaz,
-extendamos y modifiquemos a voluntad y sin restricciones nuestra interfaz</p>
+<h2 id="mooo">Mooo</h2>
 
-<p><strong>nano</strong>: un simple editor</p>
+<p><img src="http://nasciiboy.github.io/img/katana-1.png" alt="" /></p>
 
-<p><strong>vim</strong>: joder, lo que pueden hacer los de emacs, haremos a vi extensible</p>
+<p>unas <strong>capturas</strong> del invento en accion</p>
 
-<p><strong>sublime</strong>: hare mi propio vim</p>
+<p><img src="http://nasciiboy.github.io/img/katana-2.png" alt="" /></p>
 
-<p><strong>atom</strong>: hagamos un editor como sublime pero con tecnologia web awesome!</p>
+<p><img src="http://nasciiboy.github.io/img/katana-3.png" alt="" /></p>
+
+<p><img src="http://nasciiboy.github.io/img/katana-4.png" alt="" /></p>
+
+<p><img src="http://nasciiboy.github.io/img/katana-5.png" alt="" /></p>
 </div>
 </article>
 
@@ -299,9 +291,9 @@ extendamos y modifiquemos a voluntad y sin restricciones nuestra interfaz</p>
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
-    <li><span class="path-pwd">Que es GNU Emacs?</span></li>
+    <li><span class="path-pwd">Nirvana</span></li>
   </ul>
 </main>
 
