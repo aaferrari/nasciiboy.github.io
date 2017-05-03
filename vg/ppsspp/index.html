@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
   <head>
     <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>Definir atajos en Emacs - nba - GNU&#39;s Rock</title>
+    <title>PPSSPP - nba - GNU&#39;s Rock</title>
     
     <style media="screen">
 :root {
@@ -183,185 +183,115 @@ img:hover { border: 0.05em solid #fff; }
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg/</span></a></li>
     
-    <li><span class="path-pwd">Definir atajos en Emacs</span></li>
+    <li><span class="path-pwd">PPSSPP</span></li>
   </ul>
 
   <article>
-  <h1 class="title">Definir atajos en Emacs</h1>
+  <h1 class="title">PPSSPP</h1>
 
-  <time datetime="2017-01-07 09:38:46 -0600 CST">Jan 7, 2017</time>
+  <time datetime="2017-05-02 20:02:37 -0500 CDT">May 2, 2017</time>
 
   <div class="article-body">
 
-<p><img src="../kara.jpg" alt="" /></p>
+<p><img src="../fs.jpg" alt="" /></p>
 
-<p>En emacs, tu puedes crear cualquier atajo de teclado para cualquier comando</p>
+<p>Cambiando un poco de enfoque me dispuse a jugar un rato con el emulador que mas
+me gusta <strong>PPSSPP</strong>, que&hellip; sirve para jugar roms de <strong>psp</strong>, este ultimo es un
+cacharro que cuando salio alucinaba por tener, pero como siempre he sido pobre
+de mente y economia nunca tuve, ya mas tarde me pasaron uno para que le pusiera
+algunos jugos, pero me parecio un cacharro de mala calidad</p>
 
-<p>Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de
-configuracion de emacs</p>
+<p>bueno, dejando la anecdota de lado, <strong>PPSSPP</strong>, es de lejos el emulador mas
+bonito y atractivo que he visto jamas ensima es software libre!</p>
 
-<pre><code class="language-elisp">(global-set-key (kbd &quot;&lt;f7&gt;&quot;) 'calendar)
+<p><img src="../ppsspp.png" alt="" /></p>
+
+<p>Tiene una tienda de Homebrew, aunque todo es <q>gratis</q>, admite mandos o al
+menos el logitech F710 no tiene problemas, porsupuesto los controles y atajos
+son configurables, biene en español y esta muy bien optimisado. Corre hasta en
+equipos androide, claro, hay que ser realistas y darle al menos un i3 para que
+se desempeñe como es debido.</p>
+
+<p>En mi caso con un celeron 847 de dos nucleos a 1.1GHZ, fluido va&hellip; aunque hay
+que aclarar que lo unico que juego (y fui younqui un rato) es el Lumines (I y II)</p>
+
+<p><img src="../lumines.png" alt="" /></p>
+
+<p>es algo asi como un tetris psicotropico con una cabra (u otro avatar) pulsante del
+lado izquierdo, la gracia es unir cuatro o mas elementos del mismo color, hacer
+combos de uniones o despejar uno o ambos colores de la pantalla por la eternidad
+(la puntuacion mas alta que he alcanzado es de 346348 puntos, algo asi como dos
+horas de juego</p>
+
+<p>Pero bueno no todo es felicidad y vicio, queria probar algo mas plataformero y
+me encontre el <strong>MegaMan Maverick X Hunter</strong>, pero el ppsspp se colgaba, asi que
+supuse que serian cosas del programa, y toco probar con una version nueva del
+programa, pues la ultima ya tenia como un año que la habia compilado</p>
+
+<h2 id="compilar">Compilar</h2>
+
+<p>El codigo fuente esta en github, al parecer ya incluye todas las dependencias
+necesarias, exepto o <strong>sdl2</strong> o algo de <strong>qt</strong> (ya sera al gusto de compilador) (Nota:
+si en el proceso de compilacion te dice que hace falta una libreria la buscas y
+la instalas)</p>
+
+<pre><code>git clone https://github.com/hrydgard/ppsspp.git
+cd ppsspp
+git submodule update --init
+./b.sh
+cd build
 </code></pre>
 
-<p>Si estas experimentando y no deseas reiniciar emacs cada vez que intentas
-definir un nuevo atajo, puedes colocar el cursor al final del ultimo parantesis
-e invocar a (<code>M-x</code>) <code>eval-last-sexp</code> (comando ligado a <code>C-x C-e</code>). El atajo se
-activa de inmediato. Para salir del buffer calendario presiona <code>q</code>.</p>
+<p>y ya esta, en la carpeta <code>build</code> encontraras un ejecutable <code>PPSSPP</code> un click o
+un <code>./PPSSPP</code> + unas roms y felicidad en un binario que incluye todas sus
+librerias para correr de forma autonoma, lo lleves a donde lleves&hellip; o asi fue
+la ultima ves que compile.</p>
 
-<p>Si cometes algun error y necesitas iniciar emacs sin cargar el archivo de
-configuracion, puedes iniciar emacs desde el terminal con este comando:</p>
+<p>En la version mas actual directa del repositorio, me ha salido esto</p>
 
-<pre><code class="language-bash">emacs --no-init-file
+<pre><code>CMake Error: Cannot determine link language for target &quot;armips&quot;.
+CMake Error: CMake can not determine linker language for target: armips
+-- Generating done
+-- Build files have been written to: /home/nasciiboy/apt/vg-dev/emu/ppsspp/ppsspp-git/build
 </code></pre>
 
-<h2 id="sintaxis">sintaxis</h2>
+<p>ni idea para que necesite el <code>armips</code>, tampoco encontre mucho al respecto, asi
+que baje un binario precompilado desde su pagina</p>
 
-<p>La funcion para definir atajos es</p>
+<h2 id="buscar-binario-desde-la-pagina-oficial">Buscar Binario desde La pagina oficial</h2>
 
-<pre><code class="language-elisp">(define-key map COMBINACION 'FUNCION)
-</code></pre>
+<p>antes de hacer esto, mejor revisa si esta en los repositorios oficiales, hasta
+donde se no lo incluien ni debian ni freidora</p>
 
-<p>donde <code>map</code> es un mapa de combinaciones, o por decirlo de alguna forma, un
-prefijo que precede a la combinacion en si</p>
+<p><a href="http://www.ppsspp.org/downloads.html">http://www.ppsspp.org/downloads.html</a></p>
 
-<ul>
-<li><code>ctl-x-map</code> con prefijo <code>C-x</code></li>
-<li><code>ctl-x-4-map</code> con prefijo <code>C-x 4</code></li>
-<li><code>ctl-x-5-map</code> con prefijo <code>C-x 5</code></li>
-<li><code>ctl-x-r-map</code> con prefijo <code>C-x r</code></li>
-<li><code>esc-map</code>  con prefijo <code>ESC</code></li>
-<li><code>help-map</code>  con prefijo <code>C-h</code></li>
-<li><code>global-map</code> (sin prefijo) para cualquier combinacion. Esta ultima tiene una
-funcion dedicada y en ella centraremos la explicacion</li>
-</ul>
+<p>descomprimes el binario y te llebas la carpeta a dende mejor te convenga</p>
 
-<pre><code class="language-elisp">(global-set-key COMBINACION 'FUNCION)
-</code></pre>
+<h2 id="homebrew">Homebrew</h2>
 
-<p>La <code>COMBINACION</code> de teclas puede ser cualquiera de estas 3 formas</p>
+<p>Como futuro rey de los <s>piratas</s> programadores, mi sueño es encontrar el
+One Code, un tesoro compuesto por libros de programacion en español de cualquier
+tema imaginable, bien desarrollados, entendibles por paletos como yo y en un
+formato molon.</p>
 
-<ul>
-<li><p><code>&quot;letra&quot;</code>. Una unica letra de a-z o 1-9 dentro de comillas</p></li>
+<p>Para mi desgracia, hasta el dia de hoy no he dado ni un puñetero libro
+para programar videojuegos descente, menos aun para programar en esos sistemas
+dedicados en hardware y software al ocio electronico (mejor conosidos como
+consolas) que exponga el tema. Oh lo que daria por una biblia de programacion
+para el nes (en ensablador) o el snes, o el gameboy y quisa para el psp o la n64</p>
 
-<li><p><code>[nombre]</code>. <code>nombre</code>, se substiye por el nombre interno o por el codigo que
-emacs asigna a cada tecla, la combinacion puede contener mas de una tecla pero
-siempre se efectua en un solo paso, por ejemplo <code>[s-left]</code> es presionar la
-tecla super + la tecla fecha izquierda, <code>[s-kp-5]</code> es presionar la
-tecla super + la tecla 5 del pad numerico.</p></li>
+<p>Mietras tanto, evado el asunto consiguiendo roms en el unico sistema de
+distribucion libre, los torrents!</p>
 
-<li><p><code>(kbd &quot;sequencia&quot;)</code>. <code>sequencia</code> es cualquier combinacion del teclado colocada
-entre parentesis, esta puede separarse en varios pasos si se coloca un espacio
-en blanco entre los nombres de las teclas. Dentro de la cadena, para hacer
-referencia a la tecla control, colocamos <code>C</code>, para meta/esc <code>M</code>, y para
-super <code>s</code>, las tres siempre van en conjunto con alguna otra tecla siguiendo el
-formato <code>C-tecla</code>, <code>M-tecla</code> o <code>s-tecla</code>. Finalmente podemos hacer referencia
-al nombre interno de una tecla, al colocarlo entre mayor que y menor que, por
-ejemplo <code>(kbd &quot;&lt;f8&gt;&quot;)</code> sera la tecla F8</p></li>
-</ul>
+<p>Ya para terminar, al parecer el problema que tenia la vercion anterior con el
+MegaMan era la reproduccion de videos, asunto solucionado en versiones
+recientes, pero mi procesador no lo mueve fluido, ni el Gran Turismo, pero el
+Sega Rally va fino, fino</p>
 
-<p>este es el nombre interno de algunas teclas</p>
-
-<ul>
-<li><code>backspace</code> retroceso</li>
-<li><code>return</code> enter</li>
-<li><code>delete</code> suprimir</li>
-<li><code>up</code> flecha arriba</li>
-<li><code>down</code> flecha abajo</li>
-<li><code>right</code> flecha derecha</li>
-<li><code>left</code> flecha izquierda</li>
-<li><code>f1</code>..<code>f35</code>tecla de funcion de F1 a F35</li>
-<li><code>home</code> Inicio</li>
-<li><code>end</code> Fin</li>
-<li><code>help</code> Ayuda</li>
-<li><code>kp-0</code>.. <code>kp-9</code> numeros del pad numerico</li>
-<li><code>kp-subtract</code> menos del pad numerico</li>
-<li><code>kp-add</code> mas del pad numerico</li>
-<li><code>kp-enter</code> enter del teclado numérico</li>
-<li><code>kp-decimal</code> punto decimal del teclado numérico</li>
-<li><code>next</code> AvPag</li>
-<li><code>prior</code> RePag</li>
-</ul>
-
-<h2 id="ejemplos">ejemplos</h2>
-
-<pre><code class="language-elisp">(global-set-key [s-left]  'windmove-left)
-(global-set-key [s-right] 'windmove-right)
-(global-set-key [s-up]    'windmove-up)
-(global-set-key [s-down]  'windmove-down)
-
-(global-set-key (kbd &quot;C-c &lt;left&gt;&quot;)  'windmove-left)
-(global-set-key (kbd &quot;C-c &lt;right&gt;&quot;) 'windmove-right)
-(global-set-key (kbd &quot;C-c &lt;up&gt;&quot;)    'windmove-up)
-(global-set-key (kbd &quot;C-c &lt;down&gt;&quot;)  'windmove-down)
-
-(global-set-key (kbd &quot;C-c o&quot;) 'recentf-open-files)
-(global-set-key (kbd &quot;C-x C-b&quot;) 'ibuffer)
-
-(global-set-key [return] 'backward-char)
-(global-set-key (kbd &quot;&lt;return&gt;&quot;) 'backward-char)
-(global-set-key (kbd &quot;&lt;f7&gt; &lt;f8&gt;&quot;) 'calendar)
-</code></pre>
-
-<h2 id="conocer-el-comando-ligado-a-un-atajo">Conocer el comando ligado a un atajo</h2>
-
-<p>Si invocamos a <code>describe-key</code> (<code>C-h k</code>) y, a continuacion, se presiona un atajo,
-emacs mostrara el comando al que esta ligado.</p>
-
-<p>Por ejemplo, supongamos que deseamos conocer el comando ligado a
-<code>C-M-g</code>. Primero se llama a <code>describe-key</code>, luego se presiona la combinacion de
-teclado, entonces emacs imprimira <code>C-M-g is undefined</code>. Esto significa que
-puedes utilizar <code>(kbd &quot;C-M-g&quot;)</code> para representar una combinacion de teclas en
-codigo lisp.</p>
-
-<h2 id="combinaciones-a-evitar">Combinaciones a evitar</h2>
-
-<p>Emacs tiene sus caprichos. Es mejor no definir las siguientes combinaciones, a
-menos que sepas lo que estas haciendo.</p>
-
-<ul>
-<li><p><code>C-cualquierLetra</code>. Dada la forma en que emacs esta implementado utiliza la
-sintaxis &ldquo;C-letra&rdquo; para un monton de atajos preestablecidos</p></li>
-
-<li><p><code>F1</code> o <code>C-h</code>. Emacs utiliza esta combinacion para el sistema de ayuda de emacs
-y tiene un estado especial en el sistema de comandos de emacs.</p></li>
-
-<li><p><code>ESC</code> o <code>C-[</code>. Esta combinacion por si misma tiene un significado complicado,
-dependiendo de cauntas veces se presione</p></li>
-
-<li><p><code>C-Shift-letra</code>. Algunos terminales no pueben dintingur las versiones de la
-combinacion con Shift de la version sin Shift</p></li>
-</ul>
-
-<h2 id="buenas-opciones">Buenas opciones</h2>
-
-<p>Emacs tiene unos siete mill comandos. De forma predeterminada, 800 de ellos
-tiene un atajo. Si defines tus propios atajos sin cuidado es posible que muchos
-modos primarios o secundarios anulen tus combinaciones, ya que estas tiene
-prioridad.</p>
-
-<p>En la documentacion oficial de emacs, Las combinaciones libres para el usuario
-son de F5 a F9 y <code>C-c letra</code>.</p>
-
-<p>Las siguientes combinaciones son buenos puntos de partida para tus propias
-definiciones, y no causan ningun problema en la practica</p>
-
-<ul>
-<li><p><code>F5</code>, <code>F6</code>, <code>F7</code>, <code>F8</code>, <code>F9</code>, <code>F12</code>. Puden combinarse sin problemas con
-Ctrl. Asegurate que no los utilize el sistema operativo.</p></li>
-
-<li><p>Super o Hyper. Cualquier combinacion con estas es buena, pero es posible que
-el terminal no reconosca las teclas Super o Hyper.</p></li>
-</ul>
-
-<h2 id="fuentes">fuentes</h2>
-
-<p>buena parte del articulo es una pseudo-traduccion de</p>
-
-<p><a href="http://ergoemacs.org/emacs/keyboard_shortcuts.html">http://ergoemacs.org/emacs/keyboard_shortcuts.html</a></p>
-
-<p>otra, es una invencion no contrastada con el manual</p>
+<p>O, del Homebrew solo recomendar <strong>Attack Of the Mutants</strong> y el siempre
+incombustible <strong>Cave Story</strong>, aunque este mejor jugar el port nativo <a href="../nxEngine/index.html">nxEngine</a></p>
 </div>
 </article>
 
@@ -369,9 +299,9 @@ el terminal no reconosca las teclas Super o Hyper.</p></li>
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg/</span></a></li>
     
-    <li><span class="path-pwd">Definir atajos en Emacs</span></li>
+    <li><span class="path-pwd">PPSSPP</span></li>
   </ul>
 </main>
 

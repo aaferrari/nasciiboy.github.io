@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nasciiboy.github.io/vg/ppsspp/</loc>
+    <lastmod>2017-05-02T20:02:37-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/nirvana/</loc>
     <lastmod>2017-04-20T11:54:03-05:00</lastmod>
   </url>
@@ -252,7 +257,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/howto/</loc>
-    <lastmod>2017-03-12T09:33:15-06:00</lastmod>
+    <lastmod>2017-05-02T20:02:37-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -366,13 +371,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/vg/</loc>
-    <lastmod>2017-01-01T14:56:59-06:00</lastmod>
+    <lastmod>2017-05-02T20:02:37-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/vg/</loc>
-    <lastmod>2017-01-01T14:56:59-06:00</lastmod>
+    <lastmod>2017-05-02T20:02:37-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -384,7 +389,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-04-20T11:54:03-05:00</lastmod>
+    <lastmod>2017-05-02T20:02:37-05:00</lastmod>
     <priority>0</priority>
   </url>
   
