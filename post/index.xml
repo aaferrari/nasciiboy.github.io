@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sun, 02 Apr 2017 21:08:41 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 14 May 2017 21:52:45 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen II</title>
+      <link>http://nasciiboy.github.io/post/ramen-ii/</link>
+      <pubDate>Sun, 14 May 2017 21:52:45 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/ramen-ii/</guid>
+      <description>Ho, ho, ho, ho! un par de temas alteran mi ser, ambos relacionados con el software libre, la programacion, el sistema, la prision, etc&amp;hellip;
+el primero con nombre tentativo fin de la infancia&amp;hellip; del software libre o algo asi, quiza sea un tema superado, pero recien llega a mi conciencia y es probable que sea el siguiente post (o no).
+El otro esta relacionado con esa cosa llamada morg, el lenguaje de programacion golang, alguna opinion (poco informada) sobre lenguajes de programacion, traducciones y mi postura sobre la comparticion de material.</description>
+    </item>
     
     <item>
       <title>Ramen I</title>
