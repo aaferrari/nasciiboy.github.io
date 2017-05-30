@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Wed, 22 Feb 2017 21:08:41 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 14 May 2017 21:52:45 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/tags/anime/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen II</title>
+      <link>http://nasciiboy.github.io/post/ramen-ii/</link>
+      <pubDate>Sun, 14 May 2017 21:52:45 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/ramen-ii/</guid>
+      <description>Ho, ho, ho, ho! un par de temas alteran mi ser, ambos relacionados con el software libre, la programacion, el sistema, la prision, etc&amp;hellip;
+el primero con nombre tentativo fin de la infancia&amp;hellip; del software libre o algo asi, quiza sea un tema superado, pero recien llega a mi conciencia y es probable que sea el siguiente post (o no).
+El otro esta relacionado con esa cosa llamada morg, el lenguaje de programacion golang, alguna opinion (poco informada) sobre lenguajes de programacion, traducciones y mi postura sobre la comparticion de material.</description>
+    </item>
+    
+    <item>
+      <title>Ramen I</title>
+      <link>http://nasciiboy.github.io/post/ramen-i/</link>
+      <pubDate>Sun, 02 Apr 2017 21:08:41 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/ramen-i/</guid>
+      <description>Hace unas semanas que no publico naha, que por haber cosas recomendaciones o temas no han faltado, pero entre la pereza y la programacion, no ha salido naha.
+Como paleativo e imitando otros blogs (kofff&amp;hellip; onda hostil, quijote libre) abro esta seccion para contar en que ando, prefiero poner una post de una tematica particular, pero ya sera cuando termine este mes.
+Katata El motivo principal del silencio literario fue katana, un componenten del proyecto morg (que encontraran dentro de las etiquetas del lado derecho de este blog).</description>
+    </item>
     
     <item>
       <title>Kuzu no Honkai</title>

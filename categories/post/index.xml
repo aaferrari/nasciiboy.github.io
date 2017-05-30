@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sun, 14 May 2017 21:52:45 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 15 May 2017 18:17:59 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/categories/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>El fin de la infancia... del Software Libre</title>
+      <link>http://nasciiboy.github.io/post/eof-fs/</link>
+      <pubDate>Mon, 15 May 2017 18:17:59 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/eof-fs/</guid>
+      <description>El open source a triunfado! incuestionable es afirmar que todas las &amp;ldquo;grandes&amp;rdquo; empresas del sector informatico, automotris, finaciero y academico basan su infraestructura informatica en &amp;ldquo;tecnologias de codigo abierto&amp;rdquo;. Esto lo sabe cualquier hijo de vecino (bien informado (o no) del tema y que disponga de un poco de criterio).
+Si bien es cierto, que aun esta lejos el dia en que esta &amp;ldquo;filosofia&amp;rdquo; se implante a nivel hardware, y en ambitos mas mundanos como &amp;ldquo;apps&amp;rdquo;, videojuegos, literatura cine y demas, el movimiento &amp;ldquo;open&amp;rdquo; no dara marcha atras, no solo por ser una estrategia de desarrolo superior a nivel tecnico, tambien por ser la unica opcion economicamente viable dado lo complejo que es el desarrollo de sistemas y herramientas fiables y duraderas.</description>
+    </item>
     
     <item>
       <title>Ramen II</title>
