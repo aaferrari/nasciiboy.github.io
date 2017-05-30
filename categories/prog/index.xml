@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Thu, 20 Apr 2017 11:54:03 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 29 May 2017 22:02:43 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/categories/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>El Lenguaje De programacion Go</title>
+      <link>http://nasciiboy.github.io/prog/tgpl/</link>
+      <pubDate>Mon, 29 May 2017 22:02:43 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/tgpl/</guid>
+      <description>golang, el lenguaje de programacion de sistemas de la gente de google con el que planea llebar a cabo sus mas retorcidos y stalkerosos deseos.
+Hoy y tras pocos meses de programacion y muchas horas de investigacion linguistica intentando entender el english, les traigo una reseña de la biblia de golang (Go para los amigos) The Go Programming Language (en adelante TGPL o GPL(?))
+el libro los usa-americanos tinen sus medidas extravagantes, siguiendo su ejemplo, yo mido la extencion de un documento en las lineas (de 80 columnas indentadas) que abarca, por ejemplo, 7000-10000 lineas suelen ser la extencion regular de una novela, debajo de esta cantidad es un trabajo corto, superior de esta es extenso y superior a las 20000 lineas ya es muy extenso, aunque Dune utiliza (y muy bien) la friolera y descomunal cantidad de 34150 lineas.</description>
+    </item>
     
     <item>
       <title>Nirvana</title>
