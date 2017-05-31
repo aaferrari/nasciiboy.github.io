@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Mon, 15 May 2017 18:17:59 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 30 May 2017 20:04:38 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NasciiBoy Inc.</title>
+      <link>http://nasciiboy.github.io/post/nasciiboy-inc/</link>
+      <pubDate>Tue, 30 May 2017 20:04:38 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/nasciiboy-inc/</guid>
+      <description>je, aunque morg, se gesto hace mas de un año, vivo, vivo tiene apenas unos meses, pese que le falta un muy largo trayecto de programacion y muchas cosas mas, me gusta su estado actual, ya he cumplido mi primera y mayor ambicion con el, que era poder exportar cosas, ahora, necesita para iniciar, herramientas que tomen un documento y lo autoformateen, que creen un archivo para traduccion, envien y autotraduscan una primera version (con apertium, aunque no descarto utilizar la api de google).</description>
+    </item>
     
     <item>
       <title>El fin de la infancia... del Software Libre</title>
