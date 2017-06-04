@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://nasciiboy.github.io/post/ramen-iii/</loc>
+    <lastmod>2017-06-04T14:57:33-05:00</lastmod>
+  </url>
   
   <url>
     <loc>http://nasciiboy.github.io/post/nasciiboy-inc/</loc>
@@ -199,7 +205,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/anime/</loc>
-    <lastmod>2017-05-14T21:52:45-05:00</lastmod>
+    <lastmod>2017-06-04T14:57:33-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -265,7 +271,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/fonos/</loc>
-    <lastmod>2017-05-14T21:52:45-05:00</lastmod>
+    <lastmod>2017-06-04T14:57:33-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -325,13 +331,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/post/</loc>
-    <lastmod>2017-05-30T20:04:38-05:00</lastmod>
+    <lastmod>2017-06-04T14:57:33-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/post/</loc>
-    <lastmod>2017-05-30T20:04:38-05:00</lastmod>
+    <lastmod>2017-06-04T14:57:33-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -355,7 +361,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/ramen/</loc>
-    <lastmod>2017-05-14T21:52:45-05:00</lastmod>
+    <lastmod>2017-06-04T14:57:33-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -409,7 +415,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-05-30T20:04:38-05:00</lastmod>
+    <lastmod>2017-06-04T14:57:33-05:00</lastmod>
     <priority>0</priority>
   </url>
   
