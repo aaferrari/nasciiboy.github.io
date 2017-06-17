@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
   <head>
     <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>Ramen II - nba - GNU&#39;s Rock</title>
+    <title>Crear una paleta de color con solo un indice - nba - GNU&#39;s Rock</title>
     
     <style media="screen">
 :root {
@@ -183,148 +183,252 @@ img:hover { border: 0.05em solid #fff; }
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
-    <li><span class="path-pwd">Ramen II</span></li>
+    <li><span class="path-pwd">Crear una paleta de color con solo un indice</span></li>
   </ul>
 
   <article>
-  <h1 class="title">Ramen II</h1>
+  <h1 class="title">Crear una paleta de color con solo un indice</h1>
 
-  <time datetime="2017-05-14 21:52:45 -0500 CDT">May 14, 2017</time>
+  <time datetime="2017-06-17 12:39:43 -0500 CDT">Jun 17, 2017</time>
 
   <div class="article-body">
 
-<p>Ho, ho, ho, ho! un par de temas alteran mi ser, ambos relacionados con el
-software libre, la programacion, <q>el sistema</q>, la prision, etc&hellip;</p>
+<p><img src="http://nasciiboy.github.io/img/mandelbrot.png" alt="" /></p>
 
-<p>el primero con nombre tentativo <b><q>fin de la infancia&hellip; del software
-libre</q></b> o algo asi, quiza sea un tema superado, pero recien llega a mi
-conciencia y es probable que sea el siguiente post (o no).</p>
+<p>que tal, como lo indica el titulo vamos a generar una paleta de color apartir de
+un unico indice, para, por ejemplo para colorear una imagen en una escala de
+colores RGB del negro absoluto (0,0,0) al blanco (255,255,255), con una
+trancicion &ldquo;suave&rdquo; por estos</p>
 
-<p>El otro esta relacionado con esa cosa llamada <q>morg</q>, el lenguaje de
-programacion golang, alguna opinion (poco informada) sobre lenguajes de
-programacion, traducciones y mi postura sobre la comparticion de
-<strong>material</strong>. No es nada nuevo bajo el sol, a mi edad ya deberia saber que no
-sere un heroe del rock, que deberia levantarme temprano, creer en algun dios,
-ser responsable y demas mierdas, pero que se puede hacer, en mi mente aun tengo
-17</p>
+<p>El asunto surgio resolviendo algunos de los ejercicios de libro de programacion
+de go, especificamente el 3.5, donde proponian dar color a una imagen de
+mandelbrot, que estaba en una escala de grises (de hay viene lo de generar los
+colores apartir de un solo indice).</p>
 
-<p>Hasta hace dos semanas, me encontraba programando un poco, pero por distintas
-razones y necesidad, decidi aparcar el tema y ponerme a traducir cosas, aprender
-un rato y quisa ponerme en serio con eso de <q>las matematicas</q> y el ingles,
-al menos hasta mejorar mi kung fu y poder leer libros serios, de esos de
-compiladores, interpretes, grafos, estructuras de datos y demas. La verdad es
-que entre esto y buscar empleo, pues, he, como decirlo, jo, pues a leer y
-traducir cosas que luego es tarde</p>
+<p>La primer y mas facil solucion es utilizar una paleta de colores prefabricada y
+adaptar el indice a un valor que entre en la paleta, pero eso es muy cutre, lo mas molon
+seria generar el color &ldquo;al vuelo&rdquo; de una paleta con un numero de colores
+arbitrario, yeee!</p>
 
-<p>puse un <a href="https://github.com/nasciiboy/TGPL">nuevo repo</a> en github, creo que aun
-me falta una semana y media, para tener algo preeliminar, pero si gustan pasar a
-echar un vistaso o almacenar una copia de respaldo</p>
+<p>entonces, como se hace? bueno&hellip; tenia una idea con un circulo de color,
+una espiral, y longitudes, pero como las mates no son lo mio, le pregunte a la gente de <a href="https://www.reddit.com/r/programacion/comments/6g28j9/generar_paleta_de_colores_con_solo_un_indice/">internet</a>
+(mejor explicado <a href="https://www.reddit.com/r/Matematicas/comments/6g5f22/recorrido_atravez_de_un_circulo_de_color_rgb/">aca</a>)</p>
 
-<p>pero bueno, no queria entrar directamente con esos temas, sin poner esta
-publicacion previa y ligera, donde les contare de forma breve algunas de las
-cosas que he estado viendo, oyendo, leyendo y lamentablemente no jugando</p>
+<p>y luego? pues, no llego la respuesta matematica que esperaba, peeeeeero una
+respuesta me dio a conocer dos modelos de color, como los que utilzaban las
+teles crt de la antiguedad</p>
 
-<h2 id="4k">4K</h2>
+<h2 id="modelo-de-color-hsl">Modelo de color HSL</h2>
 
-<p><strong>Alien Covenan</strong> intente que me gustara y aun asi sali de mal humor del cine,
-no soy muy exigente, digo como pelicula fuera de contexto Prometeus me gusto,
-pero esta, un robot <q>malevolo</q> es el creador de los aliens? en serio? que no
-estaban buscanda a unos humanoides grises con capa jedi?. Por que nadie de la
-tripulacion me importa ni un poco, peor aun la infeccion barata y unos bichos
-sin gracia&hellip; bahh esta no dura ni una semana en el cine</p>
+<p><a href="https://es.wikipedia.org/wiki/Modelo_de_color_HSL">https://es.wikipedia.org/wiki/Modelo_de_color_HSL</a></p>
 
-<p><strong>Guardines de la Galaxia II</strong>, casi igual de divertida y creo que mas
-hilarante, el inicio con el bicho bailarin no me hace gracia, ni aunque tenga a
-la ELO de fondo, y que la cinta en verdad trate de <q>los amigos</q> (o era la
-familia) no esta mal, digna secuela</p>
+<p><img src="http://nasciiboy.github.io/img/HSL.png" alt="" /></p>
 
-<p><strong>La la land</strong> no suelo ver estas cosas, pero como todos los podcast peliculeros
-que escucho la ponian muy alto, toco verla, en resumen dire que es <strong>ipnotica</strong>
-y no una sosa pelicula romantica</p>
+<p>como podemos ver, tenemos tres valores, <strong>luminosidad</strong>, <strong>saturacion</strong> y
+<strong>matiz</strong>, con la particularidad que el color inicia en negro absoluto y luego
+converge en blanco, sin embargo los colores nunca alcanzan su maximo valor puro,
+pues sin importar el matiz, si la luminosidad esta al maximo, terminaremos con un
+color blanco</p>
 
-<p><strong>Raw</strong> uuuuff, esta si es entretenida, segun trata de una chica en su despertar
-sexual (o eso dicen), pero yo vi una peli francesa(?) de un par de chicas muy
-locas, haciendo cosas divertidas y sin sentido, como en la vida real&hellip; en
-serio, en francia o por hay, asi es asistir a una facultad?. La sesion dende vi
-esto, estaba llena de chicas, y habia escenas cautivadoras, pero no, no ocurrio
-ninguna fantacia juvenil</p>
+<h2 id="modelo-de-color-hsv">Modelo de color HSV</h2>
 
-<p>y finalmente dos series anime:</p>
+<p><a href="https://es.wikipedia.org/wiki/Modelo_de_color_HSV">https://es.wikipedia.org/wiki/Modelo_de_color_HSV</a></p>
 
-<p><strong>3 gatsu no Lion</strong>, un tipo que juega al shogi y tiene problemas. Veinte y algo
-capitulos muy entretenidos, que no van a ningun lado, y&hellip; la recomiendo, me
-dieron ganas de probar eso del shogi, volverme profesional y vivir de jugar
-partidas, sera? solo me hace falta saber shogi, ser profesional y ser japones</p>
+<p>En este modelo, los colores si pueden alcanzar su maximo valor de iluminacion
+permaneciendo como un color puro o una trancicion hacia el blanco o negro segun
+al valor la saturacion y el valor de luminosidad</p>
 
-<pre><code>magnet:?xt=urn:btih:0c6bc4f7c68633eed504159f5610acad1e37d8f1&amp;dn=%5bPuyaSubs!%5d%203-%20gatsu%20no%20Lion&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounc&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce
+<p><img src="http://nasciiboy.github.io/img/HSV.png" alt="" /></p>
+
+<h2 id="codigo">Codigo</h2>
+
+<p>De entre los dos Modelos de color, escogi HSL, pues se realiza la trancicion del
+negro al blanco y con HSV la trancicion culminaria en un color especifico (si
+desea seguir este ultimo esquema, lo ideal seria generar distintos matizes con
+niveles de saturacion especificos, realizando un bucle por la luminocidad)</p>
+
+<p>aqui esta el codigo para optener un color dentro de nuestra paleta de colores</p>
+
+<pre><code>package color
+
+const colors = 255             // colores disponibles
+const secs   = 3               // seciones de color
+const sec    = colors / secs   // longitud de seccion
+
+func MagicColor( x, scale int ) (r, g, b uint8) {
+  color := int(x * colors / scale)
+
+  h := float64(color % sec) / sec
+  s := 1.0
+  l := float64(color) / colors
+
+  return hsl2rgb( h, s, l )
+}
+
+func hsl2rgb( h, s, l float64 ) (red, green, blue uint8) {
+  r, g, b := l, l, l
+
+  var v float64
+
+  if l &lt;= 0.5 {
+    v = l * (1.0 + s)
+  } else {
+    v = l + s - l * s
+  }
+
+  if v &gt; 0 {
+    m  := l + l - v
+    sv := (v - m) / v
+    h  *= 6.0
+    sextant := int(h)
+    fract := h - float64(sextant)
+    vsf   := v * sv * fract
+    mid1 := m + vsf
+    mid2 := v - vsf
+
+    switch sextant {
+    case 0: r, g, b = v, mid1, m
+    case 1: r, g, b = mid2, v, m
+    case 2: r, g, b = m, v, mid1
+    case 3: r, g, b = m, mid2, v
+    case 4: r, g, b = mid1, m, v
+    case 5: r, g, b = v, m, mid2
+    }
+  }
+
+  red, green, blue = uint8(r * 255.0), uint8(g * 255.0), uint8(b * 255.0)
+  return
+}
 </code></pre>
 
-<p><strong>Tonari no Kaibutsu-kun</strong>, una entretenida comedia romantica que no va a ningun
-lado y ya, lo meteria en la categoria de <q>si te gusto <strong>Karekano</strong></q></p>
+<p>debo aclarar que pese a que funciona segun lo planeado, los algoritmos para
+convertir de HSL (y HSV) a rgb los traduje de codigo de internete, desconosco si
+pueda hacerse mejor, por que no entiendo &ldquo;las formulas&rdquo; que proporciona la wikipedia</p>
 
-<pre><code>magnet:?xt=urn:btih:64c71e3560a49b5cb98ef2e03cbf77fdb819e8e8&amp;dn=%5bOnF%5d%20Tonari%20no%20Kaibutsu-kun%20COMPLETA&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+<p>vamos con la explicacion (de lo que entiendo), primero la funcion que cara al
+publico, es <code>MagicColor</code> que recive el indice, y el valor maximo que este puede
+alcanzar (suprimir este ultimo si se conoce de antemano o mejor aun, que la
+paleta tenga tantos colores como el valor maximo, no hice esto por pereza y por
+que las constantes en Go son &ldquo;magicas&rdquo; y no requieren de estupidos cast y se
+pueden utilizar tanto para enteros, como flotantes, como <strong>racionales</strong>(?que es
+esto?))</p>
+
+<p>la constante <code>colors</code> establece el numero de colores que tendra la paleta,
+<code>secs</code> es el numero de &ldquo;tranciciones&rdquo; atraves del matiz (<code>h</code>) es decir,
+partiendo de color rojo, pasamos por el verde y luego azul para terminar de
+nuevo en rojo. Si tenemos solo una transicion/seccion/ciclo digamos que nos
+movemos en espiral (ver dibujo HSL) negro-rojo-verde-azul-rojo-blanco si tenemos mas
+de un ciclo seria negro - <strong>(rojo-verde-azul)</strong> - blanco, donde la region
+<strong>(rojo-verde-azul)</strong>  se repite una y otra vez, con variaciones de luminocidad</p>
+
+<p>por ultimo establesco el nivel de saturacion al maximo (<code>1.0</code>, la variables de
+hsl2rgb y hsv2rgb va de 0.0 a 1.0)</p>
+
+<p>aqui esta la vercion hsv2rgb, pero como antes mencione, debemos tomar un enfoque
+distinto en MagicColor, para que la paleta tenga una variedad logica, primero un
+ciclo por la luminocidad, y dentro de este un ciclo por saturacion y matiz, no hice
+eso asi que vas por cuenta propia, aunque tampoco es muy complicado</p>
+
+<p>(Nota: agregar <code>import &quot;math</code> luego de la declaracion <code>package color</code>)</p>
+
+<pre><code>func hsv2rgb( h, s, v float64 ) (red, green, blue uint8) {
+  var r, g, b float64
+
+  i := int(math.Floor(h * 6))
+  f := h * 6 - float64(i);
+  p := v * (1 - s);
+  q := v * (1 - f * s);
+  t := v * (1 - (1 - f) * s);
+
+  switch i % 6 {
+  case 0: r, g, b = v, t, p
+  case 1: r, g, b = q, v, p
+  case 2: r, g, b = p, v, t
+  case 3: r, g, b = p, q, v
+  case 4: r, g, b = t, p, v
+  case 5: r, g, b = v, p, q
+  }
+
+  red, green, blue = uint8(r * 255.0), uint8(g * 255.0), uint8(b * 255.0)
+  return
+}
 </code></pre>
 
-<p>(nota: por falta de espacio solo compartire estos torrents una semana y a eliminar)</p>
+<p>puedes copiar el codigo y ponerlo en un fichero digamos en <code>~/color/color.go</code>, y
+hacer pruebas con lo siguiente (poner en <code>~/main.go</code>)</p>
 
-<p>tamben vi <strong>Youjo Senki</strong>, que causo furor en el fandom&hellip; no termine de verle
-la gracia, aun continuo enalteciendo <strong>Kuzu no Honkai!</strong> (pasar al post
-correspondiente)</p>
+<pre><code>package main
 
-<p>eso y otras tantas cosas que no vale la pena ni comentar, exeptuando un reciente
-descubrimiento de un canal de yutube, que estoy consumiendo de a poco y
-recomiendo encarecidamente <a href="https://www.youtube.com/user/rev0luci0nfinal">Esquizofrenia Natural</a></p>
+import (
+  &quot;fmt&quot;
+  &quot;./color&quot;
+)
 
-<h2 id="fonos">fonos</h2>
+func main(){
+  fmt.Printf( `&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; lang=&quot;&quot; xml:lang=&quot;&quot; &gt;
 
-<p><strong>Focus – Focus 3</strong> empezando con progresivo del bueno, no encontre un
-<q>recopilatorio</q> con toda la discografia de la banda (que no fuera mp3 o un
-jodido vinil) asi, que este es el primer disco de ellos que escucho, simplemento
-fantastico</p>
+  &lt;body&gt;
+` )
 
-<p><strong>Moby</strong> por recomendacion de goadfloyd y como ultimamente escucho mucho electro
-escuche una variada sellecion de este artista. Cada disco va a su rollo, y no
-estan mal pero le falta un algo que los vuelva grandes, exepto por <strong>Animal
-Rights</strong>, oh este es punk del bueno! el resto esta bien, en conjunto antes
-recomendaria la escucha de <strong>Massive Attack</strong> o <strong>Air</strong></p>
+  for i := 0; i &lt; 255; i++ {
+    r, g, b := color.MagicColor( i, 255 )
+    var c int32
+    c = int32(r) &lt;&lt; 16 | int32(g) &lt;&lt; 8 | int32(b)
 
-<p><strong>Queen II</strong>, otra recomendacion de goadfloyd, no habia tocado esta banda por
-que en mi mente eran discos sin gracia extremadamente homosexuales
-(musicalmente) como los Bee Gees, para mi sorpresa este y Queen (el disco
-homonimo) estan muy buenos, aunque por motivos extraños, no duraron mas de 5
-reescuchas, antes de pasar a otros asuntos, cuando de media el material soberbio
-suele durar en exclusiva de 2 a 5 dias en periodos de escucha de 10 horas</p>
-
-<p><strong>Gorillaz – Humanz</strong>, inesperadamente y sin aviso, esto aparecio en la lista de
-pirate bay, se bajo y duro un dia en exclusiva, y luego medios dias como por una
-semana y luego escuchas esporadicas, si eso no significa que me encanto, pues no
-se que sea. Haber, esta lejos de ser perfecto, pero tiene variedad, buen ritmo y
-piesas alucinantes (aclaro que no conosco, ni me intereza una mierda la letra,
-la voz solo es otro instrumento), mi favorita y por que soy un romantico <strong>Buster
-and Blue</strong>. Como tengo ganas de escuchar esto o el Focus bien verde</p>
-
-<p><strong>The Libertines – Up The Bracket</strong> Si te gusto el <strong>The Libertines</strong> este
-tambien te va a gustar, medio surf, alegre y sin pretenciones (creo)</p>
-
-<p><strong>The Matrix Revolutions OST</strong> tambien ponias la pista de los creditos finales
-en loop? aqui encontraras eso y mas!. Ya habia escuchado el OST de la primer
-cinta y bien a secas, sin dejar de ser una recopilacion carente de consepto
-y tambien la banda de <strong>Animatrix</strong> (electronica de la buena), pues esto es
-electro ambiental, movida turbio matrixera</p>
-
-<h2 id="docu">docu</h2>
-
-<p><strong>Eso que llamamos logica</strong> lo unico que intente leer, lo tube que dejar cuando
-comenzaron a hablar de conjuntos y cosas turbias</p>
-
-<p>y encontre dos torrents, de esos para acrecentar la libreria de libros que jamas
-leeras, sobre programacion, lisp y haskell respectivamente</p>
-
-<pre><code>magnet:?xt=urn:btih:25e504934978bf170f56f47cd1a52475d8ee1cf9&amp;dn=Lisp&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
-magnet:?xt=urn:btih:f837c2a64bb97c11940fe0bf966878cdb07ea912&amp;dn=Haskell&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969
+    fmt.Printf( &quot;&lt;span style=\&quot;color:#%06x;\&quot; &gt;a&lt;/span&gt;&quot;, c )
+  }
+  fmt.Println( &quot;&lt;/body&gt;&lt;/html&gt;&quot; )
+}
 </code></pre>
+
+<p>ir a nuestro <code>~</code> y ejecutar con <code>go run main.go &gt; prueba.html</code>, abrimos
+<code>prueba.html</code> con nuestro flamante navegador y veremos una fila de <code>a</code>s en
+escala de colores!</p>
+
+<p>para terminar, <a href="https://raw.githubusercontent.com/nasciiboy/TGPL-Exercises/master/03-05/nasciiboy/main.go">aca</a> esta
+la solucion al ejercicio que motivo este post</p>
+
+<p>descargar y ejecutar con</p>
+
+<pre><code class="language-sh">cd 'directorio-de-descarga'
+
+# para imagen mandelbrot
+go run main -m &gt; mandelbrot.png
+
+# para imagen newton
+go run main -n &gt; newton.png
+
+# para imagen sqrt
+go run main -s &gt; sqrt.png
+
+# para imagen acos
+go run main -a &gt; acos.png
+</code></pre>
+
+<p>la imagen generada con mandelbrot es muy triste, en cambio con el algoritmo
+newton es distinto:</p>
+
+<p>algoritmo newton con <code>secs</code> establecido en 1 (un ciclo)</p>
+
+<p><img src="http://nasciiboy.github.io/img/newton.png" alt="" /></p>
+
+<p>algoritmo newton con <code>secs</code> establecido en 2 (dos ciclos)</p>
+
+<p><img src="http://nasciiboy.github.io/img/newton2.png" alt="" /></p>
+
+<p>algoritmo newton con <code>secs</code> establecido en 3 (tres ciclos)</p>
+
+<p><img src="http://nasciiboy.github.io/img/newton3.png" alt="" /></p>
+
+<p>para los algoritmos <code>acos</code> y <code>sqrt</code> no interviene nuestro <code>MagicColors</code>, aun asi
+la salida es bastante chula</p>
+
+<p>Happy Hacking!</p>
 </div>
 </article>
 
@@ -332,9 +436,9 @@ magnet:?xt=urn:btih:f837c2a64bb97c11940fe0bf966878cdb07ea912&amp;dn=Haskell&amp;
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
-    <li><span class="path-pwd">Ramen II</span></li>
+    <li><span class="path-pwd">Crear una paleta de color con solo un indice</span></li>
   </ul>
 </main>
 

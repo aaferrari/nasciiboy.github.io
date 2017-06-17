@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Mon, 29 May 2017 22:02:43 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 17 Jun 2017 12:39:43 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Crear una paleta de color con solo un indice</title>
+      <link>http://nasciiboy.github.io/prog/rainbow/</link>
+      <pubDate>Sat, 17 Jun 2017 12:39:43 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/rainbow/</guid>
+      <description>que tal, como lo indica el titulo vamos a generar una paleta de color apartir de un unico indice, para, por ejemplo para colorear una imagen en una escala de colores RGB del negro absoluto (0,0,0) al blanco (255,255,255), con una trancicion &amp;ldquo;suave&amp;rdquo; por estos
+El asunto surgio resolviendo algunos de los ejercicios de libro de programacion de go, especificamente el 3.5, donde proponian dar color a una imagen de mandelbrot, que estaba en una escala de grises (de hay viene lo de generar los colores apartir de un solo indice).</description>
+    </item>
     
     <item>
       <title>El Lenguaje De programacion Go</title>
