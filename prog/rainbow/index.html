@@ -307,7 +307,7 @@ func hsl2rgb( h, s, l float64 ) (red, green, blue uint8) {
 convertir de HSL (y HSV) a rgb los traduje de codigo de internete, desconosco si
 pueda hacerse mejor, por que no entiendo &ldquo;las formulas&rdquo; que proporciona la wikipedia</p>
 
-<p>vamos con la explicacion (de lo que entiendo), primero la funcion que cara al
+<p>vamos con la explicacion (de lo que entiendo), primero la funcion de cara al
 publico, es <code>MagicColor</code> que recive el indice, y el valor maximo que este puede
 alcanzar (suprimir este ultimo si se conoce de antemano o mejor aun, que la
 paleta tenga tantos colores como el valor maximo, no hice esto por pereza y por
@@ -331,7 +331,7 @@ distinto en MagicColor, para que la paleta tenga una variedad logica, primero un
 ciclo por la luminocidad, y dentro de este un ciclo por saturacion y matiz, no hice
 eso asi que vas por cuenta propia, aunque tampoco es muy complicado</p>
 
-<p>(Nota: agregar <code>import &quot;math</code> luego de la declaracion <code>package color</code>)</p>
+<p>(Nota: agregar <code>import &quot;math&quot;</code> luego de la declaracion <code>package color</code>)</p>
 
 <pre><code>func hsv2rgb( h, s, v float64 ) (red, green, blue uint8) {
   var r, g, b float64
@@ -356,7 +356,7 @@ eso asi que vas por cuenta propia, aunque tampoco es muy complicado</p>
 }
 </code></pre>
 
-<p>puedes copiar el codigo y ponerlo en un fichero digamos en <code>~/color/color.go</code>, y
+<p>puedes copiar el codigo y ponerlo en un fichero (digamos en <code>~/color/color.go</code>), y
 hacer pruebas con lo siguiente (poner en <code>~/main.go</code>)</p>
 
 <pre><code>package main
@@ -398,20 +398,20 @@ la solucion al ejercicio que motivo este post</p>
 <pre><code class="language-sh">cd 'directorio-de-descarga'
 
 # para imagen mandelbrot
-go run main &gt; mandelbrot.png
+go run main.go &gt; mandelbrot.png
 
 # o
 
-go run main -t m &gt; mandelbrot.png
+go run main.go -t m &gt; mandelbrot.png
 
 # para imagen newton
-go run main -t n &gt; newton.png
+go run main.go -t n &gt; newton.png
 
 # para imagen sqrt
-go run main -t s &gt; sqrt.png
+go run main.go -t s &gt; sqrt.png
 
 # para imagen acos
-go run main -t a &gt; acos.png
+go run main.go -t a &gt; acos.png
 </code></pre>
 
 <p>la imagen generada con mandelbrot es muy triste, en cambio con el algoritmo
