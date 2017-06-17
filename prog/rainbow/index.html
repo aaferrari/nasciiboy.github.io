@@ -324,7 +324,7 @@ de un ciclo seria negro - <strong>(rojo-verde-azul)</strong> - blanco, donde la 
 <strong>(rojo-verde-azul)</strong>  se repite una y otra vez, con variaciones de luminocidad</p>
 
 <p>por ultimo establesco el nivel de saturacion al maximo (<code>1.0</code>, la variables de
-hsl2rgb y hsv2rgb va de 0.0 a 1.0)</p>
+hsl2rgb y hsv2rgb van de 0.0 a 1.0)</p>
 
 <p>aqui esta la vercion hsv2rgb, pero como antes mencione, debemos tomar un enfoque
 distinto en MagicColor, para que la paleta tenga una variedad logica, primero un
@@ -398,16 +398,20 @@ la solucion al ejercicio que motivo este post</p>
 <pre><code class="language-sh">cd 'directorio-de-descarga'
 
 # para imagen mandelbrot
-go run main -m &gt; mandelbrot.png
+go run main &gt; mandelbrot.png
+
+# o
+
+go run main -t m &gt; mandelbrot.png
 
 # para imagen newton
-go run main -n &gt; newton.png
+go run main -t n &gt; newton.png
 
 # para imagen sqrt
-go run main -s &gt; sqrt.png
+go run main -t s &gt; sqrt.png
 
 # para imagen acos
-go run main -a &gt; acos.png
+go run main -t a &gt; acos.png
 </code></pre>
 
 <p>la imagen generada con mandelbrot es muy triste, en cambio con el algoritmo
