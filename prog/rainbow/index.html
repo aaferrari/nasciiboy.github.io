@@ -228,17 +228,27 @@ teles crt de la antiguedad</p>
 
 <p>como podemos ver, tenemos tres valores, <strong>luminosidad</strong>, <strong>saturacion</strong> y
 <strong>matiz</strong>, con la particularidad que el color inicia en negro absoluto y luego
-converge en blanco, sin embargo los colores nunca alcanzan su maximo valor puro,
-pues sin importar el matiz, si la luminosidad esta al maximo, terminaremos con un
-color blanco</p>
+converge en blanco, y los colores puros (del esquema RGB, cuando uno de ellos es
+255 y los otros dos 0) se optienen con la luminosidad a la mitad de su valor y
+la saturcion al maximo, ahora, si la luminosidad esta al maximo, terminaremos
+con un color blanco, independientemente de saturacion y matiz, lo mismo en caso
+contrario, es decir, si la luminocidad al minimo dara el color negro</p>
+
+<p>estas particulares hacen a este modelo mucho mas intuitivo que el clasico modelo
+RGB, ademas de practico para optener tranciciones suaves, especiarmente para el
+caso de generar una paleta variada</p>
+
+<p>supondre que su popularidad no esta lo suficientemente extendida en el campo
+programacional por ser requerir un calculo considerablemente mayor</p>
 
 <h2 id="modelo-de-color-hsv">Modelo de color HSV</h2>
 
 <p><a href="https://es.wikipedia.org/wiki/Modelo_de_color_HSV">https://es.wikipedia.org/wiki/Modelo_de_color_HSV</a></p>
 
-<p>En este modelo, los colores si pueden alcanzar su maximo valor de iluminacion
-permaneciendo como un color puro o una trancicion hacia el blanco o negro segun
-al valor la saturacion y el valor de luminosidad</p>
+<p>En este modelo, los colores alcanzan su maximo valor de iluminacion con el valor
+maximo de luminocidad, sin embargo y adiferencia de HSL este se decanta por un
+color u otro segun la
+saturacion y matiz</p>
 
 <p><img src="http://nasciiboy.github.io/img/HSV.png" alt="" /></p>
 
