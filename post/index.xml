@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sun, 04 Jun 2017 14:57:33 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 18 Jun 2017 15:44:42 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen IV</title>
+      <link>http://nasciiboy.github.io/post/ramen-iv/</link>
+      <pubDate>Sun, 18 Jun 2017 15:44:42 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/ramen-iv/</guid>
+      <description>bienvenidos a una nueva entrega de pasta acuosa, con bastante limon y sobras del refri!
+querido diario, sigo sin tocar morg, ni al raptor o tui, hasta no terminar con el libro de Go, y aunque lento, van pasando los capitulos mientras completo algunos ejercicios
+siguiendo uno de estos retos, encontre particular fascinacion en el modelo de color HSL, y al mismo tiempo la tristesa toco a mi puerta tras entender las entrañas codificadas de este esquema, por que?</description>
+    </item>
     
     <item>
       <title>Ramen III</title>
