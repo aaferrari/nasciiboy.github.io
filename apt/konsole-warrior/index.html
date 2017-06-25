@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+  <head>
+    <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Konsole Warrior - nba - GNU&#39;s Rock</title>
+    
+    <style media="screen">
+:root {
+                            
+    --BGC      : #000000;   
+    --FGC      : #ffffff;   
+    --BGClogo  : #222222;   
+    --FGClogo  : #ffffff;   
+    --FGCtitle : #ff4500;   
+    --FGCstart1: #4B99D2;   
+    --FGCstart2: #00ffff;   
+    --FGCstart3: #ffa074;   
+    --FGCstart4: #98fb98;   
+    --FGCstart5: #b0c4de;   
+    --FGCstart6: #7fffd4;   
+    --FGCstart7: #db2e24;   
+    --FGCstart8: #ff4500;   
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;   
+    --FGCbtcode: #333333;   
+    --FGCftcode: #ffffff;   
+    --FGCbcode : #b3b3b3;   
+    --FGCtcomm : #ff4500;   
+    --FGCtcode : #bfbfff;   
+    --FGCfile  : #eedd82;   
+    --FGCmath  : #98fb98;   
+    --FGClink  : #00ffff;   
+    --BGClinkh : #556b2f;   
+    --FGClinkh : #ffffff;   
+    --BGCdt    : #b3b3b3;   
+    --FGCdt    : #ffffff;   
+    --FGCthead : #ff7f24;   
+    --BGCthead : #000000;   
+    --FGCtbody : #87cefa;   
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url("https://nasciiboy.github.io/DejaVuSansMono.ttf");                     }
+@font-face { font-family: codeblock;      src: url("https://nasciiboy.github.io/DejaVuSansMono.ttf");                     }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em;
+                width: 70%;
+                float: left;
+               }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 2em;
+                width: 50%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+ul.terms    { list-style: none; margin: 0em; padding: 0em; }
+ul.terms li { display: block;
+              float: left;
+              margin: .1em .5em .1em .5em;
+}
+ul.terms a { text-decoration: none;
+}
+
+ul.terms a:hover { text-decoration: none;
+                   background-color: #333;
+                   color: #fff;
+}
+
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+}
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }  
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }  
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }  
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }  
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }  
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }  
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+ 
+dl { padding-bottom: 2em; }          
+dl dt { color: #daa520;              
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;              
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+</style>
+
+  </head>
+
+  <body>
+    
+<main>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt/</span></a></li>
+    
+    <li><span class="path-pwd">Konsole Warrior</span></li>
+  </ul>
+
+  <article>
+  <h1 class="title">Konsole Warrior</h1>
+
+  <time datetime="2017-06-24 20:28:51 -0500 CDT">Jun 24, 2017</time>
+
+  <div class="article-body">
+
+<p><img src="http://nasciiboy.github.io/img/tilix-a.png" alt="" /></p>
+
+<p>Dentro de <q><em>El camino del Heroe</em></q> (que algunos dicen que esta
+conformado por doce estadios, otros por 7, 17, 13, &hellip;) antes de acudir al
+llamado, debemos preparar nuestras herramientas sobrenaturales
+<em>lenguaje</em>, <em><s>Emacs</s> Editor</em> y <em>Emulador de terminal</em>
+(intreprete incluido).</p>
+
+<p>Para las dos elecciones (lenguaje y emulador de terminal) tenemos un amplio
+abanico de posibilidades, hoy les hablare del emulador de terminal y las razones
+de su eleccion</p>
+
+<h2 id="konsole">Konsole</h2>
+
+<p>Salida del mundo de reino de KDE, donde sus habitantes priorisan la
+configuracion y el cambio constante de temas (iconos, wallpapers, doks y otra
+extensa variadad) de cambios neon, <strong>Konsole</strong> es la aplicacion con K que mas
+aprecio, por un solo aspecto, su alta configuracion de atajos del teclado, no es
+que necesite demasiado, solo tener la ventana sin ninguna distraccion, ni barra,
+ni nada, algunos atajos de desplazamiento por pagina y linea, mas poder cambiar entre
+&ldquo;tabs&rdquo;(?, seciones? lo que el la tty haces con Alt+Flecha derecha/izquierda) y
+poco mas.</p>
+
+<p>No estoy seguro si konsole, tiene incluida la caracteristica de dividir ventanas,
+(si la tiene la desactive) pues no la necesito)</p>
+
+<p>Por varios años he permanecido fiel a Konsole, mi katana demoniaca obscura,
+varias han sido las ocaciones que he mirado en alguna herreria otra arma
+secundaria (terminator y tmux) sin llegar a sentirme agusto con estas, si bien
+hace medio año (o algo asi) estube a punto de cambiar por terminix, por
+incorporar el <strong>overview</strong> de Gnome, mas luego de unos dias, desisti y continue
+con la K</p>
+
+<h2 id="tilix-antes-terminix">Tilix (antes terminix)</h2>
+
+<p>Aunque el autocompletado-automagico de fish, es bueno, queria tener marcadores,
+para los <sup>5</sup>&frasl;<sub>6</sub> directorios &ldquo;de trabajo&rdquo; que mas utilso. Con esto en mente dio
+inicio una pequeña busqueda de internet, pero tras encontrar cosas de python y otras
+utilidades que no me daba confiansa instalar, di otra oportunidad a tilix,
+pues incorpora de serie marcadores y el amado <strong>overview</strong> Gnomero!!!</p>
+
+<p><img src="http://nasciiboy.github.io/img/tilix-b.png" alt="" /></p>
+
+<p>la razon por la que antes no hice la transicion de debio a no incorporar la
+configuracion del desplazamiento por linea, pero estimados colegas, un pequeño
+<a href="https://github.com/gnunn1/tilix/issues/698">issue</a>, aun con engrish de
+traductor, es capas de conmover a nuetros forjadores</p>
+
+<p>Si bien la peticion fue escuchada con prontedad, tilix, tiene (o tenia) un
+complejo proceso de compilacion que no fui capaz de realizar, tras unos meses de
+espera, y descubrir como incorporar la ultima version a mi distribucion, fue
+posible el <em>upgrade</em> (o no) de equipamiento</p>
+
+<p>Al igual que konsole, tilix tambien es altamente customizable en sus atajos,
+colores, desplazamientos, codificacion, apariencia, fuente y paleta de colores,
+etc</p>
+
+<p>pero lo que mas me interesaba era el tema de los bookmarks. Dentro de la
+configuracion trae dicho apartado, peeeero, no fui capaz de entender como
+guardar una ruta y que luego funcionara, asi que cambie el atajo de teclado para
+ya dentro del directorio, invocar el menu y establecer el marcador</p>
+
+<p><img src="http://nasciiboy.github.io/img/tilix-c.png" alt="" /></p>
+
+<p>y&hellip;? <strong>funciono!</strong></p>
+
+<p><img src="http://nasciiboy.github.io/img/tilix-d.png" alt="" /></p>
+
+<p>tambien, tube que ajustar un poco el esquema de colores, tipografia y cursor,
+hasta lograr el mi ambiente ideal</p>
+
+<p>si bien hasta el momento no utilzo el modo Gnomero (F12), hay esta para cuando
+lo necesite</p>
+
+<h2 id="keybindings">keybindings</h2>
+
+<p>complejo es establecer unos atajos medianamiente razonables sin exigir la
+presion de mas de tres teclas simultanias, sin que estas sean capturadas por el
+entorno grafico, o entren en conflicto con el interprete y llegen a salvo hasta el programa
+en ejecucion</p>
+
+<ul>
+<li><p>Ctrl + Shift + d :: añadir marcador</p></li>
+
+<li><p>Ctrl + Shift + m :: seleccionar marcador</p></li>
+
+<li><p>Ctrl + Shift + t :: el clasico para abrir una nueva secion/terminal</p></li>
+
+<li><p>Ctrl + Shift + w :: el clasico para cerrar la secion/terminal</p></li>
+
+<li><p>Shift + Flecha derecha/izquierda :: esta combinacion puede ser polemica, pero
+ como el interprete no la utiliza para seleccionar texto, pues la ocupo para
+ cambiar entre seciones (1, 2, 3, &hellip; 1, 2 (y viceversa))</p></li>
+
+<li><p>Shift + Flecha arriba/abajo :: desplazar texto por linea</p></li>
+
+<li><p>Shift + Re/Av Pag :: desplazar texto por pagina</p></li>
+
+<li><p>F12 :: overview</p></li>
+
+<li><p>Shift + F9 :: preferencias</p></li>
+
+<li><p>Shift + F10 :: mostrar atajos</p></li>
+
+<li><p>Ctrl + Shift + / :: añadir terminal abajo</p></li>
+
+<li><p>Ctrl + Shift + * :: añadir terminal a la derecha</p></li>
+
+<li><p>Shift + Alt + Flechas :: redimencionar terminal</p></li>
+
+<li><p>Alt + flechas :: cambiar entre terminal</p></li>
+
+<li><p>Ctrl + 9 :: (en mi teclado esto es Ctrl + Shift + =) sincronizar entrada</p></li>
+</ul>
+
+<p>basicamente estos son los atajos que mas utilizo (auque en verdad no necesito
+dividir, ni sincronizar terminales)</p>
+
+<p>ademas, con dos terminales y once escritorios, no necesito distracciones
+inutiles como menus o docks, asi que la ventana aparece directamente a
+pantalla completa, para lograr esto en los atajos de gnome, en los atajos
+personales, vincule <code>Super + h</code> a tilix (mapeo dvorak customizado) a la ruta
+<code>/usr/bin/tilix --full-screen</code>, algo similar tenia con konsole, que paso a estar
+es <code>Super + t</code></p>
+
+<h2 id="instalacion">instalacion</h2>
+
+<p>fedora me atormenta, y es muy rara, y es un rollo&hellip;</p>
+
+<p>ya mencione que compilar tilix me resulto imposible, la primer vez que probe
+este terminal, lo obtube de un servicio(?) llamado corp, que no tengo mucha idea
+que es, pero parace que es parte de fedora. Bien, en esta ocacion preste
+atencion a una linea en la parte derecha de esa web que era nada mas y nada
+menos que la receta para incluir tilix en los repos, en efecto, algo muy raro</p>
+
+<pre><code>dnf copr enable heikoada/terminix
+dnf -y install tilix
+</code></pre>
+
+<p>para otras distros, buscar en repositorios, o buscarse la vida&hellip; o ver
+directamente el repo <a href="https://github.com/gnunn1/tilix">https://github.com/gnunn1/tilix</a></p>
+</div>
+</article>
+
+
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt/</span></a></li>
+    
+    <li><span class="path-pwd">Konsole Warrior</span></li>
+  </ul>
+</main>
+
+
+    <aside>
+  
+  <section>
+    <header class="taxonomies">category</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header class="taxonomies">tag</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section>
+    <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/apt/konsole-warrior/">Konsole Warrior</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-06-24 20:28:51 -0500 CDT">Jun 24, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-iv/">Ramen IV</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-06-18 15:44:42 -0500 CDT">Jun 18, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/rainbow/">Crear una paleta de color con solo un indice</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-06-17 12:39:43 -0500 CDT">Jun 17, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-iii/">Ramen III</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-06-04 14:57:33 -0500 CDT">Jun 4, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/nasciiboy-inc/">NasciiBoy Inc.</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-05-30 20:04:38 -0500 CDT">May 30, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/tgpl/">El Lenguaje De programacion Go</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-05-29 22:02:43 -0500 CDT">May 29, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/eof-fs/">El fin de la infancia... del Software Libre</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-05-15 18:17:59 -0500 CDT">May 15, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-ii/">Ramen II</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-05-14 21:52:45 -0500 CDT">May 14, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/vg/ppsspp/">PPSSPP</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-05-02 20:02:37 -0500 CDT">May 2, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/nirvana/">Nirvana</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-04-20 11:54:03 -0500 CDT">Apr 20, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+  </section>
+</aside>
+
+
+    <footer>
+      <p><span class="footer-title"><a href="http://nasciiboy.github.io">nba - GNU&#39;s Rock</a></span></p>
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a>–Theme <a href="https://github.com/nasciiboy/hugo_theme_nascii">nascii</a>–feed <a href="http://nasciiboy.github.io/index.xml">rss</a>–mail <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a>–gpg <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a></p>
+    </footer>
+
+  </body>
+</html>

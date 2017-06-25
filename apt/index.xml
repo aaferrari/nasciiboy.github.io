@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 24 Dec 2016 10:04:44 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 24 Jun 2017 20:28:51 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/apt/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Konsole Warrior</title>
+      <link>http://nasciiboy.github.io/apt/konsole-warrior/</link>
+      <pubDate>Sat, 24 Jun 2017 20:28:51 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/apt/konsole-warrior/</guid>
+      <description>Dentro de El camino del Heroe (que algunos dicen que esta conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al llamado, debemos preparar nuestras herramientas sobrenaturales lenguaje, Emacs Editor y Emulador de terminal (intreprete incluido).
+Para las dos elecciones (lenguaje y emulador de terminal) tenemos un amplio abanico de posibilidades, hoy les hablare del emulador de terminal y las razones de su eleccion
+Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la configuracion y el cambio constante de temas (iconos, wallpapers, doks y otra extensa variadad) de cambios neon, Konsole es la aplicacion con K que mas aprecio, por un solo aspecto, su alta configuracion de atajos del teclado, no es que necesite demasiado, solo tener la ventana sin ninguna distraccion, ni barra, ni nada, algunos atajos de desplazamiento por pagina y linea, mas poder cambiar entre &amp;ldquo;tabs&amp;rdquo;(?</description>
+    </item>
     
     <item>
       <title>fish</title>
