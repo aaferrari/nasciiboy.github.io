@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/post/ramen-v/</loc>
+    <lastmod>2017-07-01T15:05:47-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/apt/konsole-warrior/</loc>
     <lastmod>2017-06-24T20:28:51-05:00</lastmod>
   </url>
@@ -352,13 +357,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/post/</loc>
-    <lastmod>2017-06-18T15:44:42-05:00</lastmod>
+    <lastmod>2017-07-01T15:05:47-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/post/</loc>
-    <lastmod>2017-06-18T15:44:42-05:00</lastmod>
+    <lastmod>2017-07-01T15:05:47-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -382,7 +387,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/ramen/</loc>
-    <lastmod>2017-06-18T15:44:42-05:00</lastmod>
+    <lastmod>2017-07-01T15:05:47-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -436,7 +441,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-06-24T20:28:51-05:00</lastmod>
+    <lastmod>2017-07-01T15:05:47-05:00</lastmod>
     <priority>0</priority>
   </url>
   

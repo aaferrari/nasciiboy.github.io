@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sun, 18 Jun 2017 15:44:42 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 01 Jul 2017 15:05:47 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/categories/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen V</title>
+      <link>http://nasciiboy.github.io/post/ramen-v/</link>
+      <pubDate>Sat, 01 Jul 2017 15:05:47 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/ramen-v/</guid>
+      <description>por que si tubiera resuelto el sustento de por vida, seguiria haciendo lo mismo que hago ahora, hago lo que hago ahora aunque no tenga sustento
+lol, y como contar mis pasatiempos dispersos es mas sencillo que programar algo chulo, la seccion del ramen tendra un flujo constante mientras haya un pc al alcance
+para empezar, sigo leyendo, corrigiendo y haciendo practicas del libro de Go, que voy por el 56%, mencionar que cada vez me gusta mas el lenguaje con su peculiar orientacion a objetos e interfaces, de a poco empiezan a calar en el cerebro</description>
+    </item>
     
     <item>
       <title>Ramen IV</title>
