@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 01 Jul 2017 15:05:47 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jul 2017 12:26:47 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Por que GNU Emacs?</title>
+      <link>http://nasciiboy.github.io/emacs/why-emacs/</link>
+      <pubDate>Sun, 02 Jul 2017 12:26:47 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/why-emacs/</guid>
+      <description>Si el tiempo antes de precindir de interfaces para interactuar con los computadores se extiende lo suficiente, Emacs, terminara por ser un sistema operativo autosuficiente
+ coloca una pista de sonido, relajate y disfruta de este post al estilo &amp;ldquo;lo que otros IDEs no quieren que sepas&amp;rdquo;, &amp;ldquo;la increible historia de emacs, no podras creer el final&amp;rdquo;, &amp;ldquo;Emacs el editor que no esperabas&amp;rdquo;, &amp;hellip;
+〜(￣△￣〜) he, pero es que yo utilizo (vim|VS|atom|eclipse|nano|&amp;hellip;) y no necesito un editor viejuno y raro!</description>
+    </item>
     
     <item>
       <title>Ramen V</title>

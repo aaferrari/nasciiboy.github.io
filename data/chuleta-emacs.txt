@@ -1,0 +1,1272 @@
+// teclas y funciones comunes emacs
+// M     --> META alt-izq/ESC
+// C     --> Ctrl
+// RET   --> intro/enter
+// SPC   --> space
+// $     --> desde shell
+// <+>   --> opciones adicionales al comando actual
+// <M>   --> opcion desde menu
+// nVAL  --> valor numerico
+// cVAL  --> un solo caracter
+// sVAL  --> cadena de texto
+// KOM   --> comando
+// (...) --> comando completo
+// LMB   --> boton izquierdo del raton.
+// MMB   --> botón central del ratón.
+// RMB   --> botón derecho del ratón.
+// NUM   --> panel numerico
+// Wheel --> indica que  se debe rotar la rueda.
+
++---------------+ +---------------------+ +-------------------------------------+
+|   C-x u       | |   C-g               | | ESC ESC ESC                         |
+|   C-/         | |                     | |                                     |
+|   C-_         | | # descartar detener | | # comando de salida  multiproposito |
+|# deshacer     | |   comando           | |   definitivo.                       |
++---------------+ +---------------------+ +-------------------------------------+
+
+*******************    HELP    ************************************************
+
+C-h a temática RET
+
+    Busca comandos cuyos nombres concuerdan con temática, que debería
+    ser una expresión regular. Navegue el búfer que muestra este
+    comando para encontrar lo que está buscando.
+
+M-x apropos RET temática RET
+
+    Funciona como C-h a, pero además busca opciones de usuario y otras
+    variables, en caso de que la funcionalidad que ud. busca esté
+    controlada por una opción, y no un comando.
+
+M-x apropos-documentation RET temática RET
+
+    Busca en las cadenas de documentación (las descripciones breves
+    incorporadas) de todas las variables y funciones (no en sus
+    nombres) una concordancia de temática, una expresión regular.
+
+C-h F
+
+    Invoca las PUF de Emacs, donde puede usar los comandos habituales
+    de búsqueda para hallar la información.
+
+C-h p
+
+    Puede intentar buscar un paquete adecuado utilizando palabras
+    claves pertinentes a la funcionalidad que ud. necesita.
+
+C-h a regexp RET
+
+    Muestra una lista de los comandos cuyos nombres concuerdan con
+    regexp (apropos-command).
+
+C-h b
+
+    Muestra una tabla de todos los mapeos de tecla definidos
+    actualmente, en este orden: mapeos de modo adjunto, mapeos de modo
+    principal, y mapeos globales.
+
+C-h c tecla
+
+    Muestra el nombre del comando ejecutado por tecla
+    (describe-key-briefly). Aquí c quiere decir "carácter". Para
+    información más extensa sobre tecla, utilice C-h k.
+
+C-h f función RET
+
+    Muestra documentación de la función Lisp llamada función
+    (describe-function). Ya que los comandos son funciones Lisp, se
+    puede usar un nombre de comando.
+
+C-h h
+
+    Muestra el archivo `HELLO', que muestra ejemplos de diversos
+    juegos de caracteres.
+
+C-h i
+
+    Corre Info, el programa para navegar archivos de documentación
+    (info). El manual completo de Emacs está disponible en pantalla
+    dentro de Info.
+
+C-h k tecla
+
+    Muestra el nombre y documentación del comando ejecutado por tecla
+    (describe-key).
+
+C-h l
+
+    Muestra una descripción de los últimos 100 caracteres que
+    ud. tecleó (view-lossage).
+
+C-h m
+
+    Muestra documentación del modo principal actual (describe-mode).
+
+C-h n
+
+    Muestra documentación de los cambios de Emacs, empezando con el
+    más reciente (view-emacs-news).
+
+C-h P
+
+    Muestra información sobre problemas conocidos con Emacs y posibles
+    arreglos temporales. (view-emacs-problems).
+
+C-h p
+
+    Halla paquetes por palabra clave de temática (finder-by-keyword).
+
+C-h s
+
+    Muestra el contenido actual de la tabla de sintaxis, más una
+    explicación de qué significan (describe-syntax). See section La
+    tabla de sintaxis.
+
+C-h t
+
+    Entra al tutorial interactivo de Emacs (help-with-tutorial).
+
+C-h v var RET
+
+    Muestra la documentación de la variable Lisp var
+    (describe-variable).
+
+C-h w comando RET
+
+    Muestra cuáles teclas ejecutan el comando llamado comando
+    (where-is).
+
+C-h C codificación RET
+
+    Describe el sistema de codificación codificación
+    (describe-coding-system).
+
+C-h C RET
+
+    Describe los sistemas de codificación en uso actualmente.
+
+C-h I método RET
+
+    Describe un método de entrada (describe-input-method).
+
+C-h L entorno-idiom RET
+
+    Muestra información sobre los juegos de caracteres, sistemas de
+    codificación, y métodos de entrada utilizados para el entorno
+    idiomático entorno-idiom (describe-language-environment).
+
+C-h C-c
+
+    Muestra las condiciones de copiado para GNU Emacs.
+
+
+M-x help                  # buffer help
+C-h C-h                   # buffer help
+F1 f                      | escriba el nombre de la funcion para optener un
+C-h f                     | breve resumen de de lo que hace
+F1 a                     |  localice comandos mediante un termino de busqueda
+C-h a                    |  localice comandos mediante un termino de busqueda
+C-h c                     # muestra la funcion asociada a una combinacion
+                            de teclas
+C-h w                     # nos solicita el nombre de una funcion y nos
+                            muestra su combinacion de teclas asociada
+C-h m                     # documentacion del modo actual
+C-h b                     # muetra combinacion de teclas asociadas a
+                            comandos del buffer actual
+C-h v                     # muestra documentacion de variables
+C-h i                     # leer los manuales de paquetes instalados en
+                            el sistema
+C-h l                     # mustra los ultimos 100 caracteres tecleados
+C-h e                     # muetra mensages aparecidos en el buffer durante
+                            la sesion
+M-x describe-bindings     # muestra una lista de todos los comandos asociados
+                            a un atajo de teclado y su respectiva funcion
+                            invocada
+M-x list-colors-display   # despliega los colores disponibles
+
+*******************    GLOBAL    **********************************************
+
+M-nVAL     # factor de repeticion de un comando
+C-u nVAL   # factor de repeticion de un comando
+             Puede usar un argumento numérico para insertar varias
+             copias del mismo carácter. Esto es sencillo a menos que
+             el carácter fuera un dígito; por ejemplo, C-u 6 4 a
+             inserta 64 copias del carácter `a'. Pero esto no funciona
+             para insertar dígitos; C-u 6 4 1 especifica un argumento
+             de 641, en vez de insertar algo. Para separar el dígito
+             por insertar del argumento, digite otro C-u; por ejemplo,
+             C-u 6 4 C-u 1 sí inserta 64 copias del carácter `1'.
+C-x z      # ( M-x repeat ) Este comando repite el comando anterior de Emacs,
+             cualquiera que haya sido. La repetición utiliza los
+             mismos argumentos que la vez anterior; no vuelve a leer
+             argumentos nuevos cada vez.
+             Para repetir el comando más de una vez, teclee una z más.
+             cada z repite el comando una vez más. La repetición
+             terminará cuando teclee un carácter que no sea z, o
+             presione un botón del ratón.
+C-x C-+    # incrementa tamaño de funte
+C-x C--    # decrementa tamaño de funte
+C-x C-0    # reestablece el tamaño de funte
+M-x text-scale-decrease # decrementa tamaño de funte
+M-x text-scale-increase # incrementa tamaño de funte
+
+C-x RET f unix  # de dos a unix
+
+*******************    CONFUGURACION    ***************************************
+
+----------- cofiguracion personal
+
+esta se encuentra definida en la carpeta "home" de nuetro usuario
+con el nombre ".emacs"
+
+----------- Establecer combinacion de teclado personalizada
+
+(define-key mapa_de_caracteres "combinacion_teclas" 'nombre_comando)
+                # es la más general, ya que asocia teclas en cualquier mapa
+                  de caracteres.
+
+                     ejemplo ( define-key ctl-x-map "a" 'find-file)
+                     ahora al presionar comnado "C-x a" se ejecuta la funcion
+                     find-file
+                     para anular la asociacion
+                     (global-unset-key "\C-xa" )
+
+(global-set-key "combinacion_teclas"  'nombre_comando)
+                # realiza la asociación solo en global-map.
+                     ejemplo : ( global-set-key "a" 'find-file)
+                     ahora al precionar comando 'a' se ejecuta la funcion
+                     find-file
+
+                     ejemplo : ( global-set-key "\C-cl" 'find-file)
+                     ahora al presionar comnado "C-c l" se ejecuta la funcion
+                     find-file
+
+                     ejemplo : ( define-key esc-map [kp-5] 'find-file)
+                     ahora al precionar comando M-kp-5
+                     ( ESC + 5 del key-pack ) se ejecuta la funcion
+                     find-file
+                     para anilar la asociacion
+                     (define-key esc-map [kp-5] nil )
+
+(local-set-key "combinacion_teclas"  'nombre_comando)
+                # realiza la asociación solo en el mapa de caracteres
+                  local del buffer corriente, por lo que la vigencia de la
+                  asociación que realicemos mediante esta función será la
+                  de la sesión de Emacs en curso.
+
+global-map      # donde se localiza la asociación básica y por defecto entre
+                  teclas y caracteres
+ctl-x-map       # asociado a la tecla Ctrl ( 'C' para nosotros )
+esc-map         # asociado a la tecla META ( 'M' para nosotros )
+
+          CONVENCIÓN PARA CARACTERES ESPECIALES
+              \C-x	   C-x cVAL
+              \e	   ESC
+              \C-]	   ESC
+              \n	   Nueva linea
+              \C-j	   Nueva linea
+              \r	   Tecla Enter
+              \C-m	   Tecla Enter
+              \t	   Tecla Tab
+              \C-i	   Tecla Tab
+
+          La asociación de comandos con teclas especiales, como son
+          las teclas de flechas, las teclas de función, teclado
+          numérico...etc. deben usarse con los nombres Lisp de las teclas.
+          Los nombres de las teclas, en vez de ir entre dobles comillas (" ")
+          se colocarán entre corchetes ( [ ]
+
+              DEL	   delback
+              backspace	   delback
+              delete	   Supr
+              up	   Flecha arriba
+              down	   Flecha abajo
+              right	   Flecha derecha
+              left	   Flecha izquierda
+              f1..f35	   F1 ... F35
+              home	   Inicio
+              end	   Fin
+              help	   Ayuda
+              kp-0..kp-9   Num. de teclado numérico
+              kp-enter	   Intro de teclado numérico
+              next	   AvPág
+              prior	   RePág
+
+----------- Configuración de las variables de Emacs.
+
+Emacs dispone de más de 2.500 variables
+C-h v  # muestra documentacion de variables
+
+(setq variable valor)   # Para establecer el valor de una variable,
+                          debemos utilizar la función setq
+                          ejemplo:  (setq  auto-save-interval 800)
+
+               Los valores pueden ser :
+
+                  Números:    enteros
+                  Valores:    Booleanos:
+                                      t:    verdadero (true)
+                                    nil:    falso
+                  Cadenas:    Deben ir entre dobles comillas
+               Caracteres:    Se especifican como las
+                              cadenas, pero deben ir precedidos del símbolo ?
+                 Símbolos:    Se especifican con una comilla simple seguida
+                              del símbolo.
+
+Muchas de las variables de Emacs pueden tener valores distintos para
+cada buffer (valores locales), así como un valor por defecto, que es
+el que asumirán cuando no haya especificaciones locales.
+En general, disponemos de dos formas de configurar variables:
+
+            setq : Para configurar valores locales
+    setq-default : Para configurar el valor por defecto
+         Símbolos: Se especifican con una comilla simple seguida del símbolo.
+
+*******************    TUNING    **********************************************
+
+M-x list-faces-display         # Para ver qué estilos están definidos
+                                 actualmente, y cómo se ven, teclee
+M-x show-trailing-whitespace   # resaltar espacios en blanco
+M-x delete-trailing-whitespace # elimina espacios en blanco al final de cada
+                                 linea del buffer
+
+*******************    WINDOWS & BUFFERS    ***********************************
+
+$ emacs -nw                  # ejecutar emacs sin modo grafico
+C-x C-c( M-x kill-emacs )    # finaliza ejecucion de emacs
+C-z                          # en modo grafico minimiza la ventana
+                               en terminal suspende la ejecucion, 'fg' reanuda
+C-x C-f( M-x find-file )     # abrir fichero / crear buffer
+M-x find-file-at-point       | si el punto esta posicionado sobre texto que
+M-x ffap                     | contiene una ruta a un directorio o archivo
+                             | se abre ese directorio o archivo directamente
+C-x C-s( M-x save-buffer )   # salva el buffer actual
+C-x s                        # salva todos los buffers
+C-x C-s                      # salva buffer actual
+C-x C-w                      # salvar buffer con un nombre/ruta distinto
+M-x save-buffers-kill-emacs  # salva todos los buffers abiertos y finaliza
+                               ejecicion de emacs
+M-x rename-buffer            # renombrar buffer
+C-x C-q                      # conmutar buffer solo lectura/lectura escritura
+M-x recover-file             # recuperar fichero de autoguardado
+C-x b                        # buscar en los buffers abiertos
+                               <+> RET cambiar al buffer anterior
+C-x C-b                      # listar todos los buffers abiertos
+C-LMB                        # menu de buffers abiertos
+C-x <left>                   # ( previous-buffer ) buffer previo
+C-x <right>                  # ( next-buffer ) buffer siguiente
+C-RMB                        # menu global
+C-MMB                        # menu propiedades de texto
+F10                          # buffer *Completions*, da acceso a
+                               opciones del menu
+C-x k                        # mata el buffer activo
+C-x 4 C-f                    # ( M-x find-file-other-window )
+                               Igual que find-file a excepción que el archivo es abierto
+                               en una nueva ventana. Si el marco actual sólo tiene una ventana,
+                               se crea una nueva ventana.
+C-x 4 C-o 	             # ( M-x display-buffer )
+      	                       Seleccionar un buffer de la lista de buffers y mostrarlo en otra
+  	                       ventana, pero no mueve el punto a esa ventana.
+C-x 4 . 	             # ( M-x find-tag-other-window )
+  	                       Abra la etiqueta en el punto en otra ventana
+C-x 4 0 	             # ( M-x kill-buffer-and-window )
+  	                       Igual que C-x 0 pero eliminar el buffer en esa ventana también.
+C-x 4 a 	             # ( M-x add-change-log-entry-other-window )
+  	                       Abra otro búfer y le permitirá grabar el cambio de
+  	                       el archivo de edición actual.
+C-x 4 b 	             # ( M-x switch-to-buffer-other-window )
+  	                       Abre un buffer seleccionado en otra ventana y mueve el punto a
+  	                       esa ventana.
+C-x 4 c 	             # ( M-x clone-indirect-buffer-other-window )
+  	                       Clonar el búfer en otra ventana y darle un
+  	                       nombre diferente.
+C-x 4 d 	             # ( M-x dired-other-window )
+  	                       Abra un búffer dired en otra ventana. Dired es el administrador
+  	                       de archivos en Emacs. Vamos a discutirlo más adelante.
+C-x 4 f 	             # ( M-x find-file-other-window )
+  	                       Igual que C-x 4 C-f
+C-x 4 m 	             # ( M-x compose-mail-other-window )
+  	                       Escribir correo en otra ventana. Usted puede escribir
+                               correo electrónico y enviarlo
+                               directamente desde Emacs.
+C-x 4 r 	             # ( M-x find-file-read-only-other-window )
+  	                       Similar a find-file-other-window, pero para sólo lectura.
+C-x 5 2( M-x make-frame )    # lanza un nuevo marco conteniendo el buufer
+                               activo
+C-x 5 f                      # ( M-x find-file-other-frame )
+                               abrir fichero en un nuevo marco
+C-x 5 r                      # ( M-x find-file-read-only-other-frame )
+                               abrir fichero solo lectura en un nuevo marco
+C-x 5 b                      # ( M-x switch-to-buffer-other-frame )
+                               visualizar otro buffer activo en nuevo marco
+C-x 5 o                      # moverse entre marcos lanzados mediante 'C-x 5'
+C-x 0                        # cierra la ventana activa
+C-x 1                        | cierra todas las ventanas a excepcion
+ESC ESC ESC                  | de la activa
+C-x 5 0                      # cerrar marco activo
+C-x 5 1                      # cerrar todos los marcos excepto el activo
+C-x 2                        # divide la ventana activa en horizontal
+C-x 3                        # divide la ventana activa en vertical
+C-x o                        # mover punto a la siguiente ventana
+C-x +                        # hace que todas las ventanas tengan el mismo
+                               tamaño
+C-x ^                        # la ventana se alarga una linea en vertical
+                               a expensas de la de abajo
+C-x }                        # la ventana se ensancha una columna en
+                               horizontal, a expensas de la ventana de
+                               al lado.
+C-x {                        # la ventana se encoge una columna en horizontal,
+                               a expensas de la ventana de al lado.
+M-x compare-windows          # compara el fichero de la ventana activa con el
+                               de la ventana adyacente, paratir de la
+                               localizacion del punto, mostrando la primera
+                               diferencia
+C-x C-v                      # substituir contenido del buffer por el
+                               contenido de otro fichero
+                               <+> RET recargar fichero desde disco
+C-x <                        # Scroll text in current window to the left (scroll-left).
+C-x >                        # Scroll to the right (scroll-right)
+M-x toggle-truncate-lines    # habilitar o deshabilitar el truncamiento de lineas
+                               en un búfer
+                               Emacs puede mostrar las líneas largas
+                               por truncamiento. esto significa que
+                               todos los caracteres que no quepan en
+                               el ancho de la pantalla o ventana no
+                               aparecen en absoluto. Quedan en el
+                               búfer, temporalmente invisibles. En
+                               terminales, un signo `$' en la última
+                               columna le informa que la línea fue
+                               truncada en la pantalla. En sistemas
+                               con ventanas, una flechita recta en la
+                               banda derecha de la ventana indica una
+                               línea truncada.
+C-x l                        # cuenta las líneas de la página actual.
+
+-- MINI BUFFER --
+
+C-x ESC ESC                  # Re-ejecuta un comando de minibúfer reciente
+                              (repeat-complex-command).
+
+M-x list-command-history     | Muestra el histórico de comandos entero, con
+    command-history          | todos los comandos que C-x ESC ESC puede repetir,
+                               del más reciente al más antiguo.
+
+
+C-o        | insertar un nuevalínea en el minibúfer.
+C-q C-j    |
+TAB        # Completa el texto del minibúfer hasta donde se pueda
+             ( minibuffer-complete ).
+SPC        # Completa el texto del minibúfer, pero no pasa de una palabra
+             ( minibuffer-complete-word ).
+RET        # Manda el texto del minibúfer como argumento, posiblemente
+             completando primero como se describe debajo
+             ( minibuffer-complete-and-exit ).
+?          # Muestra una lista de todos los completamientos posibles del texto
+             del minibúfer (minibuffer-list-completions).
+PRIOR      | Si teclea PRIOR o PAGE-UP, o M-v, mientras está en el
+M-v        | minibúfer, se selecciona la ventana del búfer con la
+             lista de completamientos ( switch-to-completions ). Esto
+             prepara el terreno para usar los comandos que vienen a
+             continuación.
+             <+> RET    Cuando presiona RET en el búfer de la lista de
+                        completamientos elige el completamiento donde
+                        está el punto o el más cercano al punto
+                        (choose-completion). Para usar este comando,
+                        primero ud. debe pasarse a la ventana que
+                        muestra la lista de completamientos.
+             <+> RIGHT  Si presiona la tecla de flecha a la derecha
+                        RIGHT en el búfer de la lista de
+                        completamientos el punto se mueve al siguiente
+                        completamiento (next-completion).
+             <+>  LEFT  Si presiona la tecla de flecha a la izquierda
+                        LEFT en el búfer de la lista de
+                        completamientos el punto se mueve hacia el
+                        principio del búfer, hasta el completamiento
+                        anterior (previous-completion).
+
+UP         | Retrocede a la cadena de argumento anterior guardada en el
+M-p        | histórico del minibúfer (previous-history-element).
+
+DOWN       | Avanza a la siguiente cadena de argumento guardada en el histórico
+M-n        | del minibúfer (next-history-element).
+
+M-r regexp RET
+
+           # Vuelve a un argumento anterior guardado en el histórico
+             del minibúfer que contiene una concordancia de regexp
+             (previous-matching-history-element).
+
+M-s regexp RET
+
+          # Avanza a un argumento guardado en el histórico del
+            minibúfer que contiene una concordancia para regexp
+            (next-matching-history-element).
+
+*******************    BUSQUEDA    ********************************************
+
+M-%   # busqueda y reemplazo interactiva de cadena
+C-M-% # busqueda y reemplazo interactiva regexp
+
+                                            | COMANDOS A AGREGAR <+>
+C-r   # busqueda de cadena hacia atras      | C-w  # agrega la palabra
+                                            |        seleccionada a la busqueda
+C-s   # busqueda de cadena hacia adelante   | C-s  # salta a la siguiente
+                                            |        coninsidencia
+                                            | C-r  # pasa a la coinsidencia
+                                            |        previa
+                                            | M-p  # navegar en el circulo de
+                                            |        busqueda hacia atras
+                                            | M-p  # navegar en el circulo de
+                                            |        busqueda hacia delante
+                                            | RET  # busqueda no incremental
+C-M-s        # ( isearch-forward-regexp )
+               nos permite buscar hacia delante una cadena dado un patrón.
+C-M-r        # ( isearch-backward-regexp )
+             nos permite buscar hacia detrás una cadena dado un patrón.
+             | Patrones de busqueda
+             | - ^foo : Líneas que comiencen por la palabra foo.
+             | - bar$ : Líneas que terminen por la palabra bar.
+             | - a.b : Palabras que tengan una a al principio, una b al final y
+             |   cualquier carácter entre ambas axb, adb, abb, etc.
+             | - a*b : Palabras que tengan una a al principio, una b al final y
+             |   cualquier carácter entre ambas o no axb, adb, abb, ab, etc.
+             | - a+b : Palabras que tengan una a al principio, una b al final y
+             |   cualquier carácter(s) entre ambas axb, adb, abb, acccccb, adfghb,
+             |   etc.
+             | - <\foo : Palabras que comiencen por foo.
+             | - bar\> : Palabras que acaben en bar.
+             | - [] : Cualquiera de los caracteres que estén dentro de
+             |   los corchetes
+             |   Dentro de los corchetes [ ] los metacaracteres
+             |   pierden su función especial y se tratan como
+             |   literales.
+             | - [^] : Cualquiera de los caracteres que NO estén dentro
+             |   de los corchetes
+             | - [a-zA-Z] : Cualquier letra del alfabeto, en mayúsculas o
+             |   minúsculas.
+             | - \( \) : Permite agrupar varias expresiones regulares
+             | - \ Escapa un metacarácter
+             | - \(a\|b\|c\|d\)x : Palabras que contengan ax, bx, cx o dx.
+             <+> C-M-s C-M-s  # nos permite buscar hacia delante de forma incremental una
+                                cadena dado un patrón.
+             <+> C-M-r C-M-r  # nos permite buscar hacia detrás de forma incremental
+                                una cadena dado un patrón.
+C-s C-s   # repite la busqueda anterior
+C-r C-r   # repite la busqueda anterior
+C-s C-y   # inicia busqueda con el contenido de kill-ring
+C-r C-y   # inicia busqueda con el contenido de kill-ring
+C-s M-y   # inicia busqueda con el contenido de kill-ring
+C-r M-y   # inicia busqueda con el contenido de kill-ring
+
+M-s _     # ( isearch-forward-symbol )
+M-s h     # ( Prefix Command )
+M-s o     # ( occur ) listar coincidencias en buffer occur
+            <+> M-g n # coincidencia siguiente
+            <+> M-g p # coincidencia previa
+M-x
+M-s w     # ( isearch-forward-word )
+M-s h f   # ( hi-lock-find-patterns )
+M-s h l   # ( highlight-lines-matching-regexp ) resaltar lineas que
+            contengan el patron de busqueda
+M-s h p   # ( highlight-phrase )
+M-s h r   # ( highlight-regexp ) resaltar el patron de busqueda
+M-s h u   # ( unhighlight-regexp ) eliminar el resaltado de coincidencias
+M-s h w   # ( hi-lock-write-interactive-patterns )
+
+M-x multi-occur  # occur para multiples buffers
+
+*******************    NAVEGACIÓN    ******************************************
+
+C-a                         # inicio de linea
+C-e                         # fin de linea
+M-a                         # inicio de oracion
+M-e                         # fin de oracion
+M-g g( M-x goto-line )      # ir a la linea indicada
+M->                         # ir al inicio de buffer
+M-<                         # ir al fin de buffer
+C-v                         # av-pag
+M-v                         # re-pag
+C-Wheel                     # av-pag-re-pag
+C-l                         # limpiar la pantalla y mostrar todo el texto de
+                              nuevo en posicion central
+                              <+> C-l # posicion superior
+                              <+> C-l # posicion inferior
+M-r                         # mueve punto al centro de ventana
+                              <+> M-r # a parte superior de ventana
+                              <+> M-r # a parte inferior de ventana
+C-p                         # desplaza el punto a la line previa
+C-n                         # desplaza el punto a la line siguiente
+C-f                         # avanza un caracter
+C-b                         # retrocede un caracter
+M-f                         # desplaza el punto a siguiente palabra
+M-b                         # desplaza el punto a la anterior palabra
+C-M-f                       # ( forward-sexp ) avanzar sobre una
+                              expresión balanceada.
+C-M-b                       # ( backward-sexp ) retroceder sobre una
+                              expresión balanceada.
+C-M-p                       # Retrocede sobre una expresión balanceada.
+                              ( M-x backward-list ).
+C-M-n                       # Avanza sobre una expresión balanceada.
+                              ( M-x forward-list ).
+C-M-u                       # Sube en la jerarquia de una estructura balanceada.
+                              ( M-x backward-up-list ).
+C-M-d                       # Baja en la jerarquia de una estructura balanceada.
+                              ( M-x down-list).
+C-M v                       # desplaza hacia abajo el texto de la siguente
+                              ventana
+M-av-pag                    # desplaza siguiente ventana una pagina abajo
+M-re-pag                    # desplaza siguiente ventana una pagina arriba
+M-home                      # desplaza siguiente ventana a inicio de buffer
+M-end                       # desplaza siguiente ventana a final de buffer
+C-u C-SPC                |  # permite desplazarnos de forma rapida por el
+C-u C-@                  |    "circulo de marcas" (set-mark-command)
+C-x C-SPC                   # permite desplazarnos de forma rapida por el
+                              "circulo de marcas global" ( pop-global-mark )
+C-x C-n                     # Usa la columna actual del punto como
+                              columna objetivo semipermanente para C-n
+                              y C-p (set-goal-column). En adelante,
+                              aquellos comandos siempre irán a esa
+                              columna en cada línea que se vaya, o lo
+                              más cerca posible según el contenido de
+                              la línea. Esta columna objetivo
+                              permanece efectiva hasta que se cancela.
+C-u C-x C-n                 # Cancela la columna objetivo. En
+                              adelante, C-n y C-p intentan de nuevo
+                              mantener la misma posición horizontal,
+                              como de costumbre.
+C-x r ESP cVAL              # guarda posicion actual de punto en REGISTRO cVAL
+C-x r j cVAL                # salta a REGISTRO cVAL
+C-x r m                     # ( M-x bookmark-set )
+                              añade posicion en documento a bookmark estos
+                              datos son almacenados en ~/.emacs.bmk
+C-x r b                     # ( M-x bookmark-jump )
+                              desplazarse a un bookmark
+                              <+> TAB mostrara la lista de nuestros bookmark
+C-x r l                     # lista nuestros bookmarks en el buffer
+                              *Bookmark List*
+M-x bookmark-delete         # se nos pedira el nombre del bookmark a eliminar
+                              <+> RET si el fichero donde estamos contiene
+                              el bookmark a eliminar
+M-x bookmark-save           # Guarda todos los bookmarks en el fichero por
+                              defecto( lo realiza de forma automatica )
+M-x bookmark-write          # Guarda todos los bookmarks en un determinado
+                              fichero.
+M-x bookmark-load           # importa bookmark desde un determinado fichero
+
+*******************    SELECCION    *******************************************
+
+C-SPC     | establece marca de seleccion en la posición del punto
+C-@       | (set-mark-command).
+LMB       # establece marca de seleccion en la posición del cursor
+RMB       # marca region desde punto hasta posicion del cursor
+C-x h     # seleccionar todo el buffer
+            Pone la región alrededor del búfer entero (mark-whole-buffer).
+C-x C-x   # selecciona desde la ultima marca a la ubicacion actial de punto,
+            tambien alternar la ubicacion de la marca y el punto
+            (exchange-point-and-mark).
+M-h       # Pone la región alrededor del párrafo actual (mark-paragraph).
+M-@       # Pone la marca después del final de la siguiente palabra
+            (mark-word) Este comando no mueve el punto.
+C-x C-p   # seleccionar pagina actual (mark-page).
+C-M-h     # selecciona el contenido interno de los parentesis mas proximos
+            Pone la región alrededor de la defun actual (mark-defun).
+C-M-@    |# Pone la marca después del final de la siguiente expresión
+C-M-SPC  |  balanceada (mark-sexp). Este comando no mueve el punto.
+
+*******************    EDICION    *********************************************
+
+C-x u                | Deshace un lote de cambios: generalmente, un
+C-_                  | comando (undo).
+C-/                  |
+C-u C-x u            # Deshace un lote de cambios en la región.
+C-d                  # borrar caracter a la derecha de punto
+M-d                  # cortar palabra a la derecha del punto a kill-ring
+                       (kill-word)
+M-delback            # cortar palabra a la izquierda del punto a kill-ring
+                       Kill word backwards (backward-kill-word).
+C-k                  # cortar desde punto a fin de linea a kill-ring
+                       (kill-line)
+M-k                  # cortar desde punto hasta fin de frase a kill-ring
+                       Kill to end of sentence (kill-sentence).
+C-M-k                # Kill the following balanced expression (kill-sexp).
+C-x delback          # cortar desde punto hasta inicio de frase a kill-ring
+                       Kill back to beginning of sentence (backward-kill-sentence).
+M-w                  # copiar la region seleccionada al kill-ring
+C-w                  # corta la region seleccionada al kill-ring
+                       (kill-region).
+C-M-w                # Append next kill to last batch of killed text
+                       (append-next-kill).
+M-z cVAL             # corta desde punto hasta primer cVAL encontrado a
+                       kill-ring
+C-y                  # pega el ultimo contenido ingresado al kill-ring
+                       <+>  M-y trae anteriores contenidos ingresados al
+                       kill-ring.
+C-o                  # ( M-x open-line ) abrir una linea
+C-x C-o              # ( M-x delete-blank-lines ) Borra un grupo de líneas
+                       en blanco consecutivas dejando una sola
+M-^                  # agrega la linea actual a la anterior eliminando
+                       el salto de linea
+                       (delete-indentation)
+C-t                  # cambia( transpone ) de posicion dos caracteres
+M-t                  # cambia( transpone ) de posicion dos palabras
+C-x C-t              # cambia( transpone ) de posicion dos lineas
+C-M-t                # ( transpose-sexps ) transponer expresiones.
+insert               # activa modo sobreescritura que es un modo menor
+                       aparecera "Ovwrt" en el indicador de modos.
+                       se reemplaza texto mientras este va ingresando.
+C-x i                # insertar contenido de un fichero en posicion punto
+C-x r k              # cortar rectangulo desde marca hasta punto al kill-ring
+C-x r d              # Delete the text of the region-rectangle (delete-rectangle).
+C-x r y              # pegar el ultimo rectangulo dentro de kill-ring
+C-x r o              # abrir un rectangulo de espacios en blanco
+C-x r c              # ( M-x clear-rectangle )
+                       substitulle contenido de rectangulo por espacios
+M-x delete-whitespace-rectangle
+                     # Delete whitespace in each of the lines on the specified
+                       rectangle, starting from the left edge column of the rectangle
+C-x r i cVAL         # inserta contenido desde REGISTRO cVAL
+C-x r s cVAL         # guarda la seleccion en el REGISTRO cVAL
+C-x r r cVAL         # guarda el rectangulo deleccionado en REGISTRO cVAL
+C-x r t sVAL         # reemplaza contenido de rectangulo por cadena sVAL
+                       (string-insert-rectangle)
+C-x r f cVAL         # Guarda el estado de todos los frames, incluyendo todas
+                       sus ventanas, en el registro cVAL
+                       ( frame-configuration-to-register ).
+C-x r w cVAL         # Guarde la configuración de ventana del frame actual en el
+                       registro cVAL ( window-configuration-to-register ).
+C-u number C-x r n r # Store number into register r (number-to-register).
+C-u number C-x r + r # Increment the number in register r by number (increment-register).
+C-x r g r            # Insert the number from register r into the buffer.
+M-x view-register RET cVAL
+                     # Display a description of what register r contains.
+M-x delete-whitespace-rectangle
+                     # Delete whitespace in each of the lines on the specified
+M-%                  # substituir cadena de forma interactiva apartir
+                       punto en adelante
+M-replace-string     # substituir cadenas desde punto en adelante
+C-q cVAL             # ( M-x quoted-insert ) insertar un carácter de control
+                       o un carácter cuyo código es mayor a 200 octal
+M-/                  # ( dabbrev-expand ) autocompletado
+                       <+> M-/ # otras posibles opciones de completado
+
+*******************    FORMATEO Y REVISIÓN ORTOGRAFICA     ********************
+
+Shft-LMB            # menu font
+C-x C-u             # convertir region a mayúsculas (upcase-region),
+M-u                 # cambia a mayusculas desde punto a fin de palabra
+M-l                 # cambia a minusculas desde punto a fin de palabra
+M-c                 # cambia a mayusculas letra debajo de punto
+M-$                 # comprueva la ortografia de la palabra actual
+M-x ispell-buffer   # revision interactiva de ortografia del buffer actual
+M-q                 # ( M-x fill-paragraph ) formatear parrafo actual.
+                      los espacios vacios son reducidos a uno, y se limita
+                      el ancho de linea sin cortar palabras
+M-x untabify        # cambia caracteres de tabulacion por espacios en blanco
+                      actua sobre una region de seleccion
+M-x tabify          # cambia grupo de tres o mas espacios en blanco por
+                      caracteres de tabulacion siempre que ello no afecte
+                      la disposicion del texto
+                      actua sobre una region de seleccion
+M-\                 # Eliminar espacios y tabs alrededor de punto
+                      (delete-horizontal-space).
+M-ESP               # Eliminar espacios y tabs alrededor de punto excepto uno
+M-Sel PC            # Elimina espacios y tabs alrededor de punto, dejando uno espacio
+                      (just-one-space).
+C-M-\               # sangrar linea actual o region de seleccion
+                      si punto se encuentra a inicio de linea se sangra hasta
+                      final de parrafo
+C-x TAB             # sangra un espacio desde punto hasta la ultima marca
+M-o d               # modo por defecto
+M-o b               # bold
+M-o i               # italica
+M-o l               # italica-bold
+M-o o               # otros
+
+*******************    CODING    **********************************************
+
+M-x hl-line-mode    # Habilita o deshabilita el resaltado de la línea actual.
+C-c C-c             # comentar codigo desde el punto hasta la ultima
+                      marca de seleccion
+M-;                 # agregar un comentario al final de la linea, o
+                      agregar mas contenido al comentario existente
+                      o comentar el texto resaltado
+M-x shell           # inicia un shell "emacs-style" dentro de emacs
+                      todo lo que teclemos sera visible en forma de texto,
+                      para ocultar texto ejecutamos (M-x  send-invisible)
+M-!                 # ( M-x shell-command ) ejecutar un comando de shell
+C-u M-!             # si el comando shell proporciona una salida esta se
+                      inserta en la posicion actual de punto
+M-|                 # M-x shell-command-on-region
+                      utilizar region seleccionada del buffer como input
+                      para comando shell
+C-u M-|             # toma la region seleccionada del buffer como input
+                      para comando shell y la subsitulle por output
+TAB                 # ( M-x indent-for-tab-command ) indentacion de linea
+                      conforme  a tabulacion de linea si punto se encuentra
+                      a principio de esta, o indentacion del texto seleccionado
+M-x show-paren-mode # resaltar el paréntesis o llave correspondiente
+M-=                 # ( M-x count-lines-region ) Muestra la cantidad de
+                      líneas\caracteres de la región activa.
+C-x =               # ( M-x what-cursor-position ) Muestra el código del
+                      carácter después del punto, la posición del punto en
+                      caracteres, y la columna del punto.
+                      Muestra una línea en el área de eco que se ve así:
+
+                      Char: 3 (51, #o63, #x33) point=24387 of 57251 (43%) column=83
+
+                      Los cuatro valores que siguen después de `Char:'
+                      describen el carácter que sigue al punto,
+                      primero mostrándolo y luego dando su código de
+                      carácter en decimal, exadecimal y octal. Para un
+                      carácter multibyte no-ASCII, va seguido de `ext'
+                      y la representación del carácter, en hexa, en el
+                      sistema de codificación del búfer, si dicho
+                      sistema puede codificar de forma segura el
+                      carácter y con un solo byte. Si la codificación del
+                      carácter es mayor a un byte, Emacs muestra `ext ...'.
+
+                      A `point=' sigue la posición del punto expresada
+                      como cantidad de caracteres. El frente del búfer
+                      cuenta como posición 1, el siguiente carácter
+                      como 2, y así sucesivamente. El siguiente
+                      número, más grande, es la cantidad total de
+                      caracteres en el búfer. Después entre paréntesis
+                      viene la posición expresada como porcentaje del
+                      tamaño total.
+
+                      A `column' le sigue la posición horizontal del
+                      punto, en columnas desde el borde izquierdo de
+                      la ventana.
+C-u C-x =           # muestra información suplementaria acerca de un
+                      carácter, el lugar de las coordenadas en el búfer
+                      y la columna: el nombre del juego de caracteres
+                      y los códigos que identifican al carácter en el
+                      mismo; los caracteres ASCII son reconocidos como
+                      pertenecientes al juego de caracteres
+                      ASCII. Además la codificación completa del
+                      carácter, incluso si ocupa más de un byte,
+                      aparece después de `ext'.
+
+*******************    MACROS    **********************************************
+
+C-x (      | iniciar definicion de macro
+f3         | <+> f3    # inseta contador
+             <+> C-x q # pide confirmacion para continuar o terminar la
+                         ejecucion de macro
+                         <+> Y   # Termina esta iteración normalmente y continuar
+                                   con la siguiente.
+                         <+> N   # Omita el resto de esta iteración, y empezar la
+                                   siguiente.
+                         <+> RET # Detenga el macro completo ahora.
+                         <+> C-l # Volver a mostrar la pantalla, a continuación,
+                                   vuelva a preguntar.
+                         <+> C-r # Comienza la edición en el punto.
+                                   <+> C-M-c  # para volver a la ejecución de macro
+f4                               # finalizar definicion de macro
+C-x )                            # finalizar definicion de macro
+C-x e                            # ejecutar ultima macro definida
+f4                               # ejecutar ultima macro definida
+C-x C-k e                        # ( kmacro-edit-macro )
+                                   editar ultima macro definida
+C-u f3                           # agregar comandos al fin de ultima
+                                   macro definida
+C-u C-u f3                       # agregar comandos al fin de ultima
+                                   macro definida
+C-x C-k ESP                      # ( kmacro-step-edit-macro )
+                                   edicion interactiva de macro
+                                   <+> ? # para ayuda
+C-u 0 f4                         # repite macro hasta el final del archivo
+C-x C-k r                        # ( apply-macro-to-region-lines )
+                                   aplicar ultima macro definida a
+                                   region
+M-nVAL C-x e                     # ejecutar nVeces ultima macro definida
+C-x C-k C-k 	                 # ( kmacro-end-or-call-macro-repeat )
+  	                           Ejecutar la macro de teclado a la cabeza
+                                   del anillo
+C-x C-k C-n 	                 # kmacro-cycle-ring-next
+  	                           Gire el anillo macro teclado a la
+                                   siguiente macro
+C-x C-k C-p 	                 # kmacro-cycle-ring-previous
+  	                           Gire el anillo macro del teclado a la
+                                   macro anterior
+C-x C-k C-i 	                 # ( kmacro-insert-counter )
+  	                           Inserte el contador de macro actual
+                                   en el buffer
+                                   <+>  C-u  # antes de ejecutar este comando
+                                               restablece el contador de nuevo
+                                               a el valor anterior
+C-x C-k C-c 	                 # ( kmacro-set-counter )
+  	                           Cambie el valor del contador de macro actual
+C-x C-k C-a      	         # ( kmacro-add-counter )
+  	                           Añadir un número al contador de la actual
+                                   macro.
+                                   <+>  C-u  # antes de ejecutar este comando
+                                               restablece el contador de nuevo
+                                               a el valor anterior
+C-x C-k C-f                      # ( kmacro-set-format )
+  	                           Especifique el formato para insertar el
+                                   contador de macro
+
+                                   #### Especificacion de formato
+                                   %o 	Insertar representación de un número
+                                        entero en base-ocho.
+                                   %d 	Insertar representación de un número
+                                        entero en base-diez.
+                                   %x 	Insertar representación de un número
+                                    entero en base-dieciseis.
+                                   %X 	‘%x’ utiliza minúsculas y ‘%X’
+                                        utiliza mayúsculas.
+                                   %c 	Inserte el carácter que es el valor
+                                        numérico dado.
+                                   %e 	Inserta la notación exponencial para
+                                        un número de punto flotante.
+                                   %f 	Insertar notación de punto-decimal para
+                                        un número de punto flotante.
+                                   %g 	Inserte notación para un número de punto
+                                        flotanta, usando la notación exponencial o
+  	                                notación de punto-decimal, el que
+                                        sea más corto.
+                                   %% 	Inserta un único '%'. Esta especificación
+                                        de formato es inusual en el hecho de que
+                                        no utiliza un valor.
+                                   El formato es similar al de c, tambien admite
+                                   el ancho de campo, rellenar con ceros o
+                                   imprimir el signo.
+C-x C-k n sVAL                   # ( M-x kmacro-name-last-macro )
+                                   nombrar ultima macro definida como sVAL
+C-x C-k b sVAL                   # establecer una combinacion de teclado para
+                                   ultima macro
+M-x insert-kbd-macro RET sVAL    # insetar codigo lips que define la macro
+                                   si dicho codigo se ingresa en ~/.emacs
+                                   la macro sera cargada de forma automatica
+                                   esta es la forma de hacer persistente
+                                   una macro creada por nosotros
+
+*******************    EMACS LISP    ******************************************
+
+M-:                  # ejecutar exprecion Emacs Lips en el minibufer
+M-x ielm             # ejecutar interprete interactivo Emacs lips
+
+*******************    AFLOJANDO EL RITMO   **********************************
+
+M-x zone                 # funciones que interactuan con el texto
+M-x zone-leave-me-alone  # finaliza zone
+M-x tetris               # mitico tetris
+M-x snake                # mitico snake
+M-x doctor               # psycoanalisis
+M-x hanoi                # torres de Hanoi
+
+
+/*/*/*/*/*/*/*/*/*/*/*/*/*/*/* MODES *\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\
+
++-------------------------------------------------------------------------------+
+| Modos Mayores Basicos:                                                        |
+|                                                                               |
+|   M-x  <+>  ----+                                                             |
+| |---------------+                                                             |
+| | fundamental-mode              # Es el modo por defecto.                     |
+| | text-mode                     # Edición de texto.                           |
+| | view-mode                     # Para el visionado de ficheros, pero         |
+| |                                 no edición.                                 |
+| | transient-mark-mode           # resaltado de la region                      |
+| |                                                                             |
+| |                                                                             |
+| |                                                                             |
+| | shell-mode                    # Para utilizar una shell desde Emacs.        |
+| | indent-text-mode              # Sangrado automático de texto.               |
+| | paragraph-indent-text-mode    # Sangra la primera linea de cada párrafo.    |
+| | picture-mode                  # Crea gráficos ASCII usando el ratón.        |
+| | lips-mode                     # Escribir programas en Lisp.                 |
+| | compilation-mode              # Para compilar programas.                    |
+| | sgml-mode                     # Escribir SGML .                             |
+| | html-mode                     # Escribir HTML .                             |
+|                                                                               |
++-------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+| Modos Menores Basicos                                                         |
+|                                                                               |
+|   M-x <+> -----+                                                              |
+| |--------------+                                                              |
+| | overwrite-mode              # Sobreescribe en lugar de insertar.            |
+| |                               este se activa mediante tecla insert          |
+| | auto-save-mode              # Guarda automaticamente en un fichero          |
+| |                               especial.                                     |
+| | isearch-mode                # Para búsquedas.                               |
+| | abbrev-mode                 # Permite la utilización de abreviaturas.       |
+| | paragraph-indent-text-mode  # Sangra la primera linea de cada párrafo.      |
+| | refill-mode                 # Intenta "llenar" los párrafos tal como        |
+| |                               se editan.                                    |
+| | artist-mode                 # Crea gráficos ASCII usando el ratón.          |
+| | ido-mode                    # proporciona asistencia en la busqueda         |
+| |                               de ficheros y directorios                     |
+|                                                                               |
++-------------------------------------------------------------------------------+
+
+*******************    DIREC-MODE    ******************************************
+
+  C-x d       # explorar ficheros
+  M-x dired   # explorar ficheros
+  RET         # entrar en directorio o abrir fichero para edicion
+  e           # editar fichero
+  f           # editar fichero
+  v           # abre fichero solo en modo lectura
+                <+> q # regresa a direc-mode
+  o           # abre el fichero en otra ventana
+  C-o         # abre el fichero en otra ventana dejando el punto en la
+                ventana actual
+  m           # marca para aplicar un comando sobre un grupo de ficheros
+  t           # marca inversa
+  #           # marca todos los ficheros de autoguardado "#"
+  ~           # marca todos los ficheros de autoguardado "~"
+  * *         # marca todos los ficheros ejecutables
+  * \         # marca todos lo directorios
+  * @         # marca todos los enlaces simbolicos
+  % m         #	marcar todos los archivos cuyos nombres coincidan con regexp suministrado.
+  % g         # marcar todos los archivos cuyo contenido coincida con el regexp
+                suministrado.
+  u           # desmarcar
+  U           # desmarcar todo
+  * !         # desmarcar todo
+  C           # copiar fichero o grupo
+                si este comando es precedido por un numero tambien copia
+                los nVAL ficheros consecutivos
+  R           # renombrar fichero individual o mover grupo
+                el comportamiento de este comando es similar al comando
+                Unix mv
+  A           # busqueda de exprecion regular en fichero o grupo
+                terminara al encontrar la primer coinsidencia
+  Q           # buscar y reemplazar cadena de texto en fichero o grupo
+  d           # marca ficheros para eliminacion
+                <+> x # elimina ficheros marcados para eliminacion
+  D           # eliminar sin previo marcado
+  +           # crear directorio
+  Z           # comprimir/descomprimir ficheros o grupo de forma idividual.
+                las extenciones reconocidas son .z, .Z y .gz
+  g           # refrescar lista de directorio
+  s           # modifica el criterio de ordenacion
+                nobre <+> s fechaDescendiente <+> s fechaAscendiente
+  !           # ( M-x dired-do-shell-command )
+                ejecutar comando shell sobre fichero
+  X           # ( M-x dired-do-shell-command )
+                ejecutar comando shell sobre fichero
+  =           # ( M-x dired-diff )
+                compara fichero con otro especificado en el minibuffer
+  SPC         # este comando se une a los ya conocidos para la navegacion
+                siguiente fichero
+  delback     # este comando se une a los ya conocidos para la navegacion
+                anterior fichero
+                en caso de que el fichero de la linea anterior este marcado,
+                la marca es eliminada
+  <           # ir a directorio anterior
+  >           # ir a directorio siguiente
+  ^           # ir al directorio padre
+  i           # insertar listado del contenido de directorio para navegacion
+
+*******************    FOLLOW MODE    *****************************************
+
+M-x follow-mode    # El punto salta a la siguiente ventana si el buffer
+                     es el mismo
+
+*******************    SHELL MODE    ******************************************
+
+             SIGNALS
+C-c C-c             # ( M-x comint-interrupt-subjob )
+                      Interrumpe la tarea en curso.
+C-c C-z             # ( M-x comint-stop-subjob )
+                      Suspende o para una tarea en curso.
+<M> Signals-->CONT  # Reanuda la tarea suspendida.
+C-c C-\             # Sale de la tarea iniciada.
+<M> Signals-->QUIT  # Sale de la tarea iniciada.
+<M> Signals-->KILL  # Finaliza el proceso de shell.
+
+            In/Out
+C-c C-d             # ( M-x comint-send-eof )
+                      Envia un carácter EOF.
+C-d                 # ( M-x comint-delchar-or-maybe-eof )
+                      Envia un carácter EOF si está al final del buffer. En
+                      otro caso, elimina el carácter.
+                      aconsejable es enviarlo al finalizar el uso de este
+                      buffer especial y despues matar el buffer
+M-p                 # ( M-x comint-previous-input )
+                      Recupera comandos anteriores.
+M-n                 # ( M-x comint-next-input )
+                      Recupera subsiguientes comandos.
+M-r                 # busqueda de comandos previos
+C-c C-l             # historial de comandos
+C-c C-o             # ( M-x comint-kill-output )
+                      Elimina el output del último comando.
+C-c C-e             # ( M-x comint-show-maximum-output )
+                      Mueve la última linea del output al final de la ventana.
+C-c C-p             # ( M-x comint-previous-prompt )
+                      Mueve al comando previo.
+C-c C-n             # ( M-x   comint-next-prompt )
+                      Mueve al siguiente comando.
+C-c C-u             # ( M-x comint-kill-input )
+                      Elimina la linea corriente.
+RET                 # ( M-x comint-send-input )
+                      Envia input a la linea corriente.
+TAB                 # ( M-x comint-dynamic-complete )
+                      Completa el nombre del comando, fichero, variable..etc.
+C-c C-r             # ( M-x comint-show-output )
+                      Mueve la primera linea de output a principio de
+                      la ventana.
+M-x send-invisible  # ocultar texto que se ingresa.
+
+*******************    SHELL MODE    ******************************************
+
+C-c C-l             # mostrar el todo el historial de commandos
+
+*******************    BUFFER MENU    *****************************************
+
+  d           # Marca un buffer para su eliminación. En la primera columna
+                aparece el signo D
+  supr        # Marca un buffer para su eliminación. En la primera columna
+                aparece el signo D
+  k           #	Marca un buffer para su eliminación. En la primera columna
+                aparece el signo D
+  s           # Marca un buffer para guardarlo. En la primera columna
+                aparece el signo S
+  x           # Elimina los buffers marcados con d y k. Guarda los marcados
+                con s
+  u           # Desmarca los buffers marcados con d y k y s
+  delback     # Desmarca los buffers marcados con d y k y s
+  ~           # Pasa el buffer a inmodificado.
+  %           #  Pasa el buffer de lectura-escritura a solo-lectura y
+                 viceversa.
+  1           # Muestra el buffer a pantalla completa.
+  2           # Muestra el buffer y el siguiente en pantalla ventanas
+                horizontales.
+  f           # Reemplaza la Lista de buffers por este buffer
+  o           # Reemplaza el buffer mostrado en otra ventana por este buffer.
+  m           # Marca buffers para ser visualizados en ventanas. En la primera
+                columna aparece el signo
+  v           # Ejecuta la marca m.
+  q           # Sale de la Lista de buffers.
+
+*******************    IBUFFER    *****************************************
+
+  d           # Marca un buffer para su eliminación. En la primera columna
+                aparece el signo D
+  x           # Elimina los buffers marcados con d y k. Guarda los marcados
+                con s
+  u           # Desmarca los buffers marcados con d
+  delback     # Desmarca los buffers marcados con d
+  o           # Reemplaza el buffer mostrado en otra ventana por este buffer.
+  m           # Marca buffers para ser visualizados en ventanas. En la primera
+                columna aparece el signo
+  v           # Ejecuta la marca m.
+  q           # Sale de la Lista de buffers.
+/ m 	Agrega un filtro de un modo principal
+/ n 	Agrega un filtro por nombre de búfer.
+/ c 	Agrega un filtro de contenido del buffer.
+/ f 	Agrega un filtro por nombre de archivo
+/ > 	Agrega un filtro de tamaño de búfer
+/ < 	Agrega un filtro de tamaño de búfer
+/ / 	Quitar todos los filtros en efecto
+
+
+    view: pulse A para ver los buffers marcados
+    save: pulse S para guardar los buffers marcados
+    close: pulse D para cerrar los buffers marcados
+    revert: pulse V para descartar los cambios en los buffers marcados
+
+    Comandos de filtro por grupo:
+
+/ g 	Crea un grupo para el filtro aplicado
+TAB 	Ir al siguiente grupo
+M-p 	Mover al grupo anterior
+/ \ 	Retire todos los grupos activos
+/ S 	Guarde los grupos actuales con un nombre
+/ R 	Restaurar grupos previamente guardados
+/ X 	Eliminar grupos previamente guardados
+
+    Comandos de ordenacion:
+
+, 	Rotar entre los modos de clasificación
+s i 	Para la clasificación anterior a la actual
+s a 	Ordenar buffers por alfabeto
+s f 	Ordenar buffers por nombre de archivo
+s v 	Ordenar buffers por última vez la visión
+s s 	Ordenar buffers por tamaño
+s m 	Ordenar buffers por modos mayores
+
+*******************    *BOOKMARK LIST*    *************************************
+
+<Enter>     |  # Nos muestra el fichero que contiene el bookmark, con el cursor
+f           |    situado en la posición marcada.
+j           |
+d         |    # Marca un bookmark para su eliminación.
+C-d       |
+k         |
+u              # Elimina las marcas de los bookmarks.
+x              # Elimina los bookmarks marcados con D; k o C-d
+s              # Guarda todos los bookmarks.
+r              # Renombra el bookmark. Emacs nos solicitará el nuevo nombre.
+t              # Oculta o visualiza los paths de los ficheros de los bookmarks
+                 de la lista.
+w              # Muestra, en el mini-buffer, la localización del fichero
+                 del bookmark..
+m              # Marca bookmarks para la visualización de sus ficheros en
+                 múltiples ventanas.
+                 En la primera columna aparece el signo  >
+l              # Carga un fichero .emacs.bmk diferente al actual
+a              # Muestra las anotaciones del bookmark actual
+A              # Muestra toddas las anotaciones.
+e              # Edita o crea una anotación en el bookmark actual.
+q              # Sale de la Lista de bookmarks.
+
+*******************    OCCUR MODE    *******************************************
+
+M-s o    # occur buffer
+C-n 	 # Ir a la siguiente línea
+C-p 	 # Ir a la línea anterior
+< 	 # Ir al principio del búfer
+> 	 # Ir al final del búfer
+e 	 # Edicion dentro del buffer *Occur*
+C-c C-c  # Cuando termine con la edición, C-c C-c
+  	   para salir del modo de edición
+g 	 # Si el archivo de búsqueda se actualiza,
+  	   g refresca el buffer *Occur*
+  	   para reflejar los cambios
+o 	 # Ir hasta la coincidencia e intercambiar el punto
+C-o 	 # Ir hasta la coincidencia pero el punto permanece
+  	   en *Occur*
+
+*******************    AUTO-FILL-MODE    **************************************
+
+  M-x auto-fill-mode   # activa modo menor auto-fill que rompe automaticamente
+                         las lineas
+  C-x f                # modifica el numero de columnas para romper la linea
+
+*******************    NUEVOS MODOS    ****************************************
+
+Los modos son ficheros *.el de código fuente en lenguaje elisp, este
+código es ejecutado por el propio Emacs, que incluye un interprete de
+de este lenguaje.
+
+    Descargamos el/los fichero/s *.el en cuestión, p. ej: ruby-mode.el
+    Cargamos el fichero de código elisp con la orden load-file, p. ej:
+    load-file RET ~/ruby-mode.el Ahora ya podemos cargar el nuevo
+    modo, M-x ruby-mode
+
+    Es conveniente (no obligatorio) compilar los programas byte-code
+    porque acelera su carga y ejecución:
+
+    byte-compile-file RET e:/ruby-mode.el
+
+    tras lo cual se genera ~/ruby-mode.elc, que se puede cargar igual
+    que si fuera un fichero *.el pero más rápido
+
+    Conviene añadir la orden load-file al fichero .emacs para cargar
+    el modo siempre al inicio:
+
+    (load-file "~/ruby-mode.elc")
+
+    Es también muy útil asociar un modo a un fichero según su extensión de
+    forma que Emacs entre en ese modo automáticamente al abrir el
+    fichero. Por ejemplo, para asociar el modo wikipedia-mode.el a todos
+    los ficheros terminados en *.wiki añade la siguiente línea a tu
+    .emacs:
+
+    (add-to-list 'auto-mode-alist
+       '("\\.wiki\\'" . wikipedia-mode))
