@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 17 Jun 2017 12:39:43 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jul 2017 18:47:44 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/categories/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>morg [dia 432]</title>
+      <link>http://nasciiboy.github.io/prog/morg-d432/</link>
+      <pubDate>Tue, 04 Jul 2017 18:47:44 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/morg-d432/</guid>
+      <description>sin un titulo interesante y sin esperar una secuencia tan armonica, confie a un programa informatico de internet la tarea de calcular los dias desde el primer commit del repo de morg, no por ningun hecho revelante y menos por un desarrollo agil, que es mas bien paralitico
+bueno, el programa exportador llevaba parado un rato con un bicho enorme, mientras continua el aprendizage del lenguaje Go, a la espera de una refactorizacion, pruebas y demas cosas necesarias, asi pues cuando me decidia a probar a exportar o visualizar algun libro recien maquetado, optenia un log inverso de panicos y direcciones de memoria exadecimales.</description>
+    </item>
     
     <item>
       <title>Crear una paleta de color con solo un indice</title>
@@ -18,7 +28,7 @@
       <pubDate>Sat, 17 Jun 2017 12:39:43 -0500</pubDate>
       
       <guid>http://nasciiboy.github.io/prog/rainbow/</guid>
-      <description>que tal, como lo indica el titulo vamos a generar una paleta de color apartir de un unico indice, para, por ejemplo para colorear una imagen en una escala de colores RGB del negro absoluto (0,0,0) al blanco (255,255,255), con una trancicion &amp;ldquo;suave&amp;rdquo; por estos
+      <description>que tal, como lo indica el titulo vamos a generar una paleta de color apartir de un unico indice, para, por ejemplo colorear una imagen en una escala de colores RGB del negro absoluto (0,0,0) al blanco (255,255,255), con una trancicion &amp;ldquo;suave&amp;rdquo; por estos
 El asunto surgio resolviendo algunos de los ejercicios de libro de programacion de go, especificamente el 3.5, donde proponian dar color a una imagen de mandelbrot, que estaba en una escala de grises (de hay viene lo de generar los colores apartir de un solo indice).</description>
     </item>
     

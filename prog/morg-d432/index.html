@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
   <head>
     <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>Definir atajos en Emacs - nba - GNU&#39;s Rock</title>
+    <title>morg [dia 432] - nba - GNU&#39;s Rock</title>
     
     <style media="screen">
 :root {
@@ -183,185 +183,87 @@ img:hover { border: 0.05em solid #fff; }
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
-    <li><span class="path-pwd">Definir atajos en Emacs</span></li>
+    <li><span class="path-pwd">morg [dia 432]</span></li>
   </ul>
 
   <article>
-  <h1 class="title">Definir atajos en Emacs</h1>
+  <h1 class="title">morg [dia 432]</h1>
 
-  <time datetime="2017-01-07 09:38:46 -0600 CST">Jan 7, 2017</time>
+  <time datetime="2017-07-04 18:47:44 -0500 CDT">Jul 4, 2017</time>
 
-  <div class="article-body">
+  <div class="article-body"><p><img src="http://nasciiboy.github.io/img/BOM.jpg" alt="" /></p>
 
-<p><img src="../kara.jpg" alt="" /></p>
+<p>sin un titulo interesante y sin esperar una secuencia tan armonica, confie a un
+programa informatico de internet la tarea de calcular los dias desde el primer
+commit del repo de morg, no por ningun hecho revelante y menos por un desarrollo
+agil, que es mas bien paralitico</p>
 
-<p>En emacs, tu puedes crear cualquier atajo de teclado para cualquier comando</p>
+<p>bueno, el programa exportador llevaba parado un rato con un bicho enorme, mientras continua el
+aprendizage del lenguaje Go, a la espera de una refactorizacion, pruebas y demas
+cosas necesarias, asi pues cuando me decidia a probar a exportar o visualizar
+algun libro recien maquetado, optenia un log inverso de panicos y direcciones
+de memoria exadecimales. Toque aqui y un poco alla, sin comprender el problema,
+hasta que un momento de aburrimiento y terquedad irracional me guiaron por la ruta dificil&hellip;</p>
 
-<p>Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de
-configuracion de emacs</p>
+<p>en una revelacion mistica, pense que el problema era la codificacion del
+documento, quiza no estaba en utf-8 puro (que es lo unico que acepta el exportador)
+asi que con un <code>file</code>, el fichero en cuestion decia tener un <em>BOM</em>, &ldquo;o, hay esta
+el problema –me dije&rdquo;&hellip; mas bien no, al parecer es algo que se descarta mientras se lee
+el fichero, pero por cualquier duda, los pase a utf-8 sin el BOM (en emacs <code>C-x
+Enter f</code>, se abre un prompt, e introduces la codificacion, <code>utf-8</code>, pero
+tambien vale con <code>unix</code>)</p>
 
-<pre><code class="language-elisp">(global-set-key (kbd &quot;&lt;f7&gt;&quot;) 'calendar)
-</code></pre>
+<p>luego, en una muestra de ingenio impresionante, tome un manual de muchas muchas
+lineas y comence a quitar y guardar cosas hasta encontrar la linea que hacia
+explotar el programa, el culpable era un <em>bloque de comando</em>, sin
+definir.</p>
 
-<p>Si estas experimentando y no deseas reiniciar emacs cada vez que intentas
-definir un nuevo atajo, puedes colocar el cursor al final del ultimo parantesis
-e invocar a (<code>M-x</code>) <code>eval-last-sexp</code> (comando ligado a <code>C-x C-e</code>). El atajo se
-activa de inmediato. Para salir del buffer calendario presiona <code>q</code>.</p>
+<p>Dentro del codigo el error se devia a exportar un bloque vacio&hellip; y no
+considerar tal indudable posivilidad, provocada incluso por un error tipografico</p>
 
-<p>Si cometes algun error y necesitas iniciar emacs sin cargar el archivo de
-configuracion, puedes iniciar emacs desde el terminal con este comando:</p>
+<p>he, he, ya mencione que generalmente programo sin considerar los casos de error
+y que el programa no notifica nada para ningun fallo&hellip; fiel a mis costumbres
+le hice unos pequeñøs ajustes, que tambien suponen datos de entrada
+correctos&hellip;</p>
 
-<pre><code class="language-bash">emacs --no-init-file
-</code></pre>
+<p>entre los cambios, inclui el comando <code>srci</code> para &ldquo;simular&rdquo; un prompt de algun
+lenguaje, es decir, colocas la supuesta entrada en un determinado lenguaje y
+tambien su supuesta salida, sencillo, no?</p>
 
-<h2 id="sintaxis">sintaxis</h2>
+<p>un comando <code>tab</code> para separar un poco de la izquierda cualquier cosa</p>
 
-<p>La funcion para definir atajos es</p>
+<p>el comando <code>pret</code>, de &ldquo;texto pre&rdquo;, es decir, es texto, cada linea es un
+parrafo, pero se visualiza como pre</p>
 
-<pre><code class="language-elisp">(define-key map COMBINACION 'FUNCION)
-</code></pre>
+<p>un comando <code>verse</code>, para versos y tambien un &ldquo;separador&rdquo; para los libros, que
+ahora recuerdo olvide implementar, bueno no importa</p>
 
-<p>donde <code>map</code> es un mapa de combinaciones, o por decirlo de alguna forma, un
-prefijo que precede a la combinacion en si</p>
+<p>todo fue implementado de forma fugaz, por mis ancias de exportar el <a href="https://github.com/nasciiboy/sicp">sicp en formato morg</a>,
+tiene tanto cruft que se pega en la ropa! pero hey! solo es una prueba de
+concepto, ya tengo una mejor idea de como implementar algunas cosas (algun dia)
+y tambien he visto la necesidad de esconder la implementacion de los
+exportadores del formato, haciendo que la estructura principial se &ldquo;desenrrolle&rdquo;
+sola, el programador devera proporcionar solo las reglas para cada elemento, o
+esa es la idea, veremos si puede hacerlo o siquiera visualizarlo, pues hay es
+donde radica la magia de la programacion, si eres capaz de imaginar una
+estructura funcional, es problable que la puedas implementar (como en el kung-fu)</p>
 
-<ul>
-<li><code>ctl-x-map</code> con prefijo <code>C-x</code></li>
-<li><code>ctl-x-4-map</code> con prefijo <code>C-x 4</code></li>
-<li><code>ctl-x-5-map</code> con prefijo <code>C-x 5</code></li>
-<li><code>ctl-x-r-map</code> con prefijo <code>C-x r</code></li>
-<li><code>esc-map</code>  con prefijo <code>ESC</code></li>
-<li><code>help-map</code>  con prefijo <code>C-h</code></li>
-<li><code>global-map</code> (sin prefijo) para cualquier combinacion. Esta ultima tiene una
-funcion dedicada y en ella centraremos la explicacion</li>
-</ul>
+<p>me tome la libertad, y ya que esta version sera la ultima con el anterior
+enfoque (desechable) de segir utilizando pygments para el resaltado de codigo
+(go-highlight es un timo), e incluir el javascript de <em>Mathjax</em> para hacerse
+cargo de unas pocas formulas matemagicas de la version exportada del sicp. De
+igual forma no le meti mano al visualizador de linea de comandos, pues considere
+que seria un esfuerzo futil</p>
 
-<pre><code class="language-elisp">(global-set-key COMBINACION 'FUNCION)
-</code></pre>
+<p>no modifique mucho mi hoja de estilos generica, sera tarea para otro dia mientras preparo
+un discusito para pedir financiacion para la traduccion del sicp, continuar el
+desarrollo del morg, comprar un par de monitores, una estacion de trabajo y
+aspirar cocaina sobre el cuerpo de unas japonesas en nagoya</p>
 
-<p>La <code>COMBINACION</code> de teclas puede ser cualquiera de estas 3 formas</p>
-
-<ul>
-<li><p><code>&quot;letra&quot;</code>. Una unica letra de a-z o 1-9 dentro de comillas</p></li>
-
-<li><p><code>[nombre]</code>. <code>nombre</code>, se substiye por el nombre interno o por el codigo que
-emacs asigna a cada tecla, la combinacion puede contener mas de una tecla pero
-siempre se efectua en un solo paso, por ejemplo <code>[s-left]</code> es presionar la
-tecla super + la tecla fecha izquierda, <code>[s-kp-5]</code> es presionar la
-tecla super + la tecla 5 del pad numerico.</p></li>
-
-<li><p><code>(kbd &quot;sequencia&quot;)</code>. <code>sequencia</code> es cualquier combinacion del teclado colocada
-entre parentesis, esta puede separarse en varios pasos si se coloca un espacio
-en blanco entre los nombres de las teclas. Dentro de la cadena, para hacer
-referencia a la tecla control, colocamos <code>C</code>, para meta/esc <code>M</code>, y para
-super <code>s</code>, las tres siempre van en conjunto con alguna otra tecla siguiendo el
-formato <code>C-tecla</code>, <code>M-tecla</code> o <code>s-tecla</code>. Finalmente podemos hacer referencia
-al nombre interno de una tecla, al colocarlo entre mayor que y menor que, por
-ejemplo <code>(kbd &quot;&lt;f8&gt;&quot;)</code> sera la tecla F8</p></li>
-</ul>
-
-<p>este es el nombre interno de algunas teclas</p>
-
-<ul>
-<li><code>backspace</code> retroceso</li>
-<li><code>return</code> enter</li>
-<li><code>delete</code> suprimir</li>
-<li><code>up</code> flecha arriba</li>
-<li><code>down</code> flecha abajo</li>
-<li><code>right</code> flecha derecha</li>
-<li><code>left</code> flecha izquierda</li>
-<li><code>f1</code>..<code>f35</code>tecla de funcion de F1 a F35</li>
-<li><code>home</code> Inicio</li>
-<li><code>end</code> Fin</li>
-<li><code>help</code> Ayuda</li>
-<li><code>kp-0</code>.. <code>kp-9</code> numeros del pad numerico</li>
-<li><code>kp-subtract</code> menos del pad numerico</li>
-<li><code>kp-add</code> mas del pad numerico</li>
-<li><code>kp-enter</code> enter del teclado numérico</li>
-<li><code>kp-decimal</code> punto decimal del teclado numérico</li>
-<li><code>next</code> AvPag</li>
-<li><code>prior</code> RePag</li>
-</ul>
-
-<h2 id="ejemplos">ejemplos</h2>
-
-<pre><code class="language-elisp">(global-set-key [s-left]  'windmove-left)
-(global-set-key [s-right] 'windmove-right)
-(global-set-key [s-up]    'windmove-up)
-(global-set-key [s-down]  'windmove-down)
-
-(global-set-key (kbd &quot;C-c &lt;left&gt;&quot;)  'windmove-left)
-(global-set-key (kbd &quot;C-c &lt;right&gt;&quot;) 'windmove-right)
-(global-set-key (kbd &quot;C-c &lt;up&gt;&quot;)    'windmove-up)
-(global-set-key (kbd &quot;C-c &lt;down&gt;&quot;)  'windmove-down)
-
-(global-set-key (kbd &quot;C-c o&quot;) 'recentf-open-files)
-(global-set-key (kbd &quot;C-x C-b&quot;) 'ibuffer)
-
-(global-set-key [return] 'backward-char)
-(global-set-key (kbd &quot;&lt;return&gt;&quot;) 'backward-char)
-(global-set-key (kbd &quot;&lt;f7&gt; &lt;f8&gt;&quot;) 'calendar)
-</code></pre>
-
-<h2 id="conocer-el-comando-ligado-a-un-atajo">Conocer el comando ligado a un atajo</h2>
-
-<p>Si invocamos a <code>describe-key</code> (<code>C-h k</code>) y, a continuacion, se presiona un atajo,
-emacs mostrara el comando al que esta ligado.</p>
-
-<p>Por ejemplo, supongamos que deseamos conocer el comando ligado a
-<code>C-M-g</code>. Primero se llama a <code>describe-key</code>, luego se presiona la combinacion de
-teclado, entonces emacs imprimira <code>C-M-g is undefined</code>. Esto significa que
-puedes utilizar <code>(kbd &quot;C-M-g&quot;)</code> para representar una combinacion de teclas en
-codigo lisp.</p>
-
-<h2 id="combinaciones-a-evitar">Combinaciones a evitar</h2>
-
-<p>Emacs tiene sus caprichos. Es mejor no definir las siguientes combinaciones, a
-menos que sepas lo que estas haciendo.</p>
-
-<ul>
-<li><p><code>C-cualquierLetra</code>. Dada la forma en que emacs esta implementado utiliza la
-sintaxis &ldquo;C-letra&rdquo; para un monton de atajos preestablecidos</p></li>
-
-<li><p><code>F1</code> o <code>C-h</code>. Emacs utiliza esta combinacion para el sistema de ayuda de emacs
-y tiene un estado especial en el sistema de comandos de emacs.</p></li>
-
-<li><p><code>ESC</code> o <code>C-[</code>. Esta combinacion por si misma tiene un significado complicado,
-dependiendo de cauntas veces se presione</p></li>
-
-<li><p><code>C-Shift-letra</code>. Algunos terminales no pueben dintingur las versiones de la
-combinacion con Shift de la version sin Shift</p></li>
-</ul>
-
-<h2 id="buenas-opciones">Buenas opciones</h2>
-
-<p>Emacs tiene unos siete mill comandos. De forma predeterminada, 800 de ellos
-tiene un atajo. Si defines tus propios atajos sin cuidado es posible que muchos
-modos primarios o secundarios anulen tus combinaciones, ya que estas tiene
-prioridad.</p>
-
-<p>En la documentacion oficial de emacs, Las combinaciones libres para el usuario
-son de F5 a F9 y <code>C-c letra</code>.</p>
-
-<p>Las siguientes combinaciones son buenos puntos de partida para tus propias
-definiciones, y no causan ningun problema en la practica</p>
-
-<ul>
-<li><p><code>F5</code>, <code>F6</code>, <code>F7</code>, <code>F8</code>, <code>F9</code>, <code>F12</code>. Puden combinarse sin problemas con
-Ctrl. Asegurate que no los utilize el sistema operativo.</p></li>
-
-<li><p>Super o Hyper. Cualquier combinacion con estas es buena, pero es posible que
-el terminal no reconosca las teclas Super o Hyper.</p></li>
-</ul>
-
-<h2 id="fuentes">fuentes</h2>
-
-<p>buena parte del articulo es una pseudo-traduccion de</p>
-
-<p><a href="http://ergoemacs.org/emacs/keyboard_shortcuts.html">http://ergoemacs.org/emacs/keyboard_shortcuts.html</a></p>
-
-<p>otra, es una invencion no contrastada con el manual</p>
+<p>tambien puse a prueba el morg con los 4 libros de Ender, pero ese material, ya
+tendra su propio post</p>
 </div>
 </article>
 
@@ -369,9 +271,9 @@ el terminal no reconosca las teclas Super o Hyper.</p></li>
   <ul class="path">
     <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
     
-    <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs/</span></a></li>
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
-    <li><span class="path-pwd">Definir atajos en Emacs</span></li>
+    <li><span class="path-pwd">morg [dia 432]</span></li>
   </ul>
 </main>
 

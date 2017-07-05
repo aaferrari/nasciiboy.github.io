@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Thu, 20 Apr 2017 11:54:03 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jul 2017 18:47:44 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/tags/morg/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>morg [dia 432]</title>
+      <link>http://nasciiboy.github.io/prog/morg-d432/</link>
+      <pubDate>Tue, 04 Jul 2017 18:47:44 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/morg-d432/</guid>
+      <description>sin un titulo interesante y sin esperar una secuencia tan armonica, confie a un programa informatico de internet la tarea de calcular los dias desde el primer commit del repo de morg, no por ningun hecho revelante y menos por un desarrollo agil, que es mas bien paralitico
+bueno, el programa exportador llevaba parado un rato con un bicho enorme, mientras continua el aprendizage del lenguaje Go, a la espera de una refactorizacion, pruebas y demas cosas necesarias, asi pues cuando me decidia a probar a exportar o visualizar algun libro recien maquetado, optenia un log inverso de panicos y direcciones de memoria exadecimales.</description>
+    </item>
     
     <item>
       <title>Nirvana</title>
