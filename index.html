@@ -55,6 +55,7 @@ html { background: var( --BGC ); color: var( --FGC );
        margin: 0; padding: 0;
        font-size: 1.3em;
        line-height: 1.5em;
+       box-sizing: border-box;
      }
 
 html body { margin: 1em 0em 1em 1em;
@@ -65,16 +66,16 @@ html body { margin: 1em 0em 1em 1em;
 html body main {font-size: 1.0em;
                 font-family: text;
                 box-sizing:border-box;
-                padding: 1em;
+                padding-left: 2em;
                 width: 70%;
                 float: left;
                }
 
 html body main div.thumb {font-size: 1.0em;
                 font-family: text;
-                box-sizing:border-box;
-                padding: 2em;
-                width: 50%;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
                 float: left;
                }
 
@@ -87,6 +88,7 @@ ul.terms li { display: block;
               float: left;
               margin: .1em .5em .1em .5em;
 }
+
 ul.terms a { text-decoration: none;
 }
 
@@ -94,7 +96,6 @@ ul.terms a:hover { text-decoration: none;
                    background-color: #333;
                    color: #fff;
 }
-
 
 .summary {
   max-height: 8.7rem;
@@ -104,7 +105,6 @@ ul.terms a:hover { text-decoration: none;
 div.thumb-sm {font-size: 0.7em;
                 font-family: text;
              }
-
 
 .thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
 
@@ -121,6 +121,10 @@ html body footer {
     clear: both;
 }
 
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
 .footer-title a { list-style: none; text-decoration: none; color: red; }
 
 h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }  
@@ -136,7 +140,6 @@ h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-he
 .path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
 .path li a { text-decoration: none; color: #87cefa; }
 .path-pwd { color: yellow; }
-
 
 pre {
     background-color: var( --FGCbtcode ); color: white;
@@ -181,6 +184,27 @@ img:hover { border: 0.05em solid #fff; }
   <body>
     
 <main>
+  
+  <div class="thumb">
+  <h2 class="title"><a href="http://nasciiboy.github.io/prog/dot-slash-sicp2es/">SICP (proyecto de traduccion)</a></h2>
+
+  <ul class="meta">
+    <li><time datetime="2017-07-06 18:27:56 -0500 CDT">Jul 6, 2017</time></li>
+    
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+    
+  </ul>
+
+  <div class="summary">o en otras palabras dadme pasta! (no en galletas)
+faq por que?
+para traducir un libro de muchas lineas al español, el Structure and Interpretation of Computer Programs, tambien conocido como SICP
+por que sicp?
+ en los listados de lecturas para programadores suele aparecer inevitablemente y en los primeros puestos
+ puedo traducirlo y combrar por ello, sin romper ninguna ley (creo)
+ parece interesante y creo que enseñan a programar, ademas utilizan un derivado de lisp: Scheme</div>
+</div>
+
+  
   
   <div class="thumb">
   <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg-d432/">morg [dia 432]</a></h2>
@@ -427,22 +451,6 @@ Katata El motivo principal del silencio literario fue katana, un componenten del
 
   
   
-  <div class="thumb">
-  <h2 class="title"><a href="http://nasciiboy.github.io/prog/yorozuya/">yorozuya</a></h2>
-
-  <ul class="meta">
-    <li><time datetime="2017-03-14 16:33:15 -0600 CST">Mar 14, 2017</time></li>
-    
-    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
-    
-  </ul>
-
-  <div class="summary">Yorozuya en una tienda donde se toma cualquier tipo de trabajo por una tarifa&hellip; bienvenidos los encargos!
-bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me encontraba aprendiendo golang y para tener una referencia rapida del lenguaje, pase el libro oficial (apartir de un pdf) a morg (AQUI el material, fuente, resultado e imagenes). Aun le falta una revision fina que ire realizando a medida que avance su lectura, aunque la actualizacion quisa solo vea la luz cuando aparesca el proyecto morg al 100%.</div>
-</div>
-
-  
-  
 
   
 <nav class="p-paging">
@@ -483,6 +491,21 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
     
     <div class="thumb-sm">
   <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/dot-slash-sicp2es/">SICP (proyecto de traduccion)</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-06 18:27:56 -0500 CDT">Jul 6, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg-d432/">morg [dia 432]</a></h2>
 
     <ul class="meta">
@@ -494,6 +517,7 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -511,7 +535,6 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-v/">Ramen V</a></h2>
@@ -525,6 +548,7 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -542,7 +566,6 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-iv/">Ramen IV</a></h2>
@@ -556,6 +579,7 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -573,7 +597,6 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-iii/">Ramen III</a></h2>
@@ -587,6 +610,7 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
   </header>
 </div>
 
+    
     
     
     <div class="thumb-sm">
@@ -604,7 +628,6 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
 
     
     
-    
     <div class="thumb-sm">
   <header>
     <h2 class="title"><a href="http://nasciiboy.github.io/prog/tgpl/">El Lenguaje De programacion Go</a></h2>
@@ -620,21 +643,6 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
 
     
     
-    <div class="thumb-sm">
-  <header>
-    <h2 class="title"><a href="http://nasciiboy.github.io/post/eof-fs/">El fin de la infancia... del Software Libre</a></h2>
-
-    <ul class="meta">
-      <li><time datetime="2017-05-15 18:17:59 -0500 CDT">May 15, 2017</time></li>
-      
-      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
-      
-    </ul>
-  </header>
-</div>
-
-    
-    
     
   </section>
 </aside>
@@ -642,7 +650,7 @@ bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me e
 
     <footer>
       <p><span class="footer-title"><a href="http://nasciiboy.github.io">nba - GNU&#39;s Rock</a></span></p>
-      <p>Powered by <a href="https://gohugo.io/">Hugo</a>–Theme <a href="https://github.com/nasciiboy/hugo_theme_nascii">nascii</a>–feed <a href="http://nasciiboy.github.io/index.xml">rss</a>–mail <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a>–gpg <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a></p>
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a>–Theme <a href="https://github.com/nasciiboy/hugo_theme_nascii">nascii</a>–feed <a href="http://nasciiboy.github.io/index.xml">rss</a>–mail <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a>–gpg <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a> –liberapay <a href="https://liberapay.com/nasciiboy/donate">donar</a></p>
     </footer>
 
   </body>

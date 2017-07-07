@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+  <head>
+    <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>SICP (proyecto de traduccion) - nba - GNU&#39;s Rock</title>
+    
+    <style media="screen">
+:root {
+                            
+    --BGC      : #000000;   
+    --FGC      : #ffffff;   
+    --BGClogo  : #222222;   
+    --FGClogo  : #ffffff;   
+    --FGCtitle : #ff4500;   
+    --FGCstart1: #4B99D2;   
+    --FGCstart2: #00ffff;   
+    --FGCstart3: #ffa074;   
+    --FGCstart4: #98fb98;   
+    --FGCstart5: #b0c4de;   
+    --FGCstart6: #7fffd4;   
+    --FGCstart7: #db2e24;   
+    --FGCstart8: #ff4500;   
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;   
+    --FGCbtcode: #333333;   
+    --FGCftcode: #ffffff;   
+    --FGCbcode : #b3b3b3;   
+    --FGCtcomm : #ff4500;   
+    --FGCtcode : #bfbfff;   
+    --FGCfile  : #eedd82;   
+    --FGCmath  : #98fb98;   
+    --FGClink  : #00ffff;   
+    --BGClinkh : #556b2f;   
+    --FGClinkh : #ffffff;   
+    --BGCdt    : #b3b3b3;   
+    --FGCdt    : #ffffff;   
+    --FGCthead : #ff7f24;   
+    --BGCthead : #000000;   
+    --FGCtbody : #87cefa;   
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url("https://nasciiboy.github.io/DejaVuSansMono.ttf");                     }
+@font-face { font-family: codeblock;      src: url("https://nasciiboy.github.io/DejaVuSansMono.ttf");                     }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding-left: 2em;
+                width: 70%;
+                float: left;
+               }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+ul.terms    { list-style: none; margin: 0em; padding: 0em; }
+ul.terms li { display: block;
+              float: left;
+              margin: .1em .5em .1em .5em;
+}
+
+ul.terms a { text-decoration: none;
+}
+
+ul.terms a:hover { text-decoration: none;
+                   background-color: #333;
+                   color: #fff;
+}
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+}
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }  
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }  
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }  
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }  
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }  
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }  
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+ 
+dl { padding-bottom: 2em; }          
+dl dt { color: #daa520;              
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;              
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+</style>
+
+  </head>
+
+  <body>
+    
+<main>
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
+    
+    <li><span class="path-pwd">SICP (proyecto de traduccion)</span></li>
+  </ul>
+
+  <article>
+  <h1 class="title">SICP (proyecto de traduccion)</h1>
+
+  <time datetime="2017-07-06 18:27:56 -0500 CDT">Jul 6, 2017</time>
+
+  <div class="article-body">
+
+<p><img src="http://nasciiboy.github.io/img/jelly.jpg" alt="" /></p>
+
+<p>o en otras palabras dadme pasta! (no en galletas)</p>
+
+<h2 id="faq">faq</h2>
+
+<p><strong>por que?</strong></p>
+
+<p>para traducir un libro de muchas lineas al español, el <strong>Structure and
+Interpretation of Computer Programs</strong>, tambien conocido como <em>SICP</em></p>
+
+<p><strong>por que sicp?</strong></p>
+
+<ul>
+<li><p>en los listados de lecturas para programadores suele aparecer inevitablemente
+y en los primeros puestos</p></li>
+
+<li><p>puedo traducirlo y combrar por ello, sin romper ninguna ley (creo)</p></li>
+
+<li><p>parece interesante y creo que enseñan a programar, ademas utilizan un derivado
+de lisp: <em>Scheme</em></p></li>
+
+<li><p>no lo he leido, ni lo entiendo en ingles&hellip;</p></li>
+</ul>
+
+<p><strong>no entiendes ingles?</strong></p>
+
+<p>he, je, he, nop! de hecho ni la ortografia, ni transmitir un pensamiento por
+escrito son <em>features</em> que posea</p>
+
+<p><strong>uuuufff, de que vas?</strong></p>
+
+<p>de nah, el libro no esta traducido, y yo, sin saber ingles, puedo utilizar un
+traductor, sentido comun y muchas horas para dejar un trabajo cuando menos
+entendible, por no decir bueno (sin llegar a lo profecional), todo esto
+respaldado en un nuevo <a href="https://github.com/nasciiboy/morg/">formato de documentacion</a>
+(actualizacion de readme en proceso) que estoy construyendo, mientras aprendo a
+programar decentemente, capto un poco de ingles y me convierto en un miembro
+productivo de la sociedad. Todo ello por un modico y nada extrabagante (pero
+digno) sueldo de <s>tercer mundo</s> un pais en vias de desarrollo</p>
+
+<p><strong>momento, seguro escapas con la pasta!</strong></p>
+
+<p>&hellip; palabra de boy scout, a menos que muera o me vea impedido fisicamente o
+ambientalmente, y/o sea demandado por algun desacuerdo legal por alguna de mis
+pasadas (y futuras) acciones informaticas, y como sinceramente no tengo nada
+mejor, ni mas noble que hacer, <em>yo nasciiboy</em> lo llevare a cabo</p>
+
+<p>en caso de no llegar a la meta finaciera, seguire adelante mientras mis parientes no me
+echen a la calle, consiga empleo, pierda el interes o cualquier combinacion de estas</p>
+
+<p>cierto es que esta es la segunda vez que pido financiacion, anteriormente fue
+para llevar a cabo la escritura
+del <a href="https://github.com/nasciiboy/raptor-book/">libro del raptor</a> + su revision
+por alguien de letras. En esa ocacion, no optuve ni un centavo, aunque continua el desarrollo de la
+libreria raptor, mas el nulo interes por esta, y la sensacion de no plasmar lo mejor
+posible mis ideas, llevaron a un paron indefinido de tal labor&hellip; pero esto es
+distinto, verdad de la buena!</p>
+
+<p><strong>seguro?</strong></p>
+
+<p>si, seguro!</p>
+
+<p><strong>seguro, seguro?</strong></p>
+
+<p>que si, es mas, a diferencia de otros suplicantes de donacion que no ofrecen
+nada de inicio, noblemente he realizado una maquetacion del libro al formato
+morg (sin gluten, o aditivos), tambien incluyo una exportacion en html
+en <a href="https://github.com/nasciiboy/sicp/">este repo</a></p>
+
+<p>o puedes hacer una clonacion con</p>
+
+<pre><code>git clone https://github.com/nasciiboy/sicp.git
+</code></pre>
+
+<p>hay encontraras, el fichero fuente y su exportacion a html, ambas en
+ingles. Probe la version html con firefox y con un spin de chromium, sin
+aparente problema</p>
+
+<p><img src="http://nasciiboy.github.io/img/sicp-screeshot-a.png" alt="" /></p>
+
+<p><img src="http://nasciiboy.github.io/img/sicp-screeshot-b.png" alt="" /></p>
+
+<p>extenso el material es, asi que probablemente contenga algunos errores</p>
+
+<p><strong>cuanto quieres?</strong></p>
+
+<p><em>5,000</em> dolares, una cantidad aproximada entre 70,000 y 100,000 pesos mexicanos,
+para un periodo de entre 5 a 8 meses (ampliable a un año), que seria un sueldo
+bajo-bueno-promedio anual</p>
+
+<p>en mas de lo que esperiria ganar en un empleo regular, pero oye, para algo que
+puedo hacer ya seria mucho no valorarme, ademas podria gastar una suma
+considerable en un par de buenos monitores, una nueva placa, un disco de 4TB, o
+ser persona</p>
+
+<p><strong>donde deposito?</strong></p>
+
+<p>realmente nunca he echo un deposito, ni recivido dinero de internet, si quieres
+hacerlo sin intermediarios ponte en contacto por correo, ya veremos si la
+tarjeta bancaria maizoro que saque con 1 peso de saldo sirve para algo</p>
+
+<p>si por el contrario prefieres un intermediario, abri una cuenta en <a href="https://es.liberapay.com/"><em>liberapay</em></a>,
+que es algo asi como un patreon, pero sin fines de lucro, ni compromisos, basado
+en software libre, tambien tiene un monton de usuarios registrados esperando
+algo de pasta y su ultimo mes movieron poco mas de 1200 euros&hellip; el
+financiamiento de proyectos libres es complejo, nadie te da dinero si no eres un
+chakal!</p>
+
+<p>el enlace a la cuenta para la financiacion, esta a fondo del blog, como sin
+querer, mis inicos otros dos medios de contacto son el correo (tambien al fondo)
+y en reddit, ambos con el usuario <strong>nasciiboy</strong></p>
+
+<p><strong>y las (pegatinas|playeras|recompensas)?</strong></p>
+
+<p>no necesitas nada externo, las cosas bonitas las tienes dentro de ti, las mas
+bonitas en el disco duro, si quieres
+una baratija ya te la puedes comprar por tu cuenta he ir directo a #!eç¤¢¢
+€¢#!¢e¤¢ $&amp;~#@&hellip;. desde el respeto&hellip;</p>
+
+<p>lol, alimenta al troll&hellip; bueno, por 10 dolares o asi, ya te pongo en el
+<em>CONTRIBUTORS</em> del repo, por 100 o mas en los agradecimientos del libro, y por
+1000 al inicio del libro con el cargo ficticio (o real) que quieras! como <em>ninja
+editor</em>, o <em>Jr. revisor online ecologist superior chief developer master</em>, etc.</p>
+
+<p><strong>no tengo pasta, puedo colaborar?</strong></p>
+
+<p>esta en un repo, en texto plano, en internet, con una licencia libre (CC BY-SA
+4.0), puedes hacer lo que te permita la ley o tu vision del mundo&hellip;</p>
+
+<p>&hellip; por supuesto que puedes colaborar, dar una revicion a las cosas que voy
+haciendo (suelo subir una seccion/capitulo por commit), ponerte a traducir,
+ofrecer tu opinion sobre el formato, programar morg, hacer una portada, una hoja
+de estilo, &hellip;</p>
+
+<p>no voy a quejarme, por tardar menos, menos aun si se hace mejor</p>
+
+<p>tambien si te gusta el formato, recivo encargos, ofertas de empleo, como tambien
+propuestas para hacer esto de documentar rentable a corto plazo, armar una empresa hippie, etc.</p>
+
+<p><strong>cuando inicia la traduccion?</strong></p>
+
+<p>obviamente, cuando vea la pasta&hellip; en realidad puedo empezar inmediatamente,
+aunque primero quiero programar un poco el exportador/visualizador/facilitador
+del formato. Tengo por costumbre hacer un poco de esto y un poco de aquello,
+antes de un mes subo o una <em>pretraduccion</em> (automatica, es decir del traductor) y
+<em>premaquetacion</em> de todo el material, esto lleva mucho mas tiempo que una simple
+traduccion y por lo general no tiene un sentido entendible para humanos, pero es
+la parte fundamental.</p>
+
+<p>Si deseo programar antes, es para automatizar la mayor parte de la labor, pese a
+que esto tambien es una meta a largo plazo</p>
+
+<h2 id="adaptacion-del-material">adaptacion del material</h2>
+
+<p>Si he de clasificar la facilidad de adaptar un libro de un formato a otro, sin
+duda, lo mas complejo seria partir del formato de arbol muerto, no obstante en
+esa situacion la &ldquo;libertad de ajuste&rdquo;, es la mas grande, si no sabes
+mecanografia, es un magnifico proyecto para aprender, e ir realizando la
+adaptacion &ldquo;al vuelo&rdquo;, claro luego seran necesarias muchas pasadas cazando
+fallos ortograficos</p>
+
+<p>el siguiente caso de complejidad seria un ocr o pdf &ldquo;con letras&rdquo;, primero se
+vuelca el contenido y luego toca no solo maquetar desde el texto en bruto,
+tambien transladar cualquier marca del original (bold, italica, enfasis,
+codigo), asi como crear enlaces internos, si es el caso</p>
+
+<p>por ultimo temos la adaptacion partiendo de algun lenguaje de marcado, que
+me gusta clasificar en dos subcategorias:</p>
+
+<ul>
+<li><p><em>maquetado limpio</em>, es decir, si es factible realizarlo con una herramienta
+automatica o con un minimo de intervencion (a base de substitucion regexp y
+macros) casi directamente</p></li>
+
+<li><p><em>maquetado ofuscado</em>, jo, esto suele encontrarse en mayor medida en documentos
+html, cuando la apnesia ataca los fundamentos estructurales del lenguaje, y
+mediante una y otra etiqueta o las que hagan falta se optiene el aspecto
+visual deseado; esta tecnica tambien se vale de romper los propositos de un
+elemento dado, asi tambien como emular una caracteristica no implementada</p></li>
+</ul>
+
+<p>los documentos en (*)TeX, suelen estar en el punto medio de ambas subcategorias,
+para fortuna mia, la persona <em>Lytha Ayth</em>, en el 2001 se dedico a maquetar sicp
+a conciencia en el formato texinfo (formato oficial de documentacion del
+proyecto GNU, con un mimo particular en Emacs). Tras una larga cadena de
+aportaciones y correcciones, optube una copia desde el repositirio <a href="https://github.com/sarabander/sicp">sicp-pocket</a>
+que contiene todo el libro dentro de un solo fichero (<code class="file">sicp-pocket.texi</code>)</p>
+
+<p>como este fichero tenia una estructura razonable, la mayoria pudo hacerse
+mediante macros y substitucion de expresiones regulares, revision manual y
+un poco de lavor para encajar algunas cosas, este proceso llevo algo asi como 15
+seciones de tiempo ocioso y un par de dias a tiempo completo</p>
+
+<p>diria que lo mas complejo fue encontrar sentido al uso del comando <code>quotation</code>,
+que se utilizaba indiscriminadamente en cuelquier figura, codigo, ejemplo y
+bloque ambiguo, tambien fue complejo decidir que hacer con las bloques de arte
+ascii encerrados en comandos de compilacion condicional, que se utilizaban
+principalmente para graficar diagramas y algunas formulas matematicas, en ese
+aspecto tome una licencia artistica, substituir el arte ascii con &ldquo;arte&rdquo; unicode
+cuando fuese apropiado (y cuando no) y tambien la nada grata tarea de substituir
+sup/super indices (unicode) de todas las formulas matemagicas que fue posible,
+creo solo quedaron 5-10 formulas en TeX puro</p>
+
+<p>cierto es que el texto incluia todas las formulas tanto en ascii como en TeX,
+pero borre este ultimo, no por incapacidad del lenguaje morg (que aun no se
+decanta por una sintaxis para formulas matemagicas), sino por ahorrar
+procesamiento y por considerar que la representacion unicode cumplia de forma
+satisfactoria, tanto (y principalmente) para leer el libro directamente del
+fuente, como en alguna de sus exportaciones (de momento solo html) y una
+no completa vision desde el terminal con el comando <code>morg tui sicp.morg</code></p>
+
+<p>Para el par de formulas que no puedieron adaptarse, utilice el javascript de
+MathJax, para la que tuve que incluir una opcion en el fuente, si desea
+eliminarla, dentro del codigo fuente del documento (<code class="file">sicp.morg</code>)
+elimine la palabra <code>mathjax</code></p>
+
+<p>el resaltado de syntaxis requiere tener instalado pygments. Dentro del documento
+la palabra <code>pygments</code> habilita dicho resaltado.</p>
+
+<p>Tome en cuenta que python es mas lento que morir por fumar, asi que desabilitese
+para pruebas rapidas, lo mismo para <code>mathjax</code>, la carga del javascript afecta el
+rendimiento del navegador de mala, muy mala manera</p>
+
+<p>en los proximos dias pondre un readme al repo y una actualizacion al de morg</p>
+
+<p>happy hacking!</p>
+</div>
+</article>
+
+
+  <ul class="path">
+    <li><a href="http://nasciiboy.github.io"><span class="path-home">/</span></a></li>
+    
+    <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
+    
+    <li><span class="path-pwd">SICP (proyecto de traduccion)</span></li>
+  </ul>
+</main>
+
+
+    <aside>
+  
+  <section>
+    <header class="taxonomies">category</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li>
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header class="taxonomies">tag</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section>
+    <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/dot-slash-sicp2es/">SICP (proyecto de traduccion)</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-06 18:27:56 -0500 CDT">Jul 6, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg-d432/">morg [dia 432]</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-04 18:47:44 -0500 CDT">Jul 4, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/why-emacs/">Por que GNU Emacs?</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-02 12:26:47 -0500 CDT">Jul 2, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-v/">Ramen V</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-01 15:05:47 -0500 CDT">Jul 1, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/apt/konsole-warrior/">Konsole Warrior</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-06-24 20:28:51 -0500 CDT">Jun 24, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/apt/"><span class="path-dir">apt</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-iv/">Ramen IV</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-06-18 15:44:42 -0500 CDT">Jun 18, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/rainbow/">Crear una paleta de color con solo un indice</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-06-17 12:39:43 -0500 CDT">Jun 17, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-iii/">Ramen III</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-06-04 14:57:33 -0500 CDT">Jun 4, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/nasciiboy-inc/">NasciiBoy Inc.</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-05-30 20:04:38 -0500 CDT">May 30, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/tgpl/">El Lenguaje De programacion Go</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-05-29 22:02:43 -0500 CDT">May 29, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+  </section>
+</aside>
+
+
+    <footer>
+      <p><span class="footer-title"><a href="http://nasciiboy.github.io">nba - GNU&#39;s Rock</a></span></p>
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a>–Theme <a href="https://github.com/nasciiboy/hugo_theme_nascii">nascii</a>–feed <a href="http://nasciiboy.github.io/index.xml">rss</a>–mail <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a>–gpg <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a> –liberapay <a href="https://liberapay.com/nasciiboy/donate">donar</a></p>
+    </footer>
+
+  </body>
+</html>
