@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sicp on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/tags/sicp/</link>
+    <description>Recent content in Sicp on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL 3.0</copyright>
+    <lastBuildDate>Mon, 10 Jul 2017 17:57:10 -0500</lastBuildDate>
+    
+	<atom:link href="http://nasciiboy.github.io/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SICP [es] – Guia para Colaboradores</title>
+      <link>http://nasciiboy.github.io/prog/sicp-contrib/</link>
+      <pubDate>Mon, 10 Jul 2017 17:57:10 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/sicp-contrib/</guid>
+      <description>Bienvenidos los contribuidores a la traduccion No oficial de libro SICP al español!
+Antes de comenzar, es necesario decir que esta vercion esta formateada en un lenguaje (experimental) de marcas ligeras llamado morg que busca ser mas sencillo que ningun otro lenguaje para crear documentacion, mientras mantiene la mayoria de caracteristicas de otros lenguajes de marcas como xml o los derivados de TeX. Por tanto esta es una de sus primeras pruebas en el mundo real</description>
+    </item>
+    
+    <item>
+      <title>SICP (proyecto de traduccion)</title>
+      <link>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</link>
+      <pubDate>Thu, 06 Jul 2017 18:27:56 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</guid>
+      <description>o en otras palabras dadme pasta! (no en galletas)
+faq por que?
+para traducir un libro de muchas lineas al español, el Structure and Interpretation of Computer Programs, tambien conocido como SICP
+por que sicp?
+ en los listados de lecturas para programadores suele aparecer inevitablemente y en los primeros puestos
+ puedo traducirlo y combrar por ello, sin romper ninguna ley (creo)
+ parece interesante y creo que enseñan a programar, ademas utilizan un derivado de lisp: Scheme</description>
+    </item>
+    
+  </channel>
+</rss>

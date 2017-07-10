@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/prog/sicp-contrib/</loc>
+    <lastmod>2017-07-10T17:57:10-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</loc>
     <lastmod>2017-07-06T18:27:56-05:00</lastmod>
   </url>
@@ -245,13 +250,13 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/categories/apt/</loc>
+    <loc>http://nasciiboy.github.io/tags/apt/</loc>
     <lastmod>2017-06-24T20:28:51-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/tags/apt/</loc>
+    <loc>http://nasciiboy.github.io/categories/apt/</loc>
     <lastmod>2017-06-24T20:28:51-05:00</lastmod>
     <priority>0</priority>
   </url>
@@ -390,13 +395,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2017-07-06T18:27:56-05:00</lastmod>
+    <lastmod>2017-07-10T17:57:10-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2017-07-06T18:27:56-05:00</lastmod>
+    <lastmod>2017-07-10T17:57:10-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -427,6 +432,12 @@
   <url>
     <loc>http://nasciiboy.github.io/tags/shntool/</loc>
     <lastmod>2016-12-22T09:56:05-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nasciiboy.github.io/tags/sicp/</loc>
+    <lastmod>2017-07-10T17:57:10-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -462,7 +473,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-07-06T18:27:56-05:00</lastmod>
+    <lastmod>2017-07-10T17:57:10-05:00</lastmod>
     <priority>0</priority>
   </url>
   
