@@ -211,7 +211,7 @@ en el mundo real</p>
 <p>Esta traduccion se realiza por respeto y admiracion al espiritu que habita en la
 maquina. Manteniendo ese espiritu la obra esta bajo liciencia CC-SA 4.0 por lo
 que se da por hecho que cualquier contribucion a esta se apega a dicha
-licencia. Por respeto a las personas este proyecto no obliga a firmar ningun
+licencia. Por respeto a las personas, este proyecto no obliga a firmar ningun
 CLA, u otro contrato similar</p>
 
 <p>Happy Hacking!</p>
@@ -227,7 +227,7 @@ nasciiboy@gmail.com, siendo el unico requisito clonar el repositorio</p>
 <pre><code>git clone https://github.com/nasciiboy/sicp.git
 </code></pre>
 
-<p>manternerlo actualizado con los cambios mediante el comando</p>
+<p>manternerlo actualizado mediante el comando</p>
 
 <pre><code>git pull
 </code></pre>
@@ -249,12 +249,12 @@ repositorio &ldquo;SSH o HTTP&rdquo; y clonar:</p>
 <pre><code>$ git remote add upstream https://github.com/nasciiboy/sicp.git
 </code></pre>
 
-<p>Antes de empezar a trabajar, obtener los últimos cambios del Repo Original:</p>
+<p>y obtener los últimos cambios del repo Original:</p>
 
 <pre><code>$ git pull -r upstream master
 </code></pre>
 
-<p>Crear una Rama, Para crear una rama usar la opción <code>checkout</code> de git:</p>
+<p>Crear una Rama. Para crear una rama usar la opción <code>checkout</code> de git:</p>
 
 <pre><code>$ git checkout -b mi-rama-con-cambios
 </code></pre>
@@ -291,13 +291,13 @@ compilador con el que se hace un programa, no se considera que un proyecto
 terminado tenga que contener las datos de su programa de control de versiones</p>
 
 <p>los datos sobre la autoria de sus contribuidores (si es lo que se desea) seran
-colocados dentro del fichero <code class="file">CONTRIBUTORS.txt</code>, que sera
-el registro que se transmita en la version final de la traduccion</p>
+colocados dentro del fichero <code class="file">contrib.txt</code>, que sera
+el registro transmido en la version final de la traduccion</p>
 
 <h2 id="organizacion">Organizacion</h2>
 
 <pre><code>.
-├── CONTRIBUTORS.txt      // lista de colaboradores
+├── contrib.txt           // lista de colaboradores
 ├── img                   // carpeta con imagenes del libro
 │   ...
 ├── howto-es.md           // Como colaborar
@@ -307,7 +307,7 @@ el registro que se transmita en la version final de la traduccion</p>
 ├── sicp.morg             // fichero &quot;maestro&quot; del libro (ingles)
 ├── sicp.html             // exportacion del libro (ingles)
 ├── sicp-es.porg          // fichero &quot;maestro&quot; con la traduccion al español
-├── TODO.org
+├── todo.txt              // tareas a realizar
 └── worg-data             // carpeta con recursos para la exportacion html
     ├── worg.css          // hoja de estilo
     ├── fonts             // fuentes
@@ -317,7 +317,7 @@ el registro que se transmita en la version final de la traduccion</p>
 <h2 id="la-herramienta-morg">La herramienta morg</h2>
 
 <p><a href="https://github.com/nasciiboy/morg">morg</a> es un programa desarrollado en
-el lenguaje de programacion Go, para instalarlo priemero debe seguir los pasos
+el lenguaje de programacion Go, para instalarlo primero debe seguir los pasos
 de <a href="https://github.com/nasciiboy/morg/blob/master/howto.md">esta</a> guia, o si ya
 tiene instalado el lenguaje Go en su sistema, puede optener la herramienta con
 el comando</p>
@@ -386,31 +386,31 @@ Esta sera la traduccion del material original
   @l(http://mitpress.mit.edu/sicp/&lt;&gt;version HTML) original de MIT Press.
 </code></pre>
 
-<p>morg cuenta con sencillas pero potentes opcienes de estructuracion y resaltado,
+<p>morg cuenta con sencillas pero potentes opciones de estructuracion y resaltado,
 no es necesario conocerlas a profundidad, pero aqui estan las principales</p>
 
 <ul>
-<li><p>Todos los elementos finalizan cuando aparece una linea en blanco, exeptuando
+<li><p>todos los elementos finalizan cuando aparece una linea en blanco, exeptuando
 los &ldquo;comandos&rdquo; que se guian por la indentacion</p></li>
 
 <li><p>el documento se estructura por niveles de encabezado, esto es cada linea que
-inicia con uno o varios <code>*</code> seguida por almenos un espacio en blanco. El
+inicia con uno o varios <code>*</code> seguida por al menos un espacio en blanco. El
 alcance de este encabezado, termina cuando aparece otro encabezado</p></li>
 
 <li><p>las listas inician con <code>-</code>, <code>+</code>, <code>1.</code>, <code>1)</code>, <code>a.</code> o <code>a)</code>, seguido por un
 espacio en blanco y luego su contenido debe indentarse</p></li>
 
 <li><p>las definiciones inician con <code>-</code> o <code>+</code> luego aparece el texto a definir,
-seguido por <code>::</code> y luego cuaquer contenido que conforme la definicion debe
-seguir la identacion</p></li>
+seguido por <code>::</code> y despues cualquer contenido que conforme la definicion debe
+llebar identacion</p></li>
 
 <li><p>los &ldquo;abouts&rdquo; inician con <code>::</code> luego aparece el &ldquo;titulo&rdquo;,
 seguido por <code>::</code> y despues cualquer contenido que conforme la definicion debe
 seguir la identacion</p></li>
 
 <li><p>los &ldquo;comandos de bloque&rdquo; tienen la estructura <code>..el-comando opciones &gt; argumento</code>. El
-cuerpo, del comando si es que tiene debe estar endentado con dos espacios.
-Los comandos pueden &ldquo;cerrarse&rdquo; explicitamente con <code>&lt; el-comando..</code>, de otra
+cuerpo, del comando si es que tiene, debe estar indentado con dos espacios.
+Los comandos de bloque pueden &ldquo;cerrarse&rdquo; explicitamente con <code>&lt; el-comando..</code>, de otra
 forma terminan cuanto el contenido deja de mantener la indentacion</p></li>
 
 <li><p>existen los comandos <code>@</code>, que sirven tanto para resaltar el texto, como para
@@ -422,7 +422,7 @@ termina al encontrar el cierre, que respectivamente seria <code>)</code>, <code>
 alcance del contenido</p></li>
 </ul>
 
-<p>Si dentro del comando <code>@</code> aparece <code>&lt;&gt;</code> significa el texto a la derecha de
+<p>Si dentro del comando <code>@</code> aparece <code>&lt;&gt;</code> significa que el texto a la derecha de
   este, reemplazara lo que aparesca en la exportacion y el texto a la izquierda
   es el &ldquo;argumento&rdquo; del comando</p>
 
@@ -433,15 +433,20 @@ que los comandos de codigo fuente <code>..src &gt; lenguaje</code></p>
 
 <h2 id="todo">TODO</h2>
 
-<p>el fichero <code class="file">TODO.org</code> se encuentra la lista de
+<p>el fichero <code class="file">todo.txt</code> se encuentra la lista de
 pendientes y encargados de cada labor</p>
+
+<p>Antes de iniciar una tarea realize una modificacion en dicho fichero
+adjudicandose la tarea, envie un pull request y espere a que se actualice
+el repositorio fuente</p>
 
 <h2 id="consideraciones-finales">Consideraciones finales</h2>
 
 <p>La herramienta principal con la que se realiza la traduccion ha sido <em>El editor</em>
 Emacs, el cual proporciona diversas facilidades de edicion, tomando prestadas
 cualidades del modo <em>org-mode</em>, considere su uso, de otra manera tendra que
-editar &ldquo;rusticamente&rdquo;, debido a la juventud del lenguaje de marcas morg</p>
+editar &ldquo;rusticamente&rdquo;, debido a la juventud del lenguaje de marcas morg, de ser
+asi no se moleste en &ldquo;cuadrar&rdquo; los parrafos, solo mantenga la indentacion</p>
 
 <p>Hasta el momento he utilizado google translate (<code class="file">sicp-es.porg</code>)
 tanto para la traduccion maquina, e igual para ir realizando una revicion
@@ -452,12 +457,12 @@ mano utilice</p>
 <pre><code>$ morg toTxt sicp.morg
 </code></pre>
 
-<p>esto genera el fichero <code class="file">sicp.txt</code>, con todos los
-parrafos en una sola linea. Es una caracteristica sin terminar, pero bastante
+<p>esto genera el fichero <code class="file">sicp.txt</code>, con cada parrafo en
+una sola linea independiente. Es una caracteristica sin terminar, pero bastante
 util</p>
 
-<p>Para finalizar todos los ficheros estan codificados en utf-8, antes de enviar
-sus cambios revise la codificacion</p>
+<p>todos los ficheros estan codificados en utf-8, antes de enviar sus cambios
+revise la codificacion</p>
 
 <p>en la traduccion, las opciones de resaltado e inclucion de mathjax, estan
 desabilitadas (comando <code>..options &gt;</code>) para evitar el cuello de botella que
