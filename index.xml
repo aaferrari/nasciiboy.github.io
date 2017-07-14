@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Mon, 10 Jul 2017 23:03:56 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jul 2017 19:50:42 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen VI – Commodore</title>
+      <link>http://nasciiboy.github.io/post/ramen-vi/</link>
+      <pubDate>Thu, 13 Jul 2017 19:50:42 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/ramen-vi/</guid>
+      <description>Compañeros uploaders agradezco como siempre que recuerden a este su foro para generar ingresos y compartir lo que en factormoe es mas facil de descargar, se que muchos de ustedes usan host y acortadores que les pagan para tener un poco de pan en sus mesas lo cual repudio y deseo mueran. Los lurkers y leechers no podemos permitir que se aprovechen de nosotros y nos llenen de ventanas emergentes o pop ups nuestra navegacion de hombres ocupados</description>
+    </item>
     
     <item>
       <title>Webeloper – El navegador web</title>
