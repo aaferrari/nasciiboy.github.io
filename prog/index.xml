@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Mon, 10 Jul 2017 23:03:56 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 15 Jul 2017 21:36:03 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>regexp4-go (dia cero)</title>
+      <link>http://nasciiboy.github.io/prog/regexp4-go/</link>
+      <pubDate>Sat, 15 Jul 2017 21:36:03 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/regexp4-go/</guid>
+      <description>regexp4 es un &amp;ldquo;motor&amp;rdquo; de expresiones regulares de la familia de los motores regulares Recursive Regexp Raptor, o expresado de otra forma: una libreria de expresiones regulares hecha desde cero, reinventando la rueda (o no) de la manera (que para mi es la) mas simple posible. sin arboles de evaluacion, ni liberacion de memoria, ni cosas raras o esa es la intencion, almenos de las versiones en C
+cual es entonces la necesidad de que exista esta version en go, podrias preguntar.</description>
+    </item>
     
     <item>
       <title>Webeloper – El navegador web</title>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
   <head>
     <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>Webeloper – El navegador web - nba - GNU&#39;s Rock</title>
+    <title>regexp4-go (dia cero) - nba - GNU&#39;s Rock</title>
     
     <style media="screen">
 :root {
@@ -188,160 +188,78 @@ img:hover { border: 0.05em solid #fff; }
     
     <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
-    <li><span class="path-pwd">Webeloper – El navegador web</span></li>
+    <li><span class="path-pwd">regexp4-go (dia cero)</span></li>
   </ul>
 
   <article>
-  <h1 class="title">Webeloper – El navegador web</h1>
+  <h1 class="title">regexp4-go (dia cero)</h1>
 
-  <time datetime="2017-07-10 23:03:56 -0500 CDT">Jul 10, 2017</time>
+  <time datetime="2017-07-15 21:36:03 -0500 CDT">Jul 15, 2017</time>
 
-  <div class="article-body">
+  <div class="article-body"><p><strong>regexp4</strong> es un &ldquo;motor&rdquo; de expresiones regulares de la familia de los motores
+regulares <em>Recursive Regexp Raptor</em>, o expresado de otra forma: una libreria de
+expresiones regulares hecha desde cero, reinventando la rueda (o no) de la
+manera (que para mi es la) mas simple posible. sin arboles de evaluacion, ni
+liberacion de memoria, ni cosas raras o esa es la intencion, almenos de las
+versiones en <strong>C</strong></p>
 
-<p>joder, que gracioso, ho, ho, ho, veamos si existe la remota posibiidad que nadie
-utilize este (en mi mente) despectivo &ldquo;titulo&rdquo;&hellip;</p>
+<p>cual es entonces la necesidad de que exista esta version en go, podrias
+preguntar. Pues segun mi escasa educacion programacional, la simplesa de los
+motores raptor es tal, que pueden implementarse en cualquier lenguaje sin recurrir
+a ninguna caracteristica no implementada en el lenguaje en si, es decir, sin
+recurrir a ninguna libreria, incluyendo a las librerias estandar.</p>
 
-<p>&hellip; no &hellip; bueno, que mas da, no se puede ser &ldquo;innovador&rdquo; todo el tiempo</p>
+<p>Siguiendo esta creencia (quiza sin fundamentos) y a modo de prueba de las
+caracteristicas de un lenguaje de programacion supongo que hare una costumbre
+programar un raptor en cada ocacion que pueda. Ademas el modelo raptor aunque
+bastante desarrolado no es perfecto, asi pues, con cada nuevo concepto
+aprendido, logro profundizar un poco en busca de una mejor implementacion o el
+incremento de caracteristicas segun las facilidades que otorgue el lenguaje</p>
 
-<p>hola, que tal, esta entrada trata de algunos de los navegadores web que he utilizado y
-el por que, o esa es la idea</p>
+<p>existen dos versiones de la libreria las regexp3 donde a cada iteracion
+valiendose de la recursividad, la expresion regular se convierte en
+instrucciones que pueden evaluarse. En las regexp4 en lugar de interpretar la
+regexp a cada paso primero se &ldquo;compila&rdquo;&hellip; lo que la hace comporativamente mas
+eficiente</p>
 
-<h2 id="navegadores-por-terminal">Navegadores por terminal</h2>
+<p>la libreria parte de la version en C y la sintaxis es compatible con esta
+version en Go, pero por algunas facilidades que proporciona nativamente este
+ultimo lenguaje y por su orientacion a objetos esta no tiene limitacion (que no
+sean de hardware) del numero de capturas, la longitud y complejidad de la
+expresion y ademas es concurrentemente segura</p>
 
-<p>Luego que comienza a agradarte la terminal, y con algo de nostalgia sintetica,
-dices: &ldquo;veamos eso del internet en la terminal, que igual va mejor que el
-firefox en mi maquina agonizante con 500 megas de ram&rdquo;, y asi sin demasiado
-esfuerso aqui esta la lista de navegadores de terminal que en algun momento
-llege a utilizar (una a dos veces):</p>
+<p>bueno, bueno, vamos con los detalles morbosos&hellip; esta version adapta sin mucho
+empeño la regexp3 (go) a la version 4. Fueron necesarios varios dias con poco
+enfoque donde los momentos de lucides escaceaban, primero aparecio un bicho por no
+incrementar un indice del que tarde dos <s>dias</s> sesiones en darme cuenta y
+luego por otras 4 seciones las pruebas que contenian &ldquo;conjuntos&rdquo; (<code>[...]</code>) se
+resistian a funcionar, jo, el problema fue no colocar las constantes correctas
+dentro de un <code>switch</code>, je, por un momento me planteee hacer pruebas de cada
+una de las funciones hasta asegurar que todas hicieran lo que se suponia deberia
+de hacer&hellip; lo cual no es trivial</p>
 
-<p><code class="command" >w3m</code>, <code class="command" >lynx</code>, <code
-class="command" >links</code> y <code class="command" >elinks</code> (en la
-siguiente imagen aparecen de izquierda a derecha en ese orden)</p>
+<p>aunque en apariencia sencilla, cada uno de los componentes esta obscuramente
+relacionado, y debe realizar su tarea en perfecta armonia con los demas, por
+ello es necesario ponerse en serio con el asunto, y ya que esto escapaba un poco
+de mi control, solo me limite a ejecutar las pruebas preexistentes y tambien a
+comprobar el funcionamiento con <em>morg</em>, asi pues una vez superadas las pruebas,
+pese a no estar muy seguro de como &ldquo;interactuava&rdquo; la maquinaria, confie en las
+muchas horas invertidas en la version en C y otras tantas en regexp3 en Go,
+luego subi el repositorio a modo de respaldo</p>
 
-<p><img src="http://nasciiboy.github.io/img/www.jpg" alt="" /></p>
+<p>Como antes mencione la sistaxis de la regexp es uniforme en todas las versiones,
+ademas regexp3 (Go) y la presente compartiran la misma &ldquo;<em>API</em>&rdquo;, mas esta version
+sera extendida con un par de funciones mas (tentativamente) <code>Compile</code> y
+<code>TextMatch</code> (o algo asi), aprovechando las capacidades de &ldquo;compilacion&rdquo; (tambien
+programado de cero) en una forma singular a la que nombre &ldquo;<em>tabla de
+instrucciones</em>&rdquo; y en esta ocacion pretenciosamente las instrucciones de la tabla
+lleban el prefijo <code>asm</code></p>
 
-<p>tambien <em>eww</em>, que viene incluido en emacs</p>
+<p>en fin, <a href="https://github.com/nasciiboy/regexp4/">aqui</a> encontraran el
+repositorio, los <em>readmes</em> son un copia y pega de la version regexp3 cambiando
+el 3 por 4</p>
 
-<p><img src="http://nasciiboy.github.io/img/www-eww.png" alt="" /></p>
-
-<p>si bien es el mas lento y apenas el menos feo (w3m gana la contienda), por el
-simple hecho de venir en emacs no tiene comparacion en esta singular categoria,
-ademas, en modo grafico pueden verse imagenes!</p>
-
-<p><img src="http://nasciiboy.github.io/img/www-eww-img.png" alt="" /></p>
-
-<p>es cierto que a los navegadores en modo texto el tiempo no los ha tratado bien,
-pero las cookies, flash, drms, javascript y el contenido multimedia no son los
-unicos culpables de su decadencia, pues en su mayor parte se debe al propio
-lenguaje de la red <strong>HTML</strong>, o si! cuando cualquier hijo de vecino crea una
-pagina amontonando etiqueta, sobre etiqueta sobre etiqueta, sin tener mucha
-idea, hasta que optiene la representacion visual que desea, como esperan que
-exista un programa que averigue las intenciones del &ldquo;webeloper&rdquo;? sigue siquiera
-la mitad de la web una esquema estructural rigido para almacenar la informacion
-y luego no se, hacer algo util con ella como optener solo el articulo principal?
-o cualquier cosa imaginable pasa y luego a base de apaños en el otro gran mal
-del mundo <strong>CSS</strong> se logra aparentar que las cosas estan bien hechas? digo, por
-que si es necesario relegar todo a frameworks javascript para visualizar una
-mierda pagina con <em>contenido estatico</em> que no tiene necedidad alguna de js, mas
-que recolectar datos, poner anuncios y mostrar estadisticas, es mejor que la
-humanidad se extinga&hellip;</p>
-
-<p>haaaaaaa!! cuan odioso es css, por que tiene tantos parametros para hacer la
-misma cosa, da la impresion que de ser un juego de azar&hellip; intentas una
-propiedad y no funciona, pruebas con otra y se rompe, vas por la tercer opcion
-y&hellip; no funciona, prebas con la ultima etiqueta recien salida del &ldquo;estandar&rdquo;
-y&hellip; por fin (hay una etiqueta no ambigua para hacer cosas tan simples como
-centrar el contenido de cualquier elemento? que el margen sea un margen y el
-padding un padding y los porcentaje y em&rsquo;s no se saboteen entre si?)</p>
-
-<p>cuenta asta dies, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0&hellip; je, era alreves pero no
-importa</p>
-
-<p>de entre los navegadores de texto ignorando a eww por su implicacion
-con emacs, los mas potables son <em>links</em> y su sombra <em>elinks</em> que no solo
-colorean las cosas, tambien tienen la decencia de dejar una agradable
-indentacion a la izquierda y menus graficos.</p>
-
-<h2 id="navegadores-graficos">Navegadores Graficos</h2>
-
-<p>Y luego pasas de tu viejo pentium 4 a un flamante celeron con 8GB de ram y el
-firefox sigue siendo lento, pero ahora consume mas ram que todo el sistema y sus
-aplicaciones en conjunto&hellip; y las paginas se niegan a visualizarse si no vas
-dispuesto a aceptar cualquier mierda inecesaria: fuentes de google, analiticas
-con js, imagenes y videos que provienen de un sitio que necesita js, cookies,
-los mensajes de las cookies, acortaderes de enlaces y publicidad</p>
-
-<p>Reflexionas un poco y te dices no, no quiero toda esa basura, ni que mi
-navegador delate todo lo que hago, utilizas firefox, (o el exitinto iceweacel o
-icecat de GNU (este sin exteciones)) lo vitaminas con noScript, Privacy Bagner
-uBlock Origin y cualquier otra extecion de software libre (porque no confias en
-nada si no te dan el codigo), y ves lo que puedes y en casos extremos como ver
-videos te comes uno que otro js</p>
-
-<p>asi pues, solo con firefox complementado con feeds (que no necesitan porquerias
-extras para darte lo unico que te interesa) y eww sobrevives lo mas fiel a tus
-creencias&hellip; hasta que necesitas abrir un fichero html gordo, por ejemplo un libro
-completo en un solo html que tarda casi un minuto en cargar, al que por mera
-casualidad tienes la necesidad de modificarle el css y entre recarga y recarga
-se pasan preciosos momentos</p>
-
-<p>asi pues, que mas hay por hay fuera? en que otro navegador podria confiar?</p>
-
-<p>chrome? no,</p>
-
-<p>chromium? casi es lo mismo que chrome</p>
-
-<p>un <a href="https://en.wikipedia.org/wiki/Chromium_(web_browser)#Other_browsers_based_on_Chromium">espin</a> de chromium sin mierda? bueno podria ser
-veamos, mmm, derivados exclusivos para las manzanas, derivados exclusivos para
-las ventasas, forks con codigo cerrado&hellip; hey! aqui hay uno que parece prometodor
-<a href="https://www.brave.com/"><em>brave</em></a></p>
-
-<p><img src="http://nasciiboy.github.io/img/brave.png" alt="" /></p>
-
-<p>dicen que son &ldquo;open source&rdquo;, mucho de seguridad, comunidad y pagos(?), veamos
-tienen una compilacion para freidora&hellip; parece decente, algo modernoso</p>
-
-<p>han borrado todo contacto con google y su google play, morbosamente su unica
-extencion disponible es activar el flash? que dudoso, mucho de seguridad y
-opciones por desactivar</p>
-
-<p>no se, da un aire de <em>producto</em> para un nicho concreto, quiza no busco un
-producto, segun esta desarrollado por ex-firefoxes, pero no me termina de
-convencer, ademas no puede cambiarse de color la barra de direcciones y es
-molesta, por otra parte, a diferencia de firefox carga un html gordo sin demora
-<em>siempre y cuando</em> no le metas js (<em>mathjax</em>) o el rendimento cae en picada</p>
-
-<p>haber aca hay otro derivado <a href="https://iridiumbrowser.de/downloads/linux.html"><em>iridium</em></a>.
-Este no parece un producto, y la gente que lo lleva a flote dice que tienen
-lanzamientos cada que pueden por que no tienen gente/recursos suficientes
-(hooooooo esto si es un desarrollo de software libre –digo para mis interiores),
-ademas tiene repositorios para debian (y derivados), open suse y freidora</p>
-
-<pre><code>dnf config-manager --add-repo https://dl.iridiumbrowser.de/fedora_25/iridium-browser.repo
-dnf install iridium-browser
-</code></pre>
-
-<p>la instalacion corrio sin ninguna complicacion, al igual que brave tambien carga
-hachetemeeles gordos sin despeinarse</p>
-
-<p>como inconvenientes diria que tiene la opcion de iniciar secion con gogle y la
-dudosa capacidad de instalar extenciones de google play, aunque tambien se
-pueden instalar cosas directo del codigo fuente</p>
-
-<p>le instale ScriptSafe en modo paranoico, ni js, ni funtes externas,
-botones sociales, ni analitics, tambien desactivadas cookies de todo sitio pues
-en este navegador no voy a logear con nada (para eso mantrendre firefox), ademas
-por cualquier duda tambien privacy bagner, uBlock Origin, un tema obscuro y una
-extencion curiosa (GPL3) para sobreescribir los atributos css de las paginas <em>Stylus</em>
-(disponible tambien en firefox) que tiene cosas un poco turbias con js pero
-parece ser confiable</p>
-
-<p>y asi llego al final de este capitulo slice of life sin sentido donde con tres
-navegadors y unas 8 pestañas abiertas consegui el dudoso logro de llegar a los
-5GB de ram en uso</p>
-
-<p>ps: tambien esta midori, pero tienes un navegador igual de lento, poco
-configurable, que no esta a la ultima moda en csssssss</p>
+<p>happy hacking!</p>
 </div>
 </article>
 
@@ -351,7 +269,7 @@ configurable, que no esta a la ultima moda en csssssss</p>
     
     <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog/</span></a></li>
     
-    <li><span class="path-pwd">Webeloper – El navegador web</span></li>
+    <li><span class="path-pwd">regexp4-go (dia cero)</span></li>
   </ul>
 </main>
 
