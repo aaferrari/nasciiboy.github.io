@@ -33,6 +33,17 @@ Un mes mas tarde fruto de la necesidad de parsear el texto del nuevo lenguaje y 
     </item>
     
     <item>
+      <title>Raptor-Book</title>
+      <link>http://nasciiboy.github.io/prog/raptor-book/</link>
+      <pubDate>Wed, 11 Jan 2017 10:03:58 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/raptor-book/</guid>
+      <description>Solo queria programar un juego similar a Megaman 2
+y termine instalando debian, leyendo de bash, sdl, ncurses, c, c++, Emacs&amp;hellip;
+Desafortunadamente aun no hay un texto sagrado de nombre &amp;ldquo;De Cero a Motor 3D&amp;rdquo; (en solo 15 años) ni siminar. Entre intentar aprender ingles y buscar un sistema de documentacion decente, termine por programar un motor de expresiones regulares sin comprender la teoria de automatas finitos, lenguajes finitos ni recordar un poco de las clases de mate de nivel basico, pues no llegue al medio&amp;hellip;</description>
+    </item>
+    
+    <item>
       <title>Performance comparison of regular expression engines</title>
       <link>http://nasciiboy.github.io/prog/performance-comparison-of-regular-expression-engines/</link>
       <pubDate>Fri, 16 Dec 2016 20:22:03 -0600</pubDate>
