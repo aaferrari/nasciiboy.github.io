@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/vg/shooter/</loc>
+    <lastmod>2017-07-20T22:21:43-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/regexp4-go/</loc>
     <lastmod>2017-07-15T21:36:03-05:00</lastmod>
   </url>
@@ -254,7 +259,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/</loc>
-    <lastmod>2017-07-02T12:26:47-05:00</lastmod>
+    <lastmod>2017-07-20T22:21:43-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -464,19 +469,19 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/</loc>
-    <lastmod>2017-07-02T12:26:47-05:00</lastmod>
+    <lastmod>2017-07-20T22:21:43-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/categories/vg/</loc>
-    <lastmod>2017-05-02T20:02:37-05:00</lastmod>
+    <lastmod>2017-07-20T22:21:43-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/vg/</loc>
-    <lastmod>2017-05-02T20:02:37-05:00</lastmod>
+    <lastmod>2017-07-20T22:21:43-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -488,7 +493,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-07-15T21:36:03-05:00</lastmod>
+    <lastmod>2017-07-20T22:21:43-05:00</lastmod>
     <priority>0</priority>
   </url>
   

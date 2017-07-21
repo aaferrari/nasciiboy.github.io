@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 15 Jul 2017 21:36:03 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 20 Jul 2017 22:21:43 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SShooter</title>
+      <link>http://nasciiboy.github.io/vg/shooter/</link>
+      <pubDate>Thu, 20 Jul 2017 22:21:43 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/vg/shooter/</guid>
+      <description>¿Es posible que el software no sea como cualquier otra cosa, que está destinado a ser descartado: que el punto es siempre verlo como una burbuja de jabón?
+ El SICP esta lleno de fraces que reflejan la realidad, incluso la del &amp;ldquo;codigo abierto&amp;rdquo;, por que (casi) sin importar el titulo, si su desarrollo para, seguramente quede destinado a desaparecer en la memoria de unos cuantos
+Quiza por ello el desarrollo mas puro y duradero, es el que se realiza para equipos especificos, por ejemplo en algun ensamblador de alguna consola especifica, como la nes o el gameboy.</description>
+    </item>
     
     <item>
       <title>regexp4-go (dia cero)</title>
