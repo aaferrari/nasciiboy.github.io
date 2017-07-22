@@ -6,7 +6,7 @@ categories = [
   "prog",
 ]
 tags = [
-  "",
+  "regexp",
 ]
 
 +++

@@ -6,11 +6,11 @@ editor = "emacs -nw"
 
 languageCode = "es"
 
-paginate     = 15
+paginate     = 16
 buildDrafts  = true
 buildFuture  = false
 buildExpired = false
-relativeURLs = true
+relativeURLs = false
 canonifyURLs = true
 
 ignoreFiles  = [ "\\.~$" ]
