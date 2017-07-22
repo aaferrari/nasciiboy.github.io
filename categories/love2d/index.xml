@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Love2d on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/categories/love2d/</link>
+    <description>Recent content in Love2d on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL 3.0</copyright>
+    <lastBuildDate>Sat, 22 Jul 2017 09:06:44 -0500</lastBuildDate>
+    
+	<atom:link href="http://nasciiboy.github.io/categories/love2d/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Love, Emacs &amp; Docs</title>
+      <link>http://nasciiboy.github.io/love2d/docset/</link>
+      <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/love2d/docset/</guid>
+      <description>Love2d es un framework &amp;ldquo;open source&amp;rdquo; para crear videojuegos 2D multiplataforma con el lenguaje de programacion Lua y que aparentemente es muy facil de utilizar, al menos tan facil como para practicamente no tener documentacion mas alla de las funciones que proporciona el framework
+Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos de funciones y sus parametros, deberiamos contar con un medio practico para consultar dicha documentacion</description>
+    </item>
+    
+  </channel>
+</rss>

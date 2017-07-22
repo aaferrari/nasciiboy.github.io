@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+  <head>
+    <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Love2d - nba - GNU&#39;s Rock</title>
+    
+    <style media="screen">
+:root {
+                            
+    --BGC      : #000000;   
+    --FGC      : #ffffff;   
+    --BGClogo  : #222222;   
+    --FGClogo  : #ffffff;   
+    --FGCtitle : #ff4500;   
+    --FGCstart1: #4B99D2;   
+    --FGCstart2: #00ffff;   
+    --FGCstart3: #ffa074;   
+    --FGCstart4: #98fb98;   
+    --FGCstart5: #b0c4de;   
+    --FGCstart6: #7fffd4;   
+    --FGCstart7: #db2e24;   
+    --FGCstart8: #ff4500;   
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;   
+    --FGCbtcode: #333333;   
+    --FGCftcode: #ffffff;   
+    --FGCbcode : #b3b3b3;   
+    --FGCtcomm : #ff4500;   
+    --FGCtcode : #bfbfff;   
+    --FGCfile  : #eedd82;   
+    --FGCmath  : #98fb98;   
+    --FGClink  : #00ffff;   
+    --BGClinkh : #556b2f;   
+    --FGClinkh : #ffffff;   
+    --BGCdt    : #b3b3b3;   
+    --FGCdt    : #ffffff;   
+    --FGCthead : #ff7f24;   
+    --BGCthead : #000000;   
+    --FGCtbody : #87cefa;   
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url("https://nasciiboy.github.io/DejaVuSansMono.ttf");                     }
+@font-face { font-family: codeblock;      src: url("https://nasciiboy.github.io/DejaVuSansMono.ttf");                     }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding-left: 2em;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+ul.terms    { list-style: none; margin: 0em; padding: 0em; }
+ul.terms li { display: block;
+              float: left;
+              margin: .1em .5em .1em .5em;
+}
+
+ul.terms a { text-decoration: none;
+}
+
+ul.terms a:hover { text-decoration: none;
+                   background-color: #333;
+                   color: #fff;
+}
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+}
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }  
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }  
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }  
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }  
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }  
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }  
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }  
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+ 
+dl { padding-bottom: 2em; }          
+dl dt { color: #daa520;              
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;              
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+</style>
+
+  </head>
+
+  <body>
+    
+<main>
+  
+  <div class="thumb">
+  <h2 class="title"><a href="http://nasciiboy.github.io/love2d/docset/">Love, Emacs &amp; Docs</a></h2>
+
+  <ul class="meta">
+    <li><time datetime="2017-07-22 09:06:44 -0500 CDT">Jul 22, 2017</time></li>
+    
+    <li><a href="http://nasciiboy.github.io/love2d/"><span class="path-dir">love2d</span></a></li>
+    
+  </ul>
+
+  <div class="summary">Love2d es un framework &ldquo;open source&rdquo; para crear videojuegos 2D multiplataforma con el lenguaje de programacion Lua y que aparentemente es muy facil de utilizar, al menos tan facil como para practicamente no tener documentacion mas alla de las funciones que proporciona el framework
+Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos de funciones y sus parametros, deberiamos contar con un medio practico para consultar dicha documentacion</div>
+</div>
+
+  
+  
+
+  
+
+</main>
+
+
+    <aside>
+  
+  <section>
+    <header class="taxonomies">category</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/categories/prog">prog</a></li><li><a href="http://nasciiboy.github.io/categories/post">post</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d</a></li>
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header class="taxonomies">tag</header>
+    <div>
+      <ul class="terms">
+        <li><a href="http://nasciiboy.github.io/tags/"></a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen</a></li><li><a href="http://nasciiboy.github.io/tags/install">install</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section>
+    <header class="taxonomies">latests</header>
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/love2d/docset/">Love, Emacs &amp; Docs</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-22 09:06:44 -0500 CDT">Jul 22, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/love2d/"><span class="path-dir">love2d</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/vg/shooter/">SShooter</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-20 22:21:43 -0500 CDT">Jul 20, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/vg/"><span class="path-dir">vg</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/regexp4-go/">regexp4-go (dia cero)</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-15 21:36:03 -0500 CDT">Jul 15, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-vi/">Ramen VI – Commodore</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-13 19:50:42 -0500 CDT">Jul 13, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/webeloper/">Webeloper – El navegador web</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-10 23:03:56 -0500 CDT">Jul 10, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/sicp-contrib/">SICP [es] – Guia para Colaboradores</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-10 17:57:10 -0500 CDT">Jul 10, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/dot-slash-sicp2es/">SICP (proyecto de traduccion)</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-06 18:27:56 -0500 CDT">Jul 6, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/prog/morg-d432/">morg [dia 432]</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-04 18:47:44 -0500 CDT">Jul 4, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/prog/"><span class="path-dir">prog</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/emacs/why-emacs/">Por que GNU Emacs?</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-02 12:26:47 -0500 CDT">Jul 2, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/emacs/"><span class="path-dir">emacs</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    <div class="thumb-sm">
+  <header>
+    <h2 class="title"><a href="http://nasciiboy.github.io/post/ramen-v/">Ramen V</a></h2>
+
+    <ul class="meta">
+      <li><time datetime="2017-07-01 15:05:47 -0500 CDT">Jul 1, 2017</time></li>
+      
+      <li><a href="http://nasciiboy.github.io/post/"><span class="path-dir">post</span></a></li>
+      
+    </ul>
+  </header>
+</div>
+
+    
+    
+    
+  </section>
+</aside>
+
+
+    <footer>
+      <p><span class="footer-title"><a href="http://nasciiboy.github.io">nba - GNU&#39;s Rock</a></span></p>
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a>–Theme <a href="https://github.com/nasciiboy/hugo_theme_nascii">nascii</a>–feed <a href="http://nasciiboy.github.io/index.xml">rss</a>–mail <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a>–gpg <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a> –liberapay <a href="https://liberapay.com/nasciiboy/donate">donar</a></p>
+    </footer>
+
+  </body>
+</html>

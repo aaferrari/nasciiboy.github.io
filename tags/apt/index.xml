@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 24 Jun 2017 20:28:51 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jul 2017 09:06:44 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/tags/apt/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Love, Emacs &amp; Docs</title>
+      <link>http://nasciiboy.github.io/love2d/docset/</link>
+      <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/love2d/docset/</guid>
+      <description>Love2d es un framework &amp;ldquo;open source&amp;rdquo; para crear videojuegos 2D multiplataforma con el lenguaje de programacion Lua y que aparentemente es muy facil de utilizar, al menos tan facil como para practicamente no tener documentacion mas alla de las funciones que proporciona el framework
+Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos de funciones y sus parametros, deberiamos contar con un medio practico para consultar dicha documentacion</description>
+    </item>
     
     <item>
       <title>Konsole Warrior</title>

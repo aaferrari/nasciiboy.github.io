@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/love2d/docset/</loc>
+    <lastmod>2017-07-22T09:06:44-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/vg/shooter/</loc>
     <lastmod>2017-07-20T22:21:43-05:00</lastmod>
   </url>
@@ -271,7 +276,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/apt/</loc>
-    <lastmod>2017-06-24T20:28:51-05:00</lastmod>
+    <lastmod>2017-07-22T09:06:44-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -362,6 +367,18 @@
   <url>
     <loc>http://nasciiboy.github.io/tags/install/</loc>
     <lastmod>2017-07-10T23:03:56-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nasciiboy.github.io/categories/love2d/</loc>
+    <lastmod>2017-07-22T09:06:44-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nasciiboy.github.io/love2d/</loc>
+    <lastmod>2017-07-22T09:06:44-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -493,7 +510,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-07-20T22:21:43-05:00</lastmod>
+    <lastmod>2017-07-22T09:06:44-05:00</lastmod>
     <priority>0</priority>
   </url>
   
