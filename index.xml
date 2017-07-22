@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 22 Jul 2017 09:06:44 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jul 2017 11:11:18 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen VII</title>
+      <link>http://nasciiboy.github.io/post/ramen-vii/</link>
+      <pubDate>Sat, 22 Jul 2017 11:11:18 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/ramen-vii/</guid>
+      <description>he, el cable del movil se jodio, primero cayeron los datos y luego dejo de cargar, sin presupuesto toco desenpolvar el cautin y aspirar los dulces aromas de la soldadura y tambien aprender a utilizar ftp por wifi. Cuando tenga listo mas material un resumen epico (o no)
+la dispersion es una enfermedad muu rara y como no tengo nada que hacer&amp;hellip; agregue dos nuevos proyectos a mis queaceres diarios, aprender love2d y como daño colateral aprender lua y de paso buscar/crear/traducir documentacion, manocear Emacs e incluir en el dia a dia una nueva app llamada zeal</description>
+    </item>
     
     <item>
       <title>Love, Emacs &amp; Docs</title>
