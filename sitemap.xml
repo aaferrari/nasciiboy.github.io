@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/prog/stylus-black-translator/</loc>
+    <lastmod>2017-07-27T00:50:52-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/post/ramen-vii/</loc>
     <lastmod>2017-07-22T11:11:18-05:00</lastmod>
   </url>
@@ -281,7 +286,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/apt/</loc>
-    <lastmod>2017-07-22T09:06:44-05:00</lastmod>
+    <lastmod>2017-07-27T00:50:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -322,13 +327,13 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/categories/emacs/</loc>
+    <loc>http://nasciiboy.github.io/emacs/</loc>
     <lastmod>2017-07-02T12:26:47-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/emacs/</loc>
+    <loc>http://nasciiboy.github.io/categories/emacs/</loc>
     <lastmod>2017-07-02T12:26:47-05:00</lastmod>
     <priority>0</priority>
   </url>
@@ -437,13 +442,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2017-07-15T21:36:03-05:00</lastmod>
+    <lastmod>2017-07-27T00:50:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2017-07-15T21:36:03-05:00</lastmod>
+    <lastmod>2017-07-27T00:50:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -515,7 +520,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-07-22T11:11:18-05:00</lastmod>
+    <lastmod>2017-07-27T00:50:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   

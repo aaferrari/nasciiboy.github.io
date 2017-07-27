@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 22 Jul 2017 09:06:44 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 27 Jul 2017 00:50:52 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/tags/apt/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>stylus black-translator</title>
+      <link>http://nasciiboy.github.io/prog/stylus-black-translator/</link>
+      <pubDate>Thu, 27 Jul 2017 00:50:52 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/stylus-black-translator/</guid>
+      <description>Si Firefox es mi navegador de confianza, no es solo por que sea software libre y tenga una fundacion que le da soporte, tambien lo utilizo por que debido a que es software libre y lo desarrolla gente decente, su creacion refleja esta coherencia otorgando un punto fino de manoseo configuratorio mostruoso, no solo un par de botonsitos deslizables&amp;hellip; pero debido a esta misma apertura y los plugins que instalo, que en su mayoria son para tener una navegacion humana, sin basura y demas, termino por romper una u otra cosa, en particular la apariencia</description>
+    </item>
     
     <item>
       <title>Love, Emacs &amp; Docs</title>
