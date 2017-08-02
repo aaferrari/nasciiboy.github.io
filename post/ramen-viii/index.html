@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen VIII</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <h1>Ramen VIII</h1>
+  
+
+<p><img src="http://nasciiboy.github.io/img/weRlEMh.jpg" alt="" /></p>
+
+<p>(<strong>Advertecia</strong>, el siguiente contenido tiene mucha fallas ortograficas, algunas
+de ellas, fueron evidentes en una segunda revision, pero a su autor le hace
+gracia dejarlas. Si considera inperdonable tal ultraje al lenguaje, por su
+propio bien abstengase de leer)</p>
+
+<p>Hey, por fin cambie el tema, no es mas bonito, de hecho es un <em>spaghetti CSS</em> a
+medio hacer, je, je, ya lo ire &ldquo;purificando&rdquo; lenta y perezosamente, por que
+pocas cosas hay mas aburridas que el &ldquo;desarrollo&rdquo; web. Por el momento (mi
+coletilla personal) lo incluire en el codigo mismo del repo, cuando mejore ya
+tendra su repo propio</p>
+
+<p>relacionado con lo anterior, en el transcurso del aprendizage de hugo, y ya sin
+ser un ingorante de golang (que tampoco hace falta para meterse con hugo)
+encontre fastidioso la brillante idea de los desarrolladores de hugo sobre
+documentarlo en un jodido <a href="https://github.com/gohugoio/hugoDocs">blog</a>, por que
+escribir un libro en una solo &ldquo;pagina&rdquo;, si lo puedes repartir en secciones
+organizadas por &ldquo;pesos&rdquo; mientras modificas tu cms para satisfacer esta retorcida
+caracteristica&hellip; y&hellip; de nuevo otro ser (de luz) tambien comulga con mis
+intoleranctes ideas, asi que hace un par de años se curro un script en python 3
+(que ironico) para crear una pagina con toda la documentacion (en markdown) y
+visualizarla en <a href="https://github.com/hamoid/long-hugo-doc/">github</a>.</p>
+
+<p>Que risas, como el tiempo pasa, los de hugo mudaron e incrementaron su
+documentacion, asi que el escript dejo de funcionar, y, sin tener mucha idea, le
+di una revision y logre que funcionara, haci que hice un issue al desarrolador
+para incorporar los dos pequeños cambios. Por que no un pull request? era algo
+que no pensaba usar otra vez y hacer un fork para algo asi parecia exesivo.
+Desde luego mis propositos siempre son mas retorcidos (y menos nobles) de lo que
+aparentan, pues se me ocurrio la feliz idea de joder a los de hugo, portando su
+documentacion a morg, ademas como su licencia es permiciva, publicarlo como un
+libro (pidiendo un pago) y ademas traducirlo&hellip; un par de horas invertidas
+despues, me pregunto si vale la pena, si es mejor dejar morir ese pequeño
+esfuerzo, si hugo es lo que busco (respuesta: aun no) y que papel juego en el destino cosmico, soy
+acaso real?</p>
+
+<p>en otros frentes, gogle fastidio el tema (css) black-translator, cambiando <code>.gb_T .gb_jg</code> por
+<code>.gb_T .gb_ig</code>, hay que seguirle los pasos&hellip; ya actualizado ese post</p>
+
+<p>tambien estoy a punto de terminar mi segundo recorrido de revision y &ldquo;primer&rdquo;
+estudio serio del <em>The Go Programming Language</em>. Para ser sincero, cuando
+publique la primer &ldquo;pasada&rdquo; pre-traductoria, tenia algo de miedo de accionar un
+operativo para descubrir mi verdadera identidad y ser extraditado a USAmerica,
+con el efecto secundario de asegurarme alimento y tiempo en prision para seguir
+con mis cosas, encima cual baño de fuego, serviria de prefacio a las canciones que
+harian de &ldquo;nasciiboy el virtuoso&rdquo;&hellip; lol, parace que las editoriales o la de
+tgpl tiene buen corazon, eso, o como empiezo a sospechar, a pocos les importa una
+mierda la programacion y mas si esta en españish&hellip;</p>
+
+<p>mencionar que las utlimos tres capitulos del libro mas que un estudio, los leo
+de forma casi anecdotica, eso de la reflexion y mas aun mesclar C con Go, no
+tengo planes de combinarlo o entenderlo a profundidad por algun tiempo, dejando
+eso de lado, el lenguaje me encanta, en serio que me encanta, aunque los gophers
+son unos pesados sin personalidad</p>
+
+<p>mientras tanto comence la busqueda de otra victima para continuar la mision de
+convertirme en un &ldquo;desarrollador Golang calificado&rdquo;, cuan grande fue mi sorpresa
+de encontrar un libro (aparentemente) decente con licencia libre y
+(parcialmente) traducido al español: <em>Build Web Application with Golang</em></p>
+
+<pre><code>git clone https://github.com/astaxie/build-web-application-with-golang.git
+</code></pre>
+
+<p>solo le he dado una vista superficial, pero promete bastante, si me gusta igual
+colaboro en terminar la traduccion al español, aunque (de nuevo) el formato de
+maquetar libros con markdown de fondo, no es lo mas acertado del mundo y menos
+en capitulos con fichero propio, asi que cuando termine con el TGPL, le dare
+una lectura para corroborar su calidad y de ser asi pues a hacer un version en
+una sola pagina con morg&hellip; por que es con lo que mi jodida mente se siente
+comodo, tiene una verison en epub y no es muy dificil generar un html unico con un
+<code>cat *.md &gt; book.md</code> y luego invocar a pandoc</p>
+
+<p>finalmente, publique una pequeña recopilacion de juegos <em>FLOSS</em> hechos con
+<strong>love2D</strong>, para tener victimas de mi aprendizage recreativo videojueguero
+fresco indi rocker maker in the middle of the night, como pase mucho tiempo con
+esta cosa y haciendole un (penoso) tema pospuse un algo la traduccion del sicp,
+uuooohhh, haber si mejoro el ritmo, pero sobre todo haber si logro congeniar go, morg,
+regexp(3|4), sicp, love2d, lua (y recientemente falsificacion de documentos
+utilzando gimp) sin morir en el intento</p>
+
+<p>mientras hacia la clasificacion de los juegos de floss, llegue a la
+conclucion que la mejor forma seria poner cada pagina como &ldquo;metadatos&rdquo; o
+adjuntos, mas o menos quedo asi</p>
+
+<pre><code>---
+title     : &quot;anput&quot;
+date      : 2017-07-25T01:26:49-05:00
+draft     : false
+categories: [&quot;games&quot;]
+img       : &quot;img/vg/anput.gif&quot;
+tags      : [&quot;maze&quot;, &quot;procedural&quot;]
+lover     : &quot;0.10.2&quot;
+source    : &quot;https://github.com/andmatand/anput&quot;
+licence   : [&quot;BSD-2&quot;]
+external  : [&quot;https://kittenm4ster.itch.io/anput&quot;]
+---
+
+cosas en texto
+
+## clone
+
+   ...como clonar...
+
+</code></pre>
+
+<p>por mera casualidad, luego di con una vieja recopilacion de juegos en los foros
+de love2d, que mas o menos utilizan algo similar en su wiki&hellip; maldicion, parece
+que solo encuentro lo que busco cuando reinvento la rueda y se que buscar,
+aunque&hellip; quiza no sea un completo desperdicio, pues aprendo como funciona la
+rueda a lo bruto, ademas que puede que mi rueda pueda ser diferente</p>
+
+<p>y bueno mientras llegaba a ese conocimiento, se me ocurrio incorporar (en morg)
+&ldquo;metadatos&rdquo; (&ldquo;arbitrarias&rdquo;) asi:</p>
+
+<pre><code>..labels &gt; game
+  ..name &gt; MegaMan 2
+  ..date &gt; 1989
+  ..copy &gt; mit
+  ...lo que sea...
+</code></pre>
+
+<p>y luego me dije, puede ser algo engorrosa esta sintaxis, por que no permitir
+sintaxis alternativas</p>
+
+<pre><code>..json &gt; game
+  ...cosas json...
+</code></pre>
+
+<p>o <em>yaml</em>, o <em>toml</em>, y lugo me dije, bien y a que asociarian estos datos? habria
+que reescribir cosas para saber si algo es una imagen, un texto o un encabezado
+o lo que sea, por que de ser asi arruinaria muchas de las ideas previas. Luego
+de un rato llegue a la conclucion que los metadatos (si en algun momento los
+llego a implementar) deberian asociarse a la cosa inmediatamente previa, o algo
+asi, solo son desvarios</p>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>castlevania</strong>, sin llegar a ser un <strong>Ninja Scroll</strong>, las ovas de <strong>Hellsing
+Ultimate</strong> o tener la epica de <strong>berserk</strong> o <strong>Basilisk</strong>, tenemos una buena
+prueba de concepto, que aunque no calificaria como &ldquo;para adultos&rdquo; (ni tampoco a
+las anteriormente sitadas, con la exepcion de algunas escenas en hellsing, epa!
+basilisk en el preescolar! nasciiboy for president!), tiene momentos y fraces
+chulas, burlas a la iglesia catolica (que nunca sientan mal) y a los discursitos
+serios. Dadle una oportunidad!  (aunque sea por torrent&hellip; en esta ocacion no
+puedo compartir el enlace por que es un tracker privado del que estoy a punto de
+ser echado&hellip;)</p>
+
+<p><strong>ScarFace</strong>, toma un momento, imagina al Padrino, ahora imagina que el prota es
+cubano y estamos en los 80 (creo), pues esto es esa historia, no hay una
+familia&hellip; bueno si, pero no como la del padrino. Aqui el prota esta deseoso de
+ascender lo mas rapido posible para&hellip; descubrir que su vida es una mierda y
+terminar su historia jodiendo todo, para culminar en un epico decenlace.</p>
+
+<p>El principio me costo, pero luego del minuto 40 fue mas llevadero, la vi en 4
+seciones</p>
+
+<pre><code>magnet:?xt=urn:btih:ce113f99560b99ca854442b03602b8954079942e&amp;dn=Scarface%20(1983)%20%5b1080p%5d&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969
+</code></pre>
+
+<p><strong>Uchouten Kazoku</strong> (temporada 2) Sin que lo esperara, de hecho sin ganas de
+verlo, de hecho recondando poco de la primer temporada exepto que trataba de
+unos tanukis o mapaches tranformables junto a tengus (o gente que vuela, no
+cenesariamente con narices alargadas (sin eroticos resultados)), que fue linda y
+entretenida sin pretencion alguna. Asi pues aparecio su segunda temporada y
+luego de un mes en el almacen la comence a ver y en poco tiempo se termino la
+reserva, diria que es mas y mejor que la primera, no es inecesaria por que no
+tiene pretenciones tracendentales, ademas que tiene buena animacion,
+&ldquo;caracteres&rdquo;, estilo y se noto que los involucrados lo hacen con amor, el
+suficente amor como para esperar un tiempo para entregar algo bonico</p>
+
+<pre><code>magnet:?xt=urn:btih:f128543731f4641caf30f38be79988b5e2b8259d&amp;dn=%5bPuyaSubs!%5d%20Uchouten%20Kazoku%20S2%20%5bBatch%5d&amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=udp%3a%2f%2fipv4.tracker.harry.lu%3a80%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+</code></pre>
+
+<h2 id="fonos">fonos</h2>
+
+<p>hace tiempo que no ocurria, pero he pasado unos dias con Led Zeppelin a tope!
+hace unos doce años, cuando daba mis primeros y serios pasos en el
+descubrimiento de la musica &ldquo;refinada&rdquo;, sabia para mi interior, que si algun
+llegaba el dia que dejara de disfrutar plenamente los rifs zeppelindrosos (o
+peor aun a la juventud sonica (<strong>Sonic Youth</strong>)) ese dia, seria oficialmente un
+jodido viejo sin sangre en las venas, sin el odio por el mundo que alimento mis
+andansas por tanto tiempo&hellip; y aunque los momentos mas bajos han sido de
+aburricion o completa falta de interes (similar (imagino) al sentimiento de
+impotencia sexual) al punto de evitar colocar su sonido, decantandome por cosas
+mas progre o electronicas.</p>
+
+<p>Por ello estos cuantos dias &ldquo;al limite&rdquo; seran recordados como el &ldquo;dia que llego
+el invierto&rdquo; o algo asi, Gratitud y reverencia eterna a Led Zeppelin</p>
+
+<p><strong>Dragon</strong> (Discografia), en realidad solo escuche 5 albums, el primero
+<strong>universal Radio</strong> se encuentra a medio camino entre <em>Uriah Heep</em> y <em>Yes</em>,
+bastante destacable, digno de una secion entera, el resto en cambio decae
+feamente, el segundo <em>Scented Gardens For The Blind</em> con solo un par de escuchas
+pase al siguiente, por desgracia, apartir de este ultimo su sonido se vuelve
+soso y sin variacion entre uno y otro.</p>
+
+<p>No continue su escucha y solo preservare el primero que si es digno de una banda
+con nombre <em>Dragon</em>, que fue la razon de hacerle caso en el torrente</p>
+
+<pre><code>magnet:?xt=urn:btih:ba2bbd2666b28f223ca5b662230b6eaeace87287&amp;dn=Dragon%20-%20Studio%20Discography%201974%20-%201989&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<p><strong>Arcade Fire: Everything Now</strong>, mmhhh, esta agrupacion solo tiene dos albums a
+destacar, su debut con titulo homonimo, con un sonido melancolico e inocente, y
+el ahora penultimo <em>The Suburbs</em> que clasificaria como musica fiestera alegre,
+rasgo que comparte con la produccion en cuestion, aunque esta es menos fiestera,
+quiza mas pop, diria que con toques <em>Bowie</em> ochenteros o algo asi y algo de
+<em>Gorillaz</em> y <em>Frank Black</em>. No lo esperaba, y estaba en el torrente&hellip;  un
+postre ligero, diria</p>
+
+<pre><code>magnet:?xt=urn:btih:85696c2b31b7c7d793fcccdb74588b96cb6531b7&amp;dn=Arcade%20Fire%20-%20Everything%20Now%20(2017)%20FLAC&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969
+</code></pre>
+
+<p>a quien no le gusta el postre?</p>
+
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(20)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(17)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(8)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/">(9)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(8)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(8)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(7)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(4)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p><span class="h-logo">&copy; nba - GNU&#39;s Rock</span>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+
+</p>
+</footer>
+
+  </body>
+</html>

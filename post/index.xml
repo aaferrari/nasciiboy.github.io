@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 22 Jul 2017 11:11:18 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 01 Aug 2017 21:15:24 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen VIII</title>
+      <link>http://nasciiboy.github.io/post/ramen-viii/</link>
+      <pubDate>Tue, 01 Aug 2017 21:15:24 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/ramen-viii/</guid>
+      <description>(Advertecia, el siguiente contenido tiene mucha fallas ortograficas, algunas de ellas, fueron evidentes en una segunda revision, pero a su autor le hace gracia dejarlas. Si considera inperdonable tal ultraje al lenguaje, por su propio bien abstengase de leer)
+Hey, por fin cambie el tema, no es mas bonito, de hecho es un spaghetti CSS a medio hacer, je, je, ya lo ire &amp;ldquo;purificando&amp;rdquo; lenta y perezosamente, por que pocas cosas hay mas aburridas que el &amp;ldquo;desarrollo&amp;rdquo; web.</description>
+    </item>
     
     <item>
       <title>Ramen VII</title>

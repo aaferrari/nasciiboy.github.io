@@ -2,636 +2,364 @@
 <html>
   <head>
     <meta charset="utf-8">
-<meta name="pinterest" content="nopin">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="theme-color" content="#263238">
+    <title>Progs</title>
+    <link href="http://nasciiboy.github.io/prog/index.xml" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
 
-<meta name="generator" content="Hugo 0.26-DEV" />
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
 
-<link rel="apple-touch-icon" href="http://nasciiboy.github.ioimages/logo.png">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://nasciiboy.github.io/prog/index.xml">
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
 
-<link rel="canonical" href="http://nasciiboy.github.io/prog/">
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
 
 
-    
-    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
-    
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>Progs - nba - GNU&#39;s Rock</title>
-    
-    <style>
-      html { font-size: 18px; background-color: rgba(236,239,241,.5);}@media (max-width: 768px) { html { font-size: 15px; }}body { color: #333; font-family: 'Roboto Slab','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,sans-serif; font-feature-settings : "palt"; font-size: inherit; line-height: 1rem; margin: 0; padding: 0;}h1, h2, h3, h4, h5 ,h6 { font-size: 1rem; font-weight: 700; line-height: 1rem; margin: 0;}hr { border: 0; border-top: 1px dashed #cfd8dc; margin: 1rem 0;}p { margin: 0; line-height: 1rem;}a { color: #2196f3; text-decoration: none; transition-duration: .3s;}ul, ol { margin: 0; padding: 0;}table { border-collapse: collapse;}th, td { font-size: .8rem; padding: .5rem;}tr { border-bottom: 1px dashed #ddd;}/* Layouts */main,aside { display: block;}main { padding: 1rem 0 3rem 0; }aside.h { padding: 3rem 0; }main.f,aside.f { background-color: #333; border-top: 2px dashed #fff; border-bottom: 2px dashed #fff;}.l-container { position: relative; max-width: 68rem; margin: 0 auto; padding: 0 1rem;}.l-container.thin { max-width: 44rem;}.l-header { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); padding: 1rem 0; text-align: center;}.l-footer { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); font-size: .6rem; font-weight: 700; padding: 1rem 0;}@media (max-width: 768px) { .l-sidebar { margin-top: 4rem; }}.mrow { margin: 0 -1rem; overflow: hidden;}.mcol { box-sizing: border-box; float: left; padding: 0 1rem;}.c6 { width: 50%; }.c4 { width: 33.26323833%; }.c8 { width: 66.66666%; }@media (max-width: 768px) { .mcol { width: 100%; float: none; }}.logo a { font-size: 1.4rem; line-height: 1.5rem; font-weight: 700; color: #333;}.articles { margin: -1rem 0; margin-bottom: 1rem;}.articles.sm { margin: -.5rem 0; margin-bottom: 0;}article { border-radius: 4px; overflow: hidden;}article.li { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); height: 20rem; overflow: hidden; margin: 1rem 0;}article.li > a { display: block; color: #333;}article.li .inner { padding: 1rem;}article.li .thumb { height: 8rem;}article.li .title { color: #333; font-size: 1.2rem; line-height: 1.5rem; margin-bottom: .5rem;}article.li .summary { font-size: .8rem; height: 6rem; overflow: hidden; margin-top: 1rem;}article.lism { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); margin: .5rem 0;}article.lism::after { content: ''; display: block; clear: both;}article.lism > a { display: block; color: #333;}article.lism .inner { display: table-cell; vertical-align: middle; height: 5rem; padding-left: .5rem;}article.lism .thumb { width: 5rem; height: 5rem; float: left;}article.lism .title { font-weight: 700; line-height: 1.25rem; margin-bottom: .25rem;}article.sn { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); margin-bottom: 1rem;}article.sn .thumb { height: 20rem;}@media (max-width: 768px) { article.sn .thumb { height: 10rem; }}article.sn > .article-header,article.sn > .article-body,article.sn .article-footer { padding: 2rem;}article.sn > .article-body { padding: 0 2rem;}@media (max-width: 768px) { article.sn > .article-header, article.sn > .article-body, article.sn .article-footer { padding: 1rem; } article.sn > .article-body { padding: 0 1rem; }}article.sn > .article-header .title { font-size: 1.8rem; line-height: 2rem; margin-bottom: .5rem;}@media (max-width: 768px) { article.sn > .article-header .title { font-size: 1.4rem; line-height: 1.5rem; }}article.sn > .article-header .facts { margin-bottom: 1rem;}article.sn > .article-body { margin-bottom: 1.5rem;}article.sn > .article-body h2 { border-bottom: .25rem solid #333; font-size: 1.2rem; line-height: 1.5rem; margin: 1.5rem 0; padding: .5rem 0;}article.sn > .article-body h3 { border-left: .5rem solid #333; line-height: 1.5rem; margin: 1.5rem 0; padding: .125rem .5rem;}article.sn > .article-body ul,article.sn > .article-body ol { margin: 1.5rem 0; padding-left: 1.5rem;}article.sn > .article-body li { padding-bottom: .5rem; line-height: 1.5rem;}article.sn > .article-body li:last-child { padding-bottom: 0;}article.sn > .article-body p { margin: 1rem 0; line-height: 1.5rem;}article.sn > .article-body strong,article.sn > .article-body em { font-style: normal; font-weight: 700;}article.sn > .article-body strong { box-shadow: 0 -.5rem 0 0 #ffc107 inset;}article.sn > .article-body em { color: #8bc34a;}article.sn > .article-body code,article.sn > .article-body pre { font-family: Menlo, Consolas, monospace; font-size: .7rem;}article.sn > .article-body pre { background-color: #333; color: #fff; line-height: 1rem; margin: 1.5rem -2rem; overflow: auto;}@media (max-width: 768px) { article.sn > .article-body pre { margin: 1.5rem -1rem; }}article.sn > .article-body pre > code { display: block; padding: 1rem 2rem;}@media (max-width: 768px) { article.sn > .article-body pre > code { padding: 1rem; }}article.sn > .article-body p code { background-color: #eceff1; color: #333; border-radius: 4px; margin: 0 .25rem; padding: .375rem; white-space: nowrap;}article.sn > .article-body blockquote { position: relative; border-left: .25rem solid #333; font-size: .8rem; padding: .125rem 1rem; margin: 1.5rem 0;}@media (max-width: 768px) { article.sn > .article-body blockquote { font-size: 1rem; }}article.sn > .article-body blockquote p { margin: .5rem 0; line-height: 1rem;}article.sn > .article-body figure { margin: 1.5rem 0;}article.sn > .article-body figure img,article.sn > .article-body figure amp-img { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); max-width: 100%;}img { max-width: 100%; }article.sn > .article-body figcaption { color: #cfd8dc; font-size: .8rem; font-weight: 700; margin-top: .5rem;}.facts li { display: inline; font-size: .8rem; margin-right: 1rem;}.facts i { color: #cfd8dc; margin-right: .5em;}.facts.sm li { font-size: .7rem;}.sections.sidebar { margin: -1rem 0;}.sections.footer { margin: -1rem 0;}section.sidebar { margin: 2rem 0;}section.sidebar > header { font-size: .8rem; font-weight: 700; letter-spacing: 4px; text-align: center; margin: 1.5rem 0;}section.footer { margin: 1rem 0;}section.footer > header { font-size: .8rem; margin: .5rem 0;}section.footer > header::before { content: "- ";}section.footer > header a { font-weight: 700; color: #333; text-decoration: underline;}.terms { margin: -.25rem;}.terms li { display: inline-block;}.terms a { display: block; float: left; background-color: #333; border-radius: 4px; color: #fff; font-size: .7rem; margin: .25rem; padding: 0 .75rem; line-height: 1.75rem;}.paging { text-align: center; padding: 1rem 0;}.paging a { display: inline-block; background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); border-radius: 4px; color: #333; padding: 0 1rem; line-height: 3rem;}.page-title { text-align: center; margin: 1rem 0;}.page-title::after { content: ''; display: block; border-bottom: .25rem solid #333; width: 3rem; margin: 1.5rem auto;}.page-title > .title { font-size: 1.2rem; line-height: 1.5rem;}/* Parts:breadcrumb */.crumb ol { text-overflow: ellipsis; color: #cfd8dc; white-space: nowrap; overflow: hidden;}.crumb li { display: inline; font-size: .8rem;}.crumb li::after { content: '›'; margin: 0 .25rem 0 .5rem;}.crumb li:last-child::after { content: '';}.crumb a { color: #cfd8dc;}.crumb i { margin-right: .5em;}.share { padding: 0;}.share a { display: inline-block; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); min-width: 1rem; height: 2rem; border-radius: 4px; color: #333; font-size: .8rem; font-weight: 700; line-height: 2rem; text-align: center; padding: 0 .5rem;}.adj article.lism { margin-bottom: 1rem;}.adj header { font-weight: 700; font-size: .8rem;}.toc { padding: 0 2rem;}@media (max-width: 768px) { .toc { padding: 0 1rem; }}.toc { margin: 1rem 0;}.toc nav>ul { background-color: #eceff1; border-radius: 4px; display: inline-block; font-size: .8rem; padding: .5rem 1rem; word-break: break-all; list-style: none;}.toc ul { padding: 0;}.toc ul ul { padding-left: 1rem;}.toc ul ul ul { padding-left: 1rem;}.toc li { color: #90a4ae;}.toc ul ul>li { font-weight: 700; margin: .5rem 0; list-style-type: decimal;}.toc ul ul ul>li { list-style-type: disc; font-weight: 500;}.thumb { background-image: url(http://nasciiboy.github.ioimages/default.jpg); background-size: cover;}
-      
-      
-    </style>
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+</style>
   </head>
-
   <body>
     
-    
-    
-
-    <header class="l-header">
-      <div class="l-container">
-        <div class="logo">
-          <a href="http://nasciiboy.github.io">nba - GNU&#39;s Rock</a>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <div class="l-container">
-        
-<div class="mrow">
-  <div class="mcol c8">
-
-    
-    <header class="page-title">
-      <h1 class="title">Progs</h1>
+<main>
+  <article>
+    <header>
+      <h1 class="h-anim">Love Games</h1>
     </header>
     
+  </article>
+  
+  
 
-    <div class="articles">
-      <div class="mrow">
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/stylus-black-translator/">
-    <div class="thumb thumb-a08f44fb2a6e662f88455958dcd085b8"></div>
-
-    <div class="inner">
-      <h2 class="title">stylus black-translator</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-27T00:50:52JST">Jul 27, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">Si Firefox es mi navegador de confianza, no es solo por que sea software libre y tenga una fundacion que le da soporte, tambien lo utilizo por que debido a que es software libre y lo desarrolla gente decente, su creacion refleja esta coherencia otorgando un punto fino de manoseo configuratorio mostruoso, no solo un par de botonsitos deslizables&hellip; pero debido a esta misma apertura y los plugins que instalo, que en su mayoria son para tener una navegacion humana, sin basura y demas, termino por romper una u otra cosa, en particular la apariencia</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/regexp4-go/">
-    <div class="thumb thumb-95ae84c6ee995f53a270c12ed4451563"></div>
-
-    <div class="inner">
-      <h2 class="title">regexp4-go (dia cero)</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-15T21:36:03JST">Jul 15, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">regexp4 es un &ldquo;motor&rdquo; de expresiones regulares de la familia de los motores regulares Recursive Regexp Raptor, o expresado de otra forma: una libreria de expresiones regulares hecha desde cero, reinventando la rueda (o no) de la manera (que para mi es la) mas simple posible. sin arboles de evaluacion, ni liberacion de memoria, ni cosas raras o esa es la intencion, almenos de las versiones en C
-cual es entonces la necesidad de que exista esta version en go, podrias preguntar.</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/webeloper/">
-    <div class="thumb thumb-aafeee1a8859a5946f726345ac5375fc"></div>
-
-    <div class="inner">
-      <h2 class="title">Webeloper – El navegador web</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-10T23:03:56JST">Jul 10, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">joder, que gracioso, ho, ho, ho, veamos si existe la remota posibiidad que nadie utilize este (en mi mente) despectivo &ldquo;titulo&rdquo;&hellip;
-&hellip; no &hellip; bueno, que mas da, no se puede ser &ldquo;innovador&rdquo; todo el tiempo
-hola, que tal, esta entrada trata de algunos de los navegadores web que he utilizado y el por que, o esa es la idea
-Navegadores por terminal Luego que comienza a agradarte la terminal, y con algo de nostalgia sintetica, dices: &ldquo;veamos eso del internet en la terminal, que igual va mejor que el firefox en mi maquina agonizante con 500 megas de ram&rdquo;, y asi sin demasiado esfuerso aqui esta la lista de navegadores de terminal que en algun momento llege a utilizar (una a dos veces):</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/sicp-contrib/">
-    <div class="thumb thumb-9bc97b6c272c78fb9a1aabe907ac2896"></div>
-
-    <div class="inner">
-      <h2 class="title">SICP [es] – Guia para Colaboradores</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-10T17:57:10JST">Jul 10, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">Bienvenidos los contribuidores a la traduccion No oficial de libro SICP al español!
-Antes de comenzar, es necesario decir que esta vercion esta formateada en un lenguaje (experimental) de marcas ligeras llamado morg que busca ser mas sencillo que ningun otro lenguaje para crear documentacion, mientras mantiene la mayoria de caracteristicas de otros lenguajes de marcas como xml o los derivados de TeX. Por tanto esta es una de sus primeras pruebas en el mundo real</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/dot-slash-sicp2es/">
-    <div class="thumb thumb-8b11dd6d9b58e4093649a355f8fa8b02"></div>
-
-    <div class="inner">
-      <h2 class="title">SICP (proyecto de traduccion)</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-06T18:27:56JST">Jul 6, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">o en otras palabras dadme pasta! (no en galletas)
-faq por que?
-para traducir un libro de muchas lineas al español, el Structure and Interpretation of Computer Programs, tambien conocido como SICP
-por que sicp?
- en los listados de lecturas para programadores suele aparecer inevitablemente y en los primeros puestos
- puedo traducirlo y combrar por ello, sin romper ninguna ley (creo)
- parece interesante y creo que enseñan a programar, ademas utilizan un derivado de lisp: Scheme</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/morg-d432/">
-    <div class="thumb thumb-7320ced74f78241328c3af0e1702f325"></div>
-
-    <div class="inner">
-      <h2 class="title">morg [dia 432]</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-04T18:47:44JST">Jul 4, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">sin un titulo interesante y sin esperar una secuencia tan armonica, confie a un programa informatico de internet la tarea de calcular los dias desde el primer commit del repo de morg, no por ningun hecho revelante y menos por un desarrollo agil, que es mas bien paralitico
-bueno, el programa exportador llevaba parado un rato con un bicho enorme, mientras continua el aprendizage del lenguaje Go, a la espera de una refactorizacion, pruebas y demas cosas necesarias, asi pues cuando me decidia a probar a exportar o visualizar algun libro recien maquetado, optenia un log inverso de panicos y direcciones de memoria exadecimales.</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/rainbow/">
-    <div class="thumb thumb-34b2ada1912f0b05ae9f3274f04b26b7"></div>
-
-    <div class="inner">
-      <h2 class="title">Crear una paleta de color con solo un indice</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-06-17T12:39:43JST">Jun 17, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">que tal, como lo indica el titulo vamos a generar una paleta de color apartir de un unico indice, para, por ejemplo colorear una imagen en una escala de colores RGB del negro absoluto (0,0,0) al blanco (255,255,255), con una trancicion &ldquo;suave&rdquo; por estos
-El asunto surgio resolviendo algunos de los ejercicios de libro de programacion de go, especificamente el 3.5, donde proponian dar color a una imagen de mandelbrot, que estaba en una escala de grises (de hay viene lo de generar los colores apartir de un solo indice).</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/tgpl/">
-    <div class="thumb thumb-714f149437ce09aaaf341bf6b3106070"></div>
-
-    <div class="inner">
-      <h2 class="title">El Lenguaje De programacion Go</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-05-29T22:02:43JST">May 29, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">golang, el lenguaje de programacion de sistemas de la gente de google con el que planea llebar a cabo sus mas retorcidos y stalkerosos deseos.
-Hoy y tras pocos meses de programacion y muchas horas de investigacion linguistica intentando entender el english, les traigo una reseña de la biblia de golang (Go para los amigos) The Go Programming Language (en adelante TGPL o GPL(?))
-el libro los usa-americanos tinen sus medidas extravagantes, siguiendo su ejemplo, yo mido la extencion de un documento en las lineas (de 80 columnas indentadas) que abarca, por ejemplo, 7000-10000 lineas suelen ser la extencion regular de una novela, debajo de esta cantidad es un trabajo corto, superior de esta es extenso y superior a las 20000 lineas ya es muy extenso, aunque Dune utiliza (y muy bien) la friolera y descomunal cantidad de 34150 lineas.</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/nirvana/">
-    <div class="thumb thumb-24cd5f5c58370c21a7b60f4d961784e9"></div>
-
-    <div class="inner">
-      <h2 class="title">Nirvana</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-04-20T11:54:03JST">Apr 20, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">hu! ha!, imparable el proyecto de programacion morg (nombre temporal) es (o no), mientras tanto y a modo de respaldo (por si en algun momento me convierto al lado privativo de la fuerza&hellip;) les presento las ultimas novedades codificadas del proyecto
-Primero se agrego katana que conceptualmente se encarga de parsear/cortar el texto plano formateado, y regresar una estructura convenientemente estructurada que facilita cualquier labor a realizar.
-Dentro de la estructura se enucuentran los datos del documento y opciones, ademas de un arreglo de nodos, llamado Toc donde cada elemento es un encabezado (de cualquier nivel) que contiene los parrafos, listas, abouts, tablas, comandos, etc.</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/pg2ncurses/">
-    <div class="thumb thumb-9002758469fb4b891ff975864639c95f"></div>
-
-    <div class="inner">
-      <h2 class="title">Programmer&#39;s Guide to NCurses</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-04-11T12:38:06JST">Apr 11, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">Go, que no es un lenguaje nuevo (ya tiene sus añitos) carece de librerias nativas para desplegar guis, asi como tuis&hellip; bueno esto ultimo no es del todo cierto, pues cuenta con unas pocas librerias nativas para mostrar graficos por la terminal, solo queeee, estan muy verdes, me explico, tienes la habilidad de modificar los caracteres, conocer la dimencion de la terminal, leer la entrada del rator (y teclado) y poco mas, ni funciones para desplegar texto, ni scroll, ni todo el arsenal de funciones que por ejemplo, posee ncurses.</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/yorozuya/">
-    <div class="thumb thumb-79adf7b7b1ac0ef3d3b20ed86f58b1be"></div>
-
-    <div class="inner">
-      <h2 class="title">yorozuya</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-03-14T16:33:15JST">Mar 14, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">Yorozuya en una tienda donde se toma cualquier tipo de trabajo por una tarifa&hellip; bienvenidos los encargos!
-bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me encontraba aprendiendo golang y para tener una referencia rapida del lenguaje, pase el libro oficial (apartir de un pdf) a morg (AQUI el material, fuente, resultado e imagenes). Aun le falta una revision fina que ire realizando a medida que avance su lectura, aunque la actualizacion quisa solo vea la luz cuando aparesca el proyecto morg al 100%.</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/morg-howto/">
-    <div class="thumb thumb-af2d82ac7328b39122ff74c498ec4b39"></div>
-
-    <div class="inner">
-      <h2 class="title">morg: como usar</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-03-12T09:33:15JST">Mar 12, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">la aleatoriadad llevo a programar morg en golang (aunque creo que ya se como portarlo a c) de momento a instalar go
-instalar go (version GNU) primero ve a la direccion https://golang.org/dl/ y clica el enlace de descarga donde diga algo como (al dia de escribir esto) go1.8.linux-amd64.tar.gz (Cambia el amd64 por la arquitectura de tu equipo)
-Si todo va bien tendras el comprimido en $HOME/Downloads, abrimos un terminal y vamos hay</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/morg/">
-    <div class="thumb thumb-a89f4ecfe4f9ba12411d0065b20e7c42"></div>
-
-    <div class="inner">
-      <h2 class="title">morg</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-03-02T06:37:35JST">Mar 2, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">Que tal, por fin tras un año de hacer el vago ha surgido el primer exportador del lenguaje de marcas ligeras morg (nombre tentativo). Aun esta en una fase de programacion, con muchos apaños y trucos sucios&hellip; pero funciona! toma eso internet!
-Que igual y no era tan dificil, pero que me hice lio y termine programando un motor de expresiones regulares y por puro orgullo lo incluyo en el programa</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/inbo/">
-    <div class="thumb thumb-c100cefa689588c4ab0d47c48c43b8b3"></div>
-
-    <div class="inner">
-      <h2 class="title">INBO</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-02-13T22:14:42JST">Feb 13, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">Despues de año y medio de desempleo (y quiza de ser un inutil) aparecio una idea voy a programar un juego como MegaMan II. Por supuesto, no tenia ningun conocimiento de programacion (ni conputadora), solo tiempo y patrocinadores que gentilmente me proporcionaron un pc pentium 4 con un monitor lcd de imagen difuminada aderesada por unas lineas misteriosas capaces de disminuir la vida util de tus ojos 10 años (como la edad (minima) del pc, coincidencia?</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/regexp3-go/">
-    <div class="thumb thumb-fee11733e528a4b3ab260b140effc520"></div>
-
-    <div class="inner">
-      <h2 class="title">regexp3-go (dia cero)</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-02-11T10:26:04JST">Feb 11, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">Hace un año, luego de &ldquo;maquetar&rdquo; algunos libros en org-mode, decidi crear mi propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar un substituto del comando man/info y aniquilar a html/latex como sistema de documentacion.
-Un mes mas tarde fruto de la necesidad de parsear el texto del nuevo lenguaje y mi incapacidad de entender como utilizar una libreria de expresiones regulares, nacio Recursive Regexp Raptor (alias regexp3) que es un motor de expresiones regulares para C, otro mes mas tarde salio a la web la primer version en forma de repositorio en github y ahora&hellip; ni hay un nuevo lenguaje, ni un substituto de man/info, ni ha muerto html y he dedicado mas horas de las que jamas pense en regexp3 (y regexp4 &ldquo;el sucesor&rdquo;)</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-        <div class="mcol c6"><article class="li">
-  <a href="http://nasciiboy.github.io/prog/gnome-keys/">
-    <div class="thumb thumb-953dadde9477d348b75f233f6c5f9314"></div>
-
-    <div class="inner">
-      <h2 class="title">Gnome Keys</h2>
-
-      <ul class="facts">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-01-18T20:57:15JST">Jan 18, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-      <div class="summary">He utilizado gnome 2 (mas de un año en Debian 6), tambien xfce, lxde, dwm, ratpoison, stumpwm, kde 4, kde 5, fluxbox y openbox (y visto unity&hellip;) con todo, mi escritorio es y sera Gnome Shell
-Lo unico que evita que Gnome Shell sea perfecto es la capacidad de personalizar el teclado a gusto, como puede ofreser kde, o eso creia.
-Hace un par de dias comence a utilizar un emulador grafico nuevo llamado terminix el cual tambien adolece de una personalizacion profunda de los atajos de teclado, asi que me pase por su proyecto y les deje una lista de deseos.</div>
-    </div>
-  </a>
-</article>
-</div>
-        
-      </div>
-    </div>
-
+  <ul class="nav">
     
-<nav class="paging">
-  
+    <li><a href="http://nasciiboy.github.io/apt/">apts</a></li>
+    
+    <li><a href="http://nasciiboy.github.io/emacs/">emacs</a></li>
+    
+    <li><a href="http://nasciiboy.github.io/love2d/">love2ds</a></li>
+    
+    <li><a href="http://nasciiboy.github.io/post/">posts</a></li>
+    
+    <li><a href="http://nasciiboy.github.io/prog/">progs</a></li>
+    
+    <li><a href="http://nasciiboy.github.io/vg/">vgs</a></li>
+    
+  </ul>
 
   
-  <a href="http://nasciiboy.github.io/prog/page/2/" rel="next">Next</a>
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/stylus-black-translator/">stylus black-translator</a>
+    </header>
+  </article>
   
-</nav>
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/regexp4-go/">regexp4-go (dia cero)</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/webeloper/">Webeloper – El navegador web</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/sicp-contrib/">SICP [es] – Guia para Colaboradores</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/dot-slash-sicp2es/">SICP (proyecto de traduccion)</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/morg-d432/">morg [dia 432]</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/rainbow/">Crear una paleta de color con solo un indice</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/tgpl/">El Lenguaje De programacion Go</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/nirvana/">Nirvana</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/pg2ncurses/">Programmer&#39;s Guide to NCurses</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/yorozuya/">yorozuya</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/morg-howto/">morg: como usar</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/morg/">morg</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/inbo/">INBO</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/regexp3-go/">regexp3-go (dia cero)</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/gnome-keys/">Gnome Keys</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/raptor-book/">Raptor-Book</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/2017challenges/">2017Challenges</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/ncurses/">Ncurses</a>
+    </header>
+  </article>
+  
+  <article class="li">
+    <header>
+      <a class="title" href="http://nasciiboy.github.io/prog/performance-comparison-of-regular-expression-engines/">Performance comparison of regular expression engines</a>
+    </header>
+  </article>
+  
 
 
-  </div>
-  <div class="mcol c4">
-    <aside class="l-sidebar">
+</main>
 
-  <div class="sections sidebar">
-    <section class="sidebar">
-      <header>LATESTS</header>
-      <div>
-        <div class="articles sm">
-          
-          <article class="lism">
-  <a href="http://nasciiboy.github.io/prog/stylus-black-translator/">
-    <div class="thumb thumb-a08f44fb2a6e662f88455958dcd085b8"></div>
-
-    <div class="inner">
-      <div class="title">stylus black-translator</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-27T00:50:52JST">Jul 27, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-          
-          <article class="lism">
-  <a href="http://nasciiboy.github.io/post/ramen-vii/">
-    <div class="thumb thumb-e078a588dc8a938dfada518c9edd7a72"></div>
-
-    <div class="inner">
-      <div class="title">Ramen VII</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-22T11:11:18JST">Jul 22, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-          
-          <article class="lism">
-  <a href="http://nasciiboy.github.io/love2d/docset/">
-    <div class="thumb thumb-725bb059085911c7cfaec23da811dfc5"></div>
-
-    <div class="inner">
-      <div class="title">Love, Emacs &amp; Docs</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-22T09:06:44JST">Jul 22, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>LOVE2D</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-          
-          <article class="lism">
-  <a href="http://nasciiboy.github.io/vg/shooter/">
-    <div class="thumb thumb-bca85d47178f6021903e0b8af31b63c4"></div>
-
-    <div class="inner">
-      <div class="title">SShooter</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-20T22:21:43JST">Jul 20, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>VG</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-          
-          <article class="lism">
-  <a href="http://nasciiboy.github.io/prog/regexp4-go/">
-    <div class="thumb thumb-95ae84c6ee995f53a270c12ed4451563"></div>
-
-    <div class="inner">
-      <div class="title">regexp4-go (dia cero)</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-15T21:36:03JST">Jul 15, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-          
-          <article class="lism">
-  <a href="http://nasciiboy.github.io/post/ramen-vi/">
-    <div class="thumb thumb-41f291702c659248231f8eddcb804c50"></div>
-
-    <div class="inner">
-      <div class="title">Ramen VI – Commodore</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-13T19:50:42JST">Jul 13, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-          
-          <article class="lism">
-  <a href="http://nasciiboy.github.io/prog/webeloper/">
-    <div class="thumb thumb-aafeee1a8859a5946f726345ac5375fc"></div>
-
-    <div class="inner">
-      <div class="title">Webeloper – El navegador web</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-10T23:03:56JST">Jul 10, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-          
-          <article class="lism">
-  <a href="http://nasciiboy.github.io/prog/sicp-contrib/">
-    <div class="thumb thumb-9bc97b6c272c78fb9a1aabe907ac2896"></div>
-
-    <div class="inner">
-      <div class="title">SICP [es] – Guia para Colaboradores</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-10T17:57:10JST">Jul 10, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-          
-          <article class="lism">
-  <a href="http://nasciiboy.github.io/prog/dot-slash-sicp2es/">
-    <div class="thumb thumb-8b11dd6d9b58e4093649a355f8fa8b02"></div>
-
-    <div class="inner">
-      <div class="title">SICP (proyecto de traduccion)</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-06T18:27:56JST">Jul 6, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-          
-          <article class="lism">
-  <a href="http://nasciiboy.github.io/prog/morg-d432/">
-    <div class="thumb thumb-7320ced74f78241328c3af0e1702f325"></div>
-
-    <div class="inner">
-      <div class="title">morg [dia 432]</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-07-04T18:47:44JST">Jul 4, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>PROG</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-          
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(20)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(17)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(8)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/">(9)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(8)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(8)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(7)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(4)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p><span class="h-logo">&copy; nba - GNU&#39;s Rock</span>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+<b>Feed <a href="http://nasciiboy.github.io/prog/index.xml">RSS</a><b>.
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
 
-    
-    <section class="sidebar">
-      <header>CATEGORIES</header>
-      <div>
-        <ul class="terms">
-          <li><a href="http://nasciiboy.github.iocategories/prog">prog</a></li><li><a href="http://nasciiboy.github.iocategories/post">post</a></li><li><a href="http://nasciiboy.github.iocategories/emacs">emacs</a></li><li><a href="http://nasciiboy.github.iocategories/vg">vg</a></li><li><a href="http://nasciiboy.github.iocategories/apt">apt</a></li><li><a href="http://nasciiboy.github.iocategories/love2d">love2d</a></li>
-        </ul>
-      </div>
-    </section>
-    
-    <section class="sidebar">
-      <header>TAGS</header>
-      <div>
-        <ul class="terms">
-          <li><a href="http://nasciiboy.github.iotags/"></a></li><li><a href="http://nasciiboy.github.iotags/fonos">fonos</a></li><li><a href="http://nasciiboy.github.iotags/howto">howto</a></li><li><a href="http://nasciiboy.github.iotags/ramen">ramen</a></li><li><a href="http://nasciiboy.github.iotags/morg">morg</a></li><li><a href="http://nasciiboy.github.iotags/install">install</a></li><li><a href="http://nasciiboy.github.iotags/anime">anime</a></li><li><a href="http://nasciiboy.github.iotags/regexp">regexp</a></li><li><a href="http://nasciiboy.github.iotags/apt">apt</a></li><li><a href="http://nasciiboy.github.iotags/docu">docu</a></li>
-        </ul>
-      </div>
-    </section>
-    
-  </div>
+</p>
+</footer>
 
-</aside>
-
-  </div>
-</div>
-
-      </div>
-    </main>
-
-    <footer class="l-footer">
-      <div class="l-container">
-        <p>GPL 3.0</p>
-        <aside>
-          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
-          <p><a href="https://github.com/dim0627/hugo_theme_robust">Robust</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
-        </aside>
-      </div>
-    </footer>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
-

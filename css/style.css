@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>nxEngine</title>
-    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
-    <style>:root {
+:root {
 
     --BGC      : #000000;
     --FGC      : #ffffff;
@@ -44,8 +38,8 @@
 @font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
 @font-face { font-family: title;          src: local('cursive'      );                     }
 @font-face { font-family: heatline;       src: local('cursive'      );                     }
-@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
-@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: codetext;       src: url("https://nasciiboy.github.io/DejaVuSansMono.ttf");                     }
+@font-face { font-family: codeblock;      src: url("https://nasciiboy.github.io/DejaVuSansMono.ttf");                     }
 @font-face { font-family: description_dt; src: local('cursive'      );                     }
 @font-face { font-family: description_dd; src: local('sans'         );                     }
 
@@ -64,8 +58,7 @@ html body { margin: 1em 0em 1em 1em;
 html body main {font-size: 1.0em;
                 font-family: text;
                 box-sizing:border-box;
-                padding: 1em 1em 1em 1.5em
-                ;
+                padding-left: 2em;
                 width: 70%;
                 float: left;
                }
@@ -84,6 +77,19 @@ ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
 ul.meta li { line-height: 1.5em; }
 
 .taxonomies { color: green; clear: both; }
+ul.terms    { list-style: none; margin: 0em; padding: 0em; }
+ul.terms li { display: block;
+              float: left;
+              margin: .1em .5em .1em .5em;
+}
+
+ul.terms a { text-decoration: none;
+}
+
+ul.terms a:hover { text-decoration: none;
+                   background-color: #333;
+                   color: #fff;
+}
 
 .summary {
   max-height: 8.7rem;
@@ -102,12 +108,7 @@ html body aside {
     box-sizing:border-box;
     width: 30%;
     float: left;
-    padding-left: 1em;
 }
-
-header.key { color: black; }
-
-aside div ul { padding-left: 0em; margin: 0em; }
 
 html body footer {
     font-size: 0.7em;
@@ -144,12 +145,6 @@ pre {
 pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
 }
 
-ul.nav { list-style-type: none; }
-ul.nav li { display: inline-block; list-style: none; }
-ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
-ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
-
-
 b    { font-family: text_bold; }
 i    { font-family: text_italic; }
 u    { text-decoration: underline; }
@@ -176,91 +171,3 @@ dd { color: #ffffff;
                                   margin-left: 0.6em; }
 img { border: none; max-width: 100%; }
 img:hover { border: 0.05em solid #fff; }
-</style>
-  </head>
-  <body>
-    
-<main>
-  <h1>nxEngine</h1>
-  <p><img src="../Dokutsu.jpg" alt="" /></p>
-
-<p>Dōkutsu Monogatari mejor conocido en oxidente como Cave Story (La historia de la
-cueva) es un videojuego de plataformas con un toque de RPG desarrollado por una
-sola persona (Daisuke Amaya, alias &ldquo;pixel&rdquo;) a lo largo de 5 años. Originalmente
-fue liberado como <em>freeware</em> para la plataforma pc de microsoft, no obstante por
-su sobresaliente calidad ha sido portado a una gran cantidad de sistemas entre
-las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast, GP2X,
-&hellip;, y por supuesto GNU/linux.</p>
-
-<p>Pese a que la licencia de distribucion no es libre, se cuenta con una
-implementacion del motor (en C++) bajo la licencia GNU GPL v3 llamada
-<a href="http://nxengine.sourceforge.net/">nxEngine</a> y un par de traducciones al español
-(utilizare <a href="http://www.romhacking.net/translations/2172/">esta</a>)</p>
-
-<p>Si bien podemos disfrutar Dōkutsu Monogatari mediante <strong>wine</strong> (asunto con poco
-misterio) vamos a compilar una vercion nativa con nxEngine. Todo lo que
-necesitas lo encontraras en este <a href="../nx.zip">zip</a>. Descargalo y abre un terminal</p>
-
-<pre><code>su
-# nxEngine depende de la libreria SDL. En freidora
-dnf -y install SDL-devel SDL_ttf-devel
-exit
-
-unzip nx.zip -d nx
-cd nx
-make
-./nx # luego presiona ' ' (espacio) y 'a' (letra a)
-# listo
-</code></pre>
-
-<p>La vercion nativa no maneja apropiadamente los acentos ni los caracteres raros
-del español, aun asi puede entenderse perfectamente.</p>
-
-<p>Mi amor por esta obra es proporcional a su dificultad, moriras y moriras y
-moriras y volveras a morir y cuando lleges al tramo final moriras muchas veces
-mas. Recuerda salvar cada ves que se presente la oportunidad o te puedes pegar
-un cabreo.</p>
-
-<p>El unico defecto de este magnifico titulo, es la imposibilidad de saltarse los
-dialogos. Cuando apreda a programar&hellip;</p>
-
-<p>La duracion ronda entre 4-8 horas, (la primer vez que lo termine tarde 6). Como
-dispone de varios finales, como minimo pasatelo 2 veces.</p>
-
-<p>Puedes encontrar achivos de salvamento, ports diversos y muchas cosas mas en
-<a href="http://www.cavestory.org/">http://www.cavestory.org/</a></p>
-
-</main>
-
-    <aside>
-      
-      <section class="sidebar">
-        <header class="key"><b>CATEGORIES</b></header>
-        <div>
-          <ul class="terms">
-            <li><a href="http://nasciiboy.github.io/categories/prog">prog(20)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(17)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(8)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
-          </ul>
-        </div>
-      </section>
-      
-      <section class="sidebar">
-        <header class="key"><b>TAGS</b></header>
-        <div>
-          <ul class="terms">
-            <li><a href="http://nasciiboy.github.io/tags/">(9)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(8)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(8)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(7)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(4)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li>
-          </ul>
-        </div>
-      </section>
-      
-    </aside>
-    <footer>
-  <p><span class="h-logo">&copy; nba - GNU&#39;s Rock</span>.
-          Powered by <a href="https://gohugo.io/">Hugo</a>.
-
- Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
-
-</p>
-</footer>
-
-  </body>
-</html>
