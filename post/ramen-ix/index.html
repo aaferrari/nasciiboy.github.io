@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen IX</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <h1>Ramen IX</h1>
+  
+
+<p><img src="http://nasciiboy.github.io/img/nichi.jpg" alt="" /></p>
+
+<p>Segun yo, cuando te enfermas has de descansar y ver si tu sistema puede
+solucionar por si mismo el desperfecto, no ponerte a tope con pastillas, si
+tienes calentura o dolor de cabeza, que mejor que fumar llerba en una pipa
+echiza, ponerse una cobija encima y sertirse bien yonqui.</p>
+
+<p>Si!, hay que sentir el malestar de vez en cuando, es necesario, mas incluso como
+medio de romper rutinas, voltear a ver el exterior (o explorar los miles de
+archivos recolectados del internete) y quiza hacer cambios.</p>
+
+<p>Bienvenido el malestar, la decadencia e incluso lo fetido de vez en cuando</p>
+
+<p>y acaso 2 dias sin electricidad y 5 sin internet, no es una forma de enfermedad
+moderna? Obligado a desconectar y ver que hacer, e incluso burlarte de otros por
+que aunque el dia a dia diga lo contrario, los otros sin television pierden su
+guia moral, espiritual e incluso su rason de existir, pero bueno, no hay que ser
+tan duro, que tengo un monton de material en el equipo y con solo electricidad
+(y refugio, y comida y agua y dinero) podria dedicar la vida entera a su estudio, ademas teniendo
+el dispositivo con algo de musica, videos (xxx), podcast y un nobreak para
+cargarlo, se puede mantener la cordura, puesto que sin dispositivo y sin cervesa
+(uuhug) homero pierde la cabeza</p>
+
+<p>la traduccion de sicp se me quedo un poco parada, aunque llevo un par de dias
+de seudoconstancia, va ya por el 10%. Han aparecido muchos terminos matemagicos,
+incosistencias entre el pdf (oficial) y la adaptacion texinfo, varios palabros y
+secciones de codigo que me estan afectando el inpetu perfeccionista, por que
+escapan de mis dominios, ya sera en la segunda revicion cuando se corrija
+(espero). Como lo deje parado unos dias, se me olvidaron varios conceptos de Scheme, pero
+rescatare dos que me llaman mucho la atencion, primero, su no inclucion
+de bucles, subtituidos por pura recursividad, con variables centinela que pasan
+en cada recursion, y segundo, su recursividad iteractiva (o de cola) que
+supuestamente es igual de eficiente que una iteracion por for/while estandar,
+tras un tiempo creo que entiendo el concepto, mas dominar el truco de terminar
+con una llamada &ldquo;simetricamente&rdquo; va a ser dificil de lograr, pues aunque ya
+utilizo recursividad de forma regular, pasar esta a su version iterativa me
+cuesta un mucho.</p>
+
+<p>Dos puntos que me estan haciendo ruido (y que go solventa perfectamente si no
+utilizas <code>.</code> (punto) en `import (por cierto por que incluir esto en el lenguaje?
+eeeeh?)) son la falta de señas para conocer de donde demonios procede una
+funcion (cuando tiene un nombre criptico y parametros mas cripticos aun), en
+emacs, lo solucionan con magia que te lleva a la definicion de la
+funcion/variable, sucedera lo mismo con Scheme? Por ahora solo he toqueteado un
+poco con dos interpretes que se dejaron probar <em>GNU guile</em> que no tiene
+historial y lanza unos errores muuu raros y <em>kawa</em> con historial y navegacion
+como cualquier interprete que se de a respetar ha de hacer, este ultimo hecho
+sobre java o algo asi.</p>
+
+<p>El segundo punto que me perturva bastante son sus tipos <strong>un</strong>tipificados, eso
+es caro no? a menos que tengas un compilador/interprete super optimizado mas
+&ldquo;smart&rdquo; que el movil, no?  demaciada modernidad (ironia, lo se), gente mas lista
+lo habra resuelto, solo hablo desde la ingenua ignorancia. Manocear lua en
+paralelo con lisp, ha sido de ayuda, por cierto mucho de lisp hay en lua, que
+tambien cuenta con recursividad &ldquo;de cola&rdquo;, funciones <em>lambda</em> (que vi aparecer
+por ves primera en elips, pero no entendi hasta go, <em>lambda</em> suena como para
+sentirse listo e importate, <em>lammbda</em>, <em>laaahmbda</em>, <strong>laaammmmbmmhhdá</strong>),
+funciones de primera clase (por las <em>laamffdasss</em>) y demas. Espero que una ves
+terminado el apredisaje, el manoseo de haskell (si llego a ello) sea un paseo
+por la ciudad, huuu, un paseo con la mirada del tigre (mitad determinacion,
+mitad desprecio y mitad lascivia)</p>
+
+<p>Como me gusta (o gustaria) dominar las cosas, hecho en falta no haber encontrado
+un libro &ldquo;serio&rdquo; de lua, o siquiera un libro medio explicito en español o algo
+asi, esto tambien me esta jodiendo con Go, ni un torrente, ni enlaces recien
+descubiertos del tor, o una busqueda de <em>libro pdf</em> me han mostrado el
+camino a seguir, jo, estoy tan deseperado por conocimiento facilon, que incluso
+me planteo estudiar D (por su manaal comunitario y creo que unico en el mundo,
+aunque en ingles) o darle una tercera oportunidad a python&hellip; cada vez es mas
+real que tocare python, python&hellip; donde estan los asesinos cuando se necesitan?</p>
+
+<p>habia iniciado o manocear un viejo manual para crear extenciones para emacs,
+pero lo dejare en pausa, demasiado lisp</p>
+
+<p>que risa, luego del anterior post, revise el sitio y la plantilla de hugo esta bastante
+descuidada, hi, hi, hi, haaaahh que pereza me da corregirlo</p>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>Spiderman homecomming</strong>, de esto tenia expectativas altas, no por que la
+esperara con deseo, sino por las reseñå de un analista de confianza, que le dio
+<sup>5</sup>&frasl;<sub>5</sub>, algo poco habitual en el.</p>
+
+<p>Soy de los que se apantallaron con el spiderman de Toby, y&hellip; si hubiera visto
+esta antes, diria que seria una de mis pelis, me gusto, lo hicieron bien, solo
+que en algunas escenas el prota me parece de veinte y luego de 15 y aveces estar
+hecho de cera, algo raro. El doblaje en español no creo le haga ningun bien, en
+fin, luego de una larga mala temporada, junte (o mejor dicho, me juntaron) para
+ir al templo, que mejor que iniciar con el viejo spidy, si queda presupuesto, la
+siguiente semana los monos</p>
+
+<p><strong>Valerian and the City of Thousand Planets</strong>, y la siguiente semana tenia
+presupuesto para una seguanda pelicula en el templo, la opcion <code>a</code> era la peli
+de los monos y la opcion <code>b</code> apostar por una peli del señor que hizo <em>leon el
+profecional</em> y <em>el quinto elemento</em>, me sentia curioso y la cague feo. Decir que
+es una peli de mierda es pasarse, por que el apartado tecnico esta bueno, sin
+embargo al igual que ghost in the shell, tiene mucho shell y poco ghost. No
+entiendo a (ninguno de) los personajes, todos tiene personalidad de serie
+disney, es decir, estupidos fashion, con problemas y motivaciones
+artificiales. El malo y sus motivos, que sirven de pretexto para contar la peli,
+siguen los mismos patrones de serie juvenil invecil, y el doblaje no le hace
+ningun fabor&hellip; pero ni en original creo que suenen bien sus chavo-rucos
+actores. En la sala la gente se reia&hellip;</p>
+
+<p><strong>The Worlds End</strong>, rumores antes llegaron sobre un grupo de aventureros y su
+recorrido por los 12 pubs, pero no fue hasta hace un par de semanas con un video
+del yutu (<s>mierda</s> mireda producciones) y un lento torrent que descubri la
+<em>trilogia del corneto</em>, de la que esta es la tercera parte. Sin saberlo ya habia
+visto el inicio en <em>Shaun Of The Dead</em>, bastante recomendable tambien, en fin,
+misma calidad, tematica similar pero distinta, todo un gose de piña con fresa!</p>
+
+<pre><code>magnet:?xt=urn:btih:f1033299da7cb5c85bb932f4ac3544ffa94e9434&amp;dn=The%20Three%20Flavours%20Cornetto%20Trilogy%20(Simon%20pegg)%20BLUE-RAY&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce
+</code></pre>
+
+<p><img src="http://nasciiboy.github.io/img/p&amp;s.jpg" alt="" /></p>
+
+<p><strong>Texnholize</strong> rareza grado industrial, esto merece su post propio, en serio que
+merece un post propio, un maldito y profundo analisis, mas, por no hacerlo de
+inmediato (y por temor de no estar a la altura) no lo hare&hellip; si no me he puesto
+con la reseña de ender&hellip; lo siento, no soy un tipo serio</p>
+
+<p>La mejor forma de expresarme sobre Texnholize es decir que es lo mas opresivo
+que hay en cualquier medio, ademas de severa con el expectador. Un recorrido
+animal, sudoroso y respiratorio, hasta la muerte(?) de la
+bestia conciente, &ldquo;el ocaso&rdquo;. Descubres que eres un simple animal, haces lo
+necesario por ser un poco mas, luego caes, notas que pese a los colores y luces
+brillantes todos son sucios seres perturbados, excluyendo a las fantacias-waifu
+mentales y al final, se apagan las luces, ninguna esperanza queda, solo la melancolia
+por lo que no puede ser</p>
+
+<p>Aunque ya la habia visto hace tiempo, y la sensacion fue identica, la tenia en
+el dispositivo desde hace dos años, a la espera de una revicion. Por algun
+motivo recordava que solo eran 6 o 12 episodios, pero no, son veinte y algo.</p>
+
+<p>Una serie sin concesiones. Durante el tiempo que la tuve en el dispositivo
+(hasta la falta de electricidad) la intente revisitar 3 ocaciones, aunque me
+terminaba durmiendo&hellip; requiere compromiso, solo cuando llegas al episodio 9 o
+asi la historia adquiere el suficiente sentido para sostener la atencion, aunque
+lo que la hace revelante son las sensaciones que va plantando desde el inicio
+hasta el fin</p>
+
+<p><strong>nichijou</strong> (alias (personal) <em>helvetica standar</em>) surguio el tiempo para ver
+<em>la serie</em> de <em>japonadas</em> por exelencia por vez tercera, oohoo, como puede ser
+tan graciosa, tan bien hecha, tan cute, tan tan llena de mimo y sin humor
+escatologico ni &ldquo;adulto&rdquo;. Un maldito golpe a toda la mediocridad y productos
+edgy (coff DC), en definitiva, en mi top de series (anime o no) fabulosas que
+todo el mundo deveria de ver</p>
+
+<p><strong>Golden Boy</strong> De las recomendaciones incidentales del camello y por cortecia
+del yutu, del cual saco este comentario-resumen &ldquo;anonimo&rdquo;</p>
+
+<blockquote>
+<p>ese men ademas de seductor, mamalon, deportista profecional, buen dibujante,
+arte marcialista, en fin es cholo :v</p>
+</blockquote>
+
+<p>si conoces <strong>Great Teacher Onizuka</strong> (manga, por que el anime es un
+desproposito) tiene ese espiritu, son solo 6 episodios, valen su peso en oro!</p>
+
+<p><strong>Hot Fuzz</strong> hay mas tiempo que material y menos vida que tiempo. Terminando asi
+la trilogia del corneto, con el segundo sabor, con el inicio-despegue mas lento
+de los tres. Al igual que <em>The worlds End</em> tiene un giro (casi) a la mitad,
+aunque me permito calificarla como &ldquo;demaciado parodica&rdquo;, interesante, aunque
+floja</p>
+
+<p><strong>LIFE</strong>, un pulpo marciano cargandose a un grupo de investigadores en la
+estacion espacial internacional, con suspenso e impactos sonoros
+moderados. Buena forma de gastar hora y media!</p>
+
+<p>para cerrar la seccion, un video <em>El cine de Woody Allen a través de La Rosa
+Púrpura del Cairo</em> proveniente del canal <em>Ovejas Eléctricas</em> que siempre tiene
+videos interesantes, y aunque el titulo no me decia nada y por ello lo deje
+varios dias en la lista, nos revela de forma transparente &ldquo;el significado de la
+vida&rdquo; (moderna y forjada por el cine (y otros medios))</p>
+
+<pre><code>youtube-dl 'https://youtu.be/DFr7CVuzd8s'
+</code></pre>
+
+<blockquote>
+<p>y cada dia mas viejos y cada dia mas solos, seguimos buscando en las pantallas
+un engaño que nos reconforte, para sentir, auquen sea un instante, que toda
+esta broma tiene algun sentido.</p>
+</blockquote>
+
+<p>ultimamente siento la necesidad de hacer un recomendable con canales del yutu, o
+podcast o un top con los 100 discos|animes que debes conocer antes de morir o
+algo asi.  Igual cuando aprenda a hablar (al menos en los &ldquo;productos&rdquo; que sigo
+parecen hacerlo) me vuelvo yutuber con patrioon y esas cosas modernas, ja, ja,
+ja, te imaginas, gente que gana pasta y vive bien sin haber construido, creado,
+cultivado, criado, investigado o programado para que una maquina lo haga por
+nosotros?  por que si es asi, por que no vivir todos bien, si a fin de cuantas
+nadie hace nada? &hellip; diria que adonde vamos a llegar, pero parece que siempre
+ha sido asi</p>
+
+<h2 id="docu">docu</h2>
+
+<p><strong>Build Web Application with Golang</strong> Que no es: Un manual pormenorizado para
+formarte de cero a <em>webeloper</em> (asumiendo que ya conoces golang). Que es: un
+compendio de <em>anotaciones</em> variado e informativo sobre varios topicos del
+desarrollo web.</p>
+
+<p>Bueno para conocer lo que puedes encontrar si aspiras a webeloper y tener
+algunas recetas cortas, o como en mi caso, creer que el internet es un conjunto
+de apaños rotos confusos poco estimulantes&hellip; pero hay que ver de que va, por si
+en un futuro distante busco empleo desesperadamente de webeloper, si, de esos
+&ldquo;ofrecimientos&rdquo; para hacer de back y front end y demas cosas raras</p>
+
+<p>A medida que avanza la lectura, se va haciendo mas ecleptico, un poco de
+plantillas, encoders, sockets, cosas de cookies/seciones, cadenas(?),
+lectura/escritura de archivos y hasta regexes (presenta un codigo consiso y
+claro para limpiar un xml de xml).</p>
+
+<p>La traduccion parcial al español de este manual es entendible sin apenas
+esfuerzo. Por supuesto que tiene fallos (hasta para mi perceptibles)
+afortunadamente al ser material libre si tienes alguna aportacion (y no solo
+quejas) puedes ir directo al <a href="https://github.com/astaxie/build-web-application-with-golang">repo</a> y
+colaborar. Me habia planteado terminar la traduccion o hacer alguna revicion,
+pero como es mas una guia turistica y yo soy  mas de &ldquo;biblias&rdquo; tochas,
+detalladas e inabarcables, pues no, haber que mas hay por hay, de momento solo el TGPL
+me parece magnifico como recorrido por Go y como libro de informatica
+en general</p>
+
+<p><strong>How to (make games with) LÖVE</strong> (<a href="http://sheepolution.com/learn/book/0">http://sheepolution.com/learn/book/0</a>) una
+estimulante, eficiente (no perfecta) y clarificadora introduccion a Love2D (y
+lua), puro amor. Ya lo habia listado en el post de documenacion de love2d, ahora lo
+he leido y lo recomiendo con entusiasmo.</p>
+
+<p>Quien sabe si en verdad un no iniciado lo pueda aprovechar, aunque con la
+suficiente determinacion y si no hubiera mas material (lo hay?) podria ser
+suficiente para forjar videojuegos arbitrariamente complejos</p>
+
+<p>he continuado con un tutorial de <a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/">arcanoid</a>,
+si las cosas continuan sin inconvenientes, es decir llego a programar algo decente
+(Megaman 2, Cave Story o similar), igual y le pido permiso al autor para
+traducirlo (hablo de sheepolution y el de arcanoid) o tomarlo de base para un
+nuevo documento</p>
+
+<h2 id="fonos">fonos</h2>
+
+<p><strong>Miles Davis</strong>, el primer acercamiento no fue del todo favorable, pero al igual
+que <em>Daydream Nation</em> (Sonic Youth) o <em>The power to Believe</em> (King Crimson) los
+dos albums que mas me a costado digerir, aun notando un elevado nivel de calidad
+(no sabria explicar como es esto), luego de sucesivas escuchas y un tiempo de
+reposo, se convierten en inprecindibles pilares y baras de medicion para otros
+albums.</p>
+
+<p>Antes ya habia mencionado que los (tres) albums que escuche (basado en listas de
+progarchive) exigian atencion si no querias fastidiarte la cabeza, supongo que
+tras un reposo mental, o la muerte de millones de neuronas en la segunda vuelta,
+ahora ha fluido ligeramente (imaginar que muevo el aire ampliamente con la mano,
+mientras hago un &ldquo;fuuuuuhhhhh&rdquo;), tanto que los he disfrutado realmente, sin
+llegar a ponerlos en un altar, sobre todo <em>In A Silent Way</em>, <em>sorcerer</em> y <em>Nefertiti</em>. Me
+gustaria bajar todos los albums, pero no tengo disco para ello, pese a
+sacrificar recientemente unos capitulos de evangelion <em>fan edition</em> que tenia en
+mucha estima, o triste destino que la conciencia avandone este cuerpo si no me das (al
+menos) un disco de 4 teras!</p>
+
+<pre><code>magnet:?xt=urn:btih:ed6dd2b73b074e2fb7e915dba07628daf882ce5d&amp;dn=Miles%20Davis%20-%20The%20Complete%20Columbia%20Album%20Collection%20%5bFLAC%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce
+</code></pre>
+
+<p>parece que el torrent esta muy sano, asi que de momento preocupaciones pocas,
+pese a contar con solo  2.4GB de los 21</p>
+
+<p>[Este post esta dedicado a mi hego, a su necesidad de contar sus mierdas, a los
+tres puntos y a la comunidad de lectores aninomos-silenciosos de la cual tambien
+formo parte, wafff!]</p>
+
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(20)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(18)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(8)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/">(9)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(9)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(8)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(7)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(4)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p><span class="h-logo">&copy; nba - GNU&#39;s Rock</span>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+
+</p>
+</footer>
+
+  </body>
+</html>
