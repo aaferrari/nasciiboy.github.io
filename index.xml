@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 19 Aug 2017 14:20:56 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 20 Aug 2017 15:59:03 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>iScheme</title>
+      <link>http://nasciiboy.github.io/prog/ischeme/</link>
+      <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/ischeme/</guid>
+      <description>La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para mi escaso saber, por su parte los conceptos programacionales con Scheme solo los entiendo a nivel superficial, es decir, podria explicar de que van, pero no ponerlo en nada practico, ademas han dejado de aparecer fraces esotericas.
+Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su puesto), me plante comenzar un port del raptor (si, otro mas) al Scheme, mas, pronto me di cuenta que habia olvidado siquiera como definir una variable, una funcion y una l-a-a-m-m-b-d-a-a (que raro suena), oohh, que dilema –dijo interiormente nasciiboy</description>
+    </item>
     
     <item>
       <title>Raptor VS Mundo</title>

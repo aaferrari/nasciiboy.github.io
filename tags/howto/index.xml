@@ -63,6 +63,16 @@ Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de configur
     </item>
     
     <item>
+      <title>first theme</title>
+      <link>http://nasciiboy.github.io/emacs/first-theme/</link>
+      <pubDate>Wed, 28 Dec 2016 17:17:04 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/first-theme/</guid>
+      <description>Crear un Tema en Emacs un poco de historia Cuando comence a utilizar emacs (hace unos pocos años) para establecer un tema se utilizaba un paquete llamado color-theme parte del paquete emacs-goodies-el de Debian. Al parecer desde la version 24 de emacs se desaconseja su uso, pese a todo en mi instalacion se mantuvo en servicio hasta la version 26.0.50 sin generar inconvenientes.
+para la posteridad y los viajeros en el tiempo, dejo aqui el paquete en forma de zip (con un tema personalizado de regalo color-theme-nascii)</description>
+    </item>
+    
+    <item>
       <title>Como dividir un album contenido en una sola pista flac</title>
       <link>http://nasciiboy.github.io/apt/shnsplit/</link>
       <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>

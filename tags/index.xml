@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Thu, 20 Jul 2017 22:21:43 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 01 Aug 2017 21:15:24 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title></title>
-      <link>http://nasciiboy.github.io/tags/</link>
-      <pubDate>Thu, 20 Jul 2017 22:21:43 -0500</pubDate>
-      
-      <guid>http://nasciiboy.github.io/tags/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>4k</title>
@@ -42,7 +33,7 @@
     <item>
       <title>Apt</title>
       <link>http://nasciiboy.github.io/tags/apt/</link>
-      <pubDate>Thu, 27 Jul 2017 00:50:52 -0500</pubDate>
+      <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
       
       <guid>http://nasciiboy.github.io/tags/apt/</guid>
       <description></description>
@@ -54,15 +45,6 @@
       <pubDate>Thu, 06 Jul 2017 18:27:56 -0500</pubDate>
       
       <guid>http://nasciiboy.github.io/tags/docu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dokutsu Monogatari</title>
-      <link>http://nasciiboy.github.io/tags/dokutsu-monogatari/</link>
-      <pubDate>Mon, 19 Dec 2016 11:29:56 -0600</pubDate>
-      
-      <guid>http://nasciiboy.github.io/tags/dokutsu-monogatari/</guid>
       <description></description>
     </item>
     
@@ -132,7 +114,7 @@
     <item>
       <title>Install</title>
       <link>http://nasciiboy.github.io/tags/install/</link>
-      <pubDate>Mon, 10 Jul 2017 23:03:56 -0500</pubDate>
+      <pubDate>Sat, 24 Jun 2017 20:28:51 -0500</pubDate>
       
       <guid>http://nasciiboy.github.io/tags/install/</guid>
       <description></description>
@@ -162,15 +144,6 @@
       <pubDate>Tue, 01 Aug 2017 21:15:24 -0500</pubDate>
       
       <guid>http://nasciiboy.github.io/tags/morg/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Movs</title>
-      <link>http://nasciiboy.github.io/tags/movs/</link>
-      <pubDate>Mon, 16 Jan 2017 20:27:28 -0600</pubDate>
-      
-      <guid>http://nasciiboy.github.io/tags/movs/</guid>
       <description></description>
     </item>
     
@@ -240,7 +213,7 @@
     <item>
       <title>Sicp</title>
       <link>http://nasciiboy.github.io/tags/sicp/</link>
-      <pubDate>Mon, 10 Jul 2017 17:57:10 -0500</pubDate>
+      <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
       
       <guid>http://nasciiboy.github.io/tags/sicp/</guid>
       <description></description>
@@ -252,6 +225,15 @@
       <pubDate>Sun, 01 Jan 2017 14:56:59 -0600</pubDate>
       
       <guid>http://nasciiboy.github.io/tags/solarus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zelda</title>
+      <link>http://nasciiboy.github.io/tags/zelda/</link>
+      <pubDate>Sun, 01 Jan 2017 14:56:59 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/zelda/</guid>
       <description></description>
     </item>
     

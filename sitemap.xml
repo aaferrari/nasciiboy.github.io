@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/prog/ischeme/</loc>
+    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/raptorvsworld-ii/</loc>
     <lastmod>2017-08-19T14:20:56-05:00</lastmod>
   </url>
@@ -288,12 +293,6 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/tags/</loc>
-    <lastmod>2017-07-20T22:21:43-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://nasciiboy.github.io/tags/4k/</loc>
     <lastmod>2017-08-01T21:15:24-05:00</lastmod>
     <priority>0</priority>
@@ -307,7 +306,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/apt/</loc>
-    <lastmod>2017-07-27T00:50:52-05:00</lastmod>
+    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -332,12 +331,6 @@
   <url>
     <loc>http://nasciiboy.github.io/tags/docu/</loc>
     <lastmod>2017-07-06T18:27:56-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://nasciiboy.github.io/tags/dokutsu-monogatari/</loc>
-    <lastmod>2016-12-19T11:29:56-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -397,7 +390,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/install/</loc>
-    <lastmod>2017-07-10T23:03:56-05:00</lastmod>
+    <lastmod>2017-06-24T20:28:51-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -432,12 +425,6 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/tags/movs/</loc>
-    <lastmod>2017-01-16T20:27:28-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://nasciiboy.github.io/tags/ncurses/</loc>
     <lastmod>2017-04-11T12:38:06-05:00</lastmod>
     <priority>0</priority>
@@ -463,13 +450,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2017-08-19T14:20:56-05:00</lastmod>
+    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2017-08-19T14:20:56-05:00</lastmod>
+    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -505,7 +492,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/sicp/</loc>
-    <lastmod>2017-07-10T17:57:10-05:00</lastmod>
+    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -517,7 +504,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/</loc>
-    <lastmod>2017-07-20T22:21:43-05:00</lastmod>
+    <lastmod>2017-08-01T21:15:24-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -534,6 +521,12 @@
   </url>
   
   <url>
+    <loc>http://nasciiboy.github.io/tags/zelda/</loc>
+    <lastmod>2017-01-01T14:56:59-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/tags/zero/</loc>
     <lastmod>2016-12-16T17:19:32-06:00</lastmod>
     <priority>0</priority>
@@ -541,7 +534,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-08-19T14:20:56-05:00</lastmod>
+    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
     <priority>0</priority>
   </url>
   

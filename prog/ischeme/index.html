@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iScheme</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>iScheme</h1>
+  
+
+<p><img src="http://nasciiboy.github.io/img/lambda.png" alt="" /></p>
+
+<p>La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para
+mi escaso saber, por su parte los conceptos programacionales con Scheme solo los
+entiendo a nivel superficial, es decir, podria explicar de que van, pero no
+ponerlo en nada practico, ademas han dejado de aparecer fraces esotericas.</p>
+
+<p>Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su
+puesto), me plante comenzar un port del raptor (si, otro mas) al Scheme, mas,
+pronto me di cuenta que habia olvidado siquiera como definir una variable, una
+funcion y una l-a-a-m-m-b-d-a-a (que raro suena), oohh, que dilema –dijo
+interiormente nasciiboy</p>
+
+<p>Tres escenarios se plantaron hacia mi (luego de ver con detalle el temario
+restante del SICP)</p>
+
+<ol>
+<li><p>Mandar la traduccion a la mierda y desaparecer de intenné</p></li>
+
+<li><p>Buscar otro libro de Scheme&hellip; que seguramente tambien requiera
+traduccion&hellip; (ya habia dado un primer paso antes de pasar a la suguiente opcion)</p></li>
+
+<li><p>Crusarme por casualidad con el libro estraño de racket y ver de que iba y la
+razon de habero metido en &ldquo;los recursos&rdquo; de Scheme</p></li>
+</ol>
+
+<p>De la opcion 2 tenia en reserva los &ldquo;The Little Schemer&rdquo;, tras una revision
+preliminar, quedaron descartados, por fortuna hace un par de meses aparecio una
+compilacion de cosas de lisp (incluido scheme, prolog y haskell) que traia un
+libro apto para su servidor <em>Teach Yourself Scheme in Fixnum Days</em>. Para aun
+mas sorpresa es de &ldquo;Codigo Visible&rdquo; o algo asi, tiene <a href="https://github.com/ds26gte/tyscheme">un repo</a> en github,
+ademas de una version online (seccionizada por paginas), escrita en tex y por lo
+que vi, de facil adaptacion a otros formatos</p>
+
+<p>Pero la ganadora, amenos por ahora es la opcion 3: abrir el libro con el simbolo
+lambda (no, no <strong>↦</strong>) <strong>λ</strong>, dedicado a
+rocket <a href="http://aliamondano-eo.wikidot.com/racket-5"><em>Programando con Racket 5</em></a>
+y distribuido bajo licencia Creative Commons Attribution-Noncommercial-Share
+Alike 3.0.</p>
+
+<p>Si tienen efectivo, comprarle un libro o darle dinero</p>
+
+<p>&hellip; luego de haber pasado por la &ldquo;Introduccion a emacs lisp&rdquo;, &ldquo;Land Of Lisp&rdquo;
+(que mecanografie y traduje hasta el 20%) y un truncado intento por
+mecanografiar &ldquo;ANSI Common Lisp&rdquo;, la unica conclusion optenida es que la
+trancripcion y traduccion no son metodos validos para aprender otro lenguaje, a
+programar o a escribir &hellip;</p>
+
+<h2 id="interpretes">interpretes</h2>
+
+<p>Dejando de lado la charla anterior, sobre libros que no he leido&hellip; pero que
+cuando lees y esperas &ldquo;dominarlos&rdquo; debes poner en practica sus enseñansas, les dejo una
+reducida lista de los interpretes de Scheme que he podido catar.</p>
+
+<p>(para lisp razo, ir con clisp)</p>
+
+<h3 id="guile">guile</h3>
+
+<p>Pagina Oficial: <a href="http://www.gnu.org/software/guile">http://www.gnu.org/software/guile</a></p>
+
+<p>(Ver lo que le han hecho a la pagina de Guile y otras tantas del <em>proyecto GNU</em>,
+si dan ganas de darles dinero o comprarles lo que sea que vendan)</p>
+
+<p>Freidora 25, que es lo que estoy usando trae la version 2.0, de los tres
+interpretes es el menos amigable, no viene con atajos de teclado, la entrada y
+borrado se limitan a escribir y retroceso, sin historial ni naaaa, teniendo el
+proyecto GNU una de las librerias mas utilizadas para estos menesteres, es aun
+mas incomprensible</p>
+
+<h3 id="kawa">kawa</h3>
+
+<p>Pagina Oficial: <a href="https://www.gnu.org/software/kawa/index.html">https://www.gnu.org/software/kawa/index.html</a></p>
+
+<p>Chan, chan, chan, (insente aqui el rugido de godzilla). Joder, este interprete
+aparecio en el repositorio, luego de un <code>searh</code> y hasta el momento es el que
+mas habia utilizado (que realmente es poco) y tambien miembro de proyecto GNU
+y&hellip; corre sobre Java y&hellip; tiene todas las comodidades que se esperan de un
+interprete de linea de comandos: historial y edicion</p>
+
+<p>Si, si lo encuentran probar</p>
+
+<h3 id="racket">racket</h3>
+
+<p>Pagina Oficial: <a href="https://racket-lang.org/">https://racket-lang.org/</a></p>
+
+<p>La cleptomania de libros electronicos (ja, que raro suena
+&ldquo;e-l-e-c-t-r-o-n-i-c-o-s&rdquo;) me hiso (no) conocer este
+interprete/lenguaje/dialecto de lisp/scheme, que segun el libro &ldquo;programando con
+Racket 5&rdquo; (antes mencionado y enlazado) contiene en sus entrañas todo lo
+necesario para correr scheme.</p>
+
+<p>Este no lo encontre en los repos, asi que debe descargarse
+desde
+<a href="https://download.racket-lang.org/racket-6-10-x86_64-linux-sh.html">su web</a>.
+<strong>!!!Cuidado!!!</strong>*, con seguir alguno de los enlaces que hay aparecen
+directamente pues en el momento de escribir esto (version 6.10) el contenido es
+un script bash de 118M, al seguirlo con firefox, se colgo un rato, y al abrirlo
+con el <code>less</code> crashearon todos los <code>tilix</code> en ejecucion (en masa), la causa? en
+sus entrañas contiene un tar &ldquo;enbebido&rdquo; (probablemente lo mas raro que me he
+topado, pues no esta en base64) asi que en lugar de seguir el enlace darle con el
+boton derecho y &ldquo;copiar la ruta de enlace&rdquo;, ir directamente a un terminal y
+conseguirlo con un <code>wget</code>.</p>
+
+<p>Luego darle permisos de ejecucion al <code>*.sh</code>, ejecutar y seguir las
+intrucciones. Para istalarlo en el sistema, ejecutarlo como root, contestar
+<code>&quot;yes&quot;</code>, luego enter, enter, &hellip;, enter. En caso contrario ejecutar como usuario
+de a pie y leer lo que pide. En caso de error, leer donde coloco el binario
+<code>racket-uninstall</code> y ejecutarlo</p>
+
+<p>Ademas del interprete, se instala un compilador, un IDE y otras cosas que aun
+desconosco</p>
+
+<p>El interprete en si, esta mas cerca de la experiencia de kawa, pero no incluye
+todos los &ldquo;atajos&rdquo; de edicion.</p>
+
+<p>happy l-a-m-m-m-m-m-b-d-a-s-s-s-s-s-s-s-s!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/prog/raptorvsworld-ii/">◀ Raptor VS Mundo</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(22)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(18)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(8)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/ramen">ramen(9)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(8)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(8)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(7)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(4)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(2)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

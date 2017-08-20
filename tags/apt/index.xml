@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Thu, 27 Jul 2017 00:50:52 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 20 Aug 2017 15:59:03 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/tags/apt/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>iScheme</title>
+      <link>http://nasciiboy.github.io/prog/ischeme/</link>
+      <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/ischeme/</guid>
+      <description>La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para mi escaso saber, por su parte los conceptos programacionales con Scheme solo los entiendo a nivel superficial, es decir, podria explicar de que van, pero no ponerlo en nada practico, ademas han dejado de aparecer fraces esotericas.
+Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su puesto), me plante comenzar un port del raptor (si, otro mas) al Scheme, mas, pronto me di cuenta que habia olvidado siquiera como definir una variable, una funcion y una l-a-a-m-m-b-d-a-a (que raro suena), oohh, que dilema –dijo interiormente nasciiboy</description>
+    </item>
     
     <item>
       <title>stylus black-translator</title>
@@ -32,6 +42,18 @@ Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos
     </item>
     
     <item>
+      <title>Webeloper – El navegador web</title>
+      <link>http://nasciiboy.github.io/prog/webeloper/</link>
+      <pubDate>Mon, 10 Jul 2017 23:03:56 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/webeloper/</guid>
+      <description>joder, que gracioso, ho, ho, ho, veamos si existe la remota posibiidad que nadie utilize este (en mi mente) despectivo &amp;ldquo;titulo&amp;rdquo;&amp;hellip;
+&amp;hellip; no &amp;hellip; bueno, que mas da, no se puede ser &amp;ldquo;innovador&amp;rdquo; todo el tiempo
+hola, que tal, esta entrada trata de algunos de los navegadores web que he utilizado y el por que, o esa es la idea
+Navegadores por terminal Luego que comienza a agradarte la terminal, y con algo de nostalgia sintetica, dices: &amp;ldquo;veamos eso del internet en la terminal, que igual va mejor que el firefox en mi maquina agonizante con 500 megas de ram&amp;rdquo;, y asi sin demasiado esfuerso aqui esta la lista de navegadores de terminal que en algun momento llege a utilizar (una a dos veces):</description>
+    </item>
+    
+    <item>
       <title>Konsole Warrior</title>
       <link>http://nasciiboy.github.io/apt/konsole-warrior/</link>
       <pubDate>Sat, 24 Jun 2017 20:28:51 -0500</pubDate>
@@ -40,6 +62,26 @@ Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos
       <description>Dentro de El camino del Heroe (que algunos dicen que esta conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al llamado, debemos preparar nuestras herramientas sobrenaturales lenguaje, Emacs Editor y Emulador de terminal (intreprete incluido).
 Para las dos elecciones (lenguaje y emulador de terminal) tenemos un amplio abanico de posibilidades, hoy les hablare del emulador de terminal y las razones de su eleccion
 Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la configuracion y el cambio constante de temas (iconos, wallpapers, doks y otra extensa variadad) de cambios neon, Konsole es la aplicacion con K que mas aprecio, por un solo aspecto, su alta configuracion de atajos del teclado, no es que necesite demasiado, solo tener la ventana sin ninguna distraccion, ni barra, ni nada, algunos atajos de desplazamiento por pagina y linea, mas poder cambiar entre &amp;ldquo;tabs&amp;rdquo;(?</description>
+    </item>
+    
+    <item>
+      <title>PPSSPP</title>
+      <link>http://nasciiboy.github.io/vg/ppsspp/</link>
+      <pubDate>Tue, 02 May 2017 20:02:37 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/vg/ppsspp/</guid>
+      <description>Cambiando un poco de enfoque me dispuse a jugar un rato con el emulador que mas me gusta PPSSPP, que&amp;hellip; sirve para jugar roms de psp, este ultimo es un cacharro que cuando salio alucinaba por tener, pero como siempre he sido pobre de mente y economia nunca tuve, ya mas tarde me pasaron uno para que le pusiera algunos jugos, pero me parecio un cacharro de mala calidad</description>
+    </item>
+    
+    <item>
+      <title>Emacs - first blood</title>
+      <link>http://nasciiboy.github.io/emacs/first-blood/</link>
+      <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/first-blood/</guid>
+      <description>Instalando GNU Emacs En general utilizo emacs apartir del codigo fuente, no obstante tambien tengo disponible el que brinde la distribucion de turno, ya sea para probar algo o por si alguna version presenta algun comportamiento extraño.
+Nunca la he instalado en el sistema emacs compilado a partir del codigo, en su lugar tengo un atajo de teclado para su invocacion
+desde repositorios # en debian apt-get install emacs # en fedora dnf install emacs  compilar desde el codigo fuente instalamos las dependencias</description>
     </item>
     
   </channel>
