@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Racer</title>
-    <link href="http://nasciiboy.github.io/tags/racer/index.xml" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <title>Run Scheme</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
     <style>:root {
 
     --BGC      : #000000;
@@ -188,40 +188,108 @@ img:hover { border: 0.05em solid #fff; }
   <body>
     
 <main>
-  <article class="index">
-    
-    
-    
-    
-  </article>
-  
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/emacs">emacs</a></div>
+
+  <h1>Run Scheme</h1>
   
 
-  <ul class="nav">
-    
-    <li><a href="http://nasciiboy.github.io/apt/">apts</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/emacs/">emacs</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/love2d/">love2ds</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/post/">posts</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/prog/">progs</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/vg/">vgs</a></li>
-    
-  </ul>
+<p>En el <a href="https://nasciiboy.github.io/prog/ischeme/">anterior</a> post (cronologico del blog) comente algunos interpretes de
+Scheme. Ya que en Emacs tenemos un interprete de elisp nativo, supuse que habria un
+metodo sencillo, para correr Scheme, pero, por que correr todo un interprete
+cuando se puede echar mano del interprete del sistema de turno y powerizarlo con el
+incomparable <strong>Emacs</strong>, o si, hasta Gulie que en terminal era insipido, se
+vuelve Sexi! Todos los interpretes adquieren historial, hasta los que no lo tenian!</p>
 
-  
-  <article class="li">
-    <header>
-      <a class="title" href="http://nasciiboy.github.io/vg/h-craft/">H Craft Championship</a>
-    </header>
-  </article>
-  
+<p>&hellip; o eso es lo que aprendi en <a href="http://community.schemewiki.org/?emacs-tutorial">este</a>
+post, que me limito a traducir y alterar parcialmente (pues supongo al estar en una wiki
+es permitido)</p>
+
+<p>(nota: en post original, hablan de un modo &ldquo;quack&rdquo;, pero viendo que mensionan
+emacs-goodies, asumo que es algo &ldquo;antiguo&rdquo;, viniendo de ejecutar los interpretes
+en consola salvajemente, con lo que ofrece emacs por defecto tengo suficiente!
+(por ahora&hellip;))</p>
+
+<h2 id="configuracion-basica">Configuracion Basica</h2>
+
+<p>Coloque el codigo a continuacion en su fichero <code>init.el</code>, para configurar su uso
+con Scheme</p>
+
+<pre><code class="language-elisp">;;; Siempre con resaltado de sintaxis
+(global-font-lock-mode 1)
+
+;;; tambien con resaltado de parentesis
+(setq show-paren-delay 0
+      show-paren-style 'parenthesis)
+(show-paren-mode 1)
+
+;;; Este es el nombre binario de mi implementacion de Scheme
+(setq scheme-program-name &quot;scm&quot;)
+</code></pre>
+
+<p>Asegurese de remplazar <strong><code>&quot;scm&quot;</code></strong> con el nombre de la implementacion de Scheme
+que este utilizando en su sistema</p>
+
+<p>(resaltar que ya tenia activo <code>show-parent-mode</code>, la instruccion <code>setq show-paren-delay 0</code>
+hace que no halla retraso al momento del resaltado, que por el uso que le daba,
+presuponia estaba asignado en 1 segundo&hellip; correccion segun <code>C-h v
+show-parent-delay</code> era de 0.125 segundos, maravilloso!)</p>
+
+<h2 id="trabajando-con-scheme">Trabajando con Scheme</h2>
+
+<p>Cuando abre un archivo, los nombres de los archivos que terminan en <code>.scm</code> o
+<code>.ss</code> seran asumidos como archivos de Scheme, y se abriran con el modo scheme de
+Emacs, que proporciona resaltado de sitaxis e indentacion automatica cuando
+pulse <code>TAB</code>, y por spuesto resaltado de parentesis coincidentes.</p>
+
+<h3 id="ejecutar-scheme-en-emacs">Ejecutar Scheme en Emacs</h3>
+
+<p>Puede ejecutar un interprete de Scheme en Emacs. Esto le permite controlar en
+envio de los datos de entrada a su interprete desde emacs.</p>
+
+<p>En primer lugar, crearemos una ventana para correr el proceso de Scheme
+presionando <code>C-x 2</code>, seguido por <code>C-x o</code> para ir a esta. Ahora podemos
+ejecutar un proceso de Scheme ingresando <code>M-x run-scheme</code>.  Esto ejecutara el
+proceso que configuro anteriormente en su <code>.init.el</code></p>
+
+<p>Si esta realizando una prueba temporal, escriba en un buffer cualquiera <code>(setq
+scheme-program-name &quot;scm&quot;)</code> (remplazar <em>scm</em>), coloque el cursor en el parentesis de cierre y
+pulse <code>C-x C-e</code>, de esta forma puede probar un interprete distinto, luego de
+cerrar la secion previa escribiendo <code>(exit)</code></p>
+
+<p><img src="http://nasciiboy.github.io/img/ischeme.png" alt="" /></p>
+
+<p>Para volver a la ventana inicial, presione <code>C-x o</code>.</p>
+
+<p>Puede utilizar <code>C-x C-e</code> para enviar una expresion. Tambien puede enviar una
+region, un comando previo o incluso el buffer entero, para consultar el resto de
+atajos activos y disponibles (no vinculados con ninguna combinacion de teclado)
+presione <code>C-h m</code></p>
+
+<h3 id="comandos-basicos">Comandos basicos</h3>
+
+<p>Algunos comandos basicos de movimiento del cursor:</p>
+
+<ul>
+<li><code>C-a</code>: Inicio de linea.</li>
+<li><code>C-e</code>: Fin de linea.</li>
+<li><code>C-p</code>: Linea previa.</li>
+<li><code>C-n</code>: Linea suguiente.</li>
+<li><code>C-f</code>: Avarzar un caracter.</li>
+<li><code>C-b</code>: Retroceder un caracter.</li>
+<li><code>C-x delback</code>: Matar hasta el inicio de linea</li>
+<li><code>M-p</code>: Retroceder por el historial.</li>
+<li><code>M-n</code>: Avanzar por el historial.</li>
+</ul>
 
 
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/emacs/why-emacs/">◀ Por que GNU Emacs?</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/emacs">emacs</a></div>
 </main>
 
     <aside>
@@ -248,7 +316,7 @@ img:hover { border: 0.05em solid #fff; }
     <footer>
   <p>Licence: <em>GFDL 1.3</em>.
           Powered by <a href="https://gohugo.io/">Hugo</a>.
-<b>Feed <a href="http://nasciiboy.github.io/tags/racer/index.xml">RSS</a><b>.
+
  Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
 <b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
 <b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.

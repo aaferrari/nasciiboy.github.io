@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sun, 20 Aug 2017 15:59:03 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 20 Aug 2017 18:42:53 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Run Scheme</title>
+      <link>http://nasciiboy.github.io/emacs/run-scheme/</link>
+      <pubDate>Sun, 20 Aug 2017 18:42:53 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/run-scheme/</guid>
+      <description>En el anterior post (cronologico del blog) comente algunos interpretes de Scheme. Ya que en Emacs tenemos un interprete de elisp nativo, supuse que habria un metodo sencillo, para correr Scheme, pero, por que correr todo un interprete cuando se puede echar mano del interprete del sistema de turno y powerizarlo con el incomparable Emacs, o si, hasta Gulie que en terminal era insipido, se vuelve Sexi! Todos los interpretes adquieren historial, hasta los que no lo tenian!</description>
+    </item>
     
     <item>
       <title>iScheme</title>
