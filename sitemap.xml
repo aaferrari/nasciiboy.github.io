@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/post/ramen-x/</loc>
+    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/emacs/run-scheme/</loc>
     <lastmod>2017-08-20T18:42:53-05:00</lastmod>
   </url>
@@ -299,7 +304,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/4k/</loc>
-    <lastmod>2017-08-01T21:15:24-05:00</lastmod>
+    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -377,7 +382,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/fonos/</loc>
-    <lastmod>2017-08-01T21:15:24-05:00</lastmod>
+    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -443,13 +448,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/post/</loc>
-    <lastmod>2017-08-11T19:17:01-05:00</lastmod>
+    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/post/</loc>
-    <lastmod>2017-08-11T19:17:01-05:00</lastmod>
+    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -473,7 +478,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/ramen/</loc>
-    <lastmod>2017-08-11T19:17:01-05:00</lastmod>
+    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -515,7 +520,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/</loc>
-    <lastmod>2017-08-01T21:15:24-05:00</lastmod>
+    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -545,7 +550,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-08-20T18:42:53-05:00</lastmod>
+    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   

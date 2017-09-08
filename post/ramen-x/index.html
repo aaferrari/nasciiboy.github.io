@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen X</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+
+  <h1>Ramen X</h1>
+  
+
+<p><img src="http://nasciiboy.github.io/img/gatari.jpg" alt="" /></p>
+
+<p>bitacora de abordo: ha pasado casi un mes desde el ultimo &ldquo;encuentro&rdquo;, muchas
+cosas sabrosas, informaticas y otros echos hilarantes (a nivel personal) podrian
+merecer un registro, pero pondre lo que recuerde y algunas cosas que iba
+escribiendo despistadamente.</p>
+
+<p>Quiza lo mas relevante, es que me encuentro absorto en la aleatoria labor de
+reescribir morg. El reencuentro empezo (manoceando codigo) aproximadamente hace
+dos meses, luego de terminada la lectura del tgpl, reescribiendo unas funciones
+basicas de manipulacion de <code>strings</code> (las extrañas cadenas de Go) y luego
+replanteando, escribiendo, puliendo (y no pocas veces regresando al punto de
+partida) cambios en las estructuras <code>Markup</code> y los &ldquo;comandos de bloque&rdquo;. Dudas
+surgieron, deberia estar todo el parser en un directorio monolitico? o mejor
+subdividirlo en subdirectorios? o darles su propio paquete? al final ya que todo
+es parte de un solo concepto de un lenguaje de marcado muy particular y
+dificilmente sera utilizado por alguien mas, pues, casi todo lo puse en el mismo
+paquete, eso si, dividido por ficheros, aunque esto trae el inconveniente para
+los profanos, que deben leerse todos los ficheros antes de entender que hacen en
+conjunto</p>
+
+<p>mientras hacia esto, me encontre un BUG gordo en el motor de expresiones
+regulares, que requirio un par de horas para ubicar su origen. Resumiendo, el
+fallo, se presentaba en regexes de tipo <code>^cosas(agrupacion)+$</code> y se debia a no
+restaurar la posicion de inicio cuando una agrupacion &ldquo;falla&rdquo; en su ultimo
+recorrido, pero se cumple con su &ldquo;volumen de repeticion minimo&rdquo;, es decir la
+agrupacion es correcta&hellip; pero termina donde se supone debe terminar, que es
+el fin de los datos de entrada, je, es bastante mas confuso y poco intiutivo de
+lo que parace, mas no quiero abrumar al personal con una larga explicacion. La
+solucion chapucera, fue eliminar una pequeña optimizacion que ahorra almenos 3
+llamas a funciones, sinduda chapucero, aunque funcional</p>
+
+<p>La moraleja, es, que con el tiempo y pruebas suficientes, saldran nuevos bichos en
+tu programa, pese a todo el tiempo que allas invertido en el. Lo bueno? tengo un
+pretexto-obligacion para toquetear el motor raptor-4 (Golang edition). El resto
+de ediciones en C y regexp3 (Go), no reciviran una actualizacion inmediata,
+quiza, solo cuando encuentre una iteracion que pueda llamar perfecta, como lo
+fueron las versiones iniciales del libro del raptor&hellip; je, hay otras cosas en
+las cuales dedicar el tiempo</p>
+
+<p>luego de corregir las regexes, me lie unas tardes intentado hacer un analizador
+de cosas que tienen &ldquo;sintaxis de funcion&rdquo; (<code>algo( &quot;xy&quot;, 0.12, 12, pi, ... )</code>), con un numero de parametros
+arbitrarios, para lo que eche mano de regexes y conteo de caracteres a lo
+salvaje (+1, -1, +x, -x, &hellip;), sin embargo al intentar implementar y reconocer
+un numero arbitrario elementos con tipos distintos, la ofuscacion mental se hizo
+presente.</p>
+
+<p>la pantanosa situacion dejo de ser intimidante al recordar unas secciones del
+libro de go, donde hacian un lexer, o algo asi y me puse a viajar y divagar en
+busca de lexeres de codigo escritos en go, para terminar llendo a el codigo de
+un paquete de la libreria estandar <code>text/scanner</code>, que en esencia recorre,
+una entrada de datos caracter a caracter (unicode en utf-8), lleba un
+recuento de la posicion actual de la entrada por linea y columna, y lo mas
+interesante, reconoce espacios&hellip; y recolecta identificadores, comentarios,
+enteros, flotantes, caracteres, cadenas y otros elementos sintacticos similares
+a los que utiliza go,</p>
+
+<p>la libreria (a mis hojos (<strong>con H</strong>)) tenia cosas muy raras, pues exigia un
+&ldquo;contrato&rdquo; con un <code>io.Reader</code>, ademas de contar un raro buffer en un arreglo de
+1024 bytes y otro buffer adicional de tipo <code>bytes.Buffer</code>, que ya es cosa seria
+(para mi fortuna a ese paquete ya habia metido mano, lo que mas me gusta de la
+libreria estandar de Go, es que la puedo enterder, a diferencia de libc, que
+esta hasta arriba de macros y cosas raras)</p>
+
+<p>customise el paquete para que solo tuviera lo necesario, sin buffers ni nada,
+reconociera booleanos e informara de enteros octales, hexadecimales e ints de
+forma explicita, con casi todos sus campos brutalmente expuestos (uuhhh)</p>
+
+<p>luego de adquirir ese nuevo conocimento se me ocurrio modificar (nuevamente)
+morg de raiz y todos sus componentes y en eso estoy, ofuscado, obsecionado y
+exitado!  no dedicare tiempo a traducir, ni a otro lenguaje hasta que el asunto
+funcione, porque en este aspecto no puedo pensar en otra cosa</p>
+
+<p>en relacion con este particular tipo de adiccion, en reddid (en ingles) un tipo
+colgo un post, que si no revelador o extenso, sentiras empatia al leerlo: <a href="https://web.archive.org/web/20130906141542/http://virtuecenter.com/blog/the_effects_of_computer_programming_on_the_brain.html">https://web.archive.org/web/20130906141542/http://virtuecenter.com/blog/the_effects_of_computer_programming_on_the_brain.html</a></p>
+
+<p>otro post interesante fue, <a href="http://www.danielallington.net/2016/09/the-latex-fetish/">http://www.danielallington.net/2016/09/the-latex-fetish/</a>
+donde el autor inicia una <strong>guerra santa</strong>, <em>Latex VS Word</em> Llamando fetichistas
+a los usuarios de latex, no sin fundamentar sus acusaciones hechando abajo los
+supuestos beneficios de utilizar latex&hellip; en comparacion con word. Concuerdo con
+sus puntos, mas creo que los (ahora ficticios) beneficios de latex, <em>deben</em> ser
+alcanzados creando un lengueje de marcas ligeras <strong>poderoso</strong>, <strong>sencillo</strong>,
+<strong>elegante</strong>, pero sobre todo, <strong>WYSIWYMAG</strong> (What You See Is What You Mean And
+Get) ja, ja, ja, haaaa, algun dia sera). Para ves comentarios en reddit ir a:
+<a href="https://www.reddit.com/r/programming/comments/6tkoop/the_latex_fetish_or_dont_write_in_latex_its_just/">https://www.reddit.com/r/programming/comments/6tkoop/the_latex_fetish_or_dont_write_in_latex_its_just/</a>
+en ocaciones buenos post son undidos sin justificacion, darle un voto positivo</p>
+
+<p>El ultimo registro de esta sesion es lo mas tremendo y ezpelusnante&hellip; chan,
+chan, chan&hellip; chan, chan, chan&hellip; chan, tras abandonar, repudiar y menospresiar la
+educacion escolarisada desde hace la mitad de mi existencia, me inscribi en una
+preparatoria abierta, para poner en marcha un lividinoso proyecto que hara
+(espero) paleativa mi situacion humana en el territorio donde habito.</p>
+
+<p>El plan es terminar la &ldquo;prepa&rdquo; en unos 3 meses y seguir con mis mierdas de
+intento de programador, tras lo cual entrare a la universidad en una carrera de
+informatica, reciviendo una &ldquo;beca salario&rdquo; de unos 100 dolares mensuales, que ya
+me bastan para subsistir como semi-persona y luego espero alguna oferta de
+trabajo temporal o algo asi, jo, jo, el kit de la cuestion se oculta en el hecho
+que comparado con los habituales residentes de esas instituciones de educacion
+&ldquo;superior&rdquo;, mi nivel basta para asombrar y resivir culto de la mayoria de mis
+futuros colegas y poner en evidencia a alguno que otro profesor, uuuhhh espero
+con ansias ese dia, o cuando una compañera de ascendencia oriental me pida ayuda
+con algun tema y le responda: &ldquo;es curioso, pero tu necesitas algo y yo necesito
+algo&hellip;&ldquo;, ja, ja, ja, el sueño humedo de cualquier profesor, solo que no sere
+profesor, sere alumno, oh si!</p>
+
+<p>kof, bueno, ese es el plan, si se concluyen la primera y segunda fase que es
+entrar en la uni y recivir la &ldquo;beca salario&rdquo; (el punto critico), en verdad
+planeo quedarme para siempre en la academia, una vez que me dejen entrar, ya no
+saldre!</p>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>Kizumonogatari</strong> y <strong>Owarimonogatari</strong>, dentro del conglomerado global que
+demomino cosas audiovisuales (cine, series, anime) ninguna obra destaca y
+significa mas que EVANGELION (y su manga, que en mi mente estan fusionados, casi
+indistinguibles), mas esto no significa que no lo acompañen otros referentes personales de
+calidad equivalente, y las <strong>Monogatari</strong> cosas, obviamente tiene un lugar
+priviligiado entre los dioses a los que decido adorar.</p>
+
+<p>No, no es profunda como Evangelion, pero su estetica &ldquo;monogatari&rdquo; me mata. Si
+hay una ley que impida enaltecer una obra deliciosa aunque poco nutritiva,
+ninguna condena sera suficiente para sentir que he pagado su morboso,
+incestuoso y fetichista placer sugestivo</p>
+
+<p><strong>Over the garden Wall</strong> sin esperarla, ni buscarla, broto en la lista de
+recomendaciones del yutu con un correctisimo doblaje al español. Son mini
+episodios de 10 minutos con cuentos basados en &ldquo;animaciones folkloricas de gente
+vieja&rdquo; (&gt;= 30). Como punto destacado, transmite algo del mal rollo que tienen
+los dibujos animados primigenios</p>
+
+<p><strong>Busou Shoujo Machiavellianism</strong>, chicas tsundere con armas, en una especie de
+harem de batallas con todos los fetiches y topicos, includo el de la 4^ta
+pared. Bocadillo ligero y entretenido, ideal como transcicion luego de una densa
+racha</p>
+
+<p><strong>El Reino de los Sueños y la Locura</strong>, documental del <s>estudio Ghibli</s>
+rusueño <s>Coronel Sanders</s> Hayao Miyazaki&hellip; seguro hace falta considerar a
+&ldquo;miya&rdquo; un dios para ver esto atentamente, ya que no entro en ese elitisimo
+grupo, el filme y sus &ldquo;personajes&rdquo; me gritan a actuacion falsa mas que en un
+documental chino de ciudadanos satisfechos. Que si, tiene algunos puntos
+interesantes, como la aparicion del permanentemente extraño Anno y algunas
+cosillas de Nausica, ademas de menciones a la princesa Kaguya (<em>Exelsior</em>) y un
+poco de como hacen la ultima (por ahora) peli del miya (que aun no veo), ???
+alguien mas se pregunta donde esta los &ldquo;chinos&rdquo; que hacen la animacion de verdad
+???. Recomendable unicamente si quieres presumir de ser tan fan como para verte
+un documental de esto</p>
+
+<p><strong>the Century of the Self</strong> Al final lo mas denso (disponible en el yutu, con
+subtitulos). Esto son 4 episodios documentales de como el gobierno, las
+corporaciones y los psicoanalistas en colaboracion con los avances tecnologicos
+e informaticos han creado una sociedad de sujetos permanetemente
+insatisfechos que expresan mediante poductos su individualidad</p>
+
+<h2 id="fonos">fonos</h2>
+
+<p><strong>Voices of the Lifestream</strong>. Las cosas bonitas insitan al fanatismo, y cuando
+el fan es musico, dibujante o programador, que mas puede hacer que rendir
+tributo a sus musas (con, o sin copyright de por medio). El
+colectivo <a href="http://ocremix.org/">OverClocked ReMix</a> se dedica a hacer musica
+basada en videjuegos y ofresen la mayoria de su material de forma libre, hace
+tres años fue una bonita coincidencia del buscador del internet, creo buscando
+musica de MegaMan o Chrono Trigger, no es que sea muy jugon, pero esas dos obras
+me ponen mal, la lista de torrents la encontraran
+por <a href="http://ocremix.org/torrents">aca</a></p>
+
+<p>segun su propia pagina tienen 113 albums, aunque en los torrents cuentan
+con 70. No lo puedo asegurar, pero creo que el aumento de albums es debido a
+incorporar otros proyectos que de inicio no formaban parte del colectivo, y
+quiza por ello no estan incluidos en los torrentes.</p>
+
+<p>Tampoco recuerdo de donde saque la lista de sus producciones, cuando baje su
+material, lo mas viejo databa del 2004 y creo que ahora inicia por el 2009 (o
+2011) en fin de cualquier forma es una gran biblioteca en calidad CD, o hasta
+ahora mis favoritos son</p>
+
+<ul>
+<li><a href="magnet:?xt=urn:btih:790ac5557b3cd2774b2ed1b5283bdfdbbda16057&amp;dn=Chronology%20-%20A%20Jazz%20Tribute%20to%20Chrono%20Trigger&amp;tr=http%3a%2f%2fbt.ocremix.org%2fannounce">Chronology - A Jazz Tribute to Chrono Trigger</a></li>
+<li>25YEARLEGEND - A Legend of Zelda Indie Game Composer Tribute</li>
+<li>Final Fantasy IV - Echoes of Betrayal, Light of Redemption</li>
+</ul>
+
+<p><strong>Juno Reactor</strong>. Que tiene de interesante el tipo que proporciona algunas de
+las sonoridades de matrix y texnholize? en un primer acercamiento por
+<em>Transmissions</em> (1993) nada&hellip; luego de una &ldquo;segunda oportunidad&rdquo; con <em>Odyssey</em>
+(recopilacion 1992-2003) ya suena tecnox-matrix dolmilsss, aunque de verdad su
+punto algido lo alcanza con <em>Labyrinth</em> (2004), el resto son puntos intermedios
+entre su sonido de fiesta drogui-hacker-extasis-bdsm (no se por que lo imagino asi) y
+sonido envolvente-asfixiante-ambiental. En resumen recomendable, iniciar con
+Odyssey y Labyrinth para no alienarse</p>
+
+<pre><code>magnet:?xt=urn:btih:65ad20010a460ce573ea7a7af7f9e7d73700cdd6&amp;dn=Schooltree%20-%20Heterotopia%20(2017)&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce
+</code></pre>
+
+<p><strong>Gentle Giant</strong> Segun la wikipedia, una de las mas grandes bandas de Rock
+progresivo de todos los tiempos. Hum &hellip; estan chidos, de momento he escuchado
+4 de sus albums, el primero esta muy bueno, aunque ninguno me ha puesto yonki</p>
+
+<pre><code>magnet:?xt=urn:btih:47dcb412b126e04ef0f541cc964adfced6d182d3&amp;dn=Gentle%20Giant%201970-1980%20Studio%20Discography%20FLAC&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce
+</code></pre>
+
+<p><strong>X&amp;Y</strong> (Coldplay) no estoy seguro si ya habia consumido o no este album, si asi
+fue no le preste atencion. Recomendable para un momento s-e-c-i-b-l-e</p>
+
+<p><strong>Happy Trails</strong> (Quicksilver Messenger Service)</p>
+
+<pre><code>magnet:?xt=urn:btih:02c6251fb20892fa966dffb17815e6b254333073&amp;dn=Quicksilver%20Messenger%20Service%20-%20Happy%20Trails%20(1969)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+</code></pre>
+
+<p>Jo, esto si es droga dura, tan efectiva que para bajar mas material de esta
+banda me he puesto a erradicar scanns de albums</p>
+
+<p><strong>Rebelión en la Granja</strong> No es musica, es un cuento relatado por el podcast de
+Verne y Wells ciencia ficción, diria que de escucha indispensable</p>
+
+<pre><code>http://www.ivoox.com/verne-wells-ciencia-ficcion-rebelion-la_mf_20422478_feed_1.mp3
+http://www.ivoox.com/verne-wells-ciencia-ficcion-rebelion-la_mf_20541541_feed_1.mp3
+</code></pre>
+
+<h2 id="txt">txt</h2>
+
+<p><strong>Programando con Racket 5</strong>. Pues eso, que dejo aparcado un rato un tema y se me
+borra del sistema neuronal&hellip; y para enterarme un rato de que iba el SICP pues,
+tome este libro que estaba en españis hasta que el numero de caracteristicas del
+lenguaje me abrumo.</p>
+
+<p>Son aproximadamente 200 paginas, y llege hasta la 100, en este manual se resumen
+las caracteristicas del lenguaje Racket, que tambien es aplicable para Scheme,
+por decirlo de otra forma son notas selectas, o al final enseñan como hacer
+guis con una libreria del lenguaje. No es que valla a programar nada en Scheme,
+o algun lisp, aun asi sus enseñansas son aplicables a lenguajes que tiene
+funciones lambda, aunque el truco de utilizar una u otra funcion en un <code>if</code> y
+pasarle los argumentos al mismo tiempo, creo es un priviliegio solo de lisp y
+sus descendientes</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/post/ramen-ix/">◀ Ramen IX</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(22)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(19)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(9)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/ramen">ramen(10)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(9)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(8)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(7)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(4)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(3)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
