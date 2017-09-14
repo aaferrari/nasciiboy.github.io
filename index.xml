@@ -7,13 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Fri, 08 Sep 2017 11:53:17 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 14 Sep 2017 16:16:26 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Ramen X</title>
+      <title>Sayonara F</title>
+      <link>http://nasciiboy.github.io/prog/sayonara-f/</link>
+      <pubDate>Thu, 14 Sep 2017 16:16:26 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/sayonara-f/</guid>
+      <description>fedora -&amp;gt; antergos (dos pantalas y un adios) aaah, compras un disco duro, optienes dos semanas de depresion y terminas cambiando de distribucion&amp;hellip;
+en mi aldea, diria que solo hay un sitio rasonable para comprar hardware, que no por ello con variedad o siquiera stock, asi que cuando logre ahorrar para un hdd de 2TB y no encontre existencias, fui a otro sitio y compre el hdd y termine con un disco de servidor con miles de horas, crujidos y un mal historial del smart, mas eso ocurrio luego de haber pasado casi toda mi coleccion de libros y perderlos en el limbo&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Ramen X – Infierno Mayoi</title>
       <link>http://nasciiboy.github.io/post/ramen-x/</link>
       <pubDate>Fri, 08 Sep 2017 11:53:17 -0500</pubDate>
       
@@ -155,7 +165,7 @@ Antes de comenzar, es necesario decir que esta vercion esta formateada en un len
     <item>
       <title>SICP (proyecto de traduccion)</title>
       <link>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</link>
-      <pubDate>Thu, 06 Jul 2017 18:27:56 -0500</pubDate>
+      <pubDate>Fri, 07 Jul 2017 18:27:56 -0500</pubDate>
       
       <guid>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</guid>
       <description>o en otras palabras dadme pasta! (no en galletas)

@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 24 Jun 2017 20:28:51 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 14 Sep 2017 16:16:26 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sayonara F</title>
+      <link>http://nasciiboy.github.io/prog/sayonara-f/</link>
+      <pubDate>Thu, 14 Sep 2017 16:16:26 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/sayonara-f/</guid>
+      <description>fedora -&amp;gt; antergos (dos pantalas y un adios) aaah, compras un disco duro, optienes dos semanas de depresion y terminas cambiando de distribucion&amp;hellip;
+en mi aldea, diria que solo hay un sitio rasonable para comprar hardware, que no por ello con variedad o siquiera stock, asi que cuando logre ahorrar para un hdd de 2TB y no encontre existencias, fui a otro sitio y compre el hdd y termine con un disco de servidor con miles de horas, crujidos y un mal historial del smart, mas eso ocurrio luego de haber pasado casi toda mi coleccion de libros y perderlos en el limbo&amp;hellip;</description>
+    </item>
     
     <item>
       <title>Konsole Warrior</title>
