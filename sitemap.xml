@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/emacs/v-config/</loc>
+    <lastmod>2017-09-28T19:47:50-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/sayonara-f/</loc>
     <lastmod>2017-09-14T16:16:26-05:00</lastmod>
   </url>
@@ -357,13 +362,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/emacs/</loc>
-    <lastmod>2017-08-20T18:42:53-05:00</lastmod>
+    <lastmod>2017-09-28T19:47:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/categories/emacs/</loc>
-    <lastmod>2017-08-20T18:42:53-05:00</lastmod>
+    <lastmod>2017-09-28T19:47:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -399,7 +404,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/howto/</loc>
-    <lastmod>2017-05-02T20:02:37-05:00</lastmod>
+    <lastmod>2017-09-28T19:47:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -555,7 +560,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-09-14T16:16:26-05:00</lastmod>
+    <lastmod>2017-09-28T19:47:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   

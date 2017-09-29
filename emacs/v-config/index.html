@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Emacs, configuracion de verano</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/emacs">emacs</a></div>
+
+  <h1>Emacs, configuracion de verano</h1>
+  
+
+<p>todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs
+para ponerme a programar &ldquo;el morg&rdquo; (que esta en go) y aparecia un mensaje de
+error muuu largo, informando que el flycheck (un modo para verificar el codigo
+mientras se va escribiendo) no localizaba la ruta al ejecutable del
+<code>flycheck-go</code>. Como no encontraba el origen del problema y queria tunear el
+emacs, me propuse abandonar el sistema que tenia para agregar extensiones al
+emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio
+del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de
+paquetes del que dispone emacs&hellip; je, como decir que no me gustan las cosas
+automagicas que hacen las cosas sin que me entero, pero bueno, siendo emacs me
+dare el lujo de ser un poco mas permisivo</p>
+
+<p>asi pues la nueva configuracion, es de esas sencillitas en las que colocas el
+paquete que quieres instalar/usar en una orden y luego al abrir emacs se
+descarga, instala y puede que hasta configure los paquetes que hagan falta, asi
+a la brava y sin tener ni idea de como</p>
+
+<p>por lo tanto si quieres replicar mi configuracion</p>
+
+<p><img src="http://nasciiboy.github.io/img/morg-verano.png" alt="" /></p>
+
+<p>por ejemplo para programar en go, c, tener un lector de rss, o iniciar en emacs
+con el tema <em>nascii</em>, primero instala emacs, y luego crea una carpeta en tu
+<code>home</code> con</p>
+
+<pre><code class="language-sh">wget https://nasciiboy.github.io/data/init-dot-el.zip
+unzip init-dot-el.zip -d ~/.emacs.d
+rm init-dot-el.zip
+emacs
+</code></pre>
+
+<p><a href="http://nasciiboy.github.io/data/init-dot-el.zip">el comprimido</a> con forma de zip, almacena dos ficheros:
+<code>init.el</code>, que es donde se coloca toda configuracion de emacs y pondre a
+continuacion casi tal cual y <code>nascii-theme.el</code> mi <em>tema</em> de colores personal,
+baraje el subirlo a melpa para que tambien forme parte de la instalacion magica,
+pero me da peresa y creo que el tema visual es cosa de cada quien, unque desde
+luego mi tema es el unico que es correcto y valido&hellip;</p>
+
+<p>las extenciones para programar en go requieren que instales las siguientes herramientas</p>
+
+<pre><code class="language-sh">go get -u github.com/nsf/gocode
+go get -u github.com/rogpeppe/godef
+go get -u golang.org/x/tools/cmd/goimports
+go get -u github.com/jstemmer/gotags
+</code></pre>
+
+<p>por lo demas, solo haria falta substituir todos los <code>/home/nasciiboy</code> por tus
+rutas correspondientes</p>
+
+<h2 id="init-el">init.el</h2>
+
+<pre><code>;;; nascii-config: --- another day in Emacs
+;; Substituir /home/nasciiboy (y otras rutas) segun corresponda.
+
+;; el thema nascii
+(load-file &quot;~/.emacs.d/nascii-theme.el&quot;)
+
+;; fullscreen
+(toggle-frame-fullscreen)
+
+;; desactivar barra de (menu|herramientas|desplazamiento)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+;; tamaño de la fuente
+(set-face-attribute 'default nil :height 140)
+
+;; inhibir mensajes y pantalla de inicio
+(setq inhibit-startup-buffer-menu t)
+(setq inhibit-startup-screen t)
+(setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message &quot;usuario&quot;)
+
+;; mensaje en el buffer scratch
+(setq initial-scratch-message &quot;
+
+  ;;     _____ __  __    _    ____ ____
+  ;;    | ____|  \\/  |  / \\  / ___/ ___|
+  ;;    |  _| | |\\/| | / _ \\| |   \\___ \\
+  ;;    | |___| |  | |/ ___ \\ |___ ___) |
+  ;;    |_____|_|  |_/_/   \\_\\____|____/
+
+
+  ;;      ____   ___  _  ______    _
+  ;;     |  _ \\ / _ \\| |/ / ___|  | |
+  ;;     | |_) | | | | ' /\\___ \\  | |
+  ;;     |  _ &lt;| |_| | . \\ ___) | |_|
+  ;;     |_| \\_\\\\___/|_|\\_\\____/  (_)
+
+&quot;)
+
+;; hora en formato 24 horas:
+(setq display-time-day t display-time-24hr-format t)
+(display-time)
+
+;; reemplazar &quot;yes&quot; por &quot;y&quot; en el prompt
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; habilitar narrow &amp; wide
+(put 'narrow-to-region 'disabled nil)
+
+;; habilitar upcase-region y downcase-region
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
+;; resaltar apertura y cierre de paréntesis
+(setq show-paren-delay 0
+      show-paren-style 'parenthesis)
+(show-paren-mode)
+
+;; visualizar lineas sin truncar ⏎
+(set-default 'truncate-lines t)
+
+;; Al borrar cosas moverlas a la papelera.
+;; el directorio corresponde a la papelera en gnome3
+(setq delete-by-moving-to-trash t
+      trash-directory &quot;~/.local/share/Trash/files&quot;)
+
+;; al escribir en modo texto cortar lineas automaticamente
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;; longitud de lineas
+(setq-default fill-column 80)
+
+;; Core settings
+;; UTF-8 please
+(set-charset-priority 'unicode)
+(setq locale-coding-system   'utf-8)   ; pretty
+(set-terminal-coding-system  'utf-8)   ; pretty
+(set-keyboard-coding-system  'utf-8)   ; pretty
+(set-selection-coding-system 'utf-8)   ; please
+(prefer-coding-system        'utf-8)   ; with sugar on top
+(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+
+;; (setq make-backup-files nil) ; detener creacion de ficheros respaldo~ (descomentar)
+(setq auto-save-default nil)    ; detener creacion de ficheros #autoguardado#
+;; colocar todos los ficheros de respaldo en el directorio ~/.emacs.d/backups/
+(setq backup-directory-alist `((&quot;.&quot; . ,(concat user-emacs-directory &quot;backups&quot;))))
+
+;; espacios en lugar de tabulaciones
+(setq-default indent-tabs-mode nil)
+
+;; eliminar espacios en blanco
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; c++-mode para headers y ficheros C
+(add-to-list 'auto-mode-alist '(&quot;\\.h$&quot; . c++-mode))
+(add-to-list 'auto-mode-alist '(&quot;\\.c$&quot; . c++-mode))
+
+;; xml-mode para ficheros xml
+(add-to-list 'auto-mode-alist '(&quot;\\.xml$&quot; . sgml-mode))
+
+;; dar permisos de ejecución a scripts luego de guardar
+(setq after-save-hook
+      (quote (executable-make-buffer-file-executable-if-script-p)))
+
+;; historial de ficheros abiertos
+(require 'recentf)
+(recentf-mode t)
+(setq recentf-max-saved-items 200)
+(global-set-key (kbd &quot;C-c o&quot;) 'recentf-open-files)
+
+;; atajos
+;; Wind Move &lt;&gt; movimiento entre ventanas
+(global-set-key [s-left]  'windmove-left)
+(global-set-key [s-right] 'windmove-right)
+(global-set-key [s-up]    'windmove-up)
+(global-set-key [s-down]  'windmove-down)
+;; atajos para emacs cli
+(global-set-key (kbd &quot;C-c &lt;left&gt;&quot;)  'windmove-left)
+(global-set-key (kbd &quot;C-c &lt;right&gt;&quot;) 'windmove-right)
+(global-set-key (kbd &quot;C-c &lt;up&gt;&quot;)    'windmove-up)
+(global-set-key (kbd &quot;C-c &lt;down&gt;&quot;)  'windmove-down)
+
+;; parrafos
+(global-set-key (kbd &quot;C-.&quot;) 'forward-paragraph)
+(global-set-key (kbd &quot;C-,&quot;) 'backward-paragraph)
+(global-set-key (kbd &quot;C-q&quot;) 'fill-paragraph)
+(global-set-key (kbd &quot;C-;&quot;) 'delete-indentation)
+
+;; ibuffer en lugar de list-buffers
+(global-set-key (kbd &quot;C-x C-b&quot;) 'ibuffer)
+
+(global-set-key [f12] 'eval-buffer) ;; evaluar buffer (elips) actual
+(global-set-key [f9] 'compile)      ;; compilar buffer (por ejemplo en C)
+(global-set-key [f7] 'eww)          ;; abrir una direccion con eww
+
+;; atajos de eww el navegador incorporado de emacs
+(global-set-key (kbd &quot;C-x w o&quot;) 'eww)
+(global-set-key (kbd &quot;C-x w b&quot;) 'eww-add-bookmark)
+(global-set-key (kbd &quot;C-x w l&quot;) 'eww-list-bookmarks)
+(global-set-key (kbd &quot;C-x w f&quot;) 'eww-open-file)
+
+;; esto esta muuuuy chulo, cuando abres eshell te permite ejecutar los
+;; comandos en la lista como si estubieras dentro de un terminal &quot;real&quot;
+(setq eshell-visual-commands '(&quot;htop&quot; &quot;vi&quot; &quot;vim&quot; &quot;mocp&quot; &quot;top&quot; &quot;less&quot; &quot;more&quot; &quot;elinks&quot; &quot;elinks&quot; &quot;git&quot; &quot;sr&quot; &quot;surfraw&quot;))
+
+;; en direct coloca el tamaño de los ficheros con formato para humanos
+(setq dired-listing-switches &quot;-alh&quot;)
+
+;; interpretes
+(setq scheme-program-name &quot;racket&quot;)        ; instalar previamente racket
+(setq inferior-lisp-program &quot;clisp&quot;)       ; instalar previamente clisp
+(setq python-shell-interpreter &quot;python3&quot;)  ; instalar previamente python3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                                                    ;;
+;;         &quot;&quot;#                    &quot;                   ;;
+;;  mmmm     #    m   m   mmmm  mmm    m mm    mmm    ;;
+;;  #&quot; &quot;#    #    #   #  #&quot; &quot;#    #    #&quot;  #  #   &quot;   ;;
+;;  #   #    #    #   #  #   #    #    #   #   &quot;&quot;&quot;m   ;;
+;;  ##m#&quot;    &quot;mm  &quot;mm&quot;#  &quot;#m&quot;#  mm#mm  #   #  &quot;mmm&quot;   ;;
+;;  #                     m  #                        ;;
+;;  &quot;                      &quot;&quot;                         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; con esta seccion te permite instalar las extenciones automagicamente
+(require 'package)
+(add-to-list 'package-archives '(&quot;melpa&quot; . &quot;http://melpa.org/packages/&quot;) t)
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: company-mode         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package company)
+(add-hook 'after-init-hook 'global-company-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: flycheck             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package flycheck)
+(flycheck-mode t)
+(add-hook 'python-mode-hook 'flycheck-mode)
+(add-hook 'emacs-lisp-mode-hook 'flycheck-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: magit-mode           ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package magit)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: morg-mode            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'auto-mode-alist '(&quot;\\.morg\\'&quot; . org-mode))
+(add-to-list 'auto-mode-alist '(&quot;\\.porg\\'&quot; . org-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: markdown-mode        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package markdown-mode)
+(add-to-list 'auto-mode-alist '(&quot;\\.text\\'&quot; . markdown-mode))
+(add-to-list 'auto-mode-alist '(&quot;\\.markdown\\'&quot; . markdown-mode))
+(add-to-list 'auto-mode-alist '(&quot;\\.md\\'&quot; . markdown-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: go-mode              ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; go get -u github.com/nsf/gocode
+;; go get -u github.com/rogpeppe/godef
+;; go get -u golang.org/x/tools/cmd/goimports
+;; go get -u github.com/jstemmer/gotags
+
+(setenv &quot;GOPATH&quot; &quot;/home/nasciiboy/go&quot;)
+(setenv &quot;PATH&quot; (concat (getenv &quot;PATH&quot;) &quot;:&quot; &quot;/home/nasciiboy/go/bin&quot;))
+(setq exec-path (append exec-path (list (expand-file-name &quot;/home/nasciiboy/go/bin&quot;) (expand-file-name &quot;/home/nasciiboy/.go/bin&quot;))))
+;; con la `list` de arriba  =======^^^^
+;; solucione el problema de agregar
+;; nuevos paths donde emacs buscara los ejecutables de go
+
+
+(use-package go-mode)
+(use-package go-gopath)
+(use-package company-go)
+(use-package go-stacktracer)
+(use-package go-add-tags)
+(use-package go-eldoc)
+(use-package go-direx)
+(use-package flymake-go)
+
+(add-to-list 'company-backends 'company-go)
+(add-hook 'go-mode-hook (lambda ()
+                          (setq indent-tabs-mode nil)
+                          (setq tab-width 2)))
+(add-hook 'go-mode-hook 'go-eldoc-setup)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: haskell-mode         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package haskell-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: rust-mode            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package rust-mode)
+(add-hook 'rust-mode-hook (lambda ()
+                            (setq rust-indent-offset 2)
+                            (setq rust-format-on-save nil)))
+
+(add-to-list 'auto-mode-alist '(&quot;\\.rs\\'&quot; . rust-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: lua-mode             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package lua-mode)
+(add-to-list 'interpreter-mode-alist '(&quot;lua&quot; . lua-mode))
+(setq lua-indent-level 2)
+
+(use-package love-minor-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: fish-mode            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package fish-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: multiple-cursors     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package multiple-cursors)
+
+(global-set-key (kbd &quot;C-&gt;&quot;) 'mc/mark-next-like-this)
+(global-set-key (kbd &quot;C-&lt;&quot;) 'mc/mark-previous-like-this)
+(global-set-key (kbd &quot;s-c C-&gt;&quot;) 'mc/mark-all-like-this)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: lorem-ipsum          ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package lorem-ipsum)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: elfeed               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package elfeed)
+(setq elfeed-feeds
+      '(
+        &quot;http://blog.chuidiang.com/feed/&quot;
+        &quot;http://blog.desdelinux.net/feed/&quot;
+        &quot;http://blogubuntu.com/feed&quot;
+        &quot;http://carlini.es/feed/&quot;
+        &quot;http://cucarachasracing.blogspot.com/feeds/posts/default?alt=rss&quot;
+        &quot;http://ea4bns.blogspot.com/feeds/posts/default&quot;
+        &quot;http://elarmarioinformatico.blogspot.com/feeds/posts/default&quot;
+        &quot;http://elblogdeliher.com/feed/&quot;
+        &quot;http://enavas.blogspot.com/feeds/posts/default?alt=rss&quot;
+        &quot;http://es.xkcd.com/rss/&quot;
+        &quot;http://feeds.feedburner.com/blogspot/bytelearning&quot;
+        &quot;http://feeds.feedburner.com/btroot?format=xml&quot;
+        &quot;http://feeds.feedburner.com/diegocg?format=xml&quot;
+        &quot;http://feeds.feedburner.com/Esbuntucom?format=xml&quot;
+        &quot;http://feeds.feedburner.com/GabuntuBlog&quot;
+        &quot;http://feeds.feedburner.com/Gambas2MisProgramas?format=xml&quot;
+        &quot;http://feeds.feedburner.com/geeklandlinux&quot;
+        &quot;http://feeds.feedburner.com/SYSADMIT?format=xml&quot;
+        &quot;http://feeds.feedburner.com/teknoplof/muQI?format=xml&quot;
+        &quot;http://feeds.feedburner.com/Ubunlog?format=xml&quot;
+        &quot;http://feeds.feedburner.com/ugeek&quot;
+        &quot;http://feeds.feedburner.com/ugeekblog&quot;
+        &quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&quot;
+        &quot;http://feeds.weblogssl.com/genbetadev&quot;
+        &quot;http://fernand0.github.io/feed.xml&quot;
+        &quot;http://hackingthesystem4fun.blogspot.com/feeds/posts/default&quot;
+        &quot;http://hispalinux.es/node/feed&quot;
+        &quot;http://humanos.uci.cu/feed/&quot;
+        &quot;http://lamiradadelreplicante.com/feed/&quot;
+        &quot;http://linuxmanr4.com/feed/&quot;
+        &quot;http://maslinux.es/feed/&quot;
+        &quot;http://mhyst.es/blogs/index.php?tempskin=_rss2&quot;
+        &quot;http://misnotaslinux.blogspot.com/feeds/posts/default&quot;
+        &quot;http://nasciiboy.github.io/index.xml&quot;
+        &quot;http://nosturi.es/feed/&quot;
+        &quot;http://papermint-designs.com/roor/rss.xml&quot;
+        &quot;http://parceladigital.com/feed/&quot;
+        &quot;http://planet.emacsen.org/atom.xml&quot;
+        &quot;http://quijotelibre.com/feed/&quot;
+        &quot;http://radioela.org/spip.php?page=backend&quot;
+        &quot;http://ranchoelectronico.org/feed/&quot;
+        &quot;http://red-orbita.com/?feed=rss2&quot;
+        &quot;http://rufianenlared.com/feed/&quot;
+        &quot;http://softwarelibre.deusto.es/feed/&quot;
+        &quot;http://www.blackhats.es/wordpress/?feed=rss2&quot;
+        &quot;http://www.decrecimiento.info/feeds/posts/default&quot;
+        &quot;http://www.dmdcosillas.org/feed/&quot;
+        &quot;http://www.eldiario.es/rss/hojaderouter/&quot;
+        &quot;http://www.hackplayers.com/feeds/posts/default?alt=rss&quot;
+        &quot;http://www.jgimenez.info/feed/&quot;
+        &quot;http://www.kdeblog.com/feed/&quot;
+        &quot;http://www.lapipaplena.net/feed/&quot;
+        &quot;http://www.linuxadictos.com/feed&quot;
+        &quot;http://www.linuxhispano.net/feed/&quot;
+        &quot;http://www.maxxcan.com/feed/&quot;
+        &quot;http://www.muylinux.com/feed/&quot;
+        &quot;http://www.portallinux.es/feed&quot;
+        &quot;http://www.radioela.org/spip.php?page=backend-auteur&amp;id_auteur=115&quot;
+        &quot;http://www.rafaelrojas.net/feed/&quot;
+        &quot;http://www.rootzilopochtli.com/feed/&quot;
+        &quot;http://www.tomatesasesinos.com/feed/&quot;
+        &quot;http://www.tomatuordenador.net/feed/&quot;
+        &quot;http://www.ubuntizando.com/feed/&quot;
+
+        &quot;https://andalinux.wordpress.com/feed/&quot;
+        &quot;https://aprendizdesysadmin.com/feed/&quot;
+        &quot;https://asm86.wordpress.com/feed/&quot;
+        &quot;https://autodefensainformatica.radioalmaina.org/feed/&quot;
+        &quot;https://birrasybits.wordpress.com/feed/&quot;
+        &quot;https://blog.adrianistan.eu/feed/&quot;
+        &quot;https://blog.gvsig.org/feed/&quot;
+        &quot;https://cartaslinux.wordpress.com/feed/&quot;
+        &quot;https://ciberlatino.wordpress.com/feed/&quot;
+        &quot;https://codingornot.com/feed&quot;
+        &quot;https://colaboratorio.net/feed/&quot;
+        &quot;https://compilando.audio/index.php/feed/podcast/&quot;
+        &quot;https://comunicatelibremente.wordpress.com/feed/&quot;
+        &quot;https://daemons.cf/rss.xml&quot;
+        &quot;https://diariodeunalinuxera.com/feed/&quot;
+        &quot;https://duglasm.wordpress.com/feed/&quot;
+        &quot;https://elbinario.net/feed/&quot;
+        &quot;https://elblogdecarlosvelasco.wordpress.com/feed/&quot;
+        &quot;https://eliasbrasa.wordpress.com/feed/&quot;
+        &quot;https://eliotreyna.blogspot.com/feeds/posts/default&quot;
+        &quot;https://elpinguinotolkiano.wordpress.com/feed/&quot;
+        &quot;https://elzorrolibre.noblogs.org/feed/&quot;
+        &quot;https://enekoamieva.com/blog/feed/&quot;
+        &quot;https://feedpress.me/podcastlinux&quot;
+        &quot;https://gutl.jovenclub.cu/feed/&quot;
+        &quot;https://h4ckseed.wordpress.com/feed/&quot;
+        &quot;https://infostatex.blogspot.com/feeds/posts/default&quot;
+        &quot;https://jummp.wordpress.com/feed/&quot;
+        &quot;https://jvare.com/feed/&quot;
+        &quot;https://kernelpanicblog.wordpress.com/feed/&quot;
+        &quot;https://laenredadera.net/feed/&quot;
+        &quot;https://lapastillaroja.net/feed/&quot;
+        &quot;https://lasindias.net/feed&quot;
+        &quot;https://leninmhs.wordpress.com/feed/&quot;
+        &quot;https://lignux.com/feed/&quot;
+        &quot;https://linuxgnublog.org/es/feed&quot;
+        &quot;https://mierda.tv/feed/&quot;
+        &quot;https://miguelpinia.wordpress.com/feed/&quot;
+        &quot;https://milagrosrp.wordpress.com/feed/&quot;
+
+        &quot;https://mx.ivoox.com/es/podcast-podcast-el-precipicio_fg_f176717_1.xml&quot;
+        &quot;https://mx.ivoox.com/es/podcast-podcast-kde-espana_fg_f1249423_1.xml&quot;
+        &quot;https://mx.ivoox.com/es/reality-cracking_fg_f159955_filtro_1.xml&quot;
+        &quot;https://www.ivoox.com/podcast-fran-casas_fg_f1449982_1.xml&quot;
+        &quot;https://www.ivoox.com/podcast-podcast-verne-wells-ciencia-ficcion_fg_f1100419_1.xml&quot;
+
+        &quot;https://neoranger.github.io/feed.xml&quot;
+        &quot;https://noelonassis.wordpress.com/blog/feed/&quot;
+        &quot;https://notxor.nueva-actitud.org/feed/all.rss.xml&quot;
+        &quot;https://ondahostil.wordpress.com/feed/&quot;
+        &quot;https://otroespacioblog.wordpress.com/feed/&quot;
+        &quot;https://pfctelepathy.wordpress.com/feed/&quot;
+        &quot;https://picodotdev.github.io/blog-bitix/index.xml&quot;
+        &quot;https://poesiabinaria.net/feed/&quot;
+        &quot;https://radioliberadaelpodcast.wordpress.com/feed/&quot;
+        &quot;https://radioslibres.net/rss/&quot;
+        &quot;https://thelinuxalchemist.wordpress.com/feed/&quot;
+        &quot;https://victorhckinthefreeworld.com/feed/&quot;
+        &quot;https://vidaembebida.wordpress.com/feed/&quot;
+        &quot;https://www.atareao.es/blog/feed/&quot;
+        &quot;https://www.cambiadeso.es/feed/&quot;
+        &quot;https://www.linuxito.com/?format=feed&amp;type=rss&quot;
+        &quot;https://www.ochobitshacenunbyte.com/feed/&quot;
+        &quot;https://xkcd.com/rss.xml&quot;
+        &quot;https://xnet-x.net/blog/feed/&quot;
+        ))
+
+(global-set-key [f6] 'elfeed)
+(global-set-key [f5] 'elfeed-update)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                               ;;
+;;   ___  ___ _ __(_)_ __ | |_   ;;
+;;  / __|/ __| '__| | '_ \| __|  ;;
+;;  \__ \ (__| |  | | |_) | |_   ;;
+;;  |___/\___|_|  |_| .__/ \__|  ;;
+;;                  |_|          ;;
+;;                               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Mostrar/ocultar archivos ocultos en direc
+(defun dired-dotfiles-toggle ()
+  &quot;Mostrar/ocultar archivos ocultos&quot;
+  (interactive)
+  (when (equal major-mode 'dired-mode)
+    (if (or (not (boundp 'dired-dotfiles-show-p)) dired-dotfiles-show-p)
+        (progn
+          (set (make-local-variable 'dired-dotfiles-show-p) nil)
+          (message &quot;h&quot;)
+          (dired-mark-files-regexp &quot;^\\\.&quot;)
+          (dired-do-kill-lines))
+      (progn (revert-buffer)
+             (set (make-local-variable 'dired-dotfiles-show-p) t)))))
+
+(global-set-key (kbd &quot;C-c h&quot;) 'dired-dotfiles-toggle)
+
+(defun increment-number-at-point ()
+  (interactive)
+  (skip-chars-backward &quot;0-9&quot;)
+  (or (looking-at &quot;[0-9]+&quot;)
+      (error &quot;No number at point&quot;))
+  (replace-match (number-to-string (1+ (string-to-number (match-string 0))))))
+
+(defun decrement-number-at-point ()
+  (interactive)
+  (skip-chars-backward &quot;0-9&quot;)
+  (or (looking-at &quot;[0-9]+&quot;)
+      (error &quot;No number at point&quot;))
+  (replace-match (number-to-string (- (string-to-number (match-string 0)) 1))))
+
+(global-set-key (kbd &quot;C-c +&quot;) 'increment-number-at-point)
+(global-set-key (kbd &quot;C-c -&quot;) 'decrement-number-at-point)
+
+</code></pre>
+
+<h2 id="fuentes">fuentes</h2>
+
+<p><a href="https://github.com/melpa/melpa">https://github.com/melpa/melpa</a></p>
+
+<p><a href="https://github.com/abrochard/emacs-config/blob/master/configuration.org">https://github.com/abrochard/emacs-config/blob/master/configuration.org</a></p>
+
+<p><a href="https://www.reddit.com/r/emacs/comments/4fqu0a/automatically_install_packages_on_startup/">https://www.reddit.com/r/emacs/comments/4fqu0a/automatically_install_packages_on_startup/</a></p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/emacs/run-scheme/">◀ Run Scheme</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/emacs">emacs</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(23)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(19)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/ramen">ramen(10)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(9)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(9)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(3)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

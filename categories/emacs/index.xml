@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sun, 20 Aug 2017 18:42:53 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 28 Sep 2017 19:47:50 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Emacs, configuracion de verano</title>
+      <link>http://nasciiboy.github.io/emacs/v-config/</link>
+      <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/emacs/v-config/</guid>
+      <description>todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs para ponerme a programar &amp;ldquo;el morg&amp;rdquo; (que esta en go) y aparecia un mensaje de error muuu largo, informando que el flycheck (un modo para verificar el codigo mientras se va escribiendo) no localizaba la ruta al ejecutable del flycheck-go. Como no encontraba el origen del problema y queria tunear el emacs, me propuse abandonar el sistema que tenia para agregar extensiones al emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de paquetes del que dispone emacs&amp;hellip; je, como decir que no me gustan las cosas automagicas que hacen las cosas sin que me entero, pero bueno, siendo emacs me dare el lujo de ser un poco mas permisivo</description>
+    </item>
     
     <item>
       <title>Run Scheme</title>
