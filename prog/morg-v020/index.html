@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Morg v0.20</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>Morg v0.20</h1>
+  
+
+<p><img src="http://nasciiboy.github.io/img/morgv020.jpg" alt="" /></p>
+
+<h2 id="one-more-kiss">One More Kiss</h2>
+
+<p><strong>woooooo!!! wraaoggghhh!!! (&amp;) wrooomgfff!!!</strong></p>
+
+<p>aunque he dedicado aproximadamente los ultimos 2 meses en exclusiva y de forma
+obsesa a la refactorizacion de morg, su codigo sigue siendo mediocre.
+mentiria si dijera que comparativamente no ha avanzado un guevo con respecto a
+la ultima vez que lo toque, pero como diria mick, &ldquo;no me satisface&rdquo; (aun)</p>
+
+<p>muchas cosas he aprendido por el camino, sobre todo relacionado con Go, pues
+ahora si me siento comodo y casi seguro con su huso, tambien aprendi ha hacer un
+&ldquo;Scanner&rdquo; para identificar lineas&hellip; cadenas, numeros, constantes y otros cosas
+dentro de una cadena &ldquo;cruda&rdquo; de texto, ademas ahora se, que las cadenas (como
+las cucharas) no existen, y un monton de cosas mas que ya no recuerdo&hellip;</p>
+
+<p>algunas anotacione he dejado que darian para varios post (o un libro en el
+futuro) pero no llegaran hasta tener un programa robusto y &ldquo;señorial&rdquo;, con la
+suficiente calidad como para atreverme a mandarlo a alguna distro, no obstante,
+lo pongo a disposicion del mundo para resivir algun tipo de aportacion
+intelectual, hackeril, ecomica o moral</p>
+
+<p>Pero bueno, aunque no dejan de ser frajiles, pasemos a las caracteristicas y
+cambios que incorpora la nueva version</p>
+
+<p>(para quien no tenga idea de que mierda es <em>morg</em>, dedicare una guia exhaustiva
+en el futuro, mientras puede pasarse por el
+<a href="https://github.com/nasciiboy/morg">repo</a> y leer el  inactualizado readme, o si
+quiere ver una muestra de sus actuales capacidades de exportacion y su sintaxis
+en si, (y ademas aprender Go) vallan a <a href="https://github.com/nasciiboy/tgpl">este</a> repo)</p>
+
+<h3 id="resaltado-o-marcas">resaltado (o marcas)</h3>
+
+<p>las marcas eran antes <code>@</code> + <code>caracter</code> + <code>(</code> + <code>contenido</code> + <code>)</code> y ahora sigue
+siendo asi, peroooo por primera vez <code>caracter</code> puede ser una serie de varios
+caracteres, es decir, el &ldquo;resaltado&rdquo; se puede concatenar, como en <code>@eibc(algo)</code>
+que exportado a html seria asi: <code>&lt;em&gt;&lt;i&gt;&lt;b&gt;&lt;code&gt;algo&lt;/code&gt;&lt;/b&gt;&lt;/i&gt;&lt;/em&gt;</code></p>
+
+<h3 id="paramentros-con-sintaxis-estilo-funcion">paramentros con sintaxis estilo &ldquo;funcion&rdquo;</h3>
+
+<p>en la mayoria de herramientas de linea de comandos un parametro tiene la
+sintaxis</p>
+
+<pre><code>--algo=&quot;cosa&quot;
+</code></pre>
+
+<p>o</p>
+
+<pre><code>-algo cosa
+</code></pre>
+
+<p>bien?, para morg esto tiene la forma</p>
+
+<pre><code>algo
+</code></pre>
+
+<p>o</p>
+
+<pre><code>algo()
+</code></pre>
+
+<p>o</p>
+
+<pre><code>algo( cosa )
+</code></pre>
+
+<p>o</p>
+
+<pre><code>algo( cosa-a, cosa-b, ... )
+</code></pre>
+
+<p>una forma de entenderlo, es como una funcion que tiene valores establecidos por
+defecto, y segun el numero de parametros que se envien el resto se colocan de
+forma automatica, y en caso de que un parametro (o su numero) sea erroneo,
+se subtituyen los errores por el valor por defecto.</p>
+
+<p>La diferencia radica en que no se trata de una funcion, sino del nombre de un
+parametro y sus valores!</p>
+
+<p>ahora, estos modificadores aparecen dentro de los bloques, que tienen la forma</p>
+
+<pre><code>..bloque &gt;
+  cosas
+&lt; bloque..
+</code></pre>
+
+<p>quedando asi</p>
+
+<pre><code>..bloque algo algo1() algoMas2( &quot;cadena&quot;, 123, .21, `raw`, identificador )  &gt;
+  cosas
+&lt; bloque..
+</code></pre>
+
+<p>un uso de ejemplo es para especificar un tema especifico, o indicar que la
+salida debe numerarse apartir de un numero dado</p>
+
+<pre><code>..code n(10) style( &quot;blackHole&quot; )  &gt; c
+  esto es codigo en lenguaje C «o no»
+&lt; code..
+</code></pre>
+
+<p>como es uno cosa muy chula, tambien active el parseo de esta caracteristica
+dentro de un codigo especial (<code>options</code>) en la configuracion del documento</p>
+
+<pre><code>..options &gt; fancyCode() toc
+</code></pre>
+
+<p>de momento solo con dos opciones, la primera para especificar que queremos
+resaltado de sintaxis en la exportacion (dentro de este puede especificarse
+algun tema de color, pero en su lugar recomiendo dejar el campo vacio y
+establecer el tema con css en la exportacion html).</p>
+
+<p>la otra opcion es <code>toc</code>, que sirve para indicar que queremos que la exportacion
+incluya la tabla de contenidos</p>
+
+<h3 id="ladrillos">ladrillos</h3>
+
+<p>je, bloques y ladrillos. Imagina que tienes un bloque de codigo fuente, y en
+algun momento lo deseas &ldquo;ejecutar&rdquo; y colocar su salida dentro del documento,
+pues hay es donde aparecen los ladrillos</p>
+
+<pre><code>..code &gt; sh
+  echo &quot;hola, mundo&quot;
+&lt;&gt;
+  hola, mundo
+&lt; code..
+</code></pre>
+
+<p>exacto, el <code>&lt;&gt;</code> separa el bloque de sus ladrillos&hellip; y en este podriamos indicar
+algurna cosa como por ejemplo</p>
+
+<pre><code>..code &gt; sh
+  random
+&lt;&gt; ejecucion 1
+  1236
+&lt;&gt; ejecucion 2
+  47
+&lt; code..
+</code></pre>
+
+<p>y asi sucesivamente.</p>
+
+<p>Aunque es una opcion disponible en cualquier bloque (exepto los de configuracion
+del documento) de momento solo la he dejado activa en el bloque especial <code>cols</code>,
+que sirve para dibujar columnas de cosas (en html)</p>
+
+<pre><code>..cols &gt;
+
+  este es el texto de la columna 1
+
+&lt;&gt;
+
+  este es el texto de la columna 2
+
+&lt;&gt;
+
+  contenido de la columna 3
+
+...
+</code></pre>
+
+<p>al principio pense en que la division del ladrillo tuviera el formato</p>
+
+<pre><code>..cols &gt;
+  cosa
+&lt;-&gt; otra cosa
+  la otra cosa
+&lt;-&gt;
+  la ultima cosa
+&lt; cols..
+</code></pre>
+
+<p>con <code>&lt;-&gt;</code> por facilitar la identificacion visual de los &ldquo;ladrillos&rdquo;, pero
+abandone la idea, por que es mas complejo el agregar el guion en medio, lo unico
+que tenia en claro era la utilisacion de los simbolos <code>&lt;&gt;</code> que de algun modo
+complementan la idea de unidad en los bloques cerrando y abriendo las secciones.</p>
+
+<p>como sea, aun es un prospecto de caracteristica</p>
+
+<h3 id="srci">srci</h3>
+
+<p>el otro comando de bloque que sufrio cambios es &ldquo;sorci&rdquo; (escrito <code>srci</code>) que es
+un bloque donde se simula un prompt de algun lenguaje y su salida, sin hechar
+mano de los ladrillos</p>
+
+<p>en la anterior version la sistaxis era</p>
+
+<pre><code>..srci &gt; lenguaje
+  &gt; (esto simulario ser (codigo)  \
+      (en lisp (o algo)           \
+               (por el estilo)))
+  esta seria la supuesta salida
+  que produce el codigo
+</code></pre>
+
+<p>las diagonales al final servian para indicar que la supuesta seccion de codigo
+se expande por varias lineas, de forma identica a como se hace en bash</p>
+
+<p>pues ahora sera</p>
+
+<pre><code>..srci &gt; lenguaje
+  &gt; (esto simulario ser (codigo)
+  ^   (en lisp (o algo)
+  ^            (por el estilo)))
+  esta seria la supuesta salida
+  que produce el codigo
+</code></pre>
+
+<p>cada linea que se supone forma parte de la entrada, inicia con <code>^</code>.</p>
+
+<p>Este cambio lo hice por ninguna razon en especifico, un mero capricho. El como
+escapar unas entradas legitimas de los simbolos <code>&gt;</code> (prompt) y <code>^</code> (cosas que
+forman parte del promtpt en cuestion) es un asunto aun inexplorado, he, he, he</p>
+
+<p>pero bueno, lo bonico de este bloque, es que con una sintaxis comun se puede
+simular la supuesta estrada de casi cualquier lenguaje! Para casos donde el
+lenguaje tenga mas de un promt, habria que utilizar un parametro adicional y
+supongo que diversos bloques, por ejemplo para simular una secion como usuario
+de a pie en bash y luego un logueo como root, seria</p>
+
+<pre><code>..srci prompt( &quot;$ &quot; ) &gt; sh
+  &gt; rm -rf /boot
+  permiso denegado
+  &gt; su
+  mi codigo
+
+aqui con algun texto se alerta de los peligros de ser root y ejecutar
+comandos con poder ilimitado
+
+..srci prompt( &quot;# &quot; ) &gt; sh
+  &gt; whoami
+  root
+  &gt; rm -rf /boot
+  error: lo siento su princesa se encuentra en otro castillo
+</code></pre>
+
+<h3 id="mensajes-de-error">mensajes de error</h3>
+
+<p>la version anterior era silenciosa como una tumba, solo lanzaba mensajes cuando
+se rompia el parser. Para la nueva version, ademas de los mensajes en un
+escenario catastrofico, se incluyen mensajes en errores dentro de los bloques,
+tambien del resaltado y los relacionados con problemas de codificacion</p>
+
+<p>no es todo lo presiso que deberia ser, aun asi cumple su funcion medianamente bien</p>
+
+<h3 id="pinche-python-culero-del-infierno">pinche python culero del infierno</h3>
+
+<p>en la version &ldquo;antigua&rdquo; de morg, utilizaba pygments para colorear (o mas bien
+etiquetar) el codigo fuente, puede que hiera alguna sensivilidad, pero <strong>el puto
+python de los cojones</strong> no esta hecho para hacer aplicaciones, si lo estas
+utilizando de esa forma, colaboras con el calentamiento global, matas gatitos y
+peor aun, no mereses mi respeto</p>
+
+<p>ja, ja, no hay color! Entre la vieja version que utilizaba python para el
+coloreado y el actual hay una diferencia de 3 minutos:</p>
+
+<pre><code>$ time morg-old toHtml The-Go-Programming-Language.morg
+
+real	3m6,947s
+user	2m40,701s
+sys	0m16,755s
+$ time morg-new toHtml The-Go-Programming-Language.morg
+morg:katana:The-Go-Programming-Language:4346:52: illegal UTF-8 encoding
+katana:The-Go-Programming-Language:4346:52: illegal UTF-8 encoding
+
+real	0m2,414s
+user	0m2,456s
+sys	0m0,030s
+</code></pre>
+
+<p><strong>si tres malditos minutos</strong>, que hacia inviable para por ejemplo una edicion &ldquo;en
+vivo&rdquo; (en alguna futura version), no solo eso, si no que con la version en puro
+y nativo codigo Go, en la practica, <strong>el tiempo de espera no existe</strong>, peor aun
+ni siquiera estoy utilizando paralelismo (aun)</p>
+
+<p>cuasi como un milagro santisimo del mismo RMS, aparecio un proyecto llamado
+<a href="https://github.com/alecthomas/chroma">chroma</a>, que se esta encargando de portar
+pygments a Go.</p>
+
+<p>pero bueno, no todo es tan bonito como parece, la libreria chroma no esta
+preparada para ser utilizada concurrentemente, asunto que descubri de mala manera
+y con el <em>sentido aracnido</em>. Ademas es demasiado compleja de utilizar, tira de
+una libreria de expresiones regulares de una tercera parte, no esta pensada para
+utilizarse &ldquo;en solitario&rdquo; (segun yo) y hecha mano de paquetes &ldquo;peligrosos&rdquo;.</p>
+
+<p>Sea como fuere, <strong>chroma</strong> es una aportacion invaluable y de facil modificacion
+para mis propositos (o modos, segun se vea). Ya que tiene que cumplir con
+necesidades muy especificas dentro de morg que dificilmente serian aceptadas en
+el proyecto original, he hecho un clonacion y lo he subido a mi repo&hellip; aunque
+como el proyecto chroma aun es joven, va a ser tortuoso sincronisar las
+actualizaciones que en el se hagan, en fin, el menor de los males</p>
+
+<h2 id="eof">EOF</h2>
+
+<p>aunque tiene un monton de horas y pruebas, el codigo al igual que la
+&ldquo;especificacion&rdquo; siguen siendo flagiles, asi que no recomendare su uso, incluido
+el mio, que recintemente tuve que hacer cambios en algunos documentos si es que
+los queria utilizar como pruebas</p>
+
+<p>como de costumbre, me libre de algunos baches con chapuzas, y sigo encontrando
+dificuldades para establecer un modelo solido, lo unico que no merma es la
+adrenalina mientras me pongo a pensar, ni la esperansa de verlo completo con su
+interfaz para terminal, exportador para multiples formatos, quiza con opciones
+para ser extensible, verlo substituir a todos los otros formatos que existen,
+crear un super repositorio lleno de conociminto  y dotarlo de un buscador para
+este, incorporar traduccion automatica, reformateo, encontrar el lenguaje ideal
+para formulas matemagicas, diagramas, que cuente con tablas de datos complejas
+e interactivas en puro texto y un modo para emacs, o dicho de otro modo es un
+proyecto a muy largo plazo para este ejercito de un solo hombre</p>
+
+<h3 id="dependencias">dependencias</h3>
+
+<p>odio las dependencias, incuso incluir a la libreria estandar. Por ello trato de
+mantener el codigo lo mas &ldquo;puro&rdquo;, el nucleo es realmente sencillo y
+practicamente limitado solo a mi carpeta (ver en el siguiente arbol), pero para
+cumplir la mision primero hubo que hechar mano de chroma (no puedo dejar de
+agradecerles) y estos para mi desforturio hechan mano de una libreria de
+expresiones regulares llamada regexp2 (dlclark/regexp2) que ralentiza la
+compilacion de forma considerable (~20s)</p>
+
+<p>la otra dependencia, es <strong>termbox-go</strong> (nsf/termbox-go), que sirve para la
+interfaz de linea de comandos y por ultimo tambien esta <em>fnmatch</em>, la cual no se
+que haga&hellip;</p>
+
+<pre>
+── Dependencias
+    ├── danwakefield
+    │   └── fnmatch
+    ├── dlclark
+    │   └── regexp2
+    ├── mattn
+    │   └── go-runewidth
+    ├── nasciiboy
+    │   ├── chroma
+    │   ├── morg
+    │   │   ├── biskana
+    │   │   ├── howto.md
+    │   │   ├── katana
+    │   │   ├── LICENSE.txt
+    │   │   ├── morg.go
+    │   │   ├── morg_test.go
+    │   │   ├── nirvana
+    │   │   ├── porg
+    │   │   ├── readme.md
+    │   │   └── testdata
+    │   ├── regexp4
+    │   └── txt
+    └── nsf
+        └── termbox-go
+</pre>
+
+<p>el arbol esta bastante resumido, segun <code>find</code> son 292 ficheros de codigo (inclidas
+las pruebas) haber si en un futuro logro resumir las dependencias exclusivamente
+a mi codigo y a termbox</p>
+
+<p>o como curiosidad, la imagen del inicio la utize para incribir el proyecto morg
+en un concurso mexxxicano de &ldquo;ideas mexico&rdquo;, que exigia hacer un video (<a href="https://www.youtube.com/watch?v=F5QVI98TZNU">aca</a>
+(yutu)) ja, ja, el video es mudo y no tiene sentido alguno, fue gracioso hacerlo.</p>
+
+<p>El concurso se ganaba con votacion popular que exigia un registro en la pagina.
+Habia muchos proyectos que daban para unas risas, morg, no resivio ningun voto,
+y tampoco me hacia ilusion ganar dicho concurso, aunque si hubiera sido asi, me
+habria quitado algunos estigmas &ldquo;ambientales&rdquo; de en cima, pero bueno, no hay
+prisa, no tengo duda que en un futuro cercano o quiza lejano morg se impondra
+como el formato supremo, he!</p>
+
+<p>Happy hacking!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/prog/sayonara-f/">◀ Sayonara F</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(24)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(19)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/ramen">ramen(10)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(9)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(9)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(8)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(3)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

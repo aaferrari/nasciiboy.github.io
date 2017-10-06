@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Thu, 28 Sep 2017 19:47:50 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 06 Oct 2017 17:33:57 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Morg v0.20</title>
+      <link>http://nasciiboy.github.io/prog/morg-v020/</link>
+      <pubDate>Fri, 06 Oct 2017 17:33:57 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/morg-v020/</guid>
+      <description>One More Kiss woooooo!!! wraaoggghhh!!! (&amp;amp;) wrooomgfff!!!
+aunque he dedicado aproximadamente los ultimos 2 meses en exclusiva y de forma obsesa a la refactorizacion de morg, su codigo sigue siendo mediocre. mentiria si dijera que comparativamente no ha avanzado un guevo con respecto a la ultima vez que lo toque, pero como diria mick, &amp;ldquo;no me satisface&amp;rdquo; (aun)
+muchas cosas he aprendido por el camino, sobre todo relacionado con Go, pues ahora si me siento comodo y casi seguro con su huso, tambien aprendi ha hacer un &amp;ldquo;Scanner&amp;rdquo; para identificar lineas&amp;hellip; cadenas, numeros, constantes y otros cosas dentro de una cadena &amp;ldquo;cruda&amp;rdquo; de texto, ademas ahora se, que las cadenas (como las cucharas) no existen, y un monton de cosas mas que ya no recuerdo&amp;hellip;</description>
+    </item>
     
     <item>
       <title>Emacs, configuracion de verano</title>
@@ -18,7 +29,7 @@
       <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
       
       <guid>http://nasciiboy.github.io/emacs/v-config/</guid>
-      <description>todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs para ponerme a programar &amp;ldquo;el morg&amp;rdquo; (que esta en go) y aparecia un mensaje de error muuu largo, informando que el flycheck (un modo para verificar el codigo mientras se va escribiendo) no localizaba la ruta al ejecutable del flycheck-go. Como no encontraba el origen del problema y queria tunear el emacs, me propuse abandonar el sistema que tenia para agregar extensiones al emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de paquetes del que dispone emacs&amp;hellip; je, como decir que no me gustan las cosas automagicas que hacen las cosas sin que me entero, pero bueno, siendo emacs me dare el lujo de ser un poco mas permisivo</description>
+      <description>todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs para ponerme a programar &amp;ldquo;el morg&amp;rdquo; (que esta en go) y aparecia un mensaje de error muuu largo, informando que el flycheck (un modo para verificar el codigo mientras se va escribiendo) no localizaba la ruta al ejecutable del flycheck-go. Como no encontraba el origen del problema y queria tunear el emacs, me propuse abandonar el sistema que tenia para agregar extensiones al emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de paquetes del que dispone emacs&amp;hellip; je, como decir que no me gustan las cosas automagicas que hacen las cosas sin que me entere, pero bueno, siendo emacs me dare el lujo de ser un poco mas permisivo</description>
     </item>
     
     <item>

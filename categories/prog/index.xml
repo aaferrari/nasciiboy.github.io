@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Thu, 14 Sep 2017 16:16:26 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 06 Oct 2017 17:33:57 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/categories/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Morg v0.20</title>
+      <link>http://nasciiboy.github.io/prog/morg-v020/</link>
+      <pubDate>Fri, 06 Oct 2017 17:33:57 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/morg-v020/</guid>
+      <description>One More Kiss woooooo!!! wraaoggghhh!!! (&amp;amp;) wrooomgfff!!!
+aunque he dedicado aproximadamente los ultimos 2 meses en exclusiva y de forma obsesa a la refactorizacion de morg, su codigo sigue siendo mediocre. mentiria si dijera que comparativamente no ha avanzado un guevo con respecto a la ultima vez que lo toque, pero como diria mick, &amp;ldquo;no me satisface&amp;rdquo; (aun)
+muchas cosas he aprendido por el camino, sobre todo relacionado con Go, pues ahora si me siento comodo y casi seguro con su huso, tambien aprendi ha hacer un &amp;ldquo;Scanner&amp;rdquo; para identificar lineas&amp;hellip; cadenas, numeros, constantes y otros cosas dentro de una cadena &amp;ldquo;cruda&amp;rdquo; de texto, ademas ahora se, que las cadenas (como las cucharas) no existen, y un monton de cosas mas que ya no recuerdo&amp;hellip;</description>
+    </item>
     
     <item>
       <title>Sayonara F</title>
