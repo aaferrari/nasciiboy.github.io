@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/tags/go/</link>
+    <description>Recent content in Go on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL 3.0</copyright>
+    <lastBuildDate>Fri, 06 Oct 2017 21:03:55 -0500</lastBuildDate>
+    
+	<atom:link href="http://nasciiboy.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>benchmarks dentro de un programa en go</title>
+      <link>http://nasciiboy.github.io/prog/gomark/</link>
+      <pubDate>Fri, 06 Oct 2017 21:03:55 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/gomark/</guid>
+      <description>en Go podemos realizar benchmarks dentro de los ficheros _test.go, sin embargo realizar comparativas dentro de en un programa &amp;ldquo;regular&amp;rdquo; no es (era) tan sencillo hasta la llegada de la version
+cgo la primer opcion es echar mano de la libreria time de C. Esta libreria contiene la funcion clock que nos regresa una aproximacion a la cantidad de tiempo que ha utilizado el programa desde su ejecucion.
+package main //#include &amp;lt;time.</description>
+    </item>
+    
+  </channel>
+</rss>

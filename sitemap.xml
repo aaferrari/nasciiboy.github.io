@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/prog/gomark/</loc>
+    <lastmod>2017-10-06T21:03:55-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/morg-v020/</loc>
     <lastmod>2017-10-06T17:33:57-05:00</lastmod>
   </url>
@@ -408,6 +413,12 @@
   </url>
   
   <url>
+    <loc>http://nasciiboy.github.io/tags/go/</loc>
+    <lastmod>2017-10-06T21:03:55-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/tags/howto/</loc>
     <lastmod>2017-09-28T19:47:50-05:00</lastmod>
     <priority>0</priority>
@@ -475,13 +486,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2017-10-06T17:33:57-05:00</lastmod>
+    <lastmod>2017-10-06T21:03:55-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2017-10-06T17:33:57-05:00</lastmod>
+    <lastmod>2017-10-06T21:03:55-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -565,7 +576,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-10-06T17:33:57-05:00</lastmod>
+    <lastmod>2017-10-06T21:03:55-05:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>nxEngine</title>
+    <title>benchmarks dentro de un programa en go</title>
     <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
     <style>:root {
 
@@ -188,68 +188,143 @@ img:hover { border: 0.05em solid #fff; }
   <body>
     
 <main>
-  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/vg">vg</a></div>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
 
-  <h1>nxEngine</h1>
-  <p><img src="../Dokutsu.jpg" alt="" /></p>
+  <h1>benchmarks dentro de un programa en go</h1>
+  
 
-<p>Dōkutsu Monogatari mejor conocido en oxidente como Cave Story (La historia de la
-cueva) es un videojuego de plataformas con un toque de RPG desarrollado por una
-sola persona (Daisuke Amaya, alias &ldquo;pixel&rdquo;) a lo largo de 5 años. Originalmente
-fue liberado como <em>freeware</em> para la plataforma pc de microsoft, no obstante por
-su sobresaliente calidad ha sido portado a una gran cantidad de sistemas entre
-las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast, GP2X,
-&hellip;, y por supuesto GNU/linux.</p>
+<p>en Go podemos realizar benchmarks dentro de los ficheros <code>_test.go</code>, sin embargo
+realizar comparativas dentro de en un programa &ldquo;regular&rdquo; no es (era) tan
+sencillo hasta la llegada de la version</p>
 
-<p>Pese a que la licencia de distribucion no es libre, se cuenta con una
-implementacion del motor (en C++) bajo la licencia GNU GPL v3 llamada
-<a href="http://nxengine.sourceforge.net/">nxEngine</a> y un par de traducciones al español
-(utilizare <a href="http://www.romhacking.net/translations/2172/">esta</a>)</p>
+<h2 id="cgo">cgo</h2>
 
-<p>Si bien podemos disfrutar Dōkutsu Monogatari mediante <strong>wine</strong> (asunto con poco
-misterio) vamos a compilar una vercion nativa con nxEngine. Todo lo que
-necesitas lo encontraras en este <a href="../nx.zip">zip</a>. Descargalo y abre un terminal</p>
+<p>la primer opcion es echar mano de la libreria <code>time</code> de C. Esta libreria
+contiene la funcion <code>clock</code> que nos regresa una aproximacion a la cantidad de tiempo
+que ha utilizado el programa desde su ejecucion.</p>
 
-<pre><code>su
-# nxEngine depende de la libreria SDL. En freidora
-dnf -y install SDL-devel SDL_ttf-devel
-exit
+<pre><code>package main
 
-unzip nx.zip -d nx
-cd nx
-make
-./nx # luego presiona ' ' (espacio) y 'a' (letra a)
-# listo
+//#include &lt;time.h&gt;
+import &quot;C&quot;
+
+import &quot;fmt&quot;
+
+const top = 1 &lt;&lt; 12
+
+func main(){
+  init := CpuTime()
+
+  // prueba &gt;
+  for x, str := 0, &quot;&quot;; x &lt; top; x++ { str += &quot;1234567890&quot; }
+  // &lt; prueba
+
+  fmt.Printf( &quot;CpuTime %dms\n&quot;, DiffCpuTimeByMS( init, CpuTime() ) )
+}
+
+func CpuTime() uint64 {
+  return uint64(C.clock())
+}
+
+func DiffCpuTimeByMS( begin, end uint64 ) uint64 {
+  return (end - begin) *  1000 / uint64(C.CLOCKS_PER_SEC)
+}
 </code></pre>
 
-<p>La vercion nativa no maneja apropiadamente los acentos ni los caracteres raros
-del español, aun asi puede entenderse perfectamente.</p>
+<p><strong>resultado:</strong> <code>CpuTime 55ms</code></p>
 
-<p>Mi amor por esta obra es proporcional a su dificultad, moriras y moriras y
-moriras y volveras a morir y cuando lleges al tramo final moriras muchas veces
-mas. Recuerda salvar cada ves que se presente la oportunidad o te puedes pegar
-un cabreo.</p>
+<p>solo hay que cambiar el codigo dentro de las comentaarios &ldquo;prueba&rdquo;, es
+importante mantener la linea con <code>//#include &lt;time.h&gt;</code> tal cual, pues es una
+(obscura) indicacion para decirle al compilador de Go que incluya dicha libreria
+de C. Por supuesto tambien hay que mantener la importacion de <code>&quot;C&quot;</code></p>
 
-<p>El unico defecto de este magnifico titulo, es la imposibilidad de saltarse los
-dialogos. Cuando apreda a programar&hellip;</p>
+<p>Para la compilacion no hace falta pasar ningun parametro adicicional, basta con
+un simple <code>go build main.go</code></p>
 
-<p>La duracion ronda entre 4-8 horas, (la primer vez que lo termine tarde 6). Como
-dispone de varios finales, como minimo pasatelo 2 veces.</p>
+<h2 id="testing">testing</h2>
 
-<p>Puedes encontrar achivos de salvamento, ports diversos y muchas cosas mas en
-<a href="http://www.cavestory.org/">http://www.cavestory.org/</a></p>
+<p>la segunda opcion para realizar un benchmark es invocar a <code>testing</code> desde codigo
+regular con una funcion literal&hellip; lo se, no es intiuitivo, pero hay esta y
+funciona</p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+import &quot;testing&quot;
+import &quot;time&quot;
+
+const top = 1 &lt;&lt; 12
+
+func main(){
+
+  result := testing.Benchmark(func(b *testing.B) {
+    b.N = 1 // numero de repeticiones de la prueba
+    for i := 0; i &lt; b.N; i++ {
+      // prueba &gt;
+      for x, str := 0, &quot;&quot;; x &lt; top; x++ { str += &quot;1234567890&quot; }
+      // &lt; prueba
+    }
+  })
+
+  fmt.Printf( &quot;tiempo %s\n&quot;, result.T / time.Duration(result.N) )
+}
+</code></pre>
+
+<p><strong>resultado:</strong> <code>tiempo 67.861708ms</code></p>
+
+<p>esta prueba toma mucho mas tiempo que con la version anterior, la diferencia se
+origina en el propio <code>testing.B</code>, ya que realiza metricas adicionales, como el numero de
+asignaciones de memoria, bytes utilizados, gorutinas y otras cosas</p>
+
+<h2 id="time">time</h2>
+
+<p>por ultimo la prueba del tiempo se puede realizar con la libreria estandar de
+Go, aunque esto no es asi para verciones del compilador inferiores a 1.9 ya que
+antes de estos no se media el timpo &ldquo;monolitico&rdquo; de ejecucion (lo que hace
+<code>clock</code> de la libreria <code>time</code> de C)</p>
+
+<pre><code>package main
+
+import &quot;time&quot;
+import &quot;fmt&quot;
+
+const top = 1 &lt;&lt; 12
+
+func main(){
+  start   := time.Now()
+  for x, str := 0, &quot;&quot;; x &lt; top; x++ { str += &quot;1234567890&quot; }
+  elapsed := time.Since( start )
+
+  fmt.Printf( &quot;tiempo %s\n&quot;, elapsed )
+}
+</code></pre>
+
+<p><strong>resultado:</strong> <code>tiempo 59.746755ms</code></p>
+
+<h2 id="conclusion">conclusion</h2>
+
+<p>en pruebas personales, con <code>clock</code> (de C) los resultados son mas constantes y con
+menor variacion que en las demas opciones, mas la version con <code>time</code> nativo no
+dista demaciado de esta, ademas por ser la opcion con codigo nativo y sin
+dependencias externas es la que recomiendo y utilizo. Reservaria como segunda
+opcion y para pruebas mas exigentes la que utiliza <code>testing.B</code>, siempre asumiendo
+una consumo superior de recursos</p>
+
+<h2 id="referencias">referencias</h2>
+
+<p><a href="https://www.reddit.com/r/golang/comments/6u4xhs/how_make_a_benchmark_in_a_regular_program_no/">https://www.reddit.com/r/golang/comments/6u4xhs/how_make_a_benchmark_in_a_regular_program_no/</a></p>
+
+<p><a href="https://golang.org/pkg/time/">https://golang.org/pkg/time/</a></p>
 
 
   <div class="clear" class="center">
     
-    <a class="previous" href="http://nasciiboy.github.io/vg/h-craft/">◀ H Craft Championship</a>
+    <a class="previous" href="http://nasciiboy.github.io/prog/morg-v020/">◀ morg v0.20</a>
     
-    
-    <a class="next" href="http://nasciiboy.github.io/vg/solarus/"> Zelda solarus ▶</a>
     
   </div>
 
-  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/vg">vg</a></div>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
 </main>
 
     <aside>
