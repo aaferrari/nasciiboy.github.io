@@ -382,20 +382,20 @@ mano de los ladrillos</p>
 <p>en la anterior version la sistaxis era</p>
 
 <pre><code>..srci &gt; lenguaje
-  &gt; (esto simulario ser (codigo)  \
+  &gt; (esto simularia ser (codigo)  \
       (en lisp (o algo)           \
                (por el estilo)))
   esta seria la supuesta salida
   que produce el codigo
 </code></pre>
 
-<p>las diagonales al final servian para indicar que la supuesta seccion de codigo
+<p>las diagonales al final servia para indicar que la supuesta seccion de codigo
 se expande por varias lineas, de forma identica a como se hace en bash</p>
 
 <p>pues ahora sera</p>
 
 <pre><code>..srci &gt; lenguaje
-  &gt; (esto simulario ser (codigo)
+  &gt; (esto simularia ser (codigo)
   ^   (en lisp (o algo)
   ^            (por el estilo)))
   esta seria la supuesta salida
@@ -418,7 +418,7 @@ de a pie en bash y luego un logueo como root, seria</p>
   &gt; rm -rf /boot
   permiso denegado
   &gt; su
-  mi codigo
+  password
 
 aqui con algun texto se alerta de los peligros de ser root y ejecutar
 comandos con poder ilimitado
@@ -447,7 +447,7 @@ python de los cojones</strong> no esta hecho para hacer aplicaciones, si lo esta
 utilizando de esa forma, colaboras con el calentamiento global, matas gatitos y
 peor aun, no mereses mi respeto</p>
 
-<p>ja, ja, no hay color! Entre la vieja version que utilizaba python para el
+<p>ja, ja, no hay color! entre la vieja version que utilizaba python para el
 coloreado y el actual hay una diferencia de 3 minutos:</p>
 
 <pre><code>$ time morg-old toHtml The-Go-Programming-Language.morg
@@ -464,7 +464,7 @@ user	0m2,456s
 sys	0m0,030s
 </code></pre>
 
-<p><strong>si tres malditos minutos</strong>, que hacia inviable para por ejemplo una edicion &ldquo;en
+<p><strong>si tres malditos minutos</strong>, que hacian a morg inviable para por ejemplo una edicion &ldquo;en
 vivo&rdquo; (en alguna futura version), no solo eso, si no que con la version en puro
 y nativo codigo Go, en la practica, <strong>el tiempo de espera no existe</strong>, peor aun
 ni siquiera estoy utilizando paralelismo (aun)</p>
@@ -494,15 +494,28 @@ el mio, que recintemente tuve que hacer cambios en algunos documentos para poder
 utilizarlos como ficheros de prueba</p>
 
 <p>como de costumbre, me libre de algunos baches con chapuzas, y sigo encontrando
-dificuldades para establecer un modelo solido, lo unico que no merma es la
-adrenalina mientras me pongo a pensar, ni la esperansa de verlo completo con su
-interfaz para terminal, exportador para multiples formatos, quiza con opciones
-para ser extensible, verlo substituir a todos los otros formatos que existen,
-crear un super repositorio lleno de conociminto y dotarlo de un buscador para
-este, incorporar traduccion automatica, reformateo, encontrar el lenguaje ideal
-para formulas matemagicas, diagramas, que cuente con tablas de datos complejas e
-interactivas en puro texto y un modo para emacs&hellip; etc. En claro y dicho de otro
-modo, es un proyecto a muy largo plazo para este ejercito de un solo hombre</p>
+dificuldades para establecer un modelo solido. La seccion que se encarga del
+despliegue en terminal solo la actualice para que fuera funcional, esta sigue
+siendo lo mismo que hace (como) 5 meses, cuando aun era un forastero en Go. Lo
+unico que no merma es la adrenalina mientras me pongo a pensar, ni la esperansa
+de verlo completo con su</p>
+
+<ul>
+<li>interfaz (completa) para terminal,</li>
+<li>exportador para multiples formatos,</li>
+<li>con opciones para ser extensible y modificable</li>
+<li>verlo substituir a todos los otros formatos que existen,</li>
+<li>crear un super repositorio lleno de conociminto en formato morg y dotarlo de un buscador para este,</li>
+<li>incorporar traduccion automatica,</li>
+<li>reformateo,</li>
+<li>encontrar el lenguaje ideal para formulas matemagicas y diagramas,</li>
+<li>que cuente con tablas de datos complejas e interactivas en puro texto</li>
+<li>y un modo para emacs&hellip;</li>
+<li>etc.</li>
+</ul>
+
+<p>En claro y dicho de otro modo, es un proyecto a muy largo plazo para este
+ejercito de un solo hombre</p>
 
 <h3 id="dependencias">dependencias</h3>
 
