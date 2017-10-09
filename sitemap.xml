@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/post/ramen-xi/</loc>
+    <lastmod>2017-10-08T19:52:04-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/gomark/</loc>
     <lastmod>2017-10-06T21:03:55-05:00</lastmod>
   </url>
@@ -324,7 +329,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/4k/</loc>
-    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
+    <lastmod>2017-10-08T19:52:04-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -335,14 +340,14 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/tags/apt/</loc>
-    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
+    <loc>http://nasciiboy.github.io/categories/apt/</loc>
+    <lastmod>2017-06-24T20:28:51-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/categories/apt/</loc>
-    <lastmod>2017-06-24T20:28:51-05:00</lastmod>
+    <loc>http://nasciiboy.github.io/tags/apt/</loc>
+    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -402,7 +407,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/fonos/</loc>
-    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
+    <lastmod>2017-10-08T19:52:04-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -474,13 +479,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/post/</loc>
-    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
+    <lastmod>2017-10-08T19:52:04-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/post/</loc>
-    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
+    <lastmod>2017-10-08T19:52:04-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -504,7 +509,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/ramen/</loc>
-    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
+    <lastmod>2017-10-08T19:52:04-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -546,7 +551,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/</loc>
-    <lastmod>2017-09-08T11:53:17-05:00</lastmod>
+    <lastmod>2017-10-08T19:52:04-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -576,7 +581,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-10-06T21:03:55-05:00</lastmod>
+    <lastmod>2017-10-08T19:52:04-05:00</lastmod>
     <priority>0</priority>
   </url>
   

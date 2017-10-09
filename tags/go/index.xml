@@ -19,7 +19,7 @@
       
       <guid>http://nasciiboy.github.io/prog/gomark/</guid>
       <description>en Go podemos realizar benchmarks dentro de los ficheros _test.go, sin embargo realizar comparativas dentro de en un programa &amp;ldquo;regular&amp;rdquo; no es (era) tan sencillo hasta la llegada de la version 1.9
-cgo la primer opcion es echar mano de la libreria time de C. Esta libreria contiene la funcion clock que nos regresa una aproximacion a la cantidad de tiempo que ha utilizado el programa desde su ejecucion.</description>
+cgo la primer opcion es echar mano de la libreria time de C. Esta libreria contiene la funcion clock que nos regresa una aproximacion a la cantidad de tiempo del procesador que ha utilizado el programa desde su ejecucion.</description>
     </item>
     
   </channel>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XI – Spaghetti</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+
+  <h1>Ramen XI – Spaghetti</h1>
+  
+
+<p><img src="http://nasciiboy.github.io/img/Spaghetti-Monster.png" alt="" /></p>
+
+<p>los lenguajes con arreglos que inician en 1 son una mierda de satanas!</p>
+
+<h2 id="4k">4k</h2>
+
+<p>aunque hubo poco tiempo &ldquo;seguro&rdquo; para ver chikas 2d sin que nadie entrara en mis
+territorios he hiciera preguntas incomodas y la obsecion con la programacion es
+celosa con las distracciones, llego el final de temporada y con el la lista que
+habitualmente es de 4 o 5 cosas se ve incrementada</p>
+
+<p><strong>Boku No Hero</strong> (2da temporada) Ha conclido la segunda fase de My Hero Academy
+y no puedo estar mas satisfecho con lo entregado, como naruto pero sin relleno,
+conciso y con animacion superior a lo habitual. La batalla contra All Might
+(penultimo episodio) fue lo mas chulo de la temporada y el episodio final un
+troleo en toda regla cuando creia que seria un capitulo de relleno a uso, dan
+media vuelta y se ponen serios, bravo!</p>
+
+<p>fue la unica serie que ponia cada episodio segun iba apareciendo y la espera
+semanal era tortuosa</p>
+
+<p><strong>Shingeki no Bahamut – Virgin Soul</strong> (2da temporada) La primer temporada de
+esto, la baje mas por morbo crellendo que trataban de aprobecharse del titulo
+<em>Shingeki</em> (la serie de los titanes gritones), para sorpresa mia (y ajena) termino
+por ser una serie refrescante con buena animacion, personajes carismaticos y una
+historia entretenida, de lo mejor del año pasado(?)</p>
+
+<p>esta segunda entrega intenta seguir la estela de la anterior, personalmente creo
+que se queda algo corta, aunque mantienen buena parte de los protas anteriores,
+el cambio de protagonismo por la encantadora nina, se queda algo corto comparado
+con fabaro, aun asi la animacion sigue siendo soberbia, y los nuevos personajes
+tienen encanto.</p>
+
+<p>Me gusta la nina cuando se disgusta, y al final termino ablandando a este
+solitario y peludo hombre cafe. Ahora, el final en si, es malo, pero el chantaje
+emocional que le ponen hace que me guste, es raro, pero asi es.</p>
+
+<p>Mis fichas de temporada las puse en Boku no Hero y el Bahamut, no puedo estar
+mas satisfecho del resultado</p>
+
+<p><strong>The Reflection</strong> uh, hubo dos animes nuevos  que llamaron la atencion esta
+temporada, <em>Made in Abyss</em> (que aun no termino, ni se a que tipo de ser esta
+dirigida) y esta. Visualmente me agrada, mas su lento desarrollo y el cero
+carisma de los personajes me hicieron abandonar al sexto episodio, lastima. Me
+quedo con el &ldquo;EXELCIOR!&rdquo; que dice el stan lee al final de los episodios</p>
+
+<p><strong>Netoge no Yome Wa Onna no ka ja Nai to Omotta</strong> 7 episodios y el final, en
+esta serie tenemos al protagonista beta que es un &ldquo;otaku&rdquo; jugador de mmorpgs (o
+algo asi), que por mera casualidad del universo, se reune con sus compañeros
+virtuales de campaña, que resultan ser 3 chikas de su edad que caen rendidas
+ante sus (inexistentes) encantos&hellip; seeee, ser sincero y griton, les hace perder
+la cabeza, seee, seguro que seee</p>
+
+<p>si no tienes exigencia alguna, entretiene sin mas, de otra forma no vale la pena
+verla, exepto por su extraño enfoque artistico donde la camaro muestra tomas fijas a las
+piernas, bragas y entrepiernas de las feminas, seguramente sea un intento desesperado
+por mantener la atencion, por otro lado me hace querer ver en algun momento una
+serie/pelicula con personejes reales y un estilo que calque este tipo de tomas. Como
+demonios seria eso? seguro que no se acerca al morbo idealisado 2d, aun asi
+seria interesante</p>
+
+<p><strong>Hajimete no Gal</strong> otro tipo beta termina rodeado de &ldquo;galgues&rdquo; (algo asi como
+chicas exuberantes), en una historia comica-echi-fetichista (para todos los sabores)
+que termina siendo comedia romantica? no lo se, me confundo.</p>
+
+<p>aun con su animacion mediocre, te mantiene a la expectativa de ver la siguente
+ida de olla, aunque la verdad sea dicha es una serie apenas entretenida e
+irrelevante</p>
+
+<p><strong>Kakegurui</strong> chicas con ojos brillantes que se orgasmean mientras apuestan,
+suena bien no? no, lo lleban mal, las apuestan no tienen ninguna emocion y se
+exageran las reacciones si razon.</p>
+
+<p>Como la serie anterior, entretenido aunque de preferencia mejor dejarlo pasar de
+frente.</p>
+
+<p>si quieres ver un verdadero anime de apuestas mas alla del &ldquo;entretenido&rdquo;
+ver <strong>Akagi</strong> (donde el prota gana siempre) o <strong>kaji</strong> (donde el prota es un
+perdedor-superviviente), pura proteina mental y critica a la sociedad (en kaji)</p>
+
+<p><strong>koi to uso</strong></p>
+
+<blockquote>
+<p>Si ambas son importantes para ti, no tienes que ser justo.</p>
+
+<p>Si realmente te aman, puedes hacerlas felices y puedes lastimarlas con la
+misma facilidad.</p>
+</blockquote>
+
+<p>je, supongo que esta serie forma es parte de una agenda gubernamental japonesa
+para desacerse de los otakus invitandolos a cometer suicidio, al mismo tiempo
+que insentivan al resto de su poblacion a reproducirse.</p>
+
+<p>En esta ocacion, tenemos una invitacion para que los jovenes pierdan el mieda a
+la reproduccion (o eso intentan), je, je, tenemos un anime romantico, sin
+limitacion de genero o participantes, con dos pesos de presupuesto y encargado a
+becarios, veredicto:</p>
+
+<p>entretenido, me gusta la musiquilla del inicio, si hay una segunda temporada tal
+ves lo vea o tal ves no, aunque tampoco es material que pueda recomendar</p>
+
+<p>Para terminar 2 peliculillas y una impresion de una serie</p>
+
+<p><strong>Kingsman II</strong> (el circulo dorado), como dicen en el podcast de la orbita de
+Endor, te dan lo que te gusta de la primera en mayor cantidad, aunque no mejor</p>
+
+<p>me gusto? la verdad no, me disgusto? no, me decepciono? no lo se, visualmente es
+una pasada, aunque no puede entrar en su juego</p>
+
+<p><strong>Perversion</strong> (Fritz Lang) en el podcast <em>balas sobre endor</em>, dejan las obras
+que tratan muy alto, tanto que vas buscando la octava maravilla del cine en
+blanco y negro, veredicto: esta bien, si se conoce el contexto y las fechas,
+quiza aun mas. Un expectador modernillo como yo la encontro entretenida</p>
+
+<p>Para mi fortuna recivi unas contribuciones como para ir al cine, si hay suerte
+quiza tambien vea <em>It</em> o <em>Blade Runner</em> (la musica del original esta muy chula),
+mientras tanto, en el torrente aparecio la nueva serie de Start Trek con
+subtitulos&hellip;</p>
+
+<p>soy yo o hay tension sexual entre la prota y la capitana? llegado
+al segundo episodio y con la muerte de la capi no hubo ni un beso, lastima</p>
+
+<p>soy yo o la prota no tiene cache y exageran todo lo que hace y no hace? dificil
+conectar con esta tia, la elevan como el mito de <em>Jhon Wick</em>, aunque lo mas
+fuerte que hacen es mostrarla en actitud emo o arrisgandose en misiones
+peligrosas (por que esto es star trek), donde esta la aventura, la sorpresa, los
+temas sociales (lejos de tener a dos mujeres multi color en posiciones de
+mando), donde esta Star Trek?</p>
+
+<h2 id="txt">txt</h2>
+
+<p>por recomendacion de u/somospolvo (reddit) un ligero documento que explica a grandes rangos la razon de ser del bitcoin
+<a href="https://bitcoin.org/files/bitcoin-paper/bitcoin_es_latam.pdf">Un sistema de efectivo electronico p2p</a></p>
+
+<p><strong>De la informacion al conocimiento</strong></p>
+
+<p>el primer libro del prayecto &ldquo;terminar la preparatoria y molar en la uni&rdquo;,
+irrelevante hasta la pagina 65 que expone el por que del titulo del libro</p>
+
+<p>Casi pasa un mes desde que lo termine, pasaron dos semanas sin poder hacer el
+examen por no tener recursos, y cuando al fin pago el &ldquo;ticket&rdquo; tiembla y me
+dicen que de momento no hay examenes, jo, jo, como dice mi amigo el Floyd, no
+hay suerte para los podridos</p>
+
+<h2 id="fonos">fonos</h2>
+
+<p><strong>Tool</strong> Horrr! otro material mas que corrobora mis taras mentales, mmmm, ya
+habia oido anteriormente varios discos de esto y deje su escucha a medias, la
+primer impresion fue de material regulero, con &ldquo;potencial&rdquo;</p>
+
+<p>Sucede de vez en cuando luego de pasar una temporada en tematica, sucede que
+simplemente no se que escuchar y tengo unos cuantos discos intracendentes,
+peligrosamente poperos que cumplen la funcion de intoxicarme ligeramente, para
+luego regresar a lo de verdad bueno.</p>
+
+<p>Ya que recordaba como regulero a Tool, dentro de otro periodo de perdicion
+cosidere apropiado reescuchar uno de sus discos aleatoriamente y la victima
+escogida fue <em>10,000 Days</em>, ohhhh! ponganme otro mas dije. Y asi siguieron
+<em>Undertow</em>, <em>72826</em>, <em>Opiate</em> (desde ahora recorrido recomendable para quien
+desee entender su estilo) y pude concluir el transito por los 8 discos que tenia
+a disposicion en el equipo. Exelcior!</p>
+
+<p><strong>The Reflection</strong> (Keb&rsquo; Mo&rsquo;), que nombre tan raro este de la lista de los
+torrentes, me dije interiormente. Segun la wikipedia el keb&rsquo; mo&rsquo; es un blusero
+y&hellip; no tiene flow, oir dos sesiones y a borrar</p>
+
+<p><strong>The Pillows</strong> (Good Dreams, Smile, Fooly Cooly OST (1|2|3)) que puedo decir,
+descargue algunos de sus discos hace tiempo en un torrente infecto en mp3, razon
+por la que permanecieron sin que los escuchara hasta hace poco.</p>
+
+<p>Son como una es pecie de &ldquo;indi rock&rdquo; (etiqueta que no significa nada) como que
+divertido y energetico o en otras palabras la banda sonora de FLCL</p>
+
+<p><strong>Pronounced &lsquo;Leh-&lsquo;Nérd &lsquo;Skin-&lsquo;Nérd</strong> (Lynyrd Skinyrd) Buen Country Rock, algo viejo
+y nuevo, no se donde o si era de esta banda pero ya habia eschuchado <em>Free
+Bird</em>, tampoco se por que pero esto me suena mucho como a la musica de armagedon
+con bruce willys</p>
+
+<p><strong>John Mayall</strong> escuche <em>A Hard Road</em> y <em>Bluesbreakers</em>,  buen blues rock,
+aunque ya no me acuerdo de que va, es lo que pasa por anoto cosas y luego pasan
+varias semanas.</p>
+
+<p>Tenia la suficiente calidad como para sacrificar presiado espacio bajando un par
+de discos mas y eso ya no es algo comun en mi equipo</p>
+
+<pre><code>magnet:?xt=urn:btih:41af03769fe3946845c73491479edf593b47ca27&amp;dn=John%20Mayall&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969
+</code></pre>
+
+<p><strong>Vulnicura Live</strong> (Björk), en la inemsa (pero insuficiente) coleccion musical
+que tengo, ocacionalmente veo si no ha salido nada nuevo de alguna
+banda/artista/cosa y resulto que Björk tenia este disco suculento muy de su
+estilo, si te gusta la extraña australiana(?), este es uno de sus trabajos
+sobresalientes</p>
+
+<p>no termine de entender como fue la grabacion/publicacion de este material, pero
+encontre 2 torrentes</p>
+
+<pre><code>magnet:?xt=urn:btih:edef079d0e192b682a0897468751cb27b92f16ff&amp;dn=Bjork%20-%20Vulnicura%20Live%20%5b2CD%20Limited%20Edition%5d%20%5b2015%5d%20%5bFLAC%5d%20%5bsn3h1t87%5d%20%5bGloDLS%5d&amp;tr=udp%3a%2f%2fglotorrents.pw%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker4.piratux.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fcoppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.publicbt.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.me%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a80%2fannounce&amp;tr=udp%3a%2f%2fp4p.arenabg.ch%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.aletorrenty.pl%3a2710%2fannounce&amp;tr=http%3a%2f%2ftracker.t0r.download%3a6969%2fannounce
+magnet:?xt=urn:btih:e5e569493111584b051961b1adb663edb47b1ef2&amp;dn=Bjork%20-%20Vulnicura%20Live%20(2016)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337
+</code></pre>
+
+<p>el primero esta divido en dos &ldquo;discos&rdquo; de &ldquo;edicion limitada&rdquo; y el segundo tiene
+casi lo mismo en una sola carpeta, en caso de tener un complejo de coleccionismo
+o duda, bajar los dos</p>
+
+<p><strong>Rush</strong> (Rush) El primer album que escuche de esta banda fue el <strong>2112</strong> que no
+solo paso a la &ldquo;lista&rdquo; de grandes obras progresivescas (tambie fue de los que en
+la antiguedad compre en fisico y su portada de <em>yedi</em> esta chula), ademas sirvio
+de catalizador para un dia que me quede dormido escuchandolo tener un alucinante
+sueño dende luchava en algun tipo de apocalipsis con demonios, je, el sueño
+termino cuando un demonio perforo mi estomago con un tridente y me alzo en el
+aire sobre un precipicio! al despertar el album aun no habia terminado. La experiencia tiene aun mas
+miga pues por aquellos dias mi reproductor de musica era una unidad de cd de pc
+(con entrada de audifonos, boton de expulsion y de siguente) rescatada de un
+desperdicio industrial donde iba a sacar algunas reliquias maravillosas (que
+ironicamente terminaron en la basura)</p>
+
+<p>pero bueno, ese disco 2112 de rush, es magico, aunque los primeros dos de esta
+banda, donde se incluye su homonimo, son mas tradicionales (una especie de Led
+Zeppelin modificado)  no tiene desperdicio</p>
+
+<p><strong>Minmi - Minmi Best 2002-2008</strong>, busque esto por que en el OST de Samurai
+Champloo la chicha colabora con unos pocos temas que me colocan bastante.</p>
+
+<p>Con los japoneses, nunca se sabe, puedes encontrar cosas exelsas como el OST de
+Nier Automata, la impresionante pianista Hiromi Uehara, cosas juguetonas como
+The Pillows y Yakushimaru Etsuko o el exquisito sonido melancolico diverso de la
+Musicologia de Neon Genesis Evangelion&hellip; o pop modernillo casi sin gracia como
+Utada Hikaru, Suga Shikao o esta Minmi, donde si tienes suerte encontraras
+alguna pista pasable cada 10 pistas y solo 1 o 2 piesas memorables.</p>
+
+<p>Como mencione anteriormente, la unica razon para no borrar estos albums, seria
+utilizarlo como material de &ldquo;control&rdquo;, es decir, cuando uno pierde el norte de
+lo que es la musica chula, escucha este tipo de cosas y de inmediato regresa por
+el buen camino, ohh tambien puede utilizarse cuando no se tiene ningun deseo de
+escuchar nada, como simple ruido de fondo</p>
+
+<p>asi que en su lugar de poner un enlace a esto, vuelvo a recomendar la escucha
+del sonido Samurai Champloo, que hay minmi si tiene sentido</p>
+
+<pre><code>magnet:?xt=urn:btih:0106f2c2d2cee981836926fc55d8008788fc4e9e&amp;dn=Samurai%20Champloo%20OST&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+</code></pre>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/post/ramen-x/">◀ Ramen X – Infierno Mayoi</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(25)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(20)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/ramen">ramen(11)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(10)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(9)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(8)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(5)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(4)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/go">go(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
