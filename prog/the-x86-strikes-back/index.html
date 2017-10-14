@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The X86 Strikes Back</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/fonts/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>The X86 Strikes Back</h1>
+  
+
+<p><img src="http://nasciiboy.github.io/img/kool.jpg" alt="" /></p>
+
+<p>bueno, la imagen es mas de 8bits que por ahora son los equipos
+retro-nostalgicos de moda, ya le llegara su momento a x86.</p>
+
+<p>Esta historia trata de como pase (sin querer) de considerar obsoleto el hardware
+x86, pidiendo que todos eses equipos entregasen su silicio al mundo, a creer que
+aun son equipos potables para su uso diario o en el peor de las casos para
+utilizarlos como instrumentos de iniciacion en el heretico culto de Emacs, las
+ttys y la &ldquo;verdadera&rdquo; programacion</p>
+
+<p>pero bueno, no es que fuera un modernillo con urgensias obsesivas por la
+renovacion de equipos, en este cuerpo hay hamor (he, he, e) para todo el
+hardware, considero artisticos los pcbs, sus colores, pistas, componentes y en
+ocaciones olores y carcasas, la fusion perfecta entre el mundo de las ideas igenieriles y
+la materia. Aun asi, el hardware es perecedero, aparece la corrosion, pilas con
+&ldquo;esporas&rdquo;, capacitores inchados y tarde o temprano sus componentes terminan por
+perecer, por lo que como cualquier obra fisica (manga, pintura, cine, musica, etc),
+una ves cumplida su mision, creo que lo mejor es conservar toda su informacion
+posible como bits y especificaciones</p>
+
+<h1 id="acer-aspire-3600">acer aspire 3600</h1>
+
+<p>Hace dos semanas mi tio &ldquo;el licensiado&rdquo;, me trajo un presente, una laptop con el
+marco (y soporte de la pantalla) roto cerca de las bisagras, ademas el display
+emanava olores perfumados, tenia una sustancia mielosa desagradable y algo de
+corrosion en los fierros, je, je, no hay nada mas bonito que ver la sonrisa de
+un adulto con vermuda, melenudo y barbon mientras destripa un equipo</p>
+
+<p>luego de desmontar todo, limpiar un poco y dejar la base como lo unico
+rescatable, monte un transformador con 4 tristes diodos y dos capacitoderes que
+entregaban 20V y lo conecte al equipo, para sopresa mia y ajena funciono, no sin
+lanzar unos beeps incesantes durante el arranque y ejecucion de su OS ventanas XD</p>
+
+<p>daba por mala la placa, aunque aun tenia ilusion de verla andar, comenzo asi una
+encrusijada mental entre gastar unos donativos en un adaptador de corriente
+apropiado para el equipo (que consideraba con su motherboard supuestamente
+dañada) o subsistir con un poco de dignidad durante un mes. Tras refrenar las
+ansias de comprar un adaptador, revolvi mis pertenencias tegnologicas y voala,
+aparecio la fuente de laptop como por obra de magia, fantastico! Al probar el
+adaptador comprobe que la causa de los beeps de la placa, eran la fuente
+improvisada que habia utilizado</p>
+
+<h2 id="hardware-porno">hardware porno</h2>
+
+<ul>
+<li>Intel Celeron M 380 0KB L1 cache 1MB L2 cache, 1.60 GHz, 400MHz FSB (bus)</li>
+<li>2x256MB DIMM DDR2 (expandible a 2GB)</li>
+<li>Graficas Intel GMA 900 (con 128MB de memoria compartida)</li>
+<li>Puerto VGA</li>
+<li>4 puertos USB 2.0</li>
+<li>Unidad DVD, con &ldquo;quemador&rdquo;</li>
+<li>HDD 40GB ATA/100</li>
+<li>Ethernet <sup>10</sup>&frasl;<sub>100</sub> (RJ-45) y entrada de modem (RJ-11)</li>
+<li>wifi 802.11b/g Atheros AR2413</li>
+<li>Bateria de 2000ma muerta</li>
+<li>Monitor 15&rsquo; con las bisagras corroidas, soportes rotos y el LCD recubierdo
+con una subtansia gel-osa con olor a perfume y textura desagradable</li>
+</ul>
+
+<p>lo parte superior del equipo no tuvo salvacion, aparecian nubes en el display y
+luego de unos segundos salio humo del balastro de la lampara fluoresente</p>
+
+<p>Al principio por alguna incoherencia mental, creia que el procesador era de
+400MHz (por no contar con pasta termica, no llege a verlo desnudo), pero no, eso
+es su bus de datos, asi pues ya que el equipo tiene una potencia considerable,
+&ldquo;cegarlo&rdquo; a un uso exclusivo con ttys, me parecio un desperdicio. Por otra
+parte, ni el procesador, ni la memoria disponibles son suficientes para ejecutar
+un entrorno grafico como Gnome y menos aun KDE, asi que como criterio de
+instalacion las opciones fueron tirar de xfce para abajo, y en el peor de los
+casos, directamente con un manejador de ventanas</p>
+
+<p>tambien paso la idea de probar con puppy linux, pero las ultimas versiones que
+encontre son del año pasado, asi que esa opcion la descarte, luego vi un
+proyecto de un sistema operativo hecho en ensamblador de nombre <em>minuet os</em>,
+je, y este tambien detuvo su desarrollo hace mas de un año.</p>
+
+<p>Asi que la siguente opcion fue probar con una vieja conocida</p>
+
+<h2 id="1er-distro-debian-9-1-xfce">1er Distro – Debian 9.1 (xfce)</h2>
+
+<p>l-a-a-a-a-a-a-a-g-g-g-r-r-h-h-h-h-h-h, desconosco la razon, el escritorio
+simplemente se arrastraba</p>
+
+<h2 id="2da-distro-raspbian-lxde">2da Distro – Raspbian (lxde)</h2>
+
+<p>tras la decepcion de debian con xfce, dije, ohh las raspberry son equipos con
+512MB de ram y un procesador arm de juguete, seguro que el intel (auque con mas
+de 10 años de antiguedad) puede comportarse dignamente</p>
+
+<p>instale una version para PCs y asi fue, ligeresa en forma de 70mb de ram, con
+escritorio lxde, y con chrome corriendo (su navegador preinstalado) apenas llegan
+a 220mb de ram, bastante fluido con el yutu abierto, sorprendente!</p>
+
+<p>actualice e instale todo lo necesario para utilizarla, pero encontre dos pegas
+que no pude dejar pasar, primero es estar basado en debian 8 y la segunda fue
+que su lxde no tenia escritorios, por vishnu un solo espacio de trabajo! sin escritorios
+no hay fiesta</p>
+
+<h2 id="3ra-distro-debian-9-1-mate">3ra Distro – Debian 9.1 (mate)</h2>
+
+<p>regrabe la iso (version dvd) de Debian un usb y reistale esta ves escogiendo
+Mate, tras el primer reinicio solo aparecia una pantalla en negro, y al loguear
+en un tty vi que el consumo era de 180MB, que limitaba bantante el posible uso
+de un navegador</p>
+
+<p>desde el mismo tty, ejecutando <code>startx</code>, mate iniciava sin inconvenientes y
+luego de hacer eso y con otro reinicio, desaparecieron los problemas
+graficos&hellip; pero el consumo de memoria me asusto y pase a otra cosa</p>
+
+<h2 id="4ta-distro-gnu-guix-0-13-0">4ta Distro – GNU GUIX (0.13.0)</h2>
+
+<p>hace un tiempo GNU habia presentado su propio sistema de paquetes&hellip; como para
+estandarisar la cosa o algo asi, y cuando lei de esta distro me llamo la
+atencion por (creo) ser la unica en utilizarlo</p>
+
+<p>segui la guia de su <a href="https://www.gnu.org/software/guix/">pagina oficial</a>, aunque
+al llegar al ultimo paso, algo debi hacer mal, pues regresaba un error</p>
+
+<p>me llamo la atencion que en su pagina lo consideran un sistema GNU (sin el
+linux), cosa que me agrado bastante, aunque no encontre si es que utilizan HURD
+como nucleo.</p>
+
+<p>otra cosa que encontre interesante es que durante la instalacion utilizan el
+editor <a href="https://www.gnu.org/software/zile/">zile</a>, no lo conocia, pero esta
+basado en Emacs, solo que sin las extensiones, escrito en C y ocupa un espacio
+ridiculo. Exelente si no puedes tirar de <strong>el</strong> editor, o para ediciones menores
+con un arranque instantaneo, por supuesto, zile, es otro de los otros tantos
+proyectos de proyecto GNU</p>
+
+<h2 id="5ta-opcion-freebsd-11-1">5ta Opcion – FreeBSD 11.1</h2>
+
+<p>jemmm, cuando bajen la imagen, si van a grabarla a un usb, prestar atencion a
+que la descarga termine con <strong>memstick.img</strong>, las que terminan con <em>disk</em> o
+<em>dvd</em> no arrancan si se graban en bruto con <code>dd</code> a la usb. Por habito/despiste
+intente con la imagen <em>disc</em> y efectivamente no funciono</p>
+
+<p>para la instalacion segui la <a href="https://www.linuxito.com/21-nix/435-como-instalar-freebsd-10">guia de linuxito</a>
+por desgracia, algun tipo de problema hubo con el wifi atheros y ya que
+necesitava la red para bajar unos paquetes, la instalacion no fue posible,</p>
+
+<p>al siguiente dia intente de nuevo con el cable de red, aun concluyendo la
+instalacion el problema de la red o algo extraño de un buffer saturado seguia
+lanzando amenazas. cuando descubri que en el sistema del demonio tenemos Gnome,
+kde, y xfce, decidi abandonar el mundo BSD</p>
+
+<p>me quedo con la belleza del instalador, es muy bonico, tras el primer arranque tenia
+422MB de ram libres, 1.3GB disco en uso</p>
+
+<h2 id="6to-intento-gnu-guix-de-nuevo">6to Intento – GNU GUIX (de nuevo)</h2>
+
+<p>luego de bsd, no pude resistirme a intertar de nuevo, ahora siguiendo la <a href="https://www.ochobitshacenunbyte.com/2015/09/09/guixsd-la-distro-gnu-del-futuro/">guia ochobits</a>,
+en conjunto con la oficial</p>
+
+<p>hemmn, puede enterder algo mejor y esta ocacion si monte y etiquete las
+particiones correctamente (ahora lo se), aunque nuevamente llego el fracaso al
+momento de ejecutar <code>guix system</code>.</p>
+
+<p>Una lastima</p>
+
+<h2 id="7ta-distro-parabola">7ta Distro Parabola</h2>
+
+<p>aqui tenemos el instalador mas chulo de todos, por nivel de chuleria los
+ordenaria como</p>
+
+<ul>
+<li>parabola</li>
+<li>debian (por utilidad con su modo de rescante y ser identico el modo texto al grafico)</li>
+<li>freeBSD</li>
+</ul>
+
+<p>llegando al paso de instalar el sistema base</p>
+
+<pre><code>acstrap -i /mnt base base-devel
+</code></pre>
+
+<p>aparecian varios problemas con llaves gpg, luego de varias busquedas el comando
+<code>pacman-key --refresh-key</code> (un <code>pacman-key --populate archlinux</code> en algun
+momento), luego <code>pacman -Scc</code>, mas <code>pacman -Syyu</code>&hellip; y, naahh, seguan los
+preblemas con las llaves, solo se redujo el conflicto con un solo paquete, chan
+chan char, el kernel</p>
+
+<p>tenia dos opciones, desactivar la verificacion de llaves instalando un kernel no
+firmado, o pasar al siguiente intento. Por supuesto la respuesta no es obvia,
+por un lado la verguenza de no instalar parabola y por el otro la inconciencia
+de instalar <strong>el</strong> paquete inseguro, la dificil desicion tuvo solucion al
+considerar un kernel panic y el incomodo proceso de tener que buscar informacion
+adicional con infructifero resultado: terminar la instalacion por orgullo y
+pasar con la siguiente&hellip; o no, un nuevo kernel panic, <strong>next</strong></p>
+
+<p>en serio, lo intento, parece que simplemente las particulas del universo
+comspiran en mi contra</p>
+
+<h2 id="8va-prueba-debian-9-2-lxde-net-install">8va Prueba Debian 9.2 lxde (net install)</h2>
+
+<p>la idea fue instalar debian sin nada, y haci fue. Sin saber ni que, ni como
+me quede sin red inalambrica o alambrica, no podia actualizar paquetes ni hacer
+pings, durante la instalacion el wifi iba como un campeon y al reinicio se
+olvido de contraseñas, al prabar con ethernet tampoco funcionaba. Debian es
+especial con la configuracion y no contaba con <code>ifconfig</code>, lo que encontre en
+internete tampoco lo entendi muy bien</p>
+
+<p>una instalacion mas tarde, escogiendo lxde durante esta, y con red por ethernet,
+los problemas desaparacieron, incluso se configuro el sources.list
+correctamente. Desde el modo grafico configurar la red, fue solo poner la
+contraseña y ya</p>
+
+<p>ocurrioseme un error epico mientras cambiaba bash por fish, al hacer <code>chsh</code> con
+una ruta erronea y me quede sin poder acceder como root, la solucion
+paso por arrancar con la usb de instalacion en modo rescate y modificar
+en <code>/etc/passwd</code> la ruta erronea, corregir y reiniciar. fuuhhh, sude por mi
+estupides, reinstalar debian une vez mas me daba una pereza enorme</p>
+
+<p>je, je, se supone que chsh primero verifica la ruta a la shell (en <code>/etc/shells</code>)
+antes de hacer el cambio. En el pasado varias veces me ha impedido
+cagarla, pero ahora estava en &ldquo;modo experto&rdquo; o algo</p>
+
+<p>Esta ves el consumo de inicio fue de ~100MB de ram, mas que en raspbian, pero no
+demaciado y con escritorios, yeee! ahora a configurar unas cosillas</p>
+
+<h3 id="dvorak-programmer">dvorak programmer</h3>
+
+<p>no encontre en el menu de lxde una opcion de idiomas, y una
+<a href="https://superuser.com/questions/119018/changing-keyboard-layout-to-dvorak-in-ubuntu-server">fuente de internet</a>
+me revelo el secreto para configurar el teclado</p>
+
+<pre><code>dpkg-reconfigure keyboard-configuration
+</code></pre>
+
+<p>tambien instalando el paquete <code>console-data</code> se puede configurar el teclado,
+pero si con <code>keyboard-configuration</code> te funciona, como en mi caso, mejor no
+tocar nada mas</p>
+
+<h3 id="inicio-de-secion-automatico">inicio de secion automatico</h3>
+
+<p>con ayuda de un viejo conocido (unilateralmente) pude configurar el inicio de
+secion automatico siguendo este <a href="http://unbrutocondebian.blogspot.mx/2012/10/inicio-de-sesion-automatico-sin.html">post</a></p>
+
+<p>resumiendo basta con modificar <code>/etc/lightdm/lightdm.conf</code> agregando <code>autologin-user=mi-usuario</code></p>
+
+<p>prestar atencion, por que en la referencia de el post mencionan que lxdm
+utiliza lxdm, mas en el debian 9.2, el gestor pasa a ser lightdm.</p>
+
+<h3 id="backports-tilix-y-firefox">backports (tilix y firefox)</h3>
+
+<p>primero a erradicar libreoffice que no lo ocupo para nada</p>
+
+<pre><code>apt remove --purge libreoffice*
+</code></pre>
+
+<p>luego modificamos la lista de repositorios (<code>/etc/apt/sources.list</code>) y agregamos los
+backports, copiando y pegando</p>
+
+<pre><code>deb http://deb.debian.org/debian stretch-backports main
+deb-src http://deb.debian.org/debian stretch-backports main
+</code></pre>
+
+<p>esto es para optener el glorioso y suculento tilix que no viene en los repos
+estandar, la idea tambien era  hacerse con firefox 56, parece que de momento el
+backport de firefox no esta disponible en stretch</p>
+
+<pre><code>apt update
+apt upgrade
+apt -t stretch-backports install tilix
+</code></pre>
+
+<p>lo importante es tener la terminal mas koool de todas (todas!) y por que <em>lxterminal</em> captura
+muchos atajos de emacs y no se pueden moficar (creo) lo que es un fastidio en
+toda regla</p>
+
+<h3 id="atajos">atajos</h3>
+
+<p>ja, ja, creia que lxde no tenia atajos,
+<a href="https://daveden.wordpress.com/2012/09/21/lubuntu-keyboard-shortcuts-cheat-sheet/">aqui</a>
+una lista con ellos</p>
+
+<p>pero lo sabroso esta en configurarlos a gusto para ello segui este <a href="https://monstruosoft.wordpress.com/2016/01/25/configurar-atajos-lxde/">otro post</a></p>
+
+<p>en resumen el &ldquo;truco&rdquo; es modificar un fichero en nuestro home ==&gt; <code>~/.config/openbox/lxde-rc.xml</code></p>
+
+<p>y una vez listo, llamar como usuario de a pie a openbox con <code>openbox --reconfigure</code></p>
+
+<p>como nota y para no investigar demasiado</p>
+
+<ul>
+<li><code>Prior</code> == RePage</li>
+<li><code>Next</code> == UpPage</li>
+<li><code>KP_[0-9]</code> == pad numerico</li>
+<li><code>KP_Subtract</code> == el &ldquo;menos&rdquo; del pad numerico</li>
+<li><code>KP_Multiply</code> == el &ldquo;mas&rdquo; del pad numerico</li>
+<li><code>space</code> == barra espaciadora</li>
+<li><code>Return</code> == enter</li>
+<li><code>S</code> == Shift</li>
+<li><code>C</code> == Control</li>
+<li><code>A</code> == Alt</li>
+<li><code>W</code> == Super</li>
+<li><code>M</code> == Meta</li>
+<li><code>H</code> == Hyper</li>
+</ul>
+
+<p>una gozada ese fichero de configuracion de lxde, aunque algunos cambios como
+agregar 10 escritorios, solo surgieron efecto al reiniciar</p>
+
+<h2 id="next">next</h2>
+
+<p>en la bandeja de distros dejo <strong>Uruk</strong> y <strong>Gentoo</strong>, (por fin con dos equipos
+intentar con gentoo o arch carese de riesgo), aunque de momento no pienso mover
+mas</p>
+
+<p>quedan pendientes hacer una modificacion al mapeo de teclado del sistema para lo
+que hay que hacer una investigacion de donde demonios toma las mapeos debian,
+pues en esta ocacion no los encontre en su localizacion habitual</p>
+
+<p>el consumo final inicial de ram, con tilix corriendo, ronda los 140MB y con un
+navegador y algunas pestañas los 260-320MB, algo por demas expectacular</p>
+
+<p>el ultimo inconveniente pendiente es un &ldquo;ruido de lineas&rdquo; que aparece en el
+video, probablemente sea cosa de hardware, no lo se, y mientras funcione o no me
+ponga ocioso, hay se queda</p>
+
+<p>larga vida y prosperidad, a ese (medio) portatil que funciona con el kernel libre y sin
+pedir nada para la wifi!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/prog/gomark/">◀ benchmarks dentro de un programa en go</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(26)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(20)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/ramen">ramen(11)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(10)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(10)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(8)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(5)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(4)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/go">go(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

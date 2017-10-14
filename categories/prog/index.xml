@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Fri, 06 Oct 2017 21:03:55 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 14 Oct 2017 12:38:00 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/categories/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The X86 Strikes Back</title>
+      <link>http://nasciiboy.github.io/prog/the-x86-strikes-back/</link>
+      <pubDate>Sat, 14 Oct 2017 12:38:00 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/the-x86-strikes-back/</guid>
+      <description>bueno, la imagen es mas de 8bits que por ahora son los equipos retro-nostalgicos de moda, ya le llegara su momento a x86.
+Esta historia trata de como pase (sin querer) de considerar obsoleto el hardware x86, pidiendo que todos eses equipos entregasen su silicio al mundo, a creer que aun son equipos potables para su uso diario o en el peor de las casos para utilizarlos como instrumentos de iniciacion en el heretico culto de Emacs, las ttys y la &amp;ldquo;verdadera&amp;rdquo; programacion</description>
+    </item>
     
     <item>
       <title>benchmarks dentro de un programa en go</title>
