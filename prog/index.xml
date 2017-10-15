@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Sat, 14 Oct 2017 12:38:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 14:52:46 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Que es Morg? [Redux]</title>
+      <link>http://nasciiboy.github.io/prog/morg-redux/</link>
+      <pubDate>Sun, 15 Oct 2017 14:52:46 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/morg-redux/</guid>
+      <description>(el cuadro superior izquierdo, es una version colareada con gimp, el resto son capturas reales. Lo de redux, no es por ser un video que ha tirado el yutu y se ha resivido, mas bien, es una actualizacion de un post anterior, al que no queria cambiar la fecha, cosa que modificaria el mapa del sitio, ademas, queria hacer propaganda por el feed)
+que es morg?
+el nombre de otro sistema de documentacion de marcas ligeras, basado en otros sistemas de documentacion (de marcas ligeras)</description>
+    </item>
     
     <item>
       <title>The X86 Strikes Back</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/prog/morg-redux/</loc>
+    <lastmod>2017-10-15T14:52:46-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/the-x86-strikes-back/</loc>
     <lastmod>2017-10-14T12:38:00-05:00</lastmod>
   </url>
@@ -466,7 +471,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/morg/</loc>
-    <lastmod>2017-10-06T17:33:57-05:00</lastmod>
+    <lastmod>2017-10-15T14:52:46-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -496,13 +501,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2017-10-14T12:38:00-05:00</lastmod>
+    <lastmod>2017-10-15T14:52:46-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2017-10-14T12:38:00-05:00</lastmod>
+    <lastmod>2017-10-15T14:52:46-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -586,7 +591,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-10-14T12:38:00-05:00</lastmod>
+    <lastmod>2017-10-15T14:52:46-05:00</lastmod>
     <priority>0</priority>
   </url>
   
