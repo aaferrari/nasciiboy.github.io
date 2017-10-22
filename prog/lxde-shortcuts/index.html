@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>lxde shortcuts</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>lxde shortcuts</h1>
+  
+
+<p><img src="http://nasciiboy.github.io/img/clouds_battle_by_arsenixc.png" alt="" /></p>
+
+<p>A Gnome ♥ lo que pida! Mas, si el equipo es incapas de cumplir sus exigencias
+para una experiencia completa (contar con un procesador con 2 nucleos,
+2 monitores y 3GB de ram), mejor optar por un entorno poco exigente en sus
+recursos</p>
+
+<p>asi pues en una laptop limitada con 10 años en su historia (32bits con 512MB
+ram) el balance ideal (segun varias prubas) fue debian 9 con lxde, que, no solo
+consigue regresar de la vida al equipo, tiene la potencia suficiente como para
+ejecutar un navegador <em>consumista</em> moderno, varias terminales, editor, fluidez
+con los videos e incluso ejecutar varios emuladores, todo con un sistema
+actualizado, moderno y libre</p>
+
+<p>Pero bueno, Gnome, con su elegancia y minimalismo ha influido bastante en la
+forma como interactuo con el pc, que es basicamente estar con los dedos pegados
+al teclado, con atajos para cualquier cosa precindiendo perfectamente del
+teclado, exepto, claro esta, cuando se utiliza el navegador o aplicaciones
+graficas para aficionados&hellip; como dirian en la guia de parabola o gentoo, ya no
+recuerdo cual era</p>
+
+<p>Sobra (aunque tengo necesidad de) decir que desprecio los docks, widgets y
+barras, razon fundamental por la que nunco me he sentido comodo con KDE, o dicho
+de otro modo los temas ni cambiar el fondo de pantalla (una vez colocada la
+imagen de portada con la que llebo 3 años) son relevantes</p>
+
+<p>Otro aspecto que ha influido bastante en la interaccion con el entorno grafico
+es contar con un teclado de 105 teclas y el mapeo en programmer dvorak
+(en).</p>
+
+<p>En la mayoria de mapeos del teclado los numeros se encuentra en la &ldquo;primer
+fila&rdquo; (sobre las letras) y al presionar shift se accede a los &ldquo;simbolos&rdquo;. En
+cambio en programmer dvorak, los simbolos tienen el protagonismo y los numeros
+se acceden con el shift, uno u otro pero no ambos&hellip; y&hellip; un teclado con con pad
+numerico sienta perfectamente a tal distribucion, pues por un sitio protagonizan
+los simbolos, y ademas en el lateral tenemos los numeros cuando es necesario
+dedicarse a ellos, encima se puede hacer perfectamente con una sola mano.</p>
+
+<p>Para no subutilizar el pad a una sola mision, en este he establecido la
+interaccion con los escritorios: mover a un espacio, mover una ventana a un
+espacio, maximizar o minimizar ventanas.</p>
+
+<p>Toda esta personalizacion me convienten en un <em>memo</em> fuera de mis equipos, mas
+dentro de ellos fluyo libremente, como ningun otro usuario en otros sistemas
+podria hacerlo</p>
+
+<p>Entonces pues, es posible transaladar la experienca gnomera a lxde?</p>
+
+<p><strong>no</strong>, pero se aproxima. No, por que no cuenta con la vista <strong>overview</strong>, que
+es marca distintiva del nomo, ni tampoco por rendimiento convendria utilizar
+todas las aplicaciones nome en lxde, aunque al menos puedo emular mi
+configuracion de atajos maestros en este e imaginar que su lanzador de
+aplicaciones es como el lanzador con la tecla Super</p>
+
+<h2 id="shortcuts">Shortcuts</h2>
+
+<p>por motivos internos de lxde (en debian 9) que desconosco, utiliza openbox,
+que sugun su <a href="http://openbox.org/wiki/Main_Page">wiki</a>:</p>
+
+<blockquote>
+<p>Openbox es un administrador de ventanas altamente configurable. Le permite
+cambiar casi todos los aspectos de su interacción con su escritorio e inventar
+formas completamente nuevas de usarlo y controlarlo. Puede ser como un
+videojuego para controlar ventanas. Pero Openbox también se puede mantener
+extremadamente simple, ya que está en la configuración predeterminada, lo que
+significa que puede adaptarse a casi cualquier persona. Openbox te da el control
+sin obligarte a hacer todo.</p>
+</blockquote>
+
+<p>y (asta donde entiendo) se encarga de administrar donde aparecen, como y el
+aspecto de las ventadas</p>
+
+<p>para personalizar el teclado y algunas funciones mas, debemos modificar el
+fichero <code>~/.config/openbox/lxde-rc.xml</code>, una vez realizados los cambios se
+aplican ejecutando como usuario <code>openbox --reconfigure</code>.</p>
+
+<p>el fichero en cuestion, como puede deducirse por su extension, es solo un xml
+especializado, donde cada etiqueta tiene un significado predefinido, y debe
+aparecer en un orden concreto. En su wiki tenemos una lista de <a href="http://openbox.org/wiki/Help:Actions">acciones
+disponibles</a> y tambien nombes de (algunos)
+&ldquo;<a href="http://openbox.org/wiki/Help:Bindings">eventos</a>&rdquo; del raton y teclado</p>
+
+<p>de momento mi fichero de configuracion es <a href="http://nasciiboy.github.io/data/lxde-rc.xml">este</a>, aqui los
+aspectos mas revelantes</p>
+
+<pre><code>  &lt;desktops&gt;
+    &lt;number&gt;10&lt;/number&gt;
+    &lt;firstdesk&gt;1&lt;/firstdesk&gt;
+    &lt;names&gt;
+      &lt;name&gt;A&lt;/name&gt;
+      &lt;name&gt;B&lt;/name&gt;
+      &lt;name&gt;C&lt;/name&gt;
+      &lt;name&gt;D&lt;/name&gt;
+      &lt;name&gt;E&lt;/name&gt;
+      &lt;name&gt;F&lt;/name&gt;
+      &lt;name&gt;G&lt;/name&gt;
+      &lt;name&gt;H&lt;/name&gt;
+      &lt;name&gt;I&lt;/name&gt;
+      &lt;name&gt;J&lt;/name&gt;
+      &lt;name&gt;K&lt;/name&gt;
+      &lt;name&gt;L&lt;/name&gt;
+    &lt;/names&gt;
+    &lt;popupTime&gt;875&lt;/popupTime&gt;
+    &lt;!-- The number of milliseconds to show the popup for when switching
+       desktops.  Set this to 0 to disable the popup. --&gt;
+  &lt;/desktops&gt;
+</code></pre>
+
+<p>esto viene a decir, que quiero tener 10 escritorios, a cada uno le he puesto un
+nombre que es una letra del abecedario y que el primer escritorio es el
+primero&hellip;</p>
+
+<p>mas adelante el fichero cuenta con una etiqueta <code>&lt;keyboard&gt;</code> donde se colocan
+todos los atajos que vallamos a definir</p>
+
+<pre><code>&lt;keybind key=&quot;W-Prior&quot;&gt;
+  &lt;action name=&quot;DesktopLeft&quot;&gt;
+    &lt;dialog&gt;no&lt;/dialog&gt;
+    &lt;wrap&gt;no&lt;/wrap&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+&lt;keybind key=&quot;W-Next&quot;&gt;
+  &lt;action name=&quot;DesktopRight&quot;&gt;
+    &lt;dialog&gt;no&lt;/dialog&gt;
+    &lt;wrap&gt;no&lt;/wrap&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-Prior&quot;&gt;
+  &lt;action name=&quot;SendToDesktopLeft&quot;&gt;
+    &lt;dialog&gt;no&lt;/dialog&gt;
+    &lt;wrap&gt;no&lt;/wrap&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-Next&quot;&gt;
+  &lt;action name=&quot;SendToDesktopRight&quot;&gt;
+    &lt;dialog&gt;no&lt;/dialog&gt;
+    &lt;wrap&gt;no&lt;/wrap&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+</code></pre>
+
+<p>esta seccion es para moverme &ldquo;secuencialmente&rdquo; entre los escritorios con <em>Super</em>
+y <em>Page Up/Down</em>. En caso de querer mover una ventana a el escritorio
+sugiente/anterior la combinacion se repite pero agregrando la tecla <em>Alt</em></p>
+
+<pre><code>&lt;keybind key=&quot;W-KP_7&quot;&gt;&lt;action name=&quot;Desktop&quot;&gt;&lt;desktop&gt;1&lt;/desktop&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_8&quot;&gt;&lt;action name=&quot;Desktop&quot;&gt;&lt;desktop&gt;2&lt;/desktop&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_9&quot;&gt;&lt;action name=&quot;Desktop&quot;&gt;&lt;desktop&gt;3&lt;/desktop&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_4&quot;&gt;&lt;action name=&quot;Desktop&quot;&gt;&lt;desktop&gt;4&lt;/desktop&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_5&quot;&gt;&lt;action name=&quot;Desktop&quot;&gt;&lt;desktop&gt;5&lt;/desktop&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_6&quot;&gt;&lt;action name=&quot;Desktop&quot;&gt;&lt;desktop&gt;6&lt;/desktop&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_1&quot;&gt;&lt;action name=&quot;Desktop&quot;&gt;&lt;desktop&gt;7&lt;/desktop&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_2&quot;&gt;&lt;action name=&quot;Desktop&quot;&gt;&lt;desktop&gt;8&lt;/desktop&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_3&quot;&gt;&lt;action name=&quot;Desktop&quot;&gt;&lt;desktop&gt;9&lt;/desktop&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_0&quot;&gt;&lt;action name=&quot;Desktop&quot;&gt;&lt;desktop&gt;10&lt;/desktop&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-KP_7&quot;&gt;&lt;action name=&quot;SendToDesktop&quot;&gt;&lt;to&gt;1&lt;/to&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-KP_8&quot;&gt;&lt;action name=&quot;SendToDesktop&quot;&gt;&lt;to&gt;2&lt;/to&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-KP_9&quot;&gt;&lt;action name=&quot;SendToDesktop&quot;&gt;&lt;to&gt;3&lt;/to&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-KP_4&quot;&gt;&lt;action name=&quot;SendToDesktop&quot;&gt;&lt;to&gt;4&lt;/to&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-KP_5&quot;&gt;&lt;action name=&quot;SendToDesktop&quot;&gt;&lt;to&gt;5&lt;/to&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-KP_6&quot;&gt;&lt;action name=&quot;SendToDesktop&quot;&gt;&lt;to&gt;6&lt;/to&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-KP_1&quot;&gt;&lt;action name=&quot;SendToDesktop&quot;&gt;&lt;to&gt;7&lt;/to&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-KP_2&quot;&gt;&lt;action name=&quot;SendToDesktop&quot;&gt;&lt;to&gt;8&lt;/to&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-KP_3&quot;&gt;&lt;action name=&quot;SendToDesktop&quot;&gt;&lt;to&gt;9&lt;/to&gt;&lt;/action&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-A-KP_0&quot;&gt;&lt;action name=&quot;SendToDesktop&quot;&gt;&lt;to&gt;10&lt;/to&gt;&lt;/action&gt;&lt;/keybind&gt;
+</code></pre>
+
+<p>aqui se ha definido una combinacion especifica para cada uno de los 10
+escritorios, conseptualmente el primero esta en la tecla <strong>7</strong> del pad numerico,
+y se deciente de izquierda derecha hasta llegar al 0. La combinacion para ir a
+un escritorio es <em>Super</em> + su numero del pad numerico. Para enviar una ventana a
+un escritorio se agrega la tecla <em>Alt</em></p>
+
+<pre><code>&lt;keybind key=&quot;W-d&quot;&gt;&lt;action name=&quot;ToggleShowDesktop&quot;/&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-q&quot;&gt;&lt;action name=&quot;Close&quot;            /&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-f&quot;&gt;&lt;action name=&quot;ToggleFullscreen&quot; /&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_Subtract&quot;&gt;
+  &lt;action name=&quot;Lower&quot;/&gt;
+  &lt;action name=&quot;FocusToBottom&quot;/&gt;
+  &lt;action name=&quot;Unfocus&quot;/&gt;
+&lt;/keybind&gt;
+&lt;keybind key=&quot;W-KP_Multiply&quot;&gt;
+  &lt;action name=&quot;ToggleMaximizeFull&quot;/&gt;
+&lt;/keybind&gt;
+</code></pre>
+
+<ul>
+<li>Super + d, para ocultar/mostrar todas las ventanas</li>
+<li>Super + q, cerrar ventana</li>
+<li>Super + f, ventana a pantalla completa</li>
+<li>Super + <code>*</code> (pad numerico), maximizar ventana</li>
+<li>Super + <code>-</code> (pad numerico), minimizar ventana</li>
+</ul>
+
+<pre><code>&lt;keybind key=&quot;W-space&quot;    &gt;&lt;action name=&quot;NextWindow&quot;/&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-BackSpace&quot;&gt;&lt;action name=&quot;NextWindow&quot;/&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;A-Tab&quot;      &gt;&lt;action name=&quot;NextWindow&quot;/&gt;&lt;/keybind&gt;
+&lt;keybind key=&quot;W-Return&quot;   &gt;&lt;action name=&quot;PreviousWindow&quot;/&gt;&lt;/keybind&gt;
+</code></pre>
+
+<p>he, he, esto son cuatro combinaciones distintas para cambiar entre ventanas,
+Super + espacio (la preferida), Super + Enter, Super + Retroceso y el clasico Alt + tab&hellip;
+para que? para que sin importar la posicion del teclado o cual mano tengo
+ocupada (heee? ｢(ﾟﾍﾟ)), pueda hacer el cambio entre ventanas, no se, lo veo
+indispensable!</p>
+
+<pre><code>&lt;keybind key=&quot;A-F2&quot;&gt;
+  &lt;action name=&quot;Execute&quot;&gt;
+    &lt;command&gt;lxpanelctl run&lt;/command&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+&lt;keybind key=&quot;C-Escape&quot;&gt;
+  &lt;action name=&quot;Execute&quot;&gt;
+    &lt;command&gt;lxpanelctl menu&lt;/command&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+    &lt;keybind key=&quot;A-F1&quot;&gt;
+      &lt;action name=&quot;ShowMenu&quot;&gt;
+        &lt;menu&gt;client-menu&lt;/menu&gt;
+      &lt;/action&gt;
+    &lt;/keybind&gt;
+&lt;keybind key=&quot;A-C-Delete&quot;&gt;
+  &lt;action name=&quot;Execute&quot;&gt;
+    &lt;command&gt;lxsession-logout&lt;/command&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+</code></pre>
+
+<p>basicamente abrir el lanzador de comandos de lxde, como un substituto al
+<strong>Super</strong> gnomero, abrir el (desfasado) menu de apliciones, el menu de las
+ventanas y que aparesca el menu de sesion con Ctrl + Alt + Suprimir</p>
+
+<pre><code>&lt;keybind key=&quot;W-h&quot;&gt;
+  &lt;action name=&quot;Execute&quot;&gt;
+    &lt;command&gt;tilix&lt;/command&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+&lt;!-- Keybindings for running applications --&gt;
+&lt;keybind key=&quot;W-e&quot;&gt;
+  &lt;action name=&quot;Execute&quot;&gt;
+    &lt;command&gt;emacs&lt;/command&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+&lt;keybind key=&quot;W-u&quot;&gt;
+  &lt;action name=&quot;Execute&quot;&gt;
+    &lt;command&gt;emacs&lt;/command&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+&lt;!-- Keybindings for finding files --&gt;
+&lt;keybind key=&quot;W-x&quot;&gt;
+  &lt;action name=&quot;Execute&quot;&gt;
+    &lt;command&gt;pcmanfm&lt;/command&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+&lt;!--keybindings for LXPanel --&gt;
+&lt;keybind key=&quot;W-z&quot;&gt;
+  &lt;action name=&quot;Execute&quot;&gt;
+    &lt;command&gt;firefox&lt;/command&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+</code></pre>
+
+<p>y finalmente atajos para emacs, tilix, el navegador de ficheros y firefox, que
+es lo basico del dia a dia, jo, olvide el evince para los documentos (Super +
+v) y ahora que lo veo de nuevo, revisar si los dos super se llaman super o uno
+es Super derecho, je, je, el teclado de &ldquo;asuntos emergentes&rdquo; no tiene dos super,
+comprobacion pendiente.</p>
+
+<p>El archivo cuenta con configuraciones extra que pueden ejecutarse incluso segun
+&ldquo;el contexto&rdquo; (ventana) actual y tambien define las acciones del raton y el
+aspecto de ventanas, aunque esos parametros los deje tal cual.</p>
+
+<p>Y esto es todo, aun queda pendiente personalizar el mapeo de teclado, aunque eso
+aun no descubro como se realiza apropiadamente, Sayonara!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/prog/morg-redux/">◀ Que es Morg? [Redux]</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(28)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(20)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/howto">howto(11)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(11)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(10)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(9)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(6)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(4)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/go">go(1)</a></li><li><a href="http://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
