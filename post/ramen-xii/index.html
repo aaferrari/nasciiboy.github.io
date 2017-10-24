@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XII – this is it</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+
+  <h1>Ramen XII – this is it</h1>
+  
+
+<p><img src="http://nasciiboy.github.io/img/colorful.jpg" alt="" /></p>
+
+<blockquote>
+<p>(Colorful) Va sobre degenerados y depravados vírgenes que se ponen palote mirando un
+escote o un buen culo</p>
+</blockquote>
+
+<p>ja, ja, ja, degenerado y depravado&hellip; que fuerte, sera un invento del patriarcado
+falogocentrico psicologico monoteista como mecanismo de control de masas?</p>
+
+<p>Continuando con &ldquo;la vida del programador&rdquo;, me puse a estudiar <strong>J-A-V-A</strong>, aquel
+innombrable que me jure no aprender jamas por mi orgullo y dignidad&hellip;</p>
+
+<p>me justificare diciendo que de momento estoy aprendiendo matematicas para
+enterder los libros &ldquo;serios&rdquo; y mientras tanto como me hace falta conocer como se
+diseñån cosas grandes, programar codigo limpio, patrones, objetos y esas
+mierdas, asi pues a aprender el lenguaje donde sobran libros (en español) de esos
+temas y como java es el rey de esos asuntos pues a joderse con la peste
+<em>empresarial</em> del java, del Java 2 para ser especifico con el libro <strong>Piensa en
+Java</strong> (2da edicion) de Bruce Eckel</p>
+
+<p>Las razones de escoger el libro tan antiguo de epocas del netscape, fue por que
+no encontre la 4ta edicion. En la red recomiendan ese libro y aunque no del
+todo Eckel me cae bien desde que lei el Piensa en C++ (volumen I), en aquel
+momento su codigo me parecia poesia, veremos si esto sigue asi, ademas las
+criticas al inicio del libro lo ponian como material mas bueno que los tomos de
+Evangelion, ya veremos</p>
+
+<p>Lenguajes de guiones (scripting), Conectables (plug-ins), IGUs (GUIs), muero de
+risa con muchos terminos que han utilizado en la traduccion, jo, jo, jo, con
+estos libros antiguos dan ganas de programar software de gestion! (o no)</p>
+
+<p>Gracias a este material, por fin entiendo que demonios son los hilos en la
+programacion y como esto tambien existe en los procesadores mononucleo, tambien
+me entere de que es UML, un poco (poco) de que son los applets y los servlets, y
+descubri cual es mi <em>modo de trabajo</em>: &ldquo;modo vacacion&rdquo;, en el que no se impone
+ninguna estructura en el proceso de desarrollar el trabajo, o puesto de otra
+manera <em>se hara cuando se haga</em></p>
+
+<p>asta ahora con 197(/958) paginas , todo es fluido e interesante, aunque el autor da por
+hecho que el lector esta iniciado en C o con alguno de sus decendientes.</p>
+
+<p>La herencia directa de C y C++ se nota sobremanera en Java, por lo que lo
+encuentro comodo&hellip; quitando el asunto que cada clase tiene su fichero y este
+debe llebar el nombre preciso de la clase y que el interprete carga y ejecuta
+las clases&hellip; bueno, esto ultimo es perturbardor.</p>
+
+<p>ufff tener mono sentencias sin llaves, (pre|in)cremento y estilo &ldquo;libre&rdquo; y
+el operador ternario es una puta gozada pero a estas alturas la inicializacion
+vervosa, punto y coma y los parentesis en los (for|if|while)s resultan añejos</p>
+
+<p>Distinto el apartado sobre documentacion del codigo es. Su lenguaje de marcas
+puede llegar a colar, aunque el aceptar html puro y duro apesta, je, je,
+novatos!</p>
+
+<p>Seguramente no programare nada en java mas alla de conocer sus modismos lo
+suficiente para tener idea sobre que dicen muchos libros con este lenguaje, es
+fenomenal ver el recorrido de los lenguajes. De ves en cuando en r/programming
+cuando se toca Go suelen aparecer sujetos que lo tachan de ser un lenguaje para
+tontos, recorriendo esto del java he podido entender mas a profundidad su diseño
+y la genialidad silenciosa que contiene</p>
+
+<h2 id="fonos">fonos</h2>
+
+<p>ja, ja, ja, no se desde cuando pero tenia <strong>moc</strong> (mi reproductor de musica) en
+mono y no me daba cuenta, bueno, si, pero como decia <strong>STEREO</strong>, creia que era
+cosa mia, asi que cuando reproduci musica en otro programa quede atonito ante el
+sonido. No hay color entre el mono y estereo! entonces corri al moc a descubrir
+el engaño, resulta que con <code>J</code> el equalizador se pone en modo de mezcla
+mono&hellip; y presionando <code>J</code> de nuevo regresa a estereo.</p>
+
+<p>Hay alegria por una parte, pues todo suena tan <strong>a-s-o-m-b-r-o-s-o</strong> como para
+desear reescuchar mi coleccion completa. Por el otro lado, no puedo creer el timo
+de melomano que estoy hecho, como un fancy del te al que le cambian su bebida
+con agua de grifo y al beber expresa lo bueno que esta! ja, ja, ja!</p>
+
+<p><strong>Paul McCartney</strong>, Su album <strong>Off The Ground</strong> me parecia malillo tirando a
+descartable, aunque el track <em>Hope Of Deliverance</em> me encanta&hellip; y por pereza
+de cambiar a otra cosa terminaba por escuchar el resto de pistas una y otra vez,
+al grado que por mera repeticion, termino por gustarme.</p>
+
+<p>Luego pase a <strong>Driving Rain</strong> que no habia escuchado y tambien encontre calidad,
+eso o ya me habia acostrumbrado a su sonido, ho, ho, ho, por si no la habia
+mencionado antes, el Paul es mi beatle faborito, por que, me simpatiza mas que
+el lennon, no estoy seguro si tambien que harrison y por que su discografia es
+extensa y en general buena (quitando un unfumable periodo, koff, 80&rsquo;s, koff)</p>
+
+<p>el ultimo disco que le escuche antes de saltar a otro estilo fue <strong>Flowers In
+The Dirt</strong> (opinion: los musicalmente horribles 80&rsquo;s). Con este acumulo 19
+discos escuchados del Paul, mis faboritos los primeros, en especial <strong>Ram</strong> y <strong>Red
+Rose Speedway</strong>, dejo uno pendiente y bastantes mas por descargar</p>
+
+<p><strong>If These Trees Could Talk</strong> (Red Forest), segun un video yutuvero, esto es
+post rock, osease rock, con toques progresivos aderesado con cosas &ldquo;indie&rdquo; que
+puede ser, o interesante, o softnifero</p>
+
+<p>dirigioseme al enlace donde se encontraba el album &ldquo;en video&rdquo; (je) desde el
+dispositivo androide con audio malillo&hellip; para mi sorpresa sonaba mas que
+intereante. Luego lo encontre en torrente, pero solo en calidad mp3, je, no debe
+gustarle a mucha gente.</p>
+
+<p>Tras unas cuantas eschuchas debo confirmar que me ha gustado, no lo suficente
+como para quemar cohetes, pero me ha gustado, suelo tener problemas con este
+tipo de musica cuasi ambiental, bueno no en este caso, pista a pista crea una
+&ldquo;historia&rdquo; entretenida, pero aun le falta para estar al nivel de Lorenso Monni
+con su exepcional <em>Grey Swans of Extremistan</em>! (juro solemnemente que algun dia
+recuperare ese album, aunque sea en digital)</p>
+
+<p><strong>Chemical Brothers</strong> Hay que estar en con el humor adecuado para disfrutar
+este sonido electro-pastillero, Exit Planet Dust, Dig Your Own Hole, Surrender y
+Come With Us estan chulos, con Push the Button, We are the Night, Brotherhood y
+Further veo algo de poperismo, no se, quiza sean para un mood distinto</p>
+
+<pre><code>magnet:?xt=urn:btih:f11b17f92f17fe937bc0226ba195eca559c5c6d2&amp;dn=Chemical%20Brothers&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce
+</code></pre>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>IT</strong> en varios podcast decian que era buena, aunque la opinion global distaba
+del consenso. En esos mismos programas resaltaban el enfoque cutre que tenia con
+el terror</p>
+
+<p>esperaba algo superior a la media, incluso me plantee ver la duologia cuando estubiera
+completa, pero sedi a la tentasion.</p>
+
+<p>En esta cinta no hay terror alguno, solo muñecos que se mueven extraño a
+saltando varios cuadros, aderesados por sonidos (que no musica) muuuuuy fuerte,
+pero bueno, seguro no era para mi, si eres un adolecente con poca trayectoria la
+encontraras entretenida, visualmente esta bien, esepto todo lo relacionado con
+IT, no veo su ascendencia sobrenatural, aunque si lo tubiera en frente dudaria
+entre salir por patas o apalearlo.</p>
+
+<p><strong>Wonder Woman</strong> &hellip; Shena lo haria mejor</p>
+
+<p><strong>Tsurezure Children</strong>, es una serie de episodios cortos (10min) dividida en
+episodios cortos, que vienen a ser la declaracion romantica que en muchos animes
+tipo harem nunca aparece, y ya, eso es todo. Vi 3 episodios, fueron entretenidos</p>
+
+<p><strong>eromanga sensei</strong> mmmmhhzzzzzzZZZZZZ&hellip;. un anime de &ldquo;imotos&rdquo; mas elaborado de
+lo habitual (supongo), vi 4 episodios y salte al final, nop, no pasa
+nada. Animacion decente; entretenida si no has visto mucho o el morbo te
+puede&hellip; y aunque cualquier tema apropiadamente tratado puede ser morboso,
+entretenido, obsesivamente incomodo, este material no lo es (para mi), ni creo que
+contenga el enfoque apropiado.</p>
+
+<p>Hubo una vez algo que vi no relacionado con esta tematica, que hacia acelerar mi
+corazon mientras cuestionaba mi mas profundas creencias
+a-C-a-d-a-C-a-p-i-t-u-l-o, pero el nombre de esa obra, no se lo dire a nadie,
+nunca, nunca, n-u-n-c-a&hellip; bueno si&hellip; <strong>nunca!</strong></p>
+
+<p><strong>Blade Runner 2049</strong> oohhhh, cada fotograma da para un poster, un desarrollo
+paciente aunque no se si en realidad termina por contar algo&hellip; puede existir
+duda alguna sobre la naturaleza de organismos artificiales roboticos(?) fisica y
+mentalmente superiores? no lo entiendo, para que hacer estos seres &ldquo;carnales&rdquo;?</p>
+
+<p>Pero bueno, sea artificialmente profunda o no, se agradece que exista este tipo
+de obras, con sus cosas de autor y presupuestos elevados, guste o no, es un
+respiro entre el monton de material desechable</p>
+
+<p><strong>Baby Driver</strong> wooooorrgggg! El trailer del cine no le hacia justicia! que
+frustracion, por falta de prespuesto no la pude ver en el templo, sin duda
+alguna el novamas de esta entrega, vision obligatoria!</p>
+
+<pre><code>magnet:?xt=urn:btih:2277a81195f880427f8d1f92a54a2fea7e040862&amp;dn=Baby.Driver.2017.HDRip.XviD.AC3-EVO&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969
+</code></pre>
+
+<p><strong>Colorful</strong> uhff, una serie de episodios cortos (10min) de los cuales el
+torrente incluia solamente 4 (el actual ya trae los 16), que de que van?
+cortos experimentales con estilo videoclip noventero muy loco explorando (y
+quiza rindiendo homenaje a) la naturaleza pajillera del genero masculino</p>
+
+<pre><code>magnet:?xt=urn:btih:9725ea53bee7e54ef08fa06682fd6b9430271325&amp;dn=%5bEUR%5d_Colorful&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+</code></pre>
+
+<p><strong>Colorful</strong> (pelicula 2010) por sorpresa esto no tiene ve que ver con lo
+anterior, aqui tenemos un drama manipulador sobre el suicidio, eso del valor de
+la vida, la amistad, aceptar a la gente y cosas del estilo.</p>
+
+<p>El anime tiene mucha rotoscopia e imagen real con animacion sobrepuesta que sin
+ser ni de cerca lo bestial de <strong>kuromonagatari</strong>, me gusta mucho, sera por
+presupuesto o por lo que sea, pero se nota el mimo y dedicacion otaku de sus
+creadores que seguro saldran en alguna secuencia</p>
+
+<p><strong>Black Magic M-66</strong> Esto es una ova del año 1987 basado en un manga con toques
+militares que seguramente nunca leere. Pues eso, buena animacion añeja muy
+interesante, con una historia pasable entre rambo, alien y terminator</p>
+
+<p><strong>Made in Abyss</strong> Luego de varias semanas esperando una recoleccion batch de los
+episodios, toca lanzarse a buscar por otro lado</p>
+
+<p>Mucho mucho mimo hay aqui, peroooooo es dificil identificar para quien es esto,
+una serie infantil de exploracion? un drama intrigante con exploracion? gore
+bonito con desarrollo? para quien va, pasaban los episodios y seguia sin
+enganchar, solo los ultimos 2 episodios me resultaron absorventes</p>
+
+<p>en fin si hay poco material darle una oportunidad, aunque si no hay prisa
+esperar a que salga una segunda temporada para evaluar su visionado</p>
+
+<p><strong>Aho Girl</strong> para concluir algo de humor japo otaku consiso, concentrado y con bananas</p>
+
+<pre><code>magnet:?xt=urn:btih:b2689a3e844c4790c8ca0f1c4d0b9902c97a4f35&amp;dn=%5bPuyaSubs!%5d%20Aho%20Girl%20%5bBatch%5d&amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+</code></pre>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/post/ramen-xi/">◀ Ramen XI – Spaghetti</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(28)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(21)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(4)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/howto">howto(11)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(11)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(10)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(9)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(6)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(4)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/">(1)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/go">go(1)</a></li><li><a href="http://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
