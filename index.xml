@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Tue, 24 Oct 2017 10:55:56 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 27 Oct 2017 16:58:55 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Raptor Down</title>
+      <link>http://nasciiboy.github.io/prog/raptor-down/</link>
+      <pubDate>Fri, 27 Oct 2017 16:58:55 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/raptor-down/</guid>
+      <description>El Conteo Final De los pocos proyectos presentables que tengo, la libreria de expresiones regulares (estilo) &amp;ldquo;raptor&amp;rdquo; contiene lo suficiente de mi&amp;hellip; que aun si el fastidio se presentara mañana y dejara de programar, seria suficiente para sentirme satisfecho
+incluso inclui algunas caracteristicas &amp;ldquo;avanzadas&amp;rdquo; (no regexp) de otros motores, por ejemplo una exprecion texto.*mas-texto en raptor era texto(mas-texto)*#!mas-texto, algo que denomine como negacion de expresiones
+perooo, la negacion de expresiones requeria romper con la sencilles de la libreria (o motor o como se diga).</description>
+    </item>
     
     <item>
       <title>Ramen XII – this is it</title>

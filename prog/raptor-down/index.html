@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Fonos</title>
-    <link href="http://nasciiboy.github.io/tags/fonos/index.xml" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <title>Raptor Down</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
     <style>:root {
 
     --BGC      : #000000;
@@ -188,94 +188,117 @@ img:hover { border: 0.05em solid #fff; }
   <body>
     
 <main>
-  <article class="index">
-    
-    
-    
-    
-  </article>
-  
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>Raptor Down</h1>
   
 
-  <ul class="nav">
-    
-    <li><a href="http://nasciiboy.github.io/apt/">apts</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/emacs/">emacs</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/love2d/">love2ds</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/post/">posts</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/prog/">progs</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/vg/">vgs</a></li>
-    
-  </ul>
+<p><img src="http://nasciiboy.github.io/img/rocky.jpg" alt="" /></p>
 
-  
-  <article class="li">
-    <header>
-      10 08 <a class="title" href="http://nasciiboy.github.io/post/ramen-xi/">Ramen XI – Spaghetti</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      09 08 <a class="title" href="http://nasciiboy.github.io/post/ramen-x/">Ramen X – Infierno Mayoi</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      08 01 <a class="title" href="http://nasciiboy.github.io/post/ramen-viii/">Ramen VIII</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      07 13 <a class="title" href="http://nasciiboy.github.io/post/ramen-vi/">Ramen VI – Commodore</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      06 04 <a class="title" href="http://nasciiboy.github.io/post/ramen-iii/">Ramen III</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      05 14 <a class="title" href="http://nasciiboy.github.io/post/ramen-ii/">Ramen II</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      01 31 <a class="title" href="http://nasciiboy.github.io/post/samuraichamploo/">Samurai Champloo ♪</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      12 30 <a class="title" href="http://nasciiboy.github.io/post/krautrock-albums/">Krautrock Albums</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      12 22 <a class="title" href="http://nasciiboy.github.io/apt/moc/">moc</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      12 22 <a class="title" href="http://nasciiboy.github.io/apt/shnsplit/">Como dividir un album contenido en una sola pista flac</a>
-    </header>
-  </article>
-  
+<h2 id="el-conteo-final">El Conteo Final</h2>
+
+<p>De los pocos proyectos presentables que tengo, la libreria de expresiones
+regulares (estilo) &ldquo;raptor&rdquo; contiene lo suficiente de mi&hellip; que aun si el
+fastidio se presentara mañana y dejara de programar, seria suficiente para
+sentirme satisfecho</p>
+
+<p>incluso inclui algunas caracteristicas &ldquo;avanzadas&rdquo; (no regexp) de otros motores,
+por ejemplo una exprecion <code>texto.*mas-texto</code> en <em>raptor</em> era
+<code>texto(mas-texto)*#!mas-texto</code>, algo que denomine como <q>negacion de
+expresiones</q></p>
+
+<p>perooo, la negacion de expresiones requeria romper con la sencilles de la libreria (o
+motor o como se diga). Tenia la ambicion de encontrar una forma de simplificar
+las caracteristicas avanzadas de otros proyectos a la vez que incrementaba su
+rendimiento. Con esta idea en mente, me dispuse a examinar el motor de
+expresiones regulares que forma parte de la libreria estandar del lenguaje de
+programacion Go, intentando desde luego alcanzar la grandeza&hellip;</p>
+
+<h2 id="gore">Gore</h2>
+
+<p>Casi por norma general ocurre que me adentro en un proyecto ajeno y me pierdo
+entre dependencias y recorridos entre un fichero a otro, mientras trato de hacer
+una imagen global de lo que esta pasando. Pese a que en Golang mi orientacion es
+superior que en C, o C++, me perdi bastante, aunque llege a apreciar que el parseo
+no ocurre en el paquete principal de codigo, si no que sucede en otro &ldquo;de
+sintaxis&rdquo;, donde tambien se realiza una <em>simplificacion</em> del recorrido de las expresiones.</p>
+
+<p>Los resultados de transformar la expresion en algo util se depositan en una
+estructura, que tiene un arreglo con todos los datos necesarios y un arreglo de
+sub-expresiones o sea punteros del mismo tipo para cuando se requiere por
+ejemplo en agrupaciones, alternacion y conjuntos, agrupar expresiones dentro de
+otras expresiones</p>
+
+<p>La optimizacion, de la expresion regular, se realiza revizando caso a caso los
+elementos que tiene la expresion y se siplifican cuando es posible cambiando el
+tipo de subexprecion por otro, eliminando anidamiento o agrupando varias
+expresiones como una sola</p>
+
+<p>Una vez compilada la regexp, la busqueda (que no entendi muy bien) ocurre mas
+que por iteracion por la cadena de ingreso, mediante operaciones especificas
+considerando cada valor, posicion y tipo de la expresion, por ejemplo si debe buscarse al
+inicio o al final, si es una expresion de tipo cadena, un conjunto, y luego
+mediante funciones con la libreria <code>strings</code> se realiza el trabajo sucio de los
+casos sencillos</p>
+
+<h2 id="say-goodbay">Say, Goodbay</h2>
+
+<p>imaginaba que encontraria algo por el estilo, al examinar (o mejor dicho intuir
+pues no llegue a enterder) un motor regexp <em>serio</em>.</p>
+
+<p>La libreria regexp estandar es por decirlo de algun modo una fabrica con muchos
+empleados especializados en una labor pequeña sin nungun glamour ni emocion, un
+monton de trabajo manual automatizado convertido a codigo, je, je, je, yo queria
+encontrar algo mas del estilo de la fabrica le willy wonka, con un rio de
+gominolas y Oompa-loompas cantores</p>
+
+<p>veo a las expresiones regulares como un sistema conformado de (por decir) 3
+reglas con el que se pueden generar patrones de complejidad y extencion
+arbitrarios para casos de uso asombrosos aunque limitados. En contraste, las
+expresiones (no) regulares actuales extienden estas normas incrementando la
+complejidad a cambio de perder la &ldquo;elegancia&rdquo;, hay belleza hay? el codigo debe
+ser bello?</p>
+
+<p>en este punto, se me acurasara (seguro con razon) de cazador de lo paranormal,
+como quien se creee una religion y busca significados ocultos sumando las letras
+de mil formas distintas hasta estar agusto. Con todo, asi es como veo el codigo,
+como algo que tiene que ser sencillo y con belleza o al menos intentar aproximarse</p>
+
+<p>un tanto desilucionado, regrese a mi motor y lo despoje de la caracteristica
+esoterica <code>#!</code>, con lo cual se redujo la complejidad a su expresion mas simple y
+gano algo de rendimiento en las <a href="https://nasciiboy.github.io/raptorVSworld/index.html">pruebas</a>,
+entre 500 y 1000 milisegundos en cada competencia, y en algunos
+casos aislados, el tiempo se redujo a la mitad, hubo que renunciar a dos
+expresiones donde ahora aparece un <strong>N/A</strong>, pero aun asi, el rendimiento en
+general, es suficiente como para substituir honradamente a la libreria estandar</p>
+
+<p>Es momento de decir adios al raptor, bueno, no, lo seguire utilizando en mis
+programas y como prueba de programacion con cada nuevo lenguaje que intente, hay
+motores mucho mas eficientes, con mas caracteristicas, trabajo y complejidad,
+cuando necesite de su poder los usare, cuando no tirare del raptor y si hace
+falta eficiencia, a programar a mano</p>
+
+<p>Supongo que con el nuevo panorama podria hacerme responsable y terminar la
+escritura del <strong>manual para escribir un motor de expresiones regulares sin tener
+ni idea</strong>, alias <em>Raptor-book</em></p>
+
+<p>Ohh, modifique el resto de la familia de versiones, regexp 3 y 4 en C
+y la version 3 en Go, pero sin mucho empeño ni comprobaciones mas alla de las
+que estaban en las pruebas, jo, es complicado mantener el nivel cuando hay que
+modificar lo mismo 6 veces en dos lenguajes, por el camino, tambien desaparecio
+un bicho en patrones con agrupaciones que se presentan al final de una
+expresion de una manera que no alcanzo a entender&hellip; si funciona y aprueba, que
+mas da!</p>
 
 
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/prog/lxde-shortcuts/">◀ lxde shortcuts</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
 </main>
 
     <aside>
@@ -302,7 +325,7 @@ img:hover { border: 0.05em solid #fff; }
     <footer>
   <p>Licence: <em>GFDL 1.3</em>.
           Powered by <a href="https://gohugo.io/">Hugo</a>.
-<b>Feed <a href="http://nasciiboy.github.io/tags/fonos/index.xml">RSS</a><b>.
+
  Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
 <b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
 <b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
