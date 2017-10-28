@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Fri, 27 Oct 2017 16:58:55 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 27 Oct 2017 17:42:32 -0500</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/categories/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>blackfriday</title>
+      <link>http://nasciiboy.github.io/prog/blackfriday/</link>
+      <pubDate>Fri, 27 Oct 2017 17:42:32 -0500</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/blackfriday/</guid>
+      <description>Durante la modificacion del morg, habia escrito esto junto con otras notas vagas en una bitocora de abordo que trata de ser FIFO, aunque si no mantengo la constancia comienza a crecer y crecer hasta volverse incomoda. Asi pues (y como el post anterior) a despejar algunas de esas divagaciones
+Como (no) construir un parser para un lenguaje de marcas (ligeras) con morg (parser y lenguaje de marcas ligueras inventado por yo) la construccion al igual que casi todas mis mierdas, fue fruto de reinventar la rueda + prueba y error constantes, tratando de mantener una cierta sencilles&amp;hellip; mientras la raices de la incertidubre sobre si el proyecto llegaria a ser funcional o quedaria truncado por la ignorancia y malas deciciones de diseño orientadas en su mayoria por la aleatoriedad, me consumen lentamente</description>
+    </item>
     
     <item>
       <title>Raptor Down</title>
