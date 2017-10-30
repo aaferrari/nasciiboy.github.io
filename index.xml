@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Fri, 27 Oct 2017 17:42:32 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 30 Oct 2017 15:45:27 -0600</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ibniz</title>
+      <link>http://nasciiboy.github.io/apt/ibniz/</link>
+      <pubDate>Mon, 30 Oct 2017 15:45:27 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/apt/ibniz/</guid>
+      <description>IBNIZ es una máquina virtual diseñada para programas audiovisuales de bajo nivel extremadamente compactos. El objetivo principal del diseño es la utilidad como plataforma para producciones demoscene, arte de glitch(es) y proyectos similares. Los aspectos de ingeniería de software del equipo principal se consideran totalmente irrelevantes.
+IBNIZ significa Ideally Bare Numeric Impression giZmo. El nombre también se refiere a Gottfried Leibniz, el polimatemático del siglo XVII que, entre otras cosas, inventó la aritmética binaria, construyó la primera máquina calculadora de cuatro operaciones, y creía que el mundo estaba diseñado con el principio de que un conjunto mínimo de reglas debía producir una diversidad máxima.</description>
+    </item>
     
     <item>
       <title>blackfriday</title>

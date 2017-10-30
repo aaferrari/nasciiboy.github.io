@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ibniz on nba - GNU&#39;s Rock</title>
+    <link>http://nasciiboy.github.io/tags/ibniz/</link>
+    <description>Recent content in Ibniz on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL 3.0</copyright>
+    <lastBuildDate>Mon, 30 Oct 2017 15:45:27 -0600</lastBuildDate>
+    
+	<atom:link href="http://nasciiboy.github.io/tags/ibniz/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ibniz</title>
+      <link>http://nasciiboy.github.io/apt/ibniz/</link>
+      <pubDate>Mon, 30 Oct 2017 15:45:27 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/apt/ibniz/</guid>
+      <description>IBNIZ es una máquina virtual diseñada para programas audiovisuales de bajo nivel extremadamente compactos. El objetivo principal del diseño es la utilidad como plataforma para producciones demoscene, arte de glitch(es) y proyectos similares. Los aspectos de ingeniería de software del equipo principal se consideran totalmente irrelevantes.
+IBNIZ significa Ideally Bare Numeric Impression giZmo. El nombre también se refiere a Gottfried Leibniz, el polimatemático del siglo XVII que, entre otras cosas, inventó la aritmética binaria, construyó la primera máquina calculadora de cuatro operaciones, y creía que el mundo estaba diseñado con el principio de que un conjunto mínimo de reglas debía producir una diversidad máxima.</description>
+    </item>
+    
+  </channel>
+</rss>
