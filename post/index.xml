@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Tue, 24 Oct 2017 10:55:56 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 05 Nov 2017 19:55:02 -0600</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen XIII</title>
+      <link>http://nasciiboy.github.io/post/ramen-xiii/</link>
+      <pubDate>Sun, 05 Nov 2017 19:55:02 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/post/ramen-xiii/</guid>
+      <description>nota mental, cuando aplicas fuego a una tecla de laptop intentando borrar el simbolo (de las ventanas)&amp;hellip; esta se deforma alarmantemente rapido y queda inservible.
+en esta entrega mas divagacion y cosas previas&amp;hellip;
+primero me pregunte por que el htop (o algun otro monitor de sistema) no mostraba las estadisticas de la temperatura o de la grafica, ni siquiera de la integrada, y luego comence la busqueda poco fructifera de algun programo.</description>
+    </item>
     
     <item>
       <title>Ramen XII – this is it</title>

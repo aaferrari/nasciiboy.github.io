@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XIII</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+
+  <h1>Ramen XIII</h1>
+  
+
+<p><strong>nota mental</strong>, cuando aplicas fuego a una tecla de laptop intentando borrar el
+simbolo (de las ventanas)&hellip; esta se deforma alarmantemente rapido y queda inservible.</p>
+
+<p>en esta entrega mas divagacion y cosas previas&hellip;</p>
+
+<p><img src="http://nasciiboy.github.io/img/better.jpg" alt="" /></p>
+
+<p>primero me pregunte por que el <strong>htop</strong> (o algun otro monitor de sistema) no
+mostraba las estadisticas de la temperatura o de la grafica, ni siquiera de
+la integrada, y luego comence la
+<a href="https://askubuntu.com/questions/387594/how-to-measure-gpu-usage">busqueda</a> poco
+fructifera de algun programo.</p>
+
+<p>lo mas cercano a la solucion, sin instalar drivers privativos ni cosas raras,
+fue el paquete <code>intel-gpu-tools</code> (en freidora) y luego como root y con la fuente
+de la consola muy chikita ejecutar  <code>intel_gpu_top</code>. De paso tambien me instale
+<code>glances</code> como monitor de sistema suplente, al siempre incombustible <code>htop</code></p>
+
+<p>llebo un tiempo con boinc en el androide, y en la maquina no pude echar a andar
+el asunto hasta dar con
+<a href="https://fedoraproject.org/wiki/Installing_and_running_BOINC_client_in_Fedora_21">este</a>
+enlace. Mi maquina no es nada muy alla, haci que se pone lentorra cuando se
+ejecuta, aun con restricciones grandes. Para no desistalarlo lo configure
+en ejecucion solo cuando la maquina no esta en uso.</p>
+
+<p>ooooh desgracia, una tarde la maquina se puso rara y crei que el dia del juicio
+al disco musical habia llegado, luego no supe que jodidos pasaba,
+se congelo el sistema y se negaba a arrancar, lo unico que alcanzaba a decir era algo con
+respecto a los sata&hellip; el segundo mayor temor era que la placa fuera la
+agonizante.</p>
+
+<p>A prodar a instalar otra distro, me dije, al no encontrar una solucion y para
+descartar culpables, probe con manjaro y no hubo suerte, luego regrese con la
+distro inombrable (<del>fedora 27</del>) y hubo suerte, quitando el inconveniente que no
+hay manera de apagar el equipo &hellip; excepto reiniciando y apagando el switch en el
+interludio, ja, ja, ja</p>
+
+<p>continuando con <em>las cosas de java</em>, el lenguaje comienza a hacerse demaciado
+complejo he inecesariamene vervoso. Haaa, eran tiempos preteritos y no sabian por
+donde ir. El libro de <em>pensar en java</em>, por su parte tampoco me motiva
+demaciado, no es malo, pero no le veo gracia, ya voy por la pagina 300, acabando
+de ver las interfaces. En definitiva Go es pura magia solo visible cuando ves a
+sus ancestros</p>
+
+<p>por el camino aprendi (creo) eso de la variable <code>CLASSPATH</code>, aunque mejor usar
+rutas relativas. Para configurar esta variable en fish (<code>~/.config/fish/config.fish</code>)</p>
+
+<pre><code>set --export CLASSPATH  '/usr/share/java:.'
+</code></pre>
+
+<p>tambien me pase un rato viendo enlaces en el blog de bitix sobre java, rescato
+el de <a href="https://picodotdev.github.io/blog-bitix/2015/05/10-razones-para-seguir-usando-java/">razones para usar java</a></p>
+
+<p>para terminar un poco de poesia</p>
+
+<blockquote>
+<p>Si presume de lo rápido que ha desarrollado su producto, la gente se quejará de su rendimiento.</p>
+
+<p>Si usted presume de lo bien que su producto funciona, la gente se quejará de su tiempo de desarrollo.</p>
+
+<p>Si usted no se jacta de ninguno de los dos, la gente asumirá que está desarrollando en Java.</p>
+</blockquote>
+
+<p>(extraido de <a href="https://web.archive.org/web/20070222084110/http://destraynor.com/serendipity/index.php?/archives/102-Programming-Theorems.html">aqui</a>)</p>
+
+<h2 id="4k">4K</h2>
+
+<p><strong>Kimi no na wa</strong> Tengo la teoria, por las obras que he visto del director de
+este trabajo (The Place Promised in Our Early Days, 5 Centimeters Per Second (mi
+favorita y que me deja roto), The Garden of Words y Voices of a Distant Star),
+que de joven por razones extrabagantes termino siendo amigo de una chika
+peculiar con cabello negro</p>
+
+<p>El, era un roboto, y con el roce y el paso del tiempo con la femina, descubrio
+que tenia sentimientos, especificamente sentimientos romanticos, los cuales mas
+tarde solo pudo identificar como <em>amar</em>. Era un cobarde, razon por la cual
+aunque ambos dos se apresiavan, nunca llego a mas, termino obsecionado
+platonicamente y repite una y otra ves sus vivencias melancolicas, romanticas
+idealizadas, filme a filme, donde por fin encuentran desarrollo, pues en la
+realidad la chika y el terminaron distanciados por el azar y de forma
+irresoluble&hellip; bueno es solo una ipotesis, para nada basada en vivencias
+personales&hellip;</p>
+
+<p>en fin, la opinion, mmmmmhh, una peli normalita, la de la chika muda con voz de
+robot fue una avalancha de mas cosas en este cuerpo decadente</p>
+
+<pre><code>magnet:?xt=urn:btih:89f142e5a30d32d7a1616cc8db9009070f465adc&amp;dn=Kimi.No.Na.Wa.2016.JAPANESE.BluRay.1080p.x264.AAC.5.1.-.Hon3y&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337
+</code></pre>
+
+<p><strong>Tsuki ga Kirei</strong> anime normalito, con animacion bonita aunque generica, si lo
+dejas unos dias es dificil identificar donde ibas con solo ver el inicio de los
+episodios.</p>
+
+<p>Lo cosa se centra en un par de estudiantes de nivel medio y su romance &ldquo;bonito&rdquo;
+sin mas&hellip; hasta que el descubre que la chica por su &ldquo;inocencia&rdquo; esta jodida de
+la cabeza, esta se torna poseciva y exigente y lo agota emocionalmente
+orillandolo a la desesperacion, o si, no sabe que hacer, asi es el mundo?</p>
+
+<p>luego ella, se entera que el lleba una amistad bastante agradable con una de sus
+amigas y esta amiga a su ves le comenta que tambien &ldquo;le late&rdquo; el mismo tipo
+generico, entonces se deprime, se pregunta por que las cosas no salen bien y si
+asi es el mundo?</p>
+
+<p>entonces, ambos ante la cruda, compleja y poco hollywodense realidad, desiden
+dar fin al romance inperfecto, pero a diferencia de hablarlo, fuerzan
+instintivamente la ruptura, cometiendo actos sucios, para que la otra parte vea su jodida naturaleza
+<em>inocente</em>. Luego crecen y se dan cuenta de lo imbeciles que estaban, hacen las
+relacones (pese a estar casados, oh, pecadores) y siguen con sus pendejas
+existencias</p>
+
+<p>&hellip; bueno, no, por el episodio 6 te ponen &ldquo;el episodio recapitulatorio&rdquo; de todas
+las series con dos pesos de presupuesto, luego vi el episodio 7 y seguia sin
+ocurrir nada interaste, pase al final buscando algo de gore&hellip; y no habia nada</p>
+
+<p><strong>Labyrinth of Flames</strong> del hasta ahora desconocido (para mi) Studio Fantasia,
+llega esta ova autoconclusiva con mucho carisma y estilo de animacion|comedia
+90&rsquo;s y braguitas + humos otakus desbordantes con olores a
+Gainax, bajarlo pronto&hellip; por el dia</p>
+
+<pre><code>magnet:?xt=urn:btih:d98910b9f521f02d660d67e29f0f380573d15bcb&amp;dn=%5bEUR%5d_Labyrinth_of_Flames&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+</code></pre>
+
+<p><strong>Osomatsu San</strong>, aver, si te gusta Gintama en sus puntos mas hilarantes esto te
+va a gustar bastante. Es humor absurdo japones, eso quiere decir que en momentos
+puedes reir y en otros no encontrar sentido a lo que se muestra y en otros
+ponerse introspectivo o profundo.</p>
+
+<p>No tenia idea de su existencia hasta hasta ver un video de <em>Mireda
+Producciones</em>, que explica mucho mejor de que va esto y por que es
+interesante. Jo, JO, JoO, el primer episodio es un poco especial, pero en cada
+momento aprovecha para tirar criticas y reirse de si mismo y su industria</p>
+
+<pre><code>magnet:?xt=urn:btih:e8b421f739ebcb143b717311b6838a24ab05714e&amp;dn=%5bPuyaSubs!%5d%20Osomatsu%20san%20%5bBatch%5d&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+</code></pre>
+
+<p>apenas voy por el capitulo 6, mientras tanto aprovecho para compartirlo al
+tiempo que lo consumo lentamente. Son 25 episodios y en estos momentos estan
+transmitiendo la segunda temporada, en fin, a bajar y conservar en el disco, que
+en mi caso tardo bastantes dias en completarse la descarga y como ya es material
+&ldquo;viejo&rdquo; seguro el torrent quedara desaparado en no mucho tiempo&hellip; pocas cosas
+son mas bonitas que ver que el torrent que te gusta se comparte regularmente!</p>
+
+<h2 id="fonos">Fonos</h2>
+
+<p><strong>Blade Runner 2049</strong>, buff, lo baje antes de ver la peli (entrega anterior) y
+se fue al limbo en /dev/null. Tras ver la cinta ya tiene mas sentido, aunque
+sigue siendo flojo, lo conservare por mero coleccionismo</p>
+
+<pre><code>magnet:?xt=urn:btih:402f84f695ae9e8b9a4f525903845d7699f63f57&amp;dn=Hans%20Zimmer%20%26%20Benjamin%20Wallfisch%20-%20Blade%20Runner%202049%20(2017)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<p><strong>Living Field</strong> (The Pillows), otro disco mas de &ldquo;los almohadas&rdquo;, fummmm, que
+pasada entre (soft?) reggae, pop japo-ingles y guitarras cosmico-playeras, una
+pasada!</p>
+
+<p>tambien pasaron por las auriculares <strong>Kool Spice</strong> y <strong>Please Mr. Lostman</strong>,
+discos anterir y siguiente, respectivamente, muy en la linea e igual de
+disfrutables, me gusta en particular la ultima pieza del Kool Spice, pura ricura</p>
+
+<p>(pese a ser infectos emepetreces, dejo el enlace)</p>
+
+<pre><code>magnet:?xt=urn:btih:b77fa0f90c4fdd83d467f5f8c89d6ccc437d578c&amp;dn=The%20Pillows&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce
+</code></pre>
+
+<p><strong>Ununiform</strong> (Tricky) Ya habian pasado por estos oidos un par de discos de esta
+banda &ldquo;trip hop&rdquo;, pero no logro empatizar con sus notas, me va mas Portishead y
+Massive Attack</p>
+
+<pre><code>magnet:?xt=urn:btih:c8128f7b8b53d56ceef844f2c0b4c05283c4520d&amp;dn=Tricky%20-%20ununiform%20(2017)%20%5bWEB%20FLAC%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce
+</code></pre>
+
+<p><strong>Kareshi Kanojo no Jijou ♥</strong> (Shiro Sagisu) este es el score musical de una
+serie que considero un genero en si, el <em>como karekano</em>. En su mayaria esta
+compuesto por el Sagisu, que es el mismo de los ost de Evangelion y Shin
+Godzilla (algun torrento pls?), esta  muy en la onda del tipo, algunas piezas
+evangelicas recicladas y otras exclusivas.</p>
+
+<p>Ameno y recomendable por si mismo, tiene bastantes pistas melancolicas de esas
+que me dejan tocado y no puedo resistir repetir una y otra vez. Si ya tienes los
+sonidos de NGE, sin duda es una piesa necesaria de la coleccion</p>
+
+<pre><code>magnet:?xt=urn:btih:ff88c3a7e58b9b8aa360f85904a5c91423b1cc22&amp;dn=Shiro%20Sagisu%20-%20Kareshi%20Kanojo%20no%20Jijou%20CD-BOX%20(1998)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce
+</code></pre>
+
+<p><strong>Eric Satie</strong> (trabajos para piano) aparecio en el ricolino podcast de <strong>Score
+VG</strong> y tambien como reminicencia de algun anime&hellip; son trabajos tan sencillos
+como melancolicos y pegadisos. Como estos trabajos no suelen ser <em>discos
+conceptuales</em> cuesta tomarlo en exclusiva, aun con esto en contra seguro que te
+agradan bastante piesas</p>
+
+<h2 id="txt">txt</h2>
+
+<p>de nuevo sin libros&hellip; hubo un par de post chulos sobre cosas esotericas con la
+programacion</p>
+
+<p><a href="http://theorangeduck.com/page/ascii-love-letter">http://theorangeduck.com/page/ascii-love-letter</a> <a href="https://www.reddit.com/r/programming/comments/79jo46/ascii_a_love_letter/">https://www.reddit.com/r/programming/comments/79jo46/ascii_a_love_letter/</a></p>
+
+<p>y otro del simpre certero aunque poco contundente <a href="https://asm86.wordpress.com/2017/10/30/eficiencia-del-software-contra-eficiencia-de-desarrollo/">asm86</a></p>
+
+<p>sayonara, bye, bye</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/post/ramen-xii/">◀ Ramen XII – this is it</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(30)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(22)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/ramen">ramen(13)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(12)</a></li><li><a href="http://nasciiboy.github.io/tags/howto">howto(11)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(10)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(6)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(2)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="http://nasciiboy.github.io/tags/java">java(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="http://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
