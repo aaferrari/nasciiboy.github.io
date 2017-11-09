@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Emacs</title>
-    <link href="http://nasciiboy.github.io/emacs/index.xml" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <title>OCR</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
     <style>:root {
 
     --BGC      : #000000;
@@ -188,94 +188,108 @@ img:hover { border: 0.05em solid #fff; }
   <body>
     
 <main>
-  <article class="index">
-    
-    
-    
-    
-  </article>
-  
-  
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
 
-  <ul class="nav">
-    
-    <li><a href="http://nasciiboy.github.io/apt/">apts</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/emacs/">emacs</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/love2d/">love2ds</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/post/">posts</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/prog/">progs</a></li>
-    
-    <li><a href="http://nasciiboy.github.io/vg/">vgs</a></li>
-    
-  </ul>
+  <h1>OCR</h1>
+  <p><img src="http://nasciiboy.github.io/img/padesoor.png" alt="" /></p>
 
-  
-  <article class="li">
-    <header>
-      09 28 <a class="title" href="http://nasciiboy.github.io/emacs/v-config/">Emacs, configuracion de verano</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      08 20 <a class="title" href="http://nasciiboy.github.io/emacs/run-scheme/">Run Scheme</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      07 02 <a class="title" href="http://nasciiboy.github.io/emacs/why-emacs/">Por que GNU Emacs?</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      02 12 <a class="title" href="http://nasciiboy.github.io/emacs/notabs-for-gomode/">no mas tabs en go-mode</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      01 31 <a class="title" href="http://nasciiboy.github.io/emacs/org-mode/">org mode</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      01 18 <a class="title" href="http://nasciiboy.github.io/emacs/rsspluseww/">Emacs web y noticias en modo texto</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      01 07 <a class="title" href="http://nasciiboy.github.io/emacs/keychords/">Definir atajos en Emacs</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      12 28 <a class="title" href="http://nasciiboy.github.io/emacs/first-theme/">first theme</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      12 25 <a class="title" href="http://nasciiboy.github.io/emacs/first-blood/">Emacs - first blood</a>
-    </header>
-  </article>
-  
-  <article class="li">
-    <header>
-      12 23 <a class="title" href="http://nasciiboy.github.io/emacs/que-es-emacs/">Que es GNU Emacs?</a>
-    </header>
-  </article>
-  
+<p>sucede que tenia un libro que aprecio muchisimo, pero mucho mucho mucho, aunque
+no lo habia leido y lo escaneeehee para convertirlo en otra cobaya del proyecto
+morg, y para leerlo&hellip; y por que supongo que lo voy a necesitar con inmediates y
+de forma reiterativa en el futuro.</p>
+
+<p>asi que en un acto de benevolencia, pereza y mayor exactitud (o no), paso por mi
+mente darle otra oportunidad al ocr y ver si con el paso del timpo la cosa habia
+ido a mejor o en definitiva hay que esperar la aparicon de inteligencias
+artificiales reales, para la titanica tarea de digitalizar todo el conocimento</p>
+
+<p>pero bueno, el asunto tiene un grado superior de complejidad por que el scan (en
+pdf) contiene dos paginas por pagina, je, je, y al generar las imagenes (para
+que las tome el ocr) estas tienen una orientacion equivoca</p>
+
+<p>ademas y aunque el ocr es capaz de reconocer tal aberracion y generar un texto
+correctamente organizado, preferi cortar cada imagen y luego mandarsela al
+ocr para disminuirle complejidad</p>
+
+<p>asi pues, pese a mi ignarancia con bash aqui esta el cutre-script
+resultado&hellip; creo que hubiera tardado menos programando directamente en Go&hellip;</p>
+
+<pre><code class="language-sh">#! /bin/bash
+
+# esto &quot;corta&quot; el pdf en imagenes png, pato es el sufijo del resultado
+pdfimages -png &quot;$1&quot; pato
+
+# cargo las imagenes en una variable para irerar sobre ellas
+patoPng=$(ls -1 *.png)
+
+# una varible para poner nombres distintos
+declare -i pata=0
+
+for quak in $patoPng
+do
+    # rotar imagen a posicion apropiada
+    convert -rotate -90 $quak $quak
+    # cortar primer mitad de la imagen
+    # espacio extra por que la imagen esta muy movida [finXfinY+inicioX+inicioY]
+    convert -crop 1517x1965+0+0 $quak $(printf &quot;pata-%04i.png&quot; $pata)
+    pata+=1
+    # cortar segunda mitad de la imagen
+    convert -crop 2939x1965+1469+0 $quak $(printf &quot;pata-%04i.png&quot; $pata)
+done
+
+# cargo las imagenes &quot;recortadas&quot;
+pataPng=$(ls -1 pata-*.png)
+
+# restablesco la variable de los nombres distintos
+pata=0
+
+for quak in $pataPng
+do
+    # el ocr de cada imagen
+    tesseract $quak $(printf &quot;patax-%04i&quot; $pata) -l spa+eng
+    pata+=1
+done
+
+# concatenar todos los texto a un fichero unico
+cat patax* &gt; ocr.txt
+</code></pre>
+
+<p>para llamar al script copiar y pasar a un fichero que se llame <code>cutre.sh</code> y
+llamar con</p>
+
+<pre><code>$ ./cutre.sh mi.pdf
+</code></pre>
+
+<p>obviamente hay que cambiar lo de la rotacion (si es que se necesita) y quitar lo
+de los cortes, todo segun se el caso</p>
+
+<p>el ocr (<code>tesseract</code>) de linea de comandos esta en los repos, en freidora lo optienen con</p>
+
+<pre><code>dnf -y install tesseract tesseract-langpack-spa
+</code></pre>
+
+<p>necesario instalar los paquetes del lenguaje que se va a digitalizar (el ingles
+venia includo, por que todo mundo habla ingles&hellip;). El programa <code>pdfimages</code> no
+me acuerdo de que paquete forma parte, investigar por vuestra cuenta!</p>
+
+<p>y bueno&hellip; el ocr me sigue pareciendo un truño, si, es verdad que el texto
+puesto esta bastante jodido, pero el resultado tiene tandos defectos, que me
+sale mas a cuenta mecanografiarlo artesanalmente, ademas tenia ganas de
+mecanografiar, es algo que me desestresa, tambien me ayuda a sertirme
+&ldquo;productivo&rdquo; y a enfocarme (o distraerme). Ultimamente los pdf que encuentro
+traen oceerres buenos y le quita la emocion</p>
+
+<p>happy hacking!</p>
 
 
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/prog/blackfriday/">◀ blackfriday</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
 </main>
 
     <aside>
@@ -302,7 +316,7 @@ img:hover { border: 0.05em solid #fff; }
     <footer>
   <p>Licence: <em>GFDL 1.3</em>.
           Powered by <a href="https://gohugo.io/">Hugo</a>.
-<b>Feed <a href="http://nasciiboy.github.io/emacs/index.xml">RSS</a><b>.
+
  Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
 <b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
 <b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.

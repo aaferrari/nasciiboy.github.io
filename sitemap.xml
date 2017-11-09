@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/prog/ocr/</loc>
+    <lastmod>2017-11-09T17:10:40-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/post/ramen-xiii/</loc>
     <lastmod>2017-11-05T19:55:02-06:00</lastmod>
   </url>
@@ -380,14 +385,14 @@
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/categories/apt/</loc>
-    <lastmod>2017-10-30T15:45:27-06:00</lastmod>
+    <loc>http://nasciiboy.github.io/tags/apt/</loc>
+    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://nasciiboy.github.io/tags/apt/</loc>
-    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
+    <loc>http://nasciiboy.github.io/categories/apt/</loc>
+    <lastmod>2017-10-30T15:45:27-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -465,7 +470,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/howto/</loc>
-    <lastmod>2017-10-22T12:36:18-05:00</lastmod>
+    <lastmod>2017-11-09T17:10:40-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -549,13 +554,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2017-10-27T17:42:32-05:00</lastmod>
+    <lastmod>2017-11-09T17:10:40-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2017-10-27T17:42:32-05:00</lastmod>
+    <lastmod>2017-11-09T17:10:40-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -639,7 +644,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-11-05T19:55:02-06:00</lastmod>
+    <lastmod>2017-11-09T17:10:40-06:00</lastmod>
     <priority>0</priority>
   </url>
   
