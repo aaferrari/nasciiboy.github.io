@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/prog/javame/</loc>
+    <lastmod>2017-11-10T14:57:41-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/ocr/</loc>
     <lastmod>2017-11-09T17:10:40-06:00</lastmod>
   </url>
@@ -410,7 +415,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/docu/</loc>
-    <lastmod>2017-07-07T18:27:56-05:00</lastmod>
+    <lastmod>2017-11-10T14:57:41-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -470,7 +475,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/howto/</loc>
-    <lastmod>2017-11-09T17:10:40-06:00</lastmod>
+    <lastmod>2017-11-10T14:57:41-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -488,7 +493,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/java/</loc>
-    <lastmod>2017-11-05T19:55:02-06:00</lastmod>
+    <lastmod>2017-11-10T14:57:41-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -554,13 +559,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2017-11-09T17:10:40-06:00</lastmod>
+    <lastmod>2017-11-10T14:57:41-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2017-11-09T17:10:40-06:00</lastmod>
+    <lastmod>2017-11-10T14:57:41-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -644,7 +649,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-11-09T17:10:40-06:00</lastmod>
+    <lastmod>2017-11-10T14:57:41-06:00</lastmod>
     <priority>0</priority>
   </url>
   

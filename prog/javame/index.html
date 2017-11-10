@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Java &amp; Me(h)</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%; }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>Java &amp; Me(h)</h1>
+  
+
+<p>Por que <a href="https://picodotdev.github.io/blog-bitix/2015/05/10-razones-para-seguir-usando-java/">razones</a>
+concientes y sin coercion externa aprender java?</p>
+
+<p>en mi caso, hice un solemne juramento de no aprender java (y quiza python,
+js&hellip;) y en general nada 7 veces mas lento que C&hellip; porque cualquier lenguaje un orden
+de magnitud mas lento que C, es directamente una basura&hellip; o tiene un ambito de uso
+extremadamente especifico, como servir para crear extensiones o como
+prompt. Fuera de este uso, nadie &ldquo;serio&rdquo; sacarlos deberia. Crear programas completos
+directamente en esos lenguajes es una guarrada y una falta de
+respeto por el espiritu que habita en el silicio. Por decir algo, es casi tan
+aberrante como mi forma de escribir&hellip;</p>
+
+<p>pero bueno, hace mucho tiempo que java merodea por el mundo, y en general es
+unas 4-6 veces mas lento que C, asi que entra en la zona estelar de los lenguajes que
+permiten la existencia de agua liquida, entonces por que mantenia una
+resistencia interna a aprender java?</p>
+
+<ul>
+<li><p>todas las cosas hechas con Java dan la sensacion de estar lagueadas. (Arde en el
+infierto android)</p></li>
+
+<li><p>deriva de C++ y C++ no es un lenguje agradable para programar (si tocas cosas
+sus posibilidades), por que tiene un monton de caracteristicas obscuras y
+sutiles, que lo hacen absurdamente complejo, dificil de leer e imposible de
+dominar (o no)</p></li>
+
+<li><p>hiede a empresarial, y las cosas empresariales no son divertidas, y yo viene a
+la programacion para estar cool (&lt;== obscura referencia al manga GTO)</p></li>
+</ul>
+
+<p>pero estonces, por que siquiera de estas explicaciones, que hechos se han
+conjurado para ceder al mal?</p>
+
+<p>basicamente, mientras continuo el trepidante camino en la programacion
+autodidacta sin tener idea (de mates, english o adonde dirigirme), y a medida
+que va creciendo la complejidad de las cosas que &ldquo;planeo&rdquo; programar, la
+intuicion y sentido comun me dice que muchos de esos secretos ancestrales se
+encuentran alla afuera</p>
+
+<p><img src="http://nasciiboy.github.io/img/believer.png" alt="" /></p>
+
+<p>o en el peor de los casos, estan cerca de ser ser promulgados, por alguien&hellip;</p>
+
+<p>como apenas inicio mis andansas por el mundo de las mategicas y el engrish aun
+es arido en sus detalles, para no desaprobechar ese regalo llamado ser el
+fracasado treinton sin empleo que se queda en la pc todo el dia sin hacer nahhh
+y que vive permanentemente en la banca rota&hellip; mejor leer cosas programacionales
+en español, un  inquietante campo superpoblado con material que utiliza a
+java como lenguaje universal, asi que por el bien del mundo, a joderse!</p>
+
+<h2 id="instalar-java">Instalar Java</h2>
+
+<p>Casi todos los sistemas del Ñu traen un java instalado por defecto, como en el
+caso de freidora el openjdk-1.8, pero con esto no nos vasta para comenzar a
+&ldquo;compilar&rdquo; programos, hace falta instalar el paquete <em>devel</em> para optener el
+programa <code>javac</code>. Ya que estamos (y por que en freidora 27 aparece en los repos)
+pues mejor instalar lo ultimo de lo ultimo, por si lanzamos pestes, sus fancis no digan
+que la causa es utilizar una version desfasada; ademas es casi completamente
+compatible con el codigo vintage!</p>
+
+<pre><code># paquetes del java-9
+dnf -y install java-9-openjdk java-9-openjdk-devel
+
+# le decimos al sistema que este va a ser el &quot;java bueno&quot;
+# nos preguntara con un numero cual java poner por defecto
+# el que tenga un =nueve= sera el efectivo
+update-alternatives --config java
+
+# lo mismo que el anterior pero para el javac
+update-alternatives --config javac
+
+# comprobamos que la version es correcta
+java -version
+javac -version
+
+# no se que es esto, pero parece importante para el futuro
+dnf -y install maven
+</code></pre>
+
+<p>luego, tenemos que configurar en nuestro shell las rutas donde el java buscara
+las &ldquo;librerias&rdquo; para compilar sus cosas. Esto se hace estableciendo la variable <code>CLASSPATH</code>.</p>
+
+<p>En <code>fish</code> ha sido asi (<code>~/.config/fish/config.fish</code>)</p>
+
+<pre><code>set --export CLASSPATH  '/usr/share/java:.:/home/mi-usuario/.java'
+</code></pre>
+
+<p>solo acepta rutas absolutas. Las rutas se separan por dos puntos (<code>:</code>).  La
+primera es donde esta la libreria estandar (en freidora), la segunda, &ldquo;el
+punto&rdquo;, es para que busque en el directorio actual, y la tercera, para colocar
+cualquier libreria externa que me encuentre por el internet sin comprometer el
+sistema demaciado, y para no hacer cosas de root con frecuencia, ademas es una
+carpeta oculta para no molestar</p>
+
+<p>oh, como el java nueve es muy moderno, incluye un comando de tipo REPL, que
+significa que podemos programar de forma interactiva. Solo hay que typear
+<code>jshell</code> y voala, a programar sin compilaciones y con mucho
+l-a-a-g-g-g-g-g-g. Este tipo de cosillas y sus tiempos de respuesta me ponen
+nostalgico, como que estubiera en otro tiempo y asi fuera programar &ldquo;de verdad&rdquo;,
+fuera de sarcasmos, tiene su encanto!</p>
+
+<p>encontre sobre esto del <code>jshell</code> en un libro (en ingles) llamado &ldquo;Java 9
+Programming By Example&rdquo; de facil optecion, al menos en un sito llamado
+<em>allitebooks</em>. jo, jo, jo, que jocosos los de la editorial del libro, que te
+insitan a informar si lo encuentras por la red, me dan ganas (si lo continuo y es
+interesante) de cobayisarlo, ya veremos</p>
+
+<h2 id="el-editor">El editor</h2>
+
+<p>fuuuhh, aver, en emacs hay un modo para esto, es decir lo basico, resaltado e
+indentacion, si quieres mas pues a buscar por vias alternas.</p>
+
+<p>Hay un modo externo que se llama <strong>jdee</strong>, con resaltado de errores,
+autocompletado, documentacion, dos espacios de indentacion por defecto y otras
+promesas mas, aunque la instalacon en mi caso no fue bien, creo que es algo
+relacionado con las rutas de java.</p>
+
+<p>Al ver que la cosa no iba muy fina, reverti los cambios y deje el emacs como al
+inicio y toco ir por la segunda alternativa: un viscoso, (d)oloroso, consumista y
+lentorro <strong>IDE</strong>&hellip; bueno la prueba se limito a <strong>eclipse</strong>, la unica conclusion
+que puedo dejar sobre la experiencia, es que mi maquina no es apta para correr
+estas cosas para developers modernos</p>
+
+<p>asi que ha regresar al emacs &ldquo;a pelo&rdquo;</p>
+
+<h2 id="documentacion">Documentacion</h2>
+
+<p>Esto es un punto bastante jodido con java, no tengo ni puta idea sobre como se
+organiza la libreria estandar, ni que tan lejos llega o como se utiliza. Para
+volverlo aun mas complejo no hay documentacion en linea de comandos similar a
+<code>man 3</code> o <code>go doc</code>.</p>
+
+<p>La opcion de emergencia fue bajar los docs de Java para <code>zeal</code> y tampoco fue de
+mucha ayuda, de nuevo no tengo idea de como se organiza|utiliza la libreria
+estandar y abrir un libro (pdf en este caso) <em>especializado</em> para averiguar que
+clase se utiliza para tal cosa, o como hereda de tal otra, no es una opcion que pueda
+contemplar</p>
+
+<h2 id="thinking-in-java-2-da-edicion">Thinking in JAVA, 2^da edicion</h2>
+
+<p>Vamos con la carnita, un libro viejuno de Java 2, de los años 2000, donde hablan
+de las guerras de navegadores con el netscape vs el explorer y podian ejecutar
+el java salvagemente con etiquetas html!</p>
+
+<p>Tome este libro por que el codigo del autor me parecio mas que bonito en su
+libro de Piensa en C++ (era joven). Tambien por que fue lo que encontre en
+español, por que tiene muchas paginas, por que sale rapido en una busqueda con
+terminacion <em>pdf</em> y por que el codigo fuente de los ejercios tiene <em>dos
+espacios de indentacion</em>, haci lo hacia Stallman, haci lo hacia este autor, haci
+lo hago yo y haci lo haran mis decendientes sinteticos.</p>
+
+<p>El libro tiene una version 4, que data del 2006, en ingles asi que esta
+descalificado, pero desde la pagina del autor pueden descargar el codigo de los
+ejemplos y el libro (en ingles) en formato html de esta 2^da edicion. Aqui el <a href="http://www.mindviewinc.com/downloads/TIJ-2nd-edition.zip">enlace al
+zip</a></p>
+
+<p>o, y por si el enlace esta roto, bajarlo de <a href="http://nasciiboy.github.io/data/TIJ-2nd-edition.zip">aca</a>,
+a esta le aplique un <code>dos2unix</code> a todos los ficheros, para no tener que ver el
+<em>DOS</em> en el emacs</p>
+
+<p>antes de continuar y si se quiere seguir el libro, es importante que
+descomprinas el zip, tiene una carpeta con el libro y otra con el codigo fuente,
+toma esta ultima y mueve/copia la carpeta <code>com</code> a donde sea
+que tengas apuntando la variable <code>CLASSPATH</code>.</p>
+
+<p>Una ves hecho esto vasta con entrar a la carpeta que se este estudiando y hacer
+un <code>make</code>, casi todos los ejemplos compilan, excepto en los capitulos (creo que)
+12 en adelante, cuando se pone a hacer cosas con GUI y por que tiene una feo
+fetichismo de incluir sus librerias en cada ocacion.</p>
+
+<p>Ahora si, que tal el libro?</p>
+
+<p>un libro con DLC&hellip; el autor aprovecha cada ocacion que tiene para mencionar que
+puedes bajar tal o cual material suyo en su web, y que por una modica cantidad
+te ofrece <del>droga</del> las respuestas a los ejercicios, el resto, por supuesto
+[inserta aqui efecto de susurrar al oido] <em>es gratis</em>. Algo molesto en mi opinion,
+mas para venir en un libro comprado, con mencionarlo en el prefacio bastaba</p>
+
+<p>Los primeros capitulos (hasta antes de la aparicon de herecia e interfaces) son bastantes
+llebaderos, explica de forma condesada y clara muchas cosas, como que jodidos es
+en recolector de basura (junto con sus inconvenientes que dan miedo), que es un
+hilo del sistema, por que java esta diseñado como esta diseñado, su evolucion,
+carencias y defectos</p>
+
+<p>en el capitulo de la herencia las cosas se ponen turbias, te agobia con
+un monton de caracteristicas obscuras. Fue entonces cuando el formato &ldquo;Catalogo
+de referencia&rdquo; del libro salto a la conciencia. Seguramente por la propia
+naturaleza ecleptica de java. El autor no duda en mencionar cada una de sus multiples
+opciones y capacidades, lo que sumado a que el libro no te enseña a hacer nada
+(por decirlo de alguna manera), hace dificil retener el sin numero de opciones</p>
+
+<p>Cando la cantidad de informacion es abrumadora como en este caso, recomiendo
+entrar en modo paseo por tienda, ver que hay y si el vendedor se acerca, decirle que no
+moleste. Todas estas opciones solo se retienen en el cortex luego que se
+presentan los problemas mientras se va programando, ese es el momento donde
+saber que exite una cosa (aunque no como hacerlo) regresa a nuestro recuerdo y
+podemos ejecutar el aprendizaje teorica y practimamente, y quiza si es posible
+con aplicaciones recurrentes, memorizarlo</p>
+
+<p>cerca de la pagina 450 el material comenzo a parecer pesado.</p>
+
+<p>Ya que la principal motivacion de leer el libro era enterarme que estan
+exponiendo en algun ejemplo corto de algun libro intereante, no dedicarme a
+programar en java, me plantee dejar la lectura y pasar a otra cosa. Pero
+continue al siguente capitulo y aparecieron cosas relevantes. Si tambien vas
+en modo paseo, almenos lee el inicio de cada capitulo y alguna seccion relevante</p>
+
+<p>Como conclusion el libro es eso, un buen material de consulta.</p>
+
+<p>Sobre java:</p>
+
+<ul>
+<li><p>Es un lenguaje pegote (o katamari), se le adiere todo, un monton de
+posibilades que incitan a hacer guarradas y no enterarte de lo que algun
+programador con preferencias exquisitas este haciendo</p></li>
+
+<li><p>La jerarquia, asociacion y documentacion de sus clases no es intuitiva</p></li>
+
+<li><p>&ldquo;compilar&rdquo; y &ldquo;cargar&rdquo; (<code>javac</code>, <code>java</code>) es un rollo y se siente lento</p></li>
+
+<li><p>El lenguaje no esta diseñado, es 🌈evolutivo🌈. Toma la inco(nsist|her)ente base de C++, la simplifica,
+y hace mas verbosa, un monton de clases, enfoques, palabras clave y especificadores con
+multiples significados que enturbian la 🌈experiencia🌈</p></li>
+</ul>
+
+<p>y ya! bienvenidos los insultos y duelos a muerte!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/prog/ocr/">◀ OCR</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(32)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(22)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/howto">howto(13)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(13)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(12)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(10)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(6)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="http://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="http://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
