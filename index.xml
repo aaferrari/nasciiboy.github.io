@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Fri, 10 Nov 2017 14:57:41 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2017 13:24:08 -0600</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Return Of F</title>
+      <link>http://nasciiboy.github.io/prog/the-return-of-f/</link>
+      <pubDate>Thu, 16 Nov 2017 13:24:08 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/the-return-of-f/</guid>
+      <description>Siguiendo esa bonita tradicion de las entradas &amp;ldquo;que hacer despues de instalar X&amp;ldquo;, llega el turno de hacer un: &amp;ldquo;que hacer despues de instalar&amp;hellip; Fedora&amp;hellip;&amp;rdquo;
+y, es que el tour por antergos fue un encanto mientras duro, pero cuando las cosas se pusieron feas, la ultima opcion que quedaba fue regresar a las frias y perversas garras (reptili|fedori)anas.
+Jo, jo, jo, no todo es tan malo, creo, freidora tambien tiene de lo ultimo y por ahora el unico problema es que el equipo no se apaga si no es con un reinicio y cortando el switch de la fuente en el interludio&amp;hellip;.</description>
+    </item>
     
     <item>
       <title>Java &amp; Me(h)</title>
