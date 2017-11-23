@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTC One M8 (flasheo)</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>HTC One M8 (flasheo)</h1>
+  
+
+<p>sucede que estas tranquilamente con tu dispositivo (un androide 4.4) que se
+arrastra por la vida, un dia revisando la <em>playstore</em> aparece que google te esta revisando las
+aplicaciones para que no tengas que preocuparte por tontaaas de seguridad o virus. Te cuiada tanto que
+ni te aviza, le dices que no tiene que hacerlo, pero insiste.</p>
+
+<p>Otro dia revisas tus apps y cual hongo &ldquo;nace&rdquo; un nuevo icono de nombre <em>Ajustes
+de Google</em>, va, si esto no lo instale yo, que generosidad&hellip; y asi tu
+dispositivo con pocos recursos, programado en java, sobre java, sobre un nucleo,
+sobre un hardware con 500MB de ram y doble nucleo arm, no puede reproducir un
+puñetero audio decentemente. Te cansas y cual windowsero le instalas un
+rooteador truculento con anuncios incluidos (y a saber que mas) y te pones a
+erradicar todo lo que se atraviesa por el camino, hasta que sale un mensaje cada
+5 segundos sobre que el telefono ya no funciona&hellip; hey, bravo!</p>
+
+<p>bueno que mas, a escuchar el mundo tal cual y no ver videos por la
+noche&hellip; NoooOOOOOOOHHHHHHHHH, llevame a mi, llevame a mi!</p>
+
+<p>por diversos motivos y una serie de eventos aleatorios fuera de control, termine
+con un mobil de segunda mano al que por desgracia, pese a una &ldquo;exaustiva
+revision&rdquo; tenia un defecto en el &ldquo;touch&rdquo; del display&hellip; pero por otra parte
+ha sido el primer afortunado con el que intento un flasheo y termina con
+resultado (casi) feliz (lo del touch, es molesto). Aqui los pasos</p>
+
+<p>Primero debemos instalar en nuestro flamante y nada restrictivo PC de escritorio
+un par de herramientas <code>adb</code> y <code>fastboot</code>. En freidora seria:</p>
+
+<pre><code>dnf -y install android-tools
+</code></pre>
+
+<p>luego desde el dispositivo (cargado y sin conectar) vamos a</p>
+
+<pre><code>Ajustes &gt; Informacion &gt; Compilacion
+</code></pre>
+
+<p>o algo asi, presionamos sobre <em>Numero de Compilacion</em> 5 veces hasta que nos
+indique que ya somos &ldquo;developers&rdquo;. Regresamos a Ajustes y vamos a <em>Opciones de
+Desarrollador</em>, tras esto, encendemos el &ldquo;modo de depuracion (ADB)&rdquo;. Luego
+pasamos a conectar el dispositivo al equipo y deberia de aparecer un dialogo sobre si
+damos permisos de depuracion al PC, a lo que decimos que si y siempre!</p>
+
+<p>Sucede que los dispositivos HTC, son muy bondadosos, tienen bloqueado
+el dispotivibo contra cosas de consola, asi que en este punto vamos a <a href="https://www.htcdev.com/">la web</a> de
+&ldquo;developers de HTC&rdquo; y nos resgistramos (es necesario). Una vez cumplido el
+tramite, y ya con nuestra cuenta logueada, en el navegador (desde el PC) pasamos
+al terminal en modo root y tecleamos</p>
+
+<pre><code>adb reboot bootloader # reinicia el mobil y entra en el &quot;bios&quot;
+</code></pre>
+
+<p>o alternativamente podemos (desconectar usb) apagar el equipo, luego presionar el <code>+</code> en volumen y
+el <code>POWER</code> sin soltar, y entra en el bootloader (conectar usb)</p>
+
+<p>ahora, vamos a optener el <em>token</em> de nuestro mobil, con el cual podremos
+optener la llave de desbloqueo (o no)</p>
+
+<pre><code>fastboot oem get_identifier_token
+</code></pre>
+
+<p>en mi equipo sale algo asi:</p>
+
+<pre><code>--( root ) - { /h/n/Downloads }
+--| fastboot oem get_identifier_token
+...
+(bootloader)
+(bootloader) &lt; Please cut following message &gt;
+(bootloader) &lt;&lt;&lt;&lt; Identifier Token Start &gt;&gt;&gt;&gt;
+(bootloader) 42EC933383A3F0D0E588FDFA06BC5B60
+(bootloader) CE75OEUI897EUX89EUI5465EUIFGX5U5
+(bootloader) 60C649D88C27020848589DB27353BC32
+(bootloader) NAS421BB5DDA3926B6F88A1C9E6DE7C6
+(bootloader) 2C3C1131C708DAE513785CA95F212DA5
+(bootloader) 1A12QJB0Y4PI684EUI51UEI564PUIE5U
+(bootloader) AF8AF2324322DE1BE93A7842EB8638CA
+(bootloader) 801DBCFD5254990D1739D5DB17C83DC2
+(bootloader) 2A48B420F729651167578764F178B52D
+(bootloader) 3F87E96D0BD19DFA3067C64E483AD551
+(bootloader) CA617AF1D897E4A27FE8C35604F5D4A4
+(bootloader) 9A2DFB9C7FE465CC1102816C7B3C8E2D
+(bootloader) DBEUIUI564UIE54UIE654UEIFAIL000L
+(bootloader) E5A5B4A9D481EEC452744FDE5294CC0C
+(bootloader) 61BF1D0D3740BA36F9DFBDAF306DD4F0
+(bootloader) 54054AEDFE75B8CFB74E5769ED8F2318
+(bootloader) &lt;&lt;&lt;&lt;&lt; Identifier Token End &gt;&gt;&gt;&gt;&gt;
+OKAY [  0.009s]
+finished. total time: 0.009s
+</code></pre>
+
+<p>aqui tenemos que cortar y copiar esta seccion (obviamente disinta en tu caso):</p>
+
+<pre><code>&lt;&lt;&lt;&lt; Identifier Token Start &gt;&gt;&gt;&gt;
+42EC933383A3F0D0E588FDFA06BC5B60
+CE75OEUI897EUX89EUI5465EUIFGX5U5
+60C649D88C27020848589DB27353BC32
+NAS421BB5DDA3926B6F88A1C9E6DE7C6
+2C3C1131C708DAE513785CA95F212DA5
+1A12QJB0Y4PI684EUI51UEI564PUIE5U
+AF8AF2324322DE1BE93A7842EB8638CA
+801DBCFD5254990D1739D5DB17C83DC2
+2A48B420F729651167578764F178B52D
+3F87E96D0BD19DFA3067C64E483AD551
+CA617AF1D897E4A27FE8C35604F5D4A4
+9A2DFB9C7FE465CC1102816C7B3C8E2D
+DBEUIUI564UIE54UIE654UEIFAIL000L
+E5A5B4A9D481EEC452744FDE5294CC0C
+61BF1D0D3740BA36F9DFBDAF306DD4F0
+54054AEDFE75B8CFB74E5769ED8F2318
+&lt;&lt;&lt;&lt;&lt; Identifier Token End &gt;&gt;&gt;&gt;&gt;
+</code></pre>
+
+<p>regresamos a <a href="https://www.htcdev.com/bootloader/unlock-instructions/page-2">esta</a> pagina de htc, vamos al final y (logueados) pegamos el recorte
+en el recuadro magico. Enviamos!</p>
+
+<p>&ldquo;despues de un perido de tiempo&rdquo; (en la prueba fue instantaneo) reciviremos un
+correo de <em>HTC-Unlockbootloader@htc.com</em> con un adjunto <strong>Unclock_code.bin</strong>
+(guardarlo como el oro). Regresamos a la terminal e ingresamos</p>
+
+<pre><code>fastboot flash unlocktoken Unclock_code.bin
+</code></pre>
+
+<p>se abrira en el movil la sugiente pantalla</p>
+
+<p><img src="http://nasciiboy.github.io/img/step13.jpg" alt="" /></p>
+
+<p>movemos con VOLUMEN +/- hacia el Yes y confirmamos con POWER.</p>
+
+<p>En este momento (no estoy seguro si es necesario pero) reiniciamos el equipo y
+reentramos en el bootloader ahora desploqueado</p>
+
+<pre><code>fastboot oem boot
+adb reboot bootloader
+</code></pre>
+
+<p><img src="http://nasciiboy.github.io/img/bootloader_screen.png" alt="" /></p>
+
+<p>en este punto ya tenemos el mobil listo para flashear cualquier otro sistema. Si
+desides arrepentirte puedes ingresar</p>
+
+<pre><code>fastboot oem lock
+</code></pre>
+
+<p>de lo contrario, procedemos a instalar la ROM, en este caso un lineageOS, por
+que fue lo primero que encontre y tenia soporte. De cualquier forma, parece que
+el equipo cuenta con muchas roms, incluso desde la pagina de htc, nos
+proporcianan el kernel que utilizan y los pasos necesarios si queremos compilar
+por nuestra cuenta.</p>
+
+<p>Vamos a la pagina de descargas de lineage de este equipo
+(<a href="https://download.lineageos.org/m8">https://download.lineageos.org/m8</a>) y escogemos la &ldquo;mas
+nueva&rdquo;, debe ser algo como <code>lineage-*.zip</code> y pesar alrededor de 300-400MiB.
+Para evitar inconvenientes tambien podemos bajar la suma hash y hacer la
+comprobacion.</p>
+
+<p>Asi mismo, debemos optener el <em>recovery</em> para instalar la rom, eso esta por aca &gt;
+<a href="https://dl.twrp.me/m8/">https://dl.twrp.me/m8/</a>, tambien bajamos la mas nueva y verificamos la suma</p>
+
+<p>Si has seguido los pasos deberiamos estar el el bootloader. Procedemos a instalar
+el recoveri, lo cual seria algo como</p>
+
+<pre><code>fastboot flash recovery twrp-x.x.x-x-m8.img
+</code></pre>
+
+<p>y ya que estamos, aprobechamos para transferir nuestro rom de lineaje, cosa que
+creo puede hacerse desde el navegador de ficheros, pero continuemos con el ritual</p>
+
+<pre><code>adb push lineagexxxxxxxxx*.zip /sdcard/
+</code></pre>
+
+<p>reiniciamos y volvemos a entar en el bootleader</p>
+
+<pre><code>fastboot oem boot
+adb reboot bootloader
+</code></pre>
+
+<p>ahora, creo que presionando POWER deberiamos regresar <em>un paso</em> en el &ldquo;bios&rdquo; y
+entrar en el menu <em>RECOVERY</em></p>
+
+<p>aqui aproverchariamos para hacer un respaldo del equipo (cosa que no hice),
+vamos a</p>
+
+<pre><code>Wipe &gt; Advanced Wipe
+</code></pre>
+
+<p>seleccionamos <em>Cache</em>, <em>System</em> y <em>Data</em> y delizamos &ldquo;la barra&rdquo; para aprobar los
+cambios</p>
+
+<p>Hacemos una vuelta atras en el menu y le damos a <em>Install</em> buscamos nuestro rom
+en el sistema (<code>/sdcard</code>), selecionamos nuestro <code>lineage*.zip</code> y aplicamos los
+cambios deslizando de nuevo.</p>
+
+<p>Reiniciamos y ya deberiamos tener nuestro flamante sistema con androide 7 y sin
+las cosas de google, je, ni pide usuario o mierdas similares!. Para terminar instalamos
+el fdroid, el apk de vlc (desde su pagina) y a rockanrolear</p>
+
+<p><strong>happy hacking!</strong></p>
+
+<p>(<em>pd:</em> al parecer, el metodo es mas o menos similar pra cualquier movil, aunque el
+viejo LG l50 se resiste a entrar en el &ldquo;bios&rdquo;, si lo consiguo ya habra segunda
+parte)</p>
+
+<p>(<em>pd2:</em> el equipo de segunda mano se llebo todas mis fichas, y no tiene
+recambio. Repararlo tampoco parece una opcion rozonable (por el precio), ja, ja,
+ja, si lo logro re-vender a alguna entidad como la que me lo colo, creo que
+compraria un equipo identico, principalmente por pasar la prueba y tener un
+hardware mas que potable)</p>
+
+<h2 id="fuentes">fuentes</h2>
+
+<p><a href="https://wiki.lineageos.org/devices/m8/install">https://wiki.lineageos.org/devices/m8/install</a></p>
+
+<p><a href="https://dl.twrp.me/m8/">https://dl.twrp.me/m8/</a></p>
+
+<p><a href="https://www.htcdev.com/bootloader">https://www.htcdev.com/bootloader</a></p>
+
+<p><a href="https://www.htcdev.com/bootloader/unlock-instructions">https://www.htcdev.com/bootloader/unlock-instructions</a></p>
+
+<p><a href="https://www.htcdev.com/bootloader/unlock-instructions/page-2">https://www.htcdev.com/bootloader/unlock-instructions/page-2</a></p>
+
+<p><a href="https://www.htcdev.com/bootloader/unlock-instructions/page-4/">https://www.htcdev.com/bootloader/unlock-instructions/page-4/</a></p>
+
+<p><a href="https://www.htcdev.com/bootloader/about_unlock_process">https://www.htcdev.com/bootloader/about_unlock_process</a></p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/prog/the-return-of-f/">◀ The Return Of F</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(34)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(22)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/howto">howto(15)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(13)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(12)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(10)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(6)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="http://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="http://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="http://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

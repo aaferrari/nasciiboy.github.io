@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/prog/m8/</loc>
+    <lastmod>2017-11-23T16:26:40-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/prog/the-return-of-f/</loc>
     <lastmod>2017-11-16T13:24:08-06:00</lastmod>
   </url>
@@ -389,6 +394,12 @@
   </url>
   
   <url>
+    <loc>http://nasciiboy.github.io/tags/adb/</loc>
+    <lastmod>2017-11-23T16:26:40-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/tags/anime/</loc>
     <lastmod>2017-06-04T14:57:33-05:00</lastmod>
     <priority>0</priority>
@@ -449,6 +460,12 @@
   </url>
   
   <url>
+    <loc>http://nasciiboy.github.io/tags/fastboot/</loc>
+    <lastmod>2017-11-23T16:26:40-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/tags/fish/</loc>
     <lastmod>2016-12-24T10:04:44-06:00</lastmod>
     <priority>0</priority>
@@ -480,7 +497,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/howto/</loc>
-    <lastmod>2017-11-16T13:24:08-06:00</lastmod>
+    <lastmod>2017-11-23T16:26:40-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -564,13 +581,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2017-11-16T13:24:08-06:00</lastmod>
+    <lastmod>2017-11-23T16:26:40-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2017-11-16T13:24:08-06:00</lastmod>
+    <lastmod>2017-11-23T16:26:40-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -654,7 +671,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-11-16T13:24:08-06:00</lastmod>
+    <lastmod>2017-11-23T16:26:40-06:00</lastmod>
     <priority>0</priority>
   </url>
   
