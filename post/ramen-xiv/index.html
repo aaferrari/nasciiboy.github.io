@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XIV – Noise</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+
+  <h1>Ramen XIV – Noise</h1>
+  
+
+<p>Ho, ho, ho, a sido un mes difuso, un vehiculo casi me impacta, bueno, lo hiso,
+aunque solo fue un &ldquo;beso&rdquo; de su llanta y ese cacho de pellejo arriba del
+talon. Pese a lo poco visual que pudiera parecer, por 3 dias caminar fue
+complicado y aun hay secuelas tres semanas despues</p>
+
+<p>no conforme con eso, una semana mas tarde tube un enfrentamiento con un gato que
+termino con multiples y profundos arañazos, una mordida en un pie y otra de gran
+profundidad casi a la altura de la muñeca, donde &ldquo;nace&rdquo; el dedo pulgar, ja, ja,
+igual que con el automotor, no dejo secuelas destacables. Sin embargo, que
+eso no sea motivo de engaño, los colmillos de un felino (como los de una
+serpiente) son finos, grandes y llenos de bacterias. Aunque en principio plantee
+confiarle a mi sistema inmune el pedo, cuando la pierna comenzo a dejar de ser
+mia, me vi en la imperiosa necesidad de acudir por antibioticos,</p>
+
+<p>ja, ja, ja, ya habia hecho que el gato me perdiera el miedo y se acercara dandole
+crocetas varias veces, incluso el dia del enfrentamiento me equipe con un sueter
+y le lance una camisa encima para nublar su vision, pero sus movimientos
+desesperados y agules esquivaron la tela que separaba sus garras de mi mano y su
+cuello.</p>
+
+<p>lo primero que hiso al liberarse fue lanzarse hacia la pierna. Tome su
+accion con calma, no queria herirlo, solo &ldquo;llevarlo de paseo&rdquo; a un paraje
+desolado para no verlo nunca mas, como antes hice con otros dos felinos sin
+mayor complicacion</p>
+
+<p>en el inteludio de su primer ataque, aproveche para restaurar el sueter a su
+posicion de inicio, lo sujete con fuerza de nuevo sobre el pellejo que cubre su
+cuello pero sus movimientos no cesaron, asi que intentado contenerlo, con la
+mano opuesta trate de sujetar sus patas traseras, y justo en ese momento se
+avalanzo a morder la mano, esta vez sin piedad y con todas sus fuerzas.</p>
+
+<p>En ese momento y ya que no podia morder mas profundo de lo que habia llegado, lo
+deje disfrutar, pero ahora sus acciones tendrian un alto precio (me dije), lo
+separe a la fuenza y tome sus dos patitas con firmeza a una distancia donde sus
+mordidas perdieran eficacia&hellip; y en ese momento, mi gatete se puso al pedo e
+intento ajusticiarse en mi nombre saltandole encima, iniciando una batalla de
+garras de la que preferi no formar parte, asi que los deje luchar brebemente y
+acudi a presionar las heridas y echarles aguita y luego aplicar cloruro de
+benzalconio</p>
+
+<p>al final el gatete (el mio) se puso a hacer guardia frente a mi
+alojamiento&hellip; por si regresaba aquel ingrato al que regale unas croquetas unos
+dias (con sucias intenciones, aunque no tanto como las mierdas que esparcia por
+el patio). Ahora cada vez que aparece, el gatete al que alimento se le pone al
+pedo y lo sigue hasta que avandona mis tierras</p>
+
+<p>ademas de estos miesteriosicos acontecimientos hubieron reflexiones
+psicodelicosas &ldquo;con material&rdquo;, ufff, lugo de casi un año, puede agregar a los
+registros una entada sonica ZX!</p>
+
+<p>tambien acompañaron algunos desvarios programacionales, continuacion (temporal y
+caotica) de viejos proyectos: dos episodios del libro del raptor, que no se si
+esta escritos con calidad debajo del umbral donde se clasificaria un trabajo de
+afisionado (sin puta idea de nada), pero mientras los hago creo que son la
+hostia con patas. Tambien retome la traduccion del libro de introduccion a
+elisp.</p>
+
+<p>Por el contrario el proyecto de hacer la preparatoria, estudiar mates y
+profundizar en java se han visto desplazados a un tercer o cuarto plano, donde
+las horas del dia y la energia (o momentos sin sueño) dejan de ser suficientes.</p>
+
+<p>tambien termine la transcripcion de el <strong>GoF</strong>, pero eso, sera motivo de un post
+propio en 2 o 3 meses (o nunca), por el momento toca darle una revision y
+hacerla de emocion con el inkscape y/o dia</p>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>Star Trek Discovery</strong> luego de un inicio esceptico, a medida que pasaban los
+capitulos le fui cogiendo cariño a la serie, al menos el suficiente para
+considerarla digna de llebar el nombre. Con todo sigo teniendo problemas con los
+personajes principales, quiza quitando al capitan y el ingeniero, al resto no
+les termino de ver su relevancia, en particular a la prota, por que es <em>the one</em>?</p>
+
+<p><strong>Star Trek &ldquo;La nueva Generacion&rdquo;</strong> (Temporada 1) Esta serie, (en la zona donde
+resido), escapo a mi generacion, el primer contacto que tube con ella y que fue
+inpactante, fue mientras hacia de recepcionista (nocturno) en un hotel, y entre
+cambiar los discos del porno, ver billy &amp; mandy, coraje el perro cobarde, el sueño y
+atender a los clientes, podia apresiarla de ves en cuando sin un orden particular</p>
+
+<p>Ya habia iniciado a ver el <strong>Start Trek</strong> original, al menos los primeros
+25 episodios (creo) luego no encontre mas. Y aunque ya en ese inicio, se sientan
+las bases, es aqui donde toman fuerza.</p>
+
+<p>Las aventuras son &ldquo;mas profundas&rdquo;, creibles, con menos enfrentamientos de lucha
+libre contra lagartos, o salidas del capitan por que, que se joda la coherencia
+(he, tienen su encanto)</p>
+
+<p>en fin, compensan el poco presuesto con una puesta teatral, miradas a ningun
+sitio mientras dicen con conviccion lo increible que es lo que ven, y batallitas
+que toman alguna excusa tecno-cientifico-futurista, para indagar en temas
+tracendentales</p>
+
+<p><strong>Wolf Children</strong> em&hellip; entretenida, ni drama ni nahh&hellip; no dejo de pensar que
+es una fantasia (furry) del director</p>
+
+<p><strong>Nothing to Hide</strong> un documental relacionado con software libre y esas
+cosas&hellip; bastante bueno, aunque no dicen nada que no conociese, no aburre</p>
+
+<p><strong>Get Out</strong> un pendiente de las &ldquo;supuestas&rdquo; pelis de terror (spoiler, no
+existen, solo el suspenso es alcanzable), entretenida y con un aire a propuesta
+fresca con toques de humor (negro&hellip;)</p>
+
+<p><strong>The Cabin in the Woods</strong> criick, siguiendo la racha de pendientes, esperaba
+gore con dosis de hechos perturbantes. Encontre gore con meta humor sobre el
+genero, curioso experimento/tributo</p>
+
+<p><strong>Osomatsu San</strong> hoooooooooooooooooo! por fin termine de ver esta serie! aunque
+intentando consumirla lentamente para prolongar la dirversion!</p>
+
+<p>haber, esto es comedia surreal japonesia combianado con amor y ataques hacia la industrua
+de la que forma parte, animacion chula, creativa y llena de cariño, los endings
+son puro goce.</p>
+
+<p>Mi personaje favorito es totoko por sus ataques devastadores, su casco de pez y
+su personalidad sincera.</p>
+
+<p>Si bien no todos los &ldquo;cortos&rdquo; son graciosos (lo intenten o no), logran mantener
+la atencion y ansias por ver un episodio mas. En estos momentos se esta
+emitiendo una segunda temporada (ep 10) (el 6 con cosas verdes es a-l-u-c-i-n-a-n-t-e)
+que en conjunto con los anteriores 26 episodios han hecho que recuerde los nombres de los 6
+matsus&hellip; y colocarlo en un lugar destacado de mi lista personal</p>
+
+<p><strong>Thor Ragnarok</strong> Advertido fui al templo (el cine) advertido sobre que esto eran dos
+horas sin seriedad y con sobredosis (de supuesto) humor. Ese dia era justo lo que
+buscaba, nada serio y perder 2 horas (o mas) del dia, lo cumplio holgadamente,
+sin embargo, conectar con el humor fue dificil, pese a ello, el tono de &ldquo;no me
+tomes en serio, somos gente disfrazada, pasala bien con batallas y explosiones&rdquo;
+me incapacitan para jusgarla como nada mas que: puro y duro divertimento</p>
+
+<p><strong>Doctor Strange</strong> en Thor, salia este sujeto&hellip; mas por saber el por que, que
+por interes (que si no la vi antes, es por que no lo habia). me baje un torrente
+y&hellip; oye?! esta genial! que igual no entiendo muy bien el berrinche del brijito
+del final, pero eso de mostruos a lo kutulju, dimenciones acidas y sus efectos
+superiores en todo sentido a los de inception (y sin su asquerosa
+pretenciosidad), me hacen recomendarla, que puedo decir, mi criterio es poco exigente</p>
+
+<p><strong>Iron Man II (y III)</strong> ya que estaba, pues a continuar con las restantes, me
+faltaria las otras de thor, la segunda del capi y el hombre hormiga.</p>
+
+<p>La primera me gusto, la segunda es un punto necesario para ubicarse en los
+Avengers y darles profundidad para esa batalla de las guerras del infinito. La
+tercera, es una cosa rara, tiene mas violencia cruda, pero sin sangre, como que
+sentimental pero no mucho, como que un cierre y ocaso&hellip; pero no, no se
+clasificarla, llebadera? entretenida? no lo se, bueno solo estoy seguro que en
+mala o desperdicio de vida no la pondria</p>
+
+<h2 id="fonos">fonos</h2>
+
+<p><strong>Just For Love</strong> Si es que <em>Quicksilver Messenger Service</em> pierde algo en
+pacheques, se gana en Funky-Rollmantico, que mas se puede decir, bajalo de una puta vez?</p>
+
+<p>bueno, creo que ese flac esta ripeado de un sucio vinil, al menos no es un rip
+a 24x96, putos hipsters:</p>
+
+<pre><code>magnet:?xt=urn:btih:2962e40dd4ee1b79c7af150cb84034a1e9780184&amp;dn=Quicksilver%20Messenger%20Service%20-%20Just%20For%20Love%20(1970%3b%202005)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce
+</code></pre>
+
+<p>por completacion, y ya que no encontre una discografia sin emepe13s</p>
+
+<pre><code>magnet:?xt=urn:btih:c679bf1fb24390040a0a2dc4b0a4a8e93199e403&amp;dn=Quicksilver%20Messenger%20Service%20-%20Shady%20Grove%20(1969)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969
+magnet:?xt=urn:btih:02c6251fb20892fa966dffb17815e6b254333073&amp;dn=Quicksilver%20Messenger%20Service%20-%20Happy%20Trails%20(1969)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce
+</code></pre>
+
+<p><strong>Fugazi</strong> Haber, la primer ves que hoy algo de esta banda fue hace muchos
+muchos años cuando por la noche andaba con un walkman caminando por la calle, en
+un programa que gustaba de tratar a la musica que ponia como si fuese un
+aperitivo gourmet&hellip; luego el programa de radio aquel degenero en ser puro
+post-rock o eso decia el director</p>
+
+<p>en aquel programa, coloco algo que clasifique entre Sonic Youth y radiohead, no
+recuerdo el disco, solo el nombre de la banda&hellip; si es que esta y aquella son la
+misma.</p>
+
+<p>Dejando de lado las batallitas, ya habia escuchado un par de albums de estos,
+pero creo que no eran lo questaba buscando. Supongo por eso no recuerdo su
+sonido.</p>
+
+<p>Para esta ocacion pasaron dos albums, <em>Instrument Sountrack</em> con un sonido &ldquo;lados-b&rdquo;
+de rock noise-garajoso-soft o algo asi. Luego siguio <em>End Hits</em>, fuuum, esto si
+es de lo que me pone denso, lo clasificaria entre el Dinosaur jr/pixies y los
+Youth con la vos de la banda que toca en el cumpleaños de Mongomeri Bers</p>
+
+<p><strong>Butthole Surfers</strong> Leyendo en la wikipedia sobre noise rock, tenian una linea
+de timpo que aparecia a la par de Sonic Youth como los &ldquo;fundadores&rdquo; de esta
+corriente sonora. Supuestamente eran bastante indies y su musica esta
+fuertemente influenciada por las drogas recreativas, como ademas tiene surf en
+su nombre, pues a escuchar.</p>
+
+<p>Los albums aleatoriamente escuchados fueron <em>Electriclarryland</em>, <em>Pioughd</em> y
+<em>Psychic&hellip;Powerless..Another Man&rsquo;s Sac</em>. (ja, ja, ja, ya paso como un mes desde
+que los escuche y ni me acuerdo de las sensaciones)</p>
+
+<p>El primero entretenido sin mucho noise, muy ecleptico, voces, resos, sonidos
+electronicos, algo como rap, voces sureñas y a lo matrix. Buen album, divertido
+y variado, la inmersion sonora tendra que esperar.</p>
+
+<p>El segundo (Pioughd, un buen nombre para un daemon del sistema)) un poquito mas
+noise, aunque igualmente le puede lo ecleptico, este se diferencia en tener
+vocales &ldquo;mas rurales&rdquo;, por decirlo de algun modo.</p>
+
+<p>El tercero, aunque uno de dos primeros albums, es desagradable, como un intento por
+alejar a los &ldquo;suavesitos&rdquo;, una vez alejados estos, inicia su seccion ritual que
+esta muy chida</p>
+
+<p><strong>Dinosaur Jr.</strong> (el Sonic Youth blando) escuche, <em>You&rsquo;re Living All Over Me</em> no
+esta (muy) mal&hellip;?</p>
+
+<p><strong>Melt Banana</strong> <em>cactuses como in flocks</em>, &hellip; . . no se, supongo que este es
+el equivalente al arte contemporaneo, donde hay que adptrinarse con algunos
+libros antes de poder entender la profundidad de la obra&hellip; grabaciones de
+sonidos cortos aguitarrados vocalizados irritantes,</p>
+
+<p><em>Fetch</em> aqui hay algo mas de sentido, es bueno? no se, es distinto</p>
+
+<p><strong>Magnification</strong> (<em>Yes</em>) esta es otra de esas tantas bandas que a finales de
+los 70 se tornaron <em>ochenteras</em> y ya no pudieron regresar a sus viejas glorias
+musicales. Este un album del 2001, no es la exepcion, si bien, es oible, carece
+de la belleza cosmico-progresiva-instrumental de los primeros albums</p>
+
+<p><strong>Jeff Beck</strong></p>
+
+<ul>
+<li><p><em>Jeff Beck Group</em> todo el album esta chido, en especial me quedo con
+<em>definitely Maybe</em>, por su sonido rollmantico-depresivo-menlancolicoso</p></li>
+
+<li><p><em>Jeff Beck &amp; Jah Hammer Group</em>, virtuoso, en especial el inicion con esa
+emulacion de clasons de coche hecha en sus guitarras, pero tampoco me dieron
+ganas de escucharlo tras las primer prueba, que se añeje un rato y luego veremos</p></li>
+
+<li><p><em>Rough &amp; Ready</em> (hum, yo no lo recuerdo, malo no fue)</p></li>
+</ul>
+
+<p><strong>The Blues Alone</strong> (Jhon Mayal) bueno, aunque no termino de entrar en su onda,
+me va mas el blues rasposo o depresivo</p>
+
+<p><strong>Miles Okazaki – Trickster</strong> fuuuhjuhu! buen jazz estilo japo-uehara, aparecio
+en las novedades del torrente, lo baje por el nombre ajaponado y me lo quedo por
+su enorme calidad! Tanta que me he puesto a escuchar cualquier nombre que no
+conosca en las novedades musicales, aunque como en todo, y pese a que pienso que
+si alguien se toma la molestia de colgar material sera por que le pone tanto como para
+compartirlo; como en la mayoria del material del mundo <sup>9</sup>&frasl;<sub>10</sub> cosas, si no
+existieran no las extañaria</p>
+
+<pre><code>magnet:?xt=urn:btih:c2caaf0029c92f3eb109d0a8d2f654c8d3b81053&amp;dn=Miles%20Okazaki%20-%20Trickster%20(2017)&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<h2 id="txt">txt</h2>
+
+<p>salido de los post injustamente votados a menos cero</p>
+
+<p><a href="http://telegra.ph/Dynamic-languages-are-not-productive-11-11">http://telegra.ph/Dynamic-languages-are-not-productive-11-11</a></p>
+
+<p>aqui se expone (mundanamente) por que los lenguajes dinamicos y de scripting no son
+&ldquo;productivos&rdquo; (je, esa palabra magica, que aparece en todas las discuciones de
+programacion). Me hiso especial gracia por que al igual que yo, tambien piensa
+que esos lenguajes solo son utilies para cosillas, no para crear programas enteros!</p>
+
+<p>otro post (tambien en ingles y bajo-votado) <em>El software rápido es una disciplina, no un propósito</em></p>
+
+<p><a href="https://lemire.me/blog/2017/11/16/fast-software-is-a-discipline-not-a-purpose/">https://lemire.me/blog/2017/11/16/fast-software-is-a-discipline-not-a-purpose/</a></p>
+
+<p>tambien me ley los primeros capitulos de un libro sobre lyx y *TeX escrito por
+un pingüino de la era media</p>
+
+<p><a href="https://elpinguinotolkiano.wordpress.com/2017/11/20/disponible-lyx-la-otra-forma-de-escribir/">https://elpinguinotolkiano.wordpress.com/2017/11/20/disponible-lyx-la-otra-forma-de-escribir/</a></p>
+
+<p>del que extraigo estas piezas solo clasificables como alta literatura</p>
+
+<blockquote>
+<p>doy por supuesto que el lector sabe utilizar su computadora</p>
+</blockquote>
+
+<p>y</p>
+
+<blockquote>
+<p>Los defensores de la edición basada en texto dicen, y suelen tener razón, que
+cuando se conocen los códigos correctos es mucho más simple escribir que andar
+haciendo clic por aquí y allá y que en los editores gráficos se pasa uno más
+tiempo buscando la función que necesita que usándola.</p>
+
+<p>Los defensores de los programas de edición gráficos dicen, y suelen tener
+razón, que recordar una infinidad de comandos por más simples que estos
+sean implica un esfuerzo la mayor parte de las veces injustificado y que la
+«curva de aprendizaje» de un programa gráfico es siempre más suave que
+en un programa basado en texto.</p>
+
+<p>A esta guerra se agrega un tercer grupo formado por aquellos que dicen
+que los otros dos grupos son unos idiotas y que nada es mejor que un buen
+atajo de teclado, a lo cual los dos grupos anteriores responden, y suelen tener
+razón, que hacer todo con atajos de teclado requiere unas habilidades tanto
+en los dedos como en la memoria propias de un pianista virtuoso.</p>
+</blockquote>
+
+<p>el pingüino, tambien tiene un libro sobre libre office Writer, aunque la
+ofimatica no sea de tu interes, la introduccion tambien aporta algo de sabiduria</p>
+
+<p>como postre final, un post de reddit me llevo al blog de ESR (el del Open
+Source, &ldquo;La catedral y el bazar&rdquo;, mantenedor de ncurses (por algun tiempo) y
+otras cosas mas). Si bien no estoy deacuerdo con algunos de sus mas personales post,
+se nota que el tipo sabe y se toma su tiempo antes de picar el teclado, los
+siguientes post son indispensables (y tambien los ultimos en aparecer en su
+feed) si te interesa la programacion en general, C, la eficiencia y los
+lenguajes en particular</p>
+
+<p>el largo adios a C <a href="http://esr.ibiblio.org/?p=7711#more-7711">http://esr.ibiblio.org/?p=7711#more-7711</a></p>
+
+<p>algo de rust <a href="http://esr.ibiblio.org/?p=7303">http://esr.ibiblio.org/?p=7303</a></p>
+
+<p>una entrada sobre su parecer sobre go <a href="https://blog.ntpsec.org/2017/02/07/grappling-with-go.html">https://blog.ntpsec.org/2017/02/07/grappling-with-go.html</a></p>
+
+<blockquote>
+<p>Creo que escribir programas de juguetes -ejercicios dactilares conscientes- son
+una forma terrible de aprender un nuevo idioma. Son aburridos, y no te hacen
+pensar lo suficiente. Para mí, los tutoriales llenos de ejemplos bonitos y de
+tamaño de bocado elegidos por otros tampoco funcionan bien- me siento como si
+estuviera siendo patrocinado por los autores, alimentado con bombones
+excesivamente seguros cuando lo que quiero hacer es arrancar alegremente y
+desgarrar enormes trozos de carne.</p>
+</blockquote>
+
+<p>esta seria la mejor publicidad que podria hacerse sobre <em>lo que no es el libro
+de Go</em>, darle una oportunidad, es una belleza, que motiva esta insistencia</p>
+
+<p>otro post sobre por que C++ no reemplazo a C y es basicamente una ruta
+muerta dentro de los lenguajes de programacion hasta la aparicion de Go y Rust
+<a href="http://esr.ibiblio.org/?p=7724">http://esr.ibiblio.org/?p=7724</a> (+ otra anotacion <a href="http://esr.ibiblio.org/?p=7745">http://esr.ibiblio.org/?p=7745</a>)</p>
+
+<p>&hellip; bueno, el blog esta lleno de perlas, para finalizar a todos los que se sientan
+identificados en su identidad (sexual) con un avion de combate, <a href="http://esr.ibiblio.org/?p=7524">Por que la identidad no
+es una eleccion</a>, tendran un tiempo para
+reflexionar antes de <del>escribir</del> hacer videos de opinion con sus jetas en yutu</p>
+
+<p>si supiera engrish, me pondria a traducirlo (con o sin su permiso)
+definitivamente de dare una vuelta desde el inicio cuando aprenda mas de ese
+lenguaje</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/post/ramen-xiii/">◀ Ramen XIII</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(34)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(23)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/howto">howto(15)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(14)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(13)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(10)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(7)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="http://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="http://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="http://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
