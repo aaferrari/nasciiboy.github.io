@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Fri, 27 Oct 2017 17:42:32 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 08 Dec 2017 21:52:22 -0600</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/tags/morg/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Morg Mirror</title>
+      <link>http://nasciiboy.github.io/prog/morg-mirror/</link>
+      <pubDate>Fri, 08 Dec 2017 21:52:22 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/morg-mirror/</guid>
+      <description>Una buena documentación es invaluable. Ya que cada uno tiene su propia definición de &#34;bueno&#34;, aquí está la mía:  Los buenos documentos no me hacen buscar en la web
+ Los buenos documentos tienen ejemplos de trabajo con los que puedo empezar
+ Los buenos documentos siguen convenciones claras que fomentan hábitos de lectura
+  para mí, comenzar un nuevo proyecto significa escribir algo de código para poder entender el problema que estoy tratando de resolver mejor.</description>
+    </item>
     
     <item>
       <title>blackfriday</title>

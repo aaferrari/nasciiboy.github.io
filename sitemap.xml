@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nasciiboy.github.io/prog/morg-mirror/</loc>
+    <lastmod>2017-12-08T21:52:22-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nasciiboy.github.io/post/ramen-xiv/</loc>
     <lastmod>2017-12-06T21:12:00-06:00</lastmod>
   </url>
@@ -556,7 +561,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/tags/morg/</loc>
-    <lastmod>2017-10-27T17:42:32-05:00</lastmod>
+    <lastmod>2017-12-08T21:52:22-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -586,13 +591,13 @@
   
   <url>
     <loc>http://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2017-11-23T16:26:40-06:00</lastmod>
+    <lastmod>2017-12-08T21:52:22-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nasciiboy.github.io/prog/</loc>
-    <lastmod>2017-11-23T16:26:40-06:00</lastmod>
+    <lastmod>2017-12-08T21:52:22-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -676,7 +681,7 @@
   
   <url>
     <loc>http://nasciiboy.github.io/</loc>
-    <lastmod>2017-12-06T21:12:00-06:00</lastmod>
+    <lastmod>2017-12-08T21:52:22-06:00</lastmod>
     <priority>0</priority>
   </url>
   
