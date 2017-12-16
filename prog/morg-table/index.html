@@ -241,11 +241,11 @@ adelante <strong>estilo A</strong>)</p>
 <p>esta tabla, a simple vista mas compleja, delimita sus celdas mediante signos
 &ldquo;tuberia&rdquo; al inicio y fin, y sus bordes por tuberias y &ldquo;menos&rdquo; (<code>|----|</code>), pero
 manteniendo todas las filas con una longitud constante. Sin embargo cada celda,
-puede abarcar una longitud (relativa a las columnas de al rededor) distinta
+puede abarcar una longitud (relativa a las columnas de al rededor) arbitraria
 tanto en altura como en anchura</p>
 
-<p>pero antes veamos un ejemplo de sintaxis de tablas alternativo, el que utiliza
-reStructuredText (<strong>estilo B</strong>)</p>
+<p>pero antes de continuar veamos un ejemplo de sintaxis de tablas alternativo, el
+que utiliza reStructuredText (<strong>estilo B</strong>)</p>
 
 <pre><code>+---------------------------------------------------------------------+
 |                            Proposito                                |
@@ -301,29 +301,30 @@ que dudes de tu existencia, si logras captar las obcuras sutilesas de su constru
 dibujar mosaicos rectangulares con texto (o algo), asi que deberiamos averiguar
 las posiciones de inicio y fin de cada celda rectangular</p>
 
-<p>la seguanda consideracion y que es la que toma html, es averiguar cuantas
+<p>la segunda consideracion y que es la que toma html, es averiguar cuantas
 casillas abarca cada celda tanto de largo como de alto&hellip; ademas de su aparicion
 secuencial (de derecha a izquierda) &ldquo;por filas&rdquo;</p>
 
 <p>como ya sabemos que una tabla no dejan de ser dibujos de cuadrados, podriamos
 enviar un emisario a la posicion 0,0 de la tabla en texto plano e identificar el
 primer cuadrado, luego buscar un segundo cuadrado en la misma primer fila,
-cerrarla, abrir una nueva fila y seguir asi hasta agotar terminar, para finalmente establecer el
+cerrarla, abrir una nueva fila y seguir asi hasta terminar, para finalmente establecer el
 tamaño de la celda mas pequeña, y conforme a esta, establecer la dimencion de
 todas las demas&hellip; o ir por un camino mas escabroso donde las celdas pueden
 tener tablas internas, y estas a su ves tablas internas, &hellip;, hasta el infinito</p>
 
 <p>no podria ser mas sencillo, pero como de momento no tengo idea de como hacer un
-<em>automata segidor de contornos rectangulares</em>, voy a proceder de una forma menos
-elegante dividendo toda la tabla en filas y estas a su vez en segmentos,
-averiguando donde estan las intercecciones de cada celda, para con ello asignar
-las dimenciones de las celdas una ves identifique sus valores, o algo asi!</p>
+<em>automata segidor de contornos rectangulares</em> (con &ldquo;codigo elegante&rdquo;), voy a
+proceder de una forma menos sofisticada dividendo toda la tabla en filas y estas a
+su vez en segmentos, averiguando donde estan las intercecciones de cada celda,
+para con ello asignar las dimenciones de las celdas una ves identifique sus
+valores, o, algo asi!</p>
 
 <p>primero debemos dividir nuestra tabla por lineas y segmentos</p>
 
 <p>aqui esta la funcion que divide un string por sus lineas en un slice de
-strings. Si, se puede hacer directamente con la libreria estandar de Go, pero el
-comportamiento de esta no me termina de convencer</p>
+strings. Si, esto puede hacerse directamente con la libreria estandar de Go, pero el
+comportamiento su comportamiento no me termina de convencer</p>
 
 <pre><code>func GetLines( str string ) []string {
   result := make( []string, 0, 64 )
@@ -368,8 +369,8 @@ fuera del paquete, lo hago para poder crear tipos locales con el mismo nombre
 pero en minuscula (asi: <code>var rect Rect</code>).</p>
 
 <p>mmm, todo este rollo de codigo esta dentro de dos ficheros lo que trato de
-explicar aqui esta en <a href="http://nasciiboy.github.io/data/table.go">table.go</a> y aulgunos (insuficientes) pruebas en
-<a href="http://nasciiboy.github.io/data/table_test.go">table_test.go</a>, colocalas dentro de una carpeta sin otro
+explicar aqui esta en <a href="http://nasciiboy.github.io/data/table.go">table.go</a> y aulgunas (insuficientes) pruebas en
+<a href="http://nasciiboy.github.io/data/table_test.go">table_test.go</a>. Colocalas dentro de una carpeta sin otro
 codigo, y ejecuta con <code>go test</code></p>
 
 <p>a partir de este momento, el codigo fuera de cualquier funcion, es parte de la
@@ -384,8 +385,8 @@ for _, l := range lines {
 </code></pre>
 
 <p>ok, paso a dividir la cadena de entrada (la tabla) en lineas, para despues crear un slice
-<code>mikotos</code> de <code>Mikoto</code>, recondemos que <code>Mikoto</code> es la representacion segmentada
-de cada linea, y este slice, vendria a ser toda la tabla segmentada por lineas y
+<code>mikotos</code> de <code>Mikoto</code>, recordemos que <code>Mikoto</code> es la representacion segmentada
+de cada linea, y este slice, vendria a ser toda la tabla segmentada por filas y
 en estas en segmentos. Asi pues, inicio un bucle enviando cada linea al
 segmentador <code>scissors</code> (tijeras) y agrego esta linea segmentada en un indice del
 slice <code>mikotos</code></p>
@@ -462,7 +463,7 @@ los limites</p>
 <p>te preguntaras, he? sin panico, brother, ya que tenemos la tabla completamente
 segmentalizada, no es necesario iterar de nuevo directamente sobre el string de
 texto, tenemos un primer grado de abstraccion y podemos ahorrar bastante
-iterando con este, en lugar de volverlo a hacerlo sobre los datos en bruto. Lo que
+iterando con este, en lugar de volver a hacerlo sobre los datos en bruto. Lo que
 hace la siguiente funcion es averiguar donde estan los margenes de inicio y fin
 de cada celda y con ellos asignar mas adelante las dimenciones &ldquo;en celdas&rdquo; de
 cada rectangulo</p>
@@ -483,14 +484,14 @@ caracteres&rdquo;</p>
     5         22
 </code></pre>
 
-<p>cuando anotamos los bordes de las celdas de todas las filas, segun la posicion
+<p>anotamos los bordes de las celdas de todas las filas, segun la posicion
 donde aparecen, por ejemplo para este caso seria 0, 5, 15, 20, 22, 45, 50
-y 55.</p>
+y 55</p>
 
 <p>Dados los puntos de inicio y fin de una celda particural, podemos averiguar su
 longitud, considerando el resto de celdas, hemmm, por ejemplo, tomando de la
 fila C la columna 2, esta abarca las intercepcionens que van desde 5 a 22, que
-en este caso serian 3 celdas (las tres de las celdas 2, 3 y 4 de la fila B. Si
+en este caso serian 3 celdas (las tres de las celdas 2, 3 y 4 de la fila B). Si
 aplicamos esto a la fila A celda 3, abarcaria 2 celdas, las dos de la fila B (3
 y 4). Para otras celdas que mantienen su alineacion con respecto a todas las
 demas, su longitud (en celdas) seria 1.</p>
@@ -536,7 +537,7 @@ arreglo de enteros</p>
 }
 </code></pre>
 
-<p>ahora, para la funcion que se encargo de contabilizar cuantos segmentos toca un
+<p>ahora, para la funcion que se encarga de contabilizar cuantos segmentos toca un
 rango dado, pasariamos el arreglo (de filas o columnas) y el segmento en si</p>
 
 <pre><code>func rangeCells( a, b int, cells []int ) int {
@@ -597,7 +598,7 @@ un segmento de cierre que encaja con uno vivo, lo cerramos y matamos.</p>
 
 <p>El correcto orden de apertura de cada nueva fila dentro de la lista global de
 rectangulos por filas (<code>rows</code>) se logra con la variable <code>cRow</code>, que se reinicia
-en cada iteracion por las filas y solo se incluye si aparecio un rentangulo
+en cada iteracion por las filas y solo se incluye si aparecio un rectangulo
 nuevo. El punto magico-mistico y misterioso, ademas de razon de la sincronia de
 los cierres en la estructura de filas global (<code>rows</code>) viene dado por el uso de
 puenteros, sip! magicos punteros. Seguramente no encuentres este codigo muy
@@ -646,7 +647,7 @@ return buf.String()
 }
 </code></pre>
 
-<p>que se alimento de nuentro anteriormente usado slice con lineas</p>
+<p>que se alimento de nuestro anteriormente usado slice con lineas</p>
 
 <h2 id="epilogo">Epilogo</h2>
 
@@ -664,8 +665,8 @@ dista bastante de algo util en la vida real. Aun queda por implementarlo para
 tablas que no sean solo de caracteres de ancho fijo, como en codificacion
 unicode, resolver el dilema de escapes de las tuberias que debieran ser solo
 texto, tablas no alineadas, fijar la sistaxis en general, examinar la alineacion
-del texto sin mas mas datos que el texto en si, y otros puntos mas que aun no
-contemplo, pero eso sera para otras seciones de buena musica, mientras veo
+del texto sin mas datos que el texto en si, y otros puntos mas que aun no
+contemplo, pero eso sera para otras sesiones de buena musica, mientras veo
 fijamente el montor con un semblante serio</p>
 
 <p>ho, ho, ho, como tengo ganas de implementarlo en la siguiente iteracion de morg,
