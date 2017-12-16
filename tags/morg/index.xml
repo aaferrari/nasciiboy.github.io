@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Fri, 08 Dec 2017 21:52:22 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 15 Dec 2017 20:02:05 -0600</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/tags/morg/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TextTable2HtmlTable (Volume One)</title>
+      <link>http://nasciiboy.github.io/prog/morg-table/</link>
+      <pubDate>Fri, 15 Dec 2017 20:02:05 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/prog/morg-table/</guid>
+      <description>o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang) convertir una tabla como
+|---------------------------------------------------------------------| | MiTabla Fila 1 | De Creacion | Estructurales | |-----------------|-----------------------|---------------------------| | MiTabla Fila 2 | De Creacion | Estructurales | |-----------------|-----------------------|---------------------------| | MiTabla Fila 3 | De Creacion | Estructurales | |-----------------|-----------------------|---------------------------|  es decir, con un numero de &amp;ldquo;celdas&amp;rdquo; siempre constante, a pesar de tener su complejidad, es relativamente sencillo el programar unas cuantas funciones sin tener mucha idea y lograr convertirla en cualquier otro formato, por ejemplo (y por conveniencia) HTML</description>
+    </item>
     
     <item>
       <title>Morg Mirror</title>

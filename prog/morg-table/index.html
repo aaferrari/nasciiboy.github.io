@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TextTable2HtmlTable (Volume One)</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>TextTable2HtmlTable (Volume One)</h1>
+  
+
+<p><center>
+<img src="http://nasciiboy.github.io/img/mikoto.jpg" alt="" />
+</center></p>
+
+<h2 id="o-como-parsear-una-tabla-en-texto-plano-para-convertirla-en-una-tabla-html-u-otra-cosa-codigo-de-ejemplo-en-golang">o, como &ldquo;parsear&rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang)</h2>
+
+<p>convertir una tabla como</p>
+
+<pre><code>|---------------------------------------------------------------------|
+| MiTabla Fila  1 | De Creacion           | Estructurales             |
+|-----------------|-----------------------|---------------------------|
+| MiTabla Fila  2 | De Creacion           | Estructurales             |
+|-----------------|-----------------------|---------------------------|
+| MiTabla Fila  3 | De Creacion           | Estructurales             |
+|-----------------|-----------------------|---------------------------|
+</code></pre>
+
+<p>es decir, con un numero de &ldquo;celdas&rdquo; siempre constante, a pesar de tener su
+complejidad, es relativamente sencillo el programar unas cuantas funciones sin
+tener mucha idea y lograr convertirla en cualquier otro formato, por ejemplo (y
+por conveniencia) HTML</p>
+
+<p>sin embargo, como demonios <em>parsear</em> (<em>analizar</em>) algo como (de ahora en
+adelante <strong>estilo A</strong>)</p>
+
+<pre><code>|                            Proposito                                |
+|---------------------------------------------------------------------|
+|                 | De Creacion           | Estructurales             |
+|-----------------|-----------------------|---------------------------|
+| Ambito | Clase  | @l(#Factory Method)   | @l(#Adapter) (de clases)  |
+|        |        |-----------------------|---------------------------|
+|        |        |     nenteot           | @l(#Builder)              |
+|        |        |  @l(#Bonlder)         |                           |
+|        |--------|-----------------------|---------------------------|
+|        | Objeto | @l(#Abstract Factory) | @l(#Adapter) (de objetos) |
+|        |        |-----------------------|---------------------------|
+|        |        | @l(#Beuuuua)          | @l(#Bridge)               |
+|        |        |-----------------------|---------------------------|
+|        |        |                       | @l(#Flyweight)            |
+|        |        |-----------------------|---------------------------|
+|        |        |                       | @l(#Proxy)   | kas        |
+|--------|--------|-----------------------|--------------|------------|
+</code></pre>
+
+<p>esta tabla, a simple vista mas compleja, delimita sus celdas mediante signos
+&ldquo;tuberia&rdquo; al inicio y fin, y sus bordes por tuberias y &ldquo;menos&rdquo; (<code>|----|</code>), pero
+manteniendo todas las filas con una longitud constante. Sin embargo cada celda,
+puede abarcar una longitud (relativa a las columnas de al rededor) distinta
+tanto en altura como en anchura</p>
+
+<p>pero antes veamos un ejemplo de sintaxis de tablas alternativo, el que utiliza
+reStructuredText (<strong>estilo B</strong>)</p>
+
+<pre><code>+---------------------------------------------------------------------+
+|                            Proposito                                |
++-----------------+-----------------------+---------------------------+
+|                 | De Creacion           | Estructurales             |
++-----------------+-----------------------+---------------------------+
+| Ambito | Clase                          | @l(#Adapter) (de clases)  |
+|        |                                +---------------------------+
+|        |                                | @l(#Builder)              |
+|        |                                |                           |
+|        +--------+-----------------------+---------------------------+
+|        | Objeto | @l(#Abstract Factory) | @l(#Adapter) (de objetos) |
+|        |        +-----------------------+---------------------------+
+|        |        | @l(#Beuuuua)          | @l(#Bridge)               |
+|        |        +-----------------------+---------------------------+
+|        |        |                       | @l(#Flyweight)            |
+|        |        +-----------------------+--------------+------------+
+|        |        |                       | @l(#Proxy)   | kas        |
++--------+--------+-----------------------+--------------+------------+
+</code></pre>
+
+<p>bastante distinto, he!?, la mayor diferencia, son las intercecciones de las
+celdas, que facilitan un poco el analisis de la tabla, al hacer explicitos
+dichos simbolos, ademas de dejar de forma explicita cuando un signo tuberia es
+una division, pues en sus margenes va acompañada por los &ldquo;mas&rdquo; (<code>+</code>). Obviamente donde
+este conjunto no este emparejado, las tuberias serian solo parte del texto plano</p>
+
+<p>y pasemos a un ejemplo mas de sitaxis (<strong>estilo C</strong>), solo por que si y para
+que dudes de tu existencia, si logras captar las obcuras sutilesas de su construccion</p>
+
+<pre><code>|                            Proposito                                |
+|---------------------------------------------------------------------|
+|                 | De Creacion           | Estructurales             |
+|---------------------------------------------------------------------|
+| Ambito | Clase                          | @l(#Adapter) (de clases)  |
+|        |                                |---------------------------|
+|        |                                | @l(#Builder)              |
+|        |                                |                           |
+|        |------------------------------------------------------------|
+|        | Objeto | @l(#Abstract Factory) | @l(#Adapter) (de objetos) |
+|        |        |---------------------------------------------------|
+|        |        | @l(#Beuuuua)          | @l(#Bridge)               |
+|        |        |---------------------------------------------------|
+|        |        |                       | @l(#Flyweight)            |
+|        |        |---------------------------------------------------|
+|        |        |                       | @l(#Proxy)   | kas        |
+</code></pre>
+
+<p>bien? pues olvida todo lo que sabes y desconoces, por que aqui coloco mi solucion
+(sin tener idea) para el estilo de tabla <strong>A</strong></p>
+
+<p>primero, consideremos que las tablas (HTML) son simplemente un metodo para
+dibujar mosaicos rectangulares con texto (o algo), asi que deberiamos averiguar
+las posiciones de inicio y fin de cada celda rectangular</p>
+
+<p>la seguanda consideracion y que es la que toma html, es averiguar cuantas
+casillas abarca cada celda tanto de largo como de alto&hellip; ademas de su aparicion
+secuencial (de derecha a izquierda) &ldquo;por filas&rdquo;</p>
+
+<p>como ya sabemos que una tabla no dejan de ser dibujos de cuadrados, podriamos
+enviar un emisario a la posicion 0,0 de la tabla en texto plano e identificar el
+primer cuadrado, luego buscar un segundo cuadrado en la misma primer fila,
+cerrarla, abrir una nueva fila y seguir asi hasta agotar terminar, para finalmente establecer el
+tamaño de la celda mas pequeña, y conforme a esta, establecer la dimencion de
+todas las demas&hellip; o ir por un camino mas escabroso donde las celdas pueden
+tener tablas internas, y estas a su ves tablas internas, &hellip;, hasta el infinito</p>
+
+<p>no podria ser mas sencillo, pero como de momento no tengo idea de como hacer un
+<em>automata segidor de contornos rectangulares</em>, voy a proceder de una forma menos
+elegante dividendo toda la tabla en filas y estas a su vez en segmentos,
+averiguando donde estan las intercecciones de cada celda, para con ello asignar
+las dimenciones de las celdas una ves identifique sus valores, o algo asi!</p>
+
+<p>primero debemos dividir nuestra tabla por lineas y segmentos</p>
+
+<p>aqui esta la funcion que divide un string por sus lineas en un slice de
+strings. Si, se puede hacer directamente con la libreria estandar de Go, pero el
+comportamiento de esta no me termina de convencer</p>
+
+<pre><code>func GetLines( str string ) []string {
+  result := make( []string, 0, 64 )
+  last := 0;
+  for i, c := range str {
+    if c == '\n' {
+      result = append( result, str[last:i] )
+      last = i + 1
+    }
+  }
+
+  if last &lt; len( str ) { result = append( result, str[last:] ) }
+
+  return result
+}
+</code></pre>
+
+<p>aqui estan las estructuras base sobre las que gira el codigo</p>
+
+<pre><code>const (
+  cText = 0
+  cEdge = '-'
+)
+
+type Rect  struct { y, x, y2, x2 int }
+type Sec   struct { a, b, t int }
+type Mikoto []Sec
+</code></pre>
+
+<p><code>Rect</code> sera el inicio y fin de nuestra celda rectangular&hellip; puedes cambiar el
+nombre, je, je, je, estos son los detalles que se presentan cuando vas
+descubriendo a base de prueba y error como hacer algo nuevo. <code>Sec</code> sera un
+segmento de cada linea que representa el punto de inicio (<code>a</code>) y fin (<code>b</code>) de
+cada uno, <code>t</code> es el tipo del segmento (o texto (<code>cText</code>) o un
+divisor (<code>cEdge</code>)). Finalmente <code>Mikoto</code> es un arreglo de segmentos, que vedrian a
+conformar la linea ya analizada, por que <code>Mikoto</code>? por una obscura referecia
+hilarante a nivel personal, que nada tiene que ver con buenas metodologias de
+programacion, aunque, como es mi maldito codigo, creo que imprimir el estilo &ldquo;de la
+casa&rdquo; es cuando menos una forma de hacerlo divertido. Por cierto, lo de nombrar
+los tipos con su primer letra en mayuscula, mas que por temas de exportacion
+fuera del paquete, lo hago para poder crear tipos locales con el mismo nombre
+pero en minuscula (asi: <code>var rect Rect</code>).</p>
+
+<p>mmm, todo este rollo de codigo esta dentro de dos ficheros lo que trato de
+explicar aqui esta en <a href="http://nasciiboy.github.io/data/table.go">table.go</a> y aulgunos (insuficientes) pruebas en
+<a href="http://nasciiboy.github.io/data/table_test.go">table_test.go</a>, colocalas dentro de una carpeta sin otro
+codigo, y ejecuta con <code>go test</code></p>
+
+<p>a partir de este momento, el codigo fuera de cualquier funcion, es parte de la
+funcion principal <code>func TextTable2HtmlTable( data string ) string</code>, el demas
+vendra correctamente dentro de su funcion correspondiente. Inicio &gt;</p>
+
+<pre><code>lines := GetLines( data )
+mikotos := make( []Mikoto, 0, 5 )
+for _, l := range lines {
+  mikotos = append( mikotos, scissors(l) )
+}
+</code></pre>
+
+<p>ok, paso a dividir la cadena de entrada (la tabla) en lineas, para despues crear un slice
+<code>mikotos</code> de <code>Mikoto</code>, recondemos que <code>Mikoto</code> es la representacion segmentada
+de cada linea, y este slice, vendria a ser toda la tabla segmentada por lineas y
+en estas en segmentos. Asi pues, inicio un bucle enviando cada linea al
+segmentador <code>scissors</code> (tijeras) y agrego esta linea segmentada en un indice del
+slice <code>mikotos</code></p>
+
+<p>asi se ve <code>scissors</code></p>
+
+<pre><code>func scissors( line string ) []Sec {
+  secs, sec := make( []Sec, 0, 5 ), Sec{}
+
+  for x := 1; x &lt; len( line ); x++ {
+    switch line[x] {
+    case cEdge: x += skipSep ( line[x:] ); sec.t = cEdge
+    default   : x += skipText( line[x:] ); sec.t = cText
+    }
+
+    sec.b = x
+    secs = append( secs, sec )
+    sec.a = x
+  }
+
+  return secs
+}
+</code></pre>
+
+<p>se declara un slice (<code>secs</code>) que sera regresado con los segmentos de la linea de entrada,
+y tambien un segmento (<code>sec</code>) que tendra el segmento actual (con los valores de inicio,
+fin y tipo</p>
+
+<p>se inicia el ciclo por la linea, el numero magico <em>1</em> es para esquivar el <code>|</code> al
+inicio de la linea, por supuesto se asume que los datos de entrada son
+correctos&hellip;</p>
+
+<p>Luego se averigua con el <code>switch</code> si tenemos o un segmento de texto o de
+separacion y se procede a averiguar su longitud y establecer su tipo. Despues
+agregamos el segmento actual dentro del slice, y, repetimos el bucle una y otra
+vez, hasta llegar al final de la linea. Pon atencion a como (no) se establece el
+punto de inicio del primer bucle, ademas de prepararlo para el siguiente</p>
+
+<p>las funciones para averiguar los limites del segmento son</p>
+
+<pre><code>func skipSep( data string ) int {
+  for i, c := range data {
+    switch c {
+    case cEdge: continue
+    case '|'  : return i
+    }
+  }
+
+  return len(data)
+}
+
+func skipText( data string ) int {
+  for i, c := range data {
+    switch c {
+    case '|': return i
+    default: continue
+    }
+  }
+
+  return len(data)
+}
+</code></pre>
+
+<p>basicamente se limitan a encontrar el primer <code>|</code> que aparesca, pero, tienen su
+propia funcion para (en un futuro) agregar distintos tipos de separadores, por
+ejemplo encabezado y fondo de la tab!a, o, tambien para afinar la busqueda de
+los limites</p>
+
+<p>continuando con la funcion principal tenemos</p>
+
+<pre><code>ncol, nrow := mikotosToEdgeCells(mikotos)
+</code></pre>
+
+<p>te preguntaras, he? sin panico, brother, ya que tenemos la tabla completamente
+segmentalizada, no es necesario iterar de nuevo directamente sobre el string de
+texto, tenemos un primer grado de abstraccion y podemos ahorrar bastante
+iterando con este, en lugar de volverlo a hacerlo sobre los datos en bruto. Lo que
+hace la siguiente funcion es averiguar donde estan los margenes de inicio y fin
+de cada celda y con ellos asignar mas adelante las dimenciones &ldquo;en celdas&rdquo; de
+cada rectangulo</p>
+
+<p>La idea es esta: nuestras celdas tienen una longitud variable, pero su longitud
+se mide en base de las celdas que cruza, mas que por su longitud &ldquo;en
+caracteres&rdquo;</p>
+
+<pre><code> 0  5    15 2022      45  50  55
+ ^  ^    ^  ^ ^       ^   ^   ^
+ ______________________________
+ |1_|_2__|__3_|___4___|_5_|_3_|  A
+ |1_|_2__|3_|4|___5___|_6_|_7_|  B
+ |1_|____2____|___4___|___5___|  C
+
+    a&lt;--C2---&gt;b  = 3
+    |         |
+    5         22
+</code></pre>
+
+<p>cuando anotamos los bordes de las celdas de todas las filas, segun la posicion
+donde aparecen, por ejemplo para este caso seria 0, 5, 15, 20, 22, 45, 50
+y 55.</p>
+
+<p>Dados los puntos de inicio y fin de una celda particural, podemos averiguar su
+longitud, considerando el resto de celdas, hemmm, por ejemplo, tomando de la
+fila C la columna 2, esta abarca las intercepcionens que van desde 5 a 22, que
+en este caso serian 3 celdas (las tres de las celdas 2, 3 y 4 de la fila B. Si
+aplicamos esto a la fila A celda 3, abarcaria 2 celdas, las dos de la fila B (3
+y 4). Para otras celdas que mantienen su alineacion con respecto a todas las
+demas, su longitud (en celdas) seria 1.</p>
+
+<p>Anotando todas las intercepciones y luego iterando sobre estas, podemos averiguar
+cuantas celdas &ldquo;toca&rdquo; un rango arbitrario. Ya que la orientacion de estas
+intercepciones solo esta en nuestra mente, se aplicara tanto para filas como
+columnas indistintamente.</p>
+
+<p>La funcion encargada de lograr tal proeza esta aqui</p>
+
+<pre><code>func mikotosToEdgeCells( mikotos []Mikoto ) (c, r []int){
+  cols,    rows   := make( map[int]bool ), make( map[int]bool )
+  cols[0], rows[0] = true, true
+
+  for y, mikoto := range mikotos {
+    for _, sec := range mikoto {
+      if _, set := cols[sec.b]; !set { cols[sec.b] = true }
+      if _, set := rows[y]; sec.t == cEdge &amp;&amp; !set { rows[y] = true }
+    }
+  }
+
+  return mapToSortIntArray(cols), mapToSortIntArray(rows)
+}
+</code></pre>
+
+<p>consta de dos mapas <em>hash</em>, uno para las columnas y otro para las filas, como ya
+sabemos que deben iniciar en el punto 0, lo asignamos directamente, para el
+resto solo debemos iterar sobre las filas segmentalizadas anotando donde estan
+los bordes de las celdas: para las columnas seria el fin del segmento y para las
+filas la aparicion de un segmento de borde. La consulta de existencia en el mapa
+es opcional, pero recomendable. Utilizamos un mapa para evitar una iteracion sin
+sentido por un arreglo de n elementos y n consultas</p>
+
+<p>una ves terminado el bucle, podemos ordenar los puntos de intercepcion en un
+arreglo de enteros</p>
+
+<pre><code>func mapToSortIntArray( m map[int]bool ) []int {
+  arry, i := make([]int, len( m )), 0
+  for key := range m { arry[i] = key; i++ }
+  sort.Ints( arry )
+  return arry
+}
+</code></pre>
+
+<p>ahora, para la funcion que se encargo de contabilizar cuantos segmentos toca un
+rango dado, pasariamos el arreglo (de filas o columnas) y el segmento en si</p>
+
+<pre><code>func rangeCells( a, b int, cells []int ) int {
+  min := 0
+  for min &lt; len( cells ) &amp;&amp; a &gt; cells[ min ] { min++ }
+  max := min
+  for max &lt; len( cells ) &amp;&amp; b &gt; cells[ max ] { max++ }
+
+  if min == max {
+    return 1
+  } else if a &lt; cells[min] {
+    return max - min + 1
+  }
+
+  return max - min
+}
+</code></pre>
+
+<p>si, un bucle poco elgante, pero mis conocimientos no dan para mas, preguntar en
+reddit tampco sirvio de mucho. Sospecho que es carne para matemagicos que no
+andan por internet&hellip; y que el nivel de los programadores &ldquo;en general&rdquo; es penoso
+(como el mio)</p>
+
+<p>momento de pasar a donde se concentra toda la magia</p>
+
+<pre><code>alive := make( map[int]*Rect )
+type Rows []*Rect
+var rows []Rows
+var cRow Rows
+for y, mikoto := range mikotos {
+  cRow = nil
+
+  for _, sec := range mikoto {
+    switch sec.t {
+    case cEdge:
+      alive[sec.a].y2 = y - 1
+      delete( alive, sec.a )
+    default:
+      if _, live := alive[sec.a]; !live {
+        p := &amp;Rect{ y: y, x:sec.a, x2:sec.b }
+        cRow = append( cRow, p )
+        alive[sec.a] = p
+      }
+    }
+  }
+
+  if cRow != nil { rows = append( rows, cRow) }
+}
+</code></pre>
+
+<p>esto es un bucle por nuestra tabla segmentalizada. En concepto revisamos fila a
+fila anotando cada secmento que no teniamos previamente dentro de nuestra
+fila actual (<code>cRow</code> (currentRow)) y abriendo una lista de rectangulos sin
+cerrar (<code>alive</code>).</p>
+
+<p>Si el segmento forma parte de un segmento &ldquo;vivo&rdquo; lo ignoramos, y si encontramos
+un segmento de cierre que encaja con uno vivo, lo cerramos y matamos.</p>
+
+<p>El correcto orden de apertura de cada nueva fila dentro de la lista global de
+rectangulos por filas (<code>rows</code>) se logra con la variable <code>cRow</code>, que se reinicia
+en cada iteracion por las filas y solo se incluye si aparecio un rentangulo
+nuevo. El punto magico-mistico y misterioso, ademas de razon de la sincronia de
+los cierres en la estructura de filas global (<code>rows</code>) viene dado por el uso de
+puenteros, sip! magicos punteros. Seguramente no encuentres este codigo muy
+claro, pero dale vueltas, para mi no estaba disponible algo
+asi&hellip; bueno, si. algo en python (un lenguaje al que le tengo mania, en el peor
+sentido de la palabra) y que tenia una muy, muy, muy rara implementacion de
+algunos miles de lineas indecifrables en mi ignorancia</p>
+
+<p>Para finalizar, ya con nuestros rectangulos organizados, solo resta imprimir la
+tabla y averiguar su longitud con respecto a otros rectangulos, con la
+anteriormente expuesta <code>rangeCells</code></p>
+
+<pre><code>buf := new( bytes.Buffer )
+fmt.Fprintf( buf,  &quot;&lt;table border=\&quot;1\&quot;&gt;\n&quot; )
+
+for _, rl := range rows {
+  fmt.Fprintf( buf, &quot;&lt;tr&gt;&quot; )
+
+  for _, rect := range rl {
+    fmt.Fprintf( buf, &quot;&lt;td&quot; )
+    if colspan := rangeCells(rect.x, rect.x2, ncol); colspan != 1 {
+      fmt.Fprintf( buf, &quot; colspan=\&quot;%d\&quot;&quot;, colspan )
+    }
+    if rowspan := rangeCells(rect.y, rect.y2, nrow); rowspan != 1 {
+      fmt.Fprintf( buf, &quot; rowspan=\&quot;%d\&quot;&quot;, rowspan )
+    }
+    fmt.Fprintf( buf, &quot;&gt;%s&lt;/td&gt;&quot;, rectToString(rect, lines) )
+  }
+
+  fmt.Fprintf( buf, &quot;&lt;/tr&gt;\n&quot; )
+}
+
+fmt.Fprintf( buf, &quot;&lt;/table&gt;\n&quot; )
+return buf.String()
+</code></pre>
+
+<p>el texto de cada celda se optiene con</p>
+
+<pre><code>func rectToString( rect *Rect, lines []string ) string {
+  s := &quot;&lt;p&gt;&quot;
+  for y := rect.y; y &lt;= rect.y2; y++ {
+    s += lines[y][rect.x+1:rect.x2]
+  }
+  s += &quot;&lt;/p&gt;&quot;
+  return s
+}
+</code></pre>
+
+<p>que se alimento de nuentro anteriormente usado slice con lineas</p>
+
+<h2 id="epilogo">Epilogo</h2>
+
+<p>El problema es por demas complejo (o lo es para este subnormal que escribe), sin
+embargo, tengo la firme creencia de que si podemos enterder un concepto (aun sin
+poder explicar el como), con mucho, mucho, mucho estudio e insintencia, podemos
+ser capaces de codificarlo y quiza tras muchas iteraciones optener un codigo
+elegante.</p>
+
+<p>Si podemos decifrar su informacion, es porque la informacion esta hay,
+simplemente ignoramos los mecanismos de nuestra mente</p>
+
+<p>Este no deja de ser un primer acercamiento a este problema, por ello la solucion
+dista bastante de algo util en la vida real. Aun queda por implementarlo para
+tablas que no sean solo de caracteres de ancho fijo, como en codificacion
+unicode, resolver el dilema de escapes de las tuberias que debieran ser solo
+texto, tablas no alineadas, fijar la sistaxis en general, examinar la alineacion
+del texto sin mas mas datos que el texto en si, y otros puntos mas que aun no
+contemplo, pero eso sera para otras seciones de buena musica, mientras veo
+fijamente el montor con un semblante serio</p>
+
+<p>ho, ho, ho, como tengo ganas de implementarlo en la siguiente iteracion de morg,
+aunque en el transcurso de leer sobre patrones de diseño, seguro que nuevas
+modificaciones se hacen presentes, ademas, adaptar esto y otras ideas sobre el
+parseo a texto rectangular, llebaran una labor de revision fina, fina!</p>
+
+<p>happy hacking!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/prog/morg-mirror/">◀ Morg Mirror</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(36)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(23)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/howto">howto(15)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(14)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(13)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(12)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(7)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="http://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="http://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="http://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
