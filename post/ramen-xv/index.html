@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XV</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 100%; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode ); color: var( --FGCftcode ); font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+
+  <h1>Ramen XV</h1>
+  
+
+<p><center>
+<img src="http://nasciiboy.github.io/img/reistmas.jpg" alt="" />
+</center></p>
+
+<p>Mmmm, sin buscarlo (consientemente (por ahora)) he estado a punto de palmarla de
+nuevo. Aca por mis territorios hay un &ldquo;centro de senderismo&rdquo; (y nieves ricolinas)
+con unos cerritos coketos y pintorescos.</p>
+
+<p>Esta es como la quinta o sexta ocacion que aciendo a lo alto de aquel sendero,
+pero en esta ocacion, el sitio turistico-terminal no estaba abierto al publico,
+asi que me aventure por otra ruta poco evidente intentando perder algunas horas
+extra. Por el trayecto, me tope con una parejita, y luego un senderista
+solitario, que me dijeron que tal desviacion del recorrido tambien era una ruta
+conocida, ademas me recomendaron ascender por una ruta algo escabrosa y asi lo
+hice.</p>
+
+<p>Eran alrededor de 7 metros de ascenso pon una pendiete harto inclinada con
+algunas piedras protuverantes aunque no demaciadas, lo cual lo hacia algo peligroso
+y al mismo tiempo me proguntaba como demonios bajaria de nuevo&hellip;</p>
+
+<p>Ya en la cima, el paisaje es jodidamente impresionante, pero si tienes vertigo,
+como en mi caso, es mejor no hacerlo&hellip; por lo que me coloque en el centro, puse
+algo de Ithamara Koorax en los audifonos, saque unos dulces y me quede quieto en
+posicion de mistico sacando unas fotos, ja, ja, ja, les falta mucho rango visual
+y profundidad a las camaras para plasmar lo que estos sucios y rojos ojos
+persiven</p>
+
+<p><img src="http://nasciiboy.github.io/img/d34d.jpg" alt="" /></p>
+
+<p>bueno, bueno, dos pistas mas tarde, me estire busque otros angulos y aprecie los
+bordes de donde estaba, que no eran demaciado amplios y me separaban de lo
+bonico a terminar como un bicho apachurrado si caia por estupides.</p>
+
+<p>Mientras tanto buscaba una ruta secundaria de descenso, aunque al parecer
+tendria que regresar por donde habia venido, mas, las secuelas del cuasi
+atropello de hace un mes aun permanecen en el tobillo, esto agregado al vertigo
+no me tenia muy entusiasmado, asi que mas musica y meditacion en las alturas, lo
+que me hiso recordar ese lema de evangelion: &ldquo;God&rsquo;s in his heaven, all&rsquo;s right
+with the world&rdquo; &hellip; y asi unos minutos mas tarde (y aun con los audifonos
+puestos) escuche un sumbido en ascenso, momento, que pasa aqui, alce la mirada y
+sobre mi cabeza se avalanzaba un ejambre inmenso de avejas-chicas-como-avispas
+que no podria describir ––como hacia frio por aquellos dias, me lleve un sueter
+(+ vermuda + tenis) aunque en esos momentos no lo llevava puesto, lo habia
+dejado un par de metros de donde me encontraba–– casi como si protagonizara una
+peli de accion mi avalance sobre el sueter, lo lance hacia harriba como intentando
+cubrirme de una explosion y en ese mismo momento sabia que debia bajar, pues
+hacerme bolita en posicion fetal dejaria expuestas mis suculentas piernas a
+incesantes pinchaduras</p>
+
+<p>me coloque el sueter agilmente, mientras mantenia el cuerpo lo mas cerca del suelo
+inicando el descenso, algunas avispas se avalansaban contra las mangas y
+espalda, otras mas audaces revolateaban sobre el area entre la cintura y la
+cara, aun asi, permaneci en silencio descendiendo, alejandome del peligro
+centimetro a centimetro (dramaticamente). Con cada metro que pasaba disminuia la
+concentracion de las abejas-chicas-como-avispas, la tencion era grande,
+encontrar la siguiente posicion de apoyo complicado, pero, llegue al sendero de
+nuevo sin picadura alguna y aunque el zumbido del ejambre y los inumerables
+bichos que los formaban aun eran alarmantes, en esa zona, apenas y habia unas
+pocas.</p>
+
+<p>Luego me pregunte que hacer, esperar y advertir a otros, buscar mas afectados,
+continuar el ascenso o bajar sin pena alguna. Espere, cerca de 20 minutos hasta
+que el ejambre apenas y era apresiable, aun tenia ganas de ascender pero mis
+piernitas no estaban deacuerdo, por lo que inicie el descenso. Mas tarde tome
+una foto de unas piedras</p>
+
+<p><img src="http://nasciiboy.github.io/img/rc.h.pui.jpg" alt="" /></p>
+
+<p>y luego encontre a otros aventureros, les adverti y mientras les contaba de los
+peligros, al tiempo que bajo otra pareja de exploradores y segun ellos no vieron
+nada, mmmm, entonces no era un mecanismo de encubrimiento gubernamental como el
+de la pelicula de los X-Files</p>
+
+<p>&hellip;</p>
+
+<p>En otros asuntos, aproximadamente hace un año inicie en reddit un sub al que
+dedique cerca de 6 meses y luego pase a otro, en ambos colocando los enlaces a
+post que a mi me gustaria encontrar referentes al software libre (y afines) mas
+ahora reddit a caido de mi gracia&hellip; aunque estaba enganchado y era una parte
+muy importante de mi rutina diaria. Bueno, que mas da, con los miles de
+&ldquo;seguidores&rdquo; que especulo (sin base alguna) tiene este blog mugroso, sin buena
+redaccion, js, analiticas, cokies, comentarios ni nada, ademas de su feed,
+supongo sera suficiente para hacer eco de las mierdas mias y algunas ajenas&hellip;</p>
+
+<p>Y bueno, puede que este post sea el ultimo del arbitrario inicio y fin del ciclo
+de esta esfera donde estamos girando alrededor de un sol amarilloso, pero eso, eso, no es
+importante, lo verdaderamente relevante es que sin la mas minima esperanza y
+gracias a una bondadosa aportacion de mi patrocinador (&ldquo;el camello&rdquo;) que hace que siga siendo
+persona (sin empleo, ni veneficio), fue posible adquirir un HDD de 3TB
+(&hellip;seagate) WooooOOOHHHHH!</p>
+
+<p>Ha, Ha, Ha, hacer los pertinentes respaldos, copias y reorganizacion (aun en
+proseceso) tomo 2 dias de pleno suspenso, sin embargo, la alegria de liberar
+espacio de mi disco del sistema (un SSD) que siempre oscilaba entre 500MiB-5GiB
+de espacio libre (ahora ~100GiB), respaldar mi amada musica, reunir el hentai,
+series y peliculas dispersas en usbs y en 2 discos de baja capacidad, ademas de
+poder descargar a pleno consumo de banda torrencial durante el proximo mes y
+medio, me tienen con una satisfaccion tan grande que casi sonrio de placer, jo,
+jo, jo aun tego 1.3TiB disponibles y de momento cerca de 300GiB en descarga!</p>
+
+<p>Como si eso no fuera suficiente, en una tienda roñosa de componentes encontre (a
+sobreprecio) un adaptador de DVI a VGA. Asi que ahora puedo ir y venir de
+distros a placer&hellip; aunque un problema que inicio con freidora -&gt; <strong>el pc no se
+apaga</strong> &lt;- ha persistido en manjaro y Debian. Varios han sido los intentos por
+solventarlo, mas aun no se ha corregido, ni siquiera virtiendo una lata de aire
+comprimido por las baquelitas del hardware&hellip; como dicen en matrix, &ldquo;todo lo que
+tiene un inicio, tiene un fin&rdquo;</p>
+
+<p>De momento estoy en Debian, luego de cerca de 3 años en el exilio y de aqui no
+me muevo ni aunque salga Gnome 4&hellip; o no&hellip;</p>
+
+<p>Pasando a la carne, las festividades en general me desagradan, y las navideñas
+en particular, mucha jente y visitas indeseadas, ruido y malsueño que
+ralentizaron todos los proyectos en activo. Para compensar y evitar el
+desperdicio de &ldquo;tiempo libre&rdquo; me he puesto a ver mas cosas de lo habitual</p>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>No Game No Life</strong> un &ldquo;intercambio&rdquo;(?) desde el hackmiting, uhmmm ni aburrida
+ni divertida, mas bien un tipico topico anime, si bien, no la recomiendo, el
+final me gusto mucho, aunque dificilmente veria una segunda temporada</p>
+
+<p><strong>The Void</strong> &hellip; . . cualquier entidad cosmica/divina/lo-que-sea que requiera
+de mi accion para hacer su voluntad, no merece mi respeto</p>
+
+<p>que tenemos aqui, una pelicula de serie z, con malas actuaciones en aspecto ultra
+panoramico que le viene fatal para sus tomas cerradas de pasillo y una historia barata, llena de
+topicos, cuya forma de abordar &ldquo;la llegada de una entidad a la ktulju&rdquo; es con
+gritos, mutilacion sin sentido (la mutilacion simpre esta bien, pero con una
+excusa seria mejor) y un grupo de encapuchados fans de zelda&hellip; .</p>
+
+<p>a su fabor dire que cuenta con algo de supenso, por lo demas, es facilmente
+precindible&hellip; en el peor sintido, por que sabes que no ocurrira nada, como
+tampoco se te revelara ninguna tecnica de invocacion, menos aun un secreto
+trascendental</p>
+
+<p><strong>Mayhem</strong> y &ldquo;el karma responde&rdquo;, aqui tenemos una comedia gore con rollmance
+incluido. Divertida, llena de adrenalina, si lo quieres con lecturas a distintos
+niveles&hellip; pero en realidad los autores son tan sinceros como para reconocer que
+aunque su motivacion es el mas dulce divertimento, esforsarce en buscar una
+excusa solida, solo puede hacerlo mas irresistible, brillante!</p>
+
+<p>dejare reposar un periodo el torrent hasta compartirlo tres veces (o un inicio
+de año en una crisis por conseguir disco (retracto, lo anterior <strong>3TiB!</strong>), lo que ocurra primero). Los
+subtitulos, desde subliminal</p>
+
+<pre><code>magnet:?xt=urn:btih:a95b8f1c6e1ce3ff309345c063e427bdc8837574&amp;dn=Mayhem.2017.HDRip.XviD.AC3-EVO&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce
+</code></pre>
+
+<p><strong>The Discovery</strong> en esta pelicula abordan de forma seria las consecuencias de
+descubrir que nuestra consiencia permanece pese a la muerte de nuestros
+cuerpos&hellip; bueno, asi la anunciaban donde la vi recomendada, para mis carnes
+esta cinta es una puta basura de serie z, si la evitas te haces un fabor, si aun
+asi, te animas a verla, ve el inicio y avanza directamente al final, si quieres
+algo &ldquo;similar&rdquo; pero bien hecho mejor ve <em>Stains;Gate</em> que tiene a una pelirroja
+de muerte</p>
+
+<p>y bueno, el mismo post donde recomendaban lo anterior, tenia <em>The Osiris Child</em>,
+mas, tras los primeros dies minutos comence a avanzar y avanzar, buscando algo
+interesante, hasta llegar al final sin encontrarlo. Es un trabajo de aficionado
+muy malo, aunque se molestan en ocaciones por darle un poco de empaque&hellip; pero
+no creo que el esfuerzo en esos puntos, en lugar de escojer mejor el escenario,
+actuaciones e historia, haya valido la pena</p>
+
+<p><strong>Brigsby Bear</strong> que loco, quiza me ha marcado mas aun que Mayhem, buscar y
+descagar</p>
+
+<p><strong>13 Assassins</strong> &hellip; en resumidas cuentas seria &ldquo;el 7 samurais de Takashi
+Mike&rdquo;&hellip; sobria y sangrienta a la vez, aunque esta lejos de ser una obra maestra</p>
+
+<p><strong>Gamers</strong> Divertido harem, que no se toma en serio su propio nombre hasta una
+exposicion en el episodio 12, por lo demas, termine soñando con una rubia y eso
+no puede ser malo</p>
+
+<p><strong>The Ballad of Cable Hoque</strong> mas que un western, lo clasificaria como un slice
+of life ambientado en el desierto. Su montaje es un poco raro y en la historia
+no hay apenas ningun punto de tension. Si bien no la recomendaria, ni tampoco lo
+contrario, es pasable para un momento sin mayor busqueda que perder un par de
+horas, eso si los dialogos y actuaciones teatrales son entrañables como el par
+de melones de Hildy</p>
+
+<pre><code>magnet:?xt=urn:btih:67fac6d8f145d625e4a4b0f87256ba99f7374878&amp;dn=La%20balada%20de%20Cable%20Hogue%20(Ciclo%20Sam%20Peckinpah)&amp;tr=http%3a%2f%2ftv.tracker.p&amp;tr=http%3a%2f%2ftracker.prq.to%2fannounce&amp;tr=http%3a%2f%2fwww.todotorrents.com%3a2710%2fannounce
+</code></pre>
+
+<p><strong>Renai Boukun</strong> !pelirojas¡ Otro harem colegial, +divertido que Gamers e igual
+de intracendente, puede que lo olvides al poco tiempo, aun asi se disfruta</p>
+
+<p><strong>Shokugeki no Souma San no Sara</strong> tercera temporada del anime shonen-culinario
+con toques echi, o eso era en un inicio la serie. Ya a estas alturas su
+animacion es malilla, ha perdido mucho echi y el que tiene carece de
+creatividad, ademas la historia ya no tiene sentido ni gracia, apenas sobre la
+linea de &ldquo;lo visible&rdquo;. Si aun no ves esta temporada es prescindible</p>
+
+<p><strong>Knights and Magic</strong> cuando escucho aquello de que la temporada (de anime) actual es una
+mierda llena de moeshit, me pregunto como es esto posible, pues aunque requiere
+una labor de busqueda (con la suficiente experiencia) no demaciado exaustiva
+siempre estoi viendo material con una antiguadad no mayor a 3 años lo
+suficientemente buena para alimentar al ocioso disperso que llevo dentro.</p>
+
+<p>Si, la mayoria de este material que consumo no intenta reflexionar sobre la
+naturaleza &ldquo;profunda&rdquo; de la realidad social, espiritual, material o esoterica
+por medio de propuestas basadas en robots/ciencia-ficcion/o-cosa
+pero que demonios, de ves en cuando, hasta una propuesta tan basica y floja como
+esta me emociona y hace que consuma con ansiedad un capitulo tras otro.</p>
+
+<p>Hep, si, este es otro anime de la campaña subliminal japonesa que insentiva el
+suicidio de los otaku (y programadores plot que por alla del tercer capitulo lo
+olvidan casi por completo) pero que mas da, su propuesta de fantasia con el
+prota kawai (no es una opinion personal) que todo lo puede, tiene su
+aquel&hellip; va&hellip; darle una oportunidad</p>
+
+<pre><code>magnet:?xt=urn:btih:2fbb9fa5e249d3225e34ad9f75f3a6fb7795c8a3&amp;dn=%5bPuyaSubs!%5d%20Knights%20and%20Magic%20%5bBatch%5d&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce
+</code></pre>
+
+<p>la temporada que viene va a ser una apuesta arrisgada por continuaciones y
+terceras partes, la mayoria esperadas por mi, quitando flcl y stains;gate (si la
+maltratan, no pasare del segundo o tercer episodio) pero tambien vienen otras
+cosas sabrosas, y en el peor de los casos, siempre nos quedara el pasado, las
+&ldquo;nuevas&rdquo; propuestas y ese universo paralelo y/o futuro improbable donde se hacen
+adaptaciones dignas de los mangas&hellip; te hablo a ti samurai X, GTO, y Tenjho
+Tenge</p>
+
+<p><strong>Star Wars: The Last Jedi</strong> entretenida&hellip; me gusta el juego ese que hace sobre
+el bien, el mal, y el equilibrio, casi persibo como si fuera una evolucion sobre
+los temas que se exponen a &ldquo;la sociedad&rdquo;, sip, de forma muy infantil, pero es un
+inicio hacia aperndizajes misticos&hellip; que inevitablemente lleban al consumo de
+sustancias y luego al fin de la pacheques y luego la nada y luego al lo-que-sea</p>
+
+<p>tambien me gusta que dediquen una buena parte a un plan que como dirian los basicos &ldquo;no
+va a ningun lado&rdquo;, por que muchos de los esfuersos que hacemos, no van a ningun
+lado. Mmm, la exposicion de la guerra como una revuelta de tres gatos, tambien
+me gusto, soy yo, o en el guion si hay critica y trolerismo?</p>
+
+<p>en fin, una mas. Por agregar, creo que la anterior tenia mejor trabajo visual y
+rei (o rey?) era mas kawai</p>
+
+<h2 id="fonos">fonos</h2>
+
+<p><strong>BUCK-TICK – Yume Miru Uchuu</strong> directamente de las novedades torrenciales, un
+album que apesta a j-pop-rock, antecediendo el pop al rock, por su sonido
+happy plasticoso desenfadado, solo la ultima pieza me motiva a la repeticion,
+pero en general es algo digno a tener en la biblioteca, para esos momento donde
+el ost de la vida no es demaciado importante</p>
+
+<pre><code>magnet:?xt=urn:btih:4256263aa9200385b89e2c27a349c1ded2e02daf&amp;dn=BUCK-TICK%20%e5%a4%a2%e8%a6%8b%e3%82%8b%e5%ae%87%e5%ae%99&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969
+</code></pre>
+
+<p><strong>Fun Trick Noisemaker</strong> (<em>The Apples in Stereo</em>), otro grato descubrimiento
+&ldquo;indie&rdquo;, entre dinosaur jr (pero sin ser aburrido) y the pillows, en la <a href="https://en.wikipedia.org/wiki/The_Apples_in_Stereo">wikipedia</a>
+dicen que es pop psicodelico y les puedo creer (no psicodelia acida cosmico
+corrosiba, sino happy-tonty-romance-dance). Tambien cuentan que este es su primer
+album (1995). Desenfadado y casi hippi sesentero, una suculencia que
+aumenta de intensidad a medida que pasa una y otra repeticion del album</p>
+
+<pre><code>magnet:?xt=urn:btih:6cd3bae64f5439ae452232b2668ccfe00fa1ed6e&amp;dn=Fun%20Trick%20Noisemaker&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<p><strong>Rick Ross – Rather You Than Me</strong> niga dont touch my woman! &hellip; electro-rap-dub
+tan contundente como el ost de Samurai Champloo, y no estoy siendo exagerado!
+bueno si, diria que el album entero gira sobre el mod sonoro en la segunda pista
+<em>Santorini Greece</em>, el resto aunque inicia a mejorar sobre la segunda mitad del
+album, no estan a la altura, repetir y repetir y repetir la segunda pista! Un
+indispensable para niños rata adictos al GTA</p>
+
+<pre><code>magnet:?xt=urn:btih:1e4c1b11d8a4cb8b8e8afbaf94b9f7c7ccb9eda1&amp;dn=Rick%20Ross%20-%20Rather%20You%20Than%20Me%20(2017)%20CD%20Rip&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337
+</code></pre>
+
+<p><strong>Merit Hemmingson – Trollskog: mer svensk folkmusik på beat</strong> una especie de
+sonido escoses-nordico o algo similar, suave y sin espectacularidad, como que
+navideño, je, no es un disco que regalaria, pero por experimentar no se pierde
+demaciado</p>
+
+<pre><code>magnet:?xt=urn:btih:361c5db3403445c84acd71c0f4ffa09bcb8b4beb&amp;dn=Merit%20Hemmingson%20-%20Trollskog%20(1972%3b%201992)%20%5bZ3K%5d&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<p><strong>Ithamara Koorax – Love Dance</strong> un jazz minimalista con voz female (de aspiraciones artisticas) de cine
+negro. La cantante en momentos me retrotrae la imagen de björk, tiene unos tonos
+que se asemejan bastante, aunque el sonido es mucho mas jazzoso en ocaciones casi
+bossa, todo demasiado mesurado sin sobresaltos</p>
+
+<pre><code>magnet:?xt=urn:btih:2646827a7af41560f54cb49370eb13d5edfd707a&amp;dn=Ithamara%20Koorax%20-%20Love%20Dance%20-%20The%20Ballad%20Album&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<p>ja, ja, por regla cuando un album pasa a formar parte de mi coleccion es
+necesario stalkear al artista en la wikipedia&hellip; segun la cual la cantante de
+este album esta considerada como la tercer mejor cantante del mundo (jazz) y por
+mera casualidad su influiencia bossa (supongo) le viene por su ascendencia
+brasileira. Pero bueno, segun ese mismo articulo, Diana Krall es la mejor voz
+femenina y persornalmente estas afirmaciones me dejan bastante frio?</p>
+
+<p>Por otro lado, este album es lo que mas he escuchado en la temporada, mejora con
+cada escucha</p>
+
+<p><strong>Parliament + Funkadelic</strong>, bueno, mas que una reseña, que lo merecerian,
+al menos por la soberbia calidad funky de los primeros albums, el sigiente enlace
+magnetico contiene una recopilacion de las dos bandas, disfrut!</p>
+
+<pre><code>magnet:?xt=urn:btih:3eb43c96b1d48c651783e303b153d0c2f2c2d2ef&amp;dn=Parliament_Funkadelic%20-%20Discography%201970-2008%20%5bFLAC%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce
+</code></pre>
+
+<p><strong>The Sun</strong> (<em>Somali Yacth Club</em>) Esto entra en la categoria de musica ambiental
+con ritmos dub o algo asi, en resumen bueno y digno de recomendacion</p>
+
+<pre><code>magnet:?xt=urn:btih:9e60e4b3d852e63b7cdb68a490d7749b98957a42&amp;dn=Somali%20Yacht%20Club%20-%20The%20Sun%20(2014)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969
+</code></pre>
+
+<h2 id="txt">txt</h2>
+
+<p>una supercomputadora no hara correr tu codigo mas rapido, o aprende a programar
+y dejate de tontaaas <a href="https://lemire.me/blog/2017/12/11/no-a-supercomputer-wont-make-your-code-run-faster/">https://lemire.me/blog/2017/12/11/no-a-supercomputer-wont-make-your-code-run-faster/</a></p>
+
+<p>tambien destaco un post de emacs en poesia binaria
+<a href="https://poesiabinaria.net/2017/12/creando-una-configuracion-personalizada-emacs-emacs-d-explicaciones-detalladas-i-configuracion-general/">https://poesiabinaria.net/2017/12/creando-una-configuracion-personalizada-emacs-emacs-d-explicaciones-detalladas-i-configuracion-general/</a></p>
+
+<p>en
+<a href="https://monstruosoft.wordpress.com/2017/12/22/sueno-rosado-comic-independiente/">mostruosoft</a>
+compartian <em>Sueñø Rosado</em>, un comic independiente con un dibujo que me ha
+gustado, todavia no lo leo, pero prometen ecenas violentas y desnudos</p>
+
+<p>y finalmente, uno de los torrentes mas apetitosos que puedan existir! la <strong>gran
+biblioteca de fantacia y ciencia ficcion calibre</strong> ha sacado una nueva
+version&hellip; la conoci de forma inesperada en un podcast &ldquo;de charlas y
+curiosidades&rdquo; llamado antimateria (temporada 3, creo). En cuanto supe de su
+existencia me lance a las terribles profundidades del internete, donde tras
+previo registro en un foro de mala muerte consegui (creo) la version 2 con
++1*,000 libros en epub. Mas tarde, ya con algo de experiencia en torrente lloga
+la version 3 en formato fb2, que es donde obtengo la practica totalidad de (los
+pocos) libros que leo (casi por equivacacion), ha, ha, ha.</p>
+
+<p>La version 4 paso toda su existencia como un torrente sin descargar y en esta su
+ultima version, segun el info.txt, cuenta con 57012 epubs, repartidos en varios
+<strong>rar</strong>&rsquo;s (de novatos) con un tamaño total de descarga de 60.5GiB.</p>
+
+<p>Aun no se si los pueda descomprimir sin fallos, ni la calidad de esta nueva
+version, ni si el torrente se complete, pero material de esta categoria es
+ineludiblemente una noticia compartible! <strong>KEEP CALM AND SEED TORRENTS!</strong></p>
+
+<pre><code>magnet:?xt=urn:btih:c5ffe7a09601f3bae84bd451797cc2a3949eaaee&amp;dn=Biblioteca_57012_EPUB_ESP&amp;tr=http%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=http%3a%2f%2fbt.careland.com.cn%3a6969%2fannoun&amp;tr=http%3a%2f%2fannounce.torrentsmd.com%3a6969%2fannounce
+</code></pre>
+
+<p>happy Reistmast! y no consuman dulces en la naturaleza</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.github.io/post/ramen-xiv/">◀ Ramen XIV – Noise</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="http://nasciiboy.github.io">/</a></span> <span><a href="http://nasciiboy.github.io/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/categories/prog">prog(36)</a></li><li><a href="http://nasciiboy.github.io/categories/post">post(24)</a></li><li><a href="http://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="http://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="http://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.github.io/tags/howto">howto(15)</a></li><li><a href="http://nasciiboy.github.io/tags/ramen">ramen(15)</a></li><li><a href="http://nasciiboy.github.io/tags/fonos">fonos(14)</a></li><li><a href="http://nasciiboy.github.io/tags/morg">morg(12)</a></li><li><a href="http://nasciiboy.github.io/tags/4k">4k(8)</a></li><li><a href="http://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="http://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="http://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="http://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="http://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="http://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="http://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="http://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="http://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="http://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="http://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="http://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="http://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.github.io/tags/txt">txt(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

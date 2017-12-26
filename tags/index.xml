@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Wed, 06 Dec 2017 21:12:00 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 25 Dec 2017 17:15:29 -0600</lastBuildDate>
     
 	<atom:link href="http://nasciiboy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>4k</title>
       <link>http://nasciiboy.github.io/tags/4k/</link>
-      <pubDate>Wed, 06 Dec 2017 21:12:00 -0600</pubDate>
+      <pubDate>Mon, 25 Dec 2017 17:15:29 -0600</pubDate>
       
       <guid>http://nasciiboy.github.io/tags/4k/</guid>
       <description></description>
@@ -105,7 +105,7 @@
     <item>
       <title>Fonos</title>
       <link>http://nasciiboy.github.io/tags/fonos/</link>
-      <pubDate>Wed, 06 Dec 2017 21:12:00 -0600</pubDate>
+      <pubDate>Mon, 25 Dec 2017 17:15:29 -0600</pubDate>
       
       <guid>http://nasciiboy.github.io/tags/fonos/</guid>
       <description></description>
@@ -231,7 +231,7 @@
     <item>
       <title>Ramen</title>
       <link>http://nasciiboy.github.io/tags/ramen/</link>
-      <pubDate>Wed, 06 Dec 2017 21:12:00 -0600</pubDate>
+      <pubDate>Mon, 25 Dec 2017 17:15:29 -0600</pubDate>
       
       <guid>http://nasciiboy.github.io/tags/ramen/</guid>
       <description></description>
@@ -288,6 +288,15 @@
       <pubDate>Sun, 01 Jan 2017 14:56:59 -0600</pubDate>
       
       <guid>http://nasciiboy.github.io/tags/solarus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Txt</title>
+      <link>http://nasciiboy.github.io/tags/txt/</link>
+      <pubDate>Mon, 25 Dec 2017 17:15:29 -0600</pubDate>
+      
+      <guid>http://nasciiboy.github.io/tags/txt/</guid>
       <description></description>
     </item>
     
