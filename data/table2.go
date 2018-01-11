@@ -56,8 +56,7 @@ func (p *point) mv( dir byte ) point {
 }
 
 func (p point) nmv( dir byte ) point {
-  var n point = p
-  return n.mv( dir )
+  return p.mv( dir )
 }
 
 type square struct {

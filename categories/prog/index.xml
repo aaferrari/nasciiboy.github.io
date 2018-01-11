@@ -18,7 +18,7 @@
       <pubDate>Wed, 10 Jan 2018 18:44:03 -0600</pubDate>
       
       <guid>http://nasciiboy.github.io/prog/morg-table-ii/</guid>
-      <description>o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang) – Segunda Parte En el post anterior expuse una tecnica para parsear tablas relativamente complejas, con una tecnica relativamente sencilla, con un codigo relativamente interesante&amp;hellip; ahora la tecnica y la sintaxis ha cambiado, en lugar de &amp;ldquo;concatenar&amp;rdquo; las columnas, se realiza un analicis de los contornos de las celdas; ademas la sintaxis ha sido modificada para ser compatible con la que utiliza (un estilo) de reStructuredText (es mas sencillo y supongo, (algun dia&amp;hellip;) el editor del formato, tendra un programa auxiliar que mitigue el fastidio):</description>
+      <description>o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang) – Segunda Parte En el post anterior expuse una manera para parsear tablas relativamente complejas, con una tecnica relativamente sencilla, con un codigo relativamente interesante&amp;hellip; ahora la tecnica y la sintaxis ha cambiado, en lugar de &amp;ldquo;concatenar&amp;rdquo; las columnas, se realiza un analisis de los contornos de las celdas; ademas la sintaxis ha sido modificada para ser compatible con la que utiliza (un estilo) de reStructuredText (es mas sencillo y supongo, (algun dia&amp;hellip;) el editor del formato, tendra un programa auxiliar que mitigue el fastidio de dibujar lineas):</description>
     </item>
     
     <item>

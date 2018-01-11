@@ -200,14 +200,14 @@ img:hover { border: 0.05em solid #fff; }
 
 <h2 id="o-como-parsear-una-tabla-en-texto-plano-para-convertirla-en-una-tabla-html-u-otra-cosa-codigo-de-ejemplo-en-golang-segunda-parte">o, como &ldquo;parsear&rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang) – Segunda Parte</h2>
 
-<p>En el <a href="../morg-table/">post anterior</a> expuse una tecnica para parsear tablas
+<p>En el <a href="../morg-table/">post anterior</a> expuse una manera para parsear tablas
 relativamente complejas, con una tecnica relativamente sencilla, con un codigo
 relativamente interesante&hellip; ahora la tecnica y la sintaxis ha cambiado, en
-lugar de &ldquo;concatenar&rdquo; las columnas, se realiza un analicis de los contornos de
+lugar de &ldquo;concatenar&rdquo; las columnas, se realiza un analisis de los contornos de
 las celdas; ademas la sintaxis ha sido modificada para ser compatible con la que
 utiliza (un estilo) de reStructuredText (es mas sencillo y supongo, (algun
 dia&hellip;) el editor del formato, tendra un programa auxiliar que mitigue el
-fastidio):</p>
+fastidio de dibujar lineas):</p>
 
 <pre><code>                                  +----------------------+
 |   mi tabla compleja  |          |   mi tabla compleja  |
@@ -233,7 +233,7 @@ por <a href="http://nasciiboy.github.io/data/table2_test.go">aca</a>, un <code>g
 
 <p>Basicamente solo se modifica la forma de analizar la tabla. La convenienca de
 pasar los datos de entrada a una cuadricula de runas y conocer la
-dimencion-posicion relativa de las celdas con respecto a las demas permanece sin
+dimencion-posicion relativa de las celdas con respecto a las demas, permanece sin
 cambios.</p>
 
 <p>El codigo es severamente basico y asume datos de entrada correctos (en caso
@@ -241,11 +241,11 @@ contrario no seria extraño entrar en bucles infinitos). Aun no estoy conforme
 con la estructura literarea del codigo, es poco intuitivo y casi nada
 secuencial, tambien dudo un poco de los objetos que se utilizan, pero en fin las
 bases estan aqui, el codigo de referencia estara dentro de
-<code>github.com/nasciiboy/morg/katana/table.go</code> en el codigo del repo de morg (algun dia) y
+<code>github.com/nasciiboy/morg/katana/table.go</code> en el repo de morg (algun dia) y
 lamentablemente sera poco reutilizable debido a la naturaleza (actual) de la
 forma en como se recorre el texto de entrada&hellip; pero bueno, al ajo</p>
 
-<pre><code>// variables para definir el contorno de la tabla
+<pre><code>// constantes para definir el contorno de la tabla
 const CORNER  = '+'  //  +----+
 const VEDGE   = '|'  //  |    |
 const HEDGE   = '-'  //  +----+
@@ -315,8 +315,7 @@ func (p *point) mv( dir byte ) point {
 }
 
 func (p point) nmv( dir byte ) point {
-  var n point = p
-  return n.mv( dir )
+  return p.mv( dir )
 }
 </code></pre>
 
@@ -550,7 +549,7 @@ y arriba en el mapa de puntos calientes</p>
 puñetero <del>y apestoso, apestoso</del> codigo python de reStructuredText)</p>
 
 <p>el codigo fuente completo tiene mucha calderilla auxiliar conveniente
-sobre todo del paquete <code>github.com/nasciiboy/txt</code>. Lo coloque directamente
+(sobre todo del paquete <code>github.com/nasciiboy/txt</code>). Lo coloque directamente
 para evitar dependencias inecesarias para el ejemplo, su comprension/mejora
 queda a modo de reto personal&hellip;</p>
 
