@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Fri, 27 Oct 2017 16:58:55 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,9 +18,105 @@
       <pubDate>Fri, 27 Oct 2017 16:58:55 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/raptor-down/</guid>
-      <description>El Conteo Final De los pocos proyectos presentables que tengo, la libreria de expresiones regulares (estilo) &amp;ldquo;raptor&amp;rdquo; contiene lo suficiente de mi&amp;hellip; que aun si el fastidio se presentara mañana y dejara de programar, seria suficiente para sentirme satisfecho
-incluso inclui algunas caracteristicas &amp;ldquo;avanzadas&amp;rdquo; (no regexp) de otros motores, por ejemplo una exprecion texto.*mas-texto en raptor era texto(mas-texto)*#!mas-texto, algo que denomine como negacion de expresiones
-perooo, la negacion de expresiones requeria romper con la sencilles de la libreria (o motor o como se diga).</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/rocky.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;el-conteo-final&#34;&gt;El Conteo Final&lt;/h2&gt;
+
+&lt;p&gt;De los pocos proyectos presentables que tengo, la libreria de expresiones
+regulares (estilo) &amp;ldquo;raptor&amp;rdquo; contiene lo suficiente de mi&amp;hellip; que aun si el
+fastidio se presentara mañana y dejara de programar, seria suficiente para
+sentirme satisfecho&lt;/p&gt;
+
+&lt;p&gt;incluso inclui algunas caracteristicas &amp;ldquo;avanzadas&amp;rdquo; (no regexp) de otros motores,
+por ejemplo una exprecion &lt;code&gt;texto.*mas-texto&lt;/code&gt; en &lt;em&gt;raptor&lt;/em&gt; era
+&lt;code&gt;texto(mas-texto)*#!mas-texto&lt;/code&gt;, algo que denomine como &lt;q&gt;negacion de
+expresiones&lt;/q&gt;&lt;/p&gt;
+
+&lt;p&gt;perooo, la negacion de expresiones requeria romper con la sencilles de la libreria (o
+motor o como se diga). Tenia la ambicion de encontrar una forma de simplificar
+las caracteristicas avanzadas de otros proyectos a la vez que incrementaba su
+rendimiento. Con esta idea en mente, me dispuse a examinar el motor de
+expresiones regulares que forma parte de la libreria estandar del lenguaje de
+programacion Go, intentando desde luego alcanzar la grandeza&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;gore&#34;&gt;Gore&lt;/h2&gt;
+
+&lt;p&gt;Casi por norma general ocurre que me adentro en un proyecto ajeno y me pierdo
+entre dependencias y recorridos entre un fichero a otro, mientras trato de hacer
+una imagen global de lo que esta pasando. Pese a que en Golang mi orientacion es
+superior que en C, o C++, me perdi bastante, aunque llege a apreciar que el parseo
+no ocurre en el paquete principal de codigo, si no que sucede en otro &amp;ldquo;de
+sintaxis&amp;rdquo;, donde tambien se realiza una &lt;em&gt;simplificacion&lt;/em&gt; del recorrido de las expresiones.&lt;/p&gt;
+
+&lt;p&gt;Los resultados de transformar la expresion en algo util se depositan en una
+estructura, que tiene un arreglo con todos los datos necesarios y un arreglo de
+sub-expresiones o sea punteros del mismo tipo para cuando se requiere por
+ejemplo en agrupaciones, alternacion y conjuntos, agrupar expresiones dentro de
+otras expresiones&lt;/p&gt;
+
+&lt;p&gt;La optimizacion, de la expresion regular, se realiza revizando caso a caso los
+elementos que tiene la expresion y se siplifican cuando es posible cambiando el
+tipo de subexprecion por otro, eliminando anidamiento o agrupando varias
+expresiones como una sola&lt;/p&gt;
+
+&lt;p&gt;Una vez compilada la regexp, la busqueda (que no entendi muy bien) ocurre mas
+que por iteracion por la cadena de ingreso, mediante operaciones especificas
+considerando cada valor, posicion y tipo de la expresion, por ejemplo si debe buscarse al
+inicio o al final, si es una expresion de tipo cadena, un conjunto, y luego
+mediante funciones con la libreria &lt;code&gt;strings&lt;/code&gt; se realiza el trabajo sucio de los
+casos sencillos&lt;/p&gt;
+
+&lt;h2 id=&#34;say-goodbay&#34;&gt;Say, Goodbay&lt;/h2&gt;
+
+&lt;p&gt;imaginaba que encontraria algo por el estilo, al examinar (o mejor dicho intuir
+pues no llegue a enterder) un motor regexp &lt;em&gt;serio&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;La libreria regexp estandar es por decirlo de algun modo una fabrica con muchos
+empleados especializados en una labor pequeña sin nungun glamour ni emocion, un
+monton de trabajo manual automatizado convertido a codigo, je, je, je, yo queria
+encontrar algo mas del estilo de la fabrica le willy wonka, con un rio de
+gominolas y Oompa-loompas cantores&lt;/p&gt;
+
+&lt;p&gt;veo a las expresiones regulares como un sistema conformado de (por decir) 3
+reglas con el que se pueden generar patrones de complejidad y extencion
+arbitrarios para casos de uso asombrosos aunque limitados. En contraste, las
+expresiones (no) regulares actuales extienden estas normas incrementando la
+complejidad a cambio de perder la &amp;ldquo;elegancia&amp;rdquo;, hay belleza hay? el codigo debe
+ser bello?&lt;/p&gt;
+
+&lt;p&gt;en este punto, se me acurasara (seguro con razon) de cazador de lo paranormal,
+como quien se creee una religion y busca significados ocultos sumando las letras
+de mil formas distintas hasta estar agusto. Con todo, asi es como veo el codigo,
+como algo que tiene que ser sencillo y con belleza o al menos intentar aproximarse&lt;/p&gt;
+
+&lt;p&gt;un tanto desilucionado, regrese a mi motor y lo despoje de la caracteristica
+esoterica &lt;code&gt;#!&lt;/code&gt;, con lo cual se redujo la complejidad a su expresion mas simple y
+gano algo de rendimiento en las &lt;a href=&#34;https://nasciiboy.github.io/raptorVSworld/index.html&#34;&gt;pruebas&lt;/a&gt;,
+entre 500 y 1000 milisegundos en cada competencia, y en algunos
+casos aislados, el tiempo se redujo a la mitad, hubo que renunciar a dos
+expresiones donde ahora aparece un &lt;strong&gt;N/A&lt;/strong&gt;, pero aun asi, el rendimiento en
+general, es suficiente como para substituir honradamente a la libreria estandar&lt;/p&gt;
+
+&lt;p&gt;Es momento de decir adios al raptor, bueno, no, lo seguire utilizando en mis
+programas y como prueba de programacion con cada nuevo lenguaje que intente, hay
+motores mucho mas eficientes, con mas caracteristicas, trabajo y complejidad,
+cuando necesite de su poder los usare, cuando no tirare del raptor y si hace
+falta eficiencia, a programar a mano&lt;/p&gt;
+
+&lt;p&gt;Supongo que con el nuevo panorama podria hacerme responsable y terminar la
+escritura del &lt;strong&gt;manual para escribir un motor de expresiones regulares sin tener
+ni idea&lt;/strong&gt;, alias &lt;em&gt;Raptor-book&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Ohh, modifique el resto de la familia de versiones, regexp 3 y 4 en C
+y la version 3 en Go, pero sin mucho empeño ni comprobaciones mas alla de las
+que estaban en las pruebas, jo, es complicado mantener el nivel cuando hay que
+modificar lo mismo 6 veces en dos lenguajes, por el camino, tambien desaparecio
+un bicho en patrones con agrupaciones que se presentan al final de una
+expresion de una manera que no alcanzo a entender&amp;hellip; si funciona y aprueba, que
+mas da!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -29,8 +125,243 @@ perooo, la negacion de expresiones requeria romper con la sencilles de la librer
       <pubDate>Fri, 08 Sep 2017 11:53:17 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/post/ramen-x/</guid>
-      <description>bitacora de abordo: ha pasado casi un mes desde el ultimo &amp;ldquo;encuentro&amp;rdquo;, muchas cosas sabrosas, informaticas y otros echos hilarantes (a nivel personal) podrian merecer un registro, pero pondre lo que recuerde y algunas cosas que iba escribiendo despistadamente.
-Quiza lo mas relevante, es que me encuentro absorto en la aleatoria labor de reescribir morg. El reencuentro empezo (manoceando codigo) aproximadamente hace dos meses, luego de terminada la lectura del tgpl, reescribiendo unas funciones basicas de manipulacion de strings (las extrañas cadenas de Go) y luego replanteando, escribiendo, puliendo (y no pocas veces regresando al punto de partida) cambios en las estructuras Markup y los &amp;ldquo;comandos de bloque&amp;rdquo;.</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/gatari.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;bitacora de abordo: ha pasado casi un mes desde el ultimo &amp;ldquo;encuentro&amp;rdquo;, muchas
+cosas sabrosas, informaticas y otros echos hilarantes (a nivel personal) podrian
+merecer un registro, pero pondre lo que recuerde y algunas cosas que iba
+escribiendo despistadamente.&lt;/p&gt;
+
+&lt;p&gt;Quiza lo mas relevante, es que me encuentro absorto en la aleatoria labor de
+reescribir morg. El reencuentro empezo (manoceando codigo) aproximadamente hace
+dos meses, luego de terminada la lectura del tgpl, reescribiendo unas funciones
+basicas de manipulacion de &lt;code&gt;strings&lt;/code&gt; (las extrañas cadenas de Go) y luego
+replanteando, escribiendo, puliendo (y no pocas veces regresando al punto de
+partida) cambios en las estructuras &lt;code&gt;Markup&lt;/code&gt; y los &amp;ldquo;comandos de bloque&amp;rdquo;. Dudas
+surgieron, deberia estar todo el parser en un directorio monolitico? o mejor
+subdividirlo en subdirectorios? o darles su propio paquete? al final ya que todo
+es parte de un solo concepto de un lenguaje de marcado muy particular y
+dificilmente sera utilizado por alguien mas, pues, casi todo lo puse en el mismo
+paquete, eso si, dividido por ficheros, aunque esto trae el inconveniente para
+los profanos, que deben leerse todos los ficheros antes de entender que hacen en
+conjunto&lt;/p&gt;
+
+&lt;p&gt;mientras hacia esto, me encontre un BUG gordo en el motor de expresiones
+regulares, que requirio un par de horas para ubicar su origen. Resumiendo, el
+fallo, se presentaba en regexes de tipo &lt;code&gt;^cosas(agrupacion)+$&lt;/code&gt; y se debia a no
+restaurar la posicion de inicio cuando una agrupacion &amp;ldquo;falla&amp;rdquo; en su ultimo
+recorrido, pero se cumple con su &amp;ldquo;volumen de repeticion minimo&amp;rdquo;, es decir la
+agrupacion es correcta&amp;hellip; pero termina donde se supone debe terminar, que es
+el fin de los datos de entrada, je, es bastante mas confuso y poco intiutivo de
+lo que parace, mas no quiero abrumar al personal con una larga explicacion. La
+solucion chapucera, fue eliminar una pequeña optimizacion que ahorra almenos 3
+llamas a funciones, sinduda chapucero, aunque funcional&lt;/p&gt;
+
+&lt;p&gt;La moraleja, es, que con el tiempo y pruebas suficientes, saldran nuevos bichos en
+tu programa, pese a todo el tiempo que allas invertido en el. Lo bueno? tengo un
+pretexto-obligacion para toquetear el motor raptor-4 (Golang edition). El resto
+de ediciones en C y regexp3 (Go), no reciviran una actualizacion inmediata,
+quiza, solo cuando encuentre una iteracion que pueda llamar perfecta, como lo
+fueron las versiones iniciales del libro del raptor&amp;hellip; je, hay otras cosas en
+las cuales dedicar el tiempo&lt;/p&gt;
+
+&lt;p&gt;luego de corregir las regexes, me lie unas tardes intentado hacer un analizador
+de cosas que tienen &amp;ldquo;sintaxis de funcion&amp;rdquo; (&lt;code&gt;algo( &amp;quot;xy&amp;quot;, 0.12, 12, pi, ... )&lt;/code&gt;), con un numero de parametros
+arbitrarios, para lo que eche mano de regexes y conteo de caracteres a lo
+salvaje (+1, -1, +x, -x, &amp;hellip;), sin embargo al intentar implementar y reconocer
+un numero arbitrario elementos con tipos distintos, la ofuscacion mental se hizo
+presente.&lt;/p&gt;
+
+&lt;p&gt;la pantanosa situacion dejo de ser intimidante al recordar unas secciones del
+libro de go, donde hacian un lexer, o algo asi y me puse a viajar y divagar en
+busca de lexeres de codigo escritos en go, para terminar llendo a el codigo de
+un paquete de la libreria estandar &lt;code&gt;text/scanner&lt;/code&gt;, que en esencia recorre,
+una entrada de datos caracter a caracter (unicode en utf-8), lleba un
+recuento de la posicion actual de la entrada por linea y columna, y lo mas
+interesante, reconoce espacios&amp;hellip; y recolecta identificadores, comentarios,
+enteros, flotantes, caracteres, cadenas y otros elementos sintacticos similares
+a los que utiliza go,&lt;/p&gt;
+
+&lt;p&gt;la libreria (a mis hojos (&lt;strong&gt;con H&lt;/strong&gt;)) tenia cosas muy raras, pues exigia un
+&amp;ldquo;contrato&amp;rdquo; con un &lt;code&gt;io.Reader&lt;/code&gt;, ademas de contar un raro buffer en un arreglo de
+1024 bytes y otro buffer adicional de tipo &lt;code&gt;bytes.Buffer&lt;/code&gt;, que ya es cosa seria
+(para mi fortuna a ese paquete ya habia metido mano, lo que mas me gusta de la
+libreria estandar de Go, es que la puedo enterder, a diferencia de libc, que
+esta hasta arriba de macros y cosas raras)&lt;/p&gt;
+
+&lt;p&gt;customise el paquete para que solo tuviera lo necesario, sin buffers ni nada,
+reconociera booleanos e informara de enteros octales, hexadecimales e ints de
+forma explicita, con casi todos sus campos brutalmente expuestos (uuhhh)&lt;/p&gt;
+
+&lt;p&gt;luego de adquirir ese nuevo conocimento se me ocurrio modificar (nuevamente)
+morg de raiz y todos sus componentes y en eso estoy, ofuscado, obsecionado y
+exitado!  no dedicare tiempo a traducir, ni a otro lenguaje hasta que el asunto
+funcione, porque en este aspecto no puedo pensar en otra cosa&lt;/p&gt;
+
+&lt;p&gt;en relacion con este particular tipo de adiccion, en reddid (en ingles) un tipo
+colgo un post, que si no revelador o extenso, sentiras empatia al leerlo: &lt;a href=&#34;https://web.archive.org/web/20130906141542/http://virtuecenter.com/blog/the_effects_of_computer_programming_on_the_brain.html&#34;&gt;https://web.archive.org/web/20130906141542/http://virtuecenter.com/blog/the_effects_of_computer_programming_on_the_brain.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;otro post interesante fue, &lt;a href=&#34;http://www.danielallington.net/2016/09/the-latex-fetish/&#34;&gt;http://www.danielallington.net/2016/09/the-latex-fetish/&lt;/a&gt;
+donde el autor inicia una &lt;strong&gt;guerra santa&lt;/strong&gt;, &lt;em&gt;Latex VS Word&lt;/em&gt; Llamando fetichistas
+a los usuarios de latex, no sin fundamentar sus acusaciones hechando abajo los
+supuestos beneficios de utilizar latex&amp;hellip; en comparacion con word. Concuerdo con
+sus puntos, mas creo que los (ahora ficticios) beneficios de latex, &lt;em&gt;deben&lt;/em&gt; ser
+alcanzados creando un lengueje de marcas ligeras &lt;strong&gt;poderoso&lt;/strong&gt;, &lt;strong&gt;sencillo&lt;/strong&gt;,
+&lt;strong&gt;elegante&lt;/strong&gt;, pero sobre todo, &lt;strong&gt;WYSIWYMAG&lt;/strong&gt; (What You See Is What You Mean And
+Get) ja, ja, ja, haaaa, algun dia sera). Para ves comentarios en reddit ir a:
+&lt;a href=&#34;https://www.reddit.com/r/programming/comments/6tkoop/the_latex_fetish_or_dont_write_in_latex_its_just/&#34;&gt;https://www.reddit.com/r/programming/comments/6tkoop/the_latex_fetish_or_dont_write_in_latex_its_just/&lt;/a&gt;
+en ocaciones buenos post son undidos sin justificacion, darle un voto positivo&lt;/p&gt;
+
+&lt;p&gt;El ultimo registro de esta sesion es lo mas tremendo y ezpelusnante&amp;hellip; chan,
+chan, chan&amp;hellip; chan, chan, chan&amp;hellip; chan, tras abandonar, repudiar y menospresiar la
+educacion escolarisada desde hace la mitad de mi existencia, me inscribi en una
+preparatoria abierta, para poner en marcha un lividinoso proyecto que hara
+(espero) paleativa mi situacion humana en el territorio donde habito.&lt;/p&gt;
+
+&lt;p&gt;El plan es terminar la &amp;ldquo;prepa&amp;rdquo; en unos 3 meses y seguir con mis mierdas de
+intento de programador, tras lo cual entrare a la universidad en una carrera de
+informatica, reciviendo una &amp;ldquo;beca salario&amp;rdquo; de unos 100 dolares mensuales, que ya
+me bastan para subsistir como semi-persona y luego espero alguna oferta de
+trabajo temporal o algo asi, jo, jo, el kit de la cuestion se oculta en el hecho
+que comparado con los habituales residentes de esas instituciones de educacion
+&amp;ldquo;superior&amp;rdquo;, mi nivel basta para asombrar y resivir culto de la mayoria de mis
+futuros colegas y poner en evidencia a alguno que otro profesor, uuuhhh espero
+con ansias ese dia, o cuando una compañera de ascendencia oriental me pida ayuda
+con algun tema y le responda: &amp;ldquo;es curioso, pero tu necesitas algo y yo necesito
+algo&amp;hellip;&amp;ldquo;, ja, ja, ja, el sueño humedo de cualquier profesor, solo que no sere
+profesor, sere alumno, oh si!&lt;/p&gt;
+
+&lt;p&gt;kof, bueno, ese es el plan, si se concluyen la primera y segunda fase que es
+entrar en la uni y recivir la &amp;ldquo;beca salario&amp;rdquo; (el punto critico), en verdad
+planeo quedarme para siempre en la academia, una vez que me dejen entrar, ya no
+saldre!&lt;/p&gt;
+
+&lt;h2 id=&#34;4k&#34;&gt;4k&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Kizumonogatari&lt;/strong&gt; y &lt;strong&gt;Owarimonogatari&lt;/strong&gt;, dentro del conglomerado global que
+demomino cosas audiovisuales (cine, series, anime) ninguna obra destaca y
+significa mas que EVANGELION (y su manga, que en mi mente estan fusionados, casi
+indistinguibles), mas esto no significa que no lo acompañen otros referentes personales de
+calidad equivalente, y las &lt;strong&gt;Monogatari&lt;/strong&gt; cosas, obviamente tiene un lugar
+priviligiado entre los dioses a los que decido adorar.&lt;/p&gt;
+
+&lt;p&gt;No, no es profunda como Evangelion, pero su estetica &amp;ldquo;monogatari&amp;rdquo; me mata. Si
+hay una ley que impida enaltecer una obra deliciosa aunque poco nutritiva,
+ninguna condena sera suficiente para sentir que he pagado su morboso,
+incestuoso y fetichista placer sugestivo&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Over the garden Wall&lt;/strong&gt; sin esperarla, ni buscarla, broto en la lista de
+recomendaciones del yutu con un correctisimo doblaje al español. Son mini
+episodios de 10 minutos con cuentos basados en &amp;ldquo;animaciones folkloricas de gente
+vieja&amp;rdquo; (&amp;gt;= 30). Como punto destacado, transmite algo del mal rollo que tienen
+los dibujos animados primigenios&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Busou Shoujo Machiavellianism&lt;/strong&gt;, chicas tsundere con armas, en una especie de
+harem de batallas con todos los fetiches y topicos, includo el de la 4^ta
+pared. Bocadillo ligero y entretenido, ideal como transcicion luego de una densa
+racha&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;El Reino de los Sueños y la Locura&lt;/strong&gt;, documental del &lt;s&gt;estudio Ghibli&lt;/s&gt;
+rusueño &lt;s&gt;Coronel Sanders&lt;/s&gt; Hayao Miyazaki&amp;hellip; seguro hace falta considerar a
+&amp;ldquo;miya&amp;rdquo; un dios para ver esto atentamente, ya que no entro en ese elitisimo
+grupo, el filme y sus &amp;ldquo;personajes&amp;rdquo; me gritan a actuacion falsa mas que en un
+documental chino de ciudadanos satisfechos. Que si, tiene algunos puntos
+interesantes, como la aparicion del permanentemente extraño Anno y algunas
+cosillas de Nausica, ademas de menciones a la princesa Kaguya (&lt;em&gt;Exelsior&lt;/em&gt;) y un
+poco de como hacen la ultima (por ahora) peli del miya (que aun no veo), ???
+alguien mas se pregunta donde esta los &amp;ldquo;chinos&amp;rdquo; que hacen la animacion de verdad
+???. Recomendable unicamente si quieres presumir de ser tan fan como para verte
+un documental de esto&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;the Century of the Self&lt;/strong&gt; Al final lo mas denso (disponible en el yutu, con
+subtitulos). Esto son 4 episodios documentales de como el gobierno, las
+corporaciones y los psicoanalistas en colaboracion con los avances tecnologicos
+e informaticos han creado una sociedad de sujetos permanetemente
+insatisfechos que expresan mediante poductos su individualidad&lt;/p&gt;
+
+&lt;h2 id=&#34;fonos&#34;&gt;fonos&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Voices of the Lifestream&lt;/strong&gt;. Las cosas bonitas insitan al fanatismo, y cuando
+el fan es musico, dibujante o programador, que mas puede hacer que rendir
+tributo a sus musas (con, o sin copyright de por medio). El
+colectivo &lt;a href=&#34;http://ocremix.org/&#34;&gt;OverClocked ReMix&lt;/a&gt; se dedica a hacer musica
+basada en videjuegos y ofresen la mayoria de su material de forma libre, hace
+tres años fue una bonita coincidencia del buscador del internet, creo buscando
+musica de MegaMan o Chrono Trigger, no es que sea muy jugon, pero esas dos obras
+me ponen mal, la lista de torrents la encontraran
+por &lt;a href=&#34;http://ocremix.org/torrents&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;segun su propia pagina tienen 113 albums, aunque en los torrents cuentan
+con 70. No lo puedo asegurar, pero creo que el aumento de albums es debido a
+incorporar otros proyectos que de inicio no formaban parte del colectivo, y
+quiza por ello no estan incluidos en los torrentes.&lt;/p&gt;
+
+&lt;p&gt;Tampoco recuerdo de donde saque la lista de sus producciones, cuando baje su
+material, lo mas viejo databa del 2004 y creo que ahora inicia por el 2009 (o
+2011) en fin de cualquier forma es una gran biblioteca en calidad CD, o hasta
+ahora mis favoritos son&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;magnet:?xt=urn:btih:790ac5557b3cd2774b2ed1b5283bdfdbbda16057&amp;amp;dn=Chronology%20-%20A%20Jazz%20Tribute%20to%20Chrono%20Trigger&amp;amp;tr=http%3a%2f%2fbt.ocremix.org%2fannounce&#34;&gt;Chronology - A Jazz Tribute to Chrono Trigger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;25YEARLEGEND - A Legend of Zelda Indie Game Composer Tribute&lt;/li&gt;
+&lt;li&gt;Final Fantasy IV - Echoes of Betrayal, Light of Redemption&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Juno Reactor&lt;/strong&gt;. Que tiene de interesante el tipo que proporciona algunas de
+las sonoridades de matrix y texnholize? en un primer acercamiento por
+&lt;em&gt;Transmissions&lt;/em&gt; (1993) nada&amp;hellip; luego de una &amp;ldquo;segunda oportunidad&amp;rdquo; con &lt;em&gt;Odyssey&lt;/em&gt;
+(recopilacion 1992-2003) ya suena tecnox-matrix dolmilsss, aunque de verdad su
+punto algido lo alcanza con &lt;em&gt;Labyrinth&lt;/em&gt; (2004), el resto son puntos intermedios
+entre su sonido de fiesta drogui-hacker-extasis-bdsm (no se por que lo imagino asi) y
+sonido envolvente-asfixiante-ambiental. En resumen recomendable, iniciar con
+Odyssey y Labyrinth para no alienarse&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:65ad20010a460ce573ea7a7af7f9e7d73700cdd6&amp;amp;dn=Schooltree%20-%20Heterotopia%20(2017)&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Gentle Giant&lt;/strong&gt; Segun la wikipedia, una de las mas grandes bandas de Rock
+progresivo de todos los tiempos. Hum &amp;hellip; estan chidos, de momento he escuchado
+4 de sus albums, el primero esta muy bueno, aunque ninguno me ha puesto yonki&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:47dcb412b126e04ef0f541cc964adfced6d182d3&amp;amp;dn=Gentle%20Giant%201970-1980%20Studio%20Discography%20FLAC&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;X&amp;amp;Y&lt;/strong&gt; (Coldplay) no estoy seguro si ya habia consumido o no este album, si asi
+fue no le preste atencion. Recomendable para un momento s-e-c-i-b-l-e&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Happy Trails&lt;/strong&gt; (Quicksilver Messenger Service)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:02c6251fb20892fa966dffb17815e6b254333073&amp;amp;dn=Quicksilver%20Messenger%20Service%20-%20Happy%20Trails%20(1969)%20%5bFLAC%5d&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jo, esto si es droga dura, tan efectiva que para bajar mas material de esta
+banda me he puesto a erradicar scanns de albums&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rebelión en la Granja&lt;/strong&gt; No es musica, es un cuento relatado por el podcast de
+Verne y Wells ciencia ficción, diria que de escucha indispensable&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://www.ivoox.com/verne-wells-ciencia-ficcion-rebelion-la_mf_20422478_feed_1.mp3
+http://www.ivoox.com/verne-wells-ciencia-ficcion-rebelion-la_mf_20541541_feed_1.mp3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;txt&#34;&gt;txt&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Programando con Racket 5&lt;/strong&gt;. Pues eso, que dejo aparcado un rato un tema y se me
+borra del sistema neuronal&amp;hellip; y para enterarme un rato de que iba el SICP pues,
+tome este libro que estaba en españis hasta que el numero de caracteristicas del
+lenguaje me abrumo.&lt;/p&gt;
+
+&lt;p&gt;Son aproximadamente 200 paginas, y llege hasta la 100, en este manual se resumen
+las caracteristicas del lenguaje Racket, que tambien es aplicable para Scheme,
+por decirlo de otra forma son notas selectas, o al final enseñan como hacer
+guis con una libreria del lenguaje. No es que valla a programar nada en Scheme,
+o algun lisp, aun asi sus enseñansas son aplicables a lenguajes que tiene
+funciones lambda, aunque el truco de utilizar una u otra funcion en un &lt;code&gt;if&lt;/code&gt; y
+pasarle los argumentos al mismo tiempo, creo es un priviliegio solo de lisp y
+sus descendientes&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -39,8 +370,154 @@ Quiza lo mas relevante, es que me encuentro absorto en la aleatoria labor de ree
       <pubDate>Sat, 19 Aug 2017 14:20:56 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/raptorvsworld-ii/</guid>
-      <description>(Ya que la forma en que presenta github los readme&amp;rsquo;s no es apropiada para una extensa tabla, he agregado la comparativa como una pagina (oculta e independentista) del blog: aqui)
-Hace tiempo que no actualizaba la &amp;ldquo;Performance comparison of regular expression engines&amp;rdquo;, una prueba que tome prestada de dark100 (nick de sourceforge) so-pretexto de poner a prueba la version en Go de mi motor pueril de expresiones regulares (alias Recursive Regexp Raptor), al cual profeso apego, alegria y frustracion por el tiempo inmensurable que le he invertido.</description>
+      <description>
+
+&lt;p&gt;(Ya que la forma en que presenta github los readme&amp;rsquo;s no es apropiada para una
+extensa tabla, he agregado la comparativa como una pagina (oculta e
+independentista) del blog: &lt;a href=&#34;https://nasciiboy.github.io/raptorVSworld/&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Hace tiempo que no actualizaba la &lt;strong&gt;&amp;ldquo;Performance comparison of regular
+expression engines&amp;rdquo;&lt;/strong&gt;, una prueba que tome prestada de &lt;em&gt;dark100&lt;/em&gt; (nick de
+sourceforge) so-pretexto de poner a prueba la version en Go de mi motor pueril
+de expresiones regulares (alias Recursive Regexp Raptor), al cual profeso apego,
+alegria y frustracion por el tiempo inmensurable que le he invertido.&lt;/p&gt;
+
+&lt;p&gt;Una cosa que me incomodaba del codigo preexistente, es que las pruebas estaban
+centralizadas en un unico fichero en C que aglutinaba todos los motores y
+pruebas, y al no tener C &amp;ldquo;namespaces&amp;rdquo;, tenia conflictos con la version 3 y 4 de
+la libreria, ademas de limitar los lenguajes que podian participar en la prueba
+solo a C y C++.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/Computer-Guy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como pues organizar el asunto para incluir las pruebas? deberian tener un
+&amp;ldquo;formato&amp;rdquo; unificado para aceptar datos de entrada y entregar datos de salida de
+igual forma, como la unica manera que conosco de enviar informacion a &amp;ldquo;cosas&amp;rdquo; (en
+C, C++ y Go) es por medio de argumentos, pues eso hice, proponiendo la interfaz
+generica para cada concursante asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ./concursante sujeto-de-pruebas ciclos prueba-1 prueba-2 ... prueba-n
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde el &lt;em&gt;sujeto-de-pruebas&lt;/em&gt; son los datos objeto de las pruebas, en este caso
+y tratando de machacar a los motores de expresiones regulares, un archivo de
+20MB de texto puro y duro en ascii con formato utf8 al estilo unix, es decir con
+saltos &lt;code&gt;\n&lt;/code&gt; que es la unica forma decente de indicar un salto de linea (que le
+den por culo al resto de formatos de codificacion)&lt;/p&gt;
+
+&lt;p&gt;una vez echo esto, como demonios llamar e identificar las pruebas, te podras
+preguntar, pues llamando a todas las pruebas &lt;code&gt;bin.syntaxis.concursante&lt;/code&gt; con un script
+de bash, me respondi. Donde &lt;code&gt;syntaxis&lt;/code&gt; denota el estilo, pues esta la sintaxis
+&amp;ldquo;estandar&amp;rdquo; de expresiones regulares (que es algo asi como el estilo perl
+simplificado) y por el otro lado tenia &lt;em&gt;mi&lt;/em&gt; sintaxis comoda con la que escribi
+el raptor, ademas que, existia la posivilidad que algun motor incluido o a
+incluir, tubiera su sintaxis propia.&lt;/p&gt;
+
+&lt;p&gt;Con bash, poco me he puesto, lo encontre lioso, limitado y lento, asi que
+obtendria a los concursantes con un &lt;code&gt;ls&lt;/code&gt; y luego haria un bucle sobre el
+resultado pasando el nombre del archivo de pruebas, el numero de ciclos y las
+pruebas en si. OohHH, como demonios pasar pruebas que tiene la sistaxis de
+cadenas de C, con bash? respuesta corta luego varios intentos, pruebas y una
+busqueda: &lt;code&gt;$&#39;cadena-formateada-estilo-c&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Dudas tenia, acerca de como se enviaban internamente los parametros desde el
+interprete, hasta el programa y como comunicarlos entre si. Por esta razon,
+decidi en enviar solo el nombre del fichero sobre el cual efectuar las pruebas y
+que cada programa se las arreglara para cargarlo, en lugar de enviar un
+parametro de 20MB.&lt;/p&gt;
+
+&lt;p&gt;Segundo problema, como gestionar los resultados? la otra cosa que se hacer mas
+en C y Go es escribir en ficheros, lo cuales se llamarian
+&lt;code&gt;result.syntaxis.concursante&lt;/code&gt;, siguiendo el estilo anterior, asi el programa que
+se encargara de examinar los dator sabria quien y con que sintaxis se hizo cada
+resultado. El fichero en si, esta formateado como lineas con el formato&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tiempo-en-ms coincidencias prueba
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nada que explicar, solo la prueba, que es la exprecion aplicada, pero si esta
+contiene saltos de lineas, tabuladores y otros signos raros no joderian el
+resultado? Si, antes de escribir al fichero deben ser &amp;ldquo;normalizarlos&amp;rdquo;, je, que
+ironico, el problema inverso a enviar los parametros&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Tercer dilema, Como compilar las pruebas? con otro script de bash que encuentra
+y ejecuta los ficheros con el formato &lt;code&gt;compile.concursante.sh&lt;/code&gt;, ya cada
+&amp;ldquo;compile&amp;rdquo; sabra como hacer sus cosas para generar su binario. Por ejemplo, para
+las librerias regex en C y C++, se limitar a invocar un makefile, y para los
+programas en Go, van al archivo fuente, lo compilan con &lt;code&gt;go build&lt;/code&gt; y mueven el
+binario al directorio principal&lt;/p&gt;
+
+&lt;p&gt;El ultimo problema, Como gestionar la informacion resultante? pues leer cada
+fichero &lt;code&gt;result.*&lt;/code&gt;, cargar en un arreglo cada uno &amp;ldquo;por lineas&amp;rdquo;, optener una
+muestra del las pruebas utilizadas por su sintaxis, comprobar que cada fichero
+tiene el mismo numero de pruebas para &amp;ldquo;emparejarlas&amp;rdquo; e iterar por cada linea en
+cada fichero mientras se construlle una tabla en html&lt;/p&gt;
+
+&lt;p&gt;optener un listado de ficheros en el directorio con bash, sencillo es, con C
+complicado y no portable, con Go intermedio. Como para los ultimos 2 tendria que hacer una
+seleccion adicional en busca de los nombres correspondientes a las prubas,
+decidi enviar el nombre de las pruebas como parametros al programa encargado de
+generar la tabla.&lt;/p&gt;
+
+&lt;p&gt;Bash que es practicamente un desconocido para mi, no era ni de cerca una
+alternativa, utilizar awk era una posibilidad, pero solo me he puesto con el lo
+suficiente para saber que podria hacerse. Luego intente con C, pero abandone
+pronto&amp;hellip; Cuanto daño hacen las comodidades modernas&amp;hellip; en C nunca me acostumbre a
+pedirle memoria al sistema y liberarla despues.&lt;/p&gt;
+
+&lt;p&gt;Asi que el encargado de analizar los resultados, escrito en Go esta y
+el script en bash que ejecuta las pruebas le envia cuales son estos resultados&lt;/p&gt;
+
+&lt;p&gt;Un problema que deberia solucionar en proximas versiones, es advertir que el
+resultado se coloca en un fichero llamado &lt;code&gt;table&lt;/code&gt; si todo va bien, y que antes
+de correr las pruebas se eliminan todas los ficheros &lt;code&gt;result.*&lt;/code&gt;, por que cada
+programa en C, se limita a agregar lineas al final de estos. Almenos un triste
+&lt;code&gt;echo &#39;all ok, see &amp;quot;table&amp;quot;&#39;&lt;/code&gt; o un &lt;code&gt;cat&lt;/code&gt; al resultado&lt;/p&gt;
+
+&lt;p&gt;comentar que cuando un motor no es capas de realizar una prueba, deberia colocar
+como linea de resultado &lt;code&gt;&amp;quot;---&amp;quot;&lt;/code&gt; y/o ser invocado con &lt;code&gt;&amp;quot;---&amp;quot;&lt;/code&gt;, con el fin de
+preservar la &amp;ldquo;paridad&amp;rdquo;&lt;/p&gt;
+
+&lt;h2 id=&#34;extra&#34;&gt;Extra&lt;/h2&gt;
+
+&lt;p&gt;Hu, nunca me senti bien, ni con bash, ni con make, aunque este ultimo es util,
+conveniente y poderoso, sin llegar a ser lo criptico que es bash&lt;/p&gt;
+
+&lt;p&gt;En el camino, el reencuentro con C fue duro, olvide muchos &lt;code&gt;;&lt;/code&gt;, parentesis y
+formato para declara variables, aunque al final ya habia recupenado algo de
+confiansa, pero no la suficiente como para programarme el analizador de los
+resultados, me gustaria algun dia analizar esto en profundidad, aunque creo que
+me quedare un largo periodo con Go, quiza regrese si en algun momento escribo un
+manual para hacer videojuegos o en un lejano futuro agrego un lenguaje
+customizado a la larga lista de lenguajes que compiten por la supremacia&lt;/p&gt;
+
+&lt;p&gt;aunque todos los participantes (en C) comparten una &amp;ldquo;plantilla&amp;rdquo; comun, hizo
+falta un kilo mas de refinamiento, por ejemplo en el manejo de errores, aunque
+casi todo esta solventado, en cambio en Go, pase por alto esto en la libreria
+estandar de expresiones regulares, y en el generador del resultado, donde (en
+parte por cachondo) deje en un mapa las rexp que se utilizan, por lo que la
+columna de exmpresiones en la tabla se ordena al &amp;ldquo;azar&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;de momento conforme con el resustado estoy y no tengo prisa por modificarlo en
+el futuro cercano, mucho tiempo y dedicacion requiere para hacerlo mas &amp;ldquo;pro&amp;rdquo;,
+como de bash y make, no controlo mucho seguro lo encontraran pobre, se aceptan
+&lt;em&gt;pull request&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;el repositorio contaba con una traduccion al español, con lo cual sumaban tres
+versiones de lo mismo (readme.hmtl, readme.org y readme-es.org), sumando esto
+con las cuatro versiones de la libreria raptor y sus correspondientes dos
+readmes, cada uno con una copia de la tabla de resultados y como no es un
+proceso que hubiera automatizado, me carge el readme en español, de este repo,
+mucho tiempo requeria mantenerlo a mano, deberia recapacitar aceptando las
+virtudes de bash&lt;/p&gt;
+
+&lt;p&gt;para finalizar, por el camino encontre varias maneras de hacer un benchmark en
+Go, ya lo contare (o no) en otro post, oooohhh como nuevo proyecto la proxima
+mision es investigar en las entrañas de la libreria estandar de GO &lt;code&gt;&amp;quot;regexp&amp;quot;&lt;/code&gt; e
+incorporar algunos de sus obsenos trucoso para alcanzar una velocidad abrumadora
+en texto simple, morir de lentitud en expresiones igualmente simples y ser
+estandar en el resto, espero no terminar frustrado&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -49,8 +526,73 @@ Hace tiempo que no actualizaba la &amp;ldquo;Performance comparison of regular e
       <pubDate>Sat, 15 Jul 2017 21:36:03 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/regexp4-go/</guid>
-      <description>regexp4 es un &amp;ldquo;motor&amp;rdquo; de expresiones regulares de la familia de los motores regulares Recursive Regexp Raptor, o expresado de otra forma: una libreria de expresiones regulares hecha desde cero, reinventando la rueda (o no) de la manera (que para mi es la) mas simple posible. sin arboles de evaluacion, ni liberacion de memoria, ni cosas raras o esa es la intencion, almenos de las versiones en C
-cual es entonces la necesidad de que exista esta version en go, podrias preguntar.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/regexp4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;regexp4&lt;/strong&gt; es un &amp;ldquo;motor&amp;rdquo; de expresiones regulares de la familia de los motores
+regulares &lt;em&gt;Recursive Regexp Raptor&lt;/em&gt;, o expresado de otra forma: una libreria de
+expresiones regulares hecha desde cero, reinventando la rueda (o no) de la
+manera (que para mi es la) mas simple posible. sin arboles de evaluacion, ni
+liberacion de memoria, ni cosas raras o esa es la intencion, almenos de las
+versiones en &lt;strong&gt;C&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;cual es entonces la necesidad de que exista esta version en go, podrias
+preguntar. Pues segun mi escasa educacion programacional, la simplesa de los
+motores raptor es tal, que pueden implementarse en cualquier lenguaje sin recurrir
+a ninguna caracteristica no implementada en el lenguaje en si, es decir, sin
+recurrir a ninguna libreria, incluyendo a las librerias estandar.&lt;/p&gt;
+
+&lt;p&gt;Siguiendo esta creencia (quiza sin fundamentos) y a modo de prueba de las
+caracteristicas de un lenguaje de programacion supongo que hare una costumbre
+programar un raptor en cada ocacion que pueda. Ademas el modelo raptor aunque
+bastante desarrollado no es perfecto, asi pues, con cada nuevo concepto
+aprendido, logro profundizar un poco en busca de una mejor implementacion o el
+incremento de caracteristicas segun las facilidades que otorgue el lenguaje&lt;/p&gt;
+
+&lt;p&gt;existen dos versiones de la libreria las regexp3 donde a cada iteracion
+valiendose de la recursividad, la expresion regular se convierte en
+instrucciones que pueden evaluarse. En las regexp4 en lugar de interpretar la
+regexp a cada paso primero se &amp;ldquo;compila&amp;rdquo;&amp;hellip; lo que la hace comporativamente mas
+eficiente&lt;/p&gt;
+
+&lt;p&gt;la libreria parte de la version en C y la sintaxis es compatible con esta
+version en Go, pero por algunas facilidades que proporciona nativamente este
+ultimo lenguaje y por su orientacion a objetos esta no tiene limitacion (que no
+sean de hardware) del numero de capturas, la longitud y complejidad de la
+expresion y ademas es concurrentemente segura&lt;/p&gt;
+
+&lt;p&gt;bueno, bueno, vamos con los detalles morbosos&amp;hellip; esta version adapta sin mucho
+empeño la regexp3 (go) a la version 4. Fueron necesarios varios dias con poco
+enfoque donde los momentos de lucides escaceaban, primero aparecio un bicho por no
+incrementar un indice del que tarde dos &lt;s&gt;dias&lt;/s&gt; sesiones en darme cuenta y
+luego por otras 4 seciones las pruebas que contenian &amp;ldquo;conjuntos&amp;rdquo; (&lt;code&gt;[...]&lt;/code&gt;) se
+resistian a funcionar, jo, el problema fue no colocar las constantes correctas
+dentro de un &lt;code&gt;switch&lt;/code&gt;, je, por un momento me planteee hacer pruebas de cada
+una de las funciones hasta asegurar que todas hicieran lo que se suponia deberia
+de hacer&amp;hellip; lo cual no es trivial&lt;/p&gt;
+
+&lt;p&gt;aunque en apariencia sencilla, cada uno de los componentes esta obscuramente
+relacionado, y debe realizar su tarea en perfecta armonia con los demas, por
+ello es necesario ponerse en serio con el asunto, y ya que esto escapaba un poco
+de mi control, solo me limite a ejecutar las pruebas preexistentes y tambien a
+comprobar el funcionamiento con &lt;em&gt;morg&lt;/em&gt;, asi pues una vez superadas las pruebas,
+pese a no estar muy seguro de como &amp;ldquo;interactuava&amp;rdquo; la maquinaria, confie en las
+muchas horas invertidas en la version en C y otras tantas en regexp3 en Go,
+luego subi el repositorio a modo de respaldo&lt;/p&gt;
+
+&lt;p&gt;Como antes mencione la sistaxis de la regexp es uniforme en todas las versiones,
+ademas regexp3 (Go) y la presente compartiran la misma &amp;ldquo;&lt;em&gt;API&lt;/em&gt;&amp;rdquo;, mas esta version
+sera extendida con un par de funciones mas (tentativamente) &lt;code&gt;Compile&lt;/code&gt; y
+&lt;code&gt;TextMatch&lt;/code&gt; (o algo asi), aprovechando las capacidades de &amp;ldquo;compilacion&amp;rdquo; (tambien
+programado de cero) en una forma singular a la que nombre &amp;ldquo;&lt;em&gt;tabla de
+instrucciones&lt;/em&gt;&amp;rdquo; y en esta ocacion pretenciosamente las instrucciones de la tabla
+lleban el prefijo &lt;code&gt;asm&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;en fin, &lt;a href=&#34;https://github.com/nasciiboy/regexp4/&#34;&gt;aqui&lt;/a&gt; encontraran el
+repositorio, los &lt;em&gt;readmes&lt;/em&gt; son un copia y pega de la version regexp3 cambiando
+el 3 por 4&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -59,8 +601,78 @@ cual es entonces la necesidad de que exista esta version en go, podrias pregunta
       <pubDate>Sat, 11 Feb 2017 10:26:04 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/regexp3-go/</guid>
-      <description>Hace un año, luego de &amp;ldquo;maquetar&amp;rdquo; algunos libros en org-mode, decidi crear mi propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar un substituto del comando man/info y aniquilar a html/latex como sistema de documentacion.
-Un mes mas tarde fruto de la necesidad de parsear el texto del nuevo lenguaje y mi incapacidad de entender como utilizar una libreria de expresiones regulares, nacio Recursive Regexp Raptor (alias regexp3) que es un motor de expresiones regulares para C, otro mes mas tarde salio a la web la primer version en forma de repositorio en github y ahora&amp;hellip; ni hay un nuevo lenguaje, ni un substituto de man/info, ni ha muerto html y he dedicado mas horas de las que jamas pense en regexp3 (y regexp4 &amp;ldquo;el sucesor&amp;rdquo;)</description>
+      <description>&lt;p&gt;Hace un año, luego de &amp;ldquo;maquetar&amp;rdquo; algunos libros en org-mode, decidi crear mi
+propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar
+un substituto del comando man/info y aniquilar a html/latex como sistema de
+documentacion.&lt;/p&gt;
+
+&lt;p&gt;Un mes mas tarde fruto de la necesidad de &lt;em&gt;parsear&lt;/em&gt; el texto del nuevo lenguaje
+y mi incapacidad de entender como utilizar una libreria de expresiones
+regulares, nacio Recursive Regexp Raptor (alias regexp3) que es un motor de
+expresiones regulares para C, otro mes mas tarde salio a la web la primer
+version en forma de repositorio
+en &lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor/&#34;&gt;github&lt;/a&gt; y ahora&amp;hellip; ni
+hay un nuevo lenguaje, ni un substituto de man/info, ni ha muerto html y he
+dedicado mas horas de las que jamas pense en regexp3 (y regexp4 &amp;ldquo;el sucesor&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;Por un mes (entero) intente programar el interprete del lenguaje de marcas
+ligero y fracase, asi que pase al plan de emergencia, ver como estaban hechos
+otros interpretes como el de &lt;em&gt;org-mode&lt;/em&gt; o el de &lt;em&gt;reStructured Text&lt;/em&gt;, lo que trajo
+un nuevo problema: aprender (e)lisp o aprender python(2|3).&lt;/p&gt;
+
+&lt;p&gt;Lo primero implicaba aprender ingles, encortrar un buen libro y ponerme a
+traducir cosas, lo segundo encontrar un buen libro (e intentar por segunda vez
+con python), termine llendo por la primer opcion y cuando llego la desesperacion
+se mezclo con la segunda.&lt;/p&gt;
+
+&lt;p&gt;Lisp es interesante, asombroso en su simplesa e incomodo en su escritura&lt;/p&gt;
+
+&lt;p&gt;Python&amp;hellip; no puedo con python, lo encuentro aburrido, un pegote de muchas cosas
+en un mismo lenguaje e indentar a mano pelada por ahorrar unas llaves es un
+sufrimiento carente de toda elegancia&lt;/p&gt;
+
+&lt;p&gt;en fin, que no aprendi mucho de nada&amp;hellip; cerca de octubre del año pasado con la
+inquietud de hacer un blog (de nuevo) y tras probar algunos cms llege a &lt;em&gt;&lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;hugo&lt;/a&gt;&lt;/em&gt;,
+me parecio que era sencillo y digno de investigacion, luego de un par de semanas
+nacio este blog y decidi aprender algo de su motor de renderizado markdown
+llamado &lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;blackfriday&lt;/a&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;entonces? habia que aprender go&lt;/p&gt;
+
+&lt;p&gt;entonces? mas ingles (solo hay una pequeña guia traducida al
+español &lt;a href=&#34;https://github.com/karlseguin/the-little-go-book&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;y haci, pase a buscar un pdf en la web, aparecio &lt;em&gt;The way to go&lt;/em&gt;, luego de unas
+semanas viendo ejemplos y como no hay mejor manera de apreder algo que ponerlo
+en practica, comenzo el port de lo unico que entiendo a la perfeccion y estoy
+orgulloso, asi es, el motor de expresiones regulares (terminen con mi
+sufrimiento)&lt;/p&gt;
+
+&lt;p&gt;De momento funciona, aunque no es mas que una copia medio usable de C a Go, sin
+ninguna orientacion a objetos.&lt;/p&gt;
+
+&lt;p&gt;Hace ya unos años que di un recorrido ninja por sdl 1.2 y C++ (deitel y como
+pensar en c++) medio aprendi algo de OO, pero di media vuelta hacia atras, tome
+el C de k&amp;amp;r (+ deitel), algo de ncurses y prometi no programar nada hasta no
+dominar C.&lt;/p&gt;
+
+&lt;p&gt;asi que? no me acuerdo de como programar OO&lt;/p&gt;
+
+&lt;p&gt;y que con go? podria ser un buen sucesor de C, si tubiese punteros de verdad,
+cadenas de caracteres de verdad, un tipado menos estricto, pero sobre todo, si
+presindiera de su estupido autoformateo, guia de estilo y llaves para
+instrucciones simples, te maldigo &lt;code&gt;gofmt&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;y &lt;em&gt;regexp3-go&lt;/em&gt; que? &lt;a href=&#34;https://github.com/nasciiboy/regexp3/&#34;&gt;aqui&lt;/a&gt;, algo mas de
+informacion en el readme&lt;/p&gt;
+
+&lt;p&gt;que sigue? transitar la aleatoriedad.&lt;/p&gt;
+
+&lt;p&gt;Bueno hasta aqui con mis cosas, pronto (una semana, un mes o mas) una version
+simplificada del lenguaje de marcas ligeras.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../gotor.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -69,9 +681,44 @@ Un mes mas tarde fruto de la necesidad de parsear el texto del nuevo lenguaje y 
       <pubDate>Wed, 11 Jan 2017 10:03:58 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/raptor-book/</guid>
-      <description>Solo queria programar un juego similar a Megaman 2
-y termine instalando debian, leyendo de bash, sdl, ncurses, c, c++, Emacs&amp;hellip;
-Desafortunadamente aun no hay un texto sagrado de nombre &amp;ldquo;De Cero a Motor 3D&amp;rdquo; (en solo 15 años) ni siminar. Entre intentar aprender ingles y buscar un sistema de documentacion decente, termine por programar un motor de expresiones regulares sin comprender la teoria de automatas finitos, lenguajes finitos ni recordar un poco de las clases de mate de nivel basico, pues no llegue al medio&amp;hellip;</description>
+      <description>&lt;p&gt;Solo queria programar un juego similar a &lt;strong&gt;Megaman 2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../MegaMan2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y termine instalando debian, leyendo de bash, sdl, ncurses, c, c++, Emacs&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Desafortunadamente aun no hay un texto sagrado de nombre &lt;strong&gt;&amp;ldquo;De Cero a Motor
+3D&amp;rdquo;&lt;/strong&gt; (en solo 15 años) ni siminar. Entre intentar aprender ingles y buscar un
+sistema de documentacion decente, termine por programar un motor de expresiones
+regulares sin comprender la teoria de automatas finitos, lenguajes finitos ni
+recordar un poco de las clases de mate de nivel basico, pues no llegue al
+medio&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Con estos precedentes, el tiempo que brinda el desempleo en un mundo turbulento
+lleno de humanos, aleatoriedad incomprendida y falto de materiales
+psicotropicos, comence a escribir un libro lleno de palabras dilexicas que
+muestra lo aprendido hasta ahora, con la sucia intencion de ganar dinero&amp;hellip; y
+aportar conocimiento de libre disposicion a quien lo desee.&lt;/p&gt;
+
+&lt;p&gt;De que va el libro? Como programar un motor de expresiones regulares sin tener
+ni idea, el unico requisito es saber lenguaje de programacion C.&lt;/p&gt;
+
+&lt;p&gt;Por ahora estoy revisando y reescribiendo las primeras secciones, pueden
+colaborar con revision, anotaciones de que puntos se pueden mejorar y lo que les
+venga en gana. Hay una version en html y en el repositorio hay una explicacion
+un poco mas detallada.&lt;/p&gt;
+
+&lt;p&gt;Pueden descargar una copia en un comprimido zip &lt;a href=&#34;https://github.com/nasciiboy/raptor-book/archive/master.zip&#34;&gt;aqui&lt;/a&gt; o
+clonar el repositiorio asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/nasciiboy/raptor-book.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aunque no me gustan los tutoriales en fasciculos, se iran agregando secciones al
+libro segun esten listas, intentare ser constante.&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -80,10 +727,50 @@ Desafortunadamente aun no hay un texto sagrado de nombre &amp;ldquo;De Cero a Mo
       <pubDate>Fri, 16 Dec 2016 20:22:03 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/performance-comparison-of-regular-expression-engines/</guid>
-      <description>Hola gente, hace unos meses tome el codigo de dark100 &amp;ldquo;Performance comparison of regular expression engines&amp;rdquo; (pueden ver el orginal aqui) para hacer algunas pruebas a un pequeño motor regexp que programe en mi tiempo libre?, bueno &amp;hellip; acabo de actualizar la prueba (aqui)
-El proceso fue el siguiente
- Optener el codigo fuente de cada motor (PCRE2, RE2, tre, oniguruma)
- Compilar cada motor localmente (intel x86-64 celeron 847), es decir</description>
+      <description>&lt;p&gt;Hola gente, hace unos meses tome el codigo de &lt;strong&gt;dark100&lt;/strong&gt; &amp;ldquo;Performance
+comparison of regular expression engines&amp;rdquo; (pueden ver el orginal
+&lt;a href=&#34;http://sljit.sourceforge.net/regex_perf.html&#34;&gt;aqui&lt;/a&gt;) para hacer algunas pruebas
+a un pequeño &lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor&#34;&gt;motor regexp&lt;/a&gt;
+que programe en mi tiempo &lt;em&gt;libre?&lt;/em&gt;, bueno &amp;hellip; acabo de actualizar la prueba
+(&lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor-vs-Benchmarks&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;El proceso fue el siguiente&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Optener el codigo fuente de cada motor (PCRE2, RE2, tre, oniguruma)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Compilar cada motor localmente (intel x86-64 celeron 847), es
+decir&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;./autogen&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;./configure&lt;/code&gt; (para PCRE con alguna consideracion especifica)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Copiar el código fuente al entorno&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Intentar con el makefile existente hasta que se logro compilar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Modificar levemente el ambiente (no se si compilara en un sistema no GNU)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;En realidad no tengo ni idea si este es el proceso adecuado para actualizar el
+entorno, pero funciona ¯_(ツ)_/¯. Si conoces una mejor configuracion o como
+optimizar alguna prueba sera bien recibida, siempre y cuando los makefiles se
+mantengan KISS (aunque solo compile en x86-64)&lt;/p&gt;
+
+&lt;p&gt;Para leer la prueba cómodamente tienes que descagar el fichero &lt;code&gt;readme.html&lt;/code&gt; del
+repositorio y visualizarlo en tu navegador.&lt;/p&gt;
+
+&lt;p&gt;por cierto la exprecion:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;^( )*&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;genera un bucle infinito en pcre, tre, oniguruma, re2. En principio esta fue la
+motivacion principal para actualizar el codigo de cada prueba&amp;hellip; alguna pista?&lt;/p&gt;
+</description>
     </item>
     
   </channel>

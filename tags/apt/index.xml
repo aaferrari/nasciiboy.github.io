@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 20 Aug 2017 15:59:03 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/apt/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/apt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,125 @@
       <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/ischeme/</guid>
-      <description>La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para mi escaso saber, por su parte los conceptos programacionales con Scheme solo los entiendo a nivel superficial, es decir, podria explicar de que van, pero no ponerlo en nada practico, ademas han dejado de aparecer fraces esotericas.
-Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su puesto), me plante comenzar un port del raptor (si, otro mas) al Scheme, mas, pronto me di cuenta que habia olvidado siquiera como definir una variable, una funcion y una l-a-a-m-m-b-d-a-a (que raro suena), oohh, que dilema –dijo interiormente nasciiboy</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/lambda.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para
+mi escaso saber, por su parte los conceptos programacionales con Scheme solo los
+entiendo a nivel superficial, es decir, podria explicar de que van, pero no
+ponerlo en nada practico, ademas han dejado de aparecer fraces esotericas.&lt;/p&gt;
+
+&lt;p&gt;Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su
+puesto), me plante comenzar un port del raptor (si, otro mas) al Scheme, mas,
+pronto me di cuenta que habia olvidado siquiera como definir una variable, una
+funcion y una l-a-a-m-m-b-d-a-a (que raro suena), oohh, que dilema –dijo
+interiormente nasciiboy&lt;/p&gt;
+
+&lt;p&gt;Tres escenarios se plantaron hacia mi (luego de ver con detalle el temario
+restante del SICP)&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Mandar la traduccion a la mierda y desaparecer de intenné&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Buscar otro libro de Scheme&amp;hellip; que seguramente tambien requiera
+traduccion&amp;hellip; (ya habia dado un primer paso antes de pasar a la suguiente opcion)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Crusarme por casualidad con el libro estraño de racket y ver de que iba y la
+razon de habero metido en &amp;ldquo;los recursos&amp;rdquo; de Scheme&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;De la opcion 2 tenia en reserva los &amp;ldquo;The Little Schemer&amp;rdquo;, tras una revision
+preliminar, quedaron descartados, por fortuna hace un par de meses aparecio una
+compilacion de cosas de lisp (incluido scheme, prolog y haskell) que traia un
+libro apto para su servidor &lt;em&gt;Teach Yourself Scheme in Fixnum Days&lt;/em&gt;. Para aun
+mas sorpresa es de &amp;ldquo;Codigo Visible&amp;rdquo; o algo asi, tiene &lt;a href=&#34;https://github.com/ds26gte/tyscheme&#34;&gt;un repo&lt;/a&gt; en github,
+ademas de una version online (seccionizada por paginas), escrita en tex y por lo
+que vi, de facil adaptacion a otros formatos&lt;/p&gt;
+
+&lt;p&gt;Pero la ganadora, amenos por ahora es la opcion 3: abrir el libro con el simbolo
+lambda (no, no &lt;strong&gt;↦&lt;/strong&gt;) &lt;strong&gt;λ&lt;/strong&gt;, dedicado a
+rocket &lt;a href=&#34;http://aliamondano-eo.wikidot.com/racket-5&#34;&gt;&lt;em&gt;Programando con Racket 5&lt;/em&gt;&lt;/a&gt;
+y distribuido bajo licencia Creative Commons Attribution-Noncommercial-Share
+Alike 3.0.&lt;/p&gt;
+
+&lt;p&gt;Si tienen efectivo, comprarle un libro o darle dinero&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; luego de haber pasado por la &amp;ldquo;Introduccion a emacs lisp&amp;rdquo;, &amp;ldquo;Land Of Lisp&amp;rdquo;
+(que mecanografie y traduje hasta el 20%) y un truncado intento por
+mecanografiar &amp;ldquo;ANSI Common Lisp&amp;rdquo;, la unica conclusion optenida es que la
+trancripcion y traduccion no son metodos validos para aprender otro lenguaje, a
+programar o a escribir &amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;interpretes&#34;&gt;interpretes&lt;/h2&gt;
+
+&lt;p&gt;Dejando de lado la charla anterior, sobre libros que no he leido&amp;hellip; pero que
+cuando lees y esperas &amp;ldquo;dominarlos&amp;rdquo; debes poner en practica sus enseñansas, les dejo una
+reducida lista de los interpretes de Scheme que he podido catar.&lt;/p&gt;
+
+&lt;p&gt;(para lisp razo, ir con clisp)&lt;/p&gt;
+
+&lt;h3 id=&#34;guile&#34;&gt;guile&lt;/h3&gt;
+
+&lt;p&gt;Pagina Oficial: &lt;a href=&#34;http://www.gnu.org/software/guile&#34;&gt;http://www.gnu.org/software/guile&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(Ver lo que le han hecho a la pagina de Guile y otras tantas del &lt;em&gt;proyecto GNU&lt;/em&gt;,
+si dan ganas de darles dinero o comprarles lo que sea que vendan)&lt;/p&gt;
+
+&lt;p&gt;Freidora 25, que es lo que estoy usando trae la version 2.0, de los tres
+interpretes es el menos amigable, no viene con atajos de teclado, la entrada y
+borrado se limitan a escribir y retroceso, sin historial ni naaaa, teniendo el
+proyecto GNU una de las librerias mas utilizadas para estos menesteres, es aun
+mas incomprensible&lt;/p&gt;
+
+&lt;h3 id=&#34;kawa&#34;&gt;kawa&lt;/h3&gt;
+
+&lt;p&gt;Pagina Oficial: &lt;a href=&#34;https://www.gnu.org/software/kawa/index.html&#34;&gt;https://www.gnu.org/software/kawa/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Chan, chan, chan, (insente aqui el rugido de godzilla). Joder, este interprete
+aparecio en el repositorio, luego de un &lt;code&gt;search&lt;/code&gt; y hasta el momento es el que
+mas habia utilizado (que realmente es poco) y tambien miembro de proyecto GNU
+y&amp;hellip; corre sobre Java y&amp;hellip; tiene todas las comodidades que se esperan de un
+interprete de linea de comandos: historial y edicion&lt;/p&gt;
+
+&lt;p&gt;Si, si lo encuentran probar&lt;/p&gt;
+
+&lt;h3 id=&#34;racket&#34;&gt;racket&lt;/h3&gt;
+
+&lt;p&gt;Pagina Oficial: &lt;a href=&#34;https://racket-lang.org/&#34;&gt;https://racket-lang.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;La cleptomania de libros electronicos (ja, que raro suena
+&amp;ldquo;e-l-e-c-t-r-o-n-i-c-o-s&amp;rdquo;) me hiso (no) conocer este
+interprete/lenguaje/dialecto de lisp/scheme, que segun el libro &amp;ldquo;programando con
+Racket 5&amp;rdquo; (antes mencionado y enlazado) contiene en sus entrañas todo lo
+necesario para correr scheme.&lt;/p&gt;
+
+&lt;p&gt;Este no lo encontre en los repos, asi que debe descargarse
+desde
+&lt;a href=&#34;https://download.racket-lang.org/racket-6-10-x86_64-linux-sh.html&#34;&gt;su web&lt;/a&gt;.
+&lt;strong&gt;!!!Cuidado!!!&lt;/strong&gt;, con seguir alguno de los enlaces que hay aparecen
+directamente pues en el momento de escribir esto (version 6.10) el contenido es
+un script bash de 118M, al seguirlo con firefox, se colgo un rato, y al abrirlo
+con el &lt;code&gt;less&lt;/code&gt; crashearon todos los &lt;code&gt;tilix&lt;/code&gt; en ejecucion (en masa), la causa? en
+sus entrañas contiene un tar &amp;ldquo;enbebido&amp;rdquo; (probablemente lo mas raro que me he
+topado, pues no esta en base64) asi que en lugar de seguir el enlace darle con el
+boton derecho y &amp;ldquo;copiar la ruta de enlace&amp;rdquo;, ir directamente a un terminal y
+conseguirlo con un &lt;code&gt;wget&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Luego darle permisos de ejecucion al &lt;code&gt;*.sh&lt;/code&gt;, ejecutar y seguir las
+intrucciones. Para istalarlo en el sistema, ejecutarlo como root, contestar
+&lt;code&gt;&amp;quot;yes&amp;quot;&lt;/code&gt;, luego enter, enter, &amp;hellip;, enter. En caso contrario ejecutar como usuario
+de a pie y leer lo que pide. En caso de error, leer donde coloco el binario
+&lt;code&gt;racket-uninstall&lt;/code&gt; y ejecutarlo&lt;/p&gt;
+
+&lt;p&gt;Ademas del interprete, se instala un compilador, un IDE y otras cosas que aun
+desconosco&lt;/p&gt;
+
+&lt;p&gt;El interprete en si, esta mas cerca de la experiencia de kawa, pero no incluye
+todos los &amp;ldquo;atajos&amp;rdquo; de edicion.&lt;/p&gt;
+
+&lt;p&gt;happy l-a-m-m-m-m-m-b-d-a-s-s-s-s-s-s-s-s!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,7 +145,896 @@ Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su
       <pubDate>Thu, 27 Jul 2017 00:50:52 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/stylus-black-translator/</guid>
-      <description>Si Firefox es mi navegador de confianza, no es solo por que sea software libre y tenga una fundacion que le da soporte, tambien lo utilizo por que debido a que es software libre y lo desarrolla gente decente, su creacion refleja esta coherencia otorgando un punto fino de manoseo configuratorio mostruoso, no solo un par de botonsitos deslizables&amp;hellip; pero debido a esta misma apertura y los plugins que instalo, que en su mayoria son para tener una navegacion humana, sin basura y demas, termino por romper una u otra cosa, en particular la apariencia</description>
+      <description>&lt;p&gt;Si Firefox es mi navegador de confianza, no es solo por que sea software libre y
+tenga una &lt;em&gt;fundacion&lt;/em&gt; que le da soporte, tambien lo utilizo por que debido a que
+es software libre y lo desarrolla gente decente, su creacion refleja esta
+coherencia otorgando un punto fino de manoseo configuratorio mostruoso, no solo
+un par de botonsitos deslizables&amp;hellip; pero debido a esta misma apertura y los
+plugins que instalo, que en su mayoria son para tener una navegacion &lt;em&gt;humana&lt;/em&gt;,
+sin basura y demas, termino por romper una u otra cosa, en particular la
+apariencia&lt;/p&gt;
+
+&lt;p&gt;Asi, de vez en cuando borro toda la configuracion del firefox y empiezo de
+nuevo&amp;hellip; hasta encontrar el valance entre lo roto y la paz mental, aunque hay
+dos (tres con reddit) sitios a los que no puedo evitar acceder, dandoles lo que
+piden para funcionar. Uno es yutube y el otro translator, ambos de la (como
+diria stallman) malevola compañia guugol&lt;/p&gt;
+
+&lt;p&gt;al momento de escribir esto conviven uBlock Origin, Privacy Badger, NoScript,
+Privacy Settings, Self-Destructing Cookies
+y &lt;a href=&#34;https://github.com/openstyles/stylus&#34;&gt;&lt;em&gt;Stylus&lt;/em&gt;&lt;/a&gt;, de este ultimo es del que
+les vengo a hablar, pues las tecnologias web que ejecutan &amp;ldquo;cosas&amp;rdquo; no son el
+unico enemigo al que combato, este generoso cuerpo tambien tiene odio para las
+interfaces, casas, ropa y demas objetos con un asqueroso color blanco nuclear&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/black-nil.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;asi que tome
+&lt;a href=&#34;https://userstyles.org/styles/114266/google-translate-by-kiwi&#34;&gt;un estilo ya hecho&lt;/a&gt; (si
+van a ese link bajar las defensas momentaneamente o no funciona) y
+le di forma hasta dejar al traductor de una manera que encuentro agradable&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/black-translator.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;simplemente agregan &lt;a href=&#34;https://github.com/openstyles/stylus&#34;&gt;&lt;em&gt;Stylus&lt;/em&gt;&lt;/a&gt; al
+navegador (tambien disponible para chrome y sus spins) van a
+&lt;a href=&#34;https://translate.google.com/&#34;&gt;https://translate.google.com/&lt;/a&gt;, le dan al icono de stylus, luego a &lt;em&gt;escribir
+estilo para:&lt;/em&gt;, copian y pegan lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* background */
+
+html { background-color: #000; }
+
+#navlink  {
+	background-color: #000000 !important;
+}
+
+/* header */
+#gba { height: 0px; }
+
+.gb_5b {
+	background: #000000 !important;
+}
+
+
+#gb#gb a.gb_la {
+	color: #167AC6 !important;
+}
+
+.gb_xg { display: none; }
+
+.gb_T .gb_Eg {
+    display: none;
+}
+
+/*** applications ***/
+
+.gb_ba {
+	border-radius: 4px !important;
+	border: 1px solid #ffffff !important;
+	background: #000000 !important;
+}
+
+.gb_Fa,
+.gb_Ia  {
+	background: #000000 !important;
+}
+
+/* colours footer */
+#gb a.gb_Fa,
+#gb a.gb_Ja {
+    color: #167AC6 !important;
+}
+
+.gb_ra {
+    border: 0px solid rgba(255, 255, 255, 0)!important;
+}
+
+#gb#gb a.gb_ka:hover {
+    border: 0px solid rgba(255, 255, 255, 0)!important;
+}
+
+#gb#gb a.gb_ka, #gb#gb a.gb_la {
+    color: #167AC6 !important ;
+}
+
+.gb_ra:hover .gb_ka,
+.gb_ra:hover .gb_wa {
+	background: #3d3d3d !important;
+}
+
+/* login button */
+.gb_b {
+	color: #ffffff !important;
+	border-radius: 4px !important;
+	border: 1px solid #141414 !important;
+	background-image: linear-gradient(#3d3d3d, #2d2d2d, #1a1a1a) !important;
+	margin: 0px !important;
+	margin-top: 0px !important;
+	margin-bottom: 1px !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+.gb_b:hover {
+	color: #ffffff !important;
+	background: -moz-linear-gradient(to bottom, #00cfeb, #006471, #006471) !important;
+	border: 1px solid #141414 !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+/* change icons on top */
+.gb_Ea .gb_ga, /* button showing applications */
+.gb_hb.gb_ib ,
+.gb_1b .gb_ga {
+	opacity: 1.0 !important;
+	-webkit-filter: invert(100%) hue-rotate(130deg) contrast(500%) saturate(300%) brightness(200%);
+	filter: invert(100%) hue-rotate(130deg) contrast(500%) saturate(300%) brightness(200%);
+}
+
+/* body */
+#gt-apb-main {
+	background-color: #000000 !important;
+}
+
+body {
+	background-color: #000 !important;
+	color: white !important;
+}
+
+/* interior */
+#gt-text-c {
+	background-color: #000 !important;
+	border: #ffffff !important;
+}
+
+#gt-appname {
+	color: #167AC6 !important;
+}
+#gt-appbar {
+    position: relative;
+    border-bottom: 0px solid #000;
+    height: 0px;
+    z-index: 1;
+    display: none;
+    background-color: #000;
+}
+
+
+/* text area left  */
+#source {
+	background-color: #000000 !important;
+	color: #fff !important;
+}
+
+#gt-src-wrap {
+	border: 1px solid #ffffff;
+	background-color: #000000!important;
+}
+
+.gt-hl-layer {
+	background:  transparent !important;
+	border: transparent !important;
+}
+
+/* text area right */
+#result_box {
+	background-color: #000000 !important;
+	color: #fff !important;
+}
+
+#gt-res-wrap {
+	border: 1px solid #ffffff;
+	background-color: #000000 !important;
+}
+
+#gt-src-tools { display: none; }
+
+/* phrases dictionary */
+#gt-pb-tt, #gt-pb-pt {
+	color: #167AC6 !important;
+}
+
+.gt-related-suggest-message {
+	color: #ffffff;
+}
+
+.gt-revert-correct-message {
+	color: #67fb93;
+}
+
+#gt-pb-tb  {
+	color: #000000 !important;
+}
+
+#gt-pb-tb tr {
+	color: #000000 !important;
+}
+
+#gt-pb-tb tr:hover {
+	color: #000000 !important;
+	background-color: #167AC6 !important;
+}
+
+#pb-tool {
+	color: #ffffff !important;
+	background-color: #000 !important;
+}
+
+#pb-tb-c {
+	background-color: #000 !important;
+}
+
+#gt-promo-lr {
+    display: none;
+}
+
+/* colours left side */
+.gt-def-example {
+	color: #ffffff !important; /* white */
+}
+
+.gt-spell-correct-message {
+	color: #239B2D !important; /* green */
+}
+
+.translit {
+	color: #ffffff !important ; /* white */
+}
+
+.gt-ex-text,
+.gt-def-row {
+	color: #D7A61B !important; /* orange */
+}
+
+.gt-c {
+	background-color: #000 !important ; /* green */
+}
+
+.gt-cd-t {
+	background-color: #000 !important ; /* green */
+}
+
+.gt-cd-pos {
+	color: #FCF4F4 !important; /* light white */
+	font-style: italic !important;
+}
+
+.gt-cd-cl,
+.gt-card-ttl-txt,
+.gt-ct-text {
+    color: #167AC6 !important; /* light blue */
+}
+
+/* colours right side  */
+.gt-card-ttl-txt,
+.gt-rw-span,
+.gt-baf-word-clickable {
+	color: #167AC6 !important;
+}
+
+.gt-baf-back:hover {
+	color: #167AC6 !important;
+}
+
+/* change colour icons */
+.cd-expand-button,
+.trans-pb-button .jfk-button-img,
+.gt-hats-icon,
+span.check,
+input[type=&amp;quot;radio&amp;quot;],
+.sm-arrow,
+.modal-dialog-title-close,
+.jfk-checkbox,
+.jfk-button-img,
+.goog-flat-menu-button-dropdown,
+.goog-toolbar-menu-button-dropdown,
+.ita-kd-img,
+.ita-kd-arrow,
+/*  .ita-kd-checkbox, */
+.ita-ppe-pgd,
+.ita-ppe-pgu,
+.vk-t-btn.vk-sf-cl {
+	opacity: 1.0 !important;
+	-webkit-filter: invert(100%) hue-rotate(130deg) contrast(500%) saturate(300%) brightness(200%);
+	filter: invert(100%) hue-rotate(130deg) contrast(500%) saturate(300%) brightness(200%);
+}
+
+.ita-kd-inputtools-div .ita-kd-icon-button,
+.goog-toolbar-button, .goog-toolbar-menu-button {
+	background: transparent  !important;
+	color: white !important;
+}
+
+/* languages buttons */
+#gt-sl,
+#gt-tl,
+#anno1,
+#anno2,
+#clp-btn,
+#gt-swap,
+#gt-sl-gms,
+#gt-tl-gms,
+.ita-hwt-backspace,
+.ita-hwt-space,
+.ita-hwt-enter,
+.jfk-button-action,
+.jfk-button-standard,
+.jfk-button-primary,
+.goog-buttonset-default,
+.modal-dialog-buttons button {
+	color: #ffffff !important;
+	border-radius: 4px !important;
+	border: 1px solid #141414 !important;
+	background-image: linear-gradient(#3d3d3d, #2d2d2d, #1a1a1a) !important;
+	margin: 0px !important;
+	margin-top: 0px !important;
+	margin-bottom: 1px !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+#gt-sl:hover,
+#gt-tl:hover,
+#anno1:hover,
+#anno2:hover,
+#clp-btn:hover,
+#gt-swap:hover,
+#gt-sl-gms:hover,
+#gt-tl-gms:hover,
+.ita-hwt-backspace:hover,
+.ita-hwt-space:hover,
+.ita-hwt-enter:hover,
+.jfk-button-action:hover,
+.jfk-button-standard:hover,
+.jfk-button-primary:hover,
+.goog-buttonset-default:hover,
+.modal-dialog-buttons button:hover {
+	color: #ffffff !important;
+	background: -moz-linear-gradient(to bottom, #00cfeb, #006471, #006471) !important;
+	border: 1px solid #141414 !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+.cd-expand-button {
+	color: black !important;
+}
+
+#gt-pb-sbt {
+	background: #167AC6 !important;
+}
+
+.ita-kd-inputtools-div {
+	background-color: rgba(255, 255, 255, 0.0) !important;
+}
+
+/* checked buttons status */
+.jfk-button-checked {
+	background-color: #167AC6 !important;
+	background-image: none !important;
+}
+
+/* keyboard */
+.vk-box {
+	background: #000000 !important;
+	color: white!important;
+	border-color: #ffffff !important;
+	border-width: 1px  !important;
+	border-radius: 4px !important;
+}
+
+.vk-btn {
+	color: #ffffff !important;
+	border-radius: 4px !important;
+	border: 1px solid #141414 !important;
+	background-image: linear-gradient(#3d3d3d, #2d2d2d, #1a1a1a) !important;
+	margin: 0px !important;
+	margin-top: 0px !important;
+	margin-bottom: 1px !important;
+	-moz-background-clip: padding !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+.vk-btn:hover {
+	color: #ffffff !important;
+	background: -moz-linear-gradient(to bottom, #00cfeb, #006471, #006471) !important;
+	border: 1px solid #141414 !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+/* text on top keyboard */
+.vk-t {
+	color: #ffffff !important;
+}
+
+.ita-kd-dropdown-menu {
+	background: #000000 !important;
+	border-color: #ffffff !important;
+}
+
+.ita-kd-menuitem:hover {
+	color: black !important;
+	background-color: #167AC6 !important;
+}
+
+.ita-kd-menuitem {
+	color: white !important;
+}
+
+/* languages menu */
+.goog-menu {
+	background: #000000 !important;
+	color: white !important;
+	border-color: #ffffff !important;
+	border-radius: 4px !important;
+}
+
+.goog-menuitem {
+  color: white !important;
+}
+
+.goog-menuitem-emphasize-highlight {
+	background-color: #D7A61B !important; /* orange */
+}
+
+#gt-sl-gms-menu .goog-menuitem-group .goog-option-selected,
+#gt-tl-gms-menu .goog-menuitem-group .goog-option-selected {
+	background-color: #167AC6 !important;
+	background-image: none !important;
+	font-weight: bold !important;
+	color: white !important;
+}
+
+.goog-option-selected .goog-menuitem-content {
+	color: #ffffff !important;
+}
+
+/* footer */
+#gt-ft {
+  background: #000 !important;
+  display: none;
+}
+
+#gt-feedback {
+	color: #ffffff !important;
+}
+
+/* backgrounds */
+
+#navlink,
+#gt-appbar {
+	background-color: #000000 !important;
+}
+
+/* header */
+#gba { height: 0px; }
+
+.gb_5b {
+	background: #000000 !important;
+}
+
+
+#gb#gb a.gb_la {
+	color: #167AC6 !important;
+}
+
+.gb_T .gb_og {
+    display: none;
+}
+
+/*** applications ***/
+
+.gb_ba {
+	border-radius: 4px !important;
+	border: 1px solid #ffffff !important;
+	background: #000000 !important;
+}
+
+.gb_Fa,
+.gb_Ia  {
+	background: #000000 !important;
+}
+
+/* colours footer */
+#gb a.gb_Fa,
+#gb a.gb_Ja {
+    color: #167AC6 !important;
+}
+
+.gb_ra {
+    border: 0px solid rgba(255, 255, 255, 0)!important;
+}
+
+#gb#gb a.gb_ka:hover {
+    border: 0px solid rgba(255, 255, 255, 0)!important;
+}
+
+#gb#gb a.gb_ka, #gb#gb a.gb_la {
+    color: #167AC6 !important ;
+}
+
+.gb_ra:hover .gb_ka,
+.gb_ra:hover .gb_wa {
+	background: #3d3d3d !important;
+}
+
+/* login button */
+.gb_b {
+	color: #ffffff !important;
+	border-radius: 4px !important;
+	border: 1px solid #141414 !important;
+	background-image: linear-gradient(#3d3d3d, #2d2d2d, #1a1a1a) !important;
+	margin: 0px !important;
+	margin-top: 0px !important;
+	margin-bottom: 1px !important;
+	-moz-background-clip: padding !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+.gb_b:hover {
+	color: #ffffff !important;
+	background: -moz-linear-gradient(to bottom, #00cfeb, #006471, #006471) !important;
+	border: 1px solid #141414 !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+/* change icons on top */
+.gb_Ea .gb_ga, /* button showing applications */
+.gb_hb.gb_ib ,
+.gb_1b .gb_ga {
+	opacity: 1.0 !important;
+	-webkit-filter: invert(100%) hue-rotate(130deg) contrast(500%) saturate(300%) brightness(200%);
+	filter: invert(100%) hue-rotate(130deg) contrast(500%) saturate(300%) brightness(200%);
+}
+
+/* body */
+#gt-apb-main {
+	background-color: #000000 !important;
+}
+
+body {
+	background-color: #000 !important;
+	color: white !important;
+}
+
+/* interior */
+#gt-text-c {
+	background-color: #000 !important;
+	border: #ffffff !important;
+}
+
+#gt-appname {
+	color: #167AC6 !important;
+}
+#gt-appbar {
+    position: relative;
+    border-bottom: 0px solid #000;
+    height: 0px;
+    z-index: 1;
+    display: none;
+    background-color: #000;
+}
+
+
+/* text area left  */
+#source {
+	background-color: #000000 !important;
+	color: #fff !important;
+}
+
+#gt-src-wrap {
+	border: 1px solid #ffffff;
+	background-color: #000000!important;
+}
+
+.gt-hl-layer {
+	background:  transparent !important;
+	border: transparent !important;
+}
+
+/* text area right */
+#result_box {
+	background-color: #000000 !important;
+	color: #fff !important;
+}
+
+#gt-res-wrap {
+	border: 1px solid #ffffff;
+	background-color: #000000 !important;
+}
+
+/* phrases dictionary */
+#gt-pb-tt, #gt-pb-pt {
+	color: #167AC6 !important;
+}
+
+#gt-pb-tb  {
+	color: #000000 !important;
+}
+
+#gt-pb-tb tr {
+	color: #000000 !important;
+}
+
+#gt-pb-tb tr:hover {
+	color: #000000 !important;
+	background-color: #167AC6 !important;
+}
+
+#pb-tool {
+	color: #ffffff !important;
+	background-color: #333230 !important;
+}
+
+#pb-tb-c {
+	background-color: #333230 !important;
+}
+
+
+/* colours left side */
+.gt-def-example {
+	color: #ffffff !important; /* white */
+}
+
+.gt-spell-correct-message {
+	color: #239B2D !important; /* green */
+}
+
+.translit {
+	color: #ffffff !important ; /* white */
+}
+
+.gt-ex-text,
+.gt-def-row {
+	color: #D7A61B !important; /* orange */
+}
+
+.gt-cd-t {
+	background-color: #000 !important ; /* green */
+}
+
+.gt-cd-t {
+	color: #239B2D !important ; /* green */
+}
+
+.gt-cd-pos {
+	color: #FCF4F4 !important; /* light white */
+	font-style: italic !important;
+}
+
+.gt-cd-cl,
+.gt-card-ttl-txt,
+.gt-ct-text {
+    color: #167AC6 !important; /* light blue */
+}
+
+/* colours right side  */
+.gt-card-ttl-txt,
+.gt-rw-span,
+.gt-baf-word-clickable {
+	color: #167AC6 !important;
+}
+
+.gt-baf-back:hover {
+	color: #167AC6 !important;
+}
+
+/* change colour icons */
+.cd-expand-button,
+.trans-pb-button .jfk-button-img,
+.gt-hats-icon,
+span.check,
+input[type=&amp;quot;radio&amp;quot;],
+.sm-arrow,
+.modal-dialog-title-close,
+.jfk-checkbox,
+.jfk-button-img,
+.goog-flat-menu-button-dropdown,
+.goog-toolbar-menu-button-dropdown,
+.ita-kd-img,
+.ita-kd-arrow,
+/*  .ita-kd-checkbox, */
+.ita-ppe-pgd,
+.ita-ppe-pgu,
+.vk-t-btn.vk-sf-cl {
+	opacity: 1.0 !important;
+	-webkit-filter: invert(100%) hue-rotate(130deg) contrast(500%) saturate(300%) brightness(200%);
+	filter: invert(100%) hue-rotate(130deg) contrast(500%) saturate(300%) brightness(200%);
+}
+
+.ita-kd-inputtools-div .ita-kd-icon-button,
+.goog-toolbar-button, .goog-toolbar-menu-button {
+	background: transparent  !important;
+	color: white !important;
+}
+
+/* languages buttons */
+#gt-sl,
+#gt-tl,
+#anno1,
+#anno2,
+#clp-btn,
+#gt-swap,
+#gt-sl-gms,
+#gt-tl-gms,
+.ita-hwt-backspace,
+.ita-hwt-space,
+.ita-hwt-enter,
+.jfk-button-action,
+.jfk-button-standard,
+.jfk-button-primary,
+.goog-buttonset-default,
+.modal-dialog-buttons button {
+	color: #ffffff !important;
+	border-radius: 4px !important;
+	border: 1px solid #141414 !important;
+	background-image: linear-gradient(#3d3d3d, #2d2d2d, #1a1a1a) !important;
+	margin: 0px !important;
+	margin-top: 0px !important;
+	margin-bottom: 1px !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+#gt-sl:hover,
+#gt-tl:hover,
+#anno1:hover,
+#anno2:hover,
+#clp-btn:hover,
+#gt-swap:hover,
+#gt-sl-gms:hover,
+#gt-tl-gms:hover,
+.ita-hwt-backspace:hover,
+.ita-hwt-space:hover,
+.ita-hwt-enter:hover,
+.jfk-button-action:hover,
+.jfk-button-standard:hover,
+.jfk-button-primary:hover,
+.goog-buttonset-default:hover,
+.modal-dialog-buttons button:hover {
+	color: #ffffff !important;
+	background: -moz-linear-gradient(to bottom, #00cfeb, #006471, #006471) !important;
+	border: 1px solid #141414 !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+.cd-expand-button {
+	color: black !important;
+}
+
+#gt-pb-sbt {
+	background: #167AC6 !important;
+}
+
+.ita-kd-inputtools-div {
+	background-color: rgba(255, 255, 255, 0.0) !important;
+}
+
+/* checked buttons status */
+.jfk-button-checked {
+	background-color: #167AC6 !important;
+	background-image: none !important;
+}
+
+/* keyboard */
+.vk-box {
+	background: #000000 !important;
+	color: white!important;
+	border-color: #ffffff !important;
+	border-width: 1px  !important;
+	border-radius: 4px !important;
+}
+
+.vk-btn {
+	color: #ffffff !important;
+	border-radius: 4px !important;
+	border: 1px solid #141414 !important;
+	background-image: linear-gradient(#3d3d3d, #2d2d2d, #1a1a1a) !important;
+	margin: 0px !important;
+	margin-top: 0px !important;
+	margin-bottom: 1px !important;
+	-moz-background-clip: padding !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+.vk-btn:hover {
+	color: #ffffff !important;
+	background: -moz-linear-gradient(to bottom, #00cfeb, #006471, #006471) !important;
+	border: 1px solid #141414 !important;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.51153) !important;
+}
+
+/* text on top keyboard */
+.vk-t {
+	color: #ffffff !important;
+}
+
+.ita-kd-dropdown-menu {
+	background: #000000 !important;
+	border-color: #ffffff !important;
+}
+
+.ita-kd-menuitem:hover {
+	color: black !important;
+	background-color: #167AC6 !important;
+}
+
+.ita-kd-menuitem {
+	color: white !important;
+}
+
+/* languages menu */
+.goog-menu {
+	background: #000000 !important;
+	color: white !important;
+	border-color: #ffffff !important;
+	border-radius: 4px !important;
+}
+
+.goog-menuitem {
+  color: white !important;
+}
+
+.goog-menuitem-emphasize-highlight {
+	background-color: #D7A61B !important; /* orange */
+}
+
+#gt-sl-gms-menu .goog-menuitem-group .goog-option-selected,
+#gt-tl-gms-menu .goog-menuitem-group .goog-option-selected {
+	background-color: #167AC6 !important;
+	background-image: none !important;
+	font-weight: bold !important;
+	color: white !important;
+}
+
+.goog-option-selected .goog-menuitem-content {
+	color: #ffffff !important;
+}
+
+/* footer */
+#gt-ft {
+  background: #000 !important;
+  display: none;
+}
+
+#gt-feedback {
+	color: #ffffff !important;
+}
+
+.e_md #gt-ft-res {
+    padding: 0 0px;
+}
+
+#gt-ft-res {
+    line-height: 0px;
+    background-color: #000;
+    display: none;
+}
+
+/* end google translate */
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;le ponen un nombre y le dan a guardar&lt;/p&gt;
+
+&lt;p&gt;(&lt;em&gt;nota:&lt;/em&gt; con la extecion &lt;em&gt;Privacy Settings&lt;/em&gt; al &amp;ldquo;tope&amp;rdquo;, stylus deja de ser
+accesible, aunque sigue funcionando, poner las configuraciones por defecto
+mientras realizan la edicion)&lt;/p&gt;
+
+&lt;p&gt;por si quieren manosear un poco el navegador: &lt;a href=&#34;https://lignux.com/hardening-de-firefoxiceweasel-y-tecnicas-de-ofuscacion-de-fingerprint/&#34;&gt;Hardening de Firefox/Iceweasel y técnicas de ofuscación de fingerprint&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;felices trazos!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/contruct.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Por cierto, de forma casi inadvertida y estupida, mientras escribia un tema para
+un sitio que recopilara juegos foss de love2d (por aquello de tener ejemplos de
+estudio interesantes) me carge el tema del blog y como no tenia un respaldo, por
+que nunca lo subi al repo, por que aun no controlaba (ni controlo) lo suficiente
+de hugo&lt;/p&gt;
+
+&lt;p&gt;Temporalmente utilizare robust-theme (de fabrica), que fue en el que me base en
+un principio, quitandole mierda-script y cosas externas, asi que bloquear js si
+es que por confianza o curiosadad le dieron privilegios a esta direccion, pronto
+hare un tema nuevo, digno, reformado y en abismal color negro, jo, jo, jo.
+(disculpar si momentaneamente se rompe el feed, enlaces o algo asi)&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -37,8 +1043,168 @@ Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su
       <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/love2d/docset/</guid>
-      <description>Love2d es un framework &amp;ldquo;open source&amp;rdquo; para crear videojuegos 2D multiplataforma con el lenguaje de programacion Lua y que aparentemente es muy facil de utilizar, al menos tan facil como para practicamente no tener documentacion mas alla de las funciones que proporciona el framework
-Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos de funciones y sus parametros, deberiamos contar con un medio practico para consultar dicha documentacion</description>
+      <description>
+
+&lt;p&gt;&lt;em&gt;Love2d&lt;/em&gt; es un framework &amp;ldquo;open source&amp;rdquo; para crear videojuegos 2D multiplataforma
+con el lenguaje de programacion Lua y que aparentemente es muy facil de
+utilizar, al menos tan facil como para practicamente no tener documentacion mas alla de
+las funciones que proporciona el framework&lt;/p&gt;
+
+&lt;p&gt;Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos
+de funciones y sus parametros, deberiamos contar con un medio practico para consultar dicha
+documentacion&lt;/p&gt;
+
+&lt;p&gt;Desde la pagina ofrecen una wiki&amp;hellip; tambien disponible en modo offline, asi que
+en un ataque de creatividad, abri dos emacs en modo eww uno en cada monitor,
+grabe un marcador y a triunfar&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/love-wiki.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;luego de un rato&amp;hellip; fue obvio que no era la mejor forma de consultar la
+documentacion, y como no hay un maldito estandar para hacer documentacion
+decente (hasta ahora) recurri a un viejo conocido&lt;/p&gt;
+
+&lt;h2 id=&#34;zeal&#34;&gt;zeal&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/zeal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;que es &lt;a href=&#34;https://zealdocs.org/&#34;&gt;Zeal&lt;/a&gt;? es la implentacion libre y sin un tema
+obscuro de dash, que aunque a primera vista pareciera ser el nombre de un shell,
+mas bien es una &lt;em&gt;app&lt;/em&gt; visual para gestionar documentacion. En realidad es
+un visor web, con un buscador integrado que trabaja con bases de datos
+sqlite3&amp;hellip; o eso creo entender&lt;/p&gt;
+
+&lt;p&gt;Confirmando mis suposiciones de que tener abierto el navegador para leer de
+internet la documentacion es lento y doloroso, una buena persona hiso un
+&lt;em&gt;docset&lt;/em&gt; de las funciones de love2d, que es el formato con el que trabaja zeal&lt;/p&gt;
+
+&lt;p&gt;instalamos zeal (en freidora)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnf -y install zeal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;abrimos zeal y agregamos el feed de la documentacion (&lt;a href=&#34;https://github.com/ChrisJan00/love2d_docset&#34;&gt;no oficial&lt;/a&gt;) de love2d&lt;/p&gt;
+
+&lt;p&gt;con el raton &lt;em&gt;Tools -&amp;gt; Docsets -&amp;gt; Add feed&lt;/em&gt; y pegamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dash-feed://http%3A%2F%2Fchrisjan00.github.io%2Flove2d_docset%2FLove2d.xml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por degracia, dicha documentacion corresponde a la version 0.9.1. Para
+no dejar de estar a la moda, vamos a crean nuestra propia documentacion, para
+esto necesitamos tener instado sqlite (no estoy seguro si 3, ya lo tenia
+instalado asi que no hice nada) y seguir
+&lt;a href=&#34;https://kapeli.com/docsets#setUpFolderStructure&#34;&gt;esta&lt;/a&gt; guia (en ingles) o
+basado en (lo que entendi de) ella seguir la sugiente receta y tener instalado
+Go (vee aceptandolo, ese lenguaje va a ser muy popular) para instalar
+&lt;a href=&#34;https://github.com/technosophos/dashing&#34;&gt;dashing&lt;/a&gt; que hara un poco mas sencilla
+la tarea. Empecemos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mv /tmp                           # para evitar &amp;quot;limpiar&amp;quot; al terminar
+wget https://love2d.org/docs.zip  # optenemos la &amp;quot;wiki&amp;quot; offline
+unzip docs.zip                    # descomprimir
+cd wiki                           # ir al directorio descomprimido
+
+go get -u github.com/technosophos/dashing  # optener dashing
+dashing create                             # crea una &amp;quot;plantilla&amp;quot;
+emacs -nw -q dashing.json                  # editamos la plantilla
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Modificamos la plantilla para que se paresca a esto:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;name&amp;quot;: &amp;quot;love2d&amp;quot;,
+    &amp;quot;package&amp;quot;: &amp;quot;love2d&amp;quot;,
+    &amp;quot;index&amp;quot;: &amp;quot;index.html&amp;quot;,
+    &amp;quot;selectors&amp;quot;: {
+        &amp;quot;h1&amp;quot;: &amp;quot;firstHeading&amp;quot;
+    },
+    &amp;quot;ignore&amp;quot;: [
+        &amp;quot;ABOUT&amp;quot;
+    ],
+    &amp;quot;icon32x32&amp;quot;: &amp;quot;favicon.png&amp;quot;,
+    &amp;quot;allowJS&amp;quot;: false,
+    &amp;quot;ExternalURL&amp;quot;: &amp;quot;https://love2d.org/wiki/Main_Page&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;name&lt;/code&gt; == nombre&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;package&lt;/code&gt; == paquete&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;index&lt;/code&gt; == tiene que apuntar al inicio de la wiki&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;selectors&lt;/code&gt; == etiuetas y atributos html que seran agregados a la base de
+datos. No encontre una estructura clara en el html y tampoco entiendo las
+posibilidades de esta etiqueta. En el resultado se repiten 2 veces algunas
+cosas, pero es funcional&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;icon32x32&lt;/code&gt; == el icono de la documentacion. La wiki ya trae un icono de love2d asi
+que ponemos el nombre del fichero&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ExternalURL&lt;/code&gt; == pense en abrir un repo con la documentacion actualizada, pero
+no&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;dashing build # crear docset
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto crea la carpeta love2d.docset, la movemos a donde zeal tiene su
+documentacion (en freidora seria):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mv love2d.docset  ~/.local/share/Zeal/Zeal/docsets/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;abrimos zeal y buscamos si aparece la documentacion&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/zeal-love.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;zeal funciona como el navegador, con C-k buscamos cosas (poner prefijo de la
+documentocion, en este caso &lt;code&gt;love2d:&lt;/code&gt;), tiene un bonito autocompletado, nos movemos
+con las flechas arriba, abajo, C-u para borrar. Con C-f podemos buscar dentro de la &amp;ldquo;pagina&amp;rdquo; con
+la documentacion&lt;/p&gt;
+
+&lt;h2 id=&#34;soporte-de-lua-en-emacs&#34;&gt;Soporte de Lua en Emacs&lt;/h2&gt;
+
+&lt;p&gt;Podemos instalar &lt;em&gt;lua-mode&lt;/em&gt; desde la paqueteria, si desconfias de las cosas
+automagicas clonamos el repositorio a donde tenemos nuestras extenciones, por
+ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ~/.emacs.d/plugins/
+git clone https://github.com/immerrr/lua-mode.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;abrimos el init.el y copiamos lo suguiente en algun lugar&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;;; source: git clone https://github.com/immerrr/lua-mode.git
+(add-to-list &#39;load-path &amp;quot;~/.emacs.d/plugins/lua-mode&amp;quot;)
+(autoload &#39;lua-mode &amp;quot;lua-mode&amp;quot; &amp;quot;Lua editing mode.&amp;quot; t)
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.lua$&amp;quot; . lua-mode))
+(add-to-list &#39;interpreter-mode-alist &#39;(&amp;quot;lua&amp;quot; . lua-mode))
+(setq lua-indent-level 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;listo tenemos el lua-mode, para el autocompletado&amp;hellip; esperar a que sepa programar en
+elisp y extender company&amp;hellip; si quereis adelantarme &lt;a href=&#34;https://github.com/company-mode/company-mode/wiki/Writing-backends&#34;&gt;uno&lt;/a&gt; y &lt;a href=&#34;http://sixty-north.com/blog/writing-the-simplest-emacs-company-mode-backend&#34;&gt;dos&lt;/a&gt; links&lt;/p&gt;
+
+&lt;h2 id=&#34;enlaces&#34;&gt;+ Enlaces&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://love2d.org/wiki/examples.love&#34;&gt;https://love2d.org/wiki/examples.love&lt;/a&gt;, ejemplos basicos-practicos y sin
+consideracion para los deviles de voluntad&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/love2d-community/awesome-love2d&#34;&gt;https://github.com/love2d-community/awesome-love2d&lt;/a&gt;, recopilacion de recursos
+para programacion&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://love2d-community.github.io/love-api/&#34;&gt;http://love2d-community.github.io/love-api/&lt;/a&gt; pagina con la api en html&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://sheepolution.com/learn/book/contents&#34;&gt;http://sheepolution.com/learn/book/contents&lt;/a&gt;, un tutorial con obejas, desde las
+bases hasta lo basico&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/SSYGEA/blog/&#34;&gt;https://github.com/SSYGEA/blog/&lt;/a&gt;, no lo he leido, parace interesante&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.lua.org/manual/5.1/es/manual.html&#34;&gt;http://www.lua.org/manual/5.1/es/manual.html&lt;/a&gt;, el manual de lua en español, no te
+dejes engañar, es mas extenso de lo que aparenta&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://love2d.org/wiki/Category:Games&#34;&gt;https://love2d.org/wiki/Category:Games&lt;/a&gt;, recopilacion de bastantes videojuegos&lt;/p&gt;
+
+&lt;p&gt;Eso es todo por esta sesion, happy hacking!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -47,10 +1213,153 @@ Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos
       <pubDate>Mon, 10 Jul 2017 23:03:56 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/webeloper/</guid>
-      <description>joder, que gracioso, ho, ho, ho, veamos si existe la remota posibiidad que nadie utilize este (en mi mente) despectivo &amp;ldquo;titulo&amp;rdquo;&amp;hellip;
-&amp;hellip; no &amp;hellip; bueno, que mas da, no se puede ser &amp;ldquo;innovador&amp;rdquo; todo el tiempo
-hola, que tal, esta entrada trata de algunos de los navegadores web que he utilizado y el por que, o esa es la idea
-Navegadores por terminal Luego que comienza a agradarte la terminal, y con algo de nostalgia sintetica, dices: &amp;ldquo;veamos eso del internet en la terminal, que igual va mejor que el firefox en mi maquina agonizante con 500 megas de ram&amp;rdquo;, y asi sin demasiado esfuerso aqui esta la lista de navegadores de terminal que en algun momento llege a utilizar (una a dos veces):</description>
+      <description>
+
+&lt;p&gt;joder, que gracioso, ho, ho, ho, veamos si existe la remota posibiidad que nadie
+utilize este (en mi mente) despectivo &amp;ldquo;titulo&amp;rdquo;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; no &amp;hellip; bueno, que mas da, no se puede ser &amp;ldquo;innovador&amp;rdquo; todo el tiempo&lt;/p&gt;
+
+&lt;p&gt;hola, que tal, esta entrada trata de algunos de los navegadores web que he utilizado y
+el por que, o esa es la idea&lt;/p&gt;
+
+&lt;h2 id=&#34;navegadores-por-terminal&#34;&gt;Navegadores por terminal&lt;/h2&gt;
+
+&lt;p&gt;Luego que comienza a agradarte la terminal, y con algo de nostalgia sintetica,
+dices: &amp;ldquo;veamos eso del internet en la terminal, que igual va mejor que el
+firefox en mi maquina agonizante con 500 megas de ram&amp;rdquo;, y asi sin demasiado
+esfuerso aqui esta la lista de navegadores de terminal que en algun momento
+llege a utilizar (una a dos veces):&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&#34;command&#34; &gt;w3m&lt;/code&gt;, &lt;code class=&#34;command&#34; &gt;lynx&lt;/code&gt;, &lt;code
+class=&#34;command&#34; &gt;links&lt;/code&gt; y &lt;code class=&#34;command&#34; &gt;elinks&lt;/code&gt; (en la
+siguiente imagen aparecen de izquierda a derecha en ese orden)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/www.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;tambien &lt;em&gt;eww&lt;/em&gt;, que viene incluido en emacs&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/www-eww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;si bien es el mas lento y apenas el menos feo (w3m gana la contienda), por el
+simple hecho de venir en emacs no tiene comparacion en esta singular categoria,
+ademas, en modo grafico pueden verse imagenes!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/www-eww-img.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;es cierto que a los navegadores en modo texto el tiempo no los ha tratado bien,
+pero las cookies, flash, drms, javascript y el contenido multimedia no son los
+unicos culpables de su decadencia, pues en su mayor parte se debe al propio
+lenguaje de la red &lt;strong&gt;HTML&lt;/strong&gt;, o si! cuando cualquier hijo de vecino crea una
+pagina amontonando etiqueta, sobre etiqueta sobre etiqueta, sin tener mucha
+idea, hasta que optiene la representacion visual que desea, como esperan que
+exista un programa que averigue las intenciones del &amp;ldquo;webeloper&amp;rdquo;? sigue siquiera
+la mitad de la web una esquema estructural rigido para almacenar la informacion
+y luego no se, hacer algo util con ella como optener solo el articulo principal?
+o cualquier cosa imaginable pasa y luego a base de apaños en el otro gran mal
+del mundo &lt;strong&gt;CSS&lt;/strong&gt; se logra aparentar que las cosas estan bien hechas? digo, por
+que si es necesario relegar todo a frameworks javascript para visualizar una
+mierda pagina con &lt;em&gt;contenido estatico&lt;/em&gt; que no tiene necedidad alguna de js, mas
+que recolectar datos, poner anuncios y mostrar estadisticas, es mejor que la
+humanidad se extinga&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;haaaaaaa!! cuan odioso es css, por que tiene tantos parametros para hacer la
+misma cosa, da la impresion que de ser un juego de azar&amp;hellip; intentas una
+propiedad y no funciona, pruebas con otra y se rompe, vas por la tercer opcion
+y&amp;hellip; no funciona, prebas con la ultima etiqueta recien salida del &amp;ldquo;estandar&amp;rdquo;
+y&amp;hellip; por fin (hay una etiqueta no ambigua para hacer cosas tan simples como
+centrar el contenido de cualquier elemento? que el margen sea un margen y el
+padding un padding y los porcentaje y em&amp;rsquo;s no se saboteen entre si?)&lt;/p&gt;
+
+&lt;p&gt;cuenta asta dies, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0&amp;hellip; je, era alreves pero no
+importa&lt;/p&gt;
+
+&lt;p&gt;de entre los navegadores de texto ignorando a eww por su implicacion
+con emacs, los mas potables son &lt;em&gt;links&lt;/em&gt; y su sombra &lt;em&gt;elinks&lt;/em&gt; que no solo
+colorean las cosas, tambien tienen la decencia de dejar una agradable
+indentacion a la izquierda y menus graficos.&lt;/p&gt;
+
+&lt;h2 id=&#34;navegadores-graficos&#34;&gt;Navegadores Graficos&lt;/h2&gt;
+
+&lt;p&gt;Y luego pasas de tu viejo pentium 4 a un flamante celeron con 8GB de ram y el
+firefox sigue siendo lento, pero ahora consume mas ram que todo el sistema y sus
+aplicaciones en conjunto&amp;hellip; y las paginas se niegan a visualizarse si no vas
+dispuesto a aceptar cualquier mierda inecesaria: fuentes de google, analiticas
+con js, imagenes y videos que provienen de un sitio que necesita js, cookies,
+los mensajes de las cookies, acortaderes de enlaces y publicidad&lt;/p&gt;
+
+&lt;p&gt;Reflexionas un poco y te dices no, no quiero toda esa basura, ni que mi
+navegador delate todo lo que hago, utilizas firefox, (o el exitinto iceweacel o
+icecat de GNU (este sin exteciones)) lo vitaminas con noScript, Privacy Bagner
+uBlock Origin y cualquier otra extecion de software libre (porque no confias en
+nada si no te dan el codigo), y ves lo que puedes y en casos extremos como ver
+videos te comes uno que otro js&lt;/p&gt;
+
+&lt;p&gt;asi pues, solo con firefox complementado con feeds (que no necesitan porquerias
+extras para darte lo unico que te interesa) y eww sobrevives lo mas fiel a tus
+creencias&amp;hellip; hasta que necesitas abrir un fichero html gordo, por ejemplo un libro
+completo en un solo html que tarda casi un minuto en cargar, al que por mera
+casualidad tienes la necesidad de modificarle el css y entre recarga y recarga
+se pasan preciosos momentos&lt;/p&gt;
+
+&lt;p&gt;asi pues, que mas hay por hay fuera? en que otro navegador podria confiar?&lt;/p&gt;
+
+&lt;p&gt;chrome? no,&lt;/p&gt;
+
+&lt;p&gt;chromium? casi es lo mismo que chrome&lt;/p&gt;
+
+&lt;p&gt;un &lt;a href=&#34;https://en.wikipedia.org/wiki/Chromium_(web_browser)#Other_browsers_based_on_Chromium&#34;&gt;espin&lt;/a&gt; de chromium sin mierda? bueno podria ser
+veamos, mmm, derivados exclusivos para las manzanas, derivados exclusivos para
+las ventasas, forks con codigo cerrado&amp;hellip; hey! aqui hay uno que parece prometodor
+&lt;a href=&#34;https://www.brave.com/&#34;&gt;&lt;em&gt;brave&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/brave.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;dicen que son &amp;ldquo;open source&amp;rdquo;, mucho de seguridad, comunidad y pagos(?), veamos
+tienen una compilacion para freidora&amp;hellip; parece decente, algo modernoso&lt;/p&gt;
+
+&lt;p&gt;han borrado todo contacto con google y su google play, morbosamente su unica
+extencion disponible es activar el flash? que dudoso, mucho de seguridad y
+opciones por desactivar&lt;/p&gt;
+
+&lt;p&gt;no se, da un aire de &lt;em&gt;producto&lt;/em&gt; para un nicho concreto, quiza no busco un
+producto, segun esta desarrollado por ex-firefoxes, pero no me termina de
+convencer, ademas no puede cambiarse de color la barra de direcciones y es
+molesta, por otra parte, a diferencia de firefox carga un html gordo sin demora
+&lt;em&gt;siempre y cuando&lt;/em&gt; no le metas js (&lt;em&gt;mathjax&lt;/em&gt;) o el rendimento cae en picada&lt;/p&gt;
+
+&lt;p&gt;haber aca hay otro derivado &lt;a href=&#34;https://iridiumbrowser.de/downloads/linux.html&#34;&gt;&lt;em&gt;iridium&lt;/em&gt;&lt;/a&gt;.
+Este no parece un producto, y la gente que lo lleva a flote dice que tienen
+lanzamientos cada que pueden por que no tienen gente/recursos suficientes
+(hooooooo esto si es un desarrollo de software libre –digo para mis interiores),
+ademas tiene repositorios para debian (y derivados), open suse y freidora&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnf config-manager --add-repo https://dl.iridiumbrowser.de/fedora_25/iridium-browser.repo
+dnf install iridium-browser
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;la instalacion corrio sin ninguna complicacion, al igual que brave tambien carga
+hachetemeeles gordos sin despeinarse&lt;/p&gt;
+
+&lt;p&gt;como inconvenientes diria que tiene la opcion de iniciar secion con gogle y la
+dudosa capacidad de instalar extenciones de google play, aunque tambien se
+pueden instalar cosas directo del codigo fuente&lt;/p&gt;
+
+&lt;p&gt;le instale ScriptSafe en modo paranoico, ni js, ni funtes externas,
+botones sociales, ni analitics, tambien desactivadas cookies de todo sitio pues
+en este navegador no voy a logear con nada (para eso mantrendre firefox), ademas
+por cualquier duda tambien privacy bagner, uBlock Origin, un tema obscuro y una
+extencion curiosa (GPL3) para sobreescribir los atributos css de las paginas &lt;a href=&#34;https://github.com/openstyles/stylus&#34;&gt;&lt;em&gt;Stylus&lt;/em&gt;&lt;/a&gt;
+(disponible tambien en firefox) que tiene cosas un poco turbias con js pero
+parece ser confiable&lt;/p&gt;
+
+&lt;p&gt;y asi llego al final de este capitulo slice of life sin sentido donde con tres
+navegadors y unas 8 pestañas abiertas consegui el dudoso logro de llegar a los
+5GB de ram en uso&lt;/p&gt;
+
+&lt;p&gt;ps: tambien esta midori, pero tienes un navegador igual de lento, poco
+configurable, que no esta a la ultima moda en csssssss&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -59,9 +1368,151 @@ Navegadores por terminal Luego que comienza a agradarte la terminal, y con algo 
       <pubDate>Sat, 24 Jun 2017 20:28:51 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/apt/konsole-warrior/</guid>
-      <description>Dentro de El camino del Heroe (que algunos dicen que esta conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al llamado, debemos preparar nuestras herramientas sobrenaturales lenguaje, Emacs Editor y Emulador de terminal (intreprete incluido).
-Para las dos elecciones (lenguaje y emulador de terminal) tenemos un amplio abanico de posibilidades, hoy les hablare del emulador de terminal y las razones de su eleccion
-Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la configuracion y el cambio constante de temas (iconos, wallpapers, doks y otra extensa variadad) de cambios neon, Konsole es la aplicacion con K que mas aprecio, por un solo aspecto, su alta configuracion de atajos del teclado, no es que necesite demasiado, solo tener la ventana sin ninguna distraccion, ni barra, ni nada, algunos atajos de desplazamiento por pagina y linea, mas poder cambiar entre &amp;ldquo;tabs&amp;rdquo;(?</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/tilix-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dentro de &lt;q&gt;&lt;em&gt;El camino del Heroe&lt;/em&gt;&lt;/q&gt; (que algunos dicen que esta
+conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al
+llamado, debemos preparar nuestras herramientas sobrenaturales
+&lt;em&gt;lenguaje&lt;/em&gt;, &lt;em&gt;&lt;s&gt;Emacs&lt;/s&gt; Editor&lt;/em&gt; y &lt;em&gt;Emulador de terminal&lt;/em&gt;
+(intreprete incluido).&lt;/p&gt;
+
+&lt;p&gt;Para las dos elecciones (lenguaje y emulador de terminal) tenemos un amplio
+abanico de posibilidades, hoy les hablare del emulador de terminal y las razones
+de su eleccion&lt;/p&gt;
+
+&lt;h2 id=&#34;konsole&#34;&gt;Konsole&lt;/h2&gt;
+
+&lt;p&gt;Salida del mundo de reino de KDE, donde sus habitantes priorisan la
+configuracion y el cambio constante de temas (iconos, wallpapers, doks y otra
+extensa variadad) de cambios neon, &lt;strong&gt;Konsole&lt;/strong&gt; es la aplicacion con K que mas
+aprecio, por un solo aspecto, su alta configuracion de atajos del teclado, no es
+que necesite demasiado, solo tener la ventana sin ninguna distraccion, ni barra,
+ni nada, algunos atajos de desplazamiento por pagina y linea, mas poder cambiar entre
+&amp;ldquo;tabs&amp;rdquo;(?, seciones? lo que el la tty haces con Alt+Flecha derecha/izquierda) y
+poco mas.&lt;/p&gt;
+
+&lt;p&gt;No estoy seguro si konsole, tiene incluida la caracteristica de dividir ventanas,
+(si la tiene la desactive) pues no la necesito)&lt;/p&gt;
+
+&lt;p&gt;Por varios años he permanecido fiel a Konsole, mi katana demoniaca obscura,
+varias han sido las ocaciones que he mirado en alguna herreria para conseguir
+otra arma secundaria (terminator y tmux) sin llegar a sentirme a gusto con estas,
+hasta que hace medio año (o algo asi) estube a punto de cambiar por terminix, por
+incorporar el &lt;strong&gt;overview&lt;/strong&gt; de Gnome, mas luego de unos dias, desisti y continue
+con la K&lt;/p&gt;
+
+&lt;h2 id=&#34;tilix-antes-terminix&#34;&gt;Tilix (antes terminix)&lt;/h2&gt;
+
+&lt;p&gt;Aunque el autocompletado-automagico de fish, es bueno, queria tener marcadores,
+para los 5 o 6 directorios &amp;ldquo;de trabajo&amp;rdquo; que mas utilso. Con esto en mente dio
+inicio una pequeña busqueda de internet, pero tras encontrar cosas de python y otras
+utilidades que no me daba confiansa instalar, di otra oportunidad a tilix,
+pues incorpora de serie marcadores y el amado &lt;strong&gt;overview&lt;/strong&gt; Gnomero!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/tilix-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;la razon por la que antes no hice la transicion se debio a no incorporar la
+configuracion del desplazamiento por linea, pero estimados colegas, un pequeño
+&lt;a href=&#34;https://github.com/gnunn1/tilix/issues/698&#34;&gt;issue&lt;/a&gt;, aun con engrish de
+traductor, es capas de conmover a nuetros forjadores&lt;/p&gt;
+
+&lt;p&gt;Si bien la peticion fue escuchada con prontedad, tilix, tiene (o tenia) un
+complejo proceso de compilacion que no fui capaz de realizar, tras unos meses de
+espera, y descubrir como incorporar la ultima version a mi distribucion, fue
+posible el &lt;em&gt;upgrade&lt;/em&gt; (o no) de equipamiento&lt;/p&gt;
+
+&lt;p&gt;Al igual que konsole, tilix tambien es altamente customizable en sus atajos,
+colores, desplazamientos, codificacion, apariencia, fuente y paleta de colores,
+etc&lt;/p&gt;
+
+&lt;p&gt;pero lo que mas me interesaba era el tema de los bookmarks. Dentro de la
+configuracion trae dicho apartado, peeeero, no fui capaz de entender como
+guardar una ruta y que luego funcionara, asi que cambie el atajo de teclado para
+ya dentro del directorio, invocar el menu y establecer el marcador&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/tilix-c.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y&amp;hellip;? &lt;strong&gt;funciono!&lt;/strong&gt;, solo pones el nombre del marcador y al abrir los marcadores
+ya puedes hacer el cambio&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/tilix-d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;tambien, tube que ajustar un poco el esquema de colores, tipografia y cursor,
+hasta lograr mi ambiente ideal&lt;/p&gt;
+
+&lt;p&gt;si bien hasta el momento no utilzo el modo Gnomero (F12), hay esta para cuando
+lo necesite&amp;hellip; o para impresionar a la plebe&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;keybindings&#34;&gt;keybindings&lt;/h2&gt;
+
+&lt;p&gt;complejo es establecer unos atajos medianamiente razonables sin exigir la
+presion de mas de tres teclas simultaneas, sin que estas sean capturadas por el
+entorno grafico, o entren en conflicto con el interprete y llegen a salvo hasta
+el programa en ejecucion&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + d :: añadir marcador&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + m :: seleccionar marcador&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + t :: el clasico para abrir una nueva secion/terminal&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + w :: el clasico para cerrar la secion/terminal&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + Flecha derecha/izquierda :: esta combinacion puede ser polemica, pero
+ como el interprete no la utiliza para seleccionar texto, pues la ocupo para
+ cambiar entre seciones (1, 2, 3, &amp;hellip; 1, 2 (y viceversa))&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + Flecha arriba/abajo :: desplazar texto por linea&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + Re/Av Pag :: desplazar texto por pagina&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;F12 :: overview&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + F9 :: preferencias&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + F10 :: mostrar atajos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + / :: añadir terminal abajo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + * :: añadir terminal a la derecha&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + Alt + Flechas :: redimencionar terminal&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Alt + flechas :: cambiar entre terminal&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + 9 :: (en mi teclado esto es Ctrl + Shift + =) sincronizar entrada&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;basicamente estos son los atajos que mas utilizo (auque en verdad no necesito
+dividir, ni sincronizar terminales)&lt;/p&gt;
+
+&lt;p&gt;ademas, con dos terminales y once escritorios, no necesito distracciones
+inutiles como menus o docks, asi que la ventana aparece directamente a
+pantalla completa, para lograr esto en los atajos de gnome, en los atajos
+personales, vincule &lt;code&gt;Super + h&lt;/code&gt; a tilix (mapeo dvorak customizado) a la ruta
+&lt;code&gt;/usr/bin/tilix --full-screen&lt;/code&gt;, algo similar tenia con konsole, que paso a estar
+es &lt;code&gt;Super + t&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalacion&#34;&gt;instalacion&lt;/h2&gt;
+
+&lt;p&gt;fedora me atormenta, y es muy rara, y es un rollo&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;ya mencione que compilar tilix me resulto imposible, la primer vez que probe
+este terminal, lo obtube de un servicio(?) llamado corp, que no tengo mucha idea
+que es, pero parace que es parte de fedora. Bien, en esta ocacion preste
+atencion a una linea en la parte derecha de esa web que era nada mas y nada
+menos que la receta para incluir tilix en los repos, en efecto, algo muy raro&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnf copr enable heikoada/terminix
+dnf -y install tilix
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para otras distros, buscar en repositorios, o buscarse la vida&amp;hellip; o ver
+directamente el repo &lt;a href=&#34;https://github.com/gnunn1/tilix&#34;&gt;https://github.com/gnunn1/tilix&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -70,7 +1521,109 @@ Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la conf
       <pubDate>Tue, 02 May 2017 20:02:37 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/vg/ppsspp/</guid>
-      <description>Cambiando un poco de enfoque me dispuse a jugar un rato con el emulador que mas me gusta PPSSPP, que&amp;hellip; sirve para jugar roms de psp, este ultimo es un cacharro que cuando salio alucinaba por tener, pero como siempre he sido pobre de mente y economia nunca tuve, ya mas tarde me pasaron uno para que le pusiera algunos jugos, pero me parecio un cacharro de mala calidad</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../fs.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cambiando un poco de enfoque me dispuse a jugar un rato con el emulador que mas
+me gusta &lt;strong&gt;PPSSPP&lt;/strong&gt;, que&amp;hellip; sirve para jugar roms de &lt;strong&gt;psp&lt;/strong&gt;, este ultimo es un
+cacharro que cuando salio alucinaba por tener, pero como siempre he sido pobre
+de mente y economia nunca tuve, ya mas tarde me pasaron uno para que le pusiera
+algunos jugos, pero me parecio un cacharro de mala calidad&lt;/p&gt;
+
+&lt;p&gt;bueno, dejando la anecdota de lado, &lt;strong&gt;PPSSPP&lt;/strong&gt;, es de lejos el emulador mas
+bonito y atractivo que he visto jamas ensima es software libre!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../ppsspp.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tiene una tienda de Homebrew, aunque todo es &lt;q&gt;gratis&lt;/q&gt;, admite mandos o al
+menos el logitech F710 no tiene problemas, por supuesto los controles y atajos
+son configurables, viene en español y esta muy bien optimisado. Corre hasta en
+equipos androide, claro, hay que ser realistas y darle al menos un i3 para que
+se desempeñe como es debido.&lt;/p&gt;
+
+&lt;p&gt;En mi caso con un celeron 847 de dos nucleos a 1.1GHZ, fluido va&amp;hellip; aunque hay
+que aclarar que lo unico que juego (y fui younqui un rato) es el Lumines (I y II)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../lumines.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;es algo asi como un tetris psicotropico con una cabra (u otro avatar) pulsante
+del lado izquierdo, la gracia es unir cuatro o mas elementos del mismo color,
+hacer combos de uniones o despejar uno o ambos colores de la pantalla por la
+eternidad, todo mientras resives ataques de distraccion visual no aptos para
+epilepticos (la puntuacion mas alta que he alcanzado es de 346348 puntos, algo
+asi como dos horas de juego&lt;/p&gt;
+
+&lt;p&gt;Pero bueno no todo es felicidad y vicio, queria probar algo mas plataformero y
+me encontre el &lt;strong&gt;MegaMan Maverick X Hunter&lt;/strong&gt;, pero el ppsspp se colgaba, asi que
+supuse que serian cosas del programa, y toco probar con una version nueva, pues
+la ultima ya tenia como un año que la habia compilado&lt;/p&gt;
+
+&lt;h2 id=&#34;compilar&#34;&gt;Compilar&lt;/h2&gt;
+
+&lt;p&gt;El codigo fuente esta en github, al parecer ya incluye todas las dependencias
+necesarias, exepto o &lt;strong&gt;sdl2&lt;/strong&gt; o algo de &lt;strong&gt;qt&lt;/strong&gt; (ya sera al gusto de compilador) (Nota:
+si en el proceso de compilacion te dice que hace falta una libreria la buscas y
+la instalas)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/hrydgard/ppsspp.git
+cd ppsspp
+git submodule update --init
+./b.sh
+cd build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y ya esta, en la carpeta &lt;code&gt;build&lt;/code&gt; encontraras un ejecutable &lt;code&gt;PPSSPP&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Un click o un &lt;code&gt;./PPSSPP&lt;/code&gt; + unas roms y felicidad en un binario que incluye todas
+sus librerias para correr de forma autonoma, lo lleves a donde lleves&amp;hellip; o asi
+fue la ultima ves que compile.&lt;/p&gt;
+
+&lt;p&gt;En la version mas actual directa del repositorio, me ha salido esto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CMake Error: Cannot determine link language for target &amp;quot;armips&amp;quot;.
+CMake Error: CMake can not determine linker language for target: armips
+-- Generating done
+-- Build files have been written to: /home/nasciiboy/apt/vg-dev/emu/ppsspp/ppsspp-git/build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ni idea para que necesite el &lt;code&gt;armips&lt;/code&gt;, tampoco encontre mucho al respecto, asi
+que baje un binario precompilado desde su pagina&lt;/p&gt;
+
+&lt;h2 id=&#34;buscar-binario-desde-la-pagina-oficial&#34;&gt;Buscar Binario desde La pagina oficial&lt;/h2&gt;
+
+&lt;p&gt;antes de hacer esto, mejor revisa si esta en los repositorios oficiales, hasta
+donde se no lo incluien ni debian ni freidora&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.ppsspp.org/downloads.html&#34;&gt;http://www.ppsspp.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;descomprimes el binario y te llebas la carpeta a donde mejor te convenga&lt;/p&gt;
+
+&lt;h2 id=&#34;homebrew&#34;&gt;Homebrew&lt;/h2&gt;
+
+&lt;p&gt;Como futuro rey de los &lt;s&gt;piratas&lt;/s&gt; programadores, mi sueño es encontrar el
+One Code, un tesoro compuesto por libros de programacion en español de cualquier
+tema imaginable, bien desarrollados, entendibles por paletos como yo y en un
+formato molon.&lt;/p&gt;
+
+&lt;p&gt;Para mi desgracia, hasta el dia de hoy no he dado ni con un puñetero libro para
+programar videojuegos descente, menos aun para programar en esos sistemas
+dedicados en hardware y software al ocio electronico (mejor conosidos como
+consolas) que exponga el tema. Oh lo que daria por una biblia de programacion
+para el nes (en ensablador) o el snes, o el gameboy y quisa para el psp o la n64&lt;/p&gt;
+
+&lt;p&gt;Mietras tanto, evado el asunto consiguiendo roms en el unico sistema de
+distribucion libre, los torrents!&lt;/p&gt;
+
+&lt;p&gt;Ya para terminar, al parecer el problema que tenia la version anterior con el
+MegaMan era la reproduccion de videos, asunto solucionado en versiones
+recientes, pero mi procesador no lo mueve fluido, ni el Gran Turismo, pero el
+Sega Rally va fino, fino&lt;/p&gt;
+
+&lt;p&gt;O, del Homebrew solo recomendar &lt;strong&gt;Attack Of the Mutants&lt;/strong&gt; y el siempre
+incombustible &lt;strong&gt;Cave Story&lt;/strong&gt;, aunque este mejor jugar el port
+nativo &lt;a href=&#34;../nxEngine/index.html&#34;&gt;nxEngine&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -79,9 +1632,119 @@ Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la conf
       <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/first-blood/</guid>
-      <description>Instalando GNU Emacs En general utilizo emacs apartir del codigo fuente, no obstante tambien tengo disponible el que brinde la distribucion de turno, ya sea para probar algo o por si alguna version presenta algun comportamiento extraño.
-Nunca la he instalado en el sistema emacs compilado a partir del codigo, en su lugar tengo un atajo de teclado para su invocacion
-desde repositorios # en debian apt-get install emacs # en fedora dnf install emacs  compilar desde el codigo fuente instalamos las dependencias</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../first-blood.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalando-gnu-emacs&#34;&gt;Instalando GNU Emacs&lt;/h2&gt;
+
+&lt;p&gt;En general utilizo emacs apartir del codigo fuente, no obstante tambien tengo
+disponible el que brinde la distribucion de turno, ya sea para probar algo o por
+si alguna version presenta algun comportamiento extraño.&lt;/p&gt;
+
+&lt;p&gt;Nunca la he instalado en el sistema emacs compilado a partir del codigo, en su
+lugar tengo un atajo de teclado para su invocacion&lt;/p&gt;
+
+&lt;h3 id=&#34;desde-repositorios&#34;&gt;desde repositorios&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;# en debian
+apt-get install emacs
+# en fedora
+dnf install emacs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;compilar-desde-el-codigo-fuente&#34;&gt;compilar desde el codigo fuente&lt;/h3&gt;
+
+&lt;p&gt;instalamos las dependencias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;su
+# en debian
+apt-get build-dep emacs
+# en fedora
+dnf builddep emacs
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por motivos muy tristes no tengo debian, la ultima ocacion que compile
+emacs en debian fue con &lt;code&gt;apt-get build-dep emacs-24&lt;/code&gt;, intenta simplemente con
+&lt;code&gt;emacs&lt;/code&gt;, de lo contrario prueba con &lt;code&gt;emacs-25&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;(si no tienes &lt;code&gt;git&lt;/code&gt; instalalo)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone git://git.sv.gnu.org/emacs.git
+./autogen.sh
+./autogen.sh git
+./configure
+make
+# ya podemos utilizar emacs
+./src/emacs
+# si deseamos intalarlo
+su
+make install
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuracion-base&#34;&gt;configuracion base&lt;/h2&gt;
+
+&lt;p&gt;tenia mucho tiempo sin &amp;ldquo;purgar&amp;rdquo; la configuracion de Emacs, el resultado esta en
+este &lt;a href=&#34;../emacs-config.zip&#34;&gt;zip&lt;/a&gt; (33mb). Para utilizarla necesitas:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;descomprimir&lt;/li&gt;
+&lt;li&gt;renombrar la carpeta como &lt;code&gt;.emacs.d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;y moverla a home.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Contenido&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- init.el         # fichero de configuracion de emacs
+- nascii-theme.el # tema nascii
+- plugins/        # todas las carpetas proceden directamente de git
+         company-mode               # autocompletado
+         magit                      # interfaz avanzada git emacs-style
+         dash.el                    #   dependencia de magit
+         with-editor                #   dependencia de magit
+         emacs-fish                 # modo para scripts fish
+         expand-region.el           # seleccion segun el contexto
+         go-mode.el                 # modo para golang
+         haskell-mode               # modo para haskell
+         markdown-mode              # modo para markdown
+         multiple-cursors.el        # cursores multiples
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Emacs posee un magnifico gestor de pagetes, pero soy un romantico e instale
+todos los &amp;ldquo;plugins&amp;rdquo; directamente de los fuentes, es decir, cada carpeta en
+&lt;code&gt;plugins&lt;/code&gt; tiene su &lt;code&gt;.git&lt;/code&gt;. En teoria esto hara que la configuracion este lista
+solo con copiar y pegar. Para ser especifico lo he probado con las versiones
+25.1.1 y 26.0.50, ambas en fedora.&lt;/p&gt;
+
+&lt;p&gt;Esto tambien significa que los repositorios no estan activados, tendras que
+hacerlo como antaño: llendo al navegador y averiguado como.&lt;/p&gt;
+
+&lt;p&gt;Los modos &lt;strong&gt;magit&lt;/strong&gt; y &lt;strong&gt;haskell&lt;/strong&gt; estan compilados (son los ficheros que
+terminan con &lt;code&gt;.elc&lt;/code&gt;) y es posible que se genere un error durante la carga aunque
+no estoy seguro de ese hecho. Si esto sucede, existen dos soluciones posibles&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;elimina la seccion correspondiente a dichos modos dentro de &lt;code&gt;init.el&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;o sigue las instrucciones dentro de &lt;code&gt;init.el&lt;/code&gt; y compila los modos&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;como notas adicionales los atajos estan pensados en la distribucion de teclado
+&lt;strong&gt;programmer dvorak&lt;/strong&gt;  con 5 teclas modificadas (los dos control, mayus, @ y \)
+y el modo go depende de que tengas una instalacion de go. Puedes seguir los dos
+pasos anteriores si encuentras algun problema (&lt;strong&gt;no olvides revisar la correcta
+ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;programo en haskell? no, pero me hace gracia tener el modo&lt;/p&gt;
+
+&lt;h2 id=&#34;iniciando&#34;&gt;Iniciando&lt;/h2&gt;
+
+&lt;p&gt;Una vez Emacs esta en el sistema y ha sido invocado presiona &lt;code&gt;C-h t&lt;/code&gt; (Control y
+&amp;lsquo;h&amp;rsquo; a la vez y luego &amp;rsquo;t&amp;rsquo;) esto abre el tutorial&amp;hellip; &lt;strong&gt;bienvenido a Emacs!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;La proxima entrega sera &amp;ldquo;Emacs - Como crear un tema&amp;rdquo;&amp;hellip; o algo asi.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 20 Aug 2017 18:42:53 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/scheme/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/scheme/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,7 +18,96 @@
       <pubDate>Sun, 20 Aug 2017 18:42:53 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/run-scheme/</guid>
-      <description>En el anterior post (cronologico del blog) comente algunos interpretes de Scheme. Ya que en Emacs tenemos un interprete de elisp nativo, supuse que habria un metodo sencillo, para correr Scheme, pero, por que correr todo un interprete cuando se puede echar mano del interprete del sistema de turno y powerizarlo con el incomparable Emacs, o si, hasta Gulie que en terminal era insipido, se vuelve Sexi! Todos los interpretes adquieren historial, hasta los que no lo tenian!</description>
+      <description>
+
+&lt;p&gt;En el &lt;a href=&#34;https://nasciiboy.github.io/prog/ischeme/&#34;&gt;anterior&lt;/a&gt; post (cronologico del blog) comente algunos interpretes de
+Scheme. Ya que en Emacs tenemos un interprete de elisp nativo, supuse que habria un
+metodo sencillo, para correr Scheme, pero, por que correr todo un interprete
+cuando se puede echar mano del interprete del sistema de turno y powerizarlo con el
+incomparable &lt;strong&gt;Emacs&lt;/strong&gt;, o si, hasta Gulie que en terminal era insipido, se
+vuelve Sexi! Todos los interpretes adquieren historial, hasta los que no lo tenian!&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; o eso es lo que aprendi en &lt;a href=&#34;http://community.schemewiki.org/?emacs-tutorial&#34;&gt;este&lt;/a&gt;
+post, que me limito a traducir y alterar parcialmente (pues supongo al estar en una wiki
+es permitido)&lt;/p&gt;
+
+&lt;p&gt;(nota: el post original, hablan de un modo &amp;ldquo;quack&amp;rdquo;, pero viendo que mensionan
+emacs-goodies, asumo que es algo &amp;ldquo;antiguo&amp;rdquo;, viniendo de ejecutar los interpretes
+en consola salvajemente, con lo que ofrece emacs por defecto tengo suficiente!
+(por ahora&amp;hellip;))&lt;/p&gt;
+
+&lt;h2 id=&#34;configuracion-basica&#34;&gt;Configuracion Basica&lt;/h2&gt;
+
+&lt;p&gt;Coloque el codigo a continuacion en su fichero &lt;code&gt;init.el&lt;/code&gt;, para configurar su uso
+con Scheme&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;;;; Siempre con resaltado de sintaxis
+(global-font-lock-mode 1)
+
+;;; tambien con resaltado de parentesis
+(setq show-paren-delay 0
+      show-paren-style &#39;parenthesis)
+(show-paren-mode 1)
+
+;;; Este es el nombre binario de mi implementacion de Scheme
+(setq scheme-program-name &amp;quot;scm&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Asegurese de remplazar &lt;strong&gt;&lt;code&gt;&amp;quot;scm&amp;quot;&lt;/code&gt;&lt;/strong&gt; con el nombre de la implementacion de Scheme
+que este utilizando en su sistema&lt;/p&gt;
+
+&lt;p&gt;(resaltar que ya tenia activo &lt;code&gt;show-parent-mode&lt;/code&gt;, la instruccion &lt;code&gt;setq show-paren-delay 0&lt;/code&gt;
+hace que no halla retraso al momento del resaltado, que por el uso que le daba,
+presuponia estaba asignado en 1 segundo&amp;hellip; correccion segun &lt;code&gt;C-h v
+show-parent-delay&lt;/code&gt; era de 0.125 segundos, maravilloso!)&lt;/p&gt;
+
+&lt;h2 id=&#34;trabajando-con-scheme&#34;&gt;Trabajando con Scheme&lt;/h2&gt;
+
+&lt;p&gt;Cuando abre un archivo, los nombres de los archivos que terminan en &lt;code&gt;.scm&lt;/code&gt; o
+&lt;code&gt;.ss&lt;/code&gt; seran asumidos como archivos de Scheme, y se abriran con el modo scheme de
+Emacs, que proporciona resaltado de sitaxis e indentacion automatica cuando
+pulse &lt;code&gt;TAB&lt;/code&gt;, y por spuesto resaltado de parentesis coincidentes.&lt;/p&gt;
+
+&lt;h3 id=&#34;ejecutar-scheme-en-emacs&#34;&gt;Ejecutar Scheme en Emacs&lt;/h3&gt;
+
+&lt;p&gt;Puede ejecutar un interprete de Scheme en Emacs. Esto le permite controlar el
+envio de los datos de entrada a su interprete desde emacs.&lt;/p&gt;
+
+&lt;p&gt;En primer lugar, crearemos una ventana para correr el proceso de Scheme
+presionando &lt;code&gt;C-x 2&lt;/code&gt;, seguido por &lt;code&gt;C-x o&lt;/code&gt; para ir a esta. Ahora podemos
+ejecutar un proceso de Scheme ingresando &lt;code&gt;M-x run-scheme&lt;/code&gt;.  Esto ejecutara el
+proceso que configuro anteriormente en su &lt;code&gt;.init.el&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Si esta realizando una prueba temporal, escriba en un buffer cualquiera &lt;code&gt;(setq
+scheme-program-name &amp;quot;scm&amp;quot;)&lt;/code&gt; (remplazar &lt;em&gt;scm&lt;/em&gt;), coloque el cursor en el parentesis de cierre y
+pulse &lt;code&gt;C-x C-e&lt;/code&gt;, de esta forma puede probar un interprete distinto, luego de
+cerrar la secion previa escribiendo &lt;code&gt;(exit)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ischeme.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para volver a la ventana inicial, presione &lt;code&gt;C-x o&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Puede utilizar &lt;code&gt;C-x C-e&lt;/code&gt; para enviar una expresion. Tambien puede enviar una
+region, un comando previo o incluso el buffer entero, para consultar el resto de
+atajos activos y disponibles (no vinculados con ninguna combinacion de teclado)
+presione &lt;code&gt;C-h m&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;comandos-basicos&#34;&gt;Comandos basicos&lt;/h3&gt;
+
+&lt;p&gt;Algunos comandos basicos de movimiento del cursor:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-a&lt;/code&gt;: Inicio de linea.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-e&lt;/code&gt;: Fin de linea.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-p&lt;/code&gt;: Linea previa.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-n&lt;/code&gt;: Linea suguiente.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-f&lt;/code&gt;: Avarzar un caracter.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b&lt;/code&gt;: Retroceder un caracter.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-x delback&lt;/code&gt;: Matar hasta el inicio de linea&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-p&lt;/code&gt;: Retroceder por el historial.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-n&lt;/code&gt;: Avanzar por el historial.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

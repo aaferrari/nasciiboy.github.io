@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 04 Jun 2017 14:57:33 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/anime/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/anime/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,130 @@
       <pubDate>Sun, 04 Jun 2017 14:57:33 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/post/ramen-iii/</guid>
-      <description>Es cansado ser un ser vivo (humano, al menos), pero aunque no pueda y otras veces no quiera tener cosas bonitas, los bites del disco duro pueden almacenar buenas cosas, grandes historias, sonidos ipnoticos y otras &amp;ldquo;sensaciones&amp;rdquo;
-En cuanto a la programacion, estoy leyendo el &amp;ldquo;Lenguaje de Programacion Go&amp;rdquo; relajado y haciendo todos los ejercicios que puedo (repo aca), asi mismo comence a toquetear un poco el codigo base de morg, en lo que creo sera una larga y lenta rescritura, por cierto, adaptando encontre un bug gordo, que creo se encuentra en katana, como empezare la refactorizacion por hay, pues, la correccion tambien tomara su tiempo</description>
+      <description>
+
+&lt;p&gt;Es cansado ser un ser vivo (humano, al menos), pero aunque no pueda y otras
+veces no quiera tener cosas bonitas, los bites del disco duro pueden almacenar
+buenas cosas, grandes historias, sonidos ipnoticos y otras &amp;ldquo;sensaciones&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;En cuanto a la programacion, estoy leyendo el &amp;ldquo;Lenguaje de Programacion Go&amp;rdquo;
+relajado y haciendo todos los ejercicios que puedo (repo &lt;a href=&#34;https://github.com/nasciiboy/TGPL-Exercises/&#34;&gt;aca&lt;/a&gt;),
+asi mismo comence a toquetear un poco el codigo base de morg, en lo que creo
+sera una larga y lenta rescritura, por cierto, adaptando encontre un bug gordo,
+que creo se encuentra en &lt;strong&gt;katana&lt;/strong&gt;, como empezare la refactorizacion por
+hay, pues, la correccion tambien tomara su tiempo&lt;/p&gt;
+
+&lt;p&gt;subliminalmente, colque un enlace del tema en r/programming&amp;hellip; como veo la
+situacion, no despierta ningun interes y el tiempo que podia dedicar (casi)
+despreocupadamente ha llegado a su fin, supongo, tocara dedicar tiempo a tareas
+mas mundanas, y aprender muchas cosas mas, quiza mas lentamente, aunque sin
+dejarlo&amp;hellip; pero esto ya antes sucedio y hasta olvide como es eso de programar,
+por el otro lado, durante el ultimo año alcance mi mejor momento intelectual y
+como veo el golang, si me pongo al tema, quiza en unos 6 meses podria darmelas
+de profesional haciendo mierdas web (risa)&lt;/p&gt;
+
+&lt;p&gt;sumado a lo anterior forkee hugo, pues la libreria de expreciones regulares
+hecha en casa ya es concurrentemente segura, asi que no deberia haber mucha
+complicacion en incorporar morg al cms&amp;hellip; he, hay muchos ficheros, modifique
+todo lo que parecia evidente, basado en el parser de org y srt. Aunque compilo,
+no quedo activo, la opcion logica? escribir mi propio cms con casinos y
+colegialas en pocos y entendibles ficheros&lt;/p&gt;
+
+&lt;p&gt;Bueno, empecemos por el material&lt;/p&gt;
+
+&lt;h2 id=&#34;docu&#34;&gt;docu&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;El Juego de Ender + La voz de los Muertos&lt;/strong&gt; no tengo palabras para describir
+lo bueno del primero y lo exageradamente epico del segundo, la forma en que se
+conjugan varios problemas en paralelo y se resuelven, te obligan a leer hasta
+ver borroso. Muchas y varias buenas mentes comentan que los siguientes dos
+libros de la &lt;em&gt;saga&lt;/em&gt; flaquean, aun asi no se dice que sean malos y teniendo el
+transfondo que tienen me es dificil visualizar al autor en picada, mientras
+destruye su creacion, asi que continuare la lectura, luego de terminar un receso
+(La radio de darwin), cuando concluya o deje la saga, llegara un post
+especifico, mientras tanto no puede evitar ordenar su lectura. Es tan bueno como
+&lt;strong&gt;la trilogia original de trantor&lt;/strong&gt;, o el primer libro de &lt;strong&gt;Dune&lt;/strong&gt; (del que
+desisti por los comentarios negativos generalizados acerca de la calidad de las
+secuelas, aunque tampoco descarto continuar, pero joder termina tan bien y en un
+momento tan epico que fue necesario aplicar toda la determinacion de mi ser para
+no seguir)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2001: Una odisea espacial&lt;/strong&gt; Si viste el filme de Kubrick y no terminaste de
+enterder de que iba, aqui encontraras respuestas claras y mas desarrolladas. Me
+quedo con la pelicula&amp;hellip; completando con el libro. Si bien no me emociono, no
+fue dificil concluir, quiza despues retome la saga&lt;/p&gt;
+
+&lt;h2 id=&#34;4k&#34;&gt;4k&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Kick-Ass&lt;/strong&gt; (aplausos) por cosas como estas voy al cine, pero esto no lo vi en
+el cine, pero me hubiese gustado. Desconosco el comic, pero la cinta es como un
+&lt;em&gt;que tal si&lt;/em&gt; la gente &amp;ldquo;normal&amp;rdquo; se vuelve superheroe, con resultados obvios, si
+no fuese por que se unen una mindi y un Big Daddy, jo, jo, no es que sea
+tarantinesco, pero si te gusta lo uno te gustara lo otro. Mi momento favorito,
+big daddy ardiendo, fue graciosicimo&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Kick-Ass 2&lt;/strong&gt; el resultado la vuelve una secuela inecesaria, donde tube la
+sensacion de estar ante un capitulo de los power rangers algo mas desarrollados,
+sin llegar a ser emocionante, almenos no para el anciano que escribe esto. Es basura?
+no. Es recomendable? para mi no. Si no tienes nada que hacer y buscas algo que
+solo este bien, se puede ver&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;El Juego de Ender&lt;/strong&gt; luego de leer el libro, toco ver que habian hecho con la
+cinta, he, bueno, hay mejores formas de tirar el dinero, sin ser mala, es una
+mala adaptacion y un mal blockbuster, por que no toman el tiempo para dar un
+transfondo solido, las escenas de lucha (las dos) y el juego de compate es
+penoso, no dejan de decir que ender es &amp;ldquo;el elegido&amp;rdquo; sin justificacion, no se
+toman el tiempo para ver crecer a ender (o sus hermanos), ni su transito
+&amp;ldquo;educativo&amp;rdquo;, las batallas con los insectores tampoco motivan nadaaa, ademas le
+dan un interes romantico (para que?), solo me falto ver banderas americanas. En
+conclucion, es un resumen apresurado e insustancial del libro, tarde mas tiempo
+en sincronizar subtitulos que adelantando escenas aburridas, cofff, ghost in the
+shell.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;K-Pax&lt;/strong&gt; kevin spacio, el de Amenican Beauty, haciendo el papel de un
+humano-alienigena (o no) que va al hospital psiquiatrico mientras pone a prueba
+las creencias de su doctor, con pocos efectos especiales y un final a gusto del
+espectador. Entretenida, entra en la clasificacion de &amp;ldquo;buena pelicula de tele&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Kizumonogatari - 02&lt;/strong&gt; segunda parte de la trilogia Kizumonogatari, que narra
+el principio de las &lt;strong&gt;Monogatari&lt;/strong&gt; &amp;ldquo;cosas&amp;rdquo;&amp;hellip; que? resumiendo, segun yo, el
+maximo exponente del &amp;ldquo;anime moderno&amp;rdquo;, o en otras palabras veeeeelo. Y la peli?
+uffffffff, maravillosa, lavate las manos y no te toques muy fuerte&lt;/p&gt;
+
+&lt;p&gt;dejando de lado, el increible estilo visual, graficos 2d(?) sobre grabacion
+real, es delicioso, la anterior estubo bien, pero esta me dejo muy loco&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Boku No Hero&lt;/strong&gt; un anime (shonen) entretenido de buena calidad, su segunda
+temporada (aun en emision) me recuerda los buenos tiempos de naruto, antes de
+ser un relleno sin fin y &amp;ldquo;recuerdos&amp;rdquo; e &amp;ldquo;itachi&amp;rdquo; y el mierda &amp;ldquo;zazuque&amp;rdquo; o todo
+junto y rebuelto de mala forma. Por ahora BNH lo esta haciendo maravilloso,
+aunque comparando pustos de partida, sigue dando pena el camino que siguo
+raruto, espero no cometan el mismo error&lt;/p&gt;
+
+&lt;p&gt;Ultimamente me he sentido mayor, bastante canzado de las cosas genericas,
+supuestamente epicas, con protas gritones y chicas sufrientes, debe ser la edad&lt;/p&gt;
+
+&lt;h2 id=&#34;fonos&#34;&gt;fonos&lt;/h2&gt;
+
+&lt;p&gt;Pasaros varios estilos por los auriculares, en particural explorando el genero
+electronico, Tricky, Chemical Brothers y una desepcion (que devia aver previsto)
+con Eminem, no pude echuchar ni un solo album por completo del rapero, en fin lo
+que realmente acaparo la lista de reproduccion fue &lt;strong&gt;Thievery Corporation&lt;/strong&gt;, ya
+saben, buscando sonidos pachecosos para entrar en trance, o en su defecto tener
+un buen acompañamiento, y, asi fue, tienen eso pero no en las cantitades que
+buscaba, es lo malo de llebar enganchado tanto tiempo. Lo que si tienen y que
+tuvo prioridad exclusiva durante cuatro dias, es su ultimo album &lt;strong&gt;Saudade&lt;/strong&gt;:
+Bosannova nostalgico/depresivo calificado para sumirte emocionalmente mientras
+ves tus sueños rotos y tu nuve de muerte destruccion arrasa el mundo (ojala) y
+tambien para acompañar la lectura de &lt;strong&gt;La voz de los muertos&lt;/strong&gt;, como en mi caso,
+por que una agrupacion trip hop tiene esto? no tengo idea, ni me importa, es
+hermoso, KEEP CALM AND SEED Thievery Corporation&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:1187b713589685b12e9d2f2ef00c1e4b96de3ea5&amp;amp;dn=Thievery%20Corporation%20-%20Discography%20(1998-2014)%20%5bFLAC%5d&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;eso es todo por esta entrega, FIN&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,9 +150,139 @@ En cuanto a la programacion, estoy leyendo el &amp;ldquo;Lenguaje de Programacio
       <pubDate>Sun, 14 May 2017 21:52:45 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/post/ramen-ii/</guid>
-      <description>Ho, ho, ho, ho! un par de temas alteran mi ser, ambos relacionados con el software libre, la programacion, el sistema, la prision, etc&amp;hellip;
-el primero con nombre tentativo fin de la infancia&amp;hellip; del software libre o algo asi, quiza sea un tema superado, pero recien llega a mi conciencia y es probable que sea el siguiente post (o no).
-El otro esta relacionado con esa cosa llamada morg, el lenguaje de programacion golang, alguna opinion (poco informada) sobre lenguajes de programacion, traducciones y mi postura sobre la comparticion de material.</description>
+      <description>
+
+&lt;p&gt;Ho, ho, ho, ho! un par de temas alteran mi ser, ambos relacionados con el
+software libre, la programacion, &lt;q&gt;el sistema&lt;/q&gt;, la prision, etc&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;el primero con nombre tentativo &lt;b&gt;&lt;q&gt;fin de la infancia&amp;hellip; del software
+libre&lt;/q&gt;&lt;/b&gt; o algo asi, quiza sea un tema superado, pero recien llega a mi
+conciencia y es probable que sea el siguiente post (o no).&lt;/p&gt;
+
+&lt;p&gt;El otro esta relacionado con esa cosa llamada &lt;q&gt;morg&lt;/q&gt;, el lenguaje de
+programacion golang, alguna opinion (poco informada) sobre lenguajes de
+programacion, traducciones y mi postura sobre la comparticion de
+&lt;strong&gt;material&lt;/strong&gt;. No es nada nuevo bajo el sol, a mi edad ya deberia saber que no
+sere un heroe del rock, que deberia levantarme temprano, creer en algun dios,
+ser responsable y demas mierdas, pero que se puede hacer, en mi mente aun tengo
+17&lt;/p&gt;
+
+&lt;p&gt;Hasta hace dos semanas, me encontraba programando un poco, pero por distintas
+razones y necesidad, decidi aparcar el tema y ponerme a traducir cosas, aprender
+un rato y quisa ponerme en serio con eso de &lt;q&gt;las matematicas&lt;/q&gt; y el ingles,
+al menos hasta mejorar mi kung fu y poder leer libros serios, de esos de
+compiladores, interpretes, grafos, estructuras de datos y demas. La verdad es
+que entre esto y buscar empleo, pues, he, como decirlo, jo, pues a leer y
+traducir cosas que luego es tarde&lt;/p&gt;
+
+&lt;p&gt;puse un &lt;a href=&#34;https://github.com/nasciiboy/TGPL&#34;&gt;nuevo repo&lt;/a&gt; en github, creo que aun
+me falta una semana y media, para tener algo preeliminar, pero si gustan pasar a
+echar un vistaso o almacenar una copia de respaldo&lt;/p&gt;
+
+&lt;p&gt;pero bueno, no queria entrar directamente con esos temas, sin poner esta
+publicacion previa y ligera, donde les contare de forma breve algunas de las
+cosas que he estado viendo, oyendo, leyendo y lamentablemente no jugando&lt;/p&gt;
+
+&lt;h2 id=&#34;4k&#34;&gt;4K&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Alien Covenan&lt;/strong&gt; intente que me gustara y aun asi sali de mal humor del cine,
+no soy muy exigente, digo como pelicula fuera de contexto Prometeus me gusto,
+pero esta, un robot &lt;q&gt;malevolo&lt;/q&gt; es el creador de los aliens? en serio? que no
+estaban buscanda a unos humanoides grises con capa jedi?. Por que nadie de la
+tripulacion me importa ni un poco, peor aun la infeccion barata y unos bichos
+sin gracia&amp;hellip; bahh esta no dura ni una semana en el cine&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Guardines de la Galaxia II&lt;/strong&gt;, casi igual de divertida y creo que mas
+hilarante, el inicio con el bicho bailarin no me hace gracia, ni aunque tenga a
+la ELO de fondo, y que la cinta en verdad trate de &lt;q&gt;los amigos&lt;/q&gt; (o era la
+familia) no esta mal, digna secuela&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;La la land&lt;/strong&gt; no suelo ver estas cosas, pero como todos los podcast peliculeros
+que escucho la ponian muy alto, toco verla, en resumen dire que es &lt;strong&gt;ipnotica&lt;/strong&gt;
+y no una sosa pelicula romantica&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Raw&lt;/strong&gt; uuuuff, esta si es entretenida, segun trata de una chica en su despertar
+sexual (o eso dicen), pero yo vi una peli francesa(?) de un par de chicas muy
+locas, haciendo cosas divertidas y sin sentido, como en la vida real&amp;hellip; en
+serio, en francia o por hay, asi es asistir a una facultad?. La sesion dende vi
+esto, estaba llena de chicas, y habia escenas cautivadoras, pero no, no ocurrio
+ninguna fantacia juvenil&lt;/p&gt;
+
+&lt;p&gt;y finalmente dos series anime:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3 gatsu no Lion&lt;/strong&gt;, un tipo que juega al shogi y tiene problemas. Veinte y algo
+capitulos muy entretenidos, que no van a ningun lado, y&amp;hellip; la recomiendo, me
+dieron ganas de probar eso del shogi, volverme profesional y vivir de jugar
+partidas, sera? solo me hace falta saber shogi, ser profesional y ser japones&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:0c6bc4f7c68633eed504159f5610acad1e37d8f1&amp;amp;dn=%5bPuyaSubs!%5d%203-%20gatsu%20no%20Lion&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounc&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Tonari no Kaibutsu-kun&lt;/strong&gt;, una entretenida comedia romantica que no va a ningun
+lado y ya, lo meteria en la categoria de &lt;q&gt;si te gusto &lt;strong&gt;Karekano&lt;/strong&gt;&lt;/q&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:64c71e3560a49b5cb98ef2e03cbf77fdb819e8e8&amp;amp;dn=%5bOnF%5d%20Tonari%20no%20Kaibutsu-kun%20COMPLETA&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(nota: por falta de espacio solo compartire estos torrents una semana y a eliminar)&lt;/p&gt;
+
+&lt;p&gt;tamben vi &lt;strong&gt;Youjo Senki&lt;/strong&gt;, que causo furor en el fandom&amp;hellip; no termine de verle
+la gracia, aun continuo enalteciendo &lt;strong&gt;Kuzu no Honkai!&lt;/strong&gt; (pasar al post
+correspondiente)&lt;/p&gt;
+
+&lt;p&gt;eso y otras tantas cosas que no vale la pena ni comentar, exeptuando un reciente
+descubrimiento de un canal de yutube, que estoy consumiendo de a poco y
+recomiendo encarecidamente &lt;a href=&#34;https://www.youtube.com/user/rev0luci0nfinal&#34;&gt;Esquizofrenia Natural&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;fonos&#34;&gt;fonos&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Focus – Focus 3&lt;/strong&gt; empezando con progresivo del bueno, no encontre un
+&lt;q&gt;recopilatorio&lt;/q&gt; con toda la discografia de la banda (que no fuera mp3 o un
+jodido vinil) asi, que este es el primer disco de ellos que escucho, simplemento
+fantastico&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Moby&lt;/strong&gt; por recomendacion de goadfloyd y como ultimamente escucho mucho electro
+escuche una variada sellecion de este artista. Cada disco va a su rollo, y no
+estan mal pero le falta un algo que los vuelva grandes, exepto por &lt;strong&gt;Animal
+Rights&lt;/strong&gt;, oh este es punk del bueno! el resto esta bien, en conjunto antes
+recomendaria la escucha de &lt;strong&gt;Massive Attack&lt;/strong&gt; o &lt;strong&gt;Air&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Queen II&lt;/strong&gt;, otra recomendacion de goadfloyd, no habia tocado esta banda por
+que en mi mente eran discos sin gracia extremadamente homosexuales
+(musicalmente) como los Bee Gees, para mi sorpresa este y Queen (el disco
+homonimo) estan muy buenos, aunque por motivos extraños, no duraron mas de 5
+reescuchas, antes de pasar a otros asuntos, cuando de media el material soberbio
+suele durar en exclusiva de 2 a 5 dias en periodos de escucha de 10 horas&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Gorillaz – Humanz&lt;/strong&gt;, inesperadamente y sin aviso, esto aparecio en la lista de
+pirate bay, se bajo y duro un dia en exclusiva, y luego medios dias como por una
+semana y luego escuchas esporadicas, si eso no significa que me encanto, pues no
+se que sea. Haber, esta lejos de ser perfecto, pero tiene variedad, buen ritmo y
+piesas alucinantes (aclaro que no conosco, ni me intereza una mierda la letra,
+la voz solo es otro instrumento), mi favorita y por que soy un romantico &lt;strong&gt;Buster
+and Blue&lt;/strong&gt;. Como tengo ganas de escuchar esto o el Focus bien verde&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Libertines – Up The Bracket&lt;/strong&gt; Si te gusto el &lt;strong&gt;The Libertines&lt;/strong&gt; este
+tambien te va a gustar, medio surf, alegre y sin pretenciones (creo)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Matrix Revolutions OST&lt;/strong&gt; tambien ponias la pista de los creditos finales
+en loop? aqui encontraras eso y mas!. Ya habia escuchado el OST de la primer
+cinta y bien a secas, sin dejar de ser una recopilacion carente de consepto
+y tambien la banda de &lt;strong&gt;Animatrix&lt;/strong&gt; (electronica de la buena), pues esto es
+electro ambiental, movida turbio matrixera&lt;/p&gt;
+
+&lt;h2 id=&#34;docu&#34;&gt;docu&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Eso que llamamos logica&lt;/strong&gt; lo unico que intente leer, lo tube que dejar cuando
+comenzaron a hablar de conjuntos y cosas turbias&lt;/p&gt;
+
+&lt;p&gt;y encontre dos torrents, de esos para acrecentar la libreria de libros que jamas
+leeras, sobre programacion, lisp y haskell respectivamente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:25e504934978bf170f56f47cd1a52475d8ee1cf9&amp;amp;dn=Lisp&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+magnet:?xt=urn:btih:f837c2a64bb97c11940fe0bf966878cdb07ea912&amp;amp;dn=Haskell&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
@@ -39,9 +291,187 @@ El otro esta relacionado con esa cosa llamada morg, el lenguaje de programacion 
       <pubDate>Sun, 02 Apr 2017 21:08:41 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/post/ramen-i/</guid>
-      <description>Hace unas semanas que no publico naha, que por haber cosas recomendaciones o temas no han faltado, pero entre la pereza y la programacion, no ha salido naha.
-Como paleativo e imitando otros blogs (kofff&amp;hellip; onda hostil, quijote libre) abro esta seccion para contar en que ando, prefiero poner una post de una tematica particular, pero ya sera cuando termine este mes.
-Katata El motivo principal del silencio literario fue katana, un componenten del proyecto morg (que encontraran dentro de las etiquetas del lado derecho de este blog).</description>
+      <description>
+
+&lt;p&gt;Hace unas semanas que no publico naha, que por haber cosas recomendaciones o
+temas no han faltado, pero entre la pereza y la programacion, no ha salido naha.&lt;/p&gt;
+
+&lt;p&gt;Como paleativo e imitando otros blogs (kofff&amp;hellip; &lt;a href=&#34;http://ondahostil.wordpress.com&#34;&gt;onda hostil&lt;/a&gt;, &lt;a href=&#34;http://quijotelibre.com&#34;&gt;quijote libre&lt;/a&gt;)
+abro esta seccion para contar en que ando, prefiero poner una post de una tematica particular, pero ya sera cuando
+termine este mes.&lt;/p&gt;
+
+&lt;h2 id=&#34;katata&#34;&gt;Katata&lt;/h2&gt;
+
+&lt;p&gt;El motivo principal del silencio literario fue &lt;em&gt;katana&lt;/em&gt;, un componenten del
+proyecto &lt;em&gt;morg&lt;/em&gt; (que encontraran dentro de las etiquetas del lado derecho de
+este blog). Dicho componente conseptualmente se encarga de tomar el formato de
+documentacion en texto plano y regresar una estructura &lt;em&gt;&lt;q&gt;sencilla&lt;/q&gt;&lt;/em&gt; con el
+documento digerido de forma &lt;em&gt;&lt;q&gt;sencilla&lt;/q&gt;&lt;/em&gt;, encabezados, &lt;q&gt;tabla de contenidos&lt;/q&gt;,
+parrafos, enfasis, listas, dialogos, abouts, tablas, comandos y configuracion&lt;/p&gt;
+
+&lt;p&gt;en el libro &lt;em&gt;The Go Programming Language&lt;/em&gt; (del que hare una reseña cuando
+termine de leerlo y del que recomiendo su lectura) muestran una &lt;q&gt;libreria&lt;/q&gt;
+de nombre &lt;code&gt;x/net/html&lt;/code&gt; con la cual parsear un documento html, para regresar una
+estructura en forma de lista gerarquica o algo asi. Esto sirvio de inspiracion
+para iniciar el modulo katana&amp;hellip; aunque como muchas otras cosas al enfrentar el
+codigo lo encontre demasiado complejo e innentendible, asi que pase de todo y
+comence a programar a lo loco.&lt;/p&gt;
+
+&lt;p&gt;Primero surgio el fichero &lt;code&gt;markup.go&lt;/code&gt; que es una estructura/objeto donde se
+almacena el resaltado, y los comandos &lt;code&gt;@&lt;/code&gt; de texto&lt;/p&gt;
+
+&lt;p&gt;Una vez que la cosa funciono, comence con la estructura del documento en si, que
+no deja de ser un nodo, con slices de nodos que en teoria representan la seccion
+y su contenido (todo recursivo), peeeeero no lo estructure de forma
+convencional, asi que tengo un arreglo (slice) de nodos que representan los
+encabezados del documento, y al mismo tiempo, sirve de tabla de contenidos, aunque
+los encabezados en si no estan anidados, todos son &lt;q&gt;hermanos&lt;/q&gt; la asociacion
+queda a juicio de quien utilize la estructura&lt;/p&gt;
+
+&lt;p&gt;asi tenemos que&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;TOC []DocNode
+    |- [0] Encabezado Uno
+    |- [1] Encabezado Dos
+    |- [2] Encabezado Tres
+    |- [3] Encabezado Cuatro
+    ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y cada encabezado&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Encabezado
+ Contenido []DocNode
+           |- [0] Parrafo
+           |- [1] Lista
+           |- [2] Otro Parrafo
+           |- [3] Tabla
+           ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y cada parrafo, lista, o cosa&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;parrafo, lista, o cosa
+ Contenido []DocNode
+           |- [0] Cosa
+           |- [1] Lista
+           |- [2] Otra cosa
+           |- [3] Otra cosa mas o no
+           ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;cada nodo, es un objeto de tipo interface, que tiene dos metodos, uno para
+optener el tipo de nodo y otro para optener su informacion, el contenido por
+otra parte se optiene con un simple bucle atravez de la estructura.&lt;/p&gt;
+
+&lt;p&gt;No me quiero extender demasiado, ya que la explicacion de esto y los motivos por
+los que lo estructura asi, pueden requerir unas horas de platica, dibujos y
+revisar el codigo (que como costumbre mia, no incluye ni un jodido
+comentario&amp;hellip;).&lt;/p&gt;
+
+&lt;p&gt;para concluir ahora &lt;em&gt;biskana&lt;/em&gt;, el modulo para exportar el ducumento adelgaso de
+forma compulsiva, y utiliza una pantilla de texto para crear el html, como hace
+el cms &lt;em&gt;hugo&lt;/em&gt;. Aun falta agregar muchas pruebas, corregir unos detalles, agregar
+opciones de exportacion y demas. De momento la siguiente semana voy a comenzar a
+programar una interfaz de texto para visualizar los documentos, despues el
+buscador&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;espero presentar esto en alguna charla del flisol, aunque si no consigo
+colaboradores, es posible que termine ofreciendo el tema a alguna
+organizacion/empresa y salir de mi miseria&amp;hellip; o dedicarle un año mas al tema,
+aunque esto ultimo lo veo dificil&lt;/p&gt;
+
+&lt;p&gt;en fin, el codigo esta en el repo, tengo algunos reparos con las plantillas de
+texto y no termino de visualizar como parcear las tablas, ni como dibujarlas&lt;/p&gt;
+
+&lt;p&gt;(pd: mientras leo, voy revisando el libro de Go, cuando publique la reseña, actualizo el
+matiral (o no), mas  o menos iba por el 50 y algo %, lo pause por ponerme a
+programar e implementar algunas cosas, hace dos semanas)&lt;/p&gt;
+
+&lt;h2 id=&#34;4k&#34;&gt;4k&lt;/h2&gt;
+
+&lt;h3 id=&#34;kuzu-no-honkai&#34;&gt;Kuzu no Honkai&lt;/h3&gt;
+
+&lt;p&gt;Ufffffff, que sabroso final, cada capitulo es una delicia extraña, actualizo el
+post del tema, con un enlace de descarga, lastimozamente no tengo espacio para
+mas cosas en mi disco duro, ni idea que que pueda borrar, el ciclo de
+eliminacion de materiales para vizualizar nuevas cosas ha llegado a su limite,
+te odio internet, deja de compartir o dame un disco con un chilion de teras (con
+un tera mas podria sobrevivir unos meses)&lt;/p&gt;
+
+&lt;p&gt;Pues eso, que pasen a ver, cuando resuelva el dilema de almacenamiento la
+volvere a ver!&lt;/p&gt;
+
+&lt;h3 id=&#34;otras-cosas&#34;&gt;otras cosas&lt;/h3&gt;
+
+&lt;p&gt;Tambien vi &lt;em&gt;Tekkon Kinkreet&lt;/em&gt;, m-a-r-a-v-i-l-l-o-s-a, peli de animacion de
+calidad sublime&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:299fd6aec4cfbdc5b250a433ee4fd21b390d4d04&amp;amp;dn=TekkonKinkreet%20720p%20%5bac3%20ITA%20ENG%20JAP%20sub%20ITA%20ENG%20FRA%20SPA%20POR%5d%20by%20Salvo.mkv&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.ex.ua%2fannounce&amp;amp;tr=http%3a%2f%2finferno.demonoid.ph%3a3389%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&amp;amp;tr=http%3a%2f%2fcpleft.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ffr33dom.h33t.to%3a3310%2fannounce&amp;amp;tr=http%3a%2f%2ffr33dom.h33t.to%3a3310%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;amp;tr=http%3a%2f%2f10.rarbg.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.publicbt.com%3a80%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.publicbt.com%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.istole.it%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.ccc.de%3a80%2fannounce&amp;amp;tr=http%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.1337x.org%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.tntvillage.scambioetico.org%3a2710%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.tntvillage.scambioetico.org%3a2710%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.torrentbay.to%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftorrentbay.to%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftorrentbay.to%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.yify-torrents.com%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337%2fannounce&amp;amp;tr=http%3a%2f%2fsalvotnt.xoom.it%2fannounce.php&amp;amp;tr=http%3a%2f%2finfo2.netsons.org%2fannounce.php&amp;amp;tr=http%3a%2f%2fsalvotnt.co.nf%2ftrack.php&amp;amp;tr=http%3a%2f%2fsalvotnt.altervista.org%2fannounce.php&amp;amp;tr=udp%3a%2f%2ftorrents.ddunlimited.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftorrents.ddunlimited.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.ilibr.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.istole.it%3a80&amp;amp;tr=http%3a%2f%2fexodus.desync.com%2fannounce&amp;amp;tr=http%3a%2f%2fsugoi.pomf.se%2fannounce&amp;amp;tr=http%3a%2f%2f94.228.192.98%2fannounce&amp;amp;tr=http%3a%2f%2fanimeita.url.ph%2fannounce.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Hasta el ultimo hombre&lt;/em&gt;, una peli del señor Mel Guibson, que no termino de
+enterder si intenta dejar una leccion o tener una excusa para ser &lt;em&gt;Violenta&lt;/em&gt;(?),
+je, je, mucha sangre, desmembramientos y perfosaciones, me gusta!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Arrival&lt;/em&gt; (la llegada), que bonita, en el podcast &lt;em&gt;La orbita de Endor&lt;/em&gt; se
+explayan (solo) un poco mas, recomendada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:9c1872923ca650adca73e4b863c2c13a85d5e9d5&amp;amp;dn=Arrival%202016%201080p%20BluRay%20x264%20DTS-JYK&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;amp;tr=udp%3a%2f%2fpublic.popcorn-tracker.org%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Train to Busan&lt;/em&gt;, zombies coreanos(?)!, que bien echa esta, la escena donde los
+zombies &lt;q&gt;frenan&lt;/q&gt; es cuando menos creible, si fuese el dictador de un pais,
+obligaria a mis basallos a representar una peli sangrienta, con sangre de verdad&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:168637b7a074323f92b4d233383df90e7eb88ce0&amp;amp;dn=Train%20To%20Busan%20(2016)%20%5b1080p%5d%20%5bYTS.AG%5d&amp;amp;tr=http%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.tfile.me%2fannounce&amp;amp;tr=http%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2feddie4.nl%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker4.piratux.com%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.trackerfix.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftorrent.gresille.org%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.me%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fglotorrents.pw%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.blackunicorn.xyz%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2fp4p.arenabg.ch%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.to%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;logre juntar unas monedas para ir al templo y dejar la cooperacion:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Logan&lt;/em&gt; mmmmmmm, pudo ser mejor. Si su proposito fue ser incomoda, lo
+logro. Buena sangre, lo de convertir una cruz en una &lt;em&gt;X mutante&lt;/em&gt; es de las cosas
+mas bonitas que he visto&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;John Wick: Chapter 2&lt;/em&gt;, no puedo resistir ver pelis donde salga el señor
+&lt;em&gt;neo&lt;/em&gt;, el principio es continuista, para el intermedio ya estas dentro de la
+temitica &lt;em&gt;&lt;q&gt;es Jhon Wick&lt;/q&gt;&lt;/em&gt;, y el final? Soberbio, quiero ver lo que sigue.
+Aun encuerto, lo de &lt;q&gt;por que es Jhon Wick&lt;/q&gt; dificil de aceptar, y la
+excusa para la secuela no tiene sentido, pero que mas da, diria que es mejor
+que la primera parte&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Kong Skull Island&lt;/em&gt;, mostruos!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;para terminar, una buena persona, subio un par de torrentes, con series magnificas:
+&lt;em&gt;Space Dandy&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:aa266b5fd7c7ca7ebd296820488caf71757b2320&amp;amp;dn=%5bAniHenjin%5d%20Space%20Dandy%20%5bTV%20720p%5d&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+magnet:?xt=urn:btih:bb17866b65881296f73a3bb443db833859e123a2&amp;amp;dn=%5bAniHenjin%5d%20Space%20Dandy%20Season%202%20%5bTV%20720p%5d&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;un anime de aventura espacial, un poco a lo cowboy bebop, pero muy, muy
+experimental, con capitulos literalmente lizergicos, una joya&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nichijou&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:5a899138b847a39a7c816ae94e08dba3e3566fc5&amp;amp;dn=%5bAniHenjin%5d%20Nichijou%20%5bTV%20720p%5d&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;anime que explora el humor japones hasta sus ultimas consecuencias, con&amp;hellip; una
+animacion que parece para crios y sin ningun tema cachondo. Visualizala o
+muere!&lt;/p&gt;
+
+&lt;h2 id=&#34;fonos&#34;&gt;fonos&lt;/h2&gt;
+
+&lt;p&gt;varios discos de Paul McCartney, mi beatle faborito (musicalmente) me gustan sus
+primeros 5-7 albums, los ochentas son raros, algo de Steve Vai (Alive In An
+Ultra World), tambien unos albums de Sonic Youth la que por muchos años fuese mi
+banda faborita, &lt;q&gt;Chrome Dreams (I)&lt;/q&gt; un disco unoficial de Neil Young, y un
+puñado mas de nuevas he interesantes escuchas, tantas que ni me acuerdo del
+orden/nombres&amp;hellip;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -50,8 +480,115 @@ Katata El motivo principal del silencio literario fue katana, un componenten del
       <pubDate>Wed, 22 Feb 2017 21:08:41 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/post/kuzu-no-honkai/</guid>
-      <description>Era mi primer dia de instituto&amp;hellip; me alegre muchisimo, iba a poder verla todos los dias de clase ––pausa, respira y no parescas nervioso–– creo que los dos pensamos lo mismo ––es verdad, da igual–– tuku, tuku, tuku ––fue electrico–– todo lo que quiero hacer&amp;hellip; mierda, otro anime colegial &amp;hellip; bueno, las pantallas pueden mostrar cosas que me satisfacen plenamente, es decir, no es normal??
-Asi es, Kusu no Honkai actualmente en transmision (capitulo 7) merece su propio post.</description>
+      <description>
+
+&lt;p&gt;Era mi primer dia de instituto&amp;hellip; me alegre muchisimo, iba a poder verla todos
+los dias de clase ––pausa, respira y no parescas nervioso–– creo que los dos
+pensamos lo mismo ––es verdad, da igual–– tuku, tuku, tuku ––fue electrico––
+todo lo que quiero hacer&amp;hellip; &lt;em&gt;mierda, otro anime colegial&lt;/em&gt; &amp;hellip; bueno, las
+pantallas pueden mostrar cosas que me satisfacen plenamente, es decir, no es
+normal??&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../ushijima.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Asi es, &lt;em&gt;Kusu no Honkai&lt;/em&gt; actualmente en transmision (capitulo 7) merece su
+propio post. Ya no importa lo que suceda, ni como termine la historia, esta
+serie a subido al olimpo de creaciones audiovisuales personal&lt;/p&gt;
+
+&lt;h2 id=&#34;demasiado-humano&#34;&gt;Demasiado humano&lt;/h2&gt;
+
+&lt;p&gt;––Que se supone que es &lt;em&gt;esto&lt;/em&gt;?–– supongo que toda creacion tiene una intecion,
+aunque la intencion solo puede ser recreada si el creador y el destinatario
+comparten su forma de pensar. Entonces pues, dificil sera compartir la
+experiencia con otro ser, por ejemplo,&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;q&gt;la tumba de las luciernagas&lt;/q&gt; me parece comica y sarcastica, un mocoso
+que hace su voluntad, terminando jodido y (luego) muerto, que gracioso,
+enserio! (me senti identificado)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;Q&gt;Visitor Q&lt;/q&gt; es incluso mas divertida, aun asi alguno podria creer que es
+enfermisa.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Se comenta que &lt;q&gt;A servian film&lt;/q&gt; es grotesca, y&amp;hellip; me aburrio&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;creo que &lt;em&gt;Neon Genesis Evangelion&lt;/em&gt; deberia ser vista por todo humano y aun asi
+algun amigo no fue capaz de verla entera&amp;hellip;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;asi pues, que &lt;strong&gt;sensaciones&lt;/strong&gt; genera la obra en turno?&lt;/p&gt;
+
+&lt;p&gt;exitacion, mucha exitacion! aderesada por nostalgia, frustracion,
+deseos y algo de comiedia parodica autoreflejada&lt;/p&gt;
+
+&lt;p&gt;de que dices que trata? es un drama colombiano, humano-japones, erotico festivo
+con fraces chulas, pensonajes a mi parcer mas humanos que muchos humanos, que
+encima explican sus motivaciones de una forma creible e inusualmente clara&lt;/p&gt;
+
+&lt;h2 id=&#34;tu-cuerpo-lo-sabe&#34;&gt;Tu cuerpo lo sabe&lt;/h2&gt;
+
+&lt;p&gt;El anime/j-cine/manga es capas de mostrar a la humanidad de forma exarservada,
+violenta y sexosa con pocas (y a veces muchas) limitaciones de lo visualmente
+expuesto, una cultura contradictoria y misteriosa.&lt;/p&gt;
+
+&lt;p&gt;Se suguiere, mas de lo que se muestra, quiza la clave para volver morboso y
+exitante un simple roce de dos trozos de carne humana animados, llenos de
+pensamientos confusos, miedo, sudor, ignorancia, rush&amp;hellip; que bien se siente,
+vamos de nuevo?&lt;/p&gt;
+
+&lt;p&gt;Pues si, una semana es mucho tiempo, tanto como para ver los episodios otra
+vez. El subidon no fue igual, aunque mantiene la calidad.&lt;/p&gt;
+
+&lt;p&gt;Ahora he visto (o querido ver) algo, ademas del drama adolecente.&lt;/p&gt;
+
+&lt;p&gt;Un dia, alguien me pregunto que podia regalarle a alguna persona (a mi, ha, ha,
+ha, si soy lento para algunas cosas), le sugeri dar dinero asi el sujeto
+compraria algo de su agrado o necesidad. Pasaron de la recomendacion y dieron lo
+que les vino en gana, entonces pense, en lo egoista que es esperar algo de otra
+persona, puedo exigir algo a alguien? meresco un trato o reaccion a gusto mio?&lt;/p&gt;
+
+&lt;p&gt;Ya no recuerdo bien la respuesta mental a la pregunta, solo llegar a la
+conclucion de que &lt;em&gt;Toda accion humana es egoista&lt;/em&gt;, incluso si se hace sin
+esparar, esperar nada.&lt;/p&gt;
+
+&lt;p&gt;Como? pues eso, entiendo el egoismo como &lt;em&gt;la accion&lt;/em&gt; que emprende el humano
+apartir de su limitada y estrecha forma en que se configura su conciencia fruto
+de interacciones fuera de su comprension, sin proposito, mas no sin causas y
+efectos, algo que llamo aleatoriadad.&lt;/p&gt;
+
+&lt;p&gt;Aunque el egoismo tiene conotaciones negativas, que de negativo tiene lo
+anterior&amp;hellip; pero y una ves que ves las cosas asi entonces que? ni idea, siempre
+he sido un rick sanchez (poderes mentales no incluidos)&lt;/p&gt;
+
+&lt;p&gt;y a cuento de que la historia? kuzu no honkai podria ir en esa direccion, el
+descubrimiento del egoismo de todo individuo, luego si termina con locura y
+destruccion, mucho mejor, aunque no descarto una escena donde se froten todos de
+forma lasciva&lt;/p&gt;
+
+&lt;h2 id=&#34;dame-mas&#34;&gt;Dame mas&lt;/h2&gt;
+
+&lt;p&gt;Si te gusta esta serie y quieres un poco mas podrias ver&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;karekano&lt;/em&gt;, ternura nostalgica&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Nazo no Kanojo&lt;/em&gt;, romance erotico ligero&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:9307f6d16780dc2ad3f87828347cf1963c0a94c6&amp;amp;dn=Nazo%20no%20kanojo%20X&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Aku no Hana&lt;/em&gt;, recorrido tortuoso y confuso para ser persona&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;sayonara-baby&#34;&gt;sayonara baby&lt;/h2&gt;
+
+&lt;p&gt;(&lt;em&gt;Actualizacion&lt;/em&gt;) Era innevitable, a continuacion el enlace magnet, para descargar Kuzu no Honkai&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:6ff8439c951f3ccc03020011c61fe042980cfdef&amp;amp;dn=%5bYashiro%5d_Kuzu_no_Honkai_%5bHDTV%5d&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
   </channel>

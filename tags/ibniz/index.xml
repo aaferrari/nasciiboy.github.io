@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Mon, 30 Oct 2017 15:45:27 -0600</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/ibniz/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/ibniz/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,108 @@
       <pubDate>Mon, 30 Oct 2017 15:45:27 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/apt/ibniz/</guid>
-      <description>IBNIZ es una máquina virtual diseñada para programas audiovisuales de bajo nivel extremadamente compactos. El objetivo principal del diseño es la utilidad como plataforma para producciones demoscene, arte de glitch(es) y proyectos similares. Los aspectos de ingeniería de software del equipo principal se consideran totalmente irrelevantes.
-IBNIZ significa Ideally Bare Numeric Impression giZmo. El nombre también se refiere a Gottfried Leibniz, el polimatemático del siglo XVII que, entre otras cosas, inventó la aritmética binaria, construyó la primera máquina calculadora de cuatro operaciones, y creía que el mundo estaba diseñado con el principio de que un conjunto mínimo de reglas debía producir una diversidad máxima.</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ibniz.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;IBNIZ es una máquina virtual diseñada para programas audiovisuales de bajo
+nivel extremadamente compactos. El objetivo principal del diseño es la
+utilidad como plataforma para producciones demoscene, arte de &lt;a href=&#34;https://es.wikipedia.org/wiki/Glitch&#34;&gt;glitch&lt;/a&gt;(es) y
+proyectos similares. Los aspectos de ingeniería de software del equipo
+principal se consideran totalmente irrelevantes.&lt;/p&gt;
+
+&lt;p&gt;IBNIZ significa Ideally Bare Numeric Impression giZmo. El nombre también se
+refiere a Gottfried Leibniz, el polimatemático del siglo XVII que, entre
+otras cosas, inventó la aritmética binaria, construyó la primera máquina calculadora
+de cuatro operaciones, y creía que el mundo estaba diseñado con el principio
+de que un conjunto mínimo de reglas debía producir una diversidad máxima.&lt;/p&gt;
+
+&lt;p&gt;-- extraido del &lt;a href=&#34;http://pelulamu.net/ibniz/&#34;&gt;sitio oficial&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;me encotraba en un taller del hackmitin y durante esa charla un &amp;ldquo;ranchero&amp;rdquo;
+estaba con un wallpaper muuuuhh raro con cosas graficas extrañas y daba la
+vaga imprecion que lo controlaba con una especie de brainfuck.&lt;/p&gt;
+
+&lt;p&gt;Por un momento imagine que era una extraña herramienta para ver la instalacion
+de programas (o trafico de red o procesos o algo asi) de forma psicodelica, por
+lo que tuve que preguntar que jodidos era eso y me dijo que se llamaba ibniz y
+estaba dentro de los repos de debian, aunque casi no conocia documentacion de
+como funciona&lt;/p&gt;
+
+&lt;p&gt;mas tarde lo pude instalar de los repos de debian (&lt;code&gt;apt install ibniz&lt;/code&gt;) y efectivamente era esa cosa
+rara.&lt;/p&gt;
+
+&lt;p&gt;Para los que se encuentren en arch esta dentro de AUR y para los demas su
+repo es &lt;a href=&#34;https://github.com/viznut/IBNIZ&#34;&gt;https://github.com/viznut/IBNIZ&lt;/a&gt;, aunque su codigo se dejo abandonado (o
+quiza se considero terminado) hace 6 años&lt;/p&gt;
+
+&lt;h2 id=&#34;que-es-exactamente&#34;&gt;Que es exactamente?&lt;/h2&gt;
+
+&lt;p&gt;aqui hago una contraccion de los ojos hasta parecer asiatico y tambien me
+pregunto que jodidos es&amp;hellip; no estoy muy seguro, como que te visualiza la memoria
+de un algo y tambien hace ruiditos de las operaciones matematicas que le metes
+(&lt;em&gt;advertencia&lt;/em&gt;: antes de ejecutar bajar el sonido, pues puede ser agobiante)&lt;/p&gt;
+
+&lt;p&gt;tiene licencia zlib y si quieres compilarlo necesitaras tener las librerias SDL
+1.2 y tambien algunas de X11, en mi caso como casi siempre ya las tenia
+instaladas y con el siguiente proceso basto&lt;/p&gt;
+
+&lt;p&gt;por cierto, el repo que aparece en AUR es un fork del proyecto original con la
+ultima modificacion fechada hace un año y por ello es la que tomo para la
+instalacion, ademas tiene una seccion con ejemplos interesantes, como un
+mandelbrot. Obviamente por las fechas el codigo difiere del original en algun
+punto, una muesta de esto es contar con mas opciones en la linea de comandos y
+que al menos el ejemplo del mandelbrot no me funciono con el programa original&lt;/p&gt;
+
+&lt;h2 id=&#34;instalacion-a-mano&#34;&gt;instalacion a mano&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/PoroCYon/IBNIZ/
+cd IBNIZ
+make
+./bin/ibniz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para probar algunos ejemplos (ejecutando bash)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./bin/ibniz -c &amp;quot;$(cat examples/ibnizdemo.ib)&amp;quot;
+./bin/ibniz -c &amp;quot;$(cat examples/mandelbrot.ib)&amp;quot;
+./bin/ibniz -c &amp;quot;$(cat examples/julia.ib)&amp;quot;
+./bin/ibniz -c &amp;quot;$(cat examples/bitmapzoomer.ib)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;uso&#34;&gt;Uso&lt;/h3&gt;
+
+&lt;p&gt;si presionas &lt;code&gt;TAB&lt;/code&gt; aparece/desaparece el editor del &amp;ldquo;codigo de entrada&amp;rdquo;, si este
+esta visible y presionas &lt;code&gt;F12&lt;/code&gt; aparece la ayuda&lt;/p&gt;
+
+&lt;p&gt;cuando as puesto una entrada formada por operaciones y algunas funciones, la
+puedes &lt;em&gt;hechar a andar&lt;/em&gt; (y detener) con &lt;code&gt;F1&lt;/code&gt;, reiniciar con &lt;code&gt;F2&lt;/code&gt; y terminar con &lt;code&gt;ESC&lt;/code&gt; y ya esta, basicamente eso
+es todo, tienes algunas funciones basicas para la edicion del texto y tambien
+puedes ir probando lineas comentando y descomentando codigo&lt;/p&gt;
+
+&lt;p&gt;un buen ejemplo para iniciar es ejecutar lo sigiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./bin/ibniz -c &amp;quot;$(cat examples/oneliners.ib)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;abrir el editor (con &lt;code&gt;TAB&lt;/code&gt;) y comentar/descomentar lineas&lt;/p&gt;
+
+&lt;p&gt;la opcion &lt;code&gt;-c&lt;/code&gt; es para pasar tu &amp;ldquo;codigo&amp;rdquo; desde el aranque, por ejemplo,
+tonteando aparecieron dos patrones que me gustaron bastante&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;./bin/ibniz -c &#39;4*r+q&#39;
+./bin/ibniz -c &#39;45*r+q&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para finalizar, hay varios forks mas de ibniz, el que tiene la modificacion mas
+reciente (hace 6 dias) es &lt;a href=&#34;https://github.com/jminor/IBNIZ/&#34;&gt;este&lt;/a&gt;, ademas tambien trae un
+readme, una pagina de documentacion y enlaza a un &lt;a href=&#34;https://www.youtube.com/watch?v=aKMrBaXJvMs&#34;&gt;demo-tutorial&lt;/a&gt;
+super chulo!&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
     </item>
     
   </channel>

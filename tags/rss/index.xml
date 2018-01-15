@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 28 Sep 2017 19:47:50 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/rss/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/rss/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,7 +18,535 @@
       <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/v-config/</guid>
-      <description>todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs para ponerme a programar &amp;ldquo;el morg&amp;rdquo; (que esta en go) y aparecia un mensaje de error muuu largo, informando que el flycheck (un modo para verificar el codigo mientras se va escribiendo) no localizaba la ruta al ejecutable del flycheck-go. Como no encontraba el origen del problema y queria tunear el emacs, me propuse abandonar el sistema que tenia para agregar extensiones al emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de paquetes del que dispone emacs&amp;hellip; je, como decir que no me gustan las cosas automagicas que hacen las cosas sin que me entere, pero bueno, siendo emacs me dare el lujo de ser un poco mas permisivo</description>
+      <description>
+
+&lt;p&gt;todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs
+para ponerme a programar &amp;ldquo;el morg&amp;rdquo; (que esta en go) y aparecia un mensaje de
+error muuu largo, informando que el flycheck (un modo para verificar el codigo
+mientras se va escribiendo) no localizaba la ruta al ejecutable del
+&lt;code&gt;flycheck-go&lt;/code&gt;. Como no encontraba el origen del problema y queria tunear el
+emacs, me propuse abandonar el sistema que tenia para agregar extensiones al
+emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio
+del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de
+paquetes del que dispone emacs&amp;hellip; je, como decir que no me gustan las cosas
+automagicas que hacen las cosas sin que me entere, pero bueno, siendo emacs me
+dare el lujo de ser un poco mas permisivo&lt;/p&gt;
+
+&lt;p&gt;asi pues la nueva configuracion, es de esas sencillitas en las que colocas el
+paquete que quieres instalar/usar en una orden y luego al abrir emacs se
+descarga, instala y puede que hasta configure los paquetes que hagan falta, asi
+a la brava y sin tener ni idea de como&lt;/p&gt;
+
+&lt;p&gt;por lo tanto si quieres replicar mi configuracion&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/morg-verano.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;por ejemplo para programar en go, c, tener un lector de rss, o iniciar en emacs
+con el tema &lt;em&gt;nascii&lt;/em&gt;, primero instala emacs, y luego crea una carpeta en tu
+&lt;code&gt;home&lt;/code&gt; con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://nasciiboy.github.io/data/init-dot-el.zip
+unzip init-dot-el.zip -d ~/.emacs.d
+rm init-dot-el.zip
+emacs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://nasciiboy.github.io/data/init-dot-el.zip&#34;&gt;el comprimido&lt;/a&gt; con forma de zip, almacena dos ficheros:
+&lt;code&gt;init.el&lt;/code&gt;, que es donde se coloca toda configuracion de emacs y pondre a
+continuacion casi tal cual y &lt;code&gt;nascii-theme.el&lt;/code&gt; mi &lt;em&gt;tema&lt;/em&gt; de colores personal,
+baraje el subirlo a melpa para que tambien forme parte de la instalacion magica,
+pero me da peresa y creo que el tema visual es cosa de cada quien, unque desde
+luego mi tema es el unico que es correcto y valido&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;las extenciones para programar en go requieren que instales las siguientes herramientas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;go get -u github.com/nsf/gocode
+go get -u github.com/rogpeppe/godef
+go get -u golang.org/x/tools/cmd/goimports
+go get -u github.com/jstemmer/gotags
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por lo demas, solo haria falta substituir todos los &lt;code&gt;/home/nasciiboy&lt;/code&gt; por tus
+rutas correspondientes&lt;/p&gt;
+
+&lt;h2 id=&#34;init-el&#34;&gt;init.el&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;;;; nascii-config: --- another day in Emacs
+;; Substituir /home/nasciiboy (y otras rutas) segun corresponda.
+
+;; el thema nascii
+(load-file &amp;quot;~/.emacs.d/nascii-theme.el&amp;quot;)
+
+;; fullscreen
+(toggle-frame-fullscreen)
+
+;; desactivar barra de (menu|herramientas|desplazamiento)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+;; tamaño de la fuente
+(set-face-attribute &#39;default nil :height 140)
+
+;; inhibir mensajes y pantalla de inicio
+(setq inhibit-startup-buffer-menu t)
+(setq inhibit-startup-screen t)
+(setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message &amp;quot;usuario&amp;quot;)
+
+;; mensaje en el buffer scratch
+(setq initial-scratch-message &amp;quot;
+
+  ;;     _____ __  __    _    ____ ____
+  ;;    | ____|  \\/  |  / \\  / ___/ ___|
+  ;;    |  _| | |\\/| | / _ \\| |   \\___ \\
+  ;;    | |___| |  | |/ ___ \\ |___ ___) |
+  ;;    |_____|_|  |_/_/   \\_\\____|____/
+
+
+  ;;      ____   ___  _  ______    _
+  ;;     |  _ \\ / _ \\| |/ / ___|  | |
+  ;;     | |_) | | | | &#39; /\\___ \\  | |
+  ;;     |  _ &amp;lt;| |_| | . \\ ___) | |_|
+  ;;     |_| \\_\\\\___/|_|\\_\\____/  (_)
+
+&amp;quot;)
+
+;; hora en formato 24 horas:
+(setq display-time-day t display-time-24hr-format t)
+(display-time)
+
+;; reemplazar &amp;quot;yes&amp;quot; por &amp;quot;y&amp;quot; en el prompt
+(fset &#39;yes-or-no-p &#39;y-or-n-p)
+
+;; habilitar narrow &amp;amp; wide
+(put &#39;narrow-to-region &#39;disabled nil)
+
+;; habilitar upcase-region y downcase-region
+(put &#39;upcase-region &#39;disabled nil)
+(put &#39;downcase-region &#39;disabled nil)
+
+;; resaltar apertura y cierre de paréntesis
+(setq show-paren-delay 0
+      show-paren-style &#39;parenthesis)
+(show-paren-mode)
+
+;; visualizar lineas sin truncar ⏎
+(set-default &#39;truncate-lines t)
+
+;; Al borrar cosas moverlas a la papelera.
+;; el directorio corresponde a la papelera en gnome3
+(setq delete-by-moving-to-trash t
+      trash-directory &amp;quot;~/.local/share/Trash/files&amp;quot;)
+
+;; al escribir en modo texto cortar lineas automaticamente
+(add-hook &#39;text-mode-hook &#39;turn-on-auto-fill)
+;; longitud de lineas
+(setq-default fill-column 80)
+
+;; Core settings
+;; UTF-8 please
+(set-charset-priority &#39;unicode)
+(setq locale-coding-system   &#39;utf-8)   ; pretty
+(set-terminal-coding-system  &#39;utf-8)   ; pretty
+(set-keyboard-coding-system  &#39;utf-8)   ; pretty
+(set-selection-coding-system &#39;utf-8)   ; please
+(prefer-coding-system        &#39;utf-8)   ; with sugar on top
+(setq default-process-coding-system &#39;(utf-8-unix . utf-8-unix))
+
+;; (setq make-backup-files nil) ; detener creacion de ficheros respaldo~ (descomentar)
+(setq auto-save-default nil)    ; detener creacion de ficheros #autoguardado#
+;; colocar todos los ficheros de respaldo en el directorio ~/.emacs.d/backups/
+(setq backup-directory-alist `((&amp;quot;.&amp;quot; . ,(concat user-emacs-directory &amp;quot;backups&amp;quot;))))
+
+;; espacios en lugar de tabulaciones
+(setq-default indent-tabs-mode nil)
+
+;; eliminar espacios en blanco
+(add-hook &#39;before-save-hook &#39;delete-trailing-whitespace)
+
+;; c++-mode para headers y ficheros C
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.h$&amp;quot; . c++-mode))
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.c$&amp;quot; . c++-mode))
+
+;; xml-mode para ficheros xml
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.xml$&amp;quot; . sgml-mode))
+
+;; dar permisos de ejecución a scripts luego de guardar
+(setq after-save-hook
+      (quote (executable-make-buffer-file-executable-if-script-p)))
+
+;; historial de ficheros abiertos
+(require &#39;recentf)
+(recentf-mode t)
+(setq recentf-max-saved-items 200)
+(global-set-key (kbd &amp;quot;C-c o&amp;quot;) &#39;recentf-open-files)
+
+;; atajos
+;; Wind Move &amp;lt;&amp;gt; movimiento entre ventanas
+(global-set-key [s-left]  &#39;windmove-left)
+(global-set-key [s-right] &#39;windmove-right)
+(global-set-key [s-up]    &#39;windmove-up)
+(global-set-key [s-down]  &#39;windmove-down)
+;; atajos para emacs cli
+(global-set-key (kbd &amp;quot;C-c &amp;lt;left&amp;gt;&amp;quot;)  &#39;windmove-left)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;right&amp;gt;&amp;quot;) &#39;windmove-right)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;up&amp;gt;&amp;quot;)    &#39;windmove-up)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;down&amp;gt;&amp;quot;)  &#39;windmove-down)
+
+;; parrafos
+(global-set-key (kbd &amp;quot;C-.&amp;quot;) &#39;forward-paragraph)
+(global-set-key (kbd &amp;quot;C-,&amp;quot;) &#39;backward-paragraph)
+(global-set-key (kbd &amp;quot;C-q&amp;quot;) &#39;fill-paragraph)
+(global-set-key (kbd &amp;quot;C-;&amp;quot;) &#39;delete-indentation)
+
+;; ibuffer en lugar de list-buffers
+(global-set-key (kbd &amp;quot;C-x C-b&amp;quot;) &#39;ibuffer)
+
+(global-set-key [f12] &#39;eval-buffer) ;; evaluar buffer (elips) actual
+(global-set-key [f9] &#39;compile)      ;; compilar buffer (por ejemplo en C)
+(global-set-key [f7] &#39;eww)          ;; abrir una direccion con eww
+
+;; atajos de eww el navegador incorporado de emacs
+(global-set-key (kbd &amp;quot;C-x w o&amp;quot;) &#39;eww)
+(global-set-key (kbd &amp;quot;C-x w b&amp;quot;) &#39;eww-add-bookmark)
+(global-set-key (kbd &amp;quot;C-x w l&amp;quot;) &#39;eww-list-bookmarks)
+(global-set-key (kbd &amp;quot;C-x w f&amp;quot;) &#39;eww-open-file)
+
+;; esto esta muuuuy chulo, cuando abres eshell te permite ejecutar los
+;; comandos en la lista como si estubieras dentro de un terminal &amp;quot;real&amp;quot;
+(setq eshell-visual-commands &#39;(&amp;quot;htop&amp;quot; &amp;quot;vi&amp;quot; &amp;quot;vim&amp;quot; &amp;quot;mocp&amp;quot; &amp;quot;top&amp;quot; &amp;quot;less&amp;quot; &amp;quot;more&amp;quot; &amp;quot;elinks&amp;quot; &amp;quot;elinks&amp;quot; &amp;quot;git&amp;quot; &amp;quot;sr&amp;quot; &amp;quot;surfraw&amp;quot;))
+
+;; en direct coloca el tamaño de los ficheros con formato para humanos
+(setq dired-listing-switches &amp;quot;-alh&amp;quot;)
+
+;; interpretes
+(setq scheme-program-name &amp;quot;racket&amp;quot;)        ; instalar previamente racket
+(setq inferior-lisp-program &amp;quot;clisp&amp;quot;)       ; instalar previamente clisp
+(setq python-shell-interpreter &amp;quot;python3&amp;quot;)  ; instalar previamente python3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                                                    ;;
+;;         &amp;quot;&amp;quot;#                    &amp;quot;                   ;;
+;;  mmmm     #    m   m   mmmm  mmm    m mm    mmm    ;;
+;;  #&amp;quot; &amp;quot;#    #    #   #  #&amp;quot; &amp;quot;#    #    #&amp;quot;  #  #   &amp;quot;   ;;
+;;  #   #    #    #   #  #   #    #    #   #   &amp;quot;&amp;quot;&amp;quot;m   ;;
+;;  ##m#&amp;quot;    &amp;quot;mm  &amp;quot;mm&amp;quot;#  &amp;quot;#m&amp;quot;#  mm#mm  #   #  &amp;quot;mmm&amp;quot;   ;;
+;;  #                     m  #                        ;;
+;;  &amp;quot;                      &amp;quot;&amp;quot;                         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; con esta seccion te permite instalar las extenciones automagicamente
+(require &#39;package)
+(add-to-list &#39;package-archives &#39;(&amp;quot;melpa&amp;quot; . &amp;quot;http://melpa.org/packages/&amp;quot;) t)
+(package-initialize)
+
+(unless (package-installed-p &#39;use-package)
+  (package-refresh-contents)
+  (package-install &#39;use-package))
+
+(require &#39;use-package)
+(setq use-package-always-ensure t)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: company-mode         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package company)
+(add-hook &#39;after-init-hook &#39;global-company-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: flycheck             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package flycheck)
+(flycheck-mode t)
+(add-hook &#39;python-mode-hook &#39;flycheck-mode)
+(add-hook &#39;emacs-lisp-mode-hook &#39;flycheck-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: magit-mode           ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package magit)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: morg-mode            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.morg\\&#39;&amp;quot; . org-mode))
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.porg\\&#39;&amp;quot; . org-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: markdown-mode        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package markdown-mode)
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.text\\&#39;&amp;quot; . markdown-mode))
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.markdown\\&#39;&amp;quot; . markdown-mode))
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.md\\&#39;&amp;quot; . markdown-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: go-mode              ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; go get -u github.com/nsf/gocode
+;; go get -u github.com/rogpeppe/godef
+;; go get -u golang.org/x/tools/cmd/goimports
+;; go get -u github.com/jstemmer/gotags
+
+(setenv &amp;quot;GOPATH&amp;quot; &amp;quot;/home/nasciiboy/go&amp;quot;)
+(setenv &amp;quot;PATH&amp;quot; (concat (getenv &amp;quot;PATH&amp;quot;) &amp;quot;:&amp;quot; &amp;quot;/home/nasciiboy/go/bin&amp;quot;))
+(setq exec-path (append exec-path (list (expand-file-name &amp;quot;/home/nasciiboy/go/bin&amp;quot;) (expand-file-name &amp;quot;/home/nasciiboy/.go/bin&amp;quot;))))
+;; con la `list` de arriba  =======^^^^
+;; solucione el problema de agregar
+;; nuevos paths donde emacs buscara los ejecutables de go
+
+
+(use-package go-mode)
+(use-package go-gopath)
+(use-package company-go)
+(use-package go-stacktracer)
+(use-package go-add-tags)
+(use-package go-eldoc)
+(use-package go-direx)
+(use-package flymake-go)
+
+(add-to-list &#39;company-backends &#39;company-go)
+(add-hook &#39;go-mode-hook (lambda ()
+                          (setq indent-tabs-mode nil)
+                          (setq tab-width 2)))
+(add-hook &#39;go-mode-hook &#39;go-eldoc-setup)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: haskell-mode         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package haskell-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: rust-mode            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package rust-mode)
+(add-hook &#39;rust-mode-hook (lambda ()
+                            (setq rust-indent-offset 2)
+                            (setq rust-format-on-save nil)))
+
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.rs\\&#39;&amp;quot; . rust-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: lua-mode             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package lua-mode)
+(add-to-list &#39;interpreter-mode-alist &#39;(&amp;quot;lua&amp;quot; . lua-mode))
+(setq lua-indent-level 2)
+
+(use-package love-minor-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: fish-mode            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package fish-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: multiple-cursors     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package multiple-cursors)
+
+(global-set-key (kbd &amp;quot;C-&amp;gt;&amp;quot;) &#39;mc/mark-next-like-this)
+(global-set-key (kbd &amp;quot;C-&amp;lt;&amp;quot;) &#39;mc/mark-previous-like-this)
+(global-set-key (kbd &amp;quot;s-c C-&amp;gt;&amp;quot;) &#39;mc/mark-all-like-this)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: lorem-ipsum          ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package lorem-ipsum)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: elfeed               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package elfeed)
+(setq elfeed-feeds
+      &#39;(
+        &amp;quot;http://blog.chuidiang.com/feed/&amp;quot;
+        &amp;quot;http://blog.desdelinux.net/feed/&amp;quot;
+        &amp;quot;http://blogubuntu.com/feed&amp;quot;
+        &amp;quot;http://carlini.es/feed/&amp;quot;
+        &amp;quot;http://cucarachasracing.blogspot.com/feeds/posts/default?alt=rss&amp;quot;
+        &amp;quot;http://ea4bns.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://elarmarioinformatico.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://elblogdeliher.com/feed/&amp;quot;
+        &amp;quot;http://enavas.blogspot.com/feeds/posts/default?alt=rss&amp;quot;
+        &amp;quot;http://es.xkcd.com/rss/&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/blogspot/bytelearning&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/btroot?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/diegocg?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Esbuntucom?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/GabuntuBlog&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Gambas2MisProgramas?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/geeklandlinux&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/SYSADMIT?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/teknoplof/muQI?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Ubunlog?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/ugeek&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/ugeekblog&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&amp;quot;
+        &amp;quot;http://feeds.weblogssl.com/genbetadev&amp;quot;
+        &amp;quot;http://fernand0.github.io/feed.xml&amp;quot;
+        &amp;quot;http://hackingthesystem4fun.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://hispalinux.es/node/feed&amp;quot;
+        &amp;quot;http://humanos.uci.cu/feed/&amp;quot;
+        &amp;quot;http://lamiradadelreplicante.com/feed/&amp;quot;
+        &amp;quot;http://linuxmanr4.com/feed/&amp;quot;
+        &amp;quot;http://maslinux.es/feed/&amp;quot;
+        &amp;quot;http://mhyst.es/blogs/index.php?tempskin=_rss2&amp;quot;
+        &amp;quot;http://misnotaslinux.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://nasciiboy.github.io/index.xml&amp;quot;
+        &amp;quot;http://nosturi.es/feed/&amp;quot;
+        &amp;quot;http://papermint-designs.com/roor/rss.xml&amp;quot;
+        &amp;quot;http://parceladigital.com/feed/&amp;quot;
+        &amp;quot;http://planet.emacsen.org/atom.xml&amp;quot;
+        &amp;quot;http://quijotelibre.com/feed/&amp;quot;
+        &amp;quot;http://radioela.org/spip.php?page=backend&amp;quot;
+        &amp;quot;http://ranchoelectronico.org/feed/&amp;quot;
+        &amp;quot;http://red-orbita.com/?feed=rss2&amp;quot;
+        &amp;quot;http://rufianenlared.com/feed/&amp;quot;
+        &amp;quot;http://softwarelibre.deusto.es/feed/&amp;quot;
+        &amp;quot;http://www.blackhats.es/wordpress/?feed=rss2&amp;quot;
+        &amp;quot;http://www.decrecimiento.info/feeds/posts/default&amp;quot;
+        &amp;quot;http://www.dmdcosillas.org/feed/&amp;quot;
+        &amp;quot;http://www.eldiario.es/rss/hojaderouter/&amp;quot;
+        &amp;quot;http://www.hackplayers.com/feeds/posts/default?alt=rss&amp;quot;
+        &amp;quot;http://www.jgimenez.info/feed/&amp;quot;
+        &amp;quot;http://www.kdeblog.com/feed/&amp;quot;
+        &amp;quot;http://www.lapipaplena.net/feed/&amp;quot;
+        &amp;quot;http://www.linuxadictos.com/feed&amp;quot;
+        &amp;quot;http://www.linuxhispano.net/feed/&amp;quot;
+        &amp;quot;http://www.maxxcan.com/feed/&amp;quot;
+        &amp;quot;http://www.muylinux.com/feed/&amp;quot;
+        &amp;quot;http://www.portallinux.es/feed&amp;quot;
+        &amp;quot;http://www.radioela.org/spip.php?page=backend-auteur&amp;amp;id_auteur=115&amp;quot;
+        &amp;quot;http://www.rafaelrojas.net/feed/&amp;quot;
+        &amp;quot;http://www.rootzilopochtli.com/feed/&amp;quot;
+        &amp;quot;http://www.tomatesasesinos.com/feed/&amp;quot;
+        &amp;quot;http://www.tomatuordenador.net/feed/&amp;quot;
+        &amp;quot;http://www.ubuntizando.com/feed/&amp;quot;
+
+        &amp;quot;https://andalinux.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://aprendizdesysadmin.com/feed/&amp;quot;
+        &amp;quot;https://asm86.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://autodefensainformatica.radioalmaina.org/feed/&amp;quot;
+        &amp;quot;https://birrasybits.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://blog.adrianistan.eu/feed/&amp;quot;
+        &amp;quot;https://blog.gvsig.org/feed/&amp;quot;
+        &amp;quot;https://cartaslinux.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://ciberlatino.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://codingornot.com/feed&amp;quot;
+        &amp;quot;https://colaboratorio.net/feed/&amp;quot;
+        &amp;quot;https://compilando.audio/index.php/feed/podcast/&amp;quot;
+        &amp;quot;https://comunicatelibremente.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://daemons.cf/rss.xml&amp;quot;
+        &amp;quot;https://diariodeunalinuxera.com/feed/&amp;quot;
+        &amp;quot;https://duglasm.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://elbinario.net/feed/&amp;quot;
+        &amp;quot;https://elblogdecarlosvelasco.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://eliasbrasa.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://eliotreyna.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;https://elpinguinotolkiano.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://elzorrolibre.noblogs.org/feed/&amp;quot;
+        &amp;quot;https://enekoamieva.com/blog/feed/&amp;quot;
+        &amp;quot;https://feedpress.me/podcastlinux&amp;quot;
+        &amp;quot;https://gutl.jovenclub.cu/feed/&amp;quot;
+        &amp;quot;https://h4ckseed.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://infostatex.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;https://jummp.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://jvare.com/feed/&amp;quot;
+        &amp;quot;https://kernelpanicblog.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://laenredadera.net/feed/&amp;quot;
+        &amp;quot;https://lapastillaroja.net/feed/&amp;quot;
+        &amp;quot;https://lasindias.net/feed&amp;quot;
+        &amp;quot;https://leninmhs.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://lignux.com/feed/&amp;quot;
+        &amp;quot;https://linuxgnublog.org/es/feed&amp;quot;
+        &amp;quot;https://mierda.tv/feed/&amp;quot;
+        &amp;quot;https://miguelpinia.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://milagrosrp.wordpress.com/feed/&amp;quot;
+
+        &amp;quot;https://mx.ivoox.com/es/podcast-podcast-el-precipicio_fg_f176717_1.xml&amp;quot;
+        &amp;quot;https://mx.ivoox.com/es/podcast-podcast-kde-espana_fg_f1249423_1.xml&amp;quot;
+        &amp;quot;https://mx.ivoox.com/es/reality-cracking_fg_f159955_filtro_1.xml&amp;quot;
+        &amp;quot;https://www.ivoox.com/podcast-fran-casas_fg_f1449982_1.xml&amp;quot;
+        &amp;quot;https://www.ivoox.com/podcast-podcast-verne-wells-ciencia-ficcion_fg_f1100419_1.xml&amp;quot;
+
+        &amp;quot;https://neoranger.github.io/feed.xml&amp;quot;
+        &amp;quot;https://noelonassis.wordpress.com/blog/feed/&amp;quot;
+        &amp;quot;https://notxor.nueva-actitud.org/feed/all.rss.xml&amp;quot;
+        &amp;quot;https://ondahostil.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://otroespacioblog.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://pfctelepathy.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://picodotdev.github.io/blog-bitix/index.xml&amp;quot;
+        &amp;quot;https://poesiabinaria.net/feed/&amp;quot;
+        &amp;quot;https://radioliberadaelpodcast.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://radioslibres.net/rss/&amp;quot;
+        &amp;quot;https://thelinuxalchemist.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://victorhckinthefreeworld.com/feed/&amp;quot;
+        &amp;quot;https://vidaembebida.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://www.atareao.es/blog/feed/&amp;quot;
+        &amp;quot;https://www.cambiadeso.es/feed/&amp;quot;
+        &amp;quot;https://www.linuxito.com/?format=feed&amp;amp;type=rss&amp;quot;
+        &amp;quot;https://www.ochobitshacenunbyte.com/feed/&amp;quot;
+        &amp;quot;https://xkcd.com/rss.xml&amp;quot;
+        &amp;quot;https://xnet-x.net/blog/feed/&amp;quot;
+        ))
+
+(global-set-key [f6] &#39;elfeed)
+(global-set-key [f5] &#39;elfeed-update)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                               ;;
+;;   ___  ___ _ __(_)_ __ | |_   ;;
+;;  / __|/ __| &#39;__| | &#39;_ \| __|  ;;
+;;  \__ \ (__| |  | | |_) | |_   ;;
+;;  |___/\___|_|  |_| .__/ \__|  ;;
+;;                  |_|          ;;
+;;                               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Mostrar/ocultar archivos ocultos en direc
+(defun dired-dotfiles-toggle ()
+  &amp;quot;Mostrar/ocultar archivos ocultos&amp;quot;
+  (interactive)
+  (when (equal major-mode &#39;dired-mode)
+    (if (or (not (boundp &#39;dired-dotfiles-show-p)) dired-dotfiles-show-p)
+        (progn
+          (set (make-local-variable &#39;dired-dotfiles-show-p) nil)
+          (message &amp;quot;h&amp;quot;)
+          (dired-mark-files-regexp &amp;quot;^\\\.&amp;quot;)
+          (dired-do-kill-lines))
+      (progn (revert-buffer)
+             (set (make-local-variable &#39;dired-dotfiles-show-p) t)))))
+
+(global-set-key (kbd &amp;quot;C-c h&amp;quot;) &#39;dired-dotfiles-toggle)
+
+(defun increment-number-at-point ()
+  (interactive)
+  (skip-chars-backward &amp;quot;0-9&amp;quot;)
+  (or (looking-at &amp;quot;[0-9]+&amp;quot;)
+      (error &amp;quot;No number at point&amp;quot;))
+  (replace-match (number-to-string (1+ (string-to-number (match-string 0))))))
+
+(defun decrement-number-at-point ()
+  (interactive)
+  (skip-chars-backward &amp;quot;0-9&amp;quot;)
+  (or (looking-at &amp;quot;[0-9]+&amp;quot;)
+      (error &amp;quot;No number at point&amp;quot;))
+  (replace-match (number-to-string (- (string-to-number (match-string 0)) 1))))
+
+(global-set-key (kbd &amp;quot;C-c +&amp;quot;) &#39;increment-number-at-point)
+(global-set-key (kbd &amp;quot;C-c -&amp;quot;) &#39;decrement-number-at-point)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;fuentes&#34;&gt;fuentes&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/melpa/melpa&#34;&gt;https://github.com/melpa/melpa&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/abrochard/emacs-config/blob/master/configuration.org&#34;&gt;https://github.com/abrochard/emacs-config/blob/master/configuration.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.reddit.com/r/emacs/comments/4fqu0a/automatically_install_packages_on_startup/&#34;&gt;https://www.reddit.com/r/emacs/comments/4fqu0a/automatically_install_packages_on_startup/&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -27,8 +555,197 @@
       <pubDate>Wed, 18 Jan 2017 09:29:17 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/rsspluseww/</guid>
-      <description>Eso de los rss parece ser mas bueno que encontrar un billete de alta denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las paginas incluyen el icono naranja con unas barras.
-Cierto es que intente utilizarlo un par de veces, solo que lo encortre muy complejo&amp;hellip; asi pues he pasado cerca de cinco años abriendo todos los dias los marcadores del firefox en manada, hasta que hace unos pocos dias descubri como es esto de los rss (pese a que este blog los genera automagicamente)</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../reunian-fieles-huespedes-cocinaban-asistentes.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Eso de los &lt;strong&gt;rss&lt;/strong&gt; parece ser mas bueno que encontrar un billete de alta
+denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las
+paginas incluyen el icono naranja con unas barras.&lt;/p&gt;
+
+&lt;p&gt;Cierto es que intente utilizarlo un par de veces, solo que lo encortre muy
+complejo&amp;hellip; asi pues he pasado cerca de cinco años abriendo todos los dias los
+marcadores del firefox en manada, hasta que hace unos pocos dias &lt;q&gt;descubri&lt;/q&gt;
+como es esto de los rss (pese a que este blog los genera automagicamente)&lt;/p&gt;
+
+&lt;p&gt;bien, un rss, no es mas que un fichero de texto plano formateado en xml, es
+decir, etiquetas que &lt;code&gt;&amp;lt;abren&amp;gt;&lt;/code&gt; y etiquetas que &lt;code&gt;&amp;lt;/cierran&amp;gt;&lt;/code&gt;. Este fichero
+almecena un resumen del contenido de un sitio o cosa, por ejemplo titulo de
+entradas, fechas de publicacion, resumen de la entrada, autor, enlace y
+demas&amp;hellip; luego si tenemos un programa que sea capas de analizar dichos ficheros,
+podemos enterarnos de los cambios realizados en el sitio de nuestro interes.. y
+ya esta, no hay magia, javascript ni tecnologias web awesome y eso es bueno!&lt;/p&gt;
+
+&lt;p&gt;te estaras preguntando, ¿como puedo yo, resivir los beneficios de estos ficheros
+de texto plano? &lt;strong&gt;Emacs!&lt;/strong&gt;. que? &lt;code&gt;gnus&lt;/code&gt; de nuevo, no, gracias que es muy raro,
+intente con eso y fracase&amp;hellip; espera, no abandones, hay otro modo desarrollado para
+gente sencilla como tu y como yo, su nombre es &lt;strong&gt;elfeed&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalar-elfeed&#34;&gt;Instalar &lt;code&gt;elfeed&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Para instalar &lt;code&gt;elfeed&lt;/code&gt; puedes utilizar el gestor de paquetes de emacs
+(repositorio melpa), o seguir el siguiente metodo apto solo para romanticos de
+manos inquietas.&lt;/p&gt;
+
+&lt;p&gt;desde la terminal vamos a la ruta donde tengamos nuestros complementos para
+emacs, en mi caso es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cd ~/.emacs.d/plugins/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego descargamos el codigo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/skeeto/elfeed.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora abrimos emacs, vamos a nuestro fichero de configuracion y agregamos esto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: elfeed               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; source: https://github.com/skeeto/elfeed.git
+(add-to-list &#39;load-path &amp;quot;~/.emacs.d/plugins/elfeed/&amp;quot;)
+(require &#39;elfeed)
+
+;; aqui van los feeds que nos interesen
+(setq elfeed-feeds
+      &#39;(
+        &amp;quot;http://blog.chuidiang.com/feed/&amp;quot;
+        &amp;quot;http://blog.desdelinux.net/feed/&amp;quot;
+        &amp;quot;http://blogubuntu.com/feed&amp;quot;
+        &amp;quot;http://cucarachasracing.blogspot.com/feeds/posts/default?alt=rss&amp;quot;
+        &amp;quot;http://elarmarioinformatico.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://es.xkcd.com/rss/&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/diegocg?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Esbuntucom?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/GabuntuBlog&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/ramonramon&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/teknoplof/muQI?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Ubunlog?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&amp;quot;
+        &amp;quot;http://fernand0.github.io/feed.xml&amp;quot;
+        &amp;quot;http://humanos.uci.cu/feed/&amp;quot;
+        &amp;quot;http://lamiradadelreplicante.com/feed/&amp;quot;
+        &amp;quot;http://linuxmanr4.com/feed/&amp;quot;
+        &amp;quot;http://misnotaslinux.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://nasciiboy.github.io/index.xml&amp;quot;
+        &amp;quot;http://planet.emacsen.org/atom.xml&amp;quot;
+        &amp;quot;http://quijotelibre.com/feed/&amp;quot;
+        &amp;quot;http://radioela.org/spip.php?page=backend&amp;quot;
+        &amp;quot;http://ranchoelectronico.org/feed/&amp;quot;
+        &amp;quot;http://red-orbita.com/?feed=rss2&amp;quot;
+        &amp;quot;http://rufianenlared.com/feed/&amp;quot;
+        &amp;quot;http://softwarelibre.deusto.es/feed/&amp;quot;
+        &amp;quot;http://totaki.com/poesiabinaria/feed/&amp;quot;
+        &amp;quot;http://www.blackhats.es/wordpress/?feed=rss2&amp;quot;
+        &amp;quot;http://www.kdeblog.com/feed/&amp;quot;
+        &amp;quot;http://www.lapipaplena.net/feed/&amp;quot;
+        &amp;quot;http://www.linuxadictos.com/feed&amp;quot;
+        &amp;quot;http://www.linuxhispano.net/feed/&amp;quot;
+        &amp;quot;http://www.maxxcan.com/feed/&amp;quot;
+        &amp;quot;http://www.muylinux.com/feed/&amp;quot;
+        &amp;quot;http://www.portallinux.es/feed&amp;quot;
+        &amp;quot;http://www.tomatesasesinos.com/feed/&amp;quot;
+        &amp;quot;http://www.tomatuordenador.net/feed/&amp;quot;
+        &amp;quot;http://www.ubuntizando.com/feed/&amp;quot;
+        &amp;quot;https://asm86.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://autodefensainformatica.radioalmaina.org/feed/&amp;quot;
+        &amp;quot;https://birrasybits.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://blog.adrianistan.eu/feed/&amp;quot;
+        &amp;quot;https://cartaslinux.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://colaboratorio.net/feed/&amp;quot;
+        &amp;quot;https://comunicatelibremente.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://daemons.cf/rss.xml&amp;quot;
+        &amp;quot;https://diariodeunalinuxera.com/feed/&amp;quot;
+        &amp;quot;https://elbinario.net/feed/&amp;quot;
+        &amp;quot;https://eliasbrasa.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://elpinguinotolkiano.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://elzorrolibre.noblogs.org/feed/&amp;quot;
+        &amp;quot;https://enekoamieva.com/blog/feed/&amp;quot;
+        &amp;quot;https://gutl.jovenclub.cu/feed/&amp;quot;
+        &amp;quot;https://h4ckseed.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://jummp.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://jvare.com/feed/&amp;quot;
+        &amp;quot;https://kernelpanicblog.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://lasindias.blog/feed&amp;quot;
+        &amp;quot;https://leninmhs.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://lignux.com/feed/&amp;quot;
+        &amp;quot;https://linuxgnublog.org/es/feed&amp;quot;
+        &amp;quot;https://mierda.tv/feed/&amp;quot;
+        &amp;quot;https://miguelpinia.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://ondahostil.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://otroespacioblog.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://pfctelepathy.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://picodotdev.github.io/blog-bitix/index.xml&amp;quot;
+        &amp;quot;https://radioslibres.net/rss/&amp;quot;
+        &amp;quot;https://victorhckinthefreeworld.com/feed/&amp;quot;
+        &amp;quot;https://vidaembebida.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://www.atareao.es/blog/feed/&amp;quot;
+        &amp;quot;https://www.linuxito.com/?format=feed&amp;amp;type=rss&amp;quot;
+        &amp;quot;https://www.ochobitshacenunbyte.com/feed/&amp;quot;
+        &amp;quot;https://xkcd.com/rss.xml&amp;quot;
+        ))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;evaluamos el codigo, y ya tenemos nuestro leector rss. Para modificar o añadir
+nuevos feeds modifica las cadenas de la variable &lt;code&gt;elfeed-feeds&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;para hacer mas comodo el asunto, agreguemos un par de accesos directos a nuestro
+leector&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key [f7] &#39;elfeed)
+(global-set-key [f8] &#39;elfeed-update)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;al presionar &lt;code&gt;F7&lt;/code&gt; se abre el lector, con &lt;code&gt;F8&lt;/code&gt; actualizamos los feeds&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../elfeed.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;para ver la entrada, colocamos el cursor sobre esta y damos un enter&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../elfeed-show.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;si presionamos &lt;code&gt;b&lt;/code&gt; o nos posicionamos en el enlace + un enter, la entrada se
+abrira en el navegador del sistema! Tambien podemos copiar la ruta de enlace
+pulsando &lt;code&gt;y&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;para regresar a las entradas presionamos &lt;code&gt;q&lt;/code&gt; y para marcar una entrada como
+leeida &lt;code&gt;r&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;elfeed-eww&#34;&gt;&lt;code&gt;elfeed&lt;/code&gt; + &lt;code&gt;eww&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;ver la entrada en el navegador esta muy bien, pero no me gustan el javascript,
+los anuncios ni las cosas modernas, que puedo hacer? Emacs incorpora un
+navegador de texto plano &lt;code&gt;eww&lt;/code&gt;, podemos abrir los enlaces desde el visor de
+entradas de elfeed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;primero colocamos el cursor en el enlace y presionamos &lt;code&gt;M-x eww&lt;/code&gt;,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;veras que aparece el enlace como el parametro por defecto, damos enter o
+colocamos una direccion distinta + un enter&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;../eww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;para salir de &lt;code&gt;eww&lt;/code&gt; y regresar a &lt;code&gt;elfeed&lt;/code&gt; pulsamos &lt;code&gt;q&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;hagamos mas sencilla la operacion agregando algunos atajos para &lt;code&gt;eww&lt;/code&gt; en nuestra
+configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key [f5] &#39;eww)
+(global-set-key (kbd &amp;quot;C-x w o&amp;quot;) &#39;eww)
+(global-set-key (kbd &amp;quot;C-x w b&amp;quot;) &#39;eww-add-bookmark)
+(global-set-key (kbd &amp;quot;C-x w l&amp;quot;) &#39;eww-list-bookmarks)
+(global-set-key (kbd &amp;quot;C-x w f&amp;quot;) &#39;eww-open-file)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora para abrir los enlaces, colocamos el cursor en el enlace y pulsamos &lt;code&gt;F5&lt;/code&gt; o
+&lt;code&gt;C-x w o&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Listo, vive la web en texto plano, el tiempo extra lo puedes utilizar para ver
+porno, escribir un blog o lo que sea&amp;hellip; &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 20 Aug 2017 15:59:03 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,125 @@
       <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/ischeme/</guid>
-      <description>La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para mi escaso saber, por su parte los conceptos programacionales con Scheme solo los entiendo a nivel superficial, es decir, podria explicar de que van, pero no ponerlo en nada practico, ademas han dejado de aparecer fraces esotericas.
-Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su puesto), me plante comenzar un port del raptor (si, otro mas) al Scheme, mas, pronto me di cuenta que habia olvidado siquiera como definir una variable, una funcion y una l-a-a-m-m-b-d-a-a (que raro suena), oohh, que dilema –dijo interiormente nasciiboy</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/lambda.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para
+mi escaso saber, por su parte los conceptos programacionales con Scheme solo los
+entiendo a nivel superficial, es decir, podria explicar de que van, pero no
+ponerlo en nada practico, ademas han dejado de aparecer fraces esotericas.&lt;/p&gt;
+
+&lt;p&gt;Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su
+puesto), me plante comenzar un port del raptor (si, otro mas) al Scheme, mas,
+pronto me di cuenta que habia olvidado siquiera como definir una variable, una
+funcion y una l-a-a-m-m-b-d-a-a (que raro suena), oohh, que dilema –dijo
+interiormente nasciiboy&lt;/p&gt;
+
+&lt;p&gt;Tres escenarios se plantaron hacia mi (luego de ver con detalle el temario
+restante del SICP)&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Mandar la traduccion a la mierda y desaparecer de intenné&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Buscar otro libro de Scheme&amp;hellip; que seguramente tambien requiera
+traduccion&amp;hellip; (ya habia dado un primer paso antes de pasar a la suguiente opcion)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Crusarme por casualidad con el libro estraño de racket y ver de que iba y la
+razon de habero metido en &amp;ldquo;los recursos&amp;rdquo; de Scheme&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;De la opcion 2 tenia en reserva los &amp;ldquo;The Little Schemer&amp;rdquo;, tras una revision
+preliminar, quedaron descartados, por fortuna hace un par de meses aparecio una
+compilacion de cosas de lisp (incluido scheme, prolog y haskell) que traia un
+libro apto para su servidor &lt;em&gt;Teach Yourself Scheme in Fixnum Days&lt;/em&gt;. Para aun
+mas sorpresa es de &amp;ldquo;Codigo Visible&amp;rdquo; o algo asi, tiene &lt;a href=&#34;https://github.com/ds26gte/tyscheme&#34;&gt;un repo&lt;/a&gt; en github,
+ademas de una version online (seccionizada por paginas), escrita en tex y por lo
+que vi, de facil adaptacion a otros formatos&lt;/p&gt;
+
+&lt;p&gt;Pero la ganadora, amenos por ahora es la opcion 3: abrir el libro con el simbolo
+lambda (no, no &lt;strong&gt;↦&lt;/strong&gt;) &lt;strong&gt;λ&lt;/strong&gt;, dedicado a
+rocket &lt;a href=&#34;http://aliamondano-eo.wikidot.com/racket-5&#34;&gt;&lt;em&gt;Programando con Racket 5&lt;/em&gt;&lt;/a&gt;
+y distribuido bajo licencia Creative Commons Attribution-Noncommercial-Share
+Alike 3.0.&lt;/p&gt;
+
+&lt;p&gt;Si tienen efectivo, comprarle un libro o darle dinero&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; luego de haber pasado por la &amp;ldquo;Introduccion a emacs lisp&amp;rdquo;, &amp;ldquo;Land Of Lisp&amp;rdquo;
+(que mecanografie y traduje hasta el 20%) y un truncado intento por
+mecanografiar &amp;ldquo;ANSI Common Lisp&amp;rdquo;, la unica conclusion optenida es que la
+trancripcion y traduccion no son metodos validos para aprender otro lenguaje, a
+programar o a escribir &amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;interpretes&#34;&gt;interpretes&lt;/h2&gt;
+
+&lt;p&gt;Dejando de lado la charla anterior, sobre libros que no he leido&amp;hellip; pero que
+cuando lees y esperas &amp;ldquo;dominarlos&amp;rdquo; debes poner en practica sus enseñansas, les dejo una
+reducida lista de los interpretes de Scheme que he podido catar.&lt;/p&gt;
+
+&lt;p&gt;(para lisp razo, ir con clisp)&lt;/p&gt;
+
+&lt;h3 id=&#34;guile&#34;&gt;guile&lt;/h3&gt;
+
+&lt;p&gt;Pagina Oficial: &lt;a href=&#34;http://www.gnu.org/software/guile&#34;&gt;http://www.gnu.org/software/guile&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(Ver lo que le han hecho a la pagina de Guile y otras tantas del &lt;em&gt;proyecto GNU&lt;/em&gt;,
+si dan ganas de darles dinero o comprarles lo que sea que vendan)&lt;/p&gt;
+
+&lt;p&gt;Freidora 25, que es lo que estoy usando trae la version 2.0, de los tres
+interpretes es el menos amigable, no viene con atajos de teclado, la entrada y
+borrado se limitan a escribir y retroceso, sin historial ni naaaa, teniendo el
+proyecto GNU una de las librerias mas utilizadas para estos menesteres, es aun
+mas incomprensible&lt;/p&gt;
+
+&lt;h3 id=&#34;kawa&#34;&gt;kawa&lt;/h3&gt;
+
+&lt;p&gt;Pagina Oficial: &lt;a href=&#34;https://www.gnu.org/software/kawa/index.html&#34;&gt;https://www.gnu.org/software/kawa/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Chan, chan, chan, (insente aqui el rugido de godzilla). Joder, este interprete
+aparecio en el repositorio, luego de un &lt;code&gt;search&lt;/code&gt; y hasta el momento es el que
+mas habia utilizado (que realmente es poco) y tambien miembro de proyecto GNU
+y&amp;hellip; corre sobre Java y&amp;hellip; tiene todas las comodidades que se esperan de un
+interprete de linea de comandos: historial y edicion&lt;/p&gt;
+
+&lt;p&gt;Si, si lo encuentran probar&lt;/p&gt;
+
+&lt;h3 id=&#34;racket&#34;&gt;racket&lt;/h3&gt;
+
+&lt;p&gt;Pagina Oficial: &lt;a href=&#34;https://racket-lang.org/&#34;&gt;https://racket-lang.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;La cleptomania de libros electronicos (ja, que raro suena
+&amp;ldquo;e-l-e-c-t-r-o-n-i-c-o-s&amp;rdquo;) me hiso (no) conocer este
+interprete/lenguaje/dialecto de lisp/scheme, que segun el libro &amp;ldquo;programando con
+Racket 5&amp;rdquo; (antes mencionado y enlazado) contiene en sus entrañas todo lo
+necesario para correr scheme.&lt;/p&gt;
+
+&lt;p&gt;Este no lo encontre en los repos, asi que debe descargarse
+desde
+&lt;a href=&#34;https://download.racket-lang.org/racket-6-10-x86_64-linux-sh.html&#34;&gt;su web&lt;/a&gt;.
+&lt;strong&gt;!!!Cuidado!!!&lt;/strong&gt;, con seguir alguno de los enlaces que hay aparecen
+directamente pues en el momento de escribir esto (version 6.10) el contenido es
+un script bash de 118M, al seguirlo con firefox, se colgo un rato, y al abrirlo
+con el &lt;code&gt;less&lt;/code&gt; crashearon todos los &lt;code&gt;tilix&lt;/code&gt; en ejecucion (en masa), la causa? en
+sus entrañas contiene un tar &amp;ldquo;enbebido&amp;rdquo; (probablemente lo mas raro que me he
+topado, pues no esta en base64) asi que en lugar de seguir el enlace darle con el
+boton derecho y &amp;ldquo;copiar la ruta de enlace&amp;rdquo;, ir directamente a un terminal y
+conseguirlo con un &lt;code&gt;wget&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Luego darle permisos de ejecucion al &lt;code&gt;*.sh&lt;/code&gt;, ejecutar y seguir las
+intrucciones. Para istalarlo en el sistema, ejecutarlo como root, contestar
+&lt;code&gt;&amp;quot;yes&amp;quot;&lt;/code&gt;, luego enter, enter, &amp;hellip;, enter. En caso contrario ejecutar como usuario
+de a pie y leer lo que pide. En caso de error, leer donde coloco el binario
+&lt;code&gt;racket-uninstall&lt;/code&gt; y ejecutarlo&lt;/p&gt;
+
+&lt;p&gt;Ademas del interprete, se instala un compilador, un IDE y otras cosas que aun
+desconosco&lt;/p&gt;
+
+&lt;p&gt;El interprete en si, esta mas cerca de la experiencia de kawa, pero no incluye
+todos los &amp;ldquo;atajos&amp;rdquo; de edicion.&lt;/p&gt;
+
+&lt;p&gt;happy l-a-m-m-m-m-m-b-d-a-s-s-s-s-s-s-s-s!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,8 +145,275 @@ Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su
       <pubDate>Mon, 10 Jul 2017 17:57:10 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/sicp-contrib/</guid>
-      <description>Bienvenidos los contribuidores a la traduccion No oficial de libro SICP al español!
-Antes de comenzar, es necesario decir que esta vercion esta formateada en un lenguaje (experimental) de marcas ligeras llamado morg que busca ser mas sencillo que ningun otro lenguaje para crear documentacion, mientras mantiene la mayoria de caracteristicas de otros lenguajes de marcas como xml o los derivados de TeX. Por tanto esta es una de sus primeras pruebas en el mundo real</description>
+      <description>
+
+&lt;p&gt;Bienvenidos los contribuidores a la traduccion No oficial de libro SICP al
+español!&lt;/p&gt;
+
+&lt;p&gt;Antes de comenzar, es necesario decir que esta vercion esta formateada en un
+lenguaje (experimental) de marcas ligeras llamado &lt;a href=&#34;https://github.com/nasciiboy/morg&#34;&gt;morg&lt;/a&gt;
+que busca ser mas sencillo que ningun otro lenguaje para crear documentacion,
+mientras mantiene la mayoria de caracteristicas de otros lenguajes de marcas
+como xml o los derivados de TeX. Por tanto esta es una de sus primeras pruebas
+en el mundo real&lt;/p&gt;
+
+&lt;p&gt;Esta traduccion se realiza por respeto y admiracion al espiritu que habita en la
+maquina. Manteniendo ese espiritu la obra esta bajo liciencia CC-SA 4.0 por lo
+que se da por hecho que cualquier contribucion a esta se apega a dicha
+licencia. Por respeto a las personas, este proyecto no obliga a firmar ningun
+CLA, u otro contrato similar&lt;/p&gt;
+
+&lt;p&gt;Happy Hacking!&lt;/p&gt;
+
+&lt;h2 id=&#34;pasos&#34;&gt;Pasos&lt;/h2&gt;
+
+&lt;p&gt;Este trabajo se encuentra gestionado por el sitema de control de versiones &lt;code&gt;git&lt;/code&gt;,
+sobre la plataforma github en la que se realizaran los &amp;ldquo;pull request&amp;rdquo;, sin
+embargo si no desea registrarse en dicha plataforma, puede enviar su propuesta
+de cambios dentro de un comprimido en formato &lt;em&gt;zip&lt;/em&gt; o &lt;em&gt;tar&lt;/em&gt; al correo
+nasciiboy@gmail.com, siendo el unico requisito clonar el repositorio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/nasciiboy/sicp.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;manternerlo actualizado mediante el comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git pull
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;realizar los cambios correspondientes y enviar unicamente dichos cambios&lt;/p&gt;
+
+&lt;p&gt;La via (en github) de &lt;a href=&#34;https://gist.github.com/BCasal/026e4c7f5c71418485c1&#34;&gt;contrubucion&lt;/a&gt; &amp;ldquo;estandar&amp;rdquo; seria&lt;/p&gt;
+
+&lt;p&gt;realizar un fork al repositorio&lt;/p&gt;
+
+&lt;p&gt;Después de tener el repositorio en nuestra cuenta, seleccionar la dirección del
+repositorio &amp;ldquo;SSH o HTTP&amp;rdquo; y clonar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/mi-usuario/NombreRepo.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Antes de realizar modificaciones agregar la URL del repositorio original del proyecto:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote add upstream https://github.com/nasciiboy/sicp.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y obtener los últimos cambios del repo Original:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git pull -r upstream master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Crear una Rama. Para crear una rama usar la opción &lt;code&gt;checkout&lt;/code&gt; de git:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git checkout -b mi-rama-con-cambios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Realizar todos los cambios que se desea hacer al proyecto.&lt;/p&gt;
+
+&lt;p&gt;Agregar los archivos y hacer un commit&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git commit -a -m &amp;quot;mi commit&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Después de realizar el commit hacer el push hacia nuestro repositorio indicando
+la rama que hemos creado.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git push origin mi-rama-con-cambios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dentro de github hacer un Pull Request, Hacer click en &amp;ldquo;Compare &amp;amp; Pull Request&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Si todo está bien, enviar con el botón &amp;ldquo;Send Pull Request&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Esperar que los cambios se revisen, acepten y mezclen en la rama principal&lt;/p&gt;
+
+&lt;h2 id=&#34;formato-de-commits&#34;&gt;Formato de commits&lt;/h2&gt;
+
+&lt;p&gt;sientase libre de formatear sus commits como mejor le paresca!&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; git, es una herramienta, un mero medio para gestionar el desarrollo de un
+proyecto.&lt;/p&gt;
+
+&lt;p&gt;El &amp;ldquo;producto&amp;rdquo; final es el contenido en el directorio principal no el
+contenido almacenado en &lt;code&gt;.git&lt;/code&gt;, asi como no se comparte el editor o un
+compilador con el que se hace un programa, no se considera que un proyecto
+terminado tenga que contener las datos de su programa de control de versiones&lt;/p&gt;
+
+&lt;p&gt;los datos sobre la autoria de sus contribuidores (si es lo que se desea) seran
+colocados dentro del fichero &lt;code class=&#34;file&#34;&gt;contrib.txt&lt;/code&gt;, que sera
+el registro transmido en la version final de la traduccion&lt;/p&gt;
+
+&lt;h2 id=&#34;organizacion&#34;&gt;Organizacion&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+├── contrib.txt           // lista de colaboradores
+├── img                   // carpeta con imagenes del libro
+│   ...
+├── howto-es.md           // Como colaborar
+├── LICENSE               // Licencia del proyecto
+├── README-EN.md          // presentacion del proyecto en ingles
+├── README.md             // presentacion del proyecto en español
+├── sicp.morg             // fichero &amp;quot;maestro&amp;quot; del libro (ingles)
+├── sicp.html             // exportacion del libro (ingles)
+├── sicp-es.porg          // fichero &amp;quot;maestro&amp;quot; con la traduccion al español
+├── todo.txt              // tareas a realizar
+└── worg-data             // carpeta con recursos para la exportacion html
+    ├── worg.css          // hoja de estilo
+    ├── fonts             // fuentes
+    └── img               // imagenes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;la-herramienta-morg&#34;&gt;La herramienta morg&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/nasciiboy/morg&#34;&gt;morg&lt;/a&gt; es un programa desarrollado en
+el lenguaje de programacion Go, para instalarlo primero debe seguir los pasos
+de &lt;a href=&#34;https://github.com/nasciiboy/morg/blob/master/howto.md&#34;&gt;esta&lt;/a&gt; guia, o si ya
+tiene instalado el lenguaje Go en su sistema, puede optener la herramienta con
+el comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go get -v github.com/nasciiboy/morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para actualizar la herramienta a nuevas versiones&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go get -u -v github.com/nasciiboy/morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;De momento esta herramienta solo ha sido probada en el sistema GNU/Linux en la
+distrubucion Fedora&lt;/p&gt;
+
+&lt;p&gt;Para optener la exportacion del fichero principal al formato html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;morg toHtml sicp.morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para generar el fichero morg del libro en español apartir del fichero de
+traduccion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;morg unPorg sicp-es.porg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Luego puede exportarlo a formato html con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;morg toHtml sicp-es.morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;modificaciones&#34;&gt;Modificaciones&lt;/h2&gt;
+
+&lt;p&gt;Todo el trabajo de traduccion se centra en el fichero &lt;code class=&#34;file&#34;&gt;sicp-es.porg&lt;/code&gt;
+este contiene el contenido intacto de &lt;code class=&#34;file&#34;&gt;sicp.morg&lt;/code&gt;, con
+la particularidad que cada linea esta &lt;em&gt;comentada&lt;/em&gt; con &lt;code&gt;#&lt;/code&gt; (&lt;code&gt;#&lt;/code&gt; y un espacio en
+blanco). La traduccion al español se coloca justo debajo de cada seccion en
+ingles, manteniendo la indentacion del original, esto significa que se colocara
+con &lt;em&gt;dos&lt;/em&gt; espacios menos del inicio del contenido original comentado, es decir&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Esto forma parte del material original
+Esta sera la traduccion del material original
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pasemos a un ejemplo real&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# * Unofficial @e(morg) Format
+* Formato @e(morg) No Oficial
+
+#   This is the second edition @A(SICP) book, from Unofficial morg Format.
+  Esta es la segunda edicion del libro @A(SICP), no oficial en formato morg.
+
+#   This @l(https://github.com/nasciiboy/morg/&amp;lt;&amp;gt;morg) version is based on
+#   Unofficial Texinfo Format @l(http://sicpebook.wordpress.com) (July 07, 2017),
+#   based on @l(http://www.neilvandyke.org/sicp-texi/&amp;lt;&amp;gt;2.neilvandyke4).
+  Esta versión en formato @l(https://github.com/nasciiboy/morg/&amp;lt;&amp;gt;morg) se basa
+  en la version no oficial @l(http://sicpebook.wordpress.com/&amp;lt;&amp;gt;sicpebook) en
+  formato Texinfo (Julio 07, 2017), basada en la version no oficial
+  @l(http://www.neilvandyke.org/sicp-texi/&amp;lt;&amp;gt;2.neilvandyke4) convertida desde la
+  @l(http://mitpress.mit.edu/sicp/&amp;lt;&amp;gt;version HTML) original de MIT Press.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;morg cuenta con sencillas pero potentes opciones de estructuracion y resaltado,
+no es necesario conocerlas a profundidad, pero aqui estan las principales&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;todos los elementos finalizan cuando aparece una linea en blanco, exeptuando
+los &amp;ldquo;comandos&amp;rdquo; que se guian por la indentacion&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;el documento se estructura por niveles de encabezado, esto es cada linea que
+inicia con uno o varios &lt;code&gt;*&lt;/code&gt; seguida por al menos un espacio en blanco. El
+alcance de este encabezado, termina cuando aparece otro encabezado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;las listas inician con &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;1.&lt;/code&gt;, &lt;code&gt;1)&lt;/code&gt;, &lt;code&gt;a.&lt;/code&gt; o &lt;code&gt;a)&lt;/code&gt;, seguido por un
+espacio en blanco y luego su contenido debe indentarse&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;las definiciones inician con &lt;code&gt;-&lt;/code&gt; o &lt;code&gt;+&lt;/code&gt; luego aparece el texto a definir,
+seguido por &lt;code&gt;::&lt;/code&gt; y despues cualquer contenido que conforme la definicion debe
+llebar identacion&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;los &amp;ldquo;abouts&amp;rdquo; inician con &lt;code&gt;::&lt;/code&gt; luego aparece el &amp;ldquo;titulo&amp;rdquo;,
+seguido por &lt;code&gt;::&lt;/code&gt; y despues cualquer contenido que conforme la definicion debe
+seguir la identacion&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;los &amp;ldquo;comandos de bloque&amp;rdquo; tienen la estructura &lt;code&gt;..el-comando opciones &amp;gt; argumento&lt;/code&gt;. El
+cuerpo, del comando si es que tiene, debe estar indentado con dos espacios.
+Los comandos de bloque pueden &amp;ldquo;cerrarse&amp;rdquo; explicitamente con &lt;code&gt;&amp;lt; el-comando..&lt;/code&gt;, de otra
+forma terminan cuanto el contenido deja de mantener la indentacion&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;existen los comandos &lt;code&gt;@&lt;/code&gt;, que sirven tanto para resaltar el texto, como para
+otras opciones (futuras) mas complejas, estos comandos siguen la forma &lt;code&gt;@x(&lt;/code&gt;,
+donde la &lt;code&gt;x&lt;/code&gt; es el comando en si (&lt;code&gt;b&lt;/code&gt; ==&amp;gt; bold, &lt;code&gt;e&lt;/code&gt; ==&amp;gt; enfasis, &lt;code&gt;i&lt;/code&gt; == italica,
+etc). Luego esta la abertura del comando que puede ser &lt;code&gt;(&lt;/code&gt;, &lt;code&gt;[&lt;/code&gt;, &lt;code&gt;{&lt;/code&gt; y &lt;code&gt;&amp;lt;&lt;/code&gt; y
+termina al encontrar el cierre, que respectivamente seria &lt;code&gt;)&lt;/code&gt;, &lt;code&gt;]&lt;/code&gt;, &lt;code&gt;}&lt;/code&gt; y
+&lt;code&gt;&amp;gt;&lt;/code&gt;. La variedad de este ultimo se utiliza para &lt;em&gt;evitar abiguedades&lt;/em&gt; sobre el
+alcance del contenido&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Si dentro del comando &lt;code&gt;@&lt;/code&gt; aparece &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; significa que el texto a la derecha de
+  este, reemplazara lo que aparesca en la exportacion y el texto a la izquierda
+  es el &amp;ldquo;argumento&amp;rdquo; del comando&lt;/p&gt;
+
+&lt;p&gt;Desde luego los comandos (&lt;code&gt;@&lt;/code&gt; y de &amp;ldquo;bloque&amp;rdquo;) pueden anidarse, con la salvedad
+que los comandos de codigo fuente &lt;code&gt;..src &amp;gt; lenguaje&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Para colocar una &lt;code&gt;@&lt;/code&gt; dentro del texto tal cual, utilize &lt;code&gt;@@&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+
+&lt;p&gt;el fichero &lt;code class=&#34;file&#34;&gt;todo.txt&lt;/code&gt; se encuentra la lista de
+pendientes y encargados de cada labor&lt;/p&gt;
+
+&lt;p&gt;Antes de iniciar una tarea realize una modificacion en dicho fichero
+adjudicandose la tarea, envie un pull request y espere a que se actualice
+el repositorio fuente&lt;/p&gt;
+
+&lt;h2 id=&#34;consideraciones-finales&#34;&gt;Consideraciones finales&lt;/h2&gt;
+
+&lt;p&gt;La herramienta principal con la que se realiza la traduccion ha sido &lt;em&gt;El editor&lt;/em&gt;
+Emacs, el cual proporciona diversas facilidades de edicion, tomando prestadas
+cualidades del modo &lt;em&gt;org-mode&lt;/em&gt;, considere su uso, de otra manera tendra que
+editar &amp;ldquo;rusticamente&amp;rdquo;, debido a la juventud del lenguaje de marcas morg, de ser
+asi no se moleste en &amp;ldquo;cuadrar&amp;rdquo; los parrafos, solo mantenga la indentacion&lt;/p&gt;
+
+&lt;p&gt;Hasta el momento he utilizado google translate (&lt;code class=&#34;file&#34;&gt;sicp-es.porg&lt;/code&gt;)
+tanto para la traduccion maquina, e igual para ir realizando una revicion
+pararrafo a parrafo, dicho traductor, requiere de parrafos en una sola linea
+para operar de forma optima. Para no tener la penosa necesidad de unir lineas a
+mano utilice&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ morg toTxt sicp.morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto genera el fichero &lt;code class=&#34;file&#34;&gt;sicp.txt&lt;/code&gt;, con cada parrafo en
+una sola linea independiente. Es una caracteristica sin terminar, pero bastante
+util&lt;/p&gt;
+
+&lt;p&gt;todos los ficheros estan codificados en utf-8, antes de enviar sus cambios
+revise la codificacion&lt;/p&gt;
+
+&lt;p&gt;en la traduccion, las opciones de resaltado e inclucion de mathjax, estan
+desabilitadas (comando &lt;code&gt;..options &amp;gt;&lt;/code&gt;) para evitar el cuello de botella que
+suponen en el desarrollo, habilite si quiere la exportacion completa&lt;/p&gt;
+
+&lt;p&gt;Para terminar, hay un subreddit donde realizar cualquer pregunta, propuesta o
+insulto, en &lt;a href=&#34;https://www.reddit.com/r/SICP_ES/&#34;&gt;https://www.reddit.com/r/SICP_ES/&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -38,13 +422,236 @@ Antes de comenzar, es necesario decir que esta vercion esta formateada en un len
       <pubDate>Fri, 07 Jul 2017 18:27:56 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/dot-slash-sicp2es/</guid>
-      <description>o en otras palabras dadme pasta! (no en galletas)
-faq por que?
-para traducir un libro de muchas lineas al español, el Structure and Interpretation of Computer Programs, tambien conocido como SICP
-por que sicp?
- en los listados de lecturas para programadores suele aparecer inevitablemente y en los primeros puestos
- puedo traducirlo y combrar por ello, sin romper ninguna ley (creo)
- parece interesante y creo que enseñan a programar, ademas utilizan un derivado de lisp: Scheme</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/jelly.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;o en otras palabras dadme pasta! (no en galletas)&lt;/p&gt;
+
+&lt;h2 id=&#34;faq&#34;&gt;faq&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;por que?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;para traducir un libro de muchas lineas al español, el &lt;strong&gt;Structure and
+Interpretation of Computer Programs&lt;/strong&gt;, tambien conocido como &lt;em&gt;SICP&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;por que sicp?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;en los listados de lecturas para programadores suele aparecer inevitablemente
+y en los primeros puestos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;puedo traducirlo y combrar por ello, sin romper ninguna ley (creo)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;parece interesante y creo que enseñan a programar, ademas utilizan un derivado
+de lisp: &lt;em&gt;Scheme&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;no lo he leido, ni lo entiendo en ingles&amp;hellip;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;no entiendes ingles?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;he, je, he, nop! de hecho ni la ortografia, ni transmitir un pensamiento por
+escrito son &lt;em&gt;features&lt;/em&gt; que posea&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;uuuufff, de que vas?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;de nah, el libro no esta traducido, y yo, sin saber ingles, puedo utilizar un
+traductor, sentido comun y muchas horas para dejar un trabajo cuando menos
+entendible, por no decir bueno (sin llegar a lo profecional), todo esto
+respaldado en un nuevo &lt;a href=&#34;https://github.com/nasciiboy/morg/&#34;&gt;formato de documentacion&lt;/a&gt;
+(actualizacion de readme en proceso) que estoy construyendo, mientras aprendo a
+programar decentemente, capto un poco de ingles y me convierto en un miembro
+productivo de la sociedad. Todo ello por un modico y nada extrabagante (pero
+digno) sueldo de &lt;s&gt;tercer mundo&lt;/s&gt; un pais en vias de desarrollo&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;momento, seguro escapas con la pasta!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; palabra de boy scout, a menos que muera o me vea impedido fisicamente o
+ambientalmente, y/o sea demandado por algun desacuerdo legal por alguna de mis
+pasadas (y futuras) acciones informaticas, y como sinceramente no tengo nada
+mejor, ni mas noble que hacer, &lt;em&gt;yo nasciiboy&lt;/em&gt; lo llevare a cabo&lt;/p&gt;
+
+&lt;p&gt;en caso de no llegar a la meta finaciera, seguire adelante mientras mis parientes no me
+echen a la calle, consiga empleo, pierda el interes o cualquier combinacion de estas&lt;/p&gt;
+
+&lt;p&gt;cierto es que esta es la segunda vez que pido financiacion, anteriormente fue
+para llevar a cabo la escritura
+del &lt;a href=&#34;https://github.com/nasciiboy/raptor-book/&#34;&gt;libro del raptor&lt;/a&gt; + su revision
+por alguien de letras. En esa ocacion, no optuve ni un centavo, aunque continua el desarrollo de la
+libreria raptor, mas el nulo interes por esta, y la sensacion de no plasmar lo mejor
+posible mis ideas, llevaron a un paron indefinido de tal labor&amp;hellip; pero esto es
+distinto, verdad de la buena!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;seguro?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;si, seguro!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;seguro, seguro?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;que si, es mas, a diferencia de otros suplicantes de donacion que no ofrecen
+nada de inicio, noblemente he realizado una maquetacion del libro al formato
+morg (sin gluten, o aditivos), tambien incluyo una exportacion en html
+en &lt;a href=&#34;https://github.com/nasciiboy/sicp/&#34;&gt;este repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;o puedes hacer una clonacion con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/nasciiboy/sicp.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hay encontraras, el fichero fuente y su exportacion a html, ambas en
+ingles. Probe la version html con firefox y con un spin de chromium, sin
+aparente problema&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/sicp-screeshot-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/sicp-screeshot-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;extenso el material es, asi que probablemente contenga algunos errores&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;cuanto quieres?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;5,000&lt;/em&gt; dolares, una cantidad aproximada entre 70,000 y 100,000 pesos mexicanos,
+para un periodo de entre 5 a 8 meses (ampliable a un año), que seria un sueldo
+bajo-bueno-promedio anual&lt;/p&gt;
+
+&lt;p&gt;en mas de lo que esperiria ganar en un empleo regular, pero oye, para algo que
+puedo hacer ya seria mucho no valorarme, ademas podria gastar una suma
+considerable en un par de buenos monitores, una nueva placa, un disco de 4TB, o
+ser persona&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;donde deposito?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;realmente nunca he echo un deposito, ni recivido dinero de internet, si quieres
+hacerlo sin intermediarios ponte en contacto por correo, ya veremos si la
+tarjeta bancaria maizoro que saque con 1 peso de saldo sirve para algo&lt;/p&gt;
+
+&lt;p&gt;si por el contrario prefieres un intermediario, abri una cuenta en &lt;a href=&#34;https://es.liberapay.com/&#34;&gt;&lt;em&gt;liberapay&lt;/em&gt;&lt;/a&gt;,
+que es algo asi como un patreon, pero sin fines de lucro, ni compromisos, basado
+en software libre, tambien tiene un monton de usuarios registrados esperando
+algo de pasta y su ultimo mes movieron poco mas de 1200 euros&amp;hellip; el
+financiamiento de proyectos libres es complejo, nadie te da dinero si no eres un
+chakal!&lt;/p&gt;
+
+&lt;p&gt;el enlace a la cuenta para la financiacion, esta a fondo del blog, como sin
+querer, mis unicos otros dos medios de contacto son el correo (tambien al fondo)
+y en reddit, ambos con el usuario &lt;strong&gt;nasciiboy&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;y las (pegatinas|playeras|recompensas)?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;no necesitas nada externo, las cosas bonitas las tienes dentro de ti, las mas
+bonitas en el disco duro, si quieres
+una baratija ya te la puedes comprar por tu cuenta he ir directo a #!eç¤¢¢
+€¢#!¢e¤¢ $&amp;amp;~#@&amp;hellip;. desde el respeto&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;lol, alimenta al troll&amp;hellip; bueno, por 10 dolares o asi, ya te pongo en el
+&lt;em&gt;CONTRIBUTORS&lt;/em&gt; del repo, por 100 o mas en los agradecimientos del libro, y por
+1000 al inicio del libro con el cargo ficticio (o real) que quieras! como &lt;em&gt;ninja
+editor&lt;/em&gt;, o &lt;em&gt;Jr. revisor online ecologist superior chief developer master&lt;/em&gt;, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;no tengo pasta, puedo colaborar?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;esta en un repo, en texto plano, en internet, con una licencia libre (CC BY-SA
+4.0), puedes hacer lo que te permita la ley o tu vision del mundo&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; por supuesto que puedes colaborar, dar una revicion a las cosas que voy
+haciendo (suelo subir una seccion/capitulo por commit), ponerte a traducir,
+ofrecer tu opinion sobre el formato, programar morg, hacer una portada, una hoja
+de estilo, &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;no voy a quejarme, por tardar menos, menos aun si se hace mejor&lt;/p&gt;
+
+&lt;p&gt;tambien si te gusta el formato, recivo encargos, ofertas de empleo, como tambien
+propuestas para hacer esto de documentar rentable a corto plazo, armar una empresa hippie, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;cuando inicia la traduccion?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;obviamente, cuando vea la pasta&amp;hellip; en realidad puedo empezar inmediatamente,
+aunque primero quiero programar un poco el exportador/visualizador/facilitador
+del formato. Tengo por costumbre hacer un poco de esto y un poco de aquello,
+en un mes subo (o no) una &lt;em&gt;pretraduccion&lt;/em&gt; (automatica, es decir del traductor) y/o
+&lt;em&gt;premaquetacion&lt;/em&gt; de todo el material, esto lleva mucho mas tiempo que una simple
+traduccion y por lo general no tiene un sentido entendible para humanos, pero es
+la parte fundamental.&lt;/p&gt;
+
+&lt;p&gt;Si deseo programar antes, es para automatizar la mayor parte de la labor, pese a
+que esto tambien es una meta a largo plazo&lt;/p&gt;
+
+&lt;h2 id=&#34;adaptacion-del-material&#34;&gt;adaptacion del material&lt;/h2&gt;
+
+&lt;p&gt;Si he de clasificar la facilidad de adaptar un libro de un formato a otro, sin
+duda, lo mas complejo seria partir del formato de arbol muerto, no obstante en
+esa situacion la &amp;ldquo;libertad de ajuste&amp;rdquo;, es la mas grande, si no sabes
+mecanografia, es un magnifico proyecto para aprender, e ir realizando la
+adaptacion &amp;ldquo;al vuelo&amp;rdquo;, claro luego seran necesarias muchas pasadas cazando
+fallos ortograficos&lt;/p&gt;
+
+&lt;p&gt;el siguiente caso de complejidad seria un ocr o pdf &amp;ldquo;con letras&amp;rdquo;, primero se
+vuelca el contenido y luego toca no solo maquetar desde el texto en bruto,
+tambien transladar cualquier marca del original (bold, italica, enfasis,
+codigo), asi como crear enlaces internos, si es el caso&lt;/p&gt;
+
+&lt;p&gt;por ultimo temos la adaptacion partiendo de algun lenguaje de marcado, que
+me gusta clasificar en dos subcategorias:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;maquetado limpio&lt;/em&gt;, es decir, si es factible realizarlo con una herramienta
+automatica o con un minimo de intervencion (a base de substitucion regexp y
+macros) casi directamente&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;maquetado ofuscado&lt;/em&gt;, jo, esto suele encontrarse en mayor medida en documentos
+html, cuando la apnesia ataca los fundamentos estructurales del lenguaje, y
+mediante una y otra etiqueta o las que hagan falta se optiene el aspecto
+visual deseado; esta tecnica tambien se vale de romper los propositos de un
+elemento dado, asi tambien como emular una caracteristica no implementada&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;los documentos en (*)TeX, suelen estar en el punto medio de ambas subcategorias,
+para fortuna mia, la persona &lt;em&gt;Lytha Ayth&lt;/em&gt;, en el 2001 se dedico a maquetar sicp
+a conciencia en el formato texinfo (formato oficial de documentacion del
+proyecto GNU, con un mimo particular en Emacs). Tras una larga cadena de
+aportaciones y correcciones, optube una copia desde el repositirio &lt;a href=&#34;https://github.com/sarabander/sicp&#34;&gt;sicp-pocket&lt;/a&gt;
+que contiene todo el libro dentro de un solo fichero (&lt;code class=&#34;file&#34;&gt;sicp-pocket.texi&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;como este fichero tenia una estructura razonable, la mayoria pudo hacerse
+mediante macros y substitucion de expresiones regulares, revision manual y
+un poco de lavor para encajar algunas cosas, este proceso llevo algo asi como 15
+seciones de tiempo ocioso y un par de dias a tiempo completo&lt;/p&gt;
+
+&lt;p&gt;diria que lo mas complejo fue encontrar sentido al uso del comando &lt;code&gt;quotation&lt;/code&gt;,
+que se utilizaba indiscriminadamente en cuelquier figura, codigo, ejemplo y
+bloque ambiguo, tambien fue complejo decidir que hacer con las bloques de arte
+ascii encerrados en comandos de compilacion condicional, que se utilizaban
+principalmente para graficar diagramas y algunas formulas matematicas, en ese
+aspecto tome una licencia artistica, substituir el arte ascii con &amp;ldquo;arte&amp;rdquo; unicode
+cuando fuese apropiado (y cuando no) y tambien la nada grata tarea de substituir
+sup/super indices (unicode) de todas las formulas matemagicas que fue posible,
+creo solo quedaron 5-10 formulas en TeX puro&lt;/p&gt;
+
+&lt;p&gt;cierto es que el texto incluia todas las formulas tanto en ascii como en TeX,
+pero borre este ultimo, no por incapacidad del lenguaje morg (que aun no se
+decanta por una sintaxis para formulas matemagicas), sino por ahorrar
+procesamiento y por considerar que la representacion unicode cumplia de forma
+satisfactoria, tanto (y principalmente) para leer el libro directamente del
+fuente, como en alguna de sus exportaciones (de momento solo html) y una
+no completa vision desde el terminal con el comando &lt;code&gt;morg tui sicp.morg&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Para el par de formulas que no puedieron adaptarse, utilice el javascript de
+MathJax, para la que tuve que incluir una opcion en el fuente, si desea
+eliminarla, dentro del codigo fuente del documento (&lt;code class=&#34;file&#34;&gt;sicp.morg&lt;/code&gt;)
+elimine la palabra &lt;code&gt;mathjax&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;el resaltado de syntaxis requiere tener instalado pygments. Dentro del documento
+la palabra &lt;code&gt;pygments&lt;/code&gt; habilita dicho resaltado.&lt;/p&gt;
+
+&lt;p&gt;Tome en cuenta que python es mas lento que morir por fumar, asi que desabilitese
+para pruebas rapidas, lo mismo para &lt;code&gt;mathjax&lt;/code&gt;, la carga del javascript afecta el
+rendimiento del navegador de mala, muy mala manera&lt;/p&gt;
+
+&lt;p&gt;en los proximos dias pondre un readme al repo y una actualizacion al de morg&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
     </item>
     
   </channel>

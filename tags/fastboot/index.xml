@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 23 Nov 2017 16:26:40 -0600</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/fastboot/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/fastboot/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,229 @@
       <pubDate>Thu, 23 Nov 2017 16:26:40 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/m8/</guid>
-      <description>sucede que estas tranquilamente con tu dispositivo (un androide 4.4) que se arrastra por la vida, un dia revisando la playstore aparece que google te esta revisando las aplicaciones para que no tengas que preocuparte por tontaaas de seguridad o virus. Te cuiada tanto que ni te aviza, le dices que no tiene que hacerlo, pero insiste.
-Otro dia revisas tus apps y cual hongo &amp;ldquo;nace&amp;rdquo; un nuevo icono de nombre Ajustes de Google, va, si esto no lo instale yo, que generosidad&amp;hellip; y asi tu dispositivo con pocos recursos, programado en java, sobre java, sobre un nucleo, sobre un hardware con 500MB de ram y doble nucleo arm, no puede reproducir un puñetero audio decentemente.</description>
+      <description>
+
+&lt;p&gt;sucede que estas tranquilamente con tu dispositivo (un androide 4.4) que se
+arrastra por la vida, un dia revisando la &lt;em&gt;playstore&lt;/em&gt; aparece que google te esta revisando las
+aplicaciones para que no tengas que preocuparte por tontaaas de seguridad o virus. Te cuiada tanto que
+ni te aviza, le dices que no tiene que hacerlo, pero insiste.&lt;/p&gt;
+
+&lt;p&gt;Otro dia revisas tus apps y cual hongo &amp;ldquo;nace&amp;rdquo; un nuevo icono de nombre &lt;em&gt;Ajustes
+de Google&lt;/em&gt;, va, si esto no lo instale yo, que generosidad&amp;hellip; y asi tu
+dispositivo con pocos recursos, programado en java, sobre java, sobre un nucleo,
+sobre un hardware con 500MB de ram y doble nucleo arm, no puede reproducir un
+puñetero audio decentemente. Te cansas y cual windowsero le instalas un
+rooteador truculento con anuncios incluidos (y a saber que mas) y te pones a
+erradicar todo lo que se atraviesa por el camino, hasta que sale un mensaje cada
+5 segundos sobre que el telefono ya no funciona&amp;hellip; hey, bravo!&lt;/p&gt;
+
+&lt;p&gt;bueno que mas, a escuchar el mundo tal cual y no ver videos por la
+noche&amp;hellip; NoooOOOOOOOHHHHHHHHH, llevame a mi, llevame a mi!&lt;/p&gt;
+
+&lt;p&gt;por diversos motivos y una serie de eventos aleatorios fuera de control, termine
+con un mobil de segunda mano al que por desgracia, pese a una &amp;ldquo;exaustiva
+revision&amp;rdquo; tenia un defecto en el &amp;ldquo;touch&amp;rdquo; del display&amp;hellip; pero por otra parte
+ha sido el primer afortunado con el que intento un flasheo y termina con
+resultado (casi) feliz (lo del touch, es molesto). Aqui los pasos&lt;/p&gt;
+
+&lt;p&gt;Primero debemos instalar en nuestro flamante y nada restrictivo PC de escritorio
+un par de herramientas &lt;code&gt;adb&lt;/code&gt; y &lt;code&gt;fastboot&lt;/code&gt;. En freidora seria:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnf -y install android-tools
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego desde el dispositivo (cargado y sin conectar) vamos a&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Ajustes &amp;gt; Informacion &amp;gt; Compilacion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o algo asi, presionamos sobre &lt;em&gt;Numero de Compilacion&lt;/em&gt; 5 veces hasta que nos
+indique que ya somos &amp;ldquo;developers&amp;rdquo;. Regresamos a Ajustes y vamos a &lt;em&gt;Opciones de
+Desarrollador&lt;/em&gt;, tras esto, encendemos el &amp;ldquo;modo de depuracion (ADB)&amp;rdquo;. Luego
+pasamos a conectar el dispositivo al equipo y deberia de aparecer un dialogo sobre si
+damos permisos de depuracion al PC, a lo que decimos que si y siempre!&lt;/p&gt;
+
+&lt;p&gt;Sucede que los dispositivos HTC, son muy bondadosos, tienen bloqueado
+el dispotivibo contra cosas de consola, asi que en este punto vamos a &lt;a href=&#34;https://www.htcdev.com/&#34;&gt;la web&lt;/a&gt; de
+&amp;ldquo;developers de HTC&amp;rdquo; y nos resgistramos (es necesario). Una vez cumplido el
+tramite, y ya con nuestra cuenta logueada, en el navegador (desde el PC) pasamos
+al terminal en modo root y tecleamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;adb reboot bootloader # reinicia el mobil y entra en el &amp;quot;bios&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o alternativamente podemos (desconectar usb) apagar el equipo, luego presionar el &lt;code&gt;+&lt;/code&gt; en volumen y
+el &lt;code&gt;POWER&lt;/code&gt; sin soltar, y entra en el bootloader (conectar usb)&lt;/p&gt;
+
+&lt;p&gt;ahora, vamos a optener el &lt;em&gt;token&lt;/em&gt; de nuestro mobil, con el cual podremos
+optener la llave de desbloqueo (o no)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fastboot oem get_identifier_token
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en mi equipo sale algo asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;--( root ) - { /h/n/Downloads }
+--| fastboot oem get_identifier_token
+...
+(bootloader)
+(bootloader) &amp;lt; Please cut following message &amp;gt;
+(bootloader) &amp;lt;&amp;lt;&amp;lt;&amp;lt; Identifier Token Start &amp;gt;&amp;gt;&amp;gt;&amp;gt;
+(bootloader) 42EC933383A3F0D0E588FDFA06BC5B60
+(bootloader) CE75OEUI897EUX89EUI5465EUIFGX5U5
+(bootloader) 60C649D88C27020848589DB27353BC32
+(bootloader) NAS421BB5DDA3926B6F88A1C9E6DE7C6
+(bootloader) 2C3C1131C708DAE513785CA95F212DA5
+(bootloader) 1A12QJB0Y4PI684EUI51UEI564PUIE5U
+(bootloader) AF8AF2324322DE1BE93A7842EB8638CA
+(bootloader) 801DBCFD5254990D1739D5DB17C83DC2
+(bootloader) 2A48B420F729651167578764F178B52D
+(bootloader) 3F87E96D0BD19DFA3067C64E483AD551
+(bootloader) CA617AF1D897E4A27FE8C35604F5D4A4
+(bootloader) 9A2DFB9C7FE465CC1102816C7B3C8E2D
+(bootloader) DBEUIUI564UIE54UIE654UEIFAIL000L
+(bootloader) E5A5B4A9D481EEC452744FDE5294CC0C
+(bootloader) 61BF1D0D3740BA36F9DFBDAF306DD4F0
+(bootloader) 54054AEDFE75B8CFB74E5769ED8F2318
+(bootloader) &amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; Identifier Token End &amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;
+OKAY [  0.009s]
+finished. total time: 0.009s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aqui tenemos que cortar y copiar esta seccion (obviamente disinta en tu caso):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; Identifier Token Start &amp;gt;&amp;gt;&amp;gt;&amp;gt;
+42EC933383A3F0D0E588FDFA06BC5B60
+CE75OEUI897EUX89EUI5465EUIFGX5U5
+60C649D88C27020848589DB27353BC32
+NAS421BB5DDA3926B6F88A1C9E6DE7C6
+2C3C1131C708DAE513785CA95F212DA5
+1A12QJB0Y4PI684EUI51UEI564PUIE5U
+AF8AF2324322DE1BE93A7842EB8638CA
+801DBCFD5254990D1739D5DB17C83DC2
+2A48B420F729651167578764F178B52D
+3F87E96D0BD19DFA3067C64E483AD551
+CA617AF1D897E4A27FE8C35604F5D4A4
+9A2DFB9C7FE465CC1102816C7B3C8E2D
+DBEUIUI564UIE54UIE654UEIFAIL000L
+E5A5B4A9D481EEC452744FDE5294CC0C
+61BF1D0D3740BA36F9DFBDAF306DD4F0
+54054AEDFE75B8CFB74E5769ED8F2318
+&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; Identifier Token End &amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;regresamos a &lt;a href=&#34;https://www.htcdev.com/bootloader/unlock-instructions/page-2&#34;&gt;esta&lt;/a&gt; pagina de htc, vamos al final y (logueados) pegamos el recorte
+en el recuadro magico. Enviamos!&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;despues de un perido de tiempo&amp;rdquo; (en la prueba fue instantaneo) reciviremos un
+correo de &lt;em&gt;HTC-Unlockbootloader@htc.com&lt;/em&gt; con un adjunto &lt;strong&gt;Unclock_code.bin&lt;/strong&gt;
+(guardarlo como el oro). Regresamos a la terminal e ingresamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fastboot flash unlocktoken Unclock_code.bin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se abrira en el movil la sugiente pantalla&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/step13.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;movemos con VOLUMEN +/- hacia el Yes y confirmamos con POWER.&lt;/p&gt;
+
+&lt;p&gt;En este momento (no estoy seguro si es necesario pero) reiniciamos el equipo y
+reentramos en el bootloader ahora desploqueado&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fastboot oem boot
+adb reboot bootloader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/bootloader_screen.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;en este punto ya tenemos el mobil listo para flashear cualquier otro sistema. Si
+desides arrepentirte puedes ingresar&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fastboot oem lock
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de lo contrario, procedemos a instalar la ROM, en este caso un lineageOS, por
+que fue lo primero que encontre y tenia soporte. De cualquier forma, parece que
+el equipo cuenta con muchas roms, incluso desde la pagina de htc, nos
+proporcianan el kernel que utilizan y los pasos necesarios si queremos compilar
+por nuestra cuenta.&lt;/p&gt;
+
+&lt;p&gt;Vamos a la pagina de descargas de lineage de este equipo
+(&lt;a href=&#34;https://download.lineageos.org/m8&#34;&gt;https://download.lineageos.org/m8&lt;/a&gt;) y escogemos la &amp;ldquo;mas
+nueva&amp;rdquo;, debe ser algo como &lt;code&gt;lineage-*.zip&lt;/code&gt; y pesar alrededor de 300-400MiB.
+Para evitar inconvenientes tambien podemos bajar la suma hash y hacer la
+comprobacion.&lt;/p&gt;
+
+&lt;p&gt;Asi mismo, debemos optener el &lt;em&gt;recovery&lt;/em&gt; para instalar la rom, eso esta por aca &amp;gt;
+&lt;a href=&#34;https://dl.twrp.me/m8/&#34;&gt;https://dl.twrp.me/m8/&lt;/a&gt;, tambien bajamos la mas nueva y verificamos la suma&lt;/p&gt;
+
+&lt;p&gt;Si has seguido los pasos deberiamos estar el el bootloader. Procedemos a instalar
+el recoveri, lo cual seria algo como&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fastboot flash recovery twrp-x.x.x-x-m8.img
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y ya que estamos, aprobechamos para transferir nuestro rom de lineaje, cosa que
+creo puede hacerse desde el navegador de ficheros, pero continuemos con el ritual&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;adb push lineagexxxxxxxxx*.zip /sdcard/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;reiniciamos y volvemos a entar en el bootleader&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fastboot oem boot
+adb reboot bootloader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora, creo que presionando POWER deberiamos regresar &lt;em&gt;un paso&lt;/em&gt; en el &amp;ldquo;bios&amp;rdquo; y
+entrar en el menu &lt;em&gt;RECOVERY&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;aqui aproverchariamos para hacer un respaldo del equipo (cosa que no hice),
+vamos a&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Wipe &amp;gt; Advanced Wipe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;seleccionamos &lt;em&gt;Cache&lt;/em&gt;, &lt;em&gt;System&lt;/em&gt; y &lt;em&gt;Data&lt;/em&gt; y delizamos &amp;ldquo;la barra&amp;rdquo; para aprobar los
+cambios&lt;/p&gt;
+
+&lt;p&gt;Hacemos una vuelta atras en el menu y le damos a &lt;em&gt;Install&lt;/em&gt; buscamos nuestro rom
+en el sistema (&lt;code&gt;/sdcard&lt;/code&gt;), selecionamos nuestro &lt;code&gt;lineage*.zip&lt;/code&gt; y aplicamos los
+cambios deslizando de nuevo.&lt;/p&gt;
+
+&lt;p&gt;Reiniciamos y ya deberiamos tener nuestro flamante sistema con androide 7 y sin
+las cosas de google, je, ni pide usuario o mierdas similares!. Para terminar instalamos
+el fdroid, el apk de vlc (desde su pagina) y a rockanrolear&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;happy hacking!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;(&lt;em&gt;pd:&lt;/em&gt; al parecer, el metodo es mas o menos similar pra cualquier movil, aunque el
+viejo LG l50 se resiste a entrar en el &amp;ldquo;bios&amp;rdquo;, si lo consiguo ya habra segunda
+parte)&lt;/p&gt;
+
+&lt;p&gt;(&lt;em&gt;pd2:&lt;/em&gt; el equipo de segunda mano se llebo todas mis fichas, y no tiene
+recambio. Repararlo tampoco parece una opcion rozonable (por el precio), ja, ja,
+ja, si lo logro re-vender a alguna entidad como la que me lo colo, creo que
+compraria un equipo identico, principalmente por pasar la prueba y tener un
+hardware mas que potable)&lt;/p&gt;
+
+&lt;h2 id=&#34;fuentes&#34;&gt;fuentes&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wiki.lineageos.org/devices/m8/install&#34;&gt;https://wiki.lineageos.org/devices/m8/install&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dl.twrp.me/m8/&#34;&gt;https://dl.twrp.me/m8/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.htcdev.com/bootloader&#34;&gt;https://www.htcdev.com/bootloader&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.htcdev.com/bootloader/unlock-instructions&#34;&gt;https://www.htcdev.com/bootloader/unlock-instructions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.htcdev.com/bootloader/unlock-instructions/page-2&#34;&gt;https://www.htcdev.com/bootloader/unlock-instructions/page-2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.htcdev.com/bootloader/unlock-instructions/page-4/&#34;&gt;https://www.htcdev.com/bootloader/unlock-instructions/page-4/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.htcdev.com/bootloader/about_unlock_process&#34;&gt;https://www.htcdev.com/bootloader/about_unlock_process&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 28 Sep 2017 19:47:50 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/emacs/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/emacs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,7 +18,535 @@
       <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/v-config/</guid>
-      <description>todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs para ponerme a programar &amp;ldquo;el morg&amp;rdquo; (que esta en go) y aparecia un mensaje de error muuu largo, informando que el flycheck (un modo para verificar el codigo mientras se va escribiendo) no localizaba la ruta al ejecutable del flycheck-go. Como no encontraba el origen del problema y queria tunear el emacs, me propuse abandonar el sistema que tenia para agregar extensiones al emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de paquetes del que dispone emacs&amp;hellip; je, como decir que no me gustan las cosas automagicas que hacen las cosas sin que me entere, pero bueno, siendo emacs me dare el lujo de ser un poco mas permisivo</description>
+      <description>
+
+&lt;p&gt;todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs
+para ponerme a programar &amp;ldquo;el morg&amp;rdquo; (que esta en go) y aparecia un mensaje de
+error muuu largo, informando que el flycheck (un modo para verificar el codigo
+mientras se va escribiendo) no localizaba la ruta al ejecutable del
+&lt;code&gt;flycheck-go&lt;/code&gt;. Como no encontraba el origen del problema y queria tunear el
+emacs, me propuse abandonar el sistema que tenia para agregar extensiones al
+emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio
+del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de
+paquetes del que dispone emacs&amp;hellip; je, como decir que no me gustan las cosas
+automagicas que hacen las cosas sin que me entere, pero bueno, siendo emacs me
+dare el lujo de ser un poco mas permisivo&lt;/p&gt;
+
+&lt;p&gt;asi pues la nueva configuracion, es de esas sencillitas en las que colocas el
+paquete que quieres instalar/usar en una orden y luego al abrir emacs se
+descarga, instala y puede que hasta configure los paquetes que hagan falta, asi
+a la brava y sin tener ni idea de como&lt;/p&gt;
+
+&lt;p&gt;por lo tanto si quieres replicar mi configuracion&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/morg-verano.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;por ejemplo para programar en go, c, tener un lector de rss, o iniciar en emacs
+con el tema &lt;em&gt;nascii&lt;/em&gt;, primero instala emacs, y luego crea una carpeta en tu
+&lt;code&gt;home&lt;/code&gt; con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://nasciiboy.github.io/data/init-dot-el.zip
+unzip init-dot-el.zip -d ~/.emacs.d
+rm init-dot-el.zip
+emacs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://nasciiboy.github.io/data/init-dot-el.zip&#34;&gt;el comprimido&lt;/a&gt; con forma de zip, almacena dos ficheros:
+&lt;code&gt;init.el&lt;/code&gt;, que es donde se coloca toda configuracion de emacs y pondre a
+continuacion casi tal cual y &lt;code&gt;nascii-theme.el&lt;/code&gt; mi &lt;em&gt;tema&lt;/em&gt; de colores personal,
+baraje el subirlo a melpa para que tambien forme parte de la instalacion magica,
+pero me da peresa y creo que el tema visual es cosa de cada quien, unque desde
+luego mi tema es el unico que es correcto y valido&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;las extenciones para programar en go requieren que instales las siguientes herramientas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;go get -u github.com/nsf/gocode
+go get -u github.com/rogpeppe/godef
+go get -u golang.org/x/tools/cmd/goimports
+go get -u github.com/jstemmer/gotags
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por lo demas, solo haria falta substituir todos los &lt;code&gt;/home/nasciiboy&lt;/code&gt; por tus
+rutas correspondientes&lt;/p&gt;
+
+&lt;h2 id=&#34;init-el&#34;&gt;init.el&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;;;; nascii-config: --- another day in Emacs
+;; Substituir /home/nasciiboy (y otras rutas) segun corresponda.
+
+;; el thema nascii
+(load-file &amp;quot;~/.emacs.d/nascii-theme.el&amp;quot;)
+
+;; fullscreen
+(toggle-frame-fullscreen)
+
+;; desactivar barra de (menu|herramientas|desplazamiento)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+;; tamaño de la fuente
+(set-face-attribute &#39;default nil :height 140)
+
+;; inhibir mensajes y pantalla de inicio
+(setq inhibit-startup-buffer-menu t)
+(setq inhibit-startup-screen t)
+(setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message &amp;quot;usuario&amp;quot;)
+
+;; mensaje en el buffer scratch
+(setq initial-scratch-message &amp;quot;
+
+  ;;     _____ __  __    _    ____ ____
+  ;;    | ____|  \\/  |  / \\  / ___/ ___|
+  ;;    |  _| | |\\/| | / _ \\| |   \\___ \\
+  ;;    | |___| |  | |/ ___ \\ |___ ___) |
+  ;;    |_____|_|  |_/_/   \\_\\____|____/
+
+
+  ;;      ____   ___  _  ______    _
+  ;;     |  _ \\ / _ \\| |/ / ___|  | |
+  ;;     | |_) | | | | &#39; /\\___ \\  | |
+  ;;     |  _ &amp;lt;| |_| | . \\ ___) | |_|
+  ;;     |_| \\_\\\\___/|_|\\_\\____/  (_)
+
+&amp;quot;)
+
+;; hora en formato 24 horas:
+(setq display-time-day t display-time-24hr-format t)
+(display-time)
+
+;; reemplazar &amp;quot;yes&amp;quot; por &amp;quot;y&amp;quot; en el prompt
+(fset &#39;yes-or-no-p &#39;y-or-n-p)
+
+;; habilitar narrow &amp;amp; wide
+(put &#39;narrow-to-region &#39;disabled nil)
+
+;; habilitar upcase-region y downcase-region
+(put &#39;upcase-region &#39;disabled nil)
+(put &#39;downcase-region &#39;disabled nil)
+
+;; resaltar apertura y cierre de paréntesis
+(setq show-paren-delay 0
+      show-paren-style &#39;parenthesis)
+(show-paren-mode)
+
+;; visualizar lineas sin truncar ⏎
+(set-default &#39;truncate-lines t)
+
+;; Al borrar cosas moverlas a la papelera.
+;; el directorio corresponde a la papelera en gnome3
+(setq delete-by-moving-to-trash t
+      trash-directory &amp;quot;~/.local/share/Trash/files&amp;quot;)
+
+;; al escribir en modo texto cortar lineas automaticamente
+(add-hook &#39;text-mode-hook &#39;turn-on-auto-fill)
+;; longitud de lineas
+(setq-default fill-column 80)
+
+;; Core settings
+;; UTF-8 please
+(set-charset-priority &#39;unicode)
+(setq locale-coding-system   &#39;utf-8)   ; pretty
+(set-terminal-coding-system  &#39;utf-8)   ; pretty
+(set-keyboard-coding-system  &#39;utf-8)   ; pretty
+(set-selection-coding-system &#39;utf-8)   ; please
+(prefer-coding-system        &#39;utf-8)   ; with sugar on top
+(setq default-process-coding-system &#39;(utf-8-unix . utf-8-unix))
+
+;; (setq make-backup-files nil) ; detener creacion de ficheros respaldo~ (descomentar)
+(setq auto-save-default nil)    ; detener creacion de ficheros #autoguardado#
+;; colocar todos los ficheros de respaldo en el directorio ~/.emacs.d/backups/
+(setq backup-directory-alist `((&amp;quot;.&amp;quot; . ,(concat user-emacs-directory &amp;quot;backups&amp;quot;))))
+
+;; espacios en lugar de tabulaciones
+(setq-default indent-tabs-mode nil)
+
+;; eliminar espacios en blanco
+(add-hook &#39;before-save-hook &#39;delete-trailing-whitespace)
+
+;; c++-mode para headers y ficheros C
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.h$&amp;quot; . c++-mode))
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.c$&amp;quot; . c++-mode))
+
+;; xml-mode para ficheros xml
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.xml$&amp;quot; . sgml-mode))
+
+;; dar permisos de ejecución a scripts luego de guardar
+(setq after-save-hook
+      (quote (executable-make-buffer-file-executable-if-script-p)))
+
+;; historial de ficheros abiertos
+(require &#39;recentf)
+(recentf-mode t)
+(setq recentf-max-saved-items 200)
+(global-set-key (kbd &amp;quot;C-c o&amp;quot;) &#39;recentf-open-files)
+
+;; atajos
+;; Wind Move &amp;lt;&amp;gt; movimiento entre ventanas
+(global-set-key [s-left]  &#39;windmove-left)
+(global-set-key [s-right] &#39;windmove-right)
+(global-set-key [s-up]    &#39;windmove-up)
+(global-set-key [s-down]  &#39;windmove-down)
+;; atajos para emacs cli
+(global-set-key (kbd &amp;quot;C-c &amp;lt;left&amp;gt;&amp;quot;)  &#39;windmove-left)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;right&amp;gt;&amp;quot;) &#39;windmove-right)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;up&amp;gt;&amp;quot;)    &#39;windmove-up)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;down&amp;gt;&amp;quot;)  &#39;windmove-down)
+
+;; parrafos
+(global-set-key (kbd &amp;quot;C-.&amp;quot;) &#39;forward-paragraph)
+(global-set-key (kbd &amp;quot;C-,&amp;quot;) &#39;backward-paragraph)
+(global-set-key (kbd &amp;quot;C-q&amp;quot;) &#39;fill-paragraph)
+(global-set-key (kbd &amp;quot;C-;&amp;quot;) &#39;delete-indentation)
+
+;; ibuffer en lugar de list-buffers
+(global-set-key (kbd &amp;quot;C-x C-b&amp;quot;) &#39;ibuffer)
+
+(global-set-key [f12] &#39;eval-buffer) ;; evaluar buffer (elips) actual
+(global-set-key [f9] &#39;compile)      ;; compilar buffer (por ejemplo en C)
+(global-set-key [f7] &#39;eww)          ;; abrir una direccion con eww
+
+;; atajos de eww el navegador incorporado de emacs
+(global-set-key (kbd &amp;quot;C-x w o&amp;quot;) &#39;eww)
+(global-set-key (kbd &amp;quot;C-x w b&amp;quot;) &#39;eww-add-bookmark)
+(global-set-key (kbd &amp;quot;C-x w l&amp;quot;) &#39;eww-list-bookmarks)
+(global-set-key (kbd &amp;quot;C-x w f&amp;quot;) &#39;eww-open-file)
+
+;; esto esta muuuuy chulo, cuando abres eshell te permite ejecutar los
+;; comandos en la lista como si estubieras dentro de un terminal &amp;quot;real&amp;quot;
+(setq eshell-visual-commands &#39;(&amp;quot;htop&amp;quot; &amp;quot;vi&amp;quot; &amp;quot;vim&amp;quot; &amp;quot;mocp&amp;quot; &amp;quot;top&amp;quot; &amp;quot;less&amp;quot; &amp;quot;more&amp;quot; &amp;quot;elinks&amp;quot; &amp;quot;elinks&amp;quot; &amp;quot;git&amp;quot; &amp;quot;sr&amp;quot; &amp;quot;surfraw&amp;quot;))
+
+;; en direct coloca el tamaño de los ficheros con formato para humanos
+(setq dired-listing-switches &amp;quot;-alh&amp;quot;)
+
+;; interpretes
+(setq scheme-program-name &amp;quot;racket&amp;quot;)        ; instalar previamente racket
+(setq inferior-lisp-program &amp;quot;clisp&amp;quot;)       ; instalar previamente clisp
+(setq python-shell-interpreter &amp;quot;python3&amp;quot;)  ; instalar previamente python3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                                                    ;;
+;;         &amp;quot;&amp;quot;#                    &amp;quot;                   ;;
+;;  mmmm     #    m   m   mmmm  mmm    m mm    mmm    ;;
+;;  #&amp;quot; &amp;quot;#    #    #   #  #&amp;quot; &amp;quot;#    #    #&amp;quot;  #  #   &amp;quot;   ;;
+;;  #   #    #    #   #  #   #    #    #   #   &amp;quot;&amp;quot;&amp;quot;m   ;;
+;;  ##m#&amp;quot;    &amp;quot;mm  &amp;quot;mm&amp;quot;#  &amp;quot;#m&amp;quot;#  mm#mm  #   #  &amp;quot;mmm&amp;quot;   ;;
+;;  #                     m  #                        ;;
+;;  &amp;quot;                      &amp;quot;&amp;quot;                         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; con esta seccion te permite instalar las extenciones automagicamente
+(require &#39;package)
+(add-to-list &#39;package-archives &#39;(&amp;quot;melpa&amp;quot; . &amp;quot;http://melpa.org/packages/&amp;quot;) t)
+(package-initialize)
+
+(unless (package-installed-p &#39;use-package)
+  (package-refresh-contents)
+  (package-install &#39;use-package))
+
+(require &#39;use-package)
+(setq use-package-always-ensure t)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: company-mode         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package company)
+(add-hook &#39;after-init-hook &#39;global-company-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: flycheck             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package flycheck)
+(flycheck-mode t)
+(add-hook &#39;python-mode-hook &#39;flycheck-mode)
+(add-hook &#39;emacs-lisp-mode-hook &#39;flycheck-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: magit-mode           ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package magit)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: morg-mode            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.morg\\&#39;&amp;quot; . org-mode))
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.porg\\&#39;&amp;quot; . org-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: markdown-mode        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package markdown-mode)
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.text\\&#39;&amp;quot; . markdown-mode))
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.markdown\\&#39;&amp;quot; . markdown-mode))
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.md\\&#39;&amp;quot; . markdown-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: go-mode              ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; go get -u github.com/nsf/gocode
+;; go get -u github.com/rogpeppe/godef
+;; go get -u golang.org/x/tools/cmd/goimports
+;; go get -u github.com/jstemmer/gotags
+
+(setenv &amp;quot;GOPATH&amp;quot; &amp;quot;/home/nasciiboy/go&amp;quot;)
+(setenv &amp;quot;PATH&amp;quot; (concat (getenv &amp;quot;PATH&amp;quot;) &amp;quot;:&amp;quot; &amp;quot;/home/nasciiboy/go/bin&amp;quot;))
+(setq exec-path (append exec-path (list (expand-file-name &amp;quot;/home/nasciiboy/go/bin&amp;quot;) (expand-file-name &amp;quot;/home/nasciiboy/.go/bin&amp;quot;))))
+;; con la `list` de arriba  =======^^^^
+;; solucione el problema de agregar
+;; nuevos paths donde emacs buscara los ejecutables de go
+
+
+(use-package go-mode)
+(use-package go-gopath)
+(use-package company-go)
+(use-package go-stacktracer)
+(use-package go-add-tags)
+(use-package go-eldoc)
+(use-package go-direx)
+(use-package flymake-go)
+
+(add-to-list &#39;company-backends &#39;company-go)
+(add-hook &#39;go-mode-hook (lambda ()
+                          (setq indent-tabs-mode nil)
+                          (setq tab-width 2)))
+(add-hook &#39;go-mode-hook &#39;go-eldoc-setup)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: haskell-mode         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package haskell-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: rust-mode            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package rust-mode)
+(add-hook &#39;rust-mode-hook (lambda ()
+                            (setq rust-indent-offset 2)
+                            (setq rust-format-on-save nil)))
+
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.rs\\&#39;&amp;quot; . rust-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: lua-mode             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package lua-mode)
+(add-to-list &#39;interpreter-mode-alist &#39;(&amp;quot;lua&amp;quot; . lua-mode))
+(setq lua-indent-level 2)
+
+(use-package love-minor-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: fish-mode            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package fish-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: multiple-cursors     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package multiple-cursors)
+
+(global-set-key (kbd &amp;quot;C-&amp;gt;&amp;quot;) &#39;mc/mark-next-like-this)
+(global-set-key (kbd &amp;quot;C-&amp;lt;&amp;quot;) &#39;mc/mark-previous-like-this)
+(global-set-key (kbd &amp;quot;s-c C-&amp;gt;&amp;quot;) &#39;mc/mark-all-like-this)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: lorem-ipsum          ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package lorem-ipsum)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: elfeed               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package elfeed)
+(setq elfeed-feeds
+      &#39;(
+        &amp;quot;http://blog.chuidiang.com/feed/&amp;quot;
+        &amp;quot;http://blog.desdelinux.net/feed/&amp;quot;
+        &amp;quot;http://blogubuntu.com/feed&amp;quot;
+        &amp;quot;http://carlini.es/feed/&amp;quot;
+        &amp;quot;http://cucarachasracing.blogspot.com/feeds/posts/default?alt=rss&amp;quot;
+        &amp;quot;http://ea4bns.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://elarmarioinformatico.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://elblogdeliher.com/feed/&amp;quot;
+        &amp;quot;http://enavas.blogspot.com/feeds/posts/default?alt=rss&amp;quot;
+        &amp;quot;http://es.xkcd.com/rss/&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/blogspot/bytelearning&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/btroot?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/diegocg?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Esbuntucom?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/GabuntuBlog&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Gambas2MisProgramas?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/geeklandlinux&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/SYSADMIT?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/teknoplof/muQI?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Ubunlog?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/ugeek&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/ugeekblog&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&amp;quot;
+        &amp;quot;http://feeds.weblogssl.com/genbetadev&amp;quot;
+        &amp;quot;http://fernand0.github.io/feed.xml&amp;quot;
+        &amp;quot;http://hackingthesystem4fun.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://hispalinux.es/node/feed&amp;quot;
+        &amp;quot;http://humanos.uci.cu/feed/&amp;quot;
+        &amp;quot;http://lamiradadelreplicante.com/feed/&amp;quot;
+        &amp;quot;http://linuxmanr4.com/feed/&amp;quot;
+        &amp;quot;http://maslinux.es/feed/&amp;quot;
+        &amp;quot;http://mhyst.es/blogs/index.php?tempskin=_rss2&amp;quot;
+        &amp;quot;http://misnotaslinux.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://nasciiboy.github.io/index.xml&amp;quot;
+        &amp;quot;http://nosturi.es/feed/&amp;quot;
+        &amp;quot;http://papermint-designs.com/roor/rss.xml&amp;quot;
+        &amp;quot;http://parceladigital.com/feed/&amp;quot;
+        &amp;quot;http://planet.emacsen.org/atom.xml&amp;quot;
+        &amp;quot;http://quijotelibre.com/feed/&amp;quot;
+        &amp;quot;http://radioela.org/spip.php?page=backend&amp;quot;
+        &amp;quot;http://ranchoelectronico.org/feed/&amp;quot;
+        &amp;quot;http://red-orbita.com/?feed=rss2&amp;quot;
+        &amp;quot;http://rufianenlared.com/feed/&amp;quot;
+        &amp;quot;http://softwarelibre.deusto.es/feed/&amp;quot;
+        &amp;quot;http://www.blackhats.es/wordpress/?feed=rss2&amp;quot;
+        &amp;quot;http://www.decrecimiento.info/feeds/posts/default&amp;quot;
+        &amp;quot;http://www.dmdcosillas.org/feed/&amp;quot;
+        &amp;quot;http://www.eldiario.es/rss/hojaderouter/&amp;quot;
+        &amp;quot;http://www.hackplayers.com/feeds/posts/default?alt=rss&amp;quot;
+        &amp;quot;http://www.jgimenez.info/feed/&amp;quot;
+        &amp;quot;http://www.kdeblog.com/feed/&amp;quot;
+        &amp;quot;http://www.lapipaplena.net/feed/&amp;quot;
+        &amp;quot;http://www.linuxadictos.com/feed&amp;quot;
+        &amp;quot;http://www.linuxhispano.net/feed/&amp;quot;
+        &amp;quot;http://www.maxxcan.com/feed/&amp;quot;
+        &amp;quot;http://www.muylinux.com/feed/&amp;quot;
+        &amp;quot;http://www.portallinux.es/feed&amp;quot;
+        &amp;quot;http://www.radioela.org/spip.php?page=backend-auteur&amp;amp;id_auteur=115&amp;quot;
+        &amp;quot;http://www.rafaelrojas.net/feed/&amp;quot;
+        &amp;quot;http://www.rootzilopochtli.com/feed/&amp;quot;
+        &amp;quot;http://www.tomatesasesinos.com/feed/&amp;quot;
+        &amp;quot;http://www.tomatuordenador.net/feed/&amp;quot;
+        &amp;quot;http://www.ubuntizando.com/feed/&amp;quot;
+
+        &amp;quot;https://andalinux.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://aprendizdesysadmin.com/feed/&amp;quot;
+        &amp;quot;https://asm86.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://autodefensainformatica.radioalmaina.org/feed/&amp;quot;
+        &amp;quot;https://birrasybits.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://blog.adrianistan.eu/feed/&amp;quot;
+        &amp;quot;https://blog.gvsig.org/feed/&amp;quot;
+        &amp;quot;https://cartaslinux.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://ciberlatino.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://codingornot.com/feed&amp;quot;
+        &amp;quot;https://colaboratorio.net/feed/&amp;quot;
+        &amp;quot;https://compilando.audio/index.php/feed/podcast/&amp;quot;
+        &amp;quot;https://comunicatelibremente.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://daemons.cf/rss.xml&amp;quot;
+        &amp;quot;https://diariodeunalinuxera.com/feed/&amp;quot;
+        &amp;quot;https://duglasm.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://elbinario.net/feed/&amp;quot;
+        &amp;quot;https://elblogdecarlosvelasco.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://eliasbrasa.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://eliotreyna.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;https://elpinguinotolkiano.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://elzorrolibre.noblogs.org/feed/&amp;quot;
+        &amp;quot;https://enekoamieva.com/blog/feed/&amp;quot;
+        &amp;quot;https://feedpress.me/podcastlinux&amp;quot;
+        &amp;quot;https://gutl.jovenclub.cu/feed/&amp;quot;
+        &amp;quot;https://h4ckseed.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://infostatex.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;https://jummp.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://jvare.com/feed/&amp;quot;
+        &amp;quot;https://kernelpanicblog.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://laenredadera.net/feed/&amp;quot;
+        &amp;quot;https://lapastillaroja.net/feed/&amp;quot;
+        &amp;quot;https://lasindias.net/feed&amp;quot;
+        &amp;quot;https://leninmhs.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://lignux.com/feed/&amp;quot;
+        &amp;quot;https://linuxgnublog.org/es/feed&amp;quot;
+        &amp;quot;https://mierda.tv/feed/&amp;quot;
+        &amp;quot;https://miguelpinia.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://milagrosrp.wordpress.com/feed/&amp;quot;
+
+        &amp;quot;https://mx.ivoox.com/es/podcast-podcast-el-precipicio_fg_f176717_1.xml&amp;quot;
+        &amp;quot;https://mx.ivoox.com/es/podcast-podcast-kde-espana_fg_f1249423_1.xml&amp;quot;
+        &amp;quot;https://mx.ivoox.com/es/reality-cracking_fg_f159955_filtro_1.xml&amp;quot;
+        &amp;quot;https://www.ivoox.com/podcast-fran-casas_fg_f1449982_1.xml&amp;quot;
+        &amp;quot;https://www.ivoox.com/podcast-podcast-verne-wells-ciencia-ficcion_fg_f1100419_1.xml&amp;quot;
+
+        &amp;quot;https://neoranger.github.io/feed.xml&amp;quot;
+        &amp;quot;https://noelonassis.wordpress.com/blog/feed/&amp;quot;
+        &amp;quot;https://notxor.nueva-actitud.org/feed/all.rss.xml&amp;quot;
+        &amp;quot;https://ondahostil.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://otroespacioblog.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://pfctelepathy.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://picodotdev.github.io/blog-bitix/index.xml&amp;quot;
+        &amp;quot;https://poesiabinaria.net/feed/&amp;quot;
+        &amp;quot;https://radioliberadaelpodcast.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://radioslibres.net/rss/&amp;quot;
+        &amp;quot;https://thelinuxalchemist.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://victorhckinthefreeworld.com/feed/&amp;quot;
+        &amp;quot;https://vidaembebida.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://www.atareao.es/blog/feed/&amp;quot;
+        &amp;quot;https://www.cambiadeso.es/feed/&amp;quot;
+        &amp;quot;https://www.linuxito.com/?format=feed&amp;amp;type=rss&amp;quot;
+        &amp;quot;https://www.ochobitshacenunbyte.com/feed/&amp;quot;
+        &amp;quot;https://xkcd.com/rss.xml&amp;quot;
+        &amp;quot;https://xnet-x.net/blog/feed/&amp;quot;
+        ))
+
+(global-set-key [f6] &#39;elfeed)
+(global-set-key [f5] &#39;elfeed-update)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                               ;;
+;;   ___  ___ _ __(_)_ __ | |_   ;;
+;;  / __|/ __| &#39;__| | &#39;_ \| __|  ;;
+;;  \__ \ (__| |  | | |_) | |_   ;;
+;;  |___/\___|_|  |_| .__/ \__|  ;;
+;;                  |_|          ;;
+;;                               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Mostrar/ocultar archivos ocultos en direc
+(defun dired-dotfiles-toggle ()
+  &amp;quot;Mostrar/ocultar archivos ocultos&amp;quot;
+  (interactive)
+  (when (equal major-mode &#39;dired-mode)
+    (if (or (not (boundp &#39;dired-dotfiles-show-p)) dired-dotfiles-show-p)
+        (progn
+          (set (make-local-variable &#39;dired-dotfiles-show-p) nil)
+          (message &amp;quot;h&amp;quot;)
+          (dired-mark-files-regexp &amp;quot;^\\\.&amp;quot;)
+          (dired-do-kill-lines))
+      (progn (revert-buffer)
+             (set (make-local-variable &#39;dired-dotfiles-show-p) t)))))
+
+(global-set-key (kbd &amp;quot;C-c h&amp;quot;) &#39;dired-dotfiles-toggle)
+
+(defun increment-number-at-point ()
+  (interactive)
+  (skip-chars-backward &amp;quot;0-9&amp;quot;)
+  (or (looking-at &amp;quot;[0-9]+&amp;quot;)
+      (error &amp;quot;No number at point&amp;quot;))
+  (replace-match (number-to-string (1+ (string-to-number (match-string 0))))))
+
+(defun decrement-number-at-point ()
+  (interactive)
+  (skip-chars-backward &amp;quot;0-9&amp;quot;)
+  (or (looking-at &amp;quot;[0-9]+&amp;quot;)
+      (error &amp;quot;No number at point&amp;quot;))
+  (replace-match (number-to-string (- (string-to-number (match-string 0)) 1))))
+
+(global-set-key (kbd &amp;quot;C-c +&amp;quot;) &#39;increment-number-at-point)
+(global-set-key (kbd &amp;quot;C-c -&amp;quot;) &#39;decrement-number-at-point)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;fuentes&#34;&gt;fuentes&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/melpa/melpa&#34;&gt;https://github.com/melpa/melpa&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/abrochard/emacs-config/blob/master/configuration.org&#34;&gt;https://github.com/abrochard/emacs-config/blob/master/configuration.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.reddit.com/r/emacs/comments/4fqu0a/automatically_install_packages_on_startup/&#34;&gt;https://www.reddit.com/r/emacs/comments/4fqu0a/automatically_install_packages_on_startup/&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -27,7 +555,96 @@
       <pubDate>Sun, 20 Aug 2017 18:42:53 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/run-scheme/</guid>
-      <description>En el anterior post (cronologico del blog) comente algunos interpretes de Scheme. Ya que en Emacs tenemos un interprete de elisp nativo, supuse que habria un metodo sencillo, para correr Scheme, pero, por que correr todo un interprete cuando se puede echar mano del interprete del sistema de turno y powerizarlo con el incomparable Emacs, o si, hasta Gulie que en terminal era insipido, se vuelve Sexi! Todos los interpretes adquieren historial, hasta los que no lo tenian!</description>
+      <description>
+
+&lt;p&gt;En el &lt;a href=&#34;https://nasciiboy.github.io/prog/ischeme/&#34;&gt;anterior&lt;/a&gt; post (cronologico del blog) comente algunos interpretes de
+Scheme. Ya que en Emacs tenemos un interprete de elisp nativo, supuse que habria un
+metodo sencillo, para correr Scheme, pero, por que correr todo un interprete
+cuando se puede echar mano del interprete del sistema de turno y powerizarlo con el
+incomparable &lt;strong&gt;Emacs&lt;/strong&gt;, o si, hasta Gulie que en terminal era insipido, se
+vuelve Sexi! Todos los interpretes adquieren historial, hasta los que no lo tenian!&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; o eso es lo que aprendi en &lt;a href=&#34;http://community.schemewiki.org/?emacs-tutorial&#34;&gt;este&lt;/a&gt;
+post, que me limito a traducir y alterar parcialmente (pues supongo al estar en una wiki
+es permitido)&lt;/p&gt;
+
+&lt;p&gt;(nota: el post original, hablan de un modo &amp;ldquo;quack&amp;rdquo;, pero viendo que mensionan
+emacs-goodies, asumo que es algo &amp;ldquo;antiguo&amp;rdquo;, viniendo de ejecutar los interpretes
+en consola salvajemente, con lo que ofrece emacs por defecto tengo suficiente!
+(por ahora&amp;hellip;))&lt;/p&gt;
+
+&lt;h2 id=&#34;configuracion-basica&#34;&gt;Configuracion Basica&lt;/h2&gt;
+
+&lt;p&gt;Coloque el codigo a continuacion en su fichero &lt;code&gt;init.el&lt;/code&gt;, para configurar su uso
+con Scheme&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;;;; Siempre con resaltado de sintaxis
+(global-font-lock-mode 1)
+
+;;; tambien con resaltado de parentesis
+(setq show-paren-delay 0
+      show-paren-style &#39;parenthesis)
+(show-paren-mode 1)
+
+;;; Este es el nombre binario de mi implementacion de Scheme
+(setq scheme-program-name &amp;quot;scm&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Asegurese de remplazar &lt;strong&gt;&lt;code&gt;&amp;quot;scm&amp;quot;&lt;/code&gt;&lt;/strong&gt; con el nombre de la implementacion de Scheme
+que este utilizando en su sistema&lt;/p&gt;
+
+&lt;p&gt;(resaltar que ya tenia activo &lt;code&gt;show-parent-mode&lt;/code&gt;, la instruccion &lt;code&gt;setq show-paren-delay 0&lt;/code&gt;
+hace que no halla retraso al momento del resaltado, que por el uso que le daba,
+presuponia estaba asignado en 1 segundo&amp;hellip; correccion segun &lt;code&gt;C-h v
+show-parent-delay&lt;/code&gt; era de 0.125 segundos, maravilloso!)&lt;/p&gt;
+
+&lt;h2 id=&#34;trabajando-con-scheme&#34;&gt;Trabajando con Scheme&lt;/h2&gt;
+
+&lt;p&gt;Cuando abre un archivo, los nombres de los archivos que terminan en &lt;code&gt;.scm&lt;/code&gt; o
+&lt;code&gt;.ss&lt;/code&gt; seran asumidos como archivos de Scheme, y se abriran con el modo scheme de
+Emacs, que proporciona resaltado de sitaxis e indentacion automatica cuando
+pulse &lt;code&gt;TAB&lt;/code&gt;, y por spuesto resaltado de parentesis coincidentes.&lt;/p&gt;
+
+&lt;h3 id=&#34;ejecutar-scheme-en-emacs&#34;&gt;Ejecutar Scheme en Emacs&lt;/h3&gt;
+
+&lt;p&gt;Puede ejecutar un interprete de Scheme en Emacs. Esto le permite controlar el
+envio de los datos de entrada a su interprete desde emacs.&lt;/p&gt;
+
+&lt;p&gt;En primer lugar, crearemos una ventana para correr el proceso de Scheme
+presionando &lt;code&gt;C-x 2&lt;/code&gt;, seguido por &lt;code&gt;C-x o&lt;/code&gt; para ir a esta. Ahora podemos
+ejecutar un proceso de Scheme ingresando &lt;code&gt;M-x run-scheme&lt;/code&gt;.  Esto ejecutara el
+proceso que configuro anteriormente en su &lt;code&gt;.init.el&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Si esta realizando una prueba temporal, escriba en un buffer cualquiera &lt;code&gt;(setq
+scheme-program-name &amp;quot;scm&amp;quot;)&lt;/code&gt; (remplazar &lt;em&gt;scm&lt;/em&gt;), coloque el cursor en el parentesis de cierre y
+pulse &lt;code&gt;C-x C-e&lt;/code&gt;, de esta forma puede probar un interprete distinto, luego de
+cerrar la secion previa escribiendo &lt;code&gt;(exit)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ischeme.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para volver a la ventana inicial, presione &lt;code&gt;C-x o&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Puede utilizar &lt;code&gt;C-x C-e&lt;/code&gt; para enviar una expresion. Tambien puede enviar una
+region, un comando previo o incluso el buffer entero, para consultar el resto de
+atajos activos y disponibles (no vinculados con ninguna combinacion de teclado)
+presione &lt;code&gt;C-h m&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;comandos-basicos&#34;&gt;Comandos basicos&lt;/h3&gt;
+
+&lt;p&gt;Algunos comandos basicos de movimiento del cursor:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-a&lt;/code&gt;: Inicio de linea.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-e&lt;/code&gt;: Fin de linea.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-p&lt;/code&gt;: Linea previa.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-n&lt;/code&gt;: Linea suguiente.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-f&lt;/code&gt;: Avarzar un caracter.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b&lt;/code&gt;: Retroceder un caracter.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-x delback&lt;/code&gt;: Matar hasta el inicio de linea&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-p&lt;/code&gt;: Retroceder por el historial.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-n&lt;/code&gt;: Avanzar por el historial.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -36,9 +653,187 @@
       <pubDate>Sun, 02 Jul 2017 12:26:47 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/why-emacs/</guid>
-      <description>Si el tiempo antes de precindir de interfaces para interactuar con los computadores se extiende lo suficiente, Emacs, terminara por ser un sistema operativo autosuficiente
- coloca una pista de sonido, relajate y disfruta de este post al estilo &amp;ldquo;lo que otros IDEs no quieren que sepas&amp;rdquo;, &amp;ldquo;la increible historia de emacs, no podras creer el final&amp;rdquo;, &amp;ldquo;Emacs el editor que no esperabas&amp;rdquo;, &amp;hellip;
-〜(￣△￣〜) he, pero es que yo utilizo (vim|VS|atom|eclipse|nano|&amp;hellip;) y no necesito un editor viejuno y raro!</description>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Si el tiempo antes de precindir de interfaces para interactuar con los
+computadores se extiende lo suficiente, Emacs, terminara por ser un sistema
+operativo autosuficiente&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;coloca una pista de sonido, relajate y disfruta de este post al estilo &lt;em&gt;&amp;ldquo;lo que
+otros IDEs no quieren que sepas&amp;rdquo;&lt;/em&gt;, &lt;em&gt;&amp;ldquo;la increible historia de emacs, no podras
+creer el final&amp;rdquo;&lt;/em&gt;, &lt;em&gt;&amp;ldquo;Emacs el editor que no esperabas&amp;rdquo;&lt;/em&gt;, &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;〜(￣△￣〜) he, pero es que yo utilizo (vim|VS|atom|eclipse|nano|&amp;hellip;) y no necesito
+un editor viejuno y raro!&lt;/p&gt;
+
+&lt;p&gt;(∿°○°)∿ tu-ru-ru-ru-ru-ru ohhh yeah! estoy mas cerca de un usuario basico, que
+uno intermedio de Emacs, no tengo duda alguna que lo que sea que hagas con tu
+editor actual lo podrias hacer con Emacs, que sea de forma sencilla, ya es otra
+cosa, mientras tanto, piensa en el como un estupendo complemento/substituto para
+varias herramientas, o un proyecto a largo o mediano plazo que estoy
+absolutamene seguro disfrutaras&lt;/p&gt;
+
+&lt;p&gt;la forma mas simple para explicar por que emacs, seria &lt;strong&gt;terminal vs
+aplicaciones graficas&lt;/strong&gt;, para el segundo tienes un monton de interfaces
+distintas no diseñadas para colaborar entre si, para el primero solo hace falta
+un poco de aprendizaje antes de comenzar a concatenar acciones, que de otra forma
+serian extenuantes&lt;/p&gt;
+
+&lt;p&gt;Emacs, es un interprete, que hace muchas cosas, pero todas ellas con una
+&amp;ldquo;interfaz&amp;rdquo; comun, es decir, si sabes como moverte en un fichero de texto, sabes
+como moverte en alguna de sus varias &amp;ldquo;aplicaciones&amp;rdquo;, pues sus programadores
+tratan de lograr una coherencia global en cuanto al significados de los comandos
+que pueden aplicarse, y en caso de duda siempre tienes la documentacion a mano&lt;/p&gt;
+
+&lt;p&gt;｢(ﾟﾍﾟ) bueno, entoces ocupas emacs para hacer de todo?&lt;/p&gt;
+
+&lt;p&gt;＼_(￣、￣ 彡 ￣ー￣)_／ －☆・　・　・　‥……━━●&lt;/p&gt;
+
+&lt;p&gt;no, pero no hay dia que encienda el pc sin abrir varias instancias de emacs, diria que
+paso el 80% del tiempo en emacs, con varias terminales&lt;/p&gt;
+
+&lt;p&gt;de ves en cuando aprendo un nuevo truco, mas, en Emacs, la distancia entre mis
+habilidades y el dominio total, es tan grande como lo es el mar&lt;/p&gt;
+
+&lt;p&gt;(｡´&amp;gt;д&amp;lt;)っ彡 entoces que haces?&lt;/p&gt;
+
+&lt;p&gt;leer libros, maquetar libros, organizar/elimimar/navegar ficheros, programar, de
+ves en cuando navegar por la red, ver irc, revisar feeds, algo de git y poco mas.&lt;/p&gt;
+
+&lt;p&gt;me gustaria leer tambien el correo, pero no he encontrado un tutorial para vagos&lt;/p&gt;
+
+&lt;p&gt;que? cual es el punto de hacer eso con emacs?&lt;/p&gt;
+
+&lt;p&gt;(｡´&amp;gt;д&amp;lt;)っ彡&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;como mayor virtud, esta la interfas uniforme, no importa la rareza del
+lenguaje de programacion, si es un visor rss, o un navegador de archivos, los
+comandos principiales cumplen el mismo proposito, es decir no tengo que
+recordar comportamientos independientes para cada situacion, ni navegar por
+raros menus o botones graficos misteriosos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;la capacidad de configurar cualquier aspecto para que se adapte a mis
+necesidades y gustos no tiene comparacion, tanto si quiero o no menus,
+numeracion, tal o cual tipografia y color, puede configurarse de forma
+independiente o global segun nuestra necesidad&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;dired, un practico navegador de ficheros, con el que puedes hacer lo mismo
+que con un navegador grafico, solo que incorporado, sin tener que transitar a
+una aplicacion externa, con los beneficios que esto conlleva&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;bookmarks, tanto para una ruta especifica del sistema, como para una posicion
+dentro de un fichero de texto. Evitar escribir y recordar rutas, es muy
+liberador y comodo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;anillo de la muerte, es como un portapapeles donde todo el texto que cortes o
+indicas expresamente se guarda de forma &amp;ldquo;circular&amp;rdquo;, por supuesto, su
+comportamiento y presentacion pueden adaptarse para ser mas agradable (para mi
+ya es agradable)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;anillo de marcas, esto es un registro de la posicion donde se realizan
+ciertas acciones, lo que te permite ir de un sitio a otro del
+dcumento/lo-que-sea y regresar a la posicion de partida sin buscar a lo bruto&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;registros, es algo a medio camino entre el anillo de la muerte y el de
+marcas, la diferencia esta en que &amp;ldquo;guardas&amp;rdquo; especificamente el
+contenido/posicion en un &amp;ldquo;registro&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;busqueda, substitucion, busqueda-regexp y substitucion regexp. Lo primero es
+practico, lo segundo extremadamente poderoso, aunque al igual que la mayoria
+de motores de expresiones regulares la escritura es algo tortuosa&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;buffers, windos, frames. Esto es una terminologia propia de Emacs, lo primero
+es lo que se muestra en los &amp;ldquo;tabs&amp;rdquo; (windows), lo segundo los &amp;ldquo;tabs&amp;rdquo;, los cuales
+pueden habitar varios en la misma &amp;ldquo;ventana&amp;rdquo; (frame) con cualquier contenido y
+posicion, una independiente de otra y lo tercero los frames son las
+&amp;ldquo;ventanas&amp;rdquo;&amp;hellip; y esto sirve por ejemplo para tener un proyecto de programacion
+repartido en 3 areas de trabajo a dos monitores cada una con su &amp;ldquo;frame&amp;rdquo; de
+emacs (todos conectados) con ficheros varios o repetidos con distintas
+posiciones, algunas en la misma &amp;ldquo;ventana&amp;rdquo; dividida para maximisar el
+espacio&amp;hellip; como lo que hacen com multiples terminales en la misma ventana,
+perooo util de verdad&amp;hellip;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ejecucion de comandos del sistema. Estos pueden alimentarse con
+texto y mostrar, depositar o substituir otro texto. Util por ejemplo para
+hacer un &lt;code&gt;sort&lt;/code&gt; y un &lt;code&gt;uniq&lt;/code&gt; en una region especifica de un documento cualquiera&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;macros, junta los ultimos 6 puntos, agrupalos en una secuencia de acciones
+repetitiva, y vuala! algo a medio camino entre la automitizacion y lo manual,
+por ejemplo para transformar una documento de un formato a otro, o crear
+informacion, corregirla o todo junto&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;org-mode, esto es un lenguaje de marcas ligeras con los poderes especiales
+de Emacs, que sirve para muchas cosas, como para escribir un blog, como
+para hacer una lista de pendientes, o escribir un libro. Cierto es que ya no
+lo utilizo tal cual, pero fue inspiracion base de como debe ser el sistema
+de documentacion ideal, tambien lo utilzo para registrar la musica que
+escucho y anotar lo que hago en el dia&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;eww, un navegador de internete y tambien visor de html, muy potable, de
+hecho el mejor navegador en modo texto de los que he probado, tambien
+incluye sus propios marcadores&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;magit (requiere instalacion). La mas comoda y vistosa herramienta para
+interactuar con repositorios git&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;elfeed (requiere instalacion). El mas bonito visor de feeds, si lo sumamos
+con el navegador, o que puede invocar al navegador del sistema, optienes el
+combo perfecto&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;un gestor de paquetes para instalar extenciones sin mucha
+complicacion/configuracion&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;asi que por estas razones deberias empezar a aprender emacs hoy, para haci quisa
+dentro de unos pocos meses o años alguien se digne a traducir el colosal manual
+de emacs al español&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;(tambien tiene corrector ortografico, que por cierto nunca utilizo)&lt;/p&gt;
+
+&lt;h2 id=&#34;por-donde-empiezo&#34;&gt;Por donde empiezo&lt;/h2&gt;
+
+&lt;p&gt;Primero instala emacs, seguro que viene en los repositorios, Luego cuando lo
+abras por vez primera presiona &lt;code&gt;Ctrl-h t&lt;/code&gt; (&lt;code&gt;control&lt;/code&gt; y &lt;code&gt;h&lt;/code&gt; a la vez y luego &lt;code&gt;t&lt;/code&gt;)
+esto abre un breve tutorial suficiente para iniciar&lt;/p&gt;
+
+&lt;p&gt;Luego &lt;a href=&#34;../first-theme/index.html&#34;&gt;cambia el tema&lt;/a&gt; para que no te quedes ciego y
+despues pues ver la &lt;a href=&#34;http://quijotelibre.com/recursos-gnu-emacs-y-org-mode/&#34;&gt;compilacion de recursos&lt;/a&gt; que ha hecho
+&lt;em&gt;Quijote Libre&lt;/em&gt;; al igual que el, recomiendo &lt;a href=&#34;http://www.lapipaplena.org/emacs/&#34;&gt;la saga emacs&lt;/a&gt; de la pipaplena, como
+tambien algunos post (no muy organizados) en el &lt;a href=&#34;https://elbinario.net/?s=emacs&#34;&gt;binario.net&lt;/a&gt;,
+darse una vuelta por el &lt;a href=&#34;http://planet.emacs-es.org/&#34;&gt;planet emacs en español&lt;/a&gt;
+y sus blogs afiliados, que es de lo poco realmente vivo en la comunidad
+Emacs-hispana&lt;/p&gt;
+
+&lt;p&gt;hace mucho, mucho tiempo, pero no tanto, existio una pagina llamada
+&lt;strong&gt;rpublica.net&lt;/strong&gt;, sitio donde existia un exelente y aun vigente curso de
+iniciacion a emacs, al que por su calidad realice un &lt;code&gt;wget&lt;/code&gt; y por bagancia no he
+&amp;ldquo;limpiado&amp;rdquo; para rendirle tributo, podeis descargar un zip con su
+contenido &lt;a href=&#34;https://nasciiboy.github.io/data/rpublica-emacs.zip&#34;&gt;aqui&lt;/a&gt;, descomprimir y abrir el fichero
+&lt;code&gt;emacs.html&lt;/code&gt; con el navegador&lt;/p&gt;
+
+&lt;p&gt;tambien dejo una pequeña chuleta que hice en mis primeros dias y aun me sigue siendo
+util &lt;a href=&#34;https://nasciiboy.github.io/data/chuleta-emacs.txt&#34;&gt;chuleta-emacs&lt;/a&gt;, puedes ponerla en un
+marcador, por ejemplo de nombre &lt;em&gt;keys&lt;/em&gt; y darle una exencion org y conquistar el
+mundo&lt;/p&gt;
+
+&lt;p&gt;como consejo final, substituye al menos block-mayus por Control, o como en mi caso
+tengo una configuracion customizada del mapeo programmer dvorak-en, en un teclado
+con distribucion en ingles&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;si no has aprendido mecanografia haslo, y si ya sabes y es con qwerty, cambiar
+vale cada hora requerida. Modificar la posicion de Ctrl, evita extraños
+estiramientos no solo en Emacs, tambien en el resto de programas&lt;/p&gt;
+
+&lt;p&gt;desconosco si el mapeo de programmer dvarak-en es igual en todos los SOs,
+al menos en freidora (y creo que tambien en debian) biene cargada de muchos
+caracteres extra al presionar &lt;code&gt;alt gr&lt;/code&gt;, por ejemplo, en conjunto con la n, te da
+la ñ, y con comilla simple, pones acentos&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -47,8 +842,70 @@
       <pubDate>Sun, 12 Feb 2017 21:52:24 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/notabs-for-gomode/</guid>
-      <description>Go tiene una ridicula guia de estilo para formatear codigo que no me agrada, de no seguir algunas reglas el compilador/interprete simplemente se niega a hacer nada. Otras reglas, son menos rigurosas, como la indentacion o colocar o no espacios, en algunos sitios.
-La indentacion oficial del lenguaje, tiene tabs equivalentes a 4 espacios en blanco y eso, eso, es algo que no puedo soportar, como tampoco tener tabs, porque cada editor los despliega como le viene en gana.</description>
+      <description>&lt;p&gt;Go tiene una ridicula guia de estilo para formatear codigo que no me agrada, de
+no seguir algunas reglas el compilador/interprete simplemente se niega a hacer
+nada. Otras reglas, son menos rigurosas, como la indentacion o colocar o no
+espacios, en algunos sitios.&lt;/p&gt;
+
+&lt;p&gt;La indentacion oficial del lenguaje, tiene tabs equivalentes a 4 espacios en
+blanco y eso, eso, es algo que no puedo soportar, como tampoco tener tabs,
+porque cada editor los despliega como le viene en gana.&lt;/p&gt;
+
+&lt;p&gt;Por eso, dentro de la configuracion de emacs tengo esta linea&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(setq-default indent-tabs-mode nil)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;su funcion es substituir los tabs por espacios, y en el modo go tenia esta
+modificacion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(add-hook &#39;go-mode-hook
+          (lambda ()
+            (setq tab-width 2)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para que los tabs se representen como dos espacios en blanco.&lt;/p&gt;
+
+&lt;p&gt;Perfecto! subo un repositorio de codigo en go a github y por curiosidad veo el
+codigo ya en el repo&amp;hellip; la indentacion es un jodido desastre! los tabs son
+tabs&amp;hellip; pero, pero, si en el jodido modo go, todo se ve perfecto, que esta
+pasando es cosa de github o un problema interno?&lt;/p&gt;
+
+&lt;p&gt;paso a abrir el codigo en emacs y cambio a &lt;code&gt;fundamental-mode&lt;/code&gt; para visualizar la
+realidad, resultado, el problema esta en go-mode, en efecto los tabs se
+visualizan como 2 espacios, pero en el fichero &lt;em&gt;no se substituyen por espacios,
+siguen siendo tabs&lt;/em&gt;, donde esta el culpable?&lt;/p&gt;
+
+&lt;p&gt;paso a ver el codigo de go-mode, en busca de expresiones regulares y cosas como
+&lt;code&gt;\t&lt;/code&gt;&amp;hellip; no encuento el problema (y tampoco entiendo mucho de lisp)&amp;hellip; entonces
+cambio la busqueda a cosas que contengan la palabra &lt;code&gt;indent&lt;/code&gt; y aparece esta linea&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;  ;; Go style
+  (setq indent-tabs-mode t)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(commit 5737e59cbac9bc480546766c9502c527fa2be26f, linea 985)&lt;/p&gt;
+
+&lt;p&gt;Su funcion es dejar los tabs como tabs y no como espacios, la solucion? cambiar
+&lt;code&gt;t&lt;/code&gt; por &lt;code&gt;nil&lt;/code&gt; directamente en el codigo de &lt;span class=&#34;file&#34;&gt;go-mode.el&lt;/span&gt;
+o en un &lt;em&gt;hook&lt;/em&gt; en la configuracion.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(add-hook &#39;go-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq tab-width 2)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora, si abres tu codigo los cambios se realizan solo a las lineas que
+modifiques, no a las lineas ya existentes. Es necesario reeindentar todo y no
+funciona &lt;code&gt;C-x h tab&lt;/code&gt;, hay que quitar la indentacion e indentar de nuevo, hice
+una macro que recorria todas las lineas eliminando los espacios al inicio, luego
+si seleccione todo + tab (&lt;code&gt;C-x h tab&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Tabs y espacios en armonia!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../space-friend.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -57,7 +914,597 @@ La indentacion oficial del lenguaje, tiene tabs equivalentes a 4 espacios en bla
       <pubDate>Tue, 31 Jan 2017 14:40:54 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/org-mode/</guid>
-      <description>org-mode es un lenguaje de marcas ligeras nacido de, por, y para emacs y como emacs, org tambien tiene aplicaciones varias, puede ser una agenda, una lista de pendientes, hoja de calculo, blog de notas, sistema de documentacion e investigacion reproducible, todo junto y revuelto, encima da la posibilidad de exportar el contenido a pdf, latex, html, markdown, odt y groff (algunas opciones vienen por separado y requieren configuracion).</description>
+      <description>
+
+&lt;p&gt;&lt;code&gt;org-mode&lt;/code&gt; es un lenguaje de marcas ligeras nacido de, por, y para &lt;code
+class=&#34;command&#34;&gt;emacs&lt;/code&gt; y como emacs, org tambien tiene aplicaciones
+varias, puede ser una agenda, una lista de pendientes, hoja de calculo, blog de
+notas, sistema de documentacion e investigacion reproducible, todo junto y
+revuelto, encima da la posibilidad de exportar el contenido a pdf, latex, html,
+markdown, odt y groff (algunas opciones vienen por separado y requieren
+configuracion).&lt;/p&gt;
+
+&lt;p&gt;que bueno&amp;hellip; no? la devilidad de org esta en su diversidad, al no tener un
+proposito especifico, algunos aspectos no han sido resueltos, especialmente lo
+que respecta a ser un sistema de documentacion. Con todo, si no exiges demasiado
+vasta y sobra.&lt;/p&gt;
+
+&lt;p&gt;Imaginemos que no conoces org, odias &lt;code&gt;html&lt;/code&gt; y tienes necesidad de generar
+contenido en formato html, listo?, de eso va esta entrada&lt;/p&gt;
+
+&lt;h3 id=&#34;configuracion&#34;&gt;Configuracion&lt;/h3&gt;
+
+&lt;p&gt;Para comenzar a utilizar org solo hace falta abrir emacs y crear un fichero con
+terminacion &lt;code&gt;.org&lt;/code&gt; o en su defecto agregar lo siguiente en la primer linea de
+cualquier fichero y recargar (&lt;code&gt;C-x C-v&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-*- mode: org; -*-
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;org utiliza unas marcas especiales (opcionales) al inicio del documento, para
+establecer el titulo, autor, correo, encender y apagar algunas caracteristicas.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;#+TITLE: Cosas de Emacs: org-mode
+#+LANGUAGE: es
+#+AUTHOR: nasciiboy
+#+EMAIL: miCorreoCamello@aya.org
+#+DATE: 2015-22-06
+#+DESCRIPTION: experimento org-mode
+#+KEYWORDS: emacs org-mode tutorial
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;supongo que se explican por si mismas&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;encabezados&#34;&gt;Encabezados&lt;/h3&gt;
+
+&lt;p&gt;Cualquier cosa que escribamos inmediatamente despues de la configuaracion, sera
+lo primero que aparezca dentro del documento, aunque, al igual que en html,
+tambien podemos agrupar el contenido dentro de secciones/encabezados segun
+convenga.&lt;/p&gt;
+
+&lt;p&gt;La sintaxis de un encabezado es muy simple:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;* Encabezado principal
+** Segundo nivel
+*** 3er. nivel
+    algo de texto
+*** 3er. nivel
+    mas texto
+
+* Otro encabezado principal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Toda linea que inicia con uno o varios &lt;code&gt;*&lt;/code&gt; seguido por al menos un espacio en
+blanco, es un encabezado.&lt;/p&gt;
+
+&lt;p&gt;El texto (en la misma linea) donde esta el o los &lt;code&gt;*&lt;/code&gt; sera el titulo del encabezado.&lt;/p&gt;
+
+&lt;p&gt;El nivel del encabezado depende del numero de &lt;code&gt;*&lt;/code&gt; al inicio de la linea, es
+decir&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt; == &lt;code&gt;h1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;**&lt;/code&gt; == &lt;code&gt;h2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;***&lt;/code&gt; == &lt;code&gt;h3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;****&lt;/code&gt; == &lt;code&gt;h4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*****&lt;/code&gt; == &lt;code&gt;h5&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(en realidad, al exportar a html, los encabezados se desplazan en uno, el titulo
+del documento es el que se corresponde con &lt;code&gt;h1&lt;/code&gt;, pero lo dejo asi para evitar
+esfuerzo mental)&lt;/p&gt;
+
+&lt;p&gt;A que encabezado pertenece el texto? al primero que aparezca por encima de
+el. Si no tiene un encabezado encima pertenece al &lt;q&gt;titulo&lt;/q&gt; del documento&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;NOTA:&lt;/b&gt; en org no existe un limite en cuanto a el nivel que puede tener un
+encabezado. No es asi en html, segun recuerdo el encabezado de menor nivel que
+existe en html es &lt;code&gt;h7&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo mas extenso:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* Encabezado H1
+
+  Primer parrafo del encabezado H1
+
+  Segundo parrafo del encabezado H1
+
+** Encabezado H2
+
+   Algo,
+   y algo mas (sin una linea en blanco no hay cambio de parrafo)
+
+** Otro Encabezado H2
+
+   Hey
+
+*** Encabezado H3
+
+    coloca algo aqui
+
+**** Encabezado H4
+
+     y aqui
+
+***** Encabezado H5
+
+      tambien aqui
+
+* Otro Encabezado H1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;como vez, he indentado el texto que pertenece a cada encabezado (no es
+necesario, pero a mi me gusta que se vea asi).&lt;/p&gt;
+
+&lt;p&gt;Por cierto como no podia ser de otra forma podemos crear encabezados haciendo
+uso de atajos de teclado.&lt;/p&gt;
+
+&lt;p&gt;Con &lt;code&gt;M-Intro&lt;/code&gt; si no hay ningun encabezado, aparece uno de primer nivel, de otra
+forma, el nivel es igual al del encabezado anterior.&lt;/p&gt;
+
+&lt;p&gt;otros atajos interesantes&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;TAB&lt;/code&gt; sobre un encabezado, oculta o muestra el contenido&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Shift-TAB&lt;/code&gt; En cualquier posicion, oculta o muestra el contenido de todos los
+encabezados&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-n&lt;/code&gt; ir al siguiente encabezado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-p&lt;/code&gt; ir al encabezado anterior&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-f&lt;/code&gt; ir al siguiente encabezado del mismo nivel&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-b&lt;/code&gt; ir al encabezado anterior del mismo nivel&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-c C-u&lt;/code&gt; ir al encabezado padre&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaDerecha&lt;/code&gt; agregar un &lt;code&gt;*&lt;/code&gt; al encabezado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaIzquierda&lt;/code&gt; quitar un &lt;code&gt;*&lt;/code&gt; al encabezado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaArriba&lt;/code&gt; Si el encabezado superior es del mismo nivel, intercambia
+el lugar de los encabezados, es decir mueve el actual hacia arriba&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaAbajo&lt;/code&gt; Si el encabezado siguiente es del mismo nivel, intercambia
+el lugar de los encabezados, es decir mueve el actual hacia abajo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;listas&#34;&gt;Listas&lt;/h3&gt;
+
+&lt;p&gt;Como en html, disponemos de dos tipos de listas, ordenadas (numeradas) y no
+ordenadas, para las primeras colocamos un numero (el que sea) seguido de un
+punto y comenzamos a escribir&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;1. primer elemento de la lista
+2. segundo elemento de la lista
+3. tercer elemento de la lista
+   con una linea adicional
+
+   este parrafo tambien es parte del tercer elemento
+
+
+este parrafo esta fuera de la lista
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en este caso, el contenido que sea parte de un elemento de la lista, debe
+respetar cierta indentacion.&lt;/p&gt;
+
+&lt;p&gt;El numero que coloques al inicio de la lista, es irrelevante, org lo ignora por
+completo y lo substituye por un &lt;code&gt;ol&lt;/code&gt; -&amp;gt; &lt;code&gt;li&lt;/code&gt; al exportar.&lt;/p&gt;
+
+&lt;p&gt;Como en los encabezados, podemos generar-saltar al siguiente elemento con la
+combinacion &lt;code&gt;M-Intro&lt;/code&gt;. Este atajo tiene un efecto secundario, org pasa de
+nuestro numero y reenumera la lista apartir de 1.&lt;/p&gt;
+
+&lt;p&gt;Para salir de la lista, dejamos una linea en blanco. Org tambien considera, de
+forma &lt;q&gt;automatica&lt;/q&gt; que estamos fuera de un listado si dejamos dos espacios
+en blanco.&lt;/p&gt;
+
+&lt;p&gt;Si estamos dentro de un parrafo y alguna de sus lineas tiene &lt;em&gt;apariencia de
+listado&lt;/em&gt; al exportar, org toma la linea y la considera una lista. No tengas
+lineas que inicien con algo similar a una lista.&lt;/p&gt;
+
+&lt;p&gt;El resto, asi son las listas ordenadas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;1. elemento uno
+2. elemento dos
+3. elemento tres
+
+
+1) elemento uno
+2) elemento dos
+3) elemento tres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;listas no ordenadas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;+ elemento uno
++ elemento dos
++ elemento tres
+
+
+- elemento uno
+- elemento dos
+- elemento tres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Algunos comandos en listados&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Shift-FlechaDerecha&lt;/code&gt; rotacion por el estilo del listado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaIzquierda&lt;/code&gt; rotacion por el estilo del listado&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaDerecha&lt;/code&gt; convierte al elemento en un miembro del elemento superior&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaIzquierda&lt;/code&gt; convierte al elemento en un elemento de nivel superior&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaArriba&lt;/code&gt; si el elemento superior es del mismo nivel, intercambia
+el lugar de los elementos, es decir mueve el actual hacia arriba&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-FlechaAbajo&lt;/code&gt; si el elemento siguiente es del mismo nivel, intercambia el
+lugar de los elementos, es decir mueve el actual hacia abajo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;definiciones&#34;&gt;Definiciones&lt;/h4&gt;
+
+&lt;p&gt;Este elemento tiene las mismas reglas que una lista no ordenada, es decir, el
+contenido que forme parte de la definicion ha de tener indentacion.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;+ Palabra :: definicion
+
+- Palabra :: definicion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;los dos puntos (&lt;code&gt;::&lt;/code&gt;) que separan la &lt;code&gt;palabra&lt;/code&gt; de la &lt;code&gt;definicion&lt;/code&gt; tiene que estar
+en la misma linea que el signo &lt;code&gt;-&lt;/code&gt; o &lt;code&gt;+&lt;/code&gt;. La &lt;code&gt;definicion&lt;/code&gt; puede extenderse en
+varias lineas, parrafos e incluir bloques varios.&lt;/p&gt;
+
+&lt;p&gt;Al igual que una lista, las definiciones terminan dejando dos linas en
+blanco.&lt;/p&gt;
+
+&lt;h3 id=&#34;resaltado&#34;&gt;Resaltado&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*bold*&lt;/code&gt; ==&amp;gt; &lt;b&gt;bold&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~code~&lt;/code&gt; ==&amp;gt; &lt;code&gt;code&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+strike+&lt;/code&gt; ==&amp;gt; &lt;s&gt;strike&lt;/s&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/italic/&lt;/code&gt; ==&amp;gt; &lt;i&gt;italic&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;=verbatim=&lt;/code&gt; ==&amp;gt; &lt;code&gt;code&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_underline_&lt;/code&gt; ==&amp;gt; &lt;u&gt;underline&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;tambien se pueden crear superindices&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;elemento^superinidice
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el elemento y el superindice no deben tener espacios en blanco, por ejemplo&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2^30&lt;/code&gt; ==&amp;gt; &lt;code&gt;2&lt;sup&gt;30&lt;/sup&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;en caso de los subindices&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;elemento_subinidice
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el elemento y el subindice no deben tener espacios en blanco, por ejemplo&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2_30&lt;/code&gt; ==&amp;gt; &lt;code&gt;2&lt;sub&gt;30&lt;/sub&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;finalmente podemos meter formulas LaTex dentro del texto (inline) con la
+sintaxis &lt;code&gt;$formula$&lt;/code&gt;, por ejemplo&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ne^{123^{a}}$&lt;/code&gt; ==&amp;gt; &lt;code&gt;ne&lt;sup&gt;123&lt;sup&gt;a&lt;/sup&gt;&lt;/sup&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;[[prefijo:ruta][descripcion]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;la descripcion puede omitirse, quedando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;[[prefijo:ruta]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;enlaces soportados&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://www.astro.uva.nl/~dominik          en la red
+doi:10.1000/182                           DOI para un recurso electronico
+file:/home/dominik/images/jupiter.jpg     fichero, ruta absoluta
+/home/dominik/images/jupiter.jpg          igual que arriba
+file:papers/last.pdf                      fichero, ruta relativa
+./papers/last.pdf                         igual que arriba
+file:/myself@some.where:papers/last.pdf   fichero, ruta a una maquina remota
+/myself@some.where:papers/last.pdf        igual que arriba
+file:sometextfile::NNN                    fichero, saltar al numero de linea
+file:projects.org                         otro fichero Org
+file:projects.org::some words             buscar texto en fichero Org[fn:35]
+file:projects.org::*task title            buscar encabezado en fichero Org[fn:36]
+file+sys:/path/to/file                    abrir via OS, como doble-click
+file+emacs:/path/to/file                  fuerza apertura con Emacs
+docview:papers/last.pdf::NNN              abrir en modo doc-view en la pagina
+id:B7423F4D-2E8A-471B-8810-C40F074717E9   Enlazar con ecabezado por ID
+news:comp.emacs                           enlace Usenet
+mailto:adent@galaxy.net                   enlace Mail
+mhe:folder                                enlace a carpeta MH-E
+mhe:folder#id                             enlace a mensage MH-E
+rmail:folder                              enlace a carpeta RMAIL
+rmail:folder#id                           enlace a mensaje RMAIL
+gnus:group                                enlace a grupo Gnus
+gnus:group#id                             enlace a articulo Gnus
+bbdb:R.*Stallman                          enlace BBDB (con regexp)
+irc:/irc.com/#emacs/bob                   enlace IRC
+info:org#External links                   enlace a nodo o indice Info
+shell:ls *.org                            Un comando shell
+elisp:org-agenda                          Comando Interactivo Elisp
+elisp:(find-file-other-frame &amp;quot;Elisp.org&amp;quot;) formate de evaluacion Elisp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ademas podemos poner enlaces a secciones (encabezados) dentro de nuestro
+documento con la estructura&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;[[*Encabezado][descripcion]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;recuerda, la descripcion es opcional&lt;/p&gt;
+
+&lt;p&gt;Si te encuentras en el modo org, y deseas segir un enlace presiona &lt;code&gt;C-c C-o&lt;/code&gt;.
+Para regresar a la posicion original &lt;code&gt;C-c &amp;amp;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tambien puedes colocar una marca temporal &lt;code&gt;C-c %&lt;/code&gt; y luego regeresar con &lt;code&gt;C-c
+&amp;amp;&lt;/code&gt;. Esto es similar al comando &lt;code&gt;C-u C-ESP&lt;/code&gt; que permite recorrer el circulo de
+marcas.&lt;/p&gt;
+
+&lt;p&gt;Para modificar la direccion de un enlace o su descripcion presiona &lt;code&gt;C-c C-l&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Por cierto, para colocar imagenes dentro del contenido que exportes simplemente
+coloca la direccion de la imagen, asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;[[mi-imagen.png]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;radio-targets&#34;&gt;Radio Targets&lt;/h4&gt;
+
+&lt;p&gt;Los &lt;em&gt;Radio Objetivos&lt;/em&gt;, son un metodo automagico de convertir una frace en
+un enlace a algun punto del documento, lo unico que tenemos que hacer es
+encerrar el objetivo entre tres pares de &lt;code&gt;&amp;lt;&lt;/code&gt; &lt;code&gt;&amp;gt;&lt;/code&gt; asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;&amp;lt;&amp;lt;&amp;lt;Mi objetivo&amp;gt;&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora todo el texto que coincida con &lt;code&gt;Mi objetivo&lt;/code&gt; apunta al radio objetivo, no
+importa si esta separado por espacios (exepto nuevas lineas) o si esta en
+minusculas o mayusculas.&lt;/p&gt;
+
+&lt;h3 id=&#34;codigo&#34;&gt;Codigo&lt;/h3&gt;
+
+&lt;p&gt;Org tiene distintos tipos de bloques, todos con esta sintaxis&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34;&gt;#+BEGIN_Tipo-Bloque algun-parametro
+  contenido
+#+END_TIpo-Bloque
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde &lt;code&gt;Tipo-Bloque&lt;/code&gt; puede ser&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;EXAMPLE&lt;/code&gt; ejemplos (como &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HTML&lt;/code&gt; seccion de codigo a exportar tal cual&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LaTex&lt;/code&gt; seccion de codigo a exportar tal cual&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SRC&lt;/code&gt; bloque de codigo&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;QUOTE&lt;/code&gt; bloque de cita&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;hay un truco, que evita escribir a mano todo el bloque. En una linea vacia o con
+espacios en blanco escribimos &lt;code&gt;&amp;lt;&lt;/code&gt; segudio por&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;e&lt;/code&gt; ==&amp;gt; &lt;code&gt;EXAMPLE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;h&lt;/code&gt; ==&amp;gt; &lt;code&gt;HTML&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;l&lt;/code&gt; ==&amp;gt; &lt;code&gt;LaTex&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; ==&amp;gt; &lt;code&gt;SRC&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q&lt;/code&gt; ==&amp;gt; &lt;code&gt;QUOTE&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;y mas un &lt;code&gt;tab&lt;/code&gt; el bloque aparece!&lt;/p&gt;
+
+&lt;p&gt;Es necesario ahondar un poco en los bloques de codigo fuente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#+BEGIN_SRC c
+  /* strlen: regresa la longitud de s */
+  int strlen(char s[])
+  {
+    int i;
+
+    i = 0;
+    while (s[i] != &#39;\0&#39;)
+      ++i;
+    return i;
+  }
+#+END_SRC
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el lenguaje se especifica luego de &lt;code&gt;#+BEGIN_SRC&lt;/code&gt;, en este caso, lenguaje &lt;code&gt;c&lt;/code&gt;,
+tambien podemos hacer que el codigo aparesca numerado, si agregamos el parametro
+&lt;code&gt;-n&lt;/code&gt;. Si se desea que la numeracion inicie a partir de un numero concreto
+colocamos &lt;code&gt;-n numero&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Antes mencione que org nacio de, por y para emacs, pues resulta que esto se
+demuestra en los bloques de codigo. Sea cual sea el lenguaje que coloques
+delante de un bloque de codigo (digo, si esta soportado) al presionar &lt;code&gt;C-c &#39;&lt;/code&gt; se
+abre un buffer con un modo para editar dicho lenguaje con resaltado, con teclas
+de emacs y funciones de emacs. Otro &lt;code&gt;C-c &#39;&lt;/code&gt;te regresa al documento.&lt;/p&gt;
+
+&lt;p&gt;Puedes imaginar el colosal esfuerzo que requiere emular esta funcion en otro
+sitio que no sea emacs?&lt;/p&gt;
+
+&lt;p&gt;asi se ve org-mode en mi emacs&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../raptor-book.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;NOTA:&lt;/b&gt; a veces en versiones experimentales de emacs, la convinacion &lt;code&gt;C-c
+&#39;&lt;/code&gt; abre un buffer de edicion para el bloque de codigo, pero al repetir el
+comando, este no se reconoce, si ocurre esa situacion, intenta con los comandos
+por su nombre directamente. Para entrar es &lt;code&gt;org-edit-src-code&lt;/code&gt; y para salir
+&lt;code&gt;org-edit-src-exit&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;exportacion&#34;&gt;Exportacion&lt;/h2&gt;
+
+&lt;p&gt;En principio, exportar apartir de org es sencillo, presionamos &lt;code&gt;C-c C-e&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../org-export.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Esto abre una interfaz de exportacion con opciones varias, por ejemplo para
+exportar a html (un fichero con el mismo nombre del documento pero con
+terminacion &lt;code&gt;.html&lt;/code&gt;) el comando completo seria &lt;code&gt;C-c C-e h h&lt;/code&gt;, o si estas ya en
+la interfaz &lt;strong&gt;Org Export Dispatcher&lt;/strong&gt;, solo &lt;code&gt;h h&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pero antes de exportar vamos a modificar algunas cosas. En la configuracion del
+documento agrega estas lineas:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#+OPTIONS: toc:nil num:nil h:7 html-preamble:nil html-postamble:nil html-scripts:nil html-style:nil
+#+HTML_HEAD: &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;worg-data/worg.css&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;#+HTML_HEAD:&lt;/code&gt; coloca alguna cosa dentro de la etiqueta &lt;code&gt;head&lt;/code&gt; del html,
+para ser precisos, se indica la direccion de una hoja de estilo.
+&lt;a href=&#34;../worg-data.zip&#34;&gt;Aqui&lt;/a&gt; encontraras la que utilizo.&lt;/p&gt;
+
+&lt;p&gt;cuando se exporta por defecto, se crea una &lt;strong&gt;tabla de contenidos&lt;/strong&gt;, si no la
+quieres deja el &lt;code&gt;toc:nil&lt;/code&gt;, tambien se numeran las secciones, como &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;1.1&lt;/code&gt;,
+&lt;code&gt;2&lt;/code&gt;, &lt;code&gt;2.1.2&lt;/code&gt; y asi, &lt;code&gt;num:nil&lt;/code&gt; indica que no queremos numeracion.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;h:7&lt;/code&gt; indica cuantos niveles de encabezados deseamos exportar como &lt;code&gt;H&lt;/code&gt;s. Si hay
+encabezados que superen el nivel, seran incluidos, pero en forma de lista.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;html-postamble:nil&lt;/code&gt; elimina una seccion al final del html que contiene el
+autor, fecha y correo(?), &lt;code&gt;html-preamble-nil&lt;/code&gt; no se que haga pero tampoco lo
+quiero&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;veras que org es generoso, nos regala una hoja de estilo y scripts
+&lt;code&gt;html-scripts:nil&lt;/code&gt; y &lt;code&gt;html-style:nil&lt;/code&gt; se las regresan&amp;hellip; de buena forma&amp;hellip; pero
+org insiste, pasa de nosotros y las coloca de todas formas (por lo general, como comentario)&lt;/p&gt;
+
+&lt;p&gt;por cierto, para mostrar las formulas LaTex en html, org coloca por su cuenta esta linea&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://orgmode.org/mathjax/MathJax.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;colorear-codigo-al-exportar&#34;&gt;Colorear Codigo (al exportar)&lt;/h4&gt;
+
+&lt;p&gt;Esto requiere algo de codigo (ha, ha, ha&amp;hellip;), primero ve a tu carpeta de
+configuracion. En mi caso es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cd ~/.emacs.d/plugins/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/emacsmirror/htmlize.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y agrega esto en tu archivo de configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: org-mode             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; source: https://github.com/emacsmirror/htmlize.git
+(load-file &amp;quot;~/.emacs.d/plugins/htmlize/htmlize.el&amp;quot;)
+
+;; esto activa el coloreado
+(setq org-src-fontify-natively t)
+
+;; por defecto se coloca el color en linea, descomenta
+;; si quieres este comportamiento
+;; (setq org-html-htmlize-output-type &#39;inline-css)
+
+;; en mi caso prefiero tomar el estilo de una hoja css
+;; comenta si eliges lo anterior
+(setq org-html-htmlize-output-type &#39;css)
+
+;; las siguientes lineas son para colocar o no un prefijo a
+;; las etiquetas de codigo (todas son de tipo &amp;lt;span&amp;gt;)
+;; (setq org-html-htmlize-font-prefix &amp;quot;&amp;quot;) ;; default
+(setq org-html-htmlize-font-prefix &amp;quot;src-&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;podria interesarte saber que puedes convertir cualquier buffer de emacs, en una
+pagina html. El comando es &lt;code&gt;htmlfontify-buffer&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Al parecer, &lt;code&gt;htmlize&lt;/code&gt; es una vesion &lt;q&gt;vieja&lt;/q&gt; del modo &lt;code&gt;htmlfontify&lt;/code&gt;
+(incluido por defecto), a saber por que org requiere de &lt;code&gt;htmlize&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;cosideraciones-adicionales&#34;&gt;Cosideraciones adicionales&lt;/h3&gt;
+
+&lt;p&gt;org, y otros lenguajes de marcas ligeros tiene carencias severas de base, no
+solo por utilizar signos comunes para el resaltado, lo que proboca que en
+ocaciones se interprete de manera inesperada el resaltado o simplemente no se
+interpreta. Tambien estamos limitados a 4-5 opciones de resaltado.&lt;/p&gt;
+
+&lt;p&gt;Segun el manual, podemos evitar comportamientos extraños escapando caracteres
+con &lt;code&gt;\&lt;/code&gt; peeeero esto no funciona del todo bien. Como alternativa se ofrece
+escribir simbolos al estilo LaTex &lt;code&gt;\nombre-simbolo&lt;/code&gt; peeero esto tampoco funciona
+del todo bien.&lt;/p&gt;
+
+&lt;p&gt;en mi caso paso del resaltado y lo desactivo con la opcion
+&lt;code&gt;*:nil&lt;/code&gt;, para eliminar la interpretacion de (super|sub)indices  &lt;code&gt;^:nil&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;para poner etiquetas html directamente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@@html:lo-que-sea@@texto@@html:lo-que-sea@@
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@@html:&amp;lt;b&amp;gt;@@texto@@html:&amp;lt;/b&amp;gt;@@
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;je, je, je&amp;hellip; que comodo!&lt;/p&gt;
+
+&lt;p&gt;Si estas creando un documento &lt;q&gt;en partes&lt;/q&gt; para incluir las secciones, coloca
+esta linea en la posicion donde debe aparecer el contenido de otra seccion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#+INCLUDE: &amp;quot;~/my-book/chapter2.org&amp;quot; :minlevel 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para terminar Org tiene muchos atajos, la mayoria con prefijo &lt;code&gt;C-c&lt;/code&gt; que
+supuestamente es el espacio donde el usuario (y los modos) define(n) sus propios
+comandos. Como resultado tus comandos seran ignorados. La solucion? pues yo pase
+mis comandos a &lt;code&gt;s-c&lt;/code&gt; (Super-c).`&lt;/p&gt;
+
+&lt;h2 id=&#34;recursos-enlaces-y-fuentes&#34;&gt;Recursos, Enlaces y Fuentes&lt;/h2&gt;
+
+&lt;p&gt;Org es amplio, tanto que tiene un manual-libro incluido dentro de emacs en el
+modo &lt;code&gt;info&lt;/code&gt;, date una vuelta que no muerde&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://orgmode.org/worg/org-tutorials/org-reference-guide-es.html&#34;&gt;Guia de referencia&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://orgmode.org/worg/org-tutorials/orgtutorial_dto-es.html&#34;&gt;Tutorial&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.davidam.com/docu/orgguide.es.html&#34;&gt;Traducción de Guía Compacta de Org Mode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;org-mode-intro.zip&#34;&gt;Introduccion a org-mode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.danielclemente.com/hacer/org.html&#34;&gt;Cómo gestiono mis tareas y notas con org-mode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Graficos en org-mode  &lt;a href=&#34;http://www.lapipaplena.net/graficos-con-org-mode-ditaa-y-plantuml/&#34;&gt;http://www.lapipaplena.net/graficos-con-org-mode-ditaa-y-plantuml/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/nasciiboy/TheOrgManual&#34;&gt;Traduccion parcial&lt;/a&gt;, de mala
+calidad e intento de adaptar el manual de org-mode a org-mode&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -66,8 +1513,197 @@ La indentacion oficial del lenguaje, tiene tabs equivalentes a 4 espacios en bla
       <pubDate>Wed, 18 Jan 2017 09:29:17 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/rsspluseww/</guid>
-      <description>Eso de los rss parece ser mas bueno que encontrar un billete de alta denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las paginas incluyen el icono naranja con unas barras.
-Cierto es que intente utilizarlo un par de veces, solo que lo encortre muy complejo&amp;hellip; asi pues he pasado cerca de cinco años abriendo todos los dias los marcadores del firefox en manada, hasta que hace unos pocos dias descubri como es esto de los rss (pese a que este blog los genera automagicamente)</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../reunian-fieles-huespedes-cocinaban-asistentes.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Eso de los &lt;strong&gt;rss&lt;/strong&gt; parece ser mas bueno que encontrar un billete de alta
+denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las
+paginas incluyen el icono naranja con unas barras.&lt;/p&gt;
+
+&lt;p&gt;Cierto es que intente utilizarlo un par de veces, solo que lo encortre muy
+complejo&amp;hellip; asi pues he pasado cerca de cinco años abriendo todos los dias los
+marcadores del firefox en manada, hasta que hace unos pocos dias &lt;q&gt;descubri&lt;/q&gt;
+como es esto de los rss (pese a que este blog los genera automagicamente)&lt;/p&gt;
+
+&lt;p&gt;bien, un rss, no es mas que un fichero de texto plano formateado en xml, es
+decir, etiquetas que &lt;code&gt;&amp;lt;abren&amp;gt;&lt;/code&gt; y etiquetas que &lt;code&gt;&amp;lt;/cierran&amp;gt;&lt;/code&gt;. Este fichero
+almecena un resumen del contenido de un sitio o cosa, por ejemplo titulo de
+entradas, fechas de publicacion, resumen de la entrada, autor, enlace y
+demas&amp;hellip; luego si tenemos un programa que sea capas de analizar dichos ficheros,
+podemos enterarnos de los cambios realizados en el sitio de nuestro interes.. y
+ya esta, no hay magia, javascript ni tecnologias web awesome y eso es bueno!&lt;/p&gt;
+
+&lt;p&gt;te estaras preguntando, ¿como puedo yo, resivir los beneficios de estos ficheros
+de texto plano? &lt;strong&gt;Emacs!&lt;/strong&gt;. que? &lt;code&gt;gnus&lt;/code&gt; de nuevo, no, gracias que es muy raro,
+intente con eso y fracase&amp;hellip; espera, no abandones, hay otro modo desarrollado para
+gente sencilla como tu y como yo, su nombre es &lt;strong&gt;elfeed&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalar-elfeed&#34;&gt;Instalar &lt;code&gt;elfeed&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Para instalar &lt;code&gt;elfeed&lt;/code&gt; puedes utilizar el gestor de paquetes de emacs
+(repositorio melpa), o seguir el siguiente metodo apto solo para romanticos de
+manos inquietas.&lt;/p&gt;
+
+&lt;p&gt;desde la terminal vamos a la ruta donde tengamos nuestros complementos para
+emacs, en mi caso es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cd ~/.emacs.d/plugins/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego descargamos el codigo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/skeeto/elfeed.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora abrimos emacs, vamos a nuestro fichero de configuracion y agregamos esto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: elfeed               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; source: https://github.com/skeeto/elfeed.git
+(add-to-list &#39;load-path &amp;quot;~/.emacs.d/plugins/elfeed/&amp;quot;)
+(require &#39;elfeed)
+
+;; aqui van los feeds que nos interesen
+(setq elfeed-feeds
+      &#39;(
+        &amp;quot;http://blog.chuidiang.com/feed/&amp;quot;
+        &amp;quot;http://blog.desdelinux.net/feed/&amp;quot;
+        &amp;quot;http://blogubuntu.com/feed&amp;quot;
+        &amp;quot;http://cucarachasracing.blogspot.com/feeds/posts/default?alt=rss&amp;quot;
+        &amp;quot;http://elarmarioinformatico.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://es.xkcd.com/rss/&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/diegocg?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Esbuntucom?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/GabuntuBlog&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/ramonramon&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/teknoplof/muQI?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/Ubunlog?format=xml&amp;quot;
+        &amp;quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&amp;quot;
+        &amp;quot;http://fernand0.github.io/feed.xml&amp;quot;
+        &amp;quot;http://humanos.uci.cu/feed/&amp;quot;
+        &amp;quot;http://lamiradadelreplicante.com/feed/&amp;quot;
+        &amp;quot;http://linuxmanr4.com/feed/&amp;quot;
+        &amp;quot;http://misnotaslinux.blogspot.com/feeds/posts/default&amp;quot;
+        &amp;quot;http://nasciiboy.github.io/index.xml&amp;quot;
+        &amp;quot;http://planet.emacsen.org/atom.xml&amp;quot;
+        &amp;quot;http://quijotelibre.com/feed/&amp;quot;
+        &amp;quot;http://radioela.org/spip.php?page=backend&amp;quot;
+        &amp;quot;http://ranchoelectronico.org/feed/&amp;quot;
+        &amp;quot;http://red-orbita.com/?feed=rss2&amp;quot;
+        &amp;quot;http://rufianenlared.com/feed/&amp;quot;
+        &amp;quot;http://softwarelibre.deusto.es/feed/&amp;quot;
+        &amp;quot;http://totaki.com/poesiabinaria/feed/&amp;quot;
+        &amp;quot;http://www.blackhats.es/wordpress/?feed=rss2&amp;quot;
+        &amp;quot;http://www.kdeblog.com/feed/&amp;quot;
+        &amp;quot;http://www.lapipaplena.net/feed/&amp;quot;
+        &amp;quot;http://www.linuxadictos.com/feed&amp;quot;
+        &amp;quot;http://www.linuxhispano.net/feed/&amp;quot;
+        &amp;quot;http://www.maxxcan.com/feed/&amp;quot;
+        &amp;quot;http://www.muylinux.com/feed/&amp;quot;
+        &amp;quot;http://www.portallinux.es/feed&amp;quot;
+        &amp;quot;http://www.tomatesasesinos.com/feed/&amp;quot;
+        &amp;quot;http://www.tomatuordenador.net/feed/&amp;quot;
+        &amp;quot;http://www.ubuntizando.com/feed/&amp;quot;
+        &amp;quot;https://asm86.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://autodefensainformatica.radioalmaina.org/feed/&amp;quot;
+        &amp;quot;https://birrasybits.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://blog.adrianistan.eu/feed/&amp;quot;
+        &amp;quot;https://cartaslinux.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://colaboratorio.net/feed/&amp;quot;
+        &amp;quot;https://comunicatelibremente.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://daemons.cf/rss.xml&amp;quot;
+        &amp;quot;https://diariodeunalinuxera.com/feed/&amp;quot;
+        &amp;quot;https://elbinario.net/feed/&amp;quot;
+        &amp;quot;https://eliasbrasa.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://elpinguinotolkiano.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://elzorrolibre.noblogs.org/feed/&amp;quot;
+        &amp;quot;https://enekoamieva.com/blog/feed/&amp;quot;
+        &amp;quot;https://gutl.jovenclub.cu/feed/&amp;quot;
+        &amp;quot;https://h4ckseed.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://jummp.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://jvare.com/feed/&amp;quot;
+        &amp;quot;https://kernelpanicblog.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://lasindias.blog/feed&amp;quot;
+        &amp;quot;https://leninmhs.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://lignux.com/feed/&amp;quot;
+        &amp;quot;https://linuxgnublog.org/es/feed&amp;quot;
+        &amp;quot;https://mierda.tv/feed/&amp;quot;
+        &amp;quot;https://miguelpinia.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://ondahostil.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://otroespacioblog.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://pfctelepathy.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://picodotdev.github.io/blog-bitix/index.xml&amp;quot;
+        &amp;quot;https://radioslibres.net/rss/&amp;quot;
+        &amp;quot;https://victorhckinthefreeworld.com/feed/&amp;quot;
+        &amp;quot;https://vidaembebida.wordpress.com/feed/&amp;quot;
+        &amp;quot;https://www.atareao.es/blog/feed/&amp;quot;
+        &amp;quot;https://www.linuxito.com/?format=feed&amp;amp;type=rss&amp;quot;
+        &amp;quot;https://www.ochobitshacenunbyte.com/feed/&amp;quot;
+        &amp;quot;https://xkcd.com/rss.xml&amp;quot;
+        ))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;evaluamos el codigo, y ya tenemos nuestro leector rss. Para modificar o añadir
+nuevos feeds modifica las cadenas de la variable &lt;code&gt;elfeed-feeds&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;para hacer mas comodo el asunto, agreguemos un par de accesos directos a nuestro
+leector&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key [f7] &#39;elfeed)
+(global-set-key [f8] &#39;elfeed-update)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;al presionar &lt;code&gt;F7&lt;/code&gt; se abre el lector, con &lt;code&gt;F8&lt;/code&gt; actualizamos los feeds&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../elfeed.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;para ver la entrada, colocamos el cursor sobre esta y damos un enter&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../elfeed-show.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;si presionamos &lt;code&gt;b&lt;/code&gt; o nos posicionamos en el enlace + un enter, la entrada se
+abrira en el navegador del sistema! Tambien podemos copiar la ruta de enlace
+pulsando &lt;code&gt;y&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;para regresar a las entradas presionamos &lt;code&gt;q&lt;/code&gt; y para marcar una entrada como
+leeida &lt;code&gt;r&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;elfeed-eww&#34;&gt;&lt;code&gt;elfeed&lt;/code&gt; + &lt;code&gt;eww&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;ver la entrada en el navegador esta muy bien, pero no me gustan el javascript,
+los anuncios ni las cosas modernas, que puedo hacer? Emacs incorpora un
+navegador de texto plano &lt;code&gt;eww&lt;/code&gt;, podemos abrir los enlaces desde el visor de
+entradas de elfeed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;primero colocamos el cursor en el enlace y presionamos &lt;code&gt;M-x eww&lt;/code&gt;,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;veras que aparece el enlace como el parametro por defecto, damos enter o
+colocamos una direccion distinta + un enter&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;../eww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;para salir de &lt;code&gt;eww&lt;/code&gt; y regresar a &lt;code&gt;elfeed&lt;/code&gt; pulsamos &lt;code&gt;q&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;hagamos mas sencilla la operacion agregando algunos atajos para &lt;code&gt;eww&lt;/code&gt; en nuestra
+configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key [f5] &#39;eww)
+(global-set-key (kbd &amp;quot;C-x w o&amp;quot;) &#39;eww)
+(global-set-key (kbd &amp;quot;C-x w b&amp;quot;) &#39;eww-add-bookmark)
+(global-set-key (kbd &amp;quot;C-x w l&amp;quot;) &#39;eww-list-bookmarks)
+(global-set-key (kbd &amp;quot;C-x w f&amp;quot;) &#39;eww-open-file)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora para abrir los enlaces, colocamos el cursor en el enlace y pulsamos &lt;code&gt;F5&lt;/code&gt; o
+&lt;code&gt;C-x w o&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Listo, vive la web en texto plano, el tiempo extra lo puedes utilizar para ver
+porno, escribir un blog o lo que sea&amp;hellip; &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -76,9 +1712,176 @@ Cierto es que intente utilizarlo un par de veces, solo que lo encortre muy compl
       <pubDate>Sat, 07 Jan 2017 09:38:46 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/keychords/</guid>
-      <description>En emacs, tu puedes crear cualquier atajo de teclado para cualquier comando
-Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de configuracion de emacs
-(global-set-key (kbd &amp;quot;&amp;lt;f7&amp;gt;&amp;quot;) &#39;calendar)  Si estas experimentando y no deseas reiniciar emacs cada vez que intentas definir un nuevo atajo, puedes colocar el cursor al final del ultimo parantesis e invocar a (M-x) eval-last-sexp (comando ligado a C-x C-e). El atajo se activa de inmediato.</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../kara.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En emacs, tu puedes crear cualquier atajo de teclado para cualquier comando&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de
+configuracion de emacs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key (kbd &amp;quot;&amp;lt;f7&amp;gt;&amp;quot;) &#39;calendar)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si estas experimentando y no deseas reiniciar emacs cada vez que intentas
+definir un nuevo atajo, puedes colocar el cursor al final del ultimo parantesis
+e invocar a (&lt;code&gt;M-x&lt;/code&gt;) &lt;code&gt;eval-last-sexp&lt;/code&gt; (comando ligado a &lt;code&gt;C-x C-e&lt;/code&gt;). El atajo se
+activa de inmediato. Para salir del buffer calendario presiona &lt;code&gt;q&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si cometes algun error y necesitas iniciar emacs sin cargar el archivo de
+configuracion, puedes iniciar emacs desde el terminal con este comando:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;emacs --no-init-file
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;sintaxis&#34;&gt;sintaxis&lt;/h2&gt;
+
+&lt;p&gt;La funcion para definir atajos es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(define-key map COMBINACION &#39;FUNCION)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde &lt;code&gt;map&lt;/code&gt; es un mapa de combinaciones, o por decirlo de alguna forma, un
+prefijo que precede a la combinacion en si&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ctl-x-map&lt;/code&gt; con prefijo &lt;code&gt;C-x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctl-x-4-map&lt;/code&gt; con prefijo &lt;code&gt;C-x 4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctl-x-5-map&lt;/code&gt; con prefijo &lt;code&gt;C-x 5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctl-x-r-map&lt;/code&gt; con prefijo &lt;code&gt;C-x r&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;esc-map&lt;/code&gt;  con prefijo &lt;code&gt;ESC&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;help-map&lt;/code&gt;  con prefijo &lt;code&gt;C-h&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;global-map&lt;/code&gt; (sin prefijo) para cualquier combinacion. Esta ultima tiene una
+funcion dedicada y en ella centraremos la explicacion&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key COMBINACION &#39;FUNCION)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La &lt;code&gt;COMBINACION&lt;/code&gt; de teclas puede ser cualquiera de estas 3 formas&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;quot;letra&amp;quot;&lt;/code&gt;. Una unica letra de a-z o 1-9 dentro de comillas&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;[nombre]&lt;/code&gt;. &lt;code&gt;nombre&lt;/code&gt;, se substiye por el nombre interno o por el codigo que
+emacs asigna a cada tecla, la combinacion puede contener mas de una tecla pero
+siempre se efectua en un solo paso, por ejemplo &lt;code&gt;[s-left]&lt;/code&gt; es presionar la
+tecla super + la tecla fecha izquierda, &lt;code&gt;[s-kp-5]&lt;/code&gt; es presionar la
+tecla super + la tecla 5 del pad numerico.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;(kbd &amp;quot;sequencia&amp;quot;)&lt;/code&gt;. &lt;code&gt;sequencia&lt;/code&gt; es cualquier combinacion del teclado colocada
+entre parentesis, esta puede separarse en varios pasos si se coloca un espacio
+en blanco entre los nombres de las teclas. Dentro de la cadena, para hacer
+referencia a la tecla control, colocamos &lt;code&gt;C&lt;/code&gt;, para meta/esc &lt;code&gt;M&lt;/code&gt;, y para
+super &lt;code&gt;s&lt;/code&gt;, las tres siempre van en conjunto con alguna otra tecla siguiendo el
+formato &lt;code&gt;C-tecla&lt;/code&gt;, &lt;code&gt;M-tecla&lt;/code&gt; o &lt;code&gt;s-tecla&lt;/code&gt;. Finalmente podemos hacer referencia
+al nombre interno de una tecla, al colocarlo entre mayor que y menor que, por
+ejemplo &lt;code&gt;(kbd &amp;quot;&amp;lt;f8&amp;gt;&amp;quot;)&lt;/code&gt; sera la tecla F8&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;este es el nombre interno de algunas teclas&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;backspace&lt;/code&gt; retroceso&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;return&lt;/code&gt; enter&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;delete&lt;/code&gt; suprimir&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;up&lt;/code&gt; flecha arriba&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;down&lt;/code&gt; flecha abajo&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;right&lt;/code&gt; flecha derecha&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;left&lt;/code&gt; flecha izquierda&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f1&lt;/code&gt;..&lt;code&gt;f35&lt;/code&gt;tecla de funcion de F1 a F35&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;home&lt;/code&gt; Inicio&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;end&lt;/code&gt; Fin&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;help&lt;/code&gt; Ayuda&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kp-0&lt;/code&gt;.. &lt;code&gt;kp-9&lt;/code&gt; numeros del pad numerico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kp-subtract&lt;/code&gt; menos del pad numerico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kp-add&lt;/code&gt; mas del pad numerico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kp-enter&lt;/code&gt; enter del teclado numérico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kp-decimal&lt;/code&gt; punto decimal del teclado numérico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;next&lt;/code&gt; AvPag&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;prior&lt;/code&gt; RePag&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ejemplos&#34;&gt;ejemplos&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-elisp&#34;&gt;(global-set-key [s-left]  &#39;windmove-left)
+(global-set-key [s-right] &#39;windmove-right)
+(global-set-key [s-up]    &#39;windmove-up)
+(global-set-key [s-down]  &#39;windmove-down)
+
+(global-set-key (kbd &amp;quot;C-c &amp;lt;left&amp;gt;&amp;quot;)  &#39;windmove-left)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;right&amp;gt;&amp;quot;) &#39;windmove-right)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;up&amp;gt;&amp;quot;)    &#39;windmove-up)
+(global-set-key (kbd &amp;quot;C-c &amp;lt;down&amp;gt;&amp;quot;)  &#39;windmove-down)
+
+(global-set-key (kbd &amp;quot;C-c o&amp;quot;) &#39;recentf-open-files)
+(global-set-key (kbd &amp;quot;C-x C-b&amp;quot;) &#39;ibuffer)
+
+(global-set-key [return] &#39;backward-char)
+(global-set-key (kbd &amp;quot;&amp;lt;return&amp;gt;&amp;quot;) &#39;backward-char)
+(global-set-key (kbd &amp;quot;&amp;lt;f7&amp;gt; &amp;lt;f8&amp;gt;&amp;quot;) &#39;calendar)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conocer-el-comando-ligado-a-un-atajo&#34;&gt;Conocer el comando ligado a un atajo&lt;/h2&gt;
+
+&lt;p&gt;Si invocamos a &lt;code&gt;describe-key&lt;/code&gt; (&lt;code&gt;C-h k&lt;/code&gt;) y, a continuacion, se presiona un atajo,
+emacs mostrara el comando al que esta ligado.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, supongamos que deseamos conocer el comando ligado a
+&lt;code&gt;C-M-g&lt;/code&gt;. Primero se llama a &lt;code&gt;describe-key&lt;/code&gt;, luego se presiona la combinacion de
+teclado, entonces emacs imprimira &lt;code&gt;C-M-g is undefined&lt;/code&gt;. Esto significa que
+puedes utilizar &lt;code&gt;(kbd &amp;quot;C-M-g&amp;quot;)&lt;/code&gt; para representar una combinacion de teclas en
+codigo lisp.&lt;/p&gt;
+
+&lt;h2 id=&#34;combinaciones-a-evitar&#34;&gt;Combinaciones a evitar&lt;/h2&gt;
+
+&lt;p&gt;Emacs tiene sus caprichos. Es mejor no definir las siguientes combinaciones, a
+menos que sepas lo que estas haciendo.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-cualquierLetra&lt;/code&gt;. Dada la forma en que emacs esta implementado utiliza la
+sintaxis &amp;ldquo;C-letra&amp;rdquo; para un monton de atajos preestablecidos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;F1&lt;/code&gt; o &lt;code&gt;C-h&lt;/code&gt;. Emacs utiliza esta combinacion para el sistema de ayuda de emacs
+y tiene un estado especial en el sistema de comandos de emacs.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;ESC&lt;/code&gt; o &lt;code&gt;C-[&lt;/code&gt;. Esta combinacion por si misma tiene un significado complicado,
+dependiendo de cauntas veces se presione&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-Shift-letra&lt;/code&gt;. Algunos terminales no pueben dintingur las versiones de la
+combinacion con Shift de la version sin Shift&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;buenas-opciones&#34;&gt;Buenas opciones&lt;/h2&gt;
+
+&lt;p&gt;Emacs tiene unos siete mill comandos. De forma predeterminada, 800 de ellos
+tiene un atajo. Si defines tus propios atajos sin cuidado es posible que muchos
+modos primarios o secundarios anulen tus combinaciones, ya que estas tiene
+prioridad.&lt;/p&gt;
+
+&lt;p&gt;En la documentacion oficial de emacs, Las combinaciones libres para el usuario
+son de F5 a F9 y &lt;code&gt;C-c letra&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Las siguientes combinaciones son buenos puntos de partida para tus propias
+definiciones, y no causan ningun problema en la practica&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;F5&lt;/code&gt;, &lt;code&gt;F6&lt;/code&gt;, &lt;code&gt;F7&lt;/code&gt;, &lt;code&gt;F8&lt;/code&gt;, &lt;code&gt;F9&lt;/code&gt;, &lt;code&gt;F12&lt;/code&gt;. Puden combinarse sin problemas con
+Ctrl. Asegurate que no los utilize el sistema operativo.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Super o Hyper. Cualquier combinacion con estas es buena, pero es posible que
+el terminal no reconosca las teclas Super o Hyper.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;fuentes&#34;&gt;fuentes&lt;/h2&gt;
+
+&lt;p&gt;buena parte del articulo es una pseudo-traduccion de&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ergoemacs.org/emacs/keyboard_shortcuts.html&#34;&gt;http://ergoemacs.org/emacs/keyboard_shortcuts.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;otra, es una invencion no contrastada con el manual&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -87,8 +1890,188 @@ Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de configur
       <pubDate>Wed, 28 Dec 2016 17:17:04 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/first-theme/</guid>
-      <description>Crear un Tema en Emacs un poco de historia Cuando comence a utilizar emacs (hace unos pocos años) para establecer un tema se utilizaba un paquete llamado color-theme parte del paquete emacs-goodies-el de Debian. Al parecer desde la version 24 de emacs se desaconseja su uso, pese a todo en mi instalacion se mantuvo en servicio hasta la version 26.0.50 sin generar inconvenientes.
-para la posteridad y los viajeros en el tiempo, dejo aqui el paquete en forma de zip (con un tema personalizado de regalo color-theme-nascii)</description>
+      <description>
+
+&lt;h2 id=&#34;crear-un-tema-en-emacs&#34;&gt;Crear un Tema en Emacs&lt;/h2&gt;
+
+&lt;h3 id=&#34;un-poco-de-historia&#34;&gt;un poco de historia&lt;/h3&gt;
+
+&lt;p&gt;Cuando comence a utilizar emacs (hace unos pocos años) para establecer un tema
+se utilizaba un paquete llamado &lt;strong&gt;color-theme&lt;/strong&gt; parte del paquete
+&lt;code&gt;emacs-goodies-el&lt;/code&gt; de Debian. Al parecer desde la version 24 de emacs se
+desaconseja su uso, pese a todo en mi instalacion se mantuvo en servicio hasta
+la version 26.0.50 sin generar inconvenientes.&lt;/p&gt;
+
+&lt;p&gt;para la posteridad y los viajeros en el tiempo, dejo aqui el paquete en forma
+de &lt;a href=&#34;../color-theme-6.6.0.zip&#34;&gt;zip&lt;/a&gt; (con un tema personalizado de regalo
+&lt;code&gt;color-theme-nascii&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;asi es como se utilizaba&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(add-to-list &#39;load-path &amp;quot;~/ruta-a/color-theme-6.6.0&amp;quot;)
+(require &#39;color-theme)
+(color-theme-initialize)
+
+;; para cargar un tema en especifico
+;; (color-theme-nombreDelTema)
+(color-theme-nascii)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;establecer-el-tema-por-defecto&#34;&gt;establecer el tema por defecto&lt;/h3&gt;
+
+&lt;p&gt;apartir de emacs version 24 podemos cambiar el tema sin instalar nada con el
+comando &lt;code&gt;customize-themes&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../custom-themes.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;para cambiar el tema se mueve el cursor al tema y se presiona enter&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../custom-themes-ligth-blue.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;para guardar el cambio colocamos el cursor en el &amp;ldquo;boton&amp;rdquo; &lt;strong&gt;Save Theme
+Setting&lt;/strong&gt; + un enter, accion que colocara automagicamente unas lineas de codigo
+extra en nuestro &lt;code&gt;init.el&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;No te van las cosas automagicas? puedes establecer la carga de un tema
+directamente en el fichero de configuracion &lt;code&gt;init.el&lt;/code&gt; con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(load-file &amp;quot;~/RUTA/A/miTema-theme.el&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si queremos que el menu de seleccion cargue un tema automaticamente, tiene que
+estar en nuestro directorio de configuracion &lt;code&gt;~/.emacs.d/&lt;/code&gt;&lt;strong&gt;nombreTema&lt;/strong&gt;&lt;code&gt;-theme.el&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;crear-un-tema&#34;&gt;crear un tema&lt;/h3&gt;
+
+&lt;p&gt;Los temas se crean en base a la configuracion actual, pero tambien podemos crear
+un tema a partir de cero segun indiquemos al comando &lt;code&gt;customize-create-theme&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../customize-create-theme.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;en el recuadro &lt;strong&gt;Theme Name&lt;/strong&gt; damos nombre al tema, en el recuandro
+&lt;strong&gt;Description&lt;/strong&gt; dejamos la fecha de creacion o en su lugar colocamos una
+descripcion del tema, por ejemplo &lt;code&gt;&amp;quot;nascii-theme un tema obscuro mas...&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;establecemos las variables a gusto y guardamos el tema con &lt;code&gt;C-x C-s&lt;/code&gt; o con un
+intro sobre el recuadro &lt;strong&gt;Save Theme&lt;/strong&gt;. Regresamos a &lt;code&gt;customize-themes&lt;/code&gt; y
+automagicamente nuestro tema estara disponible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nota&lt;/strong&gt;: Si creamos el tema apartir de la configuracion actual y queremos
+compartirlo con los demas habitantes de la red, debemos evitar incluir algunas
+variables especificas de nuestro sistema en el codigo fuente del tema, por
+ejemplo, el tipo de tipografia.&lt;/p&gt;
+
+&lt;h3 id=&#34;ver-los-cambios-al-vuelo&#34;&gt;ver los cambios &amp;ldquo;al vuelo&amp;rdquo;&lt;/h3&gt;
+
+&lt;p&gt;Vamos al codigo fuente del tema &lt;code&gt;C-x C-f&lt;/code&gt; &lt;code&gt;~/.emacs.d/miTema-theme.el&lt;/code&gt;,
+modificamos el parametro de interes (los colorines se encuentran entre comillas
+en formato nombre o en formato hexadecimal de 3 o 6 digitos), luego evaluamos el
+buffer con el comando &lt;code&gt;eval-buffer&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para hacer un poco menos lioso el asunto asignamos &lt;code&gt;eval-buffer&lt;/code&gt; a una tecla&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(global-set-key [f9] &#39;eval-buffer)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;con esto tenemos asignado el comando a la tecla de funcion &lt;strong&gt;F9&lt;/strong&gt;, asi podemos
+recargar los cambios estilo navegador web.&lt;/p&gt;
+
+&lt;h3 id=&#34;nascii-theme&#34;&gt;nascii-theme&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;../nascii-theme.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see &amp;lt;http://www.gnu.org/licenses/&amp;gt;.
+
+;; ---------------------------
+;;
+;; nascii: Another dark theme
+;;
+;; ----------------------------
+
+(unless (&amp;gt;= emacs-major-version 24)
+  (error &amp;quot;requires Emacs 24 or later.&amp;quot;))
+
+(deftheme nascii
+  &amp;quot;Another dark theme&amp;quot;)
+
+(custom-theme-set-faces
+ &#39;nascii
+ &#39;(default ((t (:weight normal :slant normal :underline nil :overline nil :strike-through nil :foreground &amp;quot;white&amp;quot; :background &amp;quot;black&amp;quot; :stipple nil :inherit nil))))
+ &#39;(cursor ((t (:background &amp;quot;yellow&amp;quot;))))
+ &#39;(escape-glyph ((((background dark)) (:foreground &amp;quot;cyan&amp;quot;)) (((type pc)) (:foreground &amp;quot;magenta&amp;quot;)) (t (:foreground &amp;quot;brown&amp;quot;))))
+ &#39;(minibuffer-prompt ((((background dark)) (:foreground &amp;quot;cyan&amp;quot;)) (((type pc)) (:foreground &amp;quot;magenta&amp;quot;)) (t (:foreground &amp;quot;medium blue&amp;quot;))))
+ &#39;(highlight ((t (:background &amp;quot;darkolivegreen&amp;quot;))))
+ &#39;(region ((t (:background &amp;quot;#222&amp;quot; :foreground &amp;quot;#87cefa&amp;quot;))))
+ &#39;(shadow ((((class color grayscale) (min-colors 88) (background light)) (:foreground &amp;quot;grey50&amp;quot;)) (((class color grayscale) (min-colors 88) (background dark)) (:foreground &amp;quot;grey70&amp;quot;)) (((class color) (min-colors 8) (background light)) (:foreground &amp;quot;green&amp;quot;)) (((class color) (min-colors 8) (background dark)) (:foreground &amp;quot;yellow&amp;quot;))))
+ &#39;(secondary-selection ((t (:background &amp;quot;darkslateblue&amp;quot;))))
+ &#39;(trailing-whitespace ((t (:background &amp;quot;red&amp;quot;))))
+ &#39;(font-lock-builtin-face ((t (:foreground &amp;quot;LightSteelBlue&amp;quot;))))
+ &#39;(font-lock-comment-delimiter-face ((default (:inherit (font-lock-comment-face)))))
+ &#39;(font-lock-comment-face ((t (:foreground &amp;quot;OrangeRed&amp;quot;))))
+ &#39;(font-lock-constant-face ((t (:foreground &amp;quot;Aquamarine&amp;quot;))))
+ &#39;(font-lock-doc-face ((t (:foreground &amp;quot;LightSalmon&amp;quot;))))
+ &#39;(font-lock-function-name-face ((t (:foreground &amp;quot;LightSkyBlue&amp;quot;))))
+ &#39;(font-lock-keyword-face ((t (:foreground &amp;quot;Cyan&amp;quot;))))
+ &#39;(font-lock-negation-char-face ((t nil)))
+ &#39;(font-lock-preprocessor-face ((t (:inherit (font-lock-builtin-face)))))
+ &#39;(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
+ &#39;(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
+ &#39;(font-lock-string-face ((t (:foreground &amp;quot;LightSalmon&amp;quot;))))
+ &#39;(font-lock-type-face ((t (:foreground &amp;quot;PaleGreen&amp;quot;))))
+ &#39;(font-lock-variable-name-face ((t (:foreground &amp;quot;LightGoldenrod&amp;quot;))))
+ &#39;(font-lock-warning-face ((t (:weight bold :foreground &amp;quot;Pink&amp;quot;))))
+ &#39;(button ((t (:inherit (link)))))
+ &#39;(link ((((class color) (min-colors 88) (background light)) (:underline (:color foreground-color :style line) :foreground &amp;quot;RoyalBlue3&amp;quot;)) (((class color) (background light)) (:underline (:color foreground-color :style line) :foreground &amp;quot;blue&amp;quot;)) (((class color) (min-colors 88) (background dark)) (:underline (:color foreground-color :style line) :foreground &amp;quot;cyan1&amp;quot;)) (((class color) (background dark)) (:underline (:color foreground-color :style line) :foreground &amp;quot;cyan&amp;quot;)) (t (:inherit (underline)))))
+ &#39;(link-visited ((default (:inherit (link))) (((class color) (background light)) (:foreground &amp;quot;magenta4&amp;quot;)) (((class color) (background dark)) (:foreground &amp;quot;violet&amp;quot;))))
+ &#39;(fringe ((t (:background &amp;quot;grey10&amp;quot;))))
+ &#39;(header-line ((t (:box nil :foreground &amp;quot;grey20&amp;quot; :background &amp;quot;grey90&amp;quot;))))
+ &#39;(tooltip ((t (:foreground &amp;quot;black&amp;quot; :background &amp;quot;lightyellow&amp;quot;))))
+ &#39;(mode-line ((t (:box (:line-width -2 :color nil :style released-button) :background &amp;quot;black&amp;quot; :foreground &amp;quot;white&amp;quot;))))
+ &#39;(mode-line-buffer-id ((t (:weight bold))))
+ &#39;(mode-line-emphasis ((t (:weight bold))))
+ &#39;(mode-line-highlight ((((class color) (min-colors 88)) (:box (:line-width 2 :color &amp;quot;grey40&amp;quot; :style released-button))) (t (:inherit (highlight)))))
+ &#39;(mode-line-inactive ((default (:inherit (mode-line))) (((class color) (min-colors 88) (background light)) (:background &amp;quot;grey90&amp;quot; :foreground &amp;quot;grey20&amp;quot; :box (:line-width -1 :color &amp;quot;grey75&amp;quot; :style nil) :weight light)) (((class color) (min-colors 88) (background dark)) (:background &amp;quot;grey30&amp;quot; :foreground &amp;quot;grey80&amp;quot; :box (:line-width -1 :color &amp;quot;grey40&amp;quot; :style nil) :weight light))))
+ &#39;(isearch ((t (:foreground &amp;quot;brown4&amp;quot; :background &amp;quot;palevioletred2&amp;quot;))))
+ &#39;(isearch-fail ((((class color) (min-colors 88) (background light)) (:background &amp;quot;RosyBrown1&amp;quot;)) (((class color) (min-colors 88) (background dark)) (:background &amp;quot;red4&amp;quot;)) (((class color) (min-colors 16)) (:background &amp;quot;red&amp;quot;)) (((class color) (min-colors 8)) (:background &amp;quot;red&amp;quot;)) (((class color grayscale)) (:foreground &amp;quot;grey&amp;quot;)) (t (:inverse-video t))))
+ &#39;(lazy-highlight ((((class color) (min-colors 88) (background light)) (:background &amp;quot;paleturquoise&amp;quot;)) (((class color) (min-colors 88) (background dark)) (:background &amp;quot;paleturquoise4&amp;quot;)) (((class color) (min-colors 16)) (:background &amp;quot;turquoise3&amp;quot;)) (((class color) (min-colors 8)) (:background &amp;quot;turquoise3&amp;quot;)) (t (:underline (:color foreground-color :style line)))))
+ &#39;(match ((((class color) (min-colors 88) (background light)) (:background &amp;quot;yellow1&amp;quot;)) (((class color) (min-colors 88) (background dark)) (:background &amp;quot;RoyalBlue3&amp;quot;)) (((class color) (min-colors 8) (background light)) (:foreground &amp;quot;black&amp;quot; :background &amp;quot;yellow&amp;quot;)) (((class color) (min-colors 8) (background dark)) (:foreground &amp;quot;white&amp;quot; :background &amp;quot;blue&amp;quot;)) (((type tty) (class mono)) (:inverse-video t)) (t (:background &amp;quot;gray&amp;quot;))))
+ &#39;(next-error ((t (:inherit (region)))))
+ &#39;(query-replace ((t (:inherit (isearch))))))
+
+(provide-theme &#39;nascii)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para cargar el tema, copiar y guardar en &lt;code&gt;&amp;quot;~/.emacs.d/nascii-theme.el&amp;quot;&lt;/code&gt;, luego se
+puede cargar/probar ejecutando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(load-file &amp;quot;~/.emacs.d/nascii-theme.el&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o mediante &lt;code&gt;customize-themes&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;referencias&#34;&gt;referencias&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&#34;&gt;https://www.gnu.org/software/emacs/manual/html_node/emacs/Creating-Custom-Themes.html#Creating-Custom-Themes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;tambien puede acceder directamente al manual dentro de emacs. Copia esto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[info:emacs#Creating%20Custom%20Themes]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pegalo en algun buffer, cambia a modo-org, coloca el cursor sobre el texto y
+presiona &lt;code&gt;C-c C-o&lt;/code&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -97,9 +2080,119 @@ para la posteridad y los viajeros en el tiempo, dejo aqui el paquete en forma de
       <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/first-blood/</guid>
-      <description>Instalando GNU Emacs En general utilizo emacs apartir del codigo fuente, no obstante tambien tengo disponible el que brinde la distribucion de turno, ya sea para probar algo o por si alguna version presenta algun comportamiento extraño.
-Nunca la he instalado en el sistema emacs compilado a partir del codigo, en su lugar tengo un atajo de teclado para su invocacion
-desde repositorios # en debian apt-get install emacs # en fedora dnf install emacs  compilar desde el codigo fuente instalamos las dependencias</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../first-blood.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalando-gnu-emacs&#34;&gt;Instalando GNU Emacs&lt;/h2&gt;
+
+&lt;p&gt;En general utilizo emacs apartir del codigo fuente, no obstante tambien tengo
+disponible el que brinde la distribucion de turno, ya sea para probar algo o por
+si alguna version presenta algun comportamiento extraño.&lt;/p&gt;
+
+&lt;p&gt;Nunca la he instalado en el sistema emacs compilado a partir del codigo, en su
+lugar tengo un atajo de teclado para su invocacion&lt;/p&gt;
+
+&lt;h3 id=&#34;desde-repositorios&#34;&gt;desde repositorios&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;# en debian
+apt-get install emacs
+# en fedora
+dnf install emacs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;compilar-desde-el-codigo-fuente&#34;&gt;compilar desde el codigo fuente&lt;/h3&gt;
+
+&lt;p&gt;instalamos las dependencias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;su
+# en debian
+apt-get build-dep emacs
+# en fedora
+dnf builddep emacs
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por motivos muy tristes no tengo debian, la ultima ocacion que compile
+emacs en debian fue con &lt;code&gt;apt-get build-dep emacs-24&lt;/code&gt;, intenta simplemente con
+&lt;code&gt;emacs&lt;/code&gt;, de lo contrario prueba con &lt;code&gt;emacs-25&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;(si no tienes &lt;code&gt;git&lt;/code&gt; instalalo)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone git://git.sv.gnu.org/emacs.git
+./autogen.sh
+./autogen.sh git
+./configure
+make
+# ya podemos utilizar emacs
+./src/emacs
+# si deseamos intalarlo
+su
+make install
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuracion-base&#34;&gt;configuracion base&lt;/h2&gt;
+
+&lt;p&gt;tenia mucho tiempo sin &amp;ldquo;purgar&amp;rdquo; la configuracion de Emacs, el resultado esta en
+este &lt;a href=&#34;../emacs-config.zip&#34;&gt;zip&lt;/a&gt; (33mb). Para utilizarla necesitas:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;descomprimir&lt;/li&gt;
+&lt;li&gt;renombrar la carpeta como &lt;code&gt;.emacs.d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;y moverla a home.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Contenido&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- init.el         # fichero de configuracion de emacs
+- nascii-theme.el # tema nascii
+- plugins/        # todas las carpetas proceden directamente de git
+         company-mode               # autocompletado
+         magit                      # interfaz avanzada git emacs-style
+         dash.el                    #   dependencia de magit
+         with-editor                #   dependencia de magit
+         emacs-fish                 # modo para scripts fish
+         expand-region.el           # seleccion segun el contexto
+         go-mode.el                 # modo para golang
+         haskell-mode               # modo para haskell
+         markdown-mode              # modo para markdown
+         multiple-cursors.el        # cursores multiples
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Emacs posee un magnifico gestor de pagetes, pero soy un romantico e instale
+todos los &amp;ldquo;plugins&amp;rdquo; directamente de los fuentes, es decir, cada carpeta en
+&lt;code&gt;plugins&lt;/code&gt; tiene su &lt;code&gt;.git&lt;/code&gt;. En teoria esto hara que la configuracion este lista
+solo con copiar y pegar. Para ser especifico lo he probado con las versiones
+25.1.1 y 26.0.50, ambas en fedora.&lt;/p&gt;
+
+&lt;p&gt;Esto tambien significa que los repositorios no estan activados, tendras que
+hacerlo como antaño: llendo al navegador y averiguado como.&lt;/p&gt;
+
+&lt;p&gt;Los modos &lt;strong&gt;magit&lt;/strong&gt; y &lt;strong&gt;haskell&lt;/strong&gt; estan compilados (son los ficheros que
+terminan con &lt;code&gt;.elc&lt;/code&gt;) y es posible que se genere un error durante la carga aunque
+no estoy seguro de ese hecho. Si esto sucede, existen dos soluciones posibles&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;elimina la seccion correspondiente a dichos modos dentro de &lt;code&gt;init.el&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;o sigue las instrucciones dentro de &lt;code&gt;init.el&lt;/code&gt; y compila los modos&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;como notas adicionales los atajos estan pensados en la distribucion de teclado
+&lt;strong&gt;programmer dvorak&lt;/strong&gt;  con 5 teclas modificadas (los dos control, mayus, @ y \)
+y el modo go depende de que tengas una instalacion de go. Puedes seguir los dos
+pasos anteriores si encuentras algun problema (&lt;strong&gt;no olvides revisar la correcta
+ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;programo en haskell? no, pero me hace gracia tener el modo&lt;/p&gt;
+
+&lt;h2 id=&#34;iniciando&#34;&gt;Iniciando&lt;/h2&gt;
+
+&lt;p&gt;Una vez Emacs esta en el sistema y ha sido invocado presiona &lt;code&gt;C-h t&lt;/code&gt; (Control y
+&amp;lsquo;h&amp;rsquo; a la vez y luego &amp;rsquo;t&amp;rsquo;) esto abre el tutorial&amp;hellip; &lt;strong&gt;bienvenido a Emacs!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;La proxima entrega sera &amp;ldquo;Emacs - Como crear un tema&amp;rdquo;&amp;hellip; o algo asi.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -108,8 +2201,106 @@ desde repositorios # en debian apt-get install emacs # en fedora dnf install ema
       <pubDate>Fri, 23 Dec 2016 20:43:19 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/emacs/que-es-emacs/</guid>
-      <description>algunos dicen que es un editor, otros que es un sistema operativo, los mas filosoficos diran que es lo que elijas que sea, una forma de vida, un camino a seguir o incluso que Emacs son los padres&amp;hellip; bueno luego de un par de años utilizando Emacs esta es mi opinion
-My and mrs Emacs  Yo y la señora Emacs, tenemos algo que esta creciendo, sabemos que está mal, pero es algo muy fuerte como para dejarlo ir ahora.</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../Emacs-logo.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;algunos dicen que es &lt;strong&gt;un editor&lt;/strong&gt;, otros que es &lt;strong&gt;un sistema operativo&lt;/strong&gt;, los mas
+filosoficos diran que es  &lt;strong&gt;lo que elijas que sea&lt;/strong&gt;, &lt;strong&gt;una forma de vida&lt;/strong&gt;,
+&lt;strong&gt;un camino a seguir&lt;/strong&gt; o incluso que Emacs son los padres&amp;hellip; bueno luego de un
+par de años utilizando Emacs esta es mi opinion&lt;/p&gt;
+
+&lt;h2 id=&#34;my-and-mrs-emacs&#34;&gt;My and mrs Emacs&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Yo y la señora Emacs,
+tenemos algo que esta creciendo,
+sabemos que está mal,
+pero es algo muy fuerte como para dejarlo ir ahora.&lt;/p&gt;
+
+&lt;p&gt;Nos vemos cada dia en el mismo monitor,
+a las 8:30 se que estará ahí,
+tomando mis comandos, haciendo toda clase de funciones,
+mientras moc toca nuestra canción favorita.&lt;/p&gt;
+
+&lt;p&gt;Yo y la señora, señora Emacs, señora Emacs, señora Emacs,
+tenemos algo que esta creciendo,
+sabemos que esta mal,
+pero es algo muy fuerte como para dejarlo ir ahora.&lt;/p&gt;
+
+&lt;p&gt;Tenemos que ser muy cuidadosos,
+de no llevar nuestros sueños muy lejos,
+porque ella tiene sus propias obligaciones y yo también,
+yo y la señora, señora Emacs, señora Emacs, señora Emacs.&lt;/p&gt;
+
+&lt;p&gt;Bueno, es nuestra hora de irnos,
+me duele mucho, mucho por dentro,
+y ahora ella tomará su camino, yo el mio,
+Pero mañana nos veremos en el mismo lugar, a la misma hora.
+Yo y la señora Emacs, señora Emacs, señora Emacs&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip;cof, cof, hem, todo aspirante a programador debe eligir su martillo
+forjador de codigo, en mi caso al ser autodidacta unicamente las opiniones de
+internet sirvieron de guia (lagrimas ironicas).&lt;/p&gt;
+
+&lt;p&gt;Primero vino la bestia (&lt;strong&gt;VI&lt;/strong&gt;), fue dificil, muy dificil (mas sin saber
+mecanografia). Hubo que anotar las combinaciones frecuentes en un papel y pegar
+los ojos al teclado y luego al monitor y luego al teclado. Dia tras dia mejoraba
+mi Kung Fu y la idea de ser un programador parecia no ser solo un sueño. Tras un
+mes de entrenamiento y con algo de confianza probe un enfoque mas visual
+(&lt;strong&gt;gedit&lt;/strong&gt;), el resultado? Un sin sabor, era sencillo pero no tenia profundidad,
+carecia de potencia, en resumen aburrido, de regreso al viejo dojo encontre una
+nueva escuela (&lt;strong&gt;Emacs&lt;/strong&gt;), las clases eran gratis y prometian ser interesantes&lt;/p&gt;
+
+&lt;p&gt;Tras una semana con el tutorial, era tan agil con Emacs como con Vi, nada mal,
+se podia hacer todo con el teclado y si lo queria tambien tenia menus accesibles
+tanto por las &lt;code&gt;F&lt;/code&gt;s como por el raton (esto ultimo es increible, todo aquel que
+asimila la &lt;strong&gt;forma Emacs&lt;/strong&gt; inevitablemente termina por hacer a un lado el
+raton. ¿Quien demonios sigue programando esto?).&lt;/p&gt;
+
+&lt;p&gt;Tras unos dias (y con ayuda de algun tutorial) puede cambiar el tema, luego
+descubri que se podia navegar por los ficheros desde emacs y que tenia
+terminales e interpretes y un tetris y un navegador web y gestor de paquetes y
+soporte para cualquier lenguaje de programacion (almenos resaltado) y un sin fin
+de utiles(?) aplicaciones, sin embargo &lt;strong&gt;todas compartian el mismo conjunto de
+comandos base&lt;/strong&gt; para moverse por la interfaz y manipular texto, aprender lo
+especifico de cada funcionalidad (en gerga de emacs, &lt;strong&gt;modo&lt;/strong&gt;) es un tema
+aparte que requiere una memoria exepcional&lt;/p&gt;
+
+&lt;p&gt;Cai como un yonqui adicto a cualquier informacion de emacs (los no hablantes de
+ingles tenemos un poco mas dicil&amp;hellip; todo), apenas aprendi algun nuevo comando lo
+ponia en practica (para olvidarlo un par de horas despues)&lt;/p&gt;
+
+&lt;p&gt;Y un buen dia entientes que puedes programar emacs, que todo comportamiento es
+modificable y de echo es modificable &lt;strong&gt;al vuelo&lt;/strong&gt; y te preguntas &lt;strong&gt;¿Que es
+Emacs?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;emacs-es&#34;&gt;Emacs Es&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;El interprete de un lenguaje derivado de Lisp (Emacs Lisp). De hecho es el
+interprete mas sofisticado que existe y probablemente existira, ya que viene con
+el suficiente codigo precargado como para (hacerte creer que es un editor y)
+permitirte crear nuevos programas, funcionalidades o modificar Emacs en si
+mismo&amp;hellip; existe un mejor diseño que ese?&lt;/p&gt;
+
+&lt;h2 id=&#34;enfoques-sobre-el-texto&#34;&gt;Enfoques sobre el texto&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;teco&lt;/strong&gt;: un leguaje para forjar texto&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;vi&lt;/strong&gt;: escribamos caracteres o apliquemos comandos a los caracteres&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: el texto es la interfaz, el editor es parte de la interfaz,
+extendamos y modifiquemos a voluntad y sin restricciones nuestra interfaz&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;nano&lt;/strong&gt;: un simple editor&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;: joder, lo que pueden hacer los de emacs, haremos a vi extensible&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;sublime&lt;/strong&gt;: hare mi propio vim&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;atom&lt;/strong&gt;: hagamos un editor como sublime pero con tecnologia web awesome!&lt;/p&gt;
+</description>
     </item>
     
   </channel>

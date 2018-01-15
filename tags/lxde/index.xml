@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 22 Oct 2017 12:36:18 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/lxde/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/lxde/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,283 @@
       <pubDate>Sun, 22 Oct 2017 12:36:18 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/lxde-shortcuts/</guid>
-      <description>A Gnome ♥ lo que pida! Mas, si el equipo es incapas de cumplir sus exigencias para una experiencia completa (contar con un procesador con 2 nucleos, 2 monitores y 3GB de ram), mejor optar por un entorno poco exigente en sus recursos
-asi pues en una laptop limitada con 10 años en su historia (32bits con 512MB ram) el balance ideal (segun varias prubas) fue debian 9 con lxde, que, no solo consigue regresar de la vida al equipo, tiene la potencia suficiente como para ejecutar un navegador consumista moderno, varias terminales, editor, fluidez con los videos e incluso ejecutar varios emuladores, todo con un sistema actualizado, moderno y libre</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/clouds_battle_by_arsenixc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A Gnome ♥ lo que pida! Mas, si el equipo es incapas de cumplir sus exigencias
+para una experiencia completa (contar con un procesador con 2 nucleos,
+2 monitores y 3GB de ram), mejor optar por un entorno poco exigente en sus
+recursos&lt;/p&gt;
+
+&lt;p&gt;asi pues en una laptop limitada con 10 años en su historia (32bits con 512MB
+ram) el balance ideal (segun varias prubas) fue debian 9 con lxde, que, no solo
+consigue regresar de la vida al equipo, tiene la potencia suficiente como para
+ejecutar un navegador &lt;em&gt;consumista&lt;/em&gt; moderno, varias terminales, editor, fluidez
+con los videos e incluso ejecutar varios emuladores, todo con un sistema
+actualizado, moderno y libre&lt;/p&gt;
+
+&lt;p&gt;Pero bueno, Gnome, con su elegancia y minimalismo ha influido bastante en la
+forma como interactuo con el pc, que es basicamente estar con los dedos pegados
+al teclado, con atajos para cualquier cosa precindiendo perfectamente del
+raton, exepto, claro esta, cuando se utiliza el navegador o aplicaciones
+graficas para aficionados&amp;hellip; como dirian en la guia de parabola o gentoo, ya no
+recuerdo cual era&lt;/p&gt;
+
+&lt;p&gt;Sobra (aunque tengo necesidad de) decir que desprecio los docks, widgets y
+barras, razon fundamental por la que nunca me he sentido comodo con KDE, o dicho
+de otro modo los temas ni cambiar el fondo de pantalla (una vez colocada la
+imagen de portada con la que llebo 3 años) son relevantes&lt;/p&gt;
+
+&lt;p&gt;Otro aspecto que ha influido bastante en la interaccion con el entorno grafico
+es contar con un teclado de 105 teclas y el mapeo en programmer dvorak
+(en).&lt;/p&gt;
+
+&lt;p&gt;En la mayoria de mapeos del teclado los numeros se encuentra en la &amp;ldquo;primer
+fila&amp;rdquo; (sobre las letras) y al presionar shift se accede a los &amp;ldquo;simbolos&amp;rdquo;. En
+cambio en programmer dvorak, los simbolos tienen el protagonismo y los numeros
+se acceden con el shift, uno u otro pero no ambos&amp;hellip; y&amp;hellip; un teclado con con pad
+numerico sienta perfectamente a tal distribucion, pues, por un sitio protagonizan
+los simbolos y en el lateral tenemos los numeros cuando es necesario
+dedicarse a ellos, encima se puede hacer perfectamente con una sola mano.&lt;/p&gt;
+
+&lt;p&gt;Para no subutilizar el pad a una sola mision, en este he establecido la
+interaccion con los escritorios: mover a un espacio, mover una ventana a un
+espacio, maximizar o minimizar ventanas.&lt;/p&gt;
+
+&lt;p&gt;Toda esta personalizacion me convienten en un &lt;em&gt;memo&lt;/em&gt; fuera de mis equipos, mas
+dentro de ellos fluyo libremente, como ningun otro usuario en otros sistemas
+podria hacerlo&lt;/p&gt;
+
+&lt;p&gt;Entonces pues, es posible transaladar la experienca gnomera a lxde?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;no&lt;/strong&gt;, pero se aproxima. No, por que no cuenta con la vista &lt;strong&gt;overview&lt;/strong&gt;, que
+es marca distintiva del nomo, ni tampoco por rendimiento convendria utilizar
+todas las aplicaciones nome en lxde, aunque al menos puedo emular mi
+configuracion de atajos maestros en este e imaginar que su lanzador de
+aplicaciones es como el lanzador con la tecla Super&lt;/p&gt;
+
+&lt;h2 id=&#34;shortcuts&#34;&gt;Shortcuts&lt;/h2&gt;
+
+&lt;p&gt;por motivos internos de lxde (en debian 9) que desconosco, utiliza openbox,
+que sugun su &lt;a href=&#34;http://openbox.org/wiki/Main_Page&#34;&gt;wiki&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Openbox es un administrador de ventanas altamente configurable. Le permite
+cambiar casi todos los aspectos de su interacción con su escritorio e inventar
+formas completamente nuevas de usarlo y controlarlo. Puede ser como un
+videojuego para controlar ventanas. Pero Openbox también se puede mantener
+extremadamente simple, ya que está en la configuración predeterminada, lo que
+significa que puede adaptarse a casi cualquier persona. Openbox te da el control
+sin obligarte a hacer todo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;y (asta donde entiendo) se encarga de administrar donde aparecen, como y el
+aspecto de las ventadas&lt;/p&gt;
+
+&lt;p&gt;para personalizar el teclado y algunas funciones mas, debemos modificar el
+fichero &lt;code&gt;~/.config/openbox/lxde-rc.xml&lt;/code&gt;, una vez realizados los cambios se
+aplican ejecutando como usuario &lt;code&gt;openbox --reconfigure&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;el fichero en cuestion, como puede deducirse por su extension, es solo un xml
+especializado, donde cada etiqueta tiene un significado predefinido, y debe
+aparecer en un orden concreto. En su wiki tenemos una lista de &lt;a href=&#34;http://openbox.org/wiki/Help:Actions&#34;&gt;acciones
+disponibles&lt;/a&gt; y tambien nombes de (algunos)
+&amp;ldquo;&lt;a href=&#34;http://openbox.org/wiki/Help:Bindings&#34;&gt;eventos&lt;/a&gt;&amp;rdquo; del raton y teclado&lt;/p&gt;
+
+&lt;p&gt;de momento mi fichero de configuracion es &lt;a href=&#34;https://nasciiboy.github.io/data/lxde-rc.xml&#34;&gt;este&lt;/a&gt;, aqui los
+aspectos mas revelantes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;desktops&amp;gt;
+    &amp;lt;number&amp;gt;10&amp;lt;/number&amp;gt;
+    &amp;lt;firstdesk&amp;gt;1&amp;lt;/firstdesk&amp;gt;
+    &amp;lt;names&amp;gt;
+      &amp;lt;name&amp;gt;A&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;B&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;C&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;D&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;E&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;F&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;G&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;H&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;I&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;J&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;K&amp;lt;/name&amp;gt;
+      &amp;lt;name&amp;gt;L&amp;lt;/name&amp;gt;
+    &amp;lt;/names&amp;gt;
+    &amp;lt;popupTime&amp;gt;875&amp;lt;/popupTime&amp;gt;
+    &amp;lt;!-- The number of milliseconds to show the popup for when switching
+       desktops.  Set this to 0 to disable the popup. --&amp;gt;
+  &amp;lt;/desktops&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto viene a decir, que quiero tener 10 escritorios, a cada uno le he puesto un
+nombre que es una letra del abecedario y que el primer escritorio es el
+primero&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;mas adelante el fichero cuenta con una etiqueta &lt;code&gt;&amp;lt;keyboard&amp;gt;&lt;/code&gt; donde se colocan
+todos los atajos que vallamos a definir&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;keybind key=&amp;quot;W-Prior&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;DesktopLeft&amp;quot;&amp;gt;
+    &amp;lt;dialog&amp;gt;no&amp;lt;/dialog&amp;gt;
+    &amp;lt;wrap&amp;gt;no&amp;lt;/wrap&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-Next&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;DesktopRight&amp;quot;&amp;gt;
+    &amp;lt;dialog&amp;gt;no&amp;lt;/dialog&amp;gt;
+    &amp;lt;wrap&amp;gt;no&amp;lt;/wrap&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-Prior&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;SendToDesktopLeft&amp;quot;&amp;gt;
+    &amp;lt;dialog&amp;gt;no&amp;lt;/dialog&amp;gt;
+    &amp;lt;wrap&amp;gt;no&amp;lt;/wrap&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-Next&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;SendToDesktopRight&amp;quot;&amp;gt;
+    &amp;lt;dialog&amp;gt;no&amp;lt;/dialog&amp;gt;
+    &amp;lt;wrap&amp;gt;no&amp;lt;/wrap&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esta seccion es para moverme &amp;ldquo;secuencialmente&amp;rdquo; entre los escritorios con &lt;em&gt;Super&lt;/em&gt;
+y &lt;em&gt;Page Up/Down&lt;/em&gt;. En caso de querer enviar una ventana a el escritorio
+sugiente/anterior la combinacion se repite pero agregrando la tecla &lt;em&gt;Alt&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;keybind key=&amp;quot;W-KP_7&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Desktop&amp;quot;&amp;gt;&amp;lt;desktop&amp;gt;1&amp;lt;/desktop&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_8&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Desktop&amp;quot;&amp;gt;&amp;lt;desktop&amp;gt;2&amp;lt;/desktop&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_9&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Desktop&amp;quot;&amp;gt;&amp;lt;desktop&amp;gt;3&amp;lt;/desktop&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_4&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Desktop&amp;quot;&amp;gt;&amp;lt;desktop&amp;gt;4&amp;lt;/desktop&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_5&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Desktop&amp;quot;&amp;gt;&amp;lt;desktop&amp;gt;5&amp;lt;/desktop&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_6&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Desktop&amp;quot;&amp;gt;&amp;lt;desktop&amp;gt;6&amp;lt;/desktop&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_1&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Desktop&amp;quot;&amp;gt;&amp;lt;desktop&amp;gt;7&amp;lt;/desktop&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_2&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Desktop&amp;quot;&amp;gt;&amp;lt;desktop&amp;gt;8&amp;lt;/desktop&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_3&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Desktop&amp;quot;&amp;gt;&amp;lt;desktop&amp;gt;9&amp;lt;/desktop&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_0&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Desktop&amp;quot;&amp;gt;&amp;lt;desktop&amp;gt;10&amp;lt;/desktop&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-KP_7&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;SendToDesktop&amp;quot;&amp;gt;&amp;lt;to&amp;gt;1&amp;lt;/to&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-KP_8&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;SendToDesktop&amp;quot;&amp;gt;&amp;lt;to&amp;gt;2&amp;lt;/to&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-KP_9&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;SendToDesktop&amp;quot;&amp;gt;&amp;lt;to&amp;gt;3&amp;lt;/to&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-KP_4&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;SendToDesktop&amp;quot;&amp;gt;&amp;lt;to&amp;gt;4&amp;lt;/to&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-KP_5&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;SendToDesktop&amp;quot;&amp;gt;&amp;lt;to&amp;gt;5&amp;lt;/to&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-KP_6&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;SendToDesktop&amp;quot;&amp;gt;&amp;lt;to&amp;gt;6&amp;lt;/to&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-KP_1&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;SendToDesktop&amp;quot;&amp;gt;&amp;lt;to&amp;gt;7&amp;lt;/to&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-KP_2&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;SendToDesktop&amp;quot;&amp;gt;&amp;lt;to&amp;gt;8&amp;lt;/to&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-KP_3&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;SendToDesktop&amp;quot;&amp;gt;&amp;lt;to&amp;gt;9&amp;lt;/to&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-A-KP_0&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;SendToDesktop&amp;quot;&amp;gt;&amp;lt;to&amp;gt;10&amp;lt;/to&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/keybind&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aqui se ha definido una combinacion especifica para cada uno de los 10
+escritorios, conseptualmente el primero esta en la tecla &lt;strong&gt;7&lt;/strong&gt; del pad numerico,
+y se deciente de izquierda derecha hasta llegar al 0. La combinacion para ir a
+un escritorio es &lt;em&gt;Super&lt;/em&gt; + su numero del pad numerico. Para enviar una ventana a
+un escritorio se agrega la tecla &lt;em&gt;Alt&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;keybind key=&amp;quot;W-d&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;ToggleShowDesktop&amp;quot;/&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-q&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;Close&amp;quot;            /&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-f&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;ToggleFullscreen&amp;quot; /&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_Subtract&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;Lower&amp;quot;/&amp;gt;
+  &amp;lt;action name=&amp;quot;FocusToBottom&amp;quot;/&amp;gt;
+  &amp;lt;action name=&amp;quot;Unfocus&amp;quot;/&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-KP_Multiply&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;ToggleMaximizeFull&amp;quot;/&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Super + d, para ocultar/mostrar todas las ventanas&lt;/li&gt;
+&lt;li&gt;Super + q, cerrar ventana&lt;/li&gt;
+&lt;li&gt;Super + f, ventana a pantalla completa&lt;/li&gt;
+&lt;li&gt;Super + &lt;code&gt;*&lt;/code&gt; (pad numerico), maximizar ventana&lt;/li&gt;
+&lt;li&gt;Super + &lt;code&gt;-&lt;/code&gt; (pad numerico), minimizar ventana&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;keybind key=&amp;quot;W-space&amp;quot;    &amp;gt;&amp;lt;action name=&amp;quot;NextWindow&amp;quot;/&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-BackSpace&amp;quot;&amp;gt;&amp;lt;action name=&amp;quot;NextWindow&amp;quot;/&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;A-Tab&amp;quot;      &amp;gt;&amp;lt;action name=&amp;quot;NextWindow&amp;quot;/&amp;gt;&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-Return&amp;quot;   &amp;gt;&amp;lt;action name=&amp;quot;PreviousWindow&amp;quot;/&amp;gt;&amp;lt;/keybind&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;he, he, esto son cuatro combinaciones distintas para cambiar entre ventanas,
+Super + espacio (la preferida), Super + Enter, Super + Retroceso y el clasico Alt + tab&amp;hellip;
+para que? para que sin importar la posicion del teclado o cual mano tengo
+ocupada (heee? ｢(ﾟﾍﾟ)), pueda hacer el cambio entre ventanas, no se, lo veo
+indispensable!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;keybind key=&amp;quot;A-F2&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+    &amp;lt;command&amp;gt;lxpanelctl run&amp;lt;/command&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;C-Escape&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+    &amp;lt;command&amp;gt;lxpanelctl menu&amp;lt;/command&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+    &amp;lt;keybind key=&amp;quot;A-F1&amp;quot;&amp;gt;
+      &amp;lt;action name=&amp;quot;ShowMenu&amp;quot;&amp;gt;
+        &amp;lt;menu&amp;gt;client-menu&amp;lt;/menu&amp;gt;
+      &amp;lt;/action&amp;gt;
+    &amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;A-C-Delete&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+    &amp;lt;command&amp;gt;lxsession-logout&amp;lt;/command&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;basicamente abrir el lanzador de comandos de lxde, como un substituto al
+&lt;strong&gt;Super&lt;/strong&gt; gnomero, abrir el (desfasado) menu de apliciones, el menu de las
+ventanas y que aparesca el menu de sesion con Ctrl + Alt + Suprimir&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;keybind key=&amp;quot;W-h&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+    &amp;lt;command&amp;gt;tilix&amp;lt;/command&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&amp;lt;!-- Keybindings for running applications --&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-e&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+    &amp;lt;command&amp;gt;emacs&amp;lt;/command&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-u&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+    &amp;lt;command&amp;gt;emacs&amp;lt;/command&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&amp;lt;!-- Keybindings for finding files --&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-x&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+    &amp;lt;command&amp;gt;pcmanfm&amp;lt;/command&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&amp;lt;!--keybindings for LXPanel --&amp;gt;
+&amp;lt;keybind key=&amp;quot;W-z&amp;quot;&amp;gt;
+  &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+    &amp;lt;command&amp;gt;firefox&amp;lt;/command&amp;gt;
+  &amp;lt;/action&amp;gt;
+&amp;lt;/keybind&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y finalmente atajos para emacs, tilix, el navegador de ficheros y firefox, que
+es lo basico del dia a dia, jo, olvide el evince para los documentos (Super +
+v) y ahora que lo veo de nuevo, revisar si los dos super se llaman super o uno
+es Super derecho, je, je, el teclado de &amp;ldquo;asuntos emergentes&amp;rdquo; no tiene dos super,
+comprobacion pendiente.&lt;/p&gt;
+
+&lt;p&gt;El archivo cuenta con configuraciones extra que pueden ejecutarse incluso segun
+&amp;ldquo;el contexto&amp;rdquo; (ventana) actual y tambien define las acciones del raton y el
+aspecto de ventanas, aunque esos parametros los deje tal cual.&lt;/p&gt;
+
+&lt;p&gt;Y esto es todo, aun queda pendiente personalizar el mapeo de teclado, aunque eso
+aun no descubro como se realiza apropiadamente, Sayonara!&lt;/p&gt;
+</description>
     </item>
     
   </channel>

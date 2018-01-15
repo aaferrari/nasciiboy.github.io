@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Fri, 27 Oct 2017 17:42:32 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,126 @@
       <pubDate>Fri, 27 Oct 2017 17:42:32 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/blackfriday/</guid>
-      <description>Durante la modificacion del morg, habia escrito esto junto con otras notas vagas en una bitocora de abordo que trata de ser FIFO, aunque si no mantengo la constancia comienza a crecer y crecer hasta volverse incomoda. Asi pues (y como el post anterior) a despejar algunas de esas divagaciones
-Como (no) construir un parser para un lenguaje de marcas (ligeras) con morg (parser y lenguaje de marcas ligueras inventado por yo) la construccion al igual que casi todas mis mierdas, fue fruto de reinventar la rueda + prueba y error constantes, tratando de mantener una cierta sencilles&amp;hellip; mientras la raices de la incertidubre sobre si el proyecto llegaria a ser funcional o quedaria truncado por la ignorancia y malas deciciones de diseño orientadas en su mayoria por la aleatoriedad, me consumen lentamente</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/bf.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Durante la modificacion del morg, habia escrito esto junto con otras notas
+vagas en una bitocora de abordo que trata de ser FIFO, aunque si no mantengo la
+constancia comienza a crecer y crecer hasta volverse incomoda. Asi pues (y como
+el post anterior) a despejar algunas de esas divagaciones&lt;/p&gt;
+
+&lt;h2 id=&#34;como-no-construir-un-parser-para-un-lenguaje-de-marcas-ligeras&#34;&gt;Como (no) construir un parser para un lenguaje de marcas (ligeras)&lt;/h2&gt;
+
+&lt;p&gt;con &lt;em&gt;morg&lt;/em&gt; (parser y lenguaje de marcas ligueras inventado por yo) la
+construccion al igual que casi todas mis mierdas, fue fruto de reinventar la
+rueda + prueba y error constantes, tratando de mantener una cierta sencilles&amp;hellip;
+mientras la raices de la incertidubre sobre si el proyecto llegaria a ser
+funcional o quedaria truncado por la ignorancia y malas deciciones de diseño
+orientadas en su mayoria por la aleatoriedad, me consumen lentamente&lt;/p&gt;
+
+&lt;p&gt;una de las primeras deciciones luego de la mudanza a Go, fue trabajar con
+strings o slices de bytes, los primeros son inmutables, peeero todas las
+funciones que trabajan con documentos (de la libreria estandar y mas alla) optan
+por utilizar slices de bytes.&lt;/p&gt;
+
+&lt;p&gt;En principo me parecio que los strings son mejor opcion, pues me aseguro de no
+fastidiar lo que el usuario envie a el exportador, ademas que hacer recorridos
+por la cadena mediante &lt;code&gt;range&lt;/code&gt;s es muy sencillo, con el agregado de
+soportar unicode.&lt;/p&gt;
+
+&lt;p&gt;Por el otro lado, trabajar con bytes, evita una conversion extra (de bytes a
+strings) y supuestamente son mas eficientes, pero venido como soy de C, donde se
+suponque que las cadenas constantes son mas eficientes, la duda sigue presente&lt;/p&gt;
+
+&lt;p&gt;Otro tema y creo que mas crucial es como recorer y diseccionar los
+datos de entrada, opteniendo los supuestos componentes del lenguaje,
+encabezados, parrafos, notas, resaltado, listas, definiciones, etc, y casi igual
+de importante como organizarlos en una forma conveniente tanto para yo como
+programador, como para yo como usuario del programa y de ser posible lanzar
+advertencias cuando se localicen datos de entrada erroneos&lt;/p&gt;
+
+&lt;p&gt;ante tal reto y sin &amp;ldquo;documentos tecnicos&amp;rdquo; que conosca (o entienda), la unica
+opcion en el corto plazo, no es otra que meterse a lo bruto con algun proyecto
+de programacion que ofresca descaradamente su codigo a todo mundo, aqui es donde
+entra la libreria &lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;blackfriday&lt;/a&gt; de un
+tal &lt;em&gt;russross&lt;/em&gt; para parsear markdown, escrita en Go&amp;hellip; lol, hace tiempo intente
+con cosas en C y python&amp;hellip; donde el codigo me resulto incomprensible&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;como-lo-hace-russross&#34;&gt;como lo hace russross&lt;/h2&gt;
+
+&lt;p&gt;utiliza slices de bytes, en lugar de cadenas, buffers del paquetes &lt;code&gt;bytes&lt;/code&gt; como
+contenedores del resultado, tanto en llamadas internas como en los
+&lt;em&gt;renderizadores&lt;/em&gt; del documento parceado e igual que morg no regresa error
+alguno, solo slices vacios (&lt;code&gt;nil&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;interesante es su parseo en si, asigno funciones con caracteres &amp;ldquo;centinela&amp;rdquo;
+para identificar los objetos, envia el slice de datos a la funcion respectiva,
+junto con la estructura del documento y esta almacena el resultado y regeresa la
+longitud de bytes leeidos que se suponen forman parte del elemento&lt;/p&gt;
+
+&lt;p&gt;mas interesante, es que toma dos pasos de parseo sobre el documento, la primera
+para normalizar el docuemento (quitar los saltos de linea a lo windows &lt;code&gt;\r\n&lt;/code&gt;,
+cosa que no hare por asco a windows y trabajar solo con saltos unix &lt;code&gt;\n&lt;/code&gt;),
+extraer referencias, normalizar bloques de codigo y copiar el resto tal cual,
+todo byte a byte o a slices, en el buffer. El segundo reccorido por el documento
+es para el parseo &amp;ldquo;serio&amp;rdquo; donde corta y renderiza el resto de cosas.&lt;/p&gt;
+
+&lt;p&gt;Me llama la atencion, que aunque utiliza &lt;code&gt;bytes.Buffer&lt;/code&gt;, no los haga crecer
+desde un inicio para disminuir las asignaciones de memoria, no es que sea
+realmente necesario&amp;hellip; je, optimizacion premutura, el mal!&lt;/p&gt;
+
+&lt;p&gt;otra desicion relevante toma cuando al llamar al parser del documento, hay que
+enviarle un &lt;em&gt;renderizador&lt;/em&gt; que es una interfaz con 31 funciones, la cual se
+encarga en unica instancia de entregar el resultado como texto plano en forma de
+slice de bytes, bueno, eficiente o practico? dificil saberlo, blacfriday entrega
+un render para HTML y otro experimental para latex, aunque por la naturazela de
+markdown dificimente sera satisfactorio, pero siendo markdown, un mero
+&lt;em&gt;facilitador&lt;/em&gt; de HTML, no hay necesidad de generar otra cosa que no sea HTML, un
+poco futil ecuentro la cortecia de entregar &amp;ldquo;renders&amp;rdquo; en blackfriday, cuando el
+parseo y exportacion van juntos, unidos, en las entrañas del parser.&lt;/p&gt;
+
+&lt;p&gt;En morg, no lo tenia (ni tengo) muy claro, en la primer version, el parser y el
+render son entes separados, unidos solo por la estructura &amp;ldquo;organizada&amp;rdquo; que
+entrega el primero, deje en manos del render hacer lo que le venga en gana con
+la estructura, sin embargo, al cambiar constantemente esta, hay que hacer una
+labor de actualizacion en los &lt;em&gt;n&lt;/em&gt; renders, en &lt;em&gt;n&lt;/em&gt; cambios, quiza un punto
+intermedio vendria bien, para la siguiente version; que te entrege la estructura
+en bruto y cuente con una interfaz que trabaje como plantilla de exportacion,
+aunque, las sutilezas del lenguaje de marcado a exportar, vuelven a esto un
+rigido inconveniente, pese a lo sencillo de definir unas cuantas reglas
+genericas&lt;/p&gt;
+
+&lt;p&gt;creo que pandoc, cuando examina un docuemnto, lo convierte a una estructura
+&amp;ldquo;maestra&amp;rdquo; y luego con ella ya se lo manda a sus renders, me siento mas comodo con esta
+opcion, pero como aun no le hago al haskell, tendre que esperar para comprobarlo
+de primera mano&lt;/p&gt;
+
+&lt;h2 id=&#34;conclucion&#34;&gt;conclucion&lt;/h2&gt;
+
+&lt;p&gt;tentado estoy a trabajar con bytes, aunque creo que trabajar con &lt;code&gt;bytes.Buffer&lt;/code&gt;
+no representa una gran mejora y obliga a incluir un paquete extra, je, je, tengo
+algun complejo muuu grande con incluir librerias, aunque sean las estandar,
+tengo un problema&amp;hellip; repite tu mantra, esta en la libreria estandar, es bueno y
+necesario, en la libreria estandar esta, necesario y bueno es usarlo&lt;/p&gt;
+
+&lt;p&gt;utilizar bytes, requiere modificaciones drasticas en regexp4 que solo maneja
+strings, o un monton de conversiones de ida y vuelta.&lt;/p&gt;
+
+&lt;p&gt;que hacer? bytes y strings, dos caras de la misma moneda, separadas por la no
+conversion de tipos automatica, para la ocultacion de cadenas como punteros, en
+estas deciciones Go-leanas es cuando extraño a C, cuando aparecen estas
+estructuras que no estoy seguro si se replican a cada copia/asignacion o
+trabajan con los mismos datos de fondo&lt;/p&gt;
+
+&lt;p&gt;en resumen blackfriday (digo, luego de tres intentos por comprenderla hasta no
+terminar de leer seriamente el TGPL), no era tan alien, ni complejo como parecia
+en un principio, que esta furtemente atado a las limitaciones de markdown, al
+igual que sus renderes y por ello no se ve forzado a implementar una estructura
+que almacene el documento, pues no maneja elementos, anidados sobre elementos
+anidados, sobre elementos aninados, peroooo dentro de sus limitaciones tecnicas,
+hace bien su labor&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,8 +146,131 @@ Como (no) construir un parser para un lenguaje de marcas (ligeras) con morg (par
       <pubDate>Fri, 06 Oct 2017 21:03:55 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/gomark/</guid>
-      <description>en Go podemos realizar benchmarks dentro de los ficheros _test.go, sin embargo realizar comparativas dentro de en un programa &amp;ldquo;regular&amp;rdquo; no es (era) tan sencillo hasta la llegada de la version 1.9
-cgo la primer opcion es echar mano de la libreria time de C. Esta libreria contiene la funcion clock que nos regresa una aproximacion a la cantidad de tiempo del procesador que ha utilizado el programa desde su ejecucion.</description>
+      <description>
+
+&lt;p&gt;en Go podemos realizar benchmarks dentro de los ficheros &lt;code&gt;_test.go&lt;/code&gt;, sin embargo
+realizar comparativas dentro de en un programa &amp;ldquo;regular&amp;rdquo; no es (era) tan
+sencillo hasta la llegada de la version 1.9&lt;/p&gt;
+
+&lt;h2 id=&#34;cgo&#34;&gt;cgo&lt;/h2&gt;
+
+&lt;p&gt;la primer opcion es echar mano de la libreria &lt;code&gt;time&lt;/code&gt; de C. Esta libreria
+contiene la funcion &lt;code&gt;clock&lt;/code&gt; que nos regresa una aproximacion a la cantidad de tiempo
+del procesador que ha utilizado el programa desde su ejecucion.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package main
+
+//#include &amp;lt;time.h&amp;gt;
+import &amp;quot;C&amp;quot;
+
+import &amp;quot;fmt&amp;quot;
+
+const top = 1 &amp;lt;&amp;lt; 12
+
+func main(){
+  init := CpuTime()
+
+  // prueba &amp;gt;
+  for x, str := 0, &amp;quot;&amp;quot;; x &amp;lt; top; x++ { str += &amp;quot;1234567890&amp;quot; }
+  // &amp;lt; prueba
+
+  fmt.Printf( &amp;quot;CpuTime %dms\n&amp;quot;, DiffCpuTimeByMS( init, CpuTime() ) )
+}
+
+func CpuTime() uint64 {
+  return uint64(C.clock())
+}
+
+func DiffCpuTimeByMS( begin, end uint64 ) uint64 {
+  return (end - begin) *  1000 / uint64(C.CLOCKS_PER_SEC)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;resultado:&lt;/strong&gt; &lt;code&gt;CpuTime 55ms&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;solo hay que cambiar el codigo dentro de las comentaarios &amp;ldquo;prueba&amp;rdquo;, es
+importante mantener la linea con &lt;code&gt;//#include &amp;lt;time.h&amp;gt;&lt;/code&gt; tal cual, pues es una
+(obscura) indicacion para decirle al compilador de Go que incluya dicha libreria
+de C. Por supuesto tambien hay que mantener la importacion de &lt;code&gt;&amp;quot;C&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Para la compilacion no hace falta pasar ningun parametro adicicional, basta con
+un simple &lt;code&gt;go build main.go&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;testing&#34;&gt;testing&lt;/h2&gt;
+
+&lt;p&gt;la segunda opcion para realizar un benchmark es invocar a &lt;code&gt;testing&lt;/code&gt; desde codigo
+regular con una funcion literal&amp;hellip; lo se, no es intiuitivo, pero hay esta y
+funciona&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+import &amp;quot;testing&amp;quot;
+import &amp;quot;time&amp;quot;
+
+const top = 1 &amp;lt;&amp;lt; 12
+
+func main(){
+
+  result := testing.Benchmark(func(b *testing.B) {
+    b.N = 1 // numero de repeticiones de la prueba
+    for i := 0; i &amp;lt; b.N; i++ {
+      // prueba &amp;gt;
+      for x, str := 0, &amp;quot;&amp;quot;; x &amp;lt; top; x++ { str += &amp;quot;1234567890&amp;quot; }
+      // &amp;lt; prueba
+    }
+  })
+
+  fmt.Printf( &amp;quot;tiempo %s\n&amp;quot;, result.T / time.Duration(result.N) )
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;resultado:&lt;/strong&gt; &lt;code&gt;tiempo 67.861708ms&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;esta prueba toma mucho mas tiempo que con la version anterior, la diferencia se
+origina en el propio &lt;code&gt;testing.B&lt;/code&gt;, ya que realiza metricas adicionales, como el numero de
+asignaciones de memoria, bytes utilizados, gorutinas y otras cosas&lt;/p&gt;
+
+&lt;h2 id=&#34;time&#34;&gt;time&lt;/h2&gt;
+
+&lt;p&gt;por ultimo la prueba del tiempo se puede realizar con la libreria estandar de
+Go, aunque esto no es asi para verciones del compilador inferiores a 1.9 ya que
+antes de estos no se media el timpo &amp;ldquo;monolitico&amp;rdquo; de ejecucion (lo que hace
+&lt;code&gt;clock&lt;/code&gt; de la libreria &lt;code&gt;time&lt;/code&gt; de C)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package main
+
+import &amp;quot;time&amp;quot;
+import &amp;quot;fmt&amp;quot;
+
+const top = 1 &amp;lt;&amp;lt; 12
+
+func main(){
+  start   := time.Now()
+  for x, str := 0, &amp;quot;&amp;quot;; x &amp;lt; top; x++ { str += &amp;quot;1234567890&amp;quot; }
+  elapsed := time.Since( start )
+
+  fmt.Printf( &amp;quot;tiempo %s\n&amp;quot;, elapsed )
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;resultado:&lt;/strong&gt; &lt;code&gt;tiempo 59.746755ms&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;conclusion&lt;/h2&gt;
+
+&lt;p&gt;en pruebas personales, con &lt;code&gt;clock&lt;/code&gt; (de C) los resultados son mas constantes y con
+menor variacion que en las demas opciones, mas la version con &lt;code&gt;time&lt;/code&gt; nativo no
+dista demaciado de esta, ademas por ser la opcion con codigo nativo y sin
+dependencias externas es la que recomiendo y utilizo. Reservaria como segunda
+opcion y para pruebas mas exigentes la que utiliza &lt;code&gt;testing.B&lt;/code&gt;, siempre asumiendo
+una consumo superior de recursos&lt;/p&gt;
+
+&lt;h2 id=&#34;referencias&#34;&gt;referencias&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.reddit.com/r/golang/comments/6u4xhs/how_make_a_benchmark_in_a_regular_program_no/&#34;&gt;https://www.reddit.com/r/golang/comments/6u4xhs/how_make_a_benchmark_in_a_regular_program_no/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://golang.org/pkg/time/&#34;&gt;https://golang.org/pkg/time/&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

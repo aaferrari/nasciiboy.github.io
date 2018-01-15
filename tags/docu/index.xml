@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Fri, 10 Nov 2017 14:57:41 -0600</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/docu/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/docu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,235 @@
       <pubDate>Fri, 10 Nov 2017 14:57:41 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/javame/</guid>
-      <description>Por que razones concientes y sin coercion externa aprender java?
-en mi caso, hice un solemne juramento de no aprender java (y quiza python, js&amp;hellip;) y en general nada 7 veces mas lento que C&amp;hellip; porque cualquier lenguaje un orden de magnitud mas lento que C, es directamente una basura&amp;hellip; o tiene un ambito de uso extremadamente especifico, como servir para crear extensiones o como prompt. Fuera de este uso, nadie &amp;ldquo;serio&amp;rdquo; sacarlos deberia.</description>
+      <description>
+
+&lt;p&gt;Por que &lt;a href=&#34;https://picodotdev.github.io/blog-bitix/2015/05/10-razones-para-seguir-usando-java/&#34;&gt;razones&lt;/a&gt;
+concientes y sin coercion externa aprender java?&lt;/p&gt;
+
+&lt;p&gt;en mi caso, hice un solemne juramento de no aprender java (y quiza python,
+js&amp;hellip;) y en general nada 7 veces mas lento que C&amp;hellip; porque cualquier lenguaje un orden
+de magnitud mas lento que C, es directamente una basura&amp;hellip; o tiene un ambito de uso
+extremadamente especifico, como servir para crear extensiones o como
+prompt. Fuera de este uso, nadie &amp;ldquo;serio&amp;rdquo; sacarlos deberia. Crear programas completos
+directamente en esos lenguajes es una guarrada y una falta de
+respeto por el espiritu que habita en el silicio. Por decir algo, es casi tan
+aberrante como mi forma de escribir&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;pero bueno, hace mucho tiempo que java merodea por el mundo, y en general es
+unas 4-6 veces mas lento que C, asi que entra en la zona estelar de los lenguajes que
+permiten la existencia de agua liquida. Entonces, por que mantenia una
+resistencia interna a aprender java?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;todas las cosas hechas con Java dan la sensacion de estar lagueadas. (Arde en el
+infierto android)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;deriva de C++ y C++ no es un lenguje agradable para programar (si tocas todas
+sus posibilidades), por que tiene un monton de caracteristicas obscuras y
+sutiles, que lo hacen absurdamente complejo, dificil de leer e imposible de
+dominar (o no)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;hiede a empresarial, y las cosas empresariales no son divertidas, y yo viene a
+la programacion para estar cool (&amp;lt;== obscura referencia al manga GTO)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;pero estonces, por que siquiera de estas explicaciones, que hechos se han
+conjurado para ceder al mal?&lt;/p&gt;
+
+&lt;p&gt;basicamente, mientras continuo el trepidante camino en la programacion
+autodidacta sin tener idea (de mates, english o adonde dirigirme), y a medida
+que va creciendo la complejidad de las cosas que &amp;ldquo;planeo&amp;rdquo; programar, la
+intuicion y sentido comun me dice que muchos de esos secretos ancestrales se
+encuentran alla afuera&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/believer.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;o en el peor de los casos, estan cerca de ser ser promulgados, por alguien&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;como apenas inicio mis andansas por el mundo de las mategicas y el engrish aun
+es arido en sus detalles, para no desaprobechar ese regalo llamado ser el
+fracasado treinton sin empleo que se queda en la pc todo el dia sin hacer nahhh
+y que vive permanentemente en la banca rota&amp;hellip; mejor leer cosas programacionales
+en español, un  inquietante campo superpoblado con material que utiliza a
+java como lenguaje universal, asi que por el bien del mundo, a joderse!&lt;/p&gt;
+
+&lt;h2 id=&#34;instalar-java&#34;&gt;Instalar Java&lt;/h2&gt;
+
+&lt;p&gt;Casi todos los sistemas del Ñu traen un java instalado por defecto, como en el
+caso de freidora el openjdk-1.8, pero con esto no nos vasta para comenzar a
+&amp;ldquo;compilar&amp;rdquo; programos, hace falta instalar el paquete &lt;em&gt;devel&lt;/em&gt; para optener el
+programa &lt;code&gt;javac&lt;/code&gt;. Ya que estamos (y por que en freidora 27 aparece en los repos)
+pues mejor instalar lo ultimo de lo ultimo, por si lanzamos pestes, sus fancis no digan
+que la causa es utilizar una version desfasada; ademas es casi completamente
+compatible con el codigo vintage!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# paquetes del java-9
+dnf -y install java-9-openjdk java-9-openjdk-devel
+
+# le decimos al sistema que este va a ser el &amp;quot;java bueno&amp;quot;
+# nos preguntara con un numero cual java poner por defecto
+# el que tenga un =nueve= sera el efectivo
+update-alternatives --config java
+
+# lo mismo que el anterior pero para el javac
+update-alternatives --config javac
+
+# comprobamos que la version es correcta
+java -version
+javac -version
+
+# no se que es esto, pero parece importante para el futuro
+dnf -y install maven
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego, tenemos que configurar en nuestro shell las rutas donde el java buscara
+las &amp;ldquo;librerias&amp;rdquo; para compilar sus cosas. Esto se hace estableciendo la variable &lt;code&gt;CLASSPATH&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;En &lt;code&gt;fish&lt;/code&gt; ha sido asi (&lt;code&gt;~/.config/fish/config.fish&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set --export CLASSPATH  &#39;/usr/share/java:.:/home/mi-usuario/.java&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;solo acepta rutas absolutas. Las rutas se separan por dos puntos (&lt;code&gt;:&lt;/code&gt;).  La
+primera es donde esta la libreria estandar (en freidora), la segunda, &amp;ldquo;el
+punto&amp;rdquo;, es para que busque en el directorio actual, y la tercera, para colocar
+cualquier libreria externa que me encuentre por el internet sin comprometer el
+sistema demaciado, y para no hacer cosas de root con frecuencia, ademas es una
+carpeta oculta para no molestar&lt;/p&gt;
+
+&lt;p&gt;oh, como el java nueve es muy moderno, incluye un comando de tipo REPL, que
+significa que podemos programar de forma interactiva. Solo hay que typear
+&lt;code&gt;jshell&lt;/code&gt; y voala, a programar sin compilaciones y con mucho
+l-a-a-g-g-g-g-g-g. Este tipo de cosillas y sus tiempos de respuesta me ponen
+nostalgico, como que estubiera en otro tiempo y asi fuera programar &amp;ldquo;de verdad&amp;rdquo;,
+fuera de sarcasmos, tiene su encanto!&lt;/p&gt;
+
+&lt;p&gt;encontre sobre esto del &lt;code&gt;jshell&lt;/code&gt; en un libro (en ingles) llamado &amp;ldquo;Java 9
+Programming By Example&amp;rdquo; de facil optecion, al menos en un sito llamado
+&lt;em&gt;allitebooks&lt;/em&gt;. jo, jo, jo, que jocosos los de la editorial del libro, que te
+insitan a informar si lo encuentras por la red, me dan ganas (si lo continuo y es
+interesante) de cobayisarlo, ya veremos&lt;/p&gt;
+
+&lt;h2 id=&#34;el-editor&#34;&gt;El editor&lt;/h2&gt;
+
+&lt;p&gt;fuuuhh, aver, en emacs hay un modo para esto, es decir lo basico, resaltado e
+indentacion, si quieres mas pues a buscar por vias alternas.&lt;/p&gt;
+
+&lt;p&gt;Hay un modo externo que se llama &lt;strong&gt;jdee&lt;/strong&gt;, con resaltado de errores,
+autocompletado, documentacion, dos espacios de indentacion por defecto y otras
+promesas mas, aunque la instalacon en mi caso no fue bien, creo que es algo
+relacionado con las rutas de java.&lt;/p&gt;
+
+&lt;p&gt;Al ver que la cosa no iba muy fina, reverti los cambios y deje el emacs como al
+inicio y toco ir por la segunda alternativa: un viscoso, (d)oloroso, consumista y
+lentorro &lt;strong&gt;IDE&lt;/strong&gt;&amp;hellip; bueno la prueba se limito a &lt;strong&gt;eclipse&lt;/strong&gt;, la unica conclusion
+que puedo dejar sobre la experiencia, es que mi maquina no es apta para correr
+estas cosas para developers modernos&lt;/p&gt;
+
+&lt;p&gt;asi que ha regresar al emacs &amp;ldquo;a pelo&amp;rdquo;&lt;/p&gt;
+
+&lt;h2 id=&#34;documentacion&#34;&gt;Documentacion&lt;/h2&gt;
+
+&lt;p&gt;Esto es un punto bastante jodido con java, no tengo ni puta idea sobre como se
+organiza la libreria estandar, ni que tan lejos llega o como se utiliza. Para
+volverlo aun mas complejo no hay documentacion en linea de comandos similar a
+&lt;code&gt;man 3&lt;/code&gt; o &lt;code&gt;go doc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;La opcion de emergencia fue bajar los docs de Java para &lt;code&gt;zeal&lt;/code&gt; y tampoco fue de
+mucha ayuda, de nuevo no tengo idea de como se organiza|utiliza la libreria
+estandar y abrir un libro (pdf en este caso) &lt;em&gt;especializado&lt;/em&gt; para averiguar que
+clase se utiliza para tal cosa, o como hereda de tal otra, no es una opcion que pueda
+contemplar&lt;/p&gt;
+
+&lt;h2 id=&#34;thinking-in-java-2-da-edicion&#34;&gt;Thinking in JAVA, 2^da edicion&lt;/h2&gt;
+
+&lt;p&gt;Vamos con la carnita, un libro viejuno de Java 2, de los años 2000, donde hablan
+de las guerras de navegadores con el netscape vs el explorer y podian ejecutar
+el java salvagemente con etiquetas html!&lt;/p&gt;
+
+&lt;p&gt;Tome este libro por que el codigo del autor me parecio mas que bonito en su
+libro de Piensa en C++ (era joven). Tambien por que fue lo que encontre en
+español, por que tiene muchas paginas, por que sale rapido en una busqueda con
+terminacion &lt;em&gt;pdf&lt;/em&gt; y por que el codigo fuente de los ejercios tiene &lt;em&gt;dos
+espacios de indentacion&lt;/em&gt;, haci lo hacia Stallman, haci lo hacia este autor, haci
+lo hago yo y haci lo haran mis decendientes sinteticos.&lt;/p&gt;
+
+&lt;p&gt;El libro tiene una version 4, que data del 2006, en ingles asi que esta
+descalificado, pero desde la pagina del autor pueden descargar el codigo de los
+ejemplos y el libro (en ingles) en formato html de esta 2^da edicion. Aqui el &lt;a href=&#34;http://www.mindviewinc.com/downloads/TIJ-2nd-edition.zip&#34;&gt;enlace al
+zip&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;o, y por si el enlace esta roto, bajarlo de &lt;a href=&#34;https://nasciiboy.github.io/data/TIJ-2nd-edition.zip&#34;&gt;aca&lt;/a&gt;,
+a esta le aplique un &lt;code&gt;dos2unix&lt;/code&gt; a todos los ficheros, para no tener que ver el
+&lt;em&gt;DOS&lt;/em&gt; en el emacs&lt;/p&gt;
+
+&lt;p&gt;antes de continuar y si se quiere seguir el libro, es importante que
+descomprinas el zip, tiene una carpeta con el libro y otra con el codigo fuente,
+toma esta ultima y mueve/copia la carpeta &lt;code&gt;com&lt;/code&gt; a donde sea
+que tengas apuntando la variable &lt;code&gt;CLASSPATH&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Una ves hecho esto vasta con entrar a la carpeta que se este estudiando y hacer
+un &lt;code&gt;make&lt;/code&gt;, casi todos los ejemplos compilan, excepto en los capitulos (creo que)
+12 en adelante, cuando se pone a hacer cosas con GUI y por que tiene una feo
+fetichismo de incluir sus librerias en cada ocacion.&lt;/p&gt;
+
+&lt;p&gt;Ahora si, que tal el libro?&lt;/p&gt;
+
+&lt;p&gt;un libro con DLC&amp;hellip; el autor aprovecha cada ocacion que tiene para mencionar que
+puedes bajar tal o cual material suyo en su web, y que por una modica cantidad
+te ofrece &lt;del&gt;droga&lt;/del&gt; las respuestas a los ejercicios, el resto, por supuesto
+[inserta aqui efecto de susurrar al oido] &lt;em&gt;es gratis&lt;/em&gt;. Algo molesto en mi opinion,
+mas para venir en un libro comprado, con mencionarlo en el prefacio bastaba&lt;/p&gt;
+
+&lt;p&gt;Los primeros capitulos (hasta antes de la aparicon de herecia e interfaces) son bastantes
+llebaderos, explica de forma condesada y clara muchas cosas, como que jodidos es
+un recolector de basura (junto con sus inconvenientes que dan miedo), que es un
+hilo del sistema, por que java esta diseñado como esta diseñado, su evolucion,
+carencias y defectos&lt;/p&gt;
+
+&lt;p&gt;en el capitulo de la herencia las cosas se ponen turbias, te agobia con
+un monton de caracteristicas obscuras. Fue entonces cuando el formato &amp;ldquo;Catalogo
+de referencia&amp;rdquo; del libro salto a la conciencia. Seguramente por la propia
+naturaleza ecleptica de java. El autor no duda en mencionar cada una de sus multiples
+opciones y capacidades, lo que sumado a que el libro no te enseña a hacer nada
+(por decirlo de alguna manera), hace dificil retener el sin numero de opciones&lt;/p&gt;
+
+&lt;p&gt;Cuando la cantidad de informacion es abrumadora como en este caso, recomiendo
+entrar en modo paseo por tienda, ver que hay y si el vendedor se acerca, decirle que no
+moleste. Todas estas opciones solo se retienen en el cortex luego que se
+presentan los problemas mientras se va programando, ese es el momento donde
+saber que exite una cosa (aunque no como hacerlo) regresa a nuestro recuerdo y
+podemos ejecutar el aprendizaje teorica y practimamente, y quiza si es posible
+con aplicaciones recurrentes, memorizarlo&lt;/p&gt;
+
+&lt;p&gt;cerca de la pagina 450 el material comenzo a parecer pesado.&lt;/p&gt;
+
+&lt;p&gt;Ya que la principal motivacion de leer el libro era enterarme que estan
+exponiendo en algun ejemplo corto de algun libro intereante, no dedicarme a
+programar en java, me plantee dejar la lectura y pasar a otra cosa. Pero
+continue al siguente capitulo y aparecieron cosas relevantes. Si tambien vas
+en modo paseo, almenos lee el inicio de cada capitulo y alguna seccion relevante&lt;/p&gt;
+
+&lt;p&gt;Como conclusion el libro es eso, un buen material de consulta.&lt;/p&gt;
+
+&lt;p&gt;Sobre java:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Es un lenguaje pegote (o katamari), se le adiere todo, un monton de
+posibilades que incitan a hacer guarradas y no enterarte de lo que algun
+programador con preferencias exquisitas este haciendo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;La jerarquia, asociacion y documentacion de sus clases no es intuitiva&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;ldquo;compilar&amp;rdquo; y &amp;ldquo;cargar&amp;rdquo; (&lt;code&gt;javac&lt;/code&gt;, &lt;code&gt;java&lt;/code&gt;) es un rollo y se siente lento&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;El lenguaje no esta diseñado, es 🌈evolutivo🌈. Toma la inco(nsist|her)ente base de C++, la simplifica,
+y hace mas verbosa, un monton de clases, enfoques, palabras clave y especificadores con
+multiples significados que enturbian la 🌈experiencia🌈&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;y ya! bienvenidos los insultos y duelos a muerte!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,13 +255,236 @@ en mi caso, hice un solemne juramento de no aprender java (y quiza python, js&am
       <pubDate>Fri, 07 Jul 2017 18:27:56 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/dot-slash-sicp2es/</guid>
-      <description>o en otras palabras dadme pasta! (no en galletas)
-faq por que?
-para traducir un libro de muchas lineas al español, el Structure and Interpretation of Computer Programs, tambien conocido como SICP
-por que sicp?
- en los listados de lecturas para programadores suele aparecer inevitablemente y en los primeros puestos
- puedo traducirlo y combrar por ello, sin romper ninguna ley (creo)
- parece interesante y creo que enseñan a programar, ademas utilizan un derivado de lisp: Scheme</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/jelly.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;o en otras palabras dadme pasta! (no en galletas)&lt;/p&gt;
+
+&lt;h2 id=&#34;faq&#34;&gt;faq&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;por que?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;para traducir un libro de muchas lineas al español, el &lt;strong&gt;Structure and
+Interpretation of Computer Programs&lt;/strong&gt;, tambien conocido como &lt;em&gt;SICP&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;por que sicp?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;en los listados de lecturas para programadores suele aparecer inevitablemente
+y en los primeros puestos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;puedo traducirlo y combrar por ello, sin romper ninguna ley (creo)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;parece interesante y creo que enseñan a programar, ademas utilizan un derivado
+de lisp: &lt;em&gt;Scheme&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;no lo he leido, ni lo entiendo en ingles&amp;hellip;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;no entiendes ingles?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;he, je, he, nop! de hecho ni la ortografia, ni transmitir un pensamiento por
+escrito son &lt;em&gt;features&lt;/em&gt; que posea&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;uuuufff, de que vas?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;de nah, el libro no esta traducido, y yo, sin saber ingles, puedo utilizar un
+traductor, sentido comun y muchas horas para dejar un trabajo cuando menos
+entendible, por no decir bueno (sin llegar a lo profecional), todo esto
+respaldado en un nuevo &lt;a href=&#34;https://github.com/nasciiboy/morg/&#34;&gt;formato de documentacion&lt;/a&gt;
+(actualizacion de readme en proceso) que estoy construyendo, mientras aprendo a
+programar decentemente, capto un poco de ingles y me convierto en un miembro
+productivo de la sociedad. Todo ello por un modico y nada extrabagante (pero
+digno) sueldo de &lt;s&gt;tercer mundo&lt;/s&gt; un pais en vias de desarrollo&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;momento, seguro escapas con la pasta!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; palabra de boy scout, a menos que muera o me vea impedido fisicamente o
+ambientalmente, y/o sea demandado por algun desacuerdo legal por alguna de mis
+pasadas (y futuras) acciones informaticas, y como sinceramente no tengo nada
+mejor, ni mas noble que hacer, &lt;em&gt;yo nasciiboy&lt;/em&gt; lo llevare a cabo&lt;/p&gt;
+
+&lt;p&gt;en caso de no llegar a la meta finaciera, seguire adelante mientras mis parientes no me
+echen a la calle, consiga empleo, pierda el interes o cualquier combinacion de estas&lt;/p&gt;
+
+&lt;p&gt;cierto es que esta es la segunda vez que pido financiacion, anteriormente fue
+para llevar a cabo la escritura
+del &lt;a href=&#34;https://github.com/nasciiboy/raptor-book/&#34;&gt;libro del raptor&lt;/a&gt; + su revision
+por alguien de letras. En esa ocacion, no optuve ni un centavo, aunque continua el desarrollo de la
+libreria raptor, mas el nulo interes por esta, y la sensacion de no plasmar lo mejor
+posible mis ideas, llevaron a un paron indefinido de tal labor&amp;hellip; pero esto es
+distinto, verdad de la buena!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;seguro?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;si, seguro!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;seguro, seguro?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;que si, es mas, a diferencia de otros suplicantes de donacion que no ofrecen
+nada de inicio, noblemente he realizado una maquetacion del libro al formato
+morg (sin gluten, o aditivos), tambien incluyo una exportacion en html
+en &lt;a href=&#34;https://github.com/nasciiboy/sicp/&#34;&gt;este repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;o puedes hacer una clonacion con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/nasciiboy/sicp.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hay encontraras, el fichero fuente y su exportacion a html, ambas en
+ingles. Probe la version html con firefox y con un spin de chromium, sin
+aparente problema&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/sicp-screeshot-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/sicp-screeshot-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;extenso el material es, asi que probablemente contenga algunos errores&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;cuanto quieres?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;5,000&lt;/em&gt; dolares, una cantidad aproximada entre 70,000 y 100,000 pesos mexicanos,
+para un periodo de entre 5 a 8 meses (ampliable a un año), que seria un sueldo
+bajo-bueno-promedio anual&lt;/p&gt;
+
+&lt;p&gt;en mas de lo que esperiria ganar en un empleo regular, pero oye, para algo que
+puedo hacer ya seria mucho no valorarme, ademas podria gastar una suma
+considerable en un par de buenos monitores, una nueva placa, un disco de 4TB, o
+ser persona&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;donde deposito?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;realmente nunca he echo un deposito, ni recivido dinero de internet, si quieres
+hacerlo sin intermediarios ponte en contacto por correo, ya veremos si la
+tarjeta bancaria maizoro que saque con 1 peso de saldo sirve para algo&lt;/p&gt;
+
+&lt;p&gt;si por el contrario prefieres un intermediario, abri una cuenta en &lt;a href=&#34;https://es.liberapay.com/&#34;&gt;&lt;em&gt;liberapay&lt;/em&gt;&lt;/a&gt;,
+que es algo asi como un patreon, pero sin fines de lucro, ni compromisos, basado
+en software libre, tambien tiene un monton de usuarios registrados esperando
+algo de pasta y su ultimo mes movieron poco mas de 1200 euros&amp;hellip; el
+financiamiento de proyectos libres es complejo, nadie te da dinero si no eres un
+chakal!&lt;/p&gt;
+
+&lt;p&gt;el enlace a la cuenta para la financiacion, esta a fondo del blog, como sin
+querer, mis unicos otros dos medios de contacto son el correo (tambien al fondo)
+y en reddit, ambos con el usuario &lt;strong&gt;nasciiboy&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;y las (pegatinas|playeras|recompensas)?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;no necesitas nada externo, las cosas bonitas las tienes dentro de ti, las mas
+bonitas en el disco duro, si quieres
+una baratija ya te la puedes comprar por tu cuenta he ir directo a #!eç¤¢¢
+€¢#!¢e¤¢ $&amp;amp;~#@&amp;hellip;. desde el respeto&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;lol, alimenta al troll&amp;hellip; bueno, por 10 dolares o asi, ya te pongo en el
+&lt;em&gt;CONTRIBUTORS&lt;/em&gt; del repo, por 100 o mas en los agradecimientos del libro, y por
+1000 al inicio del libro con el cargo ficticio (o real) que quieras! como &lt;em&gt;ninja
+editor&lt;/em&gt;, o &lt;em&gt;Jr. revisor online ecologist superior chief developer master&lt;/em&gt;, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;no tengo pasta, puedo colaborar?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;esta en un repo, en texto plano, en internet, con una licencia libre (CC BY-SA
+4.0), puedes hacer lo que te permita la ley o tu vision del mundo&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; por supuesto que puedes colaborar, dar una revicion a las cosas que voy
+haciendo (suelo subir una seccion/capitulo por commit), ponerte a traducir,
+ofrecer tu opinion sobre el formato, programar morg, hacer una portada, una hoja
+de estilo, &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;no voy a quejarme, por tardar menos, menos aun si se hace mejor&lt;/p&gt;
+
+&lt;p&gt;tambien si te gusta el formato, recivo encargos, ofertas de empleo, como tambien
+propuestas para hacer esto de documentar rentable a corto plazo, armar una empresa hippie, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;cuando inicia la traduccion?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;obviamente, cuando vea la pasta&amp;hellip; en realidad puedo empezar inmediatamente,
+aunque primero quiero programar un poco el exportador/visualizador/facilitador
+del formato. Tengo por costumbre hacer un poco de esto y un poco de aquello,
+en un mes subo (o no) una &lt;em&gt;pretraduccion&lt;/em&gt; (automatica, es decir del traductor) y/o
+&lt;em&gt;premaquetacion&lt;/em&gt; de todo el material, esto lleva mucho mas tiempo que una simple
+traduccion y por lo general no tiene un sentido entendible para humanos, pero es
+la parte fundamental.&lt;/p&gt;
+
+&lt;p&gt;Si deseo programar antes, es para automatizar la mayor parte de la labor, pese a
+que esto tambien es una meta a largo plazo&lt;/p&gt;
+
+&lt;h2 id=&#34;adaptacion-del-material&#34;&gt;adaptacion del material&lt;/h2&gt;
+
+&lt;p&gt;Si he de clasificar la facilidad de adaptar un libro de un formato a otro, sin
+duda, lo mas complejo seria partir del formato de arbol muerto, no obstante en
+esa situacion la &amp;ldquo;libertad de ajuste&amp;rdquo;, es la mas grande, si no sabes
+mecanografia, es un magnifico proyecto para aprender, e ir realizando la
+adaptacion &amp;ldquo;al vuelo&amp;rdquo;, claro luego seran necesarias muchas pasadas cazando
+fallos ortograficos&lt;/p&gt;
+
+&lt;p&gt;el siguiente caso de complejidad seria un ocr o pdf &amp;ldquo;con letras&amp;rdquo;, primero se
+vuelca el contenido y luego toca no solo maquetar desde el texto en bruto,
+tambien transladar cualquier marca del original (bold, italica, enfasis,
+codigo), asi como crear enlaces internos, si es el caso&lt;/p&gt;
+
+&lt;p&gt;por ultimo temos la adaptacion partiendo de algun lenguaje de marcado, que
+me gusta clasificar en dos subcategorias:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;maquetado limpio&lt;/em&gt;, es decir, si es factible realizarlo con una herramienta
+automatica o con un minimo de intervencion (a base de substitucion regexp y
+macros) casi directamente&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;maquetado ofuscado&lt;/em&gt;, jo, esto suele encontrarse en mayor medida en documentos
+html, cuando la apnesia ataca los fundamentos estructurales del lenguaje, y
+mediante una y otra etiqueta o las que hagan falta se optiene el aspecto
+visual deseado; esta tecnica tambien se vale de romper los propositos de un
+elemento dado, asi tambien como emular una caracteristica no implementada&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;los documentos en (*)TeX, suelen estar en el punto medio de ambas subcategorias,
+para fortuna mia, la persona &lt;em&gt;Lytha Ayth&lt;/em&gt;, en el 2001 se dedico a maquetar sicp
+a conciencia en el formato texinfo (formato oficial de documentacion del
+proyecto GNU, con un mimo particular en Emacs). Tras una larga cadena de
+aportaciones y correcciones, optube una copia desde el repositirio &lt;a href=&#34;https://github.com/sarabander/sicp&#34;&gt;sicp-pocket&lt;/a&gt;
+que contiene todo el libro dentro de un solo fichero (&lt;code class=&#34;file&#34;&gt;sicp-pocket.texi&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;como este fichero tenia una estructura razonable, la mayoria pudo hacerse
+mediante macros y substitucion de expresiones regulares, revision manual y
+un poco de lavor para encajar algunas cosas, este proceso llevo algo asi como 15
+seciones de tiempo ocioso y un par de dias a tiempo completo&lt;/p&gt;
+
+&lt;p&gt;diria que lo mas complejo fue encontrar sentido al uso del comando &lt;code&gt;quotation&lt;/code&gt;,
+que se utilizaba indiscriminadamente en cuelquier figura, codigo, ejemplo y
+bloque ambiguo, tambien fue complejo decidir que hacer con las bloques de arte
+ascii encerrados en comandos de compilacion condicional, que se utilizaban
+principalmente para graficar diagramas y algunas formulas matematicas, en ese
+aspecto tome una licencia artistica, substituir el arte ascii con &amp;ldquo;arte&amp;rdquo; unicode
+cuando fuese apropiado (y cuando no) y tambien la nada grata tarea de substituir
+sup/super indices (unicode) de todas las formulas matemagicas que fue posible,
+creo solo quedaron 5-10 formulas en TeX puro&lt;/p&gt;
+
+&lt;p&gt;cierto es que el texto incluia todas las formulas tanto en ascii como en TeX,
+pero borre este ultimo, no por incapacidad del lenguaje morg (que aun no se
+decanta por una sintaxis para formulas matemagicas), sino por ahorrar
+procesamiento y por considerar que la representacion unicode cumplia de forma
+satisfactoria, tanto (y principalmente) para leer el libro directamente del
+fuente, como en alguna de sus exportaciones (de momento solo html) y una
+no completa vision desde el terminal con el comando &lt;code&gt;morg tui sicp.morg&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Para el par de formulas que no puedieron adaptarse, utilice el javascript de
+MathJax, para la que tuve que incluir una opcion en el fuente, si desea
+eliminarla, dentro del codigo fuente del documento (&lt;code class=&#34;file&#34;&gt;sicp.morg&lt;/code&gt;)
+elimine la palabra &lt;code&gt;mathjax&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;el resaltado de syntaxis requiere tener instalado pygments. Dentro del documento
+la palabra &lt;code&gt;pygments&lt;/code&gt; habilita dicho resaltado.&lt;/p&gt;
+
+&lt;p&gt;Tome en cuenta que python es mas lento que morir por fumar, asi que desabilitese
+para pruebas rapidas, lo mismo para &lt;code&gt;mathjax&lt;/code&gt;, la carga del javascript afecta el
+rendimiento del navegador de mala, muy mala manera&lt;/p&gt;
+
+&lt;p&gt;en los proximos dias pondre un readme al repo y una actualizacion al de morg&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -43,9 +493,218 @@ por que sicp?
       <pubDate>Mon, 29 May 2017 22:02:43 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/tgpl/</guid>
-      <description>golang, el lenguaje de programacion de sistemas de la gente de google con el que planea llebar a cabo sus mas retorcidos y stalkerosos deseos.
-Hoy y tras pocos meses de programacion y muchas horas de investigacion linguistica intentando entender el english, les traigo una reseña de la biblia de golang (Go para los amigos) The Go Programming Language (en adelante TGPL o GPL(?))
-el libro los usa-americanos tinen sus medidas extravagantes, siguiendo su ejemplo, yo mido la extencion de un documento en las lineas (de 80 columnas indentadas) que abarca, por ejemplo, 7000-10000 lineas suelen ser la extencion regular de una novela, debajo de esta cantidad es un trabajo corto, superior de esta es extenso y superior a las 20000 lineas ya es muy extenso, aunque Dune utiliza (y muy bien) la friolera y descomunal cantidad de 34150 lineas.</description>
+      <description>
+
+&lt;p&gt;golang, el lenguaje de &lt;q&gt;programacion de sistemas&lt;/q&gt; de la gente de google con
+el que planea llebar a cabo sus mas retorcidos y stalkerosos deseos.&lt;/p&gt;
+
+&lt;p&gt;Hoy y tras pocos meses de programacion y muchas horas de investigacion
+linguistica intentando entender el english, les traigo una reseña de la biblia
+de golang (Go para los amigos) &lt;em&gt;The Go Programming Language&lt;/em&gt; (en adelante
+TGPL o GPL(?))&lt;/p&gt;
+
+&lt;h2 id=&#34;el-libro&#34;&gt;el libro&lt;/h2&gt;
+
+&lt;p&gt;los usa-americanos tinen sus medidas extravagantes, siguiendo su ejemplo, yo
+mido la extencion de un documento en las lineas (de 80 columnas indentadas) que
+abarca, por ejemplo, 7000-10000 lineas suelen ser la extencion regular de una
+novela, debajo de esta cantidad es un trabajo corto, superior de esta es extenso
+y superior a las 20000 lineas ya es &lt;em&gt;muy extenso&lt;/em&gt;, aunque &lt;em&gt;Dune&lt;/em&gt;
+utiliza (y muy bien) la friolera y descomunal cantidad de 34150 lineas.&lt;/p&gt;
+
+&lt;p&gt;Pues bien TGPL son 21426 lineas, repartidas a partes iguales entre explicaciones
+y codigo fuente, si quieres la extencion en paginas cerca de 400, aunque yo no
+confiaria en esta medida&lt;/p&gt;
+
+&lt;p&gt;La mayor parte del libro se utiliza para mostrar la forma de hacer las cosas en
+Go, sintaxis, ideologia y paquetes. Haciendo un simil con C seria algo asi como
+que te enseñåran a hacer muchas herramientas del sistema, mas una guia de gcc,
+make y alguna cosa mas.&lt;/p&gt;
+
+&lt;p&gt;Se asume que ya conoces al menos un lenguaje de programacion, particularmente C o
+alguno de su descendencia, y aunque no es necesario, que manejes programacion
+orientada a objetos y/o concurrencia es deseable, antes de iniciar esta aventura&lt;/p&gt;
+
+&lt;p&gt;No es un manual para no iniciados, es decir, para quien no tenga ya asumido en
+su ser lo que es programar, resultara hostil, diria que es apto como tercer o
+cuarto libro de programacion&lt;/p&gt;
+
+&lt;p&gt;Se enseña a construir aplicaciones no triviales, utilzando la rica libreria
+estandar del lenguaje, aunque la mayoria encaminadas al tema web, ninguna es
+despreciable, incluso se propone la construccion de un parser de espreciones-S y
+un pequeño interprete para un lenguaje de programacion, aunque no se llega a
+profundizar veraderamente en ningun tema, se da lo suficiente como para
+enfrentar cualquier propuesta sin temor (jo, lo dice quien no ha hecho mas de 4
+ejericios, en serio, eso es lo mas denso, ni en la vastedad de internet he
+localizado a un intrepido programador que alla concluido tal mision)&lt;/p&gt;
+
+&lt;p&gt;Lo mismo se aplica para las secciones que explican la herramienta principal del
+lenguaje, que es compilador, perfilador (primera ves que utilizo algo asi),
+administador de paquetes, &amp;ldquo;visor&amp;rdquo; de documentacion y muchas cosas mas. Nos dicen
+de que va el tema y luego saltan al sugiente punto&amp;hellip; es este caso aunque
+suficiente para iniciar, si hecho en falta mayor detalle, pues varios comandos
+requieren un orden y sintaxis nada evidentes, siendo mas bien conjuros o trucos
+misteriosos&lt;/p&gt;
+
+&lt;p&gt;en resumen, recomendo su lectura a cualquiera, en particular si se biene de C o
+C++ y se aspira a lenguajes mas desapegados de la maquina, sin topar de lleno en
+abstracciones incomprensibles&lt;/p&gt;
+
+&lt;h2 id=&#34;el-lengueje&#34;&gt;el lengueje&lt;/h2&gt;
+
+&lt;p&gt;el libro esta muy bien!, que tal el lenguaje?&lt;/p&gt;
+
+&lt;p&gt;bueno, desde la perspectiva de un aficionado a C, que ha pasado por C++, bash y
+un ligero viaje por lisp, el lenguaje me gusta mucho, aunque no puedo perdonarle
+que inponga un estilo arbitrario de como han de indentarse y separarse las
+sintrucciones, es decir el formateo, biniendo de C tener llaves para
+instrucciones sencillas (una instruccion) me parece atroz, por no decir forzar la
+posicion de apertura y cierre de las demas llaves, sobre todo en intstrucciones
+&lt;code&gt;else&lt;/code&gt;, no lo soporto esteticamente!, hooo y utilizar tabs para indentar, deben
+arder en la hogera, y como te obligan a esto, simple si no cumples su mierda
+formato no compila&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;dejando atras este no precisamente poco importante aspecto, tenemos el
+inmobiliacio habitual de los descendientes de C, ifs, elses, else ifs,
+funciones, arreglos, switches, return, gotos y bucles for, caresiendo de bucles
+while y do while, pero sumando slices, que son una especie de arreglo con
+crecimiento dinamico automagico (el lenguaje tien recolector de basura), mapas
+hash, una funcion llamada &lt;code&gt;defer&lt;/code&gt;, &lt;code&gt;gorutinas&lt;/code&gt; para programacion concurrente,
+&lt;q&gt;canales&lt;/q&gt; para pasar datos a las gorutinas y asegurar que completen su
+ciclo, pero sobre todo y quiza lo mas interesante del lenguaje su orientacion a
+objetos no evidente&lt;/p&gt;
+
+&lt;p&gt;claro, el lenguaje tiene una forma &lt;q&gt;peculiar&lt;/q&gt; de organizar sus parametros
+(al revez) que no pocas veces me ha causado transtornos cuando regreso a tocar
+C, pero lo que mas me gusta es que no intenta ser innecesariamente complejo en
+ningun aspecto, es mas, los programas son casi imperativos, la orientacion a
+objetos aparece por si sola, aunque lo &amp;ldquo;metodos&amp;rdquo; requieren un poquito mas&lt;/p&gt;
+
+&lt;p&gt;por defecto utiliza codificacion unicode utf-8, incorporando una utilidad
+llamada &lt;code&gt;range&lt;/code&gt; que nos entrega los caracteres unicode sin tener que recurrir a
+esotericas librerias, a si como convecion automagica de entre &lt;code&gt;runas&lt;/code&gt; unicode 32
+a cadenas de caracteres utf-8, si necesitamos mas ya toca recurrir a la libreria
+estandar&lt;/p&gt;
+
+&lt;p&gt;por cierto, aunque el nucleo del lenguaje es compacto (bravo) la libreria
+estandar es muy rica, te da un servidor web, analisis en cadenas, codificadores,
+compresores y otro monton de cosas&lt;/p&gt;
+
+&lt;p&gt;es sencillo crear programas relativamente complejos con estas facilidades,
+aunque encuentro incomoda la herramienta de documentacion para linea de comandos&lt;/p&gt;
+
+&lt;p&gt;no te voy a mentir, la libreria estandar es amplia, pero carece de librerias
+nativas para graficos y esto es un punto flaco, tomando en cuenta que si te
+apegas a la libreria estandar tus programas son multiplataforma y que el
+costructor de programas es por naturaleza multiplataforma. Lamentablemente, veo
+poco probable que algun dia llegue a tener librerias nativas para estos
+menesteres&amp;hellip; a menos que el gestor de paquetes pueda meter sus manos en el
+gestor de paquetes del sistema en si (apt, dnf, yum, etc)&lt;/p&gt;
+
+&lt;p&gt;sobre esto, me encanta como administra las &amp;ldquo;librerias&amp;rdquo;/paquetes externos, nada
+de buscar por internet, ni compilar a mano, ni naaah, el solito busca las
+dependencias y las enlaza. Nunca perdonare al comite de los estandares de C y
+C++, por no copiar este aspecto y evolucionarlos de forma razonable, si hicieran
+su labor no tendria que aparecen Go&lt;/p&gt;
+
+&lt;p&gt;respecto a la concurrencia, no tenia ninguna experiencia previa, era un tema
+mistico, magico y misterioso y sin embargo he podido implementar un tipo
+concurrente, aunque no se, encuentro un poco criptica las formas en que esta
+implementada, aunque como digo desconosco como se haga esto en otros lenguajes,
+de momento la puedo usar sin muchos complejos ingorando una parte que tenia que
+ver con bucles for, captura de variables y cosas concurrentes que no me quedo
+muy clara en el libro&lt;/p&gt;
+
+&lt;h3 id=&#34;cosas-feas&#34;&gt;cosas feas&lt;/h3&gt;
+
+&lt;p&gt;ademas del jodido formateo? cast, cast, cast por todas partes, y si no aplicas
+cast, he?, creas una varible extra con el cast apropiado al inicio de la funcion&amp;hellip;
+teniendo que asignar memoria extra&amp;hellip;?&lt;/p&gt;
+
+&lt;p&gt;tan dificil y peligroso es asumir que el programador sabe que es lo que hace con
+los tipos que escoge y en consonancia hacer conversion automatica de tipos, digo
+con tener conversion autamatica en llamadas a fuciones seria un gran alivio,
+pero no, ademas ni ellos resepetan su estricto y seguro tipado (ironia), pues
+aveces hacen convesiones automaticas para ciertas tareas, a sabiendas de lo poco
+practico de tal tipado, quedando mas que evinciado en su elecion de regresar
+&lt;code&gt;int&lt;/code&gt;s aun en valores que deverian ser unsigned&lt;/p&gt;
+
+&lt;p&gt;no le haria mal separar la herramienta en varias utilidades, en particular para
+la documentacion, pruebas y perfilado&lt;/p&gt;
+
+&lt;p&gt;tener un solo paquete por directorio es bueno, pero en paquetes conseptualmente
+extensos puede ser dificil averiguar la procedencia de una funcion, no es grave
+y es principalmente un problema del programador no distribuir el codigo de forma
+coherente, pero aun asi se vuelve dificil seguir la logica de un programa extenso&lt;/p&gt;
+
+&lt;h3 id=&#34;conclucion&#34;&gt;conclucion&lt;/h3&gt;
+
+&lt;p&gt;Me gusta y lo recomiendo como lenguaje secundario, si bien es cierto que tiene
+un fuerte enfoque para aplicaciones web, es un lenguaje de proposito general,
+con un rendimiento aceptable&lt;/p&gt;
+
+&lt;p&gt;segun pruebas mias, su rendimiento esta entre 3 a 4 veces mas lento que su
+homologo en C, es decir, si un pragrama demora 1, en Go, demora 4 o 5, bueno no?
+si, eheemee, aun tengo conflictos psicologicos al saber que va 3 o 4 veces mas
+lento que C, pero bueno al menos no es 100 veces mas lento como el
+&lt;q&gt;fabulosisimo&lt;/q&gt; python o JS&lt;/p&gt;
+
+&lt;p&gt;momento, tengo que sacarlo de mi sistema, no programes con python, ni JS, no lo
+hagas, por fabor, no son lenguajes poro programar por mas (falsamente) simples o
+elgentes que sean, los lenguajes interpretados son para extender programas o
+para servir como prompts, no para crear algo de cero. Sirve de algo tardar unas
+horas menos programando en esos lenguajes cuando pasaras la eternidad
+ejecutandolos lentamente? hay lo dejo&lt;/p&gt;
+
+&lt;p&gt;Go apenas se encuentra en los limites que considero un rendiminto aceptable.&lt;/p&gt;
+
+&lt;p&gt;Entre 7 y 10 veces mas lento que C, sin importar el paradigma, solo podre
+considerar al lenguaje una &lt;q&gt;curiosidad&lt;/q&gt; intelectual&lt;/p&gt;
+
+&lt;h2 id=&#34;porg&#34;&gt;porg&lt;/h2&gt;
+
+&lt;p&gt;durante el ultimo mes, he estado traduciendo o mas bien dando sentido a la
+traduccion de las maquinas sobre el libro en cuestion, pueden optener el codigo
+con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/nasciiboy/TGPL.git
+cd TGPL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;abren los ficheros &lt;code&gt;html&lt;/code&gt; en su navegador de confianza (pista: el que tiene un
+sufijo &lt;code&gt;es&lt;/code&gt;, es el que esta en español&lt;/p&gt;
+
+&lt;p&gt;para crear el material desde el codigo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go get -u https://github.com/nasciiboy/morg
+morg toHtml The-Go-Programming-Language.morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;morg toHtml The-Go-Programming-Language_es.morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para ver el fichero directamente en su terminal, utilice &lt;code&gt;morg tui fichero.morg&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;si quiere colorizar el codigo en la exportacion a html, necesita tener instalado
+&lt;code&gt;pygmentize&lt;/code&gt; (python pygments), y agregar &lt;code&gt;pygments&lt;/code&gt; a &lt;code&gt;options&lt;/code&gt; (dentro del
+documento), asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..options &amp;gt; pygments
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en fin, una labor estandar de traduccion a mi estilo sin acentos.&lt;/p&gt;
+
+&lt;p&gt;apenas es lo suficientemente entendible, y apenas dare mi primer lectura seria
+al libro y de paso corrijo algunas cosas.&lt;/p&gt;
+
+&lt;p&gt;tuve problemas al localizar muchas cosas, pero si quieres colaborar a mejorar un
+manual que nunca iba a aparecer en españøl, tienes mi correo y clave gpg abajo&lt;/p&gt;
+
+&lt;p&gt;happy hacking, en la proxima entrega nasciiboy inc. por cierto si retiran este
+sitio de internete, dadle asilo&lt;/p&gt;
+</description>
     </item>
     
   </channel>

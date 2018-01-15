@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Mon, 30 Oct 2017 15:45:27 -0600</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/apt/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/apt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,108 @@
       <pubDate>Mon, 30 Oct 2017 15:45:27 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/apt/ibniz/</guid>
-      <description>IBNIZ es una máquina virtual diseñada para programas audiovisuales de bajo nivel extremadamente compactos. El objetivo principal del diseño es la utilidad como plataforma para producciones demoscene, arte de glitch(es) y proyectos similares. Los aspectos de ingeniería de software del equipo principal se consideran totalmente irrelevantes.
-IBNIZ significa Ideally Bare Numeric Impression giZmo. El nombre también se refiere a Gottfried Leibniz, el polimatemático del siglo XVII que, entre otras cosas, inventó la aritmética binaria, construyó la primera máquina calculadora de cuatro operaciones, y creía que el mundo estaba diseñado con el principio de que un conjunto mínimo de reglas debía producir una diversidad máxima.</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ibniz.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;IBNIZ es una máquina virtual diseñada para programas audiovisuales de bajo
+nivel extremadamente compactos. El objetivo principal del diseño es la
+utilidad como plataforma para producciones demoscene, arte de &lt;a href=&#34;https://es.wikipedia.org/wiki/Glitch&#34;&gt;glitch&lt;/a&gt;(es) y
+proyectos similares. Los aspectos de ingeniería de software del equipo
+principal se consideran totalmente irrelevantes.&lt;/p&gt;
+
+&lt;p&gt;IBNIZ significa Ideally Bare Numeric Impression giZmo. El nombre también se
+refiere a Gottfried Leibniz, el polimatemático del siglo XVII que, entre
+otras cosas, inventó la aritmética binaria, construyó la primera máquina calculadora
+de cuatro operaciones, y creía que el mundo estaba diseñado con el principio
+de que un conjunto mínimo de reglas debía producir una diversidad máxima.&lt;/p&gt;
+
+&lt;p&gt;-- extraido del &lt;a href=&#34;http://pelulamu.net/ibniz/&#34;&gt;sitio oficial&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;me encotraba en un taller del hackmitin y durante esa charla un &amp;ldquo;ranchero&amp;rdquo;
+estaba con un wallpaper muuuuhh raro con cosas graficas extrañas y daba la
+vaga imprecion que lo controlaba con una especie de brainfuck.&lt;/p&gt;
+
+&lt;p&gt;Por un momento imagine que era una extraña herramienta para ver la instalacion
+de programas (o trafico de red o procesos o algo asi) de forma psicodelica, por
+lo que tuve que preguntar que jodidos era eso y me dijo que se llamaba ibniz y
+estaba dentro de los repos de debian, aunque casi no conocia documentacion de
+como funciona&lt;/p&gt;
+
+&lt;p&gt;mas tarde lo pude instalar de los repos de debian (&lt;code&gt;apt install ibniz&lt;/code&gt;) y efectivamente era esa cosa
+rara.&lt;/p&gt;
+
+&lt;p&gt;Para los que se encuentren en arch esta dentro de AUR y para los demas su
+repo es &lt;a href=&#34;https://github.com/viznut/IBNIZ&#34;&gt;https://github.com/viznut/IBNIZ&lt;/a&gt;, aunque su codigo se dejo abandonado (o
+quiza se considero terminado) hace 6 años&lt;/p&gt;
+
+&lt;h2 id=&#34;que-es-exactamente&#34;&gt;Que es exactamente?&lt;/h2&gt;
+
+&lt;p&gt;aqui hago una contraccion de los ojos hasta parecer asiatico y tambien me
+pregunto que jodidos es&amp;hellip; no estoy muy seguro, como que te visualiza la memoria
+de un algo y tambien hace ruiditos de las operaciones matematicas que le metes
+(&lt;em&gt;advertencia&lt;/em&gt;: antes de ejecutar bajar el sonido, pues puede ser agobiante)&lt;/p&gt;
+
+&lt;p&gt;tiene licencia zlib y si quieres compilarlo necesitaras tener las librerias SDL
+1.2 y tambien algunas de X11, en mi caso como casi siempre ya las tenia
+instaladas y con el siguiente proceso basto&lt;/p&gt;
+
+&lt;p&gt;por cierto, el repo que aparece en AUR es un fork del proyecto original con la
+ultima modificacion fechada hace un año y por ello es la que tomo para la
+instalacion, ademas tiene una seccion con ejemplos interesantes, como un
+mandelbrot. Obviamente por las fechas el codigo difiere del original en algun
+punto, una muesta de esto es contar con mas opciones en la linea de comandos y
+que al menos el ejemplo del mandelbrot no me funciono con el programa original&lt;/p&gt;
+
+&lt;h2 id=&#34;instalacion-a-mano&#34;&gt;instalacion a mano&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/PoroCYon/IBNIZ/
+cd IBNIZ
+make
+./bin/ibniz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para probar algunos ejemplos (ejecutando bash)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./bin/ibniz -c &amp;quot;$(cat examples/ibnizdemo.ib)&amp;quot;
+./bin/ibniz -c &amp;quot;$(cat examples/mandelbrot.ib)&amp;quot;
+./bin/ibniz -c &amp;quot;$(cat examples/julia.ib)&amp;quot;
+./bin/ibniz -c &amp;quot;$(cat examples/bitmapzoomer.ib)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;uso&#34;&gt;Uso&lt;/h3&gt;
+
+&lt;p&gt;si presionas &lt;code&gt;TAB&lt;/code&gt; aparece/desaparece el editor del &amp;ldquo;codigo de entrada&amp;rdquo;, si este
+esta visible y presionas &lt;code&gt;F12&lt;/code&gt; aparece la ayuda&lt;/p&gt;
+
+&lt;p&gt;cuando as puesto una entrada formada por operaciones y algunas funciones, la
+puedes &lt;em&gt;hechar a andar&lt;/em&gt; (y detener) con &lt;code&gt;F1&lt;/code&gt;, reiniciar con &lt;code&gt;F2&lt;/code&gt; y terminar con &lt;code&gt;ESC&lt;/code&gt; y ya esta, basicamente eso
+es todo, tienes algunas funciones basicas para la edicion del texto y tambien
+puedes ir probando lineas comentando y descomentando codigo&lt;/p&gt;
+
+&lt;p&gt;un buen ejemplo para iniciar es ejecutar lo sigiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./bin/ibniz -c &amp;quot;$(cat examples/oneliners.ib)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;abrir el editor (con &lt;code&gt;TAB&lt;/code&gt;) y comentar/descomentar lineas&lt;/p&gt;
+
+&lt;p&gt;la opcion &lt;code&gt;-c&lt;/code&gt; es para pasar tu &amp;ldquo;codigo&amp;rdquo; desde el aranque, por ejemplo,
+tonteando aparecieron dos patrones que me gustaron bastante&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;./bin/ibniz -c &#39;4*r+q&#39;
+./bin/ibniz -c &#39;45*r+q&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para finalizar, hay varios forks mas de ibniz, el que tiene la modificacion mas
+reciente (hace 6 dias) es &lt;a href=&#34;https://github.com/jminor/IBNIZ/&#34;&gt;este&lt;/a&gt;, ademas tambien trae un
+readme, una pagina de documentacion y enlaza a un &lt;a href=&#34;https://www.youtube.com/watch?v=aKMrBaXJvMs&#34;&gt;demo-tutorial&lt;/a&gt;
+super chulo!&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,9 +128,151 @@ IBNIZ significa Ideally Bare Numeric Impression giZmo. El nombre también se ref
       <pubDate>Sat, 24 Jun 2017 20:28:51 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/apt/konsole-warrior/</guid>
-      <description>Dentro de El camino del Heroe (que algunos dicen que esta conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al llamado, debemos preparar nuestras herramientas sobrenaturales lenguaje, Emacs Editor y Emulador de terminal (intreprete incluido).
-Para las dos elecciones (lenguaje y emulador de terminal) tenemos un amplio abanico de posibilidades, hoy les hablare del emulador de terminal y las razones de su eleccion
-Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la configuracion y el cambio constante de temas (iconos, wallpapers, doks y otra extensa variadad) de cambios neon, Konsole es la aplicacion con K que mas aprecio, por un solo aspecto, su alta configuracion de atajos del teclado, no es que necesite demasiado, solo tener la ventana sin ninguna distraccion, ni barra, ni nada, algunos atajos de desplazamiento por pagina y linea, mas poder cambiar entre &amp;ldquo;tabs&amp;rdquo;(?</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/tilix-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dentro de &lt;q&gt;&lt;em&gt;El camino del Heroe&lt;/em&gt;&lt;/q&gt; (que algunos dicen que esta
+conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al
+llamado, debemos preparar nuestras herramientas sobrenaturales
+&lt;em&gt;lenguaje&lt;/em&gt;, &lt;em&gt;&lt;s&gt;Emacs&lt;/s&gt; Editor&lt;/em&gt; y &lt;em&gt;Emulador de terminal&lt;/em&gt;
+(intreprete incluido).&lt;/p&gt;
+
+&lt;p&gt;Para las dos elecciones (lenguaje y emulador de terminal) tenemos un amplio
+abanico de posibilidades, hoy les hablare del emulador de terminal y las razones
+de su eleccion&lt;/p&gt;
+
+&lt;h2 id=&#34;konsole&#34;&gt;Konsole&lt;/h2&gt;
+
+&lt;p&gt;Salida del mundo de reino de KDE, donde sus habitantes priorisan la
+configuracion y el cambio constante de temas (iconos, wallpapers, doks y otra
+extensa variadad) de cambios neon, &lt;strong&gt;Konsole&lt;/strong&gt; es la aplicacion con K que mas
+aprecio, por un solo aspecto, su alta configuracion de atajos del teclado, no es
+que necesite demasiado, solo tener la ventana sin ninguna distraccion, ni barra,
+ni nada, algunos atajos de desplazamiento por pagina y linea, mas poder cambiar entre
+&amp;ldquo;tabs&amp;rdquo;(?, seciones? lo que el la tty haces con Alt+Flecha derecha/izquierda) y
+poco mas.&lt;/p&gt;
+
+&lt;p&gt;No estoy seguro si konsole, tiene incluida la caracteristica de dividir ventanas,
+(si la tiene la desactive) pues no la necesito)&lt;/p&gt;
+
+&lt;p&gt;Por varios años he permanecido fiel a Konsole, mi katana demoniaca obscura,
+varias han sido las ocaciones que he mirado en alguna herreria para conseguir
+otra arma secundaria (terminator y tmux) sin llegar a sentirme a gusto con estas,
+hasta que hace medio año (o algo asi) estube a punto de cambiar por terminix, por
+incorporar el &lt;strong&gt;overview&lt;/strong&gt; de Gnome, mas luego de unos dias, desisti y continue
+con la K&lt;/p&gt;
+
+&lt;h2 id=&#34;tilix-antes-terminix&#34;&gt;Tilix (antes terminix)&lt;/h2&gt;
+
+&lt;p&gt;Aunque el autocompletado-automagico de fish, es bueno, queria tener marcadores,
+para los 5 o 6 directorios &amp;ldquo;de trabajo&amp;rdquo; que mas utilso. Con esto en mente dio
+inicio una pequeña busqueda de internet, pero tras encontrar cosas de python y otras
+utilidades que no me daba confiansa instalar, di otra oportunidad a tilix,
+pues incorpora de serie marcadores y el amado &lt;strong&gt;overview&lt;/strong&gt; Gnomero!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/tilix-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;la razon por la que antes no hice la transicion se debio a no incorporar la
+configuracion del desplazamiento por linea, pero estimados colegas, un pequeño
+&lt;a href=&#34;https://github.com/gnunn1/tilix/issues/698&#34;&gt;issue&lt;/a&gt;, aun con engrish de
+traductor, es capas de conmover a nuetros forjadores&lt;/p&gt;
+
+&lt;p&gt;Si bien la peticion fue escuchada con prontedad, tilix, tiene (o tenia) un
+complejo proceso de compilacion que no fui capaz de realizar, tras unos meses de
+espera, y descubrir como incorporar la ultima version a mi distribucion, fue
+posible el &lt;em&gt;upgrade&lt;/em&gt; (o no) de equipamiento&lt;/p&gt;
+
+&lt;p&gt;Al igual que konsole, tilix tambien es altamente customizable en sus atajos,
+colores, desplazamientos, codificacion, apariencia, fuente y paleta de colores,
+etc&lt;/p&gt;
+
+&lt;p&gt;pero lo que mas me interesaba era el tema de los bookmarks. Dentro de la
+configuracion trae dicho apartado, peeeero, no fui capaz de entender como
+guardar una ruta y que luego funcionara, asi que cambie el atajo de teclado para
+ya dentro del directorio, invocar el menu y establecer el marcador&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/tilix-c.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y&amp;hellip;? &lt;strong&gt;funciono!&lt;/strong&gt;, solo pones el nombre del marcador y al abrir los marcadores
+ya puedes hacer el cambio&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/tilix-d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;tambien, tube que ajustar un poco el esquema de colores, tipografia y cursor,
+hasta lograr mi ambiente ideal&lt;/p&gt;
+
+&lt;p&gt;si bien hasta el momento no utilzo el modo Gnomero (F12), hay esta para cuando
+lo necesite&amp;hellip; o para impresionar a la plebe&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;keybindings&#34;&gt;keybindings&lt;/h2&gt;
+
+&lt;p&gt;complejo es establecer unos atajos medianamiente razonables sin exigir la
+presion de mas de tres teclas simultaneas, sin que estas sean capturadas por el
+entorno grafico, o entren en conflicto con el interprete y llegen a salvo hasta
+el programa en ejecucion&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + d :: añadir marcador&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + m :: seleccionar marcador&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + t :: el clasico para abrir una nueva secion/terminal&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + w :: el clasico para cerrar la secion/terminal&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + Flecha derecha/izquierda :: esta combinacion puede ser polemica, pero
+ como el interprete no la utiliza para seleccionar texto, pues la ocupo para
+ cambiar entre seciones (1, 2, 3, &amp;hellip; 1, 2 (y viceversa))&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + Flecha arriba/abajo :: desplazar texto por linea&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + Re/Av Pag :: desplazar texto por pagina&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;F12 :: overview&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + F9 :: preferencias&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + F10 :: mostrar atajos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + / :: añadir terminal abajo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + * :: añadir terminal a la derecha&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Shift + Alt + Flechas :: redimencionar terminal&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Alt + flechas :: cambiar entre terminal&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ctrl + 9 :: (en mi teclado esto es Ctrl + Shift + =) sincronizar entrada&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;basicamente estos son los atajos que mas utilizo (auque en verdad no necesito
+dividir, ni sincronizar terminales)&lt;/p&gt;
+
+&lt;p&gt;ademas, con dos terminales y once escritorios, no necesito distracciones
+inutiles como menus o docks, asi que la ventana aparece directamente a
+pantalla completa, para lograr esto en los atajos de gnome, en los atajos
+personales, vincule &lt;code&gt;Super + h&lt;/code&gt; a tilix (mapeo dvorak customizado) a la ruta
+&lt;code&gt;/usr/bin/tilix --full-screen&lt;/code&gt;, algo similar tenia con konsole, que paso a estar
+es &lt;code&gt;Super + t&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalacion&#34;&gt;instalacion&lt;/h2&gt;
+
+&lt;p&gt;fedora me atormenta, y es muy rara, y es un rollo&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;ya mencione que compilar tilix me resulto imposible, la primer vez que probe
+este terminal, lo obtube de un servicio(?) llamado corp, que no tengo mucha idea
+que es, pero parace que es parte de fedora. Bien, en esta ocacion preste
+atencion a una linea en la parte derecha de esa web que era nada mas y nada
+menos que la receta para incluir tilix en los repos, en efecto, algo muy raro&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnf copr enable heikoada/terminix
+dnf -y install tilix
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para otras distros, buscar en repositorios, o buscarse la vida&amp;hellip; o ver
+directamente el repo &lt;a href=&#34;https://github.com/gnunn1/tilix&#34;&gt;https://github.com/gnunn1/tilix&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -39,9 +281,232 @@ Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la conf
       <pubDate>Sat, 24 Dec 2016 10:04:44 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/apt/fish/</guid>
-      <description>fish &amp;ldquo;El Shell de los 90s&amp;rdquo;, es un shell como los son bash o zsh. Esta programado en C++ y se distribuye con la licencia GNU GPL version 2.
-Segun su pagina tiene autocompletado, autosugerencias, colores VGA, se puede configurar con una interfaz web, todo funciona sin necesidad de mover nada y sus scripts son los mas bonitos del barrio&amp;hellip; MENTIRA todos los scripts de shell son feos
-como? cambiar bash dialogo interno</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../ascii_fish.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;fish &lt;strong&gt;&amp;ldquo;El Shell de los 90s&amp;rdquo;&lt;/strong&gt;, es un shell como los son bash o zsh. Esta
+programado en C++ y se distribuye con la licencia GNU GPL version 2.&lt;/p&gt;
+
+&lt;p&gt;Segun &lt;a href=&#34;https://fishshell.com/&#34;&gt;su pagina&lt;/a&gt; tiene autocompletado, autosugerencias,
+colores VGA, se puede configurar con una interfaz web, todo funciona sin
+necesidad de mover nada y sus scripts son los mas bonitos del
+barrio&amp;hellip; &lt;strong&gt;MENTIRA&lt;/strong&gt; todos los scripts de shell son feos&lt;/p&gt;
+
+&lt;h2 id=&#34;como-cambiar-bash&#34;&gt;como? cambiar &lt;code&gt;bash&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;dialogo interno&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;luego de aprender lo basico de &lt;code&gt;bash&lt;/code&gt; (que ya funciona y lo hace bien) pasar a
+utilizar un shell que programa gente salida no se donde solo porque tiene
+colorines&amp;hellip; ja, ja, ja&amp;hellip; ni muerto, solo probare, para confirmar su
+inferioridad&amp;hellip; mierda, tiene autosugerencias/autocompletado automagico sin
+configurar nada&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;y asi es como pase a utilizar &lt;code&gt;fish&lt;/code&gt; y &lt;code&gt;bash&lt;/code&gt; dejo de ser suficiente.&lt;/p&gt;
+
+&lt;p&gt;Son mas bonitos los scripts fish? No.&lt;/p&gt;
+
+&lt;p&gt;Tiene tantos adeptos como bash? No.&lt;/p&gt;
+
+&lt;p&gt;Una interfaz de configuracion web es mejor? No.&lt;/p&gt;
+
+&lt;p&gt;Los colores de resaltado son mas llamativos? No, pero se pueden configurar.&lt;/p&gt;
+
+&lt;p&gt;El autocompletado/autosugerencias son perfectos? No, y sin embargo ya no puedo
+vivir sin esto&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalacion&#34;&gt;instalacion&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;$ su
+$ gestor-de-paquetes install fish
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;sin dejar el modo root revisa si fish se agrego a la &amp;ldquo;lista de shells&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cat /etc/shells
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de no encontrarse una linea que termine con &lt;code&gt;fish&lt;/code&gt; ejecuta&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ whereis fish
+fish: /usr/bin/fish /etc/fish /usr/share/fish /usr/share/man/man1/fish.1.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;acorde a la buenas costumbres &lt;code&gt;fish&lt;/code&gt; esta en &lt;code&gt;/usr/bin/&lt;/code&gt;. Agregamos la ruta
+a la lista de shells&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ echo &amp;quot;/usr/bin/fish&amp;quot; &amp;gt;&amp;gt; /etc/shells
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora cambiamos la shell por defecto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ chsh
+Cambiando intérprete de órdenes para nasciiboy.
+Nuevo intérprete de órdenes [/usr/bin/bash]: /usr/bin/fish
+$ exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si tenemos un terminal grafico, quiza sea necesario configurar el cambio
+(proceda segun el caso).&lt;/p&gt;
+
+&lt;p&gt;Ejecutamos &lt;code&gt;fish&lt;/code&gt;, o abrimos una nueva secion y optenemos esto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Welcome to fish, the friendly interactive shell
+Type help for instructions on how to use fish
+you@hostname ~&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si ejecutamos &lt;code&gt;help&lt;/code&gt; optenemos la documentacion en una pestaña del navegador por
+defecto&amp;hellip; claro siempre que estes en modo grafico de lo contrario
+optendras un error&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;configuracion&#34;&gt;configuracion&lt;/h2&gt;
+
+&lt;p&gt;si ejecutomos &lt;code&gt;fish_config&lt;/code&gt; se abrira una intefaz web (en el navegador web por
+defecto) donde podemos configurar el tema, el prompt y demas&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../fish_customize.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;si bien no esta aconsejado, podemos hacer lo mismo a mano con nuestro editor de
+confianza la ruta es &lt;code&gt;~/.config/fish/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;La configuracion basica (equivalente al &lt;code&gt;~/.bashrc&lt;/code&gt;) esta en &lt;code&gt;config.fish&lt;/code&gt;. Esta es
+la configuracion de nasciiboy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set -g -x fish_greeting &#39;&#39;              # elimina el mensaje de inicio
+set --export GOPATH /home/nasciiboy/go  # asi configuras una variable
+set --export PATH $GOPATH/bin $PATH     # asi agregas una ruta al PATH
+set --export EDITOR &amp;quot;emacs -nw&amp;quot;         # con esto se establece el editor
+
+# screenfetch -D debian                 # esto es un comentario comentado
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el prompt se establece en la carpeta &lt;code&gt;functions&lt;/code&gt; en el fichero
+&lt;code&gt;fish_prompt.fish&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function fish_prompt
+        set_color -o fff
+        printf &#39;--( &#39;
+
+        switch (whoami)
+                case nasciiboy
+                        set_color cyan
+                case root
+                        set_color red
+                case &#39;*&#39;
+                        set_color yellow
+        end
+
+        printf &amp;quot;%s&amp;quot; (whoami)
+
+        set_color fff
+        printf &#39; ) - { &#39;
+
+        set_color 54ffff
+        printf &#39;%s&#39; (prompt_pwd)
+
+        set_color fff
+        printf &amp;quot; }\n--| &amp;quot;
+
+        set_color normal
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto genera este prompt&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../nascii_prompt.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;para terminar el esquema de color y los alias se encuentran el el fichero
+&lt;code&gt;fishd.localhost.localdomain&lt;/code&gt; el &lt;code&gt;localdomain&lt;/code&gt; puede ser tu local domain en mi
+caso &lt;code&gt;localnasciiboy&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# This file is automatically generated by the fish.
+# Do NOT edit it directly, your changes will be overwritten.
+SET __fish_classic_git_prompt_initialized:\x1d
+SET __fish_init_1_50_0:\x1d
+SET __fish_init_2_3_0:\x1d
+SET fish_color_autosuggestion:ffffff
+SET fish_color_command:5fffff
+SET fish_color_comment:ff0000
+SET fish_color_cwd:green
+SET fish_color_cwd_root:red
+SET fish_color_end:ffffff
+SET fish_color_error:ffff00
+SET fish_color_escape:cyan
+SET fish_color_history_current:cyan
+SET fish_color_host:normal
+SET fish_color_match:cyan
+SET fish_color_normal:normal
+SET fish_color_operator:cyan
+SET fish_color_param:ffffff
+SET fish_color_quote:ffffff
+SET fish_color_redirection:ff5f00
+SET fish_color_search_match:\x2d\x2dbackground\x3dpurple
+SET fish_color_selection:\x2d\x2dbackground\x3dpurple
+SET fish_color_status:red
+SET fish_color_user:green
+SET fish_color_valid_path:\x2d\x2dunderline
+SET fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell\x0aType\x20\x1b\x5b32mhelp\x1b\x5b30m\x1b\x28B\x1b\x5bm\x20for\x20instructions\x20on\x20how\x20to\x20use\x20fish
+SET fish_key_bindings:fish_default_key_bindings
+SET fish_pager_color_completion:normal
+SET fish_pager_color_description:555\x1eyellow
+SET fish_pager_color_prefix:cyan
+SET fish_pager_color_progress:cyan
+SET fish_user_abbreviations:\x2b\x2b\x20ls\x20\x2dFalh\x20\x2d\x2dcolor\x3dauto\x1e\x2b\x20ls\x20\x2dF\x20\x2d\x2dcolor\x3dauto\x1e\u00e7\x20mocp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tengo tres alias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;+&amp;quot;  para &amp;quot;ls -F --color=auto&amp;quot;
+&amp;quot;++&amp;quot; para &amp;quot;ls -Falh --color=auto&amp;quot;
+&amp;quot;ç&amp;quot;  para &amp;quot;mocp&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;he probado la configuracion en varios sistemas y para root, ha funcionado sin
+inconvenientes&lt;/p&gt;
+
+&lt;h2 id=&#34;detalles&#34;&gt;detalles&lt;/h2&gt;
+
+&lt;p&gt;la mayoria de atajos de bash sirven en fish, tambien se pueden personalizar a
+exepcion de uno muy importante Ctrl-r (revizar el historial). fish soluciona
+esto de una forma mas elegante: siempre estas en el historial, con
+Ctrl-P/flecha-arriba para anterior, Ctrl-N/flecha-abajo para siguiente&lt;/p&gt;
+
+&lt;p&gt;quiza lo que menos me gusta de fish es su manera de ejecutar una tarea si la anterir se
+realiza. En bash es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ comando-1 &amp;amp;&amp;amp; comando-2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en fish es&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ comando-1; and comando-2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;manipular-scrips-fish-en-emacs&#34;&gt;Manipular scrips fish en emacs&lt;/h2&gt;
+
+&lt;p&gt;sencillo instalamos el paquete &lt;code&gt;fish-mode&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;mediante-melpa&#34;&gt;Mediante melpa&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;M-x package-install fish-mode
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;manualmente&#34;&gt;Manualmente&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/wwwjfy/emacs-fish.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y luego, dentro de emacs cargamos el paquete con:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(load-file &amp;quot;/RUTA/A/REPOSITORIO/emacs-fish/fish-mode.el&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para que el cambio sea permanente agregamos la enterior linea a &lt;code&gt;init.el&lt;/code&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -50,8 +515,63 @@ como? cambiar bash dialogo interno</description>
       <pubDate>Thu, 22 Dec 2016 11:56:44 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/apt/moc/</guid>
-      <description>En GNU existe una cantidad ridicula de reproductores de audio, por participar hasta el vlc o video (gnome) se meten en esos temas.
-En general este tipo de aplicaciones te piden una carpeta &amp;ldquo;especial&amp;rdquo; donde coloques la musica y luego exitienden sus tentaculos para optener portadas, letras, titulos, generar listas de reproduccion por autor/mas escuchados/genero, y un sin numero mas de caracteristicas que incluyen conectarse a la red, claro mientras te roban un espacio con una interfaz de lo mas mona, pensada para mover el raton de un lado a otro&amp;hellip;</description>
+      <description>&lt;p&gt;En GNU existe una cantidad ridicula de &lt;strong&gt;reproductores de audio&lt;/strong&gt;, por
+participar hasta el vlc o video (gnome) se meten en esos temas.&lt;/p&gt;
+
+&lt;p&gt;En general este tipo de aplicaciones te piden una carpeta &amp;ldquo;especial&amp;rdquo; donde
+coloques la musica y luego exitienden sus tentaculos para optener portadas,
+letras, titulos, generar listas de reproduccion por autor/mas escuchados/genero,
+y un sin numero mas de caracteristicas que incluyen conectarse a la red, claro
+mientras te roban un espacio con una interfaz de lo mas mona, pensada para mover
+el raton de un lado a otro&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;si por el contrario, &lt;strong&gt;el album es tu lista de reproduccion&lt;/strong&gt;, la carpeta con
+el nombre del grupo el unico metadato que necesitas y mover la mano con el raton
+no te genera ningun placer, existe &lt;strong&gt;moc&lt;/strong&gt; (&lt;a href=&#34;https://moc.daper.net/&#34;&gt;Music On Console&lt;/a&gt;)
+un eficiente reproductor de todo tipo de ficheros de audio desde la consola, con
+una interfaz tipo &amp;ldquo;navegador de ficheros&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;si tienes una distro descente (como debian) estara en los repositorios, en el
+caso de freidora la encontraras en rpm-fusion, instalarla no cuesta nada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gestor-de-pagetes install moc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para ejecutarla simplemente escribimos &lt;code&gt;mocp&lt;/code&gt; en la consola (en freidora por
+alguna obscura razon primero tenemos que crear un fichero en blanco (como root)
+&lt;code&gt;touch /etc/popt.d/empty_file&lt;/code&gt;) y optenemos esto&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../moc-default.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;como soy un ser de la noche, fue necesario realizar alguna modificacion dejando
+el tema asi&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../moc-nascii.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;en este &lt;a href=&#34;../moc-nascii-theme.zip&#34;&gt;zip&lt;/a&gt; encontraras el tema &amp;ldquo;nascii-theme&amp;rdquo; y una
+configuracion basica. Debes colocar el contenido en tu home dentro del
+directorio &lt;code&gt;.moc&lt;/code&gt;, no sin antes modificar las siguientes lineas del fichero
+&lt;code&gt;config&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# substituye &amp;quot;user&amp;quot; por tu nombre de usuario
+# linea  72 - directorio por defecto
+MusicDir = &amp;quot;/home/user/fonos&amp;quot;
+# linea  92 - reproducir siguiente pista
+AutoNext = yes
+# linea 194 - tema por defecto
+Theme = /home/user/.moc/themes/nascii_theme
+# linea 242 - guardar playlist para la siguiente secion
+SavePlaylist = yes
+# En la posicion 277 puedes configurar el acceso
+# rapido a algunos directorios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;presionando &lt;code&gt;h&lt;/code&gt; se muestran los comandos (teclas) que puedes ejecutar.&lt;/p&gt;
+
+&lt;p&gt;Listo, a disfrutar de buena musica&lt;/p&gt;
+
+&lt;p&gt;ps: ese album de la cura esta&amp;hellip; bueno, en contraste a algunos otros.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -60,8 +580,47 @@ En general este tipo de aplicaciones te piden una carpeta &amp;ldquo;especial&am
       <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/apt/shnsplit/</guid>
-      <description>En este mundo existen algunos seres extraños con tanto amor (libros, musica, series, peliculas, porno, &amp;hellip;) que no les cabe en su disco duro y tienen que compartirlo.
-Si el amor viene en forma de una sola pista flac, no hagas como yo y la mandes a la mierda, toda muestra de afecto merece respeto&amp;hellip; exepto si proviene de un degenerado que graba viniles en digital a maxima calidad, si formas parte de este grupo no mereces tener oidos.</description>
+      <description>&lt;p&gt;En este mundo existen algunos seres extraños con tanto amor (libros, musica,
+series, peliculas, porno, &amp;hellip;) que no les cabe en su disco duro y tienen que
+compartirlo.&lt;/p&gt;
+
+&lt;p&gt;Si el amor viene en forma de &lt;strong&gt;una sola pista flac&lt;/strong&gt;, no hagas como yo y la
+mandes a la mierda, toda muestra de afecto merece respeto&amp;hellip; exepto si proviene
+de un degenerado que graba viniles en digital a maxima calidad, si formas parte
+de este grupo no mereces tener oidos.&lt;/p&gt;
+
+&lt;p&gt;Bueno, podemos optener las pistas individuales siempre y cuando la pista este
+acompañada de un fichero con terminacion &lt;strong&gt;.cue&lt;/strong&gt;. Primero necesitamos instalar
+unas cuantas herramientas, tanto en debian como en freidora son las siguientes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gestor-de-paquetes install cuetools shntool flac
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego vamos hasta la carpeta que tiene la pista a dividir y ejecutamos el
+siguiente comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;shnsplit -f pista.cue -o flac pista.flac
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;modificando &lt;code&gt;pista&lt;/code&gt;, por el nombre especifico de &lt;strong&gt;tu&lt;/strong&gt; pista. Luego de ejecutar
+esto tendremos pistas independientes con el formato &lt;code&gt;split-track01.flac&lt;/code&gt;,
+&lt;code&gt;split-track02.flac&lt;/code&gt;, &lt;code&gt;split-track&lt;/code&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;para colocar los metadatos (titulo, autor) en las pistas invocamos lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cuetag.sh pista.cue split-track*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en ocaciones, este comando puede informarnos que el numero de pistas no
+coincide, si se presenta dicha circunstancia revisa si tienes una pista con
+nombre &lt;code&gt;split-track00.flac&lt;/code&gt;, te la cargas y vuelves a intentar.&lt;/p&gt;
+
+&lt;p&gt;Pero&amp;hellip; y todo esto aun nos deja las pistas con nombre &lt;code&gt;split-track*&lt;/code&gt;, para eso
+no conosco una solucion elegante desde linea de comandos. La solucion que
+utilizo es abrir moc (&lt;strong&gt;Music On Console&lt;/strong&gt;) copiar todos las nombres de las
+pistas (el titulo se muestra a partir de los metadatos) y con Emacs cambiar los
+nombres &amp;ldquo;a mano&amp;rdquo; en &lt;code&gt;wdired-change-to-wdired-mode&lt;/code&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

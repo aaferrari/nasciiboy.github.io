@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Tue, 11 Apr 2017 12:38:06 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/ncurses/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/ncurses/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,7 +18,133 @@
       <pubDate>Tue, 11 Apr 2017 12:38:06 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/pg2ncurses/</guid>
-      <description>Go, que no es un lenguaje nuevo (ya tiene sus añitos) carece de librerias nativas para desplegar guis, asi como tuis&amp;hellip; bueno esto ultimo no es del todo cierto, pues cuenta con unas pocas librerias nativas para mostrar graficos por la terminal, solo queeee, estan muy verdes, me explico, tienes la habilidad de modificar los caracteres, conocer la dimencion de la terminal, leer la entrada del rator (y teclado) y poco mas, ni funciones para desplegar texto, ni scroll, ni todo el arsenal de funciones que por ejemplo, posee ncurses.</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../gumy.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Go, que no es un lenguaje nuevo (ya tiene sus añitos) carece de librerias
+nativas para desplegar guis, asi como tuis&amp;hellip; bueno esto ultimo no es del todo
+cierto, pues cuenta con unas pocas librerias nativas para mostrar graficos por
+la terminal, solo queeee, estan muy verdes, me explico, tienes la habilidad de
+modificar los &lt;q&gt;caracteres&lt;/q&gt;, conocer la dimencion de la terminal, leer la
+entrada del rator (y teclado) y poco mas, ni funciones para desplegar texto, ni
+scroll, ni todo el arsenal de funciones que por ejemplo, posee &lt;strong&gt;ncurses&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Asi que lo mas logico fue &lt;s&gt;cambiar de lenguage&lt;/s&gt; comenzar la escritura de
+una nueva libreria para hacer cosas en la terminal, con casinos y colegialas
+japonesas!&lt;/p&gt;
+
+&lt;p&gt;Da la  casualidad, que tenia a la mano el libro &lt;strong&gt;Programmer&amp;rsquo;s Guide to Ncurses&lt;/strong&gt;
+de un tal Dang Gookin y ya que estaba en la labor hago una breve reseña del
+asunto (y otras cosas)&lt;/p&gt;
+
+&lt;p&gt;Por cierto si nos sabes que es ncurses, puedes visitar un post
+relacionado &lt;a href=&#34;../ncurses/index.html&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;comor&#34;&gt;comor?&lt;/h2&gt;
+
+&lt;p&gt;El libro asume que tienes conocimientos de programacion, especificamente
+programacion en C, que es el lenguaje con el que esta escrita la libreria ncurses,
+aunque tambien podrias utilizar C++.&lt;/p&gt;
+
+&lt;p&gt;Tambien, que estas o vas a programar bajo un entorno *nix, con un arsenal
+formado por un terminal (con bash), editor y un compilador (gcc), aunque esto
+queda mas como una recomendacion. Aun asi se toma un par de secciones para
+enseñar lo mas basico antes de iniciar. Quedando como asignacion a quien tome el
+material, profundizar en el uso de estas herramientas&lt;/p&gt;
+
+&lt;p&gt;Una vez aclarado el tema, la estructura de la lectura es: plantear/mostrar unas
+cuantas funciones de la libreria, dejar el codigo fuente de un programa con
+dichas funciones y analizar un poco el asunto.&lt;/p&gt;
+
+&lt;p&gt;La &lt;q&gt;dificultad&lt;/q&gt; aumenta de forma incremental, a medida que se van
+introduciendo los conseptos propios de ncurses (estos ultimos son suficientes
+para hacerse de una idea de como esta implementada la libreria, o al menos sirve
+de guia para implementar una propia) pasando por mostrar texto, leer la entrada
+del teclado, refrescar la pantalla, ventanas, color, etc.&lt;/p&gt;
+
+&lt;p&gt;Si bien todo es muy ameno, con un lenguaje relajado y no existen retos que
+puedan frustrar a quien inicia, lamentablemente el asunto no pasa de ser un
+&lt;strong&gt;paseo por la libreria&lt;/strong&gt;. Puedes olvidarte de tener el codigo para construir
+una interfaz molona, menos, fantacear con programar un videojuego o un editor de
+texto.&lt;/p&gt;
+
+&lt;p&gt;Digo el material (pdf) son 570 paginas, aunque tiene truco, de esas paginas lo
+didactico representa el 35% con letra grande y un monton de listados (esto esta
+bien), el resto es una &lt;q&gt;compilacion&lt;/q&gt; de todas las funciones, con una
+pequeña explicacion, su formato, notas y ejemplos, muy del estilo de las paginas
+man (sospecho que con un pequeño retoque). Llega a dar la imprecion que solo fue
+hecho para sacar algunas monedas, algo lamentable, pues aparte de una
+pequeña guia oficial de la libreria, este es el unico material de consulta sobre
+el tema y encima los dos (estaban) en ingles.&lt;/p&gt;
+
+&lt;p&gt;Entonces? es bueno para conocer los fundamentos de ncurses, salir de
+algunas dudas y como material de referencia. Si deseas profundizar y ejemplos
+mas elaborados, necesario acudir a la documentacion oficial de la libreria
+(NCURSES Programming HOWTO).&lt;/p&gt;
+
+&lt;h2 id=&#34;prison-blues&#34;&gt;Prison Blues&lt;/h2&gt;
+
+&lt;p&gt;a bbeeee, boooohoo, hooo, beeep, beibe. Hace mucho, mucho tiempo, mientras
+experimentaba con org mode, el sujeto de este post sirvio
+de &lt;a href=&#34;../cobaya.zip&#34;&gt;cobaya&lt;/a&gt; en la busqueda del sistema de documentacion
+definitivo(?), tambien como excusa para traducir cosas y aprender (o no) un poco
+ingles de forma salvaje.&lt;/p&gt;
+
+&lt;p&gt;Por aquel tiempo imaginaba que prodria finaciarme adaptando libros a formato
+digital, cobrando en $dolares. El asunto no fue muy bien e incluso fui llamado
+ladron, je, quiza con razon, como saberlo. Lo intente un par de veces mas
+enviando el material a algunas editoriales sin resivir respuesta, en fin.&lt;/p&gt;
+
+&lt;p&gt;Al menos, sirvio para conocer los limites de org-mode, que cayo de mi gracia, al
+igual que ncurses, por cierto la hoja de estilos, no esta muy fina y lo
+referente al español, solo fue revisado mientras lo iba leyendo.&lt;/p&gt;
+
+&lt;p&gt;Org-mode, tiene pocos estilos de resaltado y sus estructuras no estan pensadas
+para maquetar documentos extensos, asi que alguna seccion puede fallar, ademas
+la traduccion esta en bruto sobre el material original comentado. Se puede
+exportar del fuente, pero org es lento y puede fallar, por aquel tiempo un bug
+en alguna cosa hacia que emacs se colgara un rato y consumiera 3gb de ram el
+solito, motivo por el cual tuve que expardir la memoria a 8gb. No se por que
+sera pero no se resalta en colores el codigo fuente.&lt;/p&gt;
+
+&lt;h2 id=&#34;sobre-ncurses&#34;&gt;sobre ncurses&lt;/h2&gt;
+
+&lt;p&gt;Partiendo del principio de que ncurses es heredero de una libreria que permitia
+mayor control &lt;strong&gt;sobre un terminal&lt;/strong&gt;, con hardware y software primigenios de
+limitadas capacidades, unica y exclusivamente para manejar texto codificado en
+ASCII&amp;hellip; fue perfecto!&lt;/p&gt;
+
+&lt;p&gt;Ahora bien, en el precente con equipo que es capaz de mostrar mas colores que el
+arcoiris, emuladores de terminal sobre entornos graficos y mas caracteres que
+chinos&amp;hellip; es limitado.&lt;/p&gt;
+
+&lt;p&gt;No se mal entienda un terminal es para ser un terminal, su deber es ser
+eficiente desplegando texto, no tiene sentido dedicar 4 bytes por caracter para
+almacenar colores, ni 2 bytes para atributos (negrita, italica, subrayado, etc),
+menos tener la capacidad de modificar los caracteres a nivel pixel (para generar
+imagenes), como tampoco tener velocidades de refresco de pantalla mayores a 10 o
+20 ciclos, o contar con &lt;strong&gt;&lt;q&gt;modos graficos&lt;/q&gt;&lt;/strong&gt;, soporte para mandos, o midi,
+o que la lectura de teclado y raton fuesen librerias independientes&lt;/p&gt;
+
+&lt;p&gt;Pero por que tener la necesidad de averiguar si el terminal puede hacer esto o
+aquello, si tiene o no soporte para colores (8, 16, 256, etc), no puede haber un
+jodido estandar que me asegure poder desplegar interfaces lizergicas
+basadas en texto, con midis y pad, si o si?&lt;/p&gt;
+
+&lt;p&gt;La documentacion y ser software libre son importantes, tanto como lo es para mi
+el contar con codigo para subnormales (como yo), quiza es lentitud mia el
+encontrar indescifrable el codigo de Ncurses, seran las macros? los guiones
+bajos?&amp;hellip; misterioso (ademas de digno de respeto) que un solo individuo lleve el
+desarrollo de esta libreria desde hace varios años (que hace poco libero la
+vercion 6 (sin aparentes cambios)), los motivos, son un enigma digno de mayor
+analisis, te ha pasado actualizar la pantalla con algun &lt;code&gt;wrefresh&lt;/code&gt; y no ver
+cambios?&lt;/p&gt;
+
+&lt;p&gt;(narrador) Y asi mientras nasciiboy se cuestionava sobre el pasado, presente y
+futuro de las terminales, otro dia mas llegaba a su fin en la isla de los heroes
+del viento, no dejen de sintonizar la proxima entrega (/narrador)&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -27,8 +153,60 @@
       <pubDate>Mon, 19 Dec 2016 21:45:05 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/ncurses/</guid>
-      <description>Que es Ncurses Es una libreria (parte del proyecto GNU) que nos permite crear TUIs (Text User Interface) escrita en lenguaje de programacion C con envoltorios para algunos otros lenguajes. Se utiliza principalmente en el sistema GNU/linux y en los derivados de BSD y probablemente tambien corra en el sistema de las ventanas mediante minGW (Minimalist GNU for Windows).
-Proporciona funciones para «dibujar» caracteres en la pantalla con hasta 256 colores disponibles (si la terminal lo permite).</description>
+      <description>
+
+&lt;h2 id=&#34;que-es-ncurses&#34;&gt;Que es Ncurses&lt;/h2&gt;
+
+&lt;p&gt;Es una libreria (parte del proyecto GNU) que nos permite crear &lt;strong&gt;TUIs&lt;/strong&gt; (Text
+User Interface) escrita en lenguaje de programacion &lt;strong&gt;C&lt;/strong&gt; con &lt;em&gt;envoltorios&lt;/em&gt; para
+algunos otros lenguajes. Se utiliza principalmente en el sistema GNU/linux y en
+los derivados de BSD y probablemente tambien corra en el sistema de las ventanas
+mediante minGW (Minimalist GNU for Windows).&lt;/p&gt;
+
+&lt;p&gt;Proporciona funciones para «dibujar» caracteres en la pantalla con hasta 256
+colores disponibles (si la terminal lo permite). Despues de conocer &lt;code&gt;mvwprintw&lt;/code&gt;
+utilizar &lt;code&gt;printf&lt;/code&gt; es igual a sufrir alguna incapacidad. Tambien nos da la
+posibilidad de modificar varios atributos de la tipografia como pueden ser
+&lt;strong&gt;negrita&lt;/strong&gt;, &lt;em&gt;italica&lt;/em&gt; o &lt;u&gt;subrayado&lt;/u&gt;.&lt;/p&gt;
+
+&lt;p&gt;finalmente nos ofrece la posibilidad de tener acceso completo al teclado y
+raton.&lt;/p&gt;
+
+&lt;h2 id=&#34;por-que-programar-tuis&#34;&gt;Por que programar TUIs&lt;/h2&gt;
+
+&lt;p&gt;Bueno, es una foma muy sencilla de crear una interfaz «visual» sin morir en el
+intento y como fiel creyente de la iglesia de Emacs creo que &lt;em&gt;el texto es la
+unica interfaz verdadera&lt;/em&gt;. Si planeas aprender programacion de videojuegos
+tambien encontraras que es mas sencillo interactuar con caracteres en lugar de
+con pixeles (aunque en el fondo sean lo mismo)&lt;/p&gt;
+
+&lt;h2 id=&#34;como-aprender-a-programar-con-ncurses&#34;&gt;Como aprender a programar con Ncurses?&lt;/h2&gt;
+
+&lt;p&gt;complicado lo tienes&amp;hellip; solo existe un mini-manual (NCURSES Programming HOWTO) y
+un libro (Programmer&amp;rsquo;s Guide to NCurses) (ambos en ingles) para aprender lo
+basico del tema.&lt;/p&gt;
+
+&lt;p&gt;Tampoco leer codigo ayuda mucho, sobre todo el codigo fuente de la propia
+libreria (es muy raro).&lt;/p&gt;
+
+&lt;p&gt;Hace ya un tiempo dedique algunas tardes a traducir el minimanual, puedes encontrar
+lo fundamental en este &lt;a href=&#34;../ncurses-programming-howto.zip&#34;&gt;zip&lt;/a&gt; y el resto en un
+repositorio en &lt;a href=&#34;https://github.com/nasciiboy/NCURSES-Programming-HOWTO&#34;&gt;github&lt;/a&gt;.
+No ha sido revisado, y la traduccion  se realizo con el &amp;ldquo;traductor de
+internet&amp;rdquo;. En el repositorio encontraras los fuentes en formato org-mode de
+emacs, en algun momento (o años) le dare alguna revicion y quizo se
+actualice. Si te es de &lt;code&gt;interes &amp;amp;&amp;amp; utilidad &amp;amp;&amp;amp; y-lo-mejoras&lt;/code&gt; no dudes en
+enviarme el resultado&lt;/p&gt;
+
+&lt;p&gt;quiza en un post/tutorial futuro ponga algun codigo interesante del tipo &amp;ldquo;como
+programar un tetris&amp;rdquo; o algo asi&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;ps: tengo una traduccion (ilegal) de el libro casi terminada&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;ps 2: actualmente no me gusta ncurses, principalmente por que no entiendo su
+codigo fuente, y porque es un &amp;ldquo;todo en uno&amp;rdquo;, preferiria que la interaccion con
+el teclado, el mouse e incluso joystick fuesen librerias independientes&lt;/p&gt;
+</description>
     </item>
     
   </channel>

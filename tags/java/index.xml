@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Fri, 10 Nov 2017 14:57:41 -0600</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,235 @@
       <pubDate>Fri, 10 Nov 2017 14:57:41 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/prog/javame/</guid>
-      <description>Por que razones concientes y sin coercion externa aprender java?
-en mi caso, hice un solemne juramento de no aprender java (y quiza python, js&amp;hellip;) y en general nada 7 veces mas lento que C&amp;hellip; porque cualquier lenguaje un orden de magnitud mas lento que C, es directamente una basura&amp;hellip; o tiene un ambito de uso extremadamente especifico, como servir para crear extensiones o como prompt. Fuera de este uso, nadie &amp;ldquo;serio&amp;rdquo; sacarlos deberia.</description>
+      <description>
+
+&lt;p&gt;Por que &lt;a href=&#34;https://picodotdev.github.io/blog-bitix/2015/05/10-razones-para-seguir-usando-java/&#34;&gt;razones&lt;/a&gt;
+concientes y sin coercion externa aprender java?&lt;/p&gt;
+
+&lt;p&gt;en mi caso, hice un solemne juramento de no aprender java (y quiza python,
+js&amp;hellip;) y en general nada 7 veces mas lento que C&amp;hellip; porque cualquier lenguaje un orden
+de magnitud mas lento que C, es directamente una basura&amp;hellip; o tiene un ambito de uso
+extremadamente especifico, como servir para crear extensiones o como
+prompt. Fuera de este uso, nadie &amp;ldquo;serio&amp;rdquo; sacarlos deberia. Crear programas completos
+directamente en esos lenguajes es una guarrada y una falta de
+respeto por el espiritu que habita en el silicio. Por decir algo, es casi tan
+aberrante como mi forma de escribir&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;pero bueno, hace mucho tiempo que java merodea por el mundo, y en general es
+unas 4-6 veces mas lento que C, asi que entra en la zona estelar de los lenguajes que
+permiten la existencia de agua liquida. Entonces, por que mantenia una
+resistencia interna a aprender java?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;todas las cosas hechas con Java dan la sensacion de estar lagueadas. (Arde en el
+infierto android)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;deriva de C++ y C++ no es un lenguje agradable para programar (si tocas todas
+sus posibilidades), por que tiene un monton de caracteristicas obscuras y
+sutiles, que lo hacen absurdamente complejo, dificil de leer e imposible de
+dominar (o no)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;hiede a empresarial, y las cosas empresariales no son divertidas, y yo viene a
+la programacion para estar cool (&amp;lt;== obscura referencia al manga GTO)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;pero estonces, por que siquiera de estas explicaciones, que hechos se han
+conjurado para ceder al mal?&lt;/p&gt;
+
+&lt;p&gt;basicamente, mientras continuo el trepidante camino en la programacion
+autodidacta sin tener idea (de mates, english o adonde dirigirme), y a medida
+que va creciendo la complejidad de las cosas que &amp;ldquo;planeo&amp;rdquo; programar, la
+intuicion y sentido comun me dice que muchos de esos secretos ancestrales se
+encuentran alla afuera&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/believer.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;o en el peor de los casos, estan cerca de ser ser promulgados, por alguien&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;como apenas inicio mis andansas por el mundo de las mategicas y el engrish aun
+es arido en sus detalles, para no desaprobechar ese regalo llamado ser el
+fracasado treinton sin empleo que se queda en la pc todo el dia sin hacer nahhh
+y que vive permanentemente en la banca rota&amp;hellip; mejor leer cosas programacionales
+en español, un  inquietante campo superpoblado con material que utiliza a
+java como lenguaje universal, asi que por el bien del mundo, a joderse!&lt;/p&gt;
+
+&lt;h2 id=&#34;instalar-java&#34;&gt;Instalar Java&lt;/h2&gt;
+
+&lt;p&gt;Casi todos los sistemas del Ñu traen un java instalado por defecto, como en el
+caso de freidora el openjdk-1.8, pero con esto no nos vasta para comenzar a
+&amp;ldquo;compilar&amp;rdquo; programos, hace falta instalar el paquete &lt;em&gt;devel&lt;/em&gt; para optener el
+programa &lt;code&gt;javac&lt;/code&gt;. Ya que estamos (y por que en freidora 27 aparece en los repos)
+pues mejor instalar lo ultimo de lo ultimo, por si lanzamos pestes, sus fancis no digan
+que la causa es utilizar una version desfasada; ademas es casi completamente
+compatible con el codigo vintage!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# paquetes del java-9
+dnf -y install java-9-openjdk java-9-openjdk-devel
+
+# le decimos al sistema que este va a ser el &amp;quot;java bueno&amp;quot;
+# nos preguntara con un numero cual java poner por defecto
+# el que tenga un =nueve= sera el efectivo
+update-alternatives --config java
+
+# lo mismo que el anterior pero para el javac
+update-alternatives --config javac
+
+# comprobamos que la version es correcta
+java -version
+javac -version
+
+# no se que es esto, pero parece importante para el futuro
+dnf -y install maven
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego, tenemos que configurar en nuestro shell las rutas donde el java buscara
+las &amp;ldquo;librerias&amp;rdquo; para compilar sus cosas. Esto se hace estableciendo la variable &lt;code&gt;CLASSPATH&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;En &lt;code&gt;fish&lt;/code&gt; ha sido asi (&lt;code&gt;~/.config/fish/config.fish&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set --export CLASSPATH  &#39;/usr/share/java:.:/home/mi-usuario/.java&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;solo acepta rutas absolutas. Las rutas se separan por dos puntos (&lt;code&gt;:&lt;/code&gt;).  La
+primera es donde esta la libreria estandar (en freidora), la segunda, &amp;ldquo;el
+punto&amp;rdquo;, es para que busque en el directorio actual, y la tercera, para colocar
+cualquier libreria externa que me encuentre por el internet sin comprometer el
+sistema demaciado, y para no hacer cosas de root con frecuencia, ademas es una
+carpeta oculta para no molestar&lt;/p&gt;
+
+&lt;p&gt;oh, como el java nueve es muy moderno, incluye un comando de tipo REPL, que
+significa que podemos programar de forma interactiva. Solo hay que typear
+&lt;code&gt;jshell&lt;/code&gt; y voala, a programar sin compilaciones y con mucho
+l-a-a-g-g-g-g-g-g. Este tipo de cosillas y sus tiempos de respuesta me ponen
+nostalgico, como que estubiera en otro tiempo y asi fuera programar &amp;ldquo;de verdad&amp;rdquo;,
+fuera de sarcasmos, tiene su encanto!&lt;/p&gt;
+
+&lt;p&gt;encontre sobre esto del &lt;code&gt;jshell&lt;/code&gt; en un libro (en ingles) llamado &amp;ldquo;Java 9
+Programming By Example&amp;rdquo; de facil optecion, al menos en un sito llamado
+&lt;em&gt;allitebooks&lt;/em&gt;. jo, jo, jo, que jocosos los de la editorial del libro, que te
+insitan a informar si lo encuentras por la red, me dan ganas (si lo continuo y es
+interesante) de cobayisarlo, ya veremos&lt;/p&gt;
+
+&lt;h2 id=&#34;el-editor&#34;&gt;El editor&lt;/h2&gt;
+
+&lt;p&gt;fuuuhh, aver, en emacs hay un modo para esto, es decir lo basico, resaltado e
+indentacion, si quieres mas pues a buscar por vias alternas.&lt;/p&gt;
+
+&lt;p&gt;Hay un modo externo que se llama &lt;strong&gt;jdee&lt;/strong&gt;, con resaltado de errores,
+autocompletado, documentacion, dos espacios de indentacion por defecto y otras
+promesas mas, aunque la instalacon en mi caso no fue bien, creo que es algo
+relacionado con las rutas de java.&lt;/p&gt;
+
+&lt;p&gt;Al ver que la cosa no iba muy fina, reverti los cambios y deje el emacs como al
+inicio y toco ir por la segunda alternativa: un viscoso, (d)oloroso, consumista y
+lentorro &lt;strong&gt;IDE&lt;/strong&gt;&amp;hellip; bueno la prueba se limito a &lt;strong&gt;eclipse&lt;/strong&gt;, la unica conclusion
+que puedo dejar sobre la experiencia, es que mi maquina no es apta para correr
+estas cosas para developers modernos&lt;/p&gt;
+
+&lt;p&gt;asi que ha regresar al emacs &amp;ldquo;a pelo&amp;rdquo;&lt;/p&gt;
+
+&lt;h2 id=&#34;documentacion&#34;&gt;Documentacion&lt;/h2&gt;
+
+&lt;p&gt;Esto es un punto bastante jodido con java, no tengo ni puta idea sobre como se
+organiza la libreria estandar, ni que tan lejos llega o como se utiliza. Para
+volverlo aun mas complejo no hay documentacion en linea de comandos similar a
+&lt;code&gt;man 3&lt;/code&gt; o &lt;code&gt;go doc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;La opcion de emergencia fue bajar los docs de Java para &lt;code&gt;zeal&lt;/code&gt; y tampoco fue de
+mucha ayuda, de nuevo no tengo idea de como se organiza|utiliza la libreria
+estandar y abrir un libro (pdf en este caso) &lt;em&gt;especializado&lt;/em&gt; para averiguar que
+clase se utiliza para tal cosa, o como hereda de tal otra, no es una opcion que pueda
+contemplar&lt;/p&gt;
+
+&lt;h2 id=&#34;thinking-in-java-2-da-edicion&#34;&gt;Thinking in JAVA, 2^da edicion&lt;/h2&gt;
+
+&lt;p&gt;Vamos con la carnita, un libro viejuno de Java 2, de los años 2000, donde hablan
+de las guerras de navegadores con el netscape vs el explorer y podian ejecutar
+el java salvagemente con etiquetas html!&lt;/p&gt;
+
+&lt;p&gt;Tome este libro por que el codigo del autor me parecio mas que bonito en su
+libro de Piensa en C++ (era joven). Tambien por que fue lo que encontre en
+español, por que tiene muchas paginas, por que sale rapido en una busqueda con
+terminacion &lt;em&gt;pdf&lt;/em&gt; y por que el codigo fuente de los ejercios tiene &lt;em&gt;dos
+espacios de indentacion&lt;/em&gt;, haci lo hacia Stallman, haci lo hacia este autor, haci
+lo hago yo y haci lo haran mis decendientes sinteticos.&lt;/p&gt;
+
+&lt;p&gt;El libro tiene una version 4, que data del 2006, en ingles asi que esta
+descalificado, pero desde la pagina del autor pueden descargar el codigo de los
+ejemplos y el libro (en ingles) en formato html de esta 2^da edicion. Aqui el &lt;a href=&#34;http://www.mindviewinc.com/downloads/TIJ-2nd-edition.zip&#34;&gt;enlace al
+zip&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;o, y por si el enlace esta roto, bajarlo de &lt;a href=&#34;https://nasciiboy.github.io/data/TIJ-2nd-edition.zip&#34;&gt;aca&lt;/a&gt;,
+a esta le aplique un &lt;code&gt;dos2unix&lt;/code&gt; a todos los ficheros, para no tener que ver el
+&lt;em&gt;DOS&lt;/em&gt; en el emacs&lt;/p&gt;
+
+&lt;p&gt;antes de continuar y si se quiere seguir el libro, es importante que
+descomprinas el zip, tiene una carpeta con el libro y otra con el codigo fuente,
+toma esta ultima y mueve/copia la carpeta &lt;code&gt;com&lt;/code&gt; a donde sea
+que tengas apuntando la variable &lt;code&gt;CLASSPATH&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Una ves hecho esto vasta con entrar a la carpeta que se este estudiando y hacer
+un &lt;code&gt;make&lt;/code&gt;, casi todos los ejemplos compilan, excepto en los capitulos (creo que)
+12 en adelante, cuando se pone a hacer cosas con GUI y por que tiene una feo
+fetichismo de incluir sus librerias en cada ocacion.&lt;/p&gt;
+
+&lt;p&gt;Ahora si, que tal el libro?&lt;/p&gt;
+
+&lt;p&gt;un libro con DLC&amp;hellip; el autor aprovecha cada ocacion que tiene para mencionar que
+puedes bajar tal o cual material suyo en su web, y que por una modica cantidad
+te ofrece &lt;del&gt;droga&lt;/del&gt; las respuestas a los ejercicios, el resto, por supuesto
+[inserta aqui efecto de susurrar al oido] &lt;em&gt;es gratis&lt;/em&gt;. Algo molesto en mi opinion,
+mas para venir en un libro comprado, con mencionarlo en el prefacio bastaba&lt;/p&gt;
+
+&lt;p&gt;Los primeros capitulos (hasta antes de la aparicon de herecia e interfaces) son bastantes
+llebaderos, explica de forma condesada y clara muchas cosas, como que jodidos es
+un recolector de basura (junto con sus inconvenientes que dan miedo), que es un
+hilo del sistema, por que java esta diseñado como esta diseñado, su evolucion,
+carencias y defectos&lt;/p&gt;
+
+&lt;p&gt;en el capitulo de la herencia las cosas se ponen turbias, te agobia con
+un monton de caracteristicas obscuras. Fue entonces cuando el formato &amp;ldquo;Catalogo
+de referencia&amp;rdquo; del libro salto a la conciencia. Seguramente por la propia
+naturaleza ecleptica de java. El autor no duda en mencionar cada una de sus multiples
+opciones y capacidades, lo que sumado a que el libro no te enseña a hacer nada
+(por decirlo de alguna manera), hace dificil retener el sin numero de opciones&lt;/p&gt;
+
+&lt;p&gt;Cuando la cantidad de informacion es abrumadora como en este caso, recomiendo
+entrar en modo paseo por tienda, ver que hay y si el vendedor se acerca, decirle que no
+moleste. Todas estas opciones solo se retienen en el cortex luego que se
+presentan los problemas mientras se va programando, ese es el momento donde
+saber que exite una cosa (aunque no como hacerlo) regresa a nuestro recuerdo y
+podemos ejecutar el aprendizaje teorica y practimamente, y quiza si es posible
+con aplicaciones recurrentes, memorizarlo&lt;/p&gt;
+
+&lt;p&gt;cerca de la pagina 450 el material comenzo a parecer pesado.&lt;/p&gt;
+
+&lt;p&gt;Ya que la principal motivacion de leer el libro era enterarme que estan
+exponiendo en algun ejemplo corto de algun libro intereante, no dedicarme a
+programar en java, me plantee dejar la lectura y pasar a otra cosa. Pero
+continue al siguente capitulo y aparecieron cosas relevantes. Si tambien vas
+en modo paseo, almenos lee el inicio de cada capitulo y alguna seccion relevante&lt;/p&gt;
+
+&lt;p&gt;Como conclusion el libro es eso, un buen material de consulta.&lt;/p&gt;
+
+&lt;p&gt;Sobre java:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Es un lenguaje pegote (o katamari), se le adiere todo, un monton de
+posibilades que incitan a hacer guarradas y no enterarte de lo que algun
+programador con preferencias exquisitas este haciendo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;La jerarquia, asociacion y documentacion de sus clases no es intuitiva&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;ldquo;compilar&amp;rdquo; y &amp;ldquo;cargar&amp;rdquo; (&lt;code&gt;javac&lt;/code&gt;, &lt;code&gt;java&lt;/code&gt;) es un rollo y se siente lento&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;El lenguaje no esta diseñado, es 🌈evolutivo🌈. Toma la inco(nsist|her)ente base de C++, la simplifica,
+y hace mas verbosa, un monton de clases, enfoques, palabras clave y especificadores con
+multiples significados que enturbian la 🌈experiencia🌈&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;y ya! bienvenidos los insultos y duelos a muerte!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,9 +255,209 @@ en mi caso, hice un solemne juramento de no aprender java (y quiza python, js&am
       <pubDate>Sun, 05 Nov 2017 19:55:02 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/post/ramen-xiii/</guid>
-      <description>nota mental, cuando aplicas fuego a una tecla de laptop intentando borrar el simbolo (de las ventanas)&amp;hellip; esta se deforma alarmantemente rapido y queda inservible.
-en esta entrega mas divagacion y cosas previas&amp;hellip;
-primero me pregunte por que el htop (o algun otro monitor de sistema) no mostraba las estadisticas de la temperatura o de la grafica, ni siquiera de la integrada, y luego comence la busqueda poco fructifera de algun programo.</description>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;nota mental&lt;/strong&gt;, cuando aplicas fuego a una tecla de laptop intentando borrar el
+simbolo (de las ventanas)&amp;hellip; esta se deforma alarmantemente rapido y queda inservible.&lt;/p&gt;
+
+&lt;p&gt;en esta entrega mas divagacion y cosas previas&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/better.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;primero me pregunte por que el &lt;strong&gt;htop&lt;/strong&gt; (o algun otro monitor de sistema) no
+mostraba las estadisticas de la temperatura o de la grafica, ni siquiera de
+la integrada, y luego comence la
+&lt;a href=&#34;https://askubuntu.com/questions/387594/how-to-measure-gpu-usage&#34;&gt;busqueda&lt;/a&gt; poco
+fructifera de algun programo.&lt;/p&gt;
+
+&lt;p&gt;lo mas cercano a la solucion, sin instalar drivers privativos ni cosas raras,
+fue el paquete &lt;code&gt;intel-gpu-tools&lt;/code&gt; (en freidora) y luego como root y con la fuente
+de la consola muy chikita ejecutar  &lt;code&gt;intel_gpu_top&lt;/code&gt;. De paso tambien me instale
+&lt;code&gt;glances&lt;/code&gt; como monitor de sistema suplente, al siempre incombustible &lt;code&gt;htop&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;llebo un tiempo con boinc en el androide, y en la maquina no pude echar a andar
+el asunto hasta dar con
+&lt;a href=&#34;https://fedoraproject.org/wiki/Installing_and_running_BOINC_client_in_Fedora_21&#34;&gt;este&lt;/a&gt;
+enlace. Mi maquina no es nada muy alla, haci que se pone lentorra cuando se
+ejecuta, aun con restricciones grandes. Para no desistalarlo lo configure
+en ejecucion solo cuando la maquina no esta en uso.&lt;/p&gt;
+
+&lt;p&gt;ooooh desgracia, una tarde la maquina se puso rara y crei que el dia del juicio
+al disco musical habia llegado, luego no supe que jodidos pasaba,
+se congelo el sistema y se negaba a arrancar, lo unico que alcanzaba a decir era algo con
+respecto a los sata&amp;hellip; el segundo mayor temor era que la placa fuera la
+agonizante.&lt;/p&gt;
+
+&lt;p&gt;A prodar a instalar otra distro, me dije, al no encontrar una solucion y para
+descartar culpables, probe con manjaro y no hubo suerte, luego regrese con la
+distro inombrable (&lt;del&gt;fedora 27&lt;/del&gt;) y hubo suerte, quitando el inconveniente que no
+hay manera de apagar el equipo &amp;hellip; excepto reiniciando y apagando el switch en el
+interludio, ja, ja, ja&lt;/p&gt;
+
+&lt;p&gt;continuando con &lt;em&gt;las cosas de java&lt;/em&gt;, el lenguaje comienza a hacerse demaciado
+complejo he inecesariamene vervoso. Haaa, eran tiempos preteritos y no sabian por
+donde ir. El libro de &lt;em&gt;pensar en java&lt;/em&gt;, por su parte tampoco me motiva
+demaciado, no es malo, pero no le veo gracia, ya voy por la pagina 300, acabando
+de ver las interfaces. En definitiva Go es pura magia solo visible cuando ves a
+sus ancestros&lt;/p&gt;
+
+&lt;p&gt;por el camino aprendi (creo) eso de la variable &lt;code&gt;CLASSPATH&lt;/code&gt;, aunque mejor usar
+rutas relativas. Para configurar esta variable en fish (&lt;code&gt;~/.config/fish/config.fish&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set --export CLASSPATH  &#39;/usr/share/java:.&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tambien me pase un rato viendo enlaces en el blog de bitix sobre java, rescato
+el de &lt;a href=&#34;https://picodotdev.github.io/blog-bitix/2015/05/10-razones-para-seguir-usando-java/&#34;&gt;razones para usar java&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;para terminar un poco de poesia&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Si presume de lo rápido que ha desarrollado su producto, la gente se quejará de su rendimiento.&lt;/p&gt;
+
+&lt;p&gt;Si usted presume de lo bien que su producto funciona, la gente se quejará de su tiempo de desarrollo.&lt;/p&gt;
+
+&lt;p&gt;Si usted no se jacta de ninguno de los dos, la gente asumirá que está desarrollando en Java.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(extraido de &lt;a href=&#34;https://web.archive.org/web/20070222084110/http://destraynor.com/serendipity/index.php?/archives/102-Programming-Theorems.html&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;4k&#34;&gt;4K&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Kimi no na wa&lt;/strong&gt; Tengo la teoria, por las obras que he visto del director de
+este trabajo (The Place Promised in Our Early Days, 5 Centimeters Per Second (mi
+favorita y que me deja roto), The Garden of Words y Voices of a Distant Star),
+que de joven por razones extrabagantes termino siendo amigo de una chika
+peculiar con cabello negro&lt;/p&gt;
+
+&lt;p&gt;El, era un roboto, y con el roce y el paso del tiempo con la femina, descubrio
+que tenia sentimientos, especificamente sentimientos romanticos, los cuales mas
+tarde solo pudo identificar como &lt;em&gt;amar&lt;/em&gt;. Era un cobarde, razon por la cual
+aunque ambos dos se apresiavan, nunca llego a mas, termino obsecionado
+platonicamente y repite una y otra ves sus vivencias melancolicas, romanticas
+idealizadas, filme a filme, donde por fin encuentran desarrollo, pues en la
+realidad la chika y el terminaron distanciados por el azar y de forma
+irresoluble&amp;hellip; bueno es solo una ipotesis, para nada basada en vivencias
+personales&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;en fin, la opinion, mmmmmhh, una peli normalita, la de la chika muda con voz de
+robot fue una avalancha de mas cosas en este cuerpo decadente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:89f142e5a30d32d7a1616cc8db9009070f465adc&amp;amp;dn=Kimi.No.Na.Wa.2016.JAPANESE.BluRay.1080p.x264.AAC.5.1.-.Hon3y&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;amp;tr=udp%3a%2f%2fzer0day.ch%3a1337
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Tsuki ga Kirei&lt;/strong&gt; anime normalito, con animacion bonita aunque generica, si lo
+dejas unos dias es dificil identificar donde ibas con solo ver el inicio de los
+episodios.&lt;/p&gt;
+
+&lt;p&gt;Lo cosa se centra en un par de estudiantes de nivel medio y su romance &amp;ldquo;bonito&amp;rdquo;
+sin mas&amp;hellip; hasta que el descubre que la chica por su &amp;ldquo;inocencia&amp;rdquo; esta jodida de
+la cabeza, esta se torna poseciva y exigente y lo agota emocionalmente
+orillandolo a la desesperacion, o si, no sabe que hacer, asi es el mundo?&lt;/p&gt;
+
+&lt;p&gt;luego ella, se entera que el lleba una amistad bastante agradable con una de sus
+amigas y esta amiga a su ves le comenta que tambien &amp;ldquo;le late&amp;rdquo; el mismo tipo
+generico, entonces se deprime, se pregunta por que las cosas no salen bien y si
+asi es el mundo?&lt;/p&gt;
+
+&lt;p&gt;entonces, ambos ante la cruda, compleja y poco hollywodense realidad, desiden
+dar fin al romance inperfecto, pero a diferencia de hablarlo, fuerzan
+instintivamente la ruptura, cometiendo actos sucios, para que la otra parte vea su jodida naturaleza
+&lt;em&gt;inocente&lt;/em&gt;. Luego crecen y se dan cuenta de lo imbeciles que estaban, hacen las
+relacones (pese a estar casados, oh, pecadores) y siguen con sus pendejas
+existencias&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; bueno, no, por el episodio 6 te ponen &amp;ldquo;el episodio recapitulatorio&amp;rdquo; de todas
+las series con dos pesos de presupuesto, luego vi el episodio 7 y seguia sin
+ocurrir nada interaste, pase al final buscando algo de gore&amp;hellip; y no habia nada&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Labyrinth of Flames&lt;/strong&gt; del hasta ahora desconocido (para mi) Studio Fantasia,
+llega esta ova autoconclusiva con mucho carisma y estilo de animacion|comedia
+90&amp;rsquo;s y braguitas + humos otakus desbordantes con olores a
+Gainax, bajarlo pronto&amp;hellip; por el dia&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:d98910b9f521f02d660d67e29f0f380573d15bcb&amp;amp;dn=%5bEUR%5d_Labyrinth_of_Flames&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Osomatsu San&lt;/strong&gt;, aver, si te gusta Gintama en sus puntos mas hilarantes esto te
+va a gustar bastante. Es humor absurdo japones, eso quiere decir que en momentos
+puedes reir y en otros no encontrar sentido a lo que se muestra y en otros
+ponerse introspectivo o profundo.&lt;/p&gt;
+
+&lt;p&gt;No tenia idea de su existencia hasta hasta ver un video de &lt;em&gt;Mireda
+Producciones&lt;/em&gt;, que explica mucho mejor de que va esto y por que es
+interesante. Jo, JO, JoO, el primer episodio es un poco especial, pero en cada
+momento aprovecha para tirar criticas y reirse de si mismo y su industria&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:e8b421f739ebcb143b717311b6838a24ab05714e&amp;amp;dn=%5bPuyaSubs!%5d%20Osomatsu%20san%20%5bBatch%5d&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;apenas voy por el capitulo 6, mientras tanto aprovecho para compartirlo al
+tiempo que lo consumo lentamente. Son 25 episodios y en estos momentos estan
+transmitiendo la segunda temporada, en fin, a bajar y conservar en el disco, que
+en mi caso tardo bastantes dias en completarse la descarga y como ya es material
+&amp;ldquo;viejo&amp;rdquo; seguro el torrent quedara desanparado en no mucho tiempo&amp;hellip; pocas cosas
+son mas bonitas que ver que el torrent que te gusta se comparte regularmente!&lt;/p&gt;
+
+&lt;h2 id=&#34;fonos&#34;&gt;Fonos&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Blade Runner 2049&lt;/strong&gt;, buff, lo baje antes de ver la peli (entrega anterior) y
+se fue al limbo en /dev/null. Tras ver la cinta ya tiene mas sentido, aunque
+sigue siendo flojo, lo conservare por mero coleccionismo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:402f84f695ae9e8b9a4f525903845d7699f63f57&amp;amp;dn=Hans%20Zimmer%20%26%20Benjamin%20Wallfisch%20-%20Blade%20Runner%202049%20(2017)%20%5bFLAC%5d&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Living Field&lt;/strong&gt; (The Pillows), otro disco mas de &amp;ldquo;los almohadas&amp;rdquo;, fummmm, que
+pasada entre (soft?) reggae, pop japo-ingles y guitarras cosmico-playeras, una
+pasada!&lt;/p&gt;
+
+&lt;p&gt;tambien pasaron por las auriculares &lt;strong&gt;Kool Spice&lt;/strong&gt; y &lt;strong&gt;Please Mr. Lostman&lt;/strong&gt;,
+discos anterir y siguiente, respectivamente, muy en la linea e igual de
+disfrutables, me gusta en particular la ultima pieza del Kool Spice, pura ricura&lt;/p&gt;
+
+&lt;p&gt;(pese a ser infectos emepetreces, dejo el enlace)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:b77fa0f90c4fdd83d467f5f8c89d6ccc437d578c&amp;amp;dn=The%20Pillows&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Ununiform&lt;/strong&gt; (Tricky) Ya habian pasado por estos oidos un par de discos de esta
+banda &amp;ldquo;trip hop&amp;rdquo;, pero no logro empatizar con sus notas, me va mas Portishead y
+Massive Attack&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:c8128f7b8b53d56ceef844f2c0b4c05283c4520d&amp;amp;dn=Tricky%20-%20ununiform%20(2017)%20%5bWEB%20FLAC%5d&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Kareshi Kanojo no Jijou ♥&lt;/strong&gt; (Shiro Sagisu) este es el score musical de una
+serie que considero un genero en si, el &lt;em&gt;como karekano&lt;/em&gt;. En su mayoria esta
+compuesto por el Sagisu, que es el mismo de los ost de Evangelion y Shin
+Godzilla (algun torrento pls?), esta  muy en la onda del tipo, algunas piezas
+evangelicas recicladas y otras exclusivas.&lt;/p&gt;
+
+&lt;p&gt;Ameno y recomendable por si mismo, tiene bastantes pistas melancolicas de esas
+que me dejan tocado y no puedo resistir repetir una y otra vez. Si ya tienes los
+sonidos de NGE, sin duda es una piesa necesaria de la coleccion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:ff88c3a7e58b9b8aa360f85904a5c91423b1cc22&amp;amp;dn=Shiro%20Sagisu%20-%20Kareshi%20Kanojo%20no%20Jijou%20CD-BOX%20(1998)%20%5bFLAC%5d&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Eric Satie&lt;/strong&gt; (trabajos para piano) aparecio en el ricolino podcast de &lt;strong&gt;Score
+VG&lt;/strong&gt; y tambien como reminicencia de algun anime&amp;hellip; son trabajos tan sencillos
+como melancolicos y pegadisos. Como estos trabajos no suelen ser &lt;em&gt;discos
+conceptuales&lt;/em&gt; cuesta tomarlo en exclusiva, aun con esto en contra, seguro que te
+agradan bastantes piesas&lt;/p&gt;
+
+&lt;h2 id=&#34;txt&#34;&gt;txt&lt;/h2&gt;
+
+&lt;p&gt;de nuevo sin libros&amp;hellip; hubo un par de post chulos sobre cosas esotericas con la
+programacion&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://theorangeduck.com/page/ascii-love-letter&#34;&gt;http://theorangeduck.com/page/ascii-love-letter&lt;/a&gt; &lt;a href=&#34;https://www.reddit.com/r/programming/comments/79jo46/ascii_a_love_letter/&#34;&gt;https://www.reddit.com/r/programming/comments/79jo46/ascii_a_love_letter/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;y otro del simpre certero aunque poco contundente &lt;a href=&#34;https://asm86.wordpress.com/2017/10/30/eficiencia-del-software-contra-eficiencia-de-desarrollo/&#34;&gt;asm86&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;sayonara, bye, bye&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -39,10 +466,211 @@ primero me pregunte por que el htop (o algun otro monitor de sistema) no mostrab
       <pubDate>Tue, 24 Oct 2017 10:55:56 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/post/ramen-xii/</guid>
-      <description>(Colorful) Va sobre degenerados y depravados vírgenes que se ponen palote mirando un escote o un buen culo
- ja, ja, ja, degenerado y depravado&amp;hellip; que fuerte, sera un invento del patriarcado falogocentrico psicologico monoteista como mecanismo de control de masas?
-Continuando con &amp;ldquo;la vida del programador&amp;rdquo;, me puse a estudiar J-A-V-A, aquel innombrable que me jure no aprender jamas por mi orgullo y dignidad&amp;hellip;
-me justificare diciendo que de momento estoy aprendiendo matematicas para enterder los libros &amp;ldquo;serios&amp;rdquo; y mientras tanto como me hace falta conocer como se diseñån cosas grandes, programar codigo limpio, patrones, objetos y esas mierdas, asi pues a aprender el lenguaje donde sobran libros (en español) de esos temas y como java es el rey de esos asuntos pues a joderse con la peste empresarial del java, del Java 2 para ser especifico con el libro Piensa en Java (2da edicion) de Bruce Eckel</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/colorful.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;(Colorful) Va sobre degenerados y depravados vírgenes que se ponen palote mirando un
+escote o un buen culo&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ja, ja, ja, degenerado y depravado&amp;hellip; que fuerte, sera un invento del patriarcado
+falogocentrico psicologico monoteista como mecanismo de control de masas?&lt;/p&gt;
+
+&lt;p&gt;Continuando con &amp;ldquo;la vida del programador&amp;rdquo;, me puse a estudiar &lt;strong&gt;J-A-V-A&lt;/strong&gt;, aquel
+innombrable que me jure no aprender jamas por mi orgullo y dignidad&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;me justificare diciendo que de momento estoy aprendiendo matematicas para
+enterder los libros &amp;ldquo;serios&amp;rdquo; y mientras tanto como me hace falta conocer como se
+diseñån cosas grandes, programar codigo limpio, patrones, objetos y esas
+mierdas, asi pues a aprender el lenguaje donde sobran libros (en español) de esos
+temas y como java es el rey de esos asuntos pues a joderse con la peste
+&lt;em&gt;empresarial&lt;/em&gt; del java, del Java 2 para ser especifico con el libro &lt;strong&gt;Piensa en
+Java&lt;/strong&gt; (2da edicion) de Bruce Eckel&lt;/p&gt;
+
+&lt;p&gt;Las razones de escoger el libro tan antiguo de epocas del netscape, fue por que
+no encontre la 4ta edicion. En la red recomiendan ese libro y aunque no del
+todo Eckel me cae bien desde que lei el Piensa en C++ (volumen I), en aquel
+momento su codigo me parecia poesia, veremos si esto sigue asi, ademas las
+criticas al inicio del libro lo ponian como material mas bueno que los tomos de
+Evangelion, ya veremos&lt;/p&gt;
+
+&lt;p&gt;Lenguajes de guiones (scripting), Conectables (plug-ins), IGUs (GUIs), muero de
+risa con muchos terminos que han utilizado en la traduccion, jo, jo, jo, con
+estos libros antiguos dan ganas de programar software de gestion! (o no)&lt;/p&gt;
+
+&lt;p&gt;Gracias a este material, por fin entiendo que demonios son los hilos en la
+programacion y como esto tambien existe en los procesadores mononucleo, tambien
+me entere de que es UML, un poco (poco) de que son los applets y los servlets, y
+descubri cual es mi &lt;em&gt;modo de trabajo&lt;/em&gt;: &amp;ldquo;modo vacacion&amp;rdquo;, en el que no se impone
+ninguna estructura en el proceso de desarrollar el trabajo, o puesto de otra
+manera &lt;em&gt;se hara cuando se haga&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;asta ahora con 197(/958) paginas , todo es fluido e interesante, aunque el autor da por
+hecho que el lector esta iniciado en C o con alguno de sus decendientes.&lt;/p&gt;
+
+&lt;p&gt;La herencia directa de C y C++ se nota sobremanera en Java, por lo que lo
+encuentro comodo&amp;hellip; quitando el asunto que cada clase tiene su fichero y este
+debe llebar el nombre preciso de la clase y que el interprete carga y ejecuta
+las clases&amp;hellip; bueno, esto ultimo es perturbardor.&lt;/p&gt;
+
+&lt;p&gt;ufff tener mono sentencias sin llaves, (pre|in)cremento y estilo &amp;ldquo;libre&amp;rdquo; y
+el operador ternario es una puta gozada pero a estas alturas la inicializacion
+vervosa, punto y coma y los parentesis en los (for|if|while)s resultan añejos&lt;/p&gt;
+
+&lt;p&gt;Distinto el apartado sobre documentacion del codigo es. Su lenguaje de marcas
+puede llegar a colar, aunque el aceptar html puro y duro apesta, je, je,
+novatos!&lt;/p&gt;
+
+&lt;p&gt;Seguramente no programare nada en java mas alla de conocer sus modismos lo
+suficiente para tener idea sobre que dicen muchos libros con este lenguaje, es
+fenomenal ver el recorrido de los lenguajes. De ves en cuando en r/programming
+cuando se toca Go suelen aparecer sujetos que lo tachan de ser un lenguaje para
+tontos, recorriendo esto del java he podido entender mas a profundidad su diseño
+y la genialidad silenciosa que contiene&lt;/p&gt;
+
+&lt;h2 id=&#34;fonos&#34;&gt;fonos&lt;/h2&gt;
+
+&lt;p&gt;ja, ja, ja, no se desde cuando pero tenia &lt;strong&gt;moc&lt;/strong&gt; (mi reproductor de musica) en
+mono y no me daba cuenta, bueno, si, pero como decia &lt;strong&gt;STEREO&lt;/strong&gt;, creia que era
+cosa mia, asi que cuando reproduci musica en otro programa quede atonito ante el
+sonido. No hay color entre el mono y estereo! entonces corri al moc a descubrir
+el engaño, resulta que con &lt;code&gt;J&lt;/code&gt; el equalizador se pone en modo de mezcla
+mono&amp;hellip; y presionando &lt;code&gt;J&lt;/code&gt; de nuevo regresa a estereo.&lt;/p&gt;
+
+&lt;p&gt;Hay alegria por una parte, pues todo suena tan &lt;strong&gt;a-s-o-m-b-r-o-s-o&lt;/strong&gt; como para
+desear reescuchar mi coleccion completa. Por el otro lado, no puedo creer el timo
+de melomano que estoy hecho, como un fancy del te al que le cambian su bebida
+con agua de grifo y al beber expresa lo bueno que esta! ja, ja, ja!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Paul McCartney&lt;/strong&gt;, Su album &lt;strong&gt;Off The Ground&lt;/strong&gt; me parecia malillo tirando a
+descartable, aunque el track &lt;em&gt;Hope Of Deliverance&lt;/em&gt; me encanta&amp;hellip; y por pereza
+de cambiar a otra cosa terminaba por escuchar el resto de pistas una y otra vez,
+al grado que por mera repeticion, termino por gustarme.&lt;/p&gt;
+
+&lt;p&gt;Luego pase a &lt;strong&gt;Driving Rain&lt;/strong&gt; que no habia escuchado y tambien encontre calidad,
+eso o ya me habia acostrumbrado a su sonido, ho, ho, ho, por si no la habia
+mencionado antes, el Paul es mi beatle faborito, por que, me simpatiza mas que
+el lennon, no estoy seguro si tambien que harrison y por que su discografia es
+extensa y en general buena (quitando un unfumable periodo, koff, 80&amp;rsquo;s, koff)&lt;/p&gt;
+
+&lt;p&gt;el ultimo disco que le escuche antes de saltar a otro estilo fue &lt;strong&gt;Flowers In
+The Dirt&lt;/strong&gt; (opinion: los musicalmente horribles 80&amp;rsquo;s). Con este acumulo 19
+discos escuchados del Paul, mis faboritos los primeros, en especial &lt;strong&gt;Ram&lt;/strong&gt; y &lt;strong&gt;Red
+Rose Speedway&lt;/strong&gt;, dejo uno pendiente y bastantes mas por descargar&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If These Trees Could Talk&lt;/strong&gt; (Red Forest), segun un video yutuvero, esto es
+post rock, osease rock, con toques progresivos aderesado con cosas &amp;ldquo;indie&amp;rdquo; que
+puede ser, o interesante, o softnifero&lt;/p&gt;
+
+&lt;p&gt;dirigioseme al enlace donde se encontraba el album &amp;ldquo;en video&amp;rdquo; (je) desde el
+dispositivo androide con audio malillo&amp;hellip; para mi sorpresa sonaba mas que
+intereante. Luego lo encontre en torrente, pero solo en calidad mp3, je, no debe
+gustarle a mucha gente.&lt;/p&gt;
+
+&lt;p&gt;Tras unas cuantas eschuchas debo confirmar que me ha gustado, no lo suficente
+como para quemar cohetes, pero me ha gustado, suelo tener problemas con este
+tipo de musica cuasi ambiental, bueno no en este caso, pista a pista crea una
+&amp;ldquo;historia&amp;rdquo; entretenida, pero aun le falta para estar al nivel de Lorenso Monni
+con su exepcional &lt;em&gt;Grey Swans of Extremistan&lt;/em&gt;! (juro solemnemente que algun dia
+recuperare ese album, aunque sea en digital)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chemical Brothers&lt;/strong&gt; Hay que estar en con el humor adecuado para disfrutar
+este sonido electro-pastillero, Exit Planet Dust, Dig Your Own Hole, Surrender y
+Come With Us estan chulos, con Push the Button, We are the Night, Brotherhood y
+Further veo algo de poperismo, no se, quiza sean para un mood distinto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:f11b17f92f17fe937bc0226ba195eca559c5c6d2&amp;amp;dn=Chemical%20Brothers&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4k&#34;&gt;4k&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;IT&lt;/strong&gt; en varios podcast decian que era buena, aunque la opinion global distaba
+del consenso. En esos mismos programas resaltaban el enfoque cutre que tenia con
+el terror&lt;/p&gt;
+
+&lt;p&gt;esperaba algo superior a la media, incluso me plantee ver la duologia cuando estubiera
+completa, pero sedi a la tentasion.&lt;/p&gt;
+
+&lt;p&gt;En esta cinta no hay terror alguno, solo muñecos que se mueven extraño a
+saltando varios cuadros, aderesados por sonidos (que no musica) muuuuuy fuerte,
+pero bueno, seguro no era para mi, si eres un adolecente con poca trayectoria la
+encontraras entretenida, visualmente esta bien, esepto todo lo relacionado con
+IT, no veo su ascendencia sobrenatural, aunque si lo tubiera en frente dudaria
+entre salir por patas o apalearlo.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wonder Woman&lt;/strong&gt; &amp;hellip; Shena lo haria mejor&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tsurezure Children&lt;/strong&gt;, es una serie de episodios cortos (10min) dividida en
+episodios cortos, que vienen a ser la declaracion romantica que en muchos animes
+tipo harem nunca aparece, y ya, eso es todo. Vi 3 episodios, fueron entretenidos&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;eromanga sensei&lt;/strong&gt; mmmmhhzzzzzzZZZZZZ&amp;hellip;. un anime de &amp;ldquo;imotos&amp;rdquo; mas elaborado de
+lo habitual (supongo), vi 4 episodios y salte al final, nop, no pasa
+nada. Animacion decente; entretenida si no has visto mucho o el morbo te
+puede&amp;hellip; y aunque cualquier tema apropiadamente tratado puede ser morboso,
+entretenido, obsesivamente incomodo, este material no lo es (para mi), ni creo que
+contenga el enfoque apropiado.&lt;/p&gt;
+
+&lt;p&gt;Hubo una vez algo que vi no relacionado con esta tematica, que hacia acelerar mi
+corazon mientras cuestionaba mi mas profundas creencias
+a-C-a-d-a-C-a-p-i-t-u-l-o, pero el nombre de esa obra, no se lo dire a nadie,
+nunca, nunca, n-u-n-c-a&amp;hellip; bueno si&amp;hellip; &lt;strong&gt;nunca!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blade Runner 2049&lt;/strong&gt; oohhhh, cada fotograma da para un poster, un desarrollo
+paciente aunque no se si en realidad termina por contar algo&amp;hellip; puede existir
+duda alguna sobre la naturaleza de organismos artificiales roboticos(?) fisica y
+mentalmente superiores? no lo entiendo, para que hacer estos seres &amp;ldquo;carnales&amp;rdquo;?&lt;/p&gt;
+
+&lt;p&gt;Pero bueno, sea artificialmente profunda o no, se agradece que exista este tipo
+de obras, con sus cosas de autor y presupuestos elevados, guste o no, es un
+respiro entre el monton de material desechable&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Baby Driver&lt;/strong&gt; wooooorrgggg! El trailer del cine no le hacia justicia! que
+frustracion, por falta de prespuesto no la pude ver en el templo, sin duda
+alguna el novamas de esta entrega, vision obligatoria!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:2277a81195f880427f8d1f92a54a2fea7e040862&amp;amp;dn=Baby.Driver.2017.HDRip.XviD.AC3-EVO&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Colorful&lt;/strong&gt; uhff, una serie de episodios cortos (10min) de los cuales el
+torrente incluia solamente 4 (el actual ya trae los 16), que de que van?
+cortos experimentales con estilo videoclip noventero muy loco explorando (y
+quiza rindiendo homenaje a) la naturaleza pajillera del genero masculino&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:9725ea53bee7e54ef08fa06682fd6b9430271325&amp;amp;dn=%5bEUR%5d_Colorful&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Colorful&lt;/strong&gt; (pelicula 2010) por sorpresa esto no tiene ve que ver con lo
+anterior, aqui tenemos un drama manipulador sobre el suicidio, eso del valor de
+la vida, la amistad, aceptar a la gente y cosas del estilo.&lt;/p&gt;
+
+&lt;p&gt;El anime tiene mucha rotoscopia e imagen real con animacion sobrepuesta que sin
+ser ni de cerca lo bestial de &lt;strong&gt;kuromonagatari&lt;/strong&gt;, me gusta mucho, sera por
+presupuesto o por lo que sea, pero se nota el mimo y dedicacion otaku de sus
+creadores que seguro saldran en alguna secuencia&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Black Magic M-66&lt;/strong&gt; Esto es una ova del año 1987 basado en un manga con toques
+militares que seguramente nunca leere. Pues eso, buena animacion añeja muy
+interesante, con una historia pasable entre rambo, alien y terminator&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Made in Abyss&lt;/strong&gt; Luego de varias semanas esperando una recoleccion batch de los
+episodios, toca lanzarse a buscar por otro lado&lt;/p&gt;
+
+&lt;p&gt;Mucho mucho mimo hay aqui, peroooooo es dificil identificar para quien es esto,
+una serie infantil de exploracion? un drama intrigante con exploracion? gore
+bonito con desarrollo? para quien va, pasaban los episodios y seguia sin
+enganchar, solo los ultimos 2 episodios me resultaron absorventes&lt;/p&gt;
+
+&lt;p&gt;en fin si hay poco material darle una oportunidad, aunque si no hay prisa
+esperar a que salga una segunda temporada para evaluar su visionado&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aho Girl&lt;/strong&gt; para concluir algo de humor japo otaku consiso, concentrado y con bananas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:b2689a3e844c4790c8ca0f1c4d0b9902c97a4f35&amp;amp;dn=%5bPuyaSubs!%5d%20Aho%20Girl%20%5bBatch%5d&amp;amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
   </channel>

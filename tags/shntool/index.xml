@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 22 Dec 2016 09:56:05 -0600</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/tags/shntool/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/shntool/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,47 @@
       <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/apt/shnsplit/</guid>
-      <description>En este mundo existen algunos seres extraños con tanto amor (libros, musica, series, peliculas, porno, &amp;hellip;) que no les cabe en su disco duro y tienen que compartirlo.
-Si el amor viene en forma de una sola pista flac, no hagas como yo y la mandes a la mierda, toda muestra de afecto merece respeto&amp;hellip; exepto si proviene de un degenerado que graba viniles en digital a maxima calidad, si formas parte de este grupo no mereces tener oidos.</description>
+      <description>&lt;p&gt;En este mundo existen algunos seres extraños con tanto amor (libros, musica,
+series, peliculas, porno, &amp;hellip;) que no les cabe en su disco duro y tienen que
+compartirlo.&lt;/p&gt;
+
+&lt;p&gt;Si el amor viene en forma de &lt;strong&gt;una sola pista flac&lt;/strong&gt;, no hagas como yo y la
+mandes a la mierda, toda muestra de afecto merece respeto&amp;hellip; exepto si proviene
+de un degenerado que graba viniles en digital a maxima calidad, si formas parte
+de este grupo no mereces tener oidos.&lt;/p&gt;
+
+&lt;p&gt;Bueno, podemos optener las pistas individuales siempre y cuando la pista este
+acompañada de un fichero con terminacion &lt;strong&gt;.cue&lt;/strong&gt;. Primero necesitamos instalar
+unas cuantas herramientas, tanto en debian como en freidora son las siguientes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gestor-de-paquetes install cuetools shntool flac
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego vamos hasta la carpeta que tiene la pista a dividir y ejecutamos el
+siguiente comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;shnsplit -f pista.cue -o flac pista.flac
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;modificando &lt;code&gt;pista&lt;/code&gt;, por el nombre especifico de &lt;strong&gt;tu&lt;/strong&gt; pista. Luego de ejecutar
+esto tendremos pistas independientes con el formato &lt;code&gt;split-track01.flac&lt;/code&gt;,
+&lt;code&gt;split-track02.flac&lt;/code&gt;, &lt;code&gt;split-track&lt;/code&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;para colocar los metadatos (titulo, autor) en las pistas invocamos lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cuetag.sh pista.cue split-track*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en ocaciones, este comando puede informarnos que el numero de pistas no
+coincide, si se presenta dicha circunstancia revisa si tienes una pista con
+nombre &lt;code&gt;split-track00.flac&lt;/code&gt;, te la cargas y vuelves a intentar.&lt;/p&gt;
+
+&lt;p&gt;Pero&amp;hellip; y todo esto aun nos deja las pistas con nombre &lt;code&gt;split-track*&lt;/code&gt;, para eso
+no conosco una solucion elegante desde linea de comandos. La solucion que
+utilizo es abrir moc (&lt;strong&gt;Music On Console&lt;/strong&gt;) copiar todos las nombres de las
+pistas (el titulo se muestra a partir de los metadatos) y con Emacs cambiar los
+nombres &amp;ldquo;a mano&amp;rdquo; en &lt;code&gt;wdired-change-to-wdired-mode&lt;/code&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

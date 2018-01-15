@@ -9,7 +9,7 @@
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 20 Jul 2017 22:21:43 -0500</lastBuildDate>
     
-	<atom:link href="https://nasciiboy.github.io/categories/vg/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/categories/vg/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,9 +18,124 @@
       <pubDate>Thu, 20 Jul 2017 22:21:43 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/vg/shooter/</guid>
-      <description>¿Es posible que el software no sea como cualquier otra cosa, que está destinado a ser descartado: que el punto es siempre verlo como una burbuja de jabón?
- El SICP esta lleno de fraces que reflejan la realidad, incluso la del &amp;ldquo;codigo abierto&amp;rdquo;, por que (casi) sin importar el titulo, si su desarrollo para, seguramente quede destinado a desaparecer en la memoria de unos cuantos
-Quiza por ello el desarrollo mas puro y duradero, es el que se realiza para equipos especificos, por ejemplo en algun ensamblador de alguna consola especifica, como la nes o el gameboy.</description>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;¿Es posible que el software no sea como cualquier otra cosa, que está
+destinado a ser descartado: que el punto es siempre verlo como una burbuja
+de jabón?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;El SICP esta lleno de fraces que reflejan la realidad, incluso la del &amp;ldquo;codigo
+abierto&amp;rdquo;, por que (casi) sin importar el titulo, si su desarrollo para,
+seguramente quede destinado a desaparecer en la memoria de unos cuantos&lt;/p&gt;
+
+&lt;p&gt;Quiza por ello el desarrollo mas puro y duradero, es el que se realiza para
+equipos especificos, por ejemplo en algun ensamblador de alguna consola
+especifica, como la nes o el gameboy. En el PC, las cosas no son iguales, y aun
+contando con el codigo, cuando no es extraordinariamente bueno, independiente
+de modas y portable, dificilmente sobrevivira al cambio continuo de librerias&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Como es el caso de los dos (y quiza tres) siguientes juegos, todos de genero
+&amp;ldquo;matamarcianos&amp;rdquo;. No es que sea ningun conocedor, de hecho con estos solo he
+jugado 4 (mas un par mas en el movil), el cuarto y primero (o segundo quitando
+uno de nes), el maravilloso Star Fox 64, al que no puedo jugar por que el
+emulador es demasido exigente para mi equipo maizoro&lt;/p&gt;
+
+&lt;p&gt;problablemente no puedan jugar a ninguno de ellos, pero de los pocos que
+hay que pueden (o no) existir en el software libre, son de los mejores&lt;/p&gt;
+
+&lt;h2 id=&#34;tumiki-fighters&#34;&gt;tumiki fighters&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/tumiki.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Creo que esto tiene licencia mit, y creo que podia jugarse con el mando. El
+primer encuetro con el fue en los repositorios de debian, y espero que
+todavia siga hay, por que compilarlo me ha sido imposible&lt;/p&gt;
+
+&lt;p&gt;Esta hecho con el lenguaje de programacion &lt;strong&gt;D&lt;/strong&gt;, del cual desconosco su
+bondades, aunque de popularidad no puede presumir. Su autor, un japones durante
+un tiempo se dedico a programar algunos juegos y dejar a disposicion el codigo,
+pueden encontrar mas en su &lt;a href=&#34;http://www.asahi-net.or.jp/~cs8k-cyu/windows/tf_e.html&#34;&gt;pagina&lt;/a&gt; (ingles y
+japones).&lt;/p&gt;
+
+&lt;p&gt;En principio sus juegos fueron diseñados para correr en winbugs, aunque hay (o hubo) &lt;a href=&#34;http://tumiki.sourceforge.net/&#34;&gt;uno&lt;/a&gt; o dos
+intentos de portarlo a GNU/linux, que no pude compilar fuera de
+debian. Curiosamente la forma mas sencilla de jugarlo es con wine&lt;/p&gt;
+
+&lt;p&gt;De los tres juegos mi favorito, me encanta su estilo y colores. En
+cuanto a dificultad&amp;hellip; no es para lisiados, nunca pase del tercer escenario&lt;/p&gt;
+
+&lt;h2 id=&#34;garden-of-coloured-lights&#34;&gt;garden of coloured lights&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/garden.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Este juego tambien nacio en winbugs, pero a diferencia del anterior es GPL3 y
+esta programado en C, pese a esto tampoco lo pude compilar, no busque la web que
+lo vio nacer (alguna ves lo hice). Algo curioso es que aparentemente sigue en
+desarrollo al menos en la &lt;a href=&#34;https://sourceforge.net/projects/garden/&#34;&gt;forja del codigo&lt;/a&gt; cambio de la
+version 1.0.8 a 1.0.9&lt;/p&gt;
+
+&lt;p&gt;probar a compilarlo, la ultima vez que lo jugue fue en debian (incluido en los
+repos), de los tres, el tercero en mi listado de buenos juegos libertarios de disparos&lt;/p&gt;
+
+&lt;h2 id=&#34;blue-revolver&#34;&gt;Blue Revolver&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/blue-5.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hecho con &lt;a href=&#34;https://love2d.org/&#34;&gt;love2d&lt;/a&gt;, aunque no por ello precisamente
+software libre&amp;hellip; sus creadores lo distribuyen ademas de ejecutable, como un
+&lt;code class=&#34;file&#34; &gt;.love&lt;/code&gt; que es un simple &lt;code class=&#34;file&#34;&gt;.zip&lt;/code&gt;
+con el nombre modificado, que alberga el codigo y datos del juego, asi que de
+alguna forma difusa podria considerarse de &amp;ldquo;codigo abierto&amp;rdquo;, o almenos se podria
+aprender algo y modificarlo a nivel personal (y quiza mas alla)&lt;/p&gt;
+
+&lt;p&gt;En su &lt;a href=&#34;http://bluerevolvergame.com/&#34;&gt;pagina&lt;/a&gt; encontraran un enlace a itchio una
+pagina de juegos &amp;ldquo;indies&amp;rdquo;, en donde ofrecen un demo con las primeras 2
+misiones. La primera vez que vi este juego pesaba solo 15mb, ahora son mas
+de 300! Aun se encuentra en fase de desarrollo, una muy larga fase de
+desarrollo&amp;hellip; si alguien compra el juego y me envia una copia no me molestare&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;como decia, el juego esta desarrollado en love2d, exactamente con la version
+0.9.1 (ja, ingenuo de mi, crei que la sugiente version de love seria la 1.0,
+que tendrian una &amp;ldquo;API&amp;rdquo; estable y seria el momento de echarle un vistazo en
+serio, pero los troles pasaron a la version 0.10.0).&lt;/p&gt;
+
+&lt;p&gt;La version actual de love es la 0.10.2 y el juego no correra con esta, incluso
+modificando un fichero llamado &lt;code class=&#34;file&#34; &gt;conf.lua&lt;/code&gt;. Uno de los
+inconvenientes de love, radica que entre version y version los juegos
+dejan de funcionar, asi que vamos a compilar la version 0.9.1 (o si nuestra
+distro trae esta version nos ahorramos el paso)&lt;/p&gt;
+
+&lt;p&gt;conseguir dependencias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnf builddep love
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o en debian&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get build-dep love
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;wget https://bitbucket.org/rude/love/downloads/love-0.9.1-linux-src.tar.gz
+tar -zxvf love-0.9.1-linux-src.tar.gz
+cd love-0.9.1
+./configure # cruzar los dedos y esperar
+./make      # de nuevo cruzar los dedos y esperar
+
+# si todo fue bien
+./src/love ruta-a-juego.love
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/blue-7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;el juego es una pasada, el unico inconveniente es la resolucion, no se si
+modificando la posicion del monitor, aparescan nuevas resoluciones, en cualquier
+caso es una maravilla que acepta mando y configuracion de botones&lt;/p&gt;
+
+&lt;p&gt;como dirian en un podcast (de anecdotas, historia contemporanea y musica
+rollmantica) llamado &lt;em&gt;ScoreVG&lt;/em&gt;, disfruit!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -29,7 +144,109 @@ Quiza por ello el desarrollo mas puro y duradero, es el que se realiza para equi
       <pubDate>Tue, 02 May 2017 20:02:37 -0500</pubDate>
       
       <guid>https://nasciiboy.github.io/vg/ppsspp/</guid>
-      <description>Cambiando un poco de enfoque me dispuse a jugar un rato con el emulador que mas me gusta PPSSPP, que&amp;hellip; sirve para jugar roms de psp, este ultimo es un cacharro que cuando salio alucinaba por tener, pero como siempre he sido pobre de mente y economia nunca tuve, ya mas tarde me pasaron uno para que le pusiera algunos jugos, pero me parecio un cacharro de mala calidad</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../fs.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cambiando un poco de enfoque me dispuse a jugar un rato con el emulador que mas
+me gusta &lt;strong&gt;PPSSPP&lt;/strong&gt;, que&amp;hellip; sirve para jugar roms de &lt;strong&gt;psp&lt;/strong&gt;, este ultimo es un
+cacharro que cuando salio alucinaba por tener, pero como siempre he sido pobre
+de mente y economia nunca tuve, ya mas tarde me pasaron uno para que le pusiera
+algunos jugos, pero me parecio un cacharro de mala calidad&lt;/p&gt;
+
+&lt;p&gt;bueno, dejando la anecdota de lado, &lt;strong&gt;PPSSPP&lt;/strong&gt;, es de lejos el emulador mas
+bonito y atractivo que he visto jamas ensima es software libre!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../ppsspp.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tiene una tienda de Homebrew, aunque todo es &lt;q&gt;gratis&lt;/q&gt;, admite mandos o al
+menos el logitech F710 no tiene problemas, por supuesto los controles y atajos
+son configurables, viene en español y esta muy bien optimisado. Corre hasta en
+equipos androide, claro, hay que ser realistas y darle al menos un i3 para que
+se desempeñe como es debido.&lt;/p&gt;
+
+&lt;p&gt;En mi caso con un celeron 847 de dos nucleos a 1.1GHZ, fluido va&amp;hellip; aunque hay
+que aclarar que lo unico que juego (y fui younqui un rato) es el Lumines (I y II)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../lumines.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;es algo asi como un tetris psicotropico con una cabra (u otro avatar) pulsante
+del lado izquierdo, la gracia es unir cuatro o mas elementos del mismo color,
+hacer combos de uniones o despejar uno o ambos colores de la pantalla por la
+eternidad, todo mientras resives ataques de distraccion visual no aptos para
+epilepticos (la puntuacion mas alta que he alcanzado es de 346348 puntos, algo
+asi como dos horas de juego&lt;/p&gt;
+
+&lt;p&gt;Pero bueno no todo es felicidad y vicio, queria probar algo mas plataformero y
+me encontre el &lt;strong&gt;MegaMan Maverick X Hunter&lt;/strong&gt;, pero el ppsspp se colgaba, asi que
+supuse que serian cosas del programa, y toco probar con una version nueva, pues
+la ultima ya tenia como un año que la habia compilado&lt;/p&gt;
+
+&lt;h2 id=&#34;compilar&#34;&gt;Compilar&lt;/h2&gt;
+
+&lt;p&gt;El codigo fuente esta en github, al parecer ya incluye todas las dependencias
+necesarias, exepto o &lt;strong&gt;sdl2&lt;/strong&gt; o algo de &lt;strong&gt;qt&lt;/strong&gt; (ya sera al gusto de compilador) (Nota:
+si en el proceso de compilacion te dice que hace falta una libreria la buscas y
+la instalas)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/hrydgard/ppsspp.git
+cd ppsspp
+git submodule update --init
+./b.sh
+cd build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y ya esta, en la carpeta &lt;code&gt;build&lt;/code&gt; encontraras un ejecutable &lt;code&gt;PPSSPP&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Un click o un &lt;code&gt;./PPSSPP&lt;/code&gt; + unas roms y felicidad en un binario que incluye todas
+sus librerias para correr de forma autonoma, lo lleves a donde lleves&amp;hellip; o asi
+fue la ultima ves que compile.&lt;/p&gt;
+
+&lt;p&gt;En la version mas actual directa del repositorio, me ha salido esto&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CMake Error: Cannot determine link language for target &amp;quot;armips&amp;quot;.
+CMake Error: CMake can not determine linker language for target: armips
+-- Generating done
+-- Build files have been written to: /home/nasciiboy/apt/vg-dev/emu/ppsspp/ppsspp-git/build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ni idea para que necesite el &lt;code&gt;armips&lt;/code&gt;, tampoco encontre mucho al respecto, asi
+que baje un binario precompilado desde su pagina&lt;/p&gt;
+
+&lt;h2 id=&#34;buscar-binario-desde-la-pagina-oficial&#34;&gt;Buscar Binario desde La pagina oficial&lt;/h2&gt;
+
+&lt;p&gt;antes de hacer esto, mejor revisa si esta en los repositorios oficiales, hasta
+donde se no lo incluien ni debian ni freidora&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.ppsspp.org/downloads.html&#34;&gt;http://www.ppsspp.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;descomprimes el binario y te llebas la carpeta a donde mejor te convenga&lt;/p&gt;
+
+&lt;h2 id=&#34;homebrew&#34;&gt;Homebrew&lt;/h2&gt;
+
+&lt;p&gt;Como futuro rey de los &lt;s&gt;piratas&lt;/s&gt; programadores, mi sueño es encontrar el
+One Code, un tesoro compuesto por libros de programacion en español de cualquier
+tema imaginable, bien desarrollados, entendibles por paletos como yo y en un
+formato molon.&lt;/p&gt;
+
+&lt;p&gt;Para mi desgracia, hasta el dia de hoy no he dado ni con un puñetero libro para
+programar videojuegos descente, menos aun para programar en esos sistemas
+dedicados en hardware y software al ocio electronico (mejor conosidos como
+consolas) que exponga el tema. Oh lo que daria por una biblia de programacion
+para el nes (en ensablador) o el snes, o el gameboy y quisa para el psp o la n64&lt;/p&gt;
+
+&lt;p&gt;Mietras tanto, evado el asunto consiguiendo roms en el unico sistema de
+distribucion libre, los torrents!&lt;/p&gt;
+
+&lt;p&gt;Ya para terminar, al parecer el problema que tenia la version anterior con el
+MegaMan era la reproduccion de videos, asunto solucionado en versiones
+recientes, pero mi procesador no lo mueve fluido, ni el Gran Turismo, pero el
+Sega Rally va fino, fino&lt;/p&gt;
+
+&lt;p&gt;O, del Homebrew solo recomendar &lt;strong&gt;Attack Of the Mutants&lt;/strong&gt; y el siempre
+incombustible &lt;strong&gt;Cave Story&lt;/strong&gt;, aunque este mejor jugar el port
+nativo &lt;a href=&#34;../nxEngine/index.html&#34;&gt;nxEngine&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -38,10 +255,109 @@ Quiza por ello el desarrollo mas puro y duradero, es el que se realiza para equi
       <pubDate>Sun, 01 Jan 2017 14:56:59 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/vg/solarus/</guid>
-      <description>Segun la propia web del proyecto
- Solarus es un motor de juegos Action-RPG gratuito y de codigo abierto, con licencia GPL y esta escrito en C++. Ejecuta quest (campañas?) en Lua y puede trabajar en un gran numero de plataformas.
-Solarus tambien cuenta con un editor de juegos llamado Solarus Quest Editor escrito en C++ con Qt para ayudarte a crear un juego.
- Por que los proyectos utilizan el palabro &amp;ldquo;open source&amp;rdquo; si estan bajo la licencia GPL?</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../solarus_logo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Segun la propia &lt;a href=&#34;http://www.solarus-games.org/&#34;&gt;web del proyecto&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Solarus es un motor de juegos Action-RPG gratuito y de codigo abierto, con
+licencia GPL y esta escrito en C++. Ejecuta quest (campañas?) en Lua y puede
+trabajar en un gran numero de plataformas.&lt;/p&gt;
+
+&lt;p&gt;Solarus tambien cuenta con un editor de juegos llamado Solarus Quest Editor
+escrito en C++ con Qt para ayudarte a crear un juego.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Por que los proyectos utilizan el palabro &amp;ldquo;open source&amp;rdquo; si estan bajo la
+licencia GPL?&lt;/p&gt;
+
+&lt;p&gt;Aunque en la web no se especifa, en la practica el motor fue creado para hacer
+un videojuego fan-tributo de Zelda, y todos las juegos que de el han nacido
+tiene que ver con Zelda, al parecer utilizan recursos salidos directamente de un
+titulo de nintendo, ni idea de cual, supongo sera de snes. Por suerte el
+proyecto parace no tener problemas legales de ningun tipo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../logo_2x.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;THE LEGEND OF ZELDA Mystery Of Solarus DX&lt;/strong&gt; es el primer titulo que pruebo con
+respecto a la saga zelda, sin importar ser o no un fan-game tiene una calidad
+brutal, dificultad imposible y es muy adictivo. Reconosco que para terminarlo
+fue necesario ver una guia (del propio creador) en no pocas ocaciones, no sin
+antes pasar horas sin saber que hacer&amp;hellip; tambien modifique el fichero de
+salvamento para poner el dinero y municion a tope.&lt;/p&gt;
+
+&lt;p&gt;En definitiva si tuviese dinero compraria una consola e intentaria con algun
+titulo oficial. Si tuviese mas dinero compraria nintentdo y pondria su
+hardware/software libre tras un perido no mayor a 5 años luego del lanzamiento
+del titulo&amp;hellip; un hombre debe tener sueños.&lt;/p&gt;
+
+&lt;h2 id=&#34;compilar-solarus-engine-desde-repositorios&#34;&gt;Compilar solarus-engine desde repositorios&lt;/h2&gt;
+
+&lt;p&gt;La lista de dependencias en Debian salio directamete del sitio web, si ya tienes el
+codigo fuente de solarus puedes ver los pasos en el fichero &lt;code&gt;compilation.txt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;instalar dependencias en Debian&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libmodplug-dev libvorbis-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En el caso de fedora me he limitado a buscar el equivalente. Compilo cosas por
+pasatiempo y mi sistema ya tiene un monton de librerias, a modo de prueba intete
+compilar sin instalar nada mas y&amp;hellip; compilo, si encuentras algun inconveniente
+no dudes en enviar un &lt;a href=&#34;mailto:nasciiboy@gmail.com&#34;&gt;correo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;instalar dependencias en fedora&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnf -y install SDL2-devel SDL2-image-devel SDL2-ttf-devel luajit-devel physfs-devel openal-soft-devel libmodplug-devel libvorbis-devel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;creamos una carpeta donde estara el codigo del motor y el de los tres juegos que
+aparecen listados en la pagina de solarus&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir solarus
+cd solarus
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;clonamos el motor y los tres juegos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/solarus-games/solarus.git
+git clone https://github.com/solarus-games/zsdx.git
+git clone https://github.com/solarus-games/zsxd.git
+git clone https://github.com/solarus-games/zelda-roth-se.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;compilamos el motor&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd solarus
+mkdir build
+cd build
+cmake ..
+make
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si la compilacion fue exitosa ya podemos ejecutar los juegos. Sin cambiar de
+directorio ejecutamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./solarus_run ../../zsdx/
+
+./solarus_run ../../zsxd/
+
+./solarus_run ../../zelda-roth-se/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;los tres titulos se encuentran traducidos al español, las teclas de
+funcionamiento son ajustables y tambien tiene soporte para joystick (en concreto
+tengo el Logiteth 710, que funciona de forma nativa sin instalar nada)&lt;/p&gt;
+
+&lt;p&gt;recientemente inicie zelda-roth-se, por motivos desconocidos los caracteres
+&amp;ldquo;raros&amp;rdquo; del español (acentos y eñes) no se ven.&lt;/p&gt;
+
+&lt;p&gt;puedes encontrar mas juegos (de zelda) basados en el motor solarus en
+el &lt;a href=&#34;http://forum.solarus-games.org&#34;&gt;foro&lt;/a&gt; en la seccion
+de &lt;a href=&#34;http://forum.solarus-games.org/index.php/board,5.0.html?PHPSESSID=mir01idorf2lfdchofmrhmthv7&#34;&gt;proyectos&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -50,7 +366,54 @@ Solarus tambien cuenta con un editor de juegos llamado Solarus Quest Editor escr
       <pubDate>Mon, 19 Dec 2016 11:29:56 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/vg/nxengine/</guid>
-      <description>Dōkutsu Monogatari mejor conocido en oxidente como Cave Story (La historia de la cueva) es un videojuego de plataformas con un toque de RPG desarrollado por una sola persona (Daisuke Amaya, alias &amp;ldquo;pixel&amp;rdquo;) a lo largo de 5 años. Originalmente fue liberado como freeware para la plataforma pc de microsoft, no obstante por su sobresaliente calidad ha sido portado a una gran cantidad de sistemas entre las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast, GP2X, &amp;hellip;, y por supuesto GNU/linux.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;../Dokutsu.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dōkutsu Monogatari mejor conocido en oxidente como Cave Story (La historia de la
+cueva) es un videojuego de plataformas con un toque de RPG desarrollado por una
+sola persona (Daisuke Amaya, alias &amp;ldquo;pixel&amp;rdquo;) a lo largo de 5 años. Originalmente
+fue liberado como &lt;em&gt;freeware&lt;/em&gt; para la plataforma pc de microsoft, no obstante por
+su sobresaliente calidad ha sido portado a una gran cantidad de sistemas entre
+las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast, GP2X,
+&amp;hellip;, y por supuesto GNU/linux.&lt;/p&gt;
+
+&lt;p&gt;Pese a que la licencia de distribucion no es libre, se cuenta con una
+implementacion del motor (en C++) bajo la licencia GNU GPL v3 llamada
+&lt;a href=&#34;http://nxengine.sourceforge.net/&#34;&gt;nxEngine&lt;/a&gt; y un par de traducciones al español
+(utilizare &lt;a href=&#34;http://www.romhacking.net/translations/2172/&#34;&gt;esta&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Si bien podemos disfrutar Dōkutsu Monogatari mediante &lt;strong&gt;wine&lt;/strong&gt; (asunto con poco
+misterio) vamos a compilar una vercion nativa con nxEngine. Todo lo que
+necesitas lo encontraras en este &lt;a href=&#34;../nx.zip&#34;&gt;zip&lt;/a&gt;. Descargalo y abre un terminal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;su
+# nxEngine depende de la libreria SDL. En freidora
+dnf -y install SDL-devel SDL_ttf-devel
+exit
+
+unzip nx.zip -d nx
+cd nx
+make
+./nx # luego presiona &#39; &#39; (espacio) y &#39;a&#39; (letra a)
+# listo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La vercion nativa no maneja apropiadamente los acentos ni los caracteres raros
+del español, aun asi puede entenderse perfectamente.&lt;/p&gt;
+
+&lt;p&gt;Mi amor por esta obra es proporcional a su dificultad, moriras y moriras y
+moriras y volveras a morir y cuando lleges al tramo final moriras muchas veces
+mas. Recuerda salvar cada ves que se presente la oportunidad o te puedes pegar
+un cabreo.&lt;/p&gt;
+
+&lt;p&gt;El unico defecto de este magnifico titulo, es la imposibilidad de saltarse los
+dialogos. Cuando apreda a programar&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;La duracion ronda entre 4-8 horas, (la primer vez que lo termine tarde 6). Como
+dispone de varios finales, como minimo pasatelo 2 veces.&lt;/p&gt;
+
+&lt;p&gt;Puedes encontrar achivos de salvamento, ports diversos y muchas cosas mas en
+&lt;a href=&#34;http://www.cavestory.org/&#34;&gt;http://www.cavestory.org/&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -59,8 +422,60 @@ Solarus tambien cuenta con un editor de juegos llamado Solarus Quest Editor escr
       <pubDate>Sat, 17 Dec 2016 08:29:18 -0600</pubDate>
       
       <guid>https://nasciiboy.github.io/vg/h-craft/</guid>
-      <description>H-Craft es un juego de &amp;ldquo;carreras&amp;rdquo; con Hovercrafts (aerodeslizadores) estupendo disponible libremente para GNU/linux (tambien hay vercion para android y windows)
-hardware  1 Ghz Processor 512 MB Memory A 3D-Card with the power of a Geforce3 or Radeon 7500 (or better) OpenGL 1.3 GNU/linux (32 Bit / 64 Bit) or winbug$ 98, mp, xp, 2000, vista 150 MB free space on hard-disk  build (debian) Este es el proceso que segui para compilarlo en debian 7.</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../hcraft01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;H-Craft es un juego de &amp;ldquo;carreras&amp;rdquo; con &lt;em&gt;Hovercrafts&lt;/em&gt; (aerodeslizadores)
+estupendo disponible libremente para GNU/linux (tambien hay vercion para android
+y windows)&lt;/p&gt;
+
+&lt;h2 id=&#34;hardware&#34;&gt;hardware&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1 Ghz Processor&lt;/li&gt;
+&lt;li&gt;512 MB Memory&lt;/li&gt;
+&lt;li&gt;A 3D-Card with the power of a Geforce3 or Radeon 7500 (or better)&lt;/li&gt;
+&lt;li&gt;OpenGL 1.3&lt;/li&gt;
+&lt;li&gt;GNU/linux (32 Bit / 64 Bit) or winbug$ 98, mp, xp, 2000, vista&lt;/li&gt;
+&lt;li&gt;150 MB free space on hard-disk&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;build-debian&#34;&gt;build (debian)&lt;/h2&gt;
+
+&lt;p&gt;Este es el proceso que segui para compilarlo en debian 7. No me gustan los
+&lt;em&gt;IDEs&lt;/em&gt; y como en este caso se utiliza CodeBlocks, mejor invocarlo desde la
+terminal&lt;/p&gt;
+
+&lt;p&gt;Por cierto, actualice al codigo para compilarlo desde freidora 25&amp;hellip; la
+compilacion no se logro&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;su
+aptitude install bash gcc cmake codeblocks mercurial
+exit
+
+mkdir ~/h-craft
+cd ~/h-craft
+hg clone https://bitbucket.org/mzeilfelder/trunk_hc1
+hg clone https://bitbucket.org/mzeilfelder/media_hc1
+cd trunk_hc1/build
+
+# necesario ejecutarlo con bash o colocar #! /bin/bash
+# a estos scripts
+./copy-media-linux.sh
+./make-libs-linux.sh
+
+cd ..
+codeblocks --build --target=&amp;quot;Linux - Release - accurate math - static&amp;quot; \
+           --no-batch-window-close libs/irrlicht/source/Irrlicht/Irrlicht-gcc.cbp
+codeblocks --build --target=&amp;quot;linux64 release&amp;quot; --no-batch-window-close src/hover.cbp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;tuning&#34;&gt;tuning&lt;/h2&gt;
+
+&lt;p&gt;existe una traduccion del los menus realizada por &lt;strong&gt;Caleb&lt;/strong&gt;, puedes encontrarla  en
+&lt;a href=&#34;http://cadetesdelespacio.es/node/1362&#34;&gt;http://cadetesdelespacio.es/node/1362&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
