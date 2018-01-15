@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/categories/</link>
+    <link>https://nasciiboy.github.io/categories/</link>
     <description>Recent content in Categories on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Mon, 30 Oct 2017 15:45:27 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Apt</title>
-      <link>http://nasciiboy.github.io/categories/apt/</link>
+      <link>https://nasciiboy.github.io/categories/apt/</link>
       <pubDate>Mon, 30 Oct 2017 15:45:27 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/categories/apt/</guid>
+      <guid>https://nasciiboy.github.io/categories/apt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Emacs</title>
-      <link>http://nasciiboy.github.io/categories/emacs/</link>
+      <link>https://nasciiboy.github.io/categories/emacs/</link>
       <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/categories/emacs/</guid>
+      <guid>https://nasciiboy.github.io/categories/emacs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Love2d</title>
-      <link>http://nasciiboy.github.io/categories/love2d/</link>
+      <link>https://nasciiboy.github.io/categories/love2d/</link>
       <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/categories/love2d/</guid>
+      <guid>https://nasciiboy.github.io/categories/love2d/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Post</title>
-      <link>http://nasciiboy.github.io/categories/post/</link>
+      <link>https://nasciiboy.github.io/categories/post/</link>
       <pubDate>Mon, 25 Dec 2017 17:15:29 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/categories/post/</guid>
+      <guid>https://nasciiboy.github.io/categories/post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Prog</title>
-      <link>http://nasciiboy.github.io/categories/prog/</link>
-      <pubDate>Wed, 10 Jan 2018 18:44:03 -0600</pubDate>
+      <link>https://nasciiboy.github.io/categories/prog/</link>
+      <pubDate>Mon, 15 Jan 2018 14:31:33 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/categories/prog/</guid>
+      <guid>https://nasciiboy.github.io/categories/prog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vg</title>
-      <link>http://nasciiboy.github.io/categories/vg/</link>
+      <link>https://nasciiboy.github.io/categories/vg/</link>
       <pubDate>Thu, 20 Jul 2017 22:21:43 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/categories/vg/</guid>
+      <guid>https://nasciiboy.github.io/categories/vg/</guid>
       <description></description>
     </item>
     

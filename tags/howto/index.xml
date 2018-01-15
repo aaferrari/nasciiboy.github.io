@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Howto on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/howto/</link>
+    <link>https://nasciiboy.github.io/tags/howto/</link>
     <description>Recent content in Howto on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 23 Nov 2017 16:26:40 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/howto/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HTC One M8 (flasheo)</title>
-      <link>http://nasciiboy.github.io/prog/m8/</link>
+      <link>https://nasciiboy.github.io/prog/m8/</link>
       <pubDate>Thu, 23 Nov 2017 16:26:40 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/m8/</guid>
+      <guid>https://nasciiboy.github.io/prog/m8/</guid>
       <description>sucede que estas tranquilamente con tu dispositivo (un androide 4.4) que se arrastra por la vida, un dia revisando la playstore aparece que google te esta revisando las aplicaciones para que no tengas que preocuparte por tontaaas de seguridad o virus. Te cuiada tanto que ni te aviza, le dices que no tiene que hacerlo, pero insiste.
 Otro dia revisas tus apps y cual hongo &amp;ldquo;nace&amp;rdquo; un nuevo icono de nombre Ajustes de Google, va, si esto no lo instale yo, que generosidad&amp;hellip; y asi tu dispositivo con pocos recursos, programado en java, sobre java, sobre un nucleo, sobre un hardware con 500MB de ram y doble nucleo arm, no puede reproducir un puñetero audio decentemente.</description>
     </item>
     
     <item>
       <title>The Return Of F</title>
-      <link>http://nasciiboy.github.io/prog/the-return-of-f/</link>
+      <link>https://nasciiboy.github.io/prog/the-return-of-f/</link>
       <pubDate>Thu, 16 Nov 2017 13:24:08 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/the-return-of-f/</guid>
+      <guid>https://nasciiboy.github.io/prog/the-return-of-f/</guid>
       <description>Siguiendo esa bonita tradicion de las entradas &amp;ldquo;que hacer despues de instalar X&amp;ldquo;, llega el turno de hacer un: &amp;ldquo;que hacer despues de instalar&amp;hellip; Fedora&amp;hellip;&amp;rdquo;
 y, es que el tour por antergos fue un encanto mientras duro, pero cuando las cosas se pusieron feas, la ultima opcion que quedaba fue regresar a las frias y perversas garras (reptili|fedori)anas.
 Jo, jo, jo, no todo es tan malo, creo, freidora tambien tiene de lo ultimo y por ahora el unico problema es que el equipo no se apaga si no es con un reinicio y cortando el switch de la fuente en el interludio&amp;hellip;.</description>
@@ -35,68 +35,68 @@ Jo, jo, jo, no todo es tan malo, creo, freidora tambien tiene de lo ultimo y por
     
     <item>
       <title>Java &amp; Me(h)</title>
-      <link>http://nasciiboy.github.io/prog/javame/</link>
+      <link>https://nasciiboy.github.io/prog/javame/</link>
       <pubDate>Fri, 10 Nov 2017 14:57:41 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/javame/</guid>
+      <guid>https://nasciiboy.github.io/prog/javame/</guid>
       <description>Por que razones concientes y sin coercion externa aprender java?
 en mi caso, hice un solemne juramento de no aprender java (y quiza python, js&amp;hellip;) y en general nada 7 veces mas lento que C&amp;hellip; porque cualquier lenguaje un orden de magnitud mas lento que C, es directamente una basura&amp;hellip; o tiene un ambito de uso extremadamente especifico, como servir para crear extensiones o como prompt. Fuera de este uso, nadie &amp;ldquo;serio&amp;rdquo; sacarlos deberia.</description>
     </item>
     
     <item>
       <title>OCR</title>
-      <link>http://nasciiboy.github.io/prog/ocr/</link>
+      <link>https://nasciiboy.github.io/prog/ocr/</link>
       <pubDate>Thu, 09 Nov 2017 17:10:40 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/ocr/</guid>
+      <guid>https://nasciiboy.github.io/prog/ocr/</guid>
       <description>sucede que tenia un libro que aprecio muchisimo, pero mucho mucho mucho, aunque no lo habia leido y lo escaneeehee para convertirlo en otra cobaya del proyecto morg, y para leerlo&amp;hellip; y por que supongo que lo voy a necesitar con inmediates y de forma reiterativa en el futuro.
 asi que en un acto de benevolencia, pereza y mayor exactitud (o no), paso por mi mente darle otra oportunidad al ocr y ver si con el paso del tiempo la cosa habia ido a mejor o en definitiva hay que esperar la aparicion de inteligencias artificiales reales, para la titanica tarea de digitalizar todo el conocimento</description>
     </item>
     
     <item>
       <title>lxde shortcuts</title>
-      <link>http://nasciiboy.github.io/prog/lxde-shortcuts/</link>
+      <link>https://nasciiboy.github.io/prog/lxde-shortcuts/</link>
       <pubDate>Sun, 22 Oct 2017 12:36:18 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/lxde-shortcuts/</guid>
+      <guid>https://nasciiboy.github.io/prog/lxde-shortcuts/</guid>
       <description>A Gnome ♥ lo que pida! Mas, si el equipo es incapas de cumplir sus exigencias para una experiencia completa (contar con un procesador con 2 nucleos, 2 monitores y 3GB de ram), mejor optar por un entorno poco exigente en sus recursos
 asi pues en una laptop limitada con 10 años en su historia (32bits con 512MB ram) el balance ideal (segun varias prubas) fue debian 9 con lxde, que, no solo consigue regresar de la vida al equipo, tiene la potencia suficiente como para ejecutar un navegador consumista moderno, varias terminales, editor, fluidez con los videos e incluso ejecutar varios emuladores, todo con un sistema actualizado, moderno y libre</description>
     </item>
     
     <item>
       <title>The X86 Strikes Back</title>
-      <link>http://nasciiboy.github.io/prog/the-x86-strikes-back/</link>
+      <link>https://nasciiboy.github.io/prog/the-x86-strikes-back/</link>
       <pubDate>Sat, 14 Oct 2017 12:38:00 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/the-x86-strikes-back/</guid>
+      <guid>https://nasciiboy.github.io/prog/the-x86-strikes-back/</guid>
       <description>bueno, la imagen es mas de 8bits que por ahora son los equipos retro-nostalgicos de moda, ya le llegara su momento a x86.
 Esta historia trata de como pase (sin querer) de considerar obsoleto el hardware x86, pidiendo que todos esos equipos entregasen su silicio al mundo, a creer que aun son equipos potables para su uso diario o en el peor de las casos para utilizarlos como instrumentos de iniciacion en el heretico culto de Emacs, las ttys y la &amp;ldquo;verdadera&amp;rdquo; programacion</description>
     </item>
     
     <item>
       <title>Emacs, configuracion de verano</title>
-      <link>http://nasciiboy.github.io/emacs/v-config/</link>
+      <link>https://nasciiboy.github.io/emacs/v-config/</link>
       <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/v-config/</guid>
+      <guid>https://nasciiboy.github.io/emacs/v-config/</guid>
       <description>todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs para ponerme a programar &amp;ldquo;el morg&amp;rdquo; (que esta en go) y aparecia un mensaje de error muuu largo, informando que el flycheck (un modo para verificar el codigo mientras se va escribiendo) no localizaba la ruta al ejecutable del flycheck-go. Como no encontraba el origen del problema y queria tunear el emacs, me propuse abandonar el sistema que tenia para agregar extensiones al emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de paquetes del que dispone emacs&amp;hellip; je, como decir que no me gustan las cosas automagicas que hacen las cosas sin que me entere, pero bueno, siendo emacs me dare el lujo de ser un poco mas permisivo</description>
     </item>
     
     <item>
       <title>PPSSPP</title>
-      <link>http://nasciiboy.github.io/vg/ppsspp/</link>
+      <link>https://nasciiboy.github.io/vg/ppsspp/</link>
       <pubDate>Tue, 02 May 2017 20:02:37 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/vg/ppsspp/</guid>
+      <guid>https://nasciiboy.github.io/vg/ppsspp/</guid>
       <description>Cambiando un poco de enfoque me dispuse a jugar un rato con el emulador que mas me gusta PPSSPP, que&amp;hellip; sirve para jugar roms de psp, este ultimo es un cacharro que cuando salio alucinaba por tener, pero como siempre he sido pobre de mente y economia nunca tuve, ya mas tarde me pasaron uno para que le pusiera algunos jugos, pero me parecio un cacharro de mala calidad</description>
     </item>
     
     <item>
       <title>morg: como usar</title>
-      <link>http://nasciiboy.github.io/prog/morg-howto/</link>
+      <link>https://nasciiboy.github.io/prog/morg-howto/</link>
       <pubDate>Sun, 12 Mar 2017 09:33:15 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/morg-howto/</guid>
+      <guid>https://nasciiboy.github.io/prog/morg-howto/</guid>
       <description>la aleatoriadad llevo a programar morg en golang (aunque creo que ya se como portarlo a c) de momento a instalar go
 instalar go (version GNU) primero ve a la direccion https://golang.org/dl/ y clica el enlace de descarga donde diga algo como (al dia de escribir esto) go1.8.linux-amd64.tar.gz (Cambia el amd64 por la arquitectura de tu equipo)
 Si todo va bien tendras el comprimido en $HOME/Downloads, abrimos un terminal y vamos hay</description>
@@ -104,29 +104,29 @@ Si todo va bien tendras el comprimido en $HOME/Downloads, abrimos un terminal y 
     
     <item>
       <title>no mas tabs en go-mode</title>
-      <link>http://nasciiboy.github.io/emacs/notabs-for-gomode/</link>
+      <link>https://nasciiboy.github.io/emacs/notabs-for-gomode/</link>
       <pubDate>Sun, 12 Feb 2017 21:52:24 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/notabs-for-gomode/</guid>
+      <guid>https://nasciiboy.github.io/emacs/notabs-for-gomode/</guid>
       <description>Go tiene una ridicula guia de estilo para formatear codigo que no me agrada, de no seguir algunas reglas el compilador/interprete simplemente se niega a hacer nada. Otras reglas, son menos rigurosas, como la indentacion o colocar o no espacios, en algunos sitios.
 La indentacion oficial del lenguaje, tiene tabs equivalentes a 4 espacios en blanco y eso, eso, es algo que no puedo soportar, como tampoco tener tabs, porque cada editor los despliega como le viene en gana.</description>
     </item>
     
     <item>
       <title>org mode</title>
-      <link>http://nasciiboy.github.io/emacs/org-mode/</link>
+      <link>https://nasciiboy.github.io/emacs/org-mode/</link>
       <pubDate>Tue, 31 Jan 2017 14:40:54 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/org-mode/</guid>
+      <guid>https://nasciiboy.github.io/emacs/org-mode/</guid>
       <description>org-mode es un lenguaje de marcas ligeras nacido de, por, y para emacs y como emacs, org tambien tiene aplicaciones varias, puede ser una agenda, una lista de pendientes, hoja de calculo, blog de notas, sistema de documentacion e investigacion reproducible, todo junto y revuelto, encima da la posibilidad de exportar el contenido a pdf, latex, html, markdown, odt y groff (algunas opciones vienen por separado y requieren configuracion).</description>
     </item>
     
     <item>
       <title>Definir atajos en Emacs</title>
-      <link>http://nasciiboy.github.io/emacs/keychords/</link>
+      <link>https://nasciiboy.github.io/emacs/keychords/</link>
       <pubDate>Sat, 07 Jan 2017 09:38:46 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/keychords/</guid>
+      <guid>https://nasciiboy.github.io/emacs/keychords/</guid>
       <description>En emacs, tu puedes crear cualquier atajo de teclado para cualquier comando
 Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de configuracion de emacs
 (global-set-key (kbd &amp;quot;&amp;lt;f7&amp;gt;&amp;quot;) &#39;calendar)  Si estas experimentando y no deseas reiniciar emacs cada vez que intentas definir un nuevo atajo, puedes colocar el cursor al final del ultimo parantesis e invocar a (M-x) eval-last-sexp (comando ligado a C-x C-e). El atajo se activa de inmediato.</description>
@@ -134,30 +134,30 @@ Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de configur
     
     <item>
       <title>first theme</title>
-      <link>http://nasciiboy.github.io/emacs/first-theme/</link>
+      <link>https://nasciiboy.github.io/emacs/first-theme/</link>
       <pubDate>Wed, 28 Dec 2016 17:17:04 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/first-theme/</guid>
+      <guid>https://nasciiboy.github.io/emacs/first-theme/</guid>
       <description>Crear un Tema en Emacs un poco de historia Cuando comence a utilizar emacs (hace unos pocos años) para establecer un tema se utilizaba un paquete llamado color-theme parte del paquete emacs-goodies-el de Debian. Al parecer desde la version 24 de emacs se desaconseja su uso, pese a todo en mi instalacion se mantuvo en servicio hasta la version 26.0.50 sin generar inconvenientes.
 para la posteridad y los viajeros en el tiempo, dejo aqui el paquete en forma de zip (con un tema personalizado de regalo color-theme-nascii)</description>
     </item>
     
     <item>
       <title>Como dividir un album contenido en una sola pista flac</title>
-      <link>http://nasciiboy.github.io/apt/shnsplit/</link>
+      <link>https://nasciiboy.github.io/apt/shnsplit/</link>
       <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/shnsplit/</guid>
+      <guid>https://nasciiboy.github.io/apt/shnsplit/</guid>
       <description>En este mundo existen algunos seres extraños con tanto amor (libros, musica, series, peliculas, porno, &amp;hellip;) que no les cabe en su disco duro y tienen que compartirlo.
 Si el amor viene en forma de una sola pista flac, no hagas como yo y la mandes a la mierda, toda muestra de afecto merece respeto&amp;hellip; exepto si proviene de un degenerado que graba viniles en digital a maxima calidad, si formas parte de este grupo no mereces tener oidos.</description>
     </item>
     
     <item>
       <title>Ncurses</title>
-      <link>http://nasciiboy.github.io/prog/ncurses/</link>
+      <link>https://nasciiboy.github.io/prog/ncurses/</link>
       <pubDate>Mon, 19 Dec 2016 21:45:05 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/ncurses/</guid>
+      <guid>https://nasciiboy.github.io/prog/ncurses/</guid>
       <description>Que es Ncurses Es una libreria (parte del proyecto GNU) que nos permite crear TUIs (Text User Interface) escrita en lenguaje de programacion C con envoltorios para algunos otros lenguajes. Se utiliza principalmente en el sistema GNU/linux y en los derivados de BSD y probablemente tambien corra en el sistema de las ventanas mediante minGW (Minimalist GNU for Windows).
 Proporciona funciones para «dibujar» caracteres en la pantalla con hasta 256 colores disponibles (si la terminal lo permite).</description>
     </item>

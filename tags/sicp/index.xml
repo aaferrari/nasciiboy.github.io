@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sicp on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/sicp/</link>
+    <link>https://nasciiboy.github.io/tags/sicp/</link>
     <description>Recent content in Sicp on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 20 Aug 2017 15:59:03 -0500</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>iScheme</title>
-      <link>http://nasciiboy.github.io/prog/ischeme/</link>
+      <link>https://nasciiboy.github.io/prog/ischeme/</link>
       <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/ischeme/</guid>
+      <guid>https://nasciiboy.github.io/prog/ischeme/</guid>
       <description>La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para mi escaso saber, por su parte los conceptos programacionales con Scheme solo los entiendo a nivel superficial, es decir, podria explicar de que van, pero no ponerlo en nada practico, ademas han dejado de aparecer fraces esotericas.
 Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su puesto), me plante comenzar un port del raptor (si, otro mas) al Scheme, mas, pronto me di cuenta que habia olvidado siquiera como definir una variable, una funcion y una l-a-a-m-m-b-d-a-a (que raro suena), oohh, que dilema –dijo interiormente nasciiboy</description>
     </item>
     
     <item>
       <title>SICP [es] – Guia para Colaboradores</title>
-      <link>http://nasciiboy.github.io/prog/sicp-contrib/</link>
+      <link>https://nasciiboy.github.io/prog/sicp-contrib/</link>
       <pubDate>Mon, 10 Jul 2017 17:57:10 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/sicp-contrib/</guid>
+      <guid>https://nasciiboy.github.io/prog/sicp-contrib/</guid>
       <description>Bienvenidos los contribuidores a la traduccion No oficial de libro SICP al español!
 Antes de comenzar, es necesario decir que esta vercion esta formateada en un lenguaje (experimental) de marcas ligeras llamado morg que busca ser mas sencillo que ningun otro lenguaje para crear documentacion, mientras mantiene la mayoria de caracteristicas de otros lenguajes de marcas como xml o los derivados de TeX. Por tanto esta es una de sus primeras pruebas en el mundo real</description>
     </item>
     
     <item>
       <title>SICP (proyecto de traduccion)</title>
-      <link>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</link>
+      <link>https://nasciiboy.github.io/prog/dot-slash-sicp2es/</link>
       <pubDate>Fri, 07 Jul 2017 18:27:56 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</guid>
+      <guid>https://nasciiboy.github.io/prog/dot-slash-sicp2es/</guid>
       <description>o en otras palabras dadme pasta! (no en galletas)
 faq por que?
 para traducir un libro de muchas lineas al español, el Structure and Interpretation of Computer Programs, tambien conocido como SICP

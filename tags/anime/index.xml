@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anime on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/anime/</link>
+    <link>https://nasciiboy.github.io/tags/anime/</link>
     <description>Recent content in Anime on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 04 Jun 2017 14:57:33 -0500</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/anime/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/anime/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ramen III</title>
-      <link>http://nasciiboy.github.io/post/ramen-iii/</link>
+      <link>https://nasciiboy.github.io/post/ramen-iii/</link>
       <pubDate>Sun, 04 Jun 2017 14:57:33 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/ramen-iii/</guid>
+      <guid>https://nasciiboy.github.io/post/ramen-iii/</guid>
       <description>Es cansado ser un ser vivo (humano, al menos), pero aunque no pueda y otras veces no quiera tener cosas bonitas, los bites del disco duro pueden almacenar buenas cosas, grandes historias, sonidos ipnoticos y otras &amp;ldquo;sensaciones&amp;rdquo;
 En cuanto a la programacion, estoy leyendo el &amp;ldquo;Lenguaje de Programacion Go&amp;rdquo; relajado y haciendo todos los ejercicios que puedo (repo aca), asi mismo comence a toquetear un poco el codigo base de morg, en lo que creo sera una larga y lenta rescritura, por cierto, adaptando encontre un bug gordo, que creo se encuentra en katana, como empezare la refactorizacion por hay, pues, la correccion tambien tomara su tiempo</description>
     </item>
     
     <item>
       <title>Ramen II</title>
-      <link>http://nasciiboy.github.io/post/ramen-ii/</link>
+      <link>https://nasciiboy.github.io/post/ramen-ii/</link>
       <pubDate>Sun, 14 May 2017 21:52:45 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/ramen-ii/</guid>
+      <guid>https://nasciiboy.github.io/post/ramen-ii/</guid>
       <description>Ho, ho, ho, ho! un par de temas alteran mi ser, ambos relacionados con el software libre, la programacion, el sistema, la prision, etc&amp;hellip;
 el primero con nombre tentativo fin de la infancia&amp;hellip; del software libre o algo asi, quiza sea un tema superado, pero recien llega a mi conciencia y es probable que sea el siguiente post (o no).
 El otro esta relacionado con esa cosa llamada morg, el lenguaje de programacion golang, alguna opinion (poco informada) sobre lenguajes de programacion, traducciones y mi postura sobre la comparticion de material.</description>
@@ -35,10 +35,10 @@ El otro esta relacionado con esa cosa llamada morg, el lenguaje de programacion 
     
     <item>
       <title>Ramen I</title>
-      <link>http://nasciiboy.github.io/post/ramen-i/</link>
+      <link>https://nasciiboy.github.io/post/ramen-i/</link>
       <pubDate>Sun, 02 Apr 2017 21:08:41 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/ramen-i/</guid>
+      <guid>https://nasciiboy.github.io/post/ramen-i/</guid>
       <description>Hace unas semanas que no publico naha, que por haber cosas recomendaciones o temas no han faltado, pero entre la pereza y la programacion, no ha salido naha.
 Como paleativo e imitando otros blogs (kofff&amp;hellip; onda hostil, quijote libre) abro esta seccion para contar en que ando, prefiero poner una post de una tematica particular, pero ya sera cuando termine este mes.
 Katata El motivo principal del silencio literario fue katana, un componenten del proyecto morg (que encontraran dentro de las etiquetas del lado derecho de este blog).</description>
@@ -46,10 +46,10 @@ Katata El motivo principal del silencio literario fue katana, un componenten del
     
     <item>
       <title>Kuzu no Honkai</title>
-      <link>http://nasciiboy.github.io/post/kuzu-no-honkai/</link>
+      <link>https://nasciiboy.github.io/post/kuzu-no-honkai/</link>
       <pubDate>Wed, 22 Feb 2017 21:08:41 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/kuzu-no-honkai/</guid>
+      <guid>https://nasciiboy.github.io/post/kuzu-no-honkai/</guid>
       <description>Era mi primer dia de instituto&amp;hellip; me alegre muchisimo, iba a poder verla todos los dias de clase ––pausa, respira y no parescas nervioso–– creo que los dos pensamos lo mismo ––es verdad, da igual–– tuku, tuku, tuku ––fue electrico–– todo lo que quiero hacer&amp;hellip; mierda, otro anime colegial &amp;hellip; bueno, las pantallas pueden mostrar cosas que me satisfacen plenamente, es decir, no es normal??
 Asi es, Kusu no Honkai actualmente en transmision (capitulo 7) merece su propio post.</description>
     </item>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eww on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/eww/</link>
+    <link>https://nasciiboy.github.io/tags/eww/</link>
     <description>Recent content in Eww on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Wed, 18 Jan 2017 09:29:17 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/eww/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/eww/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Emacs web y noticias en modo texto</title>
-      <link>http://nasciiboy.github.io/emacs/rsspluseww/</link>
+      <link>https://nasciiboy.github.io/emacs/rsspluseww/</link>
       <pubDate>Wed, 18 Jan 2017 09:29:17 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/rsspluseww/</guid>
+      <guid>https://nasciiboy.github.io/emacs/rsspluseww/</guid>
       <description>Eso de los rss parece ser mas bueno que encontrar un billete de alta denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las paginas incluyen el icono naranja con unas barras.
 Cierto es que intente utilizarlo un par de veces, solo que lo encortre muy complejo&amp;hellip; asi pues he pasado cerca de cinco años abriendo todos los dias los marcadores del firefox en manada, hasta que hace unos pocos dias descubri como es esto de los rss (pese a que este blog los genera automagicamente)</description>
     </item>

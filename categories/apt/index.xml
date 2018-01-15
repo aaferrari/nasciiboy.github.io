@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apt on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/categories/apt/</link>
+    <link>https://nasciiboy.github.io/categories/apt/</link>
     <description>Recent content in Apt on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Mon, 30 Oct 2017 15:45:27 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/categories/apt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/categories/apt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ibniz</title>
-      <link>http://nasciiboy.github.io/apt/ibniz/</link>
+      <link>https://nasciiboy.github.io/apt/ibniz/</link>
       <pubDate>Mon, 30 Oct 2017 15:45:27 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/ibniz/</guid>
+      <guid>https://nasciiboy.github.io/apt/ibniz/</guid>
       <description>IBNIZ es una máquina virtual diseñada para programas audiovisuales de bajo nivel extremadamente compactos. El objetivo principal del diseño es la utilidad como plataforma para producciones demoscene, arte de glitch(es) y proyectos similares. Los aspectos de ingeniería de software del equipo principal se consideran totalmente irrelevantes.
 IBNIZ significa Ideally Bare Numeric Impression giZmo. El nombre también se refiere a Gottfried Leibniz, el polimatemático del siglo XVII que, entre otras cosas, inventó la aritmética binaria, construyó la primera máquina calculadora de cuatro operaciones, y creía que el mundo estaba diseñado con el principio de que un conjunto mínimo de reglas debía producir una diversidad máxima.</description>
     </item>
     
     <item>
       <title>Konsole Warrior</title>
-      <link>http://nasciiboy.github.io/apt/konsole-warrior/</link>
+      <link>https://nasciiboy.github.io/apt/konsole-warrior/</link>
       <pubDate>Sat, 24 Jun 2017 20:28:51 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/konsole-warrior/</guid>
+      <guid>https://nasciiboy.github.io/apt/konsole-warrior/</guid>
       <description>Dentro de El camino del Heroe (que algunos dicen que esta conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al llamado, debemos preparar nuestras herramientas sobrenaturales lenguaje, Emacs Editor y Emulador de terminal (intreprete incluido).
 Para las dos elecciones (lenguaje y emulador de terminal) tenemos un amplio abanico de posibilidades, hoy les hablare del emulador de terminal y las razones de su eleccion
 Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la configuracion y el cambio constante de temas (iconos, wallpapers, doks y otra extensa variadad) de cambios neon, Konsole es la aplicacion con K que mas aprecio, por un solo aspecto, su alta configuracion de atajos del teclado, no es que necesite demasiado, solo tener la ventana sin ninguna distraccion, ni barra, ni nada, algunos atajos de desplazamiento por pagina y linea, mas poder cambiar entre &amp;ldquo;tabs&amp;rdquo;(?</description>
@@ -35,10 +35,10 @@ Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la conf
     
     <item>
       <title>fish</title>
-      <link>http://nasciiboy.github.io/apt/fish/</link>
+      <link>https://nasciiboy.github.io/apt/fish/</link>
       <pubDate>Sat, 24 Dec 2016 10:04:44 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/fish/</guid>
+      <guid>https://nasciiboy.github.io/apt/fish/</guid>
       <description>fish &amp;ldquo;El Shell de los 90s&amp;rdquo;, es un shell como los son bash o zsh. Esta programado en C++ y se distribuye con la licencia GNU GPL version 2.
 Segun su pagina tiene autocompletado, autosugerencias, colores VGA, se puede configurar con una interfaz web, todo funciona sin necesidad de mover nada y sus scripts son los mas bonitos del barrio&amp;hellip; MENTIRA todos los scripts de shell son feos
 como? cambiar bash dialogo interno</description>
@@ -46,20 +46,20 @@ como? cambiar bash dialogo interno</description>
     
     <item>
       <title>moc</title>
-      <link>http://nasciiboy.github.io/apt/moc/</link>
+      <link>https://nasciiboy.github.io/apt/moc/</link>
       <pubDate>Thu, 22 Dec 2016 11:56:44 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/moc/</guid>
+      <guid>https://nasciiboy.github.io/apt/moc/</guid>
       <description>En GNU existe una cantidad ridicula de reproductores de audio, por participar hasta el vlc o video (gnome) se meten en esos temas.
 En general este tipo de aplicaciones te piden una carpeta &amp;ldquo;especial&amp;rdquo; donde coloques la musica y luego exitienden sus tentaculos para optener portadas, letras, titulos, generar listas de reproduccion por autor/mas escuchados/genero, y un sin numero mas de caracteristicas que incluyen conectarse a la red, claro mientras te roban un espacio con una interfaz de lo mas mona, pensada para mover el raton de un lado a otro&amp;hellip;</description>
     </item>
     
     <item>
       <title>Como dividir un album contenido en una sola pista flac</title>
-      <link>http://nasciiboy.github.io/apt/shnsplit/</link>
+      <link>https://nasciiboy.github.io/apt/shnsplit/</link>
       <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/shnsplit/</guid>
+      <guid>https://nasciiboy.github.io/apt/shnsplit/</guid>
       <description>En este mundo existen algunos seres extraños con tanto amor (libros, musica, series, peliculas, porno, &amp;hellip;) que no les cabe en su disco duro y tienen que compartirlo.
 Si el amor viene en forma de una sola pista flac, no hagas como yo y la mandes a la mierda, toda muestra de afecto merece respeto&amp;hellip; exepto si proviene de un degenerado que graba viniles en digital a maxima calidad, si formas parte de este grupo no mereces tener oidos.</description>
     </item>

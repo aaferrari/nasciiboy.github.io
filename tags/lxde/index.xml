@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lxde on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/lxde/</link>
+    <link>https://nasciiboy.github.io/tags/lxde/</link>
     <description>Recent content in Lxde on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 22 Oct 2017 12:36:18 -0500</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/lxde/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/lxde/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>lxde shortcuts</title>
-      <link>http://nasciiboy.github.io/prog/lxde-shortcuts/</link>
+      <link>https://nasciiboy.github.io/prog/lxde-shortcuts/</link>
       <pubDate>Sun, 22 Oct 2017 12:36:18 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/lxde-shortcuts/</guid>
+      <guid>https://nasciiboy.github.io/prog/lxde-shortcuts/</guid>
       <description>A Gnome ♥ lo que pida! Mas, si el equipo es incapas de cumplir sus exigencias para una experiencia completa (contar con un procesador con 2 nucleos, 2 monitores y 3GB de ram), mejor optar por un entorno poco exigente en sus recursos
 asi pues en una laptop limitada con 10 años en su historia (32bits con 512MB ram) el balance ideal (segun varias prubas) fue debian 9 con lxde, que, no solo consigue regresar de la vida al equipo, tiene la potencia suficiente como para ejecutar un navegador consumista moderno, varias terminales, editor, fluidez con los videos e incluso ejecutar varios emuladores, todo con un sistema actualizado, moderno y libre</description>
     </item>

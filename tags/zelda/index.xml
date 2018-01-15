@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zelda on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/zelda/</link>
+    <link>https://nasciiboy.github.io/tags/zelda/</link>
     <description>Recent content in Zelda on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 14:56:59 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/zelda/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/zelda/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Zelda solarus</title>
-      <link>http://nasciiboy.github.io/vg/solarus/</link>
+      <link>https://nasciiboy.github.io/vg/solarus/</link>
       <pubDate>Sun, 01 Jan 2017 14:56:59 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/vg/solarus/</guid>
+      <guid>https://nasciiboy.github.io/vg/solarus/</guid>
       <description>Segun la propia web del proyecto
  Solarus es un motor de juegos Action-RPG gratuito y de codigo abierto, con licencia GPL y esta escrito en C++. Ejecuta quest (campañas?) en Lua y puede trabajar en un gran numero de plataformas.
 Solarus tambien cuenta con un editor de juegos llamado Solarus Quest Editor escrito en C++ con Qt para ayudarte a crear un juego.

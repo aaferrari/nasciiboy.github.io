@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TextTable2HtmlTable (Volume Three)</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>TextTable2HtmlTable (Volume Three)</h1>
+  
+
+<p><center>
+<img src="https://nasciiboy.github.io/img/jb130510.jpg" alt="" />
+</center></p>
+
+<h2 id="o-como-parsear-una-tabla-en-texto-plano-para-convertirla-en-una-tabla-html-u-otra-cosa-y-escribir-tres-post-sobre-ello-con-explicaciones-cripticas-codigo-de-ejemplo-en-golang-tercera-parte-conclucion">o, como &ldquo;parsear&rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) y escribir tres post sobre ello con explicaciones cripticas (+ codigo de ejemplo en Golang) – Tercera Parte &ldquo;Conclucion&rdquo;</h2>
+
+<p>finalizando con &ldquo;la saga&rdquo; de post mal escritos, en la <a href="../morg-table-ii/">entrega
+anterior</a> se mostro el metodo de analizar la tabla en texto
+plano como un conjunto de cuadrilateros &ldquo;con contorno&rdquo; enviando un emisario al
+punto 0,0 (y,x) de la cuadricula.</p>
+
+<p>En esta ocacion se ha preparado el codigo como una especie de simulacion de lo
+que seria un paquete &ldquo;serio&rdquo;&hellip; sin probar en un campo real y por ello
+posiblemente cuente con carencias aberrantes, pero como antes mencione, cuando
+lo incorpore al proyecto morg, dificil sera aplicarlo en otro proyecto sin
+intercepcion de por medio, ademas colocarlo aqui servira de testigo si quiero
+saber como era el concepto inicial</p>
+
+<p>la interfaz al usuario se limita a ver unas cuantas constantes (que no puede
+usar ni modificar), dos funciones y dos estructuras (todas sin documentacion alguna)
+(<code>go doc</code>):</p>
+
+<pre><code>const RIGHT = iota ...
+const CORNER = '+'
+const HEDGE  = '-'
+const HEDGEF = '~'
+const HEDGEH = '='
+const OUTSIDE = '\uFFFD'
+const VEDGE = '|'
+func TextTable2HtmlTable(data string) (string, error)
+type Cell struct{ ... }
+type Table struct{ ... }
+    func Text2Table(txtTable string) (t Table, e error)
+</code></pre>
+
+<p>las funciones regresan errores (algo cripticos) y las tablas pueden dividirse con un
+encabezado, cuerpo y &ldquo;pie&rdquo;. Una funcion (<code>Tex2Table</code>) convierte el texto en una
+tabla (<code>Table</code>)  procesada de celdas (<code>Cell</code>) y la otra (<code>TextTable2HtmlTable</code>)
+entrega una tabla en formato html apartir de su entrada en texto plano.</p>
+
+<p>Un ejemplo de tabla seria:</p>
+
+<pre><code>+-------------------------------------------------+
+| una tabla realmente dificil de dibujar a mano   |
++------+----+----+----+---------------------------+
+|  jo  | jo | jo | jo | y mas jos como encabezado |
++======+====+====+====+====+======================+
+|             a            |          b           |
++------------------+-------+------+---------------+
+|        c         |   d   |  e   |               |
++--------+---------+-------+------+      f        |
+|   g    |      h                 |               |
++--------+--+----------------+----+-+-------------+
+|           |        j       |      |             |
+|  i        +--------+-------+   k  |      l      |
+|           |    m   |   n   |      |             |
++~~~~~~~~~~~+~~~~~~~~+~~~~~~~+~~+~~~+~~~~~~~~~~~~~+
+|      con un pie de pagina     |   o algo asi    |
++-------------------------------+-----------------+
+</code></pre>
+
+<p>que produce:</p>
+
+<pre><code>&lt;table border=&quot;1&quot;&gt;
+&lt;thead&gt;
+  &lt;tr&gt;&lt;th colspan=&quot;13&quot;&gt;&lt;p&gt; una tabla realmente dificil de dibujar a mano &lt;/p&gt;&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;&lt;p&gt; jo &lt;/p&gt;&lt;/th&gt;&lt;th colspan=&quot;2&quot;&gt;&lt;p&gt; jo &lt;/p&gt;&lt;/th&gt;&lt;th&gt;&lt;p&gt; jo &lt;/p&gt;&lt;/th&gt;&lt;th colspan=&quot;3&quot;&gt;&lt;p&gt; jo &lt;/p&gt;&lt;/th&gt;&lt;th colspan=&quot;6&quot;&gt;&lt;p&gt; y mas jos como encabezado &lt;/p&gt;&lt;/th&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;&lt;td colspan=&quot;8&quot;&gt;&lt;p&gt; a &lt;/p&gt;&lt;/td&gt;&lt;td colspan=&quot;5&quot;&gt;&lt;p&gt; b &lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td colspan=&quot;5&quot;&gt;&lt;p&gt; c &lt;/p&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;p&gt; d &lt;/p&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;p&gt; e &lt;/p&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot; rowspan=&quot;2&quot;&gt;&lt;p&gt; f &lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;p&gt; g &lt;/p&gt;&lt;/td&gt;&lt;td colspan=&quot;9&quot;&gt;&lt;p&gt; h &lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td colspan=&quot;3&quot; rowspan=&quot;2&quot;&gt;&lt;p&gt; i &lt;/p&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot;&gt;&lt;p&gt; j &lt;/p&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot; rowspan=&quot;2&quot;&gt;&lt;p&gt; k &lt;/p&gt;&lt;/td&gt;&lt;td rowspan=&quot;2&quot;&gt;&lt;p&gt; l &lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;p&gt; m &lt;/p&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;p&gt; n &lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;
+  &lt;tr&gt;&lt;td colspan=&quot;10&quot;&gt;&lt;p&gt; con un pie de pagina &lt;/p&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;p&gt; o algo asi &lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>y se ve (sin css por medio) asi:</p>
+
+<table border="1">
+<thead>
+  <tr><th colspan="13"><p> una tabla realmente dificil de dibujar a mano </p></th></tr>
+  <tr><th><p> jo </p></th><th colspan="2"><p> jo </p></th><th><p> jo </p></th><th colspan="3"><p> jo </p></th><th colspan="6"><p> y mas jos como encabezado </p></th></tr>
+</thead>
+<tbody>
+  <tr><td colspan="8"><p> a </p></td><td colspan="5"><p> b </p></td></tr>
+  <tr><td colspan="5"><p> c </p></td><td colspan="3"><p> d </p></td><td colspan="3"><p> e </p></td><td colspan="2" rowspan="2"><p> f </p></td></tr>
+  <tr><td colspan="2"><p> g </p></td><td colspan="9"><p> h </p></td></tr>
+  <tr><td colspan="3" rowspan="2"><p> i </p></td><td colspan="6"><p> j </p></td><td colspan="3" rowspan="2"><p> k </p></td><td rowspan="2"><p> l </p></td></tr>
+  <tr><td colspan="3"><p> m </p></td><td colspan="3"><p> n </p></td></tr>
+</tbody>
+<tfoot>
+  <tr><td colspan="10"><p> con un pie de pagina </p></td><td colspan="3"><p> o algo asi </p></td></tr>
+</tfoot>
+</table>
+
+<p>pasemos a <a href="https://nasciiboy.github.io/data/table3.go">el codigo</a> (guardar-como) (las pruebas
+por <a href="https://nasciiboy.github.io/data/table3_test.go">aca</a>, un <code>go test -v</code> en una carpeta sin otro codigo go):</p>
+
+<pre><code>package katana
+
+
+// importaciones estandar sin cosas raras
+import (
+  &quot;fmt&quot;
+  &quot;sort&quot;
+  &quot;bytes&quot;
+  &quot;errors&quot;
+)
+
+// constantes que se pueden modificar sin mucho problema para
+// alterar el aspecto de una tabla
+const OUTSIDE = '\uFFFD' // unicode.RuneError = '\uFFFD'
+const CORNER  = '+'      //  +----+     //  +--------+-----+--------+
+const VEDGE   = '|'      //  |    |     //  | header       |  Yhee! |
+const HEDGE   = '-'      //  +----+     //  +========+=====+========+
+                                        //  | body-A | B   |   C    |
+                                        //  +~~~~~~~~+~~~~~+~~~~~~~~+
+const HEDGEH  = '='  // h == head       //  | Yhak!  |    footer    |
+const HEDGEF  = '~'  // f == foot       //  +--------+-----+--------+
+
+
+// convierte una tabla en texto plano (perfectamente entregada) en una estructura
+// con los datos procesados, o entrega un error
+func Text2Table( txtTable string ) (t Table, e error) {
+  // se convierte la cadena de entrada en una cuadricula de runas
+  runeTable := gridify( txtTable )
+  // si no hay cuadricula, la cadena de entrada no tenia nada
+  if runeTable == nil { return t, errors.New( &quot;empty input&quot; ) }
+
+  // buscamos si existe un divisor de encabezado y pie en la tabla
+  var yHead, yFoot int = 0, -1 // valores magicos de inicio
+  for y, row := range runeTable {
+    // si la fila es un encabezado
+    if isHead( row ) {
+      if yHead ==  0 {
+        yHead = y
+      // no puede haber mas de un encabezado
+      } else { return t, fmt.Errorf( &quot;there can only be one header, repetition in row %d&quot;, y ) }
+    }
+    // si la fila es un pie
+    if isFoot( row ) {
+      if yFoot == -1 {
+        yFoot = y
+      // no puede haber mas de un pie
+      } else { return t, fmt.Errorf( &quot;there can only be one footer, repetition in row %d&quot;, y ) }
+    }
+  }
+
+  // se normalizan las columnas de encabezado y pie para simplificar el
+  // analisis de contornos
+  if yHead !=  0 { normalizeRuneTableRow( runeTable, yHead ) }
+  if yFoot != -1 { normalizeRuneTableRow( runeTable, yFoot ) }
+
+  // -----&gt; basicamente lo mismo que en el post anterior con algun cambio poco interesante
+  g         := new( grid ).init( runeTable )
+  rows      := make( [][]*quad, 0, 10 )
+  row       := make(   []*quad, 0,  5 )
+  hotPoints := make( map[point]bool )
+  xEdges, yEdges := map[int]bool{ 0: true }, map[int]bool{ 0: true }
+
+  for next, y := new(point), 0; next != nil;  {
+    s := g.newQuad(*next)
+
+    if e = s.tourist(); e != nil {
+      return t, fmt.Errorf( &quot;square.tourist: %v&quot;, e )
+    }
+
+    xEdges[ s.cornerC.x ] = true
+    yEdges[ s.cornerA.y ] = true
+
+    if y != s.cornerD.y {
+      rows = append( rows, row)
+      row  = make( []*quad, 0, 5 )
+      y    = s.cornerD.y
+    }
+
+    row = append( row, s )
+
+    if g.visit( s.cornerA.nmv( DOWN ) ) == '|' {
+      hotPoints[ s.cornerA ] = true
+    }
+
+    if _, exist := hotPoints[ s.cornerC ]; exist {
+      delete( hotPoints, s.cornerC )
+      next = &amp;s.cornerC
+    } else if g.visit( s.cornerC.nmv( RIGHT ) ) == '-' {
+      next = &amp;s.cornerC
+    } else {
+      next = pullNextPoint( hotPoints )
+
+      if next == nil { rows = append( rows, row) }
+    }
+  }
+  // &lt;--------------
+
+
+  xS, yS :=  mapToSortIntArray(xEdges), mapToSortIntArray(yEdges)
+  // internamente se utiliza una estructura para las celdas con
+  // paremetros irrelevantes para la interfaz final, asi que se
+  // copian a la estructura final
+  table := make( [][]Cell, len( rows ) )
+  for y, row := range rows {
+    table[y] = make([]Cell, len( row ) )
+    for x, q := range row {
+      table[y][x].rowspan = rangeCells( q.cornerD.y, q.cornerA.y, yS )
+      table[y][x].colspan = rangeCells( q.cornerD.x, q.cornerB.x, xS )
+      table[y][x].data    = cutCellTxt( g.data, q.cornerD, q.cornerB )
+    }
+
+    // estos dos ifs son para identificar cuales filas pertenecen al
+    // encabezado o pie (si existen), ademas se asignan al mismo tiempo.
+    // De lo contrario, la seccion de la tabla (encabezado, cuerpo o pie)
+    // es un &quot;nil&quot;
+    if yHead != 0 &amp;&amp; (row[0].cornerA.y == yHead) {
+      yHead  = y + 1
+      t.Head = table[:yHead]
+    }
+    if yFoot != -1 &amp;&amp; (row[0].cornerD.y == yFoot) {
+      yFoot  = y
+      t.Foot = table[yFoot:]
+    }
+  }
+  // la asignacion del cuerpo
+  if yFoot == -1 { yFoot = len( table ) }
+  if yFoot - yHead &gt; 0 { t.Body = table[yHead:yFoot] }
+
+  return
+}
+
+// la tabla en si [fila][celda]
+type Table struct {
+  Head [][]Cell
+  Body [][]Cell
+  Foot [][]Cell
+}
+
+// la celda, con informacion de cuantas columnas y filas abarca
+// y el texto &quot;rectangular&quot; que contiene
+type Cell struct {
+  colspan, rowspan int
+  data string
+}
+</code></pre>
+
+<p>jo, la funcion principal quedo bastante extensa, lo cual no es bueno para hacer
+pruebas&hellip; pero creo que esto facilita entender el flujo del programa sin saltar
+de un lado a otro del codigo. Es cierto que puede dividirse en fragmentos con un
+nombre apropiado e incluso colocarlos con un orden descendente, ¡pero! pasar
+parametros de un lado a otro no me entusiasma demaciado, tampoco hacer una
+estructura mas que tenga dichos datos con metodos (para evitar la copia de parametros)</p>
+
+<p>La funcion que optiene y genera el formato html creo me ha quedado bastante
+estetica y compacta, considerando el numero de acciones que realiza</p>
+
+<pre><code>// en lugar de tener tres funciones distintas segun la seccion
+// de la tabla a imprimir, utilizo un truco con estos dos arreglos
+var zs = [3]string{ &quot;thead&quot;, &quot;tbody&quot;, &quot;tfoot&quot; }
+var ys = [3]string{    &quot;th&quot;,    &quot;td&quot;,    &quot;td&quot; }
+
+// la funcion que convierte directamente de texto a html
+func TextTable2HtmlTable( data string ) (string, error) {
+  t, e := Text2Table( data ) // se optiene la tabla procesada
+  // si hubo un errror se informa
+  if e != nil { return &quot;&quot;, fmt.Errorf( &quot;Text2Table: %v&quot;, e ) }
+
+  buf := new( bytes.Buffer ) // un buffer por eficiencia
+  fmt.Fprintf( buf,  &quot;&lt;table border=\&quot;1\&quot;&gt;\n&quot; )
+
+  // aqui se itera sobre las tres secciones de la tabla
+  // el indice es para el truco antes mencionado
+  for i, sec := range [3][][]Cell{ t.Head, t.Body, t.Foot } {
+    if sec == nil { continue } // si esta vacia la seccion se pasa a la siguiente
+
+    fmt.Fprintf( buf,  &quot;&lt;%s&gt;\n&quot;, zs[i] )  // abre la seccion
+      for _, row := range sec {           // bucle por la seccion, genera las filas
+        buf.WriteString( &quot;  &lt;tr&gt;&quot; )       // imprime la etiqueta de fila
+        for _, cell := range row {        // bucle por la fila, genera las celdas
+          fmt.Fprintf( buf, &quot;&lt;%s&quot;, ys[ i ] )
+          if cell.colspan != 1 { fmt.Fprintf( buf, &quot; colspan=\&quot;%d\&quot;&quot;, cell.colspan ) }
+          if cell.rowspan != 1 { fmt.Fprintf( buf, &quot; rowspan=\&quot;%d\&quot;&quot;, cell.rowspan ) }
+          fmt.Fprintf( buf, &quot;&gt;&lt;p&gt;%s&lt;/p&gt;&lt;/%s&gt;&quot;, SpaceSwap( cell.data, &quot; &quot; ), ys[ i ] )
+        }
+        buf.WriteString( &quot;&lt;/tr&gt;\n&quot; )      // se cierra la fila
+      }
+    fmt.Fprintf( buf,  &quot;&lt;/%s&gt;\n&quot;, zs[i] ) // se cierra la seccion
+  }
+
+  fmt.Fprintf( buf, &quot;&lt;/table&gt;\n&quot; )        // termina la tabla
+
+  return buf.String(), nil
+}
+</code></pre>
+
+<p>y listo, el resto es calderilla!</p>
+
+<p>por implementar, en este punto seria un juego hacer el exportador a digamos,
+algun hijo de TeX, lo que si sera duro, es hacer un conversor tabla a texto y
+algo complejo tambien un analizador de la orientacion del texto para agregar
+estos datos a la tabla (centrado, a la izquierda a la derecha)</p>
+
+<p>por otro lado tambien sienta una buena base para generar tablas (o umls) como
+imagenes o svgs, incluso un analizador de ascii a un dibujo o cosas por el
+estilo&hellip; un buen proyecto para alguien sin ideas&hellip;</p>
+
+<p>happy hacking!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.github.io/prog/morg-table-ii/">◀ TextTable2HtmlTable (Volume Two)</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/categories/prog">prog(38)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(24)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/tags/howto">howto(15)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(15)</a></li><li><a href="https://nasciiboy.github.io/tags/fonos">fonos(14)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(8)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

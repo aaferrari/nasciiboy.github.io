@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rss on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/rss/</link>
+    <link>https://nasciiboy.github.io/tags/rss/</link>
     <description>Recent content in Rss on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 28 Sep 2017 19:47:50 -0500</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/rss/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/rss/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Emacs, configuracion de verano</title>
-      <link>http://nasciiboy.github.io/emacs/v-config/</link>
+      <link>https://nasciiboy.github.io/emacs/v-config/</link>
       <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/v-config/</guid>
+      <guid>https://nasciiboy.github.io/emacs/v-config/</guid>
       <description>todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs para ponerme a programar &amp;ldquo;el morg&amp;rdquo; (que esta en go) y aparecia un mensaje de error muuu largo, informando que el flycheck (un modo para verificar el codigo mientras se va escribiendo) no localizaba la ruta al ejecutable del flycheck-go. Como no encontraba el origen del problema y queria tunear el emacs, me propuse abandonar el sistema que tenia para agregar extensiones al emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de paquetes del que dispone emacs&amp;hellip; je, como decir que no me gustan las cosas automagicas que hacen las cosas sin que me entere, pero bueno, siendo emacs me dare el lujo de ser un poco mas permisivo</description>
     </item>
     
     <item>
       <title>Emacs web y noticias en modo texto</title>
-      <link>http://nasciiboy.github.io/emacs/rsspluseww/</link>
+      <link>https://nasciiboy.github.io/emacs/rsspluseww/</link>
       <pubDate>Wed, 18 Jan 2017 09:29:17 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/rsspluseww/</guid>
+      <guid>https://nasciiboy.github.io/emacs/rsspluseww/</guid>
       <description>Eso de los rss parece ser mas bueno que encontrar un billete de alta denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las paginas incluyen el icono naranja con unas barras.
 Cierto es que intente utilizarlo un par de veces, solo que lo encortre muy complejo&amp;hellip; asi pues he pasado cerca de cinco años abriendo todos los dias los marcadores del firefox en manada, hasta que hace unos pocos dias descubri como es esto de los rss (pese a que este blog los genera automagicamente)</description>
     </item>

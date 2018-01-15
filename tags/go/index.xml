@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/go/</link>
+    <link>https://nasciiboy.github.io/tags/go/</link>
     <description>Recent content in Go on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Fri, 27 Oct 2017 17:42:32 -0500</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>blackfriday</title>
-      <link>http://nasciiboy.github.io/prog/blackfriday/</link>
+      <link>https://nasciiboy.github.io/prog/blackfriday/</link>
       <pubDate>Fri, 27 Oct 2017 17:42:32 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/blackfriday/</guid>
+      <guid>https://nasciiboy.github.io/prog/blackfriday/</guid>
       <description>Durante la modificacion del morg, habia escrito esto junto con otras notas vagas en una bitocora de abordo que trata de ser FIFO, aunque si no mantengo la constancia comienza a crecer y crecer hasta volverse incomoda. Asi pues (y como el post anterior) a despejar algunas de esas divagaciones
 Como (no) construir un parser para un lenguaje de marcas (ligeras) con morg (parser y lenguaje de marcas ligueras inventado por yo) la construccion al igual que casi todas mis mierdas, fue fruto de reinventar la rueda + prueba y error constantes, tratando de mantener una cierta sencilles&amp;hellip; mientras la raices de la incertidubre sobre si el proyecto llegaria a ser funcional o quedaria truncado por la ignorancia y malas deciciones de diseño orientadas en su mayoria por la aleatoriedad, me consumen lentamente</description>
     </item>
     
     <item>
       <title>benchmarks dentro de un programa en go</title>
-      <link>http://nasciiboy.github.io/prog/gomark/</link>
+      <link>https://nasciiboy.github.io/prog/gomark/</link>
       <pubDate>Fri, 06 Oct 2017 21:03:55 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/gomark/</guid>
+      <guid>https://nasciiboy.github.io/prog/gomark/</guid>
       <description>en Go podemos realizar benchmarks dentro de los ficheros _test.go, sin embargo realizar comparativas dentro de en un programa &amp;ldquo;regular&amp;rdquo; no es (era) tan sencillo hasta la llegada de la version 1.9
 cgo la primer opcion es echar mano de la libreria time de C. Esta libreria contiene la funcion clock que nos regresa una aproximacion a la cantidad de tiempo del procesador que ha utilizado el programa desde su ejecucion.</description>
     </item>

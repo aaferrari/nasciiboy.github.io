@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Install on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/install/</link>
+    <link>https://nasciiboy.github.io/tags/install/</link>
     <description>Recent content in Install on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 14 Sep 2017 16:16:26 -0500</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Sayonara F</title>
-      <link>http://nasciiboy.github.io/prog/sayonara-f/</link>
+      <link>https://nasciiboy.github.io/prog/sayonara-f/</link>
       <pubDate>Thu, 14 Sep 2017 16:16:26 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/sayonara-f/</guid>
+      <guid>https://nasciiboy.github.io/prog/sayonara-f/</guid>
       <description>fedora -&amp;gt; antergos (dos pantalas y un adios) aaah, compras un disco duro, optienes dos semanas de depresion y terminas cambiando de distribucion&amp;hellip;
 en mi aldea, diria que solo hay un sitio rasonable para comprar hardware, que no por ello con variedad o siquiera stock, asi que cuando logre ahorrar para un hdd de 2TB y no encontre existencias, fui a otro sitio y compre el hdd y termine con un disco de servidor con miles de horas, crujidos y un mal historial del smart, mas eso ocurrio luego de haber pasado casi toda mi coleccion de libros y perderlos en el limbo&amp;hellip;</description>
     </item>
     
     <item>
       <title>Konsole Warrior</title>
-      <link>http://nasciiboy.github.io/apt/konsole-warrior/</link>
+      <link>https://nasciiboy.github.io/apt/konsole-warrior/</link>
       <pubDate>Sat, 24 Jun 2017 20:28:51 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/konsole-warrior/</guid>
+      <guid>https://nasciiboy.github.io/apt/konsole-warrior/</guid>
       <description>Dentro de El camino del Heroe (que algunos dicen que esta conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al llamado, debemos preparar nuestras herramientas sobrenaturales lenguaje, Emacs Editor y Emulador de terminal (intreprete incluido).
 Para las dos elecciones (lenguaje y emulador de terminal) tenemos un amplio abanico de posibilidades, hoy les hablare del emulador de terminal y las razones de su eleccion
 Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la configuracion y el cambio constante de temas (iconos, wallpapers, doks y otra extensa variadad) de cambios neon, Konsole es la aplicacion con K que mas aprecio, por un solo aspecto, su alta configuracion de atajos del teclado, no es que necesite demasiado, solo tener la ventana sin ninguna distraccion, ni barra, ni nada, algunos atajos de desplazamiento por pagina y linea, mas poder cambiar entre &amp;ldquo;tabs&amp;rdquo;(?</description>
@@ -35,10 +35,10 @@ Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la conf
     
     <item>
       <title>Emacs - first blood</title>
-      <link>http://nasciiboy.github.io/emacs/first-blood/</link>
+      <link>https://nasciiboy.github.io/emacs/first-blood/</link>
       <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/first-blood/</guid>
+      <guid>https://nasciiboy.github.io/emacs/first-blood/</guid>
       <description>Instalando GNU Emacs En general utilizo emacs apartir del codigo fuente, no obstante tambien tengo disponible el que brinde la distribucion de turno, ya sea para probar algo o por si alguna version presenta algun comportamiento extraño.
 Nunca la he instalado en el sistema emacs compilado a partir del codigo, en su lugar tengo un atajo de teclado para su invocacion
 desde repositorios # en debian apt-get install emacs # en fedora dnf install emacs  compilar desde el codigo fuente instalamos las dependencias</description>
@@ -46,10 +46,10 @@ desde repositorios # en debian apt-get install emacs # en fedora dnf install ema
     
     <item>
       <title>fish</title>
-      <link>http://nasciiboy.github.io/apt/fish/</link>
+      <link>https://nasciiboy.github.io/apt/fish/</link>
       <pubDate>Sat, 24 Dec 2016 10:04:44 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/fish/</guid>
+      <guid>https://nasciiboy.github.io/apt/fish/</guid>
       <description>fish &amp;ldquo;El Shell de los 90s&amp;rdquo;, es un shell como los son bash o zsh. Esta programado en C++ y se distribuye con la licencia GNU GPL version 2.
 Segun su pagina tiene autocompletado, autosugerencias, colores VGA, se puede configurar con una interfaz web, todo funciona sin necesidad de mover nada y sus scripts son los mas bonitos del barrio&amp;hellip; MENTIRA todos los scripts de shell son feos
 como? cambiar bash dialogo interno</description>
@@ -57,10 +57,10 @@ como? cambiar bash dialogo interno</description>
     
     <item>
       <title>moc</title>
-      <link>http://nasciiboy.github.io/apt/moc/</link>
+      <link>https://nasciiboy.github.io/apt/moc/</link>
       <pubDate>Thu, 22 Dec 2016 11:56:44 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/moc/</guid>
+      <guid>https://nasciiboy.github.io/apt/moc/</guid>
       <description>En GNU existe una cantidad ridicula de reproductores de audio, por participar hasta el vlc o video (gnome) se meten en esos temas.
 En general este tipo de aplicaciones te piden una carpeta &amp;ldquo;especial&amp;rdquo; donde coloques la musica y luego exitienden sus tentaculos para optener portadas, letras, titulos, generar listas de reproduccion por autor/mas escuchados/genero, y un sin numero mas de caracteristicas que incluyen conectarse a la red, claro mientras te roban un espacio con una interfaz de lo mas mona, pensada para mover el raton de un lado a otro&amp;hellip;</description>
     </item>

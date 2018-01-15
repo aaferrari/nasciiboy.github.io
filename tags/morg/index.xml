@@ -2,41 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Morg on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/morg/</link>
+    <link>https://nasciiboy.github.io/tags/morg/</link>
     <description>Recent content in Morg on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
-    <lastBuildDate>Wed, 10 Jan 2018 18:44:03 -0600</lastBuildDate>
+    <copyright>GPL v3.0</copyright>
+    <lastBuildDate>Mon, 15 Jan 2018 14:31:33 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/morg/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/morg/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>TextTable2HtmlTable (Volume Three)</title>
+      <link>https://nasciiboy.github.io/prog/morg-table-iii/</link>
+      <pubDate>Mon, 15 Jan 2018 14:31:33 -0600</pubDate>
+      
+      <guid>https://nasciiboy.github.io/prog/morg-table-iii/</guid>
+      <description>o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) y escribir tres post sobre ello con explicaciones cripticas (+ codigo de ejemplo en Golang) – Tercera Parte &amp;ldquo;Conclucion&amp;rdquo; finalizando con &amp;ldquo;la saga&amp;rdquo; de post mal escritos, en la entrega anterior se mostro el metodo de analizar la tabla en texto plano como un conjunto de cuadrilateros &amp;ldquo;con contorno&amp;rdquo; enviando un emisario al punto 0,0 (y,x) de la cuadricula.</description>
+    </item>
+    
+    <item>
       <title>TextTable2HtmlTable (Volume Two)</title>
-      <link>http://nasciiboy.github.io/prog/morg-table-ii/</link>
+      <link>https://nasciiboy.github.io/prog/morg-table-ii/</link>
       <pubDate>Wed, 10 Jan 2018 18:44:03 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/morg-table-ii/</guid>
+      <guid>https://nasciiboy.github.io/prog/morg-table-ii/</guid>
       <description>o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang) – Segunda Parte En el post anterior expuse una manera para parsear tablas relativamente complejas, con una tecnica relativamente sencilla, con un codigo relativamente interesante&amp;hellip; ahora la tecnica y la sintaxis ha cambiado, en lugar de &amp;ldquo;concatenar&amp;rdquo; las columnas, se realiza un analisis de los contornos de las celdas; ademas la sintaxis ha sido modificada para ser compatible con la que utiliza (un estilo) de reStructuredText (es mas sencillo y supongo, (algun dia&amp;hellip;) el editor del formato, tendra un programa auxiliar que mitigue el fastidio de dibujar lineas):</description>
     </item>
     
     <item>
       <title>TextTable2HtmlTable (Volume One)</title>
-      <link>http://nasciiboy.github.io/prog/morg-table/</link>
+      <link>https://nasciiboy.github.io/prog/morg-table/</link>
       <pubDate>Fri, 15 Dec 2017 20:02:05 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/morg-table/</guid>
+      <guid>https://nasciiboy.github.io/prog/morg-table/</guid>
       <description>o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang) convertir una tabla como
 |---------------------------------------------------------------------| | MiTabla Fila 1 | De Creacion | Estructurales | |-----------------|-----------------------|---------------------------| | MiTabla Fila 2 | De Creacion | Estructurales | |-----------------|-----------------------|---------------------------| | MiTabla Fila 3 | De Creacion | Estructurales | |-----------------|-----------------------|---------------------------|  es decir, con un numero de &amp;ldquo;celdas&amp;rdquo; siempre constante, a pesar de tener su complejidad, es relativamente sencillo el programar unas cuantas funciones sin tener mucha idea y lograr convertirla en cualquier otro formato, por ejemplo (y por conveniencia) HTML</description>
     </item>
     
     <item>
       <title>Morg Mirror</title>
-      <link>http://nasciiboy.github.io/prog/morg-mirror/</link>
+      <link>https://nasciiboy.github.io/prog/morg-mirror/</link>
       <pubDate>Fri, 08 Dec 2017 21:52:22 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/morg-mirror/</guid>
+      <guid>https://nasciiboy.github.io/prog/morg-mirror/</guid>
       <description>Una buena documentación es invaluable. Ya que cada uno tiene su propia definición de &#34;bueno&#34;, aquí está la mía:  Los buenos documentos no me hacen buscar en la web
  Los buenos documentos tienen ejemplos de trabajo con los que puedo empezar
  Los buenos documentos siguen convenciones claras que fomentan hábitos de lectura
@@ -45,20 +54,20 @@
     
     <item>
       <title>blackfriday</title>
-      <link>http://nasciiboy.github.io/prog/blackfriday/</link>
+      <link>https://nasciiboy.github.io/prog/blackfriday/</link>
       <pubDate>Fri, 27 Oct 2017 17:42:32 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/blackfriday/</guid>
+      <guid>https://nasciiboy.github.io/prog/blackfriday/</guid>
       <description>Durante la modificacion del morg, habia escrito esto junto con otras notas vagas en una bitocora de abordo que trata de ser FIFO, aunque si no mantengo la constancia comienza a crecer y crecer hasta volverse incomoda. Asi pues (y como el post anterior) a despejar algunas de esas divagaciones
 Como (no) construir un parser para un lenguaje de marcas (ligeras) con morg (parser y lenguaje de marcas ligueras inventado por yo) la construccion al igual que casi todas mis mierdas, fue fruto de reinventar la rueda + prueba y error constantes, tratando de mantener una cierta sencilles&amp;hellip; mientras la raices de la incertidubre sobre si el proyecto llegaria a ser funcional o quedaria truncado por la ignorancia y malas deciciones de diseño orientadas en su mayoria por la aleatoriedad, me consumen lentamente</description>
     </item>
     
     <item>
       <title>Que es Morg? [Redux]</title>
-      <link>http://nasciiboy.github.io/prog/morg-redux/</link>
+      <link>https://nasciiboy.github.io/prog/morg-redux/</link>
       <pubDate>Sun, 15 Oct 2017 14:52:46 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/morg-redux/</guid>
+      <guid>https://nasciiboy.github.io/prog/morg-redux/</guid>
       <description>(el cuadro superior izquierdo, es una version colareada con gimp, el resto son capturas reales. Lo de redux, no es por ser un video que ha tirado el yutu y se ha resivido, mas bien, es una actualizacion de un post anterior, al que no queria cambiar la fecha, cosa que modificaria el mapa del sitio, ademas, queria hacer propaganda por el feed)
 que es morg?
 el nombre de otro sistema de documentacion de marcas ligeras, basado en otros sistemas de documentacion (de marcas ligeras)</description>
@@ -66,10 +75,10 @@ el nombre de otro sistema de documentacion de marcas ligeras, basado en otros si
     
     <item>
       <title>morg v0.20</title>
-      <link>http://nasciiboy.github.io/prog/morg-v020/</link>
+      <link>https://nasciiboy.github.io/prog/morg-v020/</link>
       <pubDate>Fri, 06 Oct 2017 17:33:57 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/morg-v020/</guid>
+      <guid>https://nasciiboy.github.io/prog/morg-v020/</guid>
       <description>One More Kiss woooooo!!! wraaoggghhh!!! (&amp;amp;) wrooomgfff!!!
 aunque he dedicado aproximadamente los ultimos 2 meses en exclusiva y de forma obsesa a la refactorizacion de morg, su codigo sigue siendo mediocre. mentiria si dijera que comparativamente no ha avanzado un guevo con respecto a la ultima vez que lo toque, pero como diria mick, &amp;ldquo;no me satisface&amp;rdquo; (aun)
 muchas cosas he aprendido por el camino, sobre todo relacionado con Go, pues ahora si me siento comodo y casi seguro con su huso, tambien aprendi ha hacer un &amp;ldquo;Scanner&amp;rdquo; para identificar lineas&amp;hellip; cadenas, numeros, constantes y otros cosas dentro de una cadena &amp;ldquo;cruda&amp;rdquo; de texto, ademas ahora se, que las cadenas (como las cucharas) no existen, y un monton de cosas mas que ya no recuerdo&amp;hellip;</description>
@@ -77,20 +86,20 @@ muchas cosas he aprendido por el camino, sobre todo relacionado con Go, pues aho
     
     <item>
       <title>Ramen VIII</title>
-      <link>http://nasciiboy.github.io/post/ramen-viii/</link>
+      <link>https://nasciiboy.github.io/post/ramen-viii/</link>
       <pubDate>Tue, 01 Aug 2017 21:15:24 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/ramen-viii/</guid>
+      <guid>https://nasciiboy.github.io/post/ramen-viii/</guid>
       <description>(Advertecia, el siguiente contenido tiene mucha fallas ortograficas, algunas de ellas, fueron evidentes en una segunda revision, pero a su autor le hace gracia dejarlas. Si considera inperdonable tal ultraje al lenguaje, por su propio bien abstengase de leer)
 Hey, por fin cambie el tema, no es mas bonito, de hecho es un spaghetti CSS a medio hacer, je, je, ya lo ire &amp;ldquo;purificando&amp;rdquo; lenta y perezosamente, por que pocas cosas hay mas aburridas que el &amp;ldquo;desarrollo&amp;rdquo; web.</description>
     </item>
     
     <item>
       <title>SICP (proyecto de traduccion)</title>
-      <link>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</link>
+      <link>https://nasciiboy.github.io/prog/dot-slash-sicp2es/</link>
       <pubDate>Fri, 07 Jul 2017 18:27:56 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</guid>
+      <guid>https://nasciiboy.github.io/prog/dot-slash-sicp2es/</guid>
       <description>o en otras palabras dadme pasta! (no en galletas)
 faq por que?
 para traducir un libro de muchas lineas al español, el Structure and Interpretation of Computer Programs, tambien conocido como SICP
@@ -102,20 +111,20 @@ por que sicp?
     
     <item>
       <title>morg [dia 432]</title>
-      <link>http://nasciiboy.github.io/prog/morg-d432/</link>
+      <link>https://nasciiboy.github.io/prog/morg-d432/</link>
       <pubDate>Tue, 04 Jul 2017 18:47:44 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/morg-d432/</guid>
+      <guid>https://nasciiboy.github.io/prog/morg-d432/</guid>
       <description>sin un titulo interesante y sin esperar una secuencia tan armonica, confie a un programa informatico de internet la tarea de calcular los dias desde el primer commit del repo de morg, no por ningun hecho revelante y menos por un desarrollo agil, que es mas bien paralitico
 bueno, el programa exportador llevaba parado un rato con un bicho enorme, mientras continua el aprendizage del lenguaje Go, a la espera de una refactorizacion, pruebas y demas cosas necesarias, asi pues cuando me decidia a probar a exportar o visualizar algun libro recien maquetado, optenia un log inverso de panicos y direcciones de memoria exadecimales.</description>
     </item>
     
     <item>
       <title>Nirvana</title>
-      <link>http://nasciiboy.github.io/prog/nirvana/</link>
+      <link>https://nasciiboy.github.io/prog/nirvana/</link>
       <pubDate>Thu, 20 Apr 2017 11:54:03 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/nirvana/</guid>
+      <guid>https://nasciiboy.github.io/prog/nirvana/</guid>
       <description>hu! ha!, imparable el proyecto de programacion morg (nombre temporal) es (o no), mientras tanto y a modo de respaldo (por si en algun momento me convierto al lado privativo de la fuerza&amp;hellip;) les presento las ultimas novedades codificadas del proyecto
 Primero se agrego katana que conceptualmente se encarga de parsear/cortar el texto plano formateado, y regresar una estructura convenientemente estructurada que facilita cualquier labor a realizar.
 Dentro de la estructura se enucuentran los datos del documento y opciones, ademas de un arreglo de nodos, llamado Toc donde cada elemento es un encabezado (de cualquier nivel) que contiene los parrafos, listas, abouts, tablas, comandos, etc.</description>
@@ -123,20 +132,20 @@ Dentro de la estructura se enucuentran los datos del documento y opciones, adema
     
     <item>
       <title>yorozuya</title>
-      <link>http://nasciiboy.github.io/prog/yorozuya/</link>
+      <link>https://nasciiboy.github.io/prog/yorozuya/</link>
       <pubDate>Tue, 14 Mar 2017 16:33:15 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/yorozuya/</guid>
+      <guid>https://nasciiboy.github.io/prog/yorozuya/</guid>
       <description>Yorozuya en una tienda donde se toma cualquier tipo de trabajo por una tarifa&amp;hellip; bienvenidos los encargos!
 bueno, bueno, matizando un poco y conectado con la saga de post sobre morg, me encontraba aprendiendo golang y para tener una referencia rapida del lenguaje, pase el libro oficial (apartir de un pdf) a morg (AQUI el material, fuente, resultado e imagenes). Aun le falta una revision fina que ire realizando a medida que avance su lectura, aunque la actualizacion quisa solo vea la luz cuando aparesca el proyecto morg al 100%.</description>
     </item>
     
     <item>
       <title>morg: como usar</title>
-      <link>http://nasciiboy.github.io/prog/morg-howto/</link>
+      <link>https://nasciiboy.github.io/prog/morg-howto/</link>
       <pubDate>Sun, 12 Mar 2017 09:33:15 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/morg-howto/</guid>
+      <guid>https://nasciiboy.github.io/prog/morg-howto/</guid>
       <description>la aleatoriadad llevo a programar morg en golang (aunque creo que ya se como portarlo a c) de momento a instalar go
 instalar go (version GNU) primero ve a la direccion https://golang.org/dl/ y clica el enlace de descarga donde diga algo como (al dia de escribir esto) go1.8.linux-amd64.tar.gz (Cambia el amd64 por la arquitectura de tu equipo)
 Si todo va bien tendras el comprimido en $HOME/Downloads, abrimos un terminal y vamos hay</description>
@@ -144,10 +153,10 @@ Si todo va bien tendras el comprimido en $HOME/Downloads, abrimos un terminal y 
     
     <item>
       <title>morg</title>
-      <link>http://nasciiboy.github.io/prog/morg/</link>
+      <link>https://nasciiboy.github.io/prog/morg/</link>
       <pubDate>Thu, 02 Mar 2017 06:37:35 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/morg/</guid>
+      <guid>https://nasciiboy.github.io/prog/morg/</guid>
       <description>Que tal, por fin tras un año de hacer el vago ha surgido el primer exportador del lenguaje de marcas ligeras morg (nombre tentativo). Aun esta en una fase de programacion, con muchos apaños y trucos sucios&amp;hellip; pero funciona! toma eso internet!
 Que igual y no era tan dificil, pero que me hice lio y termine programando un motor de expresiones regulares y por puro orgullo lo incluyo en el programa</description>
     </item>

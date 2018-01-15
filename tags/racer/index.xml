@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Racer on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/racer/</link>
+    <link>https://nasciiboy.github.io/tags/racer/</link>
     <description>Recent content in Racer on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sat, 17 Dec 2016 08:29:18 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/racer/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/racer/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>H Craft Championship</title>
-      <link>http://nasciiboy.github.io/vg/h-craft/</link>
+      <link>https://nasciiboy.github.io/vg/h-craft/</link>
       <pubDate>Sat, 17 Dec 2016 08:29:18 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/vg/h-craft/</guid>
+      <guid>https://nasciiboy.github.io/vg/h-craft/</guid>
       <description>H-Craft es un juego de &amp;ldquo;carreras&amp;rdquo; con Hovercrafts (aerodeslizadores) estupendo disponible libremente para GNU/linux (tambien hay vercion para android y windows)
 hardware  1 Ghz Processor 512 MB Memory A 3D-Card with the power of a Geforce3 or Radeon 7500 (or better) OpenGL 1.3 GNU/linux (32 Bit / 64 Bit) or winbug$ 98, mp, xp, 2000, vista 150 MB free space on hard-disk  build (debian) Este es el proceso que segui para compilarlo en debian 7.</description>
     </item>

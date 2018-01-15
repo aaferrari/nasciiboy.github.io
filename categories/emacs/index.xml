@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emacs on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/categories/emacs/</link>
+    <link>https://nasciiboy.github.io/categories/emacs/</link>
     <description>Recent content in Emacs on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 28 Sep 2017 19:47:50 -0500</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Emacs, configuracion de verano</title>
-      <link>http://nasciiboy.github.io/emacs/v-config/</link>
+      <link>https://nasciiboy.github.io/emacs/v-config/</link>
       <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/v-config/</guid>
+      <guid>https://nasciiboy.github.io/emacs/v-config/</guid>
       <description>todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs para ponerme a programar &amp;ldquo;el morg&amp;rdquo; (que esta en go) y aparecia un mensaje de error muuu largo, informando que el flycheck (un modo para verificar el codigo mientras se va escribiendo) no localizaba la ruta al ejecutable del flycheck-go. Como no encontraba el origen del problema y queria tunear el emacs, me propuse abandonar el sistema que tenia para agregar extensiones al emacs, el cual consistia basicamente en buscar un paquete, clonar el repositorio del codigo y probar hasta se cargara a lo bestia sin tirar del sistema de paquetes del que dispone emacs&amp;hellip; je, como decir que no me gustan las cosas automagicas que hacen las cosas sin que me entere, pero bueno, siendo emacs me dare el lujo de ser un poco mas permisivo</description>
     </item>
     
     <item>
       <title>Run Scheme</title>
-      <link>http://nasciiboy.github.io/emacs/run-scheme/</link>
+      <link>https://nasciiboy.github.io/emacs/run-scheme/</link>
       <pubDate>Sun, 20 Aug 2017 18:42:53 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/run-scheme/</guid>
+      <guid>https://nasciiboy.github.io/emacs/run-scheme/</guid>
       <description>En el anterior post (cronologico del blog) comente algunos interpretes de Scheme. Ya que en Emacs tenemos un interprete de elisp nativo, supuse que habria un metodo sencillo, para correr Scheme, pero, por que correr todo un interprete cuando se puede echar mano del interprete del sistema de turno y powerizarlo con el incomparable Emacs, o si, hasta Gulie que en terminal era insipido, se vuelve Sexi! Todos los interpretes adquieren historial, hasta los que no lo tenian!</description>
     </item>
     
     <item>
       <title>Por que GNU Emacs?</title>
-      <link>http://nasciiboy.github.io/emacs/why-emacs/</link>
+      <link>https://nasciiboy.github.io/emacs/why-emacs/</link>
       <pubDate>Sun, 02 Jul 2017 12:26:47 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/why-emacs/</guid>
+      <guid>https://nasciiboy.github.io/emacs/why-emacs/</guid>
       <description>Si el tiempo antes de precindir de interfaces para interactuar con los computadores se extiende lo suficiente, Emacs, terminara por ser un sistema operativo autosuficiente
  coloca una pista de sonido, relajate y disfruta de este post al estilo &amp;ldquo;lo que otros IDEs no quieren que sepas&amp;rdquo;, &amp;ldquo;la increible historia de emacs, no podras creer el final&amp;rdquo;, &amp;ldquo;Emacs el editor que no esperabas&amp;rdquo;, &amp;hellip;
 〜(￣△￣〜) he, pero es que yo utilizo (vim|VS|atom|eclipse|nano|&amp;hellip;) y no necesito un editor viejuno y raro!</description>
@@ -43,39 +43,39 @@
     
     <item>
       <title>no mas tabs en go-mode</title>
-      <link>http://nasciiboy.github.io/emacs/notabs-for-gomode/</link>
+      <link>https://nasciiboy.github.io/emacs/notabs-for-gomode/</link>
       <pubDate>Sun, 12 Feb 2017 21:52:24 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/notabs-for-gomode/</guid>
+      <guid>https://nasciiboy.github.io/emacs/notabs-for-gomode/</guid>
       <description>Go tiene una ridicula guia de estilo para formatear codigo que no me agrada, de no seguir algunas reglas el compilador/interprete simplemente se niega a hacer nada. Otras reglas, son menos rigurosas, como la indentacion o colocar o no espacios, en algunos sitios.
 La indentacion oficial del lenguaje, tiene tabs equivalentes a 4 espacios en blanco y eso, eso, es algo que no puedo soportar, como tampoco tener tabs, porque cada editor los despliega como le viene en gana.</description>
     </item>
     
     <item>
       <title>org mode</title>
-      <link>http://nasciiboy.github.io/emacs/org-mode/</link>
+      <link>https://nasciiboy.github.io/emacs/org-mode/</link>
       <pubDate>Tue, 31 Jan 2017 14:40:54 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/org-mode/</guid>
+      <guid>https://nasciiboy.github.io/emacs/org-mode/</guid>
       <description>org-mode es un lenguaje de marcas ligeras nacido de, por, y para emacs y como emacs, org tambien tiene aplicaciones varias, puede ser una agenda, una lista de pendientes, hoja de calculo, blog de notas, sistema de documentacion e investigacion reproducible, todo junto y revuelto, encima da la posibilidad de exportar el contenido a pdf, latex, html, markdown, odt y groff (algunas opciones vienen por separado y requieren configuracion).</description>
     </item>
     
     <item>
       <title>Emacs web y noticias en modo texto</title>
-      <link>http://nasciiboy.github.io/emacs/rsspluseww/</link>
+      <link>https://nasciiboy.github.io/emacs/rsspluseww/</link>
       <pubDate>Wed, 18 Jan 2017 09:29:17 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/rsspluseww/</guid>
+      <guid>https://nasciiboy.github.io/emacs/rsspluseww/</guid>
       <description>Eso de los rss parece ser mas bueno que encontrar un billete de alta denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las paginas incluyen el icono naranja con unas barras.
 Cierto es que intente utilizarlo un par de veces, solo que lo encortre muy complejo&amp;hellip; asi pues he pasado cerca de cinco años abriendo todos los dias los marcadores del firefox en manada, hasta que hace unos pocos dias descubri como es esto de los rss (pese a que este blog los genera automagicamente)</description>
     </item>
     
     <item>
       <title>Definir atajos en Emacs</title>
-      <link>http://nasciiboy.github.io/emacs/keychords/</link>
+      <link>https://nasciiboy.github.io/emacs/keychords/</link>
       <pubDate>Sat, 07 Jan 2017 09:38:46 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/keychords/</guid>
+      <guid>https://nasciiboy.github.io/emacs/keychords/</guid>
       <description>En emacs, tu puedes crear cualquier atajo de teclado para cualquier comando
 Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de configuracion de emacs
 (global-set-key (kbd &amp;quot;&amp;lt;f7&amp;gt;&amp;quot;) &#39;calendar)  Si estas experimentando y no deseas reiniciar emacs cada vez que intentas definir un nuevo atajo, puedes colocar el cursor al final del ultimo parantesis e invocar a (M-x) eval-last-sexp (comando ligado a C-x C-e). El atajo se activa de inmediato.</description>
@@ -83,20 +83,20 @@ Por ejemplo, si deseas [F7] para el calendario, coloca en tu archivo de configur
     
     <item>
       <title>first theme</title>
-      <link>http://nasciiboy.github.io/emacs/first-theme/</link>
+      <link>https://nasciiboy.github.io/emacs/first-theme/</link>
       <pubDate>Wed, 28 Dec 2016 17:17:04 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/first-theme/</guid>
+      <guid>https://nasciiboy.github.io/emacs/first-theme/</guid>
       <description>Crear un Tema en Emacs un poco de historia Cuando comence a utilizar emacs (hace unos pocos años) para establecer un tema se utilizaba un paquete llamado color-theme parte del paquete emacs-goodies-el de Debian. Al parecer desde la version 24 de emacs se desaconseja su uso, pese a todo en mi instalacion se mantuvo en servicio hasta la version 26.0.50 sin generar inconvenientes.
 para la posteridad y los viajeros en el tiempo, dejo aqui el paquete en forma de zip (con un tema personalizado de regalo color-theme-nascii)</description>
     </item>
     
     <item>
       <title>Emacs - first blood</title>
-      <link>http://nasciiboy.github.io/emacs/first-blood/</link>
+      <link>https://nasciiboy.github.io/emacs/first-blood/</link>
       <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/first-blood/</guid>
+      <guid>https://nasciiboy.github.io/emacs/first-blood/</guid>
       <description>Instalando GNU Emacs En general utilizo emacs apartir del codigo fuente, no obstante tambien tengo disponible el que brinde la distribucion de turno, ya sea para probar algo o por si alguna version presenta algun comportamiento extraño.
 Nunca la he instalado en el sistema emacs compilado a partir del codigo, en su lugar tengo un atajo de teclado para su invocacion
 desde repositorios # en debian apt-get install emacs # en fedora dnf install emacs  compilar desde el codigo fuente instalamos las dependencias</description>
@@ -104,10 +104,10 @@ desde repositorios # en debian apt-get install emacs # en fedora dnf install ema
     
     <item>
       <title>Que es GNU Emacs?</title>
-      <link>http://nasciiboy.github.io/emacs/que-es-emacs/</link>
+      <link>https://nasciiboy.github.io/emacs/que-es-emacs/</link>
       <pubDate>Fri, 23 Dec 2016 20:43:19 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/que-es-emacs/</guid>
+      <guid>https://nasciiboy.github.io/emacs/que-es-emacs/</guid>
       <description>algunos dicen que es un editor, otros que es un sistema operativo, los mas filosoficos diran que es lo que elijas que sea, una forma de vida, un camino a seguir o incluso que Emacs son los padres&amp;hellip; bueno luego de un par de años utilizando Emacs esta es mi opinion
 My and mrs Emacs  Yo y la señora Emacs, tenemos algo que esta creciendo, sabemos que está mal, pero es algo muy fuerte como para dejarlo ir ahora.</description>
     </item>

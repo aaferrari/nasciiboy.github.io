@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apt on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/apt/</link>
+    <link>https://nasciiboy.github.io/tags/apt/</link>
     <description>Recent content in Apt on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 20 Aug 2017 15:59:03 -0500</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/apt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/apt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>iScheme</title>
-      <link>http://nasciiboy.github.io/prog/ischeme/</link>
+      <link>https://nasciiboy.github.io/prog/ischeme/</link>
       <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/ischeme/</guid>
+      <guid>https://nasciiboy.github.io/prog/ischeme/</guid>
       <description>La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para mi escaso saber, por su parte los conceptos programacionales con Scheme solo los entiendo a nivel superficial, es decir, podria explicar de que van, pero no ponerlo en nada practico, ademas han dejado de aparecer fraces esotericas.
 Con el proposito de enmendar uno de estos dilemas (el de la programacion, por su puesto), me plante comenzar un port del raptor (si, otro mas) al Scheme, mas, pronto me di cuenta que habia olvidado siquiera como definir una variable, una funcion y una l-a-a-m-m-b-d-a-a (que raro suena), oohh, que dilema –dijo interiormente nasciiboy</description>
     </item>
     
     <item>
       <title>stylus black-translator</title>
-      <link>http://nasciiboy.github.io/prog/stylus-black-translator/</link>
+      <link>https://nasciiboy.github.io/prog/stylus-black-translator/</link>
       <pubDate>Thu, 27 Jul 2017 00:50:52 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/stylus-black-translator/</guid>
+      <guid>https://nasciiboy.github.io/prog/stylus-black-translator/</guid>
       <description>Si Firefox es mi navegador de confianza, no es solo por que sea software libre y tenga una fundacion que le da soporte, tambien lo utilizo por que debido a que es software libre y lo desarrolla gente decente, su creacion refleja esta coherencia otorgando un punto fino de manoseo configuratorio mostruoso, no solo un par de botonsitos deslizables&amp;hellip; pero debido a esta misma apertura y los plugins que instalo, que en su mayoria son para tener una navegacion humana, sin basura y demas, termino por romper una u otra cosa, en particular la apariencia</description>
     </item>
     
     <item>
       <title>Love, Emacs &amp; Docs</title>
-      <link>http://nasciiboy.github.io/love2d/docset/</link>
+      <link>https://nasciiboy.github.io/love2d/docset/</link>
       <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/love2d/docset/</guid>
+      <guid>https://nasciiboy.github.io/love2d/docset/</guid>
       <description>Love2d es un framework &amp;ldquo;open source&amp;rdquo; para crear videojuegos 2D multiplataforma con el lenguaje de programacion Lua y que aparentemente es muy facil de utilizar, al menos tan facil como para practicamente no tener documentacion mas alla de las funciones que proporciona el framework
 Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos de funciones y sus parametros, deberiamos contar con un medio practico para consultar dicha documentacion</description>
     </item>
     
     <item>
       <title>Webeloper – El navegador web</title>
-      <link>http://nasciiboy.github.io/prog/webeloper/</link>
+      <link>https://nasciiboy.github.io/prog/webeloper/</link>
       <pubDate>Mon, 10 Jul 2017 23:03:56 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/webeloper/</guid>
+      <guid>https://nasciiboy.github.io/prog/webeloper/</guid>
       <description>joder, que gracioso, ho, ho, ho, veamos si existe la remota posibiidad que nadie utilize este (en mi mente) despectivo &amp;ldquo;titulo&amp;rdquo;&amp;hellip;
 &amp;hellip; no &amp;hellip; bueno, que mas da, no se puede ser &amp;ldquo;innovador&amp;rdquo; todo el tiempo
 hola, que tal, esta entrada trata de algunos de los navegadores web que he utilizado y el por que, o esa es la idea
@@ -55,10 +55,10 @@ Navegadores por terminal Luego que comienza a agradarte la terminal, y con algo 
     
     <item>
       <title>Konsole Warrior</title>
-      <link>http://nasciiboy.github.io/apt/konsole-warrior/</link>
+      <link>https://nasciiboy.github.io/apt/konsole-warrior/</link>
       <pubDate>Sat, 24 Jun 2017 20:28:51 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/konsole-warrior/</guid>
+      <guid>https://nasciiboy.github.io/apt/konsole-warrior/</guid>
       <description>Dentro de El camino del Heroe (que algunos dicen que esta conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al llamado, debemos preparar nuestras herramientas sobrenaturales lenguaje, Emacs Editor y Emulador de terminal (intreprete incluido).
 Para las dos elecciones (lenguaje y emulador de terminal) tenemos un amplio abanico de posibilidades, hoy les hablare del emulador de terminal y las razones de su eleccion
 Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la configuracion y el cambio constante de temas (iconos, wallpapers, doks y otra extensa variadad) de cambios neon, Konsole es la aplicacion con K que mas aprecio, por un solo aspecto, su alta configuracion de atajos del teclado, no es que necesite demasiado, solo tener la ventana sin ninguna distraccion, ni barra, ni nada, algunos atajos de desplazamiento por pagina y linea, mas poder cambiar entre &amp;ldquo;tabs&amp;rdquo;(?</description>
@@ -66,19 +66,19 @@ Konsole Salida del mundo de reino de KDE, donde sus habitantes priorisan la conf
     
     <item>
       <title>PPSSPP</title>
-      <link>http://nasciiboy.github.io/vg/ppsspp/</link>
+      <link>https://nasciiboy.github.io/vg/ppsspp/</link>
       <pubDate>Tue, 02 May 2017 20:02:37 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/vg/ppsspp/</guid>
+      <guid>https://nasciiboy.github.io/vg/ppsspp/</guid>
       <description>Cambiando un poco de enfoque me dispuse a jugar un rato con el emulador que mas me gusta PPSSPP, que&amp;hellip; sirve para jugar roms de psp, este ultimo es un cacharro que cuando salio alucinaba por tener, pero como siempre he sido pobre de mente y economia nunca tuve, ya mas tarde me pasaron uno para que le pusiera algunos jugos, pero me parecio un cacharro de mala calidad</description>
     </item>
     
     <item>
       <title>Emacs - first blood</title>
-      <link>http://nasciiboy.github.io/emacs/first-blood/</link>
+      <link>https://nasciiboy.github.io/emacs/first-blood/</link>
       <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/emacs/first-blood/</guid>
+      <guid>https://nasciiboy.github.io/emacs/first-blood/</guid>
       <description>Instalando GNU Emacs En general utilizo emacs apartir del codigo fuente, no obstante tambien tengo disponible el que brinde la distribucion de turno, ya sea para probar algo o por si alguna version presenta algun comportamiento extraño.
 Nunca la he instalado en el sistema emacs compilado a partir del codigo, en su lugar tengo un atajo de teclado para su invocacion
 desde repositorios # en debian apt-get install emacs # en fedora dnf install emacs  compilar desde el codigo fuente instalamos las dependencias</description>

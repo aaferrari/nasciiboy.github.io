@@ -11,7 +11,7 @@ const CORNER  = '+'  //  +----+
 const VEDGE   = '|'  //  |    |
 const HEDGE   = '-'  //  +----+
 
-type cell  struct {
+type cell struct {
   y, x, y2, x2 int
   data string
 }

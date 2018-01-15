@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/java/</link>
+    <link>https://nasciiboy.github.io/tags/java/</link>
     <description>Recent content in Java on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Fri, 10 Nov 2017 14:57:41 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Java &amp; Me(h)</title>
-      <link>http://nasciiboy.github.io/prog/javame/</link>
+      <link>https://nasciiboy.github.io/prog/javame/</link>
       <pubDate>Fri, 10 Nov 2017 14:57:41 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/javame/</guid>
+      <guid>https://nasciiboy.github.io/prog/javame/</guid>
       <description>Por que razones concientes y sin coercion externa aprender java?
 en mi caso, hice un solemne juramento de no aprender java (y quiza python, js&amp;hellip;) y en general nada 7 veces mas lento que C&amp;hellip; porque cualquier lenguaje un orden de magnitud mas lento que C, es directamente una basura&amp;hellip; o tiene un ambito de uso extremadamente especifico, como servir para crear extensiones o como prompt. Fuera de este uso, nadie &amp;ldquo;serio&amp;rdquo; sacarlos deberia.</description>
     </item>
     
     <item>
       <title>Ramen XIII</title>
-      <link>http://nasciiboy.github.io/post/ramen-xiii/</link>
+      <link>https://nasciiboy.github.io/post/ramen-xiii/</link>
       <pubDate>Sun, 05 Nov 2017 19:55:02 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/ramen-xiii/</guid>
+      <guid>https://nasciiboy.github.io/post/ramen-xiii/</guid>
       <description>nota mental, cuando aplicas fuego a una tecla de laptop intentando borrar el simbolo (de las ventanas)&amp;hellip; esta se deforma alarmantemente rapido y queda inservible.
 en esta entrega mas divagacion y cosas previas&amp;hellip;
 primero me pregunte por que el htop (o algun otro monitor de sistema) no mostraba las estadisticas de la temperatura o de la grafica, ni siquiera de la integrada, y luego comence la busqueda poco fructifera de algun programo.</description>
@@ -35,10 +35,10 @@ primero me pregunte por que el htop (o algun otro monitor de sistema) no mostrab
     
     <item>
       <title>Ramen XII – this is it</title>
-      <link>http://nasciiboy.github.io/post/ramen-xii/</link>
+      <link>https://nasciiboy.github.io/post/ramen-xii/</link>
       <pubDate>Tue, 24 Oct 2017 10:55:56 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/post/ramen-xii/</guid>
+      <guid>https://nasciiboy.github.io/post/ramen-xii/</guid>
       <description>(Colorful) Va sobre degenerados y depravados vírgenes que se ponen palote mirando un escote o un buen culo
  ja, ja, ja, degenerado y depravado&amp;hellip; que fuerte, sera un invento del patriarcado falogocentrico psicologico monoteista como mecanismo de control de masas?
 Continuando con &amp;ldquo;la vida del programador&amp;rdquo;, me puse a estudiar J-A-V-A, aquel innombrable que me jure no aprender jamas por mi orgullo y dignidad&amp;hellip;

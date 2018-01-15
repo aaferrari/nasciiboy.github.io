@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Moc on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/moc/</link>
+    <link>https://nasciiboy.github.io/tags/moc/</link>
     <description>Recent content in Moc on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 22 Dec 2016 11:56:44 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/moc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/moc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>moc</title>
-      <link>http://nasciiboy.github.io/apt/moc/</link>
+      <link>https://nasciiboy.github.io/apt/moc/</link>
       <pubDate>Thu, 22 Dec 2016 11:56:44 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/moc/</guid>
+      <guid>https://nasciiboy.github.io/apt/moc/</guid>
       <description>En GNU existe una cantidad ridicula de reproductores de audio, por participar hasta el vlc o video (gnome) se meten en esos temas.
 En general este tipo de aplicaciones te piden una carpeta &amp;ldquo;especial&amp;rdquo; donde coloques la musica y luego exitienden sus tentaculos para optener portadas, letras, titulos, generar listas de reproduccion por autor/mas escuchados/genero, y un sin numero mas de caracteristicas que incluyen conectarse a la red, claro mientras te roban un espacio con una interfaz de lo mas mona, pensada para mover el raton de un lado a otro&amp;hellip;</description>
     </item>

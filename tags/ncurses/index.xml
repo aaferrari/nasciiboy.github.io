@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ncurses on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/ncurses/</link>
+    <link>https://nasciiboy.github.io/tags/ncurses/</link>
     <description>Recent content in Ncurses on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Tue, 11 Apr 2017 12:38:06 -0500</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/ncurses/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/ncurses/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Programmer&#39;s Guide to NCurses</title>
-      <link>http://nasciiboy.github.io/prog/pg2ncurses/</link>
+      <link>https://nasciiboy.github.io/prog/pg2ncurses/</link>
       <pubDate>Tue, 11 Apr 2017 12:38:06 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/pg2ncurses/</guid>
+      <guid>https://nasciiboy.github.io/prog/pg2ncurses/</guid>
       <description>Go, que no es un lenguaje nuevo (ya tiene sus añitos) carece de librerias nativas para desplegar guis, asi como tuis&amp;hellip; bueno esto ultimo no es del todo cierto, pues cuenta con unas pocas librerias nativas para mostrar graficos por la terminal, solo queeee, estan muy verdes, me explico, tienes la habilidad de modificar los caracteres, conocer la dimencion de la terminal, leer la entrada del rator (y teclado) y poco mas, ni funciones para desplegar texto, ni scroll, ni todo el arsenal de funciones que por ejemplo, posee ncurses.</description>
     </item>
     
     <item>
       <title>Ncurses</title>
-      <link>http://nasciiboy.github.io/prog/ncurses/</link>
+      <link>https://nasciiboy.github.io/prog/ncurses/</link>
       <pubDate>Mon, 19 Dec 2016 21:45:05 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/ncurses/</guid>
+      <guid>https://nasciiboy.github.io/prog/ncurses/</guid>
       <description>Que es Ncurses Es una libreria (parte del proyecto GNU) que nos permite crear TUIs (Text User Interface) escrita en lenguaje de programacion C con envoltorios para algunos otros lenguajes. Se utiliza principalmente en el sistema GNU/linux y en los derivados de BSD y probablemente tambien corra en el sistema de las ventanas mediante minGW (Minimalist GNU for Windows).
 Proporciona funciones para «dibujar» caracteres en la pantalla con hasta 256 colores disponibles (si la terminal lo permite).</description>
     </item>

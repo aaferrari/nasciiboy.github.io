@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fish on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/fish/</link>
+    <link>https://nasciiboy.github.io/tags/fish/</link>
     <description>Recent content in Fish on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sat, 24 Dec 2016 10:04:44 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/fish/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/fish/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>fish</title>
-      <link>http://nasciiboy.github.io/apt/fish/</link>
+      <link>https://nasciiboy.github.io/apt/fish/</link>
       <pubDate>Sat, 24 Dec 2016 10:04:44 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/apt/fish/</guid>
+      <guid>https://nasciiboy.github.io/apt/fish/</guid>
       <description>fish &amp;ldquo;El Shell de los 90s&amp;rdquo;, es un shell como los son bash o zsh. Esta programado en C++ y se distribuye con la licencia GNU GPL version 2.
 Segun su pagina tiene autocompletado, autosugerencias, colores VGA, se puede configurar con una interfaz web, todo funciona sin necesidad de mover nada y sus scripts son los mas bonitos del barrio&amp;hellip; MENTIRA todos los scripts de shell son feos
 como? cambiar bash dialogo interno</description>

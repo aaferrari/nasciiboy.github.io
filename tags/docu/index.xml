@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docu on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/tags/docu/</link>
+    <link>https://nasciiboy.github.io/tags/docu/</link>
     <description>Recent content in Docu on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Fri, 10 Nov 2017 14:57:41 -0600</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/tags/docu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/tags/docu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Java &amp; Me(h)</title>
-      <link>http://nasciiboy.github.io/prog/javame/</link>
+      <link>https://nasciiboy.github.io/prog/javame/</link>
       <pubDate>Fri, 10 Nov 2017 14:57:41 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/javame/</guid>
+      <guid>https://nasciiboy.github.io/prog/javame/</guid>
       <description>Por que razones concientes y sin coercion externa aprender java?
 en mi caso, hice un solemne juramento de no aprender java (y quiza python, js&amp;hellip;) y en general nada 7 veces mas lento que C&amp;hellip; porque cualquier lenguaje un orden de magnitud mas lento que C, es directamente una basura&amp;hellip; o tiene un ambito de uso extremadamente especifico, como servir para crear extensiones o como prompt. Fuera de este uso, nadie &amp;ldquo;serio&amp;rdquo; sacarlos deberia.</description>
     </item>
     
     <item>
       <title>SICP (proyecto de traduccion)</title>
-      <link>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</link>
+      <link>https://nasciiboy.github.io/prog/dot-slash-sicp2es/</link>
       <pubDate>Fri, 07 Jul 2017 18:27:56 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/dot-slash-sicp2es/</guid>
+      <guid>https://nasciiboy.github.io/prog/dot-slash-sicp2es/</guid>
       <description>o en otras palabras dadme pasta! (no en galletas)
 faq por que?
 para traducir un libro de muchas lineas al español, el Structure and Interpretation of Computer Programs, tambien conocido como SICP
@@ -39,10 +39,10 @@ por que sicp?
     
     <item>
       <title>El Lenguaje De programacion Go</title>
-      <link>http://nasciiboy.github.io/prog/tgpl/</link>
+      <link>https://nasciiboy.github.io/prog/tgpl/</link>
       <pubDate>Mon, 29 May 2017 22:02:43 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/prog/tgpl/</guid>
+      <guid>https://nasciiboy.github.io/prog/tgpl/</guid>
       <description>golang, el lenguaje de programacion de sistemas de la gente de google con el que planea llebar a cabo sus mas retorcidos y stalkerosos deseos.
 Hoy y tras pocos meses de programacion y muchas horas de investigacion linguistica intentando entender el english, les traigo una reseña de la biblia de golang (Go para los amigos) The Go Programming Language (en adelante TGPL o GPL(?))
 el libro los usa-americanos tinen sus medidas extravagantes, siguiendo su ejemplo, yo mido la extencion de un documento en las lineas (de 80 columnas indentadas) que abarca, por ejemplo, 7000-10000 lineas suelen ser la extencion regular de una novela, debajo de esta cantidad es un trabajo corto, superior de esta es extenso y superior a las 20000 lineas ya es muy extenso, aunque Dune utiliza (y muy bien) la friolera y descomunal cantidad de 34150 lineas.</description>

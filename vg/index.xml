@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vgs on nba - GNU&#39;s Rock</title>
-    <link>http://nasciiboy.github.io/vg/</link>
+    <link>https://nasciiboy.github.io/vg/</link>
     <description>Recent content in Vgs on nba - GNU&#39;s Rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>GPL 3.0</copyright>
+    <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 20 Jul 2017 22:21:43 -0500</lastBuildDate>
     
-	<atom:link href="http://nasciiboy.github.io/vg/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nasciiboy.github.io/vg/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SShooter</title>
-      <link>http://nasciiboy.github.io/vg/shooter/</link>
+      <link>https://nasciiboy.github.io/vg/shooter/</link>
       <pubDate>Thu, 20 Jul 2017 22:21:43 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/vg/shooter/</guid>
+      <guid>https://nasciiboy.github.io/vg/shooter/</guid>
       <description>¿Es posible que el software no sea como cualquier otra cosa, que está destinado a ser descartado: que el punto es siempre verlo como una burbuja de jabón?
  El SICP esta lleno de fraces que reflejan la realidad, incluso la del &amp;ldquo;codigo abierto&amp;rdquo;, por que (casi) sin importar el titulo, si su desarrollo para, seguramente quede destinado a desaparecer en la memoria de unos cuantos
 Quiza por ello el desarrollo mas puro y duradero, es el que se realiza para equipos especificos, por ejemplo en algun ensamblador de alguna consola especifica, como la nes o el gameboy.</description>
@@ -25,19 +25,19 @@ Quiza por ello el desarrollo mas puro y duradero, es el que se realiza para equi
     
     <item>
       <title>PPSSPP</title>
-      <link>http://nasciiboy.github.io/vg/ppsspp/</link>
+      <link>https://nasciiboy.github.io/vg/ppsspp/</link>
       <pubDate>Tue, 02 May 2017 20:02:37 -0500</pubDate>
       
-      <guid>http://nasciiboy.github.io/vg/ppsspp/</guid>
+      <guid>https://nasciiboy.github.io/vg/ppsspp/</guid>
       <description>Cambiando un poco de enfoque me dispuse a jugar un rato con el emulador que mas me gusta PPSSPP, que&amp;hellip; sirve para jugar roms de psp, este ultimo es un cacharro que cuando salio alucinaba por tener, pero como siempre he sido pobre de mente y economia nunca tuve, ya mas tarde me pasaron uno para que le pusiera algunos jugos, pero me parecio un cacharro de mala calidad</description>
     </item>
     
     <item>
       <title>Zelda solarus</title>
-      <link>http://nasciiboy.github.io/vg/solarus/</link>
+      <link>https://nasciiboy.github.io/vg/solarus/</link>
       <pubDate>Sun, 01 Jan 2017 14:56:59 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/vg/solarus/</guid>
+      <guid>https://nasciiboy.github.io/vg/solarus/</guid>
       <description>Segun la propia web del proyecto
  Solarus es un motor de juegos Action-RPG gratuito y de codigo abierto, con licencia GPL y esta escrito en C++. Ejecuta quest (campañas?) en Lua y puede trabajar en un gran numero de plataformas.
 Solarus tambien cuenta con un editor de juegos llamado Solarus Quest Editor escrito en C++ con Qt para ayudarte a crear un juego.
@@ -46,19 +46,19 @@ Solarus tambien cuenta con un editor de juegos llamado Solarus Quest Editor escr
     
     <item>
       <title>nxEngine</title>
-      <link>http://nasciiboy.github.io/vg/nxengine/</link>
+      <link>https://nasciiboy.github.io/vg/nxengine/</link>
       <pubDate>Mon, 19 Dec 2016 11:29:56 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/vg/nxengine/</guid>
+      <guid>https://nasciiboy.github.io/vg/nxengine/</guid>
       <description>Dōkutsu Monogatari mejor conocido en oxidente como Cave Story (La historia de la cueva) es un videojuego de plataformas con un toque de RPG desarrollado por una sola persona (Daisuke Amaya, alias &amp;ldquo;pixel&amp;rdquo;) a lo largo de 5 años. Originalmente fue liberado como freeware para la plataforma pc de microsoft, no obstante por su sobresaliente calidad ha sido portado a una gran cantidad de sistemas entre las que se encuentran AROS, MorphOS, AmigaOS 4, Mac OS, PSP, Dreamcast, GP2X, &amp;hellip;, y por supuesto GNU/linux.</description>
     </item>
     
     <item>
       <title>H Craft Championship</title>
-      <link>http://nasciiboy.github.io/vg/h-craft/</link>
+      <link>https://nasciiboy.github.io/vg/h-craft/</link>
       <pubDate>Sat, 17 Dec 2016 08:29:18 -0600</pubDate>
       
-      <guid>http://nasciiboy.github.io/vg/h-craft/</guid>
+      <guid>https://nasciiboy.github.io/vg/h-craft/</guid>
       <description>H-Craft es un juego de &amp;ldquo;carreras&amp;rdquo; con Hovercrafts (aerodeslizadores) estupendo disponible libremente para GNU/linux (tambien hay vercion para android y windows)
 hardware  1 Ghz Processor 512 MB Memory A 3D-Card with the power of a Geforce3 or Radeon 7500 (or better) OpenGL 1.3 GNU/linux (32 Bit / 64 Bit) or winbug$ 98, mp, xp, 2000, vista 150 MB free space on hard-disk  build (debian) Este es el proceso que segui para compilarlo en debian 7.</description>
     </item>
