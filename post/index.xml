@@ -7,10 +7,333 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Mon, 25 Dec 2017 17:15:29 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jan 2018 15:04:47 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ASUS Prime B350-A (&#43; AMD A6 9500)</title>
+      <link>https://nasciiboy.github.io/post/b350m-a/</link>
+      <pubDate>Sat, 20 Jan 2018 15:04:47 -0600</pubDate>
+      
+      <guid>https://nasciiboy.github.io/post/b350m-a/</guid>
+      <description>
+
+&lt;p&gt;a la memoria y tributo de la placa que me acompaño por 4 años, 7 dias a la
+semana 12 horas al dia (aunque solo fuera bajando torrents). Seguramente
+encuentre solucion a sus males cambiando un capacitor, mas, depositar mis
+esperansas y sueños en un hardware comprometido, es algo que prefiero evitar&lt;/p&gt;
+
+&lt;p&gt;(las imagenes nunca hacen justicia a la realidad, como en esta brutal catastrofe)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/whis-you-where-here.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La probre sufrio una explocion rara en un capacitor (y a saber en que
+componentes mas). Desde inicos de diciempre (o cerca de esa fecha) dejo de
+apagarse. Segun los registros de systemd, cerraba procesos, desmontaba particiones, apagaba
+discos y todo lo necesario para el apagado, mas este nunca llegaba. Dicho error
+se presento en fedora, manjaro y debian, donde vivio sus ultimos dias&lt;/p&gt;
+
+&lt;p&gt;Las señas mas preocupantes aparecieron la semana pasada, cuando un primer
+reinicio &amp;ldquo;brusco&amp;rdquo; luego del arranque sembro temor en este personaje, un
+par de dias mas tarde, ocurrio un reinicio mas brusco aun, acompañado por beeps
+ya en pleno funcionamiento, luego otro arranque y mas beeps. Como un
+vehiculo destartalado, lo duro estaba en ese arranque, luego funcionaba en
+aparente normalidad&amp;hellip; quitando algunos retrasos en el teclado y que al pasar a
+debian los pinchos wifi usb, simplemente dejaron de funcionar, aunque eso
+aparentemente es un bug reportado (al que no encontre solucion comprensible)&lt;/p&gt;
+
+&lt;p&gt;Ya con las señas, devino la inminente necesidad de cambiar de hardware, todo el
+hardware, jo, jo, jo, y yo que estaba juntando mis moneditas para comprar una
+guitarra (squier jazzmaster) o de respaldo en caso de que me dejaran sin
+piso&amp;hellip; la fuente tambien presenta un capatitor inchado, lastima, tendra que esperar a que
+halla presupuesto (junto a 4GB de ram, un gabinete en condiciones con filtros de
+polvo y quiza una placa de audio), de momento entrega voltajes aparentemente
+correctos&lt;/p&gt;
+
+&lt;p&gt;Esta es una reseña y comparativa con el hardware anterior y el que ha tomado el
+relevo, sus comportamientos, compativilidades y problemas o deficiencias&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;por que como a cualquiera me gusta el hardware!&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;specs&#34;&gt;Specs&lt;/h2&gt;
+
+&lt;h3 id=&#34;asus-c8hm70-i-hdmi&#34;&gt;asus C8HM70-I/HDMI&lt;/h3&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://nasciiboy.github.io/img/C8HM70-I.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CPU      Intel® Celeron® 847 Processors (Soldado)
+Chipset  Intel® HM70
+Memory   2 x SODIMM, Max. 16GB, DDR3 1333/1066 MHz Dual Channel
+LAN      Realtek® 8111F-VB-CG
+Audio    Realtek® ALC887-VD 8-Channel
+
+1 x HDMI max. resolution 2048 x 1536 @ 75 Hz
+1 x VGA
+1 x SATA 3Gb/s port(s), blue
+1 x SATA 6Gb/s port(s), gray
+1 x PCIe 2.0 x16
+6 x USB 2.0 (4 panel, 2 en placa)
+2 x USB 3.1 Gen 1
+1 x PS/2 keyboard/mouse combo
+1 x LAN (RJ45)
+3 x Audio jack
+
+AI Suite II (bios con raton y colorines)
+
+BIOS   64Mb Flash ROM, UEFI AMI SM BIOS 2.7, ACPI 2.0a
+Factor Mini ITX
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esta placa la elegi por que es lo que podia comprar (lol, quiza no la elegi),
+asus, por que me parece una marca decente (y segun foros que he visitado
+recientemente, tambien de lo mas compatible con el Ñu). Otros factores son que
+visualmenente me parece mona, compacta y hasta elegante, todo pequeño unicamente
+con lo basico, ampliable en grafica y con (hasta) 16GB de ram seria mas de lo
+que necesitaba, con 8 es suficiente.&lt;/p&gt;
+
+&lt;p&gt;El consumo del procesador incluido, es risible 17w, bastante potente, mas de lo
+que necesito&amp;hellip; quitando la reproduccion de algunos videos, juegos y su
+inutilidad para cualquier cosa grafica en general, aunque tampoco es
+que haga muchas cosas graficas&lt;/p&gt;
+
+&lt;p&gt;el mayor defecto de la placa, es el ventilador del procesador, es como un
+mosquito molesto&lt;/p&gt;
+
+&lt;h3 id=&#34;asus-prime-b350m-a&#34;&gt;asus Prime B350M-A&lt;/h3&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://nasciiboy.github.io/img/PRIME-B350M-A.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CPU AMD AM4 Socket (AMD Ryzen/7th Generation A-series/Athlon)
+Chipset AMD B350
+Memory  4 x DIMM Max. DDR4 64GB Dual Channel
+        Ryzen           3200(O.C.)/2933(O.C.)/2666/2400/2133 MHz
+        A-series/Athlon 2400/2133 MHz
+LAN     Realtek RTL8111H
+Audio   Realtek ALC887 8-Channel
+
+1 x HDMI 1.4b max. resolution 4096 x 2160 @ 24 Hz / 2560 x 1600 @ 60 Hz
+1 x DVI-D     max. resolution 1920 x 1200 @ 60 Hz
+1 x VGA       max. resolution 1920 x 1200 @ 60 Hz
+6 x SATA 6Gb/s (Raid 0, 1, 10)
+1 x M.2 Socket 3 (2242/2260/2280/22110)
+1 x PCIe 3.0/2.0 x16
+2 x PCIe 2.0     x1
+2 x USB 3.1 Gen 2
+3 x USB 3.1 Gen 1 (4 panel, 2 placa)
+4 x USB 2.0 (4 placa)
+1 x PS/2 keyboard
+1 x PS/2 mouse
+1 x LAN (RJ45)
+3 x Audio jack(s)
+
+AI Suite III (bios con raton y colorines)
+
+BIOS    128 Mb Flash ROM, UEFI AMI SM BIOS 3.0, ACPI 6.1
+Factor  Micro ATX
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fuhh, no es buen momento para comprar hardware, con las &amp;ldquo;vulnerabilidades&amp;rdquo;
+de los procesadores, los sistemas operativos embebidos en estos, los defectos en Ryzen,
+la pasta de dientes (del die) en los Intel y la RAM con precios en
+bitcoin, casi que es mejor montar una Rasberri o similar (con un monitor de
+entrada hdmi y un nas o asi, lo haria)&lt;/p&gt;
+
+&lt;p&gt;Decir que si tubiera pasta montaria una placa de Servidor o una estacion de
+trabajo diseñada para funcionar con Software Libre, je, algun dia&lt;/p&gt;
+
+&lt;p&gt;Entonces, por que migrar de Intel (con sus controladores %100 libres, quitando
+el SO espia) a AMD (con los fallos de Ryzen y su opaco apoyo al FOSS)&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;El socket tiene vida para rato, desde el procesador que elegi (bueno, para el
+que quedo pasta) a (posiblemente) la correccion de los Ryzen (&amp;ldquo;II&amp;rdquo;). Que con suerte
+en un par de años salto a uno de verdad bestial (8 cores, o similar)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Los Ryzen no tiene pasta de dientes&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Parece que salen menos perjudicados con lo de Meltdown y Spectre&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Por que en particular esta marca y modelo? segun algunos foros, reddit, una
+releña en amazon y no recuerdo que mas, esta es una buena placa sin demaciados
+conflictos para utilizar GNU/Linux, tiene mas de 4 puertos SATA, buena
+apariencia y un DVI + VGA (+HDMI), que creia ayudarian a precindir de encufar la
+grafica dedicada para conertar 2 monitores VGA&amp;hellip; el modelo de adaptador
+DVI&amp;gt;VGA que poseo es de un modelo distinto (risas enlatadas)&lt;/p&gt;
+
+&lt;h2 id=&#34;cosas&#34;&gt;Cosas&lt;/h2&gt;
+
+&lt;p&gt;como fue el paso de un intel a el procesador mas barato de amd?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Intel Celeron  847 32nm 2-cores 1.10Ghz  0KB L1 0MB L2 2MB L3 17W DDR3 1333
+2 x 4 GB kingston 1333
+
+AMD   A6      9500 28nm 2-cores 3.80Ghz 96KB L1 1MB L2 0MB L3 65W DDR4 2400
+1 x 4 GB Adata    2400
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(la memoria cuesta un riñon, el estatus quo tendra que esperar)&lt;/p&gt;
+
+&lt;p&gt;en general con el Celeron corriendo&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;firefox con ~8 pestañas (2 ventanas)&lt;/li&gt;
+&lt;li&gt;algunos emacs y tilix&lt;/li&gt;
+&lt;li&gt;thunderbird&lt;/li&gt;
+&lt;li&gt;qbittorrent&lt;/li&gt;
+&lt;li&gt;moc&lt;/li&gt;
+&lt;li&gt;ckb (teclado rgb&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;nautilius&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;el procesador rondaba el 60%. Con el AMD el 20%, aunqe el consumo de
+electricidad a aumentado ~10%.&lt;/p&gt;
+
+&lt;p&gt;Generalmente los unicos procesos donde exijo de prosesador son ver videos y
+alguna compilacion puntual, por ello estube corriendo boinc en la maquina, aunque
+el rendimiento decaia mucho en el celeron, ahora corro mprime (que no encuentro
+forma de limitar) je, sea por la ciencia (y con suerte en mprime cae alguna
+recompensa)&lt;/p&gt;
+
+&lt;p&gt;Los videos de calidad gourmet si que se han visto beneficiados, ya se pueden
+ver! y sin saltos!&lt;/p&gt;
+
+&lt;p&gt;otra cosa que ha cambiado es que ahora si sale aire caliente de &amp;ldquo;la estructura&amp;rdquo;
+que tengo por torre&amp;hellip; y el movil ya no indica &lt;em&gt;carga lenta&lt;/em&gt; cuando se enchufa
+al USB&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/the-new-hope.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(como en CSI, si aumentan y limpian la imagen ilimitadamente, pueden ver mi varonil rostro
+reflejado en el cpu, la bateria, la bolsa antiestatica y el acabado reluciente del psb)&lt;/p&gt;
+
+&lt;p&gt;contar con mas de 2 puertos SATA, me llena de alegria, musica, video y
+torrentes!&lt;/p&gt;
+
+&lt;h2 id=&#34;oso&#34;&gt;OSO&lt;/h2&gt;
+
+&lt;p&gt;Vamos con que sistema instalarle al bicho. La primer opcion fue seguir con Debian 9
+(Stretch) para mi infortunio ademas de los tipicos mensajes de error ACPI me
+encontre con otros problemas que me hicieron dudar sobre si era una buena idea&lt;/p&gt;
+
+&lt;p&gt;Primero, ya en la anterior placa habia instalado debian e igualmente al arrancar
+con Gnome y solicitar una terminal solo recibia un cursor de carga, lo que
+obligaba a ir a un tty a actualizar repos e instalar mi terminal de confiansa
+(&lt;em&gt;tilix&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;Segundo, los adaptadores wifi USB un TP-LINK (con controladores privativos) y
+otro de recien compra (especificamente con soporte de fabrica y drivers libres)
+un Tenda W311ML (no habia con antena capta-wifi-del-vecino&amp;hellip; nunca se sabe)
+aunque funcionaban (reconocian los nombres de redes e intencidad) eran incapaces
+de conectarse. Cosa curiosa, el instalador (sin firmware privativo) de debian
+funcionaba sin drama alguno con el Tenda.&lt;/p&gt;
+
+&lt;p&gt;Hasta ahora tenia conectado el cable de red, aunque prefiero que lo unico que se
+conecte sea la red electrica filtrada por el PSU -&amp;gt; Fuente -&amp;gt; Motherboard, quien
+sabe cuando una descarga puede dejarte sin placa&lt;/p&gt;
+
+&lt;p&gt;Tercero, algunos mensajes de error que no encontre como solucionar y retraso en
+acciones del teclado, la mas evidente, bloquear secion, que demora unos
+5 segundos en surtir efecto&lt;/p&gt;
+
+&lt;p&gt;En general, solventados los primeros baches, se tenia un sistema funcional y
+afinado, joder, si debian gnome de inicio consume menos de 500MiB de ram
+(482MiB), hasta dan ganas de llorar!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/debian-real-no-fake.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ya con algo de trabajo para que se vea que es 100% real no fake (535MiB)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/debian-real-no-fake-II.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Perrooo, sentia que el equipo asi de nuevo e inmaculado como estaba, deberia ir
+finisimo sin ningun estigma que lo mancille&lt;/p&gt;
+
+&lt;p&gt;Pase a probar con debian testing (la imagen semanal) y el sistema no podia pasar
+del gestor de secion de nome&amp;hellip; entoces? OpenSuse, nop no me terminan de
+agradar, manjaro o un arch? ufff, dejarle esta mi pequeña maquina a esos
+&amp;ldquo;inestables&amp;rdquo;, nop&amp;hellip; fedora&lt;/p&gt;
+
+&lt;p&gt;fedora? (inserte risa nerviosa y verguenza) o, a todo uno se acostumbra, mehh,
+tienen un kernel actual, soporte (mas o menos decente), desarrolladores detras
+de ella y es una de las grandes&amp;hellip; no me jusguen&lt;/p&gt;
+
+&lt;p&gt;los pinchos usb funcionan, el teclado va sin retraso y solo tiene unos mensajes
+(ignorables) del siempre conflictivo ACPI (que ardas en el infierto junto con
+secure boot, microsoft, intel, nvidea y amd)&lt;/p&gt;
+
+&lt;p&gt;inconvenintes, ha, fedora nunca aprenderas a optimizar, de arranque y sin
+naaahhh consumes el triple que debian (1.44GiB). Durante la instalacion el mouse
+inalambrico no respondia hata que se cambio de puerto usb (de 3 version 1 a 3
+version 2). Luego de la instalacion regrese el pincho del raton al puerto
+inicial y no a habido inconvenientes&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ever-fedora.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El audio sin problemas, como con la motherboard anterior, aunque suena bien, me
+gustaria que entregara mas potencia de sonido, pero no se le pude pedir
+demaciado a los 4 tristes capacitoder que tiene la placa. Puede que sea
+sugestion, pero el audio suena un poco mejor y con un (por decir) 10%
+de potencia mas, aunque segun las especificaciones el chip es (casi) el mismo modelo&lt;/p&gt;
+
+&lt;p&gt;basicamente la instalacion consistio en ejecutar&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf -y install mg emacs moc htop fish tilix util-linux-user gnome-tweak-tool
+
+dnf -y groupinstall &amp;quot;Development Tools&amp;quot;
+dnf -y groupinstall &amp;quot;Development Libraries&amp;quot;
+dnf -y install kernel-headers kernel-devel svn subversion git mercurial bzr valgrind gource clisp gdb ghc clang guile rust rust-doc ldc nasm cargo qt-devel qt-doc qt-creator kf5-kirigami arduino avr-libc fritzing java-9-openjdk java-9-openjdk-devel maven glances inxi ncdu zeal asciidoc pandoc poppler-utils caca-utils texinfo ghostscript fbreader tesseract tesseract-langpack-spa elinks surfraw vlc mpv blender inkscape dia gimp tiled pinta synfigstudio mypaint mtpaint gpick subdownloader gnome-subtitles thunderbird simple-scan gscan2pdf speedcrunch kde-connect kde-cli-tools qbittorrent amule youtube-dl dtrx unp unar zip unzip id3v2 cuetools shntool flac ffmpeg smartmontools testdisk foremost gparted rsync aircrack-ng macchanger ripgrep
+
+update-alternatives --config java
+update-alternatives --config javac
+java -version
+javac -version
+
+dnf -y builddep emacs dosbox moc love supertuxkart tilix firefox inkscape megamario
+
+dnf -y install python-pip python3-pip
+pip install subliminal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ademas de compilar artesanalmente &lt;code&gt;ckb-next&lt;/code&gt; y &lt;code&gt;dfc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;en cuanto al particionado&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SSD 250GB
+  sda1  200MiB /boot/efi
+  sda2 1000MiB /boot
+  sda3   50GiB /
+  sda4  168GiB /home
+
+HDD 320GB
+  sdb1    8GiB swap
+
+  // el resto sin particionar
+
+HDD   3TB
+  sdc1  2.7TiB /media/data
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mmm, todos los discos con tabla de particiones GPT y particiones primarias.
+Las 2 particiones de boot las deje asi por que (en un particionado automatico)
+asi lo recomendo freidora. Exeptuando la particion efi (fat16) todas tienen
+EXT4, hice una prueba temporal con LVM pero lo encontre momentaneamente poco
+atractivo y algo lioso, creo que me seria mas util hacer un raid (colocando 3-5
+discos de 3TB o mas)&lt;/p&gt;
+
+&lt;p&gt;supongo que lo ideal es montar un ssd M.2 al tope de su velocidad de 64GB y
+colocar unicamente el sistema, aunque los discos de esa capacidad y prestaciones
+no se fabrican de menos de 256GB. Unos dos SDD de 256GB con los datos mas vitales
+duplicados y el resto en discos duros voluptuosos&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Ramen XV</title>

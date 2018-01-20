@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ASUS Prime B350-A (&#43; AMD A6 9500)</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/post">post</a></div>
+
+  <h1>ASUS Prime B350-A (&#43; AMD A6 9500)</h1>
+  
+
+<p>a la memoria y tributo de la placa que me acompaño por 4 años, 7 dias a la
+semana 12 horas al dia (aunque solo fuera bajando torrents). Seguramente
+encuentre solucion a sus males cambiando un capacitor, mas, depositar mis
+esperansas y sueños en un hardware comprometido, es algo que prefiero evitar</p>
+
+<p>(las imagenes nunca hacen justicia a la realidad, como en esta brutal catastrofe)</p>
+
+<p><img src="https://nasciiboy.github.io/img/whis-you-where-here.jpg" alt="" /></p>
+
+<p>La probre sufrio una explocion rara en un capacitor (y a saber en que
+componentes mas). Desde inicos de diciempre (o cerca de esa fecha) dejo de
+apagarse. Segun los registros de systemd, cerraba procesos, desmontaba particiones, apagaba
+discos y todo lo necesario para el apagado, mas este nunca llegaba. Dicho error
+se presento en fedora, manjaro y debian, donde vivio sus ultimos dias</p>
+
+<p>Las señas mas preocupantes aparecieron la semana pasada, cuando un primer
+reinicio &ldquo;brusco&rdquo; luego del arranque sembro temor en este personaje, un
+par de dias mas tarde, ocurrio un reinicio mas brusco aun, acompañado por beeps
+ya en pleno funcionamiento, luego otro arranque y mas beeps. Como un
+vehiculo destartalado, lo duro estaba en ese arranque, luego funcionaba en
+aparente normalidad&hellip; quitando algunos retrasos en el teclado y que al pasar a
+debian los pinchos wifi usb, simplemente dejaron de funcionar, aunque eso
+aparentemente es un bug reportado (al que no encontre solucion comprensible)</p>
+
+<p>Ya con las señas, devino la inminente necesidad de cambiar de hardware, todo el
+hardware, jo, jo, jo, y yo que estaba juntando mis moneditas para comprar una
+guitarra (squier jazzmaster) o de respaldo en caso de que me dejaran sin
+piso&hellip; la fuente tambien presenta un capatitor inchado, lastima, tendra que esperar a que
+halla presupuesto (junto a 4GB de ram, un gabinete en condiciones con filtros de
+polvo y quiza una placa de audio), de momento entrega voltajes aparentemente
+correctos</p>
+
+<p>Esta es una reseña y comparativa con el hardware anterior y el que ha tomado el
+relevo, sus comportamientos, compativilidades y problemas o deficiencias</p>
+
+<p>&hellip;por que como a cualquiera me gusta el hardware!&hellip;</p>
+
+<h2 id="specs">Specs</h2>
+
+<h3 id="asus-c8hm70-i-hdmi">asus C8HM70-I/HDMI</h3>
+
+<p><center>
+<img src="https://nasciiboy.github.io/img/C8HM70-I.jpg" alt="" />
+</center></p>
+
+<pre><code>CPU      Intel® Celeron® 847 Processors (Soldado)
+Chipset  Intel® HM70
+Memory   2 x SODIMM, Max. 16GB, DDR3 1333/1066 MHz Dual Channel
+LAN      Realtek® 8111F-VB-CG
+Audio    Realtek® ALC887-VD 8-Channel
+
+1 x HDMI max. resolution 2048 x 1536 @ 75 Hz
+1 x VGA
+1 x SATA 3Gb/s port(s), blue
+1 x SATA 6Gb/s port(s), gray
+1 x PCIe 2.0 x16
+6 x USB 2.0 (4 panel, 2 en placa)
+2 x USB 3.1 Gen 1
+1 x PS/2 keyboard/mouse combo
+1 x LAN (RJ45)
+3 x Audio jack
+
+AI Suite II (bios con raton y colorines)
+
+BIOS   64Mb Flash ROM, UEFI AMI SM BIOS 2.7, ACPI 2.0a
+Factor Mini ITX
+</code></pre>
+
+<p>esta placa la elegi por que es lo que podia comprar (lol, quiza no la elegi),
+asus, por que me parece una marca decente (y segun foros que he visitado
+recientemente, tambien de lo mas compatible con el Ñu). Otros factores son que
+visualmenente me parece mona, compacta y hasta elegante, todo pequeño unicamente
+con lo basico, ampliable en grafica y con (hasta) 16GB de ram seria mas de lo
+que necesitaba, con 8 es suficiente.</p>
+
+<p>El consumo del procesador incluido, es risible 17w, bastante potente, mas de lo
+que necesito&hellip; quitando la reproduccion de algunos videos, juegos y su
+inutilidad para cualquier cosa grafica en general, aunque tampoco es
+que haga muchas cosas graficas</p>
+
+<p>el mayor defecto de la placa, es el ventilador del procesador, es como un
+mosquito molesto</p>
+
+<h3 id="asus-prime-b350m-a">asus Prime B350M-A</h3>
+
+<p><center>
+<img src="https://nasciiboy.github.io/img/PRIME-B350M-A.jpg" alt="" />
+</center></p>
+
+<pre><code>CPU AMD AM4 Socket (AMD Ryzen/7th Generation A-series/Athlon)
+Chipset AMD B350
+Memory  4 x DIMM Max. DDR4 64GB Dual Channel
+        Ryzen           3200(O.C.)/2933(O.C.)/2666/2400/2133 MHz
+        A-series/Athlon 2400/2133 MHz
+LAN     Realtek RTL8111H
+Audio   Realtek ALC887 8-Channel
+
+1 x HDMI 1.4b max. resolution 4096 x 2160 @ 24 Hz / 2560 x 1600 @ 60 Hz
+1 x DVI-D     max. resolution 1920 x 1200 @ 60 Hz
+1 x VGA       max. resolution 1920 x 1200 @ 60 Hz
+6 x SATA 6Gb/s (Raid 0, 1, 10)
+1 x M.2 Socket 3 (2242/2260/2280/22110)
+1 x PCIe 3.0/2.0 x16
+2 x PCIe 2.0     x1
+2 x USB 3.1 Gen 2
+3 x USB 3.1 Gen 1 (4 panel, 2 placa)
+4 x USB 2.0 (4 placa)
+1 x PS/2 keyboard
+1 x PS/2 mouse
+1 x LAN (RJ45)
+3 x Audio jack(s)
+
+AI Suite III (bios con raton y colorines)
+
+BIOS    128 Mb Flash ROM, UEFI AMI SM BIOS 3.0, ACPI 6.1
+Factor  Micro ATX
+</code></pre>
+
+<p>Fuhh, no es buen momento para comprar hardware, con las &ldquo;vulnerabilidades&rdquo;
+de los procesadores, los sistemas operativos embebidos en estos, los defectos en Ryzen,
+la pasta de dientes (del die) en los Intel y la RAM con precios en
+bitcoin, casi que es mejor montar una Rasberri o similar (con un monitor de
+entrada hdmi y un nas o asi, lo haria)</p>
+
+<p>Decir que si tubiera pasta montaria una placa de Servidor o una estacion de
+trabajo diseñada para funcionar con Software Libre, je, algun dia</p>
+
+<p>Entonces, por que migrar de Intel (con sus controladores %100 libres, quitando
+el SO espia) a AMD (con los fallos de Ryzen y su opaco apoyo al FOSS)</p>
+
+<ol>
+<li><p>El socket tiene vida para rato, desde el procesador que elegi (bueno, para el
+que quedo pasta) a (posiblemente) la correccion de los Ryzen (&ldquo;II&rdquo;). Que con suerte
+en un par de años salto a uno de verdad bestial (8 cores, o similar)</p></li>
+
+<li><p>Los Ryzen no tiene pasta de dientes</p></li>
+
+<li><p>Parece que salen menos perjudicados con lo de Meltdown y Spectre</p></li>
+</ol>
+
+<p>Por que en particular esta marca y modelo? segun algunos foros, reddit, una
+releña en amazon y no recuerdo que mas, esta es una buena placa sin demaciados
+conflictos para utilizar GNU/Linux, tiene mas de 4 puertos SATA, buena
+apariencia y un DVI + VGA (+HDMI), que creia ayudarian a precindir de encufar la
+grafica dedicada para conertar 2 monitores VGA&hellip; el modelo de adaptador
+DVI&gt;VGA que poseo es de un modelo distinto (risas enlatadas)</p>
+
+<h2 id="cosas">Cosas</h2>
+
+<p>como fue el paso de un intel a el procesador mas barato de amd?</p>
+
+<pre><code>Intel Celeron  847 32nm 2-cores 1.10Ghz  0KB L1 0MB L2 2MB L3 17W DDR3 1333
+2 x 4 GB kingston 1333
+
+AMD   A6      9500 28nm 2-cores 3.80Ghz 96KB L1 1MB L2 0MB L3 65W DDR4 2400
+1 x 4 GB Adata    2400
+</code></pre>
+
+<p>(la memoria cuesta un riñon, el estatus quo tendra que esperar)</p>
+
+<p>en general con el Celeron corriendo</p>
+
+<ul>
+<li>firefox con ~8 pestañas (2 ventanas)</li>
+<li>algunos emacs y tilix</li>
+<li>thunderbird</li>
+<li>qbittorrent</li>
+<li>moc</li>
+<li>ckb (teclado rgb&hellip;)</li>
+<li>nautilius</li>
+</ul>
+
+<p>el procesador rondaba el 60%. Con el AMD el 20%, aunqe el consumo de
+electricidad a aumentado ~10%.</p>
+
+<p>Generalmente los unicos procesos donde exijo de prosesador son ver videos y
+alguna compilacion puntual, por ello estube corriendo boinc en la maquina, aunque
+el rendimiento decaia mucho en el celeron, ahora corro mprime (que no encuentro
+forma de limitar) je, sea por la ciencia (y con suerte en mprime cae alguna
+recompensa)</p>
+
+<p>Los videos de calidad gourmet si que se han visto beneficiados, ya se pueden
+ver! y sin saltos!</p>
+
+<p>otra cosa que ha cambiado es que ahora si sale aire caliente de &ldquo;la estructura&rdquo;
+que tengo por torre&hellip; y el movil ya no indica <em>carga lenta</em> cuando se enchufa
+al USB</p>
+
+<p><img src="https://nasciiboy.github.io/img/the-new-hope.jpg" alt="" /></p>
+
+<p>(como en CSI, si aumentan y limpian la imagen ilimitadamente, pueden ver mi varonil rostro
+reflejado en el cpu, la bateria, la bolsa antiestatica y el acabado reluciente del psb)</p>
+
+<p>contar con mas de 2 puertos SATA, me llena de alegria, musica, video y
+torrentes!</p>
+
+<h2 id="oso">OSO</h2>
+
+<p>Vamos con que sistema instalarle al bicho. La primer opcion fue seguir con Debian 9
+(Stretch) para mi infortunio ademas de los tipicos mensajes de error ACPI me
+encontre con otros problemas que me hicieron dudar sobre si era una buena idea</p>
+
+<p>Primero, ya en la anterior placa habia instalado debian e igualmente al arrancar
+con Gnome y solicitar una terminal solo recibia un cursor de carga, lo que
+obligaba a ir a un tty a actualizar repos e instalar mi terminal de confiansa
+(<em>tilix</em>)</p>
+
+<p>Segundo, los adaptadores wifi USB un TP-LINK (con controladores privativos) y
+otro de recien compra (especificamente con soporte de fabrica y drivers libres)
+un Tenda W311ML (no habia con antena capta-wifi-del-vecino&hellip; nunca se sabe)
+aunque funcionaban (reconocian los nombres de redes e intencidad) eran incapaces
+de conectarse. Cosa curiosa, el instalador (sin firmware privativo) de debian
+funcionaba sin drama alguno con el Tenda.</p>
+
+<p>Hasta ahora tenia conectado el cable de red, aunque prefiero que lo unico que se
+conecte sea la red electrica filtrada por el PSU -&gt; Fuente -&gt; Motherboard, quien
+sabe cuando una descarga puede dejarte sin placa</p>
+
+<p>Tercero, algunos mensajes de error que no encontre como solucionar y retraso en
+acciones del teclado, la mas evidente, bloquear secion, que demora unos
+5 segundos en surtir efecto</p>
+
+<p>En general, solventados los primeros baches, se tenia un sistema funcional y
+afinado, joder, si debian gnome de inicio consume menos de 500MiB de ram
+(482MiB), hasta dan ganas de llorar!</p>
+
+<p><img src="https://nasciiboy.github.io/img/debian-real-no-fake.png" alt="" /></p>
+
+<p>ya con algo de trabajo para que se vea que es 100% real no fake (535MiB)</p>
+
+<p><img src="https://nasciiboy.github.io/img/debian-real-no-fake-II.png" alt="" /></p>
+
+<p>Perrooo, sentia que el equipo asi de nuevo e inmaculado como estaba, deberia ir
+finisimo sin ningun estigma que lo mancille</p>
+
+<p>Pase a probar con debian testing (la imagen semanal) y el sistema no podia pasar
+del gestor de secion de nome&hellip; entoces? OpenSuse, nop no me terminan de
+agradar, manjaro o un arch? ufff, dejarle esta mi pequeña maquina a esos
+&ldquo;inestables&rdquo;, nop&hellip; fedora</p>
+
+<p>fedora? (inserte risa nerviosa y verguenza) o, a todo uno se acostumbra, mehh,
+tienen un kernel actual, soporte (mas o menos decente), desarrolladores detras
+de ella y es una de las grandes&hellip; no me jusguen</p>
+
+<p>los pinchos usb funcionan, el teclado va sin retraso y solo tiene unos mensajes
+(ignorables) del siempre conflictivo ACPI (que ardas en el infierto junto con
+secure boot, microsoft, intel, nvidea y amd)</p>
+
+<p>inconvenintes, ha, fedora nunca aprenderas a optimizar, de arranque y sin
+naaahhh consumes el triple que debian (1.44GiB). Durante la instalacion el mouse
+inalambrico no respondia hata que se cambio de puerto usb (de 3 version 1 a 3
+version 2). Luego de la instalacion regrese el pincho del raton al puerto
+inicial y no a habido inconvenientes</p>
+
+<p><img src="https://nasciiboy.github.io/img/ever-fedora.png" alt="" /></p>
+
+<p>El audio sin problemas, como con la motherboard anterior, aunque suena bien, me
+gustaria que entregara mas potencia de sonido, pero no se le pude pedir
+demaciado a los 4 tristes capacitoder que tiene la placa. Puede que sea
+sugestion, pero el audio suena un poco mejor y con un (por decir) 10%
+de potencia mas, aunque segun las especificaciones el chip es (casi) el mismo modelo</p>
+
+<p>basicamente la instalacion consistio en ejecutar</p>
+
+<pre><code>dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf -y install mg emacs moc htop fish tilix util-linux-user gnome-tweak-tool
+
+dnf -y groupinstall &quot;Development Tools&quot;
+dnf -y groupinstall &quot;Development Libraries&quot;
+dnf -y install kernel-headers kernel-devel svn subversion git mercurial bzr valgrind gource clisp gdb ghc clang guile rust rust-doc ldc nasm cargo qt-devel qt-doc qt-creator kf5-kirigami arduino avr-libc fritzing java-9-openjdk java-9-openjdk-devel maven glances inxi ncdu zeal asciidoc pandoc poppler-utils caca-utils texinfo ghostscript fbreader tesseract tesseract-langpack-spa elinks surfraw vlc mpv blender inkscape dia gimp tiled pinta synfigstudio mypaint mtpaint gpick subdownloader gnome-subtitles thunderbird simple-scan gscan2pdf speedcrunch kde-connect kde-cli-tools qbittorrent amule youtube-dl dtrx unp unar zip unzip id3v2 cuetools shntool flac ffmpeg smartmontools testdisk foremost gparted rsync aircrack-ng macchanger ripgrep
+
+update-alternatives --config java
+update-alternatives --config javac
+java -version
+javac -version
+
+dnf -y builddep emacs dosbox moc love supertuxkart tilix firefox inkscape megamario
+
+dnf -y install python-pip python3-pip
+pip install subliminal
+</code></pre>
+
+<p>ademas de compilar artesanalmente <code>ckb-next</code> y <code>dfc</code></p>
+
+<p>en cuanto al particionado</p>
+
+<pre><code>SSD 250GB
+  sda1  200MiB /boot/efi
+  sda2 1000MiB /boot
+  sda3   50GiB /
+  sda4  168GiB /home
+
+HDD 320GB
+  sdb1    8GiB swap
+
+  // el resto sin particionar
+
+HDD   3TB
+  sdc1  2.7TiB /media/data
+</code></pre>
+
+<p>mmm, todos los discos con tabla de particiones GPT y particiones primarias.
+Las 2 particiones de boot las deje asi por que (en un particionado automatico)
+asi lo recomendo freidora. Exeptuando la particion efi (fat16) todas tienen
+EXT4, hice una prueba temporal con LVM pero lo encontre momentaneamente poco
+atractivo y algo lioso, creo que me seria mas util hacer un raid (colocando 3-5
+discos de 3TB o mas)</p>
+
+<p>supongo que lo ideal es montar un ssd M.2 al tope de su velocidad de 64GB y
+colocar unicamente el sistema, aunque los discos de esa capacidad y prestaciones
+no se fabrican de menos de 256GB. Unos dos SDD de 256GB con los datos mas vitales
+duplicados y el resto en discos duros voluptuosos</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.github.io/post/ramen-xv/">◀ Ramen XV</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/categories/prog">prog(39)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(25)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/tags/howto">howto(15)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(15)</a></li><li><a href="https://nasciiboy.github.io/tags/fonos">fonos(14)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(8)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/">(2)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
