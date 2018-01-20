@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Programming Howto (19-01-18)</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>Programming Howto (19-01-18)</h1>
+  
+
+<p>Hace tiempo que tenia intenciones de escribir mi version sobre por que la
+programacion rockea y cual deberia ser el camino a seguir&hellip; je, je, pero como
+estoy bastante lejos de considerarme &ldquo;un programador&rdquo; (de la misma forma que
+solo considero a un musico a quien vive de la musica y/o reconosco y
+apresio su obra). No se, pienso que unicamente los consejos de un experto
+(«alquien que domina un tema tan a profundidad, que es capas de intuir,
+investigar, aplicar y desarrollarlo de formas aun no documentadas») tienen valia
+y son dignos de atencion&hellip; sin embargo, quien demonios es un experto?  he?
+conoces a algun experto? yo no</p>
+
+<p>asi que, sin ser ningun experto, pero dandomelas de cuñado + unos años de
+bagancia, dispersion, lecturas aleatorias, libros decepcionantes, saberes
+aprendidos (y olvidados por falta de aplicacion) y otros vaivenes de proyectos
+que terminan llendo a ningun sitio, creo, he almacenado la suficiente
+experiencia para almenos dar un par de consejos a mi yo del pasado si es que lee
+esto de alguna forma</p>
+
+<p>pero primero y copipasteando <a href="https://henrikwarne-com.cdn.ampproject.org/c/s/henrikwarne.com/2012/06/02/why-i-love-coding/amp/">un post</a>
+(en engrish) (con algunas modificaciones hirientes) &ldquo;<strong>Las razones por las que me encanta programar!</strong>&ldquo;</p>
+
+<ol>
+<li><p>La alegría de hacer cosas. La programación se basa fundamentalmente en la
+creación de soluciones a problemas. Al final del día, se ha creado algo que
+no existía esa mañana, y eso es en sí mismo satisfactorio.</p></li>
+
+<li><p>La fascinación de crear objetos complejos en forma de rompecabezas que
+entrelazan piezas móviles y verlas trabajar en ciclos sutiles, jugando con
+las consecuencias de los principios incorporados desde el principio.</p></li>
+
+<li><p>La alegría de aprender siempre, que nace de la naturaleza no repetitiva de la
+tarea. Mientras uno construye el programa, se amplía constantemente la
+comprensión tanto del problema como de la solución. Además, casi no hay
+límite a lo se puede aprender para mejorar «lenguajes, algoritmos,
+metodología, herramientas, &hellip;»</p></li>
+
+<li><p>El programador, como el poeta, trabaja sólo ligeramente alejado de los
+pensamientos puros. Construye sus castillos en el aire, desde el aire,
+creando por el ejercicio de la imaginación. Sin embargo, el constructo
+programático, a diferencia de las palabras del poeta, es real en el sentido
+de que se mueve y trabaja, produciendo resultados visibles separados del
+propio constructo</p></li>
+
+<li><p>La expresividad del código. Suena contraintuitivo, dada la especificación
+estricta de un lenguaje de programación, y las relativamente pocas
+construcciones que contiene (comparado con un lenguaje natural para humanos), pero
+hay un número casi infinito de formas de escribir un programa para resolver
+un problema dado (no trivial). Primero y ante todo, se decide el nombre de
+clases, métodos y variables, pero también el algoritmo, la partición de la
+lógica y finalmente la distribucion del codigo. Todos estos factores se
+combinan para dar al programador gran libertad para expresar la solución.</p></li>
+</ol>
+
+<h2 id="materiales">Materiales</h2>
+
+<ul>
+<li>Cualquier procesador donde pueda instalarse un sistema GNU (o BSD) (ni
+androides, o winbugs son dignos de la tarea, hay que formatear del disco esas
+aberraciones), si se trata de un hardware de la manzana puede servir, pero no
+te conformes con imitaciones genericas e instala GNU, con sus 3 letras, asi en
+grande y en mayuscula</li>
+</ul>
+
+<p>Con poder ejecutar una terminal puro y duro es suficiente para cacharrear, mas
+  si se desa una experienca completa y con un entorno grafico GNOME (el mas
+  chulo de todos), los requerimientos minimos serian</p>
+
+<ul>
+<li>procesador de doble nucleo (basicamente cualquiera procesador de <strong>sobremesa</strong>
+salido en los ultimos 10 años, una laptop? ja, ja, ja y ja, si te va el
+BDSM, adelante)</li>
+<li>al menos 3GB de ram, 2 en casos exepcionales y siendo bastante conservadores
+con el uso de esta. Preferentemente 4GB en adelente y de ser posible 8 para
+&ldquo;jamas&rdquo; tener ninguna preocupacion</li>
+<li>1TB de almacenamieto (HDD y/o SDD), para almacenar mucho codigo, libros y
+musica, seehh mucha musica. El almacenamiento nunca es suficiente&hellip; el
+interne es grande y generoso. Si esta dentro del presupuesto mejor montar
+una placa ATX o Micro ATX con 4 o mas puertos SATA</li>
+
+<li><p>muchos puertos usb, nunca son suficientes: teclado, raton, adaptador wifi,
+gamepad inalambrico, cable del mobil, memorias, etc, etc</p></li>
+
+<li><p>Un monitor. Preferentemente dos con entradas acordes a la placa. Con cualquier
+monitor roñoso es posbile programar, pero como se va a pasar mucho tiempo con
+la vista fija leyendo, preferir la mejor calidad de imagen y
+resolucion. Tamaño? 17 pulgadas en adelante</p></li>
+
+<li><p>Un teclado en condiciones, con teclas que no se peguen, mecanico si entra en
+el presupuesto</p></li>
+
+<li><p>un raton que funcione, tambien que no sea roñoso (logitech tiene calidad y buen precio)</p></li>
+
+<li><p>unos audifonos de diadema, comodos y con calidad de sonido decente, no tienen
+que ser caros, solo confiables, sin ruido ni distorcion (llevo con unos sony
+MDR-ZX100 cerca de 3 años y han cumplido su funcion (~15 dolares))</p></li>
+
+<li><p>un cuaderno y pluma o lapiz. Mas que para tomar apuntes, para hacer dibujos y
+diagramas que ayuden a visualizar ideas</p></li>
+
+<li><p>una silla comoda, con movimiento reclinable, giratorio, pero que de soporte a
+la columna</p></li>
+</ul>
+
+<h2 id="preparativos">Preparativos</h2>
+
+<p>Aprende a instalar la distribucion GNU, romper particiones, cosas basicas de
+repositorios y administracion del sistema. Ser un Sysadmin es aburrido y carente
+de emocion, asi que no indagues demasiado</p>
+
+<p>con cual (distro) empezar? <strong>Debian</strong>, instalas, configuras hasta que todo funcione y se
+amolde a tus necesidades y te olvidas un par de años sobre actualizar cosas,
+quiza si estas acostumbrado a los entornos &ldquo;retro&rdquo; pero con un toque de
+elegancia Linux Mint. Otra opcion seria OpenSuse, anuque en esta simpre siento
+que es algo incomoda-como-que-corporativa-o-algo-asi, no se.</p>
+
+<p>Si el hardware es muy quisquilloso (o nuevo) prueba con fedora&hellip;</p>
+
+<p>o si eres mas audas con algun derivado de Arch. Hay muchas distros por hay
+fuera, pero ve a las grandes, con gente (mucha gente) detras y que se queden en un
+experimento</p>
+
+<p>M-e-c-a-n-o-g-r-a-f-i-a, o si, aprendela! lo pospuse cerca de 3 años (despues de
+la era del ñu) perdiendo el tiempo entre la lectura e ingresar datos
+penosamente, picando teclas viendo el teclado</p>
+
+<p>El entrenamiento sera de aproximadamente 3 meses hasta tener confiansa y
+fluides, pero valdra cada segundo invertido, a diferencia de lo que la
+modernidad indica, el teclado es (de momento) la interfaz mas eficiente para
+interactuar con el sistema (nota: la <a href="https://es.wikipedia.org/wiki/Disortograf%C3%ADa">distografia</a> y pesima redaccion es algo mas
+dificultoso mejorar, incluso incurable).</p>
+
+<p>Cual distribucion de teclado? español?  ingles?  ninguna! <strong>programmer dvorak</strong>
+en ingles, buscate la vida, pero cambia los control, blockmayus (y otras teclas)
+de posicion, asi:</p>
+
+<p><img src="https://nasciiboy.github.io/img/nascii-dvorak.svg" alt="" /></p>
+
+<p>Es preferible que aprendas ingles (aun pendiente), mas diria que los primeros
+años del trayecto no es necesario, hay muchas cosas que requieren atencion y <em>los basicos</em>
+estan en español, y por el trayecto y el contacto cotidiano (musical, visual y sintactico)
+se aprende lo suficiente para apañarse, mas preparate apropiadamente en esa
+lengua, tarde o temprano te sera necesaria</p>
+
+<h2 id="the-thing">the thing</h2>
+
+<p>antes de proseguir, una duda que tenia al principio y aqui es el sitio donde
+debo responderla. Puedo aprender por mi cuenta o es necesario ir a un instituto
+a que un iliminado me transmita estos misterios?</p>
+
+<p>primero, la programacion es compleja y a la vez muy sencilla. Sus bases no
+requieren ninguna habilidad intelectual exepcional&hellip; suponiendo que no seas subnormal&hellip; a
+menos que tu subnormalidad radique en ser retraido, ensimismado, egolatra y obsesivo
+compulsivo, situacion en donde la subnormalidad amolda perfectamante con un
+equipo de computo y las largas horas que pasaras frente a este, descubriendo
+un ancho e inabarcable oceano de conocimiento y diversion!</p>
+
+<p>pero puesto al tema, vale la pena asistir a un aula o pagarle a un
+tutor? diria que no, de hecho seria desperdiciar tiempo y dinero cuando aun no
+sabes si eres apto, como saber si eres apto? si apredes lo eres, si no
+pueeeessssshhh noh.</p>
+
+<p>Si, alguien iniciado te puede ahorrar mucho, mucho tiempo indicando donde
+deberias invertir tu esfuerzo o aclarando algunos puntos especificos. Aun asi,
+la programacion (como cualquier otra cosa) requiere mas transpiracion y esfuerzo
+que intelecto (quiza algo inerente al ineficiente &ldquo;diseño humano&rdquo;), es decir, para
+aprender a programar y hacerlo bien, es necesario practicar, fallar, probar,
+fallar de nuevo, olvidar, volver a intentar, aprender un nuevo &ldquo;truco&rdquo; mas y
+repeter el proceso nuevamente, paso a paso durante unos cuantos años&hellip; cuantos?
+los suficientes como para olvidar que algun dia no tenias ni puta idea y ahora
+esos momentos preteritos parecen hilarantes, es mas, si alguien en tu mismo
+estado inicial se acerca a preguntar por guia seguro que, o lo miras con
+indiferencia, o con misericordia por el largo recorrido que tiene por delante</p>
+
+<p>asi que en resumen, si! puedes aprender &ldquo;por tu cuenta&rdquo;. La mejor y mas paciente
+guia es un libro bien escrito, claro, en ocaciones explicito a niveles
+pornograficos, en otras misterioso y arido</p>
+
+<p>ahora si &gt; que, como y por que&hellip; Aprende C, con Emacs, Bash y GCC</p>
+
+<p>Si bien C no es &ldquo;el lenguaje&rdquo; mas cool del barrio, si que es base y fundamento
+para la practica totalidad de lenguajes populares actuales, los principios estan
+hay. Si, si, es verdad, C es severo, pero no demaciado, mas el esfuerzo que
+viene con el aporta los siguientes puntos te seran de utilidad</p>
+
+<ul>
+<li><p>Con C, te haces una idea general de los fundamentos de la maquina,
+almacenamiento, procesamiento, texto, codigo ejecutable, compilacion,
+ejecucion, pero sobre todo, se desvela la magia detras del paradicma &ldquo;UNIX&rdquo;,
+con la debida desmitificacion de la linea de comandos, tuberias, y retornos</p></li>
+
+<li><p>C es ridiculamente pequeño, solo tiene los rudimentos, pero no creas que sera
+sencillo, aun lo mas basico como saber hacer un bucle, un
+(post|pre)(incremento|decremento) tiene que ser dominado, switches,
+if-else&rsquo;s, declaracion de variables, arreglos, estructuras, funciones (y sus
+parametros), recursividad, punteros, punteros a funciones, arreglos con
+punteros a funciones, etc.</p></li>
+</ul>
+
+<p>Conocer sobre Programacion orientada a objetos es inecesario en este punto,
+  es una complicacion adicional y prematura</p>
+
+<ul>
+<li><p>GCC y terminal, ohhh yhea! aprende los tres comandos minimos, a moverte por
+los directorios, crear ficheros, ejecutar programas y compilarlos, nada mejor
+que una pantalla obscura con letras intimidantes para sentirte poderoso</p></li>
+
+<li><p>Emacs! Editores hay cientos, Emacs, solo uno&hellip; (o no). Ningun programa que
+halla existido o existira le hace sombra a este imponente y glorioso
+interprete de elisp con piel de editor de texto, puede que desconoscas el
+significado de estas palabras, mas con dedicar una tarde a sus &ldquo;atajos&rdquo;
+fundamentales es suficiente para crear tus ficheritos de programacion</p></li>
+</ul>
+
+<p>Con el tiempo descubriras que emacs es abrumador, <em>el fruto mas puro que la
+  programacion puede entregar</em>, no conoce fronteras ni limitaciones</p>
+
+<ul>
+<li>Cuando dices que &ldquo;sabes&rdquo; programar en C, se hace el silencio, los presentes
+se miran entre ellos y luego te miran con respeto&hellip; o no&hellip;</li>
+</ul>
+
+<p>Sin importar el punto, herramiento, lenguaje o programa, lo que ha de aprenderse
+es inmenso, en lugar de lanzarte directamente a la boragine informatica, tomalo
+serenamente, una cosa a la vez, aprede cuando sea necesario, lee sobre nuevos
+temas, sigue enlaces, pero no te comprometas, ni te exijas memorizacion alguna o
+puedes abrumarte. Veras que con el tiempo recordaras sin notarlo aquellos
+comandos, funciones y atajos que de verdad necesitas, e iras sumando
+conocimentos incrementalmente&hellip; aunque el cerebro humano es limitado (llega un
+momento en que el buffer se satura y cuando entra algo nuevo, algo sale sin que
+te des cuenta&hellip;)</p>
+
+<h3 id="los-libros">Los libros</h3>
+
+<h4 id="como-programar-en-c-c-y-o-java-4th-edicion-deitel-deitel">COMO PROGRAMAR EN C (/C++ (y/o Java)) 4th edicion (Deitel &amp; Deitel)</h4>
+
+<p>Son aproximadamente 500 paginas. Explicaciones detalladas y &ldquo;didacticas&rdquo;,
+  incrementales, muy incrementales.</p>
+
+<p>Puedes aprender de 0 a &ldquo;iniciado&rdquo;, te dejara una idea muy clara de como es
+  programar (en los &ldquo;90&rdquo; antes del internet&hellip; <em>programar &ldquo;de verdad&rdquo;</em>), eso si (con este como con
+  todos los libros) intenta realizar todos los ejercicios que puedas, <em>TODOS</em>,
+  haciendolos sabras si aprendiste algo o no, ademas, creo que solo asi se
+  acondiciona el cerebro para esto</p>
+
+<p>Si hay una seccion que no terminas de entender, no te preocupes, sigue
+  leyendo hasta el final, ejecuta los programas propuestos, meconografia si
+  quieres y luego de ver el programa en accion intenta entender de que se
+  trata, vuelve a leer el capitulo y asi lo tendras mas claro</p>
+
+<p>Sobre GCC, Bash apenas necesitas lo basico en algun post lo encontraras o en
+  su defecto hojea <a href="https://nasciiboy.github.io/data/bash.pdf">este</a> para bash y <a href="https://nasciiboy.github.io/data/GCC.pdf">este</a> otro para
+  gcc, sobre los makes, je, nunca lo aprendiste&hellip;</p>
+
+<p>de Emacs, con el tutorial integrado (<code>Ctrl-h</code> y luego <code>t</code>), tambien y aunque
+  esta un poco retro y fuera de interne <a href="https://nasciiboy.github.io/data/rpublica-emacs.zip">rpublica</a> o
+  consulta la siguiente <a href="http://quijotelibre.com/recursos-gnu-emacs-y-org-mode/">recopilacion</a> del quijote libre</p>
+
+<h4 id="c-k-r-2-da-version">C (K&amp;R) (2^da version)</h4>
+
+<p>Un libro aspero casi hostil, pero muy clarificador sobre como esta construida
+  la biblioteca estandar, de hecho diria que enseña a implimentarla.</p>
+
+<p>El estilo esta algo desfasado y con seguridad nunca lo utilices en &ldquo;el mundo real&rdquo;</p>
+
+<p>Mas importante que las formas, es el contenido, diria que esta es la
+  verdadera prueba, el bautiso de fuego</p>
+
+<h4 id="pausa">Pausa</h4>
+
+<p>dedicate a programar en C, algo deverias tener en mente en este
+  momento, esto te ayudara a afirmar los conocimientos.</p>
+
+<p>Si lo que te interesa son los videojuegos, programa algo en
+  <a href="https://github.com/nasciiboy/NCURSES-Programming-HOWTO">ncurses</a> (<a href="http://nasciiboy.github.io/prog/cobaya.zip">tambien relacianado</a>)</p>
+
+<p>luego, quiza lee superficialmente el resto del libro de Deitel
+  para colocar en tu cerebro de que va eso del POO (o OOP), ademas de conocer
+  los rostros de C++ y Java</p>
+
+<h4 id="the-go-programming-language">The Go Programming Language</h4>
+
+<p>uff, a las bases de C, se les recubre con un toque de &ldquo;programacion moderno&rdquo; y
+  obtienes Go, un languje con una POO casi invisible ademas de poco
+  convencional. Te suman una libreria estandar en condiciones, gestor de
+  dependencias, documentacion, pruebas y &ldquo;perfilado&rdquo;.</p>
+
+<p>Un todo en uno, que llebara tus bases a programas &ldquo;grandes&rdquo; sin sacrificar
+  (demaciado) rendimiento ni incluir conceptos complejos, encima, como C es un
+  lenguje compacto, puedes ver por <a href="https://github.com/nasciiboy/TGPL/">aca</a></p>
+
+<h4 id="patrones-de-diseño-gof">Patrones de Diseño (GoF)</h4>
+
+<p>el paso definitivo en el camino entre ser un programador mediocre sin respeto
+  ni admiracion al espiritu que habita en el silicio&hellip; o un cuñao medio
+  entendido.</p>
+
+<p>En resumen, unos diseños para ensamblar abstracciones sobre las abstracciones
+  (sobre las abstracciones hardware) de lo que deberias saber en este punto</p>
+
+<p>Apartir de aqui, puedes ingresar a la carrera (mates, sistemas, redes y esas
+cosas que dan cache), buscar trabajo, o quiza si eres afortunado encerrarte a
+programar en solitario una temporada por mero hobbie, o finalmente abandonar y
+aprender otra cosa</p>
+
+<p>happy hacking!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.github.io/prog/morg-table-iii/">◀ TextTable2HtmlTable (Volume Three)</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/categories/prog">prog(39)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(24)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/tags/howto">howto(15)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(15)</a></li><li><a href="https://nasciiboy.github.io/tags/fonos">fonos(14)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(8)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/">(1)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

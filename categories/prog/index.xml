@@ -7,10 +7,325 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Mon, 15 Jan 2018 14:31:33 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jan 2018 21:58:23 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/categories/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Programming Howto (19-01-18)</title>
+      <link>https://nasciiboy.github.io/prog/programming-howto/</link>
+      <pubDate>Fri, 19 Jan 2018 21:58:23 -0600</pubDate>
+      
+      <guid>https://nasciiboy.github.io/prog/programming-howto/</guid>
+      <description>
+
+&lt;p&gt;Hace tiempo que tenia intenciones de escribir mi version sobre por que la
+programacion rockea y cual deberia ser el camino a seguir&amp;hellip; je, je, pero como
+estoy bastante lejos de considerarme &amp;ldquo;un programador&amp;rdquo; (de la misma forma que
+solo considero a un musico a quien vive de la musica y/o reconosco y
+apresio su obra). No se, pienso que unicamente los consejos de un experto
+(«alquien que domina un tema tan a profundidad, que es capas de intuir,
+investigar, aplicar y desarrollarlo de formas aun no documentadas») tienen valia
+y son dignos de atencion&amp;hellip; sin embargo, quien demonios es un experto?  he?
+conoces a algun experto? yo no&lt;/p&gt;
+
+&lt;p&gt;asi que, sin ser ningun experto, pero dandomelas de cuñado + unos años de
+bagancia, dispersion, lecturas aleatorias, libros decepcionantes, saberes
+aprendidos (y olvidados por falta de aplicacion) y otros vaivenes de proyectos
+que terminan llendo a ningun sitio, creo, he almacenado la suficiente
+experiencia para almenos dar un par de consejos a mi yo del pasado si es que lee
+esto de alguna forma&lt;/p&gt;
+
+&lt;p&gt;pero primero y copipasteando &lt;a href=&#34;https://henrikwarne-com.cdn.ampproject.org/c/s/henrikwarne.com/2012/06/02/why-i-love-coding/amp/&#34;&gt;un post&lt;/a&gt;
+(en engrish) (con algunas modificaciones hirientes) &amp;ldquo;&lt;strong&gt;Las razones por las que me encanta programar!&lt;/strong&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;La alegría de hacer cosas. La programación se basa fundamentalmente en la
+creación de soluciones a problemas. Al final del día, se ha creado algo que
+no existía esa mañana, y eso es en sí mismo satisfactorio.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;La fascinación de crear objetos complejos en forma de rompecabezas que
+entrelazan piezas móviles y verlas trabajar en ciclos sutiles, jugando con
+las consecuencias de los principios incorporados desde el principio.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;La alegría de aprender siempre, que nace de la naturaleza no repetitiva de la
+tarea. Mientras uno construye el programa, se amplía constantemente la
+comprensión tanto del problema como de la solución. Además, casi no hay
+límite a lo se puede aprender para mejorar «lenguajes, algoritmos,
+metodología, herramientas, &amp;hellip;»&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;El programador, como el poeta, trabaja sólo ligeramente alejado de los
+pensamientos puros. Construye sus castillos en el aire, desde el aire,
+creando por el ejercicio de la imaginación. Sin embargo, el constructo
+programático, a diferencia de las palabras del poeta, es real en el sentido
+de que se mueve y trabaja, produciendo resultados visibles separados del
+propio constructo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;La expresividad del código. Suena contraintuitivo, dada la especificación
+estricta de un lenguaje de programación, y las relativamente pocas
+construcciones que contiene (comparado con un lenguaje natural para humanos), pero
+hay un número casi infinito de formas de escribir un programa para resolver
+un problema dado (no trivial). Primero y ante todo, se decide el nombre de
+clases, métodos y variables, pero también el algoritmo, la partición de la
+lógica y finalmente la distribucion del codigo. Todos estos factores se
+combinan para dar al programador gran libertad para expresar la solución.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;materiales&#34;&gt;Materiales&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cualquier procesador donde pueda instalarse un sistema GNU (o BSD) (ni
+androides, o winbugs son dignos de la tarea, hay que formatear del disco esas
+aberraciones), si se trata de un hardware de la manzana puede servir, pero no
+te conformes con imitaciones genericas e instala GNU, con sus 3 letras, asi en
+grande y en mayuscula&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Con poder ejecutar una terminal puro y duro es suficiente para cacharrear, mas
+  si se desa una experienca completa y con un entorno grafico GNOME (el mas
+  chulo de todos), los requerimientos minimos serian&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;procesador de doble nucleo (basicamente cualquiera procesador de &lt;strong&gt;sobremesa&lt;/strong&gt;
+salido en los ultimos 10 años, una laptop? ja, ja, ja y ja, si te va el
+BDSM, adelante)&lt;/li&gt;
+&lt;li&gt;al menos 3GB de ram, 2 en casos exepcionales y siendo bastante conservadores
+con el uso de esta. Preferentemente 4GB en adelente y de ser posible 8 para
+&amp;ldquo;jamas&amp;rdquo; tener ninguna preocupacion&lt;/li&gt;
+&lt;li&gt;1TB de almacenamieto (HDD y/o SDD), para almacenar mucho codigo, libros y
+musica, seehh mucha musica. El almacenamiento nunca es suficiente&amp;hellip; el
+interne es grande y generoso. Si esta dentro del presupuesto mejor montar
+una placa ATX o Micro ATX con 4 o mas puertos SATA&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;muchos puertos usb, nunca son suficientes: teclado, raton, adaptador wifi,
+gamepad inalambrico, cable del mobil, memorias, etc, etc&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Un monitor. Preferentemente dos con entradas acordes a la placa. Con cualquier
+monitor roñoso es posbile programar, pero como se va a pasar mucho tiempo con
+la vista fija leyendo, preferir la mejor calidad de imagen y
+resolucion. Tamaño? 17 pulgadas en adelante&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Un teclado en condiciones, con teclas que no se peguen, mecanico si entra en
+el presupuesto&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;un raton que funcione, tambien que no sea roñoso (logitech tiene calidad y buen precio)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;unos audifonos de diadema, comodos y con calidad de sonido decente, no tienen
+que ser caros, solo confiables, sin ruido ni distorcion (llevo con unos sony
+MDR-ZX100 cerca de 3 años y han cumplido su funcion (~15 dolares))&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;un cuaderno y pluma o lapiz. Mas que para tomar apuntes, para hacer dibujos y
+diagramas que ayuden a visualizar ideas&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;una silla comoda, con movimiento reclinable, giratorio, pero que de soporte a
+la columna&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;preparativos&#34;&gt;Preparativos&lt;/h2&gt;
+
+&lt;p&gt;Aprende a instalar la distribucion GNU, romper particiones, cosas basicas de
+repositorios y administracion del sistema. Ser un Sysadmin es aburrido y carente
+de emocion, asi que no indagues demasiado&lt;/p&gt;
+
+&lt;p&gt;con cual (distro) empezar? &lt;strong&gt;Debian&lt;/strong&gt;, instalas, configuras hasta que todo funcione y se
+amolde a tus necesidades y te olvidas un par de años sobre actualizar cosas,
+quiza si estas acostumbrado a los entornos &amp;ldquo;retro&amp;rdquo; pero con un toque de
+elegancia Linux Mint. Otra opcion seria OpenSuse, anuque en esta simpre siento
+que es algo incomoda-como-que-corporativa-o-algo-asi, no se.&lt;/p&gt;
+
+&lt;p&gt;Si el hardware es muy quisquilloso (o nuevo) prueba con fedora&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;o si eres mas audas con algun derivado de Arch. Hay muchas distros por hay
+fuera, pero ve a las grandes, con gente (mucha gente) detras y que se queden en un
+experimento&lt;/p&gt;
+
+&lt;p&gt;M-e-c-a-n-o-g-r-a-f-i-a, o si, aprendela! lo pospuse cerca de 3 años (despues de
+la era del ñu) perdiendo el tiempo entre la lectura e ingresar datos
+penosamente, picando teclas viendo el teclado&lt;/p&gt;
+
+&lt;p&gt;El entrenamiento sera de aproximadamente 3 meses hasta tener confiansa y
+fluides, pero valdra cada segundo invertido, a diferencia de lo que la
+modernidad indica, el teclado es (de momento) la interfaz mas eficiente para
+interactuar con el sistema (nota: la &lt;a href=&#34;https://es.wikipedia.org/wiki/Disortograf%C3%ADa&#34;&gt;distografia&lt;/a&gt; y pesima redaccion es algo mas
+dificultoso mejorar, incluso incurable).&lt;/p&gt;
+
+&lt;p&gt;Cual distribucion de teclado? español?  ingles?  ninguna! &lt;strong&gt;programmer dvorak&lt;/strong&gt;
+en ingles, buscate la vida, pero cambia los control, blockmayus (y otras teclas)
+de posicion, asi:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Es preferible que aprendas ingles (aun pendiente), mas diria que los primeros
+años del trayecto no es necesario, hay muchas cosas que requieren atencion y &lt;em&gt;los basicos&lt;/em&gt;
+estan en español, y por el trayecto y el contacto cotidiano (musical, visual y sintactico)
+se aprende lo suficiente para apañarse, mas preparate apropiadamente en esa
+lengua, tarde o temprano te sera necesaria&lt;/p&gt;
+
+&lt;h2 id=&#34;the-thing&#34;&gt;the thing&lt;/h2&gt;
+
+&lt;p&gt;antes de proseguir, una duda que tenia al principio y aqui es el sitio donde
+debo responderla. Puedo aprender por mi cuenta o es necesario ir a un instituto
+a que un iliminado me transmita estos misterios?&lt;/p&gt;
+
+&lt;p&gt;primero, la programacion es compleja y a la vez muy sencilla. Sus bases no
+requieren ninguna habilidad intelectual exepcional&amp;hellip; suponiendo que no seas subnormal&amp;hellip; a
+menos que tu subnormalidad radique en ser retraido, ensimismado, egolatra y obsesivo
+compulsivo, situacion en donde la subnormalidad amolda perfectamante con un
+equipo de computo y las largas horas que pasaras frente a este, descubriendo
+un ancho e inabarcable oceano de conocimiento y diversion!&lt;/p&gt;
+
+&lt;p&gt;pero puesto al tema, vale la pena asistir a un aula o pagarle a un
+tutor? diria que no, de hecho seria desperdiciar tiempo y dinero cuando aun no
+sabes si eres apto, como saber si eres apto? si apredes lo eres, si no
+pueeeessssshhh noh.&lt;/p&gt;
+
+&lt;p&gt;Si, alguien iniciado te puede ahorrar mucho, mucho tiempo indicando donde
+deberias invertir tu esfuerzo o aclarando algunos puntos especificos. Aun asi,
+la programacion (como cualquier otra cosa) requiere mas transpiracion y esfuerzo
+que intelecto (quiza algo inerente al ineficiente &amp;ldquo;diseño humano&amp;rdquo;), es decir, para
+aprender a programar y hacerlo bien, es necesario practicar, fallar, probar,
+fallar de nuevo, olvidar, volver a intentar, aprender un nuevo &amp;ldquo;truco&amp;rdquo; mas y
+repeter el proceso nuevamente, paso a paso durante unos cuantos años&amp;hellip; cuantos?
+los suficientes como para olvidar que algun dia no tenias ni puta idea y ahora
+esos momentos preteritos parecen hilarantes, es mas, si alguien en tu mismo
+estado inicial se acerca a preguntar por guia seguro que, o lo miras con
+indiferencia, o con misericordia por el largo recorrido que tiene por delante&lt;/p&gt;
+
+&lt;p&gt;asi que en resumen, si! puedes aprender &amp;ldquo;por tu cuenta&amp;rdquo;. La mejor y mas paciente
+guia es un libro bien escrito, claro, en ocaciones explicito a niveles
+pornograficos, en otras misterioso y arido&lt;/p&gt;
+
+&lt;p&gt;ahora si &amp;gt; que, como y por que&amp;hellip; Aprende C, con Emacs, Bash y GCC&lt;/p&gt;
+
+&lt;p&gt;Si bien C no es &amp;ldquo;el lenguaje&amp;rdquo; mas cool del barrio, si que es base y fundamento
+para la practica totalidad de lenguajes populares actuales, los principios estan
+hay. Si, si, es verdad, C es severo, pero no demaciado, mas el esfuerzo que
+viene con el aporta los siguientes puntos te seran de utilidad&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Con C, te haces una idea general de los fundamentos de la maquina,
+almacenamiento, procesamiento, texto, codigo ejecutable, compilacion,
+ejecucion, pero sobre todo, se desvela la magia detras del paradicma &amp;ldquo;UNIX&amp;rdquo;,
+con la debida desmitificacion de la linea de comandos, tuberias, y retornos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;C es ridiculamente pequeño, solo tiene los rudimentos, pero no creas que sera
+sencillo, aun lo mas basico como saber hacer un bucle, un
+(post|pre)(incremento|decremento) tiene que ser dominado, switches,
+if-else&amp;rsquo;s, declaracion de variables, arreglos, estructuras, funciones (y sus
+parametros), recursividad, punteros, punteros a funciones, arreglos con
+punteros a funciones, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Conocer sobre Programacion orientada a objetos es inecesario en este punto,
+  es una complicacion adicional y prematura&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;GCC y terminal, ohhh yhea! aprende los tres comandos minimos, a moverte por
+los directorios, crear ficheros, ejecutar programas y compilarlos, nada mejor
+que una pantalla obscura con letras intimidantes para sentirte poderoso&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Emacs! Editores hay cientos, Emacs, solo uno&amp;hellip; (o no). Ningun programa que
+halla existido o existira le hace sombra a este imponente y glorioso
+interprete de elisp con piel de editor de texto, puede que desconoscas el
+significado de estas palabras, mas con dedicar una tarde a sus &amp;ldquo;atajos&amp;rdquo;
+fundamentales es suficiente para crear tus ficheritos de programacion&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Con el tiempo descubriras que emacs es abrumador, &lt;em&gt;el fruto mas puro que la
+  programacion puede entregar&lt;/em&gt;, no conoce fronteras ni limitaciones&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cuando dices que &amp;ldquo;sabes&amp;rdquo; programar en C, se hace el silencio, los presentes
+se miran entre ellos y luego te miran con respeto&amp;hellip; o no&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sin importar el punto, herramiento, lenguaje o programa, lo que ha de aprenderse
+es inmenso, en lugar de lanzarte directamente a la boragine informatica, tomalo
+serenamente, una cosa a la vez, aprede cuando sea necesario, lee sobre nuevos
+temas, sigue enlaces, pero no te comprometas, ni te exijas memorizacion alguna o
+puedes abrumarte. Veras que con el tiempo recordaras sin notarlo aquellos
+comandos, funciones y atajos que de verdad necesitas, e iras sumando
+conocimentos incrementalmente&amp;hellip; aunque el cerebro humano es limitado (llega un
+momento en que el buffer se satura y cuando entra algo nuevo, algo sale sin que
+te des cuenta&amp;hellip;)&lt;/p&gt;
+
+&lt;h3 id=&#34;los-libros&#34;&gt;Los libros&lt;/h3&gt;
+
+&lt;h4 id=&#34;como-programar-en-c-c-y-o-java-4th-edicion-deitel-deitel&#34;&gt;COMO PROGRAMAR EN C (/C++ (y/o Java)) 4th edicion (Deitel &amp;amp; Deitel)&lt;/h4&gt;
+
+&lt;p&gt;Son aproximadamente 500 paginas. Explicaciones detalladas y &amp;ldquo;didacticas&amp;rdquo;,
+  incrementales, muy incrementales.&lt;/p&gt;
+
+&lt;p&gt;Puedes aprender de 0 a &amp;ldquo;iniciado&amp;rdquo;, te dejara una idea muy clara de como es
+  programar (en los &amp;ldquo;90&amp;rdquo; antes del internet&amp;hellip; &lt;em&gt;programar &amp;ldquo;de verdad&amp;rdquo;&lt;/em&gt;), eso si (con este como con
+  todos los libros) intenta realizar todos los ejercicios que puedas, &lt;em&gt;TODOS&lt;/em&gt;,
+  haciendolos sabras si aprendiste algo o no, ademas, creo que solo asi se
+  acondiciona el cerebro para esto&lt;/p&gt;
+
+&lt;p&gt;Si hay una seccion que no terminas de entender, no te preocupes, sigue
+  leyendo hasta el final, ejecuta los programas propuestos, meconografia si
+  quieres y luego de ver el programa en accion intenta entender de que se
+  trata, vuelve a leer el capitulo y asi lo tendras mas claro&lt;/p&gt;
+
+&lt;p&gt;Sobre GCC, Bash apenas necesitas lo basico en algun post lo encontraras o en
+  su defecto hojea &lt;a href=&#34;https://nasciiboy.github.io/data/bash.pdf&#34;&gt;este&lt;/a&gt; para bash y &lt;a href=&#34;https://nasciiboy.github.io/data/GCC.pdf&#34;&gt;este&lt;/a&gt; otro para
+  gcc, sobre los makes, je, nunca lo aprendiste&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;de Emacs, con el tutorial integrado (&lt;code&gt;Ctrl-h&lt;/code&gt; y luego &lt;code&gt;t&lt;/code&gt;), tambien y aunque
+  esta un poco retro y fuera de interne &lt;a href=&#34;https://nasciiboy.github.io/data/rpublica-emacs.zip&#34;&gt;rpublica&lt;/a&gt; o
+  consulta la siguiente &lt;a href=&#34;http://quijotelibre.com/recursos-gnu-emacs-y-org-mode/&#34;&gt;recopilacion&lt;/a&gt; del quijote libre&lt;/p&gt;
+
+&lt;h4 id=&#34;c-k-r-2-da-version&#34;&gt;C (K&amp;amp;R) (2^da version)&lt;/h4&gt;
+
+&lt;p&gt;Un libro aspero casi hostil, pero muy clarificador sobre como esta construida
+  la biblioteca estandar, de hecho diria que enseña a implimentarla.&lt;/p&gt;
+
+&lt;p&gt;El estilo esta algo desfasado y con seguridad nunca lo utilices en &amp;ldquo;el mundo real&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Mas importante que las formas, es el contenido, diria que esta es la
+  verdadera prueba, el bautiso de fuego&lt;/p&gt;
+
+&lt;h4 id=&#34;pausa&#34;&gt;Pausa&lt;/h4&gt;
+
+&lt;p&gt;dedicate a programar en C, algo deverias tener en mente en este
+  momento, esto te ayudara a afirmar los conocimientos.&lt;/p&gt;
+
+&lt;p&gt;Si lo que te interesa son los videojuegos, programa algo en
+  &lt;a href=&#34;https://github.com/nasciiboy/NCURSES-Programming-HOWTO&#34;&gt;ncurses&lt;/a&gt; (&lt;a href=&#34;http://nasciiboy.github.io/prog/cobaya.zip&#34;&gt;tambien relacianado&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;luego, quiza lee superficialmente el resto del libro de Deitel
+  para colocar en tu cerebro de que va eso del POO (o OOP), ademas de conocer
+  los rostros de C++ y Java&lt;/p&gt;
+
+&lt;h4 id=&#34;the-go-programming-language&#34;&gt;The Go Programming Language&lt;/h4&gt;
+
+&lt;p&gt;uff, a las bases de C, se les recubre con un toque de &amp;ldquo;programacion moderno&amp;rdquo; y
+  obtienes Go, un languje con una POO casi invisible ademas de poco
+  convencional. Te suman una libreria estandar en condiciones, gestor de
+  dependencias, documentacion, pruebas y &amp;ldquo;perfilado&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Un todo en uno, que llebara tus bases a programas &amp;ldquo;grandes&amp;rdquo; sin sacrificar
+  (demaciado) rendimiento ni incluir conceptos complejos, encima, como C es un
+  lenguje compacto, puedes ver por &lt;a href=&#34;https://github.com/nasciiboy/TGPL/&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;patrones-de-diseño-gof&#34;&gt;Patrones de Diseño (GoF)&lt;/h4&gt;
+
+&lt;p&gt;el paso definitivo en el camino entre ser un programador mediocre sin respeto
+  ni admiracion al espiritu que habita en el silicio&amp;hellip; o un cuñao medio
+  entendido.&lt;/p&gt;
+
+&lt;p&gt;En resumen, unos diseños para ensamblar abstracciones sobre las abstracciones
+  (sobre las abstracciones hardware) de lo que deberias saber en este punto&lt;/p&gt;
+
+&lt;p&gt;Apartir de aqui, puedes ingresar a la carrera (mates, sistemas, redes y esas
+cosas que dan cache), buscar trabajo, o quiza si eres afortunado encerrarte a
+programar en solitario una temporada por mero hobbie, o finalmente abandonar y
+aprender otra cosa&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>TextTable2HtmlTable (Volume Three)</title>
