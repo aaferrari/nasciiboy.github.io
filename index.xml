@@ -125,7 +125,7 @@ Audio   Realtek ALC887 8-Channel
 1 x PCIe 3.0/2.0 x16
 2 x PCIe 2.0     x1
 2 x USB 3.1 Gen 2
-3 x USB 3.1 Gen 1 (4 panel, 2 placa)
+6 x USB 3.1 Gen 1 (4 panel, 2 placa)
 4 x USB 2.0 (4 placa)
 1 x PS/2 keyboard
 1 x PS/2 mouse
@@ -166,6 +166,12 @@ conflictos para utilizar GNU/Linux, tiene mas de 4 puertos SATA, buena
 apariencia y un DVI + VGA (+HDMI), que creia ayudarian a precindir de encufar la
 grafica dedicada para conertar 2 monitores VGA&amp;hellip; el modelo de adaptador
 DVI&amp;gt;VGA que poseo es de un modelo distinto (risas enlatadas)&lt;/p&gt;
+
+&lt;p&gt;Ohhh! Revisar el manual sobre como deben conectarse los pines del procesador, la
+subnormalidad y algo de orgullo me condujo a conectarlos de forma inversa!
+por suerte la placa solo se nego a funcionar (y el manual decia que en tal caso
+eso sucederia) quitar la pila, conectar correctamente la alimentacion y mucho
+susto mas tarde, arranco con normalidad&lt;/p&gt;
 
 &lt;h2 id=&#34;cosas&#34;&gt;Cosas&lt;/h2&gt;
 
@@ -268,17 +274,18 @@ de ella y es una de las grandes&amp;hellip; no me jusguen&lt;/p&gt;
 (ignorables) del siempre conflictivo ACPI (que ardas en el infierto junto con
 secure boot, microsoft, intel, nvidea y amd)&lt;/p&gt;
 
-&lt;p&gt;inconvenintes, ha, fedora nunca aprenderas a optimizar, de arranque y sin
-naaahhh consumes el triple que debian (1.44GiB). Durante la instalacion el mouse
-inalambrico no respondia hata que se cambio de puerto usb (de 3 version 1 a 3
-version 2). Luego de la instalacion regrese el pincho del raton al puerto
-inicial y no a habido inconvenientes&lt;/p&gt;
+&lt;p&gt;inconvenintes &amp;gt; ha, fedora nunca aprenderas a optimizar. De arranque y sin
+naaahhh consumes el triple que debian (1.44GiB).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ever-fedora.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
+&lt;p&gt;Durante la instalacion el mouse inalambrico no respondia hasa que se cambio de
+puerto usb (de 3 version 1 a 3 version 2). Luego de la instalacion regrese el
+pincho del raton al puerto inicial y no a habido inconvenientes&lt;/p&gt;
+
 &lt;p&gt;El audio sin problemas, como con la motherboard anterior, aunque suena bien, me
 gustaria que entregara mas potencia de sonido, pero no se le pude pedir
-demaciado a los 4 tristes capacitoder que tiene la placa. Puede que sea
+demaciado a los 4 tristes capacitores que tiene la placa. Puede que sea
 sugestion, pero el audio suena un poco mejor y con un (por decir) 10%
 de potencia mas, aunque segun las especificaciones el chip es (casi) el mismo modelo&lt;/p&gt;
 
