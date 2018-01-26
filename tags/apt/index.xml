@@ -201,7 +201,7 @@ html { background-color: #000; }
 	color: #167AC6 !important;
 }
 
-.gb_xg { display: none; }
+.gb_Ag { display: none; }
 
 .gb_T .gb_Eg {
     display: none;
@@ -1568,7 +1568,7 @@ la instalas)&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/hrydgard/ppsspp.git
 cd ppsspp
-git submodule update --init
+git submodule update --init --recursive
 ./b.sh
 cd build
 &lt;/code&gt;&lt;/pre&gt;
