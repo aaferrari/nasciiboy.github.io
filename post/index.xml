@@ -7,10 +7,394 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Thu, 25 Jan 2018 18:18:18 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 09 Feb 2018 18:58:47 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen XVII – payday</title>
+      <link>https://nasciiboy.github.io/post/ramen-xvii/</link>
+      <pubDate>Fri, 09 Feb 2018 18:58:47 -0600</pubDate>
+      
+      <guid>https://nasciiboy.github.io/post/ramen-xvii/</guid>
+      <description>
+
+&lt;p&gt;a finales del 2016 una mezcla de entusiasmo (inocente) y desesperacion
+economica/medio-ambiental inundaban a este (ahora) postcaster que gusta de
+chicas anime, musica ecleptica y programar (a veces). En esos momentos buscaba
+(y lo sigo haciendo) un metodo (mas alla de hacer lo que me gusta hacer) de
+publicitar alguna de mis mierdas y volverme &amp;ldquo;autonomo&amp;rdquo; por el camino, bien fuera
+haciendo ruido con el aun incipiente proyecto de (proyecto de) intento de
+creacion de lenguaje orientado a la documentacion (alias morg) o con la libreria
+de expresiones regulares &amp;ldquo;sin tener ni idea de matematicas&amp;rdquo; (alias Recursive
+Regexp Raptor). Asi que ademas de spamear en algunos foros, emprendi la busqueda
+de algun concurso (o algo) donde poder difundir ideas y quiza, solo quiza,
+acceder a alguna suma monetaria, o que almenos financiar la compra de un
+monitor decente, un disco duro o un teclado m-e-c-a-n-i-c-o&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; y bueno, aunque no ha sido precisamente por medio de la programacion,
+musica, (intentos de) traduccion, menos escritura, ni nada divertido, a dia de
+hoy, de la anterior lista de necesidades &amp;ldquo;de alta prioridad&amp;rdquo; (arterior, por que
+siempre es cambiante como el olor corporal) solo quedaria pendiente un duo de
+monitores chulos y &amp;ldquo;ser autonomo&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;aun asi, sigo sin saber como demonios convertir las aficiones en un medio de
+sustento&amp;hellip; o eso era hasta hace unos dias, pues de aquella lejana busqueda de
+hace mas de un año de un concurso o algo, aparecio un sitio llamado donation
+coder donde hacen un evento anual para compartir &amp;ldquo;aplicaciones&amp;rdquo; de software
+libre, donde todos los participantes reciben una taza conmemorativa y una
+cantidad de efectivo simbolico (alrededor de 1000 dolares repartidos de forma
+equitativa entre 10-20 personas). De verdad nada extraordinario, aunque a mis
+estandares mas de 100 dolares se considera una cantidad significativa (mas si no
+implica dejar el fisico entre cemento, tierra, arena y grava)&lt;/p&gt;
+
+&lt;p&gt;Lo cool de este tipo de eventos es que aun hasta al mas subnormal le dan
+algo. De momento catafixie la taza conmemorativa por 20 dolares y aun espero que
+depositen la fraccion de lo acumulado en el año (pero si no hicieran esto ultimo
+tampoco me extrañaria). En fin, que ha sido &amp;ldquo;el primer pago&amp;rdquo; de programador que
+resivo (abriendo un paypal de por medio). Sobra decir que resulto muy ricolino y
+gratificante&lt;/p&gt;
+
+&lt;p&gt;para conmemorar tan destacable evento, luego de meditar el inmensulable numero
+de posibilidades que brindan 20 dolares, me vi obligado a comprar un album en
+bandcap (digital, en flac, con forma de comprimido y olor a limon) a un precio
+de 3.5€ que traducidos a Pesos son 85 monedas, que traducidos a salarios
+&amp;ldquo;estandar&amp;rdquo; de nasciiboy seria algo asi como media jornada, pero que en otros
+lares seria mera calderilla y en otros mas quiza mas de un dia de salario. Es
+algo perturbante saber que con el cambio de la compra (de algun otro pais) bien
+podria subsistir como persona&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;los ultimos dos meses han sido una epoca de casi nula programacion,
+sorprendentemente no he sentido anciedad o temor a olvidar de que va eso de la
+programacion en Go o C, sera una seña de maduracion?&lt;/p&gt;
+
+&lt;p&gt;Dentro de las pocas labores estaba la mecanografia y primera revision de el
+libro de patrones de diseño de la banda de los cuatro, que estos momentos estoy
+leyendo (y revisando) en modo serio por ves primera. Quitando el hecho de que
+encuentro estimulante ponerme a mecanografiar (con distoescritura y horrores
+hortograficos alarmantes) y de que las revisiones me queman bastante, esas dos
+primeras pasadas no fueron ningun desperdicio, los conceptos vistos por encima
+van esparciendo sus semillas en la conciencia y al fin empieza la
+interiorizacion de la aplicabilidad de los patrones. Aunque son demaciados, como
+para que los aprenda en menos de un año&amp;hellip; aunque, sin tener ni idea, sea por los
+libros previos de programacion leidos o por autoexploracion de los problemas,
+algunos de esos patrones ya los habia aplicado, como el proxy (o era facade?),
+creo que composite, singleton, un poco de flyweight, interpreter y state.&lt;/p&gt;
+
+&lt;p&gt;Sin duda, la lectura de este material era algo imprecindible en el camino de la
+programacion.&lt;/p&gt;
+
+&lt;p&gt;Tenia planeado ademas de hacer una version en morg, transladar las imagenes a
+svg, pero la verdad ya me ha dado gueva. Luego de la actual lectura, acompañada
+por una vercion del libro en ingles (sin revisar, salida de un pdf infecto) lo
+dejare por hay, ya a quien le interese deberia continuar con la labor&lt;/p&gt;
+
+&lt;p&gt;Por su parte el libro de introduccion a emacs lips, avanza con pasos de
+discapacitado, pero avanza. Me esta empezando a gustar la idea de programar en
+emacs. Tras terminar la primer &amp;ldquo;correcion&amp;rdquo; (que en realidad es un intento de
+darle sentido a lo que pone el traductor) tambien tocara una lectura seria,
+espero que esto ocurra en menos de dos meses&lt;/p&gt;
+
+&lt;p&gt;la aventura de aprender mates (y hacer la preparatoria) de verdad no solo esta
+paralitica, ha quedado en coma, ja, ja, ha, que dificil es escontrar una
+puñetera aplicacion donde poner en practica de forma cotidiana tres o cuatro
+formas de sumar, restar, multiplicar, dividir, factorizar y en fin todo el rollo
+ese. Que jodido lo he pasado, aburrido y casi sin ir a ningun lado
+(intelectualmente), es mas, los dias que no estudio la hora que tenia planeada
+casi no siento culpa. Fuuhhh, la memorizacion de conceptos es algo en verdad
+jodido. Rescataria solamente que una vez conociendo que hay un transfondo a los
+procedimientos, la forma optima de proceder con las mates es memorizar &lt;em&gt;si&lt;/em&gt; o
+&lt;em&gt;tambien&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;para finalizar, me he unido a una &amp;ldquo;culto&amp;rdquo; donde un grupo de pocas personas se
+reunen a adorar la terminal con el proposito de adquirir habilidades de
+sysadmin. Los entornos administrativos me provocan rechazo he incitan a practicar
+bulling, pero hay que buscar medios alternativos para sacarle dinero al pc.&lt;/p&gt;
+
+&lt;p&gt;Solo es un dia a la semana, con un pad, mumble (el jodido consume un chilion de
+recursos, hasta parece estar escrito en python) en seciones de dos horas a la
+semana los miercoles y con una duracion estimada de 6 meses que al concluir te dejan
+conocimiento y satisfaccion, ssss, casi hecho a mi medida. Oh el taller es a
+distancia y es parte del &lt;a href=&#34;https://alambique.org/rancho/sysadmin&#34;&gt;rancho electronico&lt;/a&gt;, si gustan unirse la siguiente
+semana me ofreci a dar una charla introductoria a emacs con el unico fin de
+esparsir la doctrina del editor unico y verdadero&lt;/p&gt;
+
+&lt;p&gt;pa, pa, pa paaaa, she loves the sun! like and subcribe!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://nasciiboy.github.io/img/like-and-subscribe.png&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4k&#34;&gt;4k&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Hai to Gensou no Grimgar&lt;/strong&gt; Aqui tenemos un isekai o &amp;ldquo;mundo virual&amp;rdquo; de estilo
+mmorpg &amp;ldquo;o algo asi&amp;rdquo; convinado con slice of life. Buenos personajes, drama y
+chikas kawai. A modo de referencia lo colocaria sobre Log Horizon y a la altura
+de ReZero, pero con otro estilo y mas &amp;ldquo;concentrado&amp;rdquo;, solo 12 episodios&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:6a6f78540293e5ee4baa76cae231fb0b1c9b2f90&amp;amp;dn=%5bHakoniwa%5d%20Hai%20to%20Gensou%20no%20Grimgar%20%5bBatch%5d&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;El Cientfico&lt;/strong&gt; Una apologia a la marihuana con &amp;ldquo;bases cientificas&amp;rdquo;, que mas se
+puede decir, prente un porro que ademas de divertirte previene el cancer, la
+comida sabe bien chingon, multiplica la cachondes y expande conciencias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:14a001cded0630934063fb8867c2f62beed589e8&amp;amp;dn=(Hdvidz.in)_El-cientfico-DrRaphael-Mechoulam-The-Scientist----subtitulos-en-espaol.mp4&amp;amp;tr=http%3a%2f%2ftracker.bittor.pw%3a1337%2fannounce&amp;amp;tr=udp%3a%20%2f%2ftracker.publicbt.com%3a%2080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Densetsu no yusha no densetsu&lt;/strong&gt; aca tenemos una serie con fecha en el 2010,
+de animacion limitada aunque destacada, personajes chulos, una historia en un mundo
+magico medieval de fantacia, intro y ending decentes, drama sin llegar a lo
+cargante y aventurillas desenfadadas. El coctel perfecto que me ha hecho
+revisitar esta genial obra por cuarta ocacion, y como en las anteriores, sigue
+conservando su encanto.&lt;/p&gt;
+
+&lt;p&gt;Desafortunadamente&amp;hellip; el anime esta inconcluso, con un final confuso y
+caotico&amp;hellip; que de hecho le sienta bien&amp;hellip; pero sigue quedando a medias de muchas
+cosas. Compensa ver esto sabiendo que esta truncado? Seeeh!&lt;/p&gt;
+
+&lt;p&gt;Ojala algun dia tenga una continuacion a la altura, junto con Chihayafuru, Aku
+no Hana y Kingdom&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The shape of water &amp;amp; The shape of voice&lt;/strong&gt; (revision) generalmente dejaria
+fuera estas reviciones, The shape or water (ahora con una butaca en buena
+posicion) costo un algo entrar en la cinta, alrededor de 30 minutos despues
+comenzo a hacer su magia y la entrada valio la pena. Por su parte, The shape of
+voice, puaf! que magnifica obra, desde el inicio al final aplico sus hechisos
+dramaticos al grado de convertirme en un fan from hell, quiza tuvo algo que ver
+el &amp;ldquo;apreciarla colocado&amp;rdquo;, de nuevo puaf! hasta dio para hacer una breve reflecion:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;el drama de la consiencia es saberse esclava de su entorno&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;o en male&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;el drama de la consiencia es saberse esclavo del entorno&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:1898d64bd353358c1bc67fe2de004f68d0715a51&amp;amp;dn=%5bHoshi-Subs%5d%20Koe%20no%20Katachi%20-%20Movie%20%5bBD%5d%5b1036p%5d%5b968CC895.mkv&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Altered Carbon&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;El mayor error de esta serie se llama Kristin Ortega (aka Martha Higareda) su
+&amp;ldquo;actuacion&amp;rdquo;, maquillaje, altura, habilidades son una basura. Intencionado? fuh,
+seria muy dificil que no fuera haci (asi como esta escritura), pero por que
+razon? una declaracion de lo ridiculo que son los heroes de accion incrustados
+en la conciencia colectiva por el hetero patriarcado a lo largo de siglos, que
+puestos en una figura femenina no hace mas que reflejar lo lamentable del planteamiento?
+No, Kristena es por mucho lo mas jodido de la serie, pero de nuevo, por que
+demonios es el personaje asi?&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; y bueno, tampoco se salva demaciado la hermana del kovacs o en general esa
+actitud impulsiva &amp;ldquo;aporrea cosas&amp;rdquo; de todos los personajes, pero eso es algo que pasare como una
+&amp;ldquo;caracteristica&amp;rdquo; del genero&lt;/p&gt;
+
+&lt;p&gt;en cuanto al resto, un &lt;sup&gt;10&lt;/sup&gt;&amp;frasl;&lt;sub&gt;10&lt;/sub&gt; en ambientacion, drogas, sangre y en general con
+una historia potable. Me ha recordado demaciado a un libro que ley hace mucho
+tiempo, que me encanto por sus drogas, IAs, clones, guerras y una historia
+mistica de gatos, el material en cuestion se llama &lt;em&gt;Clones&lt;/em&gt; de un tal Michael
+Marshall Smith, fue una de mis primeras lecturas y la tengo en alta estima, pero
+por &lt;a href=&#34;https://www.ciencia-ficcion.com/opinion/op00137.htm&#34;&gt;aca&lt;/a&gt; encontraran un
+post que se caga en ella. Por cierto, la novela la encontraran en la &lt;em&gt;Gran
+Biblioteca Calibre de ciencia ficción, terror y fantasía&lt;/em&gt; (almenos version 3)
+bajo el directorio &lt;code&gt;S/Smith, Michael Marshal&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;segun un comentario donde &lt;a href=&#34;http://cuelgame.net/&#34;&gt;estaba&lt;/a&gt; colgada la tv serie, la
+novela esta chula, habra que darle una oportunidad&amp;hellip; algun dia&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Resolution&lt;/strong&gt; &amp;amp; &lt;strong&gt;Primer&lt;/strong&gt; dos cintas de viajes en el tiempo sin efectos
+especiales. La primera es un poco bizarra, casi como grabacion encontrada aunque
+con camara estandar, y buenas vibras drogadictosas (con las que poder
+identificarse). Aprovada!&lt;/p&gt;
+
+&lt;p&gt;La segunda, tiene una trama enrevesada&amp;hellip; cuentan los fundamentos de sus viajes
+en el tiempo y convinan (hasta) tres (o mas) lineas de viajes en paralelo (o eso
+decia un &amp;ldquo;explicador&amp;rdquo; del yutu). Curiosa, sin embargo, no la recomiendo, exepto
+si tienen planes de grabar una cinta independiente o se es un yonki de la materia&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:bc196d4a00f1cc0b4287672a45e721d103688faa&amp;amp;dn=Resolution%20(2012)%20%5b1080p%5d&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce
+
+magnet:?xt=urn:btih:388d03d78a1e7f77fa539c64cfb596b1246eed05&amp;amp;dn=Primer%20DVDRip%20Spanish%202004%20-%20Divxatope.com&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;fonos&#34;&gt;fonos&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Silver Fins&lt;/strong&gt; (&amp;ldquo;Discografia&amp;rdquo;) 3 albums, al buscar una pieza de estos aparecio
+&lt;em&gt;Waiting so Long&lt;/em&gt; que sale en Berserk la serie de animacion &amp;ldquo;clasica&amp;rdquo;, eso fue suficiente
+para bajar su musica. En general el sonido de esta banda tendria su equivalencia
+llamandoles &amp;ldquo;pixies japoneses&amp;rdquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:52331a07d23ae1fd1d301ac3f0779799de3993f5&amp;amp;dn=Silver%20Fins&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En la wikipedia no encontre info con el nombre tal cual, en discogs solo
+aparecia el material aqui referenciado&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ash Ra Tempel&lt;/strong&gt; (&lt;em&gt;New Age Of Earth&lt;/em&gt;, &lt;em&gt;Blackouts&lt;/em&gt; y &lt;em&gt;Walking&amp;rsquo; the Desert&lt;/em&gt;) ole!
+rock cosmico %100 no fake. No escuchar con sueño, o aplicarlo como remedio al
+insomnio. Basicamente estos albums son (post) rock cosmico ambiental, sin
+vocales ni solos de guitarra&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Vision of Escaflowne – Lovers Only&lt;/strong&gt; mmm, un OST con &amp;ldquo;estilo europeo&amp;rdquo;.
+tiene pianito, violin, coros y voces operisticas&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Jeff Beck&lt;/strong&gt; si en la enterior entrega me aburria con Joe Satriani en esta el
+guitarrista en turno viene a remediar la situacion. Inicie repitiendo
+&lt;strong&gt;Blow By Blow&lt;/strong&gt; que pondria en la clasificacion de jazz(?) (segun la wikipedia
+seria jazz fusion)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Wired&lt;/em&gt;, muy cargado hacia el Jazz pero algo mas funky y desenfadado, en
+momentos su sonoridad me recuerda al sonido de Yes&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;There &amp;amp; Back&lt;/em&gt; mas electro cosmico que wired, e igual mas alejado de Blow by
+blow y menos de &lt;em&gt;Wired&lt;/em&gt;, tiene toques de &amp;ldquo;Blade Runner&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Jeft Beck&amp;rsquo;s Guitar Shop&lt;/em&gt; ochentero! este estilo esta entre los buenos
+momentos de Van Halen con toques de Steve Vai. Este poco me ha gustado, pero
+tampoco dire que sea malo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Putumayo Presents:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Asian Lounge&lt;/em&gt;, por mis territorios, antes de conocer el fuego, el internet y el
+torrent, escuchaba la radio (en varios walkman&amp;rsquo;s), poco realmente habia de
+interes, lo mas destacable era la estacion universitaria con horas tematicas y
+&amp;ldquo;musica del mundo&amp;rdquo;. Los sabados (creo al medio dia) habia una hora presentada
+por putumayo records, que por cierto material variado de la discografia formaba
+parte del repetorio fretuente de su programacion, como por ejemplo los Yoshida
+Brothers que abren este album y razon por la que tengo dos de sus materiales
+aunque sea en emep3s&lt;/p&gt;
+
+&lt;p&gt;Este material en especifico, es una compilacion de sonoridades &amp;ldquo;asiaticas&amp;rdquo; para
+escuchar sin compromiso, o dicho de otro modo: &amp;ldquo;suena a radio&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;mmm, buscar un artista por una sola pieza es complicado, la mayoria de veces
+incluso desepcionante. Este tipo de compilaciones da para muchas busquedas
+&amp;ldquo;de esas&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:abaea4c2209f9ee8964331ca3db710068830ba57&amp;amp;dn=Putumayo%20Presents%2012%20CD&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;India&lt;/em&gt; como el anterior, &amp;ldquo;musica de radio&amp;rdquo;, escuchable,
+pero falta de genuini-des&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Brazil Cafe&lt;/em&gt; pese al desconocimiento de este genero, tengo devilidad por sus
+sonoridades boza-brazileiras, chahh!&lt;/p&gt;
+
+&lt;p&gt;je, me sabe un poco mal compartir asi a la brava este material de una
+discografica pequeña, pero compartir es bueno, difundir de ninguna marera puede
+ser peor que existir en el olvido, asi que otro torrente mas, encontrado
+por hay en la internehhh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:1747ef4410ed7ff5ee41b4a0d966fde82e9474cb&amp;amp;dn=25%20Putumayo%20Albums%20(see%20info.txt)&amp;amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Trigun&lt;/strong&gt; (&lt;em&gt;OST&lt;/em&gt;) entretenido, con transciciones delicadas entre pista y pista&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:8e56e60f3865900bccbc716d51c909297c97eeae&amp;amp;dn=Trigun%20OST&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Whiplash&lt;/strong&gt; (&lt;em&gt;OST&lt;/em&gt;) Caraban! o Caraban! esa pista tiene feeling. Buen OST y
+mejor persona&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Radiohead&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;por mucho tiempo tuve un cuadrilatero musical conformado por pink floyd, led
+zepellin, sonic youth y radiohead&amp;hellip; con el tiempo, tanto como pink floyd como
+radiohead mentalmente perdieron mi interes, aunque en un inicio fueron bombas
+musicales devastadoras, con los años han pasado a un plano casi sopnifero, algo
+que en parte a afectado a led zepellin y aun hoy me cuesta aceptar. En el otro
+estremo esta Sonic Youth, que aunque ya no escucho (minimo) dos horas diarias de ellos,
+nunca han perdido mi respeto ni lo complejo de su sonoridad,
+sea esta buscada o accidental, el resultado no varia!  Juventud-Sonica-4-eve&lt;/p&gt;
+
+&lt;p&gt;pero bueno, cumo una buena pelicula, cuando se deja reposar y los efectos de la
+abnecia surgen de nuevo aunque sea por un periodo breve vuelven a golpear &amp;ldquo;casi&amp;rdquo;
+como la primera vez.&lt;/p&gt;
+
+&lt;p&gt;En esta ocacion apreveche para escuchar los dos albumnes de Yorke y luego ya en
+la onda toco escuchar unos albums de &amp;ldquo;Bonus&amp;rdquo; que se incluian en
+algunas reediciones de los discos de estudio&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Bonus (In Rainbows)  potente, una vertiente poderosa y poco afectada por el album donde
+se incluye (que estaria en mi top 3 de la banda) suena algo sucio y no tiene
+apenas rango dinamico esta al tope&amp;hellip; y hasta le siesta bien, valido por si
+mismo y muchisimo mas interesante que su ultima produccion. Si tuviera que
+ubicar la sonoridad estaria entre Amnesiac y Hail to the Thief&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Bonus (Amnesiac) emparejado con su material fuente, cosa que bajo ningun
+concepto puede estar mal. El material original tambien estaria en el top
+3&amp;hellip; el otro integrante de la trifuerza seria OK Computer (y Hail to the Thief)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Verve Jazzclub&lt;/strong&gt; (Coleccion) Mmm, otra cosa que descargo &amp;ldquo;por que podia&amp;rdquo;. Y ya
+que se termino la descarga que menos que compartir. Son 51GiB de material, segun
+encontre en un foro perdido del internet, la discografica
+(&lt;a href=&#34;http://www.jazzecho.de/jazzclub/home&#34;&gt;aca&lt;/a&gt;) de origen aleman (??? o era ruso)
+se dedica a hacer recopilatorios con cortes de varios albums, piesas perdidas y
+algunas producciones por su cuenta&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:57ef42729e4718675532ac28251b462f0d752ff5&amp;amp;dn=Verve%20Jazzclub%20-%20Collection%20-%20FLAC&amp;amp;tr=udp%3a%2f%2fshubt.net%3a2710&amp;amp;tr=udp%3a%2f%2ftracker.istole.it%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.publicbt.com%3a80&amp;amp;tr=http%3a%2f%2fretracker.local%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.publicbt.com%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;amp;tr=http%3a%2f%2ftracker.filetracker.pl%3a8089%2fannounce&amp;amp;tr=http%3a%2f%2ftracker2.wasabii.com.tw%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.grepler.com%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2f125.227.35.196%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2f87.248.186.252%3a8080%2fannounce&amp;amp;tr=http%3a%2f%2f210.244.71.25%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2f46.4.109.148%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2f%5b2001%3a67c%3a28f8%3a92%3a%3a1111%3a1%5d%3a2710&amp;amp;tr=udp%3a%2f%2fipv6.leechers-paradise.org%3a6969&amp;amp;tr=udp%3a%2f%2f46.148.18.250%3a2710
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mmm, el album de Non-Stop de Astrud Gilberto esta tal como el original (ya antes
+en mi coleccion), sera simplemente una reedicion. Jo, las portadas que traen los
+discos, no motivan demaciado su escucha, sin embargo, le aportan algo de
+rarunes al material y aun mas importante, lo que valioso en este caso es el
+contenido, no la portada.&lt;/p&gt;
+
+&lt;p&gt;El unico punto negativo de la coleccion es tener que recortar las pistas
+monoliticas de &lt;em&gt;un&lt;/em&gt; flac, haa un mal menor, como dicen los fosiles &amp;ldquo;a
+quien le dan pan que llore&amp;rdquo;, ha, ha, ha, ha&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lift&lt;/strong&gt; (&lt;em&gt;Koki Nakano&lt;/em&gt;) jazz clasico audaz, siento no colocar un enlace a este
+magnifico trabajo, pero tenia problemas con el torrente y toco hacer una
+limpieza drastica de ~100 torrentes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Piano no Mori&lt;/strong&gt; (&lt;em&gt;Clannad&lt;/em&gt;) pianito, nada mas pianito&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:ba002f0680b9961183832a496cc39cfa326f2bc9&amp;amp;dn=Clannad%20Music%20Collection&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Grey Swans of Extremistan&lt;/strong&gt; (&lt;em&gt;Lorenzo Monni&lt;/em&gt;) El material del que hablaba al
+inicio del post. Que si es bueno? seeeh! lo suficiente como para recordar su
+intergacion a la libreria y pagar pasta por el (como haria con todos los
+integrantes de mi coleccion, &lt;code&gt;(｀∀´)Ψ&lt;/code&gt; aunque siendo pobre, si hubiera podido
+evitar pasar por caja seria mucho mejor)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Buckethead&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Colma&lt;/em&gt;, &lt;em&gt;Electric Tears&lt;/em&gt;, &lt;em&gt;Pikes Coleccion (1 y 2)&lt;/em&gt;, Wahh! cuando se almacena
+tanto material me da peresa escribir.&lt;/p&gt;
+
+&lt;p&gt;No tenia ni idea de la existencia de este guitarrista hasta ver un video con su
+biografia. El disfraz que se ha montado el tio y su mitica con pollos esta
+chula. Por otro lado, intente escuchar sus primeros albums y pase de ellos,
+luego intente con los pikes que si logre terminar (una vez) y el tipo
+definitivamente tiene talento, que aplica de forma &amp;ldquo;suversiva&amp;rdquo; (por decirlo de
+algun modo) contra el estatus quo musical. Algo que si bien no resulta
+musicalmente agradable, si que respeto. Por fortuna, (supongo) que el autor se
+sabe presa de sus deciciones, asi que aprovecha de ves en cuando para lanzar
+material &lt;em&gt;melodico&lt;/em&gt; de belleza indiscutible, como lo plasma en Colma y &lt;em&gt;Eletrict
+Tears&lt;/em&gt;, hace falta mas explicacion que el titulo mismo de este ultimo?&lt;/p&gt;
+
+&lt;p&gt;Los enlaces siguientes referencia a los pikes (50GiB) y a la discografia
+(10GiB). Fuera simplemente a modo de investigacion tecnica o por su material
+sensible, creo que la descarga bien merece un lugar en el disco duro&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:3212a5641a1450223b3366dfccfb1aa3ea3b4850&amp;amp;dn=Buckethead%20Pikes%20Collection&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+magnet:?xt=urn:btih:517cfbc1ad63b4716f0531da9cda6e4ffd79d0ef&amp;amp;dn=Buckethead%20Studio%20Albums&amp;amp;tr=http%3a%2f%2fwww.psychocydd.co.uk%3a2710%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>The Man From Earth</title>
@@ -323,6 +707,9 @@ constantemente, tambien tiene mucho scrolling sobre imagen estatica y &amp;ldquo
 arquitectonicos&amp;rdquo;, mas no lastran el total, es bonita, los personajes
 carismaticos, pero sobre todo (lo elaborado d)el dialogo se impone! yeh! ademas
 peliroja chichona y momentos sandwich&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:c94924132be4816861f6348e4dab1745a4045922&amp;amp;dn=%5bNega%5d_Maoyuu_Maou_Yuusha_%5bBD%5d%5b720p-FLAC%5d&amp;amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2fdesudesu.org%2fannounce&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;Black Mirror&lt;/strong&gt; (4^ta temporada)&lt;/p&gt;
 
