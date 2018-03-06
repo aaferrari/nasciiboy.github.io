@@ -7,10 +7,299 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Fri, 02 Mar 2018 21:29:03 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 05 Mar 2018 20:37:52 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Awk</title>
+      <link>https://nasciiboy.github.io/prog/awk/</link>
+      <pubDate>Mon, 05 Mar 2018 20:37:52 -0600</pubDate>
+      
+      <guid>https://nasciiboy.github.io/prog/awk/</guid>
+      <description>
+
+&lt;p&gt;AWK es un lenguaje de programacion diseñado para procesar datos basados en
+texto.&lt;/p&gt;
+
+&lt;p&gt;El comando awk tiene la sitaxis&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;awk CODIGO TEXTO-DE-ENTRADA
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;awk toma el texto de entrada y lo divide en &lt;em&gt;Registros&lt;/em&gt; (por defecto lineas delimitadas
+por &lt;code&gt;\n&lt;/code&gt;) y estas a su ves se dividen en campos (por defecto una secuencia de
+caracteres que no sean un espacio).&lt;/p&gt;
+
+&lt;p&gt;una ves awk recive la entrada, realiza un bucle secuencial por sus registros
+(lineas) y a estos les aplica una orden que tiene la syntaxis&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;condicion { accion }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;estas ordenes, pueden agruparse en una sola linea separandolas con punto y coma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;condicion_1 { accion_1 }; condicion_2 { accion_2 }; condicion_3 { accion_3 };
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o con saltos de linea,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;condicion_1 { accion_1 }
+condicion_2 { accion_2 }
+condicion_3 { accion_3 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;condicion&#34;&gt;condicion&lt;/h2&gt;
+
+&lt;p&gt;la condicion para ser positiva simplemente debe ser distinta a cero. Si esto es
+asi y no se especifica una accion, por defecto se imprime el registro
+actual con un salto de linea al final. Por ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ printf &amp;quot;registro uno\nregistro dos\nregistro tres&amp;quot; | awk &#39;1&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;produce&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;registro uno
+registro dos
+registro tres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si cambiamos la condicion por una cadena de caracteres, por ejemplo &lt;code&gt;awk &#39;&amp;quot;cadena&amp;quot;&#39;&lt;/code&gt;, el
+resultado seria identico, ya que una cadena tambien es &lt;q&gt;distinta a cero&lt;/q&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora, los registros de awk se dividen en campos y estos pueden &amp;ldquo;invocarse&amp;rdquo; como
+&lt;code&gt;$1&lt;/code&gt; (primer campo), &lt;code&gt;$2&lt;/code&gt; (segundo campo), &lt;code&gt;$3&lt;/code&gt; (tercer campo) y asi
+sucesivamente. Si el campo no existe, sera una cadean de caracteres vacia. El
+campo &lt;code&gt;$0&lt;/code&gt; contiene registro en si mismo (la linea)&lt;/p&gt;
+
+&lt;p&gt;Bien? Pues podriamos utilizar un campo especifico para compararlo con una cadena, de la
+siguiente forma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ printf &amp;quot;registro uno\nregistro dos\nregistro tres&amp;quot; | awk &#39;$1 == &amp;quot;registro&amp;quot;&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para de nuevo producir el resultado&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;registro uno
+registro dos
+registro tres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por si no fuera suficiente, podemos comparar cada registro con una expresion
+regular, asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ printf &amp;quot;registro uno\nregistro dos\nregistro tres&amp;quot; | awk &#39;/re..stro/&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde la seccion comprendida entre &lt;code&gt;/&lt;/code&gt; y &lt;code&gt;/&lt;/code&gt; vendria a ser la expresion
+regular.&lt;/p&gt;
+
+&lt;p&gt;A continuacion tenemos un ejemplo mas elaborado aplicando la comparacion con dos
+expresiones regulares unidas en una condicion OR:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ printf &amp;quot;registro uno\nregistro dos\nregistro tres&amp;quot; | awk &#39;/uno/ || /dos/&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;produciria&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;registro uno
+registro dos
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tambien podemos hace una busqueda de una expresion regular dentro de una cadena
+con la sintaxis &lt;code&gt;&amp;quot;cadena&amp;quot; ~ /regexp/&lt;/code&gt;&amp;hellip; y por supesto esta cadena bien puede
+ser un campo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ printf &amp;quot;registro uno\nregistro dos\nregistro tres&amp;quot; | awk &#39;$2 ~ /^[a-z]{3}$/&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;accion&#34;&gt;accion&lt;/h2&gt;
+
+&lt;p&gt;en la &lt;em&gt;accion&lt;/em&gt; se permite especificar un variado numero de caracteristicas
+propias de un lenguaje de programacion, como pueden ser condiciones &lt;code&gt;if&lt;/code&gt;, bucles
+&lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&gt;, &lt;code&gt;do-while&lt;/code&gt;, declaracion de variables, asignaciones, invocacion a
+funciones (nativas de awk y creadas por el usuario) y demas cosas magicas,
+misticas y misteriosas como leer del teclado, leer ficheros o invocar comandos
+del sistema&lt;/p&gt;
+
+&lt;p&gt;cuando se declara una accion &amp;ldquo;solitaria&amp;rdquo; se asume que la condicion es verdadera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ printf &amp;quot;registro uno\nregistro dos\nregistro tres&amp;quot; | awk &#39;{print $2}&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;imprimiria los campos dos de cada registro en una linea propia&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;uno
+dos
+tres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por su parte con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ printf &amp;quot;registro uno\nregistro dos\nregistro tres&amp;quot; | awk &#39;{print $2 &amp;quot; &amp;quot; $1}&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se invertiria el orden de los capos de entrada en la salida&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;uno registro
+dos registro
+tres registro
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si la funcion &lt;code&gt;print&lt;/code&gt; no recive parametros, imprimiria el registro en si&lt;/p&gt;
+
+&lt;h2 id=&#34;begin-end&#34;&gt;BEGIN &amp;amp; END&lt;/h2&gt;
+
+&lt;p&gt;awk cuenta con dos &amp;ldquo;condiciones&amp;rdquo; especiales que permiten realizar acciones antes
+de que inicie el bucle por los registros (condicion &lt;code&gt;BEGIN&lt;/code&gt;) y despues de que
+este termine (condicion &lt;code&gt;END&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ printf &amp;quot;registro uno\nregistro dos\nregistro tres&amp;quot; | awk &#39;BEGIN{print &amp;quot;inicio – invirtiendo entrada&amp;quot;};END{print &amp;quot;inversion finalizada&amp;quot;};{print $2 &amp;quot; &amp;quot; $1};&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;produce&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;inicio – invirtiendo entrada
+uno registro
+dos registro
+tres registro
+inversion finalizada
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el orden de las condiciones &lt;code&gt;BEGIN&lt;/code&gt; y &lt;code&gt;END&lt;/code&gt; no tiene importancia&amp;hellip; a menos que
+se declaren mas de una vez, en cuyo caso se evaluaran segun aparescan&lt;/p&gt;
+
+&lt;h2 id=&#34;ficheros&#34;&gt;ficheros&lt;/h2&gt;
+
+&lt;p&gt;a medida que el &lt;em&gt;codigo&lt;/em&gt; enviado a awk aumenta de complejidad podemos colocarlo
+en un fichero e indicarle a awk donde se encuentra el codigo de la forma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ awk -f fichero-de-codigo entrada-de-texto
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;scripts&#34;&gt;scripts&lt;/h2&gt;
+
+&lt;p&gt;tambien podemos crear un script en si, al que &amp;ldquo;enviar&amp;rdquo; la entrada. Por ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#! /usr/bin/awk -f
+
+# esto es un comentario
+# aqui el inicio
+BEGIN{print &amp;quot;inicio – invirtiendo entrada&amp;quot;}
+
+# aqui la(s) condicion(es)
+{print $2 &amp;quot; &amp;quot; $1}
+
+# aqui el final
+END{print &amp;quot;inversion finalizada&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;colocado en un fichero de nombre &amp;ldquo;prueba.awk&amp;rdquo;, se invocaria como&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ./prueba.awk entrada-de-texto
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ printf &amp;quot;registro uno\nregistro dos\nregistro tres&amp;quot; | ./a.awk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(&lt;em&gt;NOTA&lt;/em&gt; awn se encuentra en &lt;code&gt;/usr/bin/awk&lt;/code&gt; y/o &lt;code&gt;/bin/awk&lt;/code&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;un-simple-sumador-de-campos&#34;&gt;un simple sumador de campos&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;#! /usr/bin/awk -f
+
+# esto es un comentario
+# aqui el inicio
+BEGIN {
+    campo_a = 0
+    campo_b = 0
+    print &amp;quot;----- -----&amp;quot;
+}
+
+# aqui la(s) condicion(es)
+{
+    printf( &amp;quot;%5d %5d\n&amp;quot;, $1, $2 )
+    campo_a += $1
+    campo_b += $2
+}
+
+# aqui el final
+END {
+    print &amp;quot;===== =====&amp;quot;
+    printf( &amp;quot;%5d %5d\n&amp;quot;, campo_a, campo_b )
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;un ejemplo de uso&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ printf &amp;quot;1 3\n2 6\n3 9\n4 12&amp;quot; | ./a.awk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;produce&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;----- -----
+    1     3
+    2     6
+    3     9
+    4    12
+===== =====
+   10    30
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;miscelanea&#34;&gt;miscelanea&lt;/h2&gt;
+
+&lt;p&gt;canbiar la variable interna &lt;code&gt;IGNORECASE&lt;/code&gt; a un valor distinto de 0, proboca que
+awk ignore la diferencia entre mayusculas y minusculas&lt;/p&gt;
+
+&lt;p&gt;la funcion interna &lt;code&gt;sub(a, b)&lt;/code&gt; busca la primer coincidencia con una cadena, numero o regexp en el
+registro actual (&lt;code&gt;a&lt;/code&gt;) y la substituye por un numero o cadena (&lt;code&gt;b&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;la funcion interna &lt;code&gt;gsub(a, b)&lt;/code&gt; tiene los mismos parametros de &lt;code&gt;sub&lt;/code&gt; solo que se realizan
+substituciones &lt;em&gt;para todas&lt;/em&gt; las coincidencias&lt;/p&gt;
+
+&lt;p&gt;una forma rudimentaria para capturar agrupaciones dentro de un array (solo gawk)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gawk &#39;match($0, pattern, ary) {print ary[1]}&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;printf &amp;quot;abcdef\nbkhtne&amp;quot; | gawk &#39;match($0, /b(.*)e/, a) {print a[1]}&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;una forma de iterar por los caracteres de un registro/cadena&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  split($0, chars, &amp;quot;&amp;quot;)
+  for (i=1; i &amp;lt;= length($0); i++) {
+    printf(&amp;quot;%s\n&amp;quot;, chars[i])
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;enlaces-y-cosas&#34;&gt;enlaces y cosas&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://web.archive.org/web/20060622132928/http://www.linux-es.org:80/art.php?id=206&#34;&gt;AWK paso a paso&amp;hellip; y sin usar el ratón&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://xavi.ivars.me/arxius/manuals/awk/manual_awk.pdf&#34;&gt;El lenguaje de programacion awk/gawk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/AWK&#34;&gt;https://es.wikipedia.org/wiki/AWK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/2957684/awk-access-captured-group-from-line-pattern&#34;&gt;https://stackoverflow.com/questions/2957684/awk-access-captured-group-from-line-pattern&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;un &amp;ldquo;juego&amp;rdquo; escrito en awk:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/TheMozg/awk-raycaster.git
+$ cd awk-raycaster
+
+# reducir el tamaño de los caracteres de terminal hasta que se vea bien
+$ awk -f awkaster.awk
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Festival resonante</title>
@@ -20,7 +309,7 @@
       <guid>https://nasciiboy.github.io/post/resonante/</guid>
       <description>&lt;p&gt;Del sitio donde vivo diria que solo hay 1½ ruta principal y 2 rutas
 &amp;ldquo;secundarias&amp;rdquo;. Realmente quitando el sitio de &amp;ldquo;senderismo&amp;rdquo; y un centro con
-aspiraciones de ser turistico (abarca paenas unas cuantas calles), poco mas hay
+aspiraciones de ser turistico (abarca apenas unas cuantas calles), poco mas hay
 de interes. Pese a ello, suelo salir con regularidad a estirar el esqueleto en
 bicicleta con la remota esperanza de encontrar algo nuevo, interezante o en su
 defecto de alto interes cultural, o, en otras palabras digase algun encuentro

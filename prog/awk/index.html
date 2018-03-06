@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Morg Mirror</title>
+    <title>Awk</title>
     <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
     <style>:root {
 
@@ -193,116 +193,293 @@ img:hover { border: 0.05em solid #fff; }
 <main>
   <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
 
-  <h1>Morg Mirror</h1>
-  <blockquote>
-Una buena documentación es invaluable. Ya que cada uno tiene su propia definición de "bueno", aquí está la mía:
+  <h1>Awk</h1>
+  
+
+<p>AWK es un lenguaje de programacion diseñado para procesar datos basados en
+texto.</p>
+
+<p>El comando awk tiene la sitaxis</p>
+
+<pre><code>awk CODIGO TEXTO-DE-ENTRADA
+</code></pre>
+
+<p>awk toma el texto de entrada y lo divide en <em>Registros</em> (por defecto lineas delimitadas
+por <code>\n</code>) y estas a su ves se dividen en campos (por defecto una secuencia de
+caracteres que no sean un espacio).</p>
+
+<p>una ves awk recive la entrada, realiza un bucle secuencial por sus registros
+(lineas) y a estos les aplica una orden que tiene la syntaxis</p>
+
+<pre><code>condicion { accion }
+</code></pre>
+
+<p>estas ordenes, pueden agruparse en una sola linea separandolas con punto y coma</p>
+
+<pre><code>condicion_1 { accion_1 }; condicion_2 { accion_2 }; condicion_3 { accion_3 };
+</code></pre>
+
+<p>o con saltos de linea,</p>
+
+<pre><code>condicion_1 { accion_1 }
+condicion_2 { accion_2 }
+condicion_3 { accion_3 }
+</code></pre>
+
+<h2 id="condicion">condicion</h2>
+
+<p>la condicion para ser positiva simplemente debe ser distinta a cero. Si esto es
+asi y no se especifica una accion, por defecto se imprime el registro
+actual con un salto de linea al final. Por ejemplo:</p>
+
+<pre><code>$ printf &quot;registro uno\nregistro dos\nregistro tres&quot; | awk '1'
+</code></pre>
+
+<p>produce</p>
+
+<pre><code>registro uno
+registro dos
+registro tres
+</code></pre>
+
+<p>si cambiamos la condicion por una cadena de caracteres, por ejemplo <code>awk '&quot;cadena&quot;'</code>, el
+resultado seria identico, ya que una cadena tambien es <q>distinta a cero</q></p>
+
+<p>Ahora, los registros de awk se dividen en campos y estos pueden &ldquo;invocarse&rdquo; como
+<code>$1</code> (primer campo), <code>$2</code> (segundo campo), <code>$3</code> (tercer campo) y asi
+sucesivamente. Si el campo no existe, sera una cadean de caracteres vacia. El
+campo <code>$0</code> contiene registro en si mismo (la linea)</p>
+
+<p>Bien? Pues podriamos utilizar un campo especifico para compararlo con una cadena, de la
+siguiente forma</p>
+
+<pre><code>$ printf &quot;registro uno\nregistro dos\nregistro tres&quot; | awk '$1 == &quot;registro&quot;'
+</code></pre>
+
+<p>para de nuevo producir el resultado</p>
+
+<pre><code>registro uno
+registro dos
+registro tres
+</code></pre>
+
+<p>por si no fuera suficiente, podemos comparar cada registro con una expresion
+regular, asi:</p>
+
+<pre><code>$ printf &quot;registro uno\nregistro dos\nregistro tres&quot; | awk '/re..stro/'
+</code></pre>
+
+<p>donde la seccion comprendida entre <code>/</code> y <code>/</code> vendria a ser la expresion
+regular.</p>
+
+<p>A continuacion tenemos un ejemplo mas elaborado aplicando la comparacion con dos
+expresiones regulares unidas en una condicion OR:</p>
+
+<pre><code>$ printf &quot;registro uno\nregistro dos\nregistro tres&quot; | awk '/uno/ || /dos/'
+</code></pre>
+
+<p>produciria</p>
+
+<pre><code>registro uno
+registro dos
+</code></pre>
+
+<p>tambien podemos hace una busqueda de una expresion regular dentro de una cadena
+con la sintaxis <code>&quot;cadena&quot; ~ /regexp/</code>&hellip; y por supesto esta cadena bien puede
+ser un campo</p>
+
+<pre><code>$ printf &quot;registro uno\nregistro dos\nregistro tres&quot; | awk '$2 ~ /^[a-z]{3}$/'
+</code></pre>
+
+<h2 id="accion">accion</h2>
+
+<p>en la <em>accion</em> se permite especificar un variado numero de caracteristicas
+propias de un lenguaje de programacion, como pueden ser condiciones <code>if</code>, bucles
+<code>for</code>, <code>while</code>, <code>do-while</code>, declaracion de variables, asignaciones, invocacion a
+funciones (nativas de awk y creadas por el usuario) y demas cosas magicas,
+misticas y misteriosas como leer del teclado, leer ficheros o invocar comandos
+del sistema</p>
+
+<p>cuando se declara una accion &ldquo;solitaria&rdquo; se asume que la condicion es verdadera</p>
+
+<pre><code>$ printf &quot;registro uno\nregistro dos\nregistro tres&quot; | awk '{print $2}'
+</code></pre>
+
+<p>imprimiria los campos dos de cada registro en una linea propia</p>
+
+<pre><code>uno
+dos
+tres
+</code></pre>
+
+<p>por su parte con</p>
+
+<pre><code>$ printf &quot;registro uno\nregistro dos\nregistro tres&quot; | awk '{print $2 &quot; &quot; $1}'
+</code></pre>
+
+<p>se invertiria el orden de los capos de entrada en la salida</p>
+
+<pre><code>uno registro
+dos registro
+tres registro
+</code></pre>
+
+<p>si la funcion <code>print</code> no recive parametros, imprimiria el registro en si</p>
+
+<h2 id="begin-end">BEGIN &amp; END</h2>
+
+<p>awk cuenta con dos &ldquo;condiciones&rdquo; especiales que permiten realizar acciones antes
+de que inicie el bucle por los registros (condicion <code>BEGIN</code>) y despues de que
+este termine (condicion <code>END</code>)</p>
+
+<pre><code>$ printf &quot;registro uno\nregistro dos\nregistro tres&quot; | awk 'BEGIN{print &quot;inicio – invirtiendo entrada&quot;};END{print &quot;inversion finalizada&quot;};{print $2 &quot; &quot; $1};'
+</code></pre>
+
+<p>produce</p>
+
+<pre><code>inicio – invirtiendo entrada
+uno registro
+dos registro
+tres registro
+inversion finalizada
+</code></pre>
+
+<p>el orden de las condiciones <code>BEGIN</code> y <code>END</code> no tiene importancia&hellip; a menos que
+se declaren mas de una vez, en cuyo caso se evaluaran segun aparescan</p>
+
+<h2 id="ficheros">ficheros</h2>
+
+<p>a medida que el <em>codigo</em> enviado a awk aumenta de complejidad podemos colocarlo
+en un fichero e indicarle a awk donde se encuentra el codigo de la forma</p>
+
+<pre><code>$ awk -f fichero-de-codigo entrada-de-texto
+</code></pre>
+
+<h2 id="scripts">scripts</h2>
+
+<p>tambien podemos crear un script en si, al que &ldquo;enviar&rdquo; la entrada. Por ejemplo:</p>
+
+<pre><code>#! /usr/bin/awk -f
+
+# esto es un comentario
+# aqui el inicio
+BEGIN{print &quot;inicio – invirtiendo entrada&quot;}
+
+# aqui la(s) condicion(es)
+{print $2 &quot; &quot; $1}
+
+# aqui el final
+END{print &quot;inversion finalizada&quot;}
+</code></pre>
+
+<p>colocado en un fichero de nombre &ldquo;prueba.awk&rdquo;, se invocaria como</p>
+
+<pre><code>$ ./prueba.awk entrada-de-texto
+</code></pre>
+
+<p>o</p>
+
+<pre><code>$ printf &quot;registro uno\nregistro dos\nregistro tres&quot; | ./a.awk
+</code></pre>
+
+<p>(<em>NOTA</em> awn se encuentra en <code>/usr/bin/awk</code> y/o <code>/bin/awk</code>)</p>
+
+<h2 id="un-simple-sumador-de-campos">un simple sumador de campos</h2>
+
+<pre><code>#! /usr/bin/awk -f
+
+# esto es un comentario
+# aqui el inicio
+BEGIN {
+    campo_a = 0
+    campo_b = 0
+    print &quot;----- -----&quot;
+}
+
+# aqui la(s) condicion(es)
+{
+    printf( &quot;%5d %5d\n&quot;, $1, $2 )
+    campo_a += $1
+    campo_b += $2
+}
+
+# aqui el final
+END {
+    print &quot;===== =====&quot;
+    printf( &quot;%5d %5d\n&quot;, campo_a, campo_b )
+}
+</code></pre>
+
+<p>un ejemplo de uso</p>
+
+<pre><code>$ printf &quot;1 3\n2 6\n3 9\n4 12&quot; | ./a.awk
+</code></pre>
+
+<p>produce</p>
+
+<pre><code>----- -----
+    1     3
+    2     6
+    3     9
+    4    12
+===== =====
+   10    30
+</code></pre>
+
+<h2 id="miscelanea">miscelanea</h2>
+
+<p>canbiar la variable interna <code>IGNORECASE</code> a un valor distinto de 0, proboca que
+awk ignore la diferencia entre mayusculas y minusculas</p>
+
+<p>la funcion interna <code>sub(a, b)</code> busca la primer coincidencia con una cadena, numero o regexp en el
+registro actual (<code>a</code>) y la substituye por un numero o cadena (<code>b</code>)</p>
+
+<p>la funcion interna <code>gsub(a, b)</code> tiene los mismos parametros de <code>sub</code> solo que se realizan
+substituciones <em>para todas</em> las coincidencias</p>
+
+<p>una forma rudimentaria para capturar agrupaciones dentro de un array (solo gawk)</p>
+
+<pre><code>gawk 'match($0, pattern, ary) {print ary[1]}'
+</code></pre>
+
+<p>ejemplo:</p>
+
+<pre><code>printf &quot;abcdef\nbkhtne&quot; | gawk 'match($0, /b(.*)e/, a) {print a[1]}'
+</code></pre>
+
+<p>una forma de iterar por los caracteres de un registro/cadena</p>
+
+<pre><code>{
+  split($0, chars, &quot;&quot;)
+  for (i=1; i &lt;= length($0); i++) {
+    printf(&quot;%s\n&quot;, chars[i])
+  }
+}
+</code></pre>
+
+<h2 id="enlaces-y-cosas">enlaces y cosas</h2>
 
 <ul>
-<li><p>Los buenos documentos no me hacen buscar en la web</p></li>
-<li><p>Los buenos documentos tienen ejemplos de trabajo con los que puedo empezar</p></li>
-<li><p>Los buenos documentos siguen convenciones claras que fomentan hábitos de lectura</p></li>
+<li><a href="http://web.archive.org/web/20060622132928/http://www.linux-es.org:80/art.php?id=206">AWK paso a paso&hellip; y sin usar el ratón</a></li>
+<li><a href="http://xavi.ivars.me/arxius/manuals/awk/manual_awk.pdf">El lenguaje de programacion awk/gawk</a></li>
+<li><a href="https://es.wikipedia.org/wiki/AWK">https://es.wikipedia.org/wiki/AWK</a></li>
+<li><a href="https://stackoverflow.com/questions/2957684/awk-access-captured-group-from-line-pattern">https://stackoverflow.com/questions/2957684/awk-access-captured-group-from-line-pattern</a></li>
 </ul>
 
-para mí, comenzar un nuevo proyecto significa escribir algo de código para poder
-entender el problema que estoy tratando de resolver mejor. Hay mucha carga
-cognitiva, porque es un territorio inexplorado: tengo que pensar mucho en
-nombrar y en las dependencias entre partes.
-</blockquote>
+<p>un &ldquo;juego&rdquo; escrito en awk:</p>
 
-<p>(lo lamento, pero no anote la direccion del post en ingles de donde extraje
-estas perlas literarias, era sobre algo de golang vs xxx)</p>
+<pre><code>$ git clone https://github.com/TheMozg/awk-raycaster.git
+$ cd awk-raycaster
 
-<p>Y&hellip; de que va este post? son algunas reflexiones que considero interesantes
-surgidas de la experimentacion al intentar dar cara y ojos a ese formato de
-documentacion imaginario llamado morg</p>
-
-<p>Sucede esto, el formato cuenta con enfasis del tipo <code>@e(enfasis)</code>, bien, esto
-aplicaria enfasis al texto &ldquo;enfasis&rdquo;. Da la casualidad que tambien para evitar
-hacer cosas como <code>(@e(texto-con-enfasis-entre-parentesis))</code> y como permito la
-<em>concatenacion de &ldquo;comandos&rdquo;</em> esto podria substituirse por
-<code>@%e(texto-con-enfasis-entre-parentesis)</code>, donde el &ldquo;comando&rdquo; <code>%</code> significaria
-&ldquo;entre parentesis&rdquo;&hellip; y resulta que tambien podria substuirse algo similar al
-caso <code>“@c(codigo)”</code> por <code>@&quot;c(codigo)</code> y fue entonces donde me cuestione, <em>¿son
-estas construcciones lo suficientemente claras para quien desconosca tal
-sintaxis?</em> por que, el proposito de formato es ser claro ante todo, tanto en su version
-exportada, como directamente del <em>texto fuente</em></p>
-
-<p>pero vallamos mas alla, que tal si en <em>todo</em> texto se substitulle cualquier
-texto entre parentesis, como entre comillas, por su equivalente a sistaxis <code>@x()</code>, es
-decir todo <code>(texto entre parentesis)</code> pasaria a ser <code>@%(texto entre parentesis)</code>
-y todo <code>“cita o algo”</code> como <code>@&quot;(cita o algo)</code></p>
-
-<p>ignorando lo en principio absurdo de la propuesta, la segunda opcion, presenta
-conveniencias a considerar</p>
-
-<ul>
-<li><p>se puede <em>aplicar un estilo</em> tanto de color, fuente e incluso modificar los
-signos de &ldquo;contecion&rdquo; (<code>()</code> y <code>“”</code>) por cualquier otra cosa, en toda aparicion
-y en solo una instruccion (de estilo)</p></li>
-
-<li><p>podria aplicarse un analisis al texto&hellip; por algun motivo que no alcanso a visualizar</p></li>
-
-<li><p>el texto resaltado seria inconfundible y evidente, sin lugar
-a dudas de lo que se desea transmitir mediante esta&hellip; supongo</p></li>
-
-<li><p>&hellip; y no se me ocurre nada mas</p></li>
-</ul>
-
-<p>entonces, aparecio una revelacion aun mas extraña, que significan exactamente
-estas marcas &ldquo;invisibles&rdquo; que rodean al texto, y pasaron desapersividas hasta
-este momento, de hecho, cuantas construcciones de este tipo hay en la escritura
-y, si de forma simplificada (y mas o menos comoda) se permitiese una mayor
-cantidad de estas construcciones, (como la de codigo <code>@c()</code>, atajos de teclado
-<code>@k()</code>, definiciones <code>@:()</code> etc), que tanto podria desarrollarse el lenguaje?
-podria presindirse con este (conveniente) resaltado de la necesidad de una
-exportacion visual (ya que contendria toda la informacion)?</p>
-
-<p>momento, algo se me escapa, algo importante que no habia contemplado pero
-supongo existe por alguna parte, simplemente no tuve necesidad de conocerlo,
-razon por la cual paso desapersivido, mas ahora necesito conocerlo e ignoro su
-nombre, <em>estructura logica del lenguaje</em>?</p>
-
-<p>y que es esto, te preguntaras, pues la forma logica sobre la que se estructura
-el lenguaje, es decir parrafos, secciones(?), listas, listas numeradas, tablas,
-citas, bloques(?) y demas elementos comunes del lenguaje escrito. Digo, considerando que
-cualquiera que lea esto los ha utilizado o almenos los reconoce en la lectura,
-seria extraño que no estubiese definido de forma precisa como, cuando, porque y
-las implicaciones de utilizar cada uno de estos&hellip; y sus distintas
-implementaciones en otros lenguajes, o es que acaso que en otras lenguas estos
-no tienen su equivalente? tienen otros? porque, si en lugar de inventar bloques
-arbitrarios (o etiquetas) para situaciones variadas, cuento con todas las
-variaciones disponibles y sus casos de uso, quiza lo mas conveniente es aplicar
-una sintaxis especifica para la mayoria de ellos, simplificarlos o incluso tras
-un analisis crear nuevos</p>
-
-<p>y si existe este analisas, hay propuestas para nuevas construccones del
-lenguaje escrito o incluso propuestas alternativo-experimentales mas eficientes?</p>
-
-<p>y asi acudi a reddit y a la wikipedia, mas, continuo sin respuesta, no dudo que
-este tema <em>cuenta</em> con convenciones y tesis, pero no he acudido al lugar
-indicado, pues al igual que en la programacion, la mayoria o toca
-superficilmante un tema para apenas saber nada de el, o se especializa en
-una pequeña seccion de su interes y desconoce el resto, como me atreveria a
-decir que ocurre en los temas de mi interes, donde dichos temas especificos
-parecen conjuros obscuros que nadie apenas conoce, menos entiende, y si existe
-informacion, se encuentra en un plano academico al que tardare en acceder, del
-cual seguramente me entere por mera casualidad escudriñando en algun manual olvidado</p>
-
-<p>en fin, a grandes rangos aqui se contienen las inquietudes, el resto seria la
-forma de trabajar con un fichero de traduccion <em>porg</em>, la forma de modificarlo y
-transferir los cambios tanto a la traduccion como al fichero fuente</p>
-
-<p>las letras serian mas si hablara sobre metodologias de adaptacion de un libro impreso a
-su equivalente digital no pensado para impresion, traduccion y otros topicos,
-pero eso sera mas tarde</p>
+# reducir el tamaño de los caracteres de terminal hasta que se vea bien
+$ awk -f awkaster.awk
+</code></pre>
 
 
   <div class="clear" class="center">
     
-    <a class="previous" href="https://nasciiboy.github.io/prog/m8/">◀ HTC One M8 (flasheo)</a>
+    <a class="previous" href="https://nasciiboy.github.io/prog/programming-howto/">◀ Programming Howto (19-01-18)</a>
     
-    
-    <a class="next" href="https://nasciiboy.github.io/prog/morg-table/"> TextTable2HtmlTable (Volume One) ▶</a>
     
   </div>
 
