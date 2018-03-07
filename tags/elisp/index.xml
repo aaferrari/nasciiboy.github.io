@@ -39,7 +39,7 @@ ese modo en especifico&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;(setq company-global-modes &#39;(not eshell-mode))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;el segundo truco suculento esta relacionado con el lenguaje de marcas imaginario
+&lt;p&gt;el segundo truco suculento esta relacionado con el lenguaje de marcas imaginaria
 morg al que ni en un futuro cercano, medio (y tal vez lejano) creo contar con la
 habilidad de programarle un modo propio, asi que sigo ultrajando a org-mode y
 sus facilidades. Una caracteristica que hechaba mucho en falta es el resaltado
