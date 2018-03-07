@@ -205,9 +205,9 @@ screen.</p>
 <p>Acostumbrado a la version grafica de emacs y al no tener interferencia en
 practicamente ninguna combinacion de teclas. Al toparme de lleno primero con la
 interferencia del terminal y luego la de screen, me descoloque bastante, pero ya
-empiezo a acostumbrandome e engresar algunos comandos por su nombre y asignar
+empiezo a acostumbrarme e ingresar algunos comandos por su nombre y asignar
 rutas alternativas a algunos comandos, ademas de explorar modos que
-por lo general no uso extensivamente, como por ejemplo <strong><code>*eshel*</code></strong> donde
+por lo general no uso extensivamente, como por ejemplo <strong><code>*eshell*</code></strong> donde
 descubro estupefacto que de vez en cuando company-mode (autocompletado) interfiere ingresando
 espacios al azar y/o borrando caracteres&hellip; ja, ja, ja, la solucion a este mal es desactivar company en
 ese modo en especifico</p>
@@ -293,6 +293,20 @@ ambicion desmedida que cerro su codigo una vez (creo) y luego termino en
 naahhh. Hubiera sido un buen modo, seeh hubiera sido un buen modo&hellip; mmm, no
 parece muy dificil de implementar, no lo habra hecho ya algien (de buen corazon
 y espiritu GPL hippie)?</p>
+
+<p><strong>actualizacion</strong>: si existe un modo que imita a xiki, no muy logrado pero se puede
+usar y se llama <a href="https://github.com/lahorichargha/elxiki">elxiki</a>. Gracias a la
+gente de <a href="https://redd.it/82k4ym">r/emacs</a>!.</p>
+
+<p>luego de cargar el modo</p>
+
+<pre><code>$ git clone https://github.com/lahorichargha/elxiki
+(add-to-list 'load-path &quot;ruta-a-directorio-elxiki&quot;)
+(require 'elxiki)
+</code></pre>
+
+<p>para enterarse de como usarlo visitar
+<code>ruta-a-directorio-elxiki/menu/elxiki.menu</code> y ejecutar <code>M-x elxiki-mode</code></p>
 
 <p>happy hacking!</p>
 

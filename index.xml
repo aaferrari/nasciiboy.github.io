@@ -29,9 +29,9 @@ screen.&lt;/p&gt;
 &lt;p&gt;Acostumbrado a la version grafica de emacs y al no tener interferencia en
 practicamente ninguna combinacion de teclas. Al toparme de lleno primero con la
 interferencia del terminal y luego la de screen, me descoloque bastante, pero ya
-empiezo a acostumbrandome e engresar algunos comandos por su nombre y asignar
+empiezo a acostumbrarme e ingresar algunos comandos por su nombre y asignar
 rutas alternativas a algunos comandos, ademas de explorar modos que
-por lo general no uso extensivamente, como por ejemplo &lt;strong&gt;&lt;code&gt;*eshel*&lt;/code&gt;&lt;/strong&gt; donde
+por lo general no uso extensivamente, como por ejemplo &lt;strong&gt;&lt;code&gt;*eshell*&lt;/code&gt;&lt;/strong&gt; donde
 descubro estupefacto que de vez en cuando company-mode (autocompletado) interfiere ingresando
 espacios al azar y/o borrando caracteres&amp;hellip; ja, ja, ja, la solucion a este mal es desactivar company en
 ese modo en especifico&lt;/p&gt;
@@ -117,6 +117,20 @@ ambicion desmedida que cerro su codigo una vez (creo) y luego termino en
 naahhh. Hubiera sido un buen modo, seeh hubiera sido un buen modo&amp;hellip; mmm, no
 parece muy dificil de implementar, no lo habra hecho ya algien (de buen corazon
 y espiritu GPL hippie)?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;actualizacion&lt;/strong&gt;: si existe un modo que imita a xiki, no muy logrado pero se puede
+usar y se llama &lt;a href=&#34;https://github.com/lahorichargha/elxiki&#34;&gt;elxiki&lt;/a&gt;. Gracias a la
+gente de &lt;a href=&#34;https://redd.it/82k4ym&#34;&gt;r/emacs&lt;/a&gt;!.&lt;/p&gt;
+
+&lt;p&gt;luego de cargar el modo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/lahorichargha/elxiki
+(add-to-list &#39;load-path &amp;quot;ruta-a-directorio-elxiki&amp;quot;)
+(require &#39;elxiki)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para enterarse de como usarlo visitar
+&lt;code&gt;ruta-a-directorio-elxiki/menu/elxiki.menu&lt;/code&gt; y ejecutar &lt;code&gt;M-x elxiki-mode&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;happy hacking!&lt;/p&gt;
 
