@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Awk</title>
+      <title>AWK</title>
       <link>https://nasciiboy.github.io/prog/awk/</link>
       <pubDate>Mon, 05 Mar 2018 20:37:52 -0600</pubDate>
       
@@ -71,7 +71,7 @@ resultado seria identico, ya que una cadena tambien es &lt;q&gt;distinta a cero&
 
 &lt;p&gt;Ahora, los registros de awk se dividen en campos y estos pueden &amp;ldquo;invocarse&amp;rdquo; como
 &lt;code&gt;$1&lt;/code&gt; (primer campo), &lt;code&gt;$2&lt;/code&gt; (segundo campo), &lt;code&gt;$3&lt;/code&gt; (tercer campo) y asi
-sucesivamente. Si el campo no existe, sera una cadean de caracteres vacia. El
+sucesivamente. Si el campo no existe, sera una cadena de caracteres vacia. El
 campo &lt;code&gt;$0&lt;/code&gt; contiene registro en si mismo (la linea)&lt;/p&gt;
 
 &lt;p&gt;Bien? Pues podriamos utilizar un campo especifico para compararlo con una cadena, de la
@@ -281,6 +281,11 @@ substituciones &lt;em&gt;para todas&lt;/em&gt; las coincidencias&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;iterar sobre los campos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ for( i=1; i&amp;lt;=NF; i++ ) print &amp;quot;linea:&amp;quot; NR &amp;quot;:campo:&amp;quot; i &amp;quot;:&amp;quot; $i }
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;enlaces-y-cosas&#34;&gt;enlaces y cosas&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -292,7 +297,7 @@ substituciones &lt;em&gt;para todas&lt;/em&gt; las coincidencias&lt;/p&gt;
 
 &lt;p&gt;un &amp;ldquo;juego&amp;rdquo; escrito en awk:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/TheMozg/awk-raycaster.git
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/TheMozg/awk-raycaster
 $ cd awk-raycaster
 
 # reducir el tamaño de los caracteres de terminal hasta que se vea bien

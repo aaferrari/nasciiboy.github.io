@@ -7,10 +7,127 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Thu, 28 Sep 2017 19:47:50 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 06 Mar 2018 18:00:06 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/emacs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Miscelanea Emacs</title>
+      <link>https://nasciiboy.github.io/emacs/miscelanea/</link>
+      <pubDate>Tue, 06 Mar 2018 18:00:06 -0600</pubDate>
+      
+      <guid>https://nasciiboy.github.io/emacs/miscelanea/</guid>
+      <description>
+
+&lt;p&gt;aqui una serie de pequeños trucos y apaños recientes&lt;/p&gt;
+
+&lt;p&gt;primero, sin buscarlo intencionalmente he estado utilizando emacs en modo
+consola, en un terminal grafico, pasado por ssh y filtrado bajo gnu
+screen.&lt;/p&gt;
+
+&lt;p&gt;Acostumbrado a la version grafica de emacs y al no tener interferencia en
+practicamente ninguna combinacion de teclas. Al toparme de lleno primero con la
+interferencia del terminal y luego la de screen, me descoloque bastante, pero ya
+empiezo a acostumbrandome e engresar algunos comandos por su nombre y asignar
+rutas alternativas a algunos comandos, ademas de explorar modos que
+por lo general no uso extensivamente, como por ejemplo &lt;strong&gt;&lt;code&gt;*eshel*&lt;/code&gt;&lt;/strong&gt; donde
+descubro estupefacto que de vez en cuando company-mode (autocompletado) interfiere ingresando
+espacios al azar y/o borrando caracteres&amp;hellip; ja, ja, ja, la solucion a este mal es desactivar company en
+ese modo en especifico&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(setq company-global-modes &#39;(not eshell-mode))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el segundo truco suculento esta relacionado con el lenguaje de marcas imaginario
+morg al que ni en un futuro cercano, medio (y tal vez lejano) creo contar con la
+habilidad de programarle un modo propio, asi que sigo ultrajando a org-mode y
+sus facilidades. Una caracteristica que hechaba mucho en falta es el resaltado
+de la sintaxis &amp;ldquo;en linea&amp;rdquo; de comandos &amp;ldquo;arroba&amp;rdquo; asi que cada vez que visitaba un
+texto, lo unico que se me ocurria era resaltar dicha sintaxis mediante el
+comando &lt;code&gt;highlight-regexp&lt;/code&gt; con una regexp esoterica.&lt;/p&gt;
+
+&lt;p&gt;Recientemente le agregue un gancho al emacs para que lance una serie de
+highlights que automaticen el resaltado. No es perfecto, ya que aveces se
+resaltan cosas aleatoriamente y otras la regexp es incapas de encajar con la
+sintaxis, pero de momento sirve de apaño&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;;; cargar ficheros .morg en modo org
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.morg\\&#39;&amp;quot; . org-mode))
+
+;; resaltar &amp;quot;cosas&amp;quot;
+(add-hook &#39;org-mode-hook
+          (lambda ()
+            (highlight-regexp &amp;quot;@[^[&amp;lt;({]+[[&amp;lt;({][^]&amp;gt;})]+[]&amp;gt;})]&amp;quot; &#39;hi-green-b)
+            (highlight-regexp &amp;quot;@[[&amp;lt;({][^]&amp;gt;})]+[]&amp;gt;})]&amp;quot; &#39;hi-red-b)
+            (highlight-regexp &amp;quot;@[^[&amp;lt;({]+[[&amp;lt;({][]&amp;gt;})]&amp;quot; &#39;hi-red-b)
+            (highlight-regexp &amp;quot;[[:space:]]@[[:space:]]&amp;quot; &#39;hi-yellow)
+            (highlight-regexp &amp;quot;@[a-zA-Z]+[[:space:]]&amp;quot; &#39;hi-yellow)
+            (highlight-regexp &amp;quot;^ *@ +.*&amp;quot; &#39;hi-pink)
+            )
+          )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y finalmente, la primer funcion en emacs lisp (&lt;code&gt;shell-region-insert-for-markdow&lt;/code&gt;) que programo &amp;ldquo;por ver si
+funcionaba&amp;rdquo;. Un poco de corta y pega, un algo de lo traducido del manual de
+introduccion a emacs lisp y un tanto de prueba y herror (con h)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(defun shell-region (start end)
+  &amp;quot;execute region in an inferior shell&amp;quot;
+  (interactive &amp;quot;r&amp;quot;)
+  (shell-command  (buffer-substring-no-properties start end)))
+
+(defun shell-region-insert-for-markdown (start end)
+  &amp;quot;execute region in an inferior shell and insert output with markdown sintax&amp;quot;
+  (interactive &amp;quot;r&amp;quot;)
+  (save-excursion
+    (goto-char end)
+    (insert &amp;quot;\n&amp;quot;)
+    (dolist (line
+             (split-string
+              (shell-command-to-string (buffer-substring-no-properties start end))
+              &amp;quot;[\n]&amp;quot;)
+             t)
+      (insert &amp;quot;\n&amp;quot; &amp;quot;    &amp;quot; line))
+    )
+  )
+
+(global-set-key (kbd &amp;quot;C-c x&amp;quot;) &#39;shell-region)
+(global-set-key (kbd &amp;quot;C-c i&amp;quot;) &#39;shell-region-insert-for-markdown)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;la primer funcion ejecuta la region activa en una shell mostrando la salida en
+un buffer (si la hay). La segunda funcion hace lo mismo pero agrega el salto
+mortal de insertar la salida del comando dentro del mismo buffer con el formato
+de (cuatro espacios al inicio de) markdown. Je, je, a que mola!&lt;/p&gt;
+
+&lt;p&gt;por supuesto con las respectivas combinaciones de teclado para parecer aun mas
+pro. En cuanto a (e)lisp en si, pues esta curioso, sigo creyendo que ajustar
+todo a listas es un bonito truco academico pero incomodo en el uso diario. No
+contar con tipado aun si las funciones tienen nombres (medio) claros poco ayuda
+y desconocer que demonios devuelve una funcion hasta leerse la documentacion a
+detalle tampoco es motivante, acaso seguimos en los 70&amp;rsquo;s?&lt;/p&gt;
+
+&lt;p&gt;Aun asi curioso, estimulante y esoterico programar para emacs es, de a poco le
+estoy encontrando el gusto&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;este par de comandos los hice un poco pensando en
+&lt;a href=&#34;http://xiki.org/screencasts/&#34;&gt;xiki&lt;/a&gt; aquella shell montada en emacs con una
+ambicion desmedida que cerro su codigo una vez (creo) y luego termino en
+naahhh. Hubiera sido un buen modo, seeh hubiera sido un buen modo&amp;hellip; mmm, no
+parece muy dificil de implementar, no lo habra hecho ya algien (de buen corazon
+y espiritu GPL hippie)?&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+
+&lt;h1 id=&#34;fuentes&#34;&gt;fuentes&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/6286579/emacs-shell-mode-how-to-send-region-to-shell&#34;&gt;https://stackoverflow.com/questions/6286579/emacs-shell-mode-how-to-send-region-to-shell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://emacs.stackexchange.com/questions/21042/disable-minor-mode-in-major-mode&#34;&gt;https://emacs.stackexchange.com/questions/21042/disable-minor-mode-in-major-mode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Emacs, configuracion de verano</title>

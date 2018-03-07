@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Awk</title>
+    <title>AWK</title>
     <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
     <style>:root {
 
@@ -193,7 +193,7 @@ img:hover { border: 0.05em solid #fff; }
 <main>
   <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
 
-  <h1>Awk</h1>
+  <h1>AWK</h1>
   
 
 <p>AWK es un lenguaje de programacion diseñado para procesar datos basados en
@@ -247,7 +247,7 @@ resultado seria identico, ya que una cadena tambien es <q>distinta a cero</q></p
 
 <p>Ahora, los registros de awk se dividen en campos y estos pueden &ldquo;invocarse&rdquo; como
 <code>$1</code> (primer campo), <code>$2</code> (segundo campo), <code>$3</code> (tercer campo) y asi
-sucesivamente. Si el campo no existe, sera una cadean de caracteres vacia. El
+sucesivamente. Si el campo no existe, sera una cadena de caracteres vacia. El
 campo <code>$0</code> contiene registro en si mismo (la linea)</p>
 
 <p>Bien? Pues podriamos utilizar un campo especifico para compararlo con una cadena, de la
@@ -457,6 +457,11 @@ substituciones <em>para todas</em> las coincidencias</p>
 }
 </code></pre>
 
+<p>iterar sobre los campos</p>
+
+<pre><code>{ for( i=1; i&lt;=NF; i++ ) print &quot;linea:&quot; NR &quot;:campo:&quot; i &quot;:&quot; $i }
+</code></pre>
+
 <h2 id="enlaces-y-cosas">enlaces y cosas</h2>
 
 <ul>
@@ -468,7 +473,7 @@ substituciones <em>para todas</em> las coincidencias</p>
 
 <p>un &ldquo;juego&rdquo; escrito en awk:</p>
 
-<pre><code>$ git clone https://github.com/TheMozg/awk-raycaster.git
+<pre><code>$ git clone https://github.com/TheMozg/awk-raycaster
 $ cd awk-raycaster
 
 # reducir el tamaño de los caracteres de terminal hasta que se vea bien
@@ -492,7 +497,7 @@ $ awk -f awkaster.awk
         <header class="key"><b>CATEGORIES</b></header>
         <div>
           <ul class="terms">
-            <li><a href="https://nasciiboy.github.io/categories/prog">prog(40)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(29)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(10)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+            <li><a href="https://nasciiboy.github.io/categories/prog">prog(40)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(29)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(11)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
           </ul>
         </div>
       </section>
@@ -501,7 +506,7 @@ $ awk -f awkaster.awk
         <header class="key"><b>TAGS</b></header>
         <div>
           <ul class="terms">
-            <li><a href="https://nasciiboy.github.io/tags/fonos">fonos(17)</a></li><li><a href="https://nasciiboy.github.io/tags/howto">howto(16)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(16)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(11)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/">(2)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+            <li><a href="https://nasciiboy.github.io/tags/fonos">fonos(17)</a></li><li><a href="https://nasciiboy.github.io/tags/howto">howto(16)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(16)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(11)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/">(3)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
           </ul>
         </div>
       </section>
