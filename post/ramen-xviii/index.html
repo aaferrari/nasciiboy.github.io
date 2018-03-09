@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XVIII</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/post">post</a></div>
+
+  <h1>Ramen XVIII</h1>
+  
+
+<blockquote>
+<p>¿Todavía los idiotas ciberfetichistas del siglo xxi sueñan con alcanzar la intelectualidad?﻿</p>
+
+<p>Así como la gente cree que madurar es ser serio y amargado, el juego creyó que madurar es parecerse al cine.﻿</p>
+</blockquote>
+
+<p>Llegue al canal del Dayo luego de ver algunos videos con edicion absorvente en
+los canales de
+<a href="https://www.youtube.com/channel/UCXP63FzhPbL41mPx2P2g7Cw/videos">petercarter</a> y
+<a href="https://www.youtube.com/channel/UC6PcGXqquqBQql4vAVnfrLA">Piligrino</a> donde unos
+listillos los tildaban de &ldquo;intentos de ser Dayo&rdquo;, puntos supensivos&hellip;</p>
+
+<p>si, los videos del dayo estan entretenidos y sudan edicion (no tanta como la de
+petercarter), pero tengo problemas con su punto de vista sobre los videojuegos, eso de
+que deben aspirar a convertirse en experiencias profundas, transcendentales y
+ser un medio referente en la educacion para las masas (mas puntos suspensivos)
+dejando de lado la jugavilidad, <em>puahhfff</em> los comentarios extraidos del <a href="https://www.youtube.com/watch?v=14fARP7sAJU">ultimo
+video</a> en su canal,
+resumen la opinion que tengo sobre el dayo cuando habla de videojuegos, &ldquo;adultes
+y seriedad&rdquo;. Je, aunque disonante con mis perspectivas, lo mantengo en las
+subscripciones, puede ser una buena salida para el troll que llevo dentro, y
+quien sabe, quiza alguna ves exponga alguna parte que concuerde con mi
+cosmovision disonante ludonarrativa</p>
+
+<p>&hellip;</p>
+
+<p>Tambien cayeron un par de videos que transformaron mis conceptos erroneos que tenia
+sobre el anime, empezando por como es que funciona la industria o <a href="https://www.youtube.com/watch?v=oNNOMSMB9gs">&ldquo;El moe está matando el anime.&rdquo; o Sobre los argumentos zonzos de Normales Otacools</a>.
+Si, niñitas con falda enseñando los calzones!</p>
+
+<p>No conforme con la anterior muestra de cultura y entendimiento: <a href="https://www.youtube.com/watch?v=48_naePccn8">&ldquo;Seinen&rdquo; &ldquo;Shoujo&rdquo;, una exposición a medias o De la demografía del manga</a>.
+Un video que desmiente el &ldquo;Seinen&rdquo;, &ldquo;Shonen&rdquo;, &ldquo;Shoujo&rdquo; como generos</p>
+
+<p>y para terminar <a href="https://www.youtube.com/watch?v=Nb1I-RFqe3I">CrunchyRoll y la Hipocresía o Por qué no le pago nada a CR</a></p>
+
+<p>impresindibles para los fans de los monos chinos</p>
+
+<p>&hellip;</p>
+
+<p>Para no dejar de ser intelectual <a href="https://youtu.be/qZfDX8F0fB0">Ovejas Eléctricas - La izquierda a la deriva (Parte 2): Los restos del naufragio</a>.
+Si te da pereza clicar en enlaces y as de elegir uno, veria este, de hecho lo
+he bajado con youtube-dl para proservarlo en las eras por venir</p>
+
+<p>De que va? Expone las base de pensamiento occidental basada en la culpa, el
+sufrimiento y el victimismo, criticando a su vez el capitalismo, el feminismo,
+derechas e izquierdas</p>
+
+<p>fuhh, me dieron ganas de ir a blogs con femi-cosas y otros ismos, ehemm, para
+aportar otro punto de vista y parecer inteligente, ja, ja, pero no.</p>
+
+<p>mmm, tambien descubri que encajo con la definicion de Superhombre de Nietzsche.
+Con un medio de sustento para ser &ldquo;autonomo&rdquo; me lo creeria un poco mas</p>
+
+<p>&hellip;</p>
+
+<p>terminando con la vitacora vital. Una sexta parte del &ldquo;dia de pago&rdquo; se convirtio
+en mi primer aportacion monetaria a un proyecto de software libre, <strong>⋲ᴹ∧cₛ</strong>
+para ser preciso. 2½
+dolares que vendrian a ser el &ldquo;invitar un cafe&rdquo;, mehh no se le puede pedir mucho
+a un desarrapado social</p>
+
+<h2 id="4k">4k</h2>
+
+<p><em>Cloverfield Paradox</em> cha, es esto una parodia seria o ha salido de black mirror
+(4)? fuuhhh, este intento de cine &ldquo;del meme&rdquo; no fue satisfactorio</p>
+
+<p><em>Eyes Wide Shut</em> muchas tetas en una peli seria que no termine de entender. La
+vi por que salio en una orbita de endor&hellip; y me quede algo descolocado, quiza la
+siguiente vez este preparado.</p>
+
+<p>Destaco el ritual de las chicas y el sacerdote, aunque si fuera un maldito
+millonario aburrido tendria variedad racial, una asiatica, una negra, morena,
+rusa, italiana, etc.</p>
+
+<p><strong>black panther</strong> gwrrwwha, me sorpendio lo &ldquo;distinta&rdquo; (ambientalmente) que es respecto a las demas
+pelis marvel. La accion esta generica, pero la musica afro-bro lo
+compensa. Personajes carismaticos y algo de reinvindicacion etnica + critica
+ligera hacia el actuar de las potencias desarrolladas terminan por cubrir el
+gasto de pagar un boleto de entrada y asistir al templo. (Oh, como punto
+negativo el CGI canta, cosa rara a esta altura, en ese presupuesto y vieniendo
+de donde viene)</p>
+
+<p><strong>whoami</strong> &ldquo;sabes el lenguaje de las maquinas?&rdquo; &hellip; ??? ja, ja, ja, ha, ja y ha.
+Una pelicula de procedencia alemana que versa sobre <strong>&ldquo;</strong>hakers<strong>&ldquo;</strong> (con
+comillas enfatizadas).</p>
+
+<p>en principio se puede enconcontrar, o divertida o triste por su ridiculo tratamiento
+del tema&hellip; pero luego remonta, no tanto por la mejora del &ldquo;hackerismo&rdquo; como
+por su trama y el doble giro final.</p>
+
+<p>Su representacion del correo/&ldquo;dark-web&rdquo; la encuentro correcta</p>
+
+<pre><code>https://cuelgame.net/go?id=15050
+</code></pre>
+
+<p><strong>Dark</strong> tambien de procedencia alemana, en esta ocacion sobre viajes en el
+tiempo atraves de una cueva y un reloj-maleta-nuclear-raro.</p>
+
+<p>Me costo 6 episodios para encontrarle gracia al drama cotidiano y temporal. De
+los personajes no conecto con ninguno, expeto la niña muda &ldquo;corrosiva&rdquo;, si
+&ldquo;corrosiva&rdquo;, por que no la identificaria como mal humorada, je, je, me cayo bien</p>
+
+<pre><code>https://cuelgame.net/go?id=15040
+</code></pre>
+
+<p><strong>Godless</strong> De todos los consumos, fue el que mas disfrute! Una serie de
+vaqueros (y vaqueras) &ldquo;clasica&rdquo;, el malo malo, el bueno malo y el resto. Jo, que
+troles fueron con &ldquo;el chico&rdquo;, no pudo consumar en ningun sentido y murio de
+forma lamentable, bien!</p>
+
+<p>fuuuuhhhh la señora de lo caballos, que jodidamente sexi y atractiva</p>
+
+<pre><code>https://cuelgame.net/go?id=15041
+</code></pre>
+
+<p><strong>The Babysitter</strong> la cinta empieza con esta frace:</p>
+
+<blockquote>
+<p>nadie aprende nada en clase, por eso tenemos internet</p>
+</blockquote>
+
+<p>y luego continua con una mezcla de solo en casa y alguna peli generica de
+asisino de adolescentes, con una niñera muuu juguetona, loca y sexi (la misma que
+aparece mas tarde en la genial Mayhem). Que mas decir, un buen divertimento de poco mas de 90 minutos</p>
+
+<pre><code>magnet:?xt=urn:btih:189690c124bf12cd37d4044699e2730c9e7ee233&amp;dn=The.babysitter.2017.1080p-dual-lat.mp4&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<p><strong><a href="https://en.wikipedia.org/wiki/Spring_(2014_film)">Spring</a></strong> En el podcast de
+DesdeAbajo tenia el distintivo de <sup>5</sup>&frasl;<sub>5</sub> combinado el terror y el rollmance. Por lo
+general cada recomendacion de ese programa termina como un aprobado y en no
+pocas ocaciones como material selecto. Pero en otras como esta ocacion, solo
+llega al &ldquo;visible&rdquo;. El final me gusto, pero no perdi la esperansa de que
+terminara en un alien madre persiguiendo al prota</p>
+
+<p><strong>Red Sparrow</strong> Peli con personaje principal super listo que tenia planeado todo
+desde el principio&hellip; como es que habrio la cuenta en un banco a nombre de otra
+persona? eso se puede hacer?</p>
+
+<p>Toca (nunca escrito mas acertadamente) varios puntos, el humano como un
+rompecabezas de necesidad, jerarquias, patriotismos, metas, aspiraciones
+personales, el ambiente y su interferencia opuesta, indiferente o propicia con
+estas. Y&hellip; no hace nada, presenta sus cartas y se va a jugar domino</p>
+
+<h2 id="fonos">fonos</h2>
+
+<p><strong>Gary Moore</strong> Cada vez que veo una agrupacion que lleva el nombre de una
+persona me pregunto de que va. Exepto cuando el individuo abanderado es un fuera de serie
+que es o un genio-virtuso o un &ldquo;yo lo hago todo pero para el directo hay que
+contratar mas gente&rdquo;.</p>
+
+<p>En los videos que encontre del buen Moore, canta y toca la guitarra con un
+sentimiento arrollador. Tiene piesas magnificas como Parisienne Walkways, Story
+Of The Blues, The Loner, Once In a Blue Mood, pero sobre todo <em>Still Got The
+Blues</em>. Mas, sus albums, de los cuatro que he escuchado
+Victims of the Future (entre van halen y richie blackmore con black sabbath)
+Wild Frontier (&ldquo;glam ochentas&rdquo;), After Hours (De momento el que mas me ha
+agradado) y Grinding Stone (el psicodelico 70&rsquo;s) no terminan de tener un sello
+distintivo.</p>
+
+<p>En su mayor medida, es un imitador de la corriente rockera popular, un muy buen
+imitador (sea dicho) pero no supera a los originales. Eso si, sus
+piezas sobresalientes, son suficiente para colocarlo en el olimpo de los
+guitarristas, joder que son brillantes, aunque los albums que las contienen
+fracasan cohesionando el conjunto</p>
+
+<p><strong>Battles</strong> (<em>La Di Da Di</em>, <em>gloss drop</em> y <em>mirrored</em>) Si sonic youth fueran un
+grupo de chinos con devilidad por los sonidos electronicos, probablemente
+sonarian asi.</p>
+
+<p>Un sonido bastante &ldquo;elaborado&rdquo; y experimental, en momentos con inclinaciones
+jazz, en otros hacia el noise rock e incluso el funky siempre acompañados por
+&ldquo;bits chinos&rdquo;</p>
+
+<pre><code>magnet:?xt=urn:btih:9e58ef1720783de3e1cd04696be983cc51590a0a&amp;dn=%5bBRC-480%5d%20Battles%20-%20La%20Di%20Da%20Di%20(2015)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+magnet:?xt=urn:btih:d93521c954e905f73e7ac920381e3c7f3fbf8727&amp;dn=Battles%20-%20Gloss%20Drop%20(2011)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+magnet:?xt=urn:btih:0d8e35c47f880e71e1d58da117f895b68a67ce4c&amp;dn=Battles%20-%20Mirrored%20(2007)%20%5bFlac%5d&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce
+</code></pre>
+
+<p><strong>Kamasi Washington</strong></p>
+
+<ul>
+<li><strong>Harmony of Difference</strong>, lo breve del material se ve recompensado por la
+espirituosidad, ritmo y rollmance de cada melodia. Mi limitado vocabulario es
+incapaz de plasmar la plancentera escucha del album. De adqusicion obligatoria
+y directo al olipo rankeroso del nas, enjoy y disfruit!</li>
+</ul>
+
+<pre><code>magnet:?xt=urn:btih:beb2353747f9bbb6d16c0ab901f7ee8b985a7d4a&amp;dn=Kamasi%20Washington%20-%20Harmony%20of%20Difference%20(2017)%20%5bCD-FLAC%5d%20%7bYTCD171%7d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce
+</code></pre>
+
+<ul>
+<li>The Epic, es es el trabajo previo al harmony of difference (que en mi mente,
+sin conocer la razon tenia el nombre de <i>harmony of dissonance</i> (hay una
+palabra que conjugue disonancia y desorden: <i>disonarcer</i>? (mago disonante
+del desorden?)), mmm, un titulo para el disco imaginario que nunca hare (o no))
+(ja, ja, tanto <code>()</code> de ideas &ldquo;no tan divagantes&rdquo; hacen que comience a parecer
+lips).  Que esto es del materia! bueno, mas duro, no por falta de calidad, sino
+de familiaridad con el genero, en pocas palabras, no entra a la
+primer escucha, ha de repeterise, encontrarse los matices e interiorisarse. Eso
+si, el trabajo esta conformado por 3 discos, que acumulan al rededor de 3
+horas en total, mis favoritas son las que tienen voces femeninas y melodias
+arraigadas en el inconciente popular</li>
+</ul>
+
+<pre><code>magnet:?xt=urn:btih:64b4312f430958a9a17e52ddf1b6276a21fa84cb&amp;dn=Kamasi%20Washington%20-%20The%20Epic%20%203%20Cd&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337&amp;tr=http%3a%2f%2fmgtracker.org%3a2710%2fannounce&amp;tr=http%3a%2f%2fopen.acgtracker.com%3a1096%2fannounce&amp;tr=http%3a%2f%2ftracker.files.fm%3a6969%2fannounce&amp;tr=http%3a%2f%2fannounce.xxx-tracker.com%3a2710%2fannounce&amp;tr=http%3a%2f%2ftracker1.itzmx.com%3a8080%2fannounce&amp;tr=http%3a%2f%2ftracker.mg64.net%3a6881%2fannounce&amp;tr=http%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.zer0day.to%3a1337&amp;tr=http%3a%2f%2fbt.artvid.ru%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.baravik.org%3a6970%2fannounce&amp;tr=http%3a%2f%2ftracker1.wasabii.com.tw%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker2.wasabii.com.tw%3a6969%2fannounce
+</code></pre>
+
+<p><strong>XueFei Yang – Romance de Amor</strong> una compilacion de temas populares y no tan
+populares interpretados con guitarrita, todas con altos estandares de
+calidad. Mis favoritas son Sakura y Michelle</p>
+
+<pre><code>magnet:?xt=urn:btih:a18d709735c6120171e62c13a7434727213566cf&amp;dn=XueFei%20Yang%20-%20Romance%20de%20Amor%20(2007)&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+</code></pre>
+
+<p><strong>BECK (mongolian chop squad) OST</strong> simplemente eso, el OST del anime, algunas
+piezas mejor que otras y en general pasable y hasta repetible</p>
+
+<pre><code>magnet:?xt=urn:btih:f2c08e7c253e60f09d6880a54ac0393a47f7b6fb&amp;dn=animation%20BECK%20soundtrack&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=http%3a%2f%2f182.176.139.129%3a6969%2fannounce&amp;tr=http%3a%2f%2f5.79.83.193%3a2710%2fannounce&amp;tr=http%3a%2f%2f91.218.230.81%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ilibr.org%3a80%2fannounce&amp;tr=http%3a%2f%2fatrack.pow7.com%2fannounce&amp;tr=http%3a%2f%2fbt.henbt.com%3a2710%2fannounce&amp;tr=http%3a%2f%2fmgtracker.org%3a2710%2fannounce&amp;tr=http%3a%2f%2fmgtracker.org%3a6969%2fannounce&amp;tr=http%3a%2f%2fopen.touki.ru%2fannounce.php&amp;tr=http%3a%2f%2fp4p.arenabg.ch%3a1337%2fannounce&amp;tr=http%3a%2f%2fpow7.com%3a80%2fannounce&amp;tr=http%3a%2f%2fretracker.krs-ix.ru%3a80%2fannounce&amp;tr=http%3a%2f%2fsecure.pow7.com%2fannounce&amp;tr=http%3a%2f%2ft1.pow7.com%2fannounce&amp;tr=http%3a%2f%2ft2.pow7.com%2fannounce&amp;tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&amp;tr=http%3a%2f%2ftorrentsmd.com%3a8080%2fannounce&amp;tr=http%3a%2f%2ftracker.bittor.pw%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.dutchtracking.com%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.dutchtracking.nl%3a80%2fannounce&amp;tr=http%3a%2f%2ftracker.edoardocolombo.eu%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.ex.ua%3a80%2fannounce&amp;tr=http%3a%2f%2ftracker.kicks-ass.net%3a80%2fannounce&amp;tr=http%3a%2f%2ftracker1.wasabii.com.tw%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker2.itzmx.com%3a6961%2fannounce&amp;tr=http%3a%2f%2fwww.wareztorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2f62.138.0.158%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.doko.moe%3a6969%2fannounce&amp;tr=http%3a%2f%2fasnet.pw%3a2710%2fannounce&amp;tr=http%3a%2f%2fthetracker.org%3a80%2fannounce&amp;tr=http%3a%2f%2ftracker.tfile.co%3a80%2fannounce&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce&amp;tr=udp%3a%2f%2fsantost12.xyz%3a6969%2fannounce&amp;tr=https%3a%2f%2ftracker.bt-hash.com%3a443%2fannounce&amp;tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fzephir.monocul.us%3a6969%2fannounce&amp;tr=http%3a%2f%2fgrifon.info%3a80%2fannounce&amp;tr=http%3a%2f%2fretracker.spark-rostov.ru%3a80%2fannounce&amp;tr=http%3a%2f%2ftr.kxmp.cf%3a80%2fannounce&amp;tr=http%3a%2f%2ftracker.city9x.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2fbt.aoeex.com%3a8000%2fannounce&amp;tr=http%3a%2f%2ftracker.tfile.me%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fretracker.telecom.by%3a80%2fannounce&amp;tr=http%3a%2f%2ftracker.electro-torrent.pl%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.tvunderground.org.ru%3a3218%2fannounce&amp;tr=udp%3a%2f%2ftracker.halfchub.club%3a6969%2fannounce&amp;tr=udp%3a%2f%2fretracker.nts.su%3a2710%2fannounce&amp;tr=udp%3a%2f%2fwambo.club%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.dutchtracking.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftc.animereactor.ru%3a8082%2fannounce&amp;tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=https%3a%2f%2fopen.kickasstracker.com%3a443%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=http%3a%2f%2fretracker.mgts.by%3a80%2fannounce&amp;tr=http%3a%2f%2fretracker.bashtel.ru%3a80%2fannounce&amp;tr=udp%3a%2f%2finferno.demonoid.pw%3a3418%2fannounce&amp;tr=udp%3a%2f%2ftracker.cypherpunks.ru%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.cyberia.is%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.devil-torrents.pl%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker2.christianbro.pw%3a6969%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&amp;tr=udp%3a%2f%2fulfbrueggemann.no-ip.org%3a6969%2fannounce&amp;tr=http%3a%2f%2ftorrentsmd.eu%3a8080%2fannounce&amp;tr=udp%3a%2f%2fpeerfect.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.swateam.org.uk%3a2710%2fannounce&amp;tr=http%3a%2f%2fns349743.ip-91-121-106.eu%3a80%2fannounce&amp;tr=http%3a%2f%2ftorrentsmd.me%3a8080%2fannounce&amp;tr=http%3a%2f%2fagusiq-torrents.pl%3a6969%2fannounce&amp;tr=http%3a%2f%2ffxtt.ru%3a80%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969
+</code></pre>
+
+<p><strong>Borrachero – Borrachero</strong> el primer trabajo de la banda con nombre homonimo y
+fechado en este año. La banda no tienen pagina personal (propia de ellos) y
+menos una entrada en la wikipedia. En su sitio de facebug dicen que su estilo
+cubre el Psychedelic Doom y el Space Rock (Buscando en la
+<a href="https://es.wikipedia.org/wiki/Stoner_rock">wiki</a> que demonios es Psychedelic
+Doom (no encontrado, aparece Stoner rock) dicen que Stoner significa &ldquo;fumador de
+marihuana&rdquo;. Siempre contento de aprender algo nuevo!)</p>
+
+<p>Bueno, bueno, llegue al material por las novedades del pirate bay, aunque ya
+borre el magnet por falta de capacidad de subida. En el acumulado de discos por esuchar de las
+novedades ya tenia acumulados mas de 70 albums y habia que hacer algo al
+respecto. No tenia mucho interes en esta agrupacion y su nombre me daba pereza,
+pero iniciando por orden alfabetico era la primera en la lista.</p>
+
+<p>Sobre la musica en si, pues cumplen con lo que prometen, tiene algo de &ldquo;Doom&rdquo;,
+Stoner y un complemento Cosmico apropiado. No seria algo que esucharia
+marihuano, pero sienta bien sin colocacion. Las vocales no me terminan de
+convencer y le falta algo de sofisticacion a sus composiciones&hellip; aun asi
+entregan un buen album inicial (conformado de 5 pistas que suman 36 min) lo
+suficientemente bueno como para tener su sitio en el disco y esperar nuevas
+entregas. Pueden buscarlos en bandcamp o en yutube, que es donde hago una
+escucha preeliminar antes de compromenterme a bajar un torrente</p>
+
+<p><strong>Gwenno – Le Kov</strong> lo clasificaria como indie pop-electro britanico &ldquo;del
+bueno&rdquo; con tendencias orientales. Cuenta con vocales femeninas suaves y armoniosas. Magnifico album,
+relajado y espacial. Si tubiera que encotrar una combinacion cercana
+mezclaria a radiohead y Death in Vegas</p>
+
+<h2 id="txt">txt</h2>
+
+<p>otra apologia sobre emacs <a href="https://coffeeandcode.neocities.org/why-i-still-use-emacs.html">https://coffeeandcode.neocities.org/why-i-still-use-emacs.html</a></p>
+
+<p>&hellip;.</p>
+
+<p>estoy confundido <a href="https://bernsteinbear.com/blog/im-confused/">https://bernsteinbear.com/blog/im-confused/</a>, esto versa sobre
+el incremental aprendisaje magico de la informatica: no soy especial, no lo
+entiendo todo, de hecho endiendo poco, la constancia, el gusto y el tiempo son
+la unica diferencia entre un noob y yo</p>
+
+<p>&hellip;.</p>
+
+<p>el el blog de <a href="https://notxor.nueva-actitud.org/blog/2018/03/04/en-que-ando-2018/">notxor</a>
+(escribendo el nombre se entiende el nick) pusieron un par de enlaces
+relacionados con el lenguaje y la programacion que llebaron a otros enlaces mas
+como: <a href="https://www.gelbukh.com/">https://www.gelbukh.com/</a></p>
+
+<p>con dos materiales prometedores</p>
+
+<p><a href="https://www.gelbukh.com/libro-investigaciones/LibroSint.htm">https://www.gelbukh.com/libro-investigaciones/LibroSint.htm</a>
+<a href="https://www.gelbukh.com/libro-investigaciones/LibroSint.pdf">https://www.gelbukh.com/libro-investigaciones/LibroSint.pdf</a></p>
+
+<p>y tambien</p>
+
+<p><a href="https://www.gelbukh.com/libro-procesamiento-2/procesamiento-automatico.pdf">https://www.gelbukh.com/libro-procesamiento-2/procesamiento-automatico.pdf</a></p>
+
+<p>que me han aclarado como se llama ese campo encargado de analizar los lenguajes
+humanos: <strong>lingüística general</strong>. Tamben que los &ldquo;constructores&rdquo; del lenguaje
+(creo) se llaman <em>constituyentes</em></p>
+
+<p>No pase de los prologos las dos publicaciones (html y pdf) por que escapan a mis
+habilidades y conocimentos. Aun asi aportaron luz sobre como y a donde dirir
+futuras investigaciones en del morg.</p>
+
+<p>Me dieron ganas de agobiar inmediatamente con preguntas al autor en su correo
+(gelbukh@gelbukh.com), mas eperare un tiempo a terminar con los libros del
+patrones de diseño, ya despues a agobiar</p>
+
+<p>&hellip;</p>
+
+<p>La tirania de la conveniencia
+<a href="https://mobile.nytimes.com/2018/02/16/opinion/sunday/tyranny-convenience.html">https://mobile.nytimes.com/2018/02/16/opinion/sunday/tyranny-convenience.html</a>
+un post que viene a decir que la conveniencia moldea al mundo</p>
+
+<p>filices trazos!</p>
+
+<p><center>
+<img src="https://nasciiboy.github.io/img/SiluetaGiratoriaConAyudas.gif" alt="" />
+</center></p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.github.io/post/resonante/">◀ Festival resonante</a>
+    
+    
+  </div>
+
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/categories/prog">prog(40)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(30)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(11)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/tags/fonos">fonos(18)</a></li><li><a href="https://nasciiboy.github.io/tags/howto">howto(17)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(17)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(12)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elisp">elisp(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/hardware">hardware(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
