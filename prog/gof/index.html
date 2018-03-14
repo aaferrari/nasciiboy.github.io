@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Emacs web y noticias en modo texto</title>
+    <title>Desing Patterns (GoF)</title>
     <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
     <style>:root {
 
@@ -191,211 +191,191 @@ img:hover { border: 0.05em solid #fff; }
   <body>
     
 <main>
-  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/emacs">emacs</a></div>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
 
-  <h1>Emacs web y noticias en modo texto</h1>
+  <h1>Desing Patterns (GoF)</h1>
   
 
-<p><img src="../reunian-fieles-huespedes-cocinaban-asistentes.jpg" alt="" /></p>
+<p>Cuando era &ldquo;pequeño&rdquo;, al oir <em>Patrones de diseño</em>, lo unico que mi diminuta mente
+consebia era a un grupo de programadores a tope de egocentrismo, gozosos de
+inventarse terminos rimbombantes y pretenciosos, que solo ellos pudieran
+entender mientras reian y con una mano sujetaban sus monoculos y con la otra
+un a-y-h-p-a-d</p>
 
-<p>Eso de los <strong>rss</strong> parece ser mas bueno que encontrar un billete de alta
-denominacion, almenos esa es la impresion que tenia, ya que (casi) todas las
-paginas incluyen el icono naranja con unas barras.</p>
+<p>En aquella epoca de ignorancia, cada vez que iniciaba a programar algo
+medianamente complejo, siempre me preguntaba si no existia algun escrito
+perdido que proporcionara las herramientas para extructurar el codigo de forma
+organica, audaz e inteligente, como si de diseñar un organismo se tratara, donde
+todo funcionara en una armonica melodia y cada segmento de codigo tomara el
+lugar de un instrumento musical identificable, a la vez que se mezclaba con
+todos los demas.</p>
 
-<p>Cierto es que intente utilizarlo un par de veces, solo que lo encortre muy
-complejo&hellip; asi pues he pasado cerca de cinco años abriendo todos los dias los
-marcadores del firefox en manada, hasta que hace unos pocos dias <q>descubri</q>
-como es esto de los rss (pese a que este blog los genera automagicamente)</p>
+<p>Resulta pues, que sin proponermelo, fuera por la disposicion del codigo de
+ejemplo en los libros, por el uso de comandos del sistema o por necesidad y
+cabezoneria de resolver ciertos problemas, algunas de estas formas misticas de
+estructurar el codigo fueron apareciendo e incorporandose en forma de
+experiencia practica, no muy racionalizada, pero aun asi interiorizada en los musculos</p>
 
-<p>bien, un rss, no es mas que un fichero de texto plano formateado en xml, es
-decir, etiquetas que <code>&lt;abren&gt;</code> y etiquetas que <code>&lt;/cierran&gt;</code>. Este fichero
-almecena un resumen del contenido de un sitio o cosa, por ejemplo titulo de
-entradas, fechas de publicacion, resumen de la entrada, autor, enlace y
-demas&hellip; luego si tenemos un programa que sea capas de analizar dichos ficheros,
-podemos enterarnos de los cambios realizados en el sitio de nuestro interes.. y
-ya esta, no hay magia, javascript ni tecnologias web awesome y eso es bueno!</p>
+<p>mas sorprendente aun, fue descubrir, que estas &ldquo;tecnicas para organizar codigo&rdquo;
+ya existian y no estaban ocultas. Resulta que aquella palabra extravagante
+<em>Patron de diseño</em> era eso mismo que estube buscando desde el inicio, &ldquo;el metodo
+para estructurar el codigo de una forma razonable, inteligente (y en ocaciones organica)&rdquo;</p>
 
-<p>te estaras preguntando, ¿como puedo yo, resivir los beneficios de estos ficheros
-de texto plano? <strong>Emacs!</strong>. que? <code>gnus</code> de nuevo, no, gracias que es muy raro,
-intente con eso y fracase&hellip; espera, no abandones, hay otro modo desarrollado para
-gente sencilla como tu y como yo, su nombre es <strong>elfeed</strong></p>
+<p>&hellip; y el material donde se presentaron a sociedad los patrones lleba por nombre
+<em>Desing Patterns: Elements of Reusable Object-Oriented Software</em> o tambien
+apodado como <em>GoF</em></p>
 
-<h2 id="instalar-elfeed">Instalar <code>elfeed</code></h2>
+<p>&hellip; y la mejor manera que encuentro para presentar el material, no es otra que
+dejar unos extractos:</p>
 
-<p>Para instalar <code>elfeed</code> puedes utilizar el gestor de paquetes de emacs
-(repositorio melpa), o seguir el siguiente metodo apto solo para romanticos de
-manos inquietas.</p>
+<blockquote>
+<p>Los estudios de programadores expertos de lenguajes convencionales muestran
+ que el conocimiento y la experiencia no se organizan simplemente en torno a la
+ sintaxis, sino en estructuras conceptuales mayores, tales como algoritmos,
+ estructuras de datos y modismos, asi como en maneras de lograr un determinado
+ objetivo. Los diseñadores probablemente no piensan en la notacion
+ que estan usando para documentar su diseño, sino que intentan comparar la
+ situacion actual de diseño con planos, algoritmos, estructuras de datos y
+ modismos que han aprendido en el pasado.</p>
 
-<p>desde la terminal vamos a la ruta donde tengamos nuestros complementos para
-emacs, en mi caso es</p>
+<p>Los informaticos nominan y catalogan las estructuras de datos y algoritmos,
+ pero no suelen dar nombre a otros tipos de patrones. Los patrones de diseño
+ proporcionan un vocabulario comun que los diseñadores usan para comunicar,
+ documentar y explorar alternativas de diseño. Los patrones de diseño hacen que
+ un sistema parezca menos complejo, permitiendonos hablar de el con un mayor
+ nivel de abstraccion del que permite una notacion de diseño o un lenguaje de
+ programacion. Los patrones de diseño elevan el nivel en el que diseñamos y
+ discutimos diseños con nuestros colegas.</p>
 
-<pre><code class="language-sh">cd ~/.emacs.d/plugins/
+<p>Una vez que haya absorbido los patrones de diseño, su
+ vocabulario de diseño cambiara casi con toda seguridad. Hablara directamente
+ en terminos de los nombres de los patronesde diseño. Se oira asi mismo decir
+ cosas como &ldquo;aqui deberiamos usar el patron Observer&rdquo;, o &ldquo;extraigamos una
+ estrategia de estas clases&rdquo;.</p>
+</blockquote>
+
+<p>tambien:</p>
+
+<blockquote>
+<p>Una de las mejores cosas de los patrones es que apartan las decisiones de
+diseño del reino de la mera intuicion. Permiten que los autores sean
+explicitos sobre las ventajas e inconvenientes que proporcionan, lo que
+facilita ver los fallos de sus patrones y discutir con ellos.</p>
+</blockquote>
+
+<p>y finalmente la definicion misma de los patrones ::</p>
+
+<blockquote>
+<p>Un patron de diseño nomina, da los motivos y explica sistematicamente un
+diseño general que resuelve un problema de diseño recurrente en los sistemas
+orientados a objetos. Describe el problema, la solucion, cuando aplicar este
+y sus consecuencias. Tambien ofrece trucos de implementacion y ejemplos. La
+solucion es una disposicion general de clases y objetos que resuelven el
+problema. Esta adaptada e implementada para resolver el problema en un
+determinado contexto.</p>
+</blockquote>
+
+<p>imposible explicarlo mejor!</p>
+
+<p>Solo unas breves anotaciones personales para el yo del pasado:</p>
+
+<p>Primero, al libro le hace falta codigo &ldquo;real&rdquo; (almenos en la vercion que poseo.
+La vercion en ingles menciona un CD con material, pero desconosco su alcance).
+Se presentan fragmentos de codigo solo lo suficientemente desarrollados
+como para (si se presta atencion y se guarda dicho codigo con avaricia) poder
+crear una implementacion &ldquo;basada en&rdquo; y hacerla funcionar. Esto no cumple
+demaciado con mis estadares didacticos para subnormal, pero es mejor que nada.</p>
+
+<p>Segundo, se utilizan diagramas algo cripticos con una sintaxis &ldquo;inventada y
+vieja&rdquo;, asi que revisar el apendice que habla de ello, para darle algo de
+sentido. Ademas para el codigo utilizan un C++ &ldquo;primitivo&rdquo; y algo de otro
+lenguaje llamado smalltalk, que aunque sencillo (en el caso de tener un bagaje
+minimo con C++) seguramente no sera donde termines aplicando los patrones</p>
+
+<p>y finalmente, La secciones de Implementacion, Codigo de Ejemplo y Usos Conocidos
+de cada patron, en una primer lectura pueden abrumar y/o quedar en nada. Son
+muchos patrones (aunque varios con aplicaciones &ldquo;similares&rdquo;), lo mas sensato es
+enterarse donde, como y para que aplicarlos, asociarlos con su nombre y luego ya
+si se da la oportunidad, investigar como implementar una vercion en codigo
+practico y de ser posible, implementarla en el lenguaje donde te sientas comodo</p>
+
+<p>y ya esta, este jodido año estara en su mayoria dedicado a conocer, implementar
+y adaptar patrones. Chahh, con esto y dominar las interfaces/composicion (y
+canales) de Go sera mas que suficiente&hellip; si no se cuela otro hobbie por
+medio&hellip; asm para gameboy (love2d, rust, (e)lisp, asm de arduino, haskell,
+educacion escolarisada, trabajo(???)), no te acerces, alejate, a-l-e-j-a-t-e</p>
+
+<h2 id="cobaya">cobaya</h2>
+
+<pre><code>git clone https://github.com/nasciiboy/GoF_Desing-Patterns
 </code></pre>
 
-<p>luego descargamos el codigo</p>
+<p>Como cualquier material que me importe un poco, Patrones de Diseño (GoF) ha
+valido una adaptacion al formato de marcas (siempre en desarrollo, lento, lento
+desarrollo del) morg (patrones == mas-desarrollo).</p>
 
-<pre><code class="language-sh">git clone https://github.com/skeeto/elfeed.git
-</code></pre>
+<p>La mision comenzo a principios de noviembre (&hellip; supongo, porque el primer commit
+es del 2 de diciembre). El material de referencia fue un pdf
+infecto en español de aquellos que traen &ldquo;fotocopias&rdquo;.</p>
 
-<p>ahora abrimos emacs, vamos a nuestro fichero de configuracion y agregamos esto</p>
+<p>Lo primero fue transcribir a mano alzada palabra a palabra. Al principio probe a
+aplicar un ocr, pero la tecnologia esa aun entrega resultados bastante jodidos,
+sobre todo si como en este caso el texto no se ve y esta dispuesto de forma
+optima. Lo mas dificultoso, fueron las secciones finales del PDF, pues tenia paginas en
+desorden, asi como algunos bordes de texto desaparecido.</p>
 
-<pre><code class="language-elisp">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; PACKAGE: elfeed               ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; source: https://github.com/skeeto/elfeed.git
-(add-to-list 'load-path &quot;~/.emacs.d/plugins/elfeed/&quot;)
-(require 'elfeed)
+<p>Luego de la mecanografiada vino una revision superficial, y al mismo tiempo (con
+otro pdf algo infecto) la adaptacion del material en ingles al morg,
+que es de donde se extraen las imagenes en el producto final. Al principio la
+idea era hacer una version en SVGs de las imagenes, tanto para la version en
+ingles como en español&hellip; pero es mucho, mucho trabajo y en este momento no
+tengo el interes (o necesidad) para hacerlo.</p>
 
-;; aqui van los feeds que nos interesen
-(setq elfeed-feeds
-      '(
-        &quot;http://blog.chuidiang.com/feed/&quot;
-        &quot;http://blog.desdelinux.net/feed/&quot;
-        &quot;http://blogubuntu.com/feed&quot;
-        &quot;http://cucarachasracing.blogspot.com/feeds/posts/default?alt=rss&quot;
-        &quot;http://elarmarioinformatico.blogspot.com/feeds/posts/default&quot;
-        &quot;http://es.xkcd.com/rss/&quot;
-        &quot;http://feeds.feedburner.com/diegocg?format=xml&quot;
-        &quot;http://feeds.feedburner.com/Esbuntucom?format=xml&quot;
-        &quot;http://feeds.feedburner.com/GabuntuBlog&quot;
-        &quot;http://feeds.feedburner.com/ramonramon&quot;
-        &quot;http://feeds.feedburner.com/teknoplof/muQI?format=xml&quot;
-        &quot;http://feeds.feedburner.com/Ubunlog?format=xml&quot;
-        &quot;http://feeds.feedburner.com/UnBrutoConDebian?format=xml&quot;
-        &quot;http://fernand0.github.io/feed.xml&quot;
-        &quot;http://humanos.uci.cu/feed/&quot;
-        &quot;http://lamiradadelreplicante.com/feed/&quot;
-        &quot;http://linuxmanr4.com/feed/&quot;
-        &quot;http://misnotaslinux.blogspot.com/feeds/posts/default&quot;
-        &quot;http://nasciiboy.github.io/index.xml&quot;
-        &quot;http://planet.emacsen.org/atom.xml&quot;
-        &quot;http://quijotelibre.com/feed/&quot;
-        &quot;http://radioela.org/spip.php?page=backend&quot;
-        &quot;http://ranchoelectronico.org/feed/&quot;
-        &quot;http://red-orbita.com/?feed=rss2&quot;
-        &quot;http://rufianenlared.com/feed/&quot;
-        &quot;http://softwarelibre.deusto.es/feed/&quot;
-        &quot;http://totaki.com/poesiabinaria/feed/&quot;
-        &quot;http://www.blackhats.es/wordpress/?feed=rss2&quot;
-        &quot;http://www.kdeblog.com/feed/&quot;
-        &quot;http://www.lapipaplena.net/feed/&quot;
-        &quot;http://www.linuxadictos.com/feed&quot;
-        &quot;http://www.linuxhispano.net/feed/&quot;
-        &quot;http://www.maxxcan.com/feed/&quot;
-        &quot;http://www.muylinux.com/feed/&quot;
-        &quot;http://www.portallinux.es/feed&quot;
-        &quot;http://www.tomatesasesinos.com/feed/&quot;
-        &quot;http://www.tomatuordenador.net/feed/&quot;
-        &quot;http://www.ubuntizando.com/feed/&quot;
-        &quot;https://asm86.wordpress.com/feed/&quot;
-        &quot;https://autodefensainformatica.radioalmaina.org/feed/&quot;
-        &quot;https://birrasybits.wordpress.com/feed/&quot;
-        &quot;https://blog.adrianistan.eu/feed/&quot;
-        &quot;https://cartaslinux.wordpress.com/feed/&quot;
-        &quot;https://colaboratorio.net/feed/&quot;
-        &quot;https://comunicatelibremente.wordpress.com/feed/&quot;
-        &quot;https://daemons.cf/rss.xml&quot;
-        &quot;https://diariodeunalinuxera.com/feed/&quot;
-        &quot;https://elbinario.net/feed/&quot;
-        &quot;https://eliasbrasa.wordpress.com/feed/&quot;
-        &quot;https://elpinguinotolkiano.wordpress.com/feed/&quot;
-        &quot;https://elzorrolibre.noblogs.org/feed/&quot;
-        &quot;https://enekoamieva.com/blog/feed/&quot;
-        &quot;https://gutl.jovenclub.cu/feed/&quot;
-        &quot;https://h4ckseed.wordpress.com/feed/&quot;
-        &quot;https://jummp.wordpress.com/feed/&quot;
-        &quot;https://jvare.com/feed/&quot;
-        &quot;https://kernelpanicblog.wordpress.com/feed/&quot;
-        &quot;https://lasindias.blog/feed&quot;
-        &quot;https://leninmhs.wordpress.com/feed/&quot;
-        &quot;https://lignux.com/feed/&quot;
-        &quot;https://linuxgnublog.org/es/feed&quot;
-        &quot;https://mierda.tv/feed/&quot;
-        &quot;https://miguelpinia.wordpress.com/feed/&quot;
-        &quot;https://ondahostil.wordpress.com/feed/&quot;
-        &quot;https://otroespacioblog.wordpress.com/feed/&quot;
-        &quot;https://pfctelepathy.wordpress.com/feed/&quot;
-        &quot;https://picodotdev.github.io/blog-bitix/index.xml&quot;
-        &quot;https://radioslibres.net/rss/&quot;
-        &quot;https://victorhckinthefreeworld.com/feed/&quot;
-        &quot;https://vidaembebida.wordpress.com/feed/&quot;
-        &quot;https://www.atareao.es/blog/feed/&quot;
-        &quot;https://www.linuxito.com/?format=feed&amp;type=rss&quot;
-        &quot;https://www.ochobitshacenunbyte.com/feed/&quot;
-        &quot;https://xkcd.com/rss.xml&quot;
-        ))
-</code></pre>
+<p>ya terminada tanto la adaptacion en ingles (sin correccion alguna y apenas
+uno que otro enfasis del texto, solo adaptacion) como la primer revision
+del texto en español, llego el momento de leer a detalle el material y aprender
+formalmente, o esa era la idea. En la segunda revision, se corrigieron muchas
+distografias, algunas tan aberrantes como <strong>patrnose</strong> (patrones), lol, como es
+posible escribir de esa manera? digo, entiendo substituir un caracter por alguno
+en su cercania en el teclado, pero cambiar varias letras de posicion unicamente
+puede revelar desordenes cognitivos exacervados &hellip; ademas de eso, se corrigieron &ldquo;lineas
+repetidas&rdquo;, palabras &ldquo;inventadas&rdquo; y oraciones no incluidas.</p>
 
-<p>evaluamos el codigo, y ya tenemos nuestro leector rss. Para modificar o añadir
-nuevos feeds modifica las cadenas de la variable <code>elfeed-feeds</code></p>
+<p>No todos los errores los inclui, algunos ya estaban presentes en el material
+traducido y los deje tal cual.</p>
 
-<p>para hacer mas comodo el asunto, agreguemos un par de accesos directos a nuestro
-leector</p>
+<p>Para las regiones en el PDF que no estaban visibles, utilice el traductor y la
+version en ingles</p>
 
-<pre><code class="language-elisp">(global-set-key [f7] 'elfeed)
-(global-set-key [f8] 'elfeed-update)
-</code></pre>
+<p>Finalmente el repositorio cuenta con versiones en html de los materiales, solo
+por que el exportador del morg lo permite y para que quien no concuerde con mi
+vision de documentacion en texto plano disponible directamente en el &ldquo;editor&rdquo; de
+texto (emacs (por el momento como apaño) y con un marcador de por medio) tambien pueda aprovecharlo.</p>
 
-<p>al presionar <code>F7</code> se abre el lector, con <code>F8</code> actualizamos los feeds</p>
+<p>si te es de utilidad y ademas corriges algunos palabros y encima quieres
+agregarlos al repo pero sin que quede registrado, puedes enviarme el texto
+corregido tal cual por correo (ademas de la cuenta habitual (ver el fondo),
+tengo cuenta en protonmail, tambien como nasciiboy), cifrar y tomar
+consideraciones extra&hellip; claro, solo si se considera que difundir la cultura (en
+todas sus formas) es incorrecto.</p>
 
-<p><img src="../elfeed.png" alt="" /></p>
+<p>El resto, como revisar, enfatizar y corregir la version en ingles, asi como todo
+lo relacionado con las imagenes, lo dejo en manos de las generaciones por venir</p>
 
-<p>para ver la entrada, colocamos el cursor sobre esta y damos un enter</p>
+<p>(o coloque un mandelbrot como &ldquo;caratula&rdquo; del libro, porque no se&hellip; hay algo que
+diga mas patron y diseño que un mandelbrot?)</p>
 
-<p><img src="../elfeed-show.png" alt="" /></p>
-
-<p>si presionamos <code>b</code> o nos posicionamos en el enlace + un enter, la entrada se
-abrira en el navegador del sistema! Tambien podemos copiar la ruta de enlace
-pulsando <code>y</code></p>
-
-<p>para regresar a las entradas presionamos <code>q</code> y para marcar una entrada como
-leeida <code>r</code></p>
-
-<h2 id="elfeed-eww"><code>elfeed</code> + <code>eww</code></h2>
-
-<p>ver la entrada en el navegador esta muy bien, pero no me gustan el javascript,
-los anuncios ni las cosas modernas, que puedo hacer? Emacs incorpora un
-navegador de texto plano <code>eww</code>, podemos abrir los enlaces desde el visor de
-entradas de elfeed:</p>
-
-<ul>
-<li><p>primero colocamos el cursor en el enlace y presionamos <code>M-x eww</code>,</p></li>
-
-<li><p>veras que aparece el enlace como el parametro por defecto, damos enter o
-colocamos una direccion distinta + un enter</p></li>
-</ul>
-
-<p><img src="../eww.png" alt="" /></p>
-
-<p>para salir de <code>eww</code> y regresar a <code>elfeed</code> pulsamos <code>q</code></p>
-
-<p>hagamos mas sencilla la operacion agregando algunos atajos para <code>eww</code> en nuestra
-configuracion</p>
-
-<pre><code class="language-elisp">(global-set-key [f5] 'eww)
-(global-set-key (kbd &quot;C-x w o&quot;) 'eww)
-(global-set-key (kbd &quot;C-x w b&quot;) 'eww-add-bookmark)
-(global-set-key (kbd &quot;C-x w l&quot;) 'eww-list-bookmarks)
-(global-set-key (kbd &quot;C-x w f&quot;) 'eww-open-file)
-</code></pre>
-
-<p>ahora para abrir los enlaces, colocamos el cursor en el enlace y pulsamos <code>F5</code> o
-<code>C-x w o</code></p>
-
-<p>Listo, vive la web en texto plano, el tiempo extra lo puedes utilizar para ver
-porno, escribir un blog o lo que sea&hellip; <code>¯\_(ツ)_/¯</code></p>
+<p>happy typping!</p>
 
 
   <div class="clear" class="center">
     
-    <a class="previous" href="https://nasciiboy.github.io/emacs/keychords/">◀ Definir atajos en Emacs</a>
+    <a class="previous" href="https://nasciiboy.github.io/prog/awk/">◀ AWK</a>
     
-    
-    <a class="next" href="https://nasciiboy.github.io/emacs/org-mode/"> org mode ▶</a>
     
   </div>
 
-  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/emacs">emacs</a></div>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
 </main>
 
     <aside>
