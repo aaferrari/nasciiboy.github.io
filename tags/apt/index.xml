@@ -203,7 +203,7 @@ html { background-color: #000; }
 
 .gb_Ag { display: none; }
 
-.gb_T .gb_Ig {
+.gb_T .gb_Lg {
     display: none;
 }
 
