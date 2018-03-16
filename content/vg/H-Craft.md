@@ -1,14 +1,8 @@
 +++
 date = "2016-12-17T08:29:18-06:00"
-categories = [
-  "vg",
-]
-tags = [
-  "racer",
-]
+categories = [ "vg" ]
+tags = ["racer"]
 title = "H Craft Championship"
-draft = true
-
 +++
 
 ![](../hcraft01.jpg)

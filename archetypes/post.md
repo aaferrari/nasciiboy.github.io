@@ -1,7 +1,7 @@
 +++
-title      = ""
+title      = "{{ replace .TranslationBaseName "-" " " | title }}"
 tags       = [ "" ]
 categories = [ "post" ]
-date       = ""
-draft      = true
+date       = {{ .Date }}
+draft      = false
 +++

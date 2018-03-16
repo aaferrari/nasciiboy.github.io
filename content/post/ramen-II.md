@@ -1,10 +1,8 @@
 +++
 categories = ["post"]
 date = "2017-05-14T21:52:45-05:00"
-draft = true
 tags = ["ramen","anime","fonos"]
 title = "Ramen II"
-
 +++
 
 Ho, ho, ho, ho! un par de temas alteran mi ser, ambos relacionados con el

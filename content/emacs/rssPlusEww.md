@@ -1,14 +1,8 @@
 +++
-draft = true
 date = "2017-01-18T09:29:17-06:00"
-categories = [
-  "emacs",
-]
-tags = [
-  "rss", "eww", "elfeed",
-]
+categories = ["emacs"]
+tags = ["rss", "eww", "elfeed"]
 title = "Emacs web y noticias en modo texto"
-
 +++
 
 ![](../reunian-fieles-huespedes-cocinaban-asistentes.jpg)

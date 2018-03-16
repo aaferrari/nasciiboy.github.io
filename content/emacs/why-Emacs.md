@@ -2,13 +2,11 @@
 categories = ["emacs"]
 date = "2017-07-02T12:26:47-05:00"
 draft = true
-tags = [""]
 title = "Por que GNU Emacs?"
-
 +++
 
 > Si el tiempo antes de precindir de interfaces para interactuar con los
-> computadores se extiende lo suficiente, Emacs, terminara por ser un sistema
+> computadores se extiende lo suficiente, Emacs terminara por ser un sistema
 > operativo autosuficiente
 
 coloca una pista de sonido, relajate y disfruta de este post al estilo *"lo que
@@ -18,49 +16,50 @@ creer el final"*, *"Emacs el editor que no esperabas"*, ...
 〜(￣△￣〜) he, pero es que yo utilizo (vim|VS|atom|eclipse|nano|...) y no necesito
 un editor viejuno y raro!
 
-(∿°○°)∿ tu-ru-ru-ru-ru-ru ohhh yeah! estoy mas cerca de un usuario basico, que
-uno intermedio de Emacs, no tengo duda alguna que lo que sea que hagas con tu
-editor actual lo podrias hacer con Emacs, que sea de forma sencilla, ya es otra
-cosa, mientras tanto, piensa en el como un estupendo complemento/substituto para
-varias herramientas, o un proyecto a largo o mediano plazo que estoy
-absolutamene seguro disfrutaras
+(∿°○°)∿ tu-ru-ru-ru-ru-ru! aun siendo un "usuario basico" en el camino de Emacs,
+no tengo duda alguna de, que sea lo que sea hagas con tu editor actual, podras
+hacerlo con Emacs... que la configuracion de dicha actividad pueda realizarce de
+forma sencilla (o no), ya es otro asunto. Mientras tanto, piensa en Emacs como un
+estupendo complemento/substituto para varias herramientas, o como un proyecto a
+largo o mediano plazo que estoy absolutamene seguro sera "productivo" y satisfactorio
 
-la forma mas simple para explicar por que emacs, seria **terminal vs
+Pues bien, la forma mas simple para explicar "por que emacs" seria **terminal vs
 aplicaciones graficas**, para el segundo tienes un monton de interfaces
 distintas no diseñadas para colaborar entre si, para el primero solo hace falta
-un poco de aprendizaje antes de comenzar a concatenar acciones, que de otra forma
-serian extenuantes
+un poco de aprendizaje antes de comenzar a concatenar acciones, que de otra
+forma serian extenuantes
 
 Emacs, es un interprete, que hace muchas cosas, pero todas ellas con una
 "interfaz" comun, es decir, si sabes como moverte en un fichero de texto, sabes
-como moverte en alguna de sus varias "aplicaciones", pues sus programadores
+como moverte en alguna de sus varias "aplicaciones" pues sus programadores
 tratan de lograr una coherencia global en cuanto al significados de los comandos
 que pueden aplicarse, y en caso de duda siempre tienes la documentacion a mano
 
-｢(ﾟﾍﾟ) bueno, entoces ocupas emacs para hacer de todo?
+｢(ﾟﾍﾟ) bueno, entoces puedes ocupar emacs para hacer de todo?
 
 ＼_(￣、￣ 彡 ￣ー￣)_／ －☆・　・　・　‥……━━●
 
-no, pero no hay dia que encienda el pc sin abrir varias instancias de emacs, diria que
-paso el 80% del tiempo en emacs, con varias terminales
-
-de ves en cuando aprendo un nuevo truco, mas, en Emacs, la distancia entre mis
-habilidades y el dominio total, es tan grande como lo es el mar
+si y (personalmente) no, pero no hay dia que encienda el pc sin abrir varias
+instancias de emacs. Diria que paso el 80% del tiempo en emacs en compañia de
+varias terminales, firefox, moc y algunas otras aplicaciones. De vez en cuando
+aprendo un nuevo truco, mas, en Emacs, la distancia entre mis habilidades y el
+dominio total, es tan grande como lo es el mar
 
 (｡´>д<)っ彡 entoces que haces?
 
-leer libros, maquetar libros, organizar/elimimar/navegar ficheros, programar, de
-ves en cuando navegar por la red, ver irc, revisar feeds, algo de git y poco mas.
+leer libros, "maquetarlos", organizar/elimimar/navegar ficheros, programar,
+revisar feeds, de ves en cuando navegar por la red, ver irc, algo de git y poco
+mas.
 
-me gustaria leer tambien el correo, pero no he encontrado un tutorial para vagos
+me gustaria gestionar tambien el correo, pero no he encontrado un tutorial para vagos
 
 que? cual es el punto de hacer eso con emacs?
 
 (｡´>д<)っ彡
 
-1. como mayor virtud, esta la interfas uniforme, no importa la rareza del
+1. como mayor virtud, esta la interfaz uniforme, no importa la rareza del
    lenguaje de programacion, si es un visor rss, o un navegador de archivos, los
-   comandos principiales cumplen el mismo proposito, es decir no tengo que
+   comandos principiales cumplen el mismo proposito, es decir, no tengo que
    recordar comportamientos independientes para cada situacion, ni navegar por
    raros menus o botones graficos misteriosos
 

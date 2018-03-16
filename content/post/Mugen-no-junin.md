@@ -3,7 +3,6 @@ title      = "Mugen no jūnin"
 tags       = [ "manga" ]
 categories = [ "post" ]
 date       = "2017-03-05T11:49:56-06:00"
-draft      = true
 +++
 
 ![](../manji.jpg)

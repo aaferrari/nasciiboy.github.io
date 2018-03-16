@@ -1,10 +1,8 @@
 +++
 categories = ["love2d"]
 date = "2017-07-22T09:06:44-05:00"
-draft = true
 tags = ["apt"]
 title = "Love, Emacs & Docs"
-
 +++
 
 *Love2d* es un framework "open source" para crear videojuegos 2D multiplataforma
@@ -157,6 +155,8 @@ consideracion para los deviles de voluntad
 https://github.com/love2d-community/awesome-love2d, recopilacion de recursos
 para programacion
 
+http://love2d-community.github.io/love-api/ pagina con la api en html
+
 http://sheepolution.com/learn/book/contents, un tutorial con obejas, desde las
 bases hasta lo basico
 
@@ -164,5 +164,7 @@ https://github.com/SSYGEA/blog/, no lo he leido, parace interesante
 
 http://www.lua.org/manual/5.1/es/manual.html, el manual de lua en español, no te
 dejes engañar, es mas extenso de lo que aparenta
+
+https://love2d.org/wiki/Category:Games, recopilacion de bastantes videojuegos
 
 Eso es todo por esta sesion, happy hacking!

@@ -1,10 +1,8 @@
 +++
 categories = ["prog"]
 date = "2017-04-11T12:38:06-05:00"
-draft = true
 tags = [ "ncurses" ]
 title = "Programmer's Guide to NCurses"
-
 +++
 
 ![](../gumy.jpg)

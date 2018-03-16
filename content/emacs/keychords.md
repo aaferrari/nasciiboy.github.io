@@ -2,13 +2,8 @@
 title = "Definir atajos en Emacs"
 draft = true
 date = "2017-01-07T09:38:46-06:00"
-categories = [
-  "emacs",
-]
-tags = [
-  "howto",
-]
-
+categories = ["emacs"]
+tags = ["howto"]
 +++
 
 ![](../kara.jpg)

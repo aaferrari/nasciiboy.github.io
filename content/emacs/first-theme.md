@@ -1,14 +1,8 @@
 +++
-draft = true
 date = "2016-12-28T17:17:04-06:00"
-categories = [
-  "emacs",
-]
-tags = [
-  "",
-]
+categories = ["emacs"]
+tags = ["howto"]
 title = "first theme"
-
 +++
 
 ## Crear un Tema en Emacs

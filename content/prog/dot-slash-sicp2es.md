@@ -1,10 +1,8 @@
 +++
 categories = ["prog"]
-date = "2017-07-06T18:27:56-05:00"
-draft = true
+date = "2017-07-07T18:27:56-05:00"
 tags = ["morg", "docu", "sicp" ]
 title = "SICP (proyecto de traduccion)"
-
 +++
 
 ![](/img/jelly.jpg)

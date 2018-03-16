@@ -1,14 +1,8 @@
 +++
-tags = [
-  "solarus",
-]
+tags = ["solarus", "zelda"]
 title = "Zelda solarus"
-draft = true
 date = "2017-01-01T14:56:59-06:00"
-categories = [
-  "vg",
-]
-
+categories = ["vg"]
 +++
 
 ![](../solarus_logo.png)

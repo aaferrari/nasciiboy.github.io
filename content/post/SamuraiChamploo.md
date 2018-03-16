@@ -1,14 +1,8 @@
 +++
 date = "2017-01-31T12:06:31-06:00"
-categories = [
-  "post",
-]
-tags = [
-  "fonos",
-]
+categories = ["post"]
+tags = ["fonos"]
 title = "Samurai Champloo ♪"
-draft = true
-
 +++
 
 ![](../samurai-champloo.jpg)

@@ -1,10 +1,8 @@
 +++
 categories = ["prog"]
 date = "2017-04-20T11:54:03-05:00"
-draft = true
 tags = ["morg"]
 title = "Nirvana"
-
 +++
 
 ![](/img/katana-0.png)

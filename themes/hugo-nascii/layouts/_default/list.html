@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main>
+  <article class="index">
+    <!-- <header> -->
+    <!--   <h1 class="h-anim">Love Games</h1> -->
+    <!-- </header> -->
+    <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+  </article>
+  <!-- Ranges through content/post/*.md -->
+  {{ .Content }}
+
+  <ul class="nav">
+    {{ range .Site.Sections }}
+    <li><a href="{{ .Permalink }}">{{ .Title | lower }}</a></li>
+    {{ end }}
+  </ul>
+
+  {{ range .Data.Pages }}
+  <article class="li">
+    <header>
+      {{ .Date.Format "01 02" }} <a class="title" href="{{.Permalink}}">{{.Title}}</a>
+    </header>
+  </article>
+  {{ end }}
+
+
+</main>
+{{ end }}

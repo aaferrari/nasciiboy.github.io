@@ -1,10 +1,7 @@
 +++
 categories = ["vg"]
 date = "2017-07-20T22:21:43-05:00"
-draft = true
-tags = [""]
 title = "SShooter"
-
 +++
 
 > ¿Es posible que el software no sea como cualquier otra cosa, que está

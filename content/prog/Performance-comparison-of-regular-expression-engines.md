@@ -1,14 +1,9 @@
 +++
 draft = true
 date = "2016-12-16T20:22:03-06:00"
-categories = [
-  "prog",
-]
-tags = [
-  "regexp",
-]
+categories = [ "prog" ]
+tags = ["regexp" ]
 title = "Performance comparison of regular expression engines"
-
 +++
 
 Hola gente, hace unos meses tome el codigo de **dark100** "Performance

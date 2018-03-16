@@ -1,14 +1,9 @@
 +++
 draft = true
 date = "2016-12-19T11:29:56-06:00"
-categories = [
-  "vg",
-]
-tags = [
-  "nxEngine", "Dokutsu Monogatari",
-]
+categories = [ "vg" ]
+tags = [ "nxEngine" ]
 title = "nxEngine"
-
 +++
 
 ![](../Dokutsu.jpg)

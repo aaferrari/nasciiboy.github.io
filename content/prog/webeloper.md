@@ -1,10 +1,8 @@
 +++
 categories = ["prog"]
 date = "2017-07-10T23:03:56-05:00"
-draft = true
-tags = ["install"]
+tags = ["apt"]
 title = "Webeloper – El navegador web"
-
 +++
 
 joder, que gracioso, ho, ho, ho, veamos si existe la remota posibiidad que nadie
@@ -141,7 +139,7 @@ le instale ScriptSafe en modo paranoico, ni js, ni funtes externas,
 botones sociales, ni analitics, tambien desactivadas cookies de todo sitio pues
 en este navegador no voy a logear con nada (para eso mantrendre firefox), ademas
 por cualquier duda tambien privacy bagner, uBlock Origin, un tema obscuro y una
-extencion curiosa (GPL3) para sobreescribir los atributos css de las paginas *Stylus*
+extencion curiosa (GPL3) para sobreescribir los atributos css de las paginas [*Stylus*](https://github.com/openstyles/stylus)
 (disponible tambien en firefox) que tiene cosas un poco turbias con js pero
 parece ser confiable
 

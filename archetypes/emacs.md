@@ -1,7 +1,7 @@
 +++
-title      = ""
+title      = "{{ replace .TranslationBaseName "-" " " | title }}"
 tags       = [ "" ]
 categories = [ "emacs" ]
-date       = ""
-draft      = true
+date       = {{ .Date }}
+draft      = false
 +++

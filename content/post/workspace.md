@@ -1,14 +1,8 @@
 +++
 date = "2017-01-20T22:16:06-06:00"
-categories = [
-  "post",
-]
-tags = [
-  "gnome",
-]
+categories = ["post"]
+tags = ["gnome"]
 title = "la forma en que trabajo"
-draft = true
-
 +++
 
 Me gusta leer sobre la configuracion de otras personas, ver videos reseñando

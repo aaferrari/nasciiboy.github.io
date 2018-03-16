@@ -1,14 +1,7 @@
 +++
-categories = [
-  "prog",
-]
-tags = [
-  "",
-]
+categories = ["prog"]
 title = "2017Challenges"
-draft = true
 date = "2017-01-04T20:41:22-06:00"
-
 +++
 
 ![](../orange.jpg)

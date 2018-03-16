@@ -1,0 +1,14 @@
+# theme.toml template for a Hugo theme
+
+name = "nascii Theme"
+license = "MIT"
+licenselink = "https://github.com/nasciiboy/nascii-theme/LICENSE.md"
+description = "a specific theme for love-games"
+homepage = "http://example.com/"
+tags = ["prog", "nascii", "emacs", "ramen"]
+features = ["no-css", "no-js", "no-analitics"]
+min_version = "0.25.1"
+
+[author]
+  name = "nasciiboy"
+  homepage = "nasciiboy.github.io"

@@ -2,9 +2,8 @@
 categories = ["vg"]
 date = "2017-05-02T20:02:37-05:00"
 draft = true
-tags = ["howto"]
+tags = ["howto", "apt"]
 title = "PPSSPP"
-
 +++
 
 ![](../fs.jpg)
@@ -55,7 +54,7 @@ la instalas)
 ```
 git clone https://github.com/hrydgard/ppsspp.git
 cd ppsspp
-git submodule update --init
+git submodule update --init --recursive
 ./b.sh
 cd build
 ```

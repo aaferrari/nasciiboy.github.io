@@ -1,0 +1,12 @@
+<footer>
+  <p>{{ with .Site.Params.Licence }}Licence: <em>{{ . | safeHTML }}</em>{{ else }}<span class="h-logo">&copy; {{ .Site.Title }}</span>{{ end }}.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+{{ with .RSSLink }}<b>Feed <a href="{{ . }}">RSS</a><b>.{{ end }}
+{{ with .Site.Params.Email }} Contact <a href="mailto:{{ . }}">{{ . }}</a><b>.{{ end }}
+{{ if .Site.Params.GPG }}<b> GPG {{ with .Site.Params.GPGSource }}<a href="{{ . }}">{{ end }}{{ .Site.Params.GPG }}{{ with .Site.Params.GPGSource}}</a>{{ end }}<b>.{{ end }}
+{{ if .Site.Params.Donate }}<b> Donar {{ with .Site.Params.DonateSource }}<a href="{{ . }}">{{ end }}{{ .Site.Params.Donate }}{{ if .Site.Params.DonateSource}}</a>{{ end }}<b>.{{ end }}
+{{ with .Site.Params.Repo }} Source <a href="{{ . }}">Code</a><b>.{{ end }}
+
+
+</p>
+</footer>

@@ -1,10 +1,8 @@
 +++
 date = "2017-03-02T06:37:35-06:00"
 categories = ["prog"]
-tags = ["morg"]
+tags = [ "morg" ]
 title = "morg"
-draft = true
-
 +++
 
 Que tal, por fin tras un año de hacer el vago ha surgido el primer exportador

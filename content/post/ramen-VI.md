@@ -1,10 +1,8 @@
 +++
 categories = ["post"]
 date = "2017-07-13T19:50:42-05:00"
-draft = true
 tags = ["ramen", "fonos"]
 title = "Ramen VI – Commodore"
-
 +++
 
 > Compañeros uploaders agradezco como siempre que recuerden a este su foro para

@@ -1,10 +1,7 @@
 +++
 categories = ["post"]
 date = "2017-05-15T18:17:59-05:00"
-draft = true
-tags = [""]
 title = "El fin de la infancia... del Software Libre"
-
 +++
 
 El <q>open source</q> a triunfado! incuestionable es afirmar que todas las "grandes"

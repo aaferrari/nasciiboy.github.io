@@ -1,10 +1,8 @@
 +++
 categories = ["prog"]
 date = "2017-07-10T17:57:10-05:00"
-draft = true
 tags = ["sicp"]
 title = "SICP [es] – Guia para Colaboradores"
-
 +++
 
 Bienvenidos los contribuidores a la traduccion No oficial de libro SICP al
@@ -27,7 +25,7 @@ Happy Hacking!
 
 ## Pasos
 
-Este trabajo se encuentra gestionado por el sitema de control de versiones git,
+Este trabajo se encuentra gestionado por el sitema de control de versiones `git`,
 sobre la plataforma github en la que se realizaran los "pull request", sin
 embargo si no desea registrarse en dicha plataforma, puede enviar su propuesta
 de cambios dentro de un comprimido en formato *zip* o *tar* al correo
@@ -136,11 +134,6 @@ distrubucion Fedora
 Para optener la exportacion del fichero principal al formato html
 
     morg toHtml sicp.morg
-
-Si desea el resaltado de sintaxis por fabor instale antes en su sistema
-pygmentize (python pyments) con el comando
-
-    pid install pygments
 
 Para generar el fichero morg del libro en español apartir del fichero de
 traduccion

@@ -1,14 +1,8 @@
 +++
-draft = true
 date = "2016-12-25T15:13:24-06:00"
-categories = [
-  "emacs",
-]
-tags = [
-  "install",
-]
+categories = ["emacs"]
+tags = ["install", "apt"]
 title = "Emacs - first blood"
-
 +++
 
 ![](../first-blood.jpg)

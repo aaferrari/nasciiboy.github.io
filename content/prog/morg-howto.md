@@ -1,14 +1,8 @@
 +++
-tags = [
-  "morg", "howto",
-]
+tags = [ "morg", "howto" ]
 title = "morg: como usar"
-draft = true
 date = "2017-03-12T09:33:15-06:00"
-categories = [
-  "prog",
-]
-
+categories = [ "prog" ]
 +++
 
 ![](../hello.jpg)

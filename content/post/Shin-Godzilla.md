@@ -1,14 +1,9 @@
 +++
 draft = true
 date = "2017-01-16T20:27:28-06:00"
-categories = [
-  "post",
-]
-tags = [
-  "movs",
-]
+categories = ["post"]
+tags = ["4k"]
 title = "Shin Godzilla"
-
 +++
 
 ![](../hey-godzilla.jpg)

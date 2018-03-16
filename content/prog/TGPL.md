@@ -1,10 +1,8 @@
 +++
 categories = ["prog"]
 date = "2017-05-29T22:02:43-05:00"
-draft = true
 tags = ["docu"]
 title = "El Lenguaje De programacion Go"
-
 +++
 
 golang, el lenguaje de <q>programacion de sistemas</q> de la gente de google con

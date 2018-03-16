@@ -1,14 +1,8 @@
 +++
-categories = [
-  "post",
-]
-tags = [
-  "fonos",
-]
+categories = ["post"]
+tags = ["fonos"]
 title = "Krautrock Albums"
-draft = true
 date = "2016-12-30T18:21:44-06:00"
-
 +++
 
 ![](../smile.jpg)

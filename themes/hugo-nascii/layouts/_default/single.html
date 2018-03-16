@@ -1,0 +1,30 @@
+{{ define "title" }}
+  <!-- This will override the default value set in baseof.html; i.e., "{{.Site.Title}}" in the original example-->
+  {{ .Title }} – {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<main>
+  <div class="clear" ><a href="{{ $.Site.BaseURL }}">/</a></span> <span><a href="{{ .Section | absURL }}">{{ .Section }}</a></div>
+
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <div class="clear" class="center">
+    {{ with .PrevInSection }}
+    <a class="previous" href="{{.Permalink}}">◀ {{.Title}}</a>
+    {{ end }}
+    {{ with .NextInSection }}
+    <a class="next" href="{{.Permalink}}"> {{.Title}} ▶</a>
+    {{ end }}
+  </div>
+
+  <div class="clear" class="center">
+  <h2>Comments</h2>
+  </div>
+
+  {{ partial "staticman/form-comments" . }}
+  {{ partial "staticman/show-comments" . }}
+
+  <div class="clear" ><a href="{{ $.Site.BaseURL }}">/</a></span> <span><a href="{{ .Section | absURL }}">{{ .Section }}</a></div>
+</main>
+{{ end }}

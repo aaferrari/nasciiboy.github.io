@@ -1,14 +1,8 @@
 +++
-tags = [
-  "morg",
-]
+tags = [ "morg" ]
 title = "yorozuya"
-draft = true
 date = "2017-03-14T16:33:15-06:00"
-categories = [
-  "prog",
-]
-
+categories = ["prog"]
 +++
 
 *Yorozuya* en una tienda donde se toma cualquier tipo de trabajo por una

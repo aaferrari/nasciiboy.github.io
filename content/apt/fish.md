@@ -1,14 +1,8 @@
 +++
 title = "fish"
-draft = true
 date = "2016-12-24T10:04:44-06:00"
-categories = [
-  "apt",
-]
-tags = [
-  "fish", "install",
-]
-
+categories = ["apt"]
+tags = ["fish", "install"]
 +++
 
 ![](../ascii_fish.png)

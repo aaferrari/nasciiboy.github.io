@@ -1,10 +1,7 @@
 +++
-tags = [""]
 title = "INBO"
-draft = true
 date = "2017-02-13T22:14:42-06:00"
 categories = ["prog"]
-
 +++
 
 ![](../steins:gate.jpg)

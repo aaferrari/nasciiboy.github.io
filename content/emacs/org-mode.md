@@ -1,14 +1,8 @@
 +++
 date = "2017-01-31T14:40:54-06:00"
-categories = [
-  "emacs",
-]
-tags = [
-  "howto",
-]
+categories = ["emacs"]
+tags = ["howto"]
 title = "org mode"
-draft = true
-
 +++
 
 `org-mode` es un lenguaje de marcas ligeras nacido de, por, y para <code

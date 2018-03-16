@@ -1,10 +1,8 @@
 +++
 categories = ["post"]
 date = "2017-07-01T15:05:47-05:00"
-draft = true
 tags = ["ramen"]
 title = "Ramen V"
-
 +++
 
 ![](/img/inbo.png)

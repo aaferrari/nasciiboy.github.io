@@ -1,10 +1,8 @@
 +++
 categories = ["apt"]
 date = "2017-06-24T20:28:51-05:00"
-draft = true
 tags = ["apt","install"]
 title = "Konsole Warrior"
-
 +++
 
 

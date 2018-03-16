@@ -1,10 +1,8 @@
 +++
 tags = ["ramen", "anime",]
 title = "Ramen I"
-draft = true
 date = "2017-04-02T21:08:41-06:00"
 categories = ["post"]
-
 +++
 
 Hace unas semanas que no publico naha, que por haber cosas recomendaciones o

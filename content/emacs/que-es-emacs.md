@@ -1,14 +1,7 @@
 +++
 title = "Que es GNU Emacs?"
-draft = true
 date = "2016-12-23T20:43:19-06:00"
-categories = [
-  "emacs",
-]
-tags = [
-  "",
-]
-
+categories = ["emacs"]
 +++
 
 ![](../Emacs-logo.svg)

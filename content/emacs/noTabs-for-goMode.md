@@ -1,10 +1,8 @@
 +++
 title = "no mas tabs en go-mode"
-draft = true
 date = "2017-02-12T21:52:24-06:00"
 categories = ["emacs"]
 tags = ["howto"]
-
 +++
 
 Go tiene una ridicula guia de estilo para formatear codigo que no me agrada, de

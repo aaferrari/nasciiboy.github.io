@@ -1,10 +1,8 @@
 +++
 tags = ["anime"]
 title = "Kuzu no Honkai"
-draft = true
 date = "2017-02-22T21:08:41-06:00"
 categories = ["post"]
-
 +++
 
 Era mi primer dia de instituto... me alegre muchisimo, iba a poder verla todos

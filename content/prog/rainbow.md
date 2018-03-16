@@ -1,10 +1,7 @@
 +++
 categories = ["prog"]
 date = "2017-06-17T12:39:43-05:00"
-draft = true
-tags = [""]
 title = "Crear una paleta de color con solo un indice"
-
 +++
 
 ![](/img/mandelbrot.png)

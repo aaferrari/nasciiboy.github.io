@@ -1,10 +1,8 @@
 +++
 categories = ["post"]
 date = "2017-06-04T14:57:33-05:00"
-draft = true
 tags = ["ramen", "fonos", "anime",]
 title = "Ramen III"
-
 +++
 
 Es cansado ser un ser vivo (humano, al menos), pero aunque no pueda y otras

@@ -1,14 +1,8 @@
 +++
-tags = [
-  "fonos", "shntool", "flac", "howto",
-]
+tags = ["fonos", "shntool", "flac", "howto"]
 title = "Como dividir un album contenido en una sola pista flac"
-draft = true
 date = "2016-12-22T09:56:05-06:00"
-categories = [
-  "apt",
-]
-
+categories = ["apt"]
 +++
 
 En este mundo existen algunos seres extraños con tanto amor (libros, musica,

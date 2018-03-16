@@ -4,7 +4,6 @@ date = "2017-07-22T11:11:18-05:00"
 draft = true
 tags = ["ramen"]
 title = "Ramen VII"
-
 +++
 
 ![](/img/knk.jpg)

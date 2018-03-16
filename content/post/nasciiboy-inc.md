@@ -1,10 +1,7 @@
 +++
 categories = ["post"]
 date = "2017-05-30T20:04:38-05:00"
-draft = true
-tags = [""]
 title = "NasciiBoy Inc."
-
 +++
 
 ![](../inc.jpg)

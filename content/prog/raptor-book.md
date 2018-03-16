@@ -1,14 +1,8 @@
 +++
 title = "Raptor-Book"
-draft = true
 date = "2017-01-11T10:03:58-06:00"
-categories = [
-  "prog",
-]
-tags = [
-  "regexp",
-]
-
+categories = [ "prog" ]
+tags = [ "regexp" ]
 +++
 
 Solo queria programar un juego similar a **Megaman 2**

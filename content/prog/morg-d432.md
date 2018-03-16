@@ -1,10 +1,8 @@
 +++
 categories = ["prog"]
 date = "2017-07-04T18:47:44-05:00"
-draft = true
 tags = ["morg"]
 title = "morg [dia 432]"
-
 +++
 
 ![](/img/BOM.jpg)

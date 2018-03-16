@@ -1,10 +1,8 @@
 +++
 tags = [ "regexp" ]
 title = "regexp3-go (dia cero)"
-draft = true
 date = "2017-02-11T10:26:04-06:00"
 categories = ["prog"]
-
 +++
 
 Hace un año, luego de "maquetar" algunos libros en org-mode, decidi crear mi

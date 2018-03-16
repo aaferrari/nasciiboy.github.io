@@ -1,6 +1,6 @@
-baseurl = "http://nasciiboy.github.io"
+baseurl = "https://nasciiboy.github.io"
 title  = "nba - GNU's Rock"
-copyright = "GPL 3.0"
+copyright = "GPL v3.0"
 
 editor = "emacs -nw"
 
@@ -22,7 +22,7 @@ layoutDir    = "layouts"
 publishDir   = "public"
 staticDir    = "static"
 themesDir    = "themes"
-theme        = "nascii-theme"
+theme        = "hugo-nascii"
 
 defaultExtension = "html"
 
@@ -38,7 +38,19 @@ pygmentsUseClasses =        false
 [params]
   AuthorName = "nasciiboy"
   Email  = "nasciiboy@gmail.com"
-
-  Keywords    = [ "gnu", "emacs", "fish", "c", "lisp", "programming", "regexp" ]
+  Licence = "GFDL 1.3"
+  # Theme = "hugo-nascii"
+  # ThemeSource = "source"
+  GPG = "0x7A4E2DDE14D7AD94"
+  GPGSource = "http://pgp.mit.edu/pks/lookup?op=get&search=0x7A4E2DDE14D7AD94"
+  Donate = "liberapay"
+  DonateSource = "https://liberapay.com/nasciiboy/donate"
+  Keywords    = [ "gnu", "emacs", "fish", "c", "lisp", "programming", "regexp", "morg", "go" ]
   Description = "nasciiboy adverture"
   toc         = true
+
+[staticman]
+  endpoint = "https://api.staticman.net/v2/entry/"
+  username = "nasciiboy"
+  repository = "nasciiboy.github.io"
+  branch = "source"

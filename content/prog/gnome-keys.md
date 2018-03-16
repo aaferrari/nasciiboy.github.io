@@ -1,14 +1,8 @@
 +++
-tags = [
-  "gnome",
-]
+tags = [ "gnome" ]
 title = "Gnome Keys"
-draft = true
 date = "2017-01-18T20:57:15-06:00"
-categories = [
-  "prog",
-]
-
+categories = [ "prog" ]
 +++
 
 ![](../kp-01.jpg)

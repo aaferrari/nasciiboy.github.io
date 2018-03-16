@@ -1,10 +1,8 @@
 +++
 categories = ["prog"]
 date = "2017-07-15T21:36:03-05:00"
-draft = true
 tags = ["regexp"]
 title = "regexp4-go (dia cero)"
-
 +++
 
 ![](/img/regexp4.png)

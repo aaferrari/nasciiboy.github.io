@@ -1,14 +1,8 @@
 +++
-tags = [
-  "zero",
-]
+tags = ["zero"]
 title = "Rei"
-draft = true
 date = "2016-12-16T17:19:32-06:00"
-categories = [
-  "post",
-]
-
+categories = ["post"]
 +++
 
 > El destino de la destruccion es tambien la alegria del renacimiento.

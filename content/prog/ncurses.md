@@ -1,14 +1,8 @@
 +++
-tags = [
-  "ncurses", "howto",
-]
+tags = [ "ncurses", "howto" ]
 title = "Ncurses"
-draft = true
 date = "2016-12-19T21:45:05-06:00"
-categories = [
-  "prog",
-]
-
+categories = [ "prog" ]
 +++
 
 ## Que es Ncurses
