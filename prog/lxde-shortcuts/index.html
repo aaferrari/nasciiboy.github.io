@@ -187,6 +187,55 @@ img:hover { border: 0.05em solid #fff; }
         }
 .previous { float: left; }
 .next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
 </style>
   </head>
   <body>
@@ -486,13 +535,30 @@ aun no descubro como se realiza apropiadamente, Sayonara!</p>
   <h2>Comments</h2>
   </div>
 
-  <form method="POST" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/">
-    <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/prog/lxde-shortcuts/#comment-submitted">
-    <input type="hidden" name="options[entryId]" value="06d2028f8e5ab7fc9e5d7906f67d7bb8">
-    <input name="fields[name]" type="text" placeholder="Your name">
-    <input name="fields[email]" type="email" placeholder="Your email address">
-    <textarea name="fields[body]" placeholder="aqui tu comentario (se acepta Markdown)" rows="10"></textarea>
-    <input type="submit" value="Submit">
+  <form method="POST" class="dark-matter" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/comments">
+  <input type="hidden" name="options[entryId]" value="06d2028f8e5ab7fc9e5d7906f67d7bb8">
+
+  <h1>Comment Form
+    <span>Please fill all the texts in the fields.</span>
+  </h1>
+  <label>
+    <span>Your Name :</span>
+    <input name="fields[name]" type="text" placeholder="Your name"/>
+  </label>
+
+  <label>
+    <span>Your Email :</span>
+    <input name="fields[email]" type="email" placeholder="Your email address"/>
+  </label>
+
+  <label>
+    <span>Message :</span>
+    <textarea name="fields[body]" placeholder="aqui tu comentario (se acepta Markdown)" rows="5"></textarea>
+  </label>
+  <label>
+    <span>&nbsp;</span>
+    <input type="submit" value="Submit" class="submit"></input>
+  </label>
 </form>
 
     
