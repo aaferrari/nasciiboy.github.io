@@ -1,8 +1,29 @@
-<form method="POST" action="https://api.staticman.net/v2/entry/{{ .Site.Params.staticman.username }}/{{ .Site.Params.staticman.repository }}/{{ .Site.Params.staticman.branch }}/">
-    <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#comment-submitted">
-    <input type="hidden" name="options[entryId]" value="{{ .UniqueID }}">
-    <input name="fields[name]" type="text" placeholder="Your name">
-    <input name="fields[email]" type="email" placeholder="Your email address">
-    <textarea name="fields[body]" placeholder="aqui tu comentario (se acepta Markdown)" rows="10"></textarea>
-    <input type="submit" value="Submit">
+<form method="POST" class="dark-matter" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/comments">
+  <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#comment-submitted">
+  <input type="hidden" name="options[entryId]" value="{{ .UniqueID }}">
+
+  <h1>Comment Form
+    <span>Este formulario envia un pull request al repositorio donde se almacena
+    el blog, uselo con sabiduria. La inclusion de comentarios es totalmente
+    arbitaria y puede modificarse, ignorarse o desaparecer en el
+    futuro... la habilidad de anidar comentarios no esta disponible</span>
+  </h1>
+  <label>
+    <span>Your Name :</span>
+    <input name="fields[name]" type="text" placeholder="Your name"/>
+  </label>
+
+  <label>
+    <span>Your Email :</span>
+    <input name="fields[email]" type="email" placeholder="Your email address"/>
+  </label>
+
+  <label>
+    <span>Message :</span>
+    <textarea name="fields[body]" placeholder="aqui tu comentario (se acepta Markdown)" rows="5"></textarea>
+  </label>
+  <label>
+    <span>&nbsp;</span>
+    <input type="submit" value="Submit" class="submit"></input>
+  </label>
 </form>
