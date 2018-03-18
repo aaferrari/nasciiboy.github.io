@@ -7,10 +7,278 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Tue, 13 Mar 2018 20:55:49 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 18 Mar 2018 13:17:26 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/tags/txt/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://nasciiboy.github.io/prog/markdown/</link>
+      <pubDate>Sun, 18 Mar 2018 13:17:26 -0600</pubDate>
+      
+      <guid>https://nasciiboy.github.io/prog/markdown/</guid>
+      <description>
+
+&lt;p&gt;pues resulta que los humanos nos diferenciamos de las demas creaturas por que
+podemos depositar y almacenar &lt;strong&gt;el conocimiento&lt;/strong&gt; en medios externos a nuestro
+propio cuerpo mediante un formato de codificacion (grafica o &amp;ldquo;tactil&amp;rdquo;)
+particular, sea como &lt;a href=&#34;https://es.wikipedia.org/wiki/Pictograma&#34;&gt;pictogramas&lt;/a&gt; o
+&lt;a href=&#34;https://es.wikipedia.org/wiki/Logograma&#34;&gt;logogramas&lt;/a&gt;, (o representaciones
+intangibles digitales de ceros y unos).&lt;/p&gt;
+
+&lt;p&gt;Ya que como especie nos dispersamos por el globo y como volar, el
+teletransporte ni la telepatia forman parte de nuestras habilidades, se formaron
+grupusculos aislados que terminaron por inventarse y/o adaptar y/o diverger
+dialectos y metolodogias para preservar y difundir su informacion&amp;hellip;
+y asi hemos estado con cambios minusculos durente miles de años  ¯\_(ツ)_/¯ limitados a la
+subsistencia, hasta que con la imprenta (supongo) el motor de vapor y luego las
+cable-comunicaciones dio inicio la transmicion masiva (no sexual) de informacion&lt;/p&gt;
+
+&lt;p&gt;Desde entonces, la poblacion ha crecido aun mas, los limites de las comunidades
+se hacen cada vez menos obvios y en general la cantidad de procesadores
+biologicos dedicados a labores puramente intelectuales se incrementa.&lt;/p&gt;
+
+&lt;p&gt;En los ultimos 200 años la produccion de informacion junto a su intercambio han
+modificado nuestra forma de interactuar con el ambiente, al grado de transformar
+a la especie misma, sus costumbres, metas inconcientes y batallas por la
+egemonia. Como un divulgador cientifico dijo alguna vez&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;la vida es una guerra de informacion&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;la aparicion de la informatica a traido nuevas batallas, pongamos como ejemplo
+la representacion misma del lenguaje. En los incipientes albores de las
+computadoras, limitadas en capaciad de calculo y almacenamiento, cual fue la
+forma de representar y almacenar los caracteres con mas o menos eficiencia? 2
+bits? 4 bits? alguien dijo 8? o 16? El ganador de aquella primer
+confrontacion fue &lt;a href=&#34;https://es.wikipedia.org/wiki/ASCII&#34;&gt;ASCII&lt;/a&gt;,
+un simbolo de identidad entre los informaticos. Traducido, el acronimo vendria a
+ser &amp;ldquo;Código Estándar Estadounidense para el Intercambio de Información&amp;rdquo; y se
+basa en asignar un codigo numerico para cada caracter del ingles moderno, en un
+rango decimal que va del 0 a 127, conteniendo numeros, letras en minuscula, mayusculas,
+signos de puntuacion y ademas algunos codigos especificos de control (Fin de
+transmision, salto de linea, retroceso, Escape, etc)&lt;/p&gt;
+
+&lt;p&gt;La construccion misma de los procesadores, que estandariso los buses de datos
+en multiplos de 8 bits (16, 32, 64, 128, 256, &amp;hellip;.) junto a la llegada de
+ordenadores a mercados no angloparlantes, obligaron a los fabricantes a
+aprovechar el octavo bit libre en la codificacion ASCII, para adaptarlo a los
+distintos sistemas de escritura&amp;hellip; y en otros casos, para enriqueser los
+simbolos graficos desplegados por los equipos&lt;/p&gt;
+
+&lt;p&gt;Con el tiempo, aquellos primeros equipos comenzaron a intercomunicarse, viendo
+la inminente necesidad de acordar un nuevo estardar de codificacion, donde
+tuvieran cabida todos los caracteres de escritura. Dicho acuerdo recivio el
+nombre de &lt;a href=&#34;https://es.wikipedia.org/wiki/Unicode&#34;&gt;UNICODE&lt;/a&gt; asignando un
+codigo y nombre a cada caracter dentro los valores almacenables en 32 bits (que
+pueden codificarse en secuencias de 8 (UTF-8), 16 (UTF-16) y 32 (UTF-32) bits)&lt;/p&gt;
+
+&lt;p&gt;De forma paralela mientras se encontraba la forma de representar el lenguaje escrito,
+tambien se buscaron maneras para transladar el contenido de los libros
+tradicionales impresos en papel a los monitores digitales, y viceversa, es decir,
+mediante la informacion almacenada digitalmente, poder facilitar la
+creacion de libros impresos.&lt;/p&gt;
+
+&lt;p&gt;Dicho enfoque inicialmente ignoro la naturaleza del nuevo medio, mas rico,
+interactivo, interconectado e inmediato. Apenas se limito a emular la
+representacion tradicional en papel, agregando una complejidad innecesaria para
+la creacion de documentacion. Entre los varios formatos que tomaron esta
+vision, encontrariamos como representante principal a &lt;a href=&#34;https://es.wikipedia.org/wiki/tex&#34;&gt;TeX&lt;/a&gt; y en
+menor medida a &lt;a href=&#34;https://es.wikipedia.org/wiki/Roff&#34;&gt;roff&lt;/a&gt;, junto a sus
+respectivas variaciones como LaTeX, Texinfo, nroff o groff. Sin embargo, el
+formato que se termino por imponerse fue HTML (un derivado del lenguaje de marcas
+extensible &lt;a href=&#34;https://es.wikipedia.org/wiki/xml&#34;&gt;XML&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Lamentablemente en el caso de TeX al estar ideado paro &lt;em&gt;hacer libros&lt;/em&gt; complicaba
+el proceso de la escritura, lo que termino por limitarlo casi en exclusiva al
+ambito academico. Por su parte HTML contaba con un engorroso
+sistema de marcas de apertura, cierre, estructura del documento, enfasis e
+instrucciones para la representacion visual, que puesto en manos humanas
+eran casi imposibles de escribir, muy engorroso y complicado,
+situacion que desencadeno en la imposibilidad de formalizarlo y adaptarlo para la
+creacion de documentacion academica y literal&lt;/p&gt;
+
+&lt;p&gt;Ante este sin sentido de formatos, aparecieron nuevas visiones centradas en la
+sencilles, abandonando la idea del papel como fin ultimo. En esta ocacion,
+el proposito fue una escritura sencilla, entendible por humanos sin necesidad de un
+programa especial y exportable a los &amp;ldquo;viejos&amp;rdquo; formatos.&lt;/p&gt;
+
+&lt;p&gt;La transicion a este pensamiento apenas empieza, habiendo una vasta variedad de
+contendientes, todos incompletos y mediocres, limitados en su concepcion a ser
+simples facilitadores para los formatos HTML y Latex.&lt;/p&gt;
+
+&lt;p&gt;Dentro de algunos exponentes de esta vision denominada &lt;em&gt;Lenguajes de marcado
+ligejo&lt;/em&gt; tenemos a
+&lt;a href=&#34;https://es.wikipedia.org/wiki/org-mode&#34;&gt;org-mode&lt;/a&gt;,
+&lt;a href=&#34;https://es.wikipedia.org/wiki/wikitext&#34;&gt;wikitext&lt;/a&gt;,
+&lt;a href=&#34;https://es.wikipedia.org/wiki/ReStructuredText&#34;&gt;ReStructured Text&lt;/a&gt; y
+&lt;a href=&#34;https://es.wikipedia.org/wiki/markdown&#34;&gt;Markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;La incognita ahora es: alguno de estos lograra suplantar a sus predecesores?
+veremos una nueva concepcion de la documentacion? apareceran otros contendientes?&lt;/p&gt;
+
+&lt;h2 id=&#34;que-es-markdown&#34;&gt;Que es markdown?&lt;/h2&gt;
+
+&lt;p&gt;Un lenguaje de marcas ligero que no cuenta con una estandarizacion ni en
+sintaxis, ni en implementacion. Su sintaxis de resaltado es ambigua y pobre, pero
+intenta cubrir su mediocridad insertando directamente marcas XML en el
+texto &amp;ldquo;humanamente legible&amp;rdquo;&amp;hellip; diluyendo asi su proposito, pero convirtiendolo en
+un &amp;ldquo;buen&amp;rdquo; facilitador para la escritura de HTML&lt;/p&gt;
+
+&lt;h3 id=&#34;syntaxis&#34;&gt;Syntaxis&lt;/h3&gt;
+
+&lt;h3 id=&#34;encabezados&#34;&gt;Encabezados&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# Encabezado principal
+## Segundo nivel
+### 3er. nivel
+algo de texto
+### 3er. nivel
+mas texto
+
+# Otro encabezado principal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Toda linea que inicia con uno o varios &lt;code&gt;#&lt;/code&gt; seguido por al menos un espacio en
+blanco, es un encabezado.&lt;/p&gt;
+
+&lt;p&gt;El texto (en la misma linea) donde esta el o los &lt;code&gt;#&lt;/code&gt; sera el titulo del encabezado.&lt;/p&gt;
+
+&lt;p&gt;El nivel del encabezado depende del numero de &lt;code&gt;#&lt;/code&gt; al inicio de la linea, es
+decir&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#&lt;/code&gt; == &lt;code&gt;h1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;##&lt;/code&gt; == &lt;code&gt;h2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;###&lt;/code&gt; == &lt;code&gt;h3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;####&lt;/code&gt; == &lt;code&gt;h4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#####&lt;/code&gt; == &lt;code&gt;h5&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A que encabezado pertenece el texto? al primero que aparezca por encima de
+el&lt;/p&gt;
+
+&lt;h3 id=&#34;listas&#34;&gt;Listas&lt;/h3&gt;
+
+&lt;p&gt;Disponemos de dos tipos de listas, ordenadas (numeradas) y no
+ordenadas, para las primeras colocamos un numero (el que sea) seguido de un
+punto y comenzamos a escribir&lt;/p&gt;
+
+&lt;p&gt;listas ordenadas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;1. elemento uno
+2. elemento dos
+3. elemento tres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para las segundas (listas no ordenadas) simplemente un guion al inicio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;- elemento uno
+- elemento dos
+- elemento tres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;markdown no permite que un elemento tenga mas de un parrafo, por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;1. primer elemento de la lista
+2. segundo elemento de la lista
+3. tercer elemento de la lista
+   con una linea adicional
+
+   este texto, a pesar de estar indentado, no forma parte
+   del tercer elemento, es un parrafo independiente
+
+igual de independiente que este
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para hacer esto tendriamos que recurrrir a a html en si, convirtiendo lo
+anterior en&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;&amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;primer elemento de la lista&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;segundo elemento de la lista&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;tercer elemento de la lista con una linea adicional&amp;lt;/p&amp;gt;
+        &amp;lt;p&amp;gt;la linea adicional&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;citas&#34;&gt;Citas&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;&amp;gt; esto es una cita
+
+&amp;gt; esto tambien
+&amp;gt; es una
+&amp;gt; cita
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;resaltado&#34;&gt;Resaltado&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;**bold**          ==&amp;gt; &amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;
+__bold__          ==&amp;gt; &amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;
+*italic*          ==&amp;gt; &amp;lt;i&amp;gt;italic&amp;lt;/i&amp;gt;
+_italic_          ==&amp;gt; &amp;lt;i&amp;gt;italic&amp;lt;/i&amp;gt;
+***bold&amp;amp;italic*** ==&amp;gt; &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;bold&amp;amp;italic&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;
+___bold&amp;amp;italic___ ==&amp;gt; &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;bold&amp;amp;italic&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;
+`code`            ==&amp;gt; &amp;lt;code&amp;gt;code&amp;lt;/code&amp;gt;
+~~strike~~        ==&amp;gt; &amp;lt;s&amp;gt;strike&amp;lt;/s&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h3&gt;
+
+&lt;p&gt;cualquier texto que cumpla con la regexp &lt;code&gt;(https?|ftp|file)://\S+&lt;/code&gt; (o algo asi) se
+convierte en un enlace&lt;/p&gt;
+
+&lt;p&gt;tambien se puede colocar un texto alternativo como &amp;ldquo;fachada&amp;rdquo; del enlace, con la sintaxis&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;[texto-alternativo](enlace)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;imagenes&#34;&gt;imagenes&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;![texto-alternativo](enlace)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;bloques-de-codigo&#34;&gt;Bloques de Codigo&lt;/h3&gt;
+
+&lt;p&gt;hay dos sintaxis para esto, primero envolver una region con tres comillas
+invertidas ``` contenidas en una linea propia, sin espacios al inicio. Colocar el nombre del lenguaje en el que se supone esta escrito
+el codigo es opcional&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+``` lenguaje
+mi codigo
++ codigo
+y + codigo
+```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tiene el mismo efecto, dejar cuatro espacios en blanco al inicio de
+cada linea, separando el texto con una linea en blanco al inicio y al final&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;texto estandar
+
+    esto es codigo
+    y esto tambien es codigo
+    y tambien esto
+
++ texto estandar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;enlaces-1&#34;&gt;enlaces&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Markdown&#34;&gt;https://es.wikipedia.org/wiki/Markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://joedicastro.com/pages/markdown.html&#34;&gt;http://joedicastro.com/pages/markdown.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://joedicastro.com/markdown-la-mejor-opcion-para-crear-contenidos-web.html&#34;&gt;http://joedicastro.com/markdown-la-mejor-opcion-para-crear-contenidos-web.html&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html&#34;&gt;http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://nasciiboy.github.io/emacs/org-mode/&#34;&gt;https://nasciiboy.github.io/emacs/org-mode/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Desing Patterns (GoF)</title>

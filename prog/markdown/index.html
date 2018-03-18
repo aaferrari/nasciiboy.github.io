@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Crear una paleta de color con solo un indice</title>
+    <title>Markdown</title>
     <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
     <style>:root {
 
@@ -245,265 +245,272 @@ img:hover { border: 0.05em solid #fff; }
 <main>
   <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
 
-  <h1>Crear una paleta de color con solo un indice</h1>
+  <h1>Markdown</h1>
   
 
-<p><img src="https://nasciiboy.github.io/img/mandelbrot.png" alt="" /></p>
+<p>pues resulta que los humanos nos diferenciamos de las demas creaturas por que
+podemos depositar y almacenar <strong>el conocimiento</strong> en medios externos a nuestro
+propio cuerpo mediante un formato de codificacion (grafica o &ldquo;tactil&rdquo;)
+particular, sea como <a href="https://es.wikipedia.org/wiki/Pictograma">pictogramas</a> o
+<a href="https://es.wikipedia.org/wiki/Logograma">logogramas</a>, (o representaciones
+intangibles digitales de ceros y unos).</p>
 
-<p>que tal, como lo indica el titulo vamos a generar una paleta de color apartir de
-un unico indice, para, por ejemplo colorear una imagen en una escala de
-colores RGB del negro absoluto (0,0,0) al blanco (255,255,255), con una
-trancicion &ldquo;suave&rdquo; por estos</p>
+<p>Ya que como especie nos dispersamos por el globo y como volar, el
+teletransporte ni la telepatia forman parte de nuestras habilidades, se formaron
+grupusculos aislados que terminaron por inventarse y/o adaptar y/o diverger
+dialectos y metolodogias para preservar y difundir su informacion&hellip;
+y asi hemos estado con cambios minusculos durente miles de años  ¯\_(ツ)_/¯ limitados a la
+subsistencia, hasta que con la imprenta (supongo) el motor de vapor y luego las
+cable-comunicaciones dio inicio la transmicion masiva (no sexual) de informacion</p>
 
-<p>El asunto surgio resolviendo algunos de los ejercicios de libro de programacion
-de go, especificamente el 3.5, donde proponian dar color a una imagen de
-mandelbrot, que estaba en una escala de grises (de hay viene lo de generar los
-colores apartir de un solo indice).</p>
+<p>Desde entonces, la poblacion ha crecido aun mas, los limites de las comunidades
+se hacen cada vez menos obvios y en general la cantidad de procesadores
+biologicos dedicados a labores puramente intelectuales se incrementa.</p>
 
-<p>La primer y mas facil solucion es utilizar una paleta de colores prefabricada y
-adaptar el indice a un valor que entre en la paleta, pero eso es muy cutre, lo mas molon
-seria generar el color &ldquo;al vuelo&rdquo; de una paleta con un numero de colores
-arbitrario, yeee!</p>
+<p>En los ultimos 200 años la produccion de informacion junto a su intercambio han
+modificado nuestra forma de interactuar con el ambiente, al grado de transformar
+a la especie misma, sus costumbres, metas inconcientes y batallas por la
+egemonia. Como un divulgador cientifico dijo alguna vez</p>
 
-<p>entonces, como se hace? bueno&hellip; tenia una idea con un circulo de color,
-una espiral, y longitudes, pero como las mates no son lo mio, le pregunte a la gente de <a href="https://www.reddit.com/r/programacion/comments/6g28j9/generar_paleta_de_colores_con_solo_un_indice/">internet</a>
-(mejor explicado <a href="https://www.reddit.com/r/Matematicas/comments/6g5f22/recorrido_atravez_de_un_circulo_de_color_rgb/">aca</a>)</p>
+<blockquote>
+<p>la vida es una guerra de informacion</p>
+</blockquote>
 
-<p>y luego? pues, no llego la respuesta matematica que esperaba, peeeeeero una
-respuesta me dio a conocer dos modelos de color, como los que utilzaban las
-teles crt de la antiguedad</p>
+<p>la aparicion de la informatica a traido nuevas batallas, pongamos como ejemplo
+la representacion misma del lenguaje. En los incipientes albores de las
+computadoras, limitadas en capaciad de calculo y almacenamiento, cual fue la
+forma de representar y almacenar los caracteres con mas o menos eficiencia? 2
+bits? 4 bits? alguien dijo 8? o 16? El ganador de aquella primer
+confrontacion fue <a href="https://es.wikipedia.org/wiki/ASCII">ASCII</a>,
+un simbolo de identidad entre los informaticos. Traducido, el acronimo vendria a
+ser &ldquo;Código Estándar Estadounidense para el Intercambio de Información&rdquo; y se
+basa en asignar un codigo numerico para cada caracter del ingles moderno, en un
+rango decimal que va del 0 a 127, conteniendo numeros, letras en minuscula, mayusculas,
+signos de puntuacion y ademas algunos codigos especificos de control (Fin de
+transmision, salto de linea, retroceso, Escape, etc)</p>
 
-<h2 id="modelo-de-color-hsl">Modelo de color HSL</h2>
+<p>La construccion misma de los procesadores, que estandariso los buses de datos
+en multiplos de 8 bits (16, 32, 64, 128, 256, &hellip;.) junto a la llegada de
+ordenadores a mercados no angloparlantes, obligaron a los fabricantes a
+aprovechar el octavo bit libre en la codificacion ASCII, para adaptarlo a los
+distintos sistemas de escritura&hellip; y en otros casos, para enriqueser los
+simbolos graficos desplegados por los equipos</p>
 
-<p><a href="https://es.wikipedia.org/wiki/Modelo_de_color_HSL">https://es.wikipedia.org/wiki/Modelo_de_color_HSL</a></p>
+<p>Con el tiempo, aquellos primeros equipos comenzaron a intercomunicarse, viendo
+la inminente necesidad de acordar un nuevo estardar de codificacion, donde
+tuvieran cabida todos los caracteres de escritura. Dicho acuerdo recivio el
+nombre de <a href="https://es.wikipedia.org/wiki/Unicode">UNICODE</a> asignando un
+codigo y nombre a cada caracter dentro los valores almacenables en 32 bits (que
+pueden codificarse en secuencias de 8 (UTF-8), 16 (UTF-16) y 32 (UTF-32) bits)</p>
 
-<p><img src="https://nasciiboy.github.io/img/HSL.png" alt="" /></p>
+<p>De forma paralela mientras se encontraba la forma de representar el lenguaje escrito,
+tambien se buscaron maneras para transladar el contenido de los libros
+tradicionales impresos en papel a los monitores digitales, y viceversa, es decir,
+mediante la informacion almacenada digitalmente, poder facilitar la
+creacion de libros impresos.</p>
 
-<p>como podemos ver, tenemos tres valores, <strong>luminosidad</strong>, <strong>saturacion</strong> y
-<strong>matiz</strong>, con la particularidad que el color inicia en negro absoluto y luego
-converge en blanco, y los colores puros (del esquema RGB, cuando uno de ellos es
-255 y los otros dos 0) se optienen con la luminosidad a la mitad de su valor y
-la saturcion al maximo, ahora, si la luminosidad esta al maximo, terminaremos
-con un color blanco, independientemente de saturacion y matiz, lo mismo en caso
-contrario, es decir, si la luminocidad al minimo dara el color negro</p>
+<p>Dicho enfoque inicialmente ignoro la naturaleza del nuevo medio, mas rico,
+interactivo, interconectado e inmediato. Apenas se limito a emular la
+representacion tradicional en papel, agregando una complejidad innecesaria para
+la creacion de documentacion. Entre los varios formatos que tomaron esta
+vision, encontrariamos como representante principal a <a href="https://es.wikipedia.org/wiki/tex">TeX</a> y en
+menor medida a <a href="https://es.wikipedia.org/wiki/Roff">roff</a>, junto a sus
+respectivas variaciones como LaTeX, Texinfo, nroff o groff. Sin embargo, el
+formato que se termino por imponerse fue HTML (un derivado del lenguaje de marcas
+extensible <a href="https://es.wikipedia.org/wiki/xml">XML</a>)</p>
 
-<p>estas particulares hacen a este modelo mucho mas intuitivo que el clasico modelo
-RGB, ademas de practico para optener tranciciones suaves, especiarmente para el
-caso de generar una paleta variada</p>
+<p>Lamentablemente en el caso de TeX al estar ideado paro <em>hacer libros</em> complicaba
+el proceso de la escritura, lo que termino por limitarlo casi en exclusiva al
+ambito academico. Por su parte HTML contaba con un engorroso
+sistema de marcas de apertura, cierre, estructura del documento, enfasis e
+instrucciones para la representacion visual, que puesto en manos humanas
+eran casi imposibles de escribir, muy engorroso y complicado,
+situacion que desencadeno en la imposibilidad de formalizarlo y adaptarlo para la
+creacion de documentacion academica y literal</p>
 
-<p>supondre que su popularidad no esta lo suficientemente extendida en el campo
-programacional por requerir un calculo considerablemente mayor</p>
+<p>Ante este sin sentido de formatos, aparecieron nuevas visiones centradas en la
+sencilles, abandonando la idea del papel como fin ultimo. En esta ocacion,
+el proposito fue una escritura sencilla, entendible por humanos sin necesidad de un
+programa especial y exportable a los &ldquo;viejos&rdquo; formatos.</p>
 
-<h2 id="modelo-de-color-hsv">Modelo de color HSV</h2>
+<p>La transicion a este pensamiento apenas empieza, habiendo una vasta variedad de
+contendientes, todos incompletos y mediocres, limitados en su concepcion a ser
+simples facilitadores para los formatos HTML y Latex.</p>
 
-<p><a href="https://es.wikipedia.org/wiki/Modelo_de_color_HSV">https://es.wikipedia.org/wiki/Modelo_de_color_HSV</a></p>
+<p>Dentro de algunos exponentes de esta vision denominada <em>Lenguajes de marcado
+ligejo</em> tenemos a
+<a href="https://es.wikipedia.org/wiki/org-mode">org-mode</a>,
+<a href="https://es.wikipedia.org/wiki/wikitext">wikitext</a>,
+<a href="https://es.wikipedia.org/wiki/ReStructuredText">ReStructured Text</a> y
+<a href="https://es.wikipedia.org/wiki/markdown">Markdown</a></p>
 
-<p>En este modelo, los colores alcanzan su maximo valor de iluminacion con el valor
-maximo de luminocidad, sin embargo y adiferencia de HSL este se decanta por un
-color u otro segun la
-saturacion y matiz</p>
+<p>La incognita ahora es: alguno de estos lograra suplantar a sus predecesores?
+veremos una nueva concepcion de la documentacion? apareceran otros contendientes?</p>
 
-<p><img src="https://nasciiboy.github.io/img/HSV.png" alt="" /></p>
+<h2 id="que-es-markdown">Que es markdown?</h2>
 
-<h2 id="codigo">Codigo</h2>
+<p>Un lenguaje de marcas ligero que no cuenta con una estandarizacion ni en
+sintaxis, ni en implementacion. Su sintaxis de resaltado es ambigua y pobre, pero
+intenta cubrir su mediocridad insertando directamente marcas XML en el
+texto &ldquo;humanamente legible&rdquo;&hellip; diluyendo asi su proposito, pero convirtiendolo en
+un &ldquo;buen&rdquo; facilitador para la escritura de HTML</p>
 
-<p>De entre los dos Modelos de color, escogi HSL, pues se realiza la trancicion del
-negro al blanco y con HSV la trancicion culminaria en un color especifico (si
-desea seguir este ultimo esquema, lo ideal seria generar distintos matizes con
-niveles de saturacion especificos, realizando un bucle por la luminocidad)</p>
+<h3 id="syntaxis">Syntaxis</h3>
 
-<p>aqui esta el codigo para optener un color dentro de nuestra paleta de colores</p>
+<h3 id="encabezados">Encabezados</h3>
 
-<pre><code>package color
+<pre><code class="language-markdown"># Encabezado principal
+## Segundo nivel
+### 3er. nivel
+algo de texto
+### 3er. nivel
+mas texto
 
-const colors = 255             // colores disponibles
-const secs   = 3               // seciones de color
-const sec    = colors / secs   // longitud de seccion
-
-func MagicColor( x, scale int ) (r, g, b uint8) {
-  color := int(x * colors / scale)
-
-  h := float64(color % sec) / sec
-  s := 1.0
-  l := float64(color) / colors
-
-  return hsl2rgb( h, s, l )
-}
-
-func hsl2rgb( h, s, l float64 ) (red, green, blue uint8) {
-  r, g, b := l, l, l
-
-  var v float64
-
-  if l &lt;= 0.5 {
-    v = l * (1.0 + s)
-  } else {
-    v = l + s - l * s
-  }
-
-  if v &gt; 0 {
-    m  := l + l - v
-    sv := (v - m) / v
-    h  *= 6.0
-    sextant := int(h)
-    fract := h - float64(sextant)
-    vsf   := v * sv * fract
-    mid1 := m + vsf
-    mid2 := v - vsf
-
-    switch sextant {
-    case 0: r, g, b = v, mid1, m
-    case 1: r, g, b = mid2, v, m
-    case 2: r, g, b = m, v, mid1
-    case 3: r, g, b = m, mid2, v
-    case 4: r, g, b = mid1, m, v
-    case 5: r, g, b = v, m, mid2
-    }
-  }
-
-  red, green, blue = uint8(r * 255.0), uint8(g * 255.0), uint8(b * 255.0)
-  return
-}
+# Otro encabezado principal
 </code></pre>
 
-<p>debo aclarar que pese a que funciona segun lo planeado, los algoritmos para
-convertir de HSL (y HSV) a rgb los traduje de codigo de internete, desconosco si
-pueda hacerse mejor, por que no entiendo &ldquo;las formulas&rdquo; que proporciona la wikipedia</p>
+<p>Toda linea que inicia con uno o varios <code>#</code> seguido por al menos un espacio en
+blanco, es un encabezado.</p>
 
-<p>vamos con la explicacion (de lo que entiendo), primero la funcion de cara al
-publico, es <code>MagicColor</code> que recive el indice, y el valor maximo que este puede
-alcanzar (suprimir este ultimo si se conoce de antemano o mejor aun, que la
-paleta tenga tantos colores como el valor maximo, no hice esto por pereza y por
-que las constantes en Go son &ldquo;magicas&rdquo; y no requieren de estupidos cast y se
-pueden utilizar tanto para enteros, como flotantes, como <strong>racionales</strong>(?que es
-esto?))</p>
+<p>El texto (en la misma linea) donde esta el o los <code>#</code> sera el titulo del encabezado.</p>
 
-<p>la constante <code>colors</code> establece el numero de colores que tendra la paleta,
-<code>secs</code> es el numero de &ldquo;tranciciones&rdquo; atraves del matiz (<code>h</code>) es decir,
-partiendo de color rojo, pasamos por el verde y luego azul para terminar de
-nuevo en rojo. Si tenemos solo una transicion/seccion/ciclo digamos que nos
-movemos en espiral (ver dibujo HSL) negro-rojo-verde-azul-rojo-blanco si tenemos mas
-de un ciclo seria negro - <strong>(rojo-verde-azul)</strong> - blanco, donde la region
-<strong>(rojo-verde-azul)</strong>  se repite una y otra vez, con variaciones de luminocidad</p>
+<p>El nivel del encabezado depende del numero de <code>#</code> al inicio de la linea, es
+decir</p>
 
-<p>por ultimo establesco el nivel de saturacion al maximo (<code>1.0</code>, la variables de
-hsl2rgb y hsv2rgb van de 0.0 a 1.0)</p>
+<ul>
+<li><code>#</code> == <code>h1</code></li>
+<li><code>##</code> == <code>h2</code></li>
+<li><code>###</code> == <code>h3</code></li>
+<li><code>####</code> == <code>h4</code></li>
+<li><code>#####</code> == <code>h5</code></li>
+</ul>
 
-<p>aqui esta la vercion hsv2rgb, pero como antes mencione, debemos tomar un enfoque
-distinto en MagicColor, para que la paleta tenga una variedad logica, primero un
-ciclo por la luminocidad, y dentro de este un ciclo por saturacion y matiz, no hice
-eso, asi que vas por cuenta propia, aunque tampoco es muy complicado</p>
+<p>A que encabezado pertenece el texto? al primero que aparezca por encima de
+el</p>
 
-<p>(Nota: agregar <code>import &quot;math&quot;</code> luego de la declaracion <code>package color</code>)</p>
+<h3 id="listas">Listas</h3>
 
-<pre><code>func hsv2rgb( h, s, v float64 ) (red, green, blue uint8) {
-  var r, g, b float64
+<p>Disponemos de dos tipos de listas, ordenadas (numeradas) y no
+ordenadas, para las primeras colocamos un numero (el que sea) seguido de un
+punto y comenzamos a escribir</p>
 
-  i := int(math.Floor(h * 6))
-  f := h * 6 - float64(i);
-  p := v * (1 - s);
-  q := v * (1 - f * s);
-  t := v * (1 - (1 - f) * s);
+<p>listas ordenadas</p>
 
-  switch i % 6 {
-  case 0: r, g, b = v, t, p
-  case 1: r, g, b = q, v, p
-  case 2: r, g, b = p, v, t
-  case 3: r, g, b = p, q, v
-  case 4: r, g, b = t, p, v
-  case 5: r, g, b = v, p, q
-  }
-
-  red, green, blue = uint8(r * 255.0), uint8(g * 255.0), uint8(b * 255.0)
-  return
-}
+<pre><code class="language-markdown">1. elemento uno
+2. elemento dos
+3. elemento tres
 </code></pre>
 
-<p>puedes copiar el codigo y ponerlo en un fichero (digamos en <code>~/color/color.go</code>), y
-hacer pruebas con lo siguiente (poner en <code>~/main.go</code>)</p>
+<p>para las segundas (listas no ordenadas) simplemente un guion al inicio</p>
 
-<pre><code>package main
-
-import (
-  &quot;fmt&quot;
-  &quot;./color&quot;
-)
-
-func main(){
-  fmt.Printf( `&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
-&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
-&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; lang=&quot;&quot; xml:lang=&quot;&quot; &gt;
-
-  &lt;body&gt;
-` )
-
-  for i := 0; i &lt; 255; i++ {
-    r, g, b := color.MagicColor( i, 255 )
-    var c int32
-    c = int32(r) &lt;&lt; 16 | int32(g) &lt;&lt; 8 | int32(b)
-
-    fmt.Printf( &quot;&lt;span style=\&quot;color:#%06x;\&quot; &gt;a&lt;/span&gt;&quot;, c )
-  }
-  fmt.Println( &quot;&lt;/body&gt;&lt;/html&gt;&quot; )
-}
+<pre><code class="language-markdown">- elemento uno
+- elemento dos
+- elemento tres
 </code></pre>
 
-<p>ir a nuestro <code>~</code> y ejecutar con <code>go run main.go &gt; prueba.html</code>, abrimos
-<code>prueba.html</code> con nuestro flamante navegador y veremos una fila de <code>a</code>s en
-escala de colores!</p>
+<p>markdown no permite que un elemento tenga mas de un parrafo, por ejemplo</p>
 
-<p>para terminar, <a href="https://raw.githubusercontent.com/nasciiboy/TGPL-Exercises/master/03-05/nasciiboy/main.go">aca</a> esta
-la solucion al ejercicio que motivo este post</p>
+<pre><code class="language-markdown">1. primer elemento de la lista
+2. segundo elemento de la lista
+3. tercer elemento de la lista
+   con una linea adicional
 
-<p>descargar y ejecutar con</p>
+   este texto, a pesar de estar indentado, no forma parte
+   del tercer elemento, es un parrafo independiente
 
-<pre><code class="language-sh">cd 'directorio-de-descarga'
-
-# para imagen mandelbrot
-go run main.go &gt; mandelbrot.png
-
-# o
-
-go run main.go -t m &gt; mandelbrot.png
-
-# para imagen newton
-go run main.go -t n &gt; newton.png
-
-# para imagen sqrt
-go run main.go -t s &gt; sqrt.png
-
-# para imagen acos
-go run main.go -t a &gt; acos.png
+igual de independiente que este
 </code></pre>
 
-<p>la imagen generada con mandelbrot es muy triste, en cambio con el algoritmo
-newton es distinto:</p>
+<p>para hacer esto tendriamos que recurrrir a a html en si, convirtiendo lo
+anterior en</p>
 
-<p>algoritmo newton con <code>secs</code> establecido en 1 (un ciclo)</p>
+<pre><code class="language-markdown">&lt;ul&gt;
+    &lt;li&gt;&lt;p&gt;primer elemento de la lista&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;segundo elemento de la lista&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;tercer elemento de la lista con una linea adicional&lt;/p&gt;
+        &lt;p&gt;la linea adicional&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
 
-<p><img src="https://nasciiboy.github.io/img/newton.png" alt="" /></p>
+<h3 id="citas">Citas</h3>
 
-<p>algoritmo newton con <code>secs</code> establecido en 2 (dos ciclos)</p>
+<pre><code class="language-markdown">&gt; esto es una cita
 
-<p><img src="https://nasciiboy.github.io/img/newton2.png" alt="" /></p>
+&gt; esto tambien
+&gt; es una
+&gt; cita
+</code></pre>
 
-<p>algoritmo newton con <code>secs</code> establecido en 50 y <code>colors</code> en 5000</p>
+<h3 id="resaltado">Resaltado</h3>
 
-<p><img src="https://nasciiboy.github.io/img/newton3.png" alt="" /></p>
+<pre><code>**bold**          ==&gt; &lt;b&gt;bold&lt;/b&gt;
+__bold__          ==&gt; &lt;b&gt;bold&lt;/b&gt;
+*italic*          ==&gt; &lt;i&gt;italic&lt;/i&gt;
+_italic_          ==&gt; &lt;i&gt;italic&lt;/i&gt;
+***bold&amp;italic*** ==&gt; &lt;b&gt;&lt;i&gt;bold&amp;italic&lt;/i&gt;&lt;/b&gt;
+___bold&amp;italic___ ==&gt; &lt;b&gt;&lt;i&gt;bold&amp;italic&lt;/i&gt;&lt;/b&gt;
+`code`            ==&gt; &lt;code&gt;code&lt;/code&gt;
+~~strike~~        ==&gt; &lt;s&gt;strike&lt;/s&gt;
+</code></pre>
 
-<p>para los algoritmos <code>acos</code> y <code>sqrt</code> no interviene nuestro <code>MagicColors</code>, aun asi
-la salida es bastante chula</p>
+<h3 id="enlaces">Enlaces</h3>
 
-<p>Happy Hacking!</p>
+<p>cualquier texto que cumpla con la regexp <code>(https?|ftp|file)://\S+</code> (o algo asi) se
+convierte en un enlace</p>
+
+<p>tambien se puede colocar un texto alternativo como &ldquo;fachada&rdquo; del enlace, con la sintaxis</p>
+
+<pre><code class="language-markdown">[texto-alternativo](enlace)
+</code></pre>
+
+<h3 id="imagenes">imagenes</h3>
+
+<pre><code>![texto-alternativo](enlace)
+</code></pre>
+
+<h3 id="bloques-de-codigo">Bloques de Codigo</h3>
+
+<p>hay dos sintaxis para esto, primero envolver una region con tres comillas
+invertidas ``` contenidas en una linea propia, sin espacios al inicio. Colocar el nombre del lenguaje en el que se supone esta escrito
+el codigo es opcional</p>
+
+<pre><code>
+``` lenguaje
+mi codigo
++ codigo
+y + codigo
+```
+</code></pre>
+
+<p>tiene el mismo efecto, dejar cuatro espacios en blanco al inicio de
+cada linea, separando el texto con una linea en blanco al inicio y al final</p>
+
+<pre><code>texto estandar
+
+    esto es codigo
+    y esto tambien es codigo
+    y tambien esto
+
++ texto estandar
+</code></pre>
+
+<h2 id="enlaces-1">enlaces</h2>
+
+<ul>
+<li><a href="https://es.wikipedia.org/wiki/Markdown">https://es.wikipedia.org/wiki/Markdown</a></li>
+<li><a href="http://joedicastro.com/pages/markdown.html">http://joedicastro.com/pages/markdown.html</a></li>
+<li><a href="http://joedicastro.com/markdown-la-mejor-opcion-para-crear-contenidos-web.html">http://joedicastro.com/markdown-la-mejor-opcion-para-crear-contenidos-web.html</a></li>
+
+<li><p><a href="http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html">http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html</a></p></li>
+
+<li><p><a href="https://nasciiboy.github.io/emacs/org-mode/">https://nasciiboy.github.io/emacs/org-mode/</a></p></li>
+</ul>
 
 
   <div class="clear" class="center">
     
-    <a class="previous" href="https://nasciiboy.github.io/prog/tgpl/">◀ El Lenguaje De programacion Go</a>
+    <a class="previous" href="https://nasciiboy.github.io/prog/gof/">◀ Desing Patterns (GoF)</a>
     
-    
-    <a class="next" href="https://nasciiboy.github.io/prog/morg-d432/"> morg [dia 432] ▶</a>
     
   </div>
 
@@ -512,8 +519,8 @@ la salida es bastante chula</p>
   </div>
 
   <form method="POST" class="dark-matter" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/comments">
-  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/prog/rainbow/#comment-submitted">
-  <input type="hidden" name="options[entryId]" value="34b2ada1912f0b05ae9f3274f04b26b7">
+  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/prog/markdown/#comment-submitted">
+  <input type="hidden" name="options[entryId]" value="6aa2d04b7e167d78f34eb0228e462aa6">
 
   <h1>Comment Form
     <span>Este formulario envia un pull request al repositorio donde se almacena
