@@ -69,7 +69,7 @@ int main(){
   CAT(23,&amp;quot;.... ..     ...............  ..........................   ......................&amp;quot;);
 
   for( int i = 0; i &amp;lt; H; i++ )
-    printf( &amp;quot;&amp;gt;&amp;gt;%.*s&amp;lt;&amp;lt;\n&amp;quot;, W - 2, &amp;amp;map[ i ][ 1 ] );
+    printf( &amp;quot;&amp;gt;&amp;gt;%.*s&amp;lt;&amp;lt;\n&amp;quot;, W - 3, &amp;amp;map[ i ][ 1 ] );
 }
 &lt;/code&gt;&lt;/pre&gt;
 
