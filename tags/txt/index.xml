@@ -96,7 +96,7 @@ el proceso de la escritura, lo que termino por limitarlo casi en exclusiva al
 ambito academico. Por su parte HTML contaba con un engorroso
 sistema de marcas de apertura, cierre, estructura del documento, enfasis e
 instrucciones para la representacion visual, que puesto en manos humanas
-eran casi imposibles de escribir, muy engorroso y complicado,
+eran casi imposible de escribir, muy engorroso y complicado,
 situacion que desencadeno en la imposibilidad de formalizarlo y adaptarlo para la
 creacion de documentacion academica y literal&lt;/p&gt;
 
@@ -272,10 +272,8 @@ cada linea, separando el texto con una linea en blanco al inicio y al final&lt;/
 &lt;li&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Markdown&#34;&gt;https://es.wikipedia.org/wiki/Markdown&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://joedicastro.com/pages/markdown.html&#34;&gt;http://joedicastro.com/pages/markdown.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://joedicastro.com/markdown-la-mejor-opcion-para-crear-contenidos-web.html&#34;&gt;http://joedicastro.com/markdown-la-mejor-opcion-para-crear-contenidos-web.html&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html&#34;&gt;http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://nasciiboy.github.io/emacs/org-mode/&#34;&gt;https://nasciiboy.github.io/emacs/org-mode/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html&#34;&gt;http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nasciiboy.github.io/emacs/org-mode/&#34;&gt;https://nasciiboy.github.io/emacs/org-mode/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

@@ -7,10 +7,95 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Mon, 05 Mar 2018 20:37:52 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 23 Mar 2018 21:41:50 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CAT</title>
+      <link>https://nasciiboy.github.io/prog/cat/</link>
+      <pubDate>Fri, 23 Mar 2018 21:41:50 -0600</pubDate>
+      
+      <guid>https://nasciiboy.github.io/prog/cat/</guid>
+      <description>&lt;p&gt;Hace tiempo, mucho tiempo, cuando iniciaba mis aventuras con C, tenia la urgente
+necesidad de ingresar un &amp;ldquo;grafico&amp;rdquo; dentro de un arreglo de caracteres, el asunto
+es que dicho grafico contenia por supuesto algunos caracteres &amp;ldquo;especiales&amp;rdquo; para
+el propio C y en ese caso (segun mis primeras intuiciones) habia dos opcciones:
+(1) escapar los caracteres o (2) colocar el grafico en un fichero y leerlo.&lt;/p&gt;
+
+&lt;p&gt;La primer opcion no me convencia, por que ensuciava el codigo desfigurando y
+descuadrando el grafico. La segunda opcion aunque mas elegante,
+requeria la lectura de un fichero externo a resguardo de quien sabe que
+personaje de dudosas habilidades.&lt;/p&gt;
+
+&lt;p&gt;Asi pues, no recuerdo muy bien como, llegue a la siguiente solucion, que radica
+en &amp;ldquo;romper&amp;rdquo; las macros del preprocesador de C.&lt;/p&gt;
+
+&lt;p&gt;cortar y pegar en un fichero (digamos &lt;code&gt;CAT.c&lt;/code&gt;) o cliclar &lt;a href=&#34;https://nasciiboy.github.io/data/CAT.c&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;string.h&amp;gt;
+
+#define H 24
+#define W 83
+#define CAT( row, cont ) strcpy( &amp;amp;map[ row ][ 0 ], #cont )
+
+int main(){
+  char map[ H ][ W ];
+  CAT( 0,&amp;quot;... ...         .........                   ........         ..............  ...&amp;quot;);
+  CAT( 1,&amp;quot;... .  ............      .............             ..........     ......      ..&amp;quot;);
+  CAT( 2,&amp;quot;............. _|      _|              ...     _|             ......   ..........&amp;quot;);
+  CAT( 3,&amp;quot;............. _|_|    _|    _|_|_|    _|_|_|  _|  _|      _|_|             .....&amp;quot;);
+  CAT( 4,&amp;quot;............. _|  _|  _|  _|    _|  _|_|      _|_|      _|_|_|_|           .....&amp;quot;);
+  CAT( 5,&amp;quot;............. _|    _|_|  _|    _|      _|_|  _|  _|    _|            ..........&amp;quot;);
+  CAT( 6,&amp;quot;............. _|      _|    _|_|_|  _|_|_|    _|    _|    _|_|_|   .............&amp;quot;);
+  CAT( 7,&amp;quot;..             .....                                         ........         ..&amp;quot;);
+  CAT( 8,&amp;quot;..            ..       ..  ...                 ..............                 ..&amp;quot;);
+  CAT( 9,&amp;quot;..  ...........         .... .............                                ......&amp;quot;);
+  CAT(10,&amp;quot;......                                         |                 |     .........&amp;quot;);
+  CAT(11,&amp;quot;......   __ \    __|  _ \   __|   __|     __|  __|   _` |   __|  __|       .....&amp;quot;);
+  CAT(12,&amp;quot;......   |   |  |     __/ \__ \ \__ \   \__ \  |    (   |  |     |       ..   ..&amp;quot;);
+  CAT(13,&amp;quot;......   .__/  _|   \___| ____/ ____/   ____/ \__| \__,_| _|    \__|        ....&amp;quot;);
+  CAT(14,&amp;quot;......  _|                                                            ....... ..&amp;quot;);
+  CAT(15,&amp;quot;....          . ............. .        ...............                      . ..&amp;quot;);
+  CAT(16,&amp;quot;....               ..          ........         ....  .....             ....  ..&amp;quot;);
+  CAT(17,&amp;quot;.....          .....  .    _   _   _   _   _   _   ..        ... ...........  ..&amp;quot;);
+  CAT(18,&amp;quot;.....   ........   ....   / \ / \ / \ / \ / \ / \   ........        ...       ..&amp;quot;);
+  CAT(19,&amp;quot;.. ..            ...     ( b | u | t | t | o | m )         .    ................&amp;quot;);
+  CAT(20,&amp;quot;.. . .       ....         \_/ \_/ \_/ \_/ \_/ \_/       .. ........          ...&amp;quot;);
+  CAT(21,&amp;quot;.... .   .....  .....                            ........                  .....&amp;quot;);
+  CAT(22,&amp;quot;.... .    .......              ................ ..    ..        ...........   ..&amp;quot;);
+  CAT(23,&amp;quot;.... ..     ...............  ..........................   ......................&amp;quot;);
+
+  for( int i = 0; i &amp;lt; H; i++ )
+    printf( &amp;quot;&amp;gt;&amp;gt;%.*s&amp;lt;&amp;lt;\n&amp;quot;, 80, &amp;amp;map[ i ][ 1 ] );
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pueden compilar con &lt;code&gt;gcc -Wall CAT.c&lt;/code&gt; y si sois incredulos, substituir &lt;code&gt;gcc&lt;/code&gt; con &lt;code&gt;g++&lt;/code&gt;,
+&lt;code&gt;clang&lt;/code&gt; o &lt;code&gt;clang++&lt;/code&gt; que el compilador no va a lanzar ninguna alerta!&lt;/p&gt;
+
+&lt;p&gt;Como consideraciones especiales, el preprocesador &lt;strong&gt;NO&lt;/strong&gt; escapara las comillas
+al principio y final (por ello las columnas del arreglo tienen 2 caracters mas
+(+1 del signo de terminacion &lt;code&gt;\0&lt;/code&gt; que incluye &lt;code&gt;strcpy&lt;/code&gt;)) y las comillas tienen que
+ser pares.&lt;/p&gt;
+
+&lt;p&gt;podeis intentar con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  CAT( 0, &amp;quot;&amp;quot;&amp;quot;&amp;quot; );
+  printf( &amp;quot;&amp;gt;&amp;gt;%s&amp;lt;&amp;lt;\n&amp;quot;, &amp;amp;map[0][0] );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o tambien&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CAT( 0, &amp;quot;\ \n\\&amp;quot; );
+printf( &amp;quot;&amp;gt;&amp;gt;%s&amp;lt;&amp;lt;\n&amp;quot;, &amp;amp;map[0][0] );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>AWK</title>

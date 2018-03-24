@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nasciiboy.github.io/prog/cat/</loc>
+    <lastmod>2018-03-23T21:41:50-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nasciiboy.github.io/prog/markdown/</loc>
     <lastmod>2018-03-18T13:17:26-06:00</lastmod>
   </url>
@@ -594,7 +599,7 @@
   
   <url>
     <loc>https://nasciiboy.github.io/tags/howto/</loc>
-    <lastmod>2018-03-05T20:37:52-06:00</lastmod>
+    <lastmod>2018-03-23T21:41:50-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -677,14 +682,20 @@
   </url>
   
   <url>
+    <loc>https://nasciiboy.github.io/tags/prog/</loc>
+    <lastmod>2018-03-23T21:41:50-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2018-03-18T13:17:26-06:00</lastmod>
+    <lastmod>2018-03-23T21:41:50-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://nasciiboy.github.io/prog/</loc>
-    <lastmod>2018-03-18T13:17:26-06:00</lastmod>
+    <lastmod>2018-03-23T21:41:50-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -774,7 +785,7 @@
   
   <url>
     <loc>https://nasciiboy.github.io/</loc>
-    <lastmod>2018-03-18T13:17:26-06:00</lastmod>
+    <lastmod>2018-03-23T21:41:50-06:00</lastmod>
     <priority>0</priority>
   </url>
   
