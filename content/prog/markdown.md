@@ -79,7 +79,7 @@ el proceso de la escritura, lo que termino por limitarlo casi en exclusiva al
 ambito academico. Por su parte HTML contaba con un engorroso
 sistema de marcas de apertura, cierre, estructura del documento, enfasis e
 instrucciones para la representacion visual, que puesto en manos humanas
-eran casi imposibles de escribir, muy engorroso y complicado,
+eran casi imposible de escribir, muy engorroso y complicado,
 situacion que desencadeno en la imposibilidad de formalizarlo y adaptarlo para la
 creacion de documentacion academica y literal
 
@@ -262,5 +262,4 @@ texto estandar
 - http://joedicastro.com/pages/markdown.html
 - http://joedicastro.com/markdown-la-mejor-opcion-para-crear-contenidos-web.html
 - http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html
-
 - https://nasciiboy.github.io/emacs/org-mode/
