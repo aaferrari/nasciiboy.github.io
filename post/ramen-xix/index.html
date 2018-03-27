@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XIX</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/post">post</a></div>
+
+  <h1>Ramen XIX</h1>
+  
+
+<p><center>
+<img src="https://nasciiboy.github.io/img/curry.jpg" alt="" />
+</center></p>
+
+<p>cuando la abrumadora vastedad del internet te sobrepase y desees convertirte en
+una creatura de silicio o directamente desaparecer, escucha musica
+pop&hellip; dream-pop&hellip; pooOWAH! (onomatopella de vomito de arcoiris)</p>
+
+<p>Al fin, los feeds y subcripciones voluntarias me han quebrantado, admitirlo ha
+sido dificil, pero es verdad, he llegado al limite ecleptico de mi mente, pese a
+ser una carga para la sociedad con mucho tiempo libre, no puedo ni con los audios,
+ni con la musica, ni con el anime, ni con los post, ni con los libros (campo
+donde ya me habia declado incompentente, igual que con los videojuegos) que
+inundan diariamente los sensores carnales, en fin solo queda la mediocridad del
+ser. Conformarme con el consumo de algunos pequeños descubrimientos mientras el
+calor del verado consume el agua de esta funda</p>
+
+<p>Pasemos a examinar algunos materiales relevantes mas alejados de un ambito
+especifico y luego a la categorizacion poco especifica</p>
+
+<p>primero, buscando alguna presentacion en vivo del buen <a href="https://www.youtube.com/watch?v=sqzFm3erSJc">Kamasi Washington</a>
+que incluyera pistas del album Harmony of Difference, llegue al descubrimento de
+<a href="http://kexp.org/">KEXP.org</a>(<a href="https://en.wikipedia.org/wiki/KEXP-FM">wiki</a>), que es una radio o algo dedicada a las sonoridades
+&ldquo;alternativas&rdquo; y ademas graban (diria que) diariamente alguna presentacion
+musical y la suben tanto en su pagina web, donde tambien transmiten las 24hrs
+programacion, como en su canal del yutu</p>
+
+<p>dentro de las cosas raras que han subido recientemente podeis ver
+<a href="https://www.youtube.com/watch?v=NM52w9xrdn4">esto</a> &hellip; como demonios
+clasificarlo? no tengo idea, la chica es kawai, la musica es pop (o algo) y su
+performance me confunde, sus vestimentas como sus movimientos son tan raros. Si
+me dijeran que una pareja de hombres llenos de amor adoptaron a los crios estos,
+les enseñaron musica brib-pop-hippie (como blur), los drogan un poco y son poli
+amorosos indiscriminantes, no lo dudaria ni un poco. Es tan plastico y autentico
+al mismo tiempo y al mismo tiemo no encaja con mis gustos y al mismo tiempo lo
+apruebo y me agrada ligeramente que&hellip; me confunde</p>
+
+<p>pero no uyan tan rapido, tambien tienen cosas &ldquo;folkloricas&rdquo;
+como <a href="https://www.youtube.com/watch?v=R2ovoRyv4kw&amp;t=2331s">Huun‐Huur‐Tu</a></p>
+
+<p>En otro campo, un dia cuando el sueño me tenia jodido fuy a la zona centrica a
+precenciar un poco de musica en vivo, tenia mis reservas y mientras el
+transporte fomentaba el sueño y a la vez lo alejaba violentamente, me decia
+interiormente por que demonios habia salido&hellip; y asi llegue en tiempo y forma a
+la presentacion.</p>
+
+<p>Nada exagerado, un escenario estandar con un conjunto de bosinas laterales (que
+a diferenencia del festival resonante si) que ofrecian un buen sonido y un
+proyector. No recuerdo que nombre le dieron al evento, pero tenia el siguiente cartel
+<strong>Never After Before</strong>, <strong>MULA</strong> (Dominicana), <strong>Miss Garrison</strong> (Chile) y
+<strong>Quiero Club</strong>, de cual (por motivos logisticos) solo pude presenciar a los
+Never y a l@s Garrison.</p>
+
+<p>Prejuicios aparte, los Never cantaban en english, cosa que me agrada, pues asi
+ignoro letras y me concentro en sonoridades y WooOOOWWWW, contaban con la
+energia de los Chilli Peppers, el valance metalero de Iron Maiden y la
+cosmicidad de los Floyd en un equilibrio tan exquisito, que no podia creer el asistir
+a tal tocada de una banda local. Cuando llegue a su sigiente
+presentacion (si hay pasta) les pedire un cd</p>
+
+<p>Tras unos inconvenientes tecnicos siguieron l@s Garrison. Para ese momento ya no
+esperaba nada de unas banditas suda-mericanas y&hellip; de nuevo, mas fuerte y
+contundente me volvieron a joder el fisico. Viendome en la necesidad de
+comparaciones, diria que son como Archive, con la sutil diferencia que la voz es
+lidereada por una chavo ruca bien densa, no diria que sexi, por que no senti
+esos impulsos, aun asi su teatralidad era tan jodidamente hipnotica que no podia
+apartar la vista de ella. Empece un poco al centro de la tocada, pero luego
+coloque el cuerpo justo al lado del bajo y hooo suculencia, la sonoridad
+llerbosa acelero el organismo de una forma bien marihuana. Mas tarte busque
+alguno de sus materiales, pero no, no tenian lo que presentaron en aquel
+inolvidable evento, lastima!</p>
+
+<p>Ademas hubo lugar para otro video otaco culturizante:
+<a href="https://youtu.be/Em_u41MhZ9o">LA MÚSICA MÁS RARA DE JAPÓN o Una pequeña introducción al Dempa</a>
+que es algo asi como musica kawai repetitiva para gente obsesiva inundada de
+informacion, je, je, creo que no es lo mio, pero entiendo el principio</p>
+
+<p>sin uno no hay dos (o no lo se) por eso tambien vi esto
+<a href="https://youtu.be/VG4Qh1Mj9Gs">Anime Moe o El costumbrismo idealizado y de como me gusta jalarmela mentalmente por unas caricaturas</a></p>
+
+<p>y para terminar, tenia la intencion de iniciar una &ldquo;trilogia del texto&rdquo; con
+aquel post dedicado a markdown, pera me ha dado pereza, una fuerza de la
+naturaleza que llamare &ldquo;programar cosas en ensamblador&rdquo; ha pasado a formar parte
+de la trilogia de pasatiempos diarios (patrones y el manual de elisp son los
+otros dos componentes).</p>
+
+<p>Oh mierda, si el mundo de la programacion ya puede
+resultar siniestra, los bajos fondos del ensamblador para procesadores de 8
+bits concentra de tal manera la opsecion y extrañesa y turbiedad que sinceramente no se si
+sea para mi. Una cosa tras otra, un enlace tras otro, del gameboy al spectrum a
+calculadores programables, programables con ensamblador! espero conservar algo
+de cordura, para hacer quiza en algun incierto futuro un post con ello&hellip;</p>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>Galaxy Quest</strong> la promesa de una parodia super graciosa de star trek fue la causa de
+su visionado&hellip; la gracia no aparecia&hellip; pero al final (casi al final) me
+termino por agradar</p>
+
+<pre><code>magnet:?xt=urn:btih:69e93c08182017a909162a176bc3fead514bc040&amp;dn=Galaxy%20Quest%20%5bMicroHD%5d%5b1080%20px%5d%5bAC3%205.1-Castellano-AC3%205.1%20Ingles%2bSubs%5d%5bES-EN%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<p><strong>Al Caer El Sol</strong> Una de esas cosas que se bajan por que se puede. Resulta que
+es una peli de un detective crepuscular setentero con tintes &ldquo;negros&rdquo; y frases
+ingeniosas. No esperaba nada, n-a-d-a, pese a ello su estilo se imprecno de buena
+manera. Recomendable!</p>
+
+<pre><code>magnet:?xt=urn:btih:63fa3470f02772ed3bc4ad376daaf22f30566ec4&amp;dn=Al%20caer%20el%20sol.Dvdrip&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.to%3a2710%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.me%3a2710%2fannounce
+</code></pre>
+
+<p><strong>Aniquilacion</strong> Del mismo director de &ldquo;Ex Machina&rdquo;, ahora nos llegan chidos fractales y buen
+suspenso. Desconocia su trama y el primer acercamiento fue mirar varios
+fracmentos, la impresion fue de una cinta de SciFi con malos efectos
+visuales&hellip; por fortuna estaba equivocado y su visionado deja un buen sabor de
+boca, con sentimientos algo similares a los de Arrival</p>
+
+<pre><code>magnet:?xt=urn:btih:b7a3ad8c4b50fca1cc9c3f12516bf1e353f40354&amp;dn=Aniquilacion.2018.m1080p.www.DESCARGASMIX.com.mkv&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fpublic.popcorn-tracker.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftra
+</code></pre>
+
+<p><strong>The Orville</strong> y&hellip; otra serie publicitada como StarTrek pero con comedia,
+definitivamente hay un problema aqui (o aca), no es que me moleste que me
+intenten hacer reir (a Thor Ragnarok me remito) pero esta dificil, aunque
+tampoco es un bache que aya que &ldquo;superar&rdquo; pues compensa con el carisma de la
+tripulacion, las historias que ponen la ficcion de intermediario para contarte
+algo mas intimo a la vez que universal, de esas cosas que no se dicen
+abiertamente pero todo el mundo lo ha pensado, efectivamente entretienen y
+cuestionan. Algo similar esperaba con la nueva de Star Trek&hellip; si aun lo quieres
+este es el sitio, pero siendo sincero, la &ldquo;Nueva Generacion&rdquo; es superior en
+varias maneras a The Orville, p-e-r-o aqui se nota un respeto e idolatria por
+aquel producto que inspira respeto, no solo por el valor para hacerlo, sino que
+tambien para hacerlo con un sabor propio!</p>
+
+<p>De la tripulacion llebaria en una exploracion a super chica, el klingon, a flubber
+y a data</p>
+
+<pre><code>magnet:?xt=urn:btih:d4bd43c5b9fd2c92fe54e4baf93dd215e156249e&amp;dn=The%20Orville%20Season%201%20Complete%20720p%20HDTV%20x264%20%5bi_c%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<p><strong>MobPsyco 100 (Reigen OVA)</strong> Un resumen creativo (con material extra) del
+anime. Imprecindible si has visto la serie, mas si ateniendote al final esperas
+una segunda temporada tan brillante como la primera</p>
+
+<pre><code>magnet:?xt=urn:btih:7745ff0cd32e6d9f500cc4386619c7a607c04e43&amp;dn=%5bPuyaSubs!%5d%20Mob%20Psycho%20100%20REIGEN%20OVA%20%5b1080p%5d%5b12315161%5d.mkv&amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce
+</code></pre>
+
+<h2 id="fonos">fonos</h2>
+
+<p>Algunos dias puedo descargar hasta 35GiB de contenido y en cambio apenas subir
+alrededor de 2.5GiB, fuuuh vivo por encima de mis posibilidades&hellip; con todo y eso,
+imposible es ignorar aquellos albums con sonido prometedor. Conociendo su
+existencia, podria ignorar su adquisicion? DE NINGUNA MANERA!</p>
+
+<p>Siento no retribuir el aporte de los pares, lo siento, la necesidad de
+aquirirlos es demaciado fuerte. Intento compensarlo adoptando por varios meses
+aquellos materiales sobresalientes o que representan algun interes pasado</p>
+
+<p>y, bueno, un buen tipo <a href="https://thepiratebay.org/user/100.XY">100.xy</a> (se que es
+tipo por el xy) ultimamente ha subido alrededor de 5 albums diarios, todos de
+calidad (casi siempre asegurada, alguno que otro sale rana como Chrome Neon
+Jesus). En su mayoria entrarian el la clasificacion de Indi, con fuertes
+tendencias al folk y pop y en ocaciones al sonido cosmico.</p>
+
+<p>De la mayoria no dejo enlace por los motivos expuestos anteriormente, en caso de
+interes ir a su perfil</p>
+
+<p>(Como son muchos albums, me limito a unos pocos, con escuetas descripciones)</p>
+
+<p><strong>MGMT - Little Dark Age</strong> dream pop? ligero y bueno</p>
+
+<p><strong>Stellarscope - Standing in the Shadow of You Ghost</strong> basicamente Bauhaus</p>
+
+<p><strong>Lote Kestner - Off White</strong> creo que esto se llama folk, o seria algo similar,
+una voz femenina cantando (con sentimiento melancolico) y una guitarrita&hellip; eso
+es todo, suena bien, por ello va directo a la coleccion</p>
+
+<p><strong>Cloakroom - Time Wall</strong> esto es una especie de musica pop grunge(?) muy suave
+y melancolico&hellip; como dice su primer pista <em>Gone But Not Entirely</em></p>
+
+<p><strong><a href="https://en.wikipedia.org/wiki/Sound_of_Ceres">Sound of Ceres</a> - The Twin</strong>
+segun la wiki, este sonido se llama dream pop y esta suculento! sin llegar a lo
+sublime, te envuelve en una nuve cosmica de algodon llena de buen rollo, sin
+problemas, conflictos ni preocupaciones, r-e-l-a-x, puro sonido sintetico con
+vocales femeninas arrolladoras, eso es este album</p>
+
+<p><strong>A Thousand Hours - Sleep</strong>, de nuevo otro trabajo interesante. una voz
+femenina lidera el ambiente nebuloso, de ritual pagano en el bosque lleno de
+niebla, similar a una ciudad llena de los otros, ritmos sinteticos noventeros
+darkis (o como podria la <a href="https://en.wikipedia.org/wiki/Thousand_Hours">wiki</a>
+ritmos ambientales nordicos en bucle), una mezcla retro-modernosa bien chida, si
+tuviera que elegir una pieza me quedaria con <em>Sleep of Angels</em>. Tambien por hay
+esta otro de sus albums (Endless Grey) en la misma linea, quiza aun mejor</p>
+
+<p><strong>Merit Hemmingson - Merit Hemmingson</strong> aqui iba a poner que es musica hippi
+folklorica zelta, pero en la <a href="https://sv.wikipedia.org/wiki/Merit_Hemmingson">wiki</a> de esta señora, nos dice
+que es sueca. Cuela con puntuacion sobresaliente, de donde demonios sacaran
+tanta rareza los de pb?, bueno, eso no importa, son gente refinada con gustos
+exquisitos. Aunque uno &ldquo;no entienda&rdquo; el arte, puede &ldquo;sentirlo&rdquo; (sin
+resultados sexuluales&hellip; generalmente)</p>
+
+<p><strong>Oscar Benton - I Am Back</strong> la voz de Leonard Cohen en un disco de Leonard
+Cohen&hellip; supongo, no he escuchado un disco del cohen. Como diria mi amigo el
+floyd, recomendable cuando luego de pasar fumando todo el dia en el trabajo,
+llegas a casa y lo unico que quieres es seguir fumando mas</p>
+
+<p><strong>Bloodbound - Nosferatu</strong> ya que el &ldquo;metal&rdquo; como tal es un genero donde mis
+unicos dos referentes son iron maiden y motorhead, pues esto tiene muchas
+similitudes con los maiden y es metal que puedo oir, son, &ldquo;melodicos&rdquo;</p>
+
+<p><strong>kenji kawai - Gunparade March: Spirit of Samurai</strong> el compositor de esto,
+tambien firma el ost de gosh in the shell, asi que, si alli tenia calidad, por
+que no habria de tenerla en otras obras. No se si sea de anime, pero suena como
+tal, de anime noventero romanticoso ambientado en una guerra mistica. Iregular,
+sin hilo musical, apto solo para fans del anime (?)</p>
+
+<p>Y llegamos al la ultima recomendacion musical, esta es una que adoptare por
+bastante tiempo (espero):</p>
+
+<p><strong>Betterman</strong> Tienen sonido indu oriental animestico. Requiem y la pista 2 del
+primer album, son lo que mas me gusta, pero por que esto te deberia interesar?
+Heemmm, de joven por la tele en un horario aleatorio de entre las 5 y 7 de la
+mañana los sabados, por algun motivo raro ponian un anime con una intro que
+combinaba la imagen real del fondo colarino marino, con anime y con musica
+relajante, eso era m-a-g-i-a!.</p>
+
+<p>Paso mucho tiempo, hasta que un buen distribuidor
+de anime de bolsita haciendo caso a la referencia de &ldquo;creo que se llamaba
+<strong>Betterman</strong>&rdquo; luego de varias semanas pudo conseguirme el material y asi
+disfrutar que una serie particular poco conocida, con un regusto a NGE. Hace
+falta decir mas?</p>
+
+<pre><code>magnet:?xt=urn:btih:a31d4ad93d6053b2b7a55a1012a657877e478f79&amp;dn=Betterman%20OSTs&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce
+</code></pre>
+
+<p>Es dificil consueguir una version decente con subtitulos en castellano, en el
+hdd cuento con una version de subticulos incrustados y otra en engrish sin
+traduccion, he estado varajando algun dia hacer la captura de texto e incrustar
+los subs en la vercion inglesa&hellip; pero es mucha labor. Si llego a anciano, lo
+hare como ultimo proyecto antes de suicidarme</p>
+
+<h2 id="txt">txt</h2>
+
+<p><center>
+<img src="https://nasciiboy.github.io/img/mundo.png" alt="" />
+</center></p>
+
+<p>desde <a href="http://www.linuxhispano.net/2018/03/13/mundo/">linuxhispano</a> siempre con un toque de humor</p>
+
+<p>De etre las lecturas curiosas, aquien que ha hecho hardware para vim,
+especificamente <a href="https://github.com/alevchuk/vim-clutch">un pedal</a>, ja, ja, ja,
+cuando aprenderan que Emacs es el unico y verdadero sendero?</p>
+
+<p>Otra entrada interesate fue <strong><a href="https://lamaquinadiferencial.wordpress.com/2013/07/31/como-puede-haber-gente-usando-dvorak/">¿Cómo puede haber gente usando Dvorak?</a></strong> Una comparativa objetiva realizada con
+grep, awk, el diccionario de ispell (que no pude encontrar para replicar el
+experimento, pero que por obra y gracia de
+<a href="https://ondahostil.wordpress.com/2018/03/26/lo-que-he-aprendido-configurar-texmaker/">ondiz</a>
+tenemos <a href="https://github.com/LibreOffice/dictionaries">aqui</a> un enlace substitutivo) y regexes de qwerty y dvorak
+&hellip; luego el tipo se contra<a href="https://lamaquinadiferencial.wordpress.com/2016/03/14/devorak-ubuntu-linux-android-gnome-y-netflix/">dice</a> que no es &ldquo;tan&rdquo; conveniente
+pero eso es otro asunto. La unica inconveniencia que encuentro en usar dvorak es cuando toca
+reinstalar sistema y a la distro no le da la gana incorporarlo,
+bueno, eso y esperar  hasta la instalacion de ckb para agregar mi propia modificacion emacser al dvorak</p>
+
+<p>me gustaria hacer una entrada mas tarde con el codigo que proporciona el
+camarada y los <code>.dic</code>. Ademas de una buena aplicacion para practicar awk,
+tambien sirve para confirmar objetivamente que las cosas que triunfan son
+mediocres, como la religion, politica, musica, espectalucos televisivos, qwerty,
+android, windows, &hellip;. Dvorak rules!</p>
+
+<p>continuando, un tutorial para programar en gameboy con asm:
+<a href="http://wiki.ladecadence.net/doku.php?id=tutorial_de_ensamblador">http://wiki.ladecadence.net/doku.php?id=tutorial_de_ensamblador</a>
+hacen falta mas palabros para expresar que me a jodido la vida. El mundo del
+ensamblador realmente es turbio&hellip;</p>
+
+<p>por algunos warnings al ensamblar y ademas de para dar las gracias, me puse en
+contacto con el autor y pareque que tiene intenciones de corregir el codigo,
+ademas de extenderlo. Aun no leo el tutorial, me limite solo a probar que el
+codigo funsionace, tambien a corroborar la disponibilidad de las herramientas
+sugeridas y tunear un poco emacs para la labor. Si llega a algo este desvio,
+colocare una entrada dedicada con algun codigo personal o una gia o algo asi</p>
+
+<p>mientras tanto el susodicho tutorial recomendaba primero pasar por aca:
+<a href="https://wiki.speccy.org/cursos/ensamblador/indice">https://wiki.speccy.org/cursos/ensamblador/indice</a>. Y en eso estoy como al 35%,
+cada link te aborbe mas y mas y mas en litermente gigas y gigas de
+documentacion, herramientas, codigo y emuladores turbulentos.</p>
+
+<p>Dejando de lado que para asm hay que rasurarse la barba con piedras, aclara
+bastante el funcionamiento de los fierros. Puede que el asm no sea lo mio, menos
+aun el asm de spectrum, pero ha hecho que revalore la importancia de C, como a
+recordar el precio de llamar una funcion y desmitificar (nuevamente) la
+&ldquo;elegancia&rdquo; de los lenguajes &ldquo;elegantes&rdquo;, guarr, les escupo cuando pasan a un lado</p>
+
+<p>En consonancia con lo anterior, un programador se llama a si mmismo &ldquo;mediocre&rdquo; y
+nos explica como hace para que su ineficacia no arruine el dia a dia (pruebas,
+autamatizacion y monitoreo)
+<a href="https://dev.to/sobolevn/i-am-a-mediocre-developer--30hn">https://dev.to/sobolevn/i-am-a-mediocre-developer--30hn</a></p>
+
+<p>Ondiz nos enumera unas reglas esenciales para aquellos que inician en eso de la programacion:
+<a href="https://ondahostil.wordpress.com/2018/03/17/mis-reglas-para-un-mejor-software-cientifico/">https://ondahostil.wordpress.com/2018/03/17/mis-reglas-para-un-mejor-software-cientifico/</a></p>
+
+<p>y para finalizar algunas novedades de emacs</p>
+
+<p><a href="https://github.com/ralesi/ranger.el">ranger-mode</a> un nuevo paquete que intenta
+emular el funcionamiento del omologo de linea de comandos</p>
+
+<pre><code>(use-package ranger)
+</code></pre>
+
+<p>pero alto, la cosa esta muy verde, se rompe con facilidad e interfiere (al
+menos) en direc-mode, asi que no lo prueben. Tuve que borrar su rastro para
+recuperar la normalidad.</p>
+
+<p>el buen quijote se marca un pedaso de post sobre las ayudas de emacs:
+<a href="http://quijotelibre.com/2018/03/16/aprendiendo-gnu-emacs-y-org-mode-ix-la-ayuda-de-emacs">http://quijotelibre.com/2018/03/16/aprendiendo-gnu-emacs-y-org-mode-ix-la-ayuda-de-emacs</a></p>
+
+<p>y para la alegria de todo el mundo, aparecen dos nuevas entradas dedidacas al
+editor orgasmico:
+<a href="https://lapipaplena.wordpress.com/2018/03/21/curso-de-emacs-24-graficos-con-ascii-extensiones-instaladas-y-caracteres-raros/">https://lapipaplena.wordpress.com/2018/03/21/curso-de-emacs-24-graficos-con-ascii-extensiones-instaladas-y-caracteres-raros/</a> y
+<a href="https://lapipaplena.wordpress.com/2018/03/22/curso-emacs-24-zpresent-narrows-y-rectangulos/">https://lapipaplena.wordpress.com/2018/03/22/curso-emacs-24-zpresent-narrows-y-rectangulos/</a></p>
+
+<p><strong>este post, ademas de dedicado al ramer, va en honor del gato sin nombre (II),
+no mas garritas</strong></p>
+
+<p><img src="https://nasciiboy.github.io/img/sayonara.jpg" alt="" /></p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.github.io/post/ramen-xviii/">◀ Ramen XVIII</a>
+    
+    
+  </div>
+
+  <div class="clear" class="center">
+  <h2>Comments</h2>
+  </div>
+
+  <form method="POST" class="dark-matter" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/comments">
+  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/post/ramen-xix/#comment-submitted">
+  <input type="hidden" name="options[entryId]" value="f440ba57b95066959679450d64eb8246">
+
+  <h1>Comment Form
+    <span>Este formulario envia un pull request al repositorio donde se almacena
+    el blog, uselo con sabiduria. La inclusion de comentarios es totalmente
+    arbitaria y puede modificarse, ignorarse o desaparecer en el
+    futuro... la habilidad de anidar comentarios no esta disponible</span>
+  </h1>
+  <label>
+    <span>Your Name :</span>
+    <input name="fields[name]" type="text" placeholder="Your name"/>
+  </label>
+
+  <label>
+    <span>Your Email :</span>
+    <input name="fields[email]" type="email" placeholder="Your email address"/>
+  </label>
+
+  <label>
+    <span>Message :</span>
+    <textarea name="fields[body]" placeholder="aqui tu comentario (se acepta Markdown)" rows="5"></textarea>
+  </label>
+  <label>
+    <span>&nbsp;</span>
+    <input type="submit" value="Submit" class="submit"></input>
+  </label>
+</form>
+
+    
+  
+  
+
+  
+
+  
+    <p>the beautiful is blue... and black</p>
+  
+
+
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/categories/prog">prog(43)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(31)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(11)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/tags/fonos">fonos(19)</a></li><li><a href="https://nasciiboy.github.io/tags/howto">howto(18)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(18)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(13)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(4)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elisp">elisp(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/hardware">hardware(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
