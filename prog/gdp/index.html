@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Raptor Down</title>
+    <title>GDP</title>
     <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
     <style>:root {
 
@@ -245,113 +245,154 @@ img:hover { border: 0.05em solid #fff; }
 <main>
   <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
 
-  <h1>Raptor Down</h1>
+  <h1>GDP</h1>
   
 
-<p><img src="https://nasciiboy.github.io/img/rocky.jpg" alt="" /></p>
+<p><strong>Go Design Patterns</strong>, es un libro enfocado en los patrones de diseño
+implementados en Go&hellip;</p>
 
-<h2 id="el-conteo-final">El Conteo Final</h2>
+<p>El material de esta ocacion, viene (o lo encontre) en presentacion de pdf, con
+una extencion de aproximadamente 400 paginas en letra grande.</p>
 
-<p>De los pocos proyectos presentables que tengo, la libreria de expresiones
-regulares (estilo) &ldquo;raptor&rdquo; contiene lo suficiente de mi&hellip; que aun si el
-fastidio se presentara mañana y dejara de programar, seria suficiente para
-sentirme satisfecho</p>
+<p>El primer 15% es un sobrevuelo de las caracteristicas del lenguaje de
+programacion Go. Nada profundo, pero viene bien como recordatorio de como es
+esto de Go</p>
 
-<p>incluso inclui algunas caracteristicas &ldquo;avanzadas&rdquo; (no regexp) de otros motores,
-por ejemplo una exprecion <code>texto.*mas-texto</code> en <em>raptor</em> era
-<code>texto(mas-texto)*#!mas-texto</code>, algo que denomine como <q>negacion de
-expresiones</q></p>
+<p>El siguiente 55% nos muestran la implementacion de los &ldquo;clasicos&rdquo; patrones
+includidos en el GoF y el resto ilustra maneras de aprovechar las
+caracteristicas concurrentes del lenguaje (gorutinas y canales) reimplementando
+algunos patrones y mostrando un par especificos de esta tematica</p>
 
-<p>perooo, la negacion de expresiones requeria romper con la sencilles de la libreria (o
-motor o como se diga). Tenia la ambicion de encontrar una forma de simplificar
-las caracteristicas avanzadas de otros proyectos a la vez que incrementaba su
-rendimiento. Con esta idea en mente, me dispuse a examinar el motor de
-expresiones regulares que forma parte de la libreria estandar del lenguaje de
-programacion Go, intentando desde luego alcanzar la grandeza&hellip;</p>
+<p>La ideologia programacional-didactica que imparte el autor se llama
+<a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas">TDD</a> (Test-driven
+development). Aunque me parece algo aburrida y monotona (hacer la prueba,
+fallar, refactorizar, hacer la prueba, acercarse al comportamiento,
+refactorizar, etc, etc) conicido en que las pruebas son un buen punto de
+referencia para afrontar un problema, pues:</p>
 
-<h2 id="gore">Gore</h2>
+<ol>
+<li><p>Si es dificil realizar una prueba a tu codigo, seguramente este mal planteado,
+ya sea por realizar demaciadas cosas, recibir demaciados parametros, regresar
+variados resultados</p></li>
 
-<p>Casi por norma general ocurre que me adentro en un proyecto ajeno y me pierdo
-entre dependencias y recorridos entre un fichero a otro, mientras trato de hacer
-una imagen global de lo que esta pasando. Pese a que en Golang mi orientacion es
-superior que en C, o C++, me perdi bastante, aunque llege a apreciar que el parseo
-no ocurre en el paquete principal de codigo, si no que sucede en otro &ldquo;de
-sintaxis&rdquo;, donde tambien se realiza una <em>simplificacion</em> del recorrido de las expresiones.</p>
+<li><p>Son una garantia de que las nuevas modificaciones no rompan con el comportamiento
+establecido</p></li>
+</ol>
 
-<p>Los resultados de transformar la expresion en algo util se depositan en una
-estructura, que tiene un arreglo con todos los datos necesarios y un arreglo de
-sub-expresiones o sea punteros del mismo tipo para cuando se requiere por
-ejemplo en agrupaciones, alternacion y conjuntos, agrupar expresiones dentro de
-otras expresiones</p>
+<p>aun asi, el TDD como mantra sigue sin convencerme. Por la demas, cada patron
+se divide mas o menos en las secciones Descripcion, Objetivos, Criterios de
+aceptacion, Pruebas de unidad, Implementacion y &ldquo;resumen-reflexion-o-algo&rdquo;.</p>
 
-<p>La optimizacion, de la expresion regular, se realiza revizando caso a caso los
-elementos que tiene la expresion y se siplifican cuando es posible cambiando el
-tipo de subexprecion por otro, eliminando anidamiento o agrupando varias
-expresiones como una sola</p>
+<p>El acercamiento que tome, por resultarme tedioso y aburrido lo relacionado con
+la TDD, fue leer todo ignorando criterios de aceptacion y pruebas de unidad para
+ir directamente al codigo, descifrarlo y verlo funcionar, luego ante alguna duda
+ya leer la seccion de implementacion y pasar al resumen-o-algo</p>
 
-<p>Una vez compilada la regexp, la busqueda (que no entendi muy bien) ocurre mas
-que por iteracion por la cadena de ingreso, mediante operaciones especificas
-considerando cada valor, posicion y tipo de la expresion, por ejemplo si debe buscarse al
-inicio o al final, si es una expresion de tipo cadena, un conjunto, y luego
-mediante funciones con la libreria <code>strings</code> se realiza el trabajo sucio de los
-casos sencillos</p>
+<p>Los primeros capitulos, dedicados a los patrones estructurales y de creacion,
+son bastante desabridos. Basicamente se podrian resumir en simples
+interfaces. Pero cuando se llega a los patrones de comportamiento, el codigo se
+convierte en ludicos rompecabezas (no frustrantes) y con concurrencia mejoran
+aun mas. La implemantacion del patron <code>Pipeline</code> es una gozada de sencilles y
+genialidad que unicamente podria implementarse en Go con tanta genialidad
+(aunque creo que en el TGPL lo muestran aun mejor implementando una pasteleria)</p>
 
-<h2 id="say-goodbay">Say, Goodbay</h2>
+<p>mencionar que el codigo fuente no incluye ni un puñetero comentario, yeee! este
+sujeto es de mi escuela de pensamiento&hellip; No temais, entre los nombres, tipos,
+funciones del paquete en conjuncion con las acciones dentro de las pruebas es
+suficiente para entender lo que se esta intentando demostrar. Diria que en caso
+de amnesias mentales, en lugar de revisitar el libro, es mas interesante ir
+directo al codigo, y si tienes la suficiente determinacion, ni siquiera hace
+falta leer el libro</p>
 
-<p>imaginaba que encontraria algo por el estilo, al examinar (o mejor dicho intuir
-pues no llegue a enterder) un motor regexp <em>serio</em>.</p>
+<p>por la demas, la lectura es amena y rapida, no se esfuersa en repetir lo que en
+otros libros (como el mismo GoF) encontrarias mas y mejor detallado, se decanta
+por enseñar formas idiomaticas de aprovechar el lenguaje</p>
 
-<p>La libreria regexp estandar es por decirlo de algun modo una fabrica con muchos
-empleados especializados en una labor pequeña sin nungun glamour ni emocion, un
-monton de trabajo manual automatizado convertido a codigo, je, je, je, yo queria
-encontrar algo mas del estilo de la fabrica le willy wonka, con un rio de
-gominolas y Oompa-loompas cantores</p>
+<h2 id="notas">Notas</h2>
 
-<p>veo a las expresiones regulares como un sistema conformado de (por decir) 3
-reglas con el que se pueden generar patrones de complejidad y extencion
-arbitrarios para casos de uso asombrosos aunque limitados. En contraste, las
-expresiones (no) regulares actuales extienden estas normas incrementando la
-complejidad a cambio de perder la &ldquo;elegancia&rdquo;, hay belleza hay? el codigo debe
-ser bello?</p>
+<p>el codigo fuente, del libro esta disponible en
+<a href="https://github.com/PacktPublishing/Go-Design-Patterns">github</a> pero aunque la
+mayoria esta listo para compilar/probar uno que otro tiene fallos, no se si
+intencionales, como por ejemplo en el penultimo capitulo, para ejecutar el
+codigo es necesario renombrarlo, reorganizarlo y ocacionalmente modificar y/o
+agregar alguna funcion o libreria. Ya en el capitulo 10 ni se molestan
+(literalmente) en terminar la escritura, el primer fichero trae una funcion a
+medio hacer y poco mas&hellip; coloque una
+<a href="https://github.com/PacktPublishing/Go-Design-Patterns/issues/1">issue</a>,
+esperando que corrijan el asunto&hellip; pero no espero nada, es un libro &ldquo;de
+maquila&rdquo;, con mas de un año en el mercado, un mercado inundado de material
+generico donde apenas alguien tiene interes en ellos y las unicas ventas,
+ocurren casi por equivocacion, ja, ja, ja, la ruleta rusa de los libros!</p>
 
-<p>en este punto, se me acurasara (seguro con razon) de cazador de lo paranormal,
-como quien se creee una religion y busca significados ocultos sumando las letras
-de mil formas distintas hasta estar agusto. Con todo, asi es como veo el codigo,
-como algo que tiene que ser sencillo y con belleza o al menos intentar aproximarse</p>
+<p>el primer error que detecte en el codigo, esta en <code>Chapter02/prototype.go</code>:</p>
 
-<p>un tanto desilucionado, regrese a mi motor y lo despoje de la caracteristica
-esoterica <code>#!</code>, con lo cual se redujo la complejidad a su expresion mas simple y
-gano algo de rendimiento en las <a href="https://nasciiboy.github.io/raptorVSworld/index.html">pruebas</a>,
-entre 500 y 1000 milisegundos en cada competencia, y en algunos
-casos aislados, el tiempo se redujo a la mitad, hubo que renunciar a dos
-expresiones donde ahora aparece un <strong>N/A</strong>, pero aun asi, el rendimiento en
-general, es suficiente como para substituir honradamente a la libreria estandar</p>
+<pre><code>func GetShirtsCloner() ShirtCloner {
+    return nil
+}
+</code></pre>
 
-<p>Es momento de decir adios al raptor, bueno, no, lo seguire utilizando en mis
-programas y como prueba de programacion con cada nuevo lenguaje que intente, hay
-motores mucho mas eficientes, con mas caracteristicas, trabajo y complejidad,
-cuando necesite de su poder los usare, cuando no tirare del raptor y si hace
-falta eficiencia, a programar a mano</p>
+<p>el asunto, es que la funcion regresa un <code>nil</code> para una interfaz que tiene como
+contrato una funcion <code>GetClone(m int) (ItemInfoGetter, error)</code> que solo es
+cumplida por la estructura <code>ShirtsCache</code> por su metodo <code>GetClone</code> aplicado en
+un puntero a la funcion&hellip;</p>
 
-<p>Supongo que con el nuevo panorama podria hacerme responsable y terminar la
-escritura del <strong>manual para escribir un motor de expresiones regulares sin tener
-ni idea</strong>, alias <em>Raptor-book</em></p>
+<p>Al principio me jodio la mente pensando en que dicho codigo pudiera funsionar.
+Comor? un nil convirtiendose en una interfaz para una estructura que no se
+declara explicitamente? Go hace este tipo de magia (me pregunte) &hellip; y nop,
+para que la cosa funcione <code>GetShirtsCloner</code> debe regresar <code>new(ShirtsCache)</code>.</p>
 
-<p>Ohh, modifique el resto de la familia de versiones, regexp 3 y 4 en C
-y la version 3 en Go, pero sin mucho empeño ni comprobaciones mas alla de las
-que estaban en las pruebas, jo, es complicado mantener el nivel cuando hay que
-modificar lo mismo 6 veces en dos lenguajes, por el camino, tambien desaparecio
-un bicho en patrones con agrupaciones que se presentan al final de una
-expresion de una manera que no alcanzo a entender&hellip; si funciona y aprueba, que
-mas da!</p>
+<p>En el capitulo 8, fue necesario aislar un par de ficheros para ejecutar el patron
+singleton (concurrente con canales)</p>
+
+<p>En el capitulo 9, hubo que reorganizar todos los ficheros y modificarlos un poco</p>
+
+<p>Y el 10 directamente no esta hecho. Me habia planteado terminarlos, sin embargo,
+como la metodolagia que habia adoptado era ir directamente al codigo, esta vez
+inexistente, y mi forma de aproximarme al libro fue con una traduccion no
+humana, no fui capaz (ni me esforce) en enterder que demonios decia. Es una
+lastima, por que dicho capitulo mostraba (creo) como limitar la cantidad de gorutinas
+en ejecucion, como finalizar la ejecucion de una gorutina y un codigo final que
+incluia de todo un poco</p>
+
+<p>Como nota final en una parte del patron State, mencionan un FSM que al parecer
+no solo se refiere al buen <strong>monstruo de espagueti volador</strong> o
+<a href="https://en.wikipedia.org/wiki/Flying_Spaghetti_Monster">FSM</a> si no tambien a
+una maquina de estados finitos (<a href="https://es.wikipedia.org/wiki/Aut%C3%B3mata_finito">finite-state machine</a>)</p>
+
+<h2 id="cobaya">cobaya</h2>
+
+<p>Aunque cobayizar un material es un entretenimiento &ldquo;mecanico&rdquo;, cada vez, me da
+mas pereza tener que aplicarlo a tristes PDFs. Pero para optener una traduccion
+&ldquo;express&rdquo; es lo mas sencillo que encuentro, y bueno <code>¯\_(ツ)_/¯</code> aunque sea poco, material a
+material van refinando las ideas del lenguaje de documentacion
+imaginario. Por ejemplo, esta vez hicieron evidente un fallo en el
+reconocimiento de listas alfabeticas (y numericas) que se resolvio modificando
+chapuseramente una regex (aunque no subire el cambio al repo hasta el siguiente refactorizado)</p>
+
+<p>Hem, el material tenia pocos retos y apenas incluia imagenes. Lo mas complicado
+fue dar formato al codigo, tambien inferir donde demonios terminabas los TIPs y
+darle la jerarquia adecuada a los encabezados</p>
+
+<p>Los bloques donde se mostraba la salida de las pruebas no la afine del todo, y
+en la lectura del libro no me percate del hecho de su no correcta indentacion
+hasta luego de la mitad</p>
+
+<p>en el <a href="https://github.com/nasciiboy/gdp">repo cobayizado</a> encontraran el fuente,
+una exportacion a html sin interes ni esfuerzo, y la version (mal) traducida
+automaticamente. Dicha traduccion, no tiene ni tabla de indice, ni los
+encabezados tienen el orden correcto (miestras la leia, iba corrigiendo la
+version en ingles), ademas seguramente el html este bastante
+roto por toquetearlo bastante a mano y con regexes&hellip; y asi se quedara, esta
+ocacion no hay una version &ldquo;fuente&rdquo; en español, es mucho curro y prefiero
+ponerme a practicar los patrones</p>
+
+<p>felices trazos!</p>
 
 
   <div class="clear" class="center">
     
-    <a class="previous" href="https://nasciiboy.github.io/prog/lxde-shortcuts/">◀ lxde shortcuts</a>
+    <a class="previous" href="https://nasciiboy.github.io/prog/cat/">◀ CAT</a>
     
-    
-    <a class="next" href="https://nasciiboy.github.io/prog/blackfriday/"> blackfriday ▶</a>
     
   </div>
 
@@ -360,8 +401,8 @@ mas da!</p>
   </div>
 
   <form method="POST" class="dark-matter" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/comments">
-  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/prog/raptor-down/#comment-submitted">
-  <input type="hidden" name="options[entryId]" value="a7902cc8ae33a1b5d186bf8076842cc2">
+  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/prog/gdp/#comment-submitted">
+  <input type="hidden" name="options[entryId]" value="c4ffe29c195de3f3d92fbe77288812ad">
 
   <h1>Comment Form
     <span>Este formulario envia un pull request al repositorio donde se almacena
