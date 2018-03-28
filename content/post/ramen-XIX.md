@@ -323,7 +323,7 @@ https://lapipaplena.wordpress.com/2018/03/21/curso-de-emacs-24-graficos-con-asci
 https://lapipaplena.wordpress.com/2018/03/22/curso-emacs-24-zpresent-narrows-y-rectangulos/
 
 
-**este post, ademas de dedicado al ramer, va en honor del gato sin nombre (II),
+**este post, ademas de dedicado al ramen, va en honor del gato sin nombre (II),
 no mas garritas**
 
 ![](/img/sayonara.jpg)
