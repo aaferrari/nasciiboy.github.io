@@ -34,7 +34,7 @@ referencia para afrontar un problema, pues:
 2. Son una garantia de que las nuevas modificaciones no rompan con el comportamiento
    establecido
 
-aun asi, el TDD como mantra sigue sin convencerme. Por la demas, cada patron
+aun asi, el TDD como mantra sigue sin convencerme. Por lo demas, cada patron
 se divide mas o menos en las secciones Descripcion, Objetivos, Criterios de
 aceptacion, Pruebas de unidad, Implementacion y "resumen-reflexion-o-algo".
 
@@ -60,8 +60,8 @@ directo al codigo, y si tienes la suficiente determinacion, ni siquiera hace
 falta leer el libro
 
 por la demas, la lectura es amena y rapida, no se esfuersa en repetir lo que en
-otros libros (como el mismo GoF) encontrarias mas y mejor detallado, se decanta
-por enseñar formas idiomaticas de aprovechar el lenguaje
+otros libros (como el mismo GoF) encontrarias mejor y mas detallado. En su lugar
+se decanta por enseñar formas idiomaticas de aprovechar el lenguaje
 
 ## Notas
 
@@ -136,7 +136,7 @@ hasta luego de la mitad
 en el [repo cobayizado](https://github.com/nasciiboy/gdp) encontraran el fuente,
 una exportacion a html sin interes ni esfuerzo, y la version (mal) traducida
 automaticamente. Dicha traduccion, no tiene ni tabla de indice, ni los
-encabezados tienen el orden correcto (miestras la leia, iba corrigiendo la
+encabezados tienen el orden correcto (mientras la leia, iba corrigiendo la
 version en ingles), ademas seguramente el html este bastante
 roto por toquetearlo bastante a mano y con regexes... y asi se quedara, esta
 ocacion no hay una version "fuente" en español, es mucho curro y prefiero
