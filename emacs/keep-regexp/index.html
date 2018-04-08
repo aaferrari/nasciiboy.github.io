@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Keep Regexp</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/emacs">emacs</a></div>
+
+  <h1>Keep Regexp</h1>
+  
+
+<p>es muy vergonZoSo sentirse capaz y al enfrentar un reto quedarse congelado al
+borde del fracaso</p>
+
+<p>El asunto es el siguiente, tenemos <a href="https://nasciiboy.github.io/data/lista_correos.txt">un fichero</a> con
+correos (muchos correos, 79 exactamente). El fichero ademas de los correos
+incluye nombres y comas y la meta es obtener unicamene los correos.</p>
+
+<p>Empece el reto substituyendo comas por saltos de linea, luego probe una
+complicada regexp para buscar los correos, pero tras muchos fallidos intentos,
+abandone la idea&hellip; ademas, que esperaba encontrando la regexp? no es como si la
+coincidencia colocara la region en la coincidencia y luego se pudiera &ldquo;cortar&rdquo; y
+&ldquo;pegar&rdquo;</p>
+
+<p>Lo siguiente, fue utilizar el comando <code>flush-lines</code> para borrar las lineas que
+no coincidieran con el patron <code>[^@]</code>, &ldquo;obviamente&rdquo; no funciono, auque en mi ignorancia
+culpe al patron&hellip; (risa histerica) y bueno, sucede que no te aclaras y hasta se
+te olvida utilizar la ayuda del emacs</p>
+
+<p>un par de intentos mas tarde, termine por utilizar una poco elegante macro, que
+cumplia el objetivo chapuceramente</p>
+
+<p>luego, tras ver la primer solucion, mas simple, conpacta, no del todo &ldquo;segura, pero para el
+caso efectiva</p>
+
+<pre><code>cat lista_correos.txt | tr &quot; &quot; '\n' | grep @ | xargs
+</code></pre>
+
+<p>e inmediatamente despues un <strong>vi</strong>-liever solucionaba el asunto con</p>
+
+<pre><code>:%s/  */^M/g
+:v/@/d
+:%join
+</code></pre>
+
+<p>como podia evitar la inminente culpa y herirda en el orgullo klingon-emacsero?</p>
+
+<p>intetentando superar la frustracion, dio inicio un aprendizage formal y profundo
+de las regexes en emacs y alguno que otro comando mas. Pero antes de pasar a
+ello, fue nesesario aminorar el trauma implementando una solucion en awk y otra
+en C&hellip;.</p>
+
+<pre><code># esto a un fichero, por ejemplo a.awk
+1 {
+    for( i=1; i&lt;=NF; i++ )
+        if( $i ~ /@/ ){
+            printf( &quot;%s\n&quot;, $i)
+        }
+}
+
+# y luego ejecutar con:
+# $ awk -f a.awk lista_correos.txt
+</code></pre>
+
+<p><a href="https://nasciiboy.github.io/data/emailtor.zip">aca</a> la solucion con C. Compilar con <code>gcc a.c
+regexp4.c</code> y ejecutar con <code>$ a.out lista_correos.txt</code></p>
+
+<p>Un dia despues, con la agonia mental aun fresca, llego la solucion en emacs</p>
+
+<pre><code>M-&lt;
+M-x replace-regexp RET &quot; +\|,&quot; RET C-o RET
+M-&lt;
+M-x keep-lines RET &quot;@&quot; RET
+</code></pre>
+
+<p>(no conocia <code>keep-lines</code> si tu tampoco, te la presento. Ignorar las comillas son
+para delimitar la cadena de entrada)</p>
+
+<p>ciertamente mas extensa que vi, pero consideremos que emacs no tiene una
+simbiosis con el comando sed, ni tampoco una implementacion de sus comandos de
+tal forma que puedan ejecutarse &ldquo;en bloques&rdquo;. No esta tan mal, supongo.</p>
+
+<p>aqui es donde se podria iniciar una &ldquo;guerra santa&rdquo;. Pero bueno, la naturaleza
+extensible e ilimitada de emacs para un tema concreto puede ser menos eficiente,
+es cierto&hellip; aunque, nada impide que se implemente un comando
+<q><i>interprete</i></q> tipo sed e incluso otro para aplicar acciones por
+lineas y de manera global (sin recurrir a macros)</p>
+
+<p>Supongo que los usuarios del modo maligno, han hecho algo asi, mas profanar emacs con
+tales paganismos, ni utilizar &ldquo;modos&rdquo; que fuerzan a presionar ESC de forma
+inconciente, son algo a contemplar por mi parte, las cosas &ldquo;modales&rdquo; son un
+dolor, ya es suficientemente modal tener que usar el firefox, o el navegador de
+ficheros y andar presionando ahi teclas de otros &ldquo;modos&rdquo;</p>
+
+<p>o, por aca un semi-equivalente en elisp de la solucion</p>
+
+<pre><code>(defun emailtor ()
+  &quot;Separa los correos en lista_correos.txt&quot;
+  (interactive)
+  (goto-char (point-min))
+  (while (re-search-forward &quot; +\\|,&quot; nil t)
+    (replace-match &quot;\n&quot; nil nil))
+  (goto-char (point-min))
+  (delete-non-matching-lines &quot;@&quot;))
+</code></pre>
+
+<p>ha, no es lo mas fino, pero para el caso cumple</p>
+
+<h2 id="regexp">regexp</h2>
+
+<ul>
+<li><p>Conjunto <code>[]</code>. Conjunto inverso <code>[^]</code>. Dentro de los conjuntos (con la
+syntaxis completa <code>[[:clase:]]</code>) se permiten las clases</p>
+
+<ul>
+<li><code>[:alnum:]</code> caracter alfanumerico</li>
+<li><code>[:alpha:]</code> una letra, incluidos caracteres unicode</li>
+<li><code>[:blank:]</code> espacio y tabulacion</li>
+<li><code>[:cntrl:]</code> caracteres ASCII de control</li>
+<li><code>[:digit:]</code> numeros ascii del 0 al 9</li>
+<li><code>[:graph:]</code> cualquier caracter visible, exepto espacios en blanco</li>
+<li><code>[:print:]</code> cualquier caracter visible, incluidos espacios en blanco</li>
+<li><code>[:lower:]</code> caracteres en minusculas</li>
+<li><code>[:upper:]</code> caracteres en mayusculas</li>
+<li><code>[:punct:]</code> signos de puntuacion</li>
+<li><code>[:space:]</code> espacios en blanco</li>
+<li><code>[:word:]</code>caracteres que formen parte de las palabras</li>
+<li><code>[:xdigit:]</code> caracteres hexadecimales (0-9, a-f y A-F)</li>
+<li><code>[:ascii:]</code> caracter ASCII</li>
+<li><code>[:nonascii:]</code> cualquier caracter no ASCII</li>
+<li><code>[:multibyte:]</code> caracteres unicode multibyte</li>
+<li><code>[:unibyte:]</code> caracteres codificados en un solo byte (basicamente todo ASCII)</li>
+</ul></li>
+
+<li><p>punto <code>.</code></p></li>
+
+<li><p>metacaracter <code>\</code></p></li>
+
+<li><p>agrupacion y captura <code>\(\)</code></p></li>
+
+<li><p>coincidencia con la anterior captura <code>\d</code>. (Substituir <code>d</code> por el numero de captura)</p></li>
+
+<li><p>agrupacion sin captura <code>\(?:\)</code></p></li>
+
+<li><p>alternativa <code>\|</code></p></li>
+
+<li><p>cuantificadores</p>
+
+<ul>
+<li><code>?</code> cero o uno</li>
+<li><code>*</code> cero o mas</li>
+<li><code>+</code> uno o mas</li>
+<li><code>\{n\}</code> exactamente n</li>
+<li><code>\{n,\}</code> n o mas</li>
+<li><code>\{n,m\}</code> entre n y m</li>
+</ul></li>
+
+<li><p>modificadores</p>
+
+<ul>
+<li><code>$</code> coincidencia al fin de linea</li>
+<li><code>^</code> coincidencia al inicio de linea</li>
+<li><code>\=</code> coincidencia en la posicion del punto</li>
+<li><code>\'</code> coincidencia al final del buffer</li>
+<li><code>\`</code> coincidencia al inicio del buffer</li>
+</ul></li>
+
+<li><p>fin o inicio de palabra <code>\b</code></p></li>
+
+<li><p>(deacuerdo al modo) un caracter que forme palabras <code>\w</code> o <code>\sw</code></p></li>
+
+<li><p>(deacuerdo al modo) un carac,ter que no forme palabras <code>\w</code> o <code>\Sw</code> o <code>\sW</code></p></li>
+
+<li><p>espacios <code>\s-</code> o <code>\s</code> (&rdquo;<code>\s</code>&rdquo;)</p></li>
+
+<li><p>symbolos <code>\s_</code></p></li>
+
+<li><p>delimitador de apertura <code>\s(</code></p></li>
+
+<li><p>delimitador de cierre <code>\s)</code></p></li>
+
+<li><p>caracteres de puntuacion <code>\s.</code></p></li>
+</ul>
+
+<h3 id="comandos-de-utilidad">comandos de utilidad</h3>
+
+<ul>
+<li>(search-forward)  busqueda de texto hacia adelante</li>
+
+<li><p>(search-backward) busqueda de texto hacia atras</p></li>
+
+<li><p><code>C-s</code> (isearch-forward)  busqueda de texto de forma interactiva hacia adelante</p></li>
+
+<li><p><code>C-r</code> (isearch-backward) busqueda de texto de forma interactiva hacia atras</p></li>
+
+<li><p>(search-forward-regexp)  busqueda de regexp hacia adelante</p></li>
+
+<li><p>(search-backward-regexp) busqueda de regexp hacia atras</p></li>
+
+<li><p><code>C-M-s</code> (isearch-forward-regexp)  busqueda de regexp de forma interactiva hacia adelante</p></li>
+
+<li><p><code>C-M-r</code> (isearch-backward-regexp) busqueda de regexp de forma interactiva hacia atras</p></li>
+
+<li><p>(replace-string) substitucion de texto</p></li>
+
+<li><p>(replace-regexp) substitucion de regexp</p></li>
+
+<li><p><code>M-%</code>   (query-replace)        substitucion interactiva de texto</p></li>
+
+<li><p><code>C-M-%</code> (query-replace-regexp) substitucion interactiva de regexp</p></li>
+
+<li><p>(highlight-lines-matching-regexp) resaltar cualquier linea que coincida con una regexp</p></li>
+
+<li><p>(highlight-regexp) resaltar una regexp</p></li>
+
+<li><p>(unhighlight-regexp) des-resaltar regexp</p></li>
+
+<li><p>(flush-lines) eliminar lineas que coincidan con la regexp. (el patron <code>^$</code> eliminara todas las lineas en blanco)</p></li>
+
+<li><p>(keep-lines) se eliminan las lineas que no coincidan con la regexp</p></li>
+
+<li><p>(align-regexp) alinea (verticalmente la parte en varias lineas que coincida con la regexp</p></li>
+</ul>
+
+<h2 id="re-builder-isearch-isearch">re-builder, isearch, isearch+</h2>
+
+<p>De entre las muchas cosas relacionadas con regexes, el modo <code>re-builder</code> es uno
+muy interesante, pues nos permite escribir y editar una regexp con suma
+facilidad y luego copiar el resultado.</p>
+
+<p>Supongo que este modo, es una facilidad para los programadores de emacs,
+basandome en que la expresion esta entrecomillada y al copiar la regexp con el
+comando <code>reb-copy</code> (C-c C-w) incluye las comillas y ademas el formato de escape
+de caracteres esta dispuesto a la forma que requiere el codigo fuente en elisp.</p>
+
+<p>Dicho escape de caracteres y metacaracteres, se debe a la naturaleza de las
+cadenas en C de hay que las cosas suelan requerir escapes para los escapes. Por
+defecto re-builder viene en modo de syntaxis <code>read</code> que es de la que hablo, pero
+tambien podemos cambiar a sintaxis <code>string</code> (la que utiliza isearch), bien
+presionando la combinacion <code>C-c TAB</code> y escribiendo <code>string</code> o directamente colocando
+lo siguiente en nuestra configuracion</p>
+
+<pre><code>;; re-builder
+(setq reb-re-syntax 'string)
+</code></pre>
+
+<p>pese a la facilidad de edicion y creacion de regexes, me pregunto la razon de no
+vincular este modo con isearch. Mas adelante (o no) una posible razon y un par de
+soluciones.</p>
+
+<p>los comandos basicos de utilidad</p>
+
+<ul>
+<li><code>C-c C-w</code> copiar regexp (comillas incluidas)</li>
+<li><code>C-c C-q</code> salir del modo</li>
+<li><code>C-c TAP</code> cambiar syntaxis de entrada</li>
+<li><code>C-c C-r</code> ir a coincidencia previa</li>
+<li><code>C-c C-s</code> ir a coincidencia siguiente</li>
+</ul>
+
+<p><strong>isearch</strong> en sus modalidades mas conocidas <code>isearch-forward-regexp</code> (C-M-s) e
+<code>isearch-backward-regexp</code> nos permiten buscar expresiones regulares hacia
+adelante y hacia atras del punto interactivamente, mas no dejeis que os engañen
+las funciones basicas de estos comandos, pues no son simples comandos, son modos
+por si mismos, podemos averiguar sus muchas posibilidades (ya dentro de isearch)
+presionando <code>C-h m</code> o con la documentacion de la funcion <code>C-h f
+isearch-forward-regexp</code></p>
+
+<p>quiza el comando mas conocido de las busquedas interactivas sea <code>C-w</code> que toma
+la entrada sobre y delante del punto como como texto de entrada (dividida por
+palabras), pero ademas de esa combinacion tenemos otras muy interesantes como</p>
+
+<ul>
+<li><code>M-s e</code> para editar &ldquo;con papeles&rdquo; la regexp, aunque no interactivamente</li>
+<li><code>C-M-y</code> ingresar a la regexp el caracter del buffer sobre el que esta el punto</li>
+<li><code>C-M-w</code> borrar el ultimo caracter de la regexp</li>
+<li><code>M-s C-e</code> ingresar a la regexp el resto de la linea apartir de la posicion del punto</li>
+<li><code>C-y</code> traer ultima cadena del anillo de la muerte</li>
+<li><code>M-y</code> iterar sobre el contenido del anillo de la muerte</li>
+<li><code>M-c</code> cambiar la sensivilidad a las mayusculas-minusculas</li>
+<li><code>C-s</code> siguiente coincidencia</li>
+<li><code>C-r</code> anterior coincidencia</li>
+</ul>
+
+<p>y muchas otras cosas misticas y confusas mas trae el modo, la cuestion
+problematica tiene que ver con el la forma en que isearch incorpora el contenido
+del anillo de la muerte a la busqueda, pues si por ejemplo matamos la cadena
+<code>\(group\)[set]</code> al hacer el yank (C-y) en lugan de ingresar <code>\(group\)[set]</code>
+escapara los caracteres significativos en la regexp, dejando <code>\\(group\\)\[set]</code>
+lo que obligaria a editar de forma penosa la expresion</p>
+
+<p>preguntando en <a href="https://www.reddit.com/r/emacs/comments/8aepnk/yank_text_in_isearch_without_escape_character/">reddit</a>, el unico lugar donde aparecen respuestas prontas y en
+ociones con feliz resultado, oantolin proporcionaba el siguiente comando
+alternativo para hacer el yank con su contenido tal cual dentro de la expresion</p>
+
+<pre><code>(defun isearch-yank-kill-literally ()
+  &quot;Pull string from kill ring into search string literally.&quot;
+  (interactive)
+  (setq isearch-yank-flag t)
+  (let ((string (current-kill 0)))
+    (isearch-process-search-string
+     string
+     (mapconcat 'isearch-text-char-description string &quot;&quot;))))
+
+(define-key isearch-mode-map (kbd &quot;C-S-y&quot;) #'isearch-yank-kill-literally)
+</code></pre>
+
+<p>como puede verse, se seguiere la vinculacion al atajo Control-Super-y, pero en
+mi caso me es incompatible con otro comando&hellip; lo que sirvio fue suplantar
+directamente el comando yank de isearch dejando como nombre de la nueva
+definicion solamente <code>isearch-yank-kill</code></p>
+
+<p>cabe aclarar, que la copia tal cual del contenido del anillo de la muerte, no es
+una caracteristica considerada de inicio en isearch, por lo que al hacer un <code>M-y</code>,
+el demas contenido del anillo seguira siendo modificado con escapes. De hay que
+otro colega, 00-11, suguiriera el uso del modo isearch+, que si considero esta
+necesidad en su base</p>
+
+<p><strong>isearch+</strong> (supongo) es una capa sobre el modo isearch, que agrega ademas de
+la posivilidad de hacer yanks sin modificar, colorear la busqueda en secciones y
+varios comandos de utilidad extra. Todo esto manteniendo los atajos de isearch
+(casi) intactos</p>
+
+<p>isearch+, no viene en el repositorio melpa, para instalarlo deberemos copiar
+directamente su codigo desde emacswiki a un fichero, y luego cargarlo &ldquo;a mano&rdquo;.</p>
+
+<p><a href="https://www.emacswiki.org/emacs/download/isearch%2b.el">https://www.emacswiki.org/emacs/download/isearch%2b.el</a></p>
+
+<p>En el mismo fichero proponen cargar el modo con el comando</p>
+
+<pre><code>(eval-after-load &quot;isearch&quot; '(require 'isearch+))
+</code></pre>
+
+<p>pero he preferido agregar lo siguiente en mi init</p>
+
+<pre><code>;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE*: isearch+            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; source: https://www.emacswiki.org/emacs/download/isearch%2b.el
+(load-file &quot;~/.emacs.d/plugins/isearch+.el&quot;)
+</code></pre>
+
+<p>vamos con la justificacion de utilizar isearch+, que era poder hacer yanks. En
+la linea 2547, tenemos la variable customizable
+<code>isearchp-regexp-quote-yank-flag</code> que si la ponemos a <code>nil</code>, asi</p>
+
+<pre><code>    (defcustom isearchp-regexp-quote-yank-flag nil
+</code></pre>
+
+<p>nos dara el resultado que buscamos.</p>
+
+<p>Si, se puede hacer el cambio de la varible en el init, pero ya que tenemos y
+vamos a cargar el codigo directamente, mejor dejarse de historias y hacer el
+cambio directamente</p>
+
+<p>(<strong>nota:</strong> al cargar isearch+ substituye automaticamente a isearch. He probado el
+modo con emacs 25 sin ninguna extencion y funciona sin problemas)</p>
+
+<p>ahora si, despues de tener isearch+ configurado, podemos escribir nuestra
+funcion en <strong><code>re-builder</code></strong> (modo de syntaxis <code>string</code>) y copiar el resultado entre
+parentesis, para &ldquo;pegarlo&rdquo; directamente en isearch(+)</p>
+
+<h2 id="enlaces-fuentes-y-otras-cosas">Enlaces, fuentes y otras cosas</h2>
+
+<ul>
+<li><a href="http://ergoemacs.org/emacs/emacs_regex.html">http://ergoemacs.org/emacs/emacs_regex.html</a></li>
+<li><a href="https://ondahostil.wordpress.com/2017/10/21/lo-que-he-aprendido-expresiones-regulares-en-emacs/">https://ondahostil.wordpress.com/2017/10/21/lo-que-he-aprendido-expresiones-regulares-en-emacs/</a></li>
+<li><a href="https://www.emacswiki.org/emacs/RegularExpression">https://www.emacswiki.org/emacs/RegularExpression</a></li>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Syntax-Class-Table.html#Syntax-Class-Table">https://www.gnu.org/software/emacs/manual/html_node/elisp/Syntax-Class-Table.html#Syntax-Class-Table</a></li>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Search.html#Search">https://www.gnu.org/software/emacs/manual/html_node/emacs/Search.html#Search</a></li>
+<li><a href="https://www.reddit.com/r/emacs/comments/8aepnk/yank_text_in_isearch_without_escape_character/">https://www.reddit.com/r/emacs/comments/8aepnk/yank_text_in_isearch_without_escape_character/</a></li>
+</ul>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.github.io/emacs/the-holy-war/">◀ The Holy War</a>
+    
+    
+  </div>
+
+  <div class="clear" class="center">
+  <h2>Comments</h2>
+  </div>
+
+  <form method="POST" class="dark-matter" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/comments">
+  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/emacs/keep-regexp/#comment-submitted">
+  <input type="hidden" name="options[entryId]" value="c9a9bc13f2ef98fae9ab4a0787cefa5c">
+
+  <h1>Comment Form
+    <span>Este formulario envia un pull request al repositorio donde se almacena
+    el blog, uselo con sabiduria. La inclusion de comentarios es totalmente
+    arbitaria y puede modificarse, ignorarse o desaparecer en el
+    futuro... la habilidad de anidar comentarios no esta disponible</span>
+  </h1>
+  <label>
+    <span>Your Name :</span>
+    <input name="fields[name]" type="text" placeholder="Your name"/>
+  </label>
+
+  <label>
+    <span>Your Email :</span>
+    <input name="fields[email]" type="email" placeholder="Your email address"/>
+  </label>
+
+  <label>
+    <span>Message :</span>
+    <textarea name="fields[body]" placeholder="aqui tu comentario (se acepta Markdown)" rows="5"></textarea>
+  </label>
+  <label>
+    <span>&nbsp;</span>
+    <input type="submit" value="Submit" class="submit"></input>
+  </label>
+</form>
+
+    
+  
+  
+
+  
+    
+  
+
+  
+    <p>the beautiful is blue... and black</p>
+  
+
+
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/emacs">emacs</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/categories/prog">prog(44)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(31)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(13)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/tags/fonos">fonos(19)</a></li><li><a href="https://nasciiboy.github.io/tags/howto">howto(18)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(18)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(13)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(4)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elisp">elisp(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/hardware">hardware(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/trl">trl(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

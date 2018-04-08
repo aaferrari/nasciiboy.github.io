@@ -7,10 +7,382 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Sun, 08 Apr 2018 10:35:54 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 08 Apr 2018 11:50:44 -0500</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Keep Regexp</title>
+      <link>https://nasciiboy.github.io/emacs/keep-regexp/</link>
+      <pubDate>Sun, 08 Apr 2018 11:50:44 -0500</pubDate>
+      
+      <guid>https://nasciiboy.github.io/emacs/keep-regexp/</guid>
+      <description>
+
+&lt;p&gt;es muy vergonZoSo sentirse capaz y al enfrentar un reto quedarse congelado al
+borde del fracaso&lt;/p&gt;
+
+&lt;p&gt;El asunto es el siguiente, tenemos &lt;a href=&#34;https://nasciiboy.github.io/data/lista_correos.txt&#34;&gt;un fichero&lt;/a&gt; con
+correos (muchos correos, 79 exactamente). El fichero ademas de los correos
+incluye nombres y comas y la meta es obtener unicamene los correos.&lt;/p&gt;
+
+&lt;p&gt;Empece el reto substituyendo comas por saltos de linea, luego probe una
+complicada regexp para buscar los correos, pero tras muchos fallidos intentos,
+abandone la idea&amp;hellip; ademas, que esperaba encontrando la regexp? no es como si la
+coincidencia colocara la region en la coincidencia y luego se pudiera &amp;ldquo;cortar&amp;rdquo; y
+&amp;ldquo;pegar&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Lo siguiente, fue utilizar el comando &lt;code&gt;flush-lines&lt;/code&gt; para borrar las lineas que
+no coincidieran con el patron &lt;code&gt;[^@]&lt;/code&gt;, &amp;ldquo;obviamente&amp;rdquo; no funciono, auque en mi ignorancia
+culpe al patron&amp;hellip; (risa histerica) y bueno, sucede que no te aclaras y hasta se
+te olvida utilizar la ayuda del emacs&lt;/p&gt;
+
+&lt;p&gt;un par de intentos mas tarde, termine por utilizar una poco elegante macro, que
+cumplia el objetivo chapuceramente&lt;/p&gt;
+
+&lt;p&gt;luego, tras ver la primer solucion, mas simple, conpacta, no del todo &amp;ldquo;segura, pero para el
+caso efectiva&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cat lista_correos.txt | tr &amp;quot; &amp;quot; &#39;\n&#39; | grep @ | xargs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;e inmediatamente despues un &lt;strong&gt;vi&lt;/strong&gt;-liever solucionaba el asunto con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:%s/  */^M/g
+:v/@/d
+:%join
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;como podia evitar la inminente culpa y herirda en el orgullo klingon-emacsero?&lt;/p&gt;
+
+&lt;p&gt;intetentando superar la frustracion, dio inicio un aprendizage formal y profundo
+de las regexes en emacs y alguno que otro comando mas. Pero antes de pasar a
+ello, fue nesesario aminorar el trauma implementando una solucion en awk y otra
+en C&amp;hellip;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# esto a un fichero, por ejemplo a.awk
+1 {
+    for( i=1; i&amp;lt;=NF; i++ )
+        if( $i ~ /@/ ){
+            printf( &amp;quot;%s\n&amp;quot;, $i)
+        }
+}
+
+# y luego ejecutar con:
+# $ awk -f a.awk lista_correos.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://nasciiboy.github.io/data/emailtor.zip&#34;&gt;aca&lt;/a&gt; la solucion con C. Compilar con &lt;code&gt;gcc a.c
+regexp4.c&lt;/code&gt; y ejecutar con &lt;code&gt;$ a.out lista_correos.txt&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Un dia despues, con la agonia mental aun fresca, llego la solucion en emacs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;M-&amp;lt;
+M-x replace-regexp RET &amp;quot; +\|,&amp;quot; RET C-o RET
+M-&amp;lt;
+M-x keep-lines RET &amp;quot;@&amp;quot; RET
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(no conocia &lt;code&gt;keep-lines&lt;/code&gt; si tu tampoco, te la presento. Ignorar las comillas son
+para delimitar la cadena de entrada)&lt;/p&gt;
+
+&lt;p&gt;ciertamente mas extensa que vi, pero consideremos que emacs no tiene una
+simbiosis con el comando sed, ni tampoco una implementacion de sus comandos de
+tal forma que puedan ejecutarse &amp;ldquo;en bloques&amp;rdquo;. No esta tan mal, supongo.&lt;/p&gt;
+
+&lt;p&gt;aqui es donde se podria iniciar una &amp;ldquo;guerra santa&amp;rdquo;. Pero bueno, la naturaleza
+extensible e ilimitada de emacs para un tema concreto puede ser menos eficiente,
+es cierto&amp;hellip; aunque, nada impide que se implemente un comando
+&lt;q&gt;&lt;i&gt;interprete&lt;/i&gt;&lt;/q&gt; tipo sed e incluso otro para aplicar acciones por
+lineas y de manera global (sin recurrir a macros)&lt;/p&gt;
+
+&lt;p&gt;Supongo que los usuarios del modo maligno, han hecho algo asi, mas profanar emacs con
+tales paganismos, ni utilizar &amp;ldquo;modos&amp;rdquo; que fuerzan a presionar ESC de forma
+inconciente, son algo a contemplar por mi parte, las cosas &amp;ldquo;modales&amp;rdquo; son un
+dolor, ya es suficientemente modal tener que usar el firefox, o el navegador de
+ficheros y andar presionando ahi teclas de otros &amp;ldquo;modos&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;o, por aca un semi-equivalente en elisp de la solucion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(defun emailtor ()
+  &amp;quot;Separa los correos en lista_correos.txt&amp;quot;
+  (interactive)
+  (goto-char (point-min))
+  (while (re-search-forward &amp;quot; +\\|,&amp;quot; nil t)
+    (replace-match &amp;quot;\n&amp;quot; nil nil))
+  (goto-char (point-min))
+  (delete-non-matching-lines &amp;quot;@&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ha, no es lo mas fino, pero para el caso cumple&lt;/p&gt;
+
+&lt;h2 id=&#34;regexp&#34;&gt;regexp&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Conjunto &lt;code&gt;[]&lt;/code&gt;. Conjunto inverso &lt;code&gt;[^]&lt;/code&gt;. Dentro de los conjuntos (con la
+syntaxis completa &lt;code&gt;[[:clase:]]&lt;/code&gt;) se permiten las clases&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[:alnum:]&lt;/code&gt; caracter alfanumerico&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:alpha:]&lt;/code&gt; una letra, incluidos caracteres unicode&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:blank:]&lt;/code&gt; espacio y tabulacion&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:cntrl:]&lt;/code&gt; caracteres ASCII de control&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:digit:]&lt;/code&gt; numeros ascii del 0 al 9&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:graph:]&lt;/code&gt; cualquier caracter visible, exepto espacios en blanco&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:print:]&lt;/code&gt; cualquier caracter visible, incluidos espacios en blanco&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:lower:]&lt;/code&gt; caracteres en minusculas&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:upper:]&lt;/code&gt; caracteres en mayusculas&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:punct:]&lt;/code&gt; signos de puntuacion&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:space:]&lt;/code&gt; espacios en blanco&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:word:]&lt;/code&gt;caracteres que formen parte de las palabras&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:xdigit:]&lt;/code&gt; caracteres hexadecimales (0-9, a-f y A-F)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:ascii:]&lt;/code&gt; caracter ASCII&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:nonascii:]&lt;/code&gt; cualquier caracter no ASCII&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:multibyte:]&lt;/code&gt; caracteres unicode multibyte&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[:unibyte:]&lt;/code&gt; caracteres codificados en un solo byte (basicamente todo ASCII)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;punto &lt;code&gt;.&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;metacaracter &lt;code&gt;\&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;agrupacion y captura &lt;code&gt;\(\)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;coincidencia con la anterior captura &lt;code&gt;\d&lt;/code&gt;. (Substituir &lt;code&gt;d&lt;/code&gt; por el numero de captura)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;agrupacion sin captura &lt;code&gt;\(?:\)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;alternativa &lt;code&gt;\|&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;cuantificadores&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;?&lt;/code&gt; cero o uno&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt; cero o mas&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+&lt;/code&gt; uno o mas&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\{n\}&lt;/code&gt; exactamente n&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\{n,\}&lt;/code&gt; n o mas&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\{n,m\}&lt;/code&gt; entre n y m&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;modificadores&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$&lt;/code&gt; coincidencia al fin de linea&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;^&lt;/code&gt; coincidencia al inicio de linea&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\=&lt;/code&gt; coincidencia en la posicion del punto&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\&#39;&lt;/code&gt; coincidencia al final del buffer&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\`&lt;/code&gt; coincidencia al inicio del buffer&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;fin o inicio de palabra &lt;code&gt;\b&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(deacuerdo al modo) un caracter que forme palabras &lt;code&gt;\w&lt;/code&gt; o &lt;code&gt;\sw&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(deacuerdo al modo) un carac,ter que no forme palabras &lt;code&gt;\w&lt;/code&gt; o &lt;code&gt;\Sw&lt;/code&gt; o &lt;code&gt;\sW&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;espacios &lt;code&gt;\s-&lt;/code&gt; o &lt;code&gt;\s&lt;/code&gt; (&amp;rdquo;&lt;code&gt;\s&lt;/code&gt;&amp;rdquo;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;symbolos &lt;code&gt;\s_&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;delimitador de apertura &lt;code&gt;\s(&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;delimitador de cierre &lt;code&gt;\s)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;caracteres de puntuacion &lt;code&gt;\s.&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;comandos-de-utilidad&#34;&gt;comandos de utilidad&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(search-forward)  busqueda de texto hacia adelante&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(search-backward) busqueda de texto hacia atras&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-s&lt;/code&gt; (isearch-forward)  busqueda de texto de forma interactiva hacia adelante&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-r&lt;/code&gt; (isearch-backward) busqueda de texto de forma interactiva hacia atras&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(search-forward-regexp)  busqueda de regexp hacia adelante&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(search-backward-regexp) busqueda de regexp hacia atras&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-M-s&lt;/code&gt; (isearch-forward-regexp)  busqueda de regexp de forma interactiva hacia adelante&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-M-r&lt;/code&gt; (isearch-backward-regexp) busqueda de regexp de forma interactiva hacia atras&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(replace-string) substitucion de texto&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(replace-regexp) substitucion de regexp&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-%&lt;/code&gt;   (query-replace)        substitucion interactiva de texto&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C-M-%&lt;/code&gt; (query-replace-regexp) substitucion interactiva de regexp&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(highlight-lines-matching-regexp) resaltar cualquier linea que coincida con una regexp&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(highlight-regexp) resaltar una regexp&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(unhighlight-regexp) des-resaltar regexp&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(flush-lines) eliminar lineas que coincidan con la regexp. (el patron &lt;code&gt;^$&lt;/code&gt; eliminara todas las lineas en blanco)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(keep-lines) se eliminan las lineas que no coincidan con la regexp&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(align-regexp) alinea (verticalmente la parte en varias lineas que coincida con la regexp&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;re-builder-isearch-isearch&#34;&gt;re-builder, isearch, isearch+&lt;/h2&gt;
+
+&lt;p&gt;De entre las muchas cosas relacionadas con regexes, el modo &lt;code&gt;re-builder&lt;/code&gt; es uno
+muy interesante, pues nos permite escribir y editar una regexp con suma
+facilidad y luego copiar el resultado.&lt;/p&gt;
+
+&lt;p&gt;Supongo que este modo, es una facilidad para los programadores de emacs,
+basandome en que la expresion esta entrecomillada y al copiar la regexp con el
+comando &lt;code&gt;reb-copy&lt;/code&gt; (C-c C-w) incluye las comillas y ademas el formato de escape
+de caracteres esta dispuesto a la forma que requiere el codigo fuente en elisp.&lt;/p&gt;
+
+&lt;p&gt;Dicho escape de caracteres y metacaracteres, se debe a la naturaleza de las
+cadenas en C de hay que las cosas suelan requerir escapes para los escapes. Por
+defecto re-builder viene en modo de syntaxis &lt;code&gt;read&lt;/code&gt; que es de la que hablo, pero
+tambien podemos cambiar a sintaxis &lt;code&gt;string&lt;/code&gt; (la que utiliza isearch), bien
+presionando la combinacion &lt;code&gt;C-c TAB&lt;/code&gt; y escribiendo &lt;code&gt;string&lt;/code&gt; o directamente colocando
+lo siguiente en nuestra configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;;; re-builder
+(setq reb-re-syntax &#39;string)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pese a la facilidad de edicion y creacion de regexes, me pregunto la razon de no
+vincular este modo con isearch. Mas adelante (o no) una posible razon y un par de
+soluciones.&lt;/p&gt;
+
+&lt;p&gt;los comandos basicos de utilidad&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c C-w&lt;/code&gt; copiar regexp (comillas incluidas)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-q&lt;/code&gt; salir del modo&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c TAP&lt;/code&gt; cambiar syntaxis de entrada&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-r&lt;/code&gt; ir a coincidencia previa&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-s&lt;/code&gt; ir a coincidencia siguiente&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;isearch&lt;/strong&gt; en sus modalidades mas conocidas &lt;code&gt;isearch-forward-regexp&lt;/code&gt; (C-M-s) e
+&lt;code&gt;isearch-backward-regexp&lt;/code&gt; nos permiten buscar expresiones regulares hacia
+adelante y hacia atras del punto interactivamente, mas no dejeis que os engañen
+las funciones basicas de estos comandos, pues no son simples comandos, son modos
+por si mismos, podemos averiguar sus muchas posibilidades (ya dentro de isearch)
+presionando &lt;code&gt;C-h m&lt;/code&gt; o con la documentacion de la funcion &lt;code&gt;C-h f
+isearch-forward-regexp&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;quiza el comando mas conocido de las busquedas interactivas sea &lt;code&gt;C-w&lt;/code&gt; que toma
+la entrada sobre y delante del punto como como texto de entrada (dividida por
+palabras), pero ademas de esa combinacion tenemos otras muy interesantes como&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;M-s e&lt;/code&gt; para editar &amp;ldquo;con papeles&amp;rdquo; la regexp, aunque no interactivamente&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-M-y&lt;/code&gt; ingresar a la regexp el caracter del buffer sobre el que esta el punto&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-M-w&lt;/code&gt; borrar el ultimo caracter de la regexp&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-s C-e&lt;/code&gt; ingresar a la regexp el resto de la linea apartir de la posicion del punto&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-y&lt;/code&gt; traer ultima cadena del anillo de la muerte&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-y&lt;/code&gt; iterar sobre el contenido del anillo de la muerte&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-c&lt;/code&gt; cambiar la sensivilidad a las mayusculas-minusculas&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-s&lt;/code&gt; siguiente coincidencia&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-r&lt;/code&gt; anterior coincidencia&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;y muchas otras cosas misticas y confusas mas trae el modo, la cuestion
+problematica tiene que ver con el la forma en que isearch incorpora el contenido
+del anillo de la muerte a la busqueda, pues si por ejemplo matamos la cadena
+&lt;code&gt;\(group\)[set]&lt;/code&gt; al hacer el yank (C-y) en lugan de ingresar &lt;code&gt;\(group\)[set]&lt;/code&gt;
+escapara los caracteres significativos en la regexp, dejando &lt;code&gt;\\(group\\)\[set]&lt;/code&gt;
+lo que obligaria a editar de forma penosa la expresion&lt;/p&gt;
+
+&lt;p&gt;preguntando en &lt;a href=&#34;https://www.reddit.com/r/emacs/comments/8aepnk/yank_text_in_isearch_without_escape_character/&#34;&gt;reddit&lt;/a&gt;, el unico lugar donde aparecen respuestas prontas y en
+ociones con feliz resultado, oantolin proporcionaba el siguiente comando
+alternativo para hacer el yank con su contenido tal cual dentro de la expresion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(defun isearch-yank-kill-literally ()
+  &amp;quot;Pull string from kill ring into search string literally.&amp;quot;
+  (interactive)
+  (setq isearch-yank-flag t)
+  (let ((string (current-kill 0)))
+    (isearch-process-search-string
+     string
+     (mapconcat &#39;isearch-text-char-description string &amp;quot;&amp;quot;))))
+
+(define-key isearch-mode-map (kbd &amp;quot;C-S-y&amp;quot;) #&#39;isearch-yank-kill-literally)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;como puede verse, se seguiere la vinculacion al atajo Control-Super-y, pero en
+mi caso me es incompatible con otro comando&amp;hellip; lo que sirvio fue suplantar
+directamente el comando yank de isearch dejando como nombre de la nueva
+definicion solamente &lt;code&gt;isearch-yank-kill&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;cabe aclarar, que la copia tal cual del contenido del anillo de la muerte, no es
+una caracteristica considerada de inicio en isearch, por lo que al hacer un &lt;code&gt;M-y&lt;/code&gt;,
+el demas contenido del anillo seguira siendo modificado con escapes. De hay que
+otro colega, 00-11, suguiriera el uso del modo isearch+, que si considero esta
+necesidad en su base&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;isearch+&lt;/strong&gt; (supongo) es una capa sobre el modo isearch, que agrega ademas de
+la posivilidad de hacer yanks sin modificar, colorear la busqueda en secciones y
+varios comandos de utilidad extra. Todo esto manteniendo los atajos de isearch
+(casi) intactos&lt;/p&gt;
+
+&lt;p&gt;isearch+, no viene en el repositorio melpa, para instalarlo deberemos copiar
+directamente su codigo desde emacswiki a un fichero, y luego cargarlo &amp;ldquo;a mano&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/download/isearch%2b.el&#34;&gt;https://www.emacswiki.org/emacs/download/isearch%2b.el&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;En el mismo fichero proponen cargar el modo con el comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(eval-after-load &amp;quot;isearch&amp;quot; &#39;(require &#39;isearch+))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero he preferido agregar lo siguiente en mi init&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE*: isearch+            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; source: https://www.emacswiki.org/emacs/download/isearch%2b.el
+(load-file &amp;quot;~/.emacs.d/plugins/isearch+.el&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;vamos con la justificacion de utilizar isearch+, que era poder hacer yanks. En
+la linea 2547, tenemos la variable customizable
+&lt;code&gt;isearchp-regexp-quote-yank-flag&lt;/code&gt; que si la ponemos a &lt;code&gt;nil&lt;/code&gt;, asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    (defcustom isearchp-regexp-quote-yank-flag nil
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos dara el resultado que buscamos.&lt;/p&gt;
+
+&lt;p&gt;Si, se puede hacer el cambio de la varible en el init, pero ya que tenemos y
+vamos a cargar el codigo directamente, mejor dejarse de historias y hacer el
+cambio directamente&lt;/p&gt;
+
+&lt;p&gt;(&lt;strong&gt;nota:&lt;/strong&gt; al cargar isearch+ substituye automaticamente a isearch. He probado el
+modo con emacs 25 sin ninguna extencion y funciona sin problemas)&lt;/p&gt;
+
+&lt;p&gt;ahora si, despues de tener isearch+ configurado, podemos escribir nuestra
+funcion en &lt;strong&gt;&lt;code&gt;re-builder&lt;/code&gt;&lt;/strong&gt; (modo de syntaxis &lt;code&gt;string&lt;/code&gt;) y copiar el resultado entre
+parentesis, para &amp;ldquo;pegarlo&amp;rdquo; directamente en isearch(+)&lt;/p&gt;
+
+&lt;h2 id=&#34;enlaces-fuentes-y-otras-cosas&#34;&gt;Enlaces, fuentes y otras cosas&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://ergoemacs.org/emacs/emacs_regex.html&#34;&gt;http://ergoemacs.org/emacs/emacs_regex.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ondahostil.wordpress.com/2017/10/21/lo-que-he-aprendido-expresiones-regulares-en-emacs/&#34;&gt;https://ondahostil.wordpress.com/2017/10/21/lo-que-he-aprendido-expresiones-regulares-en-emacs/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/RegularExpression&#34;&gt;https://www.emacswiki.org/emacs/RegularExpression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html_node/elisp/Syntax-Class-Table.html#Syntax-Class-Table&#34;&gt;https://www.gnu.org/software/emacs/manual/html_node/elisp/Syntax-Class-Table.html#Syntax-Class-Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html_node/emacs/Search.html#Search&#34;&gt;https://www.gnu.org/software/emacs/manual/html_node/emacs/Search.html#Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/emacs/comments/8aepnk/yank_text_in_isearch_without_escape_character/&#34;&gt;https://www.reddit.com/r/emacs/comments/8aepnk/yank_text_in_isearch_without_escape_character/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>The Holy War</title>
