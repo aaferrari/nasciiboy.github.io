@@ -51,7 +51,7 @@ variados resultados&lt;/p&gt;&lt;/li&gt;
 establecido&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;aun asi, el TDD como mantra sigue sin convencerme. Por la demas, cada patron
+&lt;p&gt;aun asi, el TDD como mantra sigue sin convencerme. Por lo demas, cada patron
 se divide mas o menos en las secciones Descripcion, Objetivos, Criterios de
 aceptacion, Pruebas de unidad, Implementacion y &amp;ldquo;resumen-reflexion-o-algo&amp;rdquo;.&lt;/p&gt;
 
@@ -77,8 +77,8 @@ directo al codigo, y si tienes la suficiente determinacion, ni siquiera hace
 falta leer el libro&lt;/p&gt;
 
 &lt;p&gt;por la demas, la lectura es amena y rapida, no se esfuersa en repetir lo que en
-otros libros (como el mismo GoF) encontrarias mas y mejor detallado, se decanta
-por enseñar formas idiomaticas de aprovechar el lenguaje&lt;/p&gt;
+otros libros (como el mismo GoF) encontrarias mejor y mas detallado. En su lugar
+se decanta por enseñar formas idiomaticas de aprovechar el lenguaje&lt;/p&gt;
 
 &lt;h2 id=&#34;notas&#34;&gt;Notas&lt;/h2&gt;
 
@@ -152,7 +152,7 @@ hasta luego de la mitad&lt;/p&gt;
 &lt;p&gt;en el &lt;a href=&#34;https://github.com/nasciiboy/gdp&#34;&gt;repo cobayizado&lt;/a&gt; encontraran el fuente,
 una exportacion a html sin interes ni esfuerzo, y la version (mal) traducida
 automaticamente. Dicha traduccion, no tiene ni tabla de indice, ni los
-encabezados tienen el orden correcto (miestras la leia, iba corrigiendo la
+encabezados tienen el orden correcto (mientras la leia, iba corrigiendo la
 version en ingles), ademas seguramente el html este bastante
 roto por toquetearlo bastante a mano y con regexes&amp;hellip; y asi se quedara, esta
 ocacion no hay una version &amp;ldquo;fuente&amp;rdquo; en español, es mucho curro y prefiero

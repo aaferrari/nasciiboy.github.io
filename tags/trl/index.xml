@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trl on nba - GNU&#39;s Rock</title>
+    <link>https://nasciiboy.github.io/tags/trl/</link>
+    <description>Recent content in Trl on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL v3.0</copyright>
+    <lastBuildDate>Sun, 08 Apr 2018 10:35:54 -0500</lastBuildDate>
+    
+        <atom:link href="https://nasciiboy.github.io/tags/trl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Holy War</title>
+      <link>https://nasciiboy.github.io/emacs/the-holy-war/</link>
+      <pubDate>Sun, 08 Apr 2018 10:35:54 -0500</pubDate>
+      
+      <guid>https://nasciiboy.github.io/emacs/the-holy-war/</guid>
+      <description>&lt;p&gt;Post original (04/12/2001) -&amp;gt; &lt;a href=&#34;https://www.linux.com/news/emacs-vs-vi-endless-geek-holy-war&#34;&gt;https://www.linux.com/news/emacs-vs-vi-endless-geek-holy-war&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;hBody-1&#34; &gt;
+&lt;p&gt;&lt;b&gt;Author:&lt;/b&gt; &lt;a href=&#34;mailto:jtsmithJT-Smith&#34; &gt;mailto:jtsmith&lt;b&gt;&lt;u&gt;&lt;span class=&#34;note&#34; &gt;&lt;sup&gt;&lt;a href=&#34;#&#34; &gt;&lt;s&gt;&lt;i&gt;&lt;code&gt;&lt;kbd&gt;&lt;i&gt;&lt;code&gt;&lt;span class=&#34;math&#34; &gt;&lt;/span&gt;&lt;/code&gt;&lt;/i&gt;&lt;/kbd&gt;&lt;/code&gt;&lt;/i&gt;&lt;/s&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;&lt;/u&gt;&lt;/b&gt;JT Smith&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ahí van de nuevo. El presidente de nuestro grupo local de usuarios de Linux envió el mensaje de que el tutorial de la semana sería cancelado. El hecho de que el tutorial fuera sobre el uso del editor de texto vi fue suficiente para iniciar una nueva ronda de tiros de última hora.&lt;/p&gt;
+&lt;p&gt;Greg Menke disparó la primera salva. Usar vi? ¿Qué tan difícil puede ser? Envió por correo electrónico sus propios pasos para usar vi. Fueron estos:&lt;/p&gt;
+&lt;ol class=&#34;num&#34; &gt;
+&lt;li&gt;
+&lt;p&gt;Adquirir un pecado, de cualquier tipo, longitud &amp;gt; 30 cm&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Congelarlo durante la noche&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Siéntate frente a la PC, ejecuta vi&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sosteniendo el pez por la cola, golpéelo repetidamente contra tu frente hasta que decidas darle una oportunidad a EMACS porque las escamas de pescado están volando alrededor de tu cabeza y comienza a doler.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Menke, por supuesto, insinuaba que no sólo vi era insensatamente obstinado sino que los usuarios de vi también lo eran por negarse a admitir cómo se estaban infligiendo a sí mismos brutales golpes en la cabeza con un pescado congelado.&lt;/p&gt;
+&lt;p&gt;No tardó mucho para que los amantes de vi devolvieran el fuego. Uno sugirió a Menke que agregara esta línea a sus instrucciones: &lt;q&gt;Escriba &amp;#39;emacs&amp;#39; antes del paso 1, para que cuando el paso 4 esté hecho, finalmente haya terminado de cargarse&lt;/q&gt;.&lt;/p&gt;
+&lt;p&gt;¿Intentaba decir que EMACS es lento?&lt;/p&gt;
+&lt;p&gt;Al igual que los batallones fatigados por la lucha llegan a una tregua temporal pero se niegan a abandonar la guerra, los usuarios de vi y EMACS mantienen un intranquilo punto muerto en GNU/Linux, &lt;a href=&#34;http://www.usenix.org/sage/&#34; &gt;SAGE&lt;/a&gt; y muchas comunidades virtuales relacionadas con computadoras. Es el tipo de empate que puede permanecer inactivo durante meses, pero sólo se necesita una pizca de vaguedad de un lado para que una vez más las llamas se propaguen por los grupos de noticias y las listas de correo. Porque justo por debajo de su conducta civilizada, cada bando siente que el editor que usa es el mejor de todos los editores posibles y aquellos que usan cualquier otro editor, particularmente ese otro editor, son tontos que se daran cuenta de su erronea forma de pensar aunque sólo sea posible a base de muchas burlas.&lt;/p&gt;
+&lt;p&gt;Ahora, una escision sobre cual editor de texto en Unix es una construccion del mismisimo Dios puede no parecer significativa dados todos los problemas del mundo, un empate de Coca-Cola vs. Pepsi sin consecuencias, sin motivaciones más allá de la simple unión grupal (&lt;q&gt;¡Vamos Equipo!&lt;/q&gt;).&lt;/p&gt;
+&lt;p&gt;Pero, ¿por qué esta diferencia de puntos de vista ha seguido siendo un divisor de la cultura de los programadores durante más de dos décadas? ¿Por qué ha permanecido intacta en el PC, luego de que las interfaces gráficas de usuario, el ratón, Internet y el código abierto han alteraron el panorama computacional?&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;Desde que tengo uso de razon, la población de hackers se ha dividido 50/50 [entre] EMACS [y] vi,&lt;/q&gt; escribe en un email Eric Raymond, quien tiene varios roles en las comunidades de software de código abierto y hackers como antropólogo observador y participante desde hace mucho tiempo. &lt;q&gt;Pico, Joe, MicroEmacs, y otros editores han estado básicamente abajo en el ruido estadístico durante todo el período&lt;/q&gt;. Raymond puede datar personalmente la división vi/EMACS en 1985 y estipula que, con toda probabilidad, fue mucho antes de eso.&lt;/p&gt;
+&lt;p&gt;Ya en 1991, Raymond registro la &lt;q&gt;guerra santa&lt;/q&gt; vi vs. EMACS en el &lt;a href=&#34;http://www.tuxedo.org/jargon/&#34; &gt;Jargon File&lt;/a&gt;, quizás la colección definitiva de la terminología hacker.&lt;/p&gt;
+&lt;p&gt;Cuando se presiona, la mayoría de la gente familiarizada con ambos editores dirá que la diferencia entre los dos es de velocidad vs. flexibilidad, con los usuarios de vi señalando lo rápido que pueden moverse y los amantes de EMACS pregonando su inmenso número de opciones. Los usuarios de vi se burlan de EMACS por ser innecesariamente ostentosos; los usuarios de EMACS se burlan de vi por ser difícil de aprender y tener un alcance limitado.&lt;/p&gt;
+&lt;p&gt;Así que el gran debate del editor de textos de nuestro tiempo se reduce al equivalente técnico del gustos &lt;q&gt;menos/o-mas relleno&lt;/q&gt;. Bueno, sí, más o menos. Pero como en todos los asuntos relacionados con la religion ––o la guerra––, cuanto más se profundiza, más oscuros se vuelven los temas.&lt;/p&gt;
+&lt;p&gt;Pero aqui hay algo significativo. Estos editores son la tabula rasa sobre la que se ha construido gran parte del ciberespacio. El hecho de que estas herramientas, cada una diseñada para ser transparente para el usuario final, estén sujetas a lealtades tan feroces y competitivas, revela algo acerca de algunas suposiciones primordiales que la gente tiene acerca de las mejores maneras de hacer las cosas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;vi:-¿el-editor-que-el-tiempo-olvidó?&#34; &gt;Vi: ¿El editor que el tiempo olvidó?&lt;/h3&gt;
+&lt;div class=&#34;hBody-3&#34; &gt;
+&lt;p&gt;A primera vista, los forasteros podrían ver a vi como el editor que el tiempo olvidó. No es sólo que tienes que abrir una ventana de terminal sólo para usar la cosa. Esa también es la mejor manera de conseguir EMACS. Pero incluso con VIM, la versión actualizada que la mayoría de los usuarios de vi emplean hoy en día, uno no puede evitar maravillarse (o frustrarse) por la falta de intuición sobre su funcionamiento.&lt;/p&gt;
+&lt;p&gt;Incluso el webmaster de la &lt;a href=&#34;http://www.thomer.com/thomer/vi/vi.html&#34; &gt;página de inicio de los Amantes de VI&lt;/a&gt; admite que la curva de aprendizaje es empinada. &lt;q&gt;Vi no es mas veloz antes de conocer 25 comandos más o menos&lt;/q&gt;, escribe Thomer Gil, oriundo de Ámsterdam, que actualmente trabaja en un doctorado en ciencias de la computación en el Instituto Tecnológico de Massachusetts.&lt;/p&gt;
+&lt;p&gt;Gil ha sido comparado por sus compañeros de oficina con un &lt;q&gt;cavernícola que blandía un hacha y un garrote&lt;/q&gt; por su uso de VIM.&lt;/p&gt;
+&lt;p&gt;De todas las deficiencias percibidas en vi, tal vez la más notable sea la necesidad de ingresar la tecla de inserción sólo para escribir cualquier cosa en la pantalla. Vi tiene dos modos: Uno es el modo &lt;q&gt;insertar&lt;/q&gt; en el que se puede introducir texto. Se accede a este modo pulsando la tecla &lt;q&gt;insertar&lt;/q&gt; del teclado. Pero también existe el modo de comando en el que no se puede introducir texto, sino comandos relevantes. Desde el modo de inserción puede llegar a este ultimo pulsando la tecla de escape.&lt;/p&gt;
+&lt;p&gt;Así que imagínese al usuario desprevenido escribiendo por primera vez y que accidentalmente presiona la tecla de escape, sólo para descubrir que no sólo no puede ingresar más texto, sino que sus pulsaciones envian extrañas instrucciones al programa .&lt;/p&gt;
+&lt;p&gt;El Jargon File &lt;a href=&#34;http://www.techfak.uni-bielefeld.de/~joern/jargon/vi.HTML&#34; &gt;observa secamente&lt;/a&gt; que esta característica de vi &lt;q&gt;tiende a frustrar infinitamente a los nuevos usuarios, ya que no toma comandos mientras espera texto de entrada ni viceversa, y la configuración predeterminada no proporciona ninguna indicación del modo en el que se encuentra el editor&lt;/q&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;Los múltiples modos asustan a la gente&lt;/q&gt;, admite Gil.&lt;/p&gt;
+&lt;p&gt;Vi fue escrito por Bill Joy en 1976, quien lo forjó a partir de dos herramientas de edición aún más primitivas, ed y ex. Vi significaba &lt;q&gt;interfaz visual&lt;/q&gt;, que en 1976 estaba en la vanguardia de la informática, según una &lt;a href=&#34;http://www.linux-mag.com/1999-11/joy_04.html&#34; &gt;entrevista&lt;/a&gt; a Joy en la &lt;i&gt;Linux Magazine&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;Intentaba hacerlo utilizable con un módem de 300 baudios. Esa también es la razón por la que tienes todos estos comandos divertidos. Apenas funcionaba usar un editor de pantalla sobre un módem&lt;/q&gt;, dijo Joy, &lt;q&gt;Así que el editor estaba optimizado para que pudieras editar y sentirte productivo cuando pintaba más lento de lo que pensabas&lt;/q&gt;.&lt;/p&gt;
+&lt;p&gt;En esa entrevista, Joy contrastó el entorno de desarrollo de vi con el de EMACS, dijo que fue escrito para sistemas con enlaces de canales de fibra y un monstruo PDP-10.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;Así que podrían tener comandos divertidos con la pantalla brillando y todo eso, y mientras tanto, estoy sentado en casa en una especie de vivienda excedente de la Segunda Guerra Mundial en Berkeley con un módem y un terminal que apenas puede sacar el cursor de la línea de fondo&lt;/q&gt;, dijo Joy, tal vez sonando un poco envidioso. &lt;q&gt;La gente no sabe que vi fue escrito para un mundo que ya no existe.&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;Sin embargo, aunque vi debería haber desaparecido a principios de los años 80 a medida que aumentaba la velocidad de la red y del procesador, ha florecido. Las &lt;a href=&#34;http://www.math.fu-berlin.de/~guckes/vi/&#34; &gt;VI Pages&lt;/a&gt; listan cerca de 30 clones vi desde elvis y VIM hasta obscuridades tales como WinVi y vigor.&lt;/p&gt;
+&lt;p&gt;Tim O&amp;#39;Reilly, autor intelectual de la editorial O&amp;#39;Reilly &amp;amp; Associates, señaló en la columna &lt;i&gt;&lt;a href=&#34;http://www.oreilly.com/ask_tim/unix_editor.html&#34; &gt;Ask Tim&lt;/a&gt;&lt;/i&gt; de su empresa, que su empresa vende el doble de libros de vi que de EMACS. Además, O&amp;#39;Reilly apoya un juego de pintura de vi vs. EMACS en alguna convención, invariablemente el doble de voluntarios se inscriben para defender el honor de vi sobre EMACS.&lt;/p&gt;
+&lt;p&gt;Entonces, ¿cuál es el atractivo? Esto se describe mejor en el &lt;a href=&#34;http://www.splange.freeserve.co.uk/misc/vi.html&#34; &gt;Culto de VI&lt;/a&gt;, en el que John Arundel escribe: &lt;q&gt;Al ver a un gurú de vi haciendo una edición intensa en un archivo, mientras sus dedos sobrevuelan las teclas y las transformaciones textuales barren la pantalla, uno podría creer que está en presencia de poderes sobrenaturales&lt;/q&gt;.&lt;/p&gt;
+&lt;p&gt;Gil publica algunos ejemplos de esta magia en su sitio web. &lt;q&gt;Un concepto clave en vi es combinar una determinada acción (borrar, copiar a búfer, escribir en mayúsculas, etc.&lt;/q&gt; con un movimiento (ir a la línea 25, ir al final del documento, ir a la siguiente coincidencia de &amp;#39;foo&amp;#39;, ir a la segunda coincidencia del carácter &amp;#39;x&amp;#39; en esta línea, etc.)).&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;¿Eh?&lt;/q&gt; Le envié un correo electrónico.&lt;/p&gt;
+&lt;p&gt;Gil devuelve un ejemplo: &lt;q&gt;Si, por ejemplo, un documento contiene las líneas: &amp;#39;a b c d e f g h&amp;#39; y el cursor está situado en &amp;#39;b&amp;#39;, luego puedo escribir &lt;code&gt;d/f&lt;/code&gt;&lt;/q&gt;.&lt;/p&gt;
+&lt;p&gt;La primer &lt;code&gt;d&lt;/code&gt; significa borrar, la &lt;code&gt;/&lt;/code&gt; es una función de búsqueda, así que lo que hará este comando es borrar de b a f.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;No se requieren circunstancias especiales para usar esto... Borrar palabras, oraciones. Vuelve a donde estaba antes. Oh, no, salta de nuevo. Deshacer lo que hice, rehacerlo&lt;/q&gt;, escribe Gil.&lt;/p&gt;
+&lt;p&gt;Gil estipula que también puedes hacer trucos como este en EMACS. Sin embargo, se requiere memorizar &lt;q&gt;combinaciones de teclas apestosas Ctrl-X Ctrl-c Alt-F4&lt;/q&gt; para su ejecución.&lt;/p&gt;
+&lt;p&gt;Otro truco que Gil revela es cómo VI permite a los usuarios moverse dentro de los ficheros. &lt;q&gt;La manera estúpida es usar las teclas de flecha; hay muchas otras maneras más avanzadas de moverse&lt;/q&gt;, escribe Gil. Entre las formas avanzadas de movimiento que ofrece vi se encuentra la opción de saltar a los últimos saltos del cursor, o a la siguiente ocurrencia de una palabra en particular, o a la siguiente oración o párrafo.&lt;/p&gt;
+&lt;p&gt;Incluso la &lt;q&gt;característica&lt;/q&gt; de modo dual se vuelve transparente para los usuarios. Hace un año entrevisté a Jon Lasser para escribir sobre su entonces reciente libro &lt;i&gt;&lt;a href=&#34;http://www.tux.org/~lasser/think-unix/&#34; &gt;Think Unix&lt;/a&gt;&lt;/i&gt;, (cuyo manuscrito, me dijo, fue compuesto enteramente en vi). La conversación finalmente llegó a vi, y me quejé de los dos modos.&lt;/p&gt;
+&lt;p&gt;Lasser explicó que no veía ninguna diferencia entre trabajar en vi y en procesadores de texto como StarOffice o Microsoft Word. En Word, cuando mueve el puntero fuera del área de pantalla, no puede escribir texto. De hecho, pasar del modo de inserción al modo de comando. &lt;q&gt;Es lo mismo&lt;/q&gt;, explica.&lt;/p&gt;
+&lt;p&gt;Como O&amp;#39;Reilly escribió sobre vi: &lt;q&gt;Como muchas cosas sobre UNIX, sólo &lt;b&gt;parece&lt;/b&gt; difícil&lt;/q&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;más-es-más-con-emacs?&#34; &gt;Más es más con EMACS?&lt;/h3&gt;
+&lt;div class=&#34;hBody-3&#34; &gt;
+&lt;p&gt;Cuando el lealista de vi O&amp;#39;Reilly escribió en &lt;i&gt;Ask Tim&lt;/i&gt; que primero cambió de EMACS a vi sólo después de que su perfil personalizado de EMACS fue destrozado, fue uno de esos jabs sutiles que a los usuarios de vi les gusta usar en contra de EMACS.&lt;/p&gt;
+&lt;p&gt;EMACS contrasta con la prístina limitación de comandos de vi, con su personalización casi infinita. Sin embargo, dado que la naturaleza humana es lo que es, tal poder en manos de los usuarios puede no ser siempre lo mejor.&lt;/p&gt;
+&lt;p&gt;Como dice el &lt;a href=&#34;http://family.zawodny.com/jzawodn/emacs/&#34; &gt;Emacs-Beginner-HOWTO&lt;/a&gt;, EMACS puede ser un editor de texto, un cliente de correo, un lector de noticias, un procesador de texto, un editor de scripts y un entorno de desarrollo integrado para lenguajes de programación.&lt;/p&gt;
+&lt;p&gt;La clave para esto son los múltiples modos, cada uno con un conjunto de comandos único, que EMACS ofrece. ¿Quieres comprobar el correo electrónico? Sólo tienes que pasar al modo de correo electrónico. ¿Quieres escribir un programa en C++? Utiliza el modo C++. ¿Necesita crear algunas páginas Web? Salta dentro del modo html-helper.&lt;/p&gt;
+&lt;p&gt;Y además de todo esto, también puedes personalizar EMACS e incluso añadir nuevas funciones, normalmente modificando su código en Lisp.&lt;/p&gt;
+&lt;p&gt;Es por todo esto que muchos usuarios de vi lo ven como terriblemente presuntuoso para lo que se supone que es un simple editor de texto, sin mencionar que distrae al usuario. La broma en curso sobre EMACS es que es un sistema operativo con un editor de texto adjunto.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;EMACS como tal comenzó como un proyecto de estándares&lt;/q&gt;, escribe Guy Steele, uno de los creadores de EMACS, junto con Richard Stallman, quien más tarde fundó la Free Software Foundation.&lt;/p&gt;
+&lt;p&gt;Tal y como recuerda Steele, Stallman mantuvo un primer editor para el PDP-10 llamado TECO, que significaba &lt;q&gt;Text Editor and COrrector&lt;/q&gt;. A pesar de que ciertas pulsaciones de teclas realizaban comandos de edicion, Stallman creo una table programable por el usuario, &lt;q&gt;de manera que cada pulsación de tecla realizaba una búsqueda en la tabla que describía qué hacer para esa pulsación&lt;/q&gt;, según dice Steele. &lt;q&gt;Una opción era ejecutar una macro TECO especificada por el usuario.&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;Usando esta funcionalidad de macros, los usuarios estaban programando conjuntos personalizados de macros para ser vinculados a varias pulsaciones de teclas, pero esto se volvió problemático cuando los programadores comenzaron a colaborar en programas y descubrieron que tenían pocas pulsaciones de teclas comunes entre ellos.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;La comunidad de usuarios se había fragmentado con respecto a las habilidades de edición de textos (y programas&lt;/q&gt;), escribe Steele. Así que Steele, junto con David Moon y Stallman, asumió el proyecto de integrar todas las ideas en un conjunto de comandos unificado.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;Inventé una matriz en papel y corrí mucho de un lado a otro entre los implementadores y usuarios de los distintos paquetes de macros,&lt;/q&gt; dice Steele en un correo electrónico.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;Recuerdo esto muy bien&lt;/q&gt;, recuerda Dan Weinreb, quien fue uno de los primeros alfa testers de EMACS. &lt;q&gt;El tipo tenía un portapapeles con un pedazo de papel que mostraba todas los atajos, y recogió cuidadosa y diplomáticamente los comentarios de todo el mundo para unificarlos, en atajos estándar&lt;/q&gt;.&lt;/p&gt;
+&lt;p&gt;Después de unos meses, Steele, ocupado tratando de terminar su tesis de maestría, entregó la obra a Stallman. Y el resto es historia.&lt;/p&gt;
+&lt;p&gt;El hecho de que la flexibilidad se horneara desde el inicio le da a EMACS su ventaja, dicen los usuarios de hardcore.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;Pienso en EMACS como la navaja suiza de los editores&lt;/q&gt;, menciona en un correo electrónico a Debra Cameron, coautora de Learning GNU Emacs y presidenta de Cameron Consulting. &lt;q&gt;Es un ambiente de trabajo completo, un microcosmos. Si piensas en algo que desearías que hiciera, probablemente descubrirás (después de mirar a tu alrededor&lt;/q&gt; que ya lo hace. Si no lo hace, puedes extenderlo y hacer que haga lo que quieras que haga).&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;¿no-podemos-llevarnos-todos-bien?&#34; &gt;¿No podemos llevarnos todos bien?&lt;/h3&gt;
+&lt;div class=&#34;hBody-3&#34; &gt;
+&lt;p&gt;Entonces, ¿cómo difiere EMACS de vi?&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;He visto a usuarios de vi muy hábiles hacer algunos trucos bastante ingeniosos, pero sigo pensando que vi es (sólo) un editor, incluso si para algunos es un gran editor&lt;/q&gt;, menciona Cameron. &lt;q&gt;Siempre, siempre funciona de la misma manera. En este sentido, vi es como McDonald&amp;#39;s; no importa a donde vayas, es exactamente lo mismo.&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;¿Quieres un editor que se adapte a tus necesidades y peculiaridades y que haga muchas, muchas cosas o simplemente quieres ser capaz de editar archivos rápidamente en cualquier máquina?&lt;/q&gt; pregunta ella. &lt;q&gt;Para la gente que tiene que moverse de un ordenador a otro constantemente, esta consistencia puede ser una ventaja real.&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;En otras palabras, EMACS = flexibilidad, mientras que vi = uniformidad?&lt;/p&gt;
+&lt;p&gt;Aquí es donde las cosas se ponen turbias.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;EMACS es ciertamente más complejo que vi, pero no creo que sea más poderoso de ninguna manera útil, porque vi fue diseñado para ser parte de un sistema UNIX e interactuar con esas herramientas&lt;/q&gt;, replica Jon Lasser.&lt;/p&gt;
+&lt;p&gt;Tenga en cuenta que, para Lasser, &lt;q&gt;útil&lt;/q&gt; significa la forma en que vi le permite leer documentos directamente desde una tubería UNIX desde otro proceso, &lt;q&gt;como lo haría en cualquier otra aplicación UNIX&lt;/q&gt;, explica. Así, la cadena arcana de pulsaciones de teclas &lt;code&gt;&amp;lt;esc&amp;gt; :r !ls&amp;lt;enter&amp;gt;&lt;/code&gt; introducidas en vi (en modo comando, recuerde) lee en el búfer la salida del programa &lt;code class=&#34;command&#34; &gt;ls&lt;/code&gt;, o una lista de archivos del directorio actual. Y una tubería de cualquier otro programa UNIX también funcionaría.&lt;/p&gt;
+&lt;p&gt;En cuanto a la edición automática de un gran número de archivos en vi, Lasser dice que es por eso que tenemos &lt;q&gt;sed, awk, y todas las demás herramientas de procesamiento de texto UNIX&lt;/q&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;El procesamiento de texto es para lo que UNIX fue diseñado, y vi fue diseñado para ser parte de ese sistema&lt;/q&gt;, escribe Lasser.&lt;/p&gt;
+&lt;p&gt;Tal vez el problema subyacente entre EMACS y vi no es el de la uniformidad frente a la flexibilidad en absoluto. Después de todo, ambos editores ofrecen flexibilidad, es sólo que con vi, lo hace a través del propio UNIX, mientras que EMACS lo logra construyendo sobre el sistema.&lt;/p&gt;
+&lt;p&gt;Y, para el caso, el único punto de la flexibilidad es hacer que el trabajo vaya más rápido. Si desea un procesamiento de texto sencillo y sin complicaciones, puede optar por Pico, que ofrece sólo una pantalla en blanco y ninguna de las características de vi o EMACS que confunden a los novatos. Lo que ambos editores ofrecen son formas avanzadas de reducir la distancia entre la velocidad de los dedos en el teclado y la velocidad del cerebro del programador.&lt;/p&gt;
+&lt;p&gt;En otras palabras, ¿podría ser que estos editores ofrezcan lo mismo, pero exijan diferentes maneras de pensar a sus usuarios? Vi requiere la paciencia para aprender sus extravagantes formas, aunque una vez que las dominas, eres libre de llevar tu acto a cualquier sistema UNIX. EMACS te da la libertad de personalizar tu configuración como mejor te parezca, aunque si no eres cuidadoso, te convertirás en prisionero de tu propia configuración.&lt;/p&gt;
+&lt;p&gt;En algún momento durante la gran caminata de mejora de la auto-eficiencia que todos los buenos programadores toman, los usuarios de vi y EMACS se cruzan, cada uno viniendo de una dirección diferente. Y cuando se encuentran, normalmente se tiran piedras unos a otros.&lt;/p&gt;
+&lt;p&gt;Pero todo está bien.&lt;/p&gt;
+&lt;p&gt;&lt;q&gt;No creo que haya una gran diferencia en la funcionalidad. Ambos editores hacen un buen trabajo y todo se reduce a lo que la gente aprende primero&lt;/q&gt;, escribe Gil. &lt;q&gt;Ya que la mayoría de las personas conocen EMACS, les enseñarán a otros EMACS. Por lo tanto, la mayoría de la gente usa EMACS, etc.&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;Y así la disputa continuará...&lt;/p&gt;
+&lt;div class=&#34;italic&#34; &gt;
+&lt;p&gt;(Nota: Las mayúsculas de EMACS, UNIX y vi pueden haber sido cambiadas en comillas a sus formas originales, excepto en los títulos directos de libros y páginas Web).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
