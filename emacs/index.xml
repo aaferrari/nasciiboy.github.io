@@ -41,7 +41,7 @@ te olvida utilizar la ayuda del emacs&lt;/p&gt;
 &lt;p&gt;un par de intentos mas tarde, termine por utilizar una poco elegante macro, que
 cumplia el objetivo chapuceramente&lt;/p&gt;
 
-&lt;p&gt;luego, tras ver la primer solucion, mas simple, conpacta, no del todo &amp;ldquo;segura, pero para el
+&lt;p&gt;luego, tras ver la primer solucion, mas simple, conpacta, no del todo &amp;ldquo;segura&amp;rdquo;, pero para el
 caso efectiva&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;cat lista_correos.txt | tr &amp;quot; &amp;quot; &#39;\n&#39; | grep @ | xargs
@@ -54,7 +54,7 @@ caso efectiva&lt;/p&gt;
 :%join
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;como podia evitar la inminente culpa y herirda en el orgullo klingon-emacsero?&lt;/p&gt;
+&lt;p&gt;como podia evitar la inminente culpa y herida en el orgullo klingon-emacsero?&lt;/p&gt;
 
 &lt;p&gt;intetentando superar la frustracion, dio inicio un aprendizage formal y profundo
 de las regexes en emacs y alguno que otro comando mas. Pero antes de pasar a
@@ -278,8 +278,8 @@ presionando &lt;code&gt;C-h m&lt;/code&gt; o con la documentacion de la funcion 
 isearch-forward-regexp&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;quiza el comando mas conocido de las busquedas interactivas sea &lt;code&gt;C-w&lt;/code&gt; que toma
-la entrada sobre y delante del punto como como texto de entrada (dividida por
-palabras), pero ademas de esa combinacion tenemos otras muy interesantes como&lt;/p&gt;
+la entrada sobre y delante del punto como texto de entrada (dividida por
+palabras). Pero ademas de esa combinacion tenemos otras muy interesantes&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;M-s e&lt;/code&gt; para editar &amp;ldquo;con papeles&amp;rdquo; la regexp, aunque no interactivamente&lt;/li&gt;
@@ -293,8 +293,8 @@ palabras), pero ademas de esa combinacion tenemos otras muy interesantes como&lt
 &lt;li&gt;&lt;code&gt;C-r&lt;/code&gt; anterior coincidencia&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;y muchas otras cosas misticas y confusas mas trae el modo, la cuestion
-problematica tiene que ver con el la forma en que isearch incorpora el contenido
+&lt;p&gt;y muchas otras cosas misticas y confusas mas trae el modo. La cuestion
+problematica tiene que ver con la forma en que isearch incorpora el contenido
 del anillo de la muerte a la busqueda, pues si por ejemplo matamos la cadena
 &lt;code&gt;\(group\)[set]&lt;/code&gt; al hacer el yank (C-y) en lugan de ingresar &lt;code&gt;\(group\)[set]&lt;/code&gt;
 escapara los caracteres significativos en la regexp, dejando &lt;code&gt;\\(group\\)\[set]&lt;/code&gt;
@@ -316,7 +316,7 @@ alternativo para hacer el yank con su contenido tal cual dentro de la expresion&
 (define-key isearch-mode-map (kbd &amp;quot;C-S-y&amp;quot;) #&#39;isearch-yank-kill-literally)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;como puede verse, se seguiere la vinculacion al atajo Control-Super-y, pero en
+&lt;p&gt;como puede verse, se sugiere la vinculacion al atajo Control-Super-y, pero en
 mi caso me es incompatible con otro comando&amp;hellip; lo que sirvio fue suplantar
 directamente el comando yank de isearch dejando como nombre de la nueva
 definicion solamente &lt;code&gt;isearch-yank-kill&lt;/code&gt;&lt;/p&gt;
@@ -327,10 +327,10 @@ el demas contenido del anillo seguira siendo modificado con escapes. De hay que
 otro colega, 00-11, suguiriera el uso del modo isearch+, que si considero esta
 necesidad en su base&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;isearch+&lt;/strong&gt; (supongo) es una capa sobre el modo isearch, que agrega ademas de
-la posivilidad de hacer yanks sin modificar, colorear la busqueda en secciones y
-varios comandos de utilidad extra. Todo esto manteniendo los atajos de isearch
-(casi) intactos&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;isearch+&lt;/strong&gt; (supongo) es una capa sobre el modo isearch que ademas de agregar
+la posivilidad de hacer yanks sin modificar el contenido, nos colorear la
+busqueda en secciones y proporciona varios comandos de utilidad extra. Todo esto
+manteniendo los atajos de isearch (casi) intactos&lt;/p&gt;
 
 &lt;p&gt;isearch+, no viene en el repositorio melpa, para instalarlo deberemos copiar
 directamente su codigo desde emacswiki a un fichero, y luego cargarlo &amp;ldquo;a mano&amp;rdquo;.&lt;/p&gt;
@@ -351,8 +351,9 @@ directamente su codigo desde emacswiki a un fichero, y luego cargarlo &amp;ldquo
 (load-file &amp;quot;~/.emacs.d/plugins/isearch+.el&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;vamos con la justificacion de utilizar isearch+, que era poder hacer yanks. En
-la linea 2547, tenemos la variable customizable
+&lt;p&gt;vamos con la justificacion de utilizar isearch+, que era poder hacer yanks.&lt;/p&gt;
+
+&lt;p&gt;En la linea 2547, tenemos la variable customizable
 &lt;code&gt;isearchp-regexp-quote-yank-flag&lt;/code&gt; que si la ponemos a &lt;code&gt;nil&lt;/code&gt;, asi&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    (defcustom isearchp-regexp-quote-yank-flag nil
@@ -362,14 +363,15 @@ la linea 2547, tenemos la variable customizable
 
 &lt;p&gt;Si, se puede hacer el cambio de la varible en el init, pero ya que tenemos y
 vamos a cargar el codigo directamente, mejor dejarse de historias y hacer el
-cambio directamente&lt;/p&gt;
+cambio in-situ&lt;/p&gt;
 
 &lt;p&gt;(&lt;strong&gt;nota:&lt;/strong&gt; al cargar isearch+ substituye automaticamente a isearch. He probado el
 modo con emacs 25 sin ninguna extencion y funciona sin problemas)&lt;/p&gt;
 
 &lt;p&gt;ahora si, despues de tener isearch+ configurado, podemos escribir nuestra
-funcion en &lt;strong&gt;&lt;code&gt;re-builder&lt;/code&gt;&lt;/strong&gt; (modo de syntaxis &lt;code&gt;string&lt;/code&gt;) y copiar el resultado entre
-parentesis, para &amp;ldquo;pegarlo&amp;rdquo; directamente en isearch(+)&lt;/p&gt;
+funcion en &lt;strong&gt;&lt;code&gt;re-builder&lt;/code&gt;&lt;/strong&gt; (modo de syntaxis &lt;code&gt;string&lt;/code&gt;) y copiar la regexp
+(manualmente) ignorando los parentesis, para luego &amp;ldquo;pegarlo&amp;rdquo; directamente en
+isearch(+) con un yank&lt;/p&gt;
 
 &lt;h2 id=&#34;enlaces-fuentes-y-otras-cosas&#34;&gt;Enlaces, fuentes y otras cosas&lt;/h2&gt;
 
