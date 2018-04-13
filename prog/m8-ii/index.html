@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LineageOS, Feeds &amp; Feel</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>LineageOS, Feeds &amp; Feel</h1>
+  
+
+<p>Luego del primer <a href="../m8">flasheo al m8</a> probe un poco las &ldquo;apps&rdquo; de yutu que
+venian disponibles en f-droid y aquella vez no llegue muy lejos antes de
+instalar las gapps&hellip; por el yutu y alguna cosa de la playstore, como ivoox,
+firefox o vlc.</p>
+
+<p>Tras aquello, el dispositivo paso de ser un lineage a un androide googlero
+practicamente en todo sentido: las apps comenzaron a fastidiar con registros y
+actualizaciones (yutu), el playstore comienzo a hacer sus reviciones de
+seguridad, y nuevos procesos permanentes en segundo plano aparecieron haciendo
+quien sabe que cosas <code>¯\_(ツ)_/¯</code>.</p>
+
+<p>tener yutu es caro, quiza demaciado y android, android es una
+mierda. Cierto es que no ocupo mucho el dispositivo, por dos razones, primero, la
+pantalla tiene un touch perjudicado y segundo, es android y eso no vale para nada,
+nada que no sea consumir pasivamente y ver porno.</p>
+
+<p>y asi hubiera seguido con el movil hasta el fin de los tiempos, hasta que una
+&ldquo;broma&rdquo; de parte del equipo de lineageOS hizo aparecer un mensaje perturbador</p>
+
+<p><img src="https://nasciiboy.github.io/img/coin.png" alt="" /></p>
+
+<p>que? (me pregunte) la pagina del porno no se conforma con minar criptocurrencias
+cuando veo un video, ahora a colado un bicho en el sistema? (ha, ha, ha, que
+cachondos los de lineage)</p>
+
+<p>esto ademas de traer la sensacion de completa vulnerabilidad, vino acompañado
+por un cabreo que desemboco en (cual winbugs) borrar y reinstalar, ahora por
+supuesto sin google de por medio, almenos, hasta donde se pudiera</p>
+
+<p>segui el antes enlazado listado de pasos para el flasheo, y volvio a aparecer el
+mensaje de los graciosos del lineaje, je, fue hay donde me entere de lo que se
+trataba ![x-d]!</p>
+
+<p>Despues toco ir a <a href="https://f-droid.org/">f-droid</a> descargar el apk y transferirla
+al dispositivo desde el pc (por comodidad). Lo mismo sucedio con vlc, al que hay
+que rebuscar por <a href="https://www.videolan.org/vlc/download-android.html">aca</a>.
+Finalmente intente con firefox, mas el enlace de su apk no lo encontre.</p>
+
+<p>Probando con f-droid esta ice-cat, pero al igual que la ultima ocacion que la
+probe, se queda como que en eterna carga al pasar del buscador a una pagina, asi
+que se fue y se quedo el navegador por defecto.</p>
+
+<p>Luego toco buscar algun reemplazo para el yutu. Los primeros en caer fueron
+NewPipe que es usable, y MinTube que tras varios intentos el resultado siempre
+fue un crasheo.</p>
+
+<p>je, el repo de f-droid tiene muchas cosas sin actualizarse, algunas de las que
+encontre +6 años, otras que parecen abandonadas o a medio hacer. Quitando
+algunas cosillas, es un panorama bastante triste, aun asi, que asco da programar
+para androides, de verdad que poco o ningun interes me despierta, ja, ja, ja,
+quiza cambie de opinion cuando los moviles no sean meros juguetes y corran GNU
+con papeles y letras grandes, con Gnome por supuesto, aunque tambien seria
+suficiente ejecutando kde o en ultima instancia una terminal pelada y confiable
+sin modo grafico alguno, iendo de un lugar a otro con un teclado mecanico
+bajo el sobaco o colgado en la espalda</p>
+
+<p>Mientras tanto, es un grato placer compartir un par de reemplazos potables para
+substituir los principales usos del aparato (obviando vlc para los videos,
+Música para la musica y el navegador pal porno)</p>
+
+<h2 id="skytube">SkyTube</h2>
+
+<p><a href="http://skytube-app.com/">SkyTube</a> es un leector de rss especializado en los
+feeds de youtube. No se crashea, tiene una interface agradable, util, puedes ver
+comentarios, el canal de donde procede un video, subcribirte y hacer busquedas</p>
+
+<p>Se pierde aquello de dar likes, pero no creo que eso sea ningun defecto, igual y
+es un paso necesario en el desadoctrinamiento del like. Lo mismo sucede con los
+comentarios, podemos verlos mas no dejarlos.</p>
+
+<p>Agregar nuestros feeds, lejos de lo que se podria imaginar es una tarea
+sencillisima. Por alguna razon que no logro entender, el mismo yutu nos ofrece
+una lista con todas las subcripciones que tenemos en formato opml (xml) para que la
+podamos agregar a un leector&hellip; enserio? por que? un inflitrado que evita a los
+hippiosos caer por completo en las garras de alphabet? puaghh</p>
+
+<p>solo debemos ir a <a href="https://www.youtube.com/subscription_manager">https://www.youtube.com/subscription_manager</a>, seguir hasta el fondo de
+la pagina y darle a <strong>Exportar Subcripciones</strong></p>
+
+<p>para mi cuenta se genero el siguiente fichero <a href="https://nasciiboy.github.io/media/data/subscription_manager.xml">subscription_manager.xml</a>
+(le he cambiado la extencion, agregando <code>.xml</code> al final).</p>
+
+<p>A continuacion un desglose. La clasificacion es dificil de encajar para varios
+canales, por ejemplo <strong>petercarter</strong>, <strong>Pilingino</strong> o <strong>el gordo otaku</strong>
+(incluso <strong>DayoScript</strong>) que clasificaria directamente como &ldquo;montaje visual&rdquo;,
+pero por centrar sus contenidos en un area mas que en otra termino por
+colocarlos en algo menos exotico, como en <em>dispersion cultural</em> o <em>anime</em>.</p>
+
+<p>Dedico la categoria Dispersion cultural a aquellos canales sin una tematica
+particularmente enfocada a una rama de la dispersion, o que son dificiles de
+clasificar, como en el caso de Adult Swim, que incluye videos musicales,
+animacion experimental, pachequismos, spin-offs y visarradas varias. En la misma
+categoria coloco tambien a Esquizofrenia Natural donde hablan de filosofia(s), se
+realizan analisis socioculturales y de vez en cuando un minidocumental.</p>
+
+<p>Describir textualmente cada uno de los canales seria extenuante. Como unica seña
+de atencion aquellos titulos en Bold son los que recomiendo consumir sin ninguna
+reserva, y otros de nombre poco descriptivo, traen un guion y su tematica a un
+lado.</p>
+
+<p>Bueno, sin mas distracciones <strong>&ldquo;la lista&rdquo;</strong></p>
+
+<h3 id="dispersion-cultural">dispersion cultural</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/channel/UCgPClNr5VSYC3syrDUIlzLw">Adult Swim</a></li>
+<li><a href="https://www.youtube.com/channel/UCq8G6Hp2GKAzXCUqeED8T5g">Comunidad Espiral</a></li>
+<li><a href="https://www.youtube.com/channel/UCb8GKeOvI7WsFUkB4UVAeXA">Cordura Artificial</a></li>
+<li><a href="https://www.youtube.com/channel/UCVBkwO6Ok1De0UfNZdo7-Ag">DayoScript</a></li>
+<li><a href="https://www.youtube.com/channel/UCvRQKXtIGcK1yEnQ4Te8hWQ">Drugslab</a></li>
+<li><a href="https://www.youtube.com/channel/UCf_MY8uWjWH8gwzFK6vCAmg"><strong>Esquizofrenia Natural</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCiMTyGpwgqp_dmNWv-y0tfQ"><strong>Mireda Producciones</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCXP63FzhPbL41mPx2P2g7Cw"><strong>petercarter</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCTBQ_wav5XVjd7hZMwE87jQ">PIPEXMAN</a></li>
+<li><a href="https://www.youtube.com/channel/UCoyJ3DSiNZhuJgg0qNZC4yg"><strong>Quetzal</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCRJdUHPy8evgqT5CVl-mxyQ">SOY ATEO Y QUÉ</a></li>
+<li><a href="https://www.youtube.com/channel/UC3-87zhQFd6poByHjBVyJwA">Talking Vidya</a></li>
+<li><a href="https://www.youtube.com/channel/UCSN5hYxFPJme8FHEjx5cCyA">TL2Bie – kaijus y mostruos</a></li>
+</ul>
+
+<h3 id="musica">musica</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/channel/UC3I2GFN_F8WudD_2jUZbojA"><strong>KEXP</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCeEMAgqm5qFzFJ-BuKOpgew"><strong>Manual Guitarra Eléctrica</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCvpGdJBiZ52seEhUldZGwvA">moonbowmusicmovie</a></li>
+<li><a href="https://www.youtube.com/channel/UCcgmiH5T9xkemVExTNwJ58Q">Rockandplay Daniel</a></li>
+<li><a href="https://www.youtube.com/channel/UCbidH1GEKpLWmjjzdUEJHqQ">Stephanie Jones</a></li>
+<li><a href="https://www.youtube.com/channel/UCVScA3WHef_-0eCAgBPbpRA">will guitar shop cali</a></li>
+</ul>
+
+<h3 id="vg">vg</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/channel/UCEh5UPBv0alseI62OJhnKow">Artemio Urbina</a></li>
+<li><a href="https://www.youtube.com/channel/UC2S36yOxggUtJJXUGrBygKg">Game Back</a></li>
+<li><a href="https://www.youtube.com/channel/UC008MpfclY6ap-QGzoTMNKg"><strong>JackTech – gameboy</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCMnZ3qm76jc3SUi9Z-5OdcA">Leyendas &amp; Videojuegos</a></li>
+<li><a href="https://www.youtube.com/channel/UCpvtp7mH0Cdq8FQUxcjDq0Q">My Life in Gaming</a></li>
+<li><a href="https://www.youtube.com/channel/UCwRqWnW5ZkVaP_lZF7caZ-g">Retro Game Mechanics Explained</a></li>
+<li><a href="https://www.youtube.com/channel/UCWz51s7gd-p55UXY_xm69FQ">Scanliner</a></li>
+<li><a href="https://www.youtube.com/channel/UC8uT9cgJorJPWu7ITLGo9Ww">The 8-Bit Guy</a></li>
+<li><a href="https://www.youtube.com/channel/UCsr88iMWjPrD4Qb0o378gJQ">VGMAZ</a></li>
+</ul>
+
+<h3 id="animacion">animacion</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/channel/UCDowdnFPgoQ2fkDm5owjuAA"><strong>ANIMACIÓN ARTESANAL</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCV1pDNNo5IdJimT-41m0Mfw">Axolotl de la Animacion</a></li>
+<li><a href="https://www.youtube.com/channel/UCAf6gSVlDsn1MLF7v6d2ObQ">Cinestesia Anime</a></li>
+<li><a href="https://www.youtube.com/channel/UC5dGiPeNiyaiWi9vLwTRPEw">DementJG</a></li>
+<li><a href="https://www.youtube.com/channel/UCfrv5jKw0uB-U6E0SiqAHAg">D.o.c.</a></li>
+<li><a href="https://www.youtube.com/channel/UCZOnoLKzoBItcEk5OsES2TA"><strong>Don&rsquo;t Hug Me .I&rsquo;m Scared</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCcwuEaYuxaCRrBMRPlBWe0A"><strong>El Gordo Otaku</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCJKIA81F-M6CL5hzs35Nk7Q">El Rulz</a></li>
+<li><a href="https://www.youtube.com/channel/UCglFJNHHyXws4EXebrYHb2Q">Entre Libros Y Waifus</a></li>
+<li><a href="https://www.youtube.com/channel/UCiANIRWeIIw1Je5EsJkR8eQ">Eselpedré</a></li>
+<li><a href="https://www.youtube.com/channel/UCECTpjxj_stfEtlJ2RWTfow">Jodyhar</a></li>
+<li><a href="https://www.youtube.com/channel/UC6rXfIPNdLthA4fO-3rBNGw">Kalcifer Vallarta</a></li>
+<li><a href="https://www.youtube.com/channel/UC3MwWFJks6MFI5BF4CHSfWA">LaOveja Extra</a></li>
+<li><a href="https://www.youtube.com/channel/UCvxh70bpc4DgUX8qAmxCFjA">La Oveja</a></li>
+<li><a href="https://www.youtube.com/channel/UC5AgQIntQhWwVmCYrktnZAQ">MemoReviews</a></li>
+<li><a href="https://www.youtube.com/channel/UCZHlhifZJzY5H-aeeZGPwVA">Minutos Para Otakus</a></li>
+<li><a href="https://www.youtube.com/channel/UC6PcGXqquqBQql4vAVnfrLA"><strong>Pilingino</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UC8C99zBE9T9Nxq1S58VJUbA">Qki Jose</a></li>
+<li><a href="https://www.youtube.com/channel/UCeglxdFllZYMhUkneB-ICgg">ReseñasSinCafeína</a></li>
+<li><a href="https://www.youtube.com/channel/UC_s1fc6OJewmoZA3xEvz02g">Rokudo JE</a></li>
+<li><a href="https://www.youtube.com/channel/UCVwXSnbknU8Jpqij4UcFR0w"><strong>Soge YT</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UC9ThvriaM_zXVxRzadVKq1Q"><strong>Tenes Milanesas Graciela</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCu04BQKewqmSTgxw3-L3ptw">Trim Prism</a></li>
+<li><a href="https://www.youtube.com/channel/UCfqbkBHXZTbotSh_BBMHrgw"><strong>Yururin</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCEBxn0h5J2nNwJdwMcj8z1w">Zander KB</a></li>
+</ul>
+
+<h3 id="humor">humor</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/channel/UCgyhGX2FNKqDJwU0-Nw4wUg"><strong>Como Deberia Haber Terminado</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UCvbJ1wi_rrDpEkR2lIVIPUw">Cosos de Dichi</a></li>
+<li><a href="https://www.youtube.com/channel/UCPUu6wV3B2Bxd1RA3mzdAmw">Dichi Delizioso</a></li>
+<li><a href="https://www.youtube.com/channel/UCvXlZUC_OKinSCmJiXrPDGQ"><strong>Erizos Oficial</strong> – el Dr. Pangolin y su ejercito de animalitosbebe</a> (ver el video de los mapaches)</li>
+<li><a href="https://www.youtube.com/channel/UCRVs5xUK5sW1v2j4Dd5XU-A">Eddie FD</a></li>
+<li><a href="https://www.youtube.com/channel/UCa-edCymk0G91lZ3G5zh9Qw">Eddie Fox</a></li>
+<li><a href="https://www.youtube.com/channel/UC_EB3uk-Pkp1tRSKGXANPng">Eder</a></li>
+<li><a href="https://www.youtube.com/channel/UCgESfl93BM2y85abdt8BcZw"><strong>ElSmosh</strong> – honest trailers (español)</a></li>
+<li><a href="https://www.youtube.com/channel/UC66hb8VcpF4X6blJekn0-Nw">Gin Dondake Fandubs</a></li>
+<li><a href="https://www.youtube.com/channel/UCw7Bz6EHxlnOoBUBlJZCWCw"><strong>Te lo resumo</strong></a></li>
+</ul>
+
+<h3 id="gnu-ciencia-y-cacharreo">GNU, ciencia y cacharreo</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/channel/UCkHEa9kk6QvKUR3MXM2Ob6Q">Medialab-Prado</a></li>
+<li><a href="https://www.youtube.com/channel/UCQ0p7ObPat3ptpv1-6K0kHA">ladecadence</a></li>
+<li><a href="https://www.youtube.com/channel/UCu_Z5p91wZGETcCZ1_t8gww">mirmoz7 – arduino</a></li>
+<li><a href="https://www.youtube.com/channel/UC8hgTHwt2gZSe2QNkWK4bqw"><strong>Motores Patelo</strong></a></li>
+<li><a href="https://www.youtube.com/channel/UC6I9GGVWsnkHdbFEYDvFo8w">RincónIngenieril</a></li>
+<li><a href="https://www.youtube.com/channel/UCn1ZIiP-Zcm6kmUA_gkULBA">Viajando por Planetas</a></li>
+<li><a href="https://www.youtube.com/channel/UCxOQ-HjJws0Nrh7v-05cxCw">MindMachineTV</a></li>
+<li><a href="https://www.youtube.com/channel/UCaqFBDA_pSsRvKjy-jiYcNg">El ingeniero TOPs</a></li>
+<li><a href="https://www.youtube.com/channel/UCQZyH9sRRjvtZhMw-ldRvXQ">DesarrolloWeb.com</a></li>
+<li><a href="https://www.youtube.com/channel/UCaVPhFg-Ax873wvhbNitsrQ">El Robot de Platón</a></li>
+<li><a href="https://www.youtube.com/channel/UCbxMnO9P8uxetvy2sngjLwg">KDE España</a></li>
+<li><a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA">Computerphile</a></li>
+<li><a href="https://www.youtube.com/channel/UCSF6lzFPhRm84E7e7gX19gw">Pon un ingeniero en tu vida</a></li>
+<li><a href="https://www.youtube.com/channel/UCxkMDXQ5qzYOgXPRnOBrp1w">Mike Zamansky–using Emacs</a></li>
+<li><a href="https://www.youtube.com/channel/UC40Ztmc_11leuUR-tHh_irQ">Hardware 360º</a></li>
+<li><a href="https://www.youtube.com/channel/UCFVQmYJ5ToD5yN1kog8xBRw">Graf Log - videos viejos de mates</a></li>
+<li><a href="https://www.youtube.com/channel/UCkRmQ_G_NbdbCQMpALg6UPg">emacsrocks</a></li>
+<li><a href="https://www.youtube.com/channel/UCUG9f0C5_pLvobfH-IEupBw">Escuela Superior de Informática UCLM</a></li>
+<li><a href="https://www.youtube.com/channel/UCYCpka3pIEGYjjcrssW10FQ">UMA MOOC</a></li>
+<li><a href="https://www.youtube.com/channel/UCYgk0h0P55kxFgNLF6E-uKA">Yu-Jie Lin – capturas de terminal</a></li>
+<li><a href="https://www.youtube.com/channel/UCZbjyqToF-4qmGNwYrhqQtQ">LinuxCabal</a></li>
+</ul>
+
+<h2 id="antennapod">ANTENNAPOD</h2>
+
+<p>fuuuuhhhhh, para substituir ivoox la situacion no es tan sencilla. Antes de intentar
+conseguir la lista de feeds habia probado en el equipo con gpodder tanto en el
+movil como en la PC, sin embargo, carecer de un reproductor, en especial uno que
+guarde la posicion de escucha de los pod lo descarta inmediatamente.</p>
+
+<p>Luego en la maquina prove con vocal (que venia en los repos de freidora)&hellip; y no
+era ni fino, ni comodo de utilizar.</p>
+
+<p>El tercer intento, totalmente inesperado (aque creo que jessica del podcast
+birras y bits lo menciono en alguna ocacion) tiene todo lo necesario y mas! Con
+una calidad inmerecida, casi fuera de lugar comparando con la mayoria de
+proyectos libres (y privativos), o dicho de otro modo, deja a la altura del betun
+la cosa lamentable que entrega ivoox. La app en cuestion se llama
+<a href="http://antennapod.org/">ANTENNAPOD</a></p>
+
+<p>Ahora, vamos al asunto principal: conseguir la lista de feeds que ivoox
+enmascara mesquinamente con sus enlaces opacos&hellip; por que lo hace (?), mas si
+(hasta donde tengo entendido) ni siquiera es que almacene los capitulos en sus
+servidores.</p>
+
+<p>En fin, el procedimiento es</p>
+
+<ul>
+<li>ir a ivoox en el navegador</li>
+<li>loguearse</li>
+<li>click en <strong>Mis Subscripciones</strong></li>
+<li>click en <strong>Compartir</strong></li>
+<li>luego de marcar todos los podcast como publicos, enviarnoslo por correo</li>
+<li>abrir el correo y seguir el enlace al navegador</li>
+<li>gurdar la pagina del navegador (C-s) con nombre <code>subs.html</code> para abreviar</li>
+<li>abrir en un editor la pagina html o utilizar las herramientas de manipulacion
+de texto de los sistemas *nix</li>
+</ul>
+
+<p>resulta que la pagina con las subscripciones compartida tiene en cada elemento
+<code>&lt;meta itemprop=\&quot;url\&quot; content=\&quot;http://www.ivoox.com/.*&quot;</code> la direccion html al
+canal de cada podcast al que estamos subcritos, y con un poco de trabajo,
+podemos convertir esa direccion html al feed rss</p>
+
+<p>para esto substituiremos en el enlace, la seccion de texto <code>.html</code> por <code>.xml</code> y
+tambien la seccion <code>_sq_</code> (en algun caso puede ser <code>_aj_</code>) por <code>_fg_</code>. Por ejemplo</p>
+
+<pre><code>http://www.ivoox.com/podcast-cierta-ciencia_sq_f171785_1.html
+</code></pre>
+
+<p>quedaria como:</p>
+
+<pre><code>http://www.ivoox.com/podcast-cierta-ciencia_fg_f171785_1.xml
+</code></pre>
+
+<p>el inconveniente aqui seria conservar a ivoox como  intermediario entre nuestro
+podcast y el feed, pero creo es un mal (de momento) aceptable</p>
+
+<p>para ayudar en la transformacion del fichero en nuestros enlaces, tengo el
+siguiente conjunto de pasos en elisp, ir al fichero <code>subs.html</code></p>
+
+<pre><code>(defun ivoox-killer ()
+  &quot;Separa los correos en lista_correos.txt&quot;
+  (interactive)
+  (goto-char (point-min))
+  (while (re-search-forward &quot;&lt;/\\w+&gt;&quot; nil t)
+    (replace-match &quot;\n&quot; nil nil))
+  (goto-char (point-min))
+  (delete-non-matching-lines &quot;&lt;meta itemprop=\&quot;url\&quot; content=\&quot;http://www.ivoox.com/&quot;)
+  (goto-char (point-min))
+  (while (re-search-forward &quot; +&lt;meta itemprop=\&quot;url\&quot; content=\&quot;&quot; nil t)
+    (replace-match &quot;&quot; nil nil))
+  (goto-char (point-min))
+  (while (re-search-forward &quot;\&quot;&gt;&quot; nil t)
+    (replace-match &quot;&quot; nil nil))
+  (goto-char (point-min))
+  (while (re-search-forward &quot;\\.html&quot; nil t)
+    (replace-match &quot;.xml&quot; nil nil))
+  (goto-char (point-min))
+  (while (re-search-forward &quot;_.._&quot; nil t)
+    (replace-match &quot;_fg_&quot; nil nil)))
+</code></pre>
+
+<p>cargar la funcion elisp y ejecutar <code>M-x ivoox-killer</code></p>
+
+<p>o desde la terminal ejecutar</p>
+
+<pre><code>grep -Eo '&lt;meta itemprop=\&quot;url\&quot; content=\&quot;http://www.ivoox.com/[^&quot;]+&quot;' subs.html | sed 's/_.._/_fg_/g' | sed 's/\.html/.xml/g' | awk -vFS=\&quot; '{ print $4 }'
+</code></pre>
+
+<p>me gustaria decir que eso seria todo, pero no, unicamente conseguiremos los
+feeds en texto plano. Luego hay que convertirlos a un formato xml especial y
+darle la extencion <code>.opml</code>, esta tarea es un ejercicio para el lector. Se puede
+tomar como referencia este (mi) listado <a href="https://nasciiboy.github.io/media/data/antennapod-feeds.opml">antennapod-feeds.opml</a>
+(ya pasado por antennapod, y cambiando los feeds ivoox por las direcciones fuente
+cuando fue posible)</p>
+
+<p>Como con yutu, aqui el desglose de los feeds</p>
+
+<h3 id="dispersion-cultural-o-charlas">dispersion cultural (o charlas)</h3>
+
+<ul>
+<li><a href="http://feeds.feedburner.com/antimateriapodcast">Antimateria</a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-logan_fg_f1179598_1.xml">El Podcast de Logan</a></li>
+<li><a href="http://www.poderato.com/precipicio1/_feed/1"><strong>El precipicio</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-lode-archivos-ligeros_fg_f159048_1.xml">LODE -archivos ligeros-</a></li>
+<li><a href="http://www.ivoox.com/podcast-loquemeimagino-podcast_fg_f144451_1.xml"><strong>Loquemeimagino Podcast</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-one-piece-podcast_fg_f1160246_1.xml">One Piece Podcast</a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-el-precipicio_fg_f176717_1.xml"><strong>Podcast El Precipicio</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-el-vuelo-del-fenix_fg_f146467_1.xml"><strong>Podcast El Vuelo del Fénix</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-interynet_fg_f133744_filtro_1.xml">Podcast interYnet</a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-la-biblioteca-trantor_fg_f13178_1.xml"><strong>Podcast La Biblioteca de Trantor</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-la-espada-damocles_fg_f170523_1.xml">Podcast La Espada de Damocles</a></li>
+<li><a href="http://radioela.org/spip.php?page=backend">Radio ELA: Emisora Libre Autogestionada. 100.0 FM Madrid</a></li>
+<li><a href="http://feeds.feedburner.com/TuNoHasTenidoInfancia"><strong>Tú no has tenido infancia</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-vivo-entre-muggles_fg_f1157962_1.xml"><strong>Vivo entre Muggles</strong></a></li>
+</ul>
+
+<h3 id="musica-1">musica</h3>
+
+<ul>
+<li><a href="http://www.spreaker.com/show/511735/episodes/feed"><strong>Del Bit a la Orquesta</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-scorevg_fg_f1153825_1.xml"><strong>ScoreVG</strong></a></li>
+<li><a href="http://api.rtve.es/api/programas/58211/audios.rss">6x3</a></li>
+<li><a href="http://www.ivoox.com/ruleta-rusa_fg_f1156570_filtro_1.xml"><strong>La Ruleta Rusa</strong></a></li>
+</ul>
+
+<h3 id="vg-1">vg</h3>
+
+<ul>
+<li><a href="http://www.arcadiagamers.com/rss.xml"><strong>Arcadia Gamers</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-club-vintage-videojuegos-clasicos-80-s_fg_f18511_1.xml">El Club Vintage</a></li>
+<li><a href="http://www.ivoox.com/podcast-game-over_fg_f1366_1.xml"><strong>Game Over</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-hyrule-project_fg_f172144_1.xml">Podcast Hyrule Project</a></li>
+<li><a href="http://www.ivoox.com/podcast-retroactivo-podcast_fg_f110956_1.xml"><strong>RetroActivo Podcast</strong></a> (los primeros son los mejores)</li>
+</ul>
+
+<h3 id="txt-y-radio-novelas">txt y radio-novelas</h3>
+
+<ul>
+<li><a href="http://www.ivoox.com/podcast-gran-apagon_fg_f1293671_1.xml">El gran apagón</a></li>
+<li><a href="http://www.ivoox.com/podcast-biblioteca-invisible_fg_f1170900_1.xml">La biblioteca invisible</a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-verne-wells-ciencia-ficcion_fg_f1100419_1.xml"><strong>Podcast de Verne y Wells Ciencia Ficción</strong></a></li>
+</ul>
+
+<h3 id="cine">cine</h3>
+
+<ul>
+<li><a href="http://www.ivoox.com/podcast-octavo-pasajero_fg_f14315_1.xml"><strong>El Octavo Pasajero</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-desde-abajo-podcast-cine-terror-sci-fi-y_fg_f153707_1.xml"><strong>Desde Abajo Podcast: Cine de Terror, Sci-fi y más</strong></a></li>
+</ul>
+
+<h3 id="gnu-y-afines">GNU y afines</h3>
+
+<ul>
+<li><a href="https://autodefensainformatica.radioalmaina.org/feed/"><strong>Autodefensa Informatica</strong></a></li>
+<li><a href="https://birrasybits.wordpress.com/feed/">Birras y Bits</a></li>
+<li><a href="http://www.ivoox.com/podcast-codigo-podcast_fg_f192247_1.xml">Código Podcast</a></li>
+<li><a href="https://feeds.pacific-content.com/commandlineheroes">Command Line Heroes</a></li>
+<li><a href="https://compilando.audio/index.php/feed/podcast/">Compilando Podcast</a></li>
+<li><a href="http://feeds.feedburner.com/Cuevatux?format=xml">cuevatux</a></li>
+<li><a href="http://www.ivoox.com/podcast-devuanita_fg_f1231954_1.xml">Devuanita</a></li>
+<li><a href="https://eldesarmador.org/podcast.xml">El Desarmador</a></li>
+<li><a href="http://elgeekerrante.com/podcastfiles/geekerrante_podcast.xml"><strong>El Geek Errante</strong></a></li>
+<li><a href="https://www.ivoox.com/podcast-fran-casas_fg_f1449982_1.xml">Fran Casas</a></li>
+<li><a href="http://www.ivoox.com/podcast-cronicas-del-linuxverso_fg_f1444265_1.xml">Las Crónicas del Linuxverso</a></li>
+<li><a href="http://www.ivoox.com/podcast-libresfera_fg_f136150_1.xml"><strong>Libresfera</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-panico-nucleo_fg_f17378_1.xml"><strong>Pánico en el núcleo</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-kde-espana_fg_f1249423_1.xml">Podcast de KDE España</a></li>
+<li><a href="https://feedpress.me/podcastlinux"><strong>Podcast Linux</strong></a></li>
+<li><a href="https://radioliberadaelpodcast.wordpress.com/feed/">Radioliberada el podcast</a></li>
+<li><a href="http://www.ivoox.com/podcast-reality-cracking_fg_f159955_1.xml"><strong>Reality Cracking</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-tuxllefia_fg_f1309696_1.xml">Tuxllefia</a></li>
+<li><a href="http://www.ivoox.com/podcast-we-developers_fg_f146574_1.xml">We Developers</a></li>
+</ul>
+
+<h3 id="humor-1">humor</h3>
+
+<ul>
+<li><a href="http://feeds.feedburner.com/Gravina82?format=xml"><strong>Gravina82</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-kombustible-podcast_fg_f142184_1.xml"><strong>kombustible podcast</strong></a></li>
+<li><a href="https://lacalabazota.wordpress.com/feed/"><strong>La Calabazota Blog</strong></a></li>
+</ul>
+
+<h3 id="ciencia">ciencia</h3>
+
+<ul>
+<li><a href="http://www.ivoox.com/podcast-ciencia-nuestra-cada-dia_fg_f11450_1.xml">Ciencia nuestra de cada dia</a></li>
+<li><a href="http://www.ivoox.com/podcast-ciencia-genios_fg_f11449_1.xml">Ciencia y Genios</a></li>
+<li><a href="http://www.ivoox.com/podcast-cierta-ciencia_fg_f171785_1.xml">Cierta Ciencia</a></li>
+<li><a href="http://www.ivoox.com/podcast-neutrino_fg_f132713_1.xml">El neutrino</a></li>
+<li><a href="http://www.ivoox.com/podcast-radioscopio_fg_f128060_1.xml">El Radioscopio</a></li>
+<li><a href="http://www.ivoox.com/podcast-hablando-cientificos_fg_f11448_1.xml">Hablando con Científicos</a></li>
+<li><a href="http://www.ivoox.com/podcast-fabrica-ciencia-lfdlc_fg_f1100722_1.xml">La Fábrica de la Ciencia  (LFDLC)</a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-catastrofe-ultravioleta_fg_f1107209_1.xml">Podcast Catástrofe Ultravioleta</a></li>
+<li><a href="http://www.ivoox.com/podcast-podcast-desde-sur-explorando-cosmos_fg_f15085_1.xml"><strong>Podcast Desde el Sur: explorando el Cosmos</strong></a></li>
+<li><a href="http://www.ivoox.com/podcast-principio-incertidumbre_fg_f114134_1.xml">Principio de Incertidumbre</a></li>
+<li><a href="http://www.ivoox.com/podcast-quilo-ciencia_fg_f17805_1.xml">Quilo de Ciencia</a></li>
+</ul>
+
+<h2 id="eof">EOF</h2>
+
+<p>al igual que varios albums, muchos podcast han acompañado mis pasos, la mayoria
+de los aqui listados han sido escuchados por completo casi como un proyecto
+personal incluso algunos de cantidad colosal como arcadia gamers y game over, o
+varios de los que produce ciencia-es (que no los marco como recomendables, pero
+todos tienen una gran calidad).</p>
+
+<p>Unos vienen, otros se van o van siendo olvidados en el trancurso de cambiar de
+cuenta y nicks. Algunos mas han desaparecido y unos pocos los atesoro en el
+disco duro, cada cual aportando nuevas sensaciones, visiones e ideas en un
+momento especifico.</p>
+
+<p>Antes o despues, varias visiones que al inicio parecian desafiantes ahora se han
+vuelto añejas o simplonas, quiza mostrando lo rapido que evoluciono&hellip; o
+exponiendo lo facil que es influenciar a este maleable sujeto.</p>
+
+<p>Solo por hacer mencion de algunos de los ausentes, aniGame Radio (de lo primero
+que escuche), &ldquo;capa, guitarra y game-over&rdquo; (creo el primero), el podcast de
+tuxinfo, los documentales de la pastilla-roja, las japonesadas de UPML o uno que
+ya no recuerdo el nombre donde unos estudiantes de filosofia de por mi varrio
+hablaban de novelas de ciencia ficcion.</p>
+
+<p>Gracias a esos &ldquo;hacedores&rdquo; que comparten directamente y sin recelo (casi
+siempre) sus obseciones mas profundas, sea con un micro de mierda o desde
+equipos profecionales, por uno, dos o cien programas</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.github.io/prog/gdp/">◀ GDP</a>
+    
+    
+  </div>
+
+  <div class="clear" class="center">
+  <h2>Comments</h2>
+  </div>
+
+  <form method="POST" class="dark-matter" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/comments">
+  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/prog/m8-ii/#comment-submitted">
+  <input type="hidden" name="options[entryId]" value="9a5b177d08f0553e3c89c39670605dae">
+
+  <h1>Comment Form
+    <span>Este formulario envia un pull request al repositorio donde se almacena
+    el blog, uselo con sabiduria. La inclusion de comentarios es totalmente
+    arbitaria y puede modificarse, ignorarse o desaparecer en el
+    futuro... la habilidad de anidar comentarios no esta disponible</span>
+  </h1>
+  <label>
+    <span>Your Name :</span>
+    <input name="fields[name]" type="text" placeholder="Your name"/>
+  </label>
+
+  <label>
+    <span>Your Email :</span>
+    <input name="fields[email]" type="email" placeholder="Your email address"/>
+  </label>
+
+  <label>
+    <span>Message :</span>
+    <textarea name="fields[body]" placeholder="aqui tu comentario (se acepta Markdown)" rows="5"></textarea>
+  </label>
+  <label>
+    <span>&nbsp;</span>
+    <input type="submit" value="Submit" class="submit"></input>
+  </label>
+</form>
+
+    
+  
+  
+
+  
+    
+  
+
+  
+    <p>the beautiful is blue... and black</p>
+  
+
+
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/categories/prog">prog(45)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(31)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(13)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/tags/fonos">fonos(19)</a></li><li><a href="https://nasciiboy.github.io/tags/howto">howto(19)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(18)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(13)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(4)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elisp">elisp(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/hardware">hardware(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/trl">trl(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

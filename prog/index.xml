@@ -7,10 +7,460 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Wed, 28 Mar 2018 14:53:20 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 13 Apr 2018 14:26:21 -0500</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LineageOS, Feeds &amp; Feel</title>
+      <link>https://nasciiboy.github.io/prog/m8-ii/</link>
+      <pubDate>Fri, 13 Apr 2018 14:26:21 -0500</pubDate>
+      
+      <guid>https://nasciiboy.github.io/prog/m8-ii/</guid>
+      <description>
+
+&lt;p&gt;Luego del primer &lt;a href=&#34;../m8&#34;&gt;flasheo al m8&lt;/a&gt; probe un poco las &amp;ldquo;apps&amp;rdquo; de yutu que
+venian disponibles en f-droid y aquella vez no llegue muy lejos antes de
+instalar las gapps&amp;hellip; por el yutu y alguna cosa de la playstore, como ivoox,
+firefox o vlc.&lt;/p&gt;
+
+&lt;p&gt;Tras aquello, el dispositivo paso de ser un lineage a un androide googlero
+practicamente en todo sentido: las apps comenzaron a fastidiar con registros y
+actualizaciones (yutu), el playstore comienzo a hacer sus reviciones de
+seguridad, y nuevos procesos permanentes en segundo plano aparecieron haciendo
+quien sabe que cosas &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;tener yutu es caro, quiza demaciado y android, android es una
+mierda. Cierto es que no ocupo mucho el dispositivo, por dos razones, primero, la
+pantalla tiene un touch perjudicado y segundo, es android y eso no vale para nada,
+nada que no sea consumir pasivamente y ver porno.&lt;/p&gt;
+
+&lt;p&gt;y asi hubiera seguido con el movil hasta el fin de los tiempos, hasta que una
+&amp;ldquo;broma&amp;rdquo; de parte del equipo de lineageOS hizo aparecer un mensaje perturbador&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/coin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;que? (me pregunte) la pagina del porno no se conforma con minar criptocurrencias
+cuando veo un video, ahora a colado un bicho en el sistema? (ha, ha, ha, que
+cachondos los de lineage)&lt;/p&gt;
+
+&lt;p&gt;esto ademas de traer la sensacion de completa vulnerabilidad, vino acompañado
+por un cabreo que desemboco en (cual winbugs) borrar y reinstalar, ahora por
+supuesto sin google de por medio, almenos, hasta donde se pudiera&lt;/p&gt;
+
+&lt;p&gt;segui el antes enlazado listado de pasos para el flasheo, y volvio a aparecer el
+mensaje de los graciosos del lineaje, je, fue hay donde me entere de lo que se
+trataba ![x-d]!&lt;/p&gt;
+
+&lt;p&gt;Despues toco ir a &lt;a href=&#34;https://f-droid.org/&#34;&gt;f-droid&lt;/a&gt; descargar el apk y transferirla
+al dispositivo desde el pc (por comodidad). Lo mismo sucedio con vlc, al que hay
+que rebuscar por &lt;a href=&#34;https://www.videolan.org/vlc/download-android.html&#34;&gt;aca&lt;/a&gt;.
+Finalmente intente con firefox, mas el enlace de su apk no lo encontre.&lt;/p&gt;
+
+&lt;p&gt;Probando con f-droid esta ice-cat, pero al igual que la ultima ocacion que la
+probe, se queda como que en eterna carga al pasar del buscador a una pagina, asi
+que se fue y se quedo el navegador por defecto.&lt;/p&gt;
+
+&lt;p&gt;Luego toco buscar algun reemplazo para el yutu. Los primeros en caer fueron
+NewPipe que es usable, y MinTube que tras varios intentos el resultado siempre
+fue un crasheo.&lt;/p&gt;
+
+&lt;p&gt;je, el repo de f-droid tiene muchas cosas sin actualizarse, algunas de las que
+encontre +6 años, otras que parecen abandonadas o a medio hacer. Quitando
+algunas cosillas, es un panorama bastante triste, aun asi, que asco da programar
+para androides, de verdad que poco o ningun interes me despierta, ja, ja, ja,
+quiza cambie de opinion cuando los moviles no sean meros juguetes y corran GNU
+con papeles y letras grandes, con Gnome por supuesto, aunque tambien seria
+suficiente ejecutando kde o en ultima instancia una terminal pelada y confiable
+sin modo grafico alguno, iendo de un lugar a otro con un teclado mecanico
+bajo el sobaco o colgado en la espalda&lt;/p&gt;
+
+&lt;p&gt;Mientras tanto, es un grato placer compartir un par de reemplazos potables para
+substituir los principales usos del aparato (obviando vlc para los videos,
+Música para la musica y el navegador pal porno)&lt;/p&gt;
+
+&lt;h2 id=&#34;skytube&#34;&gt;SkyTube&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://skytube-app.com/&#34;&gt;SkyTube&lt;/a&gt; es un leector de rss especializado en los
+feeds de youtube. No se crashea, tiene una interface agradable, util, puedes ver
+comentarios, el canal de donde procede un video, subcribirte y hacer busquedas&lt;/p&gt;
+
+&lt;p&gt;Se pierde aquello de dar likes, pero no creo que eso sea ningun defecto, igual y
+es un paso necesario en el desadoctrinamiento del like. Lo mismo sucede con los
+comentarios, podemos verlos mas no dejarlos.&lt;/p&gt;
+
+&lt;p&gt;Agregar nuestros feeds, lejos de lo que se podria imaginar es una tarea
+sencillisima. Por alguna razon que no logro entender, el mismo yutu nos ofrece
+una lista con todas las subcripciones que tenemos en formato opml (xml) para que la
+podamos agregar a un leector&amp;hellip; enserio? por que? un inflitrado que evita a los
+hippiosos caer por completo en las garras de alphabet? puaghh&lt;/p&gt;
+
+&lt;p&gt;solo debemos ir a &lt;a href=&#34;https://www.youtube.com/subscription_manager&#34;&gt;https://www.youtube.com/subscription_manager&lt;/a&gt;, seguir hasta el fondo de
+la pagina y darle a &lt;strong&gt;Exportar Subcripciones&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;https://nasciiboy.github.io/media/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
+(le he cambiado la extencion, agregando &lt;code&gt;.xml&lt;/code&gt; al final).&lt;/p&gt;
+
+&lt;p&gt;A continuacion un desglose. La clasificacion es dificil de encajar para varios
+canales, por ejemplo &lt;strong&gt;petercarter&lt;/strong&gt;, &lt;strong&gt;Pilingino&lt;/strong&gt; o &lt;strong&gt;el gordo otaku&lt;/strong&gt;
+(incluso &lt;strong&gt;DayoScript&lt;/strong&gt;) que clasificaria directamente como &amp;ldquo;montaje visual&amp;rdquo;,
+pero por centrar sus contenidos en un area mas que en otra termino por
+colocarlos en algo menos exotico, como en &lt;em&gt;dispersion cultural&lt;/em&gt; o &lt;em&gt;anime&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dedico la categoria Dispersion cultural a aquellos canales sin una tematica
+particularmente enfocada a una rama de la dispersion, o que son dificiles de
+clasificar, como en el caso de Adult Swim, que incluye videos musicales,
+animacion experimental, pachequismos, spin-offs y visarradas varias. En la misma
+categoria coloco tambien a Esquizofrenia Natural donde hablan de filosofia(s), se
+realizan analisis socioculturales y de vez en cuando un minidocumental.&lt;/p&gt;
+
+&lt;p&gt;Describir textualmente cada uno de los canales seria extenuante. Como unica seña
+de atencion aquellos titulos en Bold son los que recomiendo consumir sin ninguna
+reserva, y otros de nombre poco descriptivo, traen un guion y su tematica a un
+lado.&lt;/p&gt;
+
+&lt;p&gt;Bueno, sin mas distracciones &lt;strong&gt;&amp;ldquo;la lista&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;dispersion-cultural&#34;&gt;dispersion cultural&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCgPClNr5VSYC3syrDUIlzLw&#34;&gt;Adult Swim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCq8G6Hp2GKAzXCUqeED8T5g&#34;&gt;Comunidad Espiral&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCb8GKeOvI7WsFUkB4UVAeXA&#34;&gt;Cordura Artificial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCVBkwO6Ok1De0UfNZdo7-Ag&#34;&gt;DayoScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCvRQKXtIGcK1yEnQ4Te8hWQ&#34;&gt;Drugslab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCf_MY8uWjWH8gwzFK6vCAmg&#34;&gt;&lt;strong&gt;Esquizofrenia Natural&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCiMTyGpwgqp_dmNWv-y0tfQ&#34;&gt;&lt;strong&gt;Mireda Producciones&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCXP63FzhPbL41mPx2P2g7Cw&#34;&gt;&lt;strong&gt;petercarter&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCTBQ_wav5XVjd7hZMwE87jQ&#34;&gt;PIPEXMAN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCoyJ3DSiNZhuJgg0qNZC4yg&#34;&gt;&lt;strong&gt;Quetzal&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCRJdUHPy8evgqT5CVl-mxyQ&#34;&gt;SOY ATEO Y QUÉ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC3-87zhQFd6poByHjBVyJwA&#34;&gt;Talking Vidya&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCSN5hYxFPJme8FHEjx5cCyA&#34;&gt;TL2Bie – kaijus y mostruos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;musica&#34;&gt;musica&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC3I2GFN_F8WudD_2jUZbojA&#34;&gt;&lt;strong&gt;KEXP&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCeEMAgqm5qFzFJ-BuKOpgew&#34;&gt;&lt;strong&gt;Manual Guitarra Eléctrica&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCvpGdJBiZ52seEhUldZGwvA&#34;&gt;moonbowmusicmovie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCcgmiH5T9xkemVExTNwJ58Q&#34;&gt;Rockandplay Daniel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCbidH1GEKpLWmjjzdUEJHqQ&#34;&gt;Stephanie Jones&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCVScA3WHef_-0eCAgBPbpRA&#34;&gt;will guitar shop cali&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;vg&#34;&gt;vg&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCEh5UPBv0alseI62OJhnKow&#34;&gt;Artemio Urbina&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC2S36yOxggUtJJXUGrBygKg&#34;&gt;Game Back&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC008MpfclY6ap-QGzoTMNKg&#34;&gt;&lt;strong&gt;JackTech – gameboy&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCMnZ3qm76jc3SUi9Z-5OdcA&#34;&gt;Leyendas &amp;amp; Videojuegos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCpvtp7mH0Cdq8FQUxcjDq0Q&#34;&gt;My Life in Gaming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCwRqWnW5ZkVaP_lZF7caZ-g&#34;&gt;Retro Game Mechanics Explained&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCWz51s7gd-p55UXY_xm69FQ&#34;&gt;Scanliner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC8uT9cgJorJPWu7ITLGo9Ww&#34;&gt;The 8-Bit Guy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCsr88iMWjPrD4Qb0o378gJQ&#34;&gt;VGMAZ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;animacion&#34;&gt;animacion&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCDowdnFPgoQ2fkDm5owjuAA&#34;&gt;&lt;strong&gt;ANIMACIÓN ARTESANAL&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCV1pDNNo5IdJimT-41m0Mfw&#34;&gt;Axolotl de la Animacion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCAf6gSVlDsn1MLF7v6d2ObQ&#34;&gt;Cinestesia Anime&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC5dGiPeNiyaiWi9vLwTRPEw&#34;&gt;DementJG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCfrv5jKw0uB-U6E0SiqAHAg&#34;&gt;D.o.c.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCZOnoLKzoBItcEk5OsES2TA&#34;&gt;&lt;strong&gt;Don&amp;rsquo;t Hug Me .I&amp;rsquo;m Scared&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCcwuEaYuxaCRrBMRPlBWe0A&#34;&gt;&lt;strong&gt;El Gordo Otaku&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCJKIA81F-M6CL5hzs35Nk7Q&#34;&gt;El Rulz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCglFJNHHyXws4EXebrYHb2Q&#34;&gt;Entre Libros Y Waifus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCiANIRWeIIw1Je5EsJkR8eQ&#34;&gt;Eselpedré&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCECTpjxj_stfEtlJ2RWTfow&#34;&gt;Jodyhar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC6rXfIPNdLthA4fO-3rBNGw&#34;&gt;Kalcifer Vallarta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC3MwWFJks6MFI5BF4CHSfWA&#34;&gt;LaOveja Extra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCvxh70bpc4DgUX8qAmxCFjA&#34;&gt;La Oveja&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC5AgQIntQhWwVmCYrktnZAQ&#34;&gt;MemoReviews&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCZHlhifZJzY5H-aeeZGPwVA&#34;&gt;Minutos Para Otakus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC6PcGXqquqBQql4vAVnfrLA&#34;&gt;&lt;strong&gt;Pilingino&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC8C99zBE9T9Nxq1S58VJUbA&#34;&gt;Qki Jose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCeglxdFllZYMhUkneB-ICgg&#34;&gt;ReseñasSinCafeína&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC_s1fc6OJewmoZA3xEvz02g&#34;&gt;Rokudo JE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCVwXSnbknU8Jpqij4UcFR0w&#34;&gt;&lt;strong&gt;Soge YT&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC9ThvriaM_zXVxRzadVKq1Q&#34;&gt;&lt;strong&gt;Tenes Milanesas Graciela&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCu04BQKewqmSTgxw3-L3ptw&#34;&gt;Trim Prism&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCfqbkBHXZTbotSh_BBMHrgw&#34;&gt;&lt;strong&gt;Yururin&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCEBxn0h5J2nNwJdwMcj8z1w&#34;&gt;Zander KB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;humor&#34;&gt;humor&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCgyhGX2FNKqDJwU0-Nw4wUg&#34;&gt;&lt;strong&gt;Como Deberia Haber Terminado&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCvbJ1wi_rrDpEkR2lIVIPUw&#34;&gt;Cosos de Dichi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCPUu6wV3B2Bxd1RA3mzdAmw&#34;&gt;Dichi Delizioso&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCvXlZUC_OKinSCmJiXrPDGQ&#34;&gt;&lt;strong&gt;Erizos Oficial&lt;/strong&gt; – el Dr. Pangolin y su ejercito de animalitosbebe&lt;/a&gt; (ver el video de los mapaches)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCRVs5xUK5sW1v2j4Dd5XU-A&#34;&gt;Eddie FD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCa-edCymk0G91lZ3G5zh9Qw&#34;&gt;Eddie Fox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC_EB3uk-Pkp1tRSKGXANPng&#34;&gt;Eder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCgESfl93BM2y85abdt8BcZw&#34;&gt;&lt;strong&gt;ElSmosh&lt;/strong&gt; – honest trailers (español)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC66hb8VcpF4X6blJekn0-Nw&#34;&gt;Gin Dondake Fandubs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCw7Bz6EHxlnOoBUBlJZCWCw&#34;&gt;&lt;strong&gt;Te lo resumo&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;gnu-ciencia-y-cacharreo&#34;&gt;GNU, ciencia y cacharreo&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCkHEa9kk6QvKUR3MXM2Ob6Q&#34;&gt;Medialab-Prado&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCQ0p7ObPat3ptpv1-6K0kHA&#34;&gt;ladecadence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCu_Z5p91wZGETcCZ1_t8gww&#34;&gt;mirmoz7 – arduino&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC8hgTHwt2gZSe2QNkWK4bqw&#34;&gt;&lt;strong&gt;Motores Patelo&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC6I9GGVWsnkHdbFEYDvFo8w&#34;&gt;RincónIngenieril&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCn1ZIiP-Zcm6kmUA_gkULBA&#34;&gt;Viajando por Planetas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCxOQ-HjJws0Nrh7v-05cxCw&#34;&gt;MindMachineTV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCaqFBDA_pSsRvKjy-jiYcNg&#34;&gt;El ingeniero TOPs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCQZyH9sRRjvtZhMw-ldRvXQ&#34;&gt;DesarrolloWeb.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCaVPhFg-Ax873wvhbNitsrQ&#34;&gt;El Robot de Platón&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCbxMnO9P8uxetvy2sngjLwg&#34;&gt;KDE España&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA&#34;&gt;Computerphile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCSF6lzFPhRm84E7e7gX19gw&#34;&gt;Pon un ingeniero en tu vida&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCxkMDXQ5qzYOgXPRnOBrp1w&#34;&gt;Mike Zamansky–using Emacs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC40Ztmc_11leuUR-tHh_irQ&#34;&gt;Hardware 360º&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCFVQmYJ5ToD5yN1kog8xBRw&#34;&gt;Graf Log - videos viejos de mates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCkRmQ_G_NbdbCQMpALg6UPg&#34;&gt;emacsrocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCUG9f0C5_pLvobfH-IEupBw&#34;&gt;Escuela Superior de Informática UCLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCYCpka3pIEGYjjcrssW10FQ&#34;&gt;UMA MOOC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCYgk0h0P55kxFgNLF6E-uKA&#34;&gt;Yu-Jie Lin – capturas de terminal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCZbjyqToF-4qmGNwYrhqQtQ&#34;&gt;LinuxCabal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;antennapod&#34;&gt;ANTENNAPOD&lt;/h2&gt;
+
+&lt;p&gt;fuuuuhhhhh, para substituir ivoox la situacion no es tan sencilla. Antes de intentar
+conseguir la lista de feeds habia probado en el equipo con gpodder tanto en el
+movil como en la PC, sin embargo, carecer de un reproductor, en especial uno que
+guarde la posicion de escucha de los pod lo descarta inmediatamente.&lt;/p&gt;
+
+&lt;p&gt;Luego en la maquina prove con vocal (que venia en los repos de freidora)&amp;hellip; y no
+era ni fino, ni comodo de utilizar.&lt;/p&gt;
+
+&lt;p&gt;El tercer intento, totalmente inesperado (aque creo que jessica del podcast
+birras y bits lo menciono en alguna ocacion) tiene todo lo necesario y mas! Con
+una calidad inmerecida, casi fuera de lugar comparando con la mayoria de
+proyectos libres (y privativos), o dicho de otro modo, deja a la altura del betun
+la cosa lamentable que entrega ivoox. La app en cuestion se llama
+&lt;a href=&#34;http://antennapod.org/&#34;&gt;ANTENNAPOD&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora, vamos al asunto principal: conseguir la lista de feeds que ivoox
+enmascara mesquinamente con sus enlaces opacos&amp;hellip; por que lo hace (?), mas si
+(hasta donde tengo entendido) ni siquiera es que almacene los capitulos en sus
+servidores.&lt;/p&gt;
+
+&lt;p&gt;En fin, el procedimiento es&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ir a ivoox en el navegador&lt;/li&gt;
+&lt;li&gt;loguearse&lt;/li&gt;
+&lt;li&gt;click en &lt;strong&gt;Mis Subscripciones&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;click en &lt;strong&gt;Compartir&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;luego de marcar todos los podcast como publicos, enviarnoslo por correo&lt;/li&gt;
+&lt;li&gt;abrir el correo y seguir el enlace al navegador&lt;/li&gt;
+&lt;li&gt;gurdar la pagina del navegador (C-s) con nombre &lt;code&gt;subs.html&lt;/code&gt; para abreviar&lt;/li&gt;
+&lt;li&gt;abrir en un editor la pagina html o utilizar las herramientas de manipulacion
+de texto de los sistemas *nix&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;resulta que la pagina con las subscripciones compartida tiene en cada elemento
+&lt;code&gt;&amp;lt;meta itemprop=\&amp;quot;url\&amp;quot; content=\&amp;quot;http://www.ivoox.com/.*&amp;quot;&lt;/code&gt; la direccion html al
+canal de cada podcast al que estamos subcritos, y con un poco de trabajo,
+podemos convertir esa direccion html al feed rss&lt;/p&gt;
+
+&lt;p&gt;para esto substituiremos en el enlace, la seccion de texto &lt;code&gt;.html&lt;/code&gt; por &lt;code&gt;.xml&lt;/code&gt; y
+tambien la seccion &lt;code&gt;_sq_&lt;/code&gt; (en algun caso puede ser &lt;code&gt;_aj_&lt;/code&gt;) por &lt;code&gt;_fg_&lt;/code&gt;. Por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://www.ivoox.com/podcast-cierta-ciencia_sq_f171785_1.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;quedaria como:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://www.ivoox.com/podcast-cierta-ciencia_fg_f171785_1.xml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el inconveniente aqui seria conservar a ivoox como  intermediario entre nuestro
+podcast y el feed, pero creo es un mal (de momento) aceptable&lt;/p&gt;
+
+&lt;p&gt;para ayudar en la transformacion del fichero en nuestros enlaces, tengo el
+siguiente conjunto de pasos en elisp, ir al fichero &lt;code&gt;subs.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(defun ivoox-killer ()
+  &amp;quot;Separa los correos en lista_correos.txt&amp;quot;
+  (interactive)
+  (goto-char (point-min))
+  (while (re-search-forward &amp;quot;&amp;lt;/\\w+&amp;gt;&amp;quot; nil t)
+    (replace-match &amp;quot;\n&amp;quot; nil nil))
+  (goto-char (point-min))
+  (delete-non-matching-lines &amp;quot;&amp;lt;meta itemprop=\&amp;quot;url\&amp;quot; content=\&amp;quot;http://www.ivoox.com/&amp;quot;)
+  (goto-char (point-min))
+  (while (re-search-forward &amp;quot; +&amp;lt;meta itemprop=\&amp;quot;url\&amp;quot; content=\&amp;quot;&amp;quot; nil t)
+    (replace-match &amp;quot;&amp;quot; nil nil))
+  (goto-char (point-min))
+  (while (re-search-forward &amp;quot;\&amp;quot;&amp;gt;&amp;quot; nil t)
+    (replace-match &amp;quot;&amp;quot; nil nil))
+  (goto-char (point-min))
+  (while (re-search-forward &amp;quot;\\.html&amp;quot; nil t)
+    (replace-match &amp;quot;.xml&amp;quot; nil nil))
+  (goto-char (point-min))
+  (while (re-search-forward &amp;quot;_.._&amp;quot; nil t)
+    (replace-match &amp;quot;_fg_&amp;quot; nil nil)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;cargar la funcion elisp y ejecutar &lt;code&gt;M-x ivoox-killer&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;o desde la terminal ejecutar&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;grep -Eo &#39;&amp;lt;meta itemprop=\&amp;quot;url\&amp;quot; content=\&amp;quot;http://www.ivoox.com/[^&amp;quot;]+&amp;quot;&#39; subs.html | sed &#39;s/_.._/_fg_/g&#39; | sed &#39;s/\.html/.xml/g&#39; | awk -vFS=\&amp;quot; &#39;{ print $4 }&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;me gustaria decir que eso seria todo, pero no, unicamente conseguiremos los
+feeds en texto plano. Luego hay que convertirlos a un formato xml especial y
+darle la extencion &lt;code&gt;.opml&lt;/code&gt;, esta tarea es un ejercicio para el lector. Se puede
+tomar como referencia este (mi) listado &lt;a href=&#34;https://nasciiboy.github.io/media/data/antennapod-feeds.opml&#34;&gt;antennapod-feeds.opml&lt;/a&gt;
+(ya pasado por antennapod, y cambiando los feeds ivoox por las direcciones fuente
+cuando fue posible)&lt;/p&gt;
+
+&lt;p&gt;Como con yutu, aqui el desglose de los feeds&lt;/p&gt;
+
+&lt;h3 id=&#34;dispersion-cultural-o-charlas&#34;&gt;dispersion cultural (o charlas)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://feeds.feedburner.com/antimateriapodcast&#34;&gt;Antimateria&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-logan_fg_f1179598_1.xml&#34;&gt;El Podcast de Logan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.poderato.com/precipicio1/_feed/1&#34;&gt;&lt;strong&gt;El precipicio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-lode-archivos-ligeros_fg_f159048_1.xml&#34;&gt;LODE -archivos ligeros-&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-loquemeimagino-podcast_fg_f144451_1.xml&#34;&gt;&lt;strong&gt;Loquemeimagino Podcast&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-one-piece-podcast_fg_f1160246_1.xml&#34;&gt;One Piece Podcast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-el-precipicio_fg_f176717_1.xml&#34;&gt;&lt;strong&gt;Podcast El Precipicio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-el-vuelo-del-fenix_fg_f146467_1.xml&#34;&gt;&lt;strong&gt;Podcast El Vuelo del Fénix&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-interynet_fg_f133744_filtro_1.xml&#34;&gt;Podcast interYnet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-la-biblioteca-trantor_fg_f13178_1.xml&#34;&gt;&lt;strong&gt;Podcast La Biblioteca de Trantor&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-la-espada-damocles_fg_f170523_1.xml&#34;&gt;Podcast La Espada de Damocles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://radioela.org/spip.php?page=backend&#34;&gt;Radio ELA: Emisora Libre Autogestionada. 100.0 FM Madrid&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://feeds.feedburner.com/TuNoHasTenidoInfancia&#34;&gt;&lt;strong&gt;Tú no has tenido infancia&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-vivo-entre-muggles_fg_f1157962_1.xml&#34;&gt;&lt;strong&gt;Vivo entre Muggles&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;musica-1&#34;&gt;musica&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.spreaker.com/show/511735/episodes/feed&#34;&gt;&lt;strong&gt;Del Bit a la Orquesta&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-scorevg_fg_f1153825_1.xml&#34;&gt;&lt;strong&gt;ScoreVG&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://api.rtve.es/api/programas/58211/audios.rss&#34;&gt;6x3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/ruleta-rusa_fg_f1156570_filtro_1.xml&#34;&gt;&lt;strong&gt;La Ruleta Rusa&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;vg-1&#34;&gt;vg&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.arcadiagamers.com/rss.xml&#34;&gt;&lt;strong&gt;Arcadia Gamers&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-club-vintage-videojuegos-clasicos-80-s_fg_f18511_1.xml&#34;&gt;El Club Vintage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-game-over_fg_f1366_1.xml&#34;&gt;&lt;strong&gt;Game Over&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-hyrule-project_fg_f172144_1.xml&#34;&gt;Podcast Hyrule Project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-retroactivo-podcast_fg_f110956_1.xml&#34;&gt;&lt;strong&gt;RetroActivo Podcast&lt;/strong&gt;&lt;/a&gt; (los primeros son los mejores)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;txt-y-radio-novelas&#34;&gt;txt y radio-novelas&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-gran-apagon_fg_f1293671_1.xml&#34;&gt;El gran apagón&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-biblioteca-invisible_fg_f1170900_1.xml&#34;&gt;La biblioteca invisible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-verne-wells-ciencia-ficcion_fg_f1100419_1.xml&#34;&gt;&lt;strong&gt;Podcast de Verne y Wells Ciencia Ficción&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;cine&#34;&gt;cine&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-octavo-pasajero_fg_f14315_1.xml&#34;&gt;&lt;strong&gt;El Octavo Pasajero&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-desde-abajo-podcast-cine-terror-sci-fi-y_fg_f153707_1.xml&#34;&gt;&lt;strong&gt;Desde Abajo Podcast: Cine de Terror, Sci-fi y más&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;gnu-y-afines&#34;&gt;GNU y afines&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://autodefensainformatica.radioalmaina.org/feed/&#34;&gt;&lt;strong&gt;Autodefensa Informatica&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://birrasybits.wordpress.com/feed/&#34;&gt;Birras y Bits&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-codigo-podcast_fg_f192247_1.xml&#34;&gt;Código Podcast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://feeds.pacific-content.com/commandlineheroes&#34;&gt;Command Line Heroes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://compilando.audio/index.php/feed/podcast/&#34;&gt;Compilando Podcast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://feeds.feedburner.com/Cuevatux?format=xml&#34;&gt;cuevatux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-devuanita_fg_f1231954_1.xml&#34;&gt;Devuanita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://eldesarmador.org/podcast.xml&#34;&gt;El Desarmador&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://elgeekerrante.com/podcastfiles/geekerrante_podcast.xml&#34;&gt;&lt;strong&gt;El Geek Errante&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ivoox.com/podcast-fran-casas_fg_f1449982_1.xml&#34;&gt;Fran Casas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-cronicas-del-linuxverso_fg_f1444265_1.xml&#34;&gt;Las Crónicas del Linuxverso&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-libresfera_fg_f136150_1.xml&#34;&gt;&lt;strong&gt;Libresfera&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-panico-nucleo_fg_f17378_1.xml&#34;&gt;&lt;strong&gt;Pánico en el núcleo&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-kde-espana_fg_f1249423_1.xml&#34;&gt;Podcast de KDE España&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://feedpress.me/podcastlinux&#34;&gt;&lt;strong&gt;Podcast Linux&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://radioliberadaelpodcast.wordpress.com/feed/&#34;&gt;Radioliberada el podcast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-reality-cracking_fg_f159955_1.xml&#34;&gt;&lt;strong&gt;Reality Cracking&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-tuxllefia_fg_f1309696_1.xml&#34;&gt;Tuxllefia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-we-developers_fg_f146574_1.xml&#34;&gt;We Developers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;humor-1&#34;&gt;humor&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://feeds.feedburner.com/Gravina82?format=xml&#34;&gt;&lt;strong&gt;Gravina82&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-kombustible-podcast_fg_f142184_1.xml&#34;&gt;&lt;strong&gt;kombustible podcast&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lacalabazota.wordpress.com/feed/&#34;&gt;&lt;strong&gt;La Calabazota Blog&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ciencia&#34;&gt;ciencia&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-ciencia-nuestra-cada-dia_fg_f11450_1.xml&#34;&gt;Ciencia nuestra de cada dia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-ciencia-genios_fg_f11449_1.xml&#34;&gt;Ciencia y Genios&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-cierta-ciencia_fg_f171785_1.xml&#34;&gt;Cierta Ciencia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-neutrino_fg_f132713_1.xml&#34;&gt;El neutrino&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-radioscopio_fg_f128060_1.xml&#34;&gt;El Radioscopio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-hablando-cientificos_fg_f11448_1.xml&#34;&gt;Hablando con Científicos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-fabrica-ciencia-lfdlc_fg_f1100722_1.xml&#34;&gt;La Fábrica de la Ciencia  (LFDLC)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-catastrofe-ultravioleta_fg_f1107209_1.xml&#34;&gt;Podcast Catástrofe Ultravioleta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-podcast-desde-sur-explorando-cosmos_fg_f15085_1.xml&#34;&gt;&lt;strong&gt;Podcast Desde el Sur: explorando el Cosmos&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-principio-incertidumbre_fg_f114134_1.xml&#34;&gt;Principio de Incertidumbre&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ivoox.com/podcast-quilo-ciencia_fg_f17805_1.xml&#34;&gt;Quilo de Ciencia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;eof&#34;&gt;EOF&lt;/h2&gt;
+
+&lt;p&gt;al igual que varios albums, muchos podcast han acompañado mis pasos, la mayoria
+de los aqui listados han sido escuchados por completo casi como un proyecto
+personal incluso algunos de cantidad colosal como arcadia gamers y game over, o
+varios de los que produce ciencia-es (que no los marco como recomendables, pero
+todos tienen una gran calidad).&lt;/p&gt;
+
+&lt;p&gt;Unos vienen, otros se van o van siendo olvidados en el trancurso de cambiar de
+cuenta y nicks. Algunos mas han desaparecido y unos pocos los atesoro en el
+disco duro, cada cual aportando nuevas sensaciones, visiones e ideas en un
+momento especifico.&lt;/p&gt;
+
+&lt;p&gt;Antes o despues, varias visiones que al inicio parecian desafiantes ahora se han
+vuelto añejas o simplonas, quiza mostrando lo rapido que evoluciono&amp;hellip; o
+exponiendo lo facil que es influenciar a este maleable sujeto.&lt;/p&gt;
+
+&lt;p&gt;Solo por hacer mencion de algunos de los ausentes, aniGame Radio (de lo primero
+que escuche), &amp;ldquo;capa, guitarra y game-over&amp;rdquo; (creo el primero), el podcast de
+tuxinfo, los documentales de la pastilla-roja, las japonesadas de UPML o uno que
+ya no recuerdo el nombre donde unos estudiantes de filosofia de por mi varrio
+hablaban de novelas de ciencia ficcion.&lt;/p&gt;
+
+&lt;p&gt;Gracias a esos &amp;ldquo;hacedores&amp;rdquo; que comparten directamente y sin recelo (casi
+siempre) sus obseciones mas profundas, sea con un micro de mierda o desde
+equipos profecionales, por uno, dos o cien programas&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>GDP</title>
