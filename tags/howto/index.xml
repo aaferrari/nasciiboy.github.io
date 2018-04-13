@@ -295,7 +295,7 @@ podcast y el feed, pero creo es un mal (de momento) aceptable&lt;/p&gt;
 siguiente conjunto de pasos en elisp, ir al fichero &lt;code&gt;subs.html&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;(defun ivoox-killer ()
-  &amp;quot;Separa los correos en lista_correos.txt&amp;quot;
+  &amp;quot;conseguir feeds de subs.html&amp;quot;
   (interactive)
   (goto-char (point-min))
   (while (re-search-forward &amp;quot;&amp;lt;/\\w+&amp;gt;&amp;quot; nil t)
