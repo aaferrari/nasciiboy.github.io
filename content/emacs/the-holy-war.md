@@ -19,10 +19,10 @@ Post original (04/12/2001) -> https://www.linux.com/news/emacs-vs-vi-endless-gee
 <p>Congelarlo durante la noche</p>
 </li>
 <li>
-<p>Siéntate frente a la PC, ejecuta vi</p>
+<p>Siéntese frente a la PC, ejecute vi</p>
 </li>
 <li>
-<p>Sosteniendo el pez por la cola, golpéelo repetidamente contra tu frente hasta que decidas darle una oportunidad a EMACS porque las escamas de pescado están volando alrededor de tu cabeza y comienza a doler.</p>
+<p>Sosteniendo el pez por la cola, golpéelo repetidamente contra su frente hasta que decida darle una oportunidad a EMACS porque las escamas de pescado están volando alrededor de su cabeza y comienza a doler.</p>
 </li>
 </ol>
 <p>Menke, por supuesto, insinuaba que no sólo vi era insensatamente obstinado sino que los usuarios de vi también lo eran por negarse a admitir cómo se estaban infligiendo a sí mismos brutales golpes en la cabeza con un pescado congelado.</p>
@@ -73,14 +73,14 @@ Post original (04/12/2001) -> https://www.linux.com/news/emacs-vs-vi-endless-gee
 <p>Y además de todo esto, también puedes personalizar EMACS e incluso añadir nuevas funciones, normalmente modificando su código en Lisp.</p>
 <p>Es por todo esto que muchos usuarios de vi lo ven como terriblemente presuntuoso para lo que se supone que es un simple editor de texto, sin mencionar que distrae al usuario. La broma en curso sobre EMACS es que es un sistema operativo con un editor de texto adjunto.</p>
 <p><q>EMACS como tal comenzó como un proyecto de estándares</q>, escribe Guy Steele, uno de los creadores de EMACS, junto con Richard Stallman, quien más tarde fundó la Free Software Foundation.</p>
-<p>Tal y como recuerda Steele, Stallman mantuvo un primer editor para el PDP-10 llamado TECO, que significaba <q>Text Editor and COrrector</q>. A pesar de que ciertas pulsaciones de teclas realizaban comandos de edicion, Stallman creo una table programable por el usuario, <q>de manera que cada pulsación de tecla realizaba una búsqueda en la tabla que describía qué hacer para esa pulsación</q>, según dice Steele. <q>Una opción era ejecutar una macro TECO especificada por el usuario.</q></p>
+<p>Tal y como recuerda Steele, Stallman mantuvo un primer editor para el PDP-10 llamado TECO, que significaba <q>Text Editor and COrrector</q>. A pesar de que ciertas pulsaciones de teclas realizaban comandos de edicion, Stallman creo una tabla programable por el usuario, <q>de manera que cada pulsación de tecla realizaba una búsqueda en la tabla que describía qué hacer para esa pulsación</q>, según dice Steele. <q>Una opción era ejecutar una macro TECO especificada por el usuario.</q></p>
 <p>Usando esta funcionalidad de macros, los usuarios estaban programando conjuntos personalizados de macros para ser vinculados a varias pulsaciones de teclas, pero esto se volvió problemático cuando los programadores comenzaron a colaborar en programas y descubrieron que tenían pocas pulsaciones de teclas comunes entre ellos.</p>
-<p><q>La comunidad de usuarios se había fragmentado con respecto a las habilidades de edición de textos (y programas</q>), escribe Steele. Así que Steele, junto con David Moon y Stallman, asumió el proyecto de integrar todas las ideas en un conjunto de comandos unificado.</p>
+<p><q>La comunidad de usuarios se había fragmentado con respecto a las habilidades de edición de textos (y programas)</q>, escribe Steele. Así que Steele, junto con David Moon y Stallman, asumió el proyecto de integrar todas las ideas en un conjunto de comandos unificado.</p>
 <p><q>Inventé una matriz en papel y corrí mucho de un lado a otro entre los implementadores y usuarios de los distintos paquetes de macros,</q> dice Steele en un correo electrónico.</p>
 <p><q>Recuerdo esto muy bien</q>, recuerda Dan Weinreb, quien fue uno de los primeros alfa testers de EMACS. <q>El tipo tenía un portapapeles con un pedazo de papel que mostraba todas los atajos, y recogió cuidadosa y diplomáticamente los comentarios de todo el mundo para unificarlos, en atajos estándar</q>.</p>
 <p>Después de unos meses, Steele, ocupado tratando de terminar su tesis de maestría, entregó la obra a Stallman. Y el resto es historia.</p>
-<p>El hecho de que la flexibilidad se horneara desde el inicio le da a EMACS su ventaja, dicen los usuarios de hardcore.</p>
-<p><q>Pienso en EMACS como la navaja suiza de los editores</q>, menciona en un correo electrónico a Debra Cameron, coautora de Learning GNU Emacs y presidenta de Cameron Consulting. <q>Es un ambiente de trabajo completo, un microcosmos. Si piensas en algo que desearías que hiciera, probablemente descubrirás (después de mirar a tu alrededor</q> que ya lo hace. Si no lo hace, puedes extenderlo y hacer que haga lo que quieras que haga).</p>
+<p>El hecho de que la flexibilidad se horneara desde el inicio le da a EMACS su ventaja, dicen los usuarios hardcore.</p>
+<p><q>Pienso en EMACS como la navaja suiza de los editores</q>, menciona en un correo electrónico a Debra Cameron, coautora de Learning GNU Emacs y presidenta de Cameron Consulting. <q>Es un ambiente de trabajo completo, un microcosmos. Si piensas en algo que desearías que hiciera, probablemente descubrirás (después de mirar a tu alrededor) que ya lo hace. Si no lo hace, puedes extenderlo y hacer que haga lo que quieras que haga</q>.</p>
 </div>
 <h3 id="¿no-podemos-llevarnos-todos-bien?" >¿No podemos llevarnos todos bien?</h3>
 <div class="hBody-3" >

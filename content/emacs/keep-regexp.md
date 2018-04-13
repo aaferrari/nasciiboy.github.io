@@ -26,7 +26,7 @@ te olvida utilizar la ayuda del emacs
 un par de intentos mas tarde, termine por utilizar una poco elegante macro, que
 cumplia el objetivo chapuceramente
 
-luego, tras ver la primer solucion, mas simple, conpacta, no del todo "segura, pero para el
+luego, tras ver la primer solucion, mas simple, conpacta, no del todo "segura", pero para el
 caso efectiva
 
     cat lista_correos.txt | tr " " '\n' | grep @ | xargs
@@ -39,7 +39,7 @@ e inmediatamente despues un **vi**-liever solucionaba el asunto con
 :%join
 ```
 
-como podia evitar la inminente culpa y herirda en el orgullo klingon-emacsero?
+como podia evitar la inminente culpa y herida en el orgullo klingon-emacsero?
 
 intetentando superar la frustracion, dio inicio un aprendizage formal y profundo
 de las regexes en emacs y alguno que otro comando mas. Pero antes de pasar a
@@ -230,8 +230,8 @@ presionando `C-h m` o con la documentacion de la funcion `C-h f
 isearch-forward-regexp`
 
 quiza el comando mas conocido de las busquedas interactivas sea `C-w` que toma
-la entrada sobre y delante del punto como como texto de entrada (dividida por
-palabras), pero ademas de esa combinacion tenemos otras muy interesantes como
+la entrada sobre y delante del punto como texto de entrada (dividida por
+palabras). Pero ademas de esa combinacion tenemos otras muy interesantes
 
 - `M-s e` para editar "con papeles" la regexp, aunque no interactivamente
 - `C-M-y` ingresar a la regexp el caracter del buffer sobre el que esta el punto
@@ -243,8 +243,8 @@ palabras), pero ademas de esa combinacion tenemos otras muy interesantes como
 - `C-s` siguiente coincidencia
 - `C-r` anterior coincidencia
 
-y muchas otras cosas misticas y confusas mas trae el modo, la cuestion
-problematica tiene que ver con el la forma en que isearch incorpora el contenido
+y muchas otras cosas misticas y confusas mas trae el modo. La cuestion
+problematica tiene que ver con la forma en que isearch incorpora el contenido
 del anillo de la muerte a la busqueda, pues si por ejemplo matamos la cadena
 `\(group\)[set]` al hacer el yank (C-y) en lugan de ingresar `\(group\)[set]`
 escapara los caracteres significativos en la regexp, dejando `\\(group\\)\[set]`
@@ -267,7 +267,7 @@ alternativo para hacer el yank con su contenido tal cual dentro de la expresion
 (define-key isearch-mode-map (kbd "C-S-y") #'isearch-yank-kill-literally)
 ```
 
-como puede verse, se seguiere la vinculacion al atajo Control-Super-y, pero en
+como puede verse, se sugiere la vinculacion al atajo Control-Super-y, pero en
 mi caso me es incompatible con otro comando... lo que sirvio fue suplantar
 directamente el comando yank de isearch dejando como nombre de la nueva
 definicion solamente `isearch-yank-kill`
@@ -278,10 +278,10 @@ el demas contenido del anillo seguira siendo modificado con escapes. De hay que
 otro colega, 00-11, suguiriera el uso del modo isearch+, que si considero esta
 necesidad en su base
 
-**isearch+** (supongo) es una capa sobre el modo isearch, que agrega ademas de
-la posivilidad de hacer yanks sin modificar, colorear la busqueda en secciones y
-varios comandos de utilidad extra. Todo esto manteniendo los atajos de isearch
-(casi) intactos
+**isearch+** (supongo) es una capa sobre el modo isearch que ademas de agregar
+la posivilidad de hacer yanks sin modificar el contenido, nos colorear la
+busqueda en secciones y proporciona varios comandos de utilidad extra. Todo esto
+manteniendo los atajos de isearch (casi) intactos
 
 isearch+, no viene en el repositorio melpa, para instalarlo deberemos copiar
 directamente su codigo desde emacswiki a un fichero, y luego cargarlo "a mano".
@@ -303,8 +303,9 @@ pero he preferido agregar lo siguiente en mi init
 (load-file "~/.emacs.d/plugins/isearch+.el")
 ```
 
-vamos con la justificacion de utilizar isearch+, que era poder hacer yanks. En
-la linea 2547, tenemos la variable customizable
+vamos con la justificacion de utilizar isearch+, que era poder hacer yanks.
+
+En la linea 2547, tenemos la variable customizable
 `isearchp-regexp-quote-yank-flag` que si la ponemos a `nil`, asi
 
 ```
@@ -321,8 +322,9 @@ cambio in-situ
 modo con emacs 25 sin ninguna extencion y funciona sin problemas)
 
 ahora si, despues de tener isearch+ configurado, podemos escribir nuestra
-funcion en **`re-builder`** (modo de syntaxis `string`) y copiar el resultado entre
-parentesis, para "pegarlo" directamente en isearch(+)
+funcion en **`re-builder`** (modo de syntaxis `string`) y copiar la regexp
+(manualmente) ignorando los parentesis, para luego "pegarlo" directamente en
+isearch(+) con un yank
 
 ## Enlaces, fuentes y otras cosas
 
