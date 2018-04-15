@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>regexp4-go (dia cero)</title>
+    <title>Por favor, reinventa la rueda</title>
     <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
     <style>:root {
 
@@ -245,81 +245,54 @@ img:hover { border: 0.05em solid #fff; }
 <main>
   <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
 
-  <h1>regexp4-go (dia cero)</h1>
-  <p><img src="https://nasciiboy.github.io/img/regexp4.png" alt="" /></p>
+  <h1>Por favor, reinventa la rueda</h1>
+  <p><b>
+[post original -&gt; <a href="https://blog.cerebralab.com/#!/blog/11">https://blog.cerebralab.com/#!/blog/11</a>]</p>
 
-<p><strong>regexp4</strong> es un &ldquo;motor&rdquo; de expresiones regulares de la familia de los motores
-regulares <em>Recursive Regexp Raptor</em>, o expresado de otra forma: una libreria de
-expresiones regulares hecha desde cero, reinventando la rueda (o no) de la
-manera (que para mi es la) mas simple posible. sin arboles de evaluacion, ni
-liberacion de memoria, ni cosas raras o esa es la intencion, almenos de las
-versiones en <strong>C</strong></p>
+<p>[Autor -&gt; george.hosu@protonmail.com]
+</b></p>
 
-<p>cual es entonces la necesidad de que exista esta version en go, podrias
-preguntar. Pues segun mi escasa educacion programacional, la simplesa de los
-motores raptor es tal, que pueden implementarse en cualquier lenguaje sin recurrir
-a ninguna caracteristica no implementada en el lenguaje en si, es decir, sin
-recurrir a ninguna libreria, incluyendo a las librerias estandar.</p>
-
-<p>Siguiendo esta creencia (quiza sin fundamentos) y a modo de prueba de las
-caracteristicas de un lenguaje de programacion supongo que hare una costumbre
-programar un raptor en cada ocacion que pueda. Ademas el modelo raptor aunque
-bastante desarrollado no es perfecto, asi pues, con cada nuevo concepto
-aprendido, logro profundizar un poco en busca de una mejor implementacion o el
-incremento de caracteristicas segun las facilidades que otorgue el lenguaje</p>
-
-<p>existen dos versiones de la libreria las regexp3 donde a cada iteracion
-valiendose de la recursividad, la expresion regular se convierte en
-instrucciones que pueden evaluarse. En las regexp4 en lugar de interpretar la
-regexp a cada paso primero se &ldquo;compila&rdquo;&hellip; lo que la hace comporativamente mas
-eficiente</p>
-
-<p>la libreria parte de la version en C y la sintaxis es compatible con esta
-version en Go, pero por algunas facilidades que proporciona nativamente este
-ultimo lenguaje y por su orientacion a objetos esta no tiene limitacion (que no
-sean de hardware) del numero de capturas, la longitud y complejidad de la
-expresion y ademas es concurrentemente segura</p>
-
-<p>bueno, bueno, vamos con los detalles morbosos&hellip; esta version adapta sin mucho
-empeño la regexp3 (go) a la version 4. Fueron necesarios varios dias con poco
-enfoque donde los momentos de lucides escaceaban, primero aparecio un bicho por no
-incrementar un indice del que tarde dos <s>dias</s> sesiones en darme cuenta y
-luego por otras 4 seciones las pruebas que contenian &ldquo;conjuntos&rdquo; (<code>[...]</code>) se
-resistian a funcionar, jo, el problema fue no colocar las constantes correctas
-dentro de un <code>switch</code>, je, por un momento me planteee hacer pruebas de cada
-una de las funciones hasta asegurar que todas hicieran lo que se suponia deberia
-de hacer&hellip; lo cual no es trivial</p>
-
-<p>aunque en apariencia sencilla, cada uno de los componentes esta obscuramente
-relacionado, y debe realizar su tarea en perfecta armonia con los demas, por
-ello es necesario ponerse en serio con el asunto, y ya que esto escapaba un poco
-de mi control, solo me limite a ejecutar las pruebas preexistentes y tambien a
-comprobar el funcionamiento con <em>morg</em>, asi pues una vez superadas las pruebas,
-pese a no estar muy seguro de como &ldquo;interactuava&rdquo; la maquinaria, confie en las
-muchas horas invertidas en la version en C y otras tantas en regexp3 en Go,
-luego subi el repositorio a modo de respaldo</p>
-
-<p>Como antes mencione la sistaxis de la regexp es uniforme en todas las versiones,
-ademas regexp3 (Go) y la presente compartiran la misma &ldquo;<em>API</em>&rdquo;, mas esta version
-sera extendida con un par de funciones mas (tentativamente) <code>Compile</code> y
-<code>TextMatch</code> (o algo asi), aprovechando las capacidades de &ldquo;compilacion&rdquo; (tambien
-programado de cero) en una forma singular a la que nombre &ldquo;<em>tabla de
-instrucciones</em>&rdquo; y en esta ocacion pretenciosamente las instrucciones de la tabla
-lleban el prefijo <code>asm</code></p>
-
-<p>en fin, <a href="https://github.com/nasciiboy/regexp4/">aqui</a> encontraran el
-repositorio, los <em>readmes</em> son un copia y pega de la version regexp3 cambiando
-el 3 por 4</p>
-
-<p>happy hacking!</p>
+<div class="hBody-2" >
+<p>Reinventar la rueda es un modismo que queda invalidado por la metáfora que utiliza. Eso se debe a que la rueda es una de esas cosas que se ha reinventado con éxito a lo largo de la historia un número inimaginable de veces.</p>
+<p>Los materiales que utilizamos para ello cambiaron, de innumerables tipos de piedra y madera a innumerables aleaciones metálicas y sustancias a base de carbono. El contenido y las proporciones de las ruedas han cambiado, desde unas ruedas algo circulares, llenas y anchas a otras perfectamente circulares, delgadas y huecas, con cientos de radios. Los componentes con los que interactúa una rueda, como el piso y el eje, tienen cambios, lo que hace que miles de rediseños de ruedas trabajen con ellos. El terreno y la maquinaria para la que se utiliza la rueda también ha cambiado drásticamente, dando lugar a muchas otras reinvenciones de la rueda. De hecho, incluso la forma básica de la rueda no esta intacto, con variaciones que van desde las buenas y viejas ruedas circulares hasta las cuadradas.</p>
+<p>La mejor manera de visualizar los millones de reinvenciones de la rueda y el progreso que esto ha ayudado a lograr es pensar en cómo se han utilizado las ruedas a través del tiempo. Las ruedas han pasado de curiosidades que facilitaban un poco el trabajo, a objetos en los que confiamos para el aterrizaje seguro de fortalezas voladoras de miles de toneladas, portando armas de destrucción masiva que podrían significar el fin de la civilización (si esas ruedas fallaran...). Las ruedas pueden ser lo suficientemente pequeñas como para que sean imperceptibles para los sentidos humanos, lo suficientemente versátiles como para llevar un tanque a través de cualquier tipo de terreno, lo suficientemente fuertes como para soportar que la máquina corra a 500 km/h durante horas y horas y lo suficientemente inteligentes como para llevar a los robots a través del terreno impredecible de otros planetas.</p>
+<p>Así que, los chicos que inventaron las primeras ruedas, hicieron un gran trabajo considerando las circunstancias.... Pero, estoy bastante contento de que cuando mi taxi llegue no este usando nada remotamente cercano a aquellas ruedas.</p>
+</div>
+<h3 id="volvamos-a-la-programación." >Volvamos a la programación.</h3>
+<div class="hBody-3" >
+<p>Espero que la deconstrucción de la metafora haya ayudado a dar una idea de lo infundado que es este lenguaje a la hora de tratar con los ordenadores. Algunas de las piezas de software más utilizadas y esenciales jamás creadas son las reinvenciones de la rueda. Linux es una reinvención de Unix, Mariadb es una reinvención de Mysql (Mysqlb es una reinvención de Postgres/OracleDb y Postgres es una reinvención de varias bases de datos Oracle y otras). C++ moderno es una reinvención de C++, que es una reinvención de C (que es una reinvención de B que es una reinvención de BCPL), Rust es una reinvención de C++ moderno y C, Clojure es una reinvención de LISP, LISP es una reinvención de IPL y el cálculo Lambda, Haskell es una reinvención de System FC, que es una reinvención de System F, que es una reinvención del calculo Lambda, DOT es una reinvención de OO, Kotlin es una reinvención de Java... Podría seguir todo lo que quisiera. Vim es una reinvención de Vi, Wayland es una reinvención de Xorg, Systemd es una reinvención de unas 500 piezas de software diferentes, Ubuntu es una reinvención (o mejor dicho, reskin) de Debian.</p>
+<p>Muchos avances en software no se hacen añadiendo a una base de código existente, sino repitiendo sobre ella y proponiendo algo mejor. Es por eso que para cada repositorio popular en github hay cientos de forks y para cualquier caso de uso imaginable usted tiene docenas de variaciones de herramientas a elegir. Inventa tu propia rueda, para tus propias necesidades y, quién sabe, tal vez el público en general la considere una rueda mejor.</p>
+<p>A menudo se desalienta a la gente que &#34;reinvente la rueda&#34;, a pesar del hecho de que la mayoría de los avances en informática son exactamente los relacionados con la reinvención de la rueda, en lugar de crear algo que es completamente nuevo. El cambio es incremental, volvemos a insistir en un concepto ya existente y lentamente lo modificamos y lo mejoramos, hasta que ni siquiera puedes entender cómo llegaste desde el original hasta donde estás. Y lo asombroso es que no nos cuesta nada más que tiempo hacerlo, eso es lo bueno de la programación, no hay escasez de recursos, no importa cuán loca sea tu reinvención, puedes crearla.</p>
+<p>En su lugar, nos centraríamos en decirles a las personas cómo y cuándo reinventar la rueda. Me he permitido hacer una lista rápida.</p>
+</div>
+<h3 id="reinventa-la-rueda-cuando-ninguna-rueda-se-adapte-a-tu-carreta" >Reinventa la rueda cuando ninguna rueda se adapte a tu carreta</h3>
+<div class="hBody-3" >
+<p>Es decir, en lugar de diseñar un software o producto inferior para hacer frente a las bibliotecas existentes, crear la biblioteca o herramienta que necesitas, es muy probable que alguien más lo necesite también. Este enfoque puede tomar más tiempo, pero puede ser divertido y puede resultar en un mejor producto. Obviamente tienes que ser un poco flexible y escoger tus batallas, de lo contrario, terminas siendo uno de esos &#34;programadores&#34; C que insisten en que deben escribir sus propias listas y vectores, o uno de los &#34;desarrolladores&#34; de javascript que participa en las más de 100.000 descargas diarias de la biblioteca `is_odd&#39;. El lugar donde se dibuja la línea es una pregunta abierta, sin una sola respuesta.</p>
+<p>Un muy buen ejemplo de esto es Julia, un lenguaje de programación muy similar a python en todos los aspectos menos en tres: es fácil de desplegar sin necesidad de entornos virtuales, es mucho más rápido y está diseñado pensando en el paralelismo a gran escala. Julia es un muy buen ejemplo de reinvención de la rueda, ya que hace lo que se podría hacer, &#34;teóricamente&#34;, con entornos virtuales, Cython, uso adecuado de librerías C/C++, algunas pautas de codificación y un poco de paciencia. Pero Julia hace estas cosas fuera de la caja y simplemente funciona... termina ahorrando mucho tiempo y haciendo el desarrollo más agradable. Es probablemente uno de los idiomas más sorprendentes (y pronto muy influyentes) del siglo XXI.</p>
+</div>
+<h3 id="reinventa-la-rueda-si-no-ha-habido-reinvenciones-recientes" >Reinventa la rueda si no ha habido reinvenciones recientes</h3>
+<div class="hBody-3" >
+<p>Otra razón para reinventar la rueda es que nadie lo ha intentado últimamente. Esto podría significar que la rueda actual es muy buena y no necesita grandes mejoras, pero a menudo significa que hay mucha gente a la que le gustaría una mejor, simplemente no tienen el tiempo o la voluntad para hacerlo. A menudo ocurre que un problema se &#34;arregla&#34; de manera imperfecta, pero se deja al margen, ya que la tecnología y los marcos mentales actuales no pueden encontrar una solución mejor. Uno puede encontrar a menudo, mirando este tipo de problemas unos años después, que la tecnología está ahora al día y que pueden ser resueltos de una manera mucho mejor.</p>
+<p>Un gran ejemplo de esto es el reconocimiento de imágenes, que fue pensado como el trabajo de los clasificadores &#34;clásicos&#34;. Se hicieron montones de mejoras incrementales a estos clasificadores y para el 2010 se obtuvieron muy buenos resultados usando cosas como el kernel fisher. Todavía estába lejos de algo que se usaría para detectar tumores de cáncer o para conducir un coche, algo que estaba a medio camino entre un loro inteligente y un elefante en términos de precisión y tiempo de entrenamiento. Hasta que alguien tuvo la idea de adaptar la rueda menos popular de las redes neuronales de convolución para utilizar las GPU modernas y mejorar algunos de los modelos de reconocimiento de imágenes desarrollados inicialmente en los años 90. Surgió el famoso AlexNet &amp; Co en 2012, que, en pocos años, abrió el camino a la asombrosa tecnología de reconocimiento de imágenes de hoy en día, que, en conjuntos de datos de tamaño mediano, puede en realidad superar a los humanos.</p>
+</div>
+<h3 id="reinventa-la-rueda-si-la-rueda-es-de-marca-registrada" >Reinventa la rueda si la rueda es de marca registrada</h3>
+<div class="hBody-3" >
+<p>Este es el caso de muchos grandes proyectos de código abierto, cosas como Linux, GCC y git donde sólo se reinventa software ya existente. Sin embargo, eran mejores en ciertas áreas y eran de código abierto, lo que significaba que más gente los usaba y contribuía a ellos, haciéndolos exponencialmente más asombrosos, convirtiéndose rápidamente en la opción superior en todo el mundo.</p>
+</div>
+<h3 id="reinventa-la-rueda-si-crees-que-puede-ser-divertido" >Reinventa la rueda si crees que puede ser divertido</h3>
+<div class="hBody-3" >
+<p>Tampoco hay nada de malo en tener la oportunidad de reinventar una rueda perfectamente buena. Puede que fracases, pero entenderás mejor por qué se eligió el diseño actual y probablemente aprenderás mucho. Después de todo, muchos problemas interesantes ya están resueltos, pero resolverlos de nuevo puede ser muy agradable, hay millones de personas que intentaron probar el teorema de Pitágoras o crear un &#34;nuevo LISP&#34;, y la mayoría de ellos, posiblemente, terminaron reinventando una rueda de mierda a similar. Y si tu rueda es algo mejor, acabas de hacer algo para ayudar a la humanidad (o a ti mismo) haciendo algo que disfrutas.</p>
+</div>
+<h3 id="en-conclusión" >En conclusión</h3>
+<div class="hBody-3" >
+<p>Sal y reinventa la rueda. Porque ciertamente podrías hacer algunas mejoras. Y cuando alguien te diga que lo que estás haciendo es &#34;inútil&#34;, recuérdales que lo que estás haciendo es uno de los procesos fundamentales por los que progresa nuestro campo. Y, cada vez que pienses que estas analizando un problema que ya ha sido resuelto por mejores hombres de maneras mejores. Recordemos que un nerd de 31 años con pocos conocimientos de astrofísica o matemáticas y unas pocas docenas de millones de dólares, logró humillar a la NASA, CNSA, la ESA, Roscomos, el ejército ruso-estadounidense y chino y muchas otras organizaciones &#34;prestigiosas&#34;, con presupuestos de docenas o cientos de miles de millones, con docenas de miles de doctores y cientos de miles de ingenieros trabajando para ellos. Inventando un cohete que es mucho más barato, más potente, más seguro, más simple, más rápido de fabricar y que puede aterrizar con una precisión de centímetros en un planeta. Así que tal vez, el hecho de que usted esté intentando crear una librería de ploteo javascript más intuitiva y bonita, un JITC más rápido para python, una ALU de fabricación más barata, una mejor versión de shopify o una implementación más eficiente de busqueda en una tabla, no es tan descabellado después de todo.</p>
+</div>
 
 
   <div class="clear" class="center">
     
-    <a class="previous" href="https://nasciiboy.github.io/prog/webeloper/">◀ Webeloper – El navegador web</a>
+    <a class="previous" href="https://nasciiboy.github.io/prog/m8-ii/">◀ LineageOS, Feeds &amp; Feel</a>
     
-    
-    <a class="next" href="https://nasciiboy.github.io/prog/stylus-black-translator/"> stylus black-translator ▶</a>
     
   </div>
 
@@ -328,8 +301,8 @@ el 3 por 4</p>
   </div>
 
   <form method="POST" class="dark-matter" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/comments">
-  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/prog/regexp4-go/#comment-submitted">
-  <input type="hidden" name="options[entryId]" value="95ae84c6ee995f53a270c12ed4451563">
+  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/prog/please-reinvent-the-whell/#comment-submitted">
+  <input type="hidden" name="options[entryId]" value="db087fea0cf5f1ff3a8ff5cc268a12e8">
 
   <h1>Comment Form
     <span>Este formulario envia un pull request al repositorio donde se almacena
