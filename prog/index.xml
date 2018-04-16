@@ -7,10 +7,267 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Sat, 14 Apr 2018 22:26:41 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 15 Apr 2018 21:36:36 -0500</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Z80 Spectrum (tutorial speccy.org)</title>
+      <link>https://nasciiboy.github.io/prog/z80-spectrum/</link>
+      <pubDate>Sun, 15 Apr 2018 21:36:36 -0500</pubDate>
+      
+      <guid>https://nasciiboy.github.io/prog/z80-spectrum/</guid>
+      <description>
+
+&lt;p&gt;Entre aprender diseño de software, administracion de sistemas, elisp, ingles,
+mates o cualquier otra asignatura que pudiera servir a desarrollar alguna habilidad
+&amp;ldquo;productiva&amp;rdquo;, he pasado parte del ultimo mes investigando la programacion
+en ensamblador para una plataforma con mas de 35 años de antiguedad&lt;/p&gt;
+
+&lt;p&gt;La razon? los videojuegos! no por ser un jugon de pro (que ni consola tengo). Tampoco
+esperando petarla con una creacion indi, sino por la mera admiracion a algunas
+de las pocas obras que he podido catar (megaman y cave story).&lt;/p&gt;
+
+&lt;p&gt;Tras topar con un &lt;a href=&#34;http://wiki.ladecadence.net/doku.php?id=tutorial_de_ensamblador&#34;&gt;tutorial&lt;/a&gt;
+(en español) sobre programacion en la GameBoy y comprobar que todo su codigo
+fuera efectivo, al igual que las herramientas propuestas. En el recomendaban
+como primer paso seguir el material del que vengo a comentar, porque como buen
+robot que soy, hago caso a lo que se me dicen (generalmente (si biene en un
+documento (y parece de interes))). Asi que antes de afrotar lo
+relacionado al GameBoy (aunque tenia mas interes en aprender sobre la NES)
+veamos este material&lt;/p&gt;
+
+&lt;p&gt;El &lt;a href=&#34;https://wiki.speccy.org/cursos/ensamblador/indice&#34;&gt;Curso de Ensamblador Z80 de Compiler Software&lt;/a&gt;
+alojado en Speccy.org (para abreviar de aqui en adelante: &amp;ldquo;el curso&amp;rdquo;, &amp;ldquo;el
+tutorial&amp;rdquo; o &amp;ldquo;z80-speccy&amp;rdquo;) se centra en la programacion en ensamblador, cosa que
+festejo, primero por agregar el (Sr) ASM a las cosas que he probado, ha, ha, con lo
+imponente que es decir ASM en frente de las personas y quedarte tan agusto&lt;/p&gt;
+
+&lt;p&gt;Segundo, porque luego de cacharrear con un par de lenguajes de programacion y
+librerias, llego a la conclucion de que la mejor forma de conservar un
+videojuego (o programa en general), eliminando distracciones, inconsistencias y
+apaños, es hacerlo para una plataforma hardware (o software) consolidada e
+inmutable. Y como nadie va a venir el dia de mañana a cambiar el hardware de la
+NES o SNES, N64 o la GameBoy (las plataformas que me interesan) creo que si me
+apego a las bases (mas basicas) de cada una de ellas hay quedara, por el resto
+de los tiempos, mientras el sol, la luna, los evas, las computadoras y los
+emuladores sigan existiendo.&lt;/p&gt;
+
+&lt;p&gt;Tercero, ademas de colgarme la medalla de &amp;ldquo;programar en ASM&amp;rdquo;, conocer mas de cerca
+la naturalesa metalica de la programacion, sin adornos, ni abstracciones era
+algo que deseaba hacer desde el inicio. Dejar de lado las artilugios abstractos
+y ver a la cara la realidad&lt;/p&gt;
+
+&lt;p&gt;y finalmente, el material esta en español que es una exepcion a la regla, ademas
+con lo poco documentado que esta el desarrollo para las plataformas &amp;ldquo;vintage&amp;rdquo;
+(que me interesan) aun siendo algo mas bien exotico (el Spectrum) tras concluir
+la lectura, abre la puerta hacia nuevas plataformas. Despoja y desmitifica el
+respeto mitificado que rodea a la palabra ASM, y en ultima instancia como
+esperaba, la comprension (aunque aun superficial) sobre &lt;em&gt;&amp;ldquo;la maquina&amp;rdquo;&lt;/em&gt; ha visto
+incrementada su barra en unos cientos de puntos.&lt;/p&gt;
+
+&lt;p&gt;El material es extenso, como para un libro, los capitusos detallados y con mucho
+codigo, siguendo un orden coherente y mas o menos progresivo. Digo esto ultimo,
+porque hay que aprender un monton de caracteristicas antes de comenzar a verlas
+en funcionamiento, y esto, como en las matematicas puede desmotivar al no ver
+una aplicacion directa a cada nuevo aprendizaje.&lt;/p&gt;
+
+&lt;p&gt;Ya por su propia naturaleza, el ensamblador puede echar para atras a mucha
+gente, y si la documentacion esta en un lenguaje ajeno (ademas de poco dominado)
+es motivo suficiente para evitar el reto, mas con lo expuesto en este tutorial
+es suficiente como rito iniciatico (y material de referencia). Es necesario
+aclarar, que el material termina antes de construir un viedeojuego, de hecho
+finaliza justo antes de mostrar como realizar animaciones&lt;/p&gt;
+
+&lt;p&gt;Se incluye muchas rutinas, una herramienta de ensamblado programada en C y
+compilable sin mayores dificultads que escribir &lt;code&gt;make&lt;/code&gt; (de hecho incluyen un
+emulador construido por el tutorialista&amp;hellip; compilo, pero no era una opcion en
+mi maquina, se apodero del &amp;ldquo;modo grafico&amp;rdquo; (fullscreen (a dos pantallas)) y no
+tenia boton de cerrar). Tambien se recomiendan emuladores (para GNU &lt;code&gt;fuse&lt;/code&gt;),
+programas de dibujo y otras varias utilidades, aunque la mayoria desarrolladas
+para winbugs, ejutables (segun cuentan) con wine. Todo esto aderesado con
+ricos packs de enlaces a webs con aun mas material relacionado&lt;/p&gt;
+
+&lt;p&gt;web, a web se aprecian los profundos y obsesionados misterios relacionados no
+solo con el Spectrum, sino con su procesador. En toda regla un abismo truculento
+de enlaces que lleban a sitios tan llenos de entusiasmo y nerdes, que&amp;hellip; no
+estoy seguro de querer formar parte de ello&amp;hellip; mientras un viejillo carcacarrabias
+advierte &amp;ldquo;no vayas por hay, no vayas por hay&amp;rdquo;. Mas para que la trama tenga algun
+interes, es bien sabido que se ha de terminar en ese lugar en un momento u otro.&lt;/p&gt;
+
+&lt;p&gt;Quiza, de entre los enlaces que apunta &lt;em&gt;el manual&lt;/em&gt; encuentro de lo ma
+extravagante &lt;a href=&#34;http://www.ticalc.org/&#34;&gt;http://www.ticalc.org/&lt;/a&gt; un sitio dedicado a las calculadoras
+programables, sus juegos desarrollados en asm (variantes del Z80) y aun mas los
+&lt;a href=&#34;http://www.ticalc.org/programming/emulators/software.html&#34;&gt;emuladores&lt;/a&gt; que para
+estos aparatos se desarrollan, incluidos sistemas operativos y &amp;ldquo;aplicaciones&amp;rdquo; de
+todo tipo&lt;/p&gt;
+
+&lt;p&gt;en particular probe a compilar con dos emuladores: firebird&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# clonar su repo asi
+git clone --recurse-submodules https://github.com/nspire-emus/firebird
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;que al invocar el ejecutable congelo el sistema por completo y (a menos que se
+tuviera m-u-c-h-a paciencia) sin retorno&lt;/p&gt;
+
+&lt;p&gt;como tambien &lt;a href=&#34;https://github.com/CE-Programming/CEmu&#34;&gt;Cemu&lt;/a&gt; (no relacionado con
+el emulador de gamecube). Este no rompio nada, mas no logre descifrar el orden de
+invocacion apropiado de rom, flash (o algo asi) que lo haria despertar&lt;/p&gt;
+
+&lt;p&gt;como anotacion, los procedadores de estas calculadoras programables,
+apenas y tienen mas potencia que sus variables prehistoricas&amp;hellip; pero no por ello
+significa que sean aparatos economicos (al menos para mis presupuestos tendentes
+a cero)&lt;/p&gt;
+
+&lt;p&gt;resumiendo, entre todas las plataformas que cuentan con el chip z80, su
+simplicidad y el (ahora) variado, entusiasta y obseso mundo que tiene al
+rededor, luego de aprender sus bases invariablemente obliga a tomar una
+desicion, quedarse en el pais de las hadas (obesas y sudorosas) del z80 o
+cual mision treki, continuar en busca de nuevas aventuras&lt;/p&gt;
+
+&lt;h3 id=&#34;el-vaile-de-hanoi&#34;&gt;el vaile de hanoi&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Es un ejercicio inútil que, en el mejor de los casos, te confundirá y, en el
+peor, te dará la ilusión de que entiendes lo que está sucediendo. Los
+compiladores y CPUs modernos son indistinguibles de la magia. Cuando se
+enfrenta a una elección como la presentada por OP, escoja la versión que tenga
+más sentido para un lector humano y confíe en que el compilador haga su
+trabajo.&lt;/p&gt;
+
+&lt;p&gt;(comentario en reedit, post &lt;a href=&#34;https://redd.it/8c03xq&#34;&gt;Is it better to write a &amp;lt; 11 instead of a &amp;lt;= 10?&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Las &lt;a href=&#34;https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i&#34;&gt;torres de hanoi&lt;/a&gt; es un
+rompecabezas donde los pasos a realizar para llegar a la solucion son bastantes
+sencillos de entender, mas seguir un orden preciso en el intercambio de las
+piezas es imperativo si es que se desea reducir la ya por cuenta propia ingente
+cantidad de movimientos necesarios en la resolucion. Je, de este juego
+visualizando aquel movimento en el puzle, ademas de encontrando cierta similitud
+entre un limitado numero de registros donde se debe de copiar, mover, sumar,
+restar recorrer y realizar operaciones, surgio eso del &lt;em&gt;vaile de hanoi&lt;/em&gt; (eres un
+heroe). La analogia debe ser mas bestia en un procesador moderno, de esos que
+realizan prediccion de instrucciones y tienen nucleos multiples&lt;/p&gt;
+
+&lt;p&gt;Las bases del asm del z80 son faciles de asimilar, sin embargo, entre eso y
+aprender las ~70 instrucciones (documentadas), las variantes de uso que tienen
+(memoria, registros, modificacion a banderas), los registros en si mismos,
+banderas, tiempos de ejecucion (t-estados) e interrupciones (por no mencionar la
+relacion con el hardware de dibujado de pantalla, teclado y accesorios) no es
+una tarea ni de cerca sencilla.&lt;/p&gt;
+
+&lt;p&gt;Por la barrera de conceptos minimos necesarios para comenzar a realizar algo
+vistoso, y la necesidad de arrastrar los que se van presentando (no muy
+didacticamente) aplicandolos a un dispositivo autista (que ni vez,
+ni olles, ni hueles) sugiero tomar la lectura del documento en &amp;ldquo;modo turista&amp;rdquo;;
+es decir, leer superficialmente, recoger la idea principal o conocer que existe
+&amp;ldquo;algun algo&amp;rdquo; y, ya si eso, terminada una primer visita determinar si volverias
+al lugar a aprender la lengua, comer la comida y quiza volverte un residente.&lt;/p&gt;
+
+&lt;p&gt;El acermatiento que tome fue de leer y ejecutar todo hasta el capitulo 10
+(aprox). Desde ese punto solo capturar la escencia, sin considerar las
+truculencias del codigo, pero aun ejecutando los binarios para ver sus resultados.&lt;/p&gt;
+
+&lt;p&gt;Lejos de lo que creai, el ensamblador proporciona muchas facilidades, como
+insertar distintos tipos de datos, en distintos formatos (incluidas cadenas de
+texto) automaticamente en una direccion de memoria. Tambien proporciona
+constantes, alias para las direcciones de salto, y la comodidad de establecer la
+direccion de inicio para el codigo, lo cual, ofrece en la practica aquello
+que en otros lenguajes vendrian a ser abstracciones basicas como las fucciones&lt;/p&gt;
+
+&lt;p&gt;No obstante, la gestion de que registros utilizar (y no utilizar), el uso de la
+pila (que esta en la memoria), y operaciones directas con la memoria, no es algo
+a lo que se dedique una seccion explicita, solo algunas menciones poco
+profundas. Aun asi, si se tienen estas limitaciones en mente, supongo que no
+debe ser muy dificil adaptarse.&lt;/p&gt;
+
+&lt;p&gt;Quiza lo mas dificultoso de utilizar en asm del spectrum, es no tener una
+referencia sencilla con respecto a la posicion de ejecucion del codigo y el
+estado global de lo que ocurre en el procesador, ademas de verificar el tiempo
+global antes de las interrupciones, por ejemplo, conocer en que direccion esta
+leyendo la pantalla la dibujando la ULA. (Encuentro comodo eliminar la necesidad
+de timers, y esperar la interrupcion de dibujado)&lt;/p&gt;
+
+&lt;p&gt;Lo otro dificultoso, tiene que ver en como se organiza la memoria de dibujo, que
+no es lineal. Los graficos del spectrum no estan optimizados para dibujar
+graficos, sino caracteres, y por ello (segun cuenta el texto) los diseñadores
+llegaron a la conclusion que lo mas eficiente era dividir la partalla en tres
+secciones y cada una de estas en lineas intercaladas de lo que verdrian a ser
+los caracteres y esto aunque salvable por &amp;ldquo;rutinas&amp;rdquo;, no me gusta.&lt;/p&gt;
+
+&lt;p&gt;Otra cosa que no me gusta (y si encuenro un sistema que no lo contenga, no
+regresare al Spectrum) es el ROM de basic. He, no lo controlo, esta hay ocupando
+espacio y lo que hace es ejecutar BASIC. Si, cuenta con codigo reutilizable (no
+portable) mas preferiria montareme un ejercito de rutinas por separado antes que
+utilizar las que provee el aparato (varia de una version a otra del
+Spectrum). Entiendo la necesidad en su tiempo de incorporarla (aunque podria
+haber venido en un carchucho (cinta)) pero tenerla permanentemente, es como tener un
+pixel muerto en la pantalla y verlo siempre.&lt;/p&gt;
+
+&lt;p&gt;Salvando esos inconvenientes, la falta de un visor global de los estados del
+procesador, un contador que lleve un registro del tiempo disponible entre
+interrupciones, la posicion de la ALU, mensajes de error de parte del
+ensamblador, el basic, la extraña organizacione de la pantalla, la no
+ortogonalidad del procesador, las instrucciones no documentadas y el lento
+acceso a memoria, me ha gustado el procesador, por su transparecia en lo que
+hace, no traer ningun sistema de proteccion ni ninguna gilipolles imbecil y lo
+relativamente amigable que es el ensamblador (el lenguaje) que en el tutorial proponen&lt;/p&gt;
+
+&lt;p&gt;en mi novel ingorancia, si se pudiera, me gustaria tener un procesador con
+almenos 512KiB de memoria sin latencia, entre 1 y 10 MiB de memoria con latencia,
+y registros varios de 16 y 32 bits, casi todos ortogonales&amp;hellip; y por pedir a
+1GHZ, ja, ja, seria divertido trastear con eso.&lt;/p&gt;
+
+&lt;h2 id=&#34;cobaya&#34;&gt;cobaya&lt;/h2&gt;
+
+&lt;p&gt;la ultima modificacion al documento segun el sitio acurrio en 11-12-2010. Como
+este sitio (ni ningun otro) tiene asegurada su permanencia en la red, y por
+que prefiero leer tochos monopagina en lugar de secciones, respalde el manual,
+lo puse en una sola pagina, cambie el estilo a un color negro y de paso aplique
+&lt;code&gt;wget&lt;/code&gt; a todas los sitios enlazados y los coloque en un repositorio (&lt;a href=&#34;https://github.com/nasciiboy/Z80-Speccy&#34;&gt;https://github.com/nasciiboy/Z80-Speccy&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;No contiene una copia de todos los sitios (son mas de 12GiB), solo algunos, unicamente los
+mas necesarios y algunas aplicaciones revelantes, las suficientes como para no
+necesitar de internet para su estudio.&lt;/p&gt;
+
+&lt;p&gt;Aunque el html, ya era simple, lo simplifique aun mas con el objetivo de
+cobayizarlo, pero de momento al desconocer la necedidad que de el tenga en el
+futuro, no realizace la transcicion. Como las manipulaciones fueron muy a
+mano, seguramente el html este roto por algun sitio.&lt;/p&gt;
+
+&lt;p&gt;alguna pagina como manuales.speccy.org sufrio modificaciones con &lt;code&gt;find&lt;/code&gt;, &lt;code&gt;sed&lt;/code&gt; y
+&lt;code&gt;rename&lt;/code&gt; en sus php cosas para convertirlas en html cosas. Primero aplique un
+cambio en los enlaces internos con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find . -type f -print0 | xargs -0 sed -i &#39;s/\.php/.html/g&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y despues un renombre a los ficheros en si&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find . -name &amp;quot;*.php&amp;quot; -exec bash -c &#39;mv &amp;quot;$1&amp;quot; &amp;quot;${1%.php}&amp;quot;.html&#39; - &#39;{}&#39; \;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(ambos scripts, salidos directamente de stackoverflow)&lt;/p&gt;
+
+&lt;p&gt;y eso es todo, continuare con GameBoy, donde espero encontrar la mayoria de
+caracteristicas que deseo, como pueden ser solo tener los minimos botones
+necesarios, mayor configuracion de estos (no como el extraño comportamiento de
+fuse el emulador de Spectrum), no encontrar un &amp;ldquo;OS&amp;rdquo;, una memoria de video mas
+amigable y un sistema de proteccion inexistente (ja, ja, ja) o almenos tan
+sencillo como para ignorarlo.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; hoooooOOO, si! hay un programa que emula la lluvia de matrix en el Spectrum,
+su codigo esta &lt;a href=&#34;https://nasciiboy.github.io/data/matrix-rain.asm&#34;&gt;aqui&lt;/a&gt; y lo encontre por &lt;a href=&#34;http://www.retroprogramming.com/&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://nasciiboy.github.io/img/matrix-rain-z80.png&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Bye, Bye&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Por favor, reinventa la rueda</title>

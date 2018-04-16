@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Z80 Spectrum (tutorial speccy.org)</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
+
+  <h1>Z80 Spectrum (tutorial speccy.org)</h1>
+  
+
+<p>Entre aprender diseño de software, administracion de sistemas, elisp, ingles,
+mates o cualquier otra asignatura que pudiera servir a desarrollar alguna habilidad
+&ldquo;productiva&rdquo;, he pasado parte del ultimo mes investigando la programacion
+en ensamblador para una plataforma con mas de 35 años de antiguedad</p>
+
+<p>La razon? los videojuegos! no por ser un jugon de pro (que ni consola tengo). Tampoco
+esperando petarla con una creacion indi, sino por la mera admiracion a algunas
+de las pocas obras que he podido catar (megaman y cave story).</p>
+
+<p>Tras topar con un <a href="http://wiki.ladecadence.net/doku.php?id=tutorial_de_ensamblador">tutorial</a>
+(en español) sobre programacion en la GameBoy y comprobar que todo su codigo
+fuera efectivo, al igual que las herramientas propuestas. En el recomendaban
+como primer paso seguir el material del que vengo a comentar, porque como buen
+robot que soy, hago caso a lo que se me dicen (generalmente (si biene en un
+documento (y parece de interes))). Asi que antes de afrotar lo
+relacionado al GameBoy (aunque tenia mas interes en aprender sobre la NES)
+veamos este material</p>
+
+<p>El <a href="https://wiki.speccy.org/cursos/ensamblador/indice">Curso de Ensamblador Z80 de Compiler Software</a>
+alojado en Speccy.org (para abreviar de aqui en adelante: &ldquo;el curso&rdquo;, &ldquo;el
+tutorial&rdquo; o &ldquo;z80-speccy&rdquo;) se centra en la programacion en ensamblador, cosa que
+festejo, primero por agregar el (Sr) ASM a las cosas que he probado, ha, ha, con lo
+imponente que es decir ASM en frente de las personas y quedarte tan agusto</p>
+
+<p>Segundo, porque luego de cacharrear con un par de lenguajes de programacion y
+librerias, llego a la conclucion de que la mejor forma de conservar un
+videojuego (o programa en general), eliminando distracciones, inconsistencias y
+apaños, es hacerlo para una plataforma hardware (o software) consolidada e
+inmutable. Y como nadie va a venir el dia de mañana a cambiar el hardware de la
+NES o SNES, N64 o la GameBoy (las plataformas que me interesan) creo que si me
+apego a las bases (mas basicas) de cada una de ellas hay quedara, por el resto
+de los tiempos, mientras el sol, la luna, los evas, las computadoras y los
+emuladores sigan existiendo.</p>
+
+<p>Tercero, ademas de colgarme la medalla de &ldquo;programar en ASM&rdquo;, conocer mas de cerca
+la naturalesa metalica de la programacion, sin adornos, ni abstracciones era
+algo que deseaba hacer desde el inicio. Dejar de lado las artilugios abstractos
+y ver a la cara la realidad</p>
+
+<p>y finalmente, el material esta en español que es una exepcion a la regla, ademas
+con lo poco documentado que esta el desarrollo para las plataformas &ldquo;vintage&rdquo;
+(que me interesan) aun siendo algo mas bien exotico (el Spectrum) tras concluir
+la lectura, abre la puerta hacia nuevas plataformas. Despoja y desmitifica el
+respeto mitificado que rodea a la palabra ASM, y en ultima instancia como
+esperaba, la comprension (aunque aun superficial) sobre <em>&ldquo;la maquina&rdquo;</em> ha visto
+incrementada su barra en unos cientos de puntos.</p>
+
+<p>El material es extenso, como para un libro, los capitusos detallados y con mucho
+codigo, siguendo un orden coherente y mas o menos progresivo. Digo esto ultimo,
+porque hay que aprender un monton de caracteristicas antes de comenzar a verlas
+en funcionamiento, y esto, como en las matematicas puede desmotivar al no ver
+una aplicacion directa a cada nuevo aprendizaje.</p>
+
+<p>Ya por su propia naturaleza, el ensamblador puede echar para atras a mucha
+gente, y si la documentacion esta en un lenguaje ajeno (ademas de poco dominado)
+es motivo suficiente para evitar el reto, mas con lo expuesto en este tutorial
+es suficiente como rito iniciatico (y material de referencia). Es necesario
+aclarar, que el material termina antes de construir un viedeojuego, de hecho
+finaliza justo antes de mostrar como realizar animaciones</p>
+
+<p>Se incluye muchas rutinas, una herramienta de ensamblado programada en C y
+compilable sin mayores dificultads que escribir <code>make</code> (de hecho incluyen un
+emulador construido por el tutorialista&hellip; compilo, pero no era una opcion en
+mi maquina, se apodero del &ldquo;modo grafico&rdquo; (fullscreen (a dos pantallas)) y no
+tenia boton de cerrar). Tambien se recomiendan emuladores (para GNU <code>fuse</code>),
+programas de dibujo y otras varias utilidades, aunque la mayoria desarrolladas
+para winbugs, ejutables (segun cuentan) con wine. Todo esto aderesado con
+ricos packs de enlaces a webs con aun mas material relacionado</p>
+
+<p>web, a web se aprecian los profundos y obsesionados misterios relacionados no
+solo con el Spectrum, sino con su procesador. En toda regla un abismo truculento
+de enlaces que lleban a sitios tan llenos de entusiasmo y nerdes, que&hellip; no
+estoy seguro de querer formar parte de ello&hellip; mientras un viejillo carcacarrabias
+advierte &ldquo;no vayas por hay, no vayas por hay&rdquo;. Mas para que la trama tenga algun
+interes, es bien sabido que se ha de terminar en ese lugar en un momento u otro.</p>
+
+<p>Quiza, de entre los enlaces que apunta <em>el manual</em> encuentro de lo ma
+extravagante <a href="http://www.ticalc.org/">http://www.ticalc.org/</a> un sitio dedicado a las calculadoras
+programables, sus juegos desarrollados en asm (variantes del Z80) y aun mas los
+<a href="http://www.ticalc.org/programming/emulators/software.html">emuladores</a> que para
+estos aparatos se desarrollan, incluidos sistemas operativos y &ldquo;aplicaciones&rdquo; de
+todo tipo</p>
+
+<p>en particular probe a compilar con dos emuladores: firebird</p>
+
+<pre><code># clonar su repo asi
+git clone --recurse-submodules https://github.com/nspire-emus/firebird
+</code></pre>
+
+<p>que al invocar el ejecutable congelo el sistema por completo y (a menos que se
+tuviera m-u-c-h-a paciencia) sin retorno</p>
+
+<p>como tambien <a href="https://github.com/CE-Programming/CEmu">Cemu</a> (no relacionado con
+el emulador de gamecube). Este no rompio nada, mas no logre descifrar el orden de
+invocacion apropiado de rom, flash (o algo asi) que lo haria despertar</p>
+
+<p>como anotacion, los procedadores de estas calculadoras programables,
+apenas y tienen mas potencia que sus variables prehistoricas&hellip; pero no por ello
+significa que sean aparatos economicos (al menos para mis presupuestos tendentes
+a cero)</p>
+
+<p>resumiendo, entre todas las plataformas que cuentan con el chip z80, su
+simplicidad y el (ahora) variado, entusiasta y obseso mundo que tiene al
+rededor, luego de aprender sus bases invariablemente obliga a tomar una
+desicion, quedarse en el pais de las hadas (obesas y sudorosas) del z80 o
+cual mision treki, continuar en busca de nuevas aventuras</p>
+
+<h3 id="el-vaile-de-hanoi">el vaile de hanoi</h3>
+
+<blockquote>
+<p>Es un ejercicio inútil que, en el mejor de los casos, te confundirá y, en el
+peor, te dará la ilusión de que entiendes lo que está sucediendo. Los
+compiladores y CPUs modernos son indistinguibles de la magia. Cuando se
+enfrenta a una elección como la presentada por OP, escoja la versión que tenga
+más sentido para un lector humano y confíe en que el compilador haga su
+trabajo.</p>
+
+<p>(comentario en reedit, post <a href="https://redd.it/8c03xq">Is it better to write a &lt; 11 instead of a &lt;= 10?</a>)</p>
+</blockquote>
+
+<p>Las <a href="https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i">torres de hanoi</a> es un
+rompecabezas donde los pasos a realizar para llegar a la solucion son bastantes
+sencillos de entender, mas seguir un orden preciso en el intercambio de las
+piezas es imperativo si es que se desea reducir la ya por cuenta propia ingente
+cantidad de movimientos necesarios en la resolucion. Je, de este juego
+visualizando aquel movimento en el puzle, ademas de encontrando cierta similitud
+entre un limitado numero de registros donde se debe de copiar, mover, sumar,
+restar recorrer y realizar operaciones, surgio eso del <em>vaile de hanoi</em> (eres un
+heroe). La analogia debe ser mas bestia en un procesador moderno, de esos que
+realizan prediccion de instrucciones y tienen nucleos multiples</p>
+
+<p>Las bases del asm del z80 son faciles de asimilar, sin embargo, entre eso y
+aprender las ~70 instrucciones (documentadas), las variantes de uso que tienen
+(memoria, registros, modificacion a banderas), los registros en si mismos,
+banderas, tiempos de ejecucion (t-estados) e interrupciones (por no mencionar la
+relacion con el hardware de dibujado de pantalla, teclado y accesorios) no es
+una tarea ni de cerca sencilla.</p>
+
+<p>Por la barrera de conceptos minimos necesarios para comenzar a realizar algo
+vistoso, y la necesidad de arrastrar los que se van presentando (no muy
+didacticamente) aplicandolos a un dispositivo autista (que ni vez,
+ni olles, ni hueles) sugiero tomar la lectura del documento en &ldquo;modo turista&rdquo;;
+es decir, leer superficialmente, recoger la idea principal o conocer que existe
+&ldquo;algun algo&rdquo; y, ya si eso, terminada una primer visita determinar si volverias
+al lugar a aprender la lengua, comer la comida y quiza volverte un residente.</p>
+
+<p>El acermatiento que tome fue de leer y ejecutar todo hasta el capitulo 10
+(aprox). Desde ese punto solo capturar la escencia, sin considerar las
+truculencias del codigo, pero aun ejecutando los binarios para ver sus resultados.</p>
+
+<p>Lejos de lo que creai, el ensamblador proporciona muchas facilidades, como
+insertar distintos tipos de datos, en distintos formatos (incluidas cadenas de
+texto) automaticamente en una direccion de memoria. Tambien proporciona
+constantes, alias para las direcciones de salto, y la comodidad de establecer la
+direccion de inicio para el codigo, lo cual, ofrece en la practica aquello
+que en otros lenguajes vendrian a ser abstracciones basicas como las fucciones</p>
+
+<p>No obstante, la gestion de que registros utilizar (y no utilizar), el uso de la
+pila (que esta en la memoria), y operaciones directas con la memoria, no es algo
+a lo que se dedique una seccion explicita, solo algunas menciones poco
+profundas. Aun asi, si se tienen estas limitaciones en mente, supongo que no
+debe ser muy dificil adaptarse.</p>
+
+<p>Quiza lo mas dificultoso de utilizar en asm del spectrum, es no tener una
+referencia sencilla con respecto a la posicion de ejecucion del codigo y el
+estado global de lo que ocurre en el procesador, ademas de verificar el tiempo
+global antes de las interrupciones, por ejemplo, conocer en que direccion esta
+leyendo la pantalla la dibujando la ULA. (Encuentro comodo eliminar la necesidad
+de timers, y esperar la interrupcion de dibujado)</p>
+
+<p>Lo otro dificultoso, tiene que ver en como se organiza la memoria de dibujo, que
+no es lineal. Los graficos del spectrum no estan optimizados para dibujar
+graficos, sino caracteres, y por ello (segun cuenta el texto) los diseñadores
+llegaron a la conclusion que lo mas eficiente era dividir la partalla en tres
+secciones y cada una de estas en lineas intercaladas de lo que verdrian a ser
+los caracteres y esto aunque salvable por &ldquo;rutinas&rdquo;, no me gusta.</p>
+
+<p>Otra cosa que no me gusta (y si encuenro un sistema que no lo contenga, no
+regresare al Spectrum) es el ROM de basic. He, no lo controlo, esta hay ocupando
+espacio y lo que hace es ejecutar BASIC. Si, cuenta con codigo reutilizable (no
+portable) mas preferiria montareme un ejercito de rutinas por separado antes que
+utilizar las que provee el aparato (varia de una version a otra del
+Spectrum). Entiendo la necesidad en su tiempo de incorporarla (aunque podria
+haber venido en un carchucho (cinta)) pero tenerla permanentemente, es como tener un
+pixel muerto en la pantalla y verlo siempre.</p>
+
+<p>Salvando esos inconvenientes, la falta de un visor global de los estados del
+procesador, un contador que lleve un registro del tiempo disponible entre
+interrupciones, la posicion de la ALU, mensajes de error de parte del
+ensamblador, el basic, la extraña organizacione de la pantalla, la no
+ortogonalidad del procesador, las instrucciones no documentadas y el lento
+acceso a memoria, me ha gustado el procesador, por su transparecia en lo que
+hace, no traer ningun sistema de proteccion ni ninguna gilipolles imbecil y lo
+relativamente amigable que es el ensamblador (el lenguaje) que en el tutorial proponen</p>
+
+<p>en mi novel ingorancia, si se pudiera, me gustaria tener un procesador con
+almenos 512KiB de memoria sin latencia, entre 1 y 10 MiB de memoria con latencia,
+y registros varios de 16 y 32 bits, casi todos ortogonales&hellip; y por pedir a
+1GHZ, ja, ja, seria divertido trastear con eso.</p>
+
+<h2 id="cobaya">cobaya</h2>
+
+<p>la ultima modificacion al documento segun el sitio acurrio en 11-12-2010. Como
+este sitio (ni ningun otro) tiene asegurada su permanencia en la red, y por
+que prefiero leer tochos monopagina en lugar de secciones, respalde el manual,
+lo puse en una sola pagina, cambie el estilo a un color negro y de paso aplique
+<code>wget</code> a todas los sitios enlazados y los coloque en un repositorio (<a href="https://github.com/nasciiboy/Z80-Speccy">https://github.com/nasciiboy/Z80-Speccy</a>)</p>
+
+<p>No contiene una copia de todos los sitios (son mas de 12GiB), solo algunos, unicamente los
+mas necesarios y algunas aplicaciones revelantes, las suficientes como para no
+necesitar de internet para su estudio.</p>
+
+<p>Aunque el html, ya era simple, lo simplifique aun mas con el objetivo de
+cobayizarlo, pero de momento al desconocer la necedidad que de el tenga en el
+futuro, no realizace la transcicion. Como las manipulaciones fueron muy a
+mano, seguramente el html este roto por algun sitio.</p>
+
+<p>alguna pagina como manuales.speccy.org sufrio modificaciones con <code>find</code>, <code>sed</code> y
+<code>rename</code> en sus php cosas para convertirlas en html cosas. Primero aplique un
+cambio en los enlaces internos con</p>
+
+<pre><code>find . -type f -print0 | xargs -0 sed -i 's/\.php/.html/g'
+</code></pre>
+
+<p>y despues un renombre a los ficheros en si</p>
+
+<pre><code>find . -name &quot;*.php&quot; -exec bash -c 'mv &quot;$1&quot; &quot;${1%.php}&quot;.html' - '{}' \;
+</code></pre>
+
+<p>(ambos scripts, salidos directamente de stackoverflow)</p>
+
+<p>y eso es todo, continuare con GameBoy, donde espero encontrar la mayoria de
+caracteristicas que deseo, como pueden ser solo tener los minimos botones
+necesarios, mayor configuracion de estos (no como el extraño comportamiento de
+fuse el emulador de Spectrum), no encontrar un &ldquo;OS&rdquo;, una memoria de video mas
+amigable y un sistema de proteccion inexistente (ja, ja, ja) o almenos tan
+sencillo como para ignorarlo.</p>
+
+<p>&hellip; hoooooOOO, si! hay un programa que emula la lluvia de matrix en el Spectrum,
+su codigo esta <a href="https://nasciiboy.github.io/data/matrix-rain.asm">aqui</a> y lo encontre por <a href="http://www.retroprogramming.com/">aca</a></p>
+
+<p><center>
+<img src="https://nasciiboy.github.io/img/matrix-rain-z80.png" alt="" />
+</center></p>
+
+<p>Bye, Bye</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.github.io/prog/please-reinvent-the-whell/">◀ Por favor, reinventa la rueda</a>
+    
+    
+  </div>
+
+  <div class="clear" class="center">
+  <h2>Comments</h2>
+  </div>
+
+  <form method="POST" class="dark-matter" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/comments">
+  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/prog/z80-spectrum/#comment-submitted">
+  <input type="hidden" name="options[entryId]" value="0c757134cc3acd02aa279f97221e604a">
+
+  <h1>Comment Form
+    <span>Este formulario envia un pull request al repositorio donde se almacena
+    el blog, uselo con sabiduria. La inclusion de comentarios es totalmente
+    arbitaria y puede modificarse, ignorarse o desaparecer en el
+    futuro... la habilidad de anidar comentarios no esta disponible</span>
+  </h1>
+  <label>
+    <span>Your Name :</span>
+    <input name="fields[name]" type="text" placeholder="Your name"/>
+  </label>
+
+  <label>
+    <span>Your Email :</span>
+    <input name="fields[email]" type="email" placeholder="Your email address"/>
+  </label>
+
+  <label>
+    <span>Message :</span>
+    <textarea name="fields[body]" placeholder="aqui tu comentario (se acepta Markdown)" rows="5"></textarea>
+  </label>
+  <label>
+    <span>&nbsp;</span>
+    <input type="submit" value="Submit" class="submit"></input>
+  </label>
+</form>
+
+    
+  
+  
+
+  
+    
+  
+
+  
+    <p>the beautiful is blue... and black</p>
+  
+
+
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/categories/prog">prog(47)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(31)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(13)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/tags/fonos">fonos(19)</a></li><li><a href="https://nasciiboy.github.io/tags/howto">howto(19)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(18)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(13)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(4)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/asm">asm(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elisp">elisp(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/hardware">hardware(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

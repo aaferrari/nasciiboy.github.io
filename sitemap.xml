@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nasciiboy.github.io/prog/z80-spectrum/</loc>
+    <lastmod>2018-04-15T21:36:36-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nasciiboy.github.io/prog/please-reinvent-the-whell/</loc>
     <lastmod>2018-04-14T22:26:41-05:00</lastmod>
   </url>
@@ -544,6 +549,12 @@
   </url>
   
   <url>
+    <loc>https://nasciiboy.github.io/tags/asm/</loc>
+    <lastmod>2018-04-15T21:36:36-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nasciiboy.github.io/categories/</loc>
     <lastmod>2017-10-30T15:45:27-06:00</lastmod>
     <priority>0</priority>
@@ -719,13 +730,13 @@
   
   <url>
     <loc>https://nasciiboy.github.io/categories/prog/</loc>
-    <lastmod>2018-04-14T22:26:41-05:00</lastmod>
+    <lastmod>2018-04-15T21:36:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://nasciiboy.github.io/prog/</loc>
-    <lastmod>2018-04-14T22:26:41-05:00</lastmod>
+    <lastmod>2018-04-15T21:36:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -821,7 +832,7 @@
   
   <url>
     <loc>https://nasciiboy.github.io/</loc>
-    <lastmod>2018-04-14T22:26:41-05:00</lastmod>
+    <lastmod>2018-04-15T21:36:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   
