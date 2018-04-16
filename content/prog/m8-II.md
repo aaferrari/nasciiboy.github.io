@@ -219,7 +219,7 @@ guarde la posicion de escucha de los pod lo descarta inmediatamente.
 Luego en la maquina prove con vocal (que venia en los repos de freidora)... y no
 era ni fino, ni comodo de utilizar.
 
-El tercer intento, totalmente inesperado (aque creo que jessica del podcast
+El tercer intento, totalmente inesperado (aunque creo que jessica del podcast
 birras y bits lo menciono en alguna ocacion) tiene todo lo necesario y mas! Con
 una calidad inmerecida, casi fuera de lugar comparando con la mayoria de
 proyectos libres (y privativos), o dicho de otro modo, deja a la altura del betun
@@ -265,7 +265,7 @@ siguiente conjunto de pasos en elisp, ir al fichero `subs.html`
 
 ```
 (defun ivoox-killer ()
-  "Separa los correos en lista_correos.txt"
+  "conseguir feeds de subs.html"
   (interactive)
   (goto-char (point-min))
   (while (re-search-forward "</\\w+>" nil t)
@@ -394,7 +394,7 @@ personal incluso algunos de cantidad colosal como arcadia gamers y game over, o
 varios de los que produce ciencia-es (que no los marco como recomendables, pero
 todos tienen una gran calidad).
 
-Unos vienen, otros se van o van siendo olvidados en el trancurso de cambiar de
+Unos vienen, otros se van o van siendo olvidados en el transcurso de cambiar de
 cuenta y nicks. Algunos mas han desaparecido y unos pocos los atesoro en el
 disco duro, cada cual aportando nuevas sensaciones, visiones e ideas en un
 momento especifico.
