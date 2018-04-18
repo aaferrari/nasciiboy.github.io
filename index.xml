@@ -12971,7 +12971,7 @@ html { background-color: #000; }
 
 .gb_Ag { display: none; }
 
-.gb_T .gb_Lg {
+.gb_T .gb_Mg {
     display: none;
 }
 
