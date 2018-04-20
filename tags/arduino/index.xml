@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arduino on nba - GNU&#39;s Rock</title>
+    <link>https://nasciiboy.github.io/tags/arduino/</link>
+    <description>Recent content in Arduino on nba - GNU&#39;s Rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL v3.0</copyright>
+    <lastBuildDate>Thu, 19 Apr 2018 18:36:32 -0500</lastBuildDate>
+    
+        <atom:link href="https://nasciiboy.github.io/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IntroARM</title>
+      <link>https://nasciiboy.github.io/prog/introarm/</link>
+      <pubDate>Thu, 19 Apr 2018 18:36:32 -0500</pubDate>
+      
+      <guid>https://nasciiboy.github.io/prog/introarm/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&amp;ldquo;Introducción a la arquitectura de computadores con QtARMSim y Arduino&amp;rdquo;&lt;/strong&gt; es
+un libro que encontre (el año pasado) en &lt;a href=&#34;https://openlibra.com/es/book/introduccion-a-la-arquitectura-de-computadores-con-qtarmsim-y-arduino&#34;&gt;openlibra&lt;/a&gt;
+cuya insulsa portada (como casi todo lo de openlibra) oculta un material
+bastante didactico (je, esto ultimo a consideracion&amp;hellip; respecto a los otros
+titulos de openlibra), ameno, directo e
+interesante sobre la arquitectura de computadoras.&lt;/p&gt;
+
+&lt;p&gt;El libro centra su atencion en la arquitectura ARM de 32 bits desplegando
+ejemplos en ensamblador (instrucciones Thumb Cortex-M0 estilo GNU) y luego
+aplicando (mas o menos) practicaticamete los conocimentos sobre la placa
+&lt;a href=&#34;https://www.arduino.cc/en/Guide/ArduinoDue&#34;&gt;Arduino Due&lt;/a&gt; [ATSAM3X8E]&amp;hellip; para
+encender y apagar un led! (esto es si es un &amp;ldquo;hello word&amp;rdquo; bien rudo!)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ArduinoDue.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En realidad, ni el asm, ni la placa arduino tienen mucha importancia pues no
+dejan de ser un conducto para mostrar los entresijos y filosofias relacionadas
+con el funcionamiento conceptual de los procesadores, su programacion y luego
+mas tarde su interaccion y gestion con dispositivos de entrada y salida
+varios. De hecho, y aunque el ensamblador que nos muestra el libro es bastante
+bonito (quitando su manera extrabagante de pasar datos de memoria a los registros y
+viceversa), en todo el libro, no se expone ninguna razon para utilizar
+ensamblador, mas alla (claro esta) de poder ver su funcionamiento en vivo y a
+todo c-o-l-o-r.&lt;/p&gt;
+
+&lt;p&gt;y bueno, el libro, codigo y herramientas necesarias para su estudio se
+encuentran en la siguiente direccion (oficial): &lt;a href=&#34;http://lorca.act.uji.es/libro/introARM/&#34;&gt;http://lorca.act.uji.es/libro/introARM/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;para que la programacion en asm no qude como un ejercicio autista donde
+tenemos que imaginar que esta pasando, se propone utilizar una interfaz grafica
+de un emulador de arm (&lt;code&gt;spim&lt;/code&gt;) llamada &lt;a href=&#34;http://lorca.act.uji.es/project/qtarmsim/&#34;&gt;QtARMSim&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;segun las intrucciones de la pagina tendriamos que seguir los siguientes pasos
+para hacernos con &amp;ldquo;los programas&amp;rdquo;(, o asi los hice yo):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt install gcc-arm-linux-gnueabi
+apt install python3-pyside python3-pip ruby spin
+pip3 install qtarmsim
+
+# si se quiere actualizar
+# pip3 install --upgrade qtarmsim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;hellip; es curioso, como un libro centrado en asm y que en sus propias paginas
+expone la necesidad de hacer que la interaccion del usuario con un programa
+tiene que ser practica, tubieron la brilante idea de implementar el entorno
+grafico utilizando (asqueroso) python&amp;hellip; no es que la interfaz sea fea, cargada
+o innecesaria ni mucho menos (mi mas sincera alabanza), sino que a la hora de interactuar con el editor de
+texto incorporado, el lag puede ser insufrible (puto python). Otra cosa curiosa
+del p-y-t-h-o-n, ocurre cuando instalas sus mierdas y luego al ejecutarlas en lugar de
+&amp;ldquo;interpretar&amp;rdquo; los programas, te aparecen sendos mensajes de error, como me
+sucedio en freidora 27. Tras varios intentos, apaños y busquedas por internet,
+la solucion menos dolorosa fue utilizar una maquina virtual con debian e ir a
+probar suerte&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;no veia muy claro eso de instalar virtualbox, asi que por mera investigacion
+prove con &lt;code&gt;gnome-boxes&lt;/code&gt; (que ya venia instalada). Baje la iso estable
+(DVD|torrent) de debian 9.4.0 y segui la sujerencia de gnome-cajas en hacer una
+instalacion rapida (o algo asi). Aproximadamente 15 minutos mas tarde,
+unicamente ingresando el nombre de usuario, contraseña y dimencion de la
+particion, tenia un debian fluido y eficiente corriento con 2 procesadores,
+21GiB de disco y 1GiB de ram (con Gnome Shell) consumiendo ~500MiB de ram y muy
+poco consumo de procesador&amp;hellip; hasta mover-una-ventana-con-el-raton-a-lo-loco!&lt;/p&gt;
+
+&lt;p&gt;me sorprendio lo rapido que arranca una maquina virtual en (quemu) boxes, lo
+ligerita que va, e igualmente lo rapido que se apaga. Como puntos negativos dire
+que la captura del teclado nunca se hizo presente y que fue necesario
+reconfigurar el teclado en la maquina virtual (a programmer dvorak), porque
+venia en ingles; asi que todo lo ingresado estaba mal, mas al contar con un
+portapapeles (de texto) compartido se puede escribir en la magina anfitrion
+e ir a pegar (con tecla de opciones(?)) en cualquier lado.&lt;/p&gt;
+
+&lt;p&gt;pero bueno, todo esto no era sobre gnome-boxes, era sobre el libro. Tras probar
+que el entorno funcionaba sin inconveniente alguno sobre debian y que el entorno era
+intuitivo y despliga la informacion suficiente y de manera comoda, continuemos con la
+travesia.&lt;/p&gt;
+
+&lt;p&gt;Los ejercicios en ensamblador son pequeños, claros y lo suficientemente
+explicados como para no perderse. Hecho en falta que en la pagina oficial, no se
+incluya un comprimido con el codigo en ensamblador del libro, asi que
+&lt;a href=&#34;https://nasciiboy.github.io/data/asm-code.zip&#34;&gt;aqui&lt;/a&gt; esta una compilacion en zip.&lt;/p&gt;
+
+&lt;p&gt;A diferencia de lo que comentaba sobre el post del tutorial del
+&lt;a href=&#34;../z80-spectrum/&#34;&gt;z80-speccy&lt;/a&gt; en este material se dedican varias secciones a
+explicar estrategias y convenciones sobre el paso de parametros entre las
+subrutinas. Ademas, como no podia ser de otra manera, el procesador y su
+capacidades tambien evolucionaron. En este procesador tenemos 16 registros
+ortogonales de 32 bits&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;r0-r3  &amp;gt; paso y recivo de parametros a subrutinas&lt;/li&gt;
+&lt;li&gt;r4-r12 &amp;gt; libres para el programador&lt;/li&gt;
+&lt;li&gt;r13    &amp;gt; SP (puntero de pila)&lt;/li&gt;
+&lt;li&gt;r14    &amp;gt; LR (registro enlace)&lt;/li&gt;
+&lt;li&gt;r15    &amp;gt; PC (putero del programa)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;las instrucciones son menos complejas que las del z80, vastante mas comodas como
+&lt;code&gt;add rn, rn, rn&lt;/code&gt; donde se pasan dos registros a sumar y un registro donde
+depositar el resultado. Otro ejemplo seria la intruccion de uso de la pila &lt;code&gt;push
+{rn, rn, rn-rn}&lt;/code&gt; y su complemento &lt;code&gt;pull {rn, rn, rn-rn}&lt;/code&gt; que no solo puede pasar
+mas de un registro, tambien un rango entero de registros, wouau puro rock-and-roll!&lt;/p&gt;
+
+&lt;p&gt;como comentaba al inicio, aun tomando la lectura sin intenciones de aplicar sus
+enseñansas codificadoras, el enfoque didactico es muy estimulante para el que
+tenga interes en conocer los entresijos rugosos de un &amp;ldquo;computador&amp;rdquo;, que por aca
+ni se mitifica, ni se espanta al lector con leyendas medievales de complejidades
+imposibles (como muchos hacen con los niñatos y les dicen que p-y-t-h-o-n &amp;ldquo;es
+bonito y facil&amp;rdquo;, ha, una guerra es lo que les hace falta)&lt;/p&gt;
+
+&lt;p&gt;La segunda parte del material continua su labor didactica ahora mostrando como
+interactua el procesador con el mundo. Tambien pasa bastante tiempo liandola con
+el ensamblador y el arduino, mas, no termino de enterarme a cuenta de
+que. Aunque me parece genial que se pongan a educar sobre el asm, el arduino y
+su entorno no tienen pinta de estar prestos a liarse a programar en otra cosa
+que no sea C/C++, pero bueno, tampoco es que me enoje ni nada similar&amp;hellip; (por
+que, no tomar una consola de videojuegos arm como conducto?&amp;hellip; si la hay&amp;hellip; o
+es que no&amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;de esta parte del libro, destaco las secciones de interrupciones y conocer al
+(voz cavernosa y con eco) &lt;strong&gt;DMA&lt;/strong&gt; (/voz cavernosa y con eco) (Direct Memory Access)&lt;/p&gt;
+
+&lt;p&gt;finalmente, el ultimo tercio del liblo, esta formado por una referencia (muy)
+tecnica de las E/S, el reloc e interrupciones disponibles en el arduino. Luego
+un par de resumenes del asm y tambien la infaltable seccion de sistemas de
+numeracion, para finalmente cerrar con indices y cosas de libros&lt;/p&gt;
+
+&lt;p&gt;Ahora, como con el tutorial del z80, muestran como declarar if&amp;rsquo;s, else&amp;rsquo;s, for&amp;rsquo;s y
+while&amp;rsquo;s, pero donde esta el siempre amado y necesario &lt;strong&gt;&lt;code&gt;switch&lt;/code&gt;&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;p&gt;Para terminar, en open libra hay un material mas o menos relacionado, con un
+temario algo similar &lt;a href=&#34;https://openlibra.com/es/book/arm-cortex-m-practico-introduccion-a-los-microcontroladores-stm32-de-st&#34;&gt;ARM Cortex-M práctico: Introducción a los microcontroladores STM32 de St&lt;/a&gt;
+que va mas de C. Tiene el pecado de aplicar sus enseñansas sobre aplicaciones
+ventaneras, pero rescato su explicacion sobre las ramas de los procesadores
+ARM.&lt;/p&gt;
+
+&lt;p&gt;Si os gustan los libros, ir a openlibra, poner 5 estrellas, like &amp;amp; subscribe&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
