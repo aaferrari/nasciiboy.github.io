@@ -27,7 +27,7 @@ interesante sobre la arquitectura de computadoras.&lt;/p&gt;
 
 &lt;p&gt;El libro centra su atencion en la arquitectura ARM de 32 bits desplegando
 ejemplos en ensamblador (instrucciones Thumb Cortex-M0 estilo GNU) y luego
-aplicando (mas o menos) practicaticamete los conocimentos sobre la placa
+aplicando (mas o menos) practicamete los conocimentos sobre la placa
 &lt;a href=&#34;https://www.arduino.cc/en/Guide/ArduinoDue&#34;&gt;Arduino Due&lt;/a&gt; [ATSAM3X8E]&amp;hellip; para
 encender y apagar un led! (esto es si es un &amp;ldquo;hello word&amp;rdquo; bien rudo!)&lt;/p&gt;
 
@@ -46,7 +46,7 @@ todo c-o-l-o-r.&lt;/p&gt;
 &lt;p&gt;y bueno, el libro, codigo y herramientas necesarias para su estudio se
 encuentran en la siguiente direccion (oficial): &lt;a href=&#34;http://lorca.act.uji.es/libro/introARM/&#34;&gt;http://lorca.act.uji.es/libro/introARM/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;para que la programacion en asm no qude como un ejercicio autista donde
+&lt;p&gt;para que la programacion en asm no quede como un ejercicio autista donde
 tenemos que imaginar que esta pasando, se propone utilizar una interfaz grafica
 de un emulador de arm (&lt;code&gt;spim&lt;/code&gt;) llamada &lt;a href=&#34;http://lorca.act.uji.es/project/qtarmsim/&#34;&gt;QtARMSim&lt;/a&gt;&lt;/p&gt;
 
@@ -87,7 +87,7 @@ ligerita que va, e igualmente lo rapido que se apaga. Como puntos negativos dire
 que la captura del teclado nunca se hizo presente y que fue necesario
 reconfigurar el teclado en la maquina virtual (a programmer dvorak), porque
 venia en ingles; asi que todo lo ingresado estaba mal, mas al contar con un
-portapapeles (de texto) compartido se puede escribir en la magina anfitrion
+portapapeles (de texto) compartido se puede escribir en la maquina anfitrion
 e ir a pegar (con tecla de opciones(?)) en cualquier lado.&lt;/p&gt;
 
 &lt;p&gt;pero bueno, todo esto no era sobre gnome-boxes, era sobre el libro. Tras probar
