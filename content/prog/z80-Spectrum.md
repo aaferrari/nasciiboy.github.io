@@ -52,7 +52,7 @@ respeto mitificado que rodea a la palabra ASM, y en ultima instancia como
 esperaba, la comprension (aunque aun superficial) sobre *"la maquina"* ha visto
 incrementada su barra en unos cientos de puntos.
 
-El material es extenso, como para un libro, los capitusos detallados y con mucho
+El material es extenso, como para un libro, los capitulos detallados y con mucho
 codigo, siguendo un orden coherente y mas o menos progresivo. Digo esto ultimo,
 porque hay que aprender un monton de caracteristicas antes de comenzar a verlas
 en funcionamiento, y esto, como en las matematicas puede desmotivar al no ver
@@ -66,10 +66,10 @@ aclarar, que el material termina antes de construir un viedeojuego, de hecho
 finaliza justo antes de mostrar como realizar animaciones
 
 Se incluye muchas rutinas, una herramienta de ensamblado programada en C y
-compilable sin mayores dificultads que escribir `make` (de hecho incluyen un
+compilable sin mayores dificultades que escribir `make` (de hecho incluyen un
 emulador construido por el tutorialista... compilo, pero no era una opcion en
 mi maquina, se apodero del "modo grafico" (fullscreen (a dos pantallas)) y no
-tenia boton de cerrar). Tambien se recomiendan emuladores (para GNU `fuse`),
+tenia boton de cerrar). Tambien se recomiendan emuladores (para GNU, `fuse`),
 programas de dibujo y otras varias utilidades, aunque la mayoria desarrolladas
 para winbugs, ejutables (segun cuentan) con wine. Todo esto aderesado con
 ricos packs de enlaces a webs con aun mas material relacionado
@@ -111,7 +111,7 @@ rededor, luego de aprender sus bases invariablemente obliga a tomar una
 desicion, quedarse en el pais de las hadas (obesas y sudorosas) del z80 o
 cual mision treki, continuar en busca de nuevas aventuras
 
-### el vaile de hanoi
+## el vaile de hanoi
 
 > Es un ejercicio inútil que, en el mejor de los casos, te confundirá y, en el
 > peor, te dará la ilusión de que entiendes lo que está sucediendo. Los
@@ -129,7 +129,7 @@ piezas es imperativo si es que se desea reducir la ya por cuenta propia ingente
 cantidad de movimientos necesarios en la resolucion. Je, de este juego
 visualizando aquel movimento en el puzle, ademas de encontrando cierta similitud
 entre un limitado numero de registros donde se debe de copiar, mover, sumar,
-restar recorrer y realizar operaciones, surgio eso del *vaile de hanoi* (eres un
+restar, recorrer y realizar operaciones, surgio eso del *vaile de hanoi* (eres un
 heroe). La analogia debe ser mas bestia en un procesador moderno, de esos que
 realizan prediccion de instrucciones y tienen nucleos multiples
 
@@ -148,9 +148,10 @@ es decir, leer superficialmente, recoger la idea principal o conocer que existe
 "algun algo" y, ya si eso, terminada una primer visita determinar si volverias
 al lugar a aprender la lengua, comer la comida y quiza volverte un residente.
 
-El acermatiento que tome fue de leer y ejecutar todo hasta el capitulo 10
-(aprox). Desde ese punto solo capturar la escencia, sin considerar las
-truculencias del codigo, pero aun ejecutando los binarios para ver sus resultados.
+El acercamiento que tome con el material, fue de leer y ejecutar todo hasta el
+capitulo 10 (aprox). Desde ese punto solo capturar la escencia, sin considerar
+las truculencias del codigo, pero aun ejecutando los binarios para ver sus
+resultados.
 
 Lejos de lo que creai, el ensamblador proporciona muchas facilidades, como
 insertar distintos tipos de datos, en distintos formatos (incluidas cadenas de
@@ -165,11 +166,11 @@ a lo que se dedique una seccion explicita, solo algunas menciones poco
 profundas. Aun asi, si se tienen estas limitaciones en mente, supongo que no
 debe ser muy dificil adaptarse.
 
-Quiza lo mas dificultoso de utilizar en asm del spectrum, es no tener una
+Quiza lo mas dificultoso de utilizar el asm del spectrum, es no tener una
 referencia sencilla con respecto a la posicion de ejecucion del codigo y el
 estado global de lo que ocurre en el procesador, ademas de verificar el tiempo
 global antes de las interrupciones, por ejemplo, conocer en que direccion esta
-leyendo la pantalla la dibujando la ULA. (Encuentro comodo eliminar la necesidad
+leyendo la pantalla de dibujando la ULA. (Encuentro comodo eliminar la necesidad
 de timers, y esperar la interrupcion de dibujado)
 
 Lo otro dificultoso, tiene que ver en como se organiza la memoria de dibujo, que
@@ -185,7 +186,7 @@ espacio y lo que hace es ejecutar BASIC. Si, cuenta con codigo reutilizable (no
 portable) mas preferiria montareme un ejercito de rutinas por separado antes que
 utilizar las que provee el aparato (varia de una version a otra del
 Spectrum). Entiendo la necesidad en su tiempo de incorporarla (aunque podria
-haber venido en un carchucho (cinta)) pero tenerla permanentemente, es como tener un
+haber venido en un cartucho (cinta)) pero tenerla permanentemente, es como tener un
 pixel muerto en la pantalla y verlo siempre.
 
 Salvando esos inconvenientes, la falta de un visor global de los estados del
@@ -204,7 +205,7 @@ y registros varios de 16 y 32 bits, casi todos ortogonales... y por pedir a
 
 ## cobaya
 
-la ultima modificacion al documento segun el sitio acurrio en 11-12-2010. Como
+la ultima modificacion al documento segun el sitio ocurrio en 11-12-2010. Como
 este sitio (ni ningun otro) tiene asegurada su permanencia en la red, y por
 que prefiero leer tochos monopagina en lugar de secciones, respalde el manual,
 lo puse en una sola pagina, cambie el estilo a un color negro y de paso aplique
