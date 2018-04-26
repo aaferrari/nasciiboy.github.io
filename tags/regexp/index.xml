@@ -180,7 +180,7 @@ syntaxis completa &lt;code&gt;[[:clase:]]&lt;/code&gt;) se permiten las clases&l
 
 &lt;li&gt;&lt;p&gt;(deacuerdo al modo) un caracter que forme palabras &lt;code&gt;\w&lt;/code&gt; o &lt;code&gt;\sw&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;(deacuerdo al modo) un carac,ter que no forme palabras &lt;code&gt;\w&lt;/code&gt; o &lt;code&gt;\Sw&lt;/code&gt; o &lt;code&gt;\sW&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(deacuerdo al modo) un carac,ter que no forme palabras &lt;code&gt;\W&lt;/code&gt; o &lt;code&gt;\Sw&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;espacios &lt;code&gt;\s-&lt;/code&gt; o &lt;code&gt;\s&lt;/code&gt; (&amp;rdquo;&lt;code&gt;\s&lt;/code&gt;&amp;rdquo;)&lt;/p&gt;&lt;/li&gt;
 
@@ -211,6 +211,8 @@ syntaxis completa &lt;code&gt;[[:clase:]]&lt;/code&gt;) se permiten las clases&l
 &lt;li&gt;&lt;p&gt;&lt;code&gt;C-M-s&lt;/code&gt; (isearch-forward-regexp)  busqueda de regexp de forma interactiva hacia adelante&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;code&gt;C-M-r&lt;/code&gt; (isearch-backward-regexp) busqueda de regexp de forma interactiva hacia atras&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;M-s o&lt;/code&gt; (occur) listado interactivo de lineas que coinciden con la regexp&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;(replace-string) substitucion de texto&lt;/p&gt;&lt;/li&gt;
 
