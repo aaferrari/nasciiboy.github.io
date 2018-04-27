@@ -14,7 +14,7 @@ interesante sobre la arquitectura de computadoras.
 
 El libro centra su atencion en la arquitectura ARM de 32 bits desplegando
 ejemplos en ensamblador (instrucciones Thumb Cortex-M0 estilo GNU) y luego
-aplicando (mas o menos) practicaticamete los conocimentos sobre la placa
+aplicando (mas o menos) practicamete los conocimentos sobre la placa
 [Arduino Due](https://www.arduino.cc/en/Guide/ArduinoDue) [ATSAM3X8E]... para
 encender y apagar un led! (esto es si es un "hello word" bien rudo!)
 
@@ -33,7 +33,7 @@ todo c-o-l-o-r.
 y bueno, el libro, codigo y herramientas necesarias para su estudio se
 encuentran en la siguiente direccion (oficial): http://lorca.act.uji.es/libro/introARM/
 
-para que la programacion en asm no qude como un ejercicio autista donde
+para que la programacion en asm no quede como un ejercicio autista donde
 tenemos que imaginar que esta pasando, se propone utilizar una interfaz grafica
 de un emulador de arm (`spim`) llamada [QtARMSim](http://lorca.act.uji.es/project/qtarmsim/)
 
@@ -73,7 +73,7 @@ ligerita que va, e igualmente lo rapido que se apaga. Como puntos negativos dire
 que la captura del teclado nunca se hizo presente y que fue necesario
 reconfigurar el teclado en la maquina virtual (a programmer dvorak), porque
 venia en ingles; asi que todo lo ingresado estaba mal, mas al contar con un
-portapapeles (de texto) compartido se puede escribir en la magina anfitrion
+portapapeles (de texto) compartido se puede escribir en la maquina anfitrion
 e ir a pegar (con tecla de opciones(?)) en cualquier lado.
 
 pero bueno, todo esto no era sobre gnome-boxes, era sobre el libro. Tras probar

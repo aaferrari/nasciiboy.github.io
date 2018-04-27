@@ -151,7 +151,7 @@ ha, no es lo mas fino, pero para el caso cumple
   - <code>\\`</code> coincidencia al inicio del buffer
 - fin o inicio de palabra `\b`
 - (deacuerdo al modo) un caracter que forme palabras `\w` o `\sw`
-- (deacuerdo al modo) un carac,ter que no forme palabras `\w` o `\Sw` o `\sW`
+- (deacuerdo al modo) un carac,ter que no forme palabras `\W` o `\Sw`
 - espacios `\s-` o `\s ` ("`\s `")
 - symbolos `\s_`
 - delimitador de apertura `\s(`
@@ -171,6 +171,8 @@ ha, no es lo mas fino, pero para el caso cumple
 - (search-backward-regexp) busqueda de regexp hacia atras
 - `C-M-s` (isearch-forward-regexp)  busqueda de regexp de forma interactiva hacia adelante
 - `C-M-r` (isearch-backward-regexp) busqueda de regexp de forma interactiva hacia atras
+
+- `M-s o` (occur) listado interactivo de lineas que coinciden con la regexp
 
 - (replace-string) substitucion de texto
 - (replace-regexp) substitucion de regexp
