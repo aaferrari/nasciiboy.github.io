@@ -7,10 +7,205 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Sun, 08 Apr 2018 11:50:44 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 26 Apr 2018 16:07:39 -0500</lastBuildDate>
     
         <atom:link href="https://nasciiboy.github.io/emacs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>pwds</title>
+      <link>https://nasciiboy.github.io/emacs/pwds/</link>
+      <pubDate>Thu, 26 Apr 2018 16:07:39 -0500</pubDate>
+      
+      <guid>https://nasciiboy.github.io/emacs/pwds/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kn1u1lt5t0dz.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Por lo habitual, mi uso de Emacs va emparejado con una terminal y auxiliado por
+el navegador de ficheros (y firefox). Asi que lo mas conveniente seria poder
+sincronizar las rutas de trabajo entre Emacs, Tilix (terminal) y
+Nautilus (navegador grafico de ficheros) sin tener que escribir cada vez la ruta
+entera, o andar pinchando con el raton en botones visuales&lt;/p&gt;
+
+&lt;p&gt;la solucion (quitando el glamour de la frace &amp;ldquo;sincronizar las rutas de
+trabajo de &amp;hellip;&amp;ldquo;) consiste simplemente en copiar la ruta actual de cada programa
+al portapapeles&lt;/p&gt;
+
+&lt;h2 id=&#34;tilix&#34;&gt;tilix&lt;/h2&gt;
+
+&lt;p&gt;la eleccion de este emulador de terminal (ademas de por su gnomero estilo y su
+personalizacion de atajos profunda) se encuentra fundamentada en incorporar
+marcadores de fabrica. Sin embargo, optener la ruta actual y copiarla
+directamente al portapapeles no es una de sus caracteristicas&amp;hellip; y por ello
+la solucion puede aplicarse a cualquier emulador de terminal.&lt;/p&gt;
+
+&lt;p&gt;para saldar la limitacion usaremos el programa &lt;code&gt;xclip&lt;/code&gt; (buscar
+en el repositorio de su distribucion), en conjuncion con &lt;code&gt;pwd&lt;/code&gt; y &lt;code&gt;tr&lt;/code&gt; (para
+eliminar el salto de linea producido por &lt;code&gt;pwd&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pwd | tr -d &#39;\n&#39; | xclip -sel clip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el comando se explica por si mismo&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;otro comando que tambien suelo utilizar habitualmente para &amp;ldquo;ajustar&amp;rdquo; las fechas
+en los post de este blog:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;date --iso-8601=seconds | tr -d &#39;\n&#39; | xclip -sel clip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si bien, el recordar estos comandos a primera vista parece (y lo es) una meta
+imposible, ya que utilizo &lt;code&gt;fish&lt;/code&gt; como interprete y como este se encuentra en
+modo historial permanentemente, solo tengo que ingresar o &lt;code&gt;pwd&lt;/code&gt; o &lt;code&gt;data&lt;/code&gt; y el
+solito se encarga de completar el comando. De esa forma evito crear un script
+especifico para copiar cosas entre el terminal y el resto del entorno grafico&lt;/p&gt;
+
+&lt;h2 id=&#34;nautilus&#34;&gt;nautilus&lt;/h2&gt;
+
+&lt;p&gt;pues nada, aunque tiene sus marcadores, si se presiona la combinacion &lt;code&gt;C-l&lt;/code&gt; nos
+muestra y selecciona la ruta actual&amp;hellip; Copiar, modificar o pegar!&lt;/p&gt;
+
+&lt;h2 id=&#34;emacs&#34;&gt;Emacs&lt;/h2&gt;
+
+&lt;p&gt;los marcadores en emacs, ademas de diferenciarlo del resto de la &amp;ldquo;competencia&amp;rdquo;
+lo convierten en un asistente muy potente. La cuestion es como comunicar las
+rutas de trabajo con el portapapeles del entorno&lt;/p&gt;
+
+&lt;p&gt;La solucion mas sencilla es entrar en modo &lt;code&gt;direc&lt;/code&gt; para seleccionar y matar la
+ruta actual, y como la ultima entrada en el anillo de la muerte tiene
+comunicacion directa con el cortapapeles, tendriamos resuelto el
+problema&amp;hellip; pero, ya que emacs se puede adaptar a nuestras necesidades,
+extendamos su funcionalidad para que copie directamente en el clipboard tanto la ruta
+de trabajo, como la ruta del buffer actual&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(defun pwd-to-kill-ring ()
+  &amp;quot;Agrega la ruta actual al kill-ring.&amp;quot;
+  (interactive)
+  (kill-new default-directory))
+
+(defun buffer-path-to-kill-ring ()
+  &amp;quot;Agrega la ruta del buffer actual al kill-ring.&amp;quot;
+  (interactive)
+  (if (buffer-file-name)
+      (kill-new (buffer-file-name))
+    (message &amp;quot;El buffer actual no esta ligado a un fichero&amp;quot;)))
+
+(global-set-key &amp;quot;\C-cp&amp;quot; &#39;pwd-to-kill-ring)
+(global-set-key &amp;quot;\C-cf&amp;quot; &#39;buffer-path-to-kill-ring)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;listo! con unas modificaciones minusculas tenemos nuevas funcionalidades y
+atajos vinculados a estas. &lt;code&gt;C-c p&lt;/code&gt; para optener el &lt;code&gt;pwd&lt;/code&gt; y &lt;code&gt;C-c f&lt;/code&gt; (si el
+buffer actual esta vinculado a un fichero) para optener la ruta absoluta a la
+fuente del buffer, o en su defecto un amigable mensaje &lt;em&gt;&amp;ldquo;El buffer actual no esta ligado a un fichero&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;(mencionar que emacs posee el comando &lt;code&gt;cd&lt;/code&gt; con el que podemos modificar
+manualmente el pwd al que apunta, como tambien un comando nativo
+&lt;code&gt;pwd&lt;/code&gt;. Este &lt;em&gt;pwd&lt;/em&gt; cambia automagicamente segun el buffer en el que estemos)&lt;/p&gt;
+
+&lt;h3 id=&#34;ido-mode&#34;&gt;ido-mode&lt;/h3&gt;
+
+&lt;p&gt;como el shell &lt;code&gt;fish&lt;/code&gt; tiene un sistema de autocompletado de rutas automagico (fusionado con
+el historial), emacs no podia ser menos y deberia proveernos ayuda con
+el autocompletado de las rutas.&lt;/p&gt;
+
+&lt;p&gt;el modo &lt;code&gt;ido&lt;/code&gt; nos proporciona autocompletado con &amp;ldquo;busqueda difusa&amp;rdquo; de patrones y
+esta disponible para la busqueda de ficheros, directorios y buffers&lt;/p&gt;
+
+&lt;p&gt;de inicio, es un poco lioso y si presionas &lt;code&gt;tap&lt;/code&gt; sin antes ver que es lo que
+hace &lt;code&gt;ido&lt;/code&gt; puedes verte creando ficheros en rutas inesperadas. Uno llega a
+cogerle el truco, pero en ultima instancia es posible desactivar sus &amp;ldquo;ayudas&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ido&lt;/code&gt; forma parte de la distribucion estandar, asi que no tenemos que instalar
+nada, solo configurarlo un poco&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(require &#39;ido)                    ; invocar a ido
+(setq ido-enable-flex-matching t) ; activar busqueda difusa
+(ido-mode t)                      ; activar ido
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;con esto (hasta donde he podido percatarme) &lt;strong&gt;ido&lt;/strong&gt; usurpara el lugar de los
+comandos vinculados a &lt;code&gt;C-x C-f&lt;/code&gt;, &lt;code&gt;C-x d&lt;/code&gt;, &lt;code&gt;C-x C-d&lt;/code&gt;, &lt;code&gt;C-x i&lt;/code&gt;, &lt;code&gt;C-x C-w&lt;/code&gt; y &lt;code&gt;C-x b&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para utilizarlo basta con escribir &lt;code&gt;tap&lt;/code&gt; para completar automagicamente y usar
+las flechas derecha e izquierda para navegar entre las opciones.&lt;/p&gt;
+
+&lt;p&gt;No hara falta escribir el nombre preciso del siguiente elemento en la ruta, con
+escribir algunos caracteres, por ejemplo la extencion de lo que buscamos, seguramente
+sea suficente.&lt;/p&gt;
+
+&lt;p&gt;en caso de que queramos desactivar &lt;strong&gt;ido&lt;/strong&gt; y regresar temporalmente al comando
+que este suplantando, basta con presionar &lt;code&gt;C-f&lt;/code&gt;. Si con esto no es suficiente y
+se desea apagar ido pues &lt;code&gt;M-x ido-mode&lt;/code&gt;, o siendo mas radical, (mientras nos
+habituamos) podemos vincular su activacion/desactivacion a un atajo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(global-set-key (kbd &amp;quot;C-c .&amp;quot;) &#39;ido-mode)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;compile&#34;&gt;compile&lt;/h3&gt;
+
+&lt;p&gt;la mayoria de los programas que realizan algun tipo de inspeccion en un fichero,
+como pueden ser compiladores, exportadores de formatos o programas de busqueda
+de patrones, suelen lanzar resultados con el formato&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ruta-de-fichero:linea: &amp;quot;cosas&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ruta-de-fichero:linea:columna: &amp;quot;cosas&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el comando &lt;code&gt;compile&lt;/code&gt; de emacs, se aprovecha de esta convencion para permitirnos
+navegar entre los ficheros que indique nuestro programa, de una forma
+mas comoda de lo que seria buscar directamente a mano el fichero, su linea y columna.&lt;/p&gt;
+
+&lt;p&gt;cuando se invoca al comando &lt;code&gt;compile&lt;/code&gt; (&lt;code&gt;M-x compile&lt;/code&gt;) nos pedira un comando (del
+sistema) a ejecutar, este podria ser por ejemplo &lt;code&gt;gcc mis-cosas.c&lt;/code&gt;, &lt;code&gt;make&lt;/code&gt; o por
+que no, &lt;code&gt;grep&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;Para buscar todas las coincidencias en una ruta!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;M-x compile RET grep -Rn patron [ruta-opcional]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(&lt;code&gt;M-x compile RET grep -Rn package ~/nconf/emacsRocks/&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/emacs-grep.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;sorprendente!&lt;/p&gt;
+
+&lt;p&gt;para navegar, entre las coincidencias podemos cambiar entre ventanas (&lt;code&gt;C-x o&lt;/code&gt;) y dar enters en las
+lineas resaltadas, o, presionar &lt;code&gt;C-h m&lt;/code&gt; y averiguar que combinaciones trae por
+defecto &lt;code&gt;compile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;ja, ja, ja, aunque la utilidad del comando es evidente, a los peresosos emacsers les
+da mas por laborar una vez y descanzar eternamente. Por ello tenemos dos modos
+disponibles para hacer busquedas &amp;ldquo;a lo grep&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;El primero viene incorporado y se llama &lt;code&gt;occur&lt;/code&gt;, vinculado a &lt;code&gt;M-s
+o&lt;/code&gt;. El inconveniente es que las busquedas se limitan al buffer actual.&lt;/p&gt;
+
+&lt;p&gt;El segundo, basa su funcionalidad en un (nuevo) comando del sistema llamado &lt;code&gt;ag&lt;/code&gt; (&lt;a href=&#34;https://github.com/ggreer/the_silver_searcher&#34;&gt;The Silver Searcher&lt;/a&gt;)
+que es algo asi como un grep super rapido, configurado para actuar
+recursivamente por defecto&lt;/p&gt;
+
+&lt;p&gt;hay un modo para unir en armonia tanto a &lt;code&gt;compile&lt;/code&gt; como a &lt;code&gt;ag&lt;/code&gt; para ello (como
+recomiendan en su repositorio) tendriamos que clonar el fuente y agregar lo
+siguiente a nuestro init:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;;; source: git clone https://github.com/philsnow/ag.el
+(add-to-list &#39;load-path &amp;quot;~/ruta/a/carpeta/ag.el&amp;quot;)
+(require &#39;ag)
+(setq ag-highlight-search t)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para utilizar el comando: &lt;code&gt;M-x ag RET patron RET ruta&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; y eso es todo, happy hacking!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Keep Regexp</title>

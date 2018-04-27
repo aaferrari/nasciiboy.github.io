@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>pwds</title>
+    <link href="" rel="alternate" title="nba - GNU&#39;s Rock" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/emacs">emacs</a></div>
+
+  <h1>pwds</h1>
+  
+
+<p><img src="https://nasciiboy.github.io/img/kn1u1lt5t0dz.jpg" alt="" /></p>
+
+<p>Por lo habitual, mi uso de Emacs va emparejado con una terminal y auxiliado por
+el navegador de ficheros (y firefox). Asi que lo mas conveniente seria poder
+sincronizar las rutas de trabajo entre Emacs, Tilix (terminal) y
+Nautilus (navegador grafico de ficheros) sin tener que escribir cada vez la ruta
+entera, o andar pinchando con el raton en botones visuales</p>
+
+<p>la solucion (quitando el glamour de la frace &ldquo;sincronizar las rutas de
+trabajo de &hellip;&ldquo;) consiste simplemente en copiar la ruta actual de cada programa
+al portapapeles</p>
+
+<h2 id="tilix">tilix</h2>
+
+<p>la eleccion de este emulador de terminal (ademas de por su gnomero estilo y su
+personalizacion de atajos profunda) se encuentra fundamentada en incorporar
+marcadores de fabrica. Sin embargo, optener la ruta actual y copiarla
+directamente al portapapeles no es una de sus caracteristicas&hellip; y por ello
+la solucion puede aplicarse a cualquier emulador de terminal.</p>
+
+<p>para saldar la limitacion usaremos el programa <code>xclip</code> (buscar
+en el repositorio de su distribucion), en conjuncion con <code>pwd</code> y <code>tr</code> (para
+eliminar el salto de linea producido por <code>pwd</code>)</p>
+
+<pre><code>pwd | tr -d '\n' | xclip -sel clip
+</code></pre>
+
+<p>el comando se explica por si mismo&hellip;</p>
+
+<p>otro comando que tambien suelo utilizar habitualmente para &ldquo;ajustar&rdquo; las fechas
+en los post de este blog:</p>
+
+<pre><code>date --iso-8601=seconds | tr -d '\n' | xclip -sel clip
+</code></pre>
+
+<p>si bien, el recordar estos comandos a primera vista parece (y lo es) una meta
+imposible, ya que utilizo <code>fish</code> como interprete y como este se encuentra en
+modo historial permanentemente, solo tengo que ingresar o <code>pwd</code> o <code>data</code> y el
+solito se encarga de completar el comando. De esa forma evito crear un script
+especifico para copiar cosas entre el terminal y el resto del entorno grafico</p>
+
+<h2 id="nautilus">nautilus</h2>
+
+<p>pues nada, aunque tiene sus marcadores, si se presiona la combinacion <code>C-l</code> nos
+muestra y selecciona la ruta actual&hellip; Copiar, modificar o pegar!</p>
+
+<h2 id="emacs">Emacs</h2>
+
+<p>los marcadores en emacs, ademas de diferenciarlo del resto de la &ldquo;competencia&rdquo;
+lo convierten en un asistente muy potente. La cuestion es como comunicar las
+rutas de trabajo con el portapapeles del entorno</p>
+
+<p>La solucion mas sencilla es entrar en modo <code>direc</code> para seleccionar y matar la
+ruta actual, y como la ultima entrada en el anillo de la muerte tiene
+comunicacion directa con el cortapapeles, tendriamos resuelto el
+problema&hellip; pero, ya que emacs se puede adaptar a nuestras necesidades,
+extendamos su funcionalidad para que copie directamente en el clipboard tanto la ruta
+de trabajo, como la ruta del buffer actual</p>
+
+<pre><code>(defun pwd-to-kill-ring ()
+  &quot;Agrega la ruta actual al kill-ring.&quot;
+  (interactive)
+  (kill-new default-directory))
+
+(defun buffer-path-to-kill-ring ()
+  &quot;Agrega la ruta del buffer actual al kill-ring.&quot;
+  (interactive)
+  (if (buffer-file-name)
+      (kill-new (buffer-file-name))
+    (message &quot;El buffer actual no esta ligado a un fichero&quot;)))
+
+(global-set-key &quot;\C-cp&quot; 'pwd-to-kill-ring)
+(global-set-key &quot;\C-cf&quot; 'buffer-path-to-kill-ring)
+</code></pre>
+
+<p>listo! con unas modificaciones minusculas tenemos nuevas funcionalidades y
+atajos vinculados a estas. <code>C-c p</code> para optener el <code>pwd</code> y <code>C-c f</code> (si el
+buffer actual esta vinculado a un fichero) para optener la ruta absoluta a la
+fuente del buffer, o en su defecto un amigable mensaje <em>&ldquo;El buffer actual no esta ligado a un fichero&rdquo;</em></p>
+
+<p>(mencionar que emacs posee el comando <code>cd</code> con el que podemos modificar
+manualmente el pwd al que apunta, como tambien un comando nativo
+<code>pwd</code>. Este <em>pwd</em> cambia automagicamente segun el buffer en el que estemos)</p>
+
+<h3 id="ido-mode">ido-mode</h3>
+
+<p>como el shell <code>fish</code> tiene un sistema de autocompletado de rutas automagico (fusionado con
+el historial), emacs no podia ser menos y deberia proveernos ayuda con
+el autocompletado de las rutas.</p>
+
+<p>el modo <code>ido</code> nos proporciona autocompletado con &ldquo;busqueda difusa&rdquo; de patrones y
+esta disponible para la busqueda de ficheros, directorios y buffers</p>
+
+<p>de inicio, es un poco lioso y si presionas <code>tap</code> sin antes ver que es lo que
+hace <code>ido</code> puedes verte creando ficheros en rutas inesperadas. Uno llega a
+cogerle el truco, pero en ultima instancia es posible desactivar sus &ldquo;ayudas&rdquo;</p>
+
+<p><code>ido</code> forma parte de la distribucion estandar, asi que no tenemos que instalar
+nada, solo configurarlo un poco</p>
+
+<pre><code>(require 'ido)                    ; invocar a ido
+(setq ido-enable-flex-matching t) ; activar busqueda difusa
+(ido-mode t)                      ; activar ido
+</code></pre>
+
+<p>con esto (hasta donde he podido percatarme) <strong>ido</strong> usurpara el lugar de los
+comandos vinculados a <code>C-x C-f</code>, <code>C-x d</code>, <code>C-x C-d</code>, <code>C-x i</code>, <code>C-x C-w</code> y <code>C-x b</code>.</p>
+
+<p>Para utilizarlo basta con escribir <code>tap</code> para completar automagicamente y usar
+las flechas derecha e izquierda para navegar entre las opciones.</p>
+
+<p>No hara falta escribir el nombre preciso del siguiente elemento en la ruta, con
+escribir algunos caracteres, por ejemplo la extencion de lo que buscamos, seguramente
+sea suficente.</p>
+
+<p>en caso de que queramos desactivar <strong>ido</strong> y regresar temporalmente al comando
+que este suplantando, basta con presionar <code>C-f</code>. Si con esto no es suficiente y
+se desea apagar ido pues <code>M-x ido-mode</code>, o siendo mas radical, (mientras nos
+habituamos) podemos vincular su activacion/desactivacion a un atajo</p>
+
+<pre><code>(global-set-key (kbd &quot;C-c .&quot;) 'ido-mode)
+</code></pre>
+
+<h3 id="compile">compile</h3>
+
+<p>la mayoria de los programas que realizan algun tipo de inspeccion en un fichero,
+como pueden ser compiladores, exportadores de formatos o programas de busqueda
+de patrones, suelen lanzar resultados con el formato</p>
+
+<pre><code>ruta-de-fichero:linea: &quot;cosas&quot;
+</code></pre>
+
+<p>o</p>
+
+<pre><code>ruta-de-fichero:linea:columna: &quot;cosas&quot;
+</code></pre>
+
+<p>el comando <code>compile</code> de emacs, se aprovecha de esta convencion para permitirnos
+navegar entre los ficheros que indique nuestro programa, de una forma
+mas comoda de lo que seria buscar directamente a mano el fichero, su linea y columna.</p>
+
+<p>cuando se invoca al comando <code>compile</code> (<code>M-x compile</code>) nos pedira un comando (del
+sistema) a ejecutar, este podria ser por ejemplo <code>gcc mis-cosas.c</code>, <code>make</code> o por
+que no, <code>grep</code>!</p>
+
+<p>Para buscar todas las coincidencias en una ruta!</p>
+
+<pre><code>M-x compile RET grep -Rn patron [ruta-opcional]
+</code></pre>
+
+<p>(<code>M-x compile RET grep -Rn package ~/nconf/emacsRocks/</code>)</p>
+
+<p><img src="https://nasciiboy.github.io/img/emacs-grep.png" alt="" /></p>
+
+<p>sorprendente!</p>
+
+<p>para navegar, entre las coincidencias podemos cambiar entre ventanas (<code>C-x o</code>) y dar enters en las
+lineas resaltadas, o, presionar <code>C-h m</code> y averiguar que combinaciones trae por
+defecto <code>compile</code>.</p>
+
+<p>ja, ja, ja, aunque la utilidad del comando es evidente, a los peresosos emacsers les
+da mas por laborar una vez y descanzar eternamente. Por ello tenemos dos modos
+disponibles para hacer busquedas &ldquo;a lo grep&rdquo;.</p>
+
+<p>El primero viene incorporado y se llama <code>occur</code>, vinculado a <code>M-s
+o</code>. El inconveniente es que las busquedas se limitan al buffer actual.</p>
+
+<p>El segundo, basa su funcionalidad en un (nuevo) comando del sistema llamado <code>ag</code> (<a href="https://github.com/ggreer/the_silver_searcher">The Silver Searcher</a>)
+que es algo asi como un grep super rapido, configurado para actuar
+recursivamente por defecto</p>
+
+<p>hay un modo para unir en armonia tanto a <code>compile</code> como a <code>ag</code> para ello (como
+recomiendan en su repositorio) tendriamos que clonar el fuente y agregar lo
+siguiente a nuestro init:</p>
+
+<pre><code>;; source: git clone https://github.com/philsnow/ag.el
+(add-to-list 'load-path &quot;~/ruta/a/carpeta/ag.el&quot;)
+(require 'ag)
+(setq ag-highlight-search t)
+</code></pre>
+
+<p>para utilizar el comando: <code>M-x ag RET patron RET ruta</code></p>
+
+<p>&hellip; y eso es todo, happy hacking!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.github.io/emacs/keep-regexp/">◀ Keep Regexp</a>
+    
+    
+  </div>
+
+  <div class="clear" class="center">
+  <h2>Comments</h2>
+  </div>
+
+  <form method="POST" class="dark-matter" action="https://api.staticman.net/v2/entry/nasciiboy/nasciiboy.github.io/source/comments">
+  <input type="hidden" name="options[redirect]" value="https://nasciiboy.github.io/emacs/pwds/#comment-submitted">
+  <input type="hidden" name="options[entryId]" value="84febf22417f64e64ff0e009885ef9d5">
+
+  <h1>Comment Form
+    <span>Este formulario envia un pull request al repositorio donde se almacena
+    el blog, uselo con sabiduria. La inclusion de comentarios es totalmente
+    arbitaria y puede modificarse, ignorarse o desaparecer en el
+    futuro... la habilidad de anidar comentarios no esta disponible</span>
+  </h1>
+  <label>
+    <span>Your Name :</span>
+    <input name="fields[name]" type="text" placeholder="Your name"/>
+  </label>
+
+  <label>
+    <span>Your Email :</span>
+    <input name="fields[email]" type="email" placeholder="Your email address"/>
+  </label>
+
+  <label>
+    <span>Message :</span>
+    <textarea name="fields[body]" placeholder="aqui tu comentario (se acepta Markdown)" rows="5"></textarea>
+  </label>
+  <label>
+    <span>&nbsp;</span>
+    <input type="submit" value="Submit" class="submit"></input>
+  </label>
+</form>
+
+    
+  
+  
+
+  
+    
+  
+
+  
+    <p>the beautiful is blue... and black</p>
+  
+
+
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/emacs">emacs</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/categories/prog">prog(48)</a></li><li><a href="https://nasciiboy.github.io/categories/post">post(32)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(14)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/tags/fonos">fonos(20)</a></li><li><a href="https://nasciiboy.github.io/tags/howto">howto(19)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(18)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(14)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(5)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(2)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.github.io/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elisp">elisp(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/hardware">hardware(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
