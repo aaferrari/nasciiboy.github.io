@@ -72,7 +72,7 @@ muestra y selecciona la ruta actual&amp;hellip; Copiar, modificar o pegar!&lt;/p
 lo convierten en un asistente muy potente. La cuestion es como comunicar las
 rutas de trabajo con el portapapeles del entorno&lt;/p&gt;
 
-&lt;p&gt;La solucion mas sencilla es entrar en modo &lt;code&gt;direc&lt;/code&gt; para seleccionar y matar la
+&lt;p&gt;La solucion mas sencilla es entrar en modo &lt;code&gt;dired&lt;/code&gt; para seleccionar y matar la
 ruta actual, y como la ultima entrada en el anillo de la muerte tiene
 comunicacion directa con el cortapapeles, tendriamos resuelto el
 problema&amp;hellip; pero, ya que emacs se puede adaptar a nuestras necesidades,
