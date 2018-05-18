@@ -178,7 +178,7 @@ syntaxis completa &lt;code&gt;[[:clase:]]&lt;/code&gt;) se permiten las clases&l
 
 &lt;li&gt;&lt;p&gt;fin o inicio de palabra &lt;code&gt;\b&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;(deacuerdo al modo) un caracter que forme palabras &lt;code&gt;\w&lt;/code&gt; o &lt;code&gt;\sw&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(deacuerdo al modo) un caracter que forme palabras &lt;code&gt;\w&lt;/code&gt; o &lt;code&gt;\sW&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;(deacuerdo al modo) un carac,ter que no forme palabras &lt;code&gt;\W&lt;/code&gt; o &lt;code&gt;\Sw&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 
