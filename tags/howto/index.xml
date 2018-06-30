@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Howto on nba - GNU&#39;s Rock</title>
-    <link>https://nasciiboy.github.io/tags/howto/</link>
-    <description>Recent content in Howto on nba - GNU&#39;s Rock</description>
+    <title>Howto on ⋲ᴹ∧cₛ ℜø∁κ§</title>
+    <link>https://nasciiboy.land/tags/howto/</link>
+    <description>Recent content in Howto on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Fri, 13 Apr 2018 14:26:21 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.github.io/tags/howto/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.land/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>LineageOS, Feeds &amp; Feel</title>
-      <link>https://nasciiboy.github.io/prog/m8-ii/</link>
+      <link>https://nasciiboy.land/prog/m8-ii/</link>
       <pubDate>Fri, 13 Apr 2018 14:26:21 -0500</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/m8-ii/</guid>
+      <guid>https://nasciiboy.land/prog/m8-ii/</guid>
       <description>
 
 &lt;p&gt;Luego del primer &lt;a href=&#34;../m8&#34;&gt;flasheo al m8&lt;/a&gt; probe un poco las &amp;ldquo;apps&amp;rdquo; de yutu que
@@ -39,7 +39,7 @@ nada que no sea consumir pasivamente y ver porno.&lt;/p&gt;
 &lt;p&gt;y asi hubiera seguido con el movil hasta el fin de los tiempos, hasta que una
 &amp;ldquo;broma&amp;rdquo; de parte del equipo de lineageOS hizo aparecer un mensaje perturbador&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/coin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/coin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;que? (me pregunte) la pagina del porno no se conforma con minar criptocurrencias
 cuando veo un video, ahora a colado un bicho en el sistema? (ha, ha, ha, que
@@ -99,7 +99,7 @@ hippiosos caer por completo en las garras de alphabet? puaghh&lt;/p&gt;
 &lt;p&gt;solo debemos ir a &lt;a href=&#34;https://www.youtube.com/subscription_manager&#34;&gt;https://www.youtube.com/subscription_manager&lt;/a&gt;, seguir hasta el fondo de
 la pagina y darle a &lt;strong&gt;Exportar Subcripciones&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;https://nasciiboy.github.io/media/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
+&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;https://nasciiboy.land/media/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
 (le he cambiado la extencion, agregando &lt;code&gt;.xml&lt;/code&gt; al final).&lt;/p&gt;
 
 &lt;p&gt;A continuacion un desglose. La clasificacion es dificil de encajar para varios
@@ -326,7 +326,7 @@ siguiente conjunto de pasos en elisp, ir al fichero &lt;code&gt;subs.html&lt;/co
 &lt;p&gt;me gustaria decir que eso seria todo, pero no, unicamente conseguiremos los
 feeds en texto plano. Luego hay que convertirlos a un formato xml especial y
 darle la extencion &lt;code&gt;.opml&lt;/code&gt;, esta tarea es un ejercicio para el lector. Se puede
-tomar como referencia este (mi) listado &lt;a href=&#34;https://nasciiboy.github.io/media/data/antennapod-feeds.opml&#34;&gt;antennapod-feeds.opml&lt;/a&gt;
+tomar como referencia este (mi) listado &lt;a href=&#34;https://nasciiboy.land/media/data/antennapod-feeds.opml&#34;&gt;antennapod-feeds.opml&lt;/a&gt;
 (ya pasado por antennapod, y cambiando los feeds ivoox por las direcciones fuente
 cuando fue posible)&lt;/p&gt;
 
@@ -464,10 +464,10 @@ equipos profecionales, por uno, dos o cien programas&lt;/p&gt;
     
     <item>
       <title>CAT</title>
-      <link>https://nasciiboy.github.io/prog/cat/</link>
+      <link>https://nasciiboy.land/prog/cat/</link>
       <pubDate>Fri, 23 Mar 2018 21:41:50 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/cat/</guid>
+      <guid>https://nasciiboy.land/prog/cat/</guid>
       <description>&lt;p&gt;Hace tiempo, mucho tiempo, cuando iniciaba mis aventuras con C, tenia la urgente
 necesidad de ingresar un &amp;ldquo;grafico&amp;rdquo; dentro de un arreglo de caracteres, el asunto
 es que dicho grafico contenia por supuesto algunos caracteres &amp;ldquo;especiales&amp;rdquo; para
@@ -482,7 +482,7 @@ personaje de dudosas habilidades.&lt;/p&gt;
 &lt;p&gt;Asi pues, no recuerdo muy bien como, llegue a la siguiente solucion, que radica
 en &amp;ldquo;romper&amp;rdquo; las macros del preprocesador de C.&lt;/p&gt;
 
-&lt;p&gt;cortar y pegar en un fichero (digamos &lt;code&gt;CAT.c&lt;/code&gt;) o cliclar &lt;a href=&#34;https://nasciiboy.github.io/data/CAT.c&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;cortar y pegar en un fichero (digamos &lt;code&gt;CAT.c&lt;/code&gt;) o cliclar &lt;a href=&#34;https://nasciiboy.land/data/CAT.c&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
 #include &amp;lt;string.h&amp;gt;
@@ -549,10 +549,10 @@ printf( &amp;quot;&amp;gt;&amp;gt;%s&amp;lt;&amp;lt;\n&amp;quot;, &amp;amp;map[0
     
     <item>
       <title>AWK</title>
-      <link>https://nasciiboy.github.io/prog/awk/</link>
+      <link>https://nasciiboy.land/prog/awk/</link>
       <pubDate>Mon, 05 Mar 2018 20:37:52 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/awk/</guid>
+      <guid>https://nasciiboy.land/prog/awk/</guid>
       <description>
 
 &lt;p&gt;AWK es un lenguaje de programacion diseñado para procesar datos basados en
@@ -843,10 +843,10 @@ $ awk -f awkaster.awk
     
     <item>
       <title>Programming Howto (19-01-18)</title>
-      <link>https://nasciiboy.github.io/prog/programming-howto/</link>
+      <link>https://nasciiboy.land/prog/programming-howto/</link>
       <pubDate>Fri, 19 Jan 2018 21:58:23 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/programming-howto/</guid>
+      <guid>https://nasciiboy.land/prog/programming-howto/</guid>
       <description>
 
 &lt;p&gt;Hace tiempo que tenia intenciones de escribir mi version sobre por que la
@@ -983,7 +983,7 @@ dificultoso mejorar, incluso incurable).&lt;/p&gt;
 en ingles, buscate la vida, pero cambia los control, blockmayus (y otras teclas)
 de posicion, asi:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Es preferible que aprendas ingles (aun pendiente), mas diria que los primeros
 años del trayecto no es necesario, hay muchas cosas que requieren atencion y &lt;em&gt;los basicos&lt;/em&gt;
@@ -1098,11 +1098,11 @@ te des cuenta&amp;hellip;)&lt;/p&gt;
   trata, vuelve a leer el capitulo y asi lo tendras mas claro&lt;/p&gt;
 
 &lt;p&gt;Sobre GCC, Bash apenas necesitas lo basico en algun post lo encontraras o en
-  su defecto hojea &lt;a href=&#34;https://nasciiboy.github.io/data/bash.pdf&#34;&gt;este&lt;/a&gt; para bash y &lt;a href=&#34;https://nasciiboy.github.io/data/GCC.pdf&#34;&gt;este&lt;/a&gt; otro para
+  su defecto hojea &lt;a href=&#34;https://nasciiboy.land/data/bash.pdf&#34;&gt;este&lt;/a&gt; para bash y &lt;a href=&#34;https://nasciiboy.land/data/GCC.pdf&#34;&gt;este&lt;/a&gt; otro para
   gcc, sobre los makes, je, nunca lo aprendiste&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;de Emacs, con el tutorial integrado (&lt;code&gt;Ctrl-h&lt;/code&gt; y luego &lt;code&gt;t&lt;/code&gt;), tambien y aunque
-  esta un poco retro y fuera de interne &lt;a href=&#34;https://nasciiboy.github.io/data/rpublica-emacs.zip&#34;&gt;rpublica&lt;/a&gt; o
+  esta un poco retro y fuera de interne &lt;a href=&#34;https://nasciiboy.land/data/rpublica-emacs.zip&#34;&gt;rpublica&lt;/a&gt; o
   consulta la siguiente &lt;a href=&#34;http://quijotelibre.com/recursos-gnu-emacs-y-org-mode/&#34;&gt;recopilacion&lt;/a&gt; del quijote libre&lt;/p&gt;
 
 &lt;h4 id=&#34;c-k-r-2-da-version&#34;&gt;C (K&amp;amp;R) (2^da version)&lt;/h4&gt;
@@ -1121,7 +1121,7 @@ te des cuenta&amp;hellip;)&lt;/p&gt;
   momento, esto te ayudara a afirmar los conocimientos.&lt;/p&gt;
 
 &lt;p&gt;Si lo que te interesa son los videojuegos, programa algo en
-  &lt;a href=&#34;https://github.com/nasciiboy/NCURSES-Programming-HOWTO&#34;&gt;ncurses&lt;/a&gt; (&lt;a href=&#34;http://nasciiboy.github.io/prog/cobaya.zip&#34;&gt;tambien relacianado&lt;/a&gt;)&lt;/p&gt;
+  &lt;a href=&#34;https://github.com/nasciiboy/NCURSES-Programming-HOWTO&#34;&gt;ncurses&lt;/a&gt; (&lt;a href=&#34;http://nasciiboy.land/prog/cobaya.zip&#34;&gt;tambien relacianado&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;luego, quiza lee superficialmente el resto del libro de Deitel
   para colocar en tu cerebro de que va eso del POO (o OOP), ademas de conocer
@@ -1158,10 +1158,10 @@ aprender otra cosa&lt;/p&gt;
     
     <item>
       <title>HTC One M8 (flasheo)</title>
-      <link>https://nasciiboy.github.io/prog/m8/</link>
+      <link>https://nasciiboy.land/prog/m8/</link>
       <pubDate>Thu, 23 Nov 2017 16:26:40 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/m8/</guid>
+      <guid>https://nasciiboy.land/prog/m8/</guid>
       <description>
 
 &lt;p&gt;sucede que estas tranquilamente con tu dispositivo (un androide 4.4) que se
@@ -1285,7 +1285,7 @@ correo de &lt;em&gt;HTC-Unlockbootloader@htc.com&lt;/em&gt; con un adjunto &lt;s
 
 &lt;p&gt;se abrira en el movil la sugiente pantalla&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/step13.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/step13.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;movemos con VOLUMEN +/- hacia el Yes y confirmamos con POWER.&lt;/p&gt;
 
@@ -1296,7 +1296,7 @@ reentramos en el bootloader ahora desploqueado&lt;/p&gt;
 adb reboot bootloader
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/bootloader_screen.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bootloader_screen.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;en este punto ya tenemos el mobil listo para flashear cualquier otro sistema. Si
 desides arrepentirte puedes ingresar&lt;/p&gt;
@@ -1389,13 +1389,13 @@ hardware mas que potable)&lt;/p&gt;
     
     <item>
       <title>The Return Of F</title>
-      <link>https://nasciiboy.github.io/prog/the-return-of-f/</link>
+      <link>https://nasciiboy.land/prog/the-return-of-f/</link>
       <pubDate>Thu, 16 Nov 2017 13:24:08 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/the-return-of-f/</guid>
+      <guid>https://nasciiboy.land/prog/the-return-of-f/</guid>
       <description>
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/F.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/F.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Siguiendo esa bonita tradicion de las entradas &lt;strong&gt;&amp;ldquo;que hacer despues de instalar
 &lt;em&gt;X&lt;/em&gt;&amp;ldquo;&lt;/strong&gt;, llega el turno de hacer un:  &amp;ldquo;que hacer despues de instalar&amp;hellip; &lt;em&gt;Fedora&lt;/em&gt;&amp;hellip;&amp;rdquo;&lt;/p&gt;
@@ -1683,10 +1683,10 @@ equivalente en wayland? &lt;code&gt;startw&lt;/code&gt;, &lt;code&gt;startg&lt;/
     
     <item>
       <title>Java &amp; Me(h)</title>
-      <link>https://nasciiboy.github.io/prog/javame/</link>
+      <link>https://nasciiboy.land/prog/javame/</link>
       <pubDate>Fri, 10 Nov 2017 14:57:41 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/javame/</guid>
+      <guid>https://nasciiboy.land/prog/javame/</guid>
       <description>
 
 &lt;p&gt;Por que &lt;a href=&#34;https://picodotdev.github.io/blog-bitix/2015/05/10-razones-para-seguir-usando-java/&#34;&gt;razones&lt;/a&gt;
@@ -1728,7 +1728,7 @@ que va creciendo la complejidad de las cosas que &amp;ldquo;planeo&amp;rdquo; pr
 intuicion y sentido comun me dice que muchos de esos secretos ancestrales se
 encuentran alla afuera&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/believer.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/believer.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;o en el peor de los casos, estan cerca de ser ser promulgados, por alguien&amp;hellip;&lt;/p&gt;
 
@@ -1845,7 +1845,7 @@ descalificado, pero desde la pagina del autor pueden descargar el codigo de los
 ejemplos y el libro (en ingles) en formato html de esta 2^da edicion. Aqui el &lt;a href=&#34;http://www.mindviewinc.com/downloads/TIJ-2nd-edition.zip&#34;&gt;enlace al
 zip&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;o, y por si el enlace esta roto, bajarlo de &lt;a href=&#34;https://nasciiboy.github.io/data/TIJ-2nd-edition.zip&#34;&gt;aca&lt;/a&gt;,
+&lt;p&gt;o, y por si el enlace esta roto, bajarlo de &lt;a href=&#34;https://nasciiboy.land/data/TIJ-2nd-edition.zip&#34;&gt;aca&lt;/a&gt;,
 a esta le aplique un &lt;code&gt;dos2unix&lt;/code&gt; a todos los ficheros, para no tener que ver el
 &lt;em&gt;DOS&lt;/em&gt; en el emacs&lt;/p&gt;
 
@@ -1920,11 +1920,11 @@ multiples significados que enturbian la 🌈experiencia🌈&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>OCR</title>
-      <link>https://nasciiboy.github.io/prog/ocr/</link>
+      <link>https://nasciiboy.land/prog/ocr/</link>
       <pubDate>Thu, 09 Nov 2017 17:10:40 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/ocr/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/padesoor.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+      <guid>https://nasciiboy.land/prog/ocr/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/padesoor.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;sucede que tenia un libro que aprecio muchisimo, pero mucho mucho mucho, aunque
 no lo habia leido y lo escaneeehee para convertirlo en otra cobaya del proyecto
@@ -2024,13 +2024,13 @@ traen oceerres buenos y le quita la emocion, para esos casos basta con&lt;/p&gt;
     
     <item>
       <title>lxde shortcuts</title>
-      <link>https://nasciiboy.github.io/prog/lxde-shortcuts/</link>
+      <link>https://nasciiboy.land/prog/lxde-shortcuts/</link>
       <pubDate>Sun, 22 Oct 2017 12:36:18 -0500</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/lxde-shortcuts/</guid>
+      <guid>https://nasciiboy.land/prog/lxde-shortcuts/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/clouds_battle_by_arsenixc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A Gnome ♥ lo que pida! Mas, si el equipo es incapas de cumplir sus exigencias
 para una experiencia completa (contar con un procesador con 2 nucleos,
@@ -2112,7 +2112,7 @@ aparecer en un orden concreto. En su wiki tenemos una lista de &lt;a href=&#34;h
 disponibles&lt;/a&gt; y tambien nombes de (algunos)
 &amp;ldquo;&lt;a href=&#34;http://openbox.org/wiki/Help:Bindings&#34;&gt;eventos&lt;/a&gt;&amp;rdquo; del raton y teclado&lt;/p&gt;
 
-&lt;p&gt;de momento mi fichero de configuracion es &lt;a href=&#34;https://nasciiboy.github.io/data/lxde-rc.xml&#34;&gt;este&lt;/a&gt;, aqui los
+&lt;p&gt;de momento mi fichero de configuracion es &lt;a href=&#34;https://nasciiboy.land/data/lxde-rc.xml&#34;&gt;este&lt;/a&gt;, aqui los
 aspectos mas revelantes&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  &amp;lt;desktops&amp;gt;
@@ -2309,13 +2309,13 @@ aun no descubro como se realiza apropiadamente, Sayonara!&lt;/p&gt;
     
     <item>
       <title>The X86 Strikes Back</title>
-      <link>https://nasciiboy.github.io/prog/the-x86-strikes-back/</link>
+      <link>https://nasciiboy.land/prog/the-x86-strikes-back/</link>
       <pubDate>Sat, 14 Oct 2017 12:38:00 -0500</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/the-x86-strikes-back/</guid>
+      <guid>https://nasciiboy.land/prog/the-x86-strikes-back/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kool.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/kool.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;bueno, la imagen es mas de 8bits que por ahora son los equipos
 retro-nostalgicos de moda, ya le llegara su momento a x86.&lt;/p&gt;
@@ -2643,10 +2643,10 @@ pedir nada para la wifi!&lt;/p&gt;
     
     <item>
       <title>Emacs, configuracion de verano</title>
-      <link>https://nasciiboy.github.io/emacs/v-config/</link>
+      <link>https://nasciiboy.land/emacs/v-config/</link>
       <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
       
-      <guid>https://nasciiboy.github.io/emacs/v-config/</guid>
+      <guid>https://nasciiboy.land/emacs/v-config/</guid>
       <description>
 
 &lt;p&gt;todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs
@@ -2668,19 +2668,19 @@ a la brava y sin tener ni idea de como&lt;/p&gt;
 
 &lt;p&gt;por lo tanto si quieres replicar mi configuracion&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/morg-verano.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/morg-verano.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;por ejemplo para programar en go, c, tener un lector de rss, o iniciar en emacs
 con el tema &lt;em&gt;nascii&lt;/em&gt;, primero instala emacs, y luego crea una carpeta en tu
 &lt;code&gt;home&lt;/code&gt; con&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://nasciiboy.github.io/data/init-dot-el.zip
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://nasciiboy.land/data/init-dot-el.zip
 unzip init-dot-el.zip -d ~/.emacs.d
 rm init-dot-el.zip
 emacs
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://nasciiboy.github.io/data/init-dot-el.zip&#34;&gt;el comprimido&lt;/a&gt; con forma de zip, almacena dos ficheros:
+&lt;p&gt;&lt;a href=&#34;https://nasciiboy.land/data/init-dot-el.zip&#34;&gt;el comprimido&lt;/a&gt; con forma de zip, almacena dos ficheros:
 &lt;code&gt;init.el&lt;/code&gt;, que es donde se coloca toda configuracion de emacs y pondre a
 continuacion casi tal cual y &lt;code&gt;nascii-theme.el&lt;/code&gt; mi &lt;em&gt;tema&lt;/em&gt; de colores personal,
 baraje el subirlo a melpa para que tambien forme parte de la instalacion magica,
@@ -3023,7 +3023,7 @@ rutas correspondientes&lt;/p&gt;
         &amp;quot;http://maslinux.es/feed/&amp;quot;
         &amp;quot;http://mhyst.es/blogs/index.php?tempskin=_rss2&amp;quot;
         &amp;quot;http://misnotaslinux.blogspot.com/feeds/posts/default&amp;quot;
-        &amp;quot;http://nasciiboy.github.io/index.xml&amp;quot;
+        &amp;quot;http://nasciiboy.land/index.xml&amp;quot;
         &amp;quot;http://nosturi.es/feed/&amp;quot;
         &amp;quot;http://papermint-designs.com/roor/rss.xml&amp;quot;
         &amp;quot;http://parceladigital.com/feed/&amp;quot;
@@ -3180,10 +3180,10 @@ rutas correspondientes&lt;/p&gt;
     
     <item>
       <title>PPSSPP</title>
-      <link>https://nasciiboy.github.io/vg/ppsspp/</link>
+      <link>https://nasciiboy.land/vg/ppsspp/</link>
       <pubDate>Tue, 02 May 2017 20:02:37 -0500</pubDate>
       
-      <guid>https://nasciiboy.github.io/vg/ppsspp/</guid>
+      <guid>https://nasciiboy.land/vg/ppsspp/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../fs.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -3291,10 +3291,10 @@ nativo &lt;a href=&#34;../nxEngine/index.html&#34;&gt;nxEngine&lt;/a&gt;&lt;/p&g
     
     <item>
       <title>morg: como usar</title>
-      <link>https://nasciiboy.github.io/prog/morg-howto/</link>
+      <link>https://nasciiboy.land/prog/morg-howto/</link>
       <pubDate>Sun, 12 Mar 2017 09:33:15 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/morg-howto/</guid>
+      <guid>https://nasciiboy.land/prog/morg-howto/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../hello.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -4022,10 +4022,10 @@ alguna empresa, aver que sucede&lt;/p&gt;
     
     <item>
       <title>no mas tabs en go-mode</title>
-      <link>https://nasciiboy.github.io/emacs/notabs-for-gomode/</link>
+      <link>https://nasciiboy.land/emacs/notabs-for-gomode/</link>
       <pubDate>Sun, 12 Feb 2017 21:52:24 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/emacs/notabs-for-gomode/</guid>
+      <guid>https://nasciiboy.land/emacs/notabs-for-gomode/</guid>
       <description>&lt;p&gt;Go tiene una ridicula guia de estilo para formatear codigo que no me agrada, de
 no seguir algunas reglas el compilador/interprete simplemente se niega a hacer
 nada. Otras reglas, son menos rigurosas, como la indentacion o colocar o no
@@ -4094,10 +4094,10 @@ si seleccione todo + tab (&lt;code&gt;C-x h tab&lt;/code&gt;).&lt;/p&gt;
     
     <item>
       <title>org mode</title>
-      <link>https://nasciiboy.github.io/emacs/org-mode/</link>
+      <link>https://nasciiboy.land/emacs/org-mode/</link>
       <pubDate>Tue, 31 Jan 2017 14:40:54 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/emacs/org-mode/</guid>
+      <guid>https://nasciiboy.land/emacs/org-mode/</guid>
       <description>
 
 &lt;p&gt;&lt;code&gt;org-mode&lt;/code&gt; es un lenguaje de marcas ligeras nacido de, por, y para &lt;code
@@ -4693,10 +4693,10 @@ calidad e intento de adaptar el manual de org-mode a org-mode&lt;/p&gt;&lt;/li&g
     
     <item>
       <title>Definir atajos en Emacs</title>
-      <link>https://nasciiboy.github.io/emacs/keychords/</link>
+      <link>https://nasciiboy.land/emacs/keychords/</link>
       <pubDate>Sat, 07 Jan 2017 09:38:46 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/emacs/keychords/</guid>
+      <guid>https://nasciiboy.land/emacs/keychords/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../kara.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -4871,10 +4871,10 @@ el terminal no reconosca las teclas Super o Hyper.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>first theme</title>
-      <link>https://nasciiboy.github.io/emacs/first-theme/</link>
+      <link>https://nasciiboy.land/emacs/first-theme/</link>
       <pubDate>Wed, 28 Dec 2016 17:17:04 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/emacs/first-theme/</guid>
+      <guid>https://nasciiboy.land/emacs/first-theme/</guid>
       <description>
 
 &lt;h2 id=&#34;crear-un-tema-en-emacs&#34;&gt;Crear un Tema en Emacs&lt;/h2&gt;
@@ -5061,10 +5061,10 @@ presiona &lt;code&gt;C-c C-o&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Como dividir un album contenido en una sola pista flac</title>
-      <link>https://nasciiboy.github.io/apt/shnsplit/</link>
+      <link>https://nasciiboy.land/apt/shnsplit/</link>
       <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/apt/shnsplit/</guid>
+      <guid>https://nasciiboy.land/apt/shnsplit/</guid>
       <description>&lt;p&gt;En este mundo existen algunos seres extraños con tanto amor (libros, musica,
 series, peliculas, porno, &amp;hellip;) que no les cabe en su disco duro y tienen que
 compartirlo.&lt;/p&gt;
@@ -5110,10 +5110,10 @@ nombres &amp;ldquo;a mano&amp;rdquo; en &lt;code&gt;wdired-change-to-wdired-mode
     
     <item>
       <title>Ncurses</title>
-      <link>https://nasciiboy.github.io/prog/ncurses/</link>
+      <link>https://nasciiboy.land/prog/ncurses/</link>
       <pubDate>Mon, 19 Dec 2016 21:45:05 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/prog/ncurses/</guid>
+      <guid>https://nasciiboy.land/prog/ncurses/</guid>
       <description>
 
 &lt;h2 id=&#34;que-es-ncurses&#34;&gt;Que es Ncurses&lt;/h2&gt;

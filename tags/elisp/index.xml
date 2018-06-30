@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Elisp on nba - GNU&#39;s Rock</title>
-    <link>https://nasciiboy.github.io/tags/elisp/</link>
-    <description>Recent content in Elisp on nba - GNU&#39;s Rock</description>
+    <title>Elisp on ⋲ᴹ∧cₛ ℜø∁κ§</title>
+    <link>https://nasciiboy.land/tags/elisp/</link>
+    <description>Recent content in Elisp on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Tue, 06 Mar 2018 18:00:06 -0600</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.github.io/tags/elisp/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.land/tags/elisp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Miscelanea Emacs</title>
-      <link>https://nasciiboy.github.io/emacs/miscelanea/</link>
+      <link>https://nasciiboy.land/emacs/miscelanea/</link>
       <pubDate>Tue, 06 Mar 2018 18:00:06 -0600</pubDate>
       
-      <guid>https://nasciiboy.github.io/emacs/miscelanea/</guid>
+      <guid>https://nasciiboy.land/emacs/miscelanea/</guid>
       <description>
 
 &lt;p&gt;aqui una serie de pequeños trucos y apaños recientes&lt;/p&gt;
