@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Morg on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/morg/</link>
+    <link>https://www.nasciiboy.land/tags/morg/</link>
     <description>Recent content in Morg on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Mon, 15 Jan 2018 14:31:33 -0600</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/morg/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.nasciiboy.land/tags/morg/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>TextTable2HtmlTable (Volume Three)</title>
-      <link>https://nasciiboy.land/prog/morg-table-iii/</link>
+      <link>https://www.nasciiboy.land/prog/morg-table-iii/</link>
       <pubDate>Mon, 15 Jan 2018 14:31:33 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/morg-table-iii/</guid>
+      <guid>https://www.nasciiboy.land/prog/morg-table-iii/</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://nasciiboy.land/img/jb130510.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/jb130510.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;o-como-parsear-una-tabla-en-texto-plano-para-convertirla-en-una-tabla-html-u-otra-cosa-y-escribir-tres-post-sobre-ello-con-explicaciones-cripticas-codigo-de-ejemplo-en-golang-tercera-parte-conclucion&#34;&gt;o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) y escribir tres post sobre ello con explicaciones cripticas (+ codigo de ejemplo en Golang) – Tercera Parte &amp;ldquo;Conclucion&amp;rdquo;&lt;/h2&gt;
@@ -120,8 +120,8 @@ entrega una tabla en formato html apartir de su entrada en texto plano.&lt;/p&gt
 &lt;/tfoot&gt;
 &lt;/table&gt;
 
-&lt;p&gt;pasemos a &lt;a href=&#34;https://nasciiboy.land/data/table3.go&#34;&gt;el codigo&lt;/a&gt; (guardar-como) (las pruebas
-por &lt;a href=&#34;https://nasciiboy.land/data/table3_test.go&#34;&gt;aca&lt;/a&gt;, un &lt;code&gt;go test -v&lt;/code&gt; en una carpeta sin otro codigo go):&lt;/p&gt;
+&lt;p&gt;pasemos a &lt;a href=&#34;https://www.nasciiboy.land/data/table3.go&#34;&gt;el codigo&lt;/a&gt; (guardar-como) (las pruebas
+por &lt;a href=&#34;https://www.nasciiboy.land/data/table3_test.go&#34;&gt;aca&lt;/a&gt;, un &lt;code&gt;go test -v&lt;/code&gt; en una carpeta sin otro codigo go):&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;package katana
 
@@ -335,14 +335,14 @@ estilo&amp;hellip; un buen proyecto para alguien sin ideas&amp;hellip;&lt;/p&gt;
     
     <item>
       <title>TextTable2HtmlTable (Volume Two)</title>
-      <link>https://nasciiboy.land/prog/morg-table-ii/</link>
+      <link>https://www.nasciiboy.land/prog/morg-table-ii/</link>
       <pubDate>Wed, 10 Jan 2018 18:44:03 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/morg-table-ii/</guid>
+      <guid>https://www.nasciiboy.land/prog/morg-table-ii/</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://nasciiboy.land/img/1ef7ys9dnksz.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/1ef7ys9dnksz.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;o-como-parsear-una-tabla-en-texto-plano-para-convertirla-en-una-tabla-html-u-otra-cosa-codigo-de-ejemplo-en-golang-segunda-parte&#34;&gt;o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang) – Segunda Parte&lt;/h2&gt;
@@ -375,8 +375,8 @@ fastidio de dibujar lineas):&lt;/p&gt;
 
 &lt;p&gt;pero, por que el cambio? bueno esta nueva version (sutilmente expuesta anteriormente)
 permite evitar ambiguedades entre los delimitadores de la tabla y el contenido
-de cada &amp;ldquo;celda&amp;rdquo;, ademas &lt;a href=&#34;https://nasciiboy.land/data/table2.go&#34;&gt;el codigo&lt;/a&gt; (guardar-como) no es demaciado complejo (pruebas
-por &lt;a href=&#34;https://nasciiboy.land/data/table2_test.go&#34;&gt;aca&lt;/a&gt;, un &lt;code&gt;go test -v&lt;/code&gt; en una carpeta sin otro codigo go)&lt;/p&gt;
+de cada &amp;ldquo;celda&amp;rdquo;, ademas &lt;a href=&#34;https://www.nasciiboy.land/data/table2.go&#34;&gt;el codigo&lt;/a&gt; (guardar-como) no es demaciado complejo (pruebas
+por &lt;a href=&#34;https://www.nasciiboy.land/data/table2_test.go&#34;&gt;aca&lt;/a&gt;, un &lt;code&gt;go test -v&lt;/code&gt; en una carpeta sin otro codigo go)&lt;/p&gt;
 
 &lt;p&gt;Basicamente solo se modifica la forma de analizar la tabla. La convenienca de
 pasar los datos de entrada a una cuadricula de runas y conocer la
@@ -706,14 +706,14 @@ queda a modo de reto personal&amp;hellip;&lt;/p&gt;
     
     <item>
       <title>TextTable2HtmlTable (Volume One)</title>
-      <link>https://nasciiboy.land/prog/morg-table/</link>
+      <link>https://www.nasciiboy.land/prog/morg-table/</link>
       <pubDate>Fri, 15 Dec 2017 20:02:05 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/morg-table/</guid>
+      <guid>https://www.nasciiboy.land/prog/morg-table/</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://nasciiboy.land/img/mikoto.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/mikoto.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;o-como-parsear-una-tabla-en-texto-plano-para-convertirla-en-una-tabla-html-u-otra-cosa-codigo-de-ejemplo-en-golang&#34;&gt;o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang)&lt;/h2&gt;
@@ -887,8 +887,8 @@ fuera del paquete, lo hago para poder crear tipos locales con el mismo nombre
 pero en minuscula (asi: &lt;code&gt;var rect Rect&lt;/code&gt;).&lt;/p&gt;
 
 &lt;p&gt;mmm, todo este rollo de codigo esta dentro de dos ficheros lo que trato de
-explicar aqui esta en &lt;a href=&#34;https://nasciiboy.land/data/table.go&#34;&gt;table.go&lt;/a&gt; y aulgunas (insuficientes) pruebas en
-&lt;a href=&#34;https://nasciiboy.land/data/table_test.go&#34;&gt;table_test.go&lt;/a&gt;. Colocalas dentro de una carpeta sin otro
+explicar aqui esta en &lt;a href=&#34;https://www.nasciiboy.land/data/table.go&#34;&gt;table.go&lt;/a&gt; y aulgunas (insuficientes) pruebas en
+&lt;a href=&#34;https://www.nasciiboy.land/data/table_test.go&#34;&gt;table_test.go&lt;/a&gt;. Colocalas dentro de una carpeta sin otro
 codigo, y ejecuta con &lt;code&gt;go test&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;a partir de este momento, el codigo fuera de cualquier funcion, es parte de la
@@ -1198,10 +1198,10 @@ parseo a texto rectangular, llebaran una labor de revision fina, fina!&lt;/p&gt;
     
     <item>
       <title>Morg Mirror</title>
-      <link>https://nasciiboy.land/prog/morg-mirror/</link>
+      <link>https://www.nasciiboy.land/prog/morg-mirror/</link>
       <pubDate>Fri, 08 Dec 2017 21:52:22 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/morg-mirror/</guid>
+      <guid>https://www.nasciiboy.land/prog/morg-mirror/</guid>
       <description>&lt;blockquote&gt;
 Una buena documentación es invaluable. Ya que cada uno tiene su propia definición de &#34;bueno&#34;, aquí está la mía:
 
@@ -1308,13 +1308,13 @@ pero eso sera mas tarde&lt;/p&gt;
     
     <item>
       <title>blackfriday</title>
-      <link>https://nasciiboy.land/prog/blackfriday/</link>
+      <link>https://www.nasciiboy.land/prog/blackfriday/</link>
       <pubDate>Fri, 27 Oct 2017 17:42:32 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/blackfriday/</guid>
+      <guid>https://www.nasciiboy.land/prog/blackfriday/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bf.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/bf.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Durante la modificacion del morg, habia escrito esto junto con otras notas
 vagas en una bitocora de abordo que trata de ser FIFO, aunque si no mantengo la
@@ -1436,13 +1436,13 @@ hace bien su labor&lt;/p&gt;
     
     <item>
       <title>Que es Morg? [Redux]</title>
-      <link>https://nasciiboy.land/prog/morg-redux/</link>
+      <link>https://www.nasciiboy.land/prog/morg-redux/</link>
       <pubDate>Sun, 15 Oct 2017 14:52:46 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/morg-redux/</guid>
+      <guid>https://www.nasciiboy.land/prog/morg-redux/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/morgv020.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/morgv020.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(el cuadro superior izquierdo, es una version colareada con gimp, el resto son
 capturas reales. Lo de &lt;em&gt;redux&lt;/em&gt;, no es por ser un video que ha tirado el yutu y
@@ -2672,13 +2672,13 @@ ser un reto emocionante&lt;/p&gt;
     
     <item>
       <title>morg v0.20</title>
-      <link>https://nasciiboy.land/prog/morg-v020/</link>
+      <link>https://www.nasciiboy.land/prog/morg-v020/</link>
       <pubDate>Fri, 06 Oct 2017 17:33:57 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/morg-v020/</guid>
+      <guid>https://www.nasciiboy.land/prog/morg-v020/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/morgv020.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/morgv020.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;one-more-kiss&#34;&gt;One More Kiss&lt;/h2&gt;
 
@@ -3064,13 +3064,13 @@ como el formato supremo, he!&lt;/p&gt;
     
     <item>
       <title>Ramen VIII</title>
-      <link>https://nasciiboy.land/post/ramen-viii/</link>
+      <link>https://www.nasciiboy.land/post/ramen-viii/</link>
       <pubDate>Tue, 01 Aug 2017 21:15:24 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/post/ramen-viii/</guid>
+      <guid>https://www.nasciiboy.land/post/ramen-viii/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/weRlEMh.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/weRlEMh.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(&lt;strong&gt;Advertecia&lt;/strong&gt;, el siguiente contenido tiene mucha fallas ortograficas, algunas
 de ellas, fueron evidentes en una segunda revision, pero a su autor le hace
@@ -3290,13 +3290,13 @@ postre ligero, diria&lt;/p&gt;
     
     <item>
       <title>SICP (proyecto de traduccion)</title>
-      <link>https://nasciiboy.land/prog/dot-slash-sicp2es/</link>
+      <link>https://www.nasciiboy.land/prog/dot-slash-sicp2es/</link>
       <pubDate>Fri, 07 Jul 2017 18:27:56 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/dot-slash-sicp2es/</guid>
+      <guid>https://www.nasciiboy.land/prog/dot-slash-sicp2es/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/jelly.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/jelly.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;o en otras palabras dadme pasta! (no en galletas)&lt;/p&gt;
 
@@ -3375,9 +3375,9 @@ en &lt;a href=&#34;https://github.com/nasciiboy/sicp/&#34;&gt;este repo&lt;/a&gt
 ingles. Probe la version html con firefox y con un spin de chromium, sin
 aparente problema&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/sicp-screeshot-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/sicp-screeshot-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/sicp-screeshot-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/sicp-screeshot-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;extenso el material es, asi que probablemente contenga algunos errores&lt;/p&gt;
 
@@ -3528,11 +3528,11 @@ rendimiento del navegador de mala, muy mala manera&lt;/p&gt;
     
     <item>
       <title>morg [dia 432]</title>
-      <link>https://nasciiboy.land/prog/morg-d432/</link>
+      <link>https://www.nasciiboy.land/prog/morg-d432/</link>
       <pubDate>Tue, 04 Jul 2017 18:47:44 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/morg-d432/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/BOM.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+      <guid>https://www.nasciiboy.land/prog/morg-d432/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/BOM.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;sin un titulo interesante y sin esperar una secuencia tan armonica, confie a un
 programa informatico de internet la tarea de calcular los dias desde el primer
@@ -3608,13 +3608,13 @@ tendra su propio post&lt;/p&gt;
     
     <item>
       <title>Nirvana</title>
-      <link>https://nasciiboy.land/prog/nirvana/</link>
+      <link>https://www.nasciiboy.land/prog/nirvana/</link>
       <pubDate>Thu, 20 Apr 2017 11:54:03 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/nirvana/</guid>
+      <guid>https://www.nasciiboy.land/prog/nirvana/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/katana-0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;hu! ha!&lt;/strong&gt;, imparable el proyecto de programacion morg (nombre temporal) es (o
 no), mientras tanto y a modo de respaldo (por si en algun momento me convierto
@@ -3692,26 +3692,26 @@ perdida de tiempo&amp;hellip; veanlo como un adelanto del 🌈futuro🌈&lt;/p&g
 
 &lt;h2 id=&#34;mooo&#34;&gt;Mooo&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/katana-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;unas &lt;strong&gt;capturas&lt;/strong&gt; del invento en accion&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/katana-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/katana-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/katana-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/katana-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>yorozuya</title>
-      <link>https://nasciiboy.land/prog/yorozuya/</link>
+      <link>https://www.nasciiboy.land/prog/yorozuya/</link>
       <pubDate>Tue, 14 Mar 2017 16:33:15 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/yorozuya/</guid>
+      <guid>https://www.nasciiboy.land/prog/yorozuya/</guid>
       <description>&lt;p&gt;&lt;em&gt;Yorozuya&lt;/em&gt; en una tienda donde se toma cualquier tipo de trabajo por una
 tarifa&amp;hellip; bienvenidos los encargos!&lt;/p&gt;
 
@@ -3778,10 +3778,10 @@ sobreprecio). El proceso de adaptacion toma entre 1 o 2 semanas de tiempo ocioso
     
     <item>
       <title>morg: como usar</title>
-      <link>https://nasciiboy.land/prog/morg-howto/</link>
+      <link>https://www.nasciiboy.land/prog/morg-howto/</link>
       <pubDate>Sun, 12 Mar 2017 09:33:15 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/morg-howto/</guid>
+      <guid>https://www.nasciiboy.land/prog/morg-howto/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../hello.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -4509,10 +4509,10 @@ alguna empresa, aver que sucede&lt;/p&gt;
     
     <item>
       <title>morg</title>
-      <link>https://nasciiboy.land/prog/morg/</link>
+      <link>https://www.nasciiboy.land/prog/morg/</link>
       <pubDate>Thu, 02 Mar 2017 06:37:35 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/morg/</guid>
+      <guid>https://www.nasciiboy.land/prog/morg/</guid>
       <description>
 
 &lt;p&gt;Que tal, por fin tras un año de hacer el vago ha surgido el primer exportador

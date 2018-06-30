@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/go/</link>
+    <link>https://www.nasciiboy.land/tags/go/</link>
     <description>Recent content in Go on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Wed, 28 Mar 2018 14:53:20 -0600</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/go/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.nasciiboy.land/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GDP</title>
-      <link>https://nasciiboy.land/prog/gdp/</link>
+      <link>https://www.nasciiboy.land/prog/gdp/</link>
       <pubDate>Wed, 28 Mar 2018 14:53:20 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/gdp/</guid>
+      <guid>https://www.nasciiboy.land/prog/gdp/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Go Design Patterns&lt;/strong&gt;, es un libro enfocado en los patrones de diseño
@@ -164,13 +164,13 @@ ponerme a practicar los patrones&lt;/p&gt;
     
     <item>
       <title>blackfriday</title>
-      <link>https://nasciiboy.land/prog/blackfriday/</link>
+      <link>https://www.nasciiboy.land/prog/blackfriday/</link>
       <pubDate>Fri, 27 Oct 2017 17:42:32 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/blackfriday/</guid>
+      <guid>https://www.nasciiboy.land/prog/blackfriday/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bf.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/bf.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Durante la modificacion del morg, habia escrito esto junto con otras notas
 vagas en una bitocora de abordo que trata de ser FIFO, aunque si no mantengo la
@@ -292,10 +292,10 @@ hace bien su labor&lt;/p&gt;
     
     <item>
       <title>benchmarks dentro de un programa en go</title>
-      <link>https://nasciiboy.land/prog/gomark/</link>
+      <link>https://www.nasciiboy.land/prog/gomark/</link>
       <pubDate>Fri, 06 Oct 2017 21:03:55 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/gomark/</guid>
+      <guid>https://www.nasciiboy.land/prog/gomark/</guid>
       <description>
 
 &lt;p&gt;en Go podemos realizar benchmarks dentro de los ficheros &lt;code&gt;_test.go&lt;/code&gt;, sin embargo

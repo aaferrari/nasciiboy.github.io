@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docu on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/docu/</link>
+    <link>https://www.nasciiboy.land/tags/docu/</link>
     <description>Recent content in Docu on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Fri, 10 Nov 2017 14:57:41 -0600</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/docu/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.nasciiboy.land/tags/docu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Java &amp; Me(h)</title>
-      <link>https://nasciiboy.land/prog/javame/</link>
+      <link>https://www.nasciiboy.land/prog/javame/</link>
       <pubDate>Fri, 10 Nov 2017 14:57:41 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/javame/</guid>
+      <guid>https://www.nasciiboy.land/prog/javame/</guid>
       <description>
 
 &lt;p&gt;Por que &lt;a href=&#34;https://picodotdev.github.io/blog-bitix/2015/05/10-razones-para-seguir-usando-java/&#34;&gt;razones&lt;/a&gt;
@@ -59,7 +59,7 @@ que va creciendo la complejidad de las cosas que &amp;ldquo;planeo&amp;rdquo; pr
 intuicion y sentido comun me dice que muchos de esos secretos ancestrales se
 encuentran alla afuera&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/believer.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/believer.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;o en el peor de los casos, estan cerca de ser ser promulgados, por alguien&amp;hellip;&lt;/p&gt;
 
@@ -176,7 +176,7 @@ descalificado, pero desde la pagina del autor pueden descargar el codigo de los
 ejemplos y el libro (en ingles) en formato html de esta 2^da edicion. Aqui el &lt;a href=&#34;http://www.mindviewinc.com/downloads/TIJ-2nd-edition.zip&#34;&gt;enlace al
 zip&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;o, y por si el enlace esta roto, bajarlo de &lt;a href=&#34;https://nasciiboy.land/data/TIJ-2nd-edition.zip&#34;&gt;aca&lt;/a&gt;,
+&lt;p&gt;o, y por si el enlace esta roto, bajarlo de &lt;a href=&#34;https://www.nasciiboy.land/data/TIJ-2nd-edition.zip&#34;&gt;aca&lt;/a&gt;,
 a esta le aplique un &lt;code&gt;dos2unix&lt;/code&gt; a todos los ficheros, para no tener que ver el
 &lt;em&gt;DOS&lt;/em&gt; en el emacs&lt;/p&gt;
 
@@ -251,13 +251,13 @@ multiples significados que enturbian la 🌈experiencia🌈&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>SICP (proyecto de traduccion)</title>
-      <link>https://nasciiboy.land/prog/dot-slash-sicp2es/</link>
+      <link>https://www.nasciiboy.land/prog/dot-slash-sicp2es/</link>
       <pubDate>Fri, 07 Jul 2017 18:27:56 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/dot-slash-sicp2es/</guid>
+      <guid>https://www.nasciiboy.land/prog/dot-slash-sicp2es/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/jelly.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/jelly.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;o en otras palabras dadme pasta! (no en galletas)&lt;/p&gt;
 
@@ -336,9 +336,9 @@ en &lt;a href=&#34;https://github.com/nasciiboy/sicp/&#34;&gt;este repo&lt;/a&gt
 ingles. Probe la version html con firefox y con un spin de chromium, sin
 aparente problema&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/sicp-screeshot-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/sicp-screeshot-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/sicp-screeshot-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/sicp-screeshot-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;extenso el material es, asi que probablemente contenga algunos errores&lt;/p&gt;
 
@@ -489,10 +489,10 @@ rendimiento del navegador de mala, muy mala manera&lt;/p&gt;
     
     <item>
       <title>El Lenguaje De programacion Go</title>
-      <link>https://nasciiboy.land/prog/tgpl/</link>
+      <link>https://www.nasciiboy.land/prog/tgpl/</link>
       <pubDate>Mon, 29 May 2017 22:02:43 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/tgpl/</guid>
+      <guid>https://www.nasciiboy.land/prog/tgpl/</guid>
       <description>
 
 &lt;p&gt;golang, el lenguaje de &lt;q&gt;programacion de sistemas&lt;/q&gt; de la gente de google con
