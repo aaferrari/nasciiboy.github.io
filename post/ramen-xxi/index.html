@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XXI – TiMorg</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://www.nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://www.nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://www.nasciiboy.land">/</a></span> <span><a href="https://www.nasciiboy.land/post">post</a></div>
+
+  <h1>Ramen XXI – TiMorg</h1>
+  
+
+<p><img src="https://www.nasciiboy.land/img/esun.jpg" alt="" /></p>
+
+<blockquote>
+<p>&ldquo;Trabajo y pasatiempo&rdquo;, o &ldquo;Cuando te sientes especial por no repetir alguno de
+los patrones de comportamiento que ves en televicion&rdquo;</p>
+</blockquote>
+
+<p>(no sucede segudo, pero en ese caso la foto la realice hace tiempo con viejo dispositivo)</p>
+
+<p>Sucedeme algo extraño. En ocaciones las dinamicas de la vida me obligan a
+laborar en cosas que encuentro futiles e insoportablemente aburridas, pero que
+de momento y en escasas (e impredecibles) ocaciones son las que me dan para ir
+al cine, conseguir viveres y muy de vez en cuando renovar o conseguir algun
+hardware.</p>
+
+<p>Lo extraño del caso ocurre pues, que cuando tengo que afrontar una labor como
+ponerme a pensar en un tema programatorio, el cuerpo ademas de exigir no tener
+hambre, sueño y ruido que sobrepase el limite de sofocacion de los
+audifonos, tambien necesita tener la certeza de que el dia siguiente podra
+dedicarse con la misma rutinaria y predecible constancia a continuar el
+problema.</p>
+
+<p>Entonces, cuando ocurre uno de los &ldquo;eventos laborales rudimentarios&rdquo; y al dia
+siguiente estoy libre, <strong>pero</strong>, el dia siguiente a ese he de regresar
+nuevamente a otro evento, soy completamente incapaz de dedicar ningun esfuerzo
+en abrir un emacs, poner entre 8 a 10 frames, 2 terminales y dedicar unas horas al
+problema intelectualoide (que en otras circustancias) tengo como prioridad
+suprema, pero al laborar tardo almenos 3 dias en regresar a la mentalidad habitual</p>
+
+<p>&hellip; y asi, cuando como en el ultimo mes y medio, las labores plebellas ocurren con
+frecuencia y sin planificacion, avandono por completo el codigo&hellip; con exepcion
+de algun tema mas mecanico y de menor exigencia como podria ser dedicarme a ver
+star trek, leer post o de vez en cuando continuar con alguna maquetacion o
+traduccion (que seguramente termine en el limbo)</p>
+
+<p>y en ese punto aqui me encuentro, micro$oft compra github, a quien le confie el
+resguardo y buen manejo de mis repos y host para esta web estatica; y ahora
+tengo un escosor por montar un servidor hogareño autogestionado con casinos y
+colegialas japonesas.</p>
+
+<p><center>
+<img src="https://www.nasciiboy.land/img/c001.jpg" alt="" />
+</center></p>
+
+<p>Entre migrar todo a un vps que seguramente no pueda costear por mucho tiempo,
+conseguir una plaquita tipo rpi, una laptop de segunda (tercera o cuarta) mano o
+adquriri un monitor <strong>¡1080!</strong> (con una puñetera entrada HDMI) o mudarme a
+gitlab (y divagando en ver precios por amazon&hellip;), he dedicado tardes de
+maquinacion enteras&hellip;</p>
+
+<p>el presupuesto y las habilidades sydaministrosas no me dan para
+mucho y entre tanta dispercion y el escosor de ingresar unos presupuestos a la
+targeta de compras, termine por hacerme de un dominio propio. Si seguia por rss
+este sitio habra notado un aflujo de entradas.</p>
+
+<p>Entre las opciones de dominio mis preferencia estaban entre <strong>nasciiboy.black</strong>
+(por que el negro es el unico color elegante), <strong>nasciiboy.adult</strong> (por que
+hacia un juego de palabras con el nick y para subir una antigua compilacion con
+imagenes de bellezas (luego hablare de eso)), <strong>nasciiboy.xyz</strong> (por que mehhh) y el
+que termino siendo elejido: <strong>nasciiboy.land</strong></p>
+
+<p>obviamente estaban tambion incluidos el <strong>.net</strong> y un <strong>.org</strong>, aunque eran
+demaciado &ldquo;comunes&rdquo; para terminar victoriosos</p>
+
+<p>ja, ja, ja, comprar un dominio es como comprar una navaja de afeitar (o
+impresora): la primera tiene un precio razonable, pero los repuestos haran que
+sangres por la boca con cada &ldquo;renovacion&rdquo;</p>
+
+<p>a saber si renovare el dominio (x $40 USD anual). Por el momento pasare un año
+con la gracia de que no aparezca el github.io en el nombre. En el peor de los
+casos podran encontrar lo ya escrito aqui y en gitlab el codigo (si logro
+entender la configuracion de dominio personalizado hechare mi carga a aquel
+lugar, aunque ya hay una copia funcional (con los links apuntando hacia el
+dominio).</p>
+
+<p>De momento permanecere en las paginas de github, aunque estoy mudandando
+lentamente el &ldquo;desarrollo&rdquo; hacia gitlab (y algun repo a notabug.org), es decir,
+lo que aca se quede estara congelado, es decir sin eliminar. Es muy triste ir a
+una direccion y en contrar nada.</p>
+
+<p>Felices trazos</p>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>Masamune-kun noRevenge</strong>, hace tanto que vi esta cosa que ni me acuerdo de la
+trama, era algo de comedia con romance con una pizca de harem. El primer
+capitulo como que era medio &ldquo;tropical&rdquo; solo salvable para los gustos de una
+chika&hellip; pero no tanto como para tirarlo a /dev/null, asi que continue viendo hasta el
+final. Pasable, sin mayores meritos que evitar el aburrimiento</p>
+
+<p><strong>Violeta, &ldquo;siempre jardin&rdquo;</strong> (Violet Evergarden). Esta serie, me parecio tener
+un poco de cache entre el fandom, pero apenas logre ver el primer episodio y el
+resto de vision fue veloz y azarosa. Fuuh, o era un rollo desabrido sin
+sentido ni tension, o es de esas cosas para chikas que no entiendo ni un poco</p>
+
+<p><strong>Ito Junji - Collection</strong> esto ya fue mas decente, sin llegar a lo
+destacable. Una pequeña coleccion de historias &ldquo;terrorificas&rdquo;, &ldquo;WTF&rdquo; y &ldquo;que tal,
+si&rdquo;. Cada capitulo trae un par de cuentos, que en ocaciones tienen continuacion,
+unos mejor que otros. Destacaria el de la chica con la habilidad de detectar el
+nivel de aceite del ambiente, y tambien, el de la chika que se pierde en una
+ciudad de gente rara con mascaras</p>
+
+<p><strong>Dead Pool 2</strong>, Que cagada! iba sin hipe, pero con disposicion a que me
+gustara, en cambio la historia y actuaciones me parecieron una completa mierda
+sin ninguna razon para que me importaran ni un poco, una oda a las &ldquo;bromas&rdquo;
+referenciales y modernas fuera de control. Al final, por insintecia termino por
+agradarme, aunque a diferencia de la primer entrega, no tengo ningun interes de
+volverla a ver.</p>
+
+<p>viendo la critica del buen James Wallestein, encuentro que el puede verbalizar
+con fundamentos los motivos para el &ldquo;desastre&rdquo; de esta pieza</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/QUaG1pCGjaM?" 
+  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+</div>
+
+<p><strong>Hereditary</strong> Mas por lo genericas y desganadas que suelen ser las cintas de
+&ldquo;terror&rdquo;, que por que no me agraden, suelo evitarlas en el cine. Pero, como he
+estado peregrinando semanalmente y en alguna ocacion hasta vi-semanalmente,
+toco jugar a la ruleta de las cintas.</p>
+
+<p>Me gusto, pero sin entusismo. Lo mas agradable fue la sensacion final de la
+cinta como de haber participado (al continuar viendo la pantalla) en un rito
+&ldquo;demoniaco&rdquo;. Tambien rescato lo poco convencional del abordaje de la historia, como
+entre queriendo ser &ldquo;realista&rdquo; e &ldquo;indu&rdquo; (???).  Curiosa, aunque muy lenta y poco
+clara en su historia. Recomendable? no estoy muy seguro. Una rareza? un
+poco. Para cine? no, es de descarga y visionado desenfadado</p>
+
+<p><strong>Los Increibles 2</strong> La primera, aunque aclamada y celebrada por algunos</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/M89czRVgo6A?" 
+  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+</div>
+
+<p>la vi por engaños publicitarios cuando aun miraba la tv. Fue un sobresaliente,
+aunque no llego al nivel de <strong>Descarga Bluray-RIP</strong>. La secuela, por su parte la
+encuentro continuista (y eso es bueno), tocando (o mejor dicho mencionando) un
+monton de temas, pero que no llegan a decirme nada. buena accion, buena musica,
+un estilo visual curioso y ambitacion historica difuso-agradable.</p>
+
+<p>la voz de elastic girl, en el doblaje al &ldquo;latino (MX)&rdquo; es un dolor. Por los
+avances y la primer mitad, crei que sacarian temas &ldquo;empoderados&rdquo;, pero no
+(mucho) (fiuuhhh).</p>
+
+<p>Ha, es gracioso como todos buscan justificar su sitio de relevancia y atencion
+en una sociedad donde las ciudades, (esos centros de atracciones modernos,) lentamente
+se llenan de oficios artificiales sin ningun valor real. Meras
+evaciones para ignorar que en este momento somos capaces de madurar como
+especie, eliminando religiones, moralismos, patriotismos y sexismos, para ya
+habiendo dejado de lado la necesidad basica de sobrevivir, dedicarnos a fomentar
+y llevar a puntos inexplorados las capacidades fisicas, artisticas,
+ingenierieles y ociosas de cada individuo&hellip; o esterilizarnos, fornicar y
+devorar ingentes cantidades de comida t-o-d-o-s los dias</p>
+
+<p>&hellip; puag, eso es lo que me gusta persar. La alternativa seria que esas labores,
+ventas, construcciones, ajetreos, movimientos vehiculares y generacion de nuevos
+elementos organicos humanos que considero inesesarios, sean fundamentales para
+mantener a flote el estado de &ldquo;bienestar&rdquo; tecnologico, alimenticio y ocioso. Por
+que si es asi, &ldquo;vale verga la vida&rdquo;.</p>
+
+<p><strong>Star Trek (Temporadas 2 &amp; 3)</strong> Mi mayor proyecto actual y espacio seguro.
+No he tenido muchos deseos de explorar todas esas series (posiblemente de
+mierda) que he estado bajando de las ultimas 2 temporadas de anime. Para evitar
+la fatiga de explorar nuevos (o mejor dicho repetidos) productos, y cuando no se
+que hacer, pues veo un episodio de star trek.</p>
+
+<p>Es sorprendente lo complejo (comparando con los temas de peliculas y series
+&ldquo;mainstream&rdquo;) que son casi todos los capitulos. No temen abordar practicamente
+nada (que valga la pena ser abordado). Se centran en lo que quieren y hablan,
+hablan mucho!</p>
+
+<p>Por fin llego a algunos de los capitulos que ya habia visto hace años sin ningun
+orden, y tambien avanzo del que suponia era el ultimo episodio (cuando los borg
+asimilan a picard).</p>
+
+<p>mmm, perfectos no son, pero si se toman como lo que son, lo podrian ser. El
+mayor defecto que he encontrado esta en el montaje de las escenas, aveses son
+confusas en cuanto a la cronologia de los hechos y otras veses muy bruscas. Por
+el resto, hay sigo como a mitad de la 4 temporada, mis favoritos? los dedicados
+a Data. Joh, el cambio de doblaje (al español) en la 4^ta temporada fue un golpe duro</p>
+
+<p>indudablemente (con un poco de paciencia) de obligado visionado!</p>
+
+<p><strong>Jurasic World: Fallen Kindom</strong> Una mas&hellip;</p>
+
+<p>dinosaurios, un volcan y referencias a los comentarios del pueblo sobre el
+anterior filme&hellip; tambien una parte como de &ldquo;terror&rdquo; a lo alien&hellip; mehh, pagable.</p>
+
+<p><strong>Ousama Game</strong> unos adultos (do anime) renuncian a las exigencias sociales de
+la ciudad y se van a una villa.</p>
+
+<p>Muchos gritos y caras raras y supuestos dramas, sin una tematica en
+particular. Nada recomendable</p>
+
+<p><strong>Gintama (S5 2018)</strong> Mucho paso antes de que abordara esto, la ultima temporada
+no me emociono demaciado y esta de lo poco que habia visto tampoco&hellip; hasta que
+la tome en serio, por alla del capitulo de la importancia de tu antena.</p>
+
+<p>No se si es el final, si no es asi, han convertido esta ultima temporada en un
+recorrido y despedida inmejorable para la mayoria de personajes que han
+aparecido. Calificacion 1785/1X9Ø!</p>
+
+<h3 id="thor">THOR</h3>
+
+<p>Y finalmente junto al revisionado que estoy haciendo por <strong>Boku (fucking) hero
+academia</strong></p>
+
+<pre><code>magnet:?xt=urn:btih:bc955fdd218be49520257b39f023094939029436&amp;dn=%5bPuyaSubs!%5d%20Boku%20no%20Hero%20Academia%20S1%20%5bBatch%5d%5b1080p%5d&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=udp%3a%2f%2fipv4.tracker.harry.lu%3a80%2fannounce&amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce
+magnet:?xt=urn:btih:d7e1c6b5419735dafd40abbfdb710a307640f7ca&amp;dn=%5bPuyaSubs!%5d%20Boku%20no%20Hero%20Academia%20S2%20%5b1080p%5d&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2fipv4.tracker.harry.lu%3a80%2fannounce
+</code></pre>
+
+<p>(waaaAAA! que jodida maravilla y momentos de manipulacion emocional esta
+generando Buku no hero. Tienen mi voto para precidente)</p>
+
+<p>baje <strong>THor RagnaRØkc</strong> en &ldquo;latino&rdquo;</p>
+
+<pre><code>magnet:?xt=urn:btih:465517ff79d6c472e69e7c39b566351fe71ae5a8&amp;dn=Thor.Ragnarok.2017.1080p.BDRip.LATiNO.ENG.x264.AC3.DTS&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<p>la vi, la volvi a ver y con la adrenalina hasta vaje y visione sus dos precuelas
+(que no me atraian nahhh) y para luego volver a ver de nuevo esta obra magna de
+la cinematografia moderna!</p>
+
+<p>La primera cinta fue como un smallville nordico con presupuesto y la segunda un
+bah, esta bien (? creo).</p>
+
+<p>Indudablemente esta tercer parte rompe con la linea que marcaron sus
+predecesoras y por ello ademas del festival de humor y efectos especiales,
+entregarle la obra a un cieneasta desenfadado la hace aun mas grande.</p>
+
+<p>No entiendo a los que la odian, tienen arena en las bragas.</p>
+
+<p>y si no fuera suficiente el OST tambien mola un guevo!</p>
+
+<pre><code>magnet:?xt=urn:btih:071bed7a6f15a968990ef47eac064120fca4d955&amp;dn=Mark%20Mothersbaugh%20-%20Thor-%20Ragnarok%20(Original%20Motion%20Picture%20Soundtrack)%20(2017%2024-44.1)&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+</code></pre>
+
+<h2 id="fonos">fonos</h2>
+
+<p><strong>Runouni Kenshing – The Best Theme Collection</strong> solo por la primer pista &ldquo;Sobakasu&rdquo;
+de &ldquo;Judy and Mary&rdquo; es necesario adquirirla. Como consino que soy, no dejare de
+decir que el anime es una mierda comparado al manga. Pero esa primer pista del
+anime tiene impacto</p>
+
+<p><strong>Kairon IRSE! – Ruination</strong> psycodelico mandelbrot un poco en la rama de los
+tame impala pero convinados con un estilo setentero muy de Genesis</p>
+
+<p><strong>Ryuichi Sakamoto – Music for Film</strong></p>
+
+<pre><code>magnet:?xt=urn:btih:2ef9fc8446f3e938bf48080c1b00f648187be861&amp;dn=8367450818.rar&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce
+</code></pre>
+
+<p>hay esta, el magnet, bajar y disfrutar</p>
+
+<p><strong>The Beatles: The Lost Albums</strong></p>
+
+<pre><code>magnet:?xt=urn:btih:35ef0886bb57720d76ee94a0e313f5c23159bf57&amp;dn=The+Beatles_The+Lost+Album_2017_8+CD+Boxset_Deluxe+Edition_FLAC&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&amp;tr=udp%3A%2F%2Fzer0day.ch%3A1337&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969
+</code></pre>
+
+<p>segun dice el txt, esto son gravaciones ineditas, remezclas y &ldquo;cosas&rdquo;
+beatlereanas en alta calidad, cultivadas en las mas selectas consolas de audio y
+depositadas cuidadosamente en contenedores FLAC</p>
+
+<p>segun yo, alquien que aprecia la buena musica y le gustan los escarabajos es un
+material necesario y con buenos albums, en particular del 1 (con &ldquo;Free As A
+Bird&rdquo; iniciando bien potente) al 3 (pista 5 &ldquo;Now and Then&rdquo;).</p>
+
+<p>&hellip; y otros tantos y aveces tontos albums han caido, pero quiero finalizar con
+una rareza que aparecio en nyaa <strong>&ldquo;J-Core 9.0&rdquo;</strong>. Nada mas 600 GiB de dempa,
+remixes y compilaciones japoneras bien pinches raras. De lo suave a lo
+(mayoritariamente) &ldquo;hardcore&rdquo;.</p>
+
+<p>Muchos de los albums (solo he escuchado unos 7) no pasan de mezclas automaticas,
+por llamarlas de algun modo. Pero es necesario resaltar la (azumo que)
+procedencia underground %100 &ldquo;autentica&rdquo; y para muestra algunos de los titulos,
+que inmediatamente haran que te identifiques con la ideosincracia de sus
+expeditores, al mismo tiempo que notas la inmundicia de la existencia solo
+comparable con lo sublimes que cada <sup>1</sup>&frasl;<sub>100</sub> almbus puede llegar a ofrecer:</p>
+
+<ul>
+<li>Candy Highway</li>
+<li>Pirates of Hardcore</li>
+<li>MoeNES</li>
+<li>Don&rsquo;t waste me!</li>
+<li>Awakening.exe</li>
+<li>Due to your suicide</li>
+<li>REVOLUTION OF HAPPY #01</li>
+<li>Pain Continues</li>
+<li>Physical Disconnect</li>
+<li>Psychedelic Sensation</li>
+<li>I LOVE THIS WORLD</li>
+<li>OH HELL YEAH!!</li>
+<li>Noizephilia</li>
+<li>In Bass We Trust</li>
+</ul>
+
+<p>una declaracion clara de intenciones. Si tuviera espacio lo descargaria todo,
+TODO! pero en su lugar cogi todos los albums de cada DJ(?) y algunos titulos
+llamativos hasta llegar a los ~200GiB.</p>
+
+<p>Seguramente nunca los escuche todos, pero solo por su rareza deberian existir en
+nuestros discos duros y en nuestros corazones lleos de musculo y sangre</p>
+
+<p>&hellip; y de ultima hora solo por que los Gorillaz tienen el feeling, su ultimo
+trabajo <strong>The Now Now</strong></p>
+
+<pre><code>magnet:?xt=urn:btih:9621cbb18d982f6fc9301bb4226a89deb1184280&amp;dn=Gorillaz%20-%20The%20Now%20Now%20(2018)%20%5bFLAC%5d&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<h2 id="txt">txt</h2>
+
+<p>y para terminar algunos enlaces destacados. No tengo intencion de explicarlos
+asi que guiarse por su titulo e intuir su contenido</p>
+
+<ul>
+<li><a href="https://www.linuxjournal.com/content/girls-and-software">https://www.linuxjournal.com/content/girls-and-software</a></li>
+<li><a href="http://www.cslab.pepperdine.edu/warford/cosc320/">http://www.cslab.pepperdine.edu/warford/cosc320/</a></li>
+
+<li><p><a href="http://panthema.net/2013/sound-of-sorting/">http://panthema.net/2013/sound-of-sorting/</a></p></li>
+
+<li><p><a href="http://200ok.ch/posts/2018-04-27_Play_Emacs_like_an_Instrument.html">http://200ok.ch/posts/2018-04-27_Play_Emacs_like_an_Instrument.html</a></p></li>
+
+<li><p><a href="https://opensource.com/article/18/2/how-create-slides-emacs-org-mode-and-revealjs">https://opensource.com/article/18/2/how-create-slides-emacs-org-mode-and-revealjs</a></p></li>
+
+<li><p>(o este esta muy interesante <em>C no es un lenguaje de bajo nivel</em>) <a href="https://queue.acm.org/detail.cfm?id=3212479">https://queue.acm.org/detail.cfm?id=3212479</a></p></li>
+
+<li><p>Embrace the SICK -&gt; <a href="http://esr.ibiblio.org/?p=7979">http://esr.ibiblio.org/?p=7979</a></p></li>
+
+<li><p><a href="http://www.tinselcity.net/reflexiones/desarrollo-de-software">http://www.tinselcity.net/reflexiones/desarrollo-de-software</a></p></li>
+</ul>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://www.nasciiboy.land/post/mmac/">◀ MMAC</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://www.nasciiboy.land">/</a></span> <span><a href="https://www.nasciiboy.land/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://www.nasciiboy.land/categories/prog">prog(48)</a></li><li><a href="https://www.nasciiboy.land/categories/post">post(35)</a></li><li><a href="https://www.nasciiboy.land/categories/emacs">emacs(14)</a></li><li><a href="https://www.nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://www.nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://www.nasciiboy.land/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://www.nasciiboy.land/tags/fonos">fonos(22)</a></li><li><a href="https://www.nasciiboy.land/tags/howto">howto(19)</a></li><li><a href="https://www.nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="https://www.nasciiboy.land/tags/4k">4k(16)</a></li><li><a href="https://www.nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="https://www.nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://www.nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="https://www.nasciiboy.land/tags/txt">txt(6)</a></li><li><a href="https://www.nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://www.nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://www.nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="https://www.nasciiboy.land/tags/go">go(3)</a></li><li><a href="https://www.nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://www.nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://www.nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://www.nasciiboy.land/tags/gnome">gnome(2)</a></li><li><a href="https://www.nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://www.nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://www.nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://www.nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://www.nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://www.nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://www.nasciiboy.land/tags/elisp">elisp(1)</a></li><li><a href="https://www.nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://www.nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://www.nasciiboy.land/tags/hardware">hardware(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://www.nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://www.nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://www.nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://www.nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://www.nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://www.nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://www.nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://www.nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://www.nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

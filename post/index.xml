@@ -7,10 +7,355 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Mon, 11 Jun 2018 18:14:53 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 22 Jun 2018 19:03:49 -0500</lastBuildDate>
     
         <atom:link href="https://www.nasciiboy.land/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen XXI – TiMorg</title>
+      <link>https://www.nasciiboy.land/post/ramen-xxi/</link>
+      <pubDate>Fri, 22 Jun 2018 19:03:49 -0500</pubDate>
+      
+      <guid>https://www.nasciiboy.land/post/ramen-xxi/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/esun.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Trabajo y pasatiempo&amp;rdquo;, o &amp;ldquo;Cuando te sientes especial por no repetir alguno de
+los patrones de comportamiento que ves en televicion&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(no sucede segudo, pero en ese caso la foto la realice hace tiempo con viejo dispositivo)&lt;/p&gt;
+
+&lt;p&gt;Sucedeme algo extraño. En ocaciones las dinamicas de la vida me obligan a
+laborar en cosas que encuentro futiles e insoportablemente aburridas, pero que
+de momento y en escasas (e impredecibles) ocaciones son las que me dan para ir
+al cine, conseguir viveres y muy de vez en cuando renovar o conseguir algun
+hardware.&lt;/p&gt;
+
+&lt;p&gt;Lo extraño del caso ocurre pues, que cuando tengo que afrontar una labor como
+ponerme a pensar en un tema programatorio, el cuerpo ademas de exigir no tener
+hambre, sueño y ruido que sobrepase el limite de sofocacion de los
+audifonos, tambien necesita tener la certeza de que el dia siguiente podra
+dedicarse con la misma rutinaria y predecible constancia a continuar el
+problema.&lt;/p&gt;
+
+&lt;p&gt;Entonces, cuando ocurre uno de los &amp;ldquo;eventos laborales rudimentarios&amp;rdquo; y al dia
+siguiente estoy libre, &lt;strong&gt;pero&lt;/strong&gt;, el dia siguiente a ese he de regresar
+nuevamente a otro evento, soy completamente incapaz de dedicar ningun esfuerzo
+en abrir un emacs, poner entre 8 a 10 frames, 2 terminales y dedicar unas horas al
+problema intelectualoide (que en otras circustancias) tengo como prioridad
+suprema, pero al laborar tardo almenos 3 dias en regresar a la mentalidad habitual&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; y asi, cuando como en el ultimo mes y medio, las labores plebellas ocurren con
+frecuencia y sin planificacion, avandono por completo el codigo&amp;hellip; con exepcion
+de algun tema mas mecanico y de menor exigencia como podria ser dedicarme a ver
+star trek, leer post o de vez en cuando continuar con alguna maquetacion o
+traduccion (que seguramente termine en el limbo)&lt;/p&gt;
+
+&lt;p&gt;y en ese punto aqui me encuentro, micro$oft compra github, a quien le confie el
+resguardo y buen manejo de mis repos y host para esta web estatica; y ahora
+tengo un escosor por montar un servidor hogareño autogestionado con casinos y
+colegialas japonesas.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/c001.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Entre migrar todo a un vps que seguramente no pueda costear por mucho tiempo,
+conseguir una plaquita tipo rpi, una laptop de segunda (tercera o cuarta) mano o
+adquriri un monitor &lt;strong&gt;¡1080!&lt;/strong&gt; (con una puñetera entrada HDMI) o mudarme a
+gitlab (y divagando en ver precios por amazon&amp;hellip;), he dedicado tardes de
+maquinacion enteras&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;el presupuesto y las habilidades sydaministrosas no me dan para
+mucho y entre tanta dispercion y el escosor de ingresar unos presupuestos a la
+targeta de compras, termine por hacerme de un dominio propio. Si seguia por rss
+este sitio habra notado un aflujo de entradas.&lt;/p&gt;
+
+&lt;p&gt;Entre las opciones de dominio mis preferencia estaban entre &lt;strong&gt;nasciiboy.black&lt;/strong&gt;
+(por que el negro es el unico color elegante), &lt;strong&gt;nasciiboy.adult&lt;/strong&gt; (por que
+hacia un juego de palabras con el nick y para subir una antigua compilacion con
+imagenes de bellezas (luego hablare de eso)), &lt;strong&gt;nasciiboy.xyz&lt;/strong&gt; (por que mehhh) y el
+que termino siendo elejido: &lt;strong&gt;nasciiboy.land&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;obviamente estaban tambion incluidos el &lt;strong&gt;.net&lt;/strong&gt; y un &lt;strong&gt;.org&lt;/strong&gt;, aunque eran
+demaciado &amp;ldquo;comunes&amp;rdquo; para terminar victoriosos&lt;/p&gt;
+
+&lt;p&gt;ja, ja, ja, comprar un dominio es como comprar una navaja de afeitar (o
+impresora): la primera tiene un precio razonable, pero los repuestos haran que
+sangres por la boca con cada &amp;ldquo;renovacion&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;a saber si renovare el dominio (x $40 USD anual). Por el momento pasare un año
+con la gracia de que no aparezca el github.io en el nombre. En el peor de los
+casos podran encontrar lo ya escrito aqui y en gitlab el codigo (si logro
+entender la configuracion de dominio personalizado hechare mi carga a aquel
+lugar, aunque ya hay una copia funcional (con los links apuntando hacia el
+dominio).&lt;/p&gt;
+
+&lt;p&gt;De momento permanecere en las paginas de github, aunque estoy mudandando
+lentamente el &amp;ldquo;desarrollo&amp;rdquo; hacia gitlab (y algun repo a notabug.org), es decir,
+lo que aca se quede estara congelado, es decir sin eliminar. Es muy triste ir a
+una direccion y en contrar nada.&lt;/p&gt;
+
+&lt;p&gt;Felices trazos&lt;/p&gt;
+
+&lt;h2 id=&#34;4k&#34;&gt;4k&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Masamune-kun noRevenge&lt;/strong&gt;, hace tanto que vi esta cosa que ni me acuerdo de la
+trama, era algo de comedia con romance con una pizca de harem. El primer
+capitulo como que era medio &amp;ldquo;tropical&amp;rdquo; solo salvable para los gustos de una
+chika&amp;hellip; pero no tanto como para tirarlo a /dev/null, asi que continue viendo hasta el
+final. Pasable, sin mayores meritos que evitar el aburrimiento&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Violeta, &amp;ldquo;siempre jardin&amp;rdquo;&lt;/strong&gt; (Violet Evergarden). Esta serie, me parecio tener
+un poco de cache entre el fandom, pero apenas logre ver el primer episodio y el
+resto de vision fue veloz y azarosa. Fuuh, o era un rollo desabrido sin
+sentido ni tension, o es de esas cosas para chikas que no entiendo ni un poco&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ito Junji - Collection&lt;/strong&gt; esto ya fue mas decente, sin llegar a lo
+destacable. Una pequeña coleccion de historias &amp;ldquo;terrorificas&amp;rdquo;, &amp;ldquo;WTF&amp;rdquo; y &amp;ldquo;que tal,
+si&amp;rdquo;. Cada capitulo trae un par de cuentos, que en ocaciones tienen continuacion,
+unos mejor que otros. Destacaria el de la chica con la habilidad de detectar el
+nivel de aceite del ambiente, y tambien, el de la chika que se pierde en una
+ciudad de gente rara con mascaras&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dead Pool 2&lt;/strong&gt;, Que cagada! iba sin hipe, pero con disposicion a que me
+gustara, en cambio la historia y actuaciones me parecieron una completa mierda
+sin ninguna razon para que me importaran ni un poco, una oda a las &amp;ldquo;bromas&amp;rdquo;
+referenciales y modernas fuera de control. Al final, por insintecia termino por
+agradarme, aunque a diferencia de la primer entrega, no tengo ningun interes de
+volverla a ver.&lt;/p&gt;
+
+&lt;p&gt;viendo la critica del buen James Wallestein, encuentro que el puede verbalizar
+con fundamentos los motivos para el &amp;ldquo;desastre&amp;rdquo; de esta pieza&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/QUaG1pCGjaM?&#34; 
+  style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Hereditary&lt;/strong&gt; Mas por lo genericas y desganadas que suelen ser las cintas de
+&amp;ldquo;terror&amp;rdquo;, que por que no me agraden, suelo evitarlas en el cine. Pero, como he
+estado peregrinando semanalmente y en alguna ocacion hasta vi-semanalmente,
+toco jugar a la ruleta de las cintas.&lt;/p&gt;
+
+&lt;p&gt;Me gusto, pero sin entusismo. Lo mas agradable fue la sensacion final de la
+cinta como de haber participado (al continuar viendo la pantalla) en un rito
+&amp;ldquo;demoniaco&amp;rdquo;. Tambien rescato lo poco convencional del abordaje de la historia, como
+entre queriendo ser &amp;ldquo;realista&amp;rdquo; e &amp;ldquo;indu&amp;rdquo; (???).  Curiosa, aunque muy lenta y poco
+clara en su historia. Recomendable? no estoy muy seguro. Una rareza? un
+poco. Para cine? no, es de descarga y visionado desenfadado&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Los Increibles 2&lt;/strong&gt; La primera, aunque aclamada y celebrada por algunos&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/M89czRVgo6A?&#34; 
+  style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;la vi por engaños publicitarios cuando aun miraba la tv. Fue un sobresaliente,
+aunque no llego al nivel de &lt;strong&gt;Descarga Bluray-RIP&lt;/strong&gt;. La secuela, por su parte la
+encuentro continuista (y eso es bueno), tocando (o mejor dicho mencionando) un
+monton de temas, pero que no llegan a decirme nada. buena accion, buena musica,
+un estilo visual curioso y ambitacion historica difuso-agradable.&lt;/p&gt;
+
+&lt;p&gt;la voz de elastic girl, en el doblaje al &amp;ldquo;latino (MX)&amp;rdquo; es un dolor. Por los
+avances y la primer mitad, crei que sacarian temas &amp;ldquo;empoderados&amp;rdquo;, pero no
+(mucho) (fiuuhhh).&lt;/p&gt;
+
+&lt;p&gt;Ha, es gracioso como todos buscan justificar su sitio de relevancia y atencion
+en una sociedad donde las ciudades, (esos centros de atracciones modernos,) lentamente
+se llenan de oficios artificiales sin ningun valor real. Meras
+evaciones para ignorar que en este momento somos capaces de madurar como
+especie, eliminando religiones, moralismos, patriotismos y sexismos, para ya
+habiendo dejado de lado la necesidad basica de sobrevivir, dedicarnos a fomentar
+y llevar a puntos inexplorados las capacidades fisicas, artisticas,
+ingenierieles y ociosas de cada individuo&amp;hellip; o esterilizarnos, fornicar y
+devorar ingentes cantidades de comida t-o-d-o-s los dias&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; puag, eso es lo que me gusta persar. La alternativa seria que esas labores,
+ventas, construcciones, ajetreos, movimientos vehiculares y generacion de nuevos
+elementos organicos humanos que considero inesesarios, sean fundamentales para
+mantener a flote el estado de &amp;ldquo;bienestar&amp;rdquo; tecnologico, alimenticio y ocioso. Por
+que si es asi, &amp;ldquo;vale verga la vida&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Star Trek (Temporadas 2 &amp;amp; 3)&lt;/strong&gt; Mi mayor proyecto actual y espacio seguro.
+No he tenido muchos deseos de explorar todas esas series (posiblemente de
+mierda) que he estado bajando de las ultimas 2 temporadas de anime. Para evitar
+la fatiga de explorar nuevos (o mejor dicho repetidos) productos, y cuando no se
+que hacer, pues veo un episodio de star trek.&lt;/p&gt;
+
+&lt;p&gt;Es sorprendente lo complejo (comparando con los temas de peliculas y series
+&amp;ldquo;mainstream&amp;rdquo;) que son casi todos los capitulos. No temen abordar practicamente
+nada (que valga la pena ser abordado). Se centran en lo que quieren y hablan,
+hablan mucho!&lt;/p&gt;
+
+&lt;p&gt;Por fin llego a algunos de los capitulos que ya habia visto hace años sin ningun
+orden, y tambien avanzo del que suponia era el ultimo episodio (cuando los borg
+asimilan a picard).&lt;/p&gt;
+
+&lt;p&gt;mmm, perfectos no son, pero si se toman como lo que son, lo podrian ser. El
+mayor defecto que he encontrado esta en el montaje de las escenas, aveses son
+confusas en cuanto a la cronologia de los hechos y otras veses muy bruscas. Por
+el resto, hay sigo como a mitad de la 4 temporada, mis favoritos? los dedicados
+a Data. Joh, el cambio de doblaje (al español) en la 4^ta temporada fue un golpe duro&lt;/p&gt;
+
+&lt;p&gt;indudablemente (con un poco de paciencia) de obligado visionado!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Jurasic World: Fallen Kindom&lt;/strong&gt; Una mas&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;dinosaurios, un volcan y referencias a los comentarios del pueblo sobre el
+anterior filme&amp;hellip; tambien una parte como de &amp;ldquo;terror&amp;rdquo; a lo alien&amp;hellip; mehh, pagable.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ousama Game&lt;/strong&gt; unos adultos (do anime) renuncian a las exigencias sociales de
+la ciudad y se van a una villa.&lt;/p&gt;
+
+&lt;p&gt;Muchos gritos y caras raras y supuestos dramas, sin una tematica en
+particular. Nada recomendable&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Gintama (S5 2018)&lt;/strong&gt; Mucho paso antes de que abordara esto, la ultima temporada
+no me emociono demaciado y esta de lo poco que habia visto tampoco&amp;hellip; hasta que
+la tome en serio, por alla del capitulo de la importancia de tu antena.&lt;/p&gt;
+
+&lt;p&gt;No se si es el final, si no es asi, han convertido esta ultima temporada en un
+recorrido y despedida inmejorable para la mayoria de personajes que han
+aparecido. Calificacion 1785/1X9Ø!&lt;/p&gt;
+
+&lt;h3 id=&#34;thor&#34;&gt;THOR&lt;/h3&gt;
+
+&lt;p&gt;Y finalmente junto al revisionado que estoy haciendo por &lt;strong&gt;Boku (fucking) hero
+academia&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:bc955fdd218be49520257b39f023094939029436&amp;amp;dn=%5bPuyaSubs!%5d%20Boku%20no%20Hero%20Academia%20S1%20%5bBatch%5d%5b1080p%5d&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;amp;tr=udp%3a%2f%2fipv4.tracker.harry.lu%3a80%2fannounce&amp;amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce
+magnet:?xt=urn:btih:d7e1c6b5419735dafd40abbfdb710a307640f7ca&amp;amp;dn=%5bPuyaSubs!%5d%20Boku%20no%20Hero%20Academia%20S2%20%5b1080p%5d&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2fipv4.tracker.harry.lu%3a80%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(waaaAAA! que jodida maravilla y momentos de manipulacion emocional esta
+generando Buku no hero. Tienen mi voto para precidente)&lt;/p&gt;
+
+&lt;p&gt;baje &lt;strong&gt;THor RagnaRØkc&lt;/strong&gt; en &amp;ldquo;latino&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:465517ff79d6c472e69e7c39b566351fe71ae5a8&amp;amp;dn=Thor.Ragnarok.2017.1080p.BDRip.LATiNO.ENG.x264.AC3.DTS&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;la vi, la volvi a ver y con la adrenalina hasta vaje y visione sus dos precuelas
+(que no me atraian nahhh) y para luego volver a ver de nuevo esta obra magna de
+la cinematografia moderna!&lt;/p&gt;
+
+&lt;p&gt;La primera cinta fue como un smallville nordico con presupuesto y la segunda un
+bah, esta bien (? creo).&lt;/p&gt;
+
+&lt;p&gt;Indudablemente esta tercer parte rompe con la linea que marcaron sus
+predecesoras y por ello ademas del festival de humor y efectos especiales,
+entregarle la obra a un cieneasta desenfadado la hace aun mas grande.&lt;/p&gt;
+
+&lt;p&gt;No entiendo a los que la odian, tienen arena en las bragas.&lt;/p&gt;
+
+&lt;p&gt;y si no fuera suficiente el OST tambien mola un guevo!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:071bed7a6f15a968990ef47eac064120fca4d955&amp;amp;dn=Mark%20Mothersbaugh%20-%20Thor-%20Ragnarok%20(Original%20Motion%20Picture%20Soundtrack)%20(2017%2024-44.1)&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;fonos&#34;&gt;fonos&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Runouni Kenshing – The Best Theme Collection&lt;/strong&gt; solo por la primer pista &amp;ldquo;Sobakasu&amp;rdquo;
+de &amp;ldquo;Judy and Mary&amp;rdquo; es necesario adquirirla. Como consino que soy, no dejare de
+decir que el anime es una mierda comparado al manga. Pero esa primer pista del
+anime tiene impacto&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Kairon IRSE! – Ruination&lt;/strong&gt; psycodelico mandelbrot un poco en la rama de los
+tame impala pero convinados con un estilo setentero muy de Genesis&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ryuichi Sakamoto – Music for Film&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:2ef9fc8446f3e938bf48080c1b00f648187be861&amp;amp;dn=8367450818.rar&amp;amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hay esta, el magnet, bajar y disfrutar&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Beatles: The Lost Albums&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:35ef0886bb57720d76ee94a0e313f5c23159bf57&amp;amp;dn=The+Beatles_The+Lost+Album_2017_8+CD+Boxset_Deluxe+Edition_FLAC&amp;amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&amp;amp;tr=udp%3A%2F%2Fzer0day.ch%3A1337&amp;amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;segun dice el txt, esto son gravaciones ineditas, remezclas y &amp;ldquo;cosas&amp;rdquo;
+beatlereanas en alta calidad, cultivadas en las mas selectas consolas de audio y
+depositadas cuidadosamente en contenedores FLAC&lt;/p&gt;
+
+&lt;p&gt;segun yo, alquien que aprecia la buena musica y le gustan los escarabajos es un
+material necesario y con buenos albums, en particular del 1 (con &amp;ldquo;Free As A
+Bird&amp;rdquo; iniciando bien potente) al 3 (pista 5 &amp;ldquo;Now and Then&amp;rdquo;).&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; y otros tantos y aveces tontos albums han caido, pero quiero finalizar con
+una rareza que aparecio en nyaa &lt;strong&gt;&amp;ldquo;J-Core 9.0&amp;rdquo;&lt;/strong&gt;. Nada mas 600 GiB de dempa,
+remixes y compilaciones japoneras bien pinches raras. De lo suave a lo
+(mayoritariamente) &amp;ldquo;hardcore&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Muchos de los albums (solo he escuchado unos 7) no pasan de mezclas automaticas,
+por llamarlas de algun modo. Pero es necesario resaltar la (azumo que)
+procedencia underground %100 &amp;ldquo;autentica&amp;rdquo; y para muestra algunos de los titulos,
+que inmediatamente haran que te identifiques con la ideosincracia de sus
+expeditores, al mismo tiempo que notas la inmundicia de la existencia solo
+comparable con lo sublimes que cada &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt; almbus puede llegar a ofrecer:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Candy Highway&lt;/li&gt;
+&lt;li&gt;Pirates of Hardcore&lt;/li&gt;
+&lt;li&gt;MoeNES&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t waste me!&lt;/li&gt;
+&lt;li&gt;Awakening.exe&lt;/li&gt;
+&lt;li&gt;Due to your suicide&lt;/li&gt;
+&lt;li&gt;REVOLUTION OF HAPPY #01&lt;/li&gt;
+&lt;li&gt;Pain Continues&lt;/li&gt;
+&lt;li&gt;Physical Disconnect&lt;/li&gt;
+&lt;li&gt;Psychedelic Sensation&lt;/li&gt;
+&lt;li&gt;I LOVE THIS WORLD&lt;/li&gt;
+&lt;li&gt;OH HELL YEAH!!&lt;/li&gt;
+&lt;li&gt;Noizephilia&lt;/li&gt;
+&lt;li&gt;In Bass We Trust&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;una declaracion clara de intenciones. Si tuviera espacio lo descargaria todo,
+TODO! pero en su lugar cogi todos los albums de cada DJ(?) y algunos titulos
+llamativos hasta llegar a los ~200GiB.&lt;/p&gt;
+
+&lt;p&gt;Seguramente nunca los escuche todos, pero solo por su rareza deberian existir en
+nuestros discos duros y en nuestros corazones lleos de musculo y sangre&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; y de ultima hora solo por que los Gorillaz tienen el feeling, su ultimo
+trabajo &lt;strong&gt;The Now Now&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:9621cbb18d982f6fc9301bb4226a89deb1184280&amp;amp;dn=Gorillaz%20-%20The%20Now%20Now%20(2018)%20%5bFLAC%5d&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;txt&#34;&gt;txt&lt;/h2&gt;
+
+&lt;p&gt;y para terminar algunos enlaces destacados. No tengo intencion de explicarlos
+asi que guiarse por su titulo e intuir su contenido&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linuxjournal.com/content/girls-and-software&#34;&gt;https://www.linuxjournal.com/content/girls-and-software&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cslab.pepperdine.edu/warford/cosc320/&#34;&gt;http://www.cslab.pepperdine.edu/warford/cosc320/&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://panthema.net/2013/sound-of-sorting/&#34;&gt;http://panthema.net/2013/sound-of-sorting/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://200ok.ch/posts/2018-04-27_Play_Emacs_like_an_Instrument.html&#34;&gt;http://200ok.ch/posts/2018-04-27_Play_Emacs_like_an_Instrument.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://opensource.com/article/18/2/how-create-slides-emacs-org-mode-and-revealjs&#34;&gt;https://opensource.com/article/18/2/how-create-slides-emacs-org-mode-and-revealjs&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;(o este esta muy interesante &lt;em&gt;C no es un lenguaje de bajo nivel&lt;/em&gt;) &lt;a href=&#34;https://queue.acm.org/detail.cfm?id=3212479&#34;&gt;https://queue.acm.org/detail.cfm?id=3212479&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Embrace the SICK -&amp;gt; &lt;a href=&#34;http://esr.ibiblio.org/?p=7979&#34;&gt;http://esr.ibiblio.org/?p=7979&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.tinselcity.net/reflexiones/desarrollo-de-software&#34;&gt;http://www.tinselcity.net/reflexiones/desarrollo-de-software&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>MMAC</title>
