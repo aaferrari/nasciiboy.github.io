@@ -7,10 +7,185 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Sat, 20 Jan 2018 15:04:47 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 18 Jul 2018 14:18:21 -0500</lastBuildDate>
     
         <atom:link href="https://www.nasciiboy.land/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cedar Mill</title>
+      <link>https://www.nasciiboy.land/post/cedarmill/</link>
+      <pubDate>Wed, 18 Jul 2018 14:18:21 -0500</pubDate>
+      
+      <guid>https://www.nasciiboy.land/post/cedarmill/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;No se quede atras con su computador tradicional, adelantece a su tiempo con el
+presario multimedia de compaq. Es video en movimiento, es sonido estereo, es
+una biblioteca animada. El presario multimedia de compaq es diversion sin
+limites!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;compaq-presario-sr2120la&#34;&gt;Compaq Presario SR2120LA&lt;/h2&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/CM/CM-00.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Procesador Intel® 4 631 (Capacidad para tecnologia Hyper-Threading)&lt;/li&gt;
+&lt;li&gt;Memoria PC2-4200 DDR2 SDRAM de 1.0GB&lt;/li&gt;
+&lt;li&gt;Disco duro de 250GB 7200RPM Serial ATA&lt;/li&gt;
+&lt;li&gt;Unidad grabadora de DVD SuperMulti con tecnologia LightScribe y funciones de
+escritura de CD y DVD&lt;/li&gt;
+&lt;li&gt;ATI RADEON XPRESS 1100 Graphics&lt;/li&gt;
+&lt;li&gt;Lector de targetas de momoria 9 en 1 en el panel frontal&lt;/li&gt;
+&lt;li&gt;Modem 56K&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;un nuevo hardware se une al arsenal (y otro se va), junto a una pantalla LCD
+de 15&amp;rsquo; HP con conector… VGA… y…? nada, este es solo un registro del suceso.&lt;/p&gt;
+
+&lt;p&gt;el gabinete que la acompañaba tenia un poco mas de impacto visual que el que
+venia utilizando, asi que despues de probar si funcionaba o no la donacion (y
+descubrir que la fuente no encendia y luego contemplar el logo de winbugs
+estatico por 20 minutos) realize una operacion de switcheo de estructuras, pero
+cuando piensas que todo va andar lo mas bien, puede que termine terminando lo
+mas mal (o no).&lt;/p&gt;
+
+&lt;p&gt;Los orificios de la carcasa para la placa base del presario no son de los
+que se pueden quitar. En su lugar son protuberancias en el metal del gabinete de
+los de 3x3x2 tornillos y la placa de la asus prime b350m-a solo tiene orificios
+2x2x2.&lt;/p&gt;
+
+&lt;p&gt;Aplique cinta aislante en los que no tenian coincidencia y cruce los
+dedos. Despues toco que migrar los discos y luego de terminar por romper uno de
+los sujetadores plasticos de estos, entendi como se hacia el ajuste&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/CM/CM-01.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;luego el contenido de la compaq paso a la caja anterior, reciclando una fuente
+que ya habia dado por juvilada. Ademas, se le unio un disco de 40GB hitachi y uno
+que tenia sin usar de 320GB y el que traia la donacion (250GB)&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/CM/CM-02.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;y entoces conecte el disco de la donacion para &amp;ldquo;examinarlo&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Tras una breve y poco interesante excursion, intente formatear el hdd en la
+asus, primero con gparted y el sistema se congelo, que? (me dije). Reinicio y
+reintento numero dos, gparted y dar formato&amp;hellip; y de nuevo se congela el sistema.&lt;/p&gt;
+
+&lt;p&gt;Procedo a abrir un terminal, asegurarme que tengo recursos y procesador y a
+formatear desde terminal y de nuevo crasheo. Pero como soy subnormal vuelvo a
+intentarlo de nuevo con el mismo resultado&lt;/p&gt;
+
+&lt;p&gt;Bueno, me digo, quiza el disco no funcione, ja, ja, ja, a grabar una usb con
+debian e intentar formatear desde la presario. B-u-e-n-o&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dd if=debian-9.5.0-i386-DVD-1.iso of=/dev/sdc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y? un nuevo crasheo. Dos intentos mas tarde, desisto y me pregunto que demonios
+pasa. Desde que adquiri la asus prime, he notado que cuando se conectan dos usb
+en las salidas usb 3.1 (las que tiene color azul-verde) como que el sistema se
+pone un poco torpe. Por lo general tengo el pincho inalambrico del raton hay,
+y sucede pues que al conectar una memoria, el raton funciona erraticamente.&lt;/p&gt;
+
+&lt;p&gt;Pero es un defecto menor y no he hecho mayor caso. La solucion? o es un problema
+congenito de la loteria del hardware o el nucleo no soporta todo lo bien que
+esperaria esta placa, aunque por reseñas en redit y amazon (razon por la que
+compre esta placa) parece que de problemas (casi) nada (otros casos similares he
+encontrado, pero tambien en distintas verisones y OSes), por lo que creo tendre que
+ir a mendigar si hacen valida la garantia.&lt;/p&gt;
+
+&lt;p&gt;Mientras reinicie con un kernel distinto y al aplicar (de nuevo&amp;hellip;)
+&lt;code&gt;dd&lt;/code&gt; no hubo colapso, je, quiza era un problema doble, hardware y kernel
+problematicos&amp;hellip; maldicion!&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Asi las cosas, note que el disco de la presario era muy cachondo y durante la
+instalacion de un opensuse (regalado en un flisol) no detectava la unidad. (La
+instalacion por USB no se pudo, el bios no daba la opccion)&lt;/p&gt;
+
+&lt;p&gt;pero con opensuse no me siento demaciado comodo. Un primer intento de quemar una
+imagen de debian termino con la imagen corrupta. Luego de enfrentar el tipico
+defecto de la charola que no abre de la quemadora dvd (una banda flojilla) y
+probar nuevamente con otro dvd grabable, la instalacion de debian 9.5 x86 con
+la &amp;ldquo;lectora expuesta&amp;rdquo; fue satisfactoria&lt;/p&gt;
+
+&lt;p&gt;ya con debian el disco hdd calentorro volvio a aparecen en la instalacion, quedando
+asignado a datos, datos no muy confiables, el disco ese sigue muy cachondo y no
+me fio&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/CM/CM-03.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Por el camino y con la alegria de tener nuevo hardware, extripe la grafica
+que estaba usando para tener configuracion de dos monitores&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/CM/CM-04.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;para adquirir un adaptador de hdmi a vga&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/CM/CM-05.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;al principio conectando directamente no encendia el monitor pero tras el
+arraque (ya tirando de la iGPU) se encendio el par de monitores!&lt;/p&gt;
+
+&lt;p&gt;con esta operacion paso a descontar una suma considerable del resivo electrico
+(que no pago yo) y tambien a quitar algo de calor en el gabinete. Aunque de
+momento no funciona todo lo bien que me gustaria. Hay unas lineas que aparecen
+interminentemente en la parte superior de los dos monitores (cosa rara) y son
+molestas, pero no tanto como para regresar a poner la placa de video.&lt;/p&gt;
+
+&lt;p&gt;y bueno, en el arsenal ya tenia una placa pentum 4 que no usaba demaciado por
+solo contar con 500MB de ram y andar mu-mu-mu-mu-lento. Tambien tenia un celeron
+(creo) equivalente a un pentium 3 que en vista de la nueva incorporacion no
+volvere a utilizar nunca mas&lt;/p&gt;
+
+&lt;p&gt;Por ello, como una buena obra, la dono a algun ser intrepido sin prejuicios y con
+curiosidad, dejandola en la calle esperando siempre, que le sean de utilidad y
+no termine ultrajada para venderla como metal.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/CM/CM-06.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;la fuente funciona y las dos placas tambien, ambas con un poco de ram, lo que le
+haria falta es un hdd &amp;ldquo;antiguo&amp;rdquo; (tampoco soy tan generoso). Por un momento pense
+en conservar mesquinamente los procesadores y rapiñar los imanes de unas
+unidades de CD que agregue al conjunto, pero? para que?&lt;/p&gt;
+
+&lt;p&gt;las mentes malpensadas podrian creer que solo tire el muerto a la calle, pero,
+mi yo mismo en otras circunstancias recogeria gustosamente ese equipo&lt;/p&gt;
+
+&lt;p&gt;Para terminar, una cosa interesante del procesador
+&lt;a href=&#34;https://es.wikipedia.org/wiki/Intel_Pentium_4&#34;&gt;pentum&lt;/a&gt; de la presario, es que
+es de lo ultimo que salio con esa denominacion. Un bicho muy interesante con un
+TDP de 86w a 3GHz y con 2MB cache L2, que aunque tiene un solo nucleo el &lt;code&gt;htop&lt;/code&gt;
+marca que tiene dos procesadores.&lt;/p&gt;
+
+&lt;p&gt;Ese procesador
+&lt;a href=&#34;https://ark.intel.com/products/27479/Intel-Pentium-4-Processor-631-supporting-HT-Technology-2M-Cache-3_00-GHz-800-MHz-FSB&#34;&gt;631&lt;/a&gt;
+se deservuelve bastante bien con gnome e incluso con un obsceno firefox, que en
+conjunto con los 2GB de ram que traia y lo bien optimizada que esta debian la
+convierte en una maquina que si podria utilizar de manera habitual. Por si fuera
+poco la placa es bastante util, por contar con conexion para discos ide y sata&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>ASUS Prime B350-A (&#43; AMD A6 9500)</title>
