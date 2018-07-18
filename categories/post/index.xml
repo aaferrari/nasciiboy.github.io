@@ -105,7 +105,7 @@ compre esta placa) parece que de problemas (casi) nada (otros casos similares he
 encontrado, pero tambien en distintas verisones y OSes), por lo que creo tendre que
 ir a mendigar si hacen valida la garantia.&lt;/p&gt;
 
-&lt;p&gt;Mientras reinicie con un kernel distinto y al aplicar (de nuevo&amp;hellip;)
+&lt;p&gt;Mientras, reinicie con un kernel distinto y al aplicar (de nuevo&amp;hellip;)
 &lt;code&gt;dd&lt;/code&gt; no hubo colapso, je, quiza era un problema doble, hardware y kernel
 problematicos&amp;hellip; maldicion!&lt;/p&gt;
 
@@ -115,8 +115,8 @@ problematicos&amp;hellip; maldicion!&lt;/p&gt;
 instalacion de un opensuse (regalado en un flisol) no detectava la unidad. (La
 instalacion por USB no se pudo, el bios no daba la opccion)&lt;/p&gt;
 
-&lt;p&gt;pero con opensuse no me siento demaciado comodo. Un primer intento de quemar una
-imagen de debian termino con la imagen corrupta. Luego de enfrentar el tipico
+&lt;p&gt;con opensuse no me siento demaciado comodo. Un primer intento de quemar una
+imagen de debian en DVD termino con la imagen corrupta. Luego de enfrentar el tipico
 defecto de la charola que no abre de la quemadora dvd (una banda flojilla) y
 probar nuevamente con otro dvd grabable, la instalacion de debian 9.5 x86 con
 la &amp;ldquo;lectora expuesta&amp;rdquo; fue satisfactoria&lt;/p&gt;
@@ -136,7 +136,7 @@ que estaba usando para tener configuracion de dos monitores&lt;/p&gt;
 &lt;img src=&#34;https://www.nasciiboy.land/img/CM/CM-04.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;para adquirir un adaptador de hdmi a vga&amp;hellip;&lt;/p&gt;
+&lt;p&gt;para adquirir un adaptador de hdmi a&amp;hellip; vga&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
 &lt;img src=&#34;https://www.nasciiboy.land/img/CM/CM-05.jpg&#34; alt=&#34;&#34; /&gt;
@@ -180,10 +180,10 @@ marca que tiene dos procesadores.&lt;/p&gt;
 
 &lt;p&gt;Ese procesador
 &lt;a href=&#34;https://ark.intel.com/products/27479/Intel-Pentium-4-Processor-631-supporting-HT-Technology-2M-Cache-3_00-GHz-800-MHz-FSB&#34;&gt;631&lt;/a&gt;
-se deservuelve bastante bien con gnome e incluso con un obsceno firefox, que en
+se desenvuelve bastante bien con gnome e incluso con un obsceno firefox, que en
 conjunto con los 2GB de ram que traia y lo bien optimizada que esta debian la
 convierte en una maquina que si podria utilizar de manera habitual. Por si fuera
-poco la placa es bastante util, por contar con conexion para discos ide y sata&lt;/p&gt;
+poco la placa es bastante conveniente, por contar con conexion para discos ide y sata&lt;/p&gt;
 </description>
     </item>
     
