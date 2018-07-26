@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Debone</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://www.nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://www.nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://www.nasciiboy.land">/</a></span> <span><a href="https://www.nasciiboy.land/prog">prog</a></div>
+
+  <h1>Debone</h1>
+  
+
+<p>Inicialmente esta solo seria una receta para poner a punto un equipo &ldquo;retro&rdquo;
+utilizando debian y Gnome (+ emacs + tilix + firefox), y de paso halagar lo bien
+optimizada que viene de serie la distro del espiral. Sin embargo y con toda la
+pena del mundo mi placa principal se puso inestable y hubo que
+mandarla a garantia, con la respuesta de su condicion (reparacion, cambio o
+&ldquo;abono&rdquo; de compra) en un periodo de 20 a 30 dias.</p>
+
+<p>Asi pues tendre que apañarmelas con el equipo en cuestion y dejarlo mejor de
+como esperaba&hellip; al menos lo suficiente como para usarlo de verdad y no solo en
+casos de contingencia o experimentacion</p>
+
+<p>el equipo consta de un CPU Intel Pentum 4 (631) a 3GHz (un nucleo, dos hilos),
+montado en una placa base con 2 puertos sata, 1 puerto ide, 1 puerto para disquetera,
+1 salida de video VGA, 1 puerto PCI-E para grafica y 3 mas (que no me acuerdo si
+tambien se llaman tambien PCI, pero son del mismo tamaño que el de la grafica&hellip;)</p>
+
+<p>se montara en conjunto con 2 unidades de almacenamiento sata. La principal un
+SSD kinsgton 3k de 250GB (con mas de tres años de uso rudo, rozando el limite de
+su vida) y otro de 3TB para &ldquo;datos&rdquo;</p>
+
+<p>la distribucion de particiones quedara tal que asi</p>
+
+<pre><code>Disposit. Tamaño Tipo
+/dev/sda1  47.5G ext4  # /
+/dev/sda2   3.7G swap  # swap
+/dev/sda4 172.4G ext4  # /home
+
+/dev/sdb1   2.7T ext4  # /media/data con enlaces sobre /home/usuario
+</code></pre>
+
+<p>y como complemento especial, incluira una grafica dedicada PCI 2.0 nvidia 210
+silent con 1GB de ram dedicada</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/01.jpg" alt="" /></p>
+
+<p>(solo tiene dos conexiones para ventiladores CPU y chasis, el tercero necesario
+por que la grafica se ponte un poco calida al igual que la controladora de la
+motherboard y lo que supongo es la grafica ATI. Este tercer &ldquo;fan&rdquo; esta en el
+cable de la disquetecon puesto sin nahh enchufado con conectores para protoboard)</p>
+
+<p>2GB de ram, podrian ser suficiente para casi cualquier cosa hasta que se
+involucra un navegador web &ldquo;modernoso&rdquo; y personalizado, como lo puede ser
+firefox, de hay es donde viene colocar un poco de swap sobre el SSD.</p>
+
+<p>No obstante, por el uso constante que tras la configuracion final ha llegado a
+hacer de esta particion (sin ralentizar (apresiablemente) el sistema), estoi
+considerando aumentar la ram a 3GB o 4GB y evitar el disgusto de encontrar muerto el
+SSD junto con toda la informacion &ldquo;sensible&rdquo; que este almacena.</p>
+
+<p>La solucion alternativa seria utilizar un HDD IDE de 4OGB como area de
+intercambio, p-e-r-o, gastar la energia que gasta un HDD solo para este tema
+pues me parece un desperdicio, asi que nop.</p>
+
+<p>Tras la instalacion, la pantalla de login del Ñomo se negaba a entrar en el
+escritorio. Fuera por algun conflicto en la configuracion que venia arrastrando
+desde tiempos inmemoriales (y recien venido de un gnome 3.28 fedorizado) o bien,
+por algunaa triquiñuela probocada por la configuracion de la grafica o alguna
+mierda del estilo, fue necesaria una reinstalacion en limpio, con el home en cero y
+utilizando solo el video integrado del procesador</p>
+
+<p>La siguiente es una imagen tomada mediante una conexion ssh (de antes de que
+enviara de paseo mi placa principal)</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/02.png" alt="" /></p>
+
+<p>como puede apreciarse, el gnome 3.22 tal y como nos lo envia debian tiene un
+consumo (casi) despreciable, apenas y llega a los 300MiB! Simplemente fenomenal!
+Ya podrian aprender otras distribuciones (<del>buntus</del>, <del>fedora</del>) a mandar
+ligero su entorno de escritorio</p>
+
+<p>pero por si queda duda de la captura sobre ssh, la siguiente es una imagen 100%
+real no fake, utilizando tilix (sin configurar) sobre la secion grafica</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/03.png" alt="" /></p>
+
+<p>349MiB! Para que ahora salgan los troles del entorno mas hermoso de todos a hablar pestes&hellip;</p>
+
+<p>y bueno, &ldquo;gnome es simple por naturaleza y potente cuando se necesita&rdquo;&hellip; ja, ja,
+ja, asi que vamos a configurarlo hasta dejarlo bonico</p>
+
+<p>primero abrimos gnome-tweak-tool, que ya viene instalado por defecto</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/04.png" alt="" /></p>
+
+<p>se activa el tema obscuro global, <strong>adwaita-dark</strong> y los iconos en alto contraste</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/05.png" alt="" /></p>
+
+<p>mmm, la imagen del escritorio por defecto esta preciosa, pero no refleja nuestra
+verdadera y kawai naturaleza, asi que la <a href="https://www.nasciiboy.land/img/clouds_battle_by_arsenixc.png">cambiamos</a></p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/06.png" alt="" /></p>
+
+<p>pasamos a algunas extenciones y vemos que por defecto ya incluye un chilion de
+ellas por aquello de evitar que busquemos en sitios raros, pero de estas solo se
+requieren unas cuantas</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/07.png" alt="" /></p>
+
+<ul>
+<li><p><strong>alternativetab</strong> para que el tab no se porte &ldquo;raro&rdquo;</p></li>
+
+<li><p><strong>launch new instance</strong> para que podamos lanzar infinitos firefoxes,
+terminales, VLCs y demas. Aunque de vez en cuando sea mas conveniente tener
+una sola instancia, como en el caso del correo, firefox (&hellip;) o el
+torrente. No se como se decide esta magia de una o infinitas instancias, pero
+nunca he tenido problemas, aunque en el caso de vlc si hay que configurar esta
+caracteristica directamente dentro de su configuracion</p></li>
+
+<li><p>la siguiente no viene en el menu, pero la considero impresindible, por suerte
+esta en los repos <code>apt -y install gnome-shell-extension-autohidetopbar</code>. Como
+se podra intuir, hace que la barra esa que esta en lo alto se oculte cuando
+aparesca una ventana grande, de manera que podamos aprovechar toda la pantalla
+y ver ese bonico fondo de escritorio que hemos puesto, fuck yhea!</p></li>
+
+<li><p>y por ultimo no viene en los repos, ni incluyo como ponerla, pero la ultima
+extencion que me hace el dia se llama <strong>netspeed</strong>. Sirve para ver si hay movimiento de subida
+y bajada en la red</p></li>
+</ul>
+
+<p>pasamos a teclado y raton y en este apartado lo unico que toca modificar es el
+&ldquo;tema de teclas&rdquo;. Algo que viene a ser como los <strong>&ldquo;atajos de navegacion de
+escritura (global)&rdquo;</strong> y cuya unica opcion (por que
+los devs de gnome conocen de esto) es <strong>Emacs</strong>.</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/08.png" alt="" /></p>
+
+<p>Si utilizas bash, fish o <strong>Emacs</strong>, encontraras familiares alguos de los
+comandos:</p>
+
+<ul>
+<li><code>C-a</code> ir al inicio de linea</li>
+<li><code>C-e</code> ir al fin de linea</li>
+<li><code>C-k</code> borrar hasta el fin de linea apartir del cursor</li>
+<li><code>C-u</code> borrar hasta el inicio de linea apartir del cursor</li>
+<li><code>C-w</code> borrar desde el cursor hasta el inicio de la palabra</li>
+<li><code>M-d</code> borrar desde el cursor hasta el fin de palabra</li>
+<li><code>M-f</code> avanzar por palabras</li>
+<li><code>M-b</code> retroceder por palabras</li>
+<li><code>C-f</code> avanzar por caracter</li>
+<li><code>C-b</code> retroceder por caracter</li>
+</ul>
+
+<p>y puede que alla alguna otra combinacion mas, pero estas son las que utilizo</p>
+
+<p>para finalizar con esta primer modificacion y evitar comportamientos emergentes
+a la ves que establecemos un lugar especifico para cada ventana que lancemos (al
+menos conceptualmente), ponemos las areas de atrabajo como estaticas y que sean <strong>11</strong></p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/09.png" alt="" /></p>
+
+<p>y en este punto podemos apreciar la parte mas vistosa de la configuracion
+presionando <code>Super</code></p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/10.png" alt="" /></p>
+
+<p>al principio utilizaba 4 areas (mono-pantalla), luego 5, despues 6, 9, 10 y
+finalmente 11 (a pantalla doble).</p>
+
+<p>Utilizo de la sugiente forma las areas de trabajo</p>
+
+<ul>
+<li><p>1, 3, 4, 6: para emacs (de 1 a 3 instancias distintas) a doble pantalla</p></li>
+
+<li><p>2 y 5: terminales en del lado derecho y emacses del izquierdo. Aunque no es
+complejo abrir varias seciones a pantalla completa en tilix o incluso dividir
+la ventana con varias seciones, en general, me es mas facil cambiar de area,
+que pensar en la combinacion interna de una aplicacion</p></li>
+
+<li><p>7: nautilus del lado derecho, y del izquierdo de forma temporal vlc (o mpv),
+evince, el visor de imagenes o algun emacs</p></li>
+
+<li><p>8: un emacs a modo de diario/registro-de-actividades y lista de coleccion
+musical y del lado derecho otra terminal con mocp reproduciendo musica en todo
+su esplendor y ocacionalmente alguna tarea de linea de comandos que no
+requiera atencion</p></li>
+
+<li><p>9: qbittorrent (lado izquierdo) + thunderbird (lado derecho)</p></li>
+
+<li><p>10: firefox apuntando en redit (que ademas sirve para busquedas &ldquo;tecnicas&rdquo;) y un emacs para ver rss</p></li>
+
+<li><p>11: firefox (misma secion que la anterior pero en una ventana
+distinta) con 3 pestañas fijas en traductores es-en y en-es, algunas pestañas
+fijas en proyectos de traduccion/maquetacion y del lado derecho&hellip; otro emacs!</p></li>
+</ul>
+
+<h2 id="apt">apt</h2>
+
+<pre><code># indispensables para ser persona
+apt-get -y install apt mg emacs moc htop dfc fish gnome-tweak-tool
+
+# el historial de fish no tiene precio
+# asegurarse que la ruta al shell sea correcta o atenerse a las consecuencias
+chsh root -s /usr/bin/fish
+chsh nasciiboy -s /usr/bin/fish
+
+# desarrollo y firmwares o programacion (por si hace falta)
+apt -y install firmware-linux-free firmware-misc-nonfree
+apt -y install build-essential binutils automake scons qt5-qmake qt4-qmake rake cmake xclip
+apt -y install subversion git mercurial bzr valgrind gource
+apt -y install gdb ghc guile-2.0 gcl sbcl racket rustc rust-gdb rust-doc clang ldc nasm fritzing # cargo go clisp
+apt -y install arduino arduino-core arduino-mk gcc-avr avr-libc fritzing
+
+# java
+apt -y install openjdk-9-jdk openjdk-9-jre openjdk-9-dbg
+# update-alternatives --config java
+# java -version
+# javac -version
+
+# &quot;plantar&quot; algunas librerias
+apt -y build-dep emacs dosbox moc love supertuxkart tilix chromium inkscape tumiki-fighters
+
+# monitores
+apt -y install glances inxi ncdu dmidecode lshw di iotop iptraf iftop hddtemp
+
+# documentacion
+apt -y install zeal asciidoc pandoc poppler-utils caca-utils texinfo ghostscript pdftk fbreader
+apt -y install apertium apertium-en-es
+apt -y install tesseract-ocr tesseract-ocr-spa tesseract-ocr-eng gimagereader
+apt -y install elinks surfraw
+
+# media
+apt -y install vlc mpv blender inkscape dia gimp tiled pinta synfigstudio mypaint mtpaint gpick grabc subdownloader gnome-subtitles
+apt -y install subliminal
+
+# audio
+apt -y install audacity tuxguitar rosegarden timidity ardour hydrogen lmms soundconverter transmageddon musescore
+apt -y install vmpk tuxguitar tuxguitar-jsa rakarrack pianobooster lingot gxtuner guitarix fofix etktab fmit # songwrite
+
+# vg
+apt -y install love nestopia fceux mupen64plus dosbox stella
+apt -y install tumiki-fighters garden-of-coloured-lights
+
+# fractales y cosas raras
+apt -y install xaos xfractint fraqtive evolvotron ibniz
+
+# utilidades o algo...
+apt -y install thunderbird simple-scan gscan2pdf
+
+# data
+apt -y install qbittorrent youtube-dl # amule
+apt -y install dtrx unp unar zip unzip id3v2 cuetools shntool flac ffmpeg mkvtoolnix xmp
+
+# emergencia... y cosas
+apt -y install smartmontools testdisk foremost gparted rsync autopsy secure-delete
+apt -y install aircrack-ng macchanger
+</code></pre>
+
+<h3 id="flacon">flacon</h3>
+
+<p><img src="https://www.nasciiboy.land/img/debone/flacon.png" alt="" /></p>
+
+<p>flacon es una bonita utilidad que nos permite partir y renombrar automagicamente
+aquellos albums almacenados en una monopista (<code>.flac</code> o similar) segun el fichero
+<code>.cue</code> que lo acompañe y al mismo tiempo permite permite convertir las pistas al formato que
+nos sea mas conveniente (flac, ogg, opus, &hellip;)</p>
+
+<p>en freidora estaba en los repos, pero debian no es tan moderna. Contando el
+chilion de librerias previamente instaladas, solo hiso falta seguir los
+siguientes pasos</p>
+
+<pre><code>su
+apt install qttools5-dev-tools libuchardet-dev
+exit
+git clone https://github.com/Flacon/flacon
+cd flacon
+mkdir build
+cd build
+cmake ..
+make
+su
+make install
+</code></pre>
+
+<h3 id="tilix">tilix</h3>
+
+<p>y la mencionada y mas molona y gnomera de todas las terminales!</p>
+
+<p>para su instalacion hace falta incluir los backports a los repositorios</p>
+
+<pre><code>echo &quot;deb http://deb.debian.org/debian stretch-backports main&quot; &gt;&gt; /etc/apt/sources.list
+echo &quot;deb-src http://deb.debian.org/debian stretch-backports main&quot; &gt;&gt; /etc/apt/sources.list
+
+apt install -t stretch-backports tilix
+</code></pre>
+
+<p>al abrir por primera ves tilix nos manda un error sobre &ldquo;un algo, que no se que&rdquo;
+y un enlace, para solucionarlo, cuya correcion se resume en:</p>
+
+<pre><code># ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
+</code></pre>
+
+<p>pasariamos a confugurar algunas de sus bastas y completas opciones, que van
+desde tener multiples seciones en la misma ventana, hasta dejaspojar la interfaz
+de barras de titulo y de desplazamiento, botones y menus</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/11.png" alt="" /></p>
+
+<p>algunos de los atajos que mas utilizo y/o he configurado, son:</p>
+
+<ul>
+<li><code>Shift-Up</code> desplazar hacia arriba una linea</li>
+<li><code>Shift-Down</code> desplazar hacia abajo una linea</li>
+<li><code>Shift-Re_Pag</code> desplazar hacia arriba una pagina</li>
+<li><code>Shift-Av_Pag</code> desplazar hacia abajo una pagina</li>
+<li><code>Shift-Right</code> cambiar a siguiente secion</li>
+<li><code>Shift-Left</code> cambiar a secion previa</li>
+<li><code>C-Shift-T</code> nueva secion</li>
+<li><code>C-Shift-N</code> nueva ventana</li>
+<li><code>C-Shift-D</code> añadir marcador</li>
+<li><code>C-Shift-M</code> abrir marcador</li>
+<li><code>C-Shift-/</code> añadir terminal abajo</li>
+<li><code>C-Shift-*</code> añadir terminal a la derecha</li>
+<li><code>C-Shift-+</code> ampliar</li>
+<li><code>C-Shift--</code> reducir</li>
+<li><code>C-@</code> sincronizar entrada</li>
+<li><code>Shift-F9</code> preferencias</li>
+<li><code>F11</code> fullscreen</li>
+<li><code>F12</code> overview</li>
+<li><code>M-Up</code> cambiar a terminal arriba</li>
+<li><code>M-Down</code> cambiar a terminal abajo</li>
+<li><code>M-Left</code> cambiar a terminal izquierda</li>
+<li><code>M-Right</code> cambiar a terminal derecha</li>
+<li><code>Shift-M-Up</code> redimencionar terminal hacia arriba</li>
+<li><code>Shift-M-Down</code> redimencionar terminal hacia abajo</li>
+<li><code>Shift-M-Left</code> redimencionar terminal hacia izquierda</li>
+<li><code>Shift-M-Right</code> redimencionar terminal hacia derecha</li>
+</ul>
+
+<h2 id="ati">ATI</h2>
+
+<p>en este momento en una primer instalacion (que no repeti para la siguiente
+seccion: <strong>Nvidia</strong>) pase a ver que firmware hacia falta con el siguiente comando</p>
+
+<pre><code>dmesg --level=alert,crit,debug,emerg,err,warn | grep firmware
+</code></pre>
+
+<p>y no recuerdo que demonios salia, pero parece que la aceleracion grafica no
+estaba disponible&hellip; y no es que el equipo fuera mal, pero si habia la opcion de
+hacerlo correr un poco mas&hellip;</p>
+
+<p>decia algo asi como que la aceleracion grafica no estaba disponible por falta de
+un driver ATI algo <code>.bin</code>. Tras una busqueda aparecio el siguiente enlace</p>
+
+<p><a href="https://wiki.debian.org/AtiHowTo">https://wiki.debian.org/AtiHowTo</a></p>
+
+<p>que recomendaba aplicar lo siguiente</p>
+
+<pre><code>apt-get install firmware-linux-nonfree libgl1-mesa-dri xserver-xorg-video-ati
+</code></pre>
+
+<p>tras ello, pase a probar supertuxkart y andaba si no perfecto almenos, jugable!</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/12.png" alt="" /></p>
+
+<h2 id="nvidia">Nvidia</h2>
+
+<p>similar a lo anterior, pero en esta ocacion en español: <a href="https://wiki.debian.org/es/NvidiaGraphicsDrivers">https://wiki.debian.org/es/NvidiaGraphicsDrivers</a>
+(Recordar, el modelo particular es una GeForce 210.)</p>
+
+<p>primero agregar <code>contrib non-free</code> a los repositorios</p>
+
+<pre><code>apt install aptitude nvidia-xconfig
+bash
+aptitude -r install linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') nvidia-legacy-340xx-driver
+nvidia-xconfig
+</code></pre>
+
+<p>haber, no me gusta contaminar mi sistema con material binario sin acceso a su
+codigo fuente, y antes de que la placa asus (con su AMD A6) se portara raro,
+andaba de lujo con los drivers graficos libres y durante los ultimos 2 años he
+utilizado la grafica nvidia con noveau (sin aceleracion grafica) perfectamente,
+sin jugar, claro esta&hellip;</p>
+
+<p>por contar con debian, lo limitado del equipo y su &ldquo;vejes&rdquo;, asumo cierta
+estabilidad, asi que me aventure a probar con los drivers privativos</p>
+
+<p>y bueno? el procesador es un cuello de botella. Je, para ver video a 720 el CPU
+requiere estar dedicado por completo, siempre sobre el 100% y aun con mpv (que es
+algo mas agil que vlc), le cuesta ir fluido</p>
+
+<p>no se puede exigir demaciado</p>
+
+<h2 id="config">+ config</h2>
+
+<p>pasamos a la configuracion basica del entorno</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/13.png" alt="" /></p>
+
+<p>primero, habilitar el login automatico. Mi pc no se mueve (de lugar, ni por
+voluntad propia) y espero que nadie se atreva a modificar eso, ademas &ldquo;no tengo nada que
+ocultar&rdquo;&hellip; digo, no tengo fotos de mi pack&hellip; je, je. En realidad, me da peresa
+el incordio de loguear (si no es para hacer root) y por otro lado me enorgullece
+cada bit de mi sistema (incluido el porno de enanos con holandesas y cabras (es
+mentira, no hay porno tan divertido, hacer de productor y director pornografico esta en
+mi lista de &ldquo;algun dia&rdquo;)).</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/14.png" alt="" /></p>
+
+<p>&hellip;</p>
+
+<p>un apartado importante y que evita que un proceso de ponga a &ldquo;etiquetar&rdquo; todos
+los ficheros, es limitar la busqueda (eso que aparece cuando presionamos super)
+al <strong>terminal</strong>, <strong>software</strong> y <strong>calculadora</strong></p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/15.png" alt="" /></p>
+
+<p>para este momento (con la grafica nvidia, dos monitores vga y un adaptador dvi-i
+a vga) ya esta funcianal la (imprecindible) configuracion de dos monitores</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/16.png" alt="" /></p>
+
+<h3 id="gnome-keys">gnome-keys</h3>
+
+<p><img src="https://www.nasciiboy.land/img/debone/17.png" alt="" /></p>
+
+<p>como mencianaba al principio, gnome es simple por defecto y potente cuando se
+necesita ( ͡° ͜ʖ ͡°)</p>
+
+<p>y? Hay muchas formas de convivir con el entorno grafico, algunos aspiran a tener
+una discoteca multicolor ventanistica cambia-temas neon, otros al espartano
+(pero en cuestion de ram eficiente) uso de un gestor de ventanas, y para
+los gnomeros, supongo que el equlibrio se encuentran entre los dos mundos</p>
+
+<p>Sin agobios de tener menues interminables y duplicados de configuracion, pero a
+su vez manteniendo el control de las ventanas al 100% desde el teclado. Al fin y
+al cabo, el entorno grafico solo es un intermediario amigable entre las ventanas
+y nuestro teclado, monitor y <del>raton</del> trackball. No es ni deseable, ni
+conveniente que el navegador de ficheros incorpore navegador web y terminal, o que el
+lanzador de aplicaciones se comporte como una consulta equiparable a los bangs de
+duck-duck-go, pues para las tareas que requieren poder de verdad ya tenemos el
+firefox, la terminal y el amado Emacs. El resto, estorba!</p>
+
+<p>desde la configuracion, se puede acceder a una nada despreciable cantidad de
+configuraciones posibles, pero, tambien es un asunto que podemos configurar
+desde la consola o si se prefiere en forma grafica y no esta disponible en
+<strong>configuracion &gt; teclado</strong> (aunque atemorizante) es posible, instalando <code>dconf-editor</code></p>
+
+<p>para dar una idea de cuantos atajos se pueden configurar</p>
+
+<pre><code>gsettings list-recursively org.gnome.desktop.wm.keybindings             | wc -l  # 85
+gsettings list-recursively org.gnome.settings-daemon.plugins.media-keys | wc -l  # 38
+</code></pre>
+
+<p>es decir 85 + 38 = <strong>123</strong> atajos, que ya son mas que los botones del teclado!</p>
+
+<p>otra cosa que podemos hacer (con <code>dconf</code>) es volcar toda nuestra configuracion
+de atajos sobre un fichero y luego cargarla, por si nos encontraramos en una
+maquina ajena&hellip;</p>
+
+<pre><code>dconf dump /org/gnome/desktop/wm/keybindings/             &gt; keys
+dconf dump /org/gnome/settings-daemon/plugins/media-keys/ &gt; m-keys
+
+dconf load /org/gnome/desktop/wm/keybindings/             &lt; keys
+dconf load /org/gnome/settings-daemon/plugins/media-keys/ &lt; m-keys
+</code></pre>
+
+<p>estos comandos podrian volcar toda la configuracion del entorno, incluidas
+(rutas) de extenciones y demas. Sin embargo, para evitar conflictos entre
+versiones, mejor limitarse a los atajos de teclado</p>
+
+<p>a continuacion, la lista completa de los atajos configurados que utilizo, con
+por ejemplo, 5 formas de &ldquo;hacer tab&rdquo; (para moverme entre ventanas con una u otra
+mano), los atajos para ir a los 11 escritorios, enviar aplicaciones directamente
+a culaquiera de ellos, mover ventanas de monitor, maximizar, minimizar, cerrar y
+demas.</p>
+
+<p>Como <em>no configurar, tambien es configurar</em>, inclullo las no configuraciones</p>
+
+<pre><code>gsettings set org.gnome.desktop.wm.keybindings activate-window-menu               &quot;['&lt;Super&gt;Delete']&quot;
+gsettings set org.gnome.desktop.wm.keybindings always-on-top                      &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings begin-move                         &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings begin-resize                       &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings close                              &quot;['&lt;Super&gt;q']&quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-group                        &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-group-backward               &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-panels                       &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-panels-backward              &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-windows-backward             &quot;['&lt;Shift&gt;&lt;Super&gt;space']&quot;
+gsettings set org.gnome.desktop.wm.keybindings cycle-windows                      &quot;['&lt;Super&gt;space']&quot;
+gsettings set org.gnome.desktop.wm.keybindings lower                              &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings maximize-horizontally              &quot;['&lt;Primary&gt;&lt;Alt&gt;Up']&quot;
+gsettings set org.gnome.desktop.wm.keybindings maximize                           &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings maximize-vertically                &quot;['&lt;Primary&gt;&lt;Alt&gt;Down']&quot;
+gsettings set org.gnome.desktop.wm.keybindings minimize                           &quot;['&lt;Super&gt;KP_Divide']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-center                     &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-corner-ne                  &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-corner-nw                  &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-corner-se                  &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-corner-sw                  &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down               &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left               &quot;['&lt;Alt&gt;&lt;Super&gt;Left']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right              &quot;['&lt;Alt&gt;&lt;Super&gt;Right']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up                 &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-side-e                     &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-side-n                     &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-side-s                     &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-side-w                     &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1                &quot;['&lt;Alt&gt;&lt;Super&gt;KP_7']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2                &quot;['&lt;Alt&gt;&lt;Super&gt;KP_8']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3                &quot;['&lt;Alt&gt;&lt;Super&gt;KP_9']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4                &quot;['&lt;Alt&gt;&lt;Super&gt;KP_4']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5                &quot;['&lt;Alt&gt;&lt;Super&gt;KP_5']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6                &quot;['&lt;Alt&gt;&lt;Super&gt;KP_6']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7                &quot;['&lt;Alt&gt;&lt;Super&gt;KP_1']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8                &quot;['&lt;Alt&gt;&lt;Super&gt;KP_2']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9                &quot;['&lt;Alt&gt;&lt;Super&gt;KP_3']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10               &quot;['&lt;Alt&gt;&lt;Super&gt;KP_0']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-11               &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-12               &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down             &quot;['&lt;Alt&gt;&lt;Super&gt;Page_Down']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-last             &quot;['&lt;Alt&gt;&lt;Super&gt;End']&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left             &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right            &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up               &quot;['&lt;Alt&gt;&lt;Super&gt;Page_Up']&quot;
+gsettings set org.gnome.desktop.wm.keybindings panel-main-menu                    &quot;['',&quot;
+gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog                   &quot;['&lt;Alt&gt;F2']&quot;
+gsettings set org.gnome.desktop.wm.keybindings raise                              &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings raise-or-lower                     &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings set-spew-mark                      &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings show-desktop                       &quot;['&lt;Super&gt;d']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward       &quot;['&lt;Shift&gt;&lt;Super&gt;BackSpace',&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-applications                &quot;['&lt;Super&gt;BackSpace',&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-group-backward              &quot;['&lt;Shift&gt;&lt;Super&gt;Home']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-group                       &quot;['&lt;Super&gt;Home']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward       &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source                &quot;['&lt;Super&gt;F4']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-panels-backward             &quot;['&lt;Shift&gt;&lt;Super&gt;Insert']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-panels                      &quot;['&lt;Super&gt;Insert']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1              &quot;['&lt;Super&gt;KP_7']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2              &quot;['&lt;Super&gt;KP_8']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3              &quot;['&lt;Super&gt;KP_9']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4              &quot;['&lt;Super&gt;KP_4']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5              &quot;['&lt;Super&gt;KP_5']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6              &quot;['&lt;Super&gt;KP_6']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7              &quot;['&lt;Super&gt;KP_1']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8              &quot;['&lt;Super&gt;KP_2']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9              &quot;['&lt;Super&gt;KP_3']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10             &quot;['&lt;Super&gt;KP_0']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-11             &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-12             &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down           &quot;['&lt;Super&gt;Page_Down']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-last           &quot;['&lt;Super&gt;End']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left           &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right          &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up             &quot;['&lt;Super&gt;Page_Up']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward            &quot;['&lt;Shift&gt;&lt;Super&gt;Return']&quot;
+gsettings set org.gnome.desktop.wm.keybindings switch-windows                     &quot;['&lt;Super&gt;Return']&quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-above                       &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen                  &quot;['&lt;Super&gt;f']&quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-maximized                   &quot;['&lt;Super&gt;KP_Multiply']&quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-on-all-workspaces           &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings toggle-shaded                      &quot;[]&quot;
+gsettings set org.gnome.desktop.wm.keybindings unmaximize                         &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys active                 &quot;[true]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot-clip   &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot        &quot;['&lt;Super&gt;Print']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys calculator             &quot;['XF86Calculator']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys control-center         &quot;['XF86Tools']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys decrease-text-size     &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys eject                  &quot;['XF86Eject']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys email                  &quot;['XF86Mail']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys help                   &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys home                   &quot;['XF86Explorer']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys increase-text-size     &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys logout                 &quot;['&lt;Control&gt;&lt;Alt&gt;Delete']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier              &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-in      &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-out     &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length  &quot;[uint32]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys media                  &quot;['XF86AudioMedia']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys next                   &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys on-screen-keyboard     &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys pause                  &quot;['XF86AudioPause']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys play                   &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys previous               &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys priority               &quot;[0]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys screencast             &quot;['&lt;Alt&gt;&lt;Super&gt;Print']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys screenreader           &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver            &quot;['&lt;Super&gt;l']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot-clip        &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot             &quot;['Print']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys search                 &quot;['XF86Search']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys stop                   &quot;['AudioStop']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys toggle-contrast        &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys video-out              &quot;['&lt;Super&gt;p']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down            &quot;['&lt;Super&gt;AudioLowerVolume']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute            &quot;['&lt;Super&gt;AudioMute']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up              &quot;['&lt;Super&gt;AudioRaiseVolume']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot      &quot;['&lt;Alt&gt;Print']&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot-clip &quot;[]&quot;
+gsettings set org.gnome.settings-daemon.plugins.media-keys www                    &quot;['XF86WWW']&quot;
+</code></pre>
+
+<p>no incluidas, pero tambien posibles, se pueden agregar atajos personalizados
+ligados a algun binario</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/18.png" alt="" /></p>
+
+<ul>
+<li><code>S-h</code> tilix &ndash;full-screen</li>
+<li><code>S-z</code> firefox</li>
+<li><code>S-u</code> emacs26</li>
+<li><code>S-e</code> emacs24 (el de los repos)</li>
+<li><code>S-x</code> nautilus</li>
+<li><code>S-v</code> evince</li>
+</ul>
+
+<p>y todo esto es posible y mas comodo gracias a un teclado mecanico configurable
+con la distribucion de teclado programmer dvorak (en ingles) con algunas teclas
+especialmente modificadas!</p>
+
+<p><img src="https://www.nasciiboy.land/img/nascii-dvorak.svg" alt="" /></p>
+
+<p>eh mencionado alguna vez, el asco que me dan las laptops con sus teclados reducidos, de
+membrana cutre y con su minuscula pantalla?</p>
+
+<h2 id="firefox-quantum">firefox-quantum</h2>
+
+<p>hace un tiempo que salio el firefox quantum. Como este es, ha sido y supongo
+sera por muchos ciclos mi navegador principal, utilizar el firefox retro que trae debian
+seria problematico e incomodo</p>
+
+<p>siguiendo el <a href="https://pulpolibre.wordpress.com/2018/03/06/instalacion-de-firefox-quantum-en-debian-9-stretch/">siguiente enlace</a>
+y habiendolo utilizado por varios dias puedo afirmar que es la solucion perfecta
+para tener firefox quantum en el sistema y no perderlo con las actualizaciones
+de debian y, ademas evitar tirar de configuraciones de repositorios arriesgadas</p>
+
+<p>lo primero seria ir a la zona de descargas de firefox, bajar el comprimido y
+hacer algo como lo siguiente (como root)</p>
+
+<pre><code>tar xjfv firefox-58.0.2.tar.bz2 -C /opt/
+</code></pre>
+
+<p>pasamos a crear un (no se como se llame) acceso al escritorio(?)</p>
+
+<pre><code>emacs -nw /usr/share/applications/firefox-quantum.desktop
+</code></pre>
+
+<p>y colocamos lo siguiente</p>
+
+<pre><code>[Desktop Entry]
+ Name=Firefox Quantum
+ Comment=Web Browser
+ GenericName=Web Browser
+ X-GNOME-FullName=Firefox Quantum Web Browser
+ Exec=/opt/firefox/firefox %u
+ Terminal=false
+ X-MultipleArgs=false
+ Type=Application
+ Icon=/opt/firefox/browser/chrome/icons/default/default128.png
+ # Icon=/opt/firefox/browser/icons/mozicon128.png
+ Categories=Network;WebBrowser;
+ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/ht$
+ StartupWMClass=Firefox
+ StartupNotify=true
+</code></pre>
+
+<p>(vera una linea comentada para el icono a mostrar. En el post original supongo
+funcionaria pero en la version actual cambiaron la ruta del fichero)</p>
+
+<p>no recuerdo si ya tiene los permisos apropiados el binario, ante la duda</p>
+
+<pre><code>chmod -R 777 /opt/firefox/
+</code></pre>
+
+<h3 id="gestos">gestos</h3>
+
+<p><img src="https://www.nasciiboy.land/img/debone/19.png" alt="" /></p>
+
+<p>he, voy directo a cumplir con el estereotipo de computer guy. Los trackball
+me tentaban y tenia que probar uno. Ademas habia efectivo, uno tiene debilidades
+y el raton que habia utilizado hasta ahora ya tenia unos 5 años de
+servicio. Funcionaba, pero siempre tenia un doble clickeo en el boton derecho en
+firefox y en ocaciones no respodia o lo hacia de forma torpe hasta qutiar y poner la bateria</p>
+
+<p>logitech, junto a asus son dos marcas fetiche y el trackball (modelo m570) tenia
+buen aspecto, aunque costo un riñon</p>
+
+<p>Como informaba la caja de caracteristicas, el soporte para &ldquo;Linux&rdquo; esta
+asegurado apartir de la version 2.XX, para funcionar solo basto conectar y ya</p>
+
+<p>Busque como configurar los botones extra (2) y no encontre demaciado, pero el
+bicho ese trae un pincho usb que ofrece la posibilidad de vincular hasta 6
+aparatos (compatibles logitech). En caso de querer gestionar conectar mas
+dispositivos al mismo receptor, hay un programita llamado <code>solaar</code> (con interfaz
+GTK) disponible en los repos&hellip; supongo que funciona&hellip;</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/20.png" alt="" /></p>
+
+<p>como mencionaba, no encontre (ni busque demaciado) como configurar los botones,
+pero, en su lugar aparecio una extencion de firefox para agregar gestos, que al
+fin y al cabo es el sitio donde mas lo utilizo</p>
+
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/mouse-gestures/">https://addons.mozilla.org/en-US/firefox/addon/mouse-gestures/</a></p>
+
+<p>la extencion es util ya sea con raton o el trackball y supongo trackpad. Los gestos
+requieren presionar el boton derecho (a modo de prefijo) junto
+con un gesto de movimiento. Por ejemplo, arriba es abrir nueva pestaña, abajo es cerrar
+pestaña, moviendo la rueda de desplazamiento hacia arriba es &ldquo;ir al inicio de pagina&rdquo; y hacia abajo al
+final, etc.</p>
+
+<p>para que vuelva a salir el menu opcional que aparece por defecto presionando
+el boton derecho, es necesario hacer dos pulsaciones cosecutivas (doble click,
+diria la chica de it crow). Lo que es bueno, por que ayuda a evitar el problema
+que tenia con el viejo mouse.</p>
+
+<p>vale la pena el trackball? por el precio lo encuentro demaciado sencillo y
+plasticoso, mas, tomando en cuenta su limitada popularidad y demanda, puede que sea un
+precio justo.</p>
+
+<p>llebo apenas unos dias como para decir si es o no mas comodo, pero su aplicacion
+efectiva no difiere mucho de un raton, exeptuando que el movimiento &ldquo;se siente
+directo&rdquo;, algo comparable al feedback de produce un teclado mecanico vs membrana,
+lo que da la seguridad que cuando mueves el cursor, es por que lo estas moviendo
+realmente</p>
+
+<p>una caracteristica peculiar, es que segun la velocidad de desplazamiento del
+trackball, el puntero tiene una u otra cantidad de desplazamiento con el mismo
+recorrido del dedo. Un movimiento rapido lleva el puntero de un extremo
+a otro de las dos pantallas y un movimiento lento, pues es lento, dahhhhh</p>
+
+<h2 id="emacs">emacs</h2>
+
+<p>el emacs de los repos no esta mal, aun asi, el magit bajado desde elpa se queja
+y exije la version 25.1 o superior</p>
+
+<p>desde hace tiempo encuento problemas en el repo git de emacs, que terminan en una no
+compilacion. La solucion, paso por ir a descargar una version &ldquo;estable&rdquo; desde
+gnu. Al momento la mas reciente es la 26.1</p>
+
+<p><a href="http://ftp.gnu.org/gnu/emacs/">http://ftp.gnu.org/gnu/emacs/</a></p>
+
+<p>y tras descomprimir seguir los tres (4) pasos habituales</p>
+
+<pre><code>cd emacs-26.1
+./autogen.sh
+./configure
+make
+</code></pre>
+
+<p>(se puede lanzar este binario con un atajo personalizado de teclado que apunte a
+la ruta del ejecutable)</p>
+
+<h2 id="sensors">sensors</h2>
+
+<p><code>sensors</code> en un comando que nos regresa la lectura de los componentes fisicos,
+como el procesador, la grafica, alguna otra cosa y la velocidad de los
+ventiladores.</p>
+
+<p>luego de instalar <code>sensors</code> se aconseja ejecutar <code>sensors-detect</code> para que
+detecte los componentes. Mentras hace esto nos pregunta si queremos explorar
+algunos componentes y da una opcion por defecto supuestamente segura.</p>
+
+<p>je, probe la configuracion segura y sensors no regresaba nada</p>
+
+<p>luego probe con las repuestas inseguras y el sistema se congelo mientras
+exploraba la grafica&hellip;</p>
+
+<p>tras esto decia que hacia falta un modulo del kernel o algo asi, la solucion fue</p>
+
+<pre><code>echo &quot;it87&quot; &gt;&gt; /etc/modules
+modprobe it87 # para cargar el modulo de inmedito
+</code></pre>
+
+<p>y tras ello <code>sensors</code> arrojaba</p>
+
+<pre><code>Adapter: ISA adapter
+in0:          +1.25 V  (min =  +0.00 V, max =  +4.08 V)
+in1:          +1.22 V  (min =  +0.00 V, max =  +4.08 V)
+in2:          +3.33 V  (min =  +0.00 V, max =  +4.08 V)
++5V:          +2.98 V  (min =  +0.00 V, max =  +4.08 V)
+in4:          +2.93 V  (min =  +0.00 V, max =  +4.08 V)
+in5:          +1.81 V  (min =  +0.00 V, max =  +4.08 V)
+in6:          +0.72 V  (min =  +0.00 V, max =  +4.08 V)
+5VSB:         +2.90 V  (min =  +0.00 V, max =  +4.08 V)
+Vbat:         +3.04 V
+fan1:        2689 RPM  (min =    0 RPM)
+fan2:        1347 RPM  (min =    0 RPM)
+fan3:           0 RPM  (min =    0 RPM)
+temp1:        +40.0°C  (low  =  -1.0°C, high = +127.0°C)  sensor = thermistor
+temp2:        +50.0°C  (low  =  -1.0°C, high = +127.0°C)  sensor = thermal diode
+temp3:        +25.0°C  (low  =  -1.0°C, high = +127.0°C)  sensor = thermistor
+cpu0_vid:    +1.488 V
+intrusion0:  ALARM
+</code></pre>
+
+<p>(en algo ayudo este post <a href="https://linuxconfig.org/monitor-amd-ryzen-temperatures-in-linux-with-latest-kernel-modules">https://linuxconfig.org/monitor-amd-ryzen-temperatures-in-linux-with-latest-kernel-modules</a>)</p>
+
+<h2 id="ram">RAM</h2>
+
+<p>como mencionaba al inicio, los dos GB de ram, estan apenas justos para todo el
+festival de aplicaciones, lo suficiente como para ir a pedir entre 100 y 600MiB
+de swap (del SSD), para limitar la peticion</p>
+
+<pre><code>echo &quot;vm.swappiness=1&quot;          &gt;&gt; /etc/sysctl.conf
+echo &quot;vm.vfs_cache_pressure=50&quot; &gt;&gt; /etc/sysctl.conf
+sysctl vm.swappiness=1          # para modificar en el acto
+sysctl vm.vfs_cache_pressure=50 # para modificar en el acto
+cat /proc/sys/vm/swappiness     # comprobar la modificacion
+</code></pre>
+
+<h2 id="eof">EOF</h2>
+
+<p>al final del todo, tras instalar un monton de cosas invisibles (como el demonio
+que controla el teclado RGB: <code>ckb</code>), probando htop, sobre fish,
+sobre tilix, sobre gnome, de inicio</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/21.png" alt="" /></p>
+
+<p>arroja un consumo de 468MiB de ram, algo muy aceptable. Mientras tanto a dos
+pantallas con firefox con dos instancias, unos emacs, unos tilix, thunderbird,
+qbittorrent, nautilus y moc, el consumo ronda el 1.5GiB</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/22.png" alt="" /></p>
+
+<p>en fin, hasta aqui con la configuracion. Para terminar una foto del conjunto
+fisico entero</p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/23.jpg" alt="" /></p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://www.nasciiboy.land/prog/introarm/">◀ IntroARM</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://www.nasciiboy.land">/</a></span> <span><a href="https://www.nasciiboy.land/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://www.nasciiboy.land/categories/prog">prog(49)</a></li><li><a href="https://www.nasciiboy.land/categories/post">post(37)</a></li><li><a href="https://www.nasciiboy.land/categories/emacs">emacs(14)</a></li><li><a href="https://www.nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://www.nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://www.nasciiboy.land/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://www.nasciiboy.land/tags/fonos">fonos(22)</a></li><li><a href="https://www.nasciiboy.land/tags/howto">howto(19)</a></li><li><a href="https://www.nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="https://www.nasciiboy.land/tags/4k">4k(16)</a></li><li><a href="https://www.nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="https://www.nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://www.nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="https://www.nasciiboy.land/tags/txt">txt(6)</a></li><li><a href="https://www.nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://www.nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://www.nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="https://www.nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://www.nasciiboy.land/tags/go">go(3)</a></li><li><a href="https://www.nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://www.nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://www.nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://www.nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://www.nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://www.nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://www.nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://www.nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://www.nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://www.nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://www.nasciiboy.land/tags/elisp">elisp(1)</a></li><li><a href="https://www.nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://www.nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://www.nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://www.nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://www.nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://www.nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://www.nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://www.nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://www.nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://www.nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://www.nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://www.nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
