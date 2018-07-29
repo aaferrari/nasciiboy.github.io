@@ -7,10 +7,289 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Tue, 06 Mar 2018 18:00:06 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 29 Jul 2018 12:19:36 -0500</lastBuildDate>
     
         <atom:link href="https://www.nasciiboy.land/tags/elisp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>elipo</title>
+      <link>https://www.nasciiboy.land/emacs/elipo/</link>
+      <pubDate>Sun, 29 Jul 2018 12:19:36 -0500</pubDate>
+      
+      <guid>https://www.nasciiboy.land/emacs/elipo/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/elipopl.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Recuerda, “No tiene que gustarte Emacs para que te guste”––Emacs puede tener
+diferentes colores, diferentes comandos y diferentes atajos que el Emacs por
+defecto. {AItPiEL}&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;an-introduction-to-programming-in-emacs-lisp&#34;&gt;An Introduction to Programming in Emacs Lisp&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://gitlab.com/nasciiboy/elipo.git
+# o
+git clone https://notabug.org/nasciiboy/elipo.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para descarga en formato &lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.zip&#34;&gt;zip&lt;/a&gt;
+y en &lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.tar&#34;&gt;tar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;Una introducción a la programación en Emacs Lisp&amp;rdquo;&lt;/strong&gt; es una guia turistica por
+los conceptos basicos de la programacion, recorriendo las entrañas mas
+emblematicas en &amp;ldquo;las fuentes&amp;rdquo; de &lt;strong&gt;GNU Emacs&lt;/strong&gt;, &lt;strong&gt;el&lt;/strong&gt; &amp;ldquo;editor extensible&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;El documento es un primer acercamiento gentil, mas o menos claro y muy reiterativo a Emacs
+Lisp, que a un iniciado en la programacion deseoso por utilizar el verdadero
+potencial de emacs le vendra de maravilla. Menciono que a un iniciado, por que
+asi es mi caso, y me costaria recomendarlo como primer libro de programacion.
+Aun asi, utiliza buenas analogias e introduce los conceptos base
+de forma tan gradual como para no descartarlo (por completo) como libro novel.&lt;/p&gt;
+
+&lt;p&gt;A lo largo del material, aprenderemos ademas de los fundamentos de la
+programacion (variables, bucles, recursividad, funciones, &amp;hellip;, listas), a crear atajos
+personalizados para las funciones de Emacs, como tambien a definir las nuestras
+propias, a manipular y construir listas lisp, visitar buffers, mover el punto,
+utilizar la region, crear funciones interactivas, a conocer el anillo de la
+muerte y en ultima instancia a enterarnos con certeza de lo que hacemos con
+nuestro &lt;code&gt;init.el&lt;/code&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;bueno, el texto esta un poco anticuado fue escrito con la version 22
+(2007-2008) en mente, pero en la practica (practicamente) todo el codigo aun es
+aplicable, exeptuando algunas pocas funciones y configuraciones relacionadas con
+X Window&lt;/p&gt;
+
+&lt;p&gt;Antes ya habia realizado otros acercamientos a lisp como &amp;ldquo;The land of Lisp&amp;rdquo;
+(traduciendolo &amp;ldquo;informalmente&amp;rdquo; como hasta un 2X%) y tambien con ANSI Common
+Lisp, pero este ha sido el primer libro que termino y donde (mas o menos) llego a comprender las
+bases de Lisp&amp;hellip; sin masterizarlo a profundidad, pues el libro no abarca
+conceptos como la metaprogramacion, macros y el potencial de las funciones
+lambda (quien sabe que signifique todo eso&amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;De momento Lisp me continua pareciendo un lenguaje curioso, con algo de
+elegancia (no demaciada), medianamente &amp;ldquo;retro&amp;rdquo; y un poco tosco en lo que a adquirir
+documentacion y uso de librerias se refiere&lt;/p&gt;
+
+&lt;p&gt;Muchos aspectos son forzados a encajar en el molde de las listas y en otros
+tantos, como las &amp;ldquo;formas especiales&amp;rdquo;, simplemente se ignoran en pro de la
+practicidad&lt;/p&gt;
+
+&lt;p&gt;Mi calificacion?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;No es una perdida de tiempo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Necesario si quieres profundizar en emacs o descubrir la superficie de lisp&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sin ser una lectura ipnotizante, tampoco es soporifera. En ocaciones cuesta
+seguir las ideas del autor, pero es apreciable que sin ser un escritor de profesion
+o vocacion (supongo) se esforza por plasmar su conocimento lo mas claro que le fue posible&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;porg&#34;&gt;porg&lt;/h2&gt;
+
+&lt;p&gt;No recuerdo si fue en alguna busqueda de Emacs-material, en irc o
+directamente el la pagina de &lt;a href=&#34;http://www.davidam.com&#34;&gt;David Arroyo&lt;/a&gt; donde con
+alegria incontrolable descubri la existencia de una traduccion al español (en apariencia
+terminada) de este titulo, que ademas de tener una version en PDF y texinfo,
+contaba con el material impreso.&lt;/p&gt;
+
+&lt;p&gt;Con la mayor alegria que puede albelgar un aprendis del silicio y en particular usuario de
+Emacs que poco entiende del lenguaje ingles, procedi a descargar
+el PDF para recorrerlo con deseo. Sin embargo, al poco de leer, fue evidente que
+la version tenia defectos apresiables aun para un completo perdido del engrish.&lt;/p&gt;
+
+&lt;p&gt;Incredulo, supuse que la version digital y la impresa tenian algun (compresible)
+desfase comercial y fui directamente al repositorio donde se albergaba la
+fuente. Para descubrir que el material era tal cual el del repositorio&lt;/p&gt;
+
+&lt;p&gt;No negare que un fuerte sentimiento de desilucion aparecio al ver que habria que
+hecharle esfuerzo para tener un material compresible. Aunque viendolo desde otro
+angulo, ya habia personas que habian invertido tiempo y energia preparando el
+material. Que menos que unirse a la causa para sumar al material, o tan siquiera
+dejarlo en un punto que fuera util a mis egoistas fines&lt;/p&gt;
+
+&lt;p&gt;Segun el repo, la primer contribucion que hice fue el 30-05-16, pero aunque
+intente mantenerme constante, encontre que traducir mediante un fichero &lt;strong&gt;.po&lt;/strong&gt;
+que ademas esta documentado en texinfo es bastante engorroso. Sumado a esto, las
+taras ortograficas y traductorias que cargo son bastas (e incorregibles&amp;hellip;),
+como resistirme a colocar acentos o a pasar un corrector ortografico y ademas
+tener en esas fechas algunos experimentos bizarros para un lenguaje de marcas
+ligero que cumpliera todas mis ridiculas exigencias, condujeron a que hiciera un
+&amp;ldquo;fork&amp;rdquo; del proyecto&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;fork&amp;rdquo; etre comillas, porque no cargue con el material original. Fue una
+adaptacian express al lenguaje experimental de aquel tiempo (aun sin exportador, ni
+nada) y tras &amp;ldquo;corregir&amp;rdquo; cerca del 30% perdi la motivacion&amp;hellip;.&lt;/p&gt;
+
+&lt;p&gt;el asunto se fue aparcando, el formato de marcado ligero cambiando y poco
+interes tenia por actualizar&lt;/p&gt;
+
+&lt;p&gt;hasta que por diciembre del 2017 lo retome esporadicamente y luego de
+bastantes seciones, pues lo doy por &amp;ldquo;usable&amp;rdquo; y digno de ser compartido bajo unos
+pobres estandares.&lt;/p&gt;
+
+&lt;p&gt;Eso si, no sera ninguna logro literario, pero no negare que visualmente tanto
+las versiones en web y en &lt;em&gt;morg&lt;/em&gt;, tienen un acabado de puta madre. Ha quedado
+bien chido y &amp;ldquo;profecional&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/elipo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, la parte de la traduccion que no se como inicio, pero creo
+fue obra del traductor de google (y en un inico continue con la tradicion hasta
+que aparecio deepl) (por mi parte) consistio apenas en darle sentido a los parrafos&lt;/p&gt;
+
+&lt;p&gt;En muchas (por no decir que en todas) las seciones, terminaba por
+entrar en una face cercana al sueño y dejando presionada una tecla
+indefinidamente. Iniciaba una alerta de regresar a la consciencia, y&amp;hellip; volvia a
+controlar la somnolencia, unos minutos mas antes de desistir.&lt;/p&gt;
+
+&lt;p&gt;Otro de los bellos detalles que inclui, fueron palabras con sus caracteres en posiciones alteradas
+de sitio. Asi como palabras repetidas y poca atencion al formato&lt;/p&gt;
+
+&lt;p&gt;Hay varios sitios donde es necesario hacer mas digerible la transmicion de ideas
+y otros donde por la falta de conocimiento del engrish solo intuia el sentido e
+inventaba el resto&lt;/p&gt;
+
+&lt;p&gt;Algunas traducciones no son consistentes, otras dificiles de transladar y unas mas se
+asume que ya se entienden, por ejemplo las funciones y conceptos &lt;code&gt;narrow&lt;/code&gt; y
+&lt;code&gt;widen&lt;/code&gt;, que deje como reducir y extender&lt;/p&gt;
+
+&lt;p&gt;Donde decia &amp;ldquo;computer&amp;rdquo; al principio substitui con &lt;em&gt;computador&lt;/em&gt;, pero termino
+como &lt;em&gt;ordenador&lt;/em&gt;, y asi otros tantos detalles&lt;/p&gt;
+
+&lt;p&gt;Por el lado del codigo, el proyecto de traduccion original (de &lt;a href=&#34;http://libremanuals.net/&#34;&gt;libre-manuals&lt;/a&gt;)
+planeaba adaptar el codigo a una version reciente. Por parte mia, y ya que
+segun la &lt;a href=&#34;https://en.wikipedia.org/wiki/Robert_J._Chassell&#34;&gt;wikipedia&lt;/a&gt; el autor
+de esta obra (y otras mas) Robert J. Chassel murio en 2017, he preferido dejarlo
+(casi en su mayoria) tal cual. (Alguna cosa cambie pero no recuerdo que exactamente.)&lt;/p&gt;
+
+&lt;p&gt;Otra cosa importante, es que todas las regiones de texto en el original dentro
+de un bloque texinfo &lt;code&gt;ignore&lt;/code&gt;, las extripe de las versiones a &amp;ldquo;morg&amp;rdquo;. Considere que eran
+comentarios y ya que estaban inconclusos los quite.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Asocia la tecla ‘Bloq Mayus’ a ‘Control’
+(Una interfaz de usuario tan rota, sugiere que los fabricantes de teclados
+piensan que las computadoras son máquinas de escribir de 1885.) {AItPiEL}&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Y luego del momento de monolo, el producto central esta en los siguientes repos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://gitlab.com/nasciiboy/elipo.git
+git clone https://notabug.org/nasciiboy/elipo.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tambien hay uno en github, pero los repos hay presentes (todos inconclusos) los he congelado y/o
+estan en proceso de migracion hacia gitlab&lt;/p&gt;
+
+&lt;p&gt;Para quien desee intervenir el material, recomendaria primero leer acerca del
+(cambiante y experimental) lenguaje de marcas ligeras &lt;a href=&#34;https://github.com/nasciiboy/morg/&#34;&gt;morg&lt;/a&gt; y si se quiere
+profundizar mas, seguir la etiqueta morg en &lt;strong&gt;este&lt;/strong&gt; &lt;a href=&#34;https://www.nasciiboy.land&#34;&gt;blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;El fichero donde deben realizarce las modificaciones tanto en español, como en
+ingles es &lt;code&gt;emacs-lisp-intro_es.porg&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Para facilitar la labor, utilizo org-mode para algunas funcionalidades, como
+escribir listas y tener outline-mode. Algunas de las configuraciones que se
+pueden agregar a &lt;code&gt;init.el&lt;/code&gt; para ayudar un poco, son:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.morg\\&#39;&amp;quot; . org-mode))
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.porg\\&#39;&amp;quot; . org-mode))
+
+;;; resaltado primitivo y no siempre certero de la sintaxis
+(add-hook &#39;org-mode-hook
+          (lambda ()
+            (highlight-regexp &amp;quot;@[^[&amp;lt;({]+[[&amp;lt;({][^]&amp;gt;})]+[]&amp;gt;})]&amp;quot; &#39;hi-green-b)
+            (highlight-regexp &amp;quot;@[[&amp;lt;({][^]&amp;gt;})]+[]&amp;gt;})]&amp;quot; &#39;hi-red-b)
+            (highlight-regexp &amp;quot;@[^[&amp;lt;({]+[[&amp;lt;({][]&amp;gt;})]&amp;quot; &#39;hi-red-b)
+            (highlight-regexp &amp;quot;[[:space:]]@[[:space:]]&amp;quot; &#39;hi-yellow)
+            (highlight-regexp &amp;quot;@[a-zA-Z]+[[:space:]]&amp;quot; &#39;hi-yellow)
+            (highlight-regexp &amp;quot;^ *@ +.*&amp;quot; &#39;hi-pink)
+            )
+          )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;me parece que el programa que esta en los &lt;a href=&#34;https://github.com/nasciiboy/morg/&#34;&gt;repositorios&lt;/a&gt; y el que utilizo en mi
+sistema para realizar la exportacion, difieren un poco&amp;hellip; estaba en proceso de
+refactorizacion e inesperadamante cai en un bucle de poscastinacion y falta de
+ideas.&lt;/p&gt;
+
+&lt;p&gt;En los planes esta que las versiones finales de ficheros (en|es|..|xx|).morg
+puedan mesclarze, traducirse automaticamente, compararse, reformatearse y
+demas. Pero ante mi ineficacia, para este material recurri a simples trucos
+para generar la versiones finales apartir del fichero &lt;code&gt;.porg&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;para producir la traduccion en español, solo tienen que borrarse todas las
+lineas que inicien con &lt;code&gt;#&lt;/code&gt;. Para generar la version en ingles, mantener todas
+las lineas vacias y que inicien con &lt;code&gt;#&lt;/code&gt;, y luego eliminar el &lt;code&gt;#&lt;/code&gt; inicial mas un caracter
+en blanco (si lo hubiera)&lt;/p&gt;
+
+&lt;p&gt;he colocado unas cripticas instrucciones en el &lt;code&gt;.porg&lt;/code&gt;, para generar ambas
+versiones.&lt;/p&gt;
+
+&lt;p&gt;De &lt;code&gt;.porg&lt;/code&gt; a &lt;code&gt;en.morg&lt;/code&gt; y ademas exportacion a html, seria:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;awk &#39;length == 0 || /^#/&#39; emacs-lisp-intro_es.porg | sed -e &#39;s/^# \?//&#39; | sed &#39;8,11d&#39; &amp;gt; emacs-lisp-intro.morg &amp;amp;&amp;amp; morg toHtml emacs-lisp-intro.morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y de &lt;code&gt;.porg&lt;/code&gt; a &lt;code&gt;es.morg&lt;/code&gt; con exportacion a html:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;morg unPorg emacs-lisp-intro_es.porg &amp;amp;&amp;amp; morg toHtml emacs-lisp-intro_es.morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si se desea verificar que los enlaces en las exportaciones html apuntan a algun
+lado, se puede utilizar &lt;code&gt;linkchecker&lt;/code&gt; (presente en los repositorios de debian)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;linkchecker emacs-lisp-intro_es.html --check-extern
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;algunas-convenciones&#34;&gt;algunas convenciones&lt;/h3&gt;
+
+&lt;p&gt;cuando despues de un atajo se incluye el nombre de la funcion que invoca &amp;ldquo;entre
+parentesis&amp;rdquo;, utilizo la sintaxis &lt;code&gt;@%c(nombre-de-funcion)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;cuando despues de un palabro en español o ingles se coloca su equivalente en el otro
+idioma, utilizo la sintaxis &lt;code&gt;@%i(traduccion/original)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;En el documento origital varias &amp;ldquo;piezas de codigo&amp;rdquo; se colocaban entre comillas
+simples. Cuando lo considere pertinente y que ofrecia un mejor resaltado utilice
+&lt;code&gt;@&#39;c(pieza-de-codigo)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Por falta de mejora en el exportador, y sombretodo, como un apaño, dentro de los bloques de
+codigo, deben respetarse los espacios en blanco. Si un bloque de codigo en el
+original tiene una linea de espacio en blanco, debe intercaralse forzosamente el codigo en ingles,
+colocando la traduccion al español y que ambos bloques compartan la linea en
+blanco&lt;/p&gt;
+
+&lt;p&gt;En el original, habia condiciones para que al exportar el fuente los enlaces
+externos a los manuales de Emacs y Emacs Lisp estubieran accesibles desde info y
+en caso de exportar en un formato diferente, desde la ruta web.&lt;/p&gt;
+
+&lt;p&gt;un proposito futuro, es replicar este comportamiento (una vez adaptadas esas dos obras a
+morg), pero eso puede tardar mucho o nunca suceder. Para mantener la
+funcionalidad, en principio substitui toda referencia a dichos recursos con la ruta web al
+manual mono-pagina. Pero para evitar peticiones de varios megas a gnu.org, con
+la lentinud que ello conlleba, termine por colocar en el repositorio verciones locales
+de estos en formato web mono-pagina&lt;/p&gt;
+
+&lt;p&gt;En el original creo que las citas con comillas dobles y sencillas y &lt;code&gt;---&lt;/code&gt;, se aplicaban
+mediante sintaxis texinfo. Para mejorar la legibilidad en el fuente, se
+modificaron a &lt;code&gt;“cosas”&lt;/code&gt;, &lt;code&gt;‘cosas’&lt;/code&gt;y &lt;code&gt;––&lt;/code&gt;. El formato morg, tiene comandos para
+aplicar los mismos efectos: &lt;code&gt;@&amp;quot;(cosas)&lt;/code&gt;, &lt;code&gt;@&#39;(cosas)&lt;/code&gt; y &lt;code&gt;@-(cosas)&lt;/code&gt;. Sin embargo
+el ultimo no esta adaptado para casos &amp;ldquo;especiales&amp;rdquo; si las cosas tienen llave de
+apertura pero no de cierre. Aun considero cambiar todas las apariciones
+&amp;ldquo;legibles a simple vista&amp;rdquo; por su version en comando, pero no lo termino de decidir&lt;/p&gt;
+
+&lt;p&gt;Disfrut! Bienvenidas las peleas, asesorias programacionales a morg, los
+exportadores de texinfo a morg, los tenedores, monitores 2K y sobre todo, el sucio dinero!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Miscelanea Emacs</title>
