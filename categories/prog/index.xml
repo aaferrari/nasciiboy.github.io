@@ -58,7 +58,7 @@ silent con 1GB de ram dedicada&lt;/p&gt;
 &lt;p&gt;(solo tiene dos conexiones para ventiladores CPU y chasis, el tercero necesario
 por que la grafica se ponte un poco calida al igual que la controladora de la
 motherboard y lo que supongo es la grafica ATI. Este tercer &amp;ldquo;fan&amp;rdquo; esta en el
-cable de la disquetecon puesto sin nahh enchufado con conectores para protoboard)&lt;/p&gt;
+cable del disquete puesto sin nahh enchufado con conectores para protoboard)&lt;/p&gt;
 
 &lt;p&gt;2GB de ram, podrian ser suficiente para casi cualquier cosa hasta que se
 involucra un navegador web &amp;ldquo;modernoso&amp;rdquo; y personalizado, como lo puede ser
@@ -167,7 +167,7 @@ comandos:&lt;/p&gt;
 
 &lt;p&gt;para finalizar con esta primer modificacion y evitar comportamientos emergentes
 a la ves que establecemos un lugar especifico para cada ventana que lancemos (al
-menos conceptualmente), ponemos las areas de atrabajo como estaticas y que sean &lt;strong&gt;11&lt;/strong&gt;&lt;/p&gt;
+menos conceptualmente), ponemos las areas de trabajo como estaticas y que sean &lt;strong&gt;11&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/09.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -176,7 +176,7 @@ presionando &lt;code&gt;Super&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;al principio utilizaba 4 areas (mono-pantalla), luego 5, despues 6, 9, 10 y
+&lt;p&gt;al principio utilizaba 4 areas (mono-pantalla), luego 5, despues 6, 7, 9, 10 y
 finalmente 11 (a pantalla doble).&lt;/p&gt;
 
 &lt;p&gt;Utilizo de la sugiente forma las areas de trabajo&lt;/p&gt;
@@ -184,7 +184,7 @@ finalmente 11 (a pantalla doble).&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;1, 3, 4, 6: para emacs (de 1 a 3 instancias distintas) a doble pantalla&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;2 y 5: terminales en del lado derecho y emacses del izquierdo. Aunque no es
+&lt;li&gt;&lt;p&gt;2 y 5: terminales del lado derecho y emacses del izquierdo. Aunque no es
 complejo abrir varias seciones a pantalla completa en tilix o incluso dividir
 la ventana con varias seciones, en general, me es mas facil cambiar de area,
 que pensar en la combinacion interna de una aplicacion&lt;/p&gt;&lt;/li&gt;
@@ -274,7 +274,7 @@ apt -y install aircrack-ng macchanger
 
 &lt;p&gt;flacon es una bonita utilidad que nos permite partir y renombrar automagicamente
 aquellos albums almacenados en una monopista (&lt;code&gt;.flac&lt;/code&gt; o similar) segun el fichero
-&lt;code&gt;.cue&lt;/code&gt; que lo acompañe y al mismo tiempo permite permite convertir las pistas al formato que
+&lt;code&gt;.cue&lt;/code&gt; que lo acompañe y al mismo tiempo permite convertir las pistas al formato que
 nos sea mas conveniente (flac, ogg, opus, &amp;hellip;)&lt;/p&gt;
 
 &lt;p&gt;en freidora estaba en los repos, pero debian no es tan moderna. Contando el
@@ -309,7 +309,7 @@ apt install -t stretch-backports tilix
 &lt;p&gt;al abrir por primera ves tilix nos manda un error sobre &amp;ldquo;un algo, que no se que&amp;rdquo;
 y un enlace, para solucionarlo, cuya correcion se resume en:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
+&lt;pre&gt;&lt;code&gt;ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;pasariamos a confugurar algunas de sus bastas y completas opciones, que van
@@ -361,8 +361,8 @@ seccion: &lt;strong&gt;Nvidia&lt;/strong&gt;) pase a ver que firmware hacia falt
 estaba disponible&amp;hellip; y no es que el equipo fuera mal, pero si habia la opcion de
 hacerlo correr un poco mas&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;decia algo asi como que la aceleracion grafica no estaba disponible por falta de
-un driver ATI algo &lt;code&gt;.bin&lt;/code&gt;. Tras una busqueda aparecio el siguiente enlace&lt;/p&gt;
+&lt;p&gt;el problema parecia ser la falta de un driver ATI algo &lt;code&gt;.bin&lt;/code&gt;. Tras una busqueda
+aparecio el siguiente enlace&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://wiki.debian.org/AtiHowTo&#34;&gt;https://wiki.debian.org/AtiHowTo&lt;/a&gt;&lt;/p&gt;
 
@@ -371,7 +371,7 @@ un driver ATI algo &lt;code&gt;.bin&lt;/code&gt;. Tras una busqueda aparecio el 
 &lt;pre&gt;&lt;code&gt;apt-get install firmware-linux-nonfree libgl1-mesa-dri xserver-xorg-video-ati
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;tras ello, pase a probar supertuxkart y andaba si no perfecto almenos, jugable!&lt;/p&gt;
+&lt;p&gt;tras ello, pase a probar supertuxkart y andaba si no perfecto al menos, jugable!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -421,7 +421,7 @@ mi lista de &amp;ldquo;algun dia&amp;rdquo;)).&lt;/p&gt;
 
 &lt;p&gt;&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;un apartado importante y que evita que un proceso de ponga a &amp;ldquo;etiquetar&amp;rdquo; todos
+&lt;p&gt;un apartado importante y que evita que un proceso se ponga a &amp;ldquo;etiquetar&amp;rdquo; todos
 los ficheros, es limitar la busqueda (eso que aparece cuando presionamos super)
 al &lt;strong&gt;terminal&lt;/strong&gt;, &lt;strong&gt;software&lt;/strong&gt; y &lt;strong&gt;calculadora&lt;/strong&gt;&lt;/p&gt;
 
@@ -683,7 +683,7 @@ funcionaria pero en la version actual cambiaron la ruta del fichero)&lt;/p&gt;
 
 &lt;p&gt;no recuerdo si ya tiene los permisos apropiados el binario, ante la duda&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;chmod -R 777 /opt/firefox/
+&lt;pre&gt;&lt;code&gt;chmod -R 755 /opt/firefox/
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;gestos&#34;&gt;gestos&lt;/h3&gt;
@@ -694,7 +694,7 @@ funcionaria pero en la version actual cambiaron la ruta del fichero)&lt;/p&gt;
 me tentaban y tenia que probar uno. Ademas habia efectivo, uno tiene debilidades
 y el raton que habia utilizado hasta ahora ya tenia unos 5 años de
 servicio. Funcionaba, pero siempre tenia un doble clickeo en el boton derecho en
-firefox y en ocaciones no respodia o lo hacia de forma torpe hasta qutiar y poner la bateria&lt;/p&gt;
+firefox y en ocaciones no respodia o lo hacia de forma torpe hasta quitar y poner la bateria&lt;/p&gt;
 
 &lt;p&gt;logitech, junto a asus son dos marcas fetiche y el trackball (modelo m570) tenia
 buen aspecto, aunque costo un riñon&lt;/p&gt;
@@ -815,9 +815,9 @@ intrusion0:  ALARM
 festival de aplicaciones, lo suficiente como para ir a pedir entre 100 y 600MiB
 de swap (del SSD), para limitar la peticion&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;vm.swappiness=1&amp;quot;          &amp;gt;&amp;gt; /etc/sysctl.conf
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;vm.swappiness=0&amp;quot;          &amp;gt;&amp;gt; /etc/sysctl.conf
 echo &amp;quot;vm.vfs_cache_pressure=50&amp;quot; &amp;gt;&amp;gt; /etc/sysctl.conf
-sysctl vm.swappiness=1          # para modificar en el acto
+sysctl vm.swappiness=0          # para modificar en el acto
 sysctl vm.vfs_cache_pressure=50 # para modificar en el acto
 cat /proc/sys/vm/swappiness     # comprobar la modificacion
 &lt;/code&gt;&lt;/pre&gt;

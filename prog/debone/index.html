@@ -289,7 +289,7 @@ silent con 1GB de ram dedicada</p>
 <p>(solo tiene dos conexiones para ventiladores CPU y chasis, el tercero necesario
 por que la grafica se ponte un poco calida al igual que la controladora de la
 motherboard y lo que supongo es la grafica ATI. Este tercer &ldquo;fan&rdquo; esta en el
-cable de la disquetecon puesto sin nahh enchufado con conectores para protoboard)</p>
+cable del disquete puesto sin nahh enchufado con conectores para protoboard)</p>
 
 <p>2GB de ram, podrian ser suficiente para casi cualquier cosa hasta que se
 involucra un navegador web &ldquo;modernoso&rdquo; y personalizado, como lo puede ser
@@ -398,7 +398,7 @@ comandos:</p>
 
 <p>para finalizar con esta primer modificacion y evitar comportamientos emergentes
 a la ves que establecemos un lugar especifico para cada ventana que lancemos (al
-menos conceptualmente), ponemos las areas de atrabajo como estaticas y que sean <strong>11</strong></p>
+menos conceptualmente), ponemos las areas de trabajo como estaticas y que sean <strong>11</strong></p>
 
 <p><img src="https://www.nasciiboy.land/img/debone/09.png" alt="" /></p>
 
@@ -407,7 +407,7 @@ presionando <code>Super</code></p>
 
 <p><img src="https://www.nasciiboy.land/img/debone/10.png" alt="" /></p>
 
-<p>al principio utilizaba 4 areas (mono-pantalla), luego 5, despues 6, 9, 10 y
+<p>al principio utilizaba 4 areas (mono-pantalla), luego 5, despues 6, 7, 9, 10 y
 finalmente 11 (a pantalla doble).</p>
 
 <p>Utilizo de la sugiente forma las areas de trabajo</p>
@@ -415,7 +415,7 @@ finalmente 11 (a pantalla doble).</p>
 <ul>
 <li><p>1, 3, 4, 6: para emacs (de 1 a 3 instancias distintas) a doble pantalla</p></li>
 
-<li><p>2 y 5: terminales en del lado derecho y emacses del izquierdo. Aunque no es
+<li><p>2 y 5: terminales del lado derecho y emacses del izquierdo. Aunque no es
 complejo abrir varias seciones a pantalla completa en tilix o incluso dividir
 la ventana con varias seciones, en general, me es mas facil cambiar de area,
 que pensar en la combinacion interna de una aplicacion</p></li>
@@ -505,7 +505,7 @@ apt -y install aircrack-ng macchanger
 
 <p>flacon es una bonita utilidad que nos permite partir y renombrar automagicamente
 aquellos albums almacenados en una monopista (<code>.flac</code> o similar) segun el fichero
-<code>.cue</code> que lo acompañe y al mismo tiempo permite permite convertir las pistas al formato que
+<code>.cue</code> que lo acompañe y al mismo tiempo permite convertir las pistas al formato que
 nos sea mas conveniente (flac, ogg, opus, &hellip;)</p>
 
 <p>en freidora estaba en los repos, pero debian no es tan moderna. Contando el
@@ -540,7 +540,7 @@ apt install -t stretch-backports tilix
 <p>al abrir por primera ves tilix nos manda un error sobre &ldquo;un algo, que no se que&rdquo;
 y un enlace, para solucionarlo, cuya correcion se resume en:</p>
 
-<pre><code># ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
+<pre><code>ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 </code></pre>
 
 <p>pasariamos a confugurar algunas de sus bastas y completas opciones, que van
@@ -592,8 +592,8 @@ seccion: <strong>Nvidia</strong>) pase a ver que firmware hacia falta con el sig
 estaba disponible&hellip; y no es que el equipo fuera mal, pero si habia la opcion de
 hacerlo correr un poco mas&hellip;</p>
 
-<p>decia algo asi como que la aceleracion grafica no estaba disponible por falta de
-un driver ATI algo <code>.bin</code>. Tras una busqueda aparecio el siguiente enlace</p>
+<p>el problema parecia ser la falta de un driver ATI algo <code>.bin</code>. Tras una busqueda
+aparecio el siguiente enlace</p>
 
 <p><a href="https://wiki.debian.org/AtiHowTo">https://wiki.debian.org/AtiHowTo</a></p>
 
@@ -602,7 +602,7 @@ un driver ATI algo <code>.bin</code>. Tras una busqueda aparecio el siguiente en
 <pre><code>apt-get install firmware-linux-nonfree libgl1-mesa-dri xserver-xorg-video-ati
 </code></pre>
 
-<p>tras ello, pase a probar supertuxkart y andaba si no perfecto almenos, jugable!</p>
+<p>tras ello, pase a probar supertuxkart y andaba si no perfecto al menos, jugable!</p>
 
 <p><img src="https://www.nasciiboy.land/img/debone/12.png" alt="" /></p>
 
@@ -652,7 +652,7 @@ mi lista de &ldquo;algun dia&rdquo;)).</p>
 
 <p>&hellip;</p>
 
-<p>un apartado importante y que evita que un proceso de ponga a &ldquo;etiquetar&rdquo; todos
+<p>un apartado importante y que evita que un proceso se ponga a &ldquo;etiquetar&rdquo; todos
 los ficheros, es limitar la busqueda (eso que aparece cuando presionamos super)
 al <strong>terminal</strong>, <strong>software</strong> y <strong>calculadora</strong></p>
 
@@ -914,7 +914,7 @@ funcionaria pero en la version actual cambiaron la ruta del fichero)</p>
 
 <p>no recuerdo si ya tiene los permisos apropiados el binario, ante la duda</p>
 
-<pre><code>chmod -R 777 /opt/firefox/
+<pre><code>chmod -R 755 /opt/firefox/
 </code></pre>
 
 <h3 id="gestos">gestos</h3>
@@ -925,7 +925,7 @@ funcionaria pero en la version actual cambiaron la ruta del fichero)</p>
 me tentaban y tenia que probar uno. Ademas habia efectivo, uno tiene debilidades
 y el raton que habia utilizado hasta ahora ya tenia unos 5 años de
 servicio. Funcionaba, pero siempre tenia un doble clickeo en el boton derecho en
-firefox y en ocaciones no respodia o lo hacia de forma torpe hasta qutiar y poner la bateria</p>
+firefox y en ocaciones no respodia o lo hacia de forma torpe hasta quitar y poner la bateria</p>
 
 <p>logitech, junto a asus son dos marcas fetiche y el trackball (modelo m570) tenia
 buen aspecto, aunque costo un riñon</p>
@@ -1046,9 +1046,9 @@ intrusion0:  ALARM
 festival de aplicaciones, lo suficiente como para ir a pedir entre 100 y 600MiB
 de swap (del SSD), para limitar la peticion</p>
 
-<pre><code>echo &quot;vm.swappiness=1&quot;          &gt;&gt; /etc/sysctl.conf
+<pre><code>echo &quot;vm.swappiness=0&quot;          &gt;&gt; /etc/sysctl.conf
 echo &quot;vm.vfs_cache_pressure=50&quot; &gt;&gt; /etc/sysctl.conf
-sysctl vm.swappiness=1          # para modificar en el acto
+sysctl vm.swappiness=0          # para modificar en el acto
 sysctl vm.vfs_cache_pressure=50 # para modificar en el acto
 cat /proc/sys/vm/swappiness     # comprobar la modificacion
 </code></pre>
