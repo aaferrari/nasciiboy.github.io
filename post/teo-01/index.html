@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Teopanzolco – 01 (Vuyo Sotashe)</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://www.nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://www.nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://www.nasciiboy.land">/</a></span> <span><a href="https://www.nasciiboy.land/post">post</a></div>
+
+  <h1>Teopanzolco – 01 (Vuyo Sotashe)</h1>
+  <p>Los eventos artistico-culturales son como la &ldquo;&mdash;&mdash;&mdash;&rdquo;, son como cualquier
+otro evento. Cada cual libra sus batallitas por la atencion, hay rutas populares
+de convocatoria, como la tv, los estadios, las plazas o los multipantallas en los
+centros comerciales.</p>
+
+<p>Tambien existen sitios donde los menos favorecidos ejercen sus reclamos de
+atencion como los hackmitins, las &ldquo;conveciones&rdquo; otakus e incluso pequeños
+bar-cafes intelectualoides. Pero esto no termina en este punto, incluso existen
+vias institucionales donde sujetos transtornados pueden mostrar las habilidades
+adquiridas tras miles de horas de practica en alguna curiosa habilidad, como
+tocar un instrumento musical, retorcer el cuerpo, plasmar imagenes abstractas o
+disfrasarce para interpretetar textos escritos por otros individuos con mas
+taras</p>
+
+<p>y&hellip; finalmente, hasta el fondo de la jerarquia social, encontrariamos a los
+coleccionistas de amigos en facebug, los tuitstars, youtubers, podcaster y
+blogeros con 3 espectadores</p>
+
+<p>&hellip;</p>
+
+<p><em>otra dia y otra busqueda mas por evitar el aburrimiento</em></p>
+
+<p>El evento, del que comento en esta ocacion sucedio hace un par de semanas.
+Queria comentarlo antes, por que me parecio un sitio publicitable, al que
+seguramente habra nuevas y diversas formas de asistir.</p>
+
+<p>En anteriores excursiones al centro, habia observado unos publicitarios
+(piramidales) para eventos musicales en el auditorio tepanzolco y en una region
+de este una invitacion a unas masterclass. Viendo en la <a href="http://cartelera.morelos.gob.mx/">caltelera</a> de eventos
+culturales, anunciaban que las masters eran grautitas, ademas, con la asistencia
+podias ingresar al concierto, que de otra manera tiene un costo de 300 pesos</p>
+
+<p>la masterclass iniciaba a las 16 y el concierto a las 19, pero antes de confiar
+una responsabilidad tan enorme a extraños, como lo es entrenerme, bien valdria
+la pena ver que tipo de musicos son los anfitriones</p>
+
+<p>el protagonista era un tal Vuyo Sotashe, segun la convocatoria, <q>el primer
+vocalista masculino en llegar a los primeros lugares en la importante
+Competencia Internacional de Jazz Vocal Del Instituto Thelenonious Monk de
+2015</q>; vocalista, jazz y masculino? esto no suena muy varonil&hellip;</p>
+
+<p>huuu, tienen un video del yutu</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/oFgYg61DHXI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>huuug, en efecto, una femina con voz melodiosa es un evento que no transgrede el
+muro de la aspereza de naz&copy;ii, pero esto!? Es como un equivalente del anime
+incomprensible dedicado a señoritas que de ves en cuando cae en el disco duro y
+&ldquo;como llega, se va&rdquo; por resultar incomprensible, pero, una tarde de dispersion
+gratuita en un recinto premium, bien valdria dejar los prejuicios a un lado,
+aunque sea en pro de confirmarlos</p>
+
+<p>y asi fue, pase a un cibercafe y por un peso imprimieron unas lineas a presentar
+en la entrada del auditorio; a las cuales el poli no hiso drama, ni le dio por
+hacer &ldquo;una revicion&rdquo;</p>
+
+<p>ya en la &ldquo;gran entrada&rdquo; tenian dispuesta una mesa donde canjeaban el impreso por
+un formulario a llenar y luego, tras asistir a la masterclass canjearlo nuevamente
+por el boleto de entrada</p>
+
+<p><img src="https://www.nasciiboy.land/img/teo-01-a.jpg" alt="" /></p>
+
+<p>la clase maestra, a diferencia de la del evento jazzistico anterior, no fue un
+compendio de consejos para mejorar como musico. En su lugar, consistio en una
+ligera presentacion de cada miembro del grupo</p>
+
+<ul>
+<li>Voyo Sotache, voz</li>
+<li>Chris Pattishall, piano</li>
+<li>Russell Hall, bajo (disfraz de Hendrix)</li>
+<li>Gabe Schnider, guitarra</li>
+<li>Savanna Harris, bateria</li>
+</ul>
+
+<p>y despues vino una secion de preguntas varias. (Ja, ja, por que sera que los
+identificadores &ldquo;sociales&rdquo; mexico-catolicos culeros que me eligieron, en
+comporacion a estos nombres, carecen de inpacto?)</p>
+
+<p>en la dinamica de preguntas y respuestas, aun las dudas mas comunes,
+desembocaron en respuestas&hellip; obvias, como naturales y sinceras, donde cada
+personaje exponia sus vivencias, pero sobre todo el resultado de sus reflexiones
+mas personales, de esas que mas o menos si se es un ser sencible se presentan.</p>
+
+<p>Fue un momento de sincronia colectiva, donde por supuesto no podia faltar la
+pregunta (a la bataka), ¿como es ser la unica mujer del grupo (hermana femenina
+feminista)? con una buena respuesta que simplificada seria, &ldquo;entre los musicos y
+mas en el circulo del jazz, si quieres que te respeten tienes que demostrar tu
+habilidad, y, no tocaria con alguien que no me respete como musico&rdquo;, fuhahh!</p>
+
+<p>Ja, algunas feminas interpretaron esa respuesta como girl powa! kiah, que
+tiernas&hellip;</p>
+
+<p>pero la pregunta (respuesta) que mas me sorprendio fue el por que el jazz no era
+popular, (casi como si un GNUsero, preguntara por que el Ñu no es popular (kiah,
+que tiernos)), cuya respuesta ya olvide, estaba formada por 4 puntos, y uno era
+sobre el acceso y creo que otra sobre la academia. Jo, la proxima vez que
+alguien diga algo interesante y poco habitual lo anotare.</p>
+
+<p>en fin, termino la clase (una asistencia de aprox. 35 personas) y restaba una
+hora para que diera inicio el concierto. Tenia sed y algo de hambre, pero pocas ganas de
+salir en busca de viveres. Ya que el evento fue cortesia del estado, gaste 50
+pesitos (no sin sufrimento) en dos bebidas en el propio expendio del resinto</p>
+
+<p>termino el receso y fuimos entrando a donde anteriormente sucedio la master. Los
+que pagaron su boleto, tenian acceso a las 5 filas mas proximas al escenario, y
+los demas de hay, hacia atras. Que todo sea dicho, eran las que contaban con
+mejor vista y comodidad para no tener que forzar el cuello a ver hacia arriba.</p>
+
+<p><img src="https://www.nasciiboy.land/img/teo-01-b.jpg" alt="" /></p>
+
+<p>(las luces iluminaban un webo el escenario, casi me quedo ciego)</p>
+
+<p>al inicio del acto musical, como que me arrepentia de quedarme a verlo, no tenia
+nahhhh de &ldquo;asperesa&rdquo; y el audio estaba en mono y desbalanceado hacia la
+izquierda. Pese a la anciedad por escapar, ya por la 4 rola el audio fue
+adquierendo mejor calidad y las pistas iban mejorando o quiza fui entrando en
+la temica ambiental ligera.</p>
+
+<p>Pero no todo recaia en el vocalista. Cada intrumento tenia su momento, tambien
+la guitarra tocaba muletillas rockerosas, el piano lanzo unos movimientos
+salvajes y veloces, la bateria con ritmos militares y el bajo, pues el bajo iba
+vestido de hendrix!</p>
+
+<p><img src="https://www.nasciiboy.land/img/teo-01-c.gif" alt="" /></p>
+
+<p>ya para el final el publico estaba a tono, yo esaba a tono y todo termino chido,
+el evento fue un gran expectaculo, yo contento y el poli mientras salia (yo y un
+monton de gente mas, el auditorio estaba casi lleno), me preguntaba, que, que
+pedo con el jazzzzzzzz</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://www.nasciiboy.land/post/cedarmill/">◀ Cedar Mill</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://www.nasciiboy.land">/</a></span> <span><a href="https://www.nasciiboy.land/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://www.nasciiboy.land/categories/prog">prog(49)</a></li><li><a href="https://www.nasciiboy.land/categories/post">post(38)</a></li><li><a href="https://www.nasciiboy.land/categories/emacs">emacs(15)</a></li><li><a href="https://www.nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://www.nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://www.nasciiboy.land/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://www.nasciiboy.land/tags/fonos">fonos(23)</a></li><li><a href="https://www.nasciiboy.land/tags/howto">howto(19)</a></li><li><a href="https://www.nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="https://www.nasciiboy.land/tags/4k">4k(16)</a></li><li><a href="https://www.nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="https://www.nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://www.nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="https://www.nasciiboy.land/tags/txt">txt(6)</a></li><li><a href="https://www.nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://www.nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://www.nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="https://www.nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://www.nasciiboy.land/tags/go">go(3)</a></li><li><a href="https://www.nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://www.nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://www.nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://www.nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://www.nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://www.nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://www.nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://www.nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://www.nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://www.nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://www.nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://www.nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://www.nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://www.nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://www.nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://www.nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://www.nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://www.nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://www.nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://www.nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://www.nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://www.nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://www.nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

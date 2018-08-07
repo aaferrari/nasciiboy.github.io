@@ -449,9 +449,9 @@ chsh nasciiboy -s /usr/bin/fish
 
 # desarrollo y firmwares o programacion (por si hace falta)
 apt -y install firmware-linux-free firmware-misc-nonfree
-apt -y install build-essential binutils automake scons qt5-qmake qt4-qmake rake cmake xclip
+apt -y install build-essential binutils automake scons qt5-qmake qt4-qmake rake cmake xclip # codeblocks
 apt -y install subversion git mercurial bzr valgrind gource
-apt -y install gdb ghc guile-2.0 gcl sbcl racket rustc rust-gdb rust-doc clang ldc nasm fritzing # cargo go clisp
+apt -y install gdb ghc guile-2.0 gcl sbcl racket clang ldc nasm # go cargo clisp rustc rust-gdb rust-doc
 apt -y install arduino arduino-core arduino-mk gcc-avr avr-libc fritzing
 
 # java
@@ -460,11 +460,18 @@ apt -y install openjdk-9-jdk openjdk-9-jre openjdk-9-dbg
 # java -version
 # javac -version
 
+# rust
+apt -y install curl
+curl https://sh.rustup.rs -sSf | sh
+
 # &quot;plantar&quot; algunas librerias
-apt -y build-dep emacs dosbox moc love supertuxkart tilix chromium inkscape tumiki-fighters
+apt -y build-dep emacs dosbox moc love supertuxkart chromium inkscape tumiki-fighters # tilix
+apt -y build-dep guile-2.0 racket git sbcl
 
 # monitores
-apt -y install glances inxi ncdu dmidecode lshw di iotop iptraf iftop hddtemp
+apt -y install glances inxi screenfetch ncdu dmidecode lshw di iotop iptraf iftop hddtemp whois dnsutils
+# y otras cosas
+apt -y install tree ranger silversearcher-ag
 
 # documentacion
 apt -y install zeal asciidoc pandoc poppler-utils caca-utils texinfo ghostscript pdftk fbreader
@@ -480,15 +487,18 @@ apt -y install subliminal
 apt -y install audacity tuxguitar rosegarden timidity ardour hydrogen lmms soundconverter transmageddon musescore
 apt -y install vmpk tuxguitar tuxguitar-jsa rakarrack pianobooster lingot gxtuner guitarix fofix etktab fmit # songwrite
 
+# android
+apt -y install android-tools-adb android-tools-fastboot
+
 # vg
 apt -y install love nestopia fceux mupen64plus dosbox stella
-apt -y install tumiki-fighters garden-of-coloured-lights
+apt -y install tumiki-fighters garden-of-coloured-lights supertuxkart
 
 # fractales y cosas raras
 apt -y install xaos xfractint fraqtive evolvotron ibniz
 
 # utilidades o algo...
-apt -y install thunderbird simple-scan gscan2pdf
+apt -y install simple-scan gscan2pdf midori mumble chromium weechat mutt # thunderbird
 
 # data
 apt -y install qbittorrent youtube-dl # amule
@@ -533,6 +543,7 @@ make install
 
 <pre><code>echo &quot;deb http://deb.debian.org/debian stretch-backports main&quot; &gt;&gt; /etc/apt/sources.list
 echo &quot;deb-src http://deb.debian.org/debian stretch-backports main&quot; &gt;&gt; /etc/apt/sources.list
+apt update
 
 apt install -t stretch-backports tilix
 </code></pre>
@@ -633,6 +644,16 @@ requiere estar dedicado por completo, siempre sobre el 100% y aun con mpv (que e
 algo mas agil que vlc), le cuesta ir fluido</p>
 
 <p>no se puede exigir demaciado</p>
+
+<h2 id="nouveau">NOUVEAU</h2>
+
+<p>y&hellip; finalmente, tras una semana de pruebas con los controladores nvidia y
+tras una nueva (tercer) reinstalacion, dejando nouveau por defecto sin historias (nvidia o
+ati), ni aceleracion grafica 3d, los drivers libres con el nucleo por defecto
+tambien funcionan&hellip;</p>
+
+<p>Podra no aprovercharse la grafica en su totalidad, pero al visualizar videos el
+rendimiento es ligeramente mejor</p>
 
 <h2 id="config">+ config</h2>
 
@@ -1072,6 +1093,19 @@ fisico entero</p>
 
 <p><img src="https://www.nasciiboy.land/img/debone/23.jpg" alt="" /></p>
 
+<h2 id="actualizacion">Actualizacion</h2>
+
+<p>con todos los pasos anteriores, pero sin los drivers de ATI, o Nvidia, solo con
+nouveau (que es como viene por defecto), tras una nueva instalacion, ahora
+seleccionando unicamente <code>Gnome</code> y <code>Utilidades estandar del sistema</code>, <strong>quitando</strong>
+<code>servidor de impresion</code></p>
+
+<p><img src="https://www.nasciiboy.land/img/debone/24.png" alt="" /></p>
+
+<p>el sistema completo al inicio con tilix, fish y htop esta en 260MiB! Tras todo
+un dia de batalla, cerrando de nuevo todo y de nuevo corroborando con tilix,
+fish y htop, termina en ~360MiB! Gnome-4-Eve!</p>
+
 
   <div class="clear" class="center">
     
@@ -1090,7 +1124,7 @@ fisico entero</p>
         <header class="key"><b>CATEGORIES</b></header>
         <div>
           <ul class="terms">
-            <li><a href="https://www.nasciiboy.land/categories/prog">prog(49)</a></li><li><a href="https://www.nasciiboy.land/categories/post">post(37)</a></li><li><a href="https://www.nasciiboy.land/categories/emacs">emacs(15)</a></li><li><a href="https://www.nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://www.nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://www.nasciiboy.land/categories/love2d">love2d(1)</a></li>
+            <li><a href="https://www.nasciiboy.land/categories/prog">prog(49)</a></li><li><a href="https://www.nasciiboy.land/categories/post">post(38)</a></li><li><a href="https://www.nasciiboy.land/categories/emacs">emacs(15)</a></li><li><a href="https://www.nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://www.nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://www.nasciiboy.land/categories/love2d">love2d(1)</a></li>
           </ul>
         </div>
       </section>
@@ -1099,7 +1133,7 @@ fisico entero</p>
         <header class="key"><b>TAGS</b></header>
         <div>
           <ul class="terms">
-            <li><a href="https://www.nasciiboy.land/tags/fonos">fonos(22)</a></li><li><a href="https://www.nasciiboy.land/tags/howto">howto(19)</a></li><li><a href="https://www.nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="https://www.nasciiboy.land/tags/4k">4k(16)</a></li><li><a href="https://www.nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="https://www.nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://www.nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="https://www.nasciiboy.land/tags/txt">txt(6)</a></li><li><a href="https://www.nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://www.nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://www.nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="https://www.nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://www.nasciiboy.land/tags/go">go(3)</a></li><li><a href="https://www.nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://www.nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://www.nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://www.nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://www.nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://www.nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://www.nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://www.nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://www.nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://www.nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://www.nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://www.nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://www.nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://www.nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://www.nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://www.nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://www.nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://www.nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://www.nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://www.nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://www.nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://www.nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://www.nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zero">zero(1)</a></li>
+            <li><a href="https://www.nasciiboy.land/tags/fonos">fonos(23)</a></li><li><a href="https://www.nasciiboy.land/tags/howto">howto(19)</a></li><li><a href="https://www.nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="https://www.nasciiboy.land/tags/4k">4k(16)</a></li><li><a href="https://www.nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="https://www.nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://www.nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="https://www.nasciiboy.land/tags/txt">txt(6)</a></li><li><a href="https://www.nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://www.nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://www.nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="https://www.nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://www.nasciiboy.land/tags/go">go(3)</a></li><li><a href="https://www.nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://www.nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://www.nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://www.nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://www.nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://www.nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://www.nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://www.nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://www.nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://www.nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://www.nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://www.nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://www.nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://www.nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://www.nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://www.nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://www.nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://www.nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://www.nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://www.nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://www.nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://www.nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://www.nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zero">zero(1)</a></li>
           </ul>
         </div>
       </section>
