@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>benchmarks dentro de un programa en go</title>
+    <title>SisTop</title>
     <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
     <style>:root {
 
@@ -248,139 +248,115 @@ img:hover { border: 0.05em solid #fff; }
 <main>
   <div class="clear" ><a href="https://www.nasciiboy.land">/</a></span> <span><a href="https://www.nasciiboy.land/prog">prog</a></div>
 
-  <h1>benchmarks dentro de un programa en go</h1>
+  <h1>SisTop</h1>
   
 
-<p>en Go podemos realizar benchmarks dentro de los ficheros <code>_test.go</code>, sin embargo
-realizar comparativas dentro de en un programa &ldquo;regular&rdquo; no es (era) tan
-sencillo hasta la llegada de la version 1.9</p>
+<blockquote>
+<p>Este libro busca brindar a estudiantes y docentes de las carreras de
+ingeniería en computación, informática, Ciencias de la Computación y similares
+un material completo, general y autocontenido sobre la materia de sistemas
+operativos. No se asume conocimiento previo sobre la temática, aunque se
+utilizarán conceptos de estructuras de datos y algoritmos básicos &ndash;systop</p>
+</blockquote>
 
-<h2 id="cgo">cgo</h2>
+<h2 id="fundamentos-de-sistemas-operativos">Fundamentos De Sistemas Operativos</h2>
 
-<p>la primer opcion es echar mano de la libreria <code>time</code> de C. Esta libreria
-contiene la funcion <code>clock</code> que nos regresa una aproximacion a la cantidad de tiempo
-del procesador que ha utilizado el programa desde su ejecucion.</p>
+<p>A diferencia de otras entregas con infriccion de <strong>&ldquo;¢ø-π →&rdquo;</strong> incluido, esta
+ocacion he hojeado un material libre como la libertad de tintes
+marcadamente a-c-a-d-e-m-i-c-o-s (sin chistes, jocosidad y definitiamente poca
+diversion&hellip; exepto cuando es divertido).</p>
 
-<pre><code>package main
+<p>El material ademas de incitar a la copia explicitamente, por su licencia y libre
+descarga, tambien tiene un repo desde donde se puede optener el codigo fuente
+horneado con una base de org-mode sasonado con LaTeX</p>
 
-//#include &lt;time.h&gt;
-import &quot;C&quot;
-
-import &quot;fmt&quot;
-
-const top = 1 &lt;&lt; 12
-
-func main(){
-  init := CpuTime()
-
-  // prueba &gt;
-  for x, str := 0, &quot;&quot;; x &lt; top; x++ { str += &quot;1234567890&quot; }
-  // &lt; prueba
-
-  fmt.Printf( &quot;CpuTime %dms\n&quot;, DiffCpuTimeByMS( init, CpuTime() ) )
-}
-
-func CpuTime() uint64 {
-  return uint64(C.clock())
-}
-
-func DiffCpuTimeByMS( begin, end uint64 ) uint64 {
-  return (end - begin) *  1000 / uint64(C.CLOCKS_PER_SEC)
-}
+<pre><code>git clone https://github.com/gwolf/sistop
 </code></pre>
 
-<p><strong>resultado:</strong> <code>CpuTime 55ms</code></p>
+<p>aunque tambien es recomendable asistir a su website (<a href="http://sistop.org/">http://sistop.org/</a>) para
+descargar una version en PDF, el codigo fuente de algunos ejercicios (aunque no
+es necesario) y/o comprar el libro en formato de arbol muerto o de manera digital.</p>
 
-<p>solo hay que cambiar el codigo dentro de las comentaarios &ldquo;prueba&rdquo;, es
-importante mantener la linea con <code>//#include &lt;time.h&gt;</code> tal cual, pues es una
-(obscura) indicacion para decirle al compilador de Go que incluya dicha libreria
-de C. Por supuesto tambien hay que mantener la importacion de <code>&quot;C&quot;</code></p>
+<h2 id="temario">Temario</h2>
 
-<p>Para la compilacion no hace falta pasar ningun parametro adicicional, basta con
-un simple <code>go build main.go</code></p>
+<p>El texto esta divido en 7 temas principales</p>
 
-<h2 id="testing">testing</h2>
+<ul>
+<li>1. Punto de partida.</li>
+<li>2. Relación con el hardware.</li>
+<li>3. Administración de procesos.</li>
+<li>4. Planificación de procesos.</li>
+<li>5. Administración de memoria.</li>
+<li>6. Organización de archivos.</li>
+<li>7. Sistemas de archivos.</li>
+</ul>
 
-<p>la segunda opcion para realizar un benchmark es invocar a <code>testing</code> desde codigo
-regular con una funcion literal&hellip; lo se, no es intiuitivo, pero hay esta y
-funciona</p>
+<p>y tres apendices con contenido concentrado</p>
 
-<pre><code>package main
+<ul>
+<li>A. Software libre y licenciamiento</li>
+<li>B. Virtualizacion</li>
+<li>C. El medio fisico y el almacenamiento.</li>
+</ul>
 
-import &quot;fmt&quot;
-import &quot;testing&quot;
-import &quot;time&quot;
+<p>pero podrian considerarse tambien como temas principales</p>
 
-const top = 1 &lt;&lt; 12
+<p>Los primeros dos apartados, fueron leer un poco el rollo de siempre: &ldquo;la pc&rdquo;, la
+evolucion del hardware, interfaces y esas cosas habituales.</p>
 
-func main(){
+<p>Con el tema 3 inicio lo interesante, pero eche de menos codigo jugoso,
+divertido y funcional para ver de que hablaban, quiza por esto y por tratar &ldquo;en
+exceso&rdquo; de la concurrencia me parecio pesado. Mas o menos sucedio lo mismo con
+el tema 4.</p>
 
-  result := testing.Benchmark(func(b *testing.B) {
-    b.N = 1 // numero de repeticiones de la prueba
-    for i := 0; i &lt; b.N; i++ {
-      // prueba &gt;
-      for x, str := 0, &quot;&quot;; x &lt; top; x++ { str += &quot;1234567890&quot; }
-      // &lt; prueba
-    }
-  })
+<p>La divercion llego con la <em>Planificacion de Procesos</em>, donde la cache, la ram y
+cosas de &ldquo;paginacion&rdquo; eran las palabras habituales. No me quedo una vision clara
+o precisa de como era aquello, aunque sirvio para ampliar el panorama visto en
+incursiones anteriores al asm y sus instrucciones PC, LD, PUSH, POP pero ahora
+en sistemas concurrentes tecnicolor!</p>
 
-  fmt.Printf( &quot;tiempo %s\n&quot;, result.T / time.Duration(result.N) )
-}
-</code></pre>
+<p>Me hubiera gustado una descripcion dedicadaa a exponer la interaccion del sistema
+operativo, el juego de las caches y el SMT, con programitas y programitas
+concurrentes en paralelo.</p>
 
-<p><strong>resultado:</strong> <code>tiempo 67.861708ms</code></p>
+<p>es bastante bonito observar que el esquema de bibliotecas compartidas tiene
+buenas y bastantes conveniencias, que me recuerdan a una camiseta</p>
 
-<p>esta prueba toma mucho mas tiempo que con la version anterior, la diferencia se
-origina en el propio <code>testing.B</code>, ya que realiza metricas adicionales, como el numero de
-asignaciones de memoria, bytes utilizados, gorutinas y otras cosas</p>
+<p><img src="https://www.nasciiboy.land/img/country-unix.jpg" alt="" /></p>
 
-<h2 id="time">time</h2>
+<p>(una de las razones por las que tome C como primer lenguaje y por las que pese a
+no hacer nada relevante o complejo en ese lenguaje, sus alumnos escupen en
+precencia de las otras corrientes &ldquo;filosoficas del silicio&rdquo;)</p>
 
-<p>por ultimo la prueba del tiempo se puede realizar con la libreria estandar de
-Go, aunque esto no es asi para verciones del compilador inferiores a 1.9 ya que
-antes de estos no se media el timpo &ldquo;monolitico&rdquo; de ejecucion (lo que hace
-<code>clock</code> de la libreria <code>time</code> de C)</p>
+<p>un lenguaje y utilidades de codigo en forma de librerias compartidas! &hellip; pero,
+aunque los cimientos siguen siendo esos, las paredes de python, js, javas, &hellip;,
+hechas de unicel me siguen generando repulsion cada vez que pienso en esos
+lenguejes y sus modas. Todos esos framewors, engines y librerias que se perderan
+como lagrimas en la lluvia, aprovechan (aunque sea mediante sucios bindings) las
+librerias basicas del sistema? acaso alguno los nuevos lenguajes con sus
+<code>packages</code> e <code>imports</code> funcionan de manera analoga a las librerias compartidas o
+son un monton de instrucciones libertinas sin restricciones ni temor del sistema?
+alguna vez surgira un lenguaje que modernice C (sin apaños) que sea base de un
+nuevo unix (Go tiene defectirijillos&hellip;) o la complejidad, en colaboracion con
+la evolucion del hardware ocultaran los niveles de abstraccion y
+heterogeniedades del software de manera &ldquo;organica&rdquo; como dice hacerlo lisp? o, el
+navegador son las nuevas &ldquo;librerias compartidas&rdquo;?</p>
 
-<pre><code>package main
+<p>&hellip;</p>
 
-import &quot;time&quot;
-import &quot;fmt&quot;
+<p>Los ultimos dos temas tambien son un poco rollo y los apendices, estan
+bien&hellip; bueno, todo esta bien, es un libro serio, a un cuarto del camino entre
+un acercamiento y consultar la especificacion de un tema concreto.</p>
 
-const top = 1 &lt;&lt; 12
-
-func main(){
-  start   := time.Now()
-  for x, str := 0, &quot;&quot;; x &lt; top; x++ { str += &quot;1234567890&quot; }
-  elapsed := time.Since( start )
-
-  fmt.Printf( &quot;tiempo %s\n&quot;, elapsed )
-}
-</code></pre>
-
-<p><strong>resultado:</strong> <code>tiempo 59.746755ms</code></p>
-
-<h2 id="conclusion">conclusion</h2>
-
-<p>en pruebas personales, con <code>clock</code> (de C) los resultados son mas constantes y con
-menor variacion que en las demas opciones, mas la version con <code>time</code> nativo no
-dista demaciado de esta, ademas por ser la opcion con codigo nativo y sin
-dependencias externas es la que recomiendo y utilizo. Reservaria como segunda
-opcion y para pruebas mas exigentes la que utiliza <code>testing.B</code>, siempre asumiendo
-una consumo superior de recursos</p>
-
-<h2 id="referencias">referencias</h2>
-
-<p><a href="https://www.reddit.com/r/golang/comments/6u4xhs/how_make_a_benchmark_in_a_regular_program_no/">https://www.reddit.com/r/golang/comments/6u4xhs/how_make_a_benchmark_in_a_regular_program_no/</a></p>
-
-<p><a href="https://golang.org/pkg/time/">https://golang.org/pkg/time/</a></p>
+<p>Como recomendacion, conocer es mejor que memorizar, la mejor manera de
+memorizar es con el uso habitual y si es demaciado especifico como para no
+utilizarlo nunca, mejor ir saltando de encabezado en encabezado.</p>
 
 
   <div class="clear" class="center">
     
-    <a class="previous" href="https://www.nasciiboy.land/prog/morg-v020/">◀ morg v0.20</a>
+    <a class="previous" href="https://www.nasciiboy.land/prog/debone/">◀ Debone</a>
     
-    
-    <a class="next" href="https://www.nasciiboy.land/prog/the-x86-strikes-back/"> The X86 Strikes Back ▶</a>
     
   </div>
 

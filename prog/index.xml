@@ -7,10 +7,121 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Thu, 26 Jul 2018 13:45:16 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 12 Aug 2018 20:00:08 -0500</lastBuildDate>
     
         <atom:link href="https://www.nasciiboy.land/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SisTop</title>
+      <link>https://www.nasciiboy.land/prog/sistop/</link>
+      <pubDate>Sun, 12 Aug 2018 20:00:08 -0500</pubDate>
+      
+      <guid>https://www.nasciiboy.land/prog/sistop/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Este libro busca brindar a estudiantes y docentes de las carreras de
+ingeniería en computación, informática, Ciencias de la Computación y similares
+un material completo, general y autocontenido sobre la materia de sistemas
+operativos. No se asume conocimiento previo sobre la temática, aunque se
+utilizarán conceptos de estructuras de datos y algoritmos básicos &amp;ndash;systop&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;fundamentos-de-sistemas-operativos&#34;&gt;Fundamentos De Sistemas Operativos&lt;/h2&gt;
+
+&lt;p&gt;A diferencia de otras entregas con infriccion de &lt;strong&gt;&amp;ldquo;¢ø-π →&amp;rdquo;&lt;/strong&gt; incluido, esta
+ocacion he hojeado un material libre como la libertad de tintes
+marcadamente a-c-a-d-e-m-i-c-o-s (sin chistes, jocosidad y definitiamente poca
+diversion&amp;hellip; exepto cuando es divertido).&lt;/p&gt;
+
+&lt;p&gt;El material ademas de incitar a la copia explicitamente, por su licencia y libre
+descarga, tambien tiene un repo desde donde se puede optener el codigo fuente
+horneado con una base de org-mode sasonado con LaTeX&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/gwolf/sistop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aunque tambien es recomendable asistir a su website (&lt;a href=&#34;http://sistop.org/&#34;&gt;http://sistop.org/&lt;/a&gt;) para
+descargar una version en PDF, el codigo fuente de algunos ejercicios (aunque no
+es necesario) y/o comprar el libro en formato de arbol muerto o de manera digital.&lt;/p&gt;
+
+&lt;h2 id=&#34;temario&#34;&gt;Temario&lt;/h2&gt;
+
+&lt;p&gt;El texto esta divido en 7 temas principales&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1. Punto de partida.&lt;/li&gt;
+&lt;li&gt;2. Relación con el hardware.&lt;/li&gt;
+&lt;li&gt;3. Administración de procesos.&lt;/li&gt;
+&lt;li&gt;4. Planificación de procesos.&lt;/li&gt;
+&lt;li&gt;5. Administración de memoria.&lt;/li&gt;
+&lt;li&gt;6. Organización de archivos.&lt;/li&gt;
+&lt;li&gt;7. Sistemas de archivos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;y tres apendices con contenido concentrado&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A. Software libre y licenciamiento&lt;/li&gt;
+&lt;li&gt;B. Virtualizacion&lt;/li&gt;
+&lt;li&gt;C. El medio fisico y el almacenamiento.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;pero podrian considerarse tambien como temas principales&lt;/p&gt;
+
+&lt;p&gt;Los primeros dos apartados, fueron leer un poco el rollo de siempre: &amp;ldquo;la pc&amp;rdquo;, la
+evolucion del hardware, interfaces y esas cosas habituales.&lt;/p&gt;
+
+&lt;p&gt;Con el tema 3 inicio lo interesante, pero eche de menos codigo jugoso,
+divertido y funcional para ver de que hablaban, quiza por esto y por tratar &amp;ldquo;en
+exceso&amp;rdquo; de la concurrencia me parecio pesado. Mas o menos sucedio lo mismo con
+el tema 4.&lt;/p&gt;
+
+&lt;p&gt;La divercion llego con la &lt;em&gt;Planificacion de Procesos&lt;/em&gt;, donde la cache, la ram y
+cosas de &amp;ldquo;paginacion&amp;rdquo; eran las palabras habituales. No me quedo una vision clara
+o precisa de como era aquello, aunque sirvio para ampliar el panorama visto en
+incursiones anteriores al asm y sus instrucciones PC, LD, PUSH, POP pero ahora
+en sistemas concurrentes tecnicolor!&lt;/p&gt;
+
+&lt;p&gt;Me hubiera gustado una descripcion dedicadaa a exponer la interaccion del sistema
+operativo, el juego de las caches y el SMT, con programitas y programitas
+concurrentes en paralelo.&lt;/p&gt;
+
+&lt;p&gt;es bastante bonito observar que el esquema de bibliotecas compartidas tiene
+buenas y bastantes conveniencias, que me recuerdan a una camiseta&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/country-unix.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(una de las razones por las que tome C como primer lenguaje y por las que pese a
+no hacer nada relevante o complejo en ese lenguaje, sus alumnos escupen en
+precencia de las otras corrientes &amp;ldquo;filosoficas del silicio&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;un lenguaje y utilidades de codigo en forma de librerias compartidas! &amp;hellip; pero,
+aunque los cimientos siguen siendo esos, las paredes de python, js, javas, &amp;hellip;,
+hechas de unicel me siguen generando repulsion cada vez que pienso en esos
+lenguejes y sus modas. Todos esos framewors, engines y librerias que se perderan
+como lagrimas en la lluvia, aprovechan (aunque sea mediante sucios bindings) las
+librerias basicas del sistema? acaso alguno los nuevos lenguajes con sus
+&lt;code&gt;packages&lt;/code&gt; e &lt;code&gt;imports&lt;/code&gt; funcionan de manera analoga a las librerias compartidas o
+son un monton de instrucciones libertinas sin restricciones ni temor del sistema?
+alguna vez surgira un lenguaje que modernice C (sin apaños) que sea base de un
+nuevo unix (Go tiene defectirijillos&amp;hellip;) o la complejidad, en colaboracion con
+la evolucion del hardware ocultaran los niveles de abstraccion y
+heterogeniedades del software de manera &amp;ldquo;organica&amp;rdquo; como dice hacerlo lisp? o, el
+navegador son las nuevas &amp;ldquo;librerias compartidas&amp;rdquo;?&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Los ultimos dos temas tambien son un poco rollo y los apendices, estan
+bien&amp;hellip; bueno, todo esta bien, es un libro serio, a un cuarto del camino entre
+un acercamiento y consultar la especificacion de un tema concreto.&lt;/p&gt;
+
+&lt;p&gt;Como recomendacion, conocer es mejor que memorizar, la mejor manera de
+memorizar es con el uso habitual y si es demaciado especifico como para no
+utilizarlo nunca, mejor ir saltando de encabezado en encabezado.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Debone</title>
@@ -238,7 +349,7 @@ apt -y build-dep emacs dosbox moc love supertuxkart chromium inkscape tumiki-fig
 apt -y build-dep guile-2.0 racket git sbcl
 
 # monitores
-apt -y install glances inxi screenfetch ncdu dmidecode lshw di iotop iptraf iftop hddtemp whois dnsutils
+apt -y install inxi screenfetch ncdu dmidecode lshw di iotop iptraf iftop hddtemp whois dnsutils # glances
 # y otras cosas
 apt -y install tree ranger silversearcher-ag
 
@@ -253,7 +364,7 @@ apt -y install vlc mpv blender inkscape dia gimp tiled pinta synfigstudio mypain
 apt -y install subliminal
 
 # audio
-apt -y install audacity tuxguitar rosegarden timidity ardour hydrogen lmms soundconverter transmageddon musescore
+apt -y install audacity tuxguitar rosegarden ardour hydrogen lmms soundconverter transmageddon musescore # timidity
 apt -y install vmpk tuxguitar tuxguitar-jsa rakarrack pianobooster lingot gxtuner guitarix fofix etktab fmit # songwrite
 
 # android
@@ -266,8 +377,11 @@ apt -y install tumiki-fighters garden-of-coloured-lights supertuxkart
 # fractales y cosas raras
 apt -y install xaos xfractint fraqtive evolvotron ibniz
 
+# numeros
+apt -y install speedcrunch bc genius gnome-genius gnuplot
+
 # utilidades o algo...
-apt -y install simple-scan gscan2pdf midori mumble chromium weechat mutt # thunderbird
+apt -y install simple-scan gscan2pdf midori mumble chromium weechat mutt gtypist # thunderbird
 
 # data
 apt -y install qbittorrent youtube-dl # amule
@@ -683,20 +797,20 @@ hacer algo como lo siguiente (como root)&lt;/p&gt;
 &lt;p&gt;y colocamos lo siguiente&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;[Desktop Entry]
- Name=Firefox Quantum
- Comment=Web Browser
- GenericName=Web Browser
- X-GNOME-FullName=Firefox Quantum Web Browser
- Exec=/opt/firefox/firefox %u
- Terminal=false
- X-MultipleArgs=false
- Type=Application
- Icon=/opt/firefox/browser/chrome/icons/default/default128.png
- # Icon=/opt/firefox/browser/icons/mozicon128.png
- Categories=Network;WebBrowser;
- MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/ht$
- StartupWMClass=Firefox
- StartupNotify=true
+Name=Firefox Quantum
+Comment=Web Browser
+GenericName=Web Browser
+X-GNOME-FullName=Firefox Quantum Web Browser
+Exec=/opt/firefox/firefox %u
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/firefox/browser/chrome/icons/default/default128.png
+# Icon=/opt/firefox/browser/icons/mozicon128.png
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/ht$
+StartupWMClass=Firefox
+StartupNotify=true
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(vera una linea comentada para el icono a mostrar. En el post original supongo
@@ -782,8 +896,27 @@ gnu. Al momento la mas reciente es la 26.1&lt;/p&gt;
 make
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;(se puede lanzar este binario con un atajo personalizado de teclado que apunte a
-la ruta del ejecutable)&lt;/p&gt;
+&lt;p&gt;se puede lanzar este binario con un atajo personalizado de teclado que apunte a
+la ruta del ejecutable, darle a &lt;code&gt;make install&lt;/code&gt; o complicarse la vida y agregar
+tambien un &lt;code&gt;.desktop&lt;/code&gt; (copiar emacs a &lt;code&gt;/opt&lt;/code&gt; o adaptar rutas)&lt;/p&gt;
+
+&lt;p&gt;(/usr/share/applications/emacs-26.desktop)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Desktop Entry]
+Version=1.0
+Name=GNU Emacs 26
+GenericName=Text Editor
+Comment=GNU Emacs is an extensible, customizable text editor - and more
+MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
+TryExec=/opt/emacs-26.1/src/emacs
+Exec=/opt/emacs-26.1/src/emacs %F
+Icon=/opt/emacs-26.1/etc/images/icons/hicolor/128x128/apps/emacs.png
+Type=Application
+Terminal=false
+Categories=Utility;Development;TextEditor;
+StartupWMClass=Emacs
+Keywords=Text;Editor;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;sensors&#34;&gt;sensors&lt;/h2&gt;
 
