@@ -768,7 +768,7 @@ curl https://sh.rustup.rs -sSf | sh
 
 # &amp;quot;plantar&amp;quot; algunas librerias
 apt -y build-dep emacs dosbox moc love supertuxkart chromium inkscape tumiki-fighters # tilix
-apt -y build-dep guile-2.0 racket git sbcl
+apt -y build-dep guile-2.0 racket git sbcl gimp imagemagick
 
 # monitores
 apt -y install inxi screenfetch ncdu dmidecode lshw di iotop iptraf iftop hddtemp whois dnsutils # glances
@@ -782,12 +782,12 @@ apt -y install tesseract-ocr tesseract-ocr-spa tesseract-ocr-eng gimagereader
 apt -y install elinks surfraw
 
 # media
-apt -y install vlc mpv blender inkscape dia gimp tiled pinta synfigstudio mypaint mtpaint gpick grabc subdownloader gnome-subtitles
-apt -y install subliminal
+apt -y install vlc mpv blender inkscape dia gimp tiled pinta synfigstudio mypaint mtpaint gpick grabc
+apt -y install subliminal subdownloader gnome-subtitles
 
 # audio
 apt -y install audacity tuxguitar rosegarden ardour hydrogen lmms soundconverter transmageddon musescore # timidity
-apt -y install vmpk tuxguitar tuxguitar-jsa rakarrack pianobooster lingot gxtuner guitarix fofix etktab fmit # songwrite
+apt -y install vmpk tuxguitar tuxguitar-jsa rakarrack pianobooster lingot gxtuner guitarix fofix etktab fmit
 
 # android
 apt -y install android-tools-adb android-tools-fastboot
@@ -795,6 +795,15 @@ apt -y install android-tools-adb android-tools-fastboot
 # vg
 apt -y install love nestopia fceux mupen64plus dosbox stella
 apt -y install tumiki-fighters garden-of-coloured-lights supertuxkart
+
+## solarus
+apt -y install build-essential cmake libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libvorbis-dev libmodplug-dev qtbase5-dev qttools5-dev qttools5-dev-tools libglm-dev
+git clone https://gitlab.com/solarus-games/solarus.git
+cd solarus
+mkdir build
+cd build
+cmake ..
+make
 
 # fractales y cosas raras
 apt -y install xaos xfractint fraqtive evolvotron ibniz
@@ -1194,6 +1203,60 @@ especialmente modificadas!&lt;/p&gt;
 &lt;p&gt;eh mencionado alguna vez, el asco que me dan las laptops con sus teclados reducidos, de
 membrana cutre y con su minuscula pantalla?&lt;/p&gt;
 
+&lt;h3 id=&#34;dvorak-dvp&#34;&gt;dvorak dvp&lt;/h3&gt;
+
+&lt;p&gt;la configuracion programmer dvorak ya sin las nascii-modificaciones, esta varios pasos por
+encima de cualquier otra distro, es comoda, intuitiva, extendida y
+&amp;ldquo;¡potente!. Por ejemplo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+n&lt;/code&gt; == &lt;code&gt;ñ&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+n-shift&lt;/code&gt; == &lt;code&gt;Ñ&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+&#39;&lt;/code&gt; y &lt;code&gt;letra&lt;/code&gt; == &lt;code&gt;letra-con-acento&lt;/code&gt; (&lt;code&gt;ć&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+~&lt;/code&gt; y &lt;code&gt;letra&lt;/code&gt; == &lt;code&gt;letra-con-~&lt;/code&gt; (&lt;code&gt;õ&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+^&lt;/code&gt; y &lt;code&gt;letra&lt;/code&gt; == &lt;code&gt;letra-con-^&lt;/code&gt; (&lt;code&gt;ô&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+^-shift&lt;/code&gt;  y &lt;code&gt;letra&lt;/code&gt; == &lt;code&gt;letra-con-^-invertida&lt;/code&gt; (&lt;code&gt;ǒ&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+-&lt;/code&gt; == &lt;code&gt;­&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+-+shift&lt;/code&gt; == &lt;code&gt;–&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+&amp;lt;&lt;/code&gt; == &lt;code&gt;«&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+&amp;gt;&lt;/code&gt; == &lt;code&gt;»&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+!&lt;/code&gt; == &lt;code&gt;¡&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+?&lt;/code&gt; == &lt;code&gt;¿&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;y asi varios signos raros mas (&lt;code&gt;“”¨˝ˇ¢çø®½£€¥½åæÆðþßl§⸘‽&lt;/code&gt;) en el tercer y quinto nivel (o es cuarto?)&lt;/p&gt;
+
+&lt;p&gt;el asunto es que segun la distribucion, por algunas sutiles configuraciones
+puede desaparecer al saltar entre distro y distro y debe configurarse el teclado
+desde &lt;code&gt;gnome-tweak&lt;/code&gt; de la siguiente manera&lt;/p&gt;
+
+&lt;p&gt;en &lt;em&gt;Escritura&lt;/em&gt;, unica y exclusivamente configurar &lt;em&gt;Tecla para seleccionar el tercer nivel&lt;/em&gt;
+como &lt;code&gt;Alt derecho&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/debone/g-dvp-1.png&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;para las versiones apartir del gnome shell 26 (?). Desde &lt;em&gt;Teclado y ratón&lt;/em&gt;
+desactivar la tecla de composicion&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/debone/g-dvp-2.png&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;despues presionar en &lt;em&gt;Opciones adicionales de la distribución&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/debone/g-dvp-3.png&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;y de nuevo, unica y exclusivamente configurar &lt;em&gt;Tecla para seleccionar el tercer nivel&lt;/em&gt;
+como &lt;code&gt;Alt derecho&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.nasciiboy.land/img/debone/g-dvp-4.png&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;firefox-quantum&#34;&gt;firefox-quantum&lt;/h2&gt;
 
 &lt;p&gt;hace un tiempo que salio el firefox quantum. Como este es, ha sido y supongo
@@ -1358,7 +1421,7 @@ exploraba la grafica&amp;hellip;&lt;/p&gt;
 &lt;p&gt;tras esto decia que hacia falta un modulo del kernel o algo asi, la solucion fue&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;echo &amp;quot;it87&amp;quot; &amp;gt;&amp;gt; /etc/modules
-modprobe it87 # para cargar el modulo de inmedito
+modprobe it87 # para cargar el modulo de inmediato
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;y tras ello &lt;code&gt;sensors&lt;/code&gt; arrojaba&lt;/p&gt;
@@ -24892,7 +24955,7 @@ codigo fuente de solarus puedes ver los pasos en el fichero &lt;code&gt;compilat
 
 &lt;p&gt;instalar dependencias en Debian&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libmodplug-dev libvorbis-dev
+&lt;pre&gt;&lt;code&gt;apt -y install build-essential cmake libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libvorbis-dev libmodplug-dev qtbase5-dev qttools5-dev qttools5-dev-tools libglm-dev
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;En el caso de fedora me he limitado a buscar el equivalente. Compilo cosas por
@@ -24914,10 +24977,10 @@ cd solarus
 
 &lt;p&gt;clonamos el motor y los tres juegos&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/solarus-games/solarus.git
-git clone https://github.com/solarus-games/zsdx.git
-git clone https://github.com/solarus-games/zsxd.git
-git clone https://github.com/solarus-games/zelda-roth-se.git
+&lt;pre&gt;&lt;code&gt;git clone https://gitlab.com/solarus-games/solarus.git
+git clone https://gitlab.com/solarus-games/zsdx.git
+git clone https://gitlab.com/solarus-games/zsxd.git
+git clone https://gitlab.com/solarus-games/zelda-roth-se.git
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;compilamos el motor&lt;/p&gt;

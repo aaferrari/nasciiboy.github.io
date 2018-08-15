@@ -63,7 +63,7 @@ codigo fuente de solarus puedes ver los pasos en el fichero &lt;code&gt;compilat
 
 &lt;p&gt;instalar dependencias en Debian&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libmodplug-dev libvorbis-dev
+&lt;pre&gt;&lt;code&gt;apt -y install build-essential cmake libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libvorbis-dev libmodplug-dev qtbase5-dev qttools5-dev qttools5-dev-tools libglm-dev
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;En el caso de fedora me he limitado a buscar el equivalente. Compilo cosas por
@@ -85,10 +85,10 @@ cd solarus
 
 &lt;p&gt;clonamos el motor y los tres juegos&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/solarus-games/solarus.git
-git clone https://github.com/solarus-games/zsdx.git
-git clone https://github.com/solarus-games/zsxd.git
-git clone https://github.com/solarus-games/zelda-roth-se.git
+&lt;pre&gt;&lt;code&gt;git clone https://gitlab.com/solarus-games/solarus.git
+git clone https://gitlab.com/solarus-games/zsdx.git
+git clone https://gitlab.com/solarus-games/zsxd.git
+git clone https://gitlab.com/solarus-games/zelda-roth-se.git
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;compilamos el motor&lt;/p&gt;
