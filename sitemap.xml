@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.nasciiboy.land/post/ramen-xxii/</loc>
+    <lastmod>2018-08-20T20:57:27-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.nasciiboy.land/prog/sistop/</loc>
     <lastmod>2018-08-12T20:00:08-05:00</lastmod>
   </url>
@@ -574,7 +579,7 @@
   
   <url>
     <loc>https://www.nasciiboy.land/tags/4k/</loc>
-    <lastmod>2018-06-22T19:03:49-05:00</lastmod>
+    <lastmod>2018-08-20T20:57:27-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -597,14 +602,14 @@
   </url>
   
   <url>
-    <loc>https://www.nasciiboy.land/tags/apt/</loc>
-    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
+    <loc>https://www.nasciiboy.land/categories/apt/</loc>
+    <lastmod>2017-10-30T15:45:27-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.nasciiboy.land/categories/apt/</loc>
-    <lastmod>2017-10-30T15:45:27-06:00</lastmod>
+    <loc>https://www.nasciiboy.land/tags/apt/</loc>
+    <lastmod>2017-08-20T15:59:03-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -688,7 +693,7 @@
   
   <url>
     <loc>https://www.nasciiboy.land/tags/fonos/</loc>
-    <lastmod>2018-08-06T21:29:35-05:00</lastmod>
+    <lastmod>2018-08-20T20:57:27-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -790,25 +795,25 @@
   
   <url>
     <loc>https://www.nasciiboy.land/categories/post/</loc>
-    <lastmod>2018-08-06T21:29:35-05:00</lastmod>
+    <lastmod>2018-08-20T20:57:27-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.nasciiboy.land/post/</loc>
-    <lastmod>2018-08-06T21:29:35-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nasciiboy.land/tags/prog/</loc>
-    <lastmod>2018-03-23T21:41:50-06:00</lastmod>
+    <lastmod>2018-08-20T20:57:27-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.nasciiboy.land/categories/prog/</loc>
     <lastmod>2018-08-12T20:00:08-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nasciiboy.land/tags/prog/</loc>
+    <lastmod>2018-03-23T21:41:50-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -868,7 +873,7 @@
   
   <url>
     <loc>https://www.nasciiboy.land/tags/</loc>
-    <lastmod>2018-06-22T19:03:49-05:00</lastmod>
+    <lastmod>2018-08-20T20:57:27-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -880,7 +885,7 @@
   
   <url>
     <loc>https://www.nasciiboy.land/tags/txt/</loc>
-    <lastmod>2018-08-12T20:00:08-05:00</lastmod>
+    <lastmod>2018-08-20T20:57:27-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -910,7 +915,7 @@
   
   <url>
     <loc>https://www.nasciiboy.land/</loc>
-    <lastmod>2018-08-12T20:00:08-05:00</lastmod>
+    <lastmod>2018-08-20T20:57:27-05:00</lastmod>
     <priority>0</priority>
   </url>
   

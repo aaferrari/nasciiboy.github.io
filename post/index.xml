@@ -7,10 +7,338 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Mon, 06 Aug 2018 21:29:35 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 20 Aug 2018 20:57:27 -0500</lastBuildDate>
     
         <atom:link href="https://www.nasciiboy.land/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ramen XXII</title>
+      <link>https://www.nasciiboy.land/post/ramen-xxii/</link>
+      <pubDate>Mon, 20 Aug 2018 20:57:27 -0500</pubDate>
+      
+      <guid>https://www.nasciiboy.land/post/ramen-xxii/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Creo que es extraordinariamente importante que sigamos manteniendo la
+diversion en las ciencias de la computacion. Cuando empezó, fue muy
+divertido. Por supuesto, los clientes que pagaban se quejaban de vez en
+cuando, y después de un rato comenzamos a tomar en serio sus quejas.
+Empezamos a sentirnos como si realmente fuésemos responsables del uso
+exitoso y libre de errores de estas máquinas. No creo que lo seamos. Creo
+que somos responsables de extenderlas, de ponerlas en nuevas direcciones y
+de divertirnos en casa. Espero que el campo de la informática nunca pierda
+su sentido de la diversión. Sobre todo, espero que no nos convirtamos en
+misioneros. No te sientas como si fueras un vendedor de Biblias. El mundo ya tiene
+demasiadas. Lo que conoces sobre la computación otras personas lo
+aprenderán. No sientas como si la clave para el exito de la computación
+estubiera solamente en tus manos. Lo que está en tus manos, creo y espero,
+es la inteligencia: la capacidad de ver la máquina como algo más que cuando
+te condujeron a ella, para que la puedas hacer más.
+– SICP&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/gozxxy.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En el ultimo mes mi placa pricipal se fue de garantia poco mas de 20 dias, el
+pentuim 4 (alias Cedar Mill) protagonizo el dia a dia gnomero con sus 2GB de
+ram, hubieron un monton de instalaciones (por lo menos 7) aunque esa es una de las
+labores que mas detesto (junto a pasar bytes de un disco a otro y borrar
+material). Luego regreso una placa con chipset b350m (downgradeada por 2 sata menos) y un
+nuevo y pequeño SSD. Un par de dias despues esa placa se volvio a ir, y en
+garantia me dieron otro clon de su mismo modelo. MMMmmm, en definitiva los VRM
+cuando funcionan bien (con el cpu ligerito) apenas y estan templados, pero ese
+B350m si que es un chipset calientito, calientito (a dedo ~70°) solo por estar
+prendido en el bios&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;para su instalacion probe primero con debian, actualice el kernel, puse drivers
+y despues&amp;hellip; salte a openSuse siguiendo la
+&lt;a href=&#34;https://victorhck.gitlab.io/guia_openSUSE/&#34;&gt;traduccion&lt;/a&gt; de la guia official de
+virtorhck. Al reinicio siguiente, los programitas (moc, vlc, firefox) tenian
+problemas con el audio/video asi que despues de una busqueda infructuosa por una
+solucion sencilla, dije &amp;ldquo;baahhh, a la mierda! le pondre freidora una vez mas&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;definitivamente lo mas agradable, fue incorporar ese pentium y descubrir con
+asombro que gnome puede arrancar apenas sobre los 200MiB aunque ya cargadito y
+tras unas semanas de uso, roza los 300MiB.&lt;/p&gt;
+
+&lt;p&gt;imposible? mentira? pues no lo se, sera la magia de los 32 bits y que la
+tarjeta grafica con su ram dedicada aloja al menos unos 200MiB que de otra forma
+estarian en la RAM del sistema. Pero la verdad no tiengo ni idea de por que tal
+consumo.&lt;/p&gt;
+
+&lt;p&gt;mientras tanto en ese equipo retro, di por &amp;ldquo;terminado&amp;rdquo; o mas bien &amp;ldquo;por
+aceptable&amp;rdquo; la traduccion del &lt;em&gt;elipo&lt;/em&gt; y junto a ello me siento satisfecho en lo
+que a ser un &lt;em&gt;voluntarista del internet&lt;/em&gt; se refiere. Dedicarse al voluntariado
+(sin un sustento asegurado, patrocinio o como trabajo) conlleva una continua
+insertidumbre y menosprecio, asi que mejor darle prioridad maxima al plan B de
+seguir la via convencional de estudios reconocidos (con papeles y
+preferentemente becas y finaciaminentos varios), dedicarme a la docencia como
+sustento y al voluntarialismo como pasion&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; eso, o conseguir un empleo soportable, huir, fumar mota diariamente y
+embarazar a la primera que se deje, que su daddy nos de propiedades y despues de un
+par de años pagar pension a &amp;ldquo;la ex&amp;rdquo; y decir con horgullo: &amp;ldquo;no queda de otra, hay
+que chingarle&amp;rdquo;, o mejor aun: &amp;ldquo;no puedo permitirme ser un desempleado&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;ja, ja, mientras tanto, como sin querer voy a continuar con el SICP y despues si
+aparece el entusiasmo, con morg. Tambien leere algunos libros como uno de asm
+para x86 que tenia por hay, y otro de redes del tanenbaum. Tambien estoy
+interesado en rush a manera de preludio para considerar C++ y comprender un
+motor hecho en ese lenguaje. No es tan importante aplicar lo que contengan los
+libros, como si adquirir una vision mas amplia de lo que hay mas alla de lo poco
+que conosco.&lt;/p&gt;
+
+&lt;h2 id=&#34;4k&#34;&gt;4k&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Ant-man&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Como diria Reese (o Malcom) &amp;ldquo;los japoneses nos superan de muchas maneras&amp;rdquo; (o
+algo asi) y, la tematica del isekai (como cualquier otra tematica, pero es mas
+claro en esta) ademas de fomar parte de la campaña de fomento del suicidio entre
+los otakos, proporciona la ilusoria esperanza de que aun en sus inmundas
+existencias sin ninguna habilidad social, intelectual, fisica, musical, etc. el
+mas comun de los mortales, es 🌈especial🌈&amp;hellip; incluso con 40 años (o mas)&lt;/p&gt;
+
+&lt;p&gt;es verdad que mantener falsas expectativas de un futuro lleno de abundancia y
+&amp;ldquo;felicidad&amp;rdquo; donde rockeamos un monton, cumple la funcion de mecanismo de preservacion.
+Al fin de cuenta, uno es incapaz de saber si por mera casualidad, un hecho
+extraordinario (predeterminado por el univeso) nos convierta en un Avenger&lt;/p&gt;
+
+&lt;p&gt;bueno, pocas cosas tenia que hacer y era el ultimo filme de la lista de pelis
+marvel. Buena? mala? curiosa? oooh, sobervia? cuando veo algo asi, es como cuando
+veo la labor de algunas personas que se dicen capaces y al hacer algo, sus
+resultados son dificiles de distinguir entre el producto de taras fisicas y
+mentales, o un hecho absolutamente intencional. (Dicho de otro modo &amp;ldquo;lo hacen a
+proposito o son asi?&amp;ldquo;)&lt;/p&gt;
+
+&lt;p&gt;Mi duda principal es ¿por que se invierten millones en una pelicula basada en
+unas historietas americanas con pseudo ciencia ficcion donde los ancianos actuan
+como adultos y los cuarentones como adolecentes? &amp;hellip; como debe actuar un
+cuarenton?&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;sigue tus sueños&amp;rdquo; dirian en una reseña que vi en el yutu, &lt;em&gt;actua como te de la
+gana y sigue tus sueños&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;la diferencia de un desubicado (paracito, lo llamarian algunos, e inmaduro
+otros) es conseguir apartamento, tener descendencia desperdigada entre 4
+relaciones, atarse a un trabajo vacio como agotador y que a tus crias las eduque
+el yutu? No lo se, el tipo tiene una hormiga voladora y le llama antoni!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3D Kanojo Real Girl&lt;/strong&gt; cha, supuse que este seria otro meta-dialogo directo entre
+los guinistas y la audiencia, y aun que medio fue asi al inicio, termino por
+convertirse en el dia a dia de una parejita ordinaria. Calificacion: olvidala y/o evitala&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What We Do in the Shadows&lt;/strong&gt; la peli previa del buen Taika Waititi a &lt;strong&gt;¡THor RagnaRØkc!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Extraña, independiente y casi comica, son las palabras que puedo adjudicarle. Un
+reality-documental de un grupo de Vampiros medio homosexuales. Calificacion,
+visible y rara, es lo minimo que esperaba de TW&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rascacielos&lt;/strong&gt; mi instinto aracnido aconsejaba evitar los gastos inecesarios y
+en el cine no habia nada destacable. La aburricion es poderosa&amp;hellip; pague el voleto
+con bastante pena ajena y&amp;hellip; no esta mal. Una peli de accion hecha y derecha que
+sin ser comedia se burla de sus pendejadas &amp;ldquo;de accion&amp;rdquo;, utilizando sin recato
+todos los cliches del manual de las cintas ochenteras, pero de buena forma&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Grancrest Senki&lt;/strong&gt; Cuando tienes mucha oferta (de anime (basura)), las obras que
+tardan mas de 3 capitulos en dejarte clara su tematica, son las primeras en
+desaparecer.&lt;/p&gt;
+
+&lt;p&gt;tenia prisa por liberar varios jigas del disco, pero tampoco es como para ir
+borrando a lo loco. El primer capitulo tenia una animacion 3D hortera, te
+contaban quien seria el kirito de la serie y la primer chica en caer ante sus
+encantos&amp;hellip; a-b-u-r-r-i-d-o.&lt;/p&gt;
+
+&lt;p&gt;estaba por borrar y pasar a lo siguiente, pero antes salte al segundo y luego
+tercero y luego cuarto y luego quinto capitulo haciendo avance rapido y luego
+tuve claro que esto hiba de algun tipo de &amp;ldquo;juego de tronos&amp;rdquo; del medievo con
+magia y batallas&lt;/p&gt;
+
+&lt;p&gt;las intrigas no son nada del otro jueves, aunque una vez por capitulo ponen
+alguna escena de batalla/accion decente que evita que te vallas a otra
+cosa. Tiene momentos casi epicos, la entrega de una princesa seria a un arabe
+salvaje y muertes&lt;/p&gt;
+
+&lt;p&gt;sobre la media, aunque mediocre. Parece que forma parte de un &amp;ldquo;algo&amp;rdquo; mas
+elavorado, solo que a los guionistas/animadores les hicieron falta recursos o
+tiempo&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Golden Kamui&lt;/strong&gt; del estudio &lt;a href=&#34;https://en.wikipedia.org/wiki/Geno_Studio&#34;&gt;geno&lt;/a&gt;
+que anteriormente entrego esa serie llamada Kokkoku.&lt;/p&gt;
+
+&lt;p&gt;Ahora nos traen &lt;a href=&#34;https://es.wikipedia.org/wiki/Ainu&#34;&gt;ainu&lt;/a&gt; el publi documental
+con accion. Ja, ja, esta curiosa, tiene un poco de road movie como con wenster y
+atraco al casino. El prota algo de Guts (Berserk) y la prota algo de (Doña) Anna
+(Shaman King). Decente, considerar que esta a medio hacer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;My Girls Boy&lt;/strong&gt; Esta es una peli koreana que retrata la vida romantica de 3
+sujetos y 3 sujetas coreanas cosmopolitas con problemas de pelicula de primer
+mundo (hablar por celular, desplazarse de un lado a otro en un vehiculo nuevo y
+continuar hablando mas en la oficina) con desnudos, y tetas.&lt;/p&gt;
+
+&lt;p&gt;tia mona que quiere atencion y regalos, tio que tiene pasta y quiere follarse a
+tia que quiere atencion y regalos, amigo del tio que sale con su esposa pero
+quiere encontrar a una tia para cambiar su estado social de fracasado a
+normi. Esposa del tio, cuya hija no es de su esposo y esta falta de atencion y
+sexo. Hermano del amigo del tio que le da duro y cuando quiere a la tia mona y, una
+tia que le da al tio A y C bien duro y ricolino pero es objeto de deseo del tio
+B&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;mas o menos es asi la cinta, nos cuentan una escena una y otra vez pero desde el
+punto de vista de cada personaje en una linea temporal de dificil organizacion&lt;/p&gt;
+
+&lt;p&gt;Diferente. Lo de contar varias historias sin un marco de tiempo claro, como que es
+una caracteristica del cine coreano&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mahou Shoujo Site&lt;/strong&gt; imaginemos que somos parte del grupo creativo de un
+estudio de animacion. Dentro de una reunion por crear algo vanguardista (y
+comercial) se nos propone hacer lo mas extrEMO que se pueda imaginar para
+convencer a la chavalada de que nuestra serie es seria, obscura y muy pero que muy
+profunda. Luego de mucho debatir, el generador de series random arroja lo
+siguiente&lt;/p&gt;
+
+&lt;p&gt;una chica con ojeras sufre de bulling en la escuela al grado de ser ofrecida
+para una violacion, pero no solo eso, en casa a su hermano con ojos locos le da
+por golpear su vientrecito diariamente (hasta hacerla vomitar) para liberar el
+estres de japones que lleva dentro. Esta chica adquiere una &amp;ldquo;varita magica&amp;rdquo; en
+internet pero cada vez que la utiliza su vida se acorta, los ojos se le ponen
+rojitos y sangra de algun orificio (o poro) unico y detergente. Mientras tanto
+conoce a otras chicas magicas con las que debe combatir, sangrar y entablar relaciones
+llenas de malentendos&amp;hellip; y al final? triunfa el amor, el amor lesbico&lt;/p&gt;
+
+&lt;p&gt;wahha, hahh, hahh, suena mas divertido de lo que es, divertida? supongo,
+entretenida? mmm (la termine de ver), curiosa? tambien&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mentes poderosas&lt;/strong&gt; Otro dia, otra cinta. En esta ocacion nos cuentan que en un
+futuro proximo las crias de humano comienzan a morir de forma masiva, y los que
+no mueren adquieren uno de 4 poderes&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;genio&lt;/li&gt;
+&lt;li&gt;telequinesis&lt;/li&gt;
+&lt;li&gt;manipulacion mental&lt;/li&gt;
+&lt;li&gt;lanzallamas vocal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;para que haya drama, a los sobrevivientes los envian a campos de concentracion a
+hacer trabajos forzados que desaprovechen sus habilidades. Aunque, si cuentan con
+el poder de manipulacio mental o lanzallamas vocal los inyectan para que se
+&amp;ldquo;duerman&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;la protagonista, por mera casualidad tiene la capacidad de manipulacion mental y
+es una (de aparentemente) dos personas que cuentan con ese poder en todo el
+mundo (USA). La primer parte del filme nos cuenta desde su ingreso al campo
+hasta su huida, encuentro y viaje con otros tres pintorescos mutantes.
+Esa parte esta entretenida.&lt;/p&gt;
+
+&lt;p&gt;Luego viene una parte donde llegan a la tierra prometida de los mutantes y
+sufren romanticamente y tambien por que el sito de ensueño no lo era tanto, esa
+parte ya no esta divertida.&lt;/p&gt;
+
+&lt;p&gt;Terminando en lo que pretende ser la proxima franquicia con target femenino y
+para personas debiles (y aburridas). Continuare viendo esto? (si tiene
+continuacion?) (seguramente) nop&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Isekai Izakaya&lt;/strong&gt; un anime de comida-folclorico-publicitario que ensalsa el
+horgullo japones, puffff, entretenido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wotaku ni Koi wa Muzukashii&lt;/strong&gt; No se por que a esta serie le hicieron bastante
+publicidad algunos de los canales del yutu, supuestamente nos cuentan las
+desventuras de una mujer oficinista otaku y como su aficion le causa problemas
+laborales (o algo asi). En realidad, es una especie de comedia romantica para
+chicas. Una comedia muy aburrida que no va a ningun lado.&lt;/p&gt;
+
+&lt;p&gt;Le di el privilegio de la duda, vi tres episodios y salte al final. En resumen,
+no pasa nahhhhhh&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tada-kun wa Koi wo Shinai&lt;/strong&gt; Una vez mas, otra comedia romantica, con
+slice-of-live. Animacion decente, estilo bonito, voces chillonas un tanto
+molestas que sin embargo casi se vuelven comicas y&amp;hellip; no se, se deja ver&lt;/p&gt;
+
+&lt;h2 id=&#34;fonos&#34;&gt;fonos&lt;/h2&gt;
+
+&lt;p&gt;Aunque nunca dejo de escuchar material nuevo, la cantidad de descargas de albums
+inexplorados me ha exedido en tal cantidad que (casi) la he abandonado en pro de
+mantener un perfil de consumo (de cosas nuevas) &amp;ldquo;sin prisa&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Ver aumentar la coleccion de material a descubrir es emocionante, pero cuando
+tienes que bajar al oceano de la mediacridad y pezcar algo sublime sin filtro
+alguno, no esta tan guay.&lt;/p&gt;
+
+&lt;p&gt;y bueno, entre varios OST de anime que no tienen mucha gracia (pero no borrare
+del disco) y revisitar las cosas chidas, pocas novedades se pueden destacar&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Black Bombaim &amp;amp; Peter Brotzmann&lt;/strong&gt; Con los primeros saxofonasos creia caer de
+lleno en un trabajo jazzistico incomprensible, pero no. Aqui tenemos una
+vibrante y trival conmbinacion de jazz y rock conformado por tres (o 4) instrumentos:
+una bateria bastante &amp;ldquo;vikinga&amp;rdquo;, guitarra, bajo y un saxo, este ultimo como
+reclamo distintivo de las composiciones&lt;/p&gt;
+
+&lt;p&gt;en el yutu tienen un video con otra formacion y es un buen referente de lo que
+encontraran&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/https://youtu.be/bJbIGR9uE0Q&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;The Flaming Lips&lt;/strong&gt; las sopresas del torrent!&lt;/p&gt;
+
+&lt;p&gt;En los tiempos donde el internet solo existia en los ciber, cuando las maximas
+referencias eran la televicion, la radio y las revistas, en una de estas ultimas
+publicitaban el album &amp;ldquo;Yoshimi Battles The Pink Robots&amp;rdquo; al mismo nivel del &lt;em&gt;OK
+Computer&lt;/em&gt;. Yo credulo y hambriento por descubrir nuevas sonoridades les hice caso y
+en esos momentos cuando la unica manera de conseguir musica era ir a comprar un
+disco fisico a una tienda en una plaza para gente bien, sali con el susodicho CD
+(Un ritual que llevaba a cabo casi cada semana)&lt;/p&gt;
+
+&lt;p&gt;El material, puag, el material&amp;hellip; me parecio una tonteria fresa-limon para gente
+suavesita. Ya que no fue gratis, pues de vez en cuando lo escuchaba, por aquello
+de que cada material requiere una sensivilidad particular, y-y-y-y-y-y, no, su
+momento nunca llego, pero servia como contraste entre lo bueno y lo mehh. Hasta
+que con tanta escucha, pues le cogi cariño, como una especio de de fondo
+nostalgico &amp;ldquo;colegial&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Asi, pues al ver la coleccion completa, entre que tenia ganas por recuperar el
+Yoshimi y tambien dudas de si valdria descargar todo.&lt;/p&gt;
+
+&lt;p&gt;Y-y-y-y-y? al menos los primeros tres (Hear It Is, Oh My Gawd!!, Telepathic
+Surgery) son abismalmente distintos, muy underground, entre los Pixies y Velvet.&lt;/p&gt;
+
+&lt;p&gt;Una recomendable adicion a la colexion! y-y-y-y-y el Yoshimi, no esta tan
+mal&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:68bbcf196ec555036350e1b8e7caee75fb116ce4&amp;amp;dn=The%20Flaming%20Lips%20Albums%20(1987-2009)%20%5bFLAC%2cTracks%5d&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;On Dead Waves&lt;/strong&gt; a medio camino entre los pixies y crawnberrys, no encuentro
+bien como definir su estilo, ni para dormir, ni para aburrirse, ni para
+emocionarse, ni como himno. Como diria el sr. floyd, &amp;ldquo;para cuando has fumado todo
+el dia y al llegar a casa solo quieres fumar mas&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;si hubo otra cosa interesante, me dio peresa agregarla, je, je, je&amp;hellip; escuchar a
+Hiromi Uehara es lo que mas he estado haciendo, revisitando &lt;strong&gt;Jazz In The
+Garden&lt;/strong&gt;, &lt;strong&gt;Place to Be&lt;/strong&gt;, &lt;strong&gt;Voice&lt;/strong&gt;, &lt;strong&gt;Move&lt;/strong&gt; y &lt;strong&gt;Alive&lt;/strong&gt;. Whaahh! solamente exquisites!&lt;/p&gt;
+
+&lt;p&gt;Tambien un paseito por los Camel, los Top Krautrock Albums y por unos tres dias
+el &lt;em&gt;East Wind&lt;/em&gt; de Uttara Kuru y ya de paso apresiando con detenimiento
+repetitivo a Ananda Shankar sobre todo el &lt;em&gt;Missing You&lt;/em&gt;, Ananda Shankar and His
+Music y en menor medida el homonimo, Ananda Shankar&lt;/p&gt;
+
+&lt;h2 id=&#34;txt&#34;&gt;txt&lt;/h2&gt;
+
+&lt;p&gt;Errores que comenten los programadores novatos -&amp;gt;
+&lt;a href=&#34;https://lapastillaroja.net/2018/07/errores-que-comenten-los-programadores-novatos/&#34;&gt;https://lapastillaroja.net/2018/07/errores-que-comenten-los-programadores-novatos/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;cosas de emacs&amp;rdquo;, un compendio de cosas algo rarunas -&amp;gt;
+&lt;a href=&#34;http://emacs.scienceontheweb.net/&#34;&gt;http://emacs.scienceontheweb.net/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Teopanzolco – 01 (Vuyo Sotashe)</title>
@@ -473,9 +801,9 @@ adquirir un monitor &lt;strong&gt;¡1080!&lt;/strong&gt; (con una puñetera entr
 gitlab (y divagando en ver precios por amazon&amp;hellip;), he dedicado tardes de
 maquinacion enteras&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;el presupuesto y las habilidades sydaministrosas no me dan para
+&lt;p&gt;el presupuesto y las habilidades sysadministrosas no me dan para
 mucho y entre tanta dispercion y el escosor de ingresar unos presupuestos a la
-targeta de compras, termine por hacerme de un dominio propio. Si seguia por rss
+tarjeta de compras, termine por hacerme de un dominio propio. Si seguia por rss
 este sitio habra notado un aflujo de entradas.&lt;/p&gt;
 
 &lt;p&gt;Entre las opciones de dominio mis preferencia estaban entre &lt;strong&gt;nasciiboy.black&lt;/strong&gt;

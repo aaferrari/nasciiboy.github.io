@@ -678,11 +678,13 @@ encima de cualquier otra distro, es comoda, intuitiva, extendida y
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;ALTGR+n&lt;/code&gt; == &lt;code&gt;ñ&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ALTGR+n-shift&lt;/code&gt; == &lt;code&gt;Ñ&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+n+shift&lt;/code&gt; == &lt;code&gt;Ñ&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ALTGR+&#39;&lt;/code&gt; y &lt;code&gt;letra&lt;/code&gt; == &lt;code&gt;letra-con-acento&lt;/code&gt; (&lt;code&gt;ć&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ALTGR+~&lt;/code&gt; y &lt;code&gt;letra&lt;/code&gt; == &lt;code&gt;letra-con-~&lt;/code&gt; (&lt;code&gt;õ&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ALTGR+^&lt;/code&gt; y &lt;code&gt;letra&lt;/code&gt; == &lt;code&gt;letra-con-^&lt;/code&gt; (&lt;code&gt;ô&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ALTGR+^-shift&lt;/code&gt;  y &lt;code&gt;letra&lt;/code&gt; == &lt;code&gt;letra-con-^-invertida&lt;/code&gt; (&lt;code&gt;ǒ&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+^+shift&lt;/code&gt;  y &lt;code&gt;letra&lt;/code&gt; == &lt;code&gt;letra-con-^-invertida&lt;/code&gt; (&lt;code&gt;ǒ&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+^&lt;/code&gt; y &lt;code&gt;numero&lt;/code&gt; == &lt;code&gt;&amp;quot;superindice&amp;quot;&lt;/code&gt; (&lt;code&gt;¹&lt;/code&gt;, &lt;code&gt;²&lt;/code&gt;, &lt;code&gt;³&lt;/code&gt;, &lt;code&gt;⁺&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ALTGR+^+shift&lt;/code&gt; y &lt;code&gt;numero&lt;/code&gt; == &lt;code&gt;&amp;quot;subindice&amp;quot;&lt;/code&gt; (&lt;code&gt;₁&lt;/code&gt;, &lt;code&gt;₂&lt;/code&gt;, &lt;code&gt;₃&lt;/code&gt;, &lt;code&gt;₊&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ALTGR+-&lt;/code&gt; == &lt;code&gt;­&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ALTGR+-+shift&lt;/code&gt; == &lt;code&gt;–&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ALTGR+&amp;lt;&lt;/code&gt; == &lt;code&gt;«&lt;/code&gt;&lt;/li&gt;
@@ -691,7 +693,7 @@ encima de cualquier otra distro, es comoda, intuitiva, extendida y
 &lt;li&gt;&lt;code&gt;ALTGR+?&lt;/code&gt; == &lt;code&gt;¿&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;y asi varios signos raros mas (&lt;code&gt;“”¨˝ˇ¢çø®½£€¥½åæÆðþßl§⸘‽&lt;/code&gt;) en el tercer y quinto nivel (o es cuarto?)&lt;/p&gt;
+&lt;p&gt;y asi varios signos raros mas (&lt;code&gt;“”¨˝ˇ¢çø®½£€¥½åæÆðþßl§⸘‽¶&lt;/code&gt;) en el tercer y quinto nivel (o es cuarto?)&lt;/p&gt;
 
 &lt;p&gt;el asunto es que segun la distribucion, por algunas sutiles configuraciones
 puede desaparecer al saltar entre distro y distro y debe configurarse el teclado

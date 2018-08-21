@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XXII</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://www.nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://www.nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://www.nasciiboy.land">/</a></span> <span><a href="https://www.nasciiboy.land/post">post</a></div>
+
+  <h1>Ramen XXII</h1>
+  
+
+<blockquote>
+<p>Creo que es extraordinariamente importante que sigamos manteniendo la
+diversion en las ciencias de la computacion. Cuando empezó, fue muy
+divertido. Por supuesto, los clientes que pagaban se quejaban de vez en
+cuando, y después de un rato comenzamos a tomar en serio sus quejas.
+Empezamos a sentirnos como si realmente fuésemos responsables del uso
+exitoso y libre de errores de estas máquinas. No creo que lo seamos. Creo
+que somos responsables de extenderlas, de ponerlas en nuevas direcciones y
+de divertirnos en casa. Espero que el campo de la informática nunca pierda
+su sentido de la diversión. Sobre todo, espero que no nos convirtamos en
+misioneros. No te sientas como si fueras un vendedor de Biblias. El mundo ya tiene
+demasiadas. Lo que conoces sobre la computación otras personas lo
+aprenderán. No sientas como si la clave para el exito de la computación
+estubiera solamente en tus manos. Lo que está en tus manos, creo y espero,
+es la inteligencia: la capacidad de ver la máquina como algo más que cuando
+te condujeron a ella, para que la puedas hacer más.
+– SICP</p>
+</blockquote>
+
+<p><img src="https://www.nasciiboy.land/img/gozxxy.jpg" alt="" /></p>
+
+<p>En el ultimo mes mi placa pricipal se fue de garantia poco mas de 20 dias, el
+pentuim 4 (alias Cedar Mill) protagonizo el dia a dia gnomero con sus 2GB de
+ram, hubieron un monton de instalaciones (por lo menos 7) aunque esa es una de las
+labores que mas detesto (junto a pasar bytes de un disco a otro y borrar
+material). Luego regreso una placa con chipset b350m (downgradeada por 2 sata menos) y un
+nuevo y pequeño SSD. Un par de dias despues esa placa se volvio a ir, y en
+garantia me dieron otro clon de su mismo modelo. MMMmmm, en definitiva los VRM
+cuando funcionan bien (con el cpu ligerito) apenas y estan templados, pero ese
+B350m si que es un chipset calientito, calientito (a dedo ~70°) solo por estar
+prendido en el bios&hellip;</p>
+
+<p>para su instalacion probe primero con debian, actualice el kernel, puse drivers
+y despues&hellip; salte a openSuse siguiendo la
+<a href="https://victorhck.gitlab.io/guia_openSUSE/">traduccion</a> de la guia official de
+virtorhck. Al reinicio siguiente, los programitas (moc, vlc, firefox) tenian
+problemas con el audio/video asi que despues de una busqueda infructuosa por una
+solucion sencilla, dije &ldquo;baahhh, a la mierda! le pondre freidora una vez mas&rdquo;</p>
+
+<p>definitivamente lo mas agradable, fue incorporar ese pentium y descubrir con
+asombro que gnome puede arrancar apenas sobre los 200MiB aunque ya cargadito y
+tras unas semanas de uso, roza los 300MiB.</p>
+
+<p>imposible? mentira? pues no lo se, sera la magia de los 32 bits y que la
+tarjeta grafica con su ram dedicada aloja al menos unos 200MiB que de otra forma
+estarian en la RAM del sistema. Pero la verdad no tiengo ni idea de por que tal
+consumo.</p>
+
+<p>mientras tanto en ese equipo retro, di por &ldquo;terminado&rdquo; o mas bien &ldquo;por
+aceptable&rdquo; la traduccion del <em>elipo</em> y junto a ello me siento satisfecho en lo
+que a ser un <em>voluntarista del internet</em> se refiere. Dedicarse al voluntariado
+(sin un sustento asegurado, patrocinio o como trabajo) conlleva una continua
+insertidumbre y menosprecio, asi que mejor darle prioridad maxima al plan B de
+seguir la via convencional de estudios reconocidos (con papeles y
+preferentemente becas y finaciaminentos varios), dedicarme a la docencia como
+sustento y al voluntarialismo como pasion</p>
+
+<p>&hellip; eso, o conseguir un empleo soportable, huir, fumar mota diariamente y
+embarazar a la primera que se deje, que su daddy nos de propiedades y despues de un
+par de años pagar pension a &ldquo;la ex&rdquo; y decir con horgullo: &ldquo;no queda de otra, hay
+que chingarle&rdquo;, o mejor aun: &ldquo;no puedo permitirme ser un desempleado&rdquo;</p>
+
+<p>ja, ja, mientras tanto, como sin querer voy a continuar con el SICP y despues si
+aparece el entusiasmo, con morg. Tambien leere algunos libros como uno de asm
+para x86 que tenia por hay, y otro de redes del tanenbaum. Tambien estoy
+interesado en rush a manera de preludio para considerar C++ y comprender un
+motor hecho en ese lenguaje. No es tan importante aplicar lo que contengan los
+libros, como si adquirir una vision mas amplia de lo que hay mas alla de lo poco
+que conosco.</p>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>Ant-man</strong></p>
+
+<p>Como diria Reese (o Malcom) &ldquo;los japoneses nos superan de muchas maneras&rdquo; (o
+algo asi) y, la tematica del isekai (como cualquier otra tematica, pero es mas
+claro en esta) ademas de fomar parte de la campaña de fomento del suicidio entre
+los otakos, proporciona la ilusoria esperanza de que aun en sus inmundas
+existencias sin ninguna habilidad social, intelectual, fisica, musical, etc. el
+mas comun de los mortales, es 🌈especial🌈&hellip; incluso con 40 años (o mas)</p>
+
+<p>es verdad que mantener falsas expectativas de un futuro lleno de abundancia y
+&ldquo;felicidad&rdquo; donde rockeamos un monton, cumple la funcion de mecanismo de preservacion.
+Al fin de cuenta, uno es incapaz de saber si por mera casualidad, un hecho
+extraordinario (predeterminado por el univeso) nos convierta en un Avenger</p>
+
+<p>bueno, pocas cosas tenia que hacer y era el ultimo filme de la lista de pelis
+marvel. Buena? mala? curiosa? oooh, sobervia? cuando veo algo asi, es como cuando
+veo la labor de algunas personas que se dicen capaces y al hacer algo, sus
+resultados son dificiles de distinguir entre el producto de taras fisicas y
+mentales, o un hecho absolutamente intencional. (Dicho de otro modo &ldquo;lo hacen a
+proposito o son asi?&ldquo;)</p>
+
+<p>Mi duda principal es ¿por que se invierten millones en una pelicula basada en
+unas historietas americanas con pseudo ciencia ficcion donde los ancianos actuan
+como adultos y los cuarentones como adolecentes? &hellip; como debe actuar un
+cuarenton?</p>
+
+<p>&ldquo;sigue tus sueños&rdquo; dirian en una reseña que vi en el yutu, <em>actua como te de la
+gana y sigue tus sueños</em>.</p>
+
+<p>la diferencia de un desubicado (paracito, lo llamarian algunos, e inmaduro
+otros) es conseguir apartamento, tener descendencia desperdigada entre 4
+relaciones, atarse a un trabajo vacio como agotador y que a tus crias las eduque
+el yutu? No lo se, el tipo tiene una hormiga voladora y le llama antoni!</p>
+
+<p><strong>3D Kanojo Real Girl</strong> cha, supuse que este seria otro meta-dialogo directo entre
+los guinistas y la audiencia, y aun que medio fue asi al inicio, termino por
+convertirse en el dia a dia de una parejita ordinaria. Calificacion: olvidala y/o evitala</p>
+
+<p><strong>What We Do in the Shadows</strong> la peli previa del buen Taika Waititi a <strong>¡THor RagnaRØkc!</strong></p>
+
+<p>Extraña, independiente y casi comica, son las palabras que puedo adjudicarle. Un
+reality-documental de un grupo de Vampiros medio homosexuales. Calificacion,
+visible y rara, es lo minimo que esperaba de TW</p>
+
+<p><strong>Rascacielos</strong> mi instinto aracnido aconsejaba evitar los gastos inecesarios y
+en el cine no habia nada destacable. La aburricion es poderosa&hellip; pague el voleto
+con bastante pena ajena y&hellip; no esta mal. Una peli de accion hecha y derecha que
+sin ser comedia se burla de sus pendejadas &ldquo;de accion&rdquo;, utilizando sin recato
+todos los cliches del manual de las cintas ochenteras, pero de buena forma</p>
+
+<p><strong>Grancrest Senki</strong> Cuando tienes mucha oferta (de anime (basura)), las obras que
+tardan mas de 3 capitulos en dejarte clara su tematica, son las primeras en
+desaparecer.</p>
+
+<p>tenia prisa por liberar varios jigas del disco, pero tampoco es como para ir
+borrando a lo loco. El primer capitulo tenia una animacion 3D hortera, te
+contaban quien seria el kirito de la serie y la primer chica en caer ante sus
+encantos&hellip; a-b-u-r-r-i-d-o.</p>
+
+<p>estaba por borrar y pasar a lo siguiente, pero antes salte al segundo y luego
+tercero y luego cuarto y luego quinto capitulo haciendo avance rapido y luego
+tuve claro que esto hiba de algun tipo de &ldquo;juego de tronos&rdquo; del medievo con
+magia y batallas</p>
+
+<p>las intrigas no son nada del otro jueves, aunque una vez por capitulo ponen
+alguna escena de batalla/accion decente que evita que te vallas a otra
+cosa. Tiene momentos casi epicos, la entrega de una princesa seria a un arabe
+salvaje y muertes</p>
+
+<p>sobre la media, aunque mediocre. Parece que forma parte de un &ldquo;algo&rdquo; mas
+elavorado, solo que a los guionistas/animadores les hicieron falta recursos o
+tiempo</p>
+
+<p><strong>Golden Kamui</strong> del estudio <a href="https://en.wikipedia.org/wiki/Geno_Studio">geno</a>
+que anteriormente entrego esa serie llamada Kokkoku.</p>
+
+<p>Ahora nos traen <a href="https://es.wikipedia.org/wiki/Ainu">ainu</a> el publi documental
+con accion. Ja, ja, esta curiosa, tiene un poco de road movie como con wenster y
+atraco al casino. El prota algo de Guts (Berserk) y la prota algo de (Doña) Anna
+(Shaman King). Decente, considerar que esta a medio hacer.</p>
+
+<p><strong>My Girls Boy</strong> Esta es una peli koreana que retrata la vida romantica de 3
+sujetos y 3 sujetas coreanas cosmopolitas con problemas de pelicula de primer
+mundo (hablar por celular, desplazarse de un lado a otro en un vehiculo nuevo y
+continuar hablando mas en la oficina) con desnudos, y tetas.</p>
+
+<p>tia mona que quiere atencion y regalos, tio que tiene pasta y quiere follarse a
+tia que quiere atencion y regalos, amigo del tio que sale con su esposa pero
+quiere encontrar a una tia para cambiar su estado social de fracasado a
+normi. Esposa del tio, cuya hija no es de su esposo y esta falta de atencion y
+sexo. Hermano del amigo del tio que le da duro y cuando quiere a la tia mona y, una
+tia que le da al tio A y C bien duro y ricolino pero es objeto de deseo del tio
+B&hellip;</p>
+
+<p>mas o menos es asi la cinta, nos cuentan una escena una y otra vez pero desde el
+punto de vista de cada personaje en una linea temporal de dificil organizacion</p>
+
+<p>Diferente. Lo de contar varias historias sin un marco de tiempo claro, como que es
+una caracteristica del cine coreano</p>
+
+<p><strong>Mahou Shoujo Site</strong> imaginemos que somos parte del grupo creativo de un
+estudio de animacion. Dentro de una reunion por crear algo vanguardista (y
+comercial) se nos propone hacer lo mas extrEMO que se pueda imaginar para
+convencer a la chavalada de que nuestra serie es seria, obscura y muy pero que muy
+profunda. Luego de mucho debatir, el generador de series random arroja lo
+siguiente</p>
+
+<p>una chica con ojeras sufre de bulling en la escuela al grado de ser ofrecida
+para una violacion, pero no solo eso, en casa a su hermano con ojos locos le da
+por golpear su vientrecito diariamente (hasta hacerla vomitar) para liberar el
+estres de japones que lleva dentro. Esta chica adquiere una &ldquo;varita magica&rdquo; en
+internet pero cada vez que la utiliza su vida se acorta, los ojos se le ponen
+rojitos y sangra de algun orificio (o poro) unico y detergente. Mientras tanto
+conoce a otras chicas magicas con las que debe combatir, sangrar y entablar relaciones
+llenas de malentendos&hellip; y al final? triunfa el amor, el amor lesbico</p>
+
+<p>wahha, hahh, hahh, suena mas divertido de lo que es, divertida? supongo,
+entretenida? mmm (la termine de ver), curiosa? tambien</p>
+
+<p><strong>Mentes poderosas</strong> Otro dia, otra cinta. En esta ocacion nos cuentan que en un
+futuro proximo las crias de humano comienzan a morir de forma masiva, y los que
+no mueren adquieren uno de 4 poderes</p>
+
+<ul>
+<li>genio</li>
+<li>telequinesis</li>
+<li>manipulacion mental</li>
+<li>lanzallamas vocal</li>
+</ul>
+
+<p>para que haya drama, a los sobrevivientes los envian a campos de concentracion a
+hacer trabajos forzados que desaprovechen sus habilidades. Aunque, si cuentan con
+el poder de manipulacio mental o lanzallamas vocal los inyectan para que se
+&ldquo;duerman&rdquo;</p>
+
+<p>la protagonista, por mera casualidad tiene la capacidad de manipulacion mental y
+es una (de aparentemente) dos personas que cuentan con ese poder en todo el
+mundo (USA). La primer parte del filme nos cuenta desde su ingreso al campo
+hasta su huida, encuentro y viaje con otros tres pintorescos mutantes.
+Esa parte esta entretenida.</p>
+
+<p>Luego viene una parte donde llegan a la tierra prometida de los mutantes y
+sufren romanticamente y tambien por que el sito de ensueño no lo era tanto, esa
+parte ya no esta divertida.</p>
+
+<p>Terminando en lo que pretende ser la proxima franquicia con target femenino y
+para personas debiles (y aburridas). Continuare viendo esto? (si tiene
+continuacion?) (seguramente) nop</p>
+
+<p><strong>Isekai Izakaya</strong> un anime de comida-folclorico-publicitario que ensalsa el
+horgullo japones, puffff, entretenido.</p>
+
+<p><strong>Wotaku ni Koi wa Muzukashii</strong> No se por que a esta serie le hicieron bastante
+publicidad algunos de los canales del yutu, supuestamente nos cuentan las
+desventuras de una mujer oficinista otaku y como su aficion le causa problemas
+laborales (o algo asi). En realidad, es una especie de comedia romantica para
+chicas. Una comedia muy aburrida que no va a ningun lado.</p>
+
+<p>Le di el privilegio de la duda, vi tres episodios y salte al final. En resumen,
+no pasa nahhhhhh</p>
+
+<p><strong>Tada-kun wa Koi wo Shinai</strong> Una vez mas, otra comedia romantica, con
+slice-of-live. Animacion decente, estilo bonito, voces chillonas un tanto
+molestas que sin embargo casi se vuelven comicas y&hellip; no se, se deja ver</p>
+
+<h2 id="fonos">fonos</h2>
+
+<p>Aunque nunca dejo de escuchar material nuevo, la cantidad de descargas de albums
+inexplorados me ha exedido en tal cantidad que (casi) la he abandonado en pro de
+mantener un perfil de consumo (de cosas nuevas) &ldquo;sin prisa&rdquo;.</p>
+
+<p>Ver aumentar la coleccion de material a descubrir es emocionante, pero cuando
+tienes que bajar al oceano de la mediacridad y pezcar algo sublime sin filtro
+alguno, no esta tan guay.</p>
+
+<p>y bueno, entre varios OST de anime que no tienen mucha gracia (pero no borrare
+del disco) y revisitar las cosas chidas, pocas novedades se pueden destacar</p>
+
+<p><strong>Black Bombaim &amp; Peter Brotzmann</strong> Con los primeros saxofonasos creia caer de
+lleno en un trabajo jazzistico incomprensible, pero no. Aqui tenemos una
+vibrante y trival conmbinacion de jazz y rock conformado por tres (o 4) instrumentos:
+una bateria bastante &ldquo;vikinga&rdquo;, guitarra, bajo y un saxo, este ultimo como
+reclamo distintivo de las composiciones</p>
+
+<p>en el yutu tienen un video con otra formacion y es un buen referente de lo que
+encontraran</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/https://youtu.be/bJbIGR9uE0Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><strong>The Flaming Lips</strong> las sopresas del torrent!</p>
+
+<p>En los tiempos donde el internet solo existia en los ciber, cuando las maximas
+referencias eran la televicion, la radio y las revistas, en una de estas ultimas
+publicitaban el album &ldquo;Yoshimi Battles The Pink Robots&rdquo; al mismo nivel del <em>OK
+Computer</em>. Yo credulo y hambriento por descubrir nuevas sonoridades les hice caso y
+en esos momentos cuando la unica manera de conseguir musica era ir a comprar un
+disco fisico a una tienda en una plaza para gente bien, sali con el susodicho CD
+(Un ritual que llevaba a cabo casi cada semana)</p>
+
+<p>El material, puag, el material&hellip; me parecio una tonteria fresa-limon para gente
+suavesita. Ya que no fue gratis, pues de vez en cuando lo escuchaba, por aquello
+de que cada material requiere una sensivilidad particular, y-y-y-y-y-y, no, su
+momento nunca llego, pero servia como contraste entre lo bueno y lo mehh. Hasta
+que con tanta escucha, pues le cogi cariño, como una especio de de fondo
+nostalgico &ldquo;colegial&rdquo;</p>
+
+<p>Asi, pues al ver la coleccion completa, entre que tenia ganas por recuperar el
+Yoshimi y tambien dudas de si valdria descargar todo.</p>
+
+<p>Y-y-y-y-y? al menos los primeros tres (Hear It Is, Oh My Gawd!!, Telepathic
+Surgery) son abismalmente distintos, muy underground, entre los Pixies y Velvet.</p>
+
+<p>Una recomendable adicion a la colexion! y-y-y-y-y el Yoshimi, no esta tan
+mal&hellip;</p>
+
+<pre><code>magnet:?xt=urn:btih:68bbcf196ec555036350e1b8e7caee75fb116ce4&amp;dn=The%20Flaming%20Lips%20Albums%20(1987-2009)%20%5bFLAC%2cTracks%5d&amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969&amp;tr=udp%3a%2f%2fzer0day.ch%3a1337&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337
+</code></pre>
+
+<p><strong>On Dead Waves</strong> a medio camino entre los pixies y crawnberrys, no encuentro
+bien como definir su estilo, ni para dormir, ni para aburrirse, ni para
+emocionarse, ni como himno. Como diria el sr. floyd, &ldquo;para cuando has fumado todo
+el dia y al llegar a casa solo quieres fumar mas&rdquo;</p>
+
+<p>&hellip;</p>
+
+<p>si hubo otra cosa interesante, me dio peresa agregarla, je, je, je&hellip; escuchar a
+Hiromi Uehara es lo que mas he estado haciendo, revisitando <strong>Jazz In The
+Garden</strong>, <strong>Place to Be</strong>, <strong>Voice</strong>, <strong>Move</strong> y <strong>Alive</strong>. Whaahh! solamente exquisites!</p>
+
+<p>Tambien un paseito por los Camel, los Top Krautrock Albums y por unos tres dias
+el <em>East Wind</em> de Uttara Kuru y ya de paso apresiando con detenimiento
+repetitivo a Ananda Shankar sobre todo el <em>Missing You</em>, Ananda Shankar and His
+Music y en menor medida el homonimo, Ananda Shankar</p>
+
+<h2 id="txt">txt</h2>
+
+<p>Errores que comenten los programadores novatos -&gt;
+<a href="https://lapastillaroja.net/2018/07/errores-que-comenten-los-programadores-novatos/">https://lapastillaroja.net/2018/07/errores-que-comenten-los-programadores-novatos/</a></p>
+
+<p>&ldquo;cosas de emacs&rdquo;, un compendio de cosas algo rarunas -&gt;
+<a href="http://emacs.scienceontheweb.net/">http://emacs.scienceontheweb.net/</a></p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://www.nasciiboy.land/post/teo-01/">◀ Teopanzolco – 01 (Vuyo Sotashe)</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://www.nasciiboy.land">/</a></span> <span><a href="https://www.nasciiboy.land/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://www.nasciiboy.land/categories/prog">prog(50)</a></li><li><a href="https://www.nasciiboy.land/categories/post">post(39)</a></li><li><a href="https://www.nasciiboy.land/categories/emacs">emacs(15)</a></li><li><a href="https://www.nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://www.nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://www.nasciiboy.land/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://www.nasciiboy.land/tags/fonos">fonos(24)</a></li><li><a href="https://www.nasciiboy.land/tags/howto">howto(19)</a></li><li><a href="https://www.nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="https://www.nasciiboy.land/tags/4k">4k(17)</a></li><li><a href="https://www.nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="https://www.nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://www.nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://www.nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="https://www.nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://www.nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://www.nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="https://www.nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://www.nasciiboy.land/tags/go">go(3)</a></li><li><a href="https://www.nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://www.nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://www.nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://www.nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://www.nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://www.nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://www.nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://www.nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://www.nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://www.nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://www.nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://www.nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://www.nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://www.nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://www.nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://www.nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://www.nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://www.nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://www.nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://www.nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://www.nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://www.nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://www.nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://www.nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://www.nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://www.nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
