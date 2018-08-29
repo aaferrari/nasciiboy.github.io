@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ncurses on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://www.nasciiboy.land/tags/ncurses/</link>
+    <link>http://www.nasciiboy.land/tags/ncurses/</link>
     <description>Recent content in Ncurses on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Tue, 11 Apr 2017 12:38:06 -0500</lastBuildDate>
     
-        <atom:link href="https://www.nasciiboy.land/tags/ncurses/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.nasciiboy.land/tags/ncurses/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Programmer&#39;s Guide to NCurses</title>
-      <link>https://www.nasciiboy.land/prog/pg2ncurses/</link>
+      <link>http://www.nasciiboy.land/prog/pg2ncurses/</link>
       <pubDate>Tue, 11 Apr 2017 12:38:06 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/pg2ncurses/</guid>
+      <guid>http://www.nasciiboy.land/prog/pg2ncurses/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../gumy.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -149,10 +149,10 @@ del viento, no dejen de sintonizar la proxima entrega (/narrador)&lt;/p&gt;
     
     <item>
       <title>Ncurses</title>
-      <link>https://www.nasciiboy.land/prog/ncurses/</link>
+      <link>http://www.nasciiboy.land/prog/ncurses/</link>
       <pubDate>Mon, 19 Dec 2016 21:45:05 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/ncurses/</guid>
+      <guid>http://www.nasciiboy.land/prog/ncurses/</guid>
       <description>
 
 &lt;h2 id=&#34;que-es-ncurses&#34;&gt;Que es Ncurses&lt;/h2&gt;

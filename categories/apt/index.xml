@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apt on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://www.nasciiboy.land/categories/apt/</link>
+    <link>http://www.nasciiboy.land/categories/apt/</link>
     <description>Recent content in Apt on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Mon, 30 Oct 2017 15:45:27 -0600</lastBuildDate>
     
-        <atom:link href="https://www.nasciiboy.land/categories/apt/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.nasciiboy.land/categories/apt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ibniz</title>
-      <link>https://www.nasciiboy.land/apt/ibniz/</link>
+      <link>http://www.nasciiboy.land/apt/ibniz/</link>
       <pubDate>Mon, 30 Oct 2017 15:45:27 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/apt/ibniz/</guid>
+      <guid>http://www.nasciiboy.land/apt/ibniz/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/ibniz.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/ibniz.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;IBNIZ es una máquina virtual diseñada para programas audiovisuales de bajo
@@ -124,13 +124,13 @@ super chulo!&lt;/p&gt;
     
     <item>
       <title>Konsole Warrior</title>
-      <link>https://www.nasciiboy.land/apt/konsole-warrior/</link>
+      <link>http://www.nasciiboy.land/apt/konsole-warrior/</link>
       <pubDate>Sat, 24 Jun 2017 20:28:51 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/apt/konsole-warrior/</guid>
+      <guid>http://www.nasciiboy.land/apt/konsole-warrior/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/tilix-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/tilix-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Dentro de &lt;q&gt;&lt;em&gt;El camino del Heroe&lt;/em&gt;&lt;/q&gt; (que algunos dicen que esta
 conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al
@@ -171,7 +171,7 @@ inicio una pequeña busqueda de internet, pero tras encontrar cosas de python y 
 utilidades que no me daba confiansa instalar, di otra oportunidad a tilix,
 pues incorpora de serie marcadores y el amado &lt;strong&gt;overview&lt;/strong&gt; Gnomero!!!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/tilix-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/tilix-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;la razon por la que antes no hice la transicion se debio a no incorporar la
 configuracion del desplazamiento por linea, pero estimados colegas, un pequeño
@@ -192,12 +192,12 @@ configuracion trae dicho apartado, peeeero, no fui capaz de entender como
 guardar una ruta y que luego funcionara, asi que cambie el atajo de teclado para
 ya dentro del directorio, invocar el menu y establecer el marcador&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/tilix-c.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/tilix-c.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;y&amp;hellip;? &lt;strong&gt;funciono!&lt;/strong&gt;, solo pones el nombre del marcador y al abrir los marcadores
 ya puedes hacer el cambio&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/tilix-d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/tilix-d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;tambien, tube que ajustar un poco el esquema de colores, tipografia y cursor,
 hasta lograr mi ambiente ideal&lt;/p&gt;
@@ -277,10 +277,10 @@ directamente el repo &lt;a href=&#34;https://github.com/gnunn1/tilix&#34;&gt;htt
     
     <item>
       <title>fish</title>
-      <link>https://www.nasciiboy.land/apt/fish/</link>
+      <link>http://www.nasciiboy.land/apt/fish/</link>
       <pubDate>Sat, 24 Dec 2016 10:04:44 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/apt/fish/</guid>
+      <guid>http://www.nasciiboy.land/apt/fish/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../ascii_fish.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -511,10 +511,10 @@ realiza. En bash es&lt;/p&gt;
     
     <item>
       <title>moc</title>
-      <link>https://www.nasciiboy.land/apt/moc/</link>
+      <link>http://www.nasciiboy.land/apt/moc/</link>
       <pubDate>Thu, 22 Dec 2016 11:56:44 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/apt/moc/</guid>
+      <guid>http://www.nasciiboy.land/apt/moc/</guid>
       <description>&lt;p&gt;En GNU existe una cantidad ridicula de &lt;strong&gt;reproductores de audio&lt;/strong&gt;, por
 participar hasta el vlc o video (gnome) se meten en esos temas.&lt;/p&gt;
 
@@ -576,10 +576,10 @@ SavePlaylist = yes
     
     <item>
       <title>Como dividir un album contenido en una sola pista flac</title>
-      <link>https://www.nasciiboy.land/apt/shnsplit/</link>
+      <link>http://www.nasciiboy.land/apt/shnsplit/</link>
       <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/apt/shnsplit/</guid>
+      <guid>http://www.nasciiboy.land/apt/shnsplit/</guid>
       <description>&lt;p&gt;En este mundo existen algunos seres extraños con tanto amor (libros, musica,
 series, peliculas, porno, &amp;hellip;) que no les cabe en su disco duro y tienen que
 compartirlo.&lt;/p&gt;

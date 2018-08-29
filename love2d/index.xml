@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Love2ds on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://www.nasciiboy.land/love2d/</link>
+    <link>http://www.nasciiboy.land/love2d/</link>
     <description>Recent content in Love2ds on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sat, 22 Jul 2017 09:06:44 -0500</lastBuildDate>
     
-        <atom:link href="https://www.nasciiboy.land/love2d/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.nasciiboy.land/love2d/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Love, Emacs &amp; Docs</title>
-      <link>https://www.nasciiboy.land/love2d/docset/</link>
+      <link>http://www.nasciiboy.land/love2d/docset/</link>
       <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/love2d/docset/</guid>
+      <guid>http://www.nasciiboy.land/love2d/docset/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Love2d&lt;/em&gt; es un framework &amp;ldquo;open source&amp;rdquo; para crear videojuegos 2D multiplataforma
@@ -33,7 +33,7 @@ documentacion&lt;/p&gt;
 en un ataque de creatividad, abri dos emacs en modo eww uno en cada monitor,
 grabe un marcador y a triunfar&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/love-wiki.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/love-wiki.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;luego de un rato&amp;hellip; fue obvio que no era la mejor forma de consultar la
 documentacion, y como no hay un maldito estandar para hacer documentacion
@@ -41,7 +41,7 @@ decente (hasta ahora) recurri a un viejo conocido&lt;/p&gt;
 
 &lt;h2 id=&#34;zeal&#34;&gt;zeal&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/zeal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/zeal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;que es &lt;a href=&#34;https://zealdocs.org/&#34;&gt;Zeal&lt;/a&gt;? es la implentacion libre y sin un tema
 obscuro de dash, que aunque a primera vista pareciera ser el nombre de un shell,
@@ -128,7 +128,7 @@ documentacion (en freidora seria):&lt;/p&gt;
 
 &lt;p&gt;abrimos zeal y buscamos si aparece la documentacion&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/zeal-love.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/zeal-love.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;zeal funciona como el navegador, con C-k buscamos cosas (poner prefijo de la
 documentocion, en este caso &lt;code&gt;love2d:&lt;/code&gt;), tiene un bonito autocompletado, nos movemos

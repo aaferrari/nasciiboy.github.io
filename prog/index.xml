@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Progs on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://www.nasciiboy.land/prog/</link>
+    <link>http://www.nasciiboy.land/prog/</link>
     <description>Recent content in Progs on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 12 Aug 2018 20:00:08 -0500</lastBuildDate>
     
-        <atom:link href="https://www.nasciiboy.land/prog/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.nasciiboy.land/prog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SistOp</title>
-      <link>https://www.nasciiboy.land/prog/sistop/</link>
+      <link>http://www.nasciiboy.land/prog/sistop/</link>
       <pubDate>Sun, 12 Aug 2018 20:00:08 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/sistop/</guid>
+      <guid>http://www.nasciiboy.land/prog/sistop/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -91,7 +91,7 @@ concurrentes en paralelo.&lt;/p&gt;
 &lt;p&gt;es bastante bonito observar que el esquema de bibliotecas compartidas tiene
 buenas y bastantes conveniencias, que me recuerdan a una camiseta&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/country-unix.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/country-unix.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(una de las razones por las que tome C como primer lenguaje y por las que pese a
 no hacer nada relevante o complejo en ese lenguaje, sus alumnos escupen en
@@ -125,10 +125,10 @@ utilizarlo nunca, mejor ir saltando de encabezado en encabezado.&lt;/p&gt;
     
     <item>
       <title>Debone</title>
-      <link>https://www.nasciiboy.land/prog/debone/</link>
+      <link>http://www.nasciiboy.land/prog/debone/</link>
       <pubDate>Thu, 26 Jul 2018 13:45:16 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/debone/</guid>
+      <guid>http://www.nasciiboy.land/prog/debone/</guid>
       <description>
 
 &lt;p&gt;Inicialmente esta solo seria una receta para poner a punto un equipo &amp;ldquo;retro&amp;rdquo;
@@ -164,7 +164,7 @@ su vida) y otro de 3TB para &amp;ldquo;datos&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;y como complemento especial, incluira una grafica dedicada PCI 2.0 nvidia 210
 silent con 1GB de ram dedicada&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(solo tiene dos conexiones para ventiladores CPU y chasis, el tercero necesario
 por que la grafica se ponte un poco calida al igual que la controladora de la
@@ -194,7 +194,7 @@ utilizando solo el video integrado del procesador&lt;/p&gt;
 &lt;p&gt;La siguiente es una imagen tomada mediante una conexion ssh (de antes de que
 enviara de paseo mi placa principal)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;como puede apreciarse, el gnome 3.22 tal y como nos lo envia debian tiene un
 consumo (casi) despreciable, apenas y llega a los 300MiB! Simplemente fenomenal!
@@ -204,7 +204,7 @@ ligero su entorno de escritorio&lt;/p&gt;
 &lt;p&gt;pero por si queda duda de la captura sobre ssh, la siguiente es una imagen 100%
 real no fake, utilizando tilix (sin configurar) sobre la secion grafica&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;349MiB! Para que ahora salgan los troles del entorno mas hermoso de todos a hablar pestes&amp;hellip;&lt;/p&gt;
 
@@ -213,22 +213,22 @@ ja, asi que vamos a configurarlo hasta dejarlo bonico&lt;/p&gt;
 
 &lt;p&gt;primero abrimos gnome-tweak-tool, que ya viene instalado por defecto&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;se activa el tema obscuro global, &lt;strong&gt;adwaita-dark&lt;/strong&gt; y los iconos en alto contraste&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;mmm, la imagen del escritorio por defecto esta preciosa, pero no refleja nuestra
-verdadera y kawai naturaleza, asi que la &lt;a href=&#34;https://www.nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34;&gt;cambiamos&lt;/a&gt;&lt;/p&gt;
+verdadera y kawai naturaleza, asi que la &lt;a href=&#34;http://www.nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34;&gt;cambiamos&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;pasamos a algunas extenciones y vemos que por defecto ya incluye un chilion de
 ellas por aquello de evitar que busquemos en sitios raros, pero de estas solo se
 requieren unas cuantas&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;alternativetab&lt;/strong&gt; para que el tab no se porte &amp;ldquo;raro&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
@@ -256,7 +256,7 @@ y bajada en la red&lt;/p&gt;&lt;/li&gt;
 escritura (global)&amp;rdquo;&lt;/strong&gt; y cuya unica opcion (por que
 los devs de gnome conocen de esto) es &lt;strong&gt;Emacs&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Si utilizas bash, fish o &lt;strong&gt;Emacs&lt;/strong&gt;, encontraras familiares alguos de los
 comandos:&lt;/p&gt;
@@ -280,12 +280,12 @@ comandos:&lt;/p&gt;
 a la ves que establecemos un lugar especifico para cada ventana que lancemos (al
 menos conceptualmente), ponemos las areas de trabajo como estaticas y que sean &lt;strong&gt;11&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/09.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/09.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;y en este punto podemos apreciar la parte mas vistosa de la configuracion
 presionando &lt;code&gt;Super&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;al principio utilizaba 4 areas (mono-pantalla), luego 5, despues 6, 7, 9, 10 y
 finalmente 11 (a pantalla doble).&lt;/p&gt;
@@ -345,7 +345,8 @@ apt -y install curl
 curl https://sh.rustup.rs -sSf | sh
 
 # &amp;quot;plantar&amp;quot; algunas librerias
-apt -y build-dep emacs dosbox moc love supertuxkart chromium inkscape tumiki-fighters # tilix
+apt -y install libgif-dev gnutls-dev
+apt -y build-dep emacs moc dosbox love supertuxkart chromium inkscape tumiki-fighters # tilix
 apt -y build-dep guile-2.0 racket git sbcl gimp imagemagick
 
 # monitores
@@ -364,7 +365,7 @@ apt -y install vlc mpv blender inkscape dia gimp tiled pinta synfigstudio mypain
 apt -y install subliminal subdownloader gnome-subtitles
 
 # audio
-apt -y install audacity tuxguitar rosegarden ardour hydrogen lmms soundconverter transmageddon musescore # timidity
+apt -y install alsa-utils audacity tuxguitar rosegarden ardour hydrogen lmms soundconverter transmageddon musescore # timidity
 apt -y install vmpk tuxguitar tuxguitar-jsa rakarrack pianobooster lingot gxtuner guitarix fofix etktab fmit
 
 # android
@@ -403,7 +404,7 @@ apt -y install aircrack-ng macchanger
 
 &lt;h3 id=&#34;flacon&#34;&gt;flacon&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/flacon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/flacon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;flacon es una bonita utilidad que nos permite partir y renombrar automagicamente
 aquellos albums almacenados en una monopista (&lt;code&gt;.flac&lt;/code&gt; o similar) segun el fichero
@@ -450,7 +451,7 @@ y un enlace, para solucionarlo, cuya correcion se resume en:&lt;/p&gt;
 desde tener multiples seciones en la misma ventana, hasta dejaspojar la interfaz
 de barras de titulo y de desplazamiento, botones y menus&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;algunos de los atajos que mas utilizo y/o he configurado, son:&lt;/p&gt;
 
@@ -507,7 +508,7 @@ aparecio el siguiente enlace&lt;/p&gt;
 
 &lt;p&gt;tras ello, pase a probar supertuxkart y andaba si no perfecto al menos, jugable!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;nvidia&#34;&gt;Nvidia&lt;/h2&gt;
 
@@ -551,7 +552,7 @@ rendimiento es ligeramente mejor&lt;/p&gt;
 
 &lt;p&gt;pasamos a la configuracion basica del entorno&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;primero, habilitar el login automatico. Mi pc no se mueve (de lugar, ni por
 voluntad propia) y espero que nadie se atreva a modificar eso, ademas &amp;ldquo;no tengo nada que
@@ -561,7 +562,7 @@ cada bit de mi sistema (incluido el porno de enanos con holandesas y cabras (es
 mentira, no hay porno tan divertido, hacer de productor y director pornografico esta en
 mi lista de &amp;ldquo;algun dia&amp;rdquo;)).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;hellip;&lt;/p&gt;
 
@@ -569,16 +570,16 @@ mi lista de &amp;ldquo;algun dia&amp;rdquo;)).&lt;/p&gt;
 los ficheros, es limitar la busqueda (eso que aparece cuando presionamos super)
 al &lt;strong&gt;terminal&lt;/strong&gt;, &lt;strong&gt;software&lt;/strong&gt; y &lt;strong&gt;calculadora&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;para este momento (con la grafica nvidia, dos monitores vga y un adaptador dvi-i
 a vga) ya esta funcianal la (imprecindible) configuracion de dos monitores&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;gnome-keys&#34;&gt;gnome-keys&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/17.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/17.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;como mencianaba al principio, gnome es simple por defecto y potente cuando se
 necesita ( ͡° ͜ʖ ͡°)&lt;/p&gt;
@@ -761,7 +762,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys www                  
 &lt;p&gt;no incluidas, pero tambien posibles, se pueden agregar atajos personalizados
 ligados a algun binario&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/18.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/18.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;S-h&lt;/code&gt; tilix &amp;ndash;full-screen&lt;/li&gt;
@@ -776,7 +777,7 @@ ligados a algun binario&lt;/p&gt;
 con la distribucion de teclado programmer dvorak (en ingles) con algunas teclas
 especialmente modificadas!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;eh mencionado alguna vez, el asco que me dan las laptops con sus teclados reducidos, de
 membrana cutre y con su minuscula pantalla?&lt;/p&gt;
@@ -814,27 +815,27 @@ desde &lt;code&gt;gnome-tweak&lt;/code&gt; de la siguiente manera&lt;/p&gt;
 como &lt;code&gt;Alt derecho&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.nasciiboy.land/img/debone/g-dvp-1.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://www.nasciiboy.land/img/debone/g-dvp-1.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;para las versiones apartir del gnome shell 26 (?). Desde &lt;em&gt;Teclado y ratón&lt;/em&gt;
 desactivar la tecla de composicion&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.nasciiboy.land/img/debone/g-dvp-2.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://www.nasciiboy.land/img/debone/g-dvp-2.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;despues presionar en &lt;em&gt;Opciones adicionales de la distribución&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.nasciiboy.land/img/debone/g-dvp-3.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://www.nasciiboy.land/img/debone/g-dvp-3.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;y de nuevo, unica y exclusivamente configurar &lt;em&gt;Tecla para seleccionar el tercer nivel&lt;/em&gt;
 como &lt;code&gt;Alt derecho&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.nasciiboy.land/img/debone/g-dvp-4.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://www.nasciiboy.land/img/debone/g-dvp-4.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;firefox-quantum&#34;&gt;firefox-quantum&lt;/h2&gt;
@@ -888,7 +889,7 @@ funcionaria pero en la version actual cambiaron la ruta del fichero)&lt;/p&gt;
 
 &lt;h3 id=&#34;gestos&#34;&gt;gestos&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/19.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/19.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;he, voy directo a cumplir con el estereotipo de computer guy. Los trackball
 me tentaban y tenia que probar uno. Ademas habia efectivo, uno tiene debilidades
@@ -908,7 +909,7 @@ aparatos (compatibles logitech). En caso de querer gestionar conectar mas
 dispositivos al mismo receptor, hay un programita llamado &lt;code&gt;solaar&lt;/code&gt; (con interfaz
 GTK) disponible en los repos&amp;hellip; supongo que funciona&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/20.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/20.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;como mencionaba, no encontre (ni busque demaciado) como configurar los botones,
 pero, en su lugar aparecio una extencion de firefox para agregar gestos, que al
@@ -1047,18 +1048,18 @@ cat /proc/sys/vm/swappiness     # comprobar la modificacion
 que controla el teclado RGB: &lt;code&gt;ckb&lt;/code&gt;), probando htop, sobre fish,
 sobre tilix, sobre gnome, de inicio&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/21.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/21.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;arroja un consumo de 468MiB de ram, algo muy aceptable. Mientras tanto a dos
 pantallas con firefox con dos instancias, unos emacs, unos tilix, thunderbird,
 qbittorrent, nautilus y moc, el consumo ronda el 1.5GiB&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/22.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/22.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;en fin, hasta aqui con la configuracion. Para terminar una foto del conjunto
 fisico entero&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/23.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/23.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;actualizacion&#34;&gt;Actualizacion&lt;/h2&gt;
 
@@ -1067,25 +1068,25 @@ nouveau (que es como viene por defecto), tras una nueva instalacion, ahora
 seleccionando unicamente &lt;code&gt;Gnome&lt;/code&gt; y &lt;code&gt;Utilidades estandar del sistema&lt;/code&gt;, &lt;strong&gt;quitando&lt;/strong&gt;
 &lt;code&gt;servidor de impresion&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/24.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/24.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;el sistema completo al inicio con gnome, tilix y fish esta en 217 MiB!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/25.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/25.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tras todo un dia de batalla (14 Hrs de uptime), cerrando de nuevo todo y corroborando con
 tilix, fish y htop, termina en ~353MiB! Gnome-4-Eve!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/debone/26.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/debone/26.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>IntroARM</title>
-      <link>https://www.nasciiboy.land/prog/introarm/</link>
+      <link>http://www.nasciiboy.land/prog/introarm/</link>
       <pubDate>Thu, 19 Apr 2018 18:36:32 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/introarm/</guid>
+      <guid>http://www.nasciiboy.land/prog/introarm/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&amp;ldquo;Introducción a la arquitectura de computadores con QtARMSim y Arduino&amp;rdquo;&lt;/strong&gt; es
 un libro que encontre (el año pasado) en &lt;a href=&#34;https://openlibra.com/es/book/introduccion-a-la-arquitectura-de-computadores-con-qtarmsim-y-arduino&#34;&gt;openlibra&lt;/a&gt;
 cuya insulsa portada (como casi todo lo de openlibra) oculta un material
@@ -1099,7 +1100,7 @@ aplicando (mas o menos) practicamete los conocimentos sobre la placa
 &lt;a href=&#34;https://www.arduino.cc/en/Guide/ArduinoDue&#34;&gt;Arduino Due&lt;/a&gt; [ATSAM3X8E]&amp;hellip; para
 encender y apagar un led! (esto es si es un &amp;ldquo;hello word&amp;rdquo; bien rudo!)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/ArduinoDue.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/ArduinoDue.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;En realidad, ni el asm, ni la placa arduino tienen mucha importancia pues no
 dejan de ser un conducto para mostrar los entresijos y filosofias relacionadas
@@ -1166,7 +1167,7 @@ travesia.&lt;/p&gt;
 &lt;p&gt;Los ejercicios en ensamblador son pequeños, claros y lo suficientemente
 explicados como para no perderse. Hecho en falta que en la pagina oficial, no se
 incluya un comprimido con el codigo en ensamblador del libro, asi que
-&lt;a href=&#34;https://www.nasciiboy.land/data/asm-code.zip&#34;&gt;aqui&lt;/a&gt; esta una compilacion en zip.&lt;/p&gt;
+&lt;a href=&#34;http://www.nasciiboy.land/data/asm-code.zip&#34;&gt;aqui&lt;/a&gt; esta una compilacion en zip.&lt;/p&gt;
 
 &lt;p&gt;A diferencia de lo que comentaba sobre el post del tutorial del
 &lt;a href=&#34;../z80-spectrum/&#34;&gt;z80-speccy&lt;/a&gt; en este material se dedican varias secciones a
@@ -1228,10 +1229,10 @@ ARM.&lt;/p&gt;
     
     <item>
       <title>Z80 Spectrum (tutorial speccy.org)</title>
-      <link>https://www.nasciiboy.land/prog/z80-spectrum/</link>
+      <link>http://www.nasciiboy.land/prog/z80-spectrum/</link>
       <pubDate>Sun, 15 Apr 2018 21:36:36 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/z80-spectrum/</guid>
+      <guid>http://www.nasciiboy.land/prog/z80-spectrum/</guid>
       <description>
 
 &lt;p&gt;Entre aprender diseño de software, administracion de sistemas, elisp, ingles,
@@ -1474,10 +1475,10 @@ amigable y un sistema de proteccion inexistente (ja, ja, ja) o almenos tan
 sencillo como para ignorarlo.&lt;/p&gt;
 
 &lt;p&gt;&amp;hellip; hoooooOOO, si! hay un programa que emula la lluvia de matrix en el Spectrum,
-su codigo esta &lt;a href=&#34;https://www.nasciiboy.land/data/matrix-rain.asm&#34;&gt;aqui&lt;/a&gt; y lo encontre por &lt;a href=&#34;http://www.retroprogramming.com/&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
+su codigo esta &lt;a href=&#34;http://www.nasciiboy.land/data/matrix-rain.asm&#34;&gt;aqui&lt;/a&gt; y lo encontre por &lt;a href=&#34;http://www.retroprogramming.com/&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.nasciiboy.land/img/matrix-rain-z80.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://www.nasciiboy.land/img/matrix-rain-z80.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Bye, Bye&lt;/p&gt;
@@ -1486,10 +1487,10 @@ su codigo esta &lt;a href=&#34;https://www.nasciiboy.land/data/matrix-rain.asm&#
     
     <item>
       <title>Por favor, reinventa la rueda</title>
-      <link>https://www.nasciiboy.land/prog/please-reinvent-the-whell/</link>
+      <link>http://www.nasciiboy.land/prog/please-reinvent-the-whell/</link>
       <pubDate>Sat, 14 Apr 2018 22:26:41 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/please-reinvent-the-whell/</guid>
+      <guid>http://www.nasciiboy.land/prog/please-reinvent-the-whell/</guid>
       <description>&lt;p&gt;&lt;b&gt;
 [post original -&amp;gt; &lt;a href=&#34;https://blog.cerebralab.com/#!/blog/11&#34;&gt;https://blog.cerebralab.com/#!/blog/11&lt;/a&gt;]&lt;/p&gt;
 
@@ -1536,10 +1537,10 @@ su codigo esta &lt;a href=&#34;https://www.nasciiboy.land/data/matrix-rain.asm&#
     
     <item>
       <title>LineageOS, Feeds &amp; Feel</title>
-      <link>https://www.nasciiboy.land/prog/m8-ii/</link>
+      <link>http://www.nasciiboy.land/prog/m8-ii/</link>
       <pubDate>Fri, 13 Apr 2018 14:26:21 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/m8-ii/</guid>
+      <guid>http://www.nasciiboy.land/prog/m8-ii/</guid>
       <description>
 
 &lt;p&gt;Luego del primer &lt;a href=&#34;../m8&#34;&gt;flasheo al m8&lt;/a&gt; probe un poco las &amp;ldquo;apps&amp;rdquo; de yutu que
@@ -1561,7 +1562,7 @@ nada que no sea consumir pasivamente y ver porno.&lt;/p&gt;
 &lt;p&gt;y asi hubiera seguido con el movil hasta el fin de los tiempos, hasta que una
 &amp;ldquo;broma&amp;rdquo; de parte del equipo de lineageOS hizo aparecer un mensaje perturbador&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/coin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/coin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;que? (me pregunte) la pagina del porno no se conforma con minar criptocurrencias
 cuando veo un video, ahora a colado un bicho en el sistema? (ha, ha, ha, que
@@ -1621,7 +1622,7 @@ hippiosos caer por completo en las garras de alphabet? puaghh&lt;/p&gt;
 &lt;p&gt;solo debemos ir a &lt;a href=&#34;https://www.youtube.com/subscription_manager&#34;&gt;https://www.youtube.com/subscription_manager&lt;/a&gt;, seguir hasta el fondo de
 la pagina y darle a &lt;strong&gt;Exportar Subcripciones&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;https://www.nasciiboy.land/media/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
+&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;http://www.nasciiboy.land/media/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
 (le he cambiado la extencion, agregando &lt;code&gt;.xml&lt;/code&gt; al final).&lt;/p&gt;
 
 &lt;p&gt;A continuacion un desglose. La clasificacion es dificil de encajar para varios
@@ -1848,7 +1849,7 @@ siguiente conjunto de pasos en elisp, ir al fichero &lt;code&gt;subs.html&lt;/co
 &lt;p&gt;me gustaria decir que eso seria todo, pero no, unicamente conseguiremos los
 feeds en texto plano. Luego hay que convertirlos a un formato xml especial y
 darle la extencion &lt;code&gt;.opml&lt;/code&gt;, esta tarea es un ejercicio para el lector. Se puede
-tomar como referencia este (mi) listado &lt;a href=&#34;https://www.nasciiboy.land/media/data/antennapod-feeds.opml&#34;&gt;antennapod-feeds.opml&lt;/a&gt;
+tomar como referencia este (mi) listado &lt;a href=&#34;http://www.nasciiboy.land/media/data/antennapod-feeds.opml&#34;&gt;antennapod-feeds.opml&lt;/a&gt;
 (ya pasado por antennapod, y cambiando los feeds ivoox por las direcciones fuente
 cuando fue posible)&lt;/p&gt;
 
@@ -1986,10 +1987,10 @@ equipos profecionales, por uno, dos o cien programas&lt;/p&gt;
     
     <item>
       <title>GDP</title>
-      <link>https://www.nasciiboy.land/prog/gdp/</link>
+      <link>http://www.nasciiboy.land/prog/gdp/</link>
       <pubDate>Wed, 28 Mar 2018 14:53:20 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/gdp/</guid>
+      <guid>http://www.nasciiboy.land/prog/gdp/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Go Design Patterns&lt;/strong&gt;, es un libro enfocado en los patrones de diseño
@@ -2136,10 +2137,10 @@ ponerme a practicar los patrones&lt;/p&gt;
     
     <item>
       <title>CAT</title>
-      <link>https://www.nasciiboy.land/prog/cat/</link>
+      <link>http://www.nasciiboy.land/prog/cat/</link>
       <pubDate>Fri, 23 Mar 2018 21:41:50 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/cat/</guid>
+      <guid>http://www.nasciiboy.land/prog/cat/</guid>
       <description>&lt;p&gt;Hace tiempo, mucho tiempo, cuando iniciaba mis aventuras con C, tenia la urgente
 necesidad de ingresar un &amp;ldquo;grafico&amp;rdquo; dentro de un arreglo de caracteres, el asunto
 es que dicho grafico contenia por supuesto algunos caracteres &amp;ldquo;especiales&amp;rdquo; para
@@ -2154,7 +2155,7 @@ personaje de dudosas habilidades.&lt;/p&gt;
 &lt;p&gt;Asi pues, no recuerdo muy bien como, llegue a la siguiente solucion, que radica
 en &amp;ldquo;romper&amp;rdquo; las macros del preprocesador de C.&lt;/p&gt;
 
-&lt;p&gt;cortar y pegar en un fichero (digamos &lt;code&gt;CAT.c&lt;/code&gt;) o cliclar &lt;a href=&#34;https://www.nasciiboy.land/data/CAT.c&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;cortar y pegar en un fichero (digamos &lt;code&gt;CAT.c&lt;/code&gt;) o cliclar &lt;a href=&#34;http://www.nasciiboy.land/data/CAT.c&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
 #include &amp;lt;string.h&amp;gt;
@@ -2221,10 +2222,10 @@ printf( &amp;quot;&amp;gt;&amp;gt;%s&amp;lt;&amp;lt;\n&amp;quot;, &amp;amp;map[0
     
     <item>
       <title>Markdown</title>
-      <link>https://www.nasciiboy.land/prog/markdown/</link>
+      <link>http://www.nasciiboy.land/prog/markdown/</link>
       <pubDate>Sun, 18 Mar 2018 13:17:26 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/markdown/</guid>
+      <guid>http://www.nasciiboy.land/prog/markdown/</guid>
       <description>
 
 &lt;p&gt;pues resulta que los humanos nos diferenciamos de las demas creaturas por que
@@ -2487,10 +2488,10 @@ cada linea, separando el texto con una linea en blanco al inicio y al final&lt;/
     
     <item>
       <title>Desing Patterns (GoF)</title>
-      <link>https://www.nasciiboy.land/prog/gof/</link>
+      <link>http://www.nasciiboy.land/prog/gof/</link>
       <pubDate>Tue, 13 Mar 2018 20:55:49 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/gof/</guid>
+      <guid>http://www.nasciiboy.land/prog/gof/</guid>
       <description>
 
 &lt;p&gt;Cuando era &amp;ldquo;pequeño&amp;rdquo;, al oir &lt;em&gt;Patrones de diseño&lt;/em&gt;, lo unico que mi diminuta mente
@@ -2668,10 +2669,10 @@ diga mas patron y diseño que un mandelbrot?)&lt;/p&gt;
     
     <item>
       <title>AWK</title>
-      <link>https://www.nasciiboy.land/prog/awk/</link>
+      <link>http://www.nasciiboy.land/prog/awk/</link>
       <pubDate>Mon, 05 Mar 2018 20:37:52 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/awk/</guid>
+      <guid>http://www.nasciiboy.land/prog/awk/</guid>
       <description>
 
 &lt;p&gt;AWK es un lenguaje de programacion diseñado para procesar datos basados en
@@ -2962,10 +2963,10 @@ $ awk -f awkaster.awk
     
     <item>
       <title>Programming Howto (19-01-18)</title>
-      <link>https://www.nasciiboy.land/prog/programming-howto/</link>
+      <link>http://www.nasciiboy.land/prog/programming-howto/</link>
       <pubDate>Fri, 19 Jan 2018 21:58:23 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/programming-howto/</guid>
+      <guid>http://www.nasciiboy.land/prog/programming-howto/</guid>
       <description>
 
 &lt;p&gt;Hace tiempo que tenia intenciones de escribir mi version sobre por que la
@@ -3102,7 +3103,7 @@ dificultoso mejorar, incluso incurable).&lt;/p&gt;
 en ingles, buscate la vida, pero cambia los control, blockmayus (y otras teclas)
 de posicion, asi:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Es preferible que aprendas ingles (aun pendiente), mas diria que los primeros
 años del trayecto no es necesario, hay muchas cosas que requieren atencion y &lt;em&gt;los basicos&lt;/em&gt;
@@ -3217,11 +3218,11 @@ te des cuenta&amp;hellip;)&lt;/p&gt;
   trata, vuelve a leer el capitulo y asi lo tendras mas claro&lt;/p&gt;
 
 &lt;p&gt;Sobre GCC, Bash apenas necesitas lo basico en algun post lo encontraras o en
-  su defecto hojea &lt;a href=&#34;https://www.nasciiboy.land/data/bash.pdf&#34;&gt;este&lt;/a&gt; para bash y &lt;a href=&#34;https://www.nasciiboy.land/data/GCC.pdf&#34;&gt;este&lt;/a&gt; otro para
+  su defecto hojea &lt;a href=&#34;http://www.nasciiboy.land/data/bash.pdf&#34;&gt;este&lt;/a&gt; para bash y &lt;a href=&#34;http://www.nasciiboy.land/data/GCC.pdf&#34;&gt;este&lt;/a&gt; otro para
   gcc, sobre los makes, je, nunca lo aprendiste&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;de Emacs, con el tutorial integrado (&lt;code&gt;Ctrl-h&lt;/code&gt; y luego &lt;code&gt;t&lt;/code&gt;), tambien y aunque
-  esta un poco retro y fuera de interne &lt;a href=&#34;https://www.nasciiboy.land/data/rpublica-emacs.zip&#34;&gt;rpublica&lt;/a&gt; o
+  esta un poco retro y fuera de interne &lt;a href=&#34;http://www.nasciiboy.land/data/rpublica-emacs.zip&#34;&gt;rpublica&lt;/a&gt; o
   consulta la siguiente &lt;a href=&#34;http://quijotelibre.com/recursos-gnu-emacs-y-org-mode/&#34;&gt;recopilacion&lt;/a&gt; del quijote libre&lt;/p&gt;
 
 &lt;h4 id=&#34;c-k-r-2-da-version&#34;&gt;C (K&amp;amp;R) (2^da version)&lt;/h4&gt;
@@ -3277,14 +3278,14 @@ aprender otra cosa&lt;/p&gt;
     
     <item>
       <title>TextTable2HtmlTable (Volume Three)</title>
-      <link>https://www.nasciiboy.land/prog/morg-table-iii/</link>
+      <link>http://www.nasciiboy.land/prog/morg-table-iii/</link>
       <pubDate>Mon, 15 Jan 2018 14:31:33 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/morg-table-iii/</guid>
+      <guid>http://www.nasciiboy.land/prog/morg-table-iii/</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.nasciiboy.land/img/jb130510.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://www.nasciiboy.land/img/jb130510.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;o-como-parsear-una-tabla-en-texto-plano-para-convertirla-en-una-tabla-html-u-otra-cosa-y-escribir-tres-post-sobre-ello-con-explicaciones-cripticas-codigo-de-ejemplo-en-golang-tercera-parte-conclucion&#34;&gt;o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) y escribir tres post sobre ello con explicaciones cripticas (+ codigo de ejemplo en Golang) – Tercera Parte &amp;ldquo;Conclucion&amp;rdquo;&lt;/h2&gt;
@@ -3383,8 +3384,8 @@ entrega una tabla en formato html apartir de su entrada en texto plano.&lt;/p&gt
 &lt;/tfoot&gt;
 &lt;/table&gt;
 
-&lt;p&gt;pasemos a &lt;a href=&#34;https://www.nasciiboy.land/data/table3.go&#34;&gt;el codigo&lt;/a&gt; (guardar-como) (las pruebas
-por &lt;a href=&#34;https://www.nasciiboy.land/data/table3_test.go&#34;&gt;aca&lt;/a&gt;, un &lt;code&gt;go test -v&lt;/code&gt; en una carpeta sin otro codigo go):&lt;/p&gt;
+&lt;p&gt;pasemos a &lt;a href=&#34;http://www.nasciiboy.land/data/table3.go&#34;&gt;el codigo&lt;/a&gt; (guardar-como) (las pruebas
+por &lt;a href=&#34;http://www.nasciiboy.land/data/table3_test.go&#34;&gt;aca&lt;/a&gt;, un &lt;code&gt;go test -v&lt;/code&gt; en una carpeta sin otro codigo go):&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;package katana
 
@@ -3598,14 +3599,14 @@ estilo&amp;hellip; un buen proyecto para alguien sin ideas&amp;hellip;&lt;/p&gt;
     
     <item>
       <title>TextTable2HtmlTable (Volume Two)</title>
-      <link>https://www.nasciiboy.land/prog/morg-table-ii/</link>
+      <link>http://www.nasciiboy.land/prog/morg-table-ii/</link>
       <pubDate>Wed, 10 Jan 2018 18:44:03 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/morg-table-ii/</guid>
+      <guid>http://www.nasciiboy.land/prog/morg-table-ii/</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.nasciiboy.land/img/1ef7ys9dnksz.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://www.nasciiboy.land/img/1ef7ys9dnksz.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;o-como-parsear-una-tabla-en-texto-plano-para-convertirla-en-una-tabla-html-u-otra-cosa-codigo-de-ejemplo-en-golang-segunda-parte&#34;&gt;o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang) – Segunda Parte&lt;/h2&gt;
@@ -3638,8 +3639,8 @@ fastidio de dibujar lineas):&lt;/p&gt;
 
 &lt;p&gt;pero, por que el cambio? bueno esta nueva version (sutilmente expuesta anteriormente)
 permite evitar ambiguedades entre los delimitadores de la tabla y el contenido
-de cada &amp;ldquo;celda&amp;rdquo;, ademas &lt;a href=&#34;https://www.nasciiboy.land/data/table2.go&#34;&gt;el codigo&lt;/a&gt; (guardar-como) no es demaciado complejo (pruebas
-por &lt;a href=&#34;https://www.nasciiboy.land/data/table2_test.go&#34;&gt;aca&lt;/a&gt;, un &lt;code&gt;go test -v&lt;/code&gt; en una carpeta sin otro codigo go)&lt;/p&gt;
+de cada &amp;ldquo;celda&amp;rdquo;, ademas &lt;a href=&#34;http://www.nasciiboy.land/data/table2.go&#34;&gt;el codigo&lt;/a&gt; (guardar-como) no es demaciado complejo (pruebas
+por &lt;a href=&#34;http://www.nasciiboy.land/data/table2_test.go&#34;&gt;aca&lt;/a&gt;, un &lt;code&gt;go test -v&lt;/code&gt; en una carpeta sin otro codigo go)&lt;/p&gt;
 
 &lt;p&gt;Basicamente solo se modifica la forma de analizar la tabla. La convenienca de
 pasar los datos de entrada a una cuadricula de runas y conocer la
@@ -3969,14 +3970,14 @@ queda a modo de reto personal&amp;hellip;&lt;/p&gt;
     
     <item>
       <title>TextTable2HtmlTable (Volume One)</title>
-      <link>https://www.nasciiboy.land/prog/morg-table/</link>
+      <link>http://www.nasciiboy.land/prog/morg-table/</link>
       <pubDate>Fri, 15 Dec 2017 20:02:05 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/morg-table/</guid>
+      <guid>http://www.nasciiboy.land/prog/morg-table/</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.nasciiboy.land/img/mikoto.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://www.nasciiboy.land/img/mikoto.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;o-como-parsear-una-tabla-en-texto-plano-para-convertirla-en-una-tabla-html-u-otra-cosa-codigo-de-ejemplo-en-golang&#34;&gt;o, como &amp;ldquo;parsear&amp;rdquo; una tabla en texto plano para convertirla en una tabla html (u otra cosa) (+ codigo de ejemplo en Golang)&lt;/h2&gt;
@@ -4150,8 +4151,8 @@ fuera del paquete, lo hago para poder crear tipos locales con el mismo nombre
 pero en minuscula (asi: &lt;code&gt;var rect Rect&lt;/code&gt;).&lt;/p&gt;
 
 &lt;p&gt;mmm, todo este rollo de codigo esta dentro de dos ficheros lo que trato de
-explicar aqui esta en &lt;a href=&#34;https://www.nasciiboy.land/data/table.go&#34;&gt;table.go&lt;/a&gt; y aulgunas (insuficientes) pruebas en
-&lt;a href=&#34;https://www.nasciiboy.land/data/table_test.go&#34;&gt;table_test.go&lt;/a&gt;. Colocalas dentro de una carpeta sin otro
+explicar aqui esta en &lt;a href=&#34;http://www.nasciiboy.land/data/table.go&#34;&gt;table.go&lt;/a&gt; y aulgunas (insuficientes) pruebas en
+&lt;a href=&#34;http://www.nasciiboy.land/data/table_test.go&#34;&gt;table_test.go&lt;/a&gt;. Colocalas dentro de una carpeta sin otro
 codigo, y ejecuta con &lt;code&gt;go test&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;a partir de este momento, el codigo fuera de cualquier funcion, es parte de la
@@ -4461,10 +4462,10 @@ parseo a texto rectangular, llebaran una labor de revision fina, fina!&lt;/p&gt;
     
     <item>
       <title>Morg Mirror</title>
-      <link>https://www.nasciiboy.land/prog/morg-mirror/</link>
+      <link>http://www.nasciiboy.land/prog/morg-mirror/</link>
       <pubDate>Fri, 08 Dec 2017 21:52:22 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/morg-mirror/</guid>
+      <guid>http://www.nasciiboy.land/prog/morg-mirror/</guid>
       <description>&lt;blockquote&gt;
 Una buena documentación es invaluable. Ya que cada uno tiene su propia definición de &#34;bueno&#34;, aquí está la mía:
 
@@ -4571,10 +4572,10 @@ pero eso sera mas tarde&lt;/p&gt;
     
     <item>
       <title>HTC One M8 (flasheo)</title>
-      <link>https://www.nasciiboy.land/prog/m8/</link>
+      <link>http://www.nasciiboy.land/prog/m8/</link>
       <pubDate>Thu, 23 Nov 2017 16:26:40 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/m8/</guid>
+      <guid>http://www.nasciiboy.land/prog/m8/</guid>
       <description>
 
 &lt;p&gt;sucede que estas tranquilamente con tu dispositivo (un androide 4.4) que se
@@ -4698,7 +4699,7 @@ correo de &lt;em&gt;HTC-Unlockbootloader@htc.com&lt;/em&gt; con un adjunto &lt;s
 
 &lt;p&gt;se abrira en el movil la sugiente pantalla&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/step13.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/step13.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;movemos con VOLUMEN +/- hacia el Yes y confirmamos con POWER.&lt;/p&gt;
 
@@ -4709,7 +4710,7 @@ reentramos en el bootloader ahora desploqueado&lt;/p&gt;
 adb reboot bootloader
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/bootloader_screen.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/bootloader_screen.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;en este punto ya tenemos el mobil listo para flashear cualquier otro sistema. Si
 desides arrepentirte puedes ingresar&lt;/p&gt;
@@ -4802,13 +4803,13 @@ hardware mas que potable)&lt;/p&gt;
     
     <item>
       <title>The Return Of F</title>
-      <link>https://www.nasciiboy.land/prog/the-return-of-f/</link>
+      <link>http://www.nasciiboy.land/prog/the-return-of-f/</link>
       <pubDate>Thu, 16 Nov 2017 13:24:08 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/the-return-of-f/</guid>
+      <guid>http://www.nasciiboy.land/prog/the-return-of-f/</guid>
       <description>
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/F.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/F.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Siguiendo esa bonita tradicion de las entradas &lt;strong&gt;&amp;ldquo;que hacer despues de instalar
 &lt;em&gt;X&lt;/em&gt;&amp;ldquo;&lt;/strong&gt;, llega el turno de hacer un:  &amp;ldquo;que hacer despues de instalar&amp;hellip; &lt;em&gt;Fedora&lt;/em&gt;&amp;hellip;&amp;rdquo;&lt;/p&gt;
@@ -5096,10 +5097,10 @@ equivalente en wayland? &lt;code&gt;startw&lt;/code&gt;, &lt;code&gt;startg&lt;/
     
     <item>
       <title>Java &amp; Me(h)</title>
-      <link>https://www.nasciiboy.land/prog/javame/</link>
+      <link>http://www.nasciiboy.land/prog/javame/</link>
       <pubDate>Fri, 10 Nov 2017 14:57:41 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/javame/</guid>
+      <guid>http://www.nasciiboy.land/prog/javame/</guid>
       <description>
 
 &lt;p&gt;Por que &lt;a href=&#34;https://picodotdev.github.io/blog-bitix/2015/05/10-razones-para-seguir-usando-java/&#34;&gt;razones&lt;/a&gt;
@@ -5141,7 +5142,7 @@ que va creciendo la complejidad de las cosas que &amp;ldquo;planeo&amp;rdquo; pr
 intuicion y sentido comun me dice que muchos de esos secretos ancestrales se
 encuentran alla afuera&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/believer.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/believer.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;o en el peor de los casos, estan cerca de ser ser promulgados, por alguien&amp;hellip;&lt;/p&gt;
 
@@ -5258,7 +5259,7 @@ descalificado, pero desde la pagina del autor pueden descargar el codigo de los
 ejemplos y el libro (en ingles) en formato html de esta 2^da edicion. Aqui el &lt;a href=&#34;http://www.mindviewinc.com/downloads/TIJ-2nd-edition.zip&#34;&gt;enlace al
 zip&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;o, y por si el enlace esta roto, bajarlo de &lt;a href=&#34;https://www.nasciiboy.land/data/TIJ-2nd-edition.zip&#34;&gt;aca&lt;/a&gt;,
+&lt;p&gt;o, y por si el enlace esta roto, bajarlo de &lt;a href=&#34;http://www.nasciiboy.land/data/TIJ-2nd-edition.zip&#34;&gt;aca&lt;/a&gt;,
 a esta le aplique un &lt;code&gt;dos2unix&lt;/code&gt; a todos los ficheros, para no tener que ver el
 &lt;em&gt;DOS&lt;/em&gt; en el emacs&lt;/p&gt;
 
@@ -5333,11 +5334,11 @@ multiples significados que enturbian la 🌈experiencia🌈&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>OCR</title>
-      <link>https://www.nasciiboy.land/prog/ocr/</link>
+      <link>http://www.nasciiboy.land/prog/ocr/</link>
       <pubDate>Thu, 09 Nov 2017 17:10:40 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/ocr/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/padesoor.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+      <guid>http://www.nasciiboy.land/prog/ocr/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/padesoor.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;sucede que tenia un libro que aprecio muchisimo, pero mucho mucho mucho, aunque
 no lo habia leido y lo escaneeehee para convertirlo en otra cobaya del proyecto
@@ -5437,13 +5438,13 @@ traen oceerres buenos y le quita la emocion, para esos casos basta con&lt;/p&gt;
     
     <item>
       <title>blackfriday</title>
-      <link>https://www.nasciiboy.land/prog/blackfriday/</link>
+      <link>http://www.nasciiboy.land/prog/blackfriday/</link>
       <pubDate>Fri, 27 Oct 2017 17:42:32 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/blackfriday/</guid>
+      <guid>http://www.nasciiboy.land/prog/blackfriday/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/bf.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/bf.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Durante la modificacion del morg, habia escrito esto junto con otras notas
 vagas en una bitocora de abordo que trata de ser FIFO, aunque si no mantengo la
@@ -5565,13 +5566,13 @@ hace bien su labor&lt;/p&gt;
     
     <item>
       <title>Raptor Down</title>
-      <link>https://www.nasciiboy.land/prog/raptor-down/</link>
+      <link>http://www.nasciiboy.land/prog/raptor-down/</link>
       <pubDate>Fri, 27 Oct 2017 16:58:55 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/raptor-down/</guid>
+      <guid>http://www.nasciiboy.land/prog/raptor-down/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/rocky.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/rocky.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;el-conteo-final&#34;&gt;El Conteo Final&lt;/h2&gt;
 
@@ -5672,13 +5673,13 @@ mas da!&lt;/p&gt;
     
     <item>
       <title>lxde shortcuts</title>
-      <link>https://www.nasciiboy.land/prog/lxde-shortcuts/</link>
+      <link>http://www.nasciiboy.land/prog/lxde-shortcuts/</link>
       <pubDate>Sun, 22 Oct 2017 12:36:18 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/lxde-shortcuts/</guid>
+      <guid>http://www.nasciiboy.land/prog/lxde-shortcuts/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A Gnome ♥ lo que pida! Mas, si el equipo es incapas de cumplir sus exigencias
 para una experiencia completa (contar con un procesador con 2 nucleos,
@@ -5760,7 +5761,7 @@ aparecer en un orden concreto. En su wiki tenemos una lista de &lt;a href=&#34;h
 disponibles&lt;/a&gt; y tambien nombes de (algunos)
 &amp;ldquo;&lt;a href=&#34;http://openbox.org/wiki/Help:Bindings&#34;&gt;eventos&lt;/a&gt;&amp;rdquo; del raton y teclado&lt;/p&gt;
 
-&lt;p&gt;de momento mi fichero de configuracion es &lt;a href=&#34;https://www.nasciiboy.land/data/lxde-rc.xml&#34;&gt;este&lt;/a&gt;, aqui los
+&lt;p&gt;de momento mi fichero de configuracion es &lt;a href=&#34;http://www.nasciiboy.land/data/lxde-rc.xml&#34;&gt;este&lt;/a&gt;, aqui los
 aspectos mas revelantes&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  &amp;lt;desktops&amp;gt;
@@ -5957,13 +5958,13 @@ aun no descubro como se realiza apropiadamente, Sayonara!&lt;/p&gt;
     
     <item>
       <title>Que es Morg? [Redux]</title>
-      <link>https://www.nasciiboy.land/prog/morg-redux/</link>
+      <link>http://www.nasciiboy.land/prog/morg-redux/</link>
       <pubDate>Sun, 15 Oct 2017 14:52:46 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/morg-redux/</guid>
+      <guid>http://www.nasciiboy.land/prog/morg-redux/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/morgv020.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/morgv020.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(el cuadro superior izquierdo, es una version colareada con gimp, el resto son
 capturas reales. Lo de &lt;em&gt;redux&lt;/em&gt;, no es por ser un video que ha tirado el yutu y
@@ -7193,13 +7194,13 @@ ser un reto emocionante&lt;/p&gt;
     
     <item>
       <title>The X86 Strikes Back</title>
-      <link>https://www.nasciiboy.land/prog/the-x86-strikes-back/</link>
+      <link>http://www.nasciiboy.land/prog/the-x86-strikes-back/</link>
       <pubDate>Sat, 14 Oct 2017 12:38:00 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/the-x86-strikes-back/</guid>
+      <guid>http://www.nasciiboy.land/prog/the-x86-strikes-back/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/kool.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/kool.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;bueno, la imagen es mas de 8bits que por ahora son los equipos
 retro-nostalgicos de moda, ya le llegara su momento a x86.&lt;/p&gt;
@@ -7527,10 +7528,10 @@ pedir nada para la wifi!&lt;/p&gt;
     
     <item>
       <title>benchmarks dentro de un programa en go</title>
-      <link>https://www.nasciiboy.land/prog/gomark/</link>
+      <link>http://www.nasciiboy.land/prog/gomark/</link>
       <pubDate>Fri, 06 Oct 2017 21:03:55 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/gomark/</guid>
+      <guid>http://www.nasciiboy.land/prog/gomark/</guid>
       <description>
 
 &lt;p&gt;en Go podemos realizar benchmarks dentro de los ficheros &lt;code&gt;_test.go&lt;/code&gt;, sin embargo
@@ -7660,13 +7661,13 @@ una consumo superior de recursos&lt;/p&gt;
     
     <item>
       <title>morg v0.20</title>
-      <link>https://www.nasciiboy.land/prog/morg-v020/</link>
+      <link>http://www.nasciiboy.land/prog/morg-v020/</link>
       <pubDate>Fri, 06 Oct 2017 17:33:57 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/morg-v020/</guid>
+      <guid>http://www.nasciiboy.land/prog/morg-v020/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/morgv020.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/morgv020.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;one-more-kiss&#34;&gt;One More Kiss&lt;/h2&gt;
 
@@ -8052,13 +8053,13 @@ como el formato supremo, he!&lt;/p&gt;
     
     <item>
       <title>Sayonara F</title>
-      <link>https://www.nasciiboy.land/prog/sayonara-f/</link>
+      <link>http://www.nasciiboy.land/prog/sayonara-f/</link>
       <pubDate>Thu, 14 Sep 2017 16:16:26 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/sayonara-f/</guid>
+      <guid>http://www.nasciiboy.land/prog/sayonara-f/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/sayonara-F.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/sayonara-F.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;fedora-antergos-dos-pantalas-y-un-adios&#34;&gt;fedora -&amp;gt; antergos (dos pantalas y un adios)&lt;/h2&gt;
 
@@ -8258,13 +8259,13 @@ perfeccion&lt;/p&gt;
     
     <item>
       <title>iScheme</title>
-      <link>https://www.nasciiboy.land/prog/ischeme/</link>
+      <link>http://www.nasciiboy.land/prog/ischeme/</link>
       <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/ischeme/</guid>
+      <guid>http://www.nasciiboy.land/prog/ischeme/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/lambda.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/lambda.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para
 mi escaso saber, por su parte los conceptos programacionales con Scheme solo los
@@ -8385,10 +8386,10 @@ todos los &amp;ldquo;atajos&amp;rdquo; de edicion.&lt;/p&gt;
     
     <item>
       <title>Raptor VS Mundo</title>
-      <link>https://www.nasciiboy.land/prog/raptorvsworld-ii/</link>
+      <link>http://www.nasciiboy.land/prog/raptorvsworld-ii/</link>
       <pubDate>Sat, 19 Aug 2017 14:20:56 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/raptorvsworld-ii/</guid>
+      <guid>http://www.nasciiboy.land/prog/raptorvsworld-ii/</guid>
       <description>
 
 &lt;p&gt;(Ya que la forma en que presenta github los readme&amp;rsquo;s no es apropiada para una
@@ -8407,7 +8408,7 @@ pruebas, y al no tener C &amp;ldquo;namespaces&amp;rdquo;, tenia conflictos con 
 la libreria, ademas de limitar los lenguajes que podian participar en la prueba
 solo a C y C++.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/Computer-Guy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/Computer-Guy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Como pues organizar el asunto para incluir las pruebas? deberian tener un
 &amp;ldquo;formato&amp;rdquo; unificado para aceptar datos de entrada y entregar datos de salida de
@@ -8541,10 +8542,10 @@ estandar en el resto, espero no terminar frustrado&lt;/p&gt;
     
     <item>
       <title>stylus black-translator</title>
-      <link>https://www.nasciiboy.land/prog/stylus-black-translator/</link>
+      <link>http://www.nasciiboy.land/prog/stylus-black-translator/</link>
       <pubDate>Thu, 27 Jul 2017 00:50:52 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/stylus-black-translator/</guid>
+      <guid>http://www.nasciiboy.land/prog/stylus-black-translator/</guid>
       <description>&lt;p&gt;Si Firefox es mi navegador de confianza, no es solo por que sea software libre y
 tenga una &lt;em&gt;fundacion&lt;/em&gt; que le da soporte, tambien lo utilizo por que debido a que
 es software libre y lo desarrolla gente decente, su creacion refleja esta
@@ -8567,14 +8568,14 @@ les vengo a hablar, pues las tecnologias web que ejecutan &amp;ldquo;cosas&amp;r
 unico enemigo al que combato, este generoso cuerpo tambien tiene odio para las
 interfaces, casas, ropa y demas objetos con un asqueroso color blanco nuclear&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/black-nil.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/black-nil.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;asi que tome
 &lt;a href=&#34;https://userstyles.org/styles/114266/google-translate-by-kiwi&#34;&gt;un estilo ya hecho&lt;/a&gt; (si
 van a ese link bajar las defensas momentaneamente o no funciona) y
 le di forma hasta dejar al traductor de una manera que encuentro agradable&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/black-translator.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/black-translator.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;simplemente agregan &lt;a href=&#34;https://github.com/openstyles/stylus&#34;&gt;&lt;em&gt;Stylus&lt;/em&gt;&lt;/a&gt; al
 navegador (tambien disponible para chrome y sus spins) van a
@@ -9421,7 +9422,7 @@ mientras realizan la edicion)&lt;/p&gt;
 
 &lt;p&gt;felices trazos!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/contruct.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/contruct.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Por cierto, de forma casi inadvertida y estupida, mientras escribia un tema para
 un sitio que recopilara juegos foss de love2d (por aquello de tener ejemplos de
@@ -9439,11 +9440,11 @@ hare un tema nuevo, digno, reformado y en abismal color negro, jo, jo, jo.
     
     <item>
       <title>regexp4-go (dia cero)</title>
-      <link>https://www.nasciiboy.land/prog/regexp4-go/</link>
+      <link>http://www.nasciiboy.land/prog/regexp4-go/</link>
       <pubDate>Sat, 15 Jul 2017 21:36:03 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/regexp4-go/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/regexp4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+      <guid>http://www.nasciiboy.land/prog/regexp4-go/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/regexp4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;regexp4&lt;/strong&gt; es un &amp;ldquo;motor&amp;rdquo; de expresiones regulares de la familia de los motores
 regulares &lt;em&gt;Recursive Regexp Raptor&lt;/em&gt;, o expresado de otra forma: una libreria de
@@ -9514,10 +9515,10 @@ el 3 por 4&lt;/p&gt;
     
     <item>
       <title>Webeloper – El navegador web</title>
-      <link>https://www.nasciiboy.land/prog/webeloper/</link>
+      <link>http://www.nasciiboy.land/prog/webeloper/</link>
       <pubDate>Mon, 10 Jul 2017 23:03:56 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/webeloper/</guid>
+      <guid>http://www.nasciiboy.land/prog/webeloper/</guid>
       <description>
 
 &lt;p&gt;joder, que gracioso, ho, ho, ho, veamos si existe la remota posibiidad que nadie
@@ -9540,17 +9541,17 @@ llege a utilizar (una a dos veces):&lt;/p&gt;
 class=&#34;command&#34; &gt;links&lt;/code&gt; y &lt;code class=&#34;command&#34; &gt;elinks&lt;/code&gt; (en la
 siguiente imagen aparecen de izquierda a derecha en ese orden)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/www.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/www.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;tambien &lt;em&gt;eww&lt;/em&gt;, que viene incluido en emacs&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/www-eww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/www-eww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;si bien es el mas lento y apenas el menos feo (w3m gana la contienda), por el
 simple hecho de venir en emacs no tiene comparacion en esta singular categoria,
 ademas, en modo grafico pueden verse imagenes!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/www-eww-img.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/www-eww-img.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;es cierto que a los navegadores en modo texto el tiempo no los ha tratado bien,
 pero las cookies, flash, drms, javascript y el contenido multimedia no son los
@@ -9618,7 +9619,7 @@ veamos, mmm, derivados exclusivos para las manzanas, derivados exclusivos para
 las ventasas, forks con codigo cerrado&amp;hellip; hey! aqui hay uno que parece prometodor
 &lt;a href=&#34;https://www.brave.com/&#34;&gt;&lt;em&gt;brave&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/brave.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/brave.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;dicen que son &amp;ldquo;open source&amp;rdquo;, mucho de seguridad, comunidad y pagos(?), veamos
 tienen una compilacion para freidora&amp;hellip; parece decente, algo modernoso&lt;/p&gt;
@@ -9669,10 +9670,10 @@ configurable, que no esta a la ultima moda en csssssss&lt;/p&gt;
     
     <item>
       <title>SICP [es] – Guia para Colaboradores</title>
-      <link>https://www.nasciiboy.land/prog/sicp-contrib/</link>
+      <link>http://www.nasciiboy.land/prog/sicp-contrib/</link>
       <pubDate>Mon, 10 Jul 2017 17:57:10 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/sicp-contrib/</guid>
+      <guid>http://www.nasciiboy.land/prog/sicp-contrib/</guid>
       <description>
 
 &lt;p&gt;Bienvenidos los contribuidores a la traduccion No oficial de libro SICP al
@@ -9946,13 +9947,13 @@ insulto, en &lt;a href=&#34;https://www.reddit.com/r/SICP_ES/&#34;&gt;https://ww
     
     <item>
       <title>SICP (proyecto de traduccion)</title>
-      <link>https://www.nasciiboy.land/prog/dot-slash-sicp2es/</link>
+      <link>http://www.nasciiboy.land/prog/dot-slash-sicp2es/</link>
       <pubDate>Fri, 07 Jul 2017 18:27:56 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/dot-slash-sicp2es/</guid>
+      <guid>http://www.nasciiboy.land/prog/dot-slash-sicp2es/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/jelly.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/jelly.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;o en otras palabras dadme pasta! (no en galletas)&lt;/p&gt;
 
@@ -10031,9 +10032,9 @@ en &lt;a href=&#34;https://github.com/nasciiboy/sicp/&#34;&gt;este repo&lt;/a&gt
 ingles. Probe la version html con firefox y con un spin de chromium, sin
 aparente problema&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/sicp-screeshot-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/sicp-screeshot-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/sicp-screeshot-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/sicp-screeshot-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;extenso el material es, asi que probablemente contenga algunos errores&lt;/p&gt;
 
@@ -10184,11 +10185,11 @@ rendimiento del navegador de mala, muy mala manera&lt;/p&gt;
     
     <item>
       <title>morg [dia 432]</title>
-      <link>https://www.nasciiboy.land/prog/morg-d432/</link>
+      <link>http://www.nasciiboy.land/prog/morg-d432/</link>
       <pubDate>Tue, 04 Jul 2017 18:47:44 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/morg-d432/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/BOM.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+      <guid>http://www.nasciiboy.land/prog/morg-d432/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/BOM.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;sin un titulo interesante y sin esperar una secuencia tan armonica, confie a un
 programa informatico de internet la tarea de calcular los dias desde el primer
@@ -10264,13 +10265,13 @@ tendra su propio post&lt;/p&gt;
     
     <item>
       <title>Crear una paleta de color con solo un indice</title>
-      <link>https://www.nasciiboy.land/prog/rainbow/</link>
+      <link>http://www.nasciiboy.land/prog/rainbow/</link>
       <pubDate>Sat, 17 Jun 2017 12:39:43 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/rainbow/</guid>
+      <guid>http://www.nasciiboy.land/prog/rainbow/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/mandelbrot.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/mandelbrot.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;que tal, como lo indica el titulo vamos a generar una paleta de color apartir de
 un unico indice, para, por ejemplo colorear una imagen en una escala de
@@ -10299,7 +10300,7 @@ teles crt de la antiguedad&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Modelo_de_color_HSL&#34;&gt;https://es.wikipedia.org/wiki/Modelo_de_color_HSL&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/HSL.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/HSL.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;como podemos ver, tenemos tres valores, &lt;strong&gt;luminosidad&lt;/strong&gt;, &lt;strong&gt;saturacion&lt;/strong&gt; y
 &lt;strong&gt;matiz&lt;/strong&gt;, con la particularidad que el color inicia en negro absoluto y luego
@@ -10325,7 +10326,7 @@ maximo de luminocidad, sin embargo y adiferencia de HSL este se decanta por un
 color u otro segun la
 saturacion y matiz&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/HSV.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/HSV.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;codigo&#34;&gt;Codigo&lt;/h2&gt;
 
@@ -10504,15 +10505,15 @@ newton es distinto:&lt;/p&gt;
 
 &lt;p&gt;algoritmo newton con &lt;code&gt;secs&lt;/code&gt; establecido en 1 (un ciclo)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/newton.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/newton.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;algoritmo newton con &lt;code&gt;secs&lt;/code&gt; establecido en 2 (dos ciclos)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/newton2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/newton2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;algoritmo newton con &lt;code&gt;secs&lt;/code&gt; establecido en 50 y &lt;code&gt;colors&lt;/code&gt; en 5000&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/newton3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/newton3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;para los algoritmos &lt;code&gt;acos&lt;/code&gt; y &lt;code&gt;sqrt&lt;/code&gt; no interviene nuestro &lt;code&gt;MagicColors&lt;/code&gt;, aun asi
 la salida es bastante chula&lt;/p&gt;
@@ -10523,10 +10524,10 @@ la salida es bastante chula&lt;/p&gt;
     
     <item>
       <title>El Lenguaje De programacion Go</title>
-      <link>https://www.nasciiboy.land/prog/tgpl/</link>
+      <link>http://www.nasciiboy.land/prog/tgpl/</link>
       <pubDate>Mon, 29 May 2017 22:02:43 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/tgpl/</guid>
+      <guid>http://www.nasciiboy.land/prog/tgpl/</guid>
       <description>
 
 &lt;p&gt;golang, el lenguaje de &lt;q&gt;programacion de sistemas&lt;/q&gt; de la gente de google con
@@ -10743,13 +10744,13 @@ sitio de internete, dadle asilo&lt;/p&gt;
     
     <item>
       <title>Nirvana</title>
-      <link>https://www.nasciiboy.land/prog/nirvana/</link>
+      <link>http://www.nasciiboy.land/prog/nirvana/</link>
       <pubDate>Thu, 20 Apr 2017 11:54:03 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/nirvana/</guid>
+      <guid>http://www.nasciiboy.land/prog/nirvana/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/katana-0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;hu! ha!&lt;/strong&gt;, imparable el proyecto de programacion morg (nombre temporal) es (o
 no), mientras tanto y a modo de respaldo (por si en algun momento me convierto
@@ -10827,26 +10828,26 @@ perdida de tiempo&amp;hellip; veanlo como un adelanto del 🌈futuro🌈&lt;/p&g
 
 &lt;h2 id=&#34;mooo&#34;&gt;Mooo&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/katana-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;unas &lt;strong&gt;capturas&lt;/strong&gt; del invento en accion&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/katana-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/katana-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/katana-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/katana-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/katana-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Programmer&#39;s Guide to NCurses</title>
-      <link>https://www.nasciiboy.land/prog/pg2ncurses/</link>
+      <link>http://www.nasciiboy.land/prog/pg2ncurses/</link>
       <pubDate>Tue, 11 Apr 2017 12:38:06 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/pg2ncurses/</guid>
+      <guid>http://www.nasciiboy.land/prog/pg2ncurses/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../gumy.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -10978,10 +10979,10 @@ del viento, no dejen de sintonizar la proxima entrega (/narrador)&lt;/p&gt;
     
     <item>
       <title>yorozuya</title>
-      <link>https://www.nasciiboy.land/prog/yorozuya/</link>
+      <link>http://www.nasciiboy.land/prog/yorozuya/</link>
       <pubDate>Tue, 14 Mar 2017 16:33:15 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/yorozuya/</guid>
+      <guid>http://www.nasciiboy.land/prog/yorozuya/</guid>
       <description>&lt;p&gt;&lt;em&gt;Yorozuya&lt;/em&gt; en una tienda donde se toma cualquier tipo de trabajo por una
 tarifa&amp;hellip; bienvenidos los encargos!&lt;/p&gt;
 
@@ -11048,10 +11049,10 @@ sobreprecio). El proceso de adaptacion toma entre 1 o 2 semanas de tiempo ocioso
     
     <item>
       <title>morg: como usar</title>
-      <link>https://www.nasciiboy.land/prog/morg-howto/</link>
+      <link>http://www.nasciiboy.land/prog/morg-howto/</link>
       <pubDate>Sun, 12 Mar 2017 09:33:15 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/morg-howto/</guid>
+      <guid>http://www.nasciiboy.land/prog/morg-howto/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../hello.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -11779,10 +11780,10 @@ alguna empresa, aver que sucede&lt;/p&gt;
     
     <item>
       <title>morg</title>
-      <link>https://www.nasciiboy.land/prog/morg/</link>
+      <link>http://www.nasciiboy.land/prog/morg/</link>
       <pubDate>Thu, 02 Mar 2017 06:37:35 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/morg/</guid>
+      <guid>http://www.nasciiboy.land/prog/morg/</guid>
       <description>
 
 &lt;p&gt;Que tal, por fin tras un año de hacer el vago ha surgido el primer exportador
@@ -13155,10 +13156,10 @@ meses o mas) y asi escribir este blog a gusto.&lt;/p&gt;
     
     <item>
       <title>INBO</title>
-      <link>https://www.nasciiboy.land/prog/inbo/</link>
+      <link>http://www.nasciiboy.land/prog/inbo/</link>
       <pubDate>Mon, 13 Feb 2017 22:14:42 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/inbo/</guid>
+      <guid>http://www.nasciiboy.land/prog/inbo/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../steins:gate.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Despues de año y medio de desempleo (y quiza de ser un inutil) aparecio una idea
@@ -13327,10 +13328,10 @@ fantastica y seria mas estupido de lo que soy! Happy Hacking!&lt;/p&gt;
     
     <item>
       <title>regexp3-go (dia cero)</title>
-      <link>https://www.nasciiboy.land/prog/regexp3-go/</link>
+      <link>http://www.nasciiboy.land/prog/regexp3-go/</link>
       <pubDate>Sat, 11 Feb 2017 10:26:04 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/regexp3-go/</guid>
+      <guid>http://www.nasciiboy.land/prog/regexp3-go/</guid>
       <description>&lt;p&gt;Hace un año, luego de &amp;ldquo;maquetar&amp;rdquo; algunos libros en org-mode, decidi crear mi
 propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar
 un substituto del comando man/info y aniquilar a html/latex como sistema de
@@ -13407,10 +13408,10 @@ simplificada del lenguaje de marcas ligeras.&lt;/p&gt;
     
     <item>
       <title>Gnome Keys</title>
-      <link>https://www.nasciiboy.land/prog/gnome-keys/</link>
+      <link>http://www.nasciiboy.land/prog/gnome-keys/</link>
       <pubDate>Wed, 18 Jan 2017 20:57:15 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/gnome-keys/</guid>
+      <guid>http://www.nasciiboy.land/prog/gnome-keys/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../kp-01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -13685,10 +13686,10 @@ gsettings set org.gnome.desktop.wm.keybindings unmaximize                   &amp
     
     <item>
       <title>Raptor-Book</title>
-      <link>https://www.nasciiboy.land/prog/raptor-book/</link>
+      <link>http://www.nasciiboy.land/prog/raptor-book/</link>
       <pubDate>Wed, 11 Jan 2017 10:03:58 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/raptor-book/</guid>
+      <guid>http://www.nasciiboy.land/prog/raptor-book/</guid>
       <description>&lt;p&gt;Solo queria programar un juego similar a &lt;strong&gt;Megaman 2&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../MegaMan2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -13731,10 +13732,10 @@ libro segun esten listas, intentare ser constante.&lt;/p&gt;
     
     <item>
       <title>2017Challenges</title>
-      <link>https://www.nasciiboy.land/prog/2017challenges/</link>
+      <link>http://www.nasciiboy.land/prog/2017challenges/</link>
       <pubDate>Wed, 04 Jan 2017 20:41:22 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/2017challenges/</guid>
+      <guid>http://www.nasciiboy.land/prog/2017challenges/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../orange.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hace unos dias (presuntamente a principio de año) aparecio en reddit
@@ -13790,10 +13791,10 @@ quiza con lisp.&lt;/p&gt;
     
     <item>
       <title>Ncurses</title>
-      <link>https://www.nasciiboy.land/prog/ncurses/</link>
+      <link>http://www.nasciiboy.land/prog/ncurses/</link>
       <pubDate>Mon, 19 Dec 2016 21:45:05 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/ncurses/</guid>
+      <guid>http://www.nasciiboy.land/prog/ncurses/</guid>
       <description>
 
 &lt;h2 id=&#34;que-es-ncurses&#34;&gt;Que es Ncurses&lt;/h2&gt;
@@ -13852,10 +13853,10 @@ el teclado, el mouse e incluso joystick fuesen librerias independientes&lt;/p&gt
     
     <item>
       <title>Performance comparison of regular expression engines</title>
-      <link>https://www.nasciiboy.land/prog/performance-comparison-of-regular-expression-engines/</link>
+      <link>http://www.nasciiboy.land/prog/performance-comparison-of-regular-expression-engines/</link>
       <pubDate>Fri, 16 Dec 2016 20:22:03 -0600</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/performance-comparison-of-regular-expression-engines/</guid>
+      <guid>http://www.nasciiboy.land/prog/performance-comparison-of-regular-expression-engines/</guid>
       <description>&lt;p&gt;Hola gente, hace unos meses tome el codigo de &lt;strong&gt;dark100&lt;/strong&gt; &amp;ldquo;Performance
 comparison of regular expression engines&amp;rdquo; (pueden ver el orginal
 &lt;a href=&#34;http://sljit.sourceforge.net/regex_perf.html&#34;&gt;aqui&lt;/a&gt;) para hacer algunas pruebas

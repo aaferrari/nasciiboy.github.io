@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lxde on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://www.nasciiboy.land/tags/lxde/</link>
+    <link>http://www.nasciiboy.land/tags/lxde/</link>
     <description>Recent content in Lxde on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 22 Oct 2017 12:36:18 -0500</lastBuildDate>
     
-        <atom:link href="https://www.nasciiboy.land/tags/lxde/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.nasciiboy.land/tags/lxde/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>lxde shortcuts</title>
-      <link>https://www.nasciiboy.land/prog/lxde-shortcuts/</link>
+      <link>http://www.nasciiboy.land/prog/lxde-shortcuts/</link>
       <pubDate>Sun, 22 Oct 2017 12:36:18 -0500</pubDate>
       
-      <guid>https://www.nasciiboy.land/prog/lxde-shortcuts/</guid>
+      <guid>http://www.nasciiboy.land/prog/lxde-shortcuts/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://www.nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A Gnome ♥ lo que pida! Mas, si el equipo es incapas de cumplir sus exigencias
 para una experiencia completa (contar con un procesador con 2 nucleos,
@@ -102,7 +102,7 @@ aparecer en un orden concreto. En su wiki tenemos una lista de &lt;a href=&#34;h
 disponibles&lt;/a&gt; y tambien nombes de (algunos)
 &amp;ldquo;&lt;a href=&#34;http://openbox.org/wiki/Help:Bindings&#34;&gt;eventos&lt;/a&gt;&amp;rdquo; del raton y teclado&lt;/p&gt;
 
-&lt;p&gt;de momento mi fichero de configuracion es &lt;a href=&#34;https://www.nasciiboy.land/data/lxde-rc.xml&#34;&gt;este&lt;/a&gt;, aqui los
+&lt;p&gt;de momento mi fichero de configuracion es &lt;a href=&#34;http://www.nasciiboy.land/data/lxde-rc.xml&#34;&gt;este&lt;/a&gt;, aqui los
 aspectos mas revelantes&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  &amp;lt;desktops&amp;gt;
