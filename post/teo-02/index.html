@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Teopanzolco – 02 (Marquis Hill Quartet)</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://www.nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://www.nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://www.nasciiboy.land">/</a></span> <span><a href="http://www.nasciiboy.land/post">post</a></div>
+
+  <h1>Teopanzolco – 02 (Marquis Hill Quartet)</h1>
+  <p>Domingo, veo la <a href="http://www.cartelera.morelos.gob.mx/">cartelera</a>, crak, crak,
+crak! Broto de un dia a otro a ultima hora una nueva cortesia cultural del
+estado. Crok, crok, crok, crok! MMMmmm (-_-)ゞ゛ vale la pena salir hoy? bueno,
+tampoco es como si me esperara otro compromiso</p>
+
+<p>y asi fue como el 26-08-18 asisti a una nueva &ldquo;clase magistral y concierto&rdquo;, financiada
+por la sociedad</p>
+
+<p>en contraste con la ocacion previa, la demo (video) contenia jazz &ldquo;concreto&rdquo;, ejem,
+sin canciones, bateria, pianito, otros-instrumentos y pura demostracion de
+habilidad</p>
+
+<p>el evento demoro un poco mas de la hora pactada. Segun parece por culpa de un evento
+anterior, pero nada considerable. Para conocernos mejor el grupo decidio iniciar
+con 2 pistas y luego tocaron unas 3 mas, casi como si fuese un concierto
+privado con alguna que otra interaccion del publico, un poco del CV
+de los musicos y alguna que otras palabras de sabiduria</p>
+
+<p><img src="http://www.nasciiboy.land/img/teo-02-a.jpg" alt="" /></p>
+
+<p>los exponentes tenian poca vena didactica, quiza no era su mejor dia. Intentando
+hacer mas dinamico el evento, el lider invito al escenario a algunos musicos y
+un par de mortales con la intencion de demostrar que hacer b-l-u-e-s es lo mas
+sencillo del mundo</p>
+
+<p><img src="http://www.nasciiboy.land/img/teo-02-b.jpg" alt="" /></p>
+
+<p>je, je, subieron 3 bateristas (uno substituyo al bateria, otro se quedo de pie a
+su lado y el ultimo se fue a sentar al piano), una flautista (&ldquo;en formacion&rdquo; que
+despues como que se decia interiormente &ldquo;pa que vergas subi, tragame tierra&rdquo;)
+y dos maduras a tararear un poco. Hahhh, no hubo mucha iniciativa. Apenas se
+limito a &ldquo;el simio hace, el simio repite&rdquo;.</p>
+
+<p>luego, tres preguntas mas</p>
+
+<ul>
+<li><p>Como hacer para no sentirse incomodo al tocar con otros por primera vez? Buena
+pregunta (respodio the leader), suele suceder que sientes que la
+insastifaccion de no demostrar todo tu potencial te frustre, nos ha
+pasado a todos, pero aqui seguimos</p></li>
+
+<li><p>(yo) Antes se menciono que tocaron blues, pero me costo distinguirlo del
+jazz, en sus palabras la diferencia esta en el ritmo, en inpregnarle una
+sensibilidad particular u otra cosa? (o eso quise decir) Buena pregunta, ohm,
+hem, hum, el Blues es como el tronco de un arbol, un tronco muy, muy grueso y
+el jazz es como una de sus ramas que a su vez tiene ramificaciones&hellip; y
+tambien el hip hop es otra de sus ramas, hem, algo mas a menos asi, respondi a
+tu pregunta? [yo moviendo la mano] (・_・ヾ mas o menos&hellip;</p></li>
+
+<li><p>&ldquo;al pianista&rdquo;, tienes un ejercicio (digo, ritual/hechizo/hack que no requiera
+esfuerzo) para un principiate (para alcanzar tu nivel)? (haaa, siempre se
+presenta el principiante&hellip;) practica, mucha practica. Practica las escalas
+[se toma su tiempo y pone un metronomo], mira, puedes colocar tu metronomo
+mientras realizas la escala, ir aumentando la velocidad, aplicar variaciones a
+medida que mejores, etc, etc.</p></li>
+</ul>
+
+<p>Una pista mas y finalizo el espacio educativo.</p>
+
+<p>Aqui es buen momento para presentar a los integrantes (como rellenando con mas letras
+(copypasteando de la cartelera))</p>
+
+<p><strong>Marquis Hill</strong> &ldquo;El trompetista, compositor y líder de banda proviene de
+Chicago, una de las más importantes ciudades que ha dado como fruto a grandes
+tradiciones del jazz desde Benny Goodman y Bud Freedman hasta Muhal Richard
+Abrams, Jack DeJohnette y Herbie Hancock&rdquo;</p>
+
+<p><strong>Michael King</strong> (Piano) &ldquo;A la edad de cuatro años comenzó a tocar la batería en
+la banda de su iglesia local. Este aprendizaje lo acercó al piano y al órgano,
+instrumentos que aprendió de oído. King estudió en el Conservatorio de Oberlin,
+Ohio. Fue seleccionado para estudiar como becario en el Thelonious Monk
+Institute y en Ravinia Jazz Scholars Program&rdquo;</p>
+
+<p><strong>Junius Paul</strong> (Bajo) &ldquo;Junius Paul se ha convertido en uno de los principales
+bajistas tanto eléctrico como acústico de la escena musical en Chicago, también
+es compositor y líder de banda. Junius nació y creció en Chicago y es egresado
+de la Saint Xavier University (Chicago)&rdquo;</p>
+
+<p><strong>Makaya McCraven</strong> (Batería) &ldquo;Otro de los músicos más solicitados en Chicago es
+el baterista y DJ Makaya McCraven. Hijo de un baterista afroamericano y una
+cantante húngara ejercieron una profunda influencia musical en McCraven desde su
+infancia&rdquo;</p>
+
+<p>todos son unas fuerzas indomables de la naturaleza. Virtuosismo irefutable
+apenas contenido. Ciertamente, la clase fue un mero calentamiento, solo
+demostrarian su maxima capacidad ya en el concierto</p>
+
+<p><img src="http://www.nasciiboy.land/img/teo-02-c.jpg" alt="" /></p>
+
+<p>El lider abrio el evento, fuuuuhuuuuuuuugggggggggwwwwww,
+fuhhhhhhhhuhhhwwwwwwwww, imitando el sonido de los &ldquo;aztecas&rdquo; con su caracol,
+fuhhhuhhhhuhhuhggwww. Despues tomo unos colguijes (tambien &ldquo;aztecas&rdquo;) que
+sonaban un poco a lluvia, al mismo tiempo que el piano era impactado con los
+nudillos gentilmente, la bateria hacia pequeñas sonoridades y el bajista se unia
+a los golpecillos. Dos minutos despues comenzaba el j-a-z-z-z. Una competencia
+para ver quien se imponia con su ritmo y complejidad a los demas. Yehhhh! que se
+levante y huya quien lo encuentre incomprensible!</p>
+
+<p>el gentil lider limitaba su participacion haciendo mas llamativas sus
+intervenciones. Ejem, en realidad cada uno, casi dentro de cada pieza tenia su
+momento, sin embargo el baterista era un MONSTRUO. Joder cada una de sus
+demostraciones terminaba en contundentes aplausos.</p>
+
+<p>En el evento anterior de vuyo sotashe la baterista me convencio con su
+ejecucion, pero la diferencia entre ella y este &ldquo;bob ross&rdquo; que dibujaba paisajes
+sonoros con arbolitos de armonias (y arbolitos amigos junto a los arbolitos de armonias) es tan jodidamente
+abismal. En serio, puede que lo compacto de su bateria os engañe, o que en
+alguno de los siguientes videos &ldquo;no lo muestre&rdquo;, pero era un MONSTRUO</p>
+
+<p>ha, ha, ha, fue bastante gracioso ver los movimientos del lider, lentos y
+apesumbrados, limpiando su frente y tomando agua constantemente, desplazandose
+a la derecha de don monstruo como imitando a juan topo</p>
+
+<p><img src="http://www.nasciiboy.land/img/juan-topo.jpg" alt="" /></p>
+
+<p>el contraste entre ambos seria parte del espectaculo?</p>
+
+<p>hubo momento tambien para una pieza melancolica con el piano y un breve momento
+para el bajo. En fin, si bien no son parte del EPICO concierto de aquel dia, aqui
+unas muestras de sus obras</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/-fcXB9bFbaI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/IFR6kGytCsI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>y un torrento con el trabajo del lider. Conservador y estimulante, disfrut!</p>
+
+<pre><code>magnet:?xt=urn:btih:acf9c866cf4771ad94b5a990e1535bacc99bef9a&amp;dn=Marquis%20Hill%20-%20The%20Way%20We%20Play%20(2016%2024-44.1)&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+</code></pre>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://www.nasciiboy.land/post/ramen-xxii/">◀ Ramen XXII</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="http://www.nasciiboy.land">/</a></span> <span><a href="http://www.nasciiboy.land/post">post</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://www.nasciiboy.land/categories/prog">prog(50)</a></li><li><a href="http://www.nasciiboy.land/categories/post">post(40)</a></li><li><a href="http://www.nasciiboy.land/categories/emacs">emacs(15)</a></li><li><a href="http://www.nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="http://www.nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="http://www.nasciiboy.land/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://www.nasciiboy.land/tags/fonos">fonos(25)</a></li><li><a href="http://www.nasciiboy.land/tags/howto">howto(19)</a></li><li><a href="http://www.nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="http://www.nasciiboy.land/tags/4k">4k(17)</a></li><li><a href="http://www.nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="http://www.nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="http://www.nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="http://www.nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="http://www.nasciiboy.land/tags/install">install(5)</a></li><li><a href="http://www.nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="http://www.nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="http://www.nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="http://www.nasciiboy.land/tags/go">go(3)</a></li><li><a href="http://www.nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="http://www.nasciiboy.land/tags/java">java(3)</a></li><li><a href="http://www.nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="http://www.nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="http://www.nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="http://www.nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="http://www.nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="http://www.nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="http://www.nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="http://www.nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="http://www.nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="http://www.nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="http://www.nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="http://www.nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="http://www.nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="http://www.nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="http://www.nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="http://www.nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="http://www.nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="http://www.nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="http://www.nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="http://www.nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="http://www.nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="http://www.nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="http://www.nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="http://www.nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="http://www.nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="http://www.nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="http://www.nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
