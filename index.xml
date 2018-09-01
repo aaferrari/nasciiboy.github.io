@@ -7,10 +7,101 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Wed, 29 Aug 2018 18:40:32 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 01 Sep 2018 10:41:05 -0500</lastBuildDate>
     
         <atom:link href="http://www.nasciiboy.land/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Emergente Mex 15</title>
+      <link>http://www.nasciiboy.land/post/emergente-mex-15/</link>
+      <pubDate>Sat, 01 Sep 2018 10:41:05 -0500</pubDate>
+      
+      <guid>http://www.nasciiboy.land/post/emergente-mex-15/</guid>
+      <description>&lt;p&gt;En un evento de la semana anterior, la cartelera publicitaba el &lt;em&gt;&amp;ldquo;Festival
+Morelos Emergente&amp;rdquo;&lt;/em&gt; donde se presentarian bandas locales entre el sabado y
+domingo.&lt;/p&gt;
+
+&lt;p&gt;El punto de reunion era un sitio llamado Samanna&amp;hellip; que en un primer intento no
+localise y confundi (buscando en gmaps) no se por que con otro llamado baby
+queen. Ja, ja, ja, fui con antisipacion y entusiasmo por que se presentaban los
+Never After Before, que antes ya habia tenido la oportunidad de ver en vivo y
+queria corroborar (o no) sus habilidades y, quiza, si tenian un compacto
+adquirirlo.&lt;/p&gt;
+
+&lt;p&gt;como decia pues, fui al lugar, vi una tienda de shushi, mmm (me dije) estos
+precios solo estarian a mi alcance como un lujo extrabagante. Luego tras
+merodear por otros locales y no ver movimiento, localise la puerta cerrada y con
+cadena del Baby Queen. Recargue el cuerpo en una jardinera frente al local, pues
+quiza con la espera encontraria respuesta, pero en su lugar tras una ventana
+obscura vi la desaprobacion de un anciano guardia diciendo que no estubiera hay
+y que el sitio ese solo abria apartir de las 22 horas. B-u-e-n-o (me dije
+nuevamente) quiza es el sitio equivocado. Me retire no sin observar que al pasar
+de nuevo por el sitio del sushi unas miradas atentas esperaban como con
+incertidumbre el momento donde dijera &amp;ldquo;manos arriba culeros, esto es un asalto&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;ja, ja, ja, luego merodee por los alrededores y al ver el samanna con dos
+&amp;ldquo;checadores&amp;rdquo;, una cadena y musica guapachosa saliendo de el, solo indicaban que
+de ninguna manera ese podria ser el lugar acordado&lt;/p&gt;
+
+&lt;p&gt;tras desaprovechar aquella tarde, al regresar a &amp;ldquo;la oficina&amp;rdquo; con asombro y pena
+(por no ver a los NAB) comprobe que en efecto, ese samanna era donde debia entrar&lt;/p&gt;
+
+&lt;p&gt;al dia siguiente, revisando la cartelera habia dos eventos, el ya antes
+comentado &lt;em&gt;Marquis Hill Quartet&lt;/em&gt; y este Emergente. La desicion no era muy clara
+pero me decante por el evento jazzero.&lt;/p&gt;
+
+&lt;p&gt;Para fortuna, los dos eventos no estaban demaciado distantes uno de otro. Como
+entre la clase magistral de Marquis Hill y el concierto habia un intervalo de
+aproximadamente 90 minutos, aproveche para visitar ese sitio y de paso preguntar
+por (segun el cartel) la presentacion y venta de material&lt;/p&gt;
+
+&lt;p&gt;pregunte si los Never dejaron algo a la venta, pero nop. En su lugar me
+ofrecieron una recopilacion (gratis) de las bandas que se presentaban&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/MEX-01.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://www.nasciiboy.land/img/MEX-02.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;por lo demas, durante el tiempo que estube precente, solo pude ver a una sexi, sexi
+cantante terminar su precentacion y a unos tios alistar su equipo&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/samanna.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Luego de unos dias ne dispuse a hacer una copia de seguridad del material. Para
+ello utilice los siguiguientes comandos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt install abcde flac
+abcde -o flac
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;No hace falta ir a ninguna ruta en especifico, ni indicar nada en
+particular. La opcion &lt;code&gt;-o flac&lt;/code&gt; es para obtener flacs en lugar de wavs. Lo
+habria hecho con k3b, pero el equipo de mas accesible alcance no tenia interfaz
+grafica y estaba conectado por ssh.&lt;/p&gt;
+
+&lt;p&gt;luego (tras copiar al equipo principal) puse algunos tags con &lt;code&gt;easytag&lt;/code&gt; y ya esta&lt;/p&gt;
+
+&lt;p&gt;tenia algo de reparo en subir esto al repositorio/web pues si antes apenas llegaba a
+los 200MB, con esto se ve amentado en 650MB y tampoco sabia si git(hub|lab)
+tendrian la benevolencia de solventar las descargas de los chiliones de lectores
+de este sitio, hasta que una serie de experimentos y fracasos de gestionar un
+servidor casero terminaron en probar (por dos meses &amp;ldquo;gratis&amp;rdquo;) los servicios de
+&amp;ldquo;un vps&amp;rdquo;. Jo, jo, jooo, no hay color entre subir cosas 70KiB/s y ver que en el vps
+alcanza los 15MiB/s (B = byte) sin agitarse!&lt;/p&gt;
+
+&lt;p&gt;bueno no lo extiendo mas, por &lt;a href=&#34;http://www.nasciiboy.land/fonos/Morelos-Emergente-Mex-15.tar.xz&#34;&gt;aqui&lt;/a&gt;
+dejo el backup del disco Morelos Emergente Mex 15 en tar.xz (por que no se me
+ocurrio otra cosa) y tambien por &lt;a href=&#34;http://www.nasciiboy.land/fonos/Magatama.tar.xz&#34;&gt;aca&lt;/a&gt; otro album de una
+banda local que anteriormente mencione pero no backupie hasta ahora. Su
+nombre es Magatama y tocan un jazzito interesante, su presentacion del 2018
+contenia un sonido mas elaborado, pero esta su primer grabacion tampoco es para
+nada desdeñable.&lt;/p&gt;
+
+&lt;p&gt;no incluyo escans, fotos ni caratulas, por que no creo que lo que pueda hacer
+refleje las intenciones/material artistico en su mejor calidad. Por otro lado
+los bits de un flac son 100% identicos, copiables y compartibles!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Teopanzolco – 02 (Marquis Hill Quartet)</title>
@@ -39,7 +130,7 @@ de los musicos y alguna que otras palabras de sabiduria&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/teo-02-a.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;los exponentes tenian poca vena didactica, quiza no era su mejor dia. Intentando
-hacer mas dinamico el evento, el lider invito al escenario a algunos musicos y
+hacer mas dinamico el momento, el lider invito al escenario a algunos musicos y
 un par de mortales con la intencion de demostrar que hacer b-l-u-e-s es lo mas
 sencillo del mundo&lt;/p&gt;
 
@@ -116,7 +207,7 @@ a los golpecillos. Dos minutos despues comenzaba el j-a-z-z-z. Una competencia
 para ver quien se imponia con su ritmo y complejidad a los demas. Yehhhh! que se
 levante y huya quien lo encuentre incomprensible!&lt;/p&gt;
 
-&lt;p&gt;el gentil lider limitaba su participacion haciendo mas llamativas sus
+&lt;p&gt;el gentil lider limitaba su participacion haciendo mas llamativa cada
 intervenciones. Ejem, en realidad cada uno, casi dentro de cada pieza tenia su
 momento, sin embargo el baterista era un MONSTRUO. Joder cada una de sus
 demostraciones terminaba en contundentes aplausos.&lt;/p&gt;
