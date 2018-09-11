@@ -2,22 +2,794 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Howto on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>http://www.nasciiboy.land/tags/howto/</link>
+    <link>https://nasciiboy.land/tags/howto/</link>
     <description>Recent content in Howto on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Fri, 13 Apr 2018 14:26:21 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 11 Sep 2018 09:47:52 -0500</lastBuildDate>
     
-        <atom:link href="http://www.nasciiboy.land/tags/howto/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.land/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>BPS</title>
+      <link>https://nasciiboy.land/prog/bps/</link>
+      <pubDate>Tue, 11 Sep 2018 09:47:52 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/bps/</guid>
+      <description>
+
+&lt;p&gt;sehhh, BPS! (&lt;a href=&#34;https://es.wikipedia.org/wiki/Battle_Programmer_Shirase&#34;&gt;Battle Programmer Shirase&lt;/a&gt;)
+ese anime que no nos hace sentir mejor persona y gira en torno a las prodigiosas
+habilidades del buen Akira Shirase (programador/sysadmin/cracker/animal-o-cosa y
+mejor persona) y sus situaciones comprometidas medio ecchi (con chicas de edad
+&amp;ldquo;no especificada&amp;rdquo;) que situan en un dilema moral a aquellos que le solicitan
+algun favor&lt;/p&gt;
+
+&lt;p&gt;Por supuesto que Akira nunca tiene que consultar documentacion, copiar y pegar
+errores en el navegador y los unicos fallos que se atreven a presentarsele, son
+desde luego, los que el mismo provoca. Para el resto de desgraciados que
+inmerecidamente habitamos la misma dimension, solo nos queda revolcarnos en la
+podredumbre y anotar &amp;ldquo;recetas&amp;rdquo; nada elegantes, concretas, ni profundas
+sobre configuraciones que apenas se entienden y desde luego, no nos haran ser
+&amp;ldquo;programadores&amp;rdquo;, &amp;ldquo;expertos&amp;rdquo; o populares. Ha, Ha, Ha, Ha&lt;/p&gt;
+
+&lt;p&gt;y? nahh, habia estado revisando algunos vps(s)&amp;hellip; unas maquinas (virtuales) que
+rentas con una cantidad pactada de cpu, disco, ram e internete que no deberia de
+apagarse a ninguna hora y en la que puedes poner tus mierdas, en particular un
+servidor web gestionado &amp;ldquo;a mano&amp;rdquo;. Esto por supuesto, (paleando las limitaciones
+de almacenamiento casi igual de costoso que la tinta de impresora) sera tan
+bueno y satisfactorio como los tutoriales copy-paste de internet (y un monton de
+nesedad) te permitan realizar&lt;/p&gt;
+
+&lt;p&gt;mientras hacia dichas pruebas &amp;ldquo;gratuitas&amp;rdquo; que forzosamente necesitaron varias
+busquedas por &amp;ldquo;el mejor&amp;rdquo; tutorial para &amp;ldquo;XXXXXX&amp;rdquo; version &amp;ldquo;YYYYYY&amp;rdquo;, se acumularon una
+cantidad considerable de enlaces asi como ficheros de configuracion que
+para la siguiente &amp;ldquo;reinstalacion&amp;rdquo; seguramente no recondare. Por ello mejor
+dejarlo medio organizado para el yo del futuro.&lt;/p&gt;
+
+&lt;p&gt;debo aclarar que es solo un primer intento al que se combino (por mi constante
+insatisfaccion) el proyecto de tener un servidor en casa autogestionado
+(torrente &lt;sup&gt;24&lt;/sup&gt;&amp;frasl;&lt;sub&gt;7&lt;/sub&gt;, ftp, stream de videos/musica, etc, etc). Asi que el resultado es
+medio uno y medio otro, pero (imaginariamente) centrado en poner en
+funcionamiento el servidor en casa.&lt;/p&gt;
+
+&lt;p&gt;Je, eso de rentar un vps con internete a velocidad de primer mundo mola un
+guevo, aunque si quieres hacerte de unos buenos TeraBytes de almacenamiento
+deberias ir buscando una buena hipoteca&amp;hellip; si es que tienes casa&amp;hellip; ignorando ese aspecto, el precio
+por lo que ofertan es razonable, aunque la tranquilidad y &amp;ldquo;el placer de
+tener tu propia infraestructura, viendole parpadear los leds directamente es
+mucho mayor, supongo.&lt;/p&gt;
+
+&lt;p&gt;mientras me hago con una rapsberry/micro-server/nuc/mini-itx-de-bajo-consumo-24x7x∞
+tocara conservar (y pagar dentro de un par de meses) el vps. Temporalmente hice las pruebas
+en una media-laptop con 12 años de antiguedad, 512MB de ram, 40GB HDD con debian
+estable 9.5 sin entorno grafico. Al final consume ~30MiB de ram y casi sin
+movimiento del procesador y, es necesario remarcar que su procesador mono nucleo
+va mas fluido que el procesador virtual del vps. Tambien, el contar con el
+equipo en la red local hace que la conexion via ssh no tenga nada de retraso.&lt;/p&gt;
+
+&lt;p&gt;al lio, pues!&lt;/p&gt;
+
+&lt;h2 id=&#34;red&#34;&gt;Red&lt;/h2&gt;
+
+&lt;p&gt;el hardware en cuestion trae un adaptador wifi (intel) que funciona sin instalar
+drivers privativos. No me gusta conectar el cable de red, por que creo que
+inesperadamente algun relampago podria cegar la vida del aparato. Asi pues, mientras menos
+cables (un ups, interruptores magneticos y un multicontacto de interruptor con
+&amp;ldquo;luz roja&amp;rdquo;) de por medio, mayor tranquilidad mental&lt;/p&gt;
+
+&lt;p&gt;si bien antes habia visto eso de configurar la red con ip fija, nunca lo habia
+llebado a cabo, encima varios comandos se han vuelto obsoletos y systemd
+extiende sus tentaculos por todos los sitios.&lt;/p&gt;
+
+&lt;p&gt;Haciendo caso a la &lt;a href=&#34;https://wiki.debian.org/WiFi/HowToUse&#34;&gt;wiki&lt;/a&gt; de debian
+lo primero seria colocar los permisos apropiados al fichero de configuracion de
+las interfaces de red&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; chmod 0600 /etc/network/interfaces
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;despues, como en mi caso con un wifi cifrado con WPA2 tendriamos que obtener unas digitos
+hexadeci-magicos, con el comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; wpa_passphrase ssid contraseña
+network={
+        ssid=&amp;quot;ssid&amp;quot;
+        #psk=&amp;quot;contraseña&amp;quot;
+        psk=ccb290fd4fe6b22935cbae31449e050edd02ad44627b16ce0151668f5f53c01b
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;ssid&lt;/code&gt; = nombre de wifi. El campo &lt;code&gt;psk&lt;/code&gt; tendria despues que agregarse dentro de
+la configuracion (&lt;code&gt;/etc/network/interfaces&lt;/code&gt;). Para evitar erorres, mejor
+redireccionar la salida a dicho fichero. Ya dentro de este, se podra editar con
+mayor comodidad&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; wpa_passphrase mi-ssid mi-contraseña &amp;gt;&amp;gt; /etc/network/interfaces
+&amp;gt; emacs /etc/network/interfaces
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y bueno&amp;hellip; en este punto el tutorial copy-pasteable suguiere configurar la red con
+conexion automatica, nos dejan este ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;auto wlan0
+iface wlan0 inet dhcp
+        wpa-ssid mi-ssid
+        wpa-psk ccb290fd4fe6b2293cbae351449e050edd2ad044627b16ce1510a48bb7c7c01b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde deberiamos substituir &lt;code&gt;wlan0&lt;/code&gt; por el nombre de nuestra interfaz de red
+wifi, que podemos obtener con el comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ip a
+1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: enp6s7: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 00:0a:e4:f6:20:5b brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.177/24 brd 192.168.1.255 scope global enp6s7
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20a:e4ff:fef6:205b/64 scope link
+       valid_lft forever preferred_lft forever
+3: wlp6s5: &amp;lt;BROADCAST,MULTICAST&amp;gt; mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:16:ce:63:f0:e2 brd ff:ff:ff:ff:ff:ff
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mmm, no se que sea &lt;code&gt;lo&lt;/code&gt;, pero &lt;code&gt;enp*&lt;/code&gt; (&lt;code&gt;enp6s7&lt;/code&gt;) seria la interfaz &amp;ldquo;por
+cable&amp;rdquo;. &lt;code&gt;wlp*&lt;/code&gt; (&lt;code&gt;wlp6s5&lt;/code&gt;) la interfaz inalambrica. Asi que substuimos &lt;code&gt;wlan0&lt;/code&gt; por &lt;code&gt;wlp6s5&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;y para arrancar la red, bastaria con:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ifup mi-interfaz-inalambrica
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(puede que si tenemos otra red ya habilitada, sea necesario antes hacer &lt;code&gt;ifdown mi-interfaz-habilitada&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; luego intente con la configuracion &lt;a href=&#34;https://wiki.debian.org/WiFi/AdHoc&#34;&gt;estatica&lt;/a&gt;
+agregando/mezclando algunos campos, tal que asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;auto wlp6s5
+iface wlp6s5 inet static
+        address 192.168.1.66
+        netmask 255.255.255.0
+        wireless-channel 1
+        wireless-mode ad-hoc
+        wpa-ssid mi-ssid
+        wpa-psk ccb290fd4fe6b22935cbae31449e050edd02ad44627b16ce0151668f5f53c01b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se suponia que &lt;code&gt;address&lt;/code&gt; seria la ip estatica, pero esta configuracion no me
+daba internet, aunque si permitia conectar en la red local.&lt;/p&gt;
+
+&lt;p&gt;Ante el fracazo de lograr la ip estatica por wifi, ademas de escuchar que el
+tio de un conocido que salia con la prima de una prima de un amigo sobre que
+en los servidores web no se permite la conexion por wifi, conecte el cable y por suerte, esta
+ocacion la configuracion si fue satisfactoria, quedando tal que asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+allow-hotplug enp6s5
+iface enp6s5 inet static
+      address 192.168.1.177
+      netmask 255.255.255.0
+      gateway 192.168.1.254
+
+# auto wlp6s5
+# iface wlp6s5 inet dhcp
+#       wpa-ssid mi-ssid
+#       wpa-psk ccb290fd4fe6b2293cbae351449e050edd2ad044627b16ce1510a48bb7c7c01b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se comento la parte referente al wifi, por lo demas &lt;code&gt;enp6s5&lt;/code&gt; es la interfaz
+cableada&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gateway&lt;/code&gt; es la &amp;ldquo;direccion&amp;rdquo; del router/modem (la caja del internet). Para
+haberiguar esta direccion ejecutamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ip r
+default via 192.168.1.254 dev enp6s5 onlink
+169.254.0.0/16 dev enp6s5 scope link metric 1000
+192.168.1.0/24 dev enp6s5 proto kernel scope link src 192.168.1.177
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(la &amp;ldquo;puerta de enlace&amp;rdquo; (o &lt;em&gt;gateway&lt;/em&gt;) esta despues de &lt;code&gt;default via&lt;/code&gt;, en este caso
+&lt;code&gt;192.168.1.254&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;address&lt;/code&gt; (supongo) tendria que iniciar con los primeros tres rangos del
+&lt;code&gt;gateway&lt;/code&gt; y terminar con el numero que queremos para la ip fija, en mi caso
+&lt;code&gt;177&lt;/code&gt; por-que-si&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;netmask&lt;/code&gt; es un numero que nos permite enmascarar que consultas son filtradas
+hacia &amp;ldquo;algun sitio&amp;rdquo; (o algo asi). Segun varios post del internete, el numero
+magico es &lt;code&gt;255.255.255.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ssh&#34;&gt;SSH&lt;/h2&gt;
+
+&lt;p&gt;con la ip fija, el siguiente paso logico por comodidad como tambien para
+economizar en monitores, vendria a ser conectar via ssh. Primero instalamos el
+servidor ssh en nuetro server-de-pruebas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install openssh-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto deberia poner operativo el servidor, podriamos corroborarlo con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl status sshd
+● sshd.service - OpenSSH server daemon
+...
+   Active: active (running) since Mon 20XX-YY-YY
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;apareceria el &lt;code&gt;●&lt;/code&gt; en color verde al igual que &lt;code&gt;active (running)&lt;/code&gt;, si no fuera
+asi quiza&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl enable sshd
+&amp;gt; systemctl start  sshd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;desde ahora continuaremos toda la interaccion desde la maquina donde vamos a
+conectar hacia el servidor&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh nasciiboy@192.168.1.177
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;cambiar &lt;code&gt;nasciiboy&lt;/code&gt; por el usuario de vuestra maquina, colocar la &lt;code&gt;@&lt;/code&gt; y luego la
+ip. En caso de tener un puerto distinto al establecido por defecto (22), agregar &lt;code&gt;-p numero-puerto&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;ahora bien, para hacer mas seguro (y comodo) conectar con el servidor,
+deberiamos configurar &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/como-configurar-las-llaves-ssh-en-ubuntu-18-04-es&#34;&gt;un par de llaves&lt;/a&gt;
+desde la maquina donde conectaremos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh-keygen
+&amp;gt; cd ~/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego copiamos la &lt;strong&gt;llave publica&lt;/strong&gt; al servidor. A mano seria asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; scp id_rsa.pub nasciiboy@192.168.1.67:.ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o, &amp;ldquo;sin saber ni como&amp;rdquo;, con el comando dedicado `ssh-copy-id:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh-copy-id nasciiboy@192.168.1.67
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;finalmente deberiamos configurar el demonio (&lt;code&gt;sshd&lt;/code&gt;) para que no permita la
+conexion por contraseña, solo mediante llaves modificando dentro de
+&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PubkeyAuthentication yes
+...
+PermitEmptyPasswords no
+...
+PasswordAuthentication no
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tambien podriamos modificar el parametro&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PermitRootLogin yes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;cambiando &lt;code&gt;yes&lt;/code&gt; a &lt;code&gt;no&lt;/code&gt;, p-e-r-o, creo que la conexion por llave es
+suficientemente segura y si la contraseña de root es demaciado compleja como
+para ni saberla o se tiene paranoia de escribirla, dejar esta opcion encendida
+igual y no es mala idea&lt;/p&gt;
+
+&lt;p&gt;recargamos la configuracion del daemon ssh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl reload sshd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;probamos que la sesion ssh mediante llaves funcione e instalamos/configuramos
+las comodidades que creamos convenientes (&lt;code&gt;htop&lt;/code&gt;, &lt;code&gt;dfc&lt;/code&gt;, &lt;code&gt;emacs&lt;/code&gt;, etc, etc)&lt;/p&gt;
+
+&lt;h2 id=&#34;nginx&#34;&gt;nginx&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-8&#34;&gt;basicamente&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego desde nuestra red local podriamos confirmar si esta arriba el servidor web&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;elinks 192.168.1.177
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por el momento, un servidor sin comentarios, php, javascript, ni ninguna mierda
+mas, es todo lo que necesito. Como mi web se genera estaticamente, podria
+copiarse directamente todo el contenido dentro de &lt;code&gt;/var/www/http&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rsync -avz --delete ~/nasciiboy.land/public/ /var/www/html/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;he copiado el directorio que contiene mi web dentro de la home de root. Desde
+hay genero el sitio estatico con &lt;code&gt;hugo&lt;/code&gt; que a su vez crea el directorio &lt;code&gt;public&lt;/code&gt;
+el cual finalmente se sincroniza con el directorio por defecto del contenido del
+servidor &lt;code&gt;/var/www/html&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;importante&lt;/strong&gt; si acaso al visitar el sitio reciben como bienvenida &lt;strong&gt;403
+Forbiden&lt;/strong&gt;, seguramente el sitio no tenga los permisos de lectura apropiados. La
+solucion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; chmod -R 755 /var/www/html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en este punto bien podemos configurar (solo) un poco el servidor&lt;/p&gt;
+
+&lt;p&gt;Dentro de &lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt; (dentro del bloque de configuracion &lt;code&gt;http { ... }&lt;/code&gt;) creo que es buena
+idea no mostrarle la version particular que se esta ejecutando a los
+malintencionados. Basta colocar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; server_tokens off;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(los punto y coma son importantes, tenerlos en mente)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;nginx&lt;/code&gt; tiene unos logs (&lt;code&gt;/var/log/nginx&lt;/code&gt;) donde pone cosas como las ips de quien
+accede a nuestro flamante sitio. Estos ficheros se reescribiran si hacemos cosas
+como apagar-encerder el servidor. Para mantener estas preciadas metricas, lo mas
+sensato es hacer un&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl reload nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y ver si todo fue bien con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl status nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero&amp;hellip; nada es tan sencillo. El servidor no volvia a encender, segun &lt;a href=&#34;https://stackoverflow.com/questions/42078674/nginx-service-failed-to-read-pid-from-file-run-nginx-pid-invalid-argument&#34;&gt;stackoverflow&lt;/a&gt;
+nginx tenia un bug en debian (se ve al consultar con &lt;code&gt;systemctl status nginx&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+nginx.service: Failed to read PID from file /run/nginx.pid: Invalid argument
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;la solucion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; mkdir /etc/systemd/system/nginx.service.d
+&amp;gt; printf &amp;quot;[Service]\nExecStartPost=/bin/sleep 0.1\n&amp;quot; &amp;gt; /etc/systemd/system/nginx.service.d/override.conf
+&amp;gt; systemctl daemon-reload
+&amp;gt; systemctl restart nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mmm, por unos dias dude sobre la forma correcta de actualizar el contenido en
+&lt;code&gt;/var/www/html&lt;/code&gt;, si habia que parar y encender el servidor o si hacer un
+&lt;code&gt;reload&lt;/code&gt;. Segun parece no es necesario&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Aun no se muy bien como es esto de ver &amp;ldquo;las metricas&amp;rdquo; del servidor. Modificando
+un one-liner visto en el blog de &lt;a href=&#34;https://www.ochobitshacenunbyte.com/2018/07/04/que-comando-de-terminal-usas-mas-veces-en-linux/&#34;&gt;davidochobits&lt;/a&gt;
+que a su vez lo vio en reddit, lanzo el siguiente comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | tail | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 10)&#39;
+66.249.79.87    15  ▄
+181.95.155.18   16  ▄
+66.249.79.254   18  ▄
+17.58.97.53     21  ▄▄
+40.77.167.24    21  ▄▄
+66.249.79.252   23  ▄▄
+179.6.202.53    24  ▄▄
+18.234.114.96   60  ▄▄▄▄▄▄
+150.109.59.181  139 ▄▄▄▄▄▄▄▄▄▄▄▄▄
+90.162.220.89   163 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ja, ja, que rastrero, y para contabilizar las visitas totales pues se filtra
+(sin &lt;code&gt;tail&lt;/code&gt;) y suma la segunda columna con &lt;code&gt;awk&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 10)&#39; | awk &#39;{ tot+=$2 }; END { print &amp;quot;TOTAL &amp;quot; tot }&#39;
+TOTAL 625
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si quisieramos ver a quien pertenece una ip (o dominio):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; whois 90.162.220.89
+...
+role:           Hostmaster Administrator FTE
+address:        Parque Empresarial La Finca
+address:        Edificio 9
+address:        Paseo del Club Deportivo, 1
+address:        28223 Pozuelo de Alarcon
+address:        Madrid, Spain
+admin-c:        HA1066-RIPE
+admin-c:        HA1067-RIPE
+tech-c:         HA1066-RIPE
+tech-c:         HA1067-RIPE
+nic-hdl:        HAF10-RIPE
+remarks:        spam, abuse reports....mailto:abuse@orange.es
+abuse-mailbox:  abuse@orange.es
+mnt-by:         UNI2-MNT
+created:        2005-08-19T10:24:55Z
+last-modified:  2013-01-17T16:47:17Z
+source:         RIPE # Filtered
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;entre estos, Tencent, Baidu y Google se concentran casi todas las consultas&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;router&#34;&gt;router&lt;/h2&gt;
+
+&lt;p&gt;en este punto (o quiza antes (o despues&amp;hellip;)) nos vendria bien conocer algunas cosas
+medianamente importantes, como cual es nuestra ip publica y que dispositivos hay
+en nuestra red local (como en caso de hacer un ssh a un dispositivo sin ip
+fija). Para lo segundo segun un &lt;a href=&#34;https://nideaderedes.urlansoft.com/2013/12/23/linux-como-puedo-saber-que-maquinas-hay-conectadas-en-mi-red-local/&#34;&gt;post&lt;/a&gt;
+y corroborado en el mundo real, podemos conocer los dispositivos en la red local
+con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; nmap -sP 192.168.1.1-255
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-09-09 22:09 CDT
+Nmap scan report for 192.168.1.66                            # movil
+Host is up (0.21s latency).
+Nmap scan report for nasciiboy.myddns.rocks (192.168.1.177)  # server (luego explico mas)
+Host is up (0.00050s latency).
+Nmap scan report for 192.168.1.214                           # mi pc
+Host is up (0.00043s latency).
+Nmap scan report for 192.168.1.253                           # un &amp;quot;repetidor&amp;quot;
+Host is up (0.00093s latency).
+Nmap scan report for rga.ip (192.168.1.254)                  # router
+Host is up (0.0022s latency).
+Nmap done: 255 IP addresses (5 hosts up) scanned in 14.53 seconds
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o tambien dentro del router &lt;strong&gt;Estado &amp;gt; Lista de dispositivos LAN&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;luego, para conocer nuestra ip publica, el modelo de router que me da la compañia
+lo proporciona dentro de &lt;strong&gt;Estado &amp;gt; PPPoE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;otras eficaces formas de conococer la ip publica sin movernos del terminal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; curl ifconfig.co # mas rapido que la opcion &#39;.me&#39;
+187.225.125.52
+&amp;gt; curl ifconfig.me
+187.225.125.52
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;recordar que esta ip (amenos que tengamos un acuerdo con el proveedor) puede
+cambiar entre un apagon a otro. Mientras tanto pasemos a abrir los puertos de
+nuestro router&lt;/p&gt;
+
+&lt;p&gt;vamos a &lt;strong&gt;NAT &amp;gt; Mapeo de puertos&lt;/strong&gt;, luego &lt;strong&gt;Agregar&lt;/strong&gt;, &lt;strong&gt;Servidor web&lt;/strong&gt;. En &lt;strong&gt;IP
+LAN&lt;/strong&gt; ponemos la direccion fija de nuestro servidor apuntando al puerto 80, abriendo tambien el puerto
+80 en la ip publica. Repetimos el proceso para el puerto 443 (https)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ddns&#34;&gt;ddns&lt;/h2&gt;
+
+&lt;p&gt;tenemos encendido el servidor, abiertos los puertos y podemos hacer una &lt;strong&gt;&amp;ldquo;consulta
+local&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; elinks 192.168.1.177
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero? podemos contactar con nuestra ip publica, darsela a nuestros amigos y ser populares?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; elinks 187.225.125.52
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;NO&lt;/strong&gt; y ni en firefox funciona! Segun parece, algun &amp;ldquo;mecanismo de conexion de
+no se que, que es muy complicado&amp;rdquo; impide contactar desde nuestra red local consultando
+nuestra ip publica. Por que? ni idea, una consulta decia que era muuuhhh
+complicado y le creere&lt;/p&gt;
+
+&lt;p&gt;ja, ja, sucede que anteriormente probe esto de consultar desde la red local la
+ip publica&amp;hellip; y al no tener resultado, considere que era un puto truño! Haaa,
+por que nadie lo explico?&lt;/p&gt;
+
+&lt;p&gt;con aquello de las pruebas que estoi haciendo con el vps rentado, conencte a el
+(en Frankfurt) via ssh y desde aya el &lt;code&gt;elinks&lt;/code&gt; aputando a mi ip publica funcionaba a la
+perfeccion!&lt;/p&gt;
+
+&lt;p&gt;la solucion? ni idea, monta tus mierdas y prueba desde fuera como puedas&lt;/p&gt;
+
+&lt;p&gt;y bueno, como mencionaba previamente, si tenemos un contrato estandar con el
+proveedor de internet, la ip publica puede que cambie. Como es mas confortable pasar un
+dominio que una ip, la idea es recurrir a un servicio de terceros para que le
+siga la pista a los cambios en nuestra ip y de preferencia nos de un dominio
+no-muy-feo&lt;/p&gt;
+
+&lt;p&gt;entre las (dos) opciones que busque estaban &lt;a href=&#34;https://www.noip.com/&#34;&gt;no-ip&lt;/a&gt; y
+&lt;a href=&#34;https://www.dynu.com/&#34;&gt;dynu&lt;/a&gt;. No recuerdo la causa, pero preferi dynu.&lt;/p&gt;
+
+&lt;p&gt;Hay que crearse una cuenta y te dan a elegir entre varios dominios (o colocar el
+tuyo, pero aun no es momento para ello), el que escogi fue
+nasciiboy.myddns.rocks (casi, nunca en linea)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-d0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;tras el registro y demas, deberiamos tener un metodo para desde nuestro servidor
+reportar periodicamente nuestra ip (por ejemplo, cada minuto) y con ello
+actualizar la informacion en dynu y de ser posible automaticamente.&lt;/p&gt;
+
+&lt;p&gt;ellos tienen un programa para descargar en debian&amp;hellip; je, je, si, ahorita me lo
+instalo, como no. Para los desconfiados ofrecen una serie de opciones de
+configuracion diversas, en mi caso con &lt;code&gt;ddclient&lt;/code&gt; que ya viene en los repositorios&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install ddclient
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en el proceso de instalacion, saltara una TUI para configurar la direccion a
+donde llamar, la contraseña, cuenta, etc. Pero esto no funciona del todo
+bien. Lo recomendable es siguiendo el &lt;a href=&#34;https://www.dynu.com/DynamicDNS/IPUpdateClient/DDClient&#34;&gt;tutorial&lt;/a&gt;
+de la propia dynu, modificar el fichero &lt;code&gt;/etc/ddclient.conf&lt;/code&gt; de la siguiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# ddclient configuration for Dynu
+#
+# /etc/ddclient.conf
+daemon=60                                                    # Check every 60 seconds.
+syslog=yes                                                   # Log update msgs to syslog.
+mail=root                                                    # Mail all msgs to root.
+mail-failure=root                                            # Mail failed update msgs to root.
+pid=/var/run/ddclient.pid                                    # Record PID in file.
+use=web, web=checkip.dynu.com/, web-skip=&#39;IP Address&#39;        # Get ip from server.
+server=api.dynu.com                                          # IP update server.
+protocol=dyndns2
+login=myusername                                             # Your username.
+password=YOURPASSWORD                                        # Password or MD5/SHA256 of password.
+MYDOMAIN.DYNU.COM                                            # List one or more hostnames one on each line.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;es muy importante colocar la linea de pid, de lo contrario el programita este,
+hara consultas a lo bestia. Por lo demas solo cambiar &lt;code&gt;login&lt;/code&gt;, &lt;code&gt;password&lt;/code&gt; y &lt;code&gt;MYDOMAIN.DYNU.COM&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;ahora si, podemos contactar desde fuera de casa con el &amp;ldquo;dominio provicional&amp;rdquo;, o,
+en busca de algun falso sentimento de tranquilidad agregar nuestro dominio a los
+hosts locales &lt;code&gt;/etc/hosts&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;192.168.1.177 nasciiboy.myddns.rocks
+127.0.0.1     localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1           localhost localhost.localdomain localhost6 localhost6.localdomain6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;con esto escribiendo &lt;code&gt;nasciiboy.myddns.rocks&lt;/code&gt; en firefox accederiamos al sitio
+local con el &amp;ldquo;dominio&amp;rdquo;. No se por que, pero con &lt;code&gt;elinks&lt;/code&gt; esto no funciona&lt;/p&gt;
+
+&lt;h2 id=&#34;cosas&#34;&gt;cosas&lt;/h2&gt;
+
+&lt;p&gt;entre varias consultas y post ajenos que me da peresa enlazar, hay varios
+comandos interesantes para conocer &amp;ldquo;¡¿que?!&amp;rdquo; sobre ips, dns y puertos&lt;/p&gt;
+
+&lt;p&gt;(aqui una combinacion de salidas mezcladas de mi sitio en el vps y de las
+pruebas con el servidor local)&lt;/p&gt;
+
+&lt;p&gt;con &lt;code&gt;dig&lt;/code&gt; podemos ver la configuracion del dns y tambien conocer la ip&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; dig nasciiboy.land
+
+; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.10.3-P4-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; nasciiboy.land
+;; global options: +cmd
+;; Got answer:
+;; -&amp;gt;&amp;gt;HEADER&amp;lt;&amp;lt;- opcode: QUERY, status: NOERROR, id: 56488
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;nasciiboy.land.			IN	A
+
+;; ANSWER SECTION:
+nasciiboy.land.		600	IN	A	46.101.138.205
+
+;; Query time: 27 msec
+;; SERVER: 67.207.67.2#53(67.207.67.2)
+;; WHEN: Mon Sep 10 03:24:43 UTC 2018
+;; MSG SIZE  rcvd: 59
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;nslookup&lt;/code&gt; para conocer la ip del servidor (aqui una prueba desde la red local)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; nslookup nasciiboy.myddns.rocks
+Server:		192.168.1.254
+Address:	192.168.1.254#53
+
+Non-authoritative answer:
+Name:	nasciiboy.myddns.rocks
+Address: 187.225.125.52
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;siguiedo un post &lt;a href=&#34;http://www.cursodehackers.com/nmap.html&#34;&gt;&amp;ldquo;para ser hacker&amp;rdquo;&lt;/a&gt;
+la receta para escanear todos los puertos&lt;/p&gt;
+
+&lt;p&gt;consultando (desde frankfurt) mi ip hogareña&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; nmap -sS 187.225.125.52
+Starting Nmap 7.40 ( https://nmap.org ) at 2018-09-10 14:01 UTC
+Nmap scan report for dsl-187-225-125-52-dyn.prod-infinitum.com.mx (187.225.125.52)
+Host is up (0.25s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 45.50 seconds
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;solo estan abiertos los puertos del servidor. Tenia dudas sobre la seguridad de
+poner este tipo de servicio en digamos &amp;ldquo;la maquina de uso principal&amp;rdquo;, desde
+luego ignorando posibles inconvenientes como que tu equipo se quede congelado
+por algun programa, probar un codigo de recursividad desatada o si se queda
+sin ram/swap. Luego de todas estas pruebas, no parece algo especialmente
+inseguro. Por supuesto, si alguien te quiere joder, allara la forma, mientras
+ese dia llega, supondre que todo funciona como es debido y con la suficiente
+seguridad por-defecto.&lt;/p&gt;
+
+&lt;p&gt;otro comando mas nos permite ver los saltos entre los routers hasta el destino&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; mtr nasciiboy.myddns.rocks
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;asta aqui los pasos con respecto al servidar local. Cuando adquiera la plaquita
+ideal con un chilion de ram, teras y nucleos ya colocare una guia mas rigurosa&lt;/p&gt;
+
+&lt;h2 id=&#34;https&#34;&gt;https&lt;/h2&gt;
+
+&lt;h3 id=&#34;ca-error&#34;&gt;CA error&lt;/h3&gt;
+
+&lt;p&gt;cuando estaba alojada la pagina en github-pages ellos se encargaban de
+proporcionar el https. Al mover el dns al vps intente mediante los comandos que
+varios post muestran instalar &lt;em&gt;let&amp;rsquo;s encrypt&lt;/em&gt;, entre &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/como-asegurar-nginx-con-let-s-encrypt-en-ubuntu-18-04-es&#34;&gt;uno&lt;/a&gt;
+de ellos, sugieren lo siguiente:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install python-certbot-nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego configurar &lt;code&gt;/etc/nginx/sites-available/default&lt;/code&gt; cambiando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;. . .
+server_name _;
+. . .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;. . .
+server_name mi-dominio www.mi-dominio;
+. . .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego, lanzar lo siguientes comandos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; nginx -t
+&amp;gt; systemctl reload nginx
+&amp;gt; certbot --nginx -d mi-sitio.com -d www.mi-sitio.com
+
+# en este punto se supone ya esta listo el certificado
+# y esto es para actualizarlo automaticamente
+&amp;gt; certbot renew --dry-run
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero ejecutar &lt;code&gt;certbot&lt;/code&gt; no sirvio de mucho&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Obtaining a new certificate
+Performing the following challenges:
+Client with the currently selected authenticator does not support any combination of challenges that will satisfy the CA.
+Client with the currently selected authenticator does not support any combination of challenges that will satisfy the CA.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si ese es el caso, seguramente &lt;code&gt;certbot&lt;/code&gt; habra dejado algunos inutiles timers y
+demonios de &lt;code&gt;systemd&lt;/code&gt;. Para deshabilitar tales regalos, le avente lo siguiente
+al terminal (aunque no se si sea lo correcto)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl stop    certbot.timer
+&amp;gt; systemctl stop    certbot
+&amp;gt; systemctl disable certbot.timer
+&amp;gt; systemctl disable certbot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;auto-certificado&#34;&gt;auto-certificado&lt;/h3&gt;
+
+&lt;p&gt;ante el fallo de certbot, mi primera opcion para no dejar que los buscadores
+ignoraran la opcion con https, fue crear mis propios certificados con casinos y
+colegilas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; mkdir /etc/nginx/ssl
+&amp;gt; openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;a las preguntas que se sucedian respondi en el nombre de la organizacion como
+&lt;em&gt;nascii-corp&lt;/em&gt;, para el correo mi correo regular (como seña de buena
+voluntad). El resto lo deje en blanco.&lt;/p&gt;
+
+&lt;p&gt;tras esto deberiamos modificar la configuracion de nginx (&lt;code&gt;/etc/nginx/sites-available/default&lt;/code&gt;)
+para que escuche en el puerto 443. Coloco mi fichero entero:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        listen 443 ssl;
+
+        # SSL configuration
+        #
+        # listen 443 ssl default_server;
+        # listen [::]:443 ssl default_server;
+        #
+        # Note: You should disable gzip for SSL traffic.
+        # See: https://bugs.debian.org/773332
+        #
+        # Read up on ssl_ciphers to ensure a secure configuration.
+        # See: https://bugs.debian.org/765782
+        #
+        # Self signed certs generated by the ssl-cert package
+        # Don&#39;t use them in a production server!
+        #
+        # include snippets/snakeoil.conf;
+
+        root /var/www/html;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm;
+
+        server_name nasciiboy.land www.nasciiboy.land;
+        ssl_certificate     /etc/nginx/ssl/nginx.crt;
+        ssl_certificate_key /etc/nginx/ssl/nginx.key;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+
+        error_page 404 /404.html;
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;poner bien los punto y coma&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;por supuesto el navegador se quejo&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-e0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;mirar la info del certificado&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-e1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;certbot-strikes-back&#34;&gt;certbot strikes back&lt;/h3&gt;
+
+&lt;p&gt;tras muchos intentos lanzando &lt;code&gt;certbot&lt;/code&gt; (esperando sin razon un resultado
+distinto) y leyendo unos post de &lt;a href=&#34;https://www.linuxito.com/seguridad/842-como-generar-un-certificado-ssl-tls-gratis-con-certbot&#34;&gt;linuxito&lt;/a&gt;,
+pero sobre todo de la &lt;a href=&#34;https://certbot.eff.org/lets-encrypt/debianstretch-nginx&#34;&gt;eff&lt;/a&gt;
+el certificado se materializo ejecutando lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; certbot --authenticator webroot --installer nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;los certificados funcionaron automagicamente, ja, ja, ja, no guarde el orden de
+lo que puse, para la proxima&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;y eso es todo por este aglutinado de cosas, happy hacking!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>LineageOS, Feeds &amp; Feel</title>
-      <link>http://www.nasciiboy.land/prog/m8-ii/</link>
+      <link>https://nasciiboy.land/prog/m8-ii/</link>
       <pubDate>Fri, 13 Apr 2018 14:26:21 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/m8-ii/</guid>
+      <guid>https://nasciiboy.land/prog/m8-ii/</guid>
       <description>
 
 &lt;p&gt;Luego del primer &lt;a href=&#34;../m8&#34;&gt;flasheo al m8&lt;/a&gt; probe un poco las &amp;ldquo;apps&amp;rdquo; de yutu que
@@ -39,7 +811,7 @@ nada que no sea consumir pasivamente y ver porno.&lt;/p&gt;
 &lt;p&gt;y asi hubiera seguido con el movil hasta el fin de los tiempos, hasta que una
 &amp;ldquo;broma&amp;rdquo; de parte del equipo de lineageOS hizo aparecer un mensaje perturbador&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/coin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/coin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;que? (me pregunte) la pagina del porno no se conforma con minar criptocurrencias
 cuando veo un video, ahora a colado un bicho en el sistema? (ha, ha, ha, que
@@ -99,7 +871,7 @@ hippiosos caer por completo en las garras de alphabet? puaghh&lt;/p&gt;
 &lt;p&gt;solo debemos ir a &lt;a href=&#34;https://www.youtube.com/subscription_manager&#34;&gt;https://www.youtube.com/subscription_manager&lt;/a&gt;, seguir hasta el fondo de
 la pagina y darle a &lt;strong&gt;Exportar Subcripciones&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;http://www.nasciiboy.land/media/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
+&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;https://nasciiboy.land/media/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
 (le he cambiado la extencion, agregando &lt;code&gt;.xml&lt;/code&gt; al final).&lt;/p&gt;
 
 &lt;p&gt;A continuacion un desglose. La clasificacion es dificil de encajar para varios
@@ -326,7 +1098,7 @@ siguiente conjunto de pasos en elisp, ir al fichero &lt;code&gt;subs.html&lt;/co
 &lt;p&gt;me gustaria decir que eso seria todo, pero no, unicamente conseguiremos los
 feeds en texto plano. Luego hay que convertirlos a un formato xml especial y
 darle la extencion &lt;code&gt;.opml&lt;/code&gt;, esta tarea es un ejercicio para el lector. Se puede
-tomar como referencia este (mi) listado &lt;a href=&#34;http://www.nasciiboy.land/media/data/antennapod-feeds.opml&#34;&gt;antennapod-feeds.opml&lt;/a&gt;
+tomar como referencia este (mi) listado &lt;a href=&#34;https://nasciiboy.land/media/data/antennapod-feeds.opml&#34;&gt;antennapod-feeds.opml&lt;/a&gt;
 (ya pasado por antennapod, y cambiando los feeds ivoox por las direcciones fuente
 cuando fue posible)&lt;/p&gt;
 
@@ -464,10 +1236,10 @@ equipos profecionales, por uno, dos o cien programas&lt;/p&gt;
     
     <item>
       <title>CAT</title>
-      <link>http://www.nasciiboy.land/prog/cat/</link>
+      <link>https://nasciiboy.land/prog/cat/</link>
       <pubDate>Fri, 23 Mar 2018 21:41:50 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/cat/</guid>
+      <guid>https://nasciiboy.land/prog/cat/</guid>
       <description>&lt;p&gt;Hace tiempo, mucho tiempo, cuando iniciaba mis aventuras con C, tenia la urgente
 necesidad de ingresar un &amp;ldquo;grafico&amp;rdquo; dentro de un arreglo de caracteres, el asunto
 es que dicho grafico contenia por supuesto algunos caracteres &amp;ldquo;especiales&amp;rdquo; para
@@ -482,7 +1254,7 @@ personaje de dudosas habilidades.&lt;/p&gt;
 &lt;p&gt;Asi pues, no recuerdo muy bien como, llegue a la siguiente solucion, que radica
 en &amp;ldquo;romper&amp;rdquo; las macros del preprocesador de C.&lt;/p&gt;
 
-&lt;p&gt;cortar y pegar en un fichero (digamos &lt;code&gt;CAT.c&lt;/code&gt;) o cliclar &lt;a href=&#34;http://www.nasciiboy.land/data/CAT.c&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;cortar y pegar en un fichero (digamos &lt;code&gt;CAT.c&lt;/code&gt;) o cliclar &lt;a href=&#34;https://nasciiboy.land/data/CAT.c&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
 #include &amp;lt;string.h&amp;gt;
@@ -549,10 +1321,10 @@ printf( &amp;quot;&amp;gt;&amp;gt;%s&amp;lt;&amp;lt;\n&amp;quot;, &amp;amp;map[0
     
     <item>
       <title>AWK</title>
-      <link>http://www.nasciiboy.land/prog/awk/</link>
+      <link>https://nasciiboy.land/prog/awk/</link>
       <pubDate>Mon, 05 Mar 2018 20:37:52 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/awk/</guid>
+      <guid>https://nasciiboy.land/prog/awk/</guid>
       <description>
 
 &lt;p&gt;AWK es un lenguaje de programacion diseñado para procesar datos basados en
@@ -843,10 +1615,10 @@ $ awk -f awkaster.awk
     
     <item>
       <title>Programming Howto (19-01-18)</title>
-      <link>http://www.nasciiboy.land/prog/programming-howto/</link>
+      <link>https://nasciiboy.land/prog/programming-howto/</link>
       <pubDate>Fri, 19 Jan 2018 21:58:23 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/programming-howto/</guid>
+      <guid>https://nasciiboy.land/prog/programming-howto/</guid>
       <description>
 
 &lt;p&gt;Hace tiempo que tenia intenciones de escribir mi version sobre por que la
@@ -983,7 +1755,7 @@ dificultoso mejorar, incluso incurable).&lt;/p&gt;
 en ingles, buscate la vida, pero cambia los control, blockmayus (y otras teclas)
 de posicion, asi:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Es preferible que aprendas ingles (aun pendiente), mas diria que los primeros
 años del trayecto no es necesario, hay muchas cosas que requieren atencion y &lt;em&gt;los basicos&lt;/em&gt;
@@ -1098,11 +1870,11 @@ te des cuenta&amp;hellip;)&lt;/p&gt;
   trata, vuelve a leer el capitulo y asi lo tendras mas claro&lt;/p&gt;
 
 &lt;p&gt;Sobre GCC, Bash apenas necesitas lo basico en algun post lo encontraras o en
-  su defecto hojea &lt;a href=&#34;http://www.nasciiboy.land/data/bash.pdf&#34;&gt;este&lt;/a&gt; para bash y &lt;a href=&#34;http://www.nasciiboy.land/data/GCC.pdf&#34;&gt;este&lt;/a&gt; otro para
+  su defecto hojea &lt;a href=&#34;https://nasciiboy.land/data/bash.pdf&#34;&gt;este&lt;/a&gt; para bash y &lt;a href=&#34;https://nasciiboy.land/data/GCC.pdf&#34;&gt;este&lt;/a&gt; otro para
   gcc, sobre los makes, je, nunca lo aprendiste&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;de Emacs, con el tutorial integrado (&lt;code&gt;Ctrl-h&lt;/code&gt; y luego &lt;code&gt;t&lt;/code&gt;), tambien y aunque
-  esta un poco retro y fuera de interne &lt;a href=&#34;http://www.nasciiboy.land/data/rpublica-emacs.zip&#34;&gt;rpublica&lt;/a&gt; o
+  esta un poco retro y fuera de interne &lt;a href=&#34;https://nasciiboy.land/data/rpublica-emacs.zip&#34;&gt;rpublica&lt;/a&gt; o
   consulta la siguiente &lt;a href=&#34;http://quijotelibre.com/recursos-gnu-emacs-y-org-mode/&#34;&gt;recopilacion&lt;/a&gt; del quijote libre&lt;/p&gt;
 
 &lt;h4 id=&#34;c-k-r-2-da-version&#34;&gt;C (K&amp;amp;R) (2^da version)&lt;/h4&gt;
@@ -1158,10 +1930,10 @@ aprender otra cosa&lt;/p&gt;
     
     <item>
       <title>HTC One M8 (flasheo)</title>
-      <link>http://www.nasciiboy.land/prog/m8/</link>
+      <link>https://nasciiboy.land/prog/m8/</link>
       <pubDate>Thu, 23 Nov 2017 16:26:40 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/m8/</guid>
+      <guid>https://nasciiboy.land/prog/m8/</guid>
       <description>
 
 &lt;p&gt;sucede que estas tranquilamente con tu dispositivo (un androide 4.4) que se
@@ -1285,7 +2057,7 @@ correo de &lt;em&gt;HTC-Unlockbootloader@htc.com&lt;/em&gt; con un adjunto &lt;s
 
 &lt;p&gt;se abrira en el movil la sugiente pantalla&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/step13.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/step13.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;movemos con VOLUMEN +/- hacia el Yes y confirmamos con POWER.&lt;/p&gt;
 
@@ -1296,7 +2068,7 @@ reentramos en el bootloader ahora desploqueado&lt;/p&gt;
 adb reboot bootloader
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/bootloader_screen.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bootloader_screen.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;en este punto ya tenemos el mobil listo para flashear cualquier otro sistema. Si
 desides arrepentirte puedes ingresar&lt;/p&gt;
@@ -1389,13 +2161,13 @@ hardware mas que potable)&lt;/p&gt;
     
     <item>
       <title>The Return Of F</title>
-      <link>http://www.nasciiboy.land/prog/the-return-of-f/</link>
+      <link>https://nasciiboy.land/prog/the-return-of-f/</link>
       <pubDate>Thu, 16 Nov 2017 13:24:08 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/the-return-of-f/</guid>
+      <guid>https://nasciiboy.land/prog/the-return-of-f/</guid>
       <description>
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/F.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/F.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Siguiendo esa bonita tradicion de las entradas &lt;strong&gt;&amp;ldquo;que hacer despues de instalar
 &lt;em&gt;X&lt;/em&gt;&amp;ldquo;&lt;/strong&gt;, llega el turno de hacer un:  &amp;ldquo;que hacer despues de instalar&amp;hellip; &lt;em&gt;Fedora&lt;/em&gt;&amp;hellip;&amp;rdquo;&lt;/p&gt;
@@ -1683,10 +2455,10 @@ equivalente en wayland? &lt;code&gt;startw&lt;/code&gt;, &lt;code&gt;startg&lt;/
     
     <item>
       <title>Java &amp; Me(h)</title>
-      <link>http://www.nasciiboy.land/prog/javame/</link>
+      <link>https://nasciiboy.land/prog/javame/</link>
       <pubDate>Fri, 10 Nov 2017 14:57:41 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/javame/</guid>
+      <guid>https://nasciiboy.land/prog/javame/</guid>
       <description>
 
 &lt;p&gt;Por que &lt;a href=&#34;https://picodotdev.github.io/blog-bitix/2015/05/10-razones-para-seguir-usando-java/&#34;&gt;razones&lt;/a&gt;
@@ -1728,7 +2500,7 @@ que va creciendo la complejidad de las cosas que &amp;ldquo;planeo&amp;rdquo; pr
 intuicion y sentido comun me dice que muchos de esos secretos ancestrales se
 encuentran alla afuera&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/believer.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/believer.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;o en el peor de los casos, estan cerca de ser ser promulgados, por alguien&amp;hellip;&lt;/p&gt;
 
@@ -1845,7 +2617,7 @@ descalificado, pero desde la pagina del autor pueden descargar el codigo de los
 ejemplos y el libro (en ingles) en formato html de esta 2^da edicion. Aqui el &lt;a href=&#34;http://www.mindviewinc.com/downloads/TIJ-2nd-edition.zip&#34;&gt;enlace al
 zip&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;o, y por si el enlace esta roto, bajarlo de &lt;a href=&#34;http://www.nasciiboy.land/data/TIJ-2nd-edition.zip&#34;&gt;aca&lt;/a&gt;,
+&lt;p&gt;o, y por si el enlace esta roto, bajarlo de &lt;a href=&#34;https://nasciiboy.land/data/TIJ-2nd-edition.zip&#34;&gt;aca&lt;/a&gt;,
 a esta le aplique un &lt;code&gt;dos2unix&lt;/code&gt; a todos los ficheros, para no tener que ver el
 &lt;em&gt;DOS&lt;/em&gt; en el emacs&lt;/p&gt;
 
@@ -1920,11 +2692,11 @@ multiples significados que enturbian la 🌈experiencia🌈&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>OCR</title>
-      <link>http://www.nasciiboy.land/prog/ocr/</link>
+      <link>https://nasciiboy.land/prog/ocr/</link>
       <pubDate>Thu, 09 Nov 2017 17:10:40 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/ocr/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/padesoor.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+      <guid>https://nasciiboy.land/prog/ocr/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/padesoor.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;sucede que tenia un libro que aprecio muchisimo, pero mucho mucho mucho, aunque
 no lo habia leido y lo escaneeehee para convertirlo en otra cobaya del proyecto
@@ -2024,13 +2796,13 @@ traen oceerres buenos y le quita la emocion, para esos casos basta con&lt;/p&gt;
     
     <item>
       <title>lxde shortcuts</title>
-      <link>http://www.nasciiboy.land/prog/lxde-shortcuts/</link>
+      <link>https://nasciiboy.land/prog/lxde-shortcuts/</link>
       <pubDate>Sun, 22 Oct 2017 12:36:18 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/lxde-shortcuts/</guid>
+      <guid>https://nasciiboy.land/prog/lxde-shortcuts/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A Gnome ♥ lo que pida! Mas, si el equipo es incapas de cumplir sus exigencias
 para una experiencia completa (contar con un procesador con 2 nucleos,
@@ -2112,7 +2884,7 @@ aparecer en un orden concreto. En su wiki tenemos una lista de &lt;a href=&#34;h
 disponibles&lt;/a&gt; y tambien nombes de (algunos)
 &amp;ldquo;&lt;a href=&#34;http://openbox.org/wiki/Help:Bindings&#34;&gt;eventos&lt;/a&gt;&amp;rdquo; del raton y teclado&lt;/p&gt;
 
-&lt;p&gt;de momento mi fichero de configuracion es &lt;a href=&#34;http://www.nasciiboy.land/data/lxde-rc.xml&#34;&gt;este&lt;/a&gt;, aqui los
+&lt;p&gt;de momento mi fichero de configuracion es &lt;a href=&#34;https://nasciiboy.land/data/lxde-rc.xml&#34;&gt;este&lt;/a&gt;, aqui los
 aspectos mas revelantes&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  &amp;lt;desktops&amp;gt;
@@ -2309,13 +3081,13 @@ aun no descubro como se realiza apropiadamente, Sayonara!&lt;/p&gt;
     
     <item>
       <title>The X86 Strikes Back</title>
-      <link>http://www.nasciiboy.land/prog/the-x86-strikes-back/</link>
+      <link>https://nasciiboy.land/prog/the-x86-strikes-back/</link>
       <pubDate>Sat, 14 Oct 2017 12:38:00 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/the-x86-strikes-back/</guid>
+      <guid>https://nasciiboy.land/prog/the-x86-strikes-back/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/kool.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/kool.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;bueno, la imagen es mas de 8bits que por ahora son los equipos
 retro-nostalgicos de moda, ya le llegara su momento a x86.&lt;/p&gt;
@@ -2643,10 +3415,10 @@ pedir nada para la wifi!&lt;/p&gt;
     
     <item>
       <title>Emacs, configuracion de verano</title>
-      <link>http://www.nasciiboy.land/emacs/v-config/</link>
+      <link>https://nasciiboy.land/emacs/v-config/</link>
       <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/emacs/v-config/</guid>
+      <guid>https://nasciiboy.land/emacs/v-config/</guid>
       <description>
 
 &lt;p&gt;todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs
@@ -2668,7 +3440,7 @@ a la brava y sin tener ni idea de como&lt;/p&gt;
 
 &lt;p&gt;por lo tanto si quieres replicar mi configuracion&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/morg-verano.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/morg-verano.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;por ejemplo para programar en go, c, tener un lector de rss, o iniciar en emacs
 con el tema &lt;em&gt;nascii&lt;/em&gt;, primero instala emacs, y luego crea una carpeta en tu
@@ -2680,7 +3452,7 @@ rm init-dot-el.zip
 emacs
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.nasciiboy.land/data/init-dot-el.zip&#34;&gt;el comprimido&lt;/a&gt; con forma de zip, almacena dos ficheros:
+&lt;p&gt;&lt;a href=&#34;https://nasciiboy.land/data/init-dot-el.zip&#34;&gt;el comprimido&lt;/a&gt; con forma de zip, almacena dos ficheros:
 &lt;code&gt;init.el&lt;/code&gt;, que es donde se coloca toda configuracion de emacs y pondre a
 continuacion casi tal cual y &lt;code&gt;nascii-theme.el&lt;/code&gt; mi &lt;em&gt;tema&lt;/em&gt; de colores personal,
 baraje el subirlo a melpa para que tambien forme parte de la instalacion magica,
@@ -3180,10 +3952,10 @@ rutas correspondientes&lt;/p&gt;
     
     <item>
       <title>PPSSPP</title>
-      <link>http://www.nasciiboy.land/vg/ppsspp/</link>
+      <link>https://nasciiboy.land/vg/ppsspp/</link>
       <pubDate>Tue, 02 May 2017 20:02:37 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/vg/ppsspp/</guid>
+      <guid>https://nasciiboy.land/vg/ppsspp/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../fs.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -3291,10 +4063,10 @@ nativo &lt;a href=&#34;../nxEngine/index.html&#34;&gt;nxEngine&lt;/a&gt;&lt;/p&g
     
     <item>
       <title>morg: como usar</title>
-      <link>http://www.nasciiboy.land/prog/morg-howto/</link>
+      <link>https://nasciiboy.land/prog/morg-howto/</link>
       <pubDate>Sun, 12 Mar 2017 09:33:15 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/morg-howto/</guid>
+      <guid>https://nasciiboy.land/prog/morg-howto/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../hello.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -4022,10 +4794,10 @@ alguna empresa, aver que sucede&lt;/p&gt;
     
     <item>
       <title>no mas tabs en go-mode</title>
-      <link>http://www.nasciiboy.land/emacs/notabs-for-gomode/</link>
+      <link>https://nasciiboy.land/emacs/notabs-for-gomode/</link>
       <pubDate>Sun, 12 Feb 2017 21:52:24 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/emacs/notabs-for-gomode/</guid>
+      <guid>https://nasciiboy.land/emacs/notabs-for-gomode/</guid>
       <description>&lt;p&gt;Go tiene una ridicula guia de estilo para formatear codigo que no me agrada, de
 no seguir algunas reglas el compilador/interprete simplemente se niega a hacer
 nada. Otras reglas, son menos rigurosas, como la indentacion o colocar o no
@@ -4094,10 +4866,10 @@ si seleccione todo + tab (&lt;code&gt;C-x h tab&lt;/code&gt;).&lt;/p&gt;
     
     <item>
       <title>org mode</title>
-      <link>http://www.nasciiboy.land/emacs/org-mode/</link>
+      <link>https://nasciiboy.land/emacs/org-mode/</link>
       <pubDate>Tue, 31 Jan 2017 14:40:54 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/emacs/org-mode/</guid>
+      <guid>https://nasciiboy.land/emacs/org-mode/</guid>
       <description>
 
 &lt;p&gt;&lt;code&gt;org-mode&lt;/code&gt; es un lenguaje de marcas ligeras nacido de, por, y para &lt;code
@@ -4693,10 +5465,10 @@ calidad e intento de adaptar el manual de org-mode a org-mode&lt;/p&gt;&lt;/li&g
     
     <item>
       <title>Definir atajos en Emacs</title>
-      <link>http://www.nasciiboy.land/emacs/keychords/</link>
+      <link>https://nasciiboy.land/emacs/keychords/</link>
       <pubDate>Sat, 07 Jan 2017 09:38:46 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/emacs/keychords/</guid>
+      <guid>https://nasciiboy.land/emacs/keychords/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../kara.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -4871,10 +5643,10 @@ el terminal no reconosca las teclas Super o Hyper.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>first theme</title>
-      <link>http://www.nasciiboy.land/emacs/first-theme/</link>
+      <link>https://nasciiboy.land/emacs/first-theme/</link>
       <pubDate>Wed, 28 Dec 2016 17:17:04 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/emacs/first-theme/</guid>
+      <guid>https://nasciiboy.land/emacs/first-theme/</guid>
       <description>
 
 &lt;h2 id=&#34;crear-un-tema-en-emacs&#34;&gt;Crear un Tema en Emacs&lt;/h2&gt;
@@ -5061,10 +5833,10 @@ presiona &lt;code&gt;C-c C-o&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Como dividir un album contenido en una sola pista flac</title>
-      <link>http://www.nasciiboy.land/apt/shnsplit/</link>
+      <link>https://nasciiboy.land/apt/shnsplit/</link>
       <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/apt/shnsplit/</guid>
+      <guid>https://nasciiboy.land/apt/shnsplit/</guid>
       <description>&lt;p&gt;En este mundo existen algunos seres extraños con tanto amor (libros, musica,
 series, peliculas, porno, &amp;hellip;) que no les cabe en su disco duro y tienen que
 compartirlo.&lt;/p&gt;
@@ -5110,10 +5882,10 @@ nombres &amp;ldquo;a mano&amp;rdquo; en &lt;code&gt;wdired-change-to-wdired-mode
     
     <item>
       <title>Ncurses</title>
-      <link>http://www.nasciiboy.land/prog/ncurses/</link>
+      <link>https://nasciiboy.land/prog/ncurses/</link>
       <pubDate>Mon, 19 Dec 2016 21:45:05 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/ncurses/</guid>
+      <guid>https://nasciiboy.land/prog/ncurses/</guid>
       <description>
 
 &lt;h2 id=&#34;que-es-ncurses&#34;&gt;Que es Ncurses&lt;/h2&gt;

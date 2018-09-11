@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apt on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>http://www.nasciiboy.land/tags/apt/</link>
+    <link>https://nasciiboy.land/tags/apt/</link>
     <description>Recent content in Apt on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 20 Aug 2017 15:59:03 -0500</lastBuildDate>
     
-        <atom:link href="http://www.nasciiboy.land/tags/apt/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.land/tags/apt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>iScheme</title>
-      <link>http://www.nasciiboy.land/prog/ischeme/</link>
+      <link>https://nasciiboy.land/prog/ischeme/</link>
       <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/ischeme/</guid>
+      <guid>https://nasciiboy.land/prog/ischeme/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/lambda.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/lambda.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para
 mi escaso saber, por su parte los conceptos programacionales con Scheme solo los
@@ -141,10 +141,10 @@ todos los &amp;ldquo;atajos&amp;rdquo; de edicion.&lt;/p&gt;
     
     <item>
       <title>stylus black-translator</title>
-      <link>http://www.nasciiboy.land/prog/stylus-black-translator/</link>
+      <link>https://nasciiboy.land/prog/stylus-black-translator/</link>
       <pubDate>Thu, 27 Jul 2017 00:50:52 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/stylus-black-translator/</guid>
+      <guid>https://nasciiboy.land/prog/stylus-black-translator/</guid>
       <description>&lt;p&gt;Si Firefox es mi navegador de confianza, no es solo por que sea software libre y
 tenga una &lt;em&gt;fundacion&lt;/em&gt; que le da soporte, tambien lo utilizo por que debido a que
 es software libre y lo desarrolla gente decente, su creacion refleja esta
@@ -167,14 +167,14 @@ les vengo a hablar, pues las tecnologias web que ejecutan &amp;ldquo;cosas&amp;r
 unico enemigo al que combato, este generoso cuerpo tambien tiene odio para las
 interfaces, casas, ropa y demas objetos con un asqueroso color blanco nuclear&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/black-nil.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/black-nil.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;asi que tome
 &lt;a href=&#34;https://userstyles.org/styles/114266/google-translate-by-kiwi&#34;&gt;un estilo ya hecho&lt;/a&gt; (si
 van a ese link bajar las defensas momentaneamente o no funciona) y
 le di forma hasta dejar al traductor de una manera que encuentro agradable&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/black-translator.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/black-translator.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;simplemente agregan &lt;a href=&#34;https://github.com/openstyles/stylus&#34;&gt;&lt;em&gt;Stylus&lt;/em&gt;&lt;/a&gt; al
 navegador (tambien disponible para chrome y sus spins) van a
@@ -203,7 +203,7 @@ html { background-color: #000; }
 
 .gb_R { display: none; }
 
-.gb_Nf .gb_Qg {
+.gb_Of .gb_Rg {
     display: none;
 }
 
@@ -1021,7 +1021,7 @@ mientras realizan la edicion)&lt;/p&gt;
 
 &lt;p&gt;felices trazos!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/contruct.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/contruct.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Por cierto, de forma casi inadvertida y estupida, mientras escribia un tema para
 un sitio que recopilara juegos foss de love2d (por aquello de tener ejemplos de
@@ -1039,10 +1039,10 @@ hare un tema nuevo, digno, reformado y en abismal color negro, jo, jo, jo.
     
     <item>
       <title>Love, Emacs &amp; Docs</title>
-      <link>http://www.nasciiboy.land/love2d/docset/</link>
+      <link>https://nasciiboy.land/love2d/docset/</link>
       <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/love2d/docset/</guid>
+      <guid>https://nasciiboy.land/love2d/docset/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Love2d&lt;/em&gt; es un framework &amp;ldquo;open source&amp;rdquo; para crear videojuegos 2D multiplataforma
@@ -1058,7 +1058,7 @@ documentacion&lt;/p&gt;
 en un ataque de creatividad, abri dos emacs en modo eww uno en cada monitor,
 grabe un marcador y a triunfar&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/love-wiki.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/love-wiki.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;luego de un rato&amp;hellip; fue obvio que no era la mejor forma de consultar la
 documentacion, y como no hay un maldito estandar para hacer documentacion
@@ -1066,7 +1066,7 @@ decente (hasta ahora) recurri a un viejo conocido&lt;/p&gt;
 
 &lt;h2 id=&#34;zeal&#34;&gt;zeal&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/zeal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/zeal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;que es &lt;a href=&#34;https://zealdocs.org/&#34;&gt;Zeal&lt;/a&gt;? es la implentacion libre y sin un tema
 obscuro de dash, que aunque a primera vista pareciera ser el nombre de un shell,
@@ -1153,7 +1153,7 @@ documentacion (en freidora seria):&lt;/p&gt;
 
 &lt;p&gt;abrimos zeal y buscamos si aparece la documentacion&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/zeal-love.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/zeal-love.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;zeal funciona como el navegador, con C-k buscamos cosas (poner prefijo de la
 documentocion, en este caso &lt;code&gt;love2d:&lt;/code&gt;), tiene un bonito autocompletado, nos movemos
@@ -1209,10 +1209,10 @@ dejes engañar, es mas extenso de lo que aparenta&lt;/p&gt;
     
     <item>
       <title>Webeloper – El navegador web</title>
-      <link>http://www.nasciiboy.land/prog/webeloper/</link>
+      <link>https://nasciiboy.land/prog/webeloper/</link>
       <pubDate>Mon, 10 Jul 2017 23:03:56 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/prog/webeloper/</guid>
+      <guid>https://nasciiboy.land/prog/webeloper/</guid>
       <description>
 
 &lt;p&gt;joder, que gracioso, ho, ho, ho, veamos si existe la remota posibiidad que nadie
@@ -1235,17 +1235,17 @@ llege a utilizar (una a dos veces):&lt;/p&gt;
 class=&#34;command&#34; &gt;links&lt;/code&gt; y &lt;code class=&#34;command&#34; &gt;elinks&lt;/code&gt; (en la
 siguiente imagen aparecen de izquierda a derecha en ese orden)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/www.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/www.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;tambien &lt;em&gt;eww&lt;/em&gt;, que viene incluido en emacs&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/www-eww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/www-eww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;si bien es el mas lento y apenas el menos feo (w3m gana la contienda), por el
 simple hecho de venir en emacs no tiene comparacion en esta singular categoria,
 ademas, en modo grafico pueden verse imagenes!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/www-eww-img.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/www-eww-img.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;es cierto que a los navegadores en modo texto el tiempo no los ha tratado bien,
 pero las cookies, flash, drms, javascript y el contenido multimedia no son los
@@ -1313,7 +1313,7 @@ veamos, mmm, derivados exclusivos para las manzanas, derivados exclusivos para
 las ventasas, forks con codigo cerrado&amp;hellip; hey! aqui hay uno que parece prometodor
 &lt;a href=&#34;https://www.brave.com/&#34;&gt;&lt;em&gt;brave&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/brave.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/brave.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;dicen que son &amp;ldquo;open source&amp;rdquo;, mucho de seguridad, comunidad y pagos(?), veamos
 tienen una compilacion para freidora&amp;hellip; parece decente, algo modernoso&lt;/p&gt;
@@ -1364,13 +1364,13 @@ configurable, que no esta a la ultima moda en csssssss&lt;/p&gt;
     
     <item>
       <title>Konsole Warrior</title>
-      <link>http://www.nasciiboy.land/apt/konsole-warrior/</link>
+      <link>https://nasciiboy.land/apt/konsole-warrior/</link>
       <pubDate>Sat, 24 Jun 2017 20:28:51 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/apt/konsole-warrior/</guid>
+      <guid>https://nasciiboy.land/apt/konsole-warrior/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/tilix-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/tilix-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Dentro de &lt;q&gt;&lt;em&gt;El camino del Heroe&lt;/em&gt;&lt;/q&gt; (que algunos dicen que esta
 conformado por doce estadios, otros por 7, 17, 13, &amp;hellip;) antes de acudir al
@@ -1411,7 +1411,7 @@ inicio una pequeña busqueda de internet, pero tras encontrar cosas de python y 
 utilidades que no me daba confiansa instalar, di otra oportunidad a tilix,
 pues incorpora de serie marcadores y el amado &lt;strong&gt;overview&lt;/strong&gt; Gnomero!!!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/tilix-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/tilix-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;la razon por la que antes no hice la transicion se debio a no incorporar la
 configuracion del desplazamiento por linea, pero estimados colegas, un pequeño
@@ -1432,12 +1432,12 @@ configuracion trae dicho apartado, peeeero, no fui capaz de entender como
 guardar una ruta y que luego funcionara, asi que cambie el atajo de teclado para
 ya dentro del directorio, invocar el menu y establecer el marcador&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/tilix-c.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/tilix-c.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;y&amp;hellip;? &lt;strong&gt;funciono!&lt;/strong&gt;, solo pones el nombre del marcador y al abrir los marcadores
 ya puedes hacer el cambio&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.nasciiboy.land/img/tilix-d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/tilix-d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;tambien, tube que ajustar un poco el esquema de colores, tipografia y cursor,
 hasta lograr mi ambiente ideal&lt;/p&gt;
@@ -1517,10 +1517,10 @@ directamente el repo &lt;a href=&#34;https://github.com/gnunn1/tilix&#34;&gt;htt
     
     <item>
       <title>PPSSPP</title>
-      <link>http://www.nasciiboy.land/vg/ppsspp/</link>
+      <link>https://nasciiboy.land/vg/ppsspp/</link>
       <pubDate>Tue, 02 May 2017 20:02:37 -0500</pubDate>
       
-      <guid>http://www.nasciiboy.land/vg/ppsspp/</guid>
+      <guid>https://nasciiboy.land/vg/ppsspp/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../fs.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -1628,10 +1628,10 @@ nativo &lt;a href=&#34;../nxEngine/index.html&#34;&gt;nxEngine&lt;/a&gt;&lt;/p&g
     
     <item>
       <title>Emacs - first blood</title>
-      <link>http://www.nasciiboy.land/emacs/first-blood/</link>
+      <link>https://nasciiboy.land/emacs/first-blood/</link>
       <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
       
-      <guid>http://www.nasciiboy.land/emacs/first-blood/</guid>
+      <guid>https://nasciiboy.land/emacs/first-blood/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../first-blood.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
