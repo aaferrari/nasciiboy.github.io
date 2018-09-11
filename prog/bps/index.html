@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BPS</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style>:root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle : #ff4500;
+    --FGCstart1: #4B99D2;
+    --FGCstart2: #00ffff;
+    --FGCstart3: #ffa074;
+    --FGCstart4: #98fb98;
+    --FGCstart5: #b0c4de;
+    --FGCstart6: #7fffd4;
+    --FGCstart7: #db2e24;
+    --FGCstart8: #ff4500;
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 70%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 30%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { color: #F99; }
+
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
+
+  <h1>BPS</h1>
+  
+
+<p>sehhh, BPS! (<a href="https://es.wikipedia.org/wiki/Battle_Programmer_Shirase">Battle Programmer Shirase</a>)
+ese anime que no nos hace sentir mejor persona y gira en torno a las prodigiosas
+habilidades del buen Akira Shirase (programador/sysadmin/cracker/animal-o-cosa y
+mejor persona) y sus situaciones comprometidas medio ecchi (con chicas de edad
+&ldquo;no especificada&rdquo;) que situan en un dilema moral a aquellos que le solicitan
+algun favor</p>
+
+<p>Por supuesto que Akira nunca tiene que consultar documentacion, copiar y pegar
+errores en el navegador y los unicos fallos que se atreven a presentarsele, son
+desde luego, los que el mismo provoca. Para el resto de desgraciados que
+inmerecidamente habitamos la misma dimension, solo nos queda revolcarnos en la
+podredumbre y anotar &ldquo;recetas&rdquo; nada elegantes, concretas, ni profundas
+sobre configuraciones que apenas se entienden y desde luego, no nos haran ser
+&ldquo;programadores&rdquo;, &ldquo;expertos&rdquo; o populares. Ha, Ha, Ha, Ha</p>
+
+<p>y? nahh, habia estado revisando algunos vps(s)&hellip; unas maquinas (virtuales) que
+rentas con una cantidad pactada de cpu, disco, ram e internete que no deberia de
+apagarse a ninguna hora y en la que puedes poner tus mierdas, en particular un
+servidor web gestionado &ldquo;a mano&rdquo;. Esto por supuesto, (paleando las limitaciones
+de almacenamiento casi igual de costoso que la tinta de impresora) sera tan
+bueno y satisfactorio como los tutoriales copy-paste de internet (y un monton de
+nesedad) te permitan realizar</p>
+
+<p>mientras hacia dichas pruebas &ldquo;gratuitas&rdquo; que forzosamente necesitaron varias
+busquedas por &ldquo;el mejor&rdquo; tutorial para &ldquo;XXXXXX&rdquo; version &ldquo;YYYYYY&rdquo;, se acumularon una
+cantidad considerable de enlaces asi como ficheros de configuracion que
+para la siguiente &ldquo;reinstalacion&rdquo; seguramente no recondare. Por ello mejor
+dejarlo medio organizado para el yo del futuro.</p>
+
+<p>debo aclarar que es solo un primer intento al que se combino (por mi constante
+insatisfaccion) el proyecto de tener un servidor en casa autogestionado
+(torrente <sup>24</sup>&frasl;<sub>7</sub>, ftp, stream de videos/musica, etc, etc). Asi que el resultado es
+medio uno y medio otro, pero (imaginariamente) centrado en poner en
+funcionamiento el servidor en casa.</p>
+
+<p>Je, eso de rentar un vps con internete a velocidad de primer mundo mola un
+guevo, aunque si quieres hacerte de unos buenos TeraBytes de almacenamiento
+deberias ir buscando una buena hipoteca&hellip; si es que tienes casa&hellip; ignorando ese aspecto, el precio
+por lo que ofertan es razonable, aunque la tranquilidad y &ldquo;el placer de
+tener tu propia infraestructura, viendole parpadear los leds directamente es
+mucho mayor, supongo.</p>
+
+<p>mientras me hago con una rapsberry/micro-server/nuc/mini-itx-de-bajo-consumo-24x7x∞
+tocara conservar (y pagar dentro de un par de meses) el vps. Temporalmente hice las pruebas
+en una media-laptop con 12 años de antiguedad, 512MB de ram, 40GB HDD con debian
+estable 9.5 sin entorno grafico. Al final consume ~30MiB de ram y casi sin
+movimiento del procesador y, es necesario remarcar que su procesador mono nucleo
+va mas fluido que el procesador virtual del vps. Tambien, el contar con el
+equipo en la red local hace que la conexion via ssh no tenga nada de retraso.</p>
+
+<p>al lio, pues!</p>
+
+<h2 id="red">Red</h2>
+
+<p>el hardware en cuestion trae un adaptador wifi (intel) que funciona sin instalar
+drivers privativos. No me gusta conectar el cable de red, por que creo que
+inesperadamente algun relampago podria cegar la vida del aparato. Asi pues, mientras menos
+cables (un ups, interruptores magneticos y un multicontacto de interruptor con
+&ldquo;luz roja&rdquo;) de por medio, mayor tranquilidad mental</p>
+
+<p>si bien antes habia visto eso de configurar la red con ip fija, nunca lo habia
+llebado a cabo, encima varios comandos se han vuelto obsoletos y systemd
+extiende sus tentaculos por todos los sitios.</p>
+
+<p>Haciendo caso a la <a href="https://wiki.debian.org/WiFi/HowToUse">wiki</a> de debian
+lo primero seria colocar los permisos apropiados al fichero de configuracion de
+las interfaces de red</p>
+
+<pre><code>&gt; chmod 0600 /etc/network/interfaces
+</code></pre>
+
+<p>despues, como en mi caso con un wifi cifrado con WPA2 tendriamos que obtener unas digitos
+hexadeci-magicos, con el comando</p>
+
+<pre><code>&gt; wpa_passphrase ssid contraseña
+network={
+        ssid=&quot;ssid&quot;
+        #psk=&quot;contraseña&quot;
+        psk=ccb290fd4fe6b22935cbae31449e050edd02ad44627b16ce0151668f5f53c01b
+}
+</code></pre>
+
+<p><code>ssid</code> = nombre de wifi. El campo <code>psk</code> tendria despues que agregarse dentro de
+la configuracion (<code>/etc/network/interfaces</code>). Para evitar erorres, mejor
+redireccionar la salida a dicho fichero. Ya dentro de este, se podra editar con
+mayor comodidad</p>
+
+<pre><code>&gt; wpa_passphrase mi-ssid mi-contraseña &gt;&gt; /etc/network/interfaces
+&gt; emacs /etc/network/interfaces
+</code></pre>
+
+<p>y bueno&hellip; en este punto el tutorial copy-pasteable suguiere configurar la red con
+conexion automatica, nos dejan este ejemplo:</p>
+
+<pre><code>auto wlan0
+iface wlan0 inet dhcp
+        wpa-ssid mi-ssid
+        wpa-psk ccb290fd4fe6b2293cbae351449e050edd2ad044627b16ce1510a48bb7c7c01b
+</code></pre>
+
+<p>donde deberiamos substituir <code>wlan0</code> por el nombre de nuestra interfaz de red
+wifi, que podemos obtener con el comando</p>
+
+<pre><code>&gt; ip a
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: enp6s7: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 00:0a:e4:f6:20:5b brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.177/24 brd 192.168.1.255 scope global enp6s7
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20a:e4ff:fef6:205b/64 scope link
+       valid_lft forever preferred_lft forever
+3: wlp6s5: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:16:ce:63:f0:e2 brd ff:ff:ff:ff:ff:ff
+</code></pre>
+
+<p>mmm, no se que sea <code>lo</code>, pero <code>enp*</code> (<code>enp6s7</code>) seria la interfaz &ldquo;por
+cable&rdquo;. <code>wlp*</code> (<code>wlp6s5</code>) la interfaz inalambrica. Asi que substuimos <code>wlan0</code> por <code>wlp6s5</code>.</p>
+
+<p>y para arrancar la red, bastaria con:</p>
+
+<pre><code>&gt; ifup mi-interfaz-inalambrica
+</code></pre>
+
+<p>(puede que si tenemos otra red ya habilitada, sea necesario antes hacer <code>ifdown mi-interfaz-habilitada</code>)</p>
+
+<p>&hellip; luego intente con la configuracion <a href="https://wiki.debian.org/WiFi/AdHoc">estatica</a>
+agregando/mezclando algunos campos, tal que asi:</p>
+
+<pre><code>auto wlp6s5
+iface wlp6s5 inet static
+        address 192.168.1.66
+        netmask 255.255.255.0
+        wireless-channel 1
+        wireless-mode ad-hoc
+        wpa-ssid mi-ssid
+        wpa-psk ccb290fd4fe6b22935cbae31449e050edd02ad44627b16ce0151668f5f53c01b
+</code></pre>
+
+<p>se suponia que <code>address</code> seria la ip estatica, pero esta configuracion no me
+daba internet, aunque si permitia conectar en la red local.</p>
+
+<p>Ante el fracazo de lograr la ip estatica por wifi, ademas de escuchar que el
+tio de un conocido que salia con la prima de una prima de un amigo sobre que
+en los servidores web no se permite la conexion por wifi, conecte el cable y por suerte, esta
+ocacion la configuracion si fue satisfactoria, quedando tal que asi:</p>
+
+<pre><code># This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+allow-hotplug enp6s5
+iface enp6s5 inet static
+      address 192.168.1.177
+      netmask 255.255.255.0
+      gateway 192.168.1.254
+
+# auto wlp6s5
+# iface wlp6s5 inet dhcp
+#       wpa-ssid mi-ssid
+#       wpa-psk ccb290fd4fe6b2293cbae351449e050edd2ad044627b16ce1510a48bb7c7c01b
+</code></pre>
+
+<p>se comento la parte referente al wifi, por lo demas <code>enp6s5</code> es la interfaz
+cableada</p>
+
+<p><code>gateway</code> es la &ldquo;direccion&rdquo; del router/modem (la caja del internet). Para
+haberiguar esta direccion ejecutamos</p>
+
+<pre><code>&gt; ip r
+default via 192.168.1.254 dev enp6s5 onlink
+169.254.0.0/16 dev enp6s5 scope link metric 1000
+192.168.1.0/24 dev enp6s5 proto kernel scope link src 192.168.1.177
+</code></pre>
+
+<p>(la &ldquo;puerta de enlace&rdquo; (o <em>gateway</em>) esta despues de <code>default via</code>, en este caso
+<code>192.168.1.254</code>)</p>
+
+<p><code>address</code> (supongo) tendria que iniciar con los primeros tres rangos del
+<code>gateway</code> y terminar con el numero que queremos para la ip fija, en mi caso
+<code>177</code> por-que-si</p>
+
+<p><code>netmask</code> es un numero que nos permite enmascarar que consultas son filtradas
+hacia &ldquo;algun sitio&rdquo; (o algo asi). Segun varios post del internete, el numero
+magico es <code>255.255.255.0</code></p>
+
+<h2 id="ssh">SSH</h2>
+
+<p>con la ip fija, el siguiente paso logico por comodidad como tambien para
+economizar en monitores, vendria a ser conectar via ssh. Primero instalamos el
+servidor ssh en nuetro server-de-pruebas</p>
+
+<pre><code>&gt; apt install openssh-server
+</code></pre>
+
+<p>esto deberia poner operativo el servidor, podriamos corroborarlo con</p>
+
+<pre><code>&gt; systemctl status sshd
+● sshd.service - OpenSSH server daemon
+...
+   Active: active (running) since Mon 20XX-YY-YY
+...
+</code></pre>
+
+<p>apareceria el <code>●</code> en color verde al igual que <code>active (running)</code>, si no fuera
+asi quiza</p>
+
+<pre><code>&gt; systemctl enable sshd
+&gt; systemctl start  sshd
+</code></pre>
+
+<p>desde ahora continuaremos toda la interaccion desde la maquina donde vamos a
+conectar hacia el servidor</p>
+
+<pre><code>&gt; ssh nasciiboy@192.168.1.177
+</code></pre>
+
+<p>cambiar <code>nasciiboy</code> por el usuario de vuestra maquina, colocar la <code>@</code> y luego la
+ip. En caso de tener un puerto distinto al establecido por defecto (22), agregar <code>-p numero-puerto</code></p>
+
+<p>ahora bien, para hacer mas seguro (y comodo) conectar con el servidor,
+deberiamos configurar <a href="https://www.digitalocean.com/community/tutorials/como-configurar-las-llaves-ssh-en-ubuntu-18-04-es">un par de llaves</a>
+desde la maquina donde conectaremos</p>
+
+<pre><code>&gt; ssh-keygen
+&gt; cd ~/.ssh
+</code></pre>
+
+<p>luego copiamos la <strong>llave publica</strong> al servidor. A mano seria asi:</p>
+
+<pre><code>&gt; scp id_rsa.pub nasciiboy@192.168.1.67:.ssh/authorized_keys
+</code></pre>
+
+<p>o, &ldquo;sin saber ni como&rdquo;, con el comando dedicado `ssh-copy-id:</p>
+
+<pre><code>&gt; ssh-copy-id nasciiboy@192.168.1.67
+</code></pre>
+
+<p>finalmente deberiamos configurar el demonio (<code>sshd</code>) para que no permita la
+conexion por contraseña, solo mediante llaves modificando dentro de
+<code>/etc/ssh/sshd_config</code></p>
+
+<pre><code>PubkeyAuthentication yes
+...
+PermitEmptyPasswords no
+...
+PasswordAuthentication no
+</code></pre>
+
+<p>tambien podriamos modificar el parametro</p>
+
+<pre><code>PermitRootLogin yes
+</code></pre>
+
+<p>cambiando <code>yes</code> a <code>no</code>, p-e-r-o, creo que la conexion por llave es
+suficientemente segura y si la contraseña de root es demaciado compleja como
+para ni saberla o se tiene paranoia de escribirla, dejar esta opcion encendida
+igual y no es mala idea</p>
+
+<p>recargamos la configuracion del daemon ssh</p>
+
+<pre><code>&gt; systemctl reload sshd
+</code></pre>
+
+<p>probamos que la sesion ssh mediante llaves funcione e instalamos/configuramos
+las comodidades que creamos convenientes (<code>htop</code>, <code>dfc</code>, <code>emacs</code>, etc, etc)</p>
+
+<h2 id="nginx">nginx</h2>
+
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-8">basicamente</a></p>
+
+<pre><code>&gt; apt install nginx
+</code></pre>
+
+<p>luego desde nuestra red local podriamos confirmar si esta arriba el servidor web</p>
+
+<pre><code>elinks 192.168.1.177
+</code></pre>
+
+<p>por el momento, un servidor sin comentarios, php, javascript, ni ninguna mierda
+mas, es todo lo que necesito. Como mi web se genera estaticamente, podria
+copiarse directamente todo el contenido dentro de <code>/var/www/http</code></p>
+
+<pre><code>rsync -avz --delete ~/nasciiboy.land/public/ /var/www/html/
+</code></pre>
+
+<p>he copiado el directorio que contiene mi web dentro de la home de root. Desde
+hay genero el sitio estatico con <code>hugo</code> que a su vez crea el directorio <code>public</code>
+el cual finalmente se sincroniza con el directorio por defecto del contenido del
+servidor <code>/var/www/html</code></p>
+
+<p><strong>importante</strong> si acaso al visitar el sitio reciben como bienvenida <strong>403
+Forbiden</strong>, seguramente el sitio no tenga los permisos de lectura apropiados. La
+solucion</p>
+
+<pre><code>&gt; chmod -R 755 /var/www/html
+</code></pre>
+
+<p>en este punto bien podemos configurar (solo) un poco el servidor</p>
+
+<p>Dentro de <code>/etc/nginx/nginx.conf</code> (dentro del bloque de configuracion <code>http { ... }</code>) creo que es buena
+idea no mostrarle la version particular que se esta ejecutando a los
+malintencionados. Basta colocar:</p>
+
+<pre><code>&gt; server_tokens off;
+</code></pre>
+
+<p>(los punto y coma son importantes, tenerlos en mente)</p>
+
+<p><code>nginx</code> tiene unos logs (<code>/var/log/nginx</code>) donde pone cosas como las ips de quien
+accede a nuestro flamante sitio. Estos ficheros se reescribiran si hacemos cosas
+como apagar-encerder el servidor. Para mantener estas preciadas metricas, lo mas
+sensato es hacer un</p>
+
+<pre><code>&gt; systemctl reload nginx
+</code></pre>
+
+<p>y ver si todo fue bien con</p>
+
+<pre><code>&gt; systemctl status nginx
+</code></pre>
+
+<p>pero&hellip; nada es tan sencillo. El servidor no volvia a encender, segun <a href="https://stackoverflow.com/questions/42078674/nginx-service-failed-to-read-pid-from-file-run-nginx-pid-invalid-argument">stackoverflow</a>
+nginx tenia un bug en debian (se ve al consultar con <code>systemctl status nginx</code>)</p>
+
+<pre><code>...
+nginx.service: Failed to read PID from file /run/nginx.pid: Invalid argument
+...
+</code></pre>
+
+<p>la solucion</p>
+
+<pre><code>&gt; mkdir /etc/systemd/system/nginx.service.d
+&gt; printf &quot;[Service]\nExecStartPost=/bin/sleep 0.1\n&quot; &gt; /etc/systemd/system/nginx.service.d/override.conf
+&gt; systemctl daemon-reload
+&gt; systemctl restart nginx
+</code></pre>
+
+<p>mmm, por unos dias dude sobre la forma correcta de actualizar el contenido en
+<code>/var/www/html</code>, si habia que parar y encender el servidor o si hacer un
+<code>reload</code>. Segun parece no es necesario&hellip;</p>
+
+<p>Aun no se muy bien como es esto de ver &ldquo;las metricas&rdquo; del servidor. Modificando
+un one-liner visto en el blog de <a href="https://www.ochobitshacenunbyte.com/2018/07/04/que-comando-de-terminal-usas-mas-veces-en-linux/">davidochobits</a>
+que a su vez lo vio en reddit, lanzo el siguiente comando</p>
+
+<pre><code>cat /var/log/nginx/access.log | awk '{ print $1 }' | sort | uniq -c | sort -n | tail | perl -lane 'print $F[1], &quot;\t&quot;, $F[0], &quot;\t&quot;, &quot;▄&quot; x ($F[0] / 10)'
+66.249.79.87    15  ▄
+181.95.155.18   16  ▄
+66.249.79.254   18  ▄
+17.58.97.53     21  ▄▄
+40.77.167.24    21  ▄▄
+66.249.79.252   23  ▄▄
+179.6.202.53    24  ▄▄
+18.234.114.96   60  ▄▄▄▄▄▄
+150.109.59.181  139 ▄▄▄▄▄▄▄▄▄▄▄▄▄
+90.162.220.89   163 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+</code></pre>
+
+<p>ja, ja, que rastrero, y para contabilizar las visitas totales pues se filtra
+(sin <code>tail</code>) y suma la segunda columna con <code>awk</code></p>
+
+<pre><code>&gt; cat /var/log/nginx/access.log | awk '{ print $1 }' | sort | uniq -c | sort -n | perl -lane 'print $F[1], &quot;\t&quot;, $F[0], &quot;\t&quot;, &quot;▄&quot; x ($F[0] / 10)' | awk '{ tot+=$2 }; END { print &quot;TOTAL &quot; tot }'
+TOTAL 625
+</code></pre>
+
+<p>si quisieramos ver a quien pertenece una ip (o dominio):</p>
+
+<pre><code>&gt; whois 90.162.220.89
+...
+role:           Hostmaster Administrator FTE
+address:        Parque Empresarial La Finca
+address:        Edificio 9
+address:        Paseo del Club Deportivo, 1
+address:        28223 Pozuelo de Alarcon
+address:        Madrid, Spain
+admin-c:        HA1066-RIPE
+admin-c:        HA1067-RIPE
+tech-c:         HA1066-RIPE
+tech-c:         HA1067-RIPE
+nic-hdl:        HAF10-RIPE
+remarks:        spam, abuse reports....mailto:abuse@orange.es
+abuse-mailbox:  abuse@orange.es
+mnt-by:         UNI2-MNT
+created:        2005-08-19T10:24:55Z
+last-modified:  2013-01-17T16:47:17Z
+source:         RIPE # Filtered
+...
+</code></pre>
+
+<p>entre estos, Tencent, Baidu y Google se concentran casi todas las consultas&hellip;</p>
+
+<h2 id="router">router</h2>
+
+<p>en este punto (o quiza antes (o despues&hellip;)) nos vendria bien conocer algunas cosas
+medianamente importantes, como cual es nuestra ip publica y que dispositivos hay
+en nuestra red local (como en caso de hacer un ssh a un dispositivo sin ip
+fija). Para lo segundo segun un <a href="https://nideaderedes.urlansoft.com/2013/12/23/linux-como-puedo-saber-que-maquinas-hay-conectadas-en-mi-red-local/">post</a>
+y corroborado en el mundo real, podemos conocer los dispositivos en la red local
+con</p>
+
+<pre><code>&gt; nmap -sP 192.168.1.1-255
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-09-09 22:09 CDT
+Nmap scan report for 192.168.1.66                            # movil
+Host is up (0.21s latency).
+Nmap scan report for nasciiboy.myddns.rocks (192.168.1.177)  # server (luego explico mas)
+Host is up (0.00050s latency).
+Nmap scan report for 192.168.1.214                           # mi pc
+Host is up (0.00043s latency).
+Nmap scan report for 192.168.1.253                           # un &quot;repetidor&quot;
+Host is up (0.00093s latency).
+Nmap scan report for rga.ip (192.168.1.254)                  # router
+Host is up (0.0022s latency).
+Nmap done: 255 IP addresses (5 hosts up) scanned in 14.53 seconds
+</code></pre>
+
+<p>o tambien dentro del router <strong>Estado &gt; Lista de dispositivos LAN</strong></p>
+
+<p><img src="https://nasciiboy.land/img/bps/bps-r0.png" alt="" /></p>
+
+<p>luego, para conocer nuestra ip publica, el modelo de router que me da la compañia
+lo proporciona dentro de <strong>Estado &gt; PPPoE</strong></p>
+
+<p><img src="https://nasciiboy.land/img/bps/bps-r1.png" alt="" /></p>
+
+<p>otras eficaces formas de conococer la ip publica sin movernos del terminal</p>
+
+<pre><code>&gt; curl ifconfig.co # mas rapido que la opcion '.me'
+187.225.125.52
+&gt; curl ifconfig.me
+187.225.125.52
+</code></pre>
+
+<p>recordar que esta ip (amenos que tengamos un acuerdo con el proveedor) puede
+cambiar entre un apagon a otro. Mientras tanto pasemos a abrir los puertos de
+nuestro router</p>
+
+<p>vamos a <strong>NAT &gt; Mapeo de puertos</strong>, luego <strong>Agregar</strong>, <strong>Servidor web</strong>. En <strong>IP
+LAN</strong> ponemos la direccion fija de nuestro servidor apuntando al puerto 80, abriendo tambien el puerto
+80 en la ip publica. Repetimos el proceso para el puerto 443 (https)</p>
+
+<p><img src="https://nasciiboy.land/img/bps/bps-r2.png" alt="" /></p>
+
+<h2 id="ddns">ddns</h2>
+
+<p>tenemos encendido el servidor, abiertos los puertos y podemos hacer una <strong>&ldquo;consulta
+local&rdquo;</strong></p>
+
+<pre><code>&gt; elinks 192.168.1.177
+</code></pre>
+
+<p>pero? podemos contactar con nuestra ip publica, darsela a nuestros amigos y ser populares?</p>
+
+<pre><code>&gt; elinks 187.225.125.52
+</code></pre>
+
+<p><strong>NO</strong> y ni en firefox funciona! Segun parece, algun &ldquo;mecanismo de conexion de
+no se que, que es muy complicado&rdquo; impide contactar desde nuestra red local consultando
+nuestra ip publica. Por que? ni idea, una consulta decia que era muuuhhh
+complicado y le creere</p>
+
+<p>ja, ja, sucede que anteriormente probe esto de consultar desde la red local la
+ip publica&hellip; y al no tener resultado, considere que era un puto truño! Haaa,
+por que nadie lo explico?</p>
+
+<p>con aquello de las pruebas que estoi haciendo con el vps rentado, conencte a el
+(en Frankfurt) via ssh y desde aya el <code>elinks</code> aputando a mi ip publica funcionaba a la
+perfeccion!</p>
+
+<p>la solucion? ni idea, monta tus mierdas y prueba desde fuera como puedas</p>
+
+<p>y bueno, como mencionaba previamente, si tenemos un contrato estandar con el
+proveedor de internet, la ip publica puede que cambie. Como es mas confortable pasar un
+dominio que una ip, la idea es recurrir a un servicio de terceros para que le
+siga la pista a los cambios en nuestra ip y de preferencia nos de un dominio
+no-muy-feo</p>
+
+<p>entre las (dos) opciones que busque estaban <a href="https://www.noip.com/">no-ip</a> y
+<a href="https://www.dynu.com/">dynu</a>. No recuerdo la causa, pero preferi dynu.</p>
+
+<p>Hay que crearse una cuenta y te dan a elegir entre varios dominios (o colocar el
+tuyo, pero aun no es momento para ello), el que escogi fue
+nasciiboy.myddns.rocks (casi, nunca en linea)</p>
+
+<p><img src="https://nasciiboy.land/img/bps/bps-d0.png" alt="" /></p>
+
+<p>tras el registro y demas, deberiamos tener un metodo para desde nuestro servidor
+reportar periodicamente nuestra ip (por ejemplo, cada minuto) y con ello
+actualizar la informacion en dynu y de ser posible automaticamente.</p>
+
+<p>ellos tienen un programa para descargar en debian&hellip; je, je, si, ahorita me lo
+instalo, como no. Para los desconfiados ofrecen una serie de opciones de
+configuracion diversas, en mi caso con <code>ddclient</code> que ya viene en los repositorios</p>
+
+<pre><code>&gt; apt install ddclient
+</code></pre>
+
+<p>en el proceso de instalacion, saltara una TUI para configurar la direccion a
+donde llamar, la contraseña, cuenta, etc. Pero esto no funciona del todo
+bien. Lo recomendable es siguiendo el <a href="https://www.dynu.com/DynamicDNS/IPUpdateClient/DDClient">tutorial</a>
+de la propia dynu, modificar el fichero <code>/etc/ddclient.conf</code> de la siguiente manera</p>
+
+<pre><code># ddclient configuration for Dynu
+#
+# /etc/ddclient.conf
+daemon=60                                                    # Check every 60 seconds.
+syslog=yes                                                   # Log update msgs to syslog.
+mail=root                                                    # Mail all msgs to root.
+mail-failure=root                                            # Mail failed update msgs to root.
+pid=/var/run/ddclient.pid                                    # Record PID in file.
+use=web, web=checkip.dynu.com/, web-skip='IP Address'        # Get ip from server.
+server=api.dynu.com                                          # IP update server.
+protocol=dyndns2
+login=myusername                                             # Your username.
+password=YOURPASSWORD                                        # Password or MD5/SHA256 of password.
+MYDOMAIN.DYNU.COM                                            # List one or more hostnames one on each line.
+</code></pre>
+
+<p>es muy importante colocar la linea de pid, de lo contrario el programita este,
+hara consultas a lo bestia. Por lo demas solo cambiar <code>login</code>, <code>password</code> y <code>MYDOMAIN.DYNU.COM</code></p>
+
+<p>ahora si, podemos contactar desde fuera de casa con el &ldquo;dominio provicional&rdquo;, o,
+en busca de algun falso sentimento de tranquilidad agregar nuestro dominio a los
+hosts locales <code>/etc/hosts</code></p>
+
+<pre><code>192.168.1.177 nasciiboy.myddns.rocks
+127.0.0.1     localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1           localhost localhost.localdomain localhost6 localhost6.localdomain6
+</code></pre>
+
+<p>con esto escribiendo <code>nasciiboy.myddns.rocks</code> en firefox accederiamos al sitio
+local con el &ldquo;dominio&rdquo;. No se por que, pero con <code>elinks</code> esto no funciona</p>
+
+<h2 id="cosas">cosas</h2>
+
+<p>entre varias consultas y post ajenos que me da peresa enlazar, hay varios
+comandos interesantes para conocer &ldquo;¡¿que?!&rdquo; sobre ips, dns y puertos</p>
+
+<p>(aqui una combinacion de salidas mezcladas de mi sitio en el vps y de las
+pruebas con el servidor local)</p>
+
+<p>con <code>dig</code> podemos ver la configuracion del dns y tambien conocer la ip</p>
+
+<pre><code>&gt; dig nasciiboy.land
+
+; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Debian &lt;&lt;&gt;&gt; nasciiboy.land
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 56488
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;nasciiboy.land.			IN	A
+
+;; ANSWER SECTION:
+nasciiboy.land.		600	IN	A	46.101.138.205
+
+;; Query time: 27 msec
+;; SERVER: 67.207.67.2#53(67.207.67.2)
+;; WHEN: Mon Sep 10 03:24:43 UTC 2018
+;; MSG SIZE  rcvd: 59
+</code></pre>
+
+<p><code>nslookup</code> para conocer la ip del servidor (aqui una prueba desde la red local)</p>
+
+<pre><code>&gt; nslookup nasciiboy.myddns.rocks
+Server:		192.168.1.254
+Address:	192.168.1.254#53
+
+Non-authoritative answer:
+Name:	nasciiboy.myddns.rocks
+Address: 187.225.125.52
+</code></pre>
+
+<p>siguiedo un post <a href="http://www.cursodehackers.com/nmap.html">&ldquo;para ser hacker&rdquo;</a>
+la receta para escanear todos los puertos</p>
+
+<p>consultando (desde frankfurt) mi ip hogareña</p>
+
+<pre><code>&gt; nmap -sS 187.225.125.52
+Starting Nmap 7.40 ( https://nmap.org ) at 2018-09-10 14:01 UTC
+Nmap scan report for dsl-187-225-125-52-dyn.prod-infinitum.com.mx (187.225.125.52)
+Host is up (0.25s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 45.50 seconds
+</code></pre>
+
+<p>solo estan abiertos los puertos del servidor. Tenia dudas sobre la seguridad de
+poner este tipo de servicio en digamos &ldquo;la maquina de uso principal&rdquo;, desde
+luego ignorando posibles inconvenientes como que tu equipo se quede congelado
+por algun programa, probar un codigo de recursividad desatada o si se queda
+sin ram/swap. Luego de todas estas pruebas, no parece algo especialmente
+inseguro. Por supuesto, si alguien te quiere joder, allara la forma, mientras
+ese dia llega, supondre que todo funciona como es debido y con la suficiente
+seguridad por-defecto.</p>
+
+<p>otro comando mas nos permite ver los saltos entre los routers hasta el destino</p>
+
+<pre><code>&gt; mtr nasciiboy.myddns.rocks
+</code></pre>
+
+<p><img src="https://nasciiboy.land/img/bps/bps-r3.png" alt="" /></p>
+
+<p>asta aqui los pasos con respecto al servidar local. Cuando adquiera la plaquita
+ideal con un chilion de ram, teras y nucleos ya colocare una guia mas rigurosa</p>
+
+<h2 id="https">https</h2>
+
+<h3 id="ca-error">CA error</h3>
+
+<p>cuando estaba alojada la pagina en github-pages ellos se encargaban de
+proporcionar el https. Al mover el dns al vps intente mediante los comandos que
+varios post muestran instalar <em>let&rsquo;s encrypt</em>, entre <a href="https://www.digitalocean.com/community/tutorials/como-asegurar-nginx-con-let-s-encrypt-en-ubuntu-18-04-es">uno</a>
+de ellos, sugieren lo siguiente:</p>
+
+<pre><code>&gt; apt install python-certbot-nginx
+</code></pre>
+
+<p>luego configurar <code>/etc/nginx/sites-available/default</code> cambiando</p>
+
+<pre><code>. . .
+server_name _;
+. . .
+</code></pre>
+
+<p>a</p>
+
+<pre><code>. . .
+server_name mi-dominio www.mi-dominio;
+. . .
+</code></pre>
+
+<p>luego, lanzar lo siguientes comandos</p>
+
+<pre><code>&gt; nginx -t
+&gt; systemctl reload nginx
+&gt; certbot --nginx -d mi-sitio.com -d www.mi-sitio.com
+
+# en este punto se supone ya esta listo el certificado
+# y esto es para actualizarlo automaticamente
+&gt; certbot renew --dry-run
+</code></pre>
+
+<p>pero ejecutar <code>certbot</code> no sirvio de mucho</p>
+
+<pre><code>Obtaining a new certificate
+Performing the following challenges:
+Client with the currently selected authenticator does not support any combination of challenges that will satisfy the CA.
+Client with the currently selected authenticator does not support any combination of challenges that will satisfy the CA.
+</code></pre>
+
+<p>si ese es el caso, seguramente <code>certbot</code> habra dejado algunos inutiles timers y
+demonios de <code>systemd</code>. Para deshabilitar tales regalos, le avente lo siguiente
+al terminal (aunque no se si sea lo correcto)</p>
+
+<pre><code>&gt; systemctl stop    certbot.timer
+&gt; systemctl stop    certbot
+&gt; systemctl disable certbot.timer
+&gt; systemctl disable certbot
+</code></pre>
+
+<h3 id="auto-certificado">auto-certificado</h3>
+
+<p>ante el fallo de certbot, mi primera opcion para no dejar que los buscadores
+ignoraran la opcion con https, fue crear mis propios certificados con casinos y
+colegilas</p>
+
+<pre><code>&gt; mkdir /etc/nginx/ssl
+&gt; openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
+</code></pre>
+
+<p>a las preguntas que se sucedian respondi en el nombre de la organizacion como
+<em>nascii-corp</em>, para el correo mi correo regular (como seña de buena
+voluntad). El resto lo deje en blanco.</p>
+
+<p>tras esto deberiamos modificar la configuracion de nginx (<code>/etc/nginx/sites-available/default</code>)
+para que escuche en el puerto 443. Coloco mi fichero entero:</p>
+
+<pre><code>server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        listen 443 ssl;
+
+        # SSL configuration
+        #
+        # listen 443 ssl default_server;
+        # listen [::]:443 ssl default_server;
+        #
+        # Note: You should disable gzip for SSL traffic.
+        # See: https://bugs.debian.org/773332
+        #
+        # Read up on ssl_ciphers to ensure a secure configuration.
+        # See: https://bugs.debian.org/765782
+        #
+        # Self signed certs generated by the ssl-cert package
+        # Don't use them in a production server!
+        #
+        # include snippets/snakeoil.conf;
+
+        root /var/www/html;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm;
+
+        server_name nasciiboy.land www.nasciiboy.land;
+        ssl_certificate     /etc/nginx/ssl/nginx.crt;
+        ssl_certificate_key /etc/nginx/ssl/nginx.key;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+
+        error_page 404 /404.html;
+
+}
+</code></pre>
+
+<p>poner bien los punto y coma&hellip;</p>
+
+<p>por supuesto el navegador se quejo</p>
+
+<p><img src="https://nasciiboy.land/img/bps/bps-e0.png" alt="" /></p>
+
+<p>mirar la info del certificado</p>
+
+<p><img src="https://nasciiboy.land/img/bps/bps-e1.png" alt="" /></p>
+
+<h3 id="certbot-strikes-back">certbot strikes back</h3>
+
+<p>tras muchos intentos lanzando <code>certbot</code> (esperando sin razon un resultado
+distinto) y leyendo unos post de <a href="https://www.linuxito.com/seguridad/842-como-generar-un-certificado-ssl-tls-gratis-con-certbot">linuxito</a>,
+pero sobre todo de la <a href="https://certbot.eff.org/lets-encrypt/debianstretch-nginx">eff</a>
+el certificado se materializo ejecutando lo siguiente</p>
+
+<pre><code>&gt; certbot --authenticator webroot --installer nginx
+</code></pre>
+
+<p>los certificados funcionaron automagicamente, ja, ja, ja, no guarde el orden de
+lo que puse, para la proxima&hellip;</p>
+
+<p>&hellip;</p>
+
+<p>y eso es todo por este aglutinado de cosas, happy hacking!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.land/prog/sistop/">◀ SistOp</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
+</main>
+
+    <aside>
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/categories/prog">prog(51)</a></li><li><a href="https://nasciiboy.land/categories/post">post(41)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(15)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(26)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(20)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(17)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/go">go(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
