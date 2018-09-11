@@ -277,7 +277,7 @@ nesedad) te permitan realizar</p>
 <p>mientras hacia dichas pruebas &ldquo;gratuitas&rdquo; que forzosamente necesitaron varias
 busquedas por &ldquo;el mejor&rdquo; tutorial para &ldquo;XXXXXX&rdquo; version &ldquo;YYYYYY&rdquo;, se acumularon una
 cantidad considerable de enlaces asi como ficheros de configuracion que
-para la siguiente &ldquo;reinstalacion&rdquo; seguramente no recondare. Por ello mejor
+para la siguiente &ldquo;reinstalacion&rdquo; seguramente no recuerde. Por ello mejor
 dejarlo medio organizado para el yo del futuro.</p>
 
 <p>debo aclarar que es solo un primer intento al que se combino (por mi constante
@@ -289,7 +289,7 @@ funcionamiento el servidor en casa.</p>
 <p>Je, eso de rentar un vps con internete a velocidad de primer mundo mola un
 guevo, aunque si quieres hacerte de unos buenos TeraBytes de almacenamiento
 deberias ir buscando una buena hipoteca&hellip; si es que tienes casa&hellip; ignorando ese aspecto, el precio
-por lo que ofertan es razonable, aunque la tranquilidad y &ldquo;el placer de
+por lo que ofertan es razonable, aunque la tranquilidad y &ldquo;el placer&rdquo; de
 tener tu propia infraestructura, viendole parpadear los leds directamente es
 mucho mayor, supongo.</p>
 
@@ -322,7 +322,7 @@ las interfaces de red</p>
 <pre><code>&gt; chmod 0600 /etc/network/interfaces
 </code></pre>
 
-<p>despues, como en mi caso con un wifi cifrado con WPA2 tendriamos que obtener unas digitos
+<p>despues, como en mi caso con un wifi cifrado con WPA2 tendriamos que obtener unos digitos
 hexadeci-magicos, con el comando</p>
 
 <pre><code>&gt; wpa_passphrase ssid contraseña
@@ -450,7 +450,7 @@ magico es <code>255.255.255.0</code></p>
 
 <p>con la ip fija, el siguiente paso logico por comodidad como tambien para
 economizar en monitores, vendria a ser conectar via ssh. Primero instalamos el
-servidor ssh en nuetro server-de-pruebas</p>
+servidor ssh en nuestro server-de-pruebas</p>
 
 <pre><code>&gt; apt install openssh-server
 </code></pre>
@@ -499,7 +499,7 @@ desde la maquina donde conectaremos</p>
 </code></pre>
 
 <p>finalmente deberiamos configurar el demonio (<code>sshd</code>) para que no permita la
-conexion por contraseña, solo mediante llaves modificando dentro de
+conexion por contraseña, solo mediante llaves. Modificamos dentro de
 <code>/etc/ssh/sshd_config</code></p>
 
 <pre><code>PubkeyAuthentication yes
@@ -564,7 +564,9 @@ solucion</p>
 idea no mostrarle la version particular que se esta ejecutando a los
 malintencionados. Basta colocar:</p>
 
-<pre><code>&gt; server_tokens off;
+<pre><code>...
+server_tokens off;
+...
 </code></pre>
 
 <p>(los punto y coma son importantes, tenerlos en mente)</p>
@@ -606,7 +608,7 @@ nginx.service: Failed to read PID from file /run/nginx.pid: Invalid argument
 un one-liner visto en el blog de <a href="https://www.ochobitshacenunbyte.com/2018/07/04/que-comando-de-terminal-usas-mas-veces-en-linux/">davidochobits</a>
 que a su vez lo vio en reddit, lanzo el siguiente comando</p>
 
-<pre><code>cat /var/log/nginx/access.log | awk '{ print $1 }' | sort | uniq -c | sort -n | tail | perl -lane 'print $F[1], &quot;\t&quot;, $F[0], &quot;\t&quot;, &quot;▄&quot; x ($F[0] / 10)'
+<pre><code>&gt; cat /var/log/nginx/access.log | awk '{ print $1 }' | sort | uniq -c | sort -n | tail | perl -lane 'print $F[1], &quot;\t&quot;, $F[0], &quot;\t&quot;, &quot;▄&quot; x ($F[0] / 10)'
 66.249.79.87    15  ▄
 181.95.155.18   16  ▄
 66.249.79.254   18  ▄
@@ -898,7 +900,7 @@ server_name mi-dominio www.mi-dominio;
 . . .
 </code></pre>
 
-<p>luego, lanzar lo siguientes comandos</p>
+<p>luego, lanzar los siguientes comandos</p>
 
 <pre><code>&gt; nginx -t
 &gt; systemctl reload nginx
@@ -1031,7 +1033,7 @@ lo que puse, para la proxima&hellip;</p>
         <header class="key"><b>CATEGORIES</b></header>
         <div>
           <ul class="terms">
-            <li><a href="https://nasciiboy.land/categories/prog">prog(51)</a></li><li><a href="https://nasciiboy.land/categories/post">post(41)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(15)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(1)</a></li>
+            <li><a href="https://nasciiboy.land/categories/prog">prog(51)</a></li><li><a href="https://nasciiboy.land/categories/post">post(42)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(15)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(1)</a></li>
           </ul>
         </div>
       </section>
@@ -1040,7 +1042,7 @@ lo que puse, para la proxima&hellip;</p>
         <header class="key"><b>TAGS</b></header>
         <div>
           <ul class="terms">
-            <li><a href="https://nasciiboy.land/tags/fonos">fonos(26)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(20)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(17)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/go">go(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(26)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(20)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(17)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/go">go(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li>
           </ul>
         </div>
       </section>

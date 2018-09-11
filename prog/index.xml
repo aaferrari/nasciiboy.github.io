@@ -46,7 +46,7 @@ nesedad) te permitan realizar&lt;/p&gt;
 &lt;p&gt;mientras hacia dichas pruebas &amp;ldquo;gratuitas&amp;rdquo; que forzosamente necesitaron varias
 busquedas por &amp;ldquo;el mejor&amp;rdquo; tutorial para &amp;ldquo;XXXXXX&amp;rdquo; version &amp;ldquo;YYYYYY&amp;rdquo;, se acumularon una
 cantidad considerable de enlaces asi como ficheros de configuracion que
-para la siguiente &amp;ldquo;reinstalacion&amp;rdquo; seguramente no recondare. Por ello mejor
+para la siguiente &amp;ldquo;reinstalacion&amp;rdquo; seguramente no recuerde. Por ello mejor
 dejarlo medio organizado para el yo del futuro.&lt;/p&gt;
 
 &lt;p&gt;debo aclarar que es solo un primer intento al que se combino (por mi constante
@@ -58,7 +58,7 @@ funcionamiento el servidor en casa.&lt;/p&gt;
 &lt;p&gt;Je, eso de rentar un vps con internete a velocidad de primer mundo mola un
 guevo, aunque si quieres hacerte de unos buenos TeraBytes de almacenamiento
 deberias ir buscando una buena hipoteca&amp;hellip; si es que tienes casa&amp;hellip; ignorando ese aspecto, el precio
-por lo que ofertan es razonable, aunque la tranquilidad y &amp;ldquo;el placer de
+por lo que ofertan es razonable, aunque la tranquilidad y &amp;ldquo;el placer&amp;rdquo; de
 tener tu propia infraestructura, viendole parpadear los leds directamente es
 mucho mayor, supongo.&lt;/p&gt;
 
@@ -91,7 +91,7 @@ las interfaces de red&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;gt; chmod 0600 /etc/network/interfaces
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;despues, como en mi caso con un wifi cifrado con WPA2 tendriamos que obtener unas digitos
+&lt;p&gt;despues, como en mi caso con un wifi cifrado con WPA2 tendriamos que obtener unos digitos
 hexadeci-magicos, con el comando&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;gt; wpa_passphrase ssid contraseña
@@ -219,7 +219,7 @@ magico es &lt;code&gt;255.255.255.0&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;con la ip fija, el siguiente paso logico por comodidad como tambien para
 economizar en monitores, vendria a ser conectar via ssh. Primero instalamos el
-servidor ssh en nuetro server-de-pruebas&lt;/p&gt;
+servidor ssh en nuestro server-de-pruebas&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;gt; apt install openssh-server
 &lt;/code&gt;&lt;/pre&gt;
@@ -268,7 +268,7 @@ desde la maquina donde conectaremos&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;finalmente deberiamos configurar el demonio (&lt;code&gt;sshd&lt;/code&gt;) para que no permita la
-conexion por contraseña, solo mediante llaves modificando dentro de
+conexion por contraseña, solo mediante llaves. Modificamos dentro de
 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;PubkeyAuthentication yes
@@ -333,7 +333,9 @@ solucion&lt;/p&gt;
 idea no mostrarle la version particular que se esta ejecutando a los
 malintencionados. Basta colocar:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;gt; server_tokens off;
+&lt;pre&gt;&lt;code&gt;...
+server_tokens off;
+...
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(los punto y coma son importantes, tenerlos en mente)&lt;/p&gt;
@@ -375,7 +377,7 @@ nginx.service: Failed to read PID from file /run/nginx.pid: Invalid argument
 un one-liner visto en el blog de &lt;a href=&#34;https://www.ochobitshacenunbyte.com/2018/07/04/que-comando-de-terminal-usas-mas-veces-en-linux/&#34;&gt;davidochobits&lt;/a&gt;
 que a su vez lo vio en reddit, lanzo el siguiente comando&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | tail | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 10)&#39;
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | tail | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 10)&#39;
 66.249.79.87    15  ▄
 181.95.155.18   16  ▄
 66.249.79.254   18  ▄
@@ -667,7 +669,7 @@ server_name mi-dominio www.mi-dominio;
 . . .
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;luego, lanzar lo siguientes comandos&lt;/p&gt;
+&lt;p&gt;luego, lanzar los siguientes comandos&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;gt; nginx -t
 &amp;gt; systemctl reload nginx
