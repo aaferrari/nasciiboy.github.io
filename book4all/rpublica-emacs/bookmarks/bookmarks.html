@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head><title>Emacs: 11. Bookmarks </title>
+<link title="rpublica.net Estilo" href="../emacs.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="author" content="Antoni Serra Devecchi" />
+<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, Español"/>
+<meta name="description" content="manual de introduccion a emacs." />
+
+</head>
+<body>
+<div id="contenidor0">
+	
+	<div id="rotulo">
+	
+	<span id="r">rp</span>
+	
+	</div>
+	
+	<div id="globalNav">
+<!--	
+	<ul id="credits"><li></li>
+<li>Antoni Serra Devecchi</li>
+
+<li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
+<li><i>Versión no definitiva.</i></li>
+<li><i> En proceso de redacción.</i></li>
+<li><i>Últ.Actual.: 01/04/2006</i></li></ul>		
+-->
+	</div>
+
+	<div id="nav0">
+	<span id="logo">Emacs</span>
+	</div>
+
+	<div id="guia">
+
+	<ul id="tabnav">
+     <li ><a href="../../index.html">RPublica.net</a></li>
+     <li><a href="../emacs.html">Emacs</a></li>
+     <li class="active"><a href="bookmarks.html#110">11. Bookmarks  </a></li>
+     <!--<li><a href="#">XXXXX</a></li>
+     <li><a href="#">XXXXX</a></li> -->
+
+</ul>
+
+	</div>
+<div id="logo1">
+Referéncia
+</div>
+
+<div id="indice">
+
+<div id="indice1">
+
+<p ><a href="../emacs.html">0. Indice General</a></p>
+
+<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>		
+<p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
+		
+<p ><a href="../modos/modos.html#III">III.Modos</a></p>
+		
+<p ><a href="../start/start.html#IV">IV.La Pantalla de Emacs</a></p>
+		
+				
+			
+<p><a href="../abrir/abrir.html#10">1.Abrir Archivos</a></p>
+		
+				
+
+<p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
+		
+
+<p ><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
+		
+
+
+<p ><a href="../movimientos/movimientos.html#40">4.Movimientos del cursor</a></p>
+		
+			
+<p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
+		
+<p ><a href="../buscar/buscar.html#60">6.Búsquedas</a></p>
+		
+<p ><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
+		
+
+
+<p ><a href="../xbuffers/xbuffers.html#80">8.Buffers múltiples</a></p>
+		
+
+
+<p ><a href="../ventanas/ventanas.html#90">9.Ventanas</a></p>
+		
+<p ><a href="../marcos/marcos.html#100">10.Marcos</a></p>
+		
+
+<p class="active"><a href="bookmarks.html#110">11.Bookmarks</a></p>
+		
+
+<p><a href="../consola/consola.html#120">12.Emacs y la Shell</a></p>
+		
+
+<p><a href="../dired/dired.html#130">13.Dired</a></p>
+		
+
+
+<p><a href="../perso/perso.html#140">14.Personalización </a></p>
+		
+
+<p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
+		
+<p><a href="../formato/formato.html#160">16.Formato de texto </a></p>
+		
+
+<p><a href="../imprimir/imprimir.html#170">17.Imprimir </a></p>
+
+
+<p><a href="../help/help.html#180">18.El Sistema de Ayuda </a></p>
+		
+
+
+<p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
+		
+<p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
+<p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
+<p><a href="http://www.rpublica.net/emacs/recursos/recursos.html#A">A.Recursos Emacs</a></p>
+<p><a href="http://www.rpublica.net/emacs/paquetes/paquetes.html#B">B.Paquetes Emacs</a></p>
+<p><a href="http://www.rpublica.net/emacs/referencia/referencia.html#C">C.Referencia de comandos</a></p>
+<p><a href="http://www.rpublica.net/emacs/biblio/biblio.html#D">D.Bibliografia</a></p><br/>
+
+<div id="margen00">&nbsp;<span>Contacto</span></div><br/>
+<div id="margen000"><span>A.Serra Devecchi<br/>
+<a href="mailto:rpublica@gmail.com">Mail: rpublica</a>
+<br/>Versión no definitiva<br/>
+Últ.Actual.: 01/04/2006<br/>
+
+</span>&nbsp;</div><br/>
+
+<div id="margen00000"><!--Creative Commons License-->
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">
+<img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>Esta obra est&#225; bajo una <br/>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">licencia de Creative Commons</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> --></div>
+
+
+</div>	
+
+
+</div>
+
+
+	<div id="texto">
+		<div id="titulo">
+		<h2 class="encab" id="110">11. Bookmarks </h2> 
+		</div>
+
+	<div id="contenido">
+
+	<h6><a class="Ref" href="../marcos/marcos.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a><!--&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../consola/consola.html"> Pág.Siguente</a></h6>
+
+	<p>Cuando se está trabajando con varias ventanas al mismo tiempo, puede resultar complicado recordar en qué lugar nos
+	encontrábamos la última vez que estuvimos en un determinado buffer. </p>
+	<p>Utilizando <b>bookmarks</b>, ( "puntos"), se facilita enormemente la tarea de <i style="font-weight:300">"regresar al punto
+	que dejamos"</i> el archivo.</p>
+	<p>Cuando creamos un <b>bookmark</b>, Emacs crea el archivo <i  class="marcado" style="font-weight:300">.emacs</i>, en el 
+	directorio pernonal. En dicho archivo Emacs guarda, cada vez que abandonamos la aplicación, los <b>bookmarks</b> creados.</p>
+	<p>Un aspecto que debemos tener muy en cuenta es que <i  class="marcado" style="font-weight:300">
+	los bookmarks marcan una posición en el archivo, no en el texto</i>.</p>
+	<p>Lo anterior quiere decir que , si eliminamos un texto marcado, el <b>bookmark</b> permanece. De iguál forma, 
+	si insertamos texto de modo que el texto marcado, el <b>bookmark</b> no se desplace, conservando su pòsición en el archivo. </p>
+	<p>Los <b>bookmark</b> son creados y guardados por cada usuario. Cuando varios usuarios acceden a la misma documentación, cada uno
+	de ellos puede utilizar sus propios <b>bookmark</b>, sin interferir en los demás.</p>
+	<p>En el caso de la creación y gestión de <b>bookmark</b> debe preferirse la utilización de las opciones de menú antes que
+	la utilización de la linea de comandos.</p>
+	<p>La gestión de <b>bookmark</b> puede realizarse, en casi su totalidad, através de las opciones del menú:</p>
+	<p class="marcado"><span class="comandos" >Edit-->Bookmarks</span></p><br/>
+	
+
+	
+	<h3 class="encab" id="111" > 11.1 Creación de un nuevo bookmark.</h3>
+	 <h6><a class="Ref" href="../marcos/marcos.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="bookmarks.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../consola/consola.html"> Pág.Siguente</a></h6>
+	
+	<p>Para crear un <b>bookmark</b> el la posición del cursor:</p>
+	
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit--> Bookmarks--> Set Bookmark</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;r &nbsp;m</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;bookmark-set&nbsp;&lt;Enter&gt;</i></li>
+	</ul>
+	
+	
+	
+	<div class="img">
+	<p>Al ejecutar el comando, Emacs nos pide que introduzcamos el nombre del bookmark que deseamos crear. Emacs nos 
+	sugiere un nombre (entre paréntesis), el cual, si se trata del primer bookmark creado, suele coincidir con el nombre
+	 del archivo.</p>
+	<p>Los nombres de bookmark pueden tener cualquier longitud y contener espacios.</p>
+	<table><tr><td><img src="bookmark1.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+	</div><br/>
+
+	<h3 class="encab" id="112" > 11.2 Desplazarse a un bookmark.</h3>
+	 <h6><a class="Ref" href="../marcos/marcos.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="bookmarks.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../consola/consola.html"> Pág.Siguente</a></h6>
+	
+	<p>Para desplazarnos a  un determinado <b>bookmark</b> :</p>
+	
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit--> Bookmarks--> Jump to Bookmark</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;r &nbsp;b</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;bookmark-jump&nbsp;&lt;Enter&gt;</i></li>
+	</ul>
+
+	<p>Cuando operamos através de la <b>opción del menú</b>, se nos mostrará una ventana con los bookmarks disponibles.<br/> Con el ratón seleccionamos el deseado.</p>
+	<p>Cuando realicemos el desplazamiento através de <b>comando</b>, Emacs nos pedirá que introduzcamos el nombre del
+	<b>bookmark</b> al que queremos desplazarnos.</p>
+
+	<p>Efectuada la operación, Emacs situará el cursor en el bookmark especificado.</p><br/>
+
+	
+	<h3 class="encab" id="113" > 11.3 Renombrar Booksmarks.</h3>
+	 <h6><a class="Ref" href="../marcos/marcos.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="bookmarks.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../consola/consola.html"> Pág.Siguente</a></h6>
+	
+	<p>Para cambiar el nombre a un  <b>bookmark</b> :</p>
+	
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit--> Bookmarks--> Rename Bookmark</i></li>
+	
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;bookmark-rename&nbsp;&lt;Enter&gt;</i></li>
+	</ul>
+
+	<p>Cuando operamos através de la <b>opción del menú</b>, se nos mostrará una ventana con los bookmarks disponibles.<br/> Con el ratón seleccionamos el que queremos renombrer.<br/>
+	Emacs nos mostrará un mensaje en el mini-buffer, pidiéndonos la introducción del nuevo nombre: <i style="font-weight:300">&nbsp;New name:</i></p>
+	<p>Cuando realicemos el cambio de nombre através de <b>comando</b>, Emacs nos pedirá que introduzcamos el nombre del
+	<b>bookmark</b> al que queremos cambiar el nombre (<i style="font-weight:300">&nbsp;Old Bookmark name:</i>).<br/>
+	Tras señalar el bookmark a renombrar, Emacs nos pedirá que introduzcamos el nuevo nombre (<i style="font-weight:300">&nbsp;New name:</i>).</p><br/>
+
+	<h3 class="encab" id="114" > 11.4 Eliminar bookmarks.</h3>
+	 <h6><a class="Ref" href="../marcos/marcos.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="bookmarks.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../consola/consola.html"> Pág.Siguente</a></h6>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit--> Bookmarks--> Delete Bookmark</i></li>
+	
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;bookmark-delete&nbsp;&lt;Enter&gt;</i></li>
+	</ul>
+
+	<p>Cuando realizemos la eliminación através de la <b>opción del menú</b>, se nos mostrará una ventana con los bookmarks disponibles.<br/> Con el ratón seleccionamos el que queremos eliminar.</p>
+	<p>En la eliminación através de <b>comando</b>, Emacs nos pedirá que introduzcamos el nombre del
+	<b>bookmark</b> a eliminar.</p><br/>
+
+
+
+	<h3 class="encab" id="115" > 11.5 Otros comandos realtivos a  bookmarks.</h3>
+	 <h6><a class="Ref" href="../marcos/marcos.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="bookmarks.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../consola/consola.html"> Pág.Siguente</a></h6>
+
+	<p>Se relacionan una série de comandos que pueden ser de utilidad en el trabajo con <b>bookmarks</b>: </p><br/>
+
+
+<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit--> Bookmarks--> Save Bookmarks </i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;bookmark-save&nbsp;&lt;Enter&gt;</i></li>
+	</ul>
+
+	<p>Guarda todos los bookmarks en el archivo por defecto; normalmente &nbsp;<i class="marcado">~/.emacs.bmk</i>.</p><br/>
+
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit--> Bookmarks--> Save Bookmarks As..</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;bookmark-write&nbsp;&lt;Enter&gt;</i></li>
+	</ul>
+
+	<p>Guarda todos los bookmarks en un determinado archivo. Mediante un mensaje en el mini-buffer, Emacs nos solicitará 
+	que introduzcamos el archivo en el cual deseamos guardar los bookmarks.</p><br/>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit--> Bookmarks--> Insert Location</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;bookmark-insert-location&nbsp;&lt;Enter&gt;</i></li>
+	</ul>
+
+	<p>Inserta, en la posición del cursor, el path de un determinado bookmark.</p><br/>
+	
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit--> Bookmarks--> Insert Contents</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;bookmark-insert&nbsp;&lt;Enter&gt;</i></li>
+	</ul>
+
+	<p>Inserta, en la posición del cursor, el contenido (¡todo el contenido!) de un archivo asociado a un determinado bookmark.</p>
+	<p><i style="font-weight:300">Sugerencia: Puede facilitarnos la división de la tarea en diversos archivos para, posteriormente, componer el archivo final definitivo.</i> </p><br/>
+
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit--> Bookmarks--> Load a Bookmark File</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;bookmark-load&nbsp;&lt;Enter&gt;</i></li>
+	</ul>
+
+	<p>Importa bookmarks desde un determinado archivo. Mediante un mensaje en el mini-buffer, Emacs nos solicita que introduzcamos el nombre del archivo que contiene los bookmarks a importar.</p><br/>
+	
+
+
+	<h3 class="encab" id="116" > 11.6 Lista de  bookmarks.</h3>
+	 <h6><a class="Ref" href="../marcos/marcos.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="bookmarks.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../consola/consola.html"> Pág.Siguente</a></h6>
+
+
+	<p>Para la gestión de los <b>bookmarks</b> disponemos de una <b>Lista de Bookmarks</b>, similar a la de buffers, que se nos presenta en el buffer <i style="font-weight:300">&nbsp;*Bookmark List*&nbsp;</i>.Como podremos observar, varias de las acciones que se describirán en este apartado pueden realizarse através de <b>opciones de menú</b> y/o de <b>comandos</b> descritos en los anteriores apartados. </p>	
+	<p> Para acceder a la <i style="font-weight:300">&nbsp;*Bookmark List*&nbsp;</i>: </p>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit--> Bookmarks--> Edit Bookmark List</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;r &nbsp;l</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;bookmark-menu-list&nbsp;&lt;Enter&gt;</i></li>
+	</ul>
+	
+	<img src="bookmark2.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/>
+
+	<p>Para la gestión de <b>bookmarks</b> atraves de la <b>Lista</b> utilizaremos los siguientes comandos: </p>
+
+	<table>
+	<tr><td><b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp;</td><td  class="comandos"  > Nos muestra el archivo que contiene el bookmark, con el cursor situado en la posición marcada.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">f</b>&nbsp;&nbsp; <b>o</b>&nbsp;&nbsp; <b class="marcado">j</b>&nbsp;&nbsp;</td><td  class="comandos"  >Como en el caso anterior</td></tr>
+	<tr><td></td></tr>
+
+
+	<tr><td><b class="marcado">d</b>&nbsp;<b>o</b>&nbsp;<b class="marcado">C-d</b>&nbsp;&nbsp;</td><td  class="comandos"  >Marca un bookmark para su eliminación.<br/> En la primera columna aparece el signo <b>D</b></td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">k</b>&nbsp;&nbsp;</td><td  class="comandos" >Marca un bookmark para su eliminación.<br/> En la primera columna aparece el signo <b>D</b></td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">u</b>&nbsp;&nbsp;</td><td  class="comandos" >Elimina las marcas de los bookmarks.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">x</b>&nbsp;&nbsp;</td><td  class="comandos" >Elimina los bookmarks marcados con <i class="marcado" style="font-weight:300">d</i> <b>;</b> <i class="marcado" style="font-weight:300">k</i>&nbsp;<b>o</b>&nbsp;<i class="marcado" style="font-weight:300">C-d</i></td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">s</b>&nbsp;&nbsp;</td><td  class="comandos" >Guarda todos los bookmarks.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">r</b>&nbsp;&nbsp;</td><td  class="comandos" >Renombra el bookmark. Emacs nos solicitará el nuevo nombre.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">t</b>&nbsp;&nbsp;</td><td  class="comandos" >Oculta o visualiza los paths de los archivos de los bookmarks de la lista.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">w</b>&nbsp;&nbsp;</td><td  class="comandos" >Muestra, en el mini-buffer, la localización del archivo del bookmark..</td></tr>
+	<tr><td></td></tr>
+
+
+	<tr><td><b class="marcado">m</b>&nbsp;&nbsp;</td><td  class="comandos" >Marca  bookmarks para la visualización de sus archivos en múltiples ventanas.<br/> En la primera columna aparece el signo &nbsp;<b>&#062;</b></td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">l</b>&nbsp;&nbsp;</td><td  class="comandos" >Carga un archivo   <i class="marcado" style="font-weight:300">.emacs.bmk</i> diferente al actual</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">A</b>&nbsp;&nbsp;</td><td  class="comandos" >Muestra todas las <b>anotaciones </b> &#091; Las <b>anotaciones en bookmarks</b> se tratan en el siguiente apartado.&#093;</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">a</b>&nbsp;&nbsp;</td><td  class="comandos" >Muestra  las <b>anotaciones </b> del bookmark
+        actual &#091; Las <b>anotaciones en bookmarks</b> se tratan en el siguiente apartado.&#093;.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">e</b>&nbsp;&nbsp;</td><td  class="comandos" >Edita o crea una <b>anotación</b> en el bookmark actual.&#091; Las <b>anotaciones en bookmarks</b> se tratan en el siguiente apartado.&#093;. </td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">q</b>&nbsp;&nbsp;</td><td  class="comandos" >Sale de la <b>Lista de bookmarks</b>.</td></tr>
+	</table>
+
+	<p>Para moverse dentro de la <b>Lista de bookmarks</b> pueden utilizarse los mismos comandos utilizados para moverse en la <b>Lista de buffers</b>, aunque lo mas eficiente es la utilización del ratón.</p><br/>
+
+	<h3 class="encab" id="117" > 11.7 Anotaciones en los bookmarks.</h3>
+	 <h6><a class="Ref" href="../marcos/marcos.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="bookmarks.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../consola/consola.html"> Pág.Siguente</a></h6>
+
+	<p>En los bookmarks pueden realizarse todo tipo de anotaciones.</p>
+
+	<p>La forma más fácil de realizar una anotación es desde la <b>Lista de bookmarks</b>. El proceso seria el siguiente:</p>
+	<div class="img">
+	<ol class="img">
+	<p>Abrir la  &nbsp;<i style="font-weight:300">Lista de bookmarks</i>&nbsp; ; situar el cursor en la linea del bookmark en el que se desea realizar la anotación y teclear el comando &nbsp; <b class="marcado">e</b>  ( &nbsp;<i style="font-weight:300">Editar o crear una anotación en el bookmark actual</i>&nbsp;). </p>
+	<p>Emacs abre una nueva ventana, &nbsp;<i style="font-weight:300">*Bookmark Annotation Compose*</i>&nbsp;, en la que se redactarán las anotaciones de acuerdo con unas sencillas reglas, algunas de las cuales se muestran en la misma ventana..</p>
+
+	<table><tr><td><img src="bookmark3.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+
+	<p>Las citadas &nbsp;<i style="font-weight:300">reglas de redacción de anotaciones</i>&nbsp; son:</p>
+
+	<ol>
+	<li>Todas la lineas que comiencen con el signo &nbsp; <b class="marcado">&#035;</b>&nbsp;  pueden ser eliminadas.</li>
+	<li>Una vez finalizada la redacción, se guarda la anotación y se sale de la ventana mediante el comando &nbsp; <b class="marcado">C-c &nbsp;C-c</b>&nbsp; </li>
+	<li>Emacs no guarda automaticamente las anotaciones cuando se sale de la aplicación.</li>
+	<li>Emacs añade un &nbsp; <b class="marcado">&#042;</b>&nbsp; al principio del nombre de los bookmarks anotados, en la Lista de bookmarks.</li>  
+	</ol>
+	<p>Como vimos en la sección anterior, para ver la anotación de un determinado <i style="font-weight:300">bookmark</i> utilizaremos el comando
+	 &nbsp; <b class="marcado">a</b>&nbsp;.<br/>
+	 Para visualizar todas las anotaciones de la <i style="font-weight:300">Lista de bookmarks</i> utilizaremos el comando &nbsp; <b class="marcado">A</b>.&nbsp;</p>
+
+	<p>Cuando nos desplacemos a un <i style="font-weight:300">bookmark</i> o nos movamos a un archivo marcado desde la 
+	  <i style="font-weight:300">Lista de bookmarks</i> , las anotaciones se nos mostrarán en una <i style="font-weight:300">ventana de solo-lectura</i>.<br/>
+	 Si el archivo marcado se abre por otro precedimiento que no sea através de la <i style="font-weight:300">Lista de bookmarks</i> , las anotaciones no se mostrarán.</p>
+	</div><br/>
+
+
+		<div class="margenInf">&nbsp;</div>
+
+
+		<div id="pie"> <h6><a class="Ref" href="../marcos/marcos.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; 
+		<a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="bookmarks.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;
+		<a class="Ref" href="../consola/consola.html"> Pág.Siguente</a></h6> 
+
+		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
+		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">
+		11.Bookmarks</span>&nbsp;&#124;&nbsp;</h6> 
+		 </div>
+		<div class="margenInf">&nbsp;</div> 
+		
+	</div>
+	
+</div>
+
+</body>
+	
+</html>

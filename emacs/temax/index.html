@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>temax</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style> :root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 80%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 20%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/emacs">emacs</a></div>
+
+  <h1>temax</h1>
+  
+
+<p>sucede que haciendo una prueba con el vps conectado via <code>ssh</code> queria dejar
+corriendo un comando</p>
+
+<pre><code>&gt; youtube-dl -f best -ciw -v 'https://www.youtube.com/channel/UCbGYYbuGLFC6wIsyKXXW4cQ'
+</code></pre>
+
+<p>y salir de la sesion, dejando al vps a su bola, p-e-r-o, p-e-r-o, p-e-r-o si sales de la sesion
+ssh, tu comando tambien se corta</p>
+
+<p>y esto no se soluciona poniendo un <code>&amp;</code> al final del comando, por que este
+(supongo y sin idea) &ldquo;proceso&rdquo; es un &ldquo;hijo&rdquo; de tu shell que es un hijo de tu
+sesion y si la sesion se muere, el padre mata a todo mundo. Ja, ja, ja, ha</p>
+
+<p>Como solucionar esto? pues teniendo un shell que sea &ldquo;hijo de un demonio😈&rdquo;  que
+ande a su bola, e <em>invocarlo</em> cuando nos venga en gana</p>
+
+<p><img src="https://nasciiboy.land/img/temax/daemon.png" alt="" /></p>
+
+<p>y todo esto que suena tan complicado y misterioso, es mas facil de lo que parece
+(creo). Encima podemos hacerlo con emacs, aunque igual, segun la situacion
+podriamos recurrir a otros dos programitos habitualmente disponibles en
+cualquier distribucion</p>
+
+<h2 id="emacs">emacs</h2>
+
+<p>emacs tiene un <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html">modo demonio</a>
+que sirve para dos cosas:</p>
+
+<ul>
+<li><p>cargar emacs una vez y luego lanzar instancias que comparten la misma sesion
+pero se manifiestan a la velocidad del rayo</p></li>
+
+<li><p>volver independiente tu sesion de una shell, fuera esta en ssh o en modo
+texto o grafico</p></li>
+</ul>
+
+<p>primero, para activar el modo demonio lanzamos el siguiente comando</p>
+
+<pre><code>&gt; emacs --daemon
+</code></pre>
+
+<p>esto no lanzara ningun emacs, simplemente colocara bajo las sombras una sesion
+con la que podremos contactar. Para hacer esto necesitamos un comando particular
+llamado <code>emacsclient</code>. Como la mayoria de las cosas, no es tan sencillo. Si lo
+lanzamos tal cual</p>
+
+<pre><code>&gt; emacsclient
+emacsclient: file name or argument required
+Try 'emacsclient --help' for more information
+</code></pre>
+
+<p>nos dira que intentemos ver la ayuda. Si bien, esta ayuda es basta, podriamos
+simplificarla a dos opciones utiles</p>
+
+<pre><code>&gt; emacsclient -c
+</code></pre>
+
+<p>que nos lanza emacs en el buffer scratch.</p>
+
+<p>dejemos una marca en dicho buffer para identificar nuestros pasos.
+Colocando por ejemplo, la frase <code>&quot;hola soy emacsclient uno&quot;</code></p>
+
+<p><img src="https://nasciiboy.land/img/temax/emacsclient-00.png" alt="" /></p>
+
+<p>bien, terminemos emacs como se haria habitualmente <code>C-x C-c</code> e invoquemos de
+nuevo a nuestro emacs-demonio <code>emacsclient -c -nw</code></p>
+
+<p><img src="https://nasciiboy.land/img/temax/emacsclient-00.png" alt="" /></p>
+
+<p>hala, nuestro mensaje sigue hay!</p>
+
+<p>ahora en nuestra terminal (tilix) dividida, lanzamos de nuevo <code>emacsclient -c -nw</code></p>
+
+<p><img src="https://nasciiboy.land/img/temax/emacsclient-01.png" alt="" /></p>
+
+<p>de nuevo lo mismo</p>
+
+<p><img src="https://nasciiboy.land/img/temax/emacsclient-02.png" alt="" /></p>
+
+<p>y si cerramos uno o todos los <code>emacsclient</code> da igual,
+lo que en ellos hagamos permanecera mientras no se apague el sistema o cerremos
+el modo demonio</p>
+
+<p>la otra forma en la que podemos lanzar emacsclient, consiste en indicar que
+ficheros abrir</p>
+
+<pre><code>&gt; emacsclient fichero1 fichero2 ...
+</code></pre>
+
+<p>y ahora con esto, podriamos resolver el problema inicial. Abrimos una shell,
+ponemos el comando a ejecutar, salimos (<code>C-x C-c</code>), cerramos el <code>ssh</code> y
+regresamos cuando lo creamos conveniente. El demonio de emacs con todos
+sus buffers y demas cosas, seguira realizando su labor!</p>
+
+<p><img src="https://nasciiboy.land/img/temax/emacsclient-03.png" alt="" /></p>
+
+<p>y ahora? pues para terminar con el modo demonio, desde un <code>emacsclient</code></p>
+
+<pre><code>M-x server-mode
+</code></pre>
+
+<p>nos dira que actualmente hay un servidor con clientes, que si lo queremos
+terminar de todas maneras, a lo que diremos que si.</p>
+
+<h3 id="cosas">cosas</h3>
+
+<p>emacs es un entorno centrado en el texto, que puede dividirse, expandirse y
+adaptarse de formas inimaginables, sin embargo, una terminal pura donde ejecutar
+programas visuales e interactivos escritos cada uno en su lenguaje, con sus
+propias librerias y forma de entender sus combinaciones de teclado, igual y
+queda en otra liga mas alla de los fines de emacs</p>
+
+<p>tambien, aunque emacs posee su propia terminal (tonta) <strong>eshell</strong>, lo mejor es
+lanzar programas no interactivos. Ademas eshell, sola hay una y solo una, Emacs
+no es multiproceso, o hace una cosa o hace otra, pero no dos al mismo
+tiempo. Si lo que necesitamos son varias shell reales, lo mas conveniente seria
+recurrir a otras herramientas</p>
+
+<h2 id="gnu-screen">GNU Screen</h2>
+
+<p>esto es un <a href="https://es.wikipedia.org/wiki/Multiplexor">multiplexor</a> de terminal,
+que segun la <a href="https://en.wikipedia.org/wiki/Terminal_multiplexer">wikipedia</a>:</p>
+
+<blockquote>
+<p>es una aplicación de software que puede utilizarse para varias sesiones de
+inicio de sesión independientes basadas en seudoterminales dentro de una única
+pantalla de terminal, una ventana de emulador de terminal, una consola de
+sistema de PC/puesto de trabajo o una sesión de inicio de sesión remota, o
+para separar y volver a adjuntar sesiones de un terminal. Es útil para tratar
+con múltiples programas desde una interfaz de línea de comandos, y para
+separar programas de la sesión de la shell de Unix que inició el programa,
+particularmente para que un proceso remoto continúe ejecutándose incluso
+cuando el usuario está desconectado.</p>
+</blockquote>
+
+<p>pero que en resumidas palabras, podria resumirse en un &ldquo;emacs&rdquo; para las
+terminales o como &ldquo;un entorno de escritorio para las terminales&rdquo;</p>
+
+<p>y que podemos hacer con esto? tras instalar gnu screen (buscarlo como <code>screen</code>
+en su distribucion) y lanzarlo por primera vez</p>
+
+<pre><code>&gt; screen
+</code></pre>
+
+<p>nos resivira con un bonito mensaje</p>
+
+<p><img src="https://nasciiboy.land/img/temax/screen-00.png" alt="" /></p>
+
+<p>tras presionar <code>espacio</code>, aparecera el prompt de nuestra shell de siempre, donde
+lanzar los comandos de siempre</p>
+
+<p><img src="https://nasciiboy.land/img/temax/screen-01.png" alt="" /></p>
+
+<p>bien no? pues si&hellip; a-u-n-q-u-e, cuando salimos de la terminal, no salimos de la
+terminal, saldremos de la terminal en <code>screen</code></p>
+
+<pre><code>[screen is terminating]
+</code></pre>
+
+<p>volvamos a lanzarla de nuevo y veamos como demonios (ja, ja, que cachondo)
+utilizar este invento</p>
+
+<p>primero, <code>screen</code> tiene algunas influencias emacseras, y como este, tiene un
+prefijo para hacer cosas, que por defecto es <code>C-a</code> (<code>Control</code> y <code>a</code> al mismo
+tiempo) seguido por una (o mas) combinaciones que serian el comando en si, por
+ejemplo, si presionamos <code>C-a d</code> saldremos de <em><code>screen</code> pero sin cerrar
+<code>screen</code></em>, que seguira en &ldquo;segundo plano&rdquo; a su rollo, rollo al que podemos
+regresar</p>
+
+<p>como hacer esto? no es tan sencillo, primero deberemos averiguar el nombre de
+nuestra &ldquo;sesion&rdquo; y re-enlazar a ella</p>
+
+<p>mientras haciamos el <code>C-a d</code> nos lanzaba la siguiente salida</p>
+
+<pre><code>[detached from 6469.pts-3.tachikoma]
+</code></pre>
+
+<p>un dato similar podemos obtenerlo con el siguiente comando</p>
+
+<pre><code>&gt; screen -ls
+There is a screen on:
+	6469.pts-3.tachikoma	(Detached)
+1 Socket in /run/screens/S-nasciiboy.
+</code></pre>
+
+<p>donde el <em>dato importante</em> es ese que va luego del punto del numero, hasta el
+primer espacio, es decir (y en este caso particular) <code>pts-3.tachikoma</code>. Dicho
+valor nos servira para recuperar la sesion</p>
+
+<pre><code>&gt; screen -x pts-3.tachikoma
+</code></pre>
+
+<p>bonito no? ehhhh, mas o menos. Salgamos sin cerrar e iniciemos una nueva sesion
+con un nombre mas sencillo</p>
+
+<pre><code>&gt; screen -S mi-sesion
+</code></pre>
+
+<p>de nuevo, tendriamos otra terminal&hellip;</p>
+
+<p>repitiendo el listado de sesiones</p>
+
+<pre><code>&gt; screen -ls
+There are screens on:
+	7832.mi-sesion	(Detached)
+	6469.pts-3.tachikoma	(Detached)
+2 Sockets in /run/screens/S-nasciiboy.
+</code></pre>
+
+<p>guaaa, que emocionante&hellip;</p>
+
+<p>para contactar a esta nueva sesion</p>
+
+<pre><code>&gt; screen -x mi-sesion
+</code></pre>
+
+<p>y? pues ahora un par de cosas medio chulas, primero podemos dividir la pantalla
+¡en dos! presionando <code>C-a S</code></p>
+
+<p><img src="https://nasciiboy.land/img/temax/screen-02.png" alt="" /></p>
+
+<p>luego puedes saltar a esta nueva division con <code>C-a TAB</code>. Ver el cursor en esta nueva
+seccion, apretar los botones a lo loco y ver que no pasa nada</p>
+
+<p><img src="https://nasciiboy.land/img/temax/screen-03.png" alt="" /></p>
+
+<p>hasta que invoques una shell en este espacio con el comando magico <code>C-a c</code></p>
+
+<p><img src="https://nasciiboy.land/img/temax/screen-04.png" alt="" /></p>
+
+<p>dividir nuevamente la ventana (ahora en vertical) <code>C-a |</code>, saltar a esta <code>C-a
+TAB</code>, nueva shell <code>C-a c</code> y sonreir locamente</p>
+
+<p><img src="https://nasciiboy.land/img/temax/screen-05.png" alt="" /></p>
+
+<p>ahora como cerrar este conjunto, si salimos de la shell (<code>C-d</code> o con <code>exit</code>) la
+seccion no desaparecera, seguira hay hasta que presionemos <code>C-a X</code></p>
+
+<p>&hellip;</p>
+
+<p>si por alguna razor quisieramos cambiar el prefijo <code>C-a</code> por otro distinto, por
+ejemplo <code>C-b</code>, tenemos dos opciones crear un fichero <code>.screenrc</code> en nuestro home
+con el contenido</p>
+
+<pre><code>escape ^Bb
+</code></pre>
+
+<p>con lo que el comando prefijo quedaria fijado a <code>C-b</code> por siempre jamas, o bien, lanzar
+<code>screen</code> de la siguiente manera</p>
+
+<pre><code>&gt; screen -e^bB
+</code></pre>
+
+<p>y pocas cosas mas puedo comentar sobre <code>screen</code> y sus fabulosas cualidades. Para
+mas informacion dentro de la misma sesion presionar <code>c-a ?</code> invoca a la ayuda. tambien
+podriamos ver la pagina del manual</p>
+
+<h2 id="tmux">tmux</h2>
+
+<p>y&hellip; tmux es mas o menos como <code>screen</code>, tambien va a su rollo y puede sobrevivir
+al cuelgue de una sesion ssh, tiene combinaciones &ldquo;tipo emacs&rdquo; y sirve de
+&ldquo;entorno de escritorio para las terminales&rdquo;, p-e-r-o, p-e-r-o, p-e-r-o, por
+defecto es algo mas amigable y 🌈moderno🌈 (<a href="https://en.wikipedia.org/wiki/gnu_screen">1987</a>
+vs <a href="https://en.wikipedia.org/wiki/tmux">2007</a>) aunque ambos estan escritos en c</p>
+
+<p>y cual escogeria screen o tmux? pues, tmux! aunque si hay necesidad, se usar los dos!</p>
+
+<p>y ahora, como usarlo</p>
+
+<pre><code>&gt; tmux
+</code></pre>
+
+<p><img src="https://nasciiboy.land/img/temax/tmux-00.png" alt="" /></p>
+
+<p>como vemos, a diferencia de <code>screen</code>, <code>tmux</code> se nos comera una fila al final de
+la pantalla, muy a lo <code>emacs</code>. Otra diferencia particular, empieza por el
+prefijo, que en lugar de ser <code>C-a</code> pasa a ser <code>C-b</code> (y encuentro mas comodo).
+Ademas de eso al dividir la pantalla en sus diferentes formas</p>
+
+<ul>
+<li><code>C-b &quot;</code> division horizontal</li>
+<li><code>C-b %</code> division vertical</li>
+</ul>
+
+<p>aparecera una shell sin hacer nada mas</p>
+
+<p><img src="https://nasciiboy.land/img/temax/tmux-01.png" alt="" /></p>
+
+<p>podemos deambular por las &ldquo;divisiones&rdquo; con</p>
+
+<ul>
+<li><code>C-b o</code> saltar a la siguiente</li>
+<li><code>C-b ←</code> saltar a la derecha</li>
+<li><code>C-b ↑</code> saltar arriba</li>
+<li><code>C-b →</code> saltar a la derecha</li>
+<li><code>C-b ↓</code> saltar abajo</li>
+<li><code>C-b C-←</code> redimencionar hacia la derecha</li>
+<li><code>C-b C-↑</code> redimencionar hacia arriba</li>
+<li><code>C-b C-→</code> redimencionar hacia la derecha</li>
+<li><code>C-b C-↓</code> redimencionar hacia abajo</li>
+</ul>
+
+<p><img src="https://nasciiboy.land/img/temax/tmux-02.png" alt="" /></p>
+
+<p>tambien centrar la atension en la shell actual <em>sin romper la distribucion</em> de las ventanas con
+<code>C-b z</code> (zoom) y luego restaurar con otro <code>C-b z</code></p>
+
+<p><img src="https://nasciiboy.land/img/temax/tmux-03.png" alt="" /></p>
+
+<p>o incluso y mas locochon, hacer que las shells cambien de sitio con <code>C-b C-o</code></p>
+
+<p><img src="https://nasciiboy.land/img/temax/tmux-04.png" alt="" /></p>
+
+<p>o hacer aparecer un reloc ascii gigante con <code>C-b t</code></p>
+
+<p><img src="https://nasciiboy.land/img/temax/tmux-05.png" alt="" /></p>
+
+<p>u otras cosas mas chulas como agregar &ldquo;nuevos escritorios&rdquo; con <code>C-b c</code></p>
+
+<p><img src="https://nasciiboy.land/img/temax/tmux-06.png" alt="" /></p>
+
+<p>e ir y venir entre escritorios con</p>
+
+<ul>
+<li><code>C-b n</code> siguiente</li>
+<li><code>C-b p</code> anterior</li>
+<li><code>C-b 0</code>, <code>C-b 1</code> <code>C-b …</code>, escritorio 0, escritorio 1, …</li>
+</ul>
+
+<p>o <code>C-b w</code>, que nos permite elegir visualmente</p>
+
+<p><img src="https://nasciiboy.land/img/temax/tmux-07.png" alt="" /></p>
+
+<p>salir de esta secion <em>sin cerrarla</em> con <code>C-b d</code> y recuperarla con
+<code>tmux attach</code></p>
+
+<p>tambien, podriamos no salir de dicha sesion e ingresar en ella desde otra
+terminal, repitiendo <code>tmux attach</code></p>
+
+<p><img src="https://nasciiboy.land/img/temax/tmux-08.png" alt="" /></p>
+
+<p>que hace una cosa muy chula; adaptarse y limitar lo que se ve en la sesion
+con las dimenciones de la mas pequeña. Ademas, como en <code>screen</code> podemos darle un
+nombre a una sesion y vincularnos a ella</p>
+
+<pre><code>&gt; tmux new-session -s mi-sesion # lanzar
+&gt; tmux attach -t mi-sesion      # conectar
+&gt; tmux list-sessions            # listar sesiones
+</code></pre>
+
+<p>esto y muchas cosas mas que pueden o no ser de interes, empiezan consultando la
+ayuda incluida <code>C-b ?</code>, su pagina man o si se desea un librillo con comentarios</p>
+
+<p><a href="https://leanpub.com/the-tao-of-tmux/read">https://leanpub.com/the-tao-of-tmux/read</a></p>
+
+<p>aunque creo que el nombre &ldquo;the tao of&rdquo; le viene grande, pues no enseñan un flujo o estrategia
+de trabajo. Solo comandos con imagenes, que puedes descubrir por tu cuenta, como
+el obscuro proceso para congelar la pantalla, seleccionar texto y pegarlo en
+donde se nos ocurra aun sin sesion grafica!</p>
+
+<p>en fin, yo estoy utilizando tmux para dejar corriendo en el servidor comandos de
+prolongado tiempo y tambien para ejecutar <a href="https://weechat.org">weechat</a>
+&ldquo;acumulando logs&rdquo; por dias y dias en salas de irc&hellip; mera investigacion de la fauna&hellip;</p>
+
+<p>happy hacking!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.land/emacs/elipo/">◀ elipo</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/emacs">emacs</a></div>
+</main>
+
+    <aside>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="https://nasciiboy.land/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="https://nasciiboy.land/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="https://nasciiboy.land/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="https://nasciiboy.land/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="https://nasciiboy.land/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
+
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/categories/prog">prog(58)</a></li><li><a href="https://nasciiboy.land/categories/post">post(55)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(35)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(25)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(22)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(8)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(7)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

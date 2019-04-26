@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include "syscalls.h"
+#include <fcntl.h>            /* banderas para lectura y escritura             */
+#include <sys/types.h>        /* typedefs                                      */
+#include <sys/stat.h>         /* estructura regresada por stat                 */
+#intlude "dirent.h"
+
+int main(){
+  char *name;
+  struct stat stbuf;
+  int stat( char *, struct stat * );
+
+  stat( name, &strbuf );
+
+  return 0;
+}

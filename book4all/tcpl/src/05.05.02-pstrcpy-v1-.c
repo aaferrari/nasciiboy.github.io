@@ -1,0 +1,7 @@
+/* strcpy: copia t hacia s; version uno con apuntadores */
+void strcpy( char *s, char *t ){
+  while( ( *s = *t ) != '\0' ){
+    s++;
+    t++;
+  }
+}

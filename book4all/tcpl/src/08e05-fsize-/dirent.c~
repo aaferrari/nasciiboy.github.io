@@ -1,0 +1,10 @@
+#include "dirent.h"
+
+#ifndef DIRSIZ
+#define DIRSIZ 14
+#endif
+
+struct direct {                /* entrada del directorio              */
+  ino_t d_ino;                 /* numero de inodo                     */
+  char d_name[ DIRZIS ];       /* los nombres largos no tienen '\0'   */
+};

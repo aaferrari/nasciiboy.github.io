@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head><title>Emacs: 16. Formato de texto con Emacs </title>
+<link title="rpublica.net Estilo" href="../emacs.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="author" content="Antoni Serra Devecchi" />
+<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, Español"/>
+<meta name="description" content="manual de introduccion a emacs." />
+
+</head>
+<body>
+<div id="contenidor0">
+	
+	<div id="rotulo">
+	
+	<span id="r">rp</span>
+	
+	</div>
+	
+	<div id="globalNav">
+<!--	
+	<ul id="credits"><li></li>
+<li>Antoni Serra Devecchi</li>
+
+<li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
+<li><i>Versión no definitiva.</i></li>
+<li><i> En proceso de redacción.</i></li>
+<li><i>Últ.Actual.: 01/04/2006</i></li></ul>		
+-->
+	</div>
+
+	<div id="nav0">
+	<span id="logo">Emacs</span>
+	</div>
+
+	<div id="guia">
+
+	<ul id="tabnav">
+     <li ><a href="../../index.html">RPublica.net</a></li>
+     <li><a href="../emacs.html">Emacs</a></li>
+     <li class="active"><a href="formato.html#160">16. Formato de texto con Emacs  </a></li>
+     <!--<li><a href="#">XXXXX</a></li>
+     <li><a href="#">XXXXX</a></li> -->
+
+</ul>
+
+	</div>
+<div id="logo1">
+Referéncia
+</div>
+
+<div id="indice">
+
+
+<div id="indice1">
+
+<p ><a href="../emacs.html">0. Indice General</a></p>
+
+<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>		
+<p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
+		
+<p ><a href="../modos/modos.html#III">III.Modos</a></p>
+		
+<p ><a href="../start/start.html#IV">IV.La Pantalla de Emacs</a></p>
+		
+				
+			
+<p><a href="../abrir/abrir.html#10">1.Abrir Archivos</a></p>
+		
+				
+
+<p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
+		
+
+<p ><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
+		
+
+
+<p ><a href="../movimientos/movimientos.html#40">4.Movimientos del cursor</a></p>
+		
+			
+<p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
+		
+<p ><a href="../buscar/buscar.html#60">6.Búsquedas</a></p>
+		
+<p ><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
+		
+
+
+<p ><a href="../xbuffers/xbuffers.html#80">8.Buffers múltiples</a></p>
+		
+
+
+<p ><a href="../ventanas/ventanas.html#90">9.Ventanas</a></p>
+		
+<p ><a href="../marcos/marcos.html#100">10.Marcos</a></p>
+		
+
+<p ><a href="../bookmarks/bookmarks.html#110">11.Bookmarks</a></p>
+		
+
+<p><a href="../consola/consola.html#120">12.Emacs y la Shell</a></p>
+		
+
+<p  ><a href="../dired/dired.html#130">13.Dired</a></p>
+		
+
+
+<p ><a href="../perso/perso.html#140">14.Personalización </a></p>
+		
+
+<p ><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
+		
+<p class="active"><a href="formato.html#160">16.Formato de texto </a></p>
+		
+
+<p><a href="../imprimir/imprimir.html#170">17.Imprimir </a></p>
+
+
+<p><a href="../help/help.html#180">18.El Sistema de Ayuda </a></p>
+		
+
+
+<p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
+		
+<p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
+<p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
+<p><a href="http://www.rpublica.net/emacs/recursos/recursos.html#A">A.Recursos Emacs</a></p>
+<p><a href="http://www.rpublica.net/emacs/paquetes/paquetes.html#B">B.Paquetes Emacs</a></p>
+<p><a href="http://www.rpublica.net/emacs/referencia/referencia.html#C">C.Referencia de comandos</a></p>
+<p><a href="http://www.rpublica.net/emacs/biblio/biblio.html#D">D.Bibliografia</a></p><br/>
+
+<div id="margen00">&nbsp;<span>Contacto</span></div><br/>
+<div id="margen000"><span>A.Serra Devecchi<br/>
+<a href="mailto:rpublica@gmail.com">Mail: rpublica</a>
+<br/>Versión no definitiva<br/>
+Últ.Actual.: 01/04/2006<br/>
+
+</span>&nbsp;</div><br/>
+
+<div id="margen00000"><!--Creative Commons License-->
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">
+<img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>Esta obra est&#225; bajo una <br/>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">licencia de Creative Commons</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> --></div>
+
+
+</div>	
+
+
+</div>
+
+
+	<div id="texto">
+		<div id="titulo">
+		<h2 class="encab" id="160">16. Formato de texto con Emacs </h2> 
+		</div>
+
+	<div id="contenido">
+
+	<h6><a class="Ref" href="http://www.rpublica.net/emacs/modificar/midificar.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a><!--&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6>
+
+	
+	<p>A pesar de que Emacs sea anto todo un editor de texto antes que un procesador, puede llevar a cabo ciertas tareas básicas de formateo de texto:</p>
+
+	<ul>
+	<li><b>Tabulación</b></li>
+	<li><b>Sangrado</b></li>
+	<li><b>Centrado de palabras, lineas, párrafos...</b></li>
+	<li><b>Ocultar y mostrar ciertas porciones del texto</b></li>
+	<li><b>Edición por columnas </b></li>
+	</ul><br/>
+
+
+
+
+
+
+
+
+	<h3 class="encab" id="161" > 16.1 Tabulación.</h3>
+	 <h6><a class="Ref" href="http://www.rpublica.net/emacs/modificar/midificar.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="formato.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6>
+	
+	<p>Cuando se abre un nuevo archivo, en &nbsp;<b>text-mode</b>&nbsp; o en &nbsp;<b>fundamental-mode</b>,&nbsp; a cada pulsación de &nbsp;<b>&lt;Tab&gt;</b>&nbsp; el cursos se desplaza ocho espacios a la derecha.</p>
+
+	<p>Ahora, en el archivo abierto, tecleemos una frase cualquiere y pasemos el cursor a la siguiente linea (en blanco).</p>
+	<p>Si ahora vamos pulsando &nbsp;<b>&lt;Tab&gt;</b>&nbsp; podemos observar que el cursor no se desplaza ya ocho espacios cada vez, sino que se va colocando debajo de cada palabra de la linea anterior.</p>
+
+	<p>Si intercalamos una línea en blanco, observamos como , al pulsar &nbsp;<b>&lt;Tab&gt;</b>&nbsp; en la nueva línea el curso se mueve al final de la misma: Emacs ha considerado la linea en blanco intercalada como un único caracter.</p>
+	
+	<p>Este es un comportamiento bastante adecuado para quién esté escribiendo código, aunque puede que no sea este nuestro caso. </p>
+
+	<p>Hay una forma de conseguir que Emacs  gestione las tabulaciones como lo haria una antigua máquina de escribir:</p>
+	<p class="comandos"><b class="marcado">C-q&nbsp;&lt;Tab&gt;&nbsp;</b>:El cursor se moverá a intervalos de ocho espacios.</p>
+
+	<h4 class="encab" id="1611" > 16.1.1 Modificación de los intervalos de tabulación.</h4>
+	 <h6><a class="Ref" href="http://www.rpublica.net/emacs/modificar/midificar.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="formato.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6>
+
+	<p>Ejecutando el comando:</p>
+
+	<p class="comandos"><b class="marcado">M-x&nbsp;&nbsp;edit-tab-stops&nbsp;&lt;Enter&gt;&nbsp;</b><br />
+	Nos aparece el buffer &nbsp;<i style="font-weight:300">*Tab Stops*</i>. &nbsp;.Los &nbsp;<b>:</b>&nbsp; que podemos ver en la <b>primera línea del buffer</b> nos marcan los actuales intervalos de tabulación.</p>
+
+	<table><tr><td><img src="formato.png" alt="" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+	
+	<p>Para insertar un nuevo intervalo, llevamos el cursor hasta la posición deseada y teclamos &nbsp;<b>:</b>&nbsp;</p>
+	<p>Para eliminar una tabulación, nos movemos a ella y la suprimimos</p>
+	<p>Los cambios se guardarán ejecutando el comando :&nbsp;&nbsp;<i class="marcado">C-c &nbsp;C-c</i></p>
+	<p>Los cambios efectuados afectarán a todos lo buffers creados, pero sólo durante la sesión en curso.</p>
+	
+	<p>Con el cambio realizado de la forma descrita los intervalos de tabulación cambian para la sesión corriente, pero al reiniciar Emacs se activa de nuevo el intervalo por defecto: ocho espacios.</p>
+
+	<p>Podemos cambiar el valor del intervalo de tabulación por defecto através de la modificación de la variable que lo establece, en el archivo <b>.emacs</b>:</p>
+
+	<p class="comandos"><i class="marcado">(setd-default&nbsp;&nbsp;tab-width&nbsp;&nbsp;8)</i> :<br/>
+	basta con sustituir &nbsp;<b class="marcado">8</b>&nbsp; por el número de espacios al que queramos establecer el nuevo intervalo de tabulación por defecto.</p>
+	<p> Con el ya conocido comando &nbsp;<b class="marcado">C-q&nbsp;&lt;Tab&gt;&nbsp;</b>&nbsp;podremos comprobar el resultado del cambio realizado.</p>
+
+	<p>Nos puede interesar que Emacs, en lugar de insertar caracteres de tabulación inserte espacios. Para ello bastará con incluir ( o modificar) la siguiente variable en el archivo <b>.emacs</b>: </p>
+
+	<p class="comandos"><i class="marcado">(setd-default&nbsp;&nbsp;indent-tabs-mode&nbsp;&nbsp;nil)</i><br/>
+	Con esta configuración, Emacs insertará espacios cuando se pulse &nbsp;<b>&lt;Tab&gt;</b>&nbsp;. En cambio, si se utiliza el comando  &nbsp;&nbsp;<b class="marcado">C-q&nbsp;&lt;Tab&gt;&nbsp;</b>&nbsp;&nbsp;seguirá insertando caracteres de tabulación.</p>
+
+	<p>Disponemos de dos comandos que nos permiten cambiar espacios de tabulación por espacios y viceversa:</p>
+
+	<p class="comandos"><b class="marcado">M-x&nbsp;&nbsp;untabify&nbsp;&lt;Enter&gt;</b><br/>
+	Cambia todos los caracteres de tabulación por su equivalente número de espacios. Opera sobre una región de texto.</p>
+
+
+	<p class="comandos"><b class="marcado">M-x&nbsp;&nbsp;tabify&nbsp;&lt;Enter&gt;</b><br/>
+	Cambia grupos de tres o más espacios por caracteres de tabulació, siempre que ello no afecte a la disposición del texto.</p><br/>
+
+
+	<h3 class="encab" id="162" > 16.2 Sangrado del texto</h3>
+	 <h6><a class="Ref" href="http://www.rpublica.net/emacs/modificar/midificar.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="formato.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6>
+	
+	<p>Emacs, en &nbsp;<b>text-mode</b>,&nbsp; tiene la capacidad de sangrar texto.</p>
+
+	<p>Tras el primer párrafo, usamos &nbsp;<b>&lt;Tab&gt;</b>&nbsp; o <b>espacios</b> para sangrar el texto hasta el nivel deseado.</p>
+
+	<p>Cuando el sangrado deba contener más de un párrafo, se inicia el siguiente párrafo pulsando &nbsp;<b>&lt;Enter&gt;</b>&nbsp; y &nbsp;<b>&lt;Tab&gt;</b>&nbsp; o, simplemente tecleando:</p>
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-j</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;new-line-and-indent&nbsp;&lt;Enter&gt;</b></li>
+	</ul>
+
+	<p>Pulsando dos veces &nbsp;<b class="marcado">C-j</b>&nbsp; se intrcalará una linea en blanco entre ambos párrafos.</p><br/>
+
+
+
+	<h4 class="encab" id="1621" > 16.2.1 Sangrado de la primera línea de un párrafo.</h4>
+	 <h6><a class="Ref" href="http://www.rpublica.net/emacs/modificar/midificar.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="formato.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6>
+
+	<p>Para ellos debemos operar en alguno de los siguientes modos:</p>
+
+	<ul  class="comandos">
+	<li><b class="marcado">paragraph-indent-text-mode</b>&nbsp;:&nbsp; Opera como modo mayor.</li>
+	<li><b class="marcado">paragraph-indent-minor-mode</b>&nbsp;:&nbsp; Opera como modo menor.</li>
+	</ul>
+
+	<p>Tenemos un comando,&nbsp;&nbsp; <b class="marcado">M-q</b>&nbsp; que nos agrupa varios párrafos, especialmente si no están separados por una linea en blanco, en un solo párrafo no sangrado.</p>
+
+	<p>Si deseáramos conservar el sangrado de cada párrafo , debemos utilizar el comando:</p>
+
+
+	<p class="comandos"><b class="marcado">M-x&nbsp;fill-individual-paragraps&nbsp;&lt;Enter&gt;</b>&nbsp;:&nbsp;<br/>
+	Sobre una región previamente marcada.</p><br/>
+
+
+	<h4 class="encab" id="1622" > 16.2.2 Sangrado de una región.</h4>
+	 <h6><a class="Ref" href="http://www.rpublica.net/emacs/modificar/midificar.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="formato.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6>
+
+	<p>Para el sangrado de una determinada región de texto utilizaremos los comandos:</p>
+
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-M-\</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;indent-region&nbsp;&lt;Enter&gt;</b></li>
+	<li>Sangra una determinada región, a un solo nivel.</li>
+	</ul>
+
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;&lt;Tab&gt;</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;indent-rigidly&nbsp;&lt;Enter&gt;</b></li>
+	<li>Sangra una determinada región, un espacio. Para un mayor sangrado puede utilizarse el argumento numérico <b class="marcado">M-</b><i class="marcado">nº</i>&nbsp;<b class="marcado">C-x&nbsp;&lt;Tab&gt;</b>&nbsp;( nº= numero de espacios de sangrado deseados)</li>
+	</ul><br/>
+
+
+
+	<h3 class="encab" id="163" > 16.3 Cambio de los márgenes</h3>
+	 <h6><a class="Ref" href="http://www.rpublica.net/emacs/modificar/midificar.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="formato.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6>
+
+
+	<p>Para realizar los cambios de márgenes disponemos de los siguientes comandos:</p><br/>
+
+
+
+	<ul  class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit --> Text Properties --> Indentation --> Indent More</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;increase-left-margin&nbsp;&lt;Enter&gt;</b></li>
+	<li>Aumenta el margen izquierdo.</li>
+	</ul>
+
+	<ul  class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit --> Text Properties --> Indentation --> Indent Less</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;decrease-left-margin&nbsp;&lt;Enter&gt;</b></li>
+	<li>Disminuye el margen izquierdo.</li>
+	</ul>
+
+	<ul  class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit --> Text Properties-->Indentation-->Indent Right More</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;decrease-right-margin&nbsp;&lt;Enter&gt;</b></li>
+	<li>Disminuye el margen derecho.</li>
+	</ul>
+
+	<ul  class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Edit --> Text Properties --> Indentation --> Indent Left More</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;increase-right-margin&nbsp;&lt;Enter&gt;</b></li>
+	<li>Incrementa el margen derecho.</li>
+	</ul>
+
+	<p>Los cambios de márgenes afectan solo al buffer corriente y sólo durante la sesión corriente.</p>
+	<p>Por defecto, los anteriores comandos incrementan o disminuyen los respectivos márgenes en cuatro espacios.</p>
+	<p>Admiten modificadores numéricos, que provocan que el númer de espacios de variación del margen sea el resulatado de multiplicar el valor por defecto por el valor dado al multiplicador numérico.</p>
+	<p>Estos comandos pueden actuar sobre regiones, aunque operan mejor sobre buffers completos.</p><br/>
+
+
+	<h3 class="encab" id="164" > 16.4 Justificación del texto</h3>
+	 <h6><a class="Ref" href="http://www.rpublica.net/emacs/modificar/midificar.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="formato.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6>
+	
+	<p>El centrado de texto , o su justificación a derecha o izquierda,,tal vez sea una de las tareas de formateo más comunes que llevaremos a cabo con Emacs.</p>
+	<p> Estando en &nbsp;<b>text-mode</b>&nbsp;vamos a ver como llevar a cabo el centrado ( y /o justificación) de líneas, párrafos y regiones. </p>
+
+	<p>Vamos a comenzar por el <b>centrado de texto</b>; para lo cual situaremos el cursor en la línea, parrafo o región seleccionada que deseemos centrar y utilizaremos los siguientes comandos:</p>
+
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<i class="marcado">M-s</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;center-line&nbsp;&lt;Enter&gt;</b></li>
+	<li>Centra la linea sobre la que se encuentra el cursor..</li>
+	</ul>
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<i class="marcado">M-S</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;center-paragraph&nbsp;&lt;Enter&gt;</b></li>
+	<li>Centra el párrafo en el que se encuentra el cursor.</li>
+	</ul>
+
+	<ul  class="comandos">
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;center-region&nbsp;&lt;Enter&gt;</b></li>
+	<li>Centra la región selaccionada.</li>
+	</ul>
+
+
+	<p>Existe otra via para el <b>centrado y la justificación de texto</b>, através de las opciones del menú.</p>
+
+	<p>Las opciones de menú para la realización de dichas operaciones de encuentran en: </p>
+
+	<p  class="comandos"><i  class="marcado">Edit-->Text Properties-->Justification</i>&nbsp;&nbsp;donde nos encontraremos con las siguientes opciones:</p>
+
+	<table><tr><td><img src="formato1.png" alt="" width="55"  align="middle" hspace="200" vspace="10"/></td></tr></table>
+
+
+	<p>Estos comandos actuan sobre una linea individual (aquella sobre la que está situada el cursor) o sobre textos seleccionados previamente.</p>
+
+	<p>Los comandos correspondientes a las diversas opciones que aparecen en el menú son:</p>
+
+	<ul class="comandos">
+	<li><b class="marcado">M-x&nbsp;set-justification-left&nbsp;&lt;Enter&gt;</b>&nbsp;:&nbsp;Justifica a la izquierda.</li>
+	<li><b class="marcado">M-x&nbsp;set-justification-right&nbsp;&lt;Enter&gt;</b>&nbsp;:&nbsp;Justifica a la derecha.</li>
+	<li><b class="marcado">M-x&nbsp;set-justification-full&nbsp;&lt;Enter&gt;</b>&nbsp;:&nbsp;Justifica a  izquierda y derecha.</li>	
+	<li><b class="marcado">M-x&nbsp;set-justification-center&nbsp;&lt;Enter&gt;</b>&nbsp;:&nbsp;Centra el texto
+	</ul>
+
+	<p>En ocasiones, la aplicación de los anteriores comandos sobre párrafos y/om regiones, no da el resultado deseado.</p>
+	<p>Entonces podemos recurrir un comando ya visto anteriormente:&nbsp;&nbsp;<b class="marcado">C-x&nbsp;&lt;Tab&gt;</b>; con modificador numérico.</p><br/>
+
+
+	<h3 class="encab" id="165" > 16.5 Outline-mode: ocultar y mostrar texto</h3>
+	 <h6><a class="Ref" href="http://www.rpublica.net/emacs/modificar/midificar.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="formato.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6>
+
+	<p>Podemos acceder al modo <b>outline-mode</b> como modo mayor o como modo menor.</p>
+	
+	<ul class="comandos">
+	<li><b class="marcado">M-x&nbsp;outline-mode&nbsp;&lt;Enter&gt;</b>&nbsp;:&nbsp;Modo mayor.</li>
+	<li><b class="marcado">M-x&nbsp;outline-mininor-mode&nbsp;&lt;Enter&gt;</b>&nbsp;:&nbsp;Modo menor.</li>
+	</ul>
+
+	<p>La utilización de <b>outline-minor-mode</b> reside en que puede utilizarse este modo en el seno del modo mayor en el que deseemos trabajar.</p>
+	
+	<p>Al entrar en <b>outline-mode</b>, la barra de menú cambia, apareciendo tres nuevas opciones: <b>Headings</b>,&nbsp;<b>Show</b>&nbsp;y&nbsp;<b>Hide</b></p>
+
+	<table><tr><td><img src="outline.png" alt="" width="408"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+
+	<p>La mayoria de los comandos de <b>outline-mode</b> comienzan por &nbsp;<b class="marcado">C-c</b>&nbsp;</p>
+	<p>Cuando trabajemos con <b>outline-minor-mode</b> los comandos comenzarán por &nbsp;<b class="marcado">C-c @</b>,&nbsp; con el fin de evitar interferencias con otros comandos del modo mayor en el que estemos trabajando.</p>
+	<p>En <b>outline-mode</b> utilizaremos las siguientes marcas para identificar los distintos niveles(cabeceras, sub-cabeceras...):</p>
+
+	<table>
+	<tr><td class="marcado"><b>*</b></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Primer nivel</td></tr>
+	<tr><td class="marcado"><b>**</b></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Segundo nivel</td></tr>
+	<tr><td class="marcado"><b>***</b></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Tercer nivel</td></tr>
+	<tr><td class="marcado"><b>....</b></td><td>&nbsp;&nbsp;&nbsp;&nbsp;.........</td></tr></table>
+
+	<p>Las líneas que no contienen &nbsp;<b>*</b>&nbsp; se denominan <b>body-lines</b>,&nbsp;&nbsp;<b>body-text</b>&nbsp;o, sencillamente, <b>texto</b>  </p>
+	<p>Emacs espera encontrar los arteriscos en la primera columna de cada línea marcada.</p>
+
+	<table><tr><td><img src="formato2.png" alt="" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+
+	<p>Através de las opciones de menú&nbsp;&nbsp;<i  class="marcado">Hide</i>&nbsp; y &nbsp;<i  class="marcado">Show</i>&nbsp; podemos ocultar y/o mostrar, respectivamente, porciones determinadas del texto.</p>
+
+	<p>Através de las opciones del menú &nbsp;&nbsp;<i  class="marcado">Headings</i>&nbsp;nos podremos mover entre la estructura del documento.</p>
+
+	<p>Veamos, esquemáticamente los mencionados comandos del <b>outline-mode</b></p>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Headings --> Up</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-u</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;outline-up-heading&nbsp;&lt;Enter&gt;</i></li>
+	<li>Mueve a la cima de la estructura</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Headings -->Next</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-n</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;outline-next-visible-heading&nbsp;&lt;Enter&gt;</i></li>
+	<li>Mueve a la siguiente cabecera o subcabecera visible.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Headings -->Previous</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-p</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;outline-previous-visible-heading&nbsp;&lt;Enter&gt;</i></li>
+	<li>Mueve a la anterior cabecera o subcabecera visible.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Headings -->Next Same Level</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-f</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado"></i>M-x&nbsp;outline-forward-same-level&nbsp;&lt;Enter&gt;</li>
+	<li>Mueve al siguiente elemento del mismo nivel.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado"></i>Headings -->Previous Same Level</li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-b</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;outline-forward-same-level&nbsp;&lt;Enter&gt;</i></li>
+	<li>Mueve al elemento anterior del mismo nivel.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Hide-->Leaves</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-l</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;hide-leaves&nbsp;&lt;Enter&gt;</i></li>
+	<li>Ocula el texto de una cabecera particular y el de todas sus sub-cabeceras.</li>
+	</ul>
+
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Hide-->Body</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-t</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;hide-body&nbsp;&lt;Enter&gt;</i></li>
+	<li>Oculta todos los textos</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Hide-->Entry</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-c</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;hide-entry&nbsp;&lt;Enter&gt;</i></li>
+	<li>Oculta el texto de una cabecera en particular. No el de sus sub-cabeceras.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Hide-->Subtree</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-d</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;hide-subtree&nbsp;&lt;Enter&gt;</i></li>
+	<li>Oculta sub-cabeceras y texto asociados a una determinada cabecera. </li>
+	</ul>
+
+
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Hide-->Sublevels</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-q</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;hide-sublevels&nbsp;&lt;Enter&gt;</i></li>
+	<li>Muestra solo los primeros niveles.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Hide-->Other</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-o</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;hide-other&nbsp;&lt;Enter&gt;</i></li>
+	<li>Oculta textos y cabeceras fuera del actual sub-nivel. </li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Show -->All</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-a</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;show-all&nbsp;&lt;Enter&gt;</i></li>
+	<li>Muestra todo.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Show -->Entry</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-e</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;show-entry&nbsp;&lt;Enter&gt;</i></li>
+	<li>Muestra el texto asociado con una cabecera determinada.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Show -->Branches</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-k</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;show-branches&nbsp;&lt;Enter&gt;</i></li>
+	<li>Muestra los textos de una cabecera y de todas sus sub-cabeceras.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Show -->Children</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-&lt;Tab&gt;</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;show-children&nbsp;&lt;Enter&gt;</i></li>
+	<li>Muestra el siguiente nivel de sub-cabeceras asociado con una determinada cabecera. No muestra el texto.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i  class="marcado">Show -->Subtree</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-s</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;show-subtree&nbsp;&lt;Enter&gt;</i></li>
+	<li>Muestra cabeceras (y texto) asociadas a una determinada cabecera.</li>
+	</ul>
+	
+	<ul class="comandos">
+	
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-c&nbsp;@&nbsp;C-&#094;</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;outline-promote&nbsp;&lt;Enter&gt;</i></li>
+	<li>Sube un nivel la cabecera actual.</li>
+	</ul>
+
+
+	<ul class="comandos">
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;outline-demote&nbsp;&lt;Enter&gt;</i></li>
+	<li>Baja un nivel la cabecera actual.</li>
+
+	</ul><br/>
+
+	<h3 class="encab" id="166" > 16.6 Las Tablas en Emacs: Rectángulos</h3>
+	 <h6><a class="Ref" href="http://www.rpublica.net/emacs/modificar/midificar.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="formato.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6>
+
+	<p>Emacs ofrece una alternativa a la edición de tablas: los <b>rectángulos</b>. Son áreas rectangulares que se definen y manipulan utilizando comandos específicos.</p>
+
+	<p>Los comandos para la manipulación de rectángulos operan mejor en archivos sin carácteres de tabulación por lo que, antes de comenzar a utilizarlos es conveniente seleccionar el buffer &nbsp;( <i class="marcado">C-x h</i>)&nbsp;y proceder a la sustitución de los caracteres de tabulación por espacios, mediante el comando: </p>
+
+	<ul class="comandos"><li><i class="marcado">M-x&nbsp;untabify&nbsp;&lt;Enter&gt;</i></li></ul>
+
+
+	<p>Para <b>definir un rectángulo</b>&nbsp;se opera de la misma manera que para definir una región de texto.Debemos tener en cuanta que el caracter sobre el que se halla el cursor, cuando está en el extremo inferior derecho, no forma parte de la selección.</p>
+
+	<p>Los comandos utilizados en la manipulación de rectángulos son:</p>
+
+	<ul class="comandos"><li></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-x&nbsp;r&nbsp;k</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;kill-rectangle&nbsp;&lt;Enter&gt;</i></li>
+	<li>Elimina un ractángulo y lo guarda.</li>
+	</ul>
+
+	<ul class="comandos"><li></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-x&nbsp;r&nbsp;d</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;delete-rectangle&nbsp;&lt;Enter&gt;</i></li>
+	<li>Borra un ractángulo y no lo guarda.</li>
+	</ul>
+
+
+	<ul class="comandos"><li></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-x&nbsp;r&nbsp;y</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;yank-rectangle&nbsp;&lt;Enter&gt;</i></li>
+	<li>Inserta el último rectángulo eliminado..</li>
+	</ul>
+
+
+	<ul class="comandos"><li></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-x&nbsp;r&nbsp;c</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;clear-rectangle&nbsp;&lt;Enter&gt;</i></li>
+	<li>Utilizar los espacios en blanco fuera del área marcada como rectángulo.</li>
+	</ul>
+
+	<ul class="comandos"><li></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-x&nbsp;r&nbsp;o</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;open-rectangle&nbsp;&lt;Enter&gt;</i></li>
+	<li>Inserta un rectángulo en blanco en el área marcada.</li>
+	</ul>
+
+
+	<ul class="comandos"><li></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-x&nbsp;r&nbsp;r&nbsp;Ñ</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;copy-rectangle-to-register&nbsp;&lt;Enter&gt;</i></li>
+	<li>Copia el rectángulo al registro Ñ ( Ñ=cualquier caracter).</li>
+	</ul>
+
+	<ul class="comandos"><li></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-x&nbsp;r&nbsp;i&nbsp;Ñ</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;insert-register&nbsp;&lt;Enter&gt;</i></li>
+	<li>Inserta rectánfulo desde el registro Ñ ( Ñ=cualquier caracter).</li>
+	</ul>
+
+	<ul class="comandos"><li></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b  class="marcado">C-x&nbsp;r&nbsp;t&nbsp;cadena&nbsp;&nbsp;&lt;Enter&gt;</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;string-rectangle&nbsp;&lt;Enter&gt;</i></li>
+	<li>Cambia el contenido del rectángulo marcado por el de la <b class="marcado">cadena</b>.</li>
+	</ul>
+
+
+	<ul class="comandos"><li></li>
+	
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i  class="marcado">M-x&nbsp;delete-whitespace-rectangle&nbsp;&lt;Enter&gt;</i></li>
+	<li>Si el rectángulo contiene un espacio inicial en blanco, lo elimina.</li>
+	</ul>
+
+<!--######################################################################################################### -->
+
+		<div class="margenInf">&nbsp;</div>
+
+
+		<div id="pie"> <h6><a class="Ref" href="../modificar/modificar.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; 
+		<a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="formato.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;
+		<a class="Ref" href="../imprimir/imprimir.html"> Pág.Siguente</a></h6> 
+
+		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
+		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">
+		16.Formato de texto con Emacs</span>&nbsp;&#124;&nbsp;</h6> 
+		 </div>
+		<div class="margenInf">&nbsp;</div> 
+		
+	</div>
+	
+</div>
+
+</body>
+	
+</html>

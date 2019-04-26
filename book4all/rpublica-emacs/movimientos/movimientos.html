@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head><title>Emacs:Movimientos del cursor</title>
+<link title="rpublica.net Estilo" href="../emacs.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="author" content="Antoni Serra Devecchi" />
+<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, Español"/>
+<meta name="description" content="manual de introduccion a emacs." />
+
+</head>
+<body>
+<div id="contenidor0">
+	
+	<div id="rotulo">
+	
+	<span id="r">rp</span>
+	
+	</div>
+	
+	<div id="globalNav">
+<!--	
+	<ul id="credits"><li></li>
+<li>Antoni Serra Devecchi</li>
+
+<li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
+<li><i>Versión no definitiva.</i></li>
+<li><i> En proceso de redacción.</i></li>
+<li><i>Últ.Actual.: 01/04/2006</i></li></ul>		
+-->
+	</div>
+
+	<div id="nav0">
+	<span id="logo">Emacs</span>
+	</div>
+
+	<div id="guia">
+
+	<ul id="tabnav">
+     <li ><a href="../../index.html">RPublica.net</a></li>
+     <li><a href="../emacs.html">Emacs</a></li>
+     <li class="active"><a href="movimientos.html#10">4.Movimientos del cursor</a></li>
+     <!--<li><a href="#">Capítulo siguiente</a></li>
+     <li><a href="#">XXXXX</a></li> -->
+
+</ul>
+
+	</div>
+<div id="logo1">
+Referéncia
+</div>
+
+<div id="indice">
+
+<div id="indice1">
+
+<p ><a href="../emacs.html">0. Indice General</a></p>
+
+<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>		
+<p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
+		
+<p ><a href="../modos/modos.html#III">III.Modos</a></p>
+		
+<p ><a href="../start/start.html#IV">IV.La Pantalla de Emacs</a></p>
+		
+				
+			
+<p><a href="../abrir/abrir.html#10">1.Abrir Archivos</a></p>
+		
+				
+
+<p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
+		
+
+<p ><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
+		
+
+
+<p class="active"><a href="movimientos.html#40">4.Movimientos del cursor</a></p>
+		
+			
+<p><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
+		
+<p><a href="../buscar/buscar.html#60">6.Búsquedas</a></p>
+		
+<p><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
+		
+
+
+<p><a href="../xbuffers/xbuffers.html#80">8.Buffers múltiples</a></p>
+		
+
+
+<p><a href="../ventanas/ventanas.html#90">9.Ventanas</a></p>
+		
+<p><a href="../marcos/marcos.html#100">10.Marcos</a></p>
+		
+
+<p><a href="../bookmarks/bookmarks.html#110">11.Bookmarks</a></p>
+		
+
+<p><a href="../consola/consola.html#120">12.Emacs y la Shell</a></p>
+		
+
+<p><a href="../dired/dired.html#130">13.Dired</a></p>
+		
+
+
+<p><a href="../perso/perso.html#140">14.Personalización </a></p>
+		
+
+<p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
+		
+<p><a href="../formato/formato.html#160">16.Formato de texto </a></p>
+		
+
+<p><a href="../imprimir/imprimir.html#170">17.Imprimir </a></p>
+
+
+<p><a href="../help/help.html#180">18.El Sistema de Ayuda </a></p>
+		
+
+
+<p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
+		
+<p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
+<p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
+<p><a href="http://www.rpublica.net/emacs/recursos/recursos.html#A">A.Recursos Emacs</a></p>
+<p><a href="http://www.rpublica.net/emacs/paquetes/paquetes.html#B">B.Paquetes Emacs</a></p>
+<p><a href="http://www.rpublica.net/emacs/referencia/referencia.html#C">C.Referencia de comandos</a></p>
+<p><a href="http://www.rpublica.net/emacs/biblio/biblio.html#D">D.Bibliografia</a></p><br/>
+
+<div id="margen00">&nbsp;<span>Contacto</span></div><br/>
+<div id="margen000"><span>A.Serra Devecchi<br/>
+<a href="mailto:rpublica@gmail.com">Mail: rpublica</a>
+<br/>Versión no definitiva<br/>
+Últ.Actual.: 01/04/2006<br/>
+
+</span>&nbsp;</div><br/>
+
+<div id="margen00000"><!--Creative Commons License-->
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">
+<img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>Esta obra est&#225; bajo una <br/>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">licencia de Creative Commons</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> --></div>
+
+
+</div>	
+	
+	
+</div>
+
+
+	<div id="texto">
+		<div id="titulo">
+		<h2 class="encab" id="40">4.Movimientos del cursor</h2> 
+		</div>
+	
+	<div id="contenido">
+
+	<h6><a class="Ref" href="../editando/editando.html">P&aacute;g.Anterior</a>&nbsp;&#124;&nbsp; 
+	 <a class="Ref" href="../emacs.html"> &Iacute;ndice</a><!--
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="#logo">Inicio P&aacute;gina</a>-->
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="../rectificar/rectificar.html"> P&aacute;g.Siguente</a></h6> 
+
+	<p>La manera más fácil de mover el cursor es, sin duda alguna, mediante el &nbsp;<b>ratón</b>&nbsp; y mediante las &nbsp;<b>teclas de flechas</b>.</p>
+
+	<p>Pero como ya se dijo al hablar de los comandos de Emacs, conocer como movernos dentro de Emacs mediante el teclado puede representar una ganancia de tiempo
+	 y un aumento de productividad  considerables.</p>
+
+	 <p>Vamos a estudiar los comandos de movimiento del cursor dividiéndolos en varios grupos:</p>
+	 	<ul>
+		<li>Comandos básicos</li>
+		<li>Movimientos por palabras</li>
+		<li>Movimientos por lineas</li>
+		<li>Movimimentos por bloques de texto</li>
+		<li>Movimientos de pantalla y página</li></ul>
+
+	<p>Acabaremos este capítulo introduciendo los comandos denominados &nbsp;<b>de modificación numérica </b>
+	 y los de &nbsp;<b>insertar y adjuntar archivos</b>. </p><br/>
+	 
+	<h3 class="encab" id="41" >4.1.Comandos básicos de movimiento del cursor</h3>
+	 <h6><a class="Ref" href="../editando/editando.html">P&aacute;g.Anterior</a>&nbsp;&#124;&nbsp; 
+	 <a class="Ref" href="../emacs.html"> &Iacute;ndice</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="movimientos.html#logo">Inicio P&aacute;gina</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="../rectificar/rectificar.html"> P&aacute;g.Siguente</a></h6> 
+
+    <p >Los movimientos del cursor que vamos a considerar <b>"básicos"</b> son:</p>
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-f</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp;forward-char &nbsp;&lt;Enter&gt;</b></li>
+ 	<li>Mueve el cursor un espacio hacia adelante (derecha)
+	Cuando el cursor se encuentra en el último carácter de la linea, se moverá al primer carácter de la linea siguiente.</li></ul>
+
+
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-b</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; backward-char &nbsp;&lt;Enter&gt;</b></li>
+	<li>Mueve el cursor un espacio hacia atrás (izquierda).
+	Cuando el cursor se encuentre en el primer carácter de la linea, se movera al último carácter de la linea anterior.</li></ul>
+
+
+
+	<ul class="comandos">	
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-p</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; previous-line &nbsp;&lt;Enter&gt;</b></li>
+	<li> Mueve el cursor a la linea anterior (arriba).</li></ul>
+
+	
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-n</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; next-line &nbsp;&lt;Enter&gt;</b></li>
+  	<li> Mueve el cursor a la linea siguiente (abajo).</li></ul>
+
+	<p>Todos estos movimientos pueden realizarse, también, con las correspondientes &nbsp;<i class="marcado">teclas de flechas</i>.</p><br/>
+		
+	<h3 class="encab" id="42" >4.2.Comandos de movimiento por palabras</h3>
+	 <h6><a class="Ref" href="../editando/editando.html">P&aacute;g.Anterior</a>&nbsp;&#124;&nbsp; 
+	 <a class="Ref" href="../emacs.html"> &Iacute;ndice</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="movimientos.html#logo">Inicio P&aacute;gina</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="../rectificar/rectificar.html"> P&aacute;g.Siguente</a></h6> 
+
+	<p> Tenemos dos comandos que mueven el cursor de palabra en palabra. :</p>
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-f</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; forward-word &nbsp;&lt;Enter&gt;</b></li>
+   	<li>Situa el cursor en espacio inmediatamente anterior a la palabra siguiente.</li>
+	</ul>
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-b</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; backward-word &nbsp;&lt;Enter&gt;</b></li>
+	<li> Situa el cursor sobre el primer carácter de la palabra anterior.</li>
+	</ul>
+
+	<p> Ambos comandos pueden ejecutarse también mediante la combinación &nbsp;<b class="marcado">C-&lt;Flecha_Derecha&gt;</b>&nbsp; y 
+	&nbsp;<b class="marcado">C-&lt;Flecha_Izquierda&gt;</b>,&nbsp; respectivamente.</p><br/>
+	
+	<h3 class="encab" id="43" >4.3.Comandos de movimiento por lineas</h3>
+	 <h6><a class="Ref" href="../editando/editando.html">P&aacute;g.Anterior</a>&nbsp;&#124;&nbsp; 
+	 <a class="Ref" href="../emacs.html"> &Iacute;ndice</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="movimientos.html#logo">Inicio P&aacute;gina</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="../rectificar/rectificar.html"> P&aacute;g.Siguente</a></h6> 
+
+	<p>Para movernos por lineas tenemos los siguientes comandos :</p>
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-a</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; beginning-of-line &nbsp;&lt;Enter&gt;</b></li>
+	<li> Situa el cursor sobre el primer carácter de la linea en la que se encuentra.</li>
+	</ul>
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-e</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; end-of-line &nbsp;&lt;Enter&gt;</b></li>
+	<li> Situa el cursor inmediatamente después del último carácter de la linea en la que se encuentra.</li>
+	</ul>
+
+	<h3 class="encab" id="44" >4.4.Comandos de movimiento por bloques de texto.</h3>
+	 <h6><a class="Ref" href="../editando/editando.html">P&aacute;g.Anterior</a>&nbsp;&#124;&nbsp; 
+	 <a class="Ref" href="../emacs.html"> &Iacute;ndice</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="movimientos.html#logo">Inicio P&aacute;gina</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="../rectificar/rectificar.html"> P&aacute;g.Siguente</a></h6>
+	
+	<p>Los siguientes comandos mueven el cursor entre bloques de texto: frases, párrafos, buffer, página :</p>
+	
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-a</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; backward-sentence&nbsp;&lt;Enter&gt;</b></li>
+	 <li>Situa el cursor sobre el primer carácter de la frase en la que se encuentra. 
+	 Si el cursor estuviera sobre el primer carácter de la frase, se moveria al primer carácter de la frase anterior.</li></ul>
+	
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-e</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; forward-sentence&nbsp;&lt;Enter&gt;</b></li>
+	<li>Situa el cursor inmediatamente después del último carácter de la frase en la que se encuentra.
+	Si el cursor estuviera sobre el último  espacio de la frase, se moveria al último espacio de la frase siguiente.</li>
+	</ul>
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-{</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; backward-paragraph&nbsp;&lt;Enter&gt;</b></li>
+	<li> Mueve el cursor al párrafo anterior.</li>
+	</ul>
+	
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-}</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; forward-paragraph&nbsp;&lt;Enter&gt;</b></li>
+	 <li>Mueve el cursor al principio del siguiente párrafo.</li>
+	</ul>
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-&gt;</b></li>
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<b class="marcado">Edit-->Go To --> GoTo End of Buffer</b></li>
+	 <li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; end-of-buffer&nbsp;&lt;Enter&gt;</b></li>
+	 <li>Mueve el cursor al final del buffer. Se corresponde con la tecla &nbsp;<b class="marcado">&lt;Fin&gt;</b></li>
+	</ul>
+	
+	<ul  class="comandos">
+	 <li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-&gt;</b></li>
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<b class="marcado">Edit-->Go To --> GoTo Beginning of Buffer</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; beginnig-of-buffer&nbsp;&lt;Enter&gt;</b></li>
+	 <li>Mueve el cursor al principio del buffer. Se corresponde con la tecla &nbsp;<b class="marcado">&lt;Inicio&gt;</b></li>
+	</ul>
+	<br/>
+	
+	<h3 class="encab" id="45" >4.5.Comandos de movimiento de pantalla y página.</h3>
+	 <h6><a class="Ref" href="../editando/editando.html">P&aacute;g.Anterior</a>&nbsp;&#124;&nbsp; 
+	 <a class="Ref" href="../emacs.html"> &Iacute;ndice</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="movimientos.html#logo">Inicio P&aacute;gina</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="../rectificar/rectificar.html"> P&aacute;g.Siguente</a></h6>
+
+	<p>Podemos mover  ("pasar") pantallas y páginas con los siguientes comandos :</p>
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-v</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; scroll-up &nbsp;&lt;Enter&gt;</b></li>
+	<li> Avanza una pantalla.Se corresponde con la tecla &nbsp;<b class="marcado">&lt;AvPag.&gt;</b></li>
+	</ul>
+	
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-v</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp; scroll-down &nbsp;&lt;Enter&gt;</b></li>
+	<li>Retrocede una pantalla.Se corresponde con la tecla &nbsp;<b class="marcado">&lt;RePag&gt;</b></li>
+	</ul>
+	
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x ]</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp;forward-page &nbsp;&lt;Enter&gt;</b></li>
+	<li> Avanza una página, en el caso de tener un documento paginado.</li>
+	</ul>
+
+	<ul  class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x {</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp;backward-page &nbsp;&lt;Enter&gt;</b></li>
+	<li> Avanza una página, en el caso de tener un documento paginado.</li>
+	</ul>
+
+	<p>Si estos dos últimos comandos se aplicaran sobre un documento no paginado, nos llevarian, respectivamente, al final y 
+	al principio del buffer</p><br/>
+
+
+	<h3 class="encab" id="46" >4.6.Otros comandos de movimiento útiles.</h3>
+	 <h6><a class="Ref" href="../editando/editando.html">P&aacute;g.Anterior</a>&nbsp;&#124;&nbsp; 
+	 <a class="Ref" href="../emacs.html"> &Iacute;ndice</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="movimientos.html#logo">Inicio P&aacute;gina</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="../rectificar/rectificar.html"> P&aacute;g.Siguente</a></h6>
+
+	<p>Los comandos que se presentan a continuación pueden ser de utilidad para movernos por el contenido del buffer que estemos editando: </p>
+
+	<ul  class="comandos">
+
+
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-l</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp;recenter &nbsp;&lt;Enter&gt;</b></li>
+	<li> Situa la linea en la que se halla el cursor en el centro (vertical) de la pantalla. Este comando tambien "refresca" la pantalla.</li>
+	</ul>
+	
+	<ul  class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<b class="marcado">Edit-->Go To --> GoTo Line...</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp;goto-line &nbsp;&lt;Enter&gt;</b></li>
+	<li>Lleva el cursor al inicio de una linea concreta del buffer. Su ejecución es como sigue:</li>
+	<li>&nbsp;
+	 	<ol >
+	 	<li>Se ejecuta el comando</li>
+	 	<li>En el mini-buffer aparece el mensaje &nbsp;&nbsp;<i style="font-weight:300">Goto Line:</i>.</li> 
+	 	<li>Introducimos el número de la linea del buffer a la que queremos desplazarnos.</li>
+	 	<li>Tras pulsar &nbsp;<b class="marcado">&lt;Enter&gt;</b>. El cursor se desplaza a la linea especificada.</li></ol>
+	 </li>
+	</ul>
+	
+	<ul  class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<b class="marcado">Edit-->Go To --> GoTo Buffer Position...</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp;goto-char &nbsp;&lt;Enter&gt;</b></li>
+	<li> Ir a un determinado caracter del buffer.
+	  El proceso de ejecución de dicho comando es el mismo que con &nbsp;<b class="marcado">goto-line</b>,&nbsp; 
+	  sustituyendo el número de linea por el número de caracter.</li>
+	</ul>
+	
+	<ul  class="comandos">
+	 <li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp;what-line &nbsp;&lt;Enter&gt;</b></li> 
+	<li>Nos indica el numero de la linea del buffer en la que se encuentra el cursor.
+	  El proceso de ejecución de dicho comando es. Ejecutado el comando, en el mini-buffer aparece un mensaje
+	    indicándonos el número de linea en el que se encuentra el cursor &nbsp;<i  style="font-weight:300">( Line n )</i>.</li>
+	</ul><br/>
+	
+	<h3 class="encab" id="47" >4.7.Modificadores numéricos o Comandos de repetición.</h3>
+	 <h6><a class="Ref" href="../editando/editando.html">P&aacute;g.Anterior</a>&nbsp;&#124;&nbsp; 
+	 <a class="Ref" href="../emacs.html"> &Iacute;ndice</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="movimientos.html#logo">Inicio P&aacute;gina</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="../rectificar/rectificar.html"> P&aacute;g.Siguente</a></h6>
+	<p>Muchos comandos aceptan los llamados <b>modificadores numéricos</b> o, tambien <b>comandos de repetición</b>, que hacen que la acción del
+	comando al que se aplican se el número de veces especificado en el &nbsp;<b>comando de repetición</b>. Dichos comandos son  &nbsp;<i style="font-weight:300">( n</i> es un número):</p>
+	
+	<ul  class="comandos">
+	<li><b>Comando </b>&nbsp;:&nbsp;<b class="marcado">M-</b><i style="font-weight:300">n</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp;digit-argument &nbsp;&lt;Enter&gt;</b></li>
+	<li>La aplicación de este comando sigue el siguiente esquema : </li>
+	<li><b class="marcado">M-</b><i style="font-weight:300">n</i>&nbsp;&nbsp;<b class="marcado">comando_sobre_el_que_se_aplica</b></li>
+	</ul>
+	
+	<ul  class="comandos">
+	<li><b>Comando </b>&nbsp;:&nbsp;<b class="marcado">C-u</b> &nbsp;<i style="font-weight:300">n</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp;universal-argument &nbsp;&lt;Enter&gt;</b></li>
+	<li>La aplicación de este comando sigue el siguiente esquema : </li>
+	<li><b class="marcado">C-u</b>&nbsp;&nbsp;<i style="font-weight:300">n</i>&nbsp;&nbsp;<b class="marcado">comando_sobre_el_que_se_aplica</b></li>
+	</ul>
+	
+	<p>Veamos como funcionan:</p>
+
+	<p>Cualquiera de los dos &nbsp;<b>modificadores numéricos</b>,&nbsp; combinados con &nbsp;<b class="marcado">C-v</b>&nbsp; o con &nbsp;<b class="marcado">M-v</b>&nbsp; provoca que la pantalla "corra" en número de lineas indicado y no una pantalla completa: &nbsp;<i class="marcado">C-u 8 C-v</i>;&nbsp; la pantalla "corre" 8 lineas.</p>
+
+	<p>Dichos comandos también operan con caracteres: &nbsp;<i class="marcado">C-u  8 *</i>&nbsp;  o &nbsp;<i class="marcado">M-8 * </i>&nbsp;  insertan 8 caracteres &nbsp;<b>*</b></p>
+
+	<p>La diferencia entre los dos &nbsp;<b>modificadores numéricos</b>&nbsp; es que &nbsp;<i class="marcado">C-u</i>&nbsp; 
+	no necesita ningún argumento numérico para producir un efecto de repetición:
+	 Sin argumento numérico repite &nbsp;<b>4 veces</b>&nbsp; el comando que lo sigue. &nbsp;<i class="marcado">C-u C-u C-p </i>&nbsp; haria que el comando  &nbsp;<i class="marcado"> C-p </i>&nbsp; se repita &nbsp;<b>16 veces</b>.</p>
+
+	 <p>Otra diferencia está en que, &nbsp;<b>sin argumento numérico</b>,&nbsp; el comando &nbsp;<b class="marcado">C-u</b>,&nbsp; en algunos casos, modifica la función
+	  del comando al que se aplica. Esta carásteristica se irá viendo mas adelante.</p><br/>
+
+
+	<h3 class="encab" id="48" >4.8.Insertar y Adjuntar archivos.</h3>
+	 <h6><a class="Ref" href="../editando/editando.html">P&aacute;g.Anterior</a>&nbsp;&#124;&nbsp; 
+	 <a class="Ref" href="../emacs.html"> &Iacute;ndice</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="movimientos.html#logo">Inicio P&aacute;gina</a>
+	 &nbsp;&#124;&nbsp;<a class="Ref" href="../rectificar/rectificar.html"> P&aacute;g.Siguente</a></h6>
+
+	<p>Una forma de introducir texto en un archivo que estemos editando es mediante la inserción del contenido de otro archivo</p>
+	<p>La diferencia entre &nbsp;<b>Insertar</b>&nbsp; y &nbsp;<b>Adjuntar</b>&nbsp; está , básicamente, en la posición donde se "coloca" el archivo importado. Se dice que se &nbsp;<b>adjunta</b>&nbsp; cuando el contenido archivo que se importa se situa al final y a continuación del contenido del archivo que estamos editando. Cuando el contenido del archivo importado de situa en cualquier otra posición, se dice que se &nbsp;<b>inserta</b>. </p>
+
+	<p>El comando para realizar esta operación es :</p>
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x &nbsp; i</b></li>
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<b class="marcado">File-->Insert File</b></li>	
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x &nbsp;insert-file &nbsp;&lt;Enter&gt;</b></li></ul>
+
+
+	<p>Veamos, gráficamente, como realizar esta operación:</p>
+
+	<div class="img">
+	<p> Llevamos el cursor al lugar donde deseamos insertar el archivo.( Al final del buffer, en caso de querer adjuntar).</p>
+
+	<p>En el ejemplo, queremos que la inserción se realice tras la &nbsp;<i style="font-weight:300">X</i>.</p>
+
+	<tab><tr><td><img src="insertar1.png" alt="Insertar archivos: posicionar el cursor" width="450" border="5 solid #000000" hspace="10" vspace="10" /></td></tr></tab>
+
+	<p>Tras introducir el comando, en el mini-buffer aparece un mensaje &nbsp;&#040;<i style="font-weight:300">Insert File:</i>&#041;&nbsp; pidiéndonos que introduzcamos el nombre del archivo que queremos insertar. En nuestro caso, &nbsp;<i style="font-weight:300">archivoInsert</i>.</p>
+
+	<tab><tr><td><img src="insertar2.png" alt="Insertar archivos: introducir el nombre del archivo" width="450" border="5 solid #000000" hspace="10" vspace="10" /></td></tr></tab>
+	
+	<p>Tras pulsar &nbsp;<b class="marcado">&#060;Enter&#062;</b>.&nbsp; el contenido de &nbsp;<i style="font-weight:300">archivoInsert</i>&nbsp; se inserta en la posición del cursor.</p>
+
+	<tab><tr><td><img src="insertar3.png" alt="Insertar archivos: ejecución de la inserción" width="450" border="5 solid #000000" hspace="10" vspace="10" /></td></tr></tab>
+	
+	</div>
+
+		<div class="margenInf">&nbsp;</div>
+		<div id="pie"> <h6><a class="Ref" href="../editando/editando.html">P&aacute;g.Anterior</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">&Iacute;ndice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="movimientos.html#logo">Inicio P&aacute;gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../rectificar/rectificar.html"> P&aacute;g.Siguente</a></h6> 
+
+		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1"> 4. Movimientos del cursor</span>&nbsp;&#124;&nbsp;</h6> 
+	  </div>
+		<div class="margenInf">&nbsp;</div> 
+		
+	</div>
+	
+</div>
+
+</body>
+</html>

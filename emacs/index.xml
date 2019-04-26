@@ -7,10 +7,386 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Sun, 29 Jul 2018 12:19:36 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 20 Sep 2018 14:03:02 -0500</lastBuildDate>
     
         <atom:link href="https://nasciiboy.land/emacs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>temax</title>
+      <link>https://nasciiboy.land/emacs/temax/</link>
+      <pubDate>Thu, 20 Sep 2018 14:03:02 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/emacs/temax/</guid>
+      <description>
+
+&lt;p&gt;sucede que haciendo una prueba con el vps conectado via &lt;code&gt;ssh&lt;/code&gt; queria dejar
+corriendo un comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; youtube-dl -f best -ciw -v &#39;https://www.youtube.com/channel/UCbGYYbuGLFC6wIsyKXXW4cQ&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y salir de la sesion, dejando al vps a su bola, p-e-r-o, p-e-r-o, p-e-r-o si sales de la sesion
+ssh, tu comando tambien se corta&lt;/p&gt;
+
+&lt;p&gt;y esto no se soluciona poniendo un &lt;code&gt;&amp;amp;&lt;/code&gt; al final del comando, por que este
+(supongo y sin idea) &amp;ldquo;proceso&amp;rdquo; es un &amp;ldquo;hijo&amp;rdquo; de tu shell que es un hijo de tu
+sesion y si la sesion se muere, el padre mata a todo mundo. Ja, ja, ja, ha&lt;/p&gt;
+
+&lt;p&gt;Como solucionar esto? pues teniendo un shell que sea &amp;ldquo;hijo de un demonio😈&amp;rdquo;  que
+ande a su bola, e &lt;em&gt;invocarlo&lt;/em&gt; cuando nos venga en gana&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/daemon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y todo esto que suena tan complicado y misterioso, es mas facil de lo que parece
+(creo). Encima podemos hacerlo con emacs, aunque igual, segun la situacion
+podriamos recurrir a otros dos programitos habitualmente disponibles en
+cualquier distribucion&lt;/p&gt;
+
+&lt;h2 id=&#34;emacs&#34;&gt;emacs&lt;/h2&gt;
+
+&lt;p&gt;emacs tiene un &lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html&#34;&gt;modo demonio&lt;/a&gt;
+que sirve para dos cosas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;cargar emacs una vez y luego lanzar instancias que comparten la misma sesion
+pero se manifiestan a la velocidad del rayo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;volver independiente tu sesion de una shell, fuera esta en ssh o en modo
+texto o grafico&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;primero, para activar el modo demonio lanzamos el siguiente comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; emacs --daemon
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto no lanzara ningun emacs, simplemente colocara bajo las sombras una sesion
+con la que podremos contactar. Para hacer esto necesitamos un comando particular
+llamado &lt;code&gt;emacsclient&lt;/code&gt;. Como la mayoria de las cosas, no es tan sencillo. Si lo
+lanzamos tal cual&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; emacsclient
+emacsclient: file name or argument required
+Try &#39;emacsclient --help&#39; for more information
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos dira que intentemos ver la ayuda. Si bien, esta ayuda es basta, podriamos
+simplificarla a dos opciones utiles&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; emacsclient -c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;que nos lanza emacs en el buffer scratch.&lt;/p&gt;
+
+&lt;p&gt;dejemos una marca en dicho buffer para identificar nuestros pasos.
+Colocando por ejemplo, la frase &lt;code&gt;&amp;quot;hola soy emacsclient uno&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/emacsclient-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;bien, terminemos emacs como se haria habitualmente &lt;code&gt;C-x C-c&lt;/code&gt; e invoquemos de
+nuevo a nuestro emacs-demonio &lt;code&gt;emacsclient -c -nw&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/emacsclient-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;hala, nuestro mensaje sigue hay!&lt;/p&gt;
+
+&lt;p&gt;ahora en nuestra terminal (tilix) dividida, lanzamos de nuevo &lt;code&gt;emacsclient -c -nw&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/emacsclient-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;de nuevo lo mismo&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/emacsclient-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y si cerramos uno o todos los &lt;code&gt;emacsclient&lt;/code&gt; da igual,
+lo que en ellos hagamos permanecera mientras no se apague el sistema o cerremos
+el modo demonio&lt;/p&gt;
+
+&lt;p&gt;la otra forma en la que podemos lanzar emacsclient, consiste en indicar que
+ficheros abrir&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; emacsclient fichero1 fichero2 ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y ahora con esto, podriamos resolver el problema inicial. Abrimos una shell,
+ponemos el comando a ejecutar, salimos (&lt;code&gt;C-x C-c&lt;/code&gt;), cerramos el &lt;code&gt;ssh&lt;/code&gt; y
+regresamos cuando lo creamos conveniente. El demonio de emacs con todos
+sus buffers y demas cosas, seguira realizando su labor!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/emacsclient-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y ahora? pues para terminar con el modo demonio, desde un &lt;code&gt;emacsclient&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;M-x server-mode
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos dira que actualmente hay un servidor con clientes, que si lo queremos
+terminar de todas maneras, a lo que diremos que si.&lt;/p&gt;
+
+&lt;h3 id=&#34;cosas&#34;&gt;cosas&lt;/h3&gt;
+
+&lt;p&gt;emacs es un entorno centrado en el texto, que puede dividirse, expandirse y
+adaptarse de formas inimaginables, sin embargo, una terminal pura donde ejecutar
+programas visuales e interactivos escritos cada uno en su lenguaje, con sus
+propias librerias y forma de entender sus combinaciones de teclado, igual y
+queda en otra liga mas alla de los fines de emacs&lt;/p&gt;
+
+&lt;p&gt;tambien, aunque emacs posee su propia terminal (tonta) &lt;strong&gt;eshell&lt;/strong&gt;, lo mejor es
+lanzar programas no interactivos. Ademas eshell, sola hay una y solo una, Emacs
+no es multiproceso, o hace una cosa o hace otra, pero no dos al mismo
+tiempo. Si lo que necesitamos son varias shell reales, lo mas conveniente seria
+recurrir a otras herramientas&lt;/p&gt;
+
+&lt;h2 id=&#34;gnu-screen&#34;&gt;GNU Screen&lt;/h2&gt;
+
+&lt;p&gt;esto es un &lt;a href=&#34;https://es.wikipedia.org/wiki/Multiplexor&#34;&gt;multiplexor&lt;/a&gt; de terminal,
+que segun la &lt;a href=&#34;https://en.wikipedia.org/wiki/Terminal_multiplexer&#34;&gt;wikipedia&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;es una aplicación de software que puede utilizarse para varias sesiones de
+inicio de sesión independientes basadas en seudoterminales dentro de una única
+pantalla de terminal, una ventana de emulador de terminal, una consola de
+sistema de PC/puesto de trabajo o una sesión de inicio de sesión remota, o
+para separar y volver a adjuntar sesiones de un terminal. Es útil para tratar
+con múltiples programas desde una interfaz de línea de comandos, y para
+separar programas de la sesión de la shell de Unix que inició el programa,
+particularmente para que un proceso remoto continúe ejecutándose incluso
+cuando el usuario está desconectado.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;pero que en resumidas palabras, podria resumirse en un &amp;ldquo;emacs&amp;rdquo; para las
+terminales o como &amp;ldquo;un entorno de escritorio para las terminales&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;y que podemos hacer con esto? tras instalar gnu screen (buscarlo como &lt;code&gt;screen&lt;/code&gt;
+en su distribucion) y lanzarlo por primera vez&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; screen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos resivira con un bonito mensaje&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;tras presionar &lt;code&gt;espacio&lt;/code&gt;, aparecera el prompt de nuestra shell de siempre, donde
+lanzar los comandos de siempre&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;bien no? pues si&amp;hellip; a-u-n-q-u-e, cuando salimos de la terminal, no salimos de la
+terminal, saldremos de la terminal en &lt;code&gt;screen&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[screen is terminating]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;volvamos a lanzarla de nuevo y veamos como demonios (ja, ja, que cachondo)
+utilizar este invento&lt;/p&gt;
+
+&lt;p&gt;primero, &lt;code&gt;screen&lt;/code&gt; tiene algunas influencias emacseras, y como este, tiene un
+prefijo para hacer cosas, que por defecto es &lt;code&gt;C-a&lt;/code&gt; (&lt;code&gt;Control&lt;/code&gt; y &lt;code&gt;a&lt;/code&gt; al mismo
+tiempo) seguido por una (o mas) combinaciones que serian el comando en si, por
+ejemplo, si presionamos &lt;code&gt;C-a d&lt;/code&gt; saldremos de &lt;em&gt;&lt;code&gt;screen&lt;/code&gt; pero sin cerrar
+&lt;code&gt;screen&lt;/code&gt;&lt;/em&gt;, que seguira en &amp;ldquo;segundo plano&amp;rdquo; a su rollo, rollo al que podemos
+regresar&lt;/p&gt;
+
+&lt;p&gt;como hacer esto? no es tan sencillo, primero deberemos averiguar el nombre de
+nuestra &amp;ldquo;sesion&amp;rdquo; y re-enlazar a ella&lt;/p&gt;
+
+&lt;p&gt;mientras haciamos el &lt;code&gt;C-a d&lt;/code&gt; nos lanzaba la siguiente salida&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[detached from 6469.pts-3.tachikoma]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;un dato similar podemos obtenerlo con el siguiente comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; screen -ls
+There is a screen on:
+	6469.pts-3.tachikoma	(Detached)
+1 Socket in /run/screens/S-nasciiboy.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde el &lt;em&gt;dato importante&lt;/em&gt; es ese que va luego del punto del numero, hasta el
+primer espacio, es decir (y en este caso particular) &lt;code&gt;pts-3.tachikoma&lt;/code&gt;. Dicho
+valor nos servira para recuperar la sesion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; screen -x pts-3.tachikoma
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;bonito no? ehhhh, mas o menos. Salgamos sin cerrar e iniciemos una nueva sesion
+con un nombre mas sencillo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; screen -S mi-sesion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de nuevo, tendriamos otra terminal&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;repitiendo el listado de sesiones&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; screen -ls
+There are screens on:
+	7832.mi-sesion	(Detached)
+	6469.pts-3.tachikoma	(Detached)
+2 Sockets in /run/screens/S-nasciiboy.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;guaaa, que emocionante&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;para contactar a esta nueva sesion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; screen -x mi-sesion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y? pues ahora un par de cosas medio chulas, primero podemos dividir la pantalla
+¡en dos! presionando &lt;code&gt;C-a S&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;luego puedes saltar a esta nueva division con &lt;code&gt;C-a TAB&lt;/code&gt;. Ver el cursor en esta nueva
+seccion, apretar los botones a lo loco y ver que no pasa nada&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;hasta que invoques una shell en este espacio con el comando magico &lt;code&gt;C-a c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;dividir nuevamente la ventana (ahora en vertical) &lt;code&gt;C-a |&lt;/code&gt;, saltar a esta &lt;code&gt;C-a
+TAB&lt;/code&gt;, nueva shell &lt;code&gt;C-a c&lt;/code&gt; y sonreir locamente&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ahora como cerrar este conjunto, si salimos de la shell (&lt;code&gt;C-d&lt;/code&gt; o con &lt;code&gt;exit&lt;/code&gt;) la
+seccion no desaparecera, seguira hay hasta que presionemos &lt;code&gt;C-a X&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;si por alguna razor quisieramos cambiar el prefijo &lt;code&gt;C-a&lt;/code&gt; por otro distinto, por
+ejemplo &lt;code&gt;C-b&lt;/code&gt;, tenemos dos opciones crear un fichero &lt;code&gt;.screenrc&lt;/code&gt; en nuestro home
+con el contenido&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;escape ^Bb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;con lo que el comando prefijo quedaria fijado a &lt;code&gt;C-b&lt;/code&gt; por siempre jamas, o bien, lanzar
+&lt;code&gt;screen&lt;/code&gt; de la siguiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; screen -e^bB
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y pocas cosas mas puedo comentar sobre &lt;code&gt;screen&lt;/code&gt; y sus fabulosas cualidades. Para
+mas informacion dentro de la misma sesion presionar &lt;code&gt;c-a ?&lt;/code&gt; invoca a la ayuda. tambien
+podriamos ver la pagina del manual&lt;/p&gt;
+
+&lt;h2 id=&#34;tmux&#34;&gt;tmux&lt;/h2&gt;
+
+&lt;p&gt;y&amp;hellip; tmux es mas o menos como &lt;code&gt;screen&lt;/code&gt;, tambien va a su rollo y puede sobrevivir
+al cuelgue de una sesion ssh, tiene combinaciones &amp;ldquo;tipo emacs&amp;rdquo; y sirve de
+&amp;ldquo;entorno de escritorio para las terminales&amp;rdquo;, p-e-r-o, p-e-r-o, p-e-r-o, por
+defecto es algo mas amigable y 🌈moderno🌈 (&lt;a href=&#34;https://en.wikipedia.org/wiki/gnu_screen&#34;&gt;1987&lt;/a&gt;
+vs &lt;a href=&#34;https://en.wikipedia.org/wiki/tmux&#34;&gt;2007&lt;/a&gt;) aunque ambos estan escritos en c&lt;/p&gt;
+
+&lt;p&gt;y cual escogeria screen o tmux? pues, tmux! aunque si hay necesidad, se usar los dos!&lt;/p&gt;
+
+&lt;p&gt;y ahora, como usarlo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; tmux
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;como vemos, a diferencia de &lt;code&gt;screen&lt;/code&gt;, &lt;code&gt;tmux&lt;/code&gt; se nos comera una fila al final de
+la pantalla, muy a lo &lt;code&gt;emacs&lt;/code&gt;. Otra diferencia particular, empieza por el
+prefijo, que en lugar de ser &lt;code&gt;C-a&lt;/code&gt; pasa a ser &lt;code&gt;C-b&lt;/code&gt; (y encuentro mas comodo).
+Ademas de eso al dividir la pantalla en sus diferentes formas&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-b &amp;quot;&lt;/code&gt; division horizontal&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b %&lt;/code&gt; division vertical&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;aparecera una shell sin hacer nada mas&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;podemos deambular por las &amp;ldquo;divisiones&amp;rdquo; con&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-b o&lt;/code&gt; saltar a la siguiente&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b ←&lt;/code&gt; saltar a la derecha&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b ↑&lt;/code&gt; saltar arriba&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b →&lt;/code&gt; saltar a la derecha&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b ↓&lt;/code&gt; saltar abajo&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b C-←&lt;/code&gt; redimencionar hacia la derecha&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b C-↑&lt;/code&gt; redimencionar hacia arriba&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b C-→&lt;/code&gt; redimencionar hacia la derecha&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b C-↓&lt;/code&gt; redimencionar hacia abajo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;tambien centrar la atension en la shell actual &lt;em&gt;sin romper la distribucion&lt;/em&gt; de las ventanas con
+&lt;code&gt;C-b z&lt;/code&gt; (zoom) y luego restaurar con otro &lt;code&gt;C-b z&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;o incluso y mas locochon, hacer que las shells cambien de sitio con &lt;code&gt;C-b C-o&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;o hacer aparecer un reloc ascii gigante con &lt;code&gt;C-b t&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;u otras cosas mas chulas como agregar &amp;ldquo;nuevos escritorios&amp;rdquo; con &lt;code&gt;C-b c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;e ir y venir entre escritorios con&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-b n&lt;/code&gt; siguiente&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b p&lt;/code&gt; anterior&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-b 0&lt;/code&gt;, &lt;code&gt;C-b 1&lt;/code&gt; &lt;code&gt;C-b …&lt;/code&gt;, escritorio 0, escritorio 1, …&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;o &lt;code&gt;C-b w&lt;/code&gt;, que nos permite elegir visualmente&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;salir de esta secion &lt;em&gt;sin cerrarla&lt;/em&gt; con &lt;code&gt;C-b d&lt;/code&gt; y recuperarla con
+&lt;code&gt;tmux attach&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;tambien, podriamos no salir de dicha sesion e ingresar en ella desde otra
+terminal, repitiendo &lt;code&gt;tmux attach&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;que hace una cosa muy chula; adaptarse y limitar lo que se ve en la sesion
+con las dimenciones de la mas pequeña. Ademas, como en &lt;code&gt;screen&lt;/code&gt; podemos darle un
+nombre a una sesion y vincularnos a ella&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; tmux new-session -s mi-sesion # lanzar
+&amp;gt; tmux attach -t mi-sesion      # conectar
+&amp;gt; tmux list-sessions            # listar sesiones
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto y muchas cosas mas que pueden o no ser de interes, empiezan consultando la
+ayuda incluida &lt;code&gt;C-b ?&lt;/code&gt;, su pagina man o si se desea un librillo con comentarios&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leanpub.com/the-tao-of-tmux/read&#34;&gt;https://leanpub.com/the-tao-of-tmux/read&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;aunque creo que el nombre &amp;ldquo;the tao of&amp;rdquo; le viene grande, pues no enseñan un flujo o estrategia
+de trabajo. Solo comandos con imagenes, que puedes descubrir por tu cuenta, como
+el obscuro proceso para congelar la pantalla, seleccionar texto y pegarlo en
+donde se nos ocurra aun sin sesion grafica!&lt;/p&gt;
+
+&lt;p&gt;en fin, yo estoy utilizando tmux para dejar corriendo en el servidor comandos de
+prolongado tiempo y tambien para ejecutar &lt;a href=&#34;https://weechat.org&#34;&gt;weechat&lt;/a&gt;
+&amp;ldquo;acumulando logs&amp;rdquo; por dias y dias en salas de irc&amp;hellip; mera investigacion de la fauna&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>elipo</title>
@@ -35,8 +411,11 @@ defecto. {AItPiEL}&lt;/p&gt;
 git clone https://notabug.org/nasciiboy/elipo.git
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;para descarga en formato &lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.zip&#34;&gt;zip&lt;/a&gt;
-y en &lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.tar&#34;&gt;tar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;para descarga en formato &lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.zip&#34;&gt;zip&lt;/a&gt;,
+&lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.tar&#34;&gt;tar&lt;/a&gt;,
+o bien visionar directamente en version web en
+&lt;a href=&#34;https://nasciiboy.land/book4all/elipo/emacs-lisp-intro.html&#34;&gt;ingles&lt;/a&gt; y
+&lt;a href=&#34;https://nasciiboy.land/book4all/elipo/emacs-lisp-intro_es.html&#34;&gt;español&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&amp;ldquo;Una introducción a la programación en Emacs Lisp&amp;rdquo;&lt;/strong&gt; es una guia turistica por
 los conceptos basicos de la programacion, recorriendo las entrañas mas

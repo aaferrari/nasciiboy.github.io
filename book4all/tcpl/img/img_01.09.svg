@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="31cm" height="6cm" viewBox="98 98 604 104" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="100" y="100" width="100" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="100" y="100" width="100" height="100"/>
+    <text font-size="47.977" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="150" y="164.564">
+      <tspan x="150" y="164.564">h</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="200" y="100" width="100" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="200" y="100" width="100" height="100"/>
+    <text font-size="47.977" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="250" y="164.564">
+      <tspan x="250" y="164.564">o</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="300" y="100" width="100" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="300" y="100" width="100" height="100"/>
+    <text font-size="47.977" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="350" y="164.564">
+      <tspan x="350" y="164.564">l</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="400" y="100" width="100" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="400" y="100" width="100" height="100"/>
+    <text font-size="47.977" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="450" y="164.564">
+      <tspan x="450" y="164.564">a</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="500" y="100" width="100" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="500" y="100" width="100" height="100"/>
+    <text font-size="47.977" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="550" y="164.564">
+      <tspan x="550" y="164.564">\n</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="600" y="100" width="100" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="600" y="100" width="100" height="100"/>
+    <text font-size="47.977" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="650" y="164.564">
+      <tspan x="650" y="164.564">\0</tspan>
+    </text>
+  </g>
+</svg>

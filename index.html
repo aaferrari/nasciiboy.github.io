@@ -5,21 +5,21 @@
     <meta charset="utf-8">
     <title>⋲ᴹ∧cₛ ℜø∁κ§</title>
     <link href="https://nasciiboy.land/index.xml" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
-    <style>:root {
+    <style> :root {
 
     --BGC      : #000000;
     --FGC      : #ffffff;
     --BGClogo  : #222222;
     --FGClogo  : #ffffff;
-    --FGCtitle : #ff4500;
-    --FGCstart1: #4B99D2;
-    --FGCstart2: #00ffff;
-    --FGCstart3: #ffa074;
-    --FGCstart4: #98fb98;
-    --FGCstart5: #b0c4de;
-    --FGCstart6: #7fffd4;
-    --FGCstart7: #db2e24;
-    --FGCstart8: #ff4500;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
     --FGCtext  : #ffffff;
     --FGCemph  : #ffffff;
     --FGCbtcode: #333333;
@@ -67,7 +67,7 @@ html body main {font-size: 1.0em;
                 box-sizing:border-box;
                 padding: 1em 1em 1em 1.5em
                 ;
-                width: 70%;
+                width: 80%;
                 float: left;
                }
 
@@ -83,6 +83,34 @@ html body main div.thumb {font-size: 1.0em;
 
 ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
 
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
 
 ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
 ul.meta li { line-height: 1.5em; }
@@ -104,7 +132,7 @@ html body aside {
     font-size: 1.0em;
     font-family: text;
     box-sizing:border-box;
-    width: 30%;
+    width: 20%;
     float: left;
     padding-left: 1em;
 }
@@ -123,16 +151,6 @@ nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
 .footer-title { clear: both; }
 
 .footer-title a { list-style: none; text-decoration: none; color: red; }
-
-h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title   ; line-height: 1.1em; }
-h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; line-height: 1.1em; }
-h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; line-height: 1.1em; }
-h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; line-height: 1.1em; }
-h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; line-height: 1.1em; }
-h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; line-height: 1.1em; }
-h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
-h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
-h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; line-height: 1.1em; }
 
 .path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
 .path li a { text-decoration: none; color: #87cefa; }
@@ -165,8 +183,8 @@ code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
 code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
 .file { color: var( --FGCfile ); font-family: codetext; }
 .math { color: var( --FGCmath ); font-family: codetext; }
-blockquote { color: #F99; }
-
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
 
 a { color: #00ffff; text-decoration: underline; }
 a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
@@ -187,6 +205,14 @@ img { border: none; max-width: 100%;
     }
 img:hover { border: 0.05em solid #fff; }
 
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
 .clear  { clear: both; }
 .center { display: flex;
           justify-content: center;
@@ -242,776 +268,1228 @@ img:hover { border: 0.05em solid #fff; }
 .submit:hover {
     color: green;
 }
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
 </style>
   </head>
   <body>
-
+    
 <main>
   <article class="index">
-
-
-
-
+    
+    
+    
+    
   </article>
-
-
+  
+  
 
   <ul class="nav">
-
+    
+    <li><a href="https://nasciiboy.land/book4all/"></a></li>
+    
     <li><a href="https://nasciiboy.land/apt/">apts</a></li>
-
+    
     <li><a href="https://nasciiboy.land/emacs/">emacs</a></li>
-
+    
     <li><a href="https://nasciiboy.land/love2d/">love2ds</a></li>
-
+    
+    <li><a href="https://nasciiboy.land/o/">os</a></li>
+    
     <li><a href="https://nasciiboy.land/post/">posts</a></li>
-
+    
     <li><a href="https://nasciiboy.land/prog/">progs</a></li>
-
+    
     <li><a href="https://nasciiboy.land/vg/">vgs</a></li>
-
+    
   </ul>
 
   <ul class="article">
-
+  
   <li>
     <p>
-      09 11 <a class="title" href="https://nasciiboy.github.io/post/sayonara-baby/">Sayonara Baby</a>
+      04 26 <a class="title" href="https://nasciiboy.land/post/ramen-xxix/">Ramen XXIX #yo-nunca-dije-que-la-iba-a-dejar</a>
     </p>
   </li>
-
+  
+  <li>
+    <p>
+      03 17 <a class="title" href="https://nasciiboy.land/prog/4096-rgb/">4096-RGB</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      03 09 <a class="title" href="https://nasciiboy.land/post/sushi/">Sushi</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      03 01 <a class="title" href="https://nasciiboy.land/o/0002-23-37/">0002 23 37</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      03 01 <a class="title" href="https://nasciiboy.land/o/0002-23-25/">0002 23 25</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      02 16 <a class="title" href="https://nasciiboy.land/o/0001/">0001 – pensar</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      02 11 <a class="title" href="https://nasciiboy.land/o/0000/">0000</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      01 26 <a class="title" href="https://nasciiboy.land/post/ramen-xxviii/">Ramen XXVIII – Free as a Bird</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      01 02 <a class="title" href="https://nasciiboy.land/post/2018/">2018</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      12 30 <a class="title" href="https://nasciiboy.land/post/teo-05/">Teopanzolco 05 – Billy Hart and Ethan Iverson Quartet</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      12 16 <a class="title" href="https://nasciiboy.land/post/ramen-xxvii/">Ramen XXVII – Banners II</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      11 24 <a class="title" href="https://nasciiboy.land/prog/inf-domain/">∞.nasciiboy.land</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      11 19 <a class="title" href="https://nasciiboy.land/post/feminascii-iii/">Feminascii III – D-On-Key</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      11 18 <a class="title" href="https://nasciiboy.land/post/ramen-xxvi/">Ramen XXVI – Banners</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      11 04 <a class="title" href="https://nasciiboy.land/prog/gitatnasciiboy-land/">git@nasciiboy.land</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      11 02 <a class="title" href="https://nasciiboy.land/post/ramen-xxv/">Ramen XXV – Payday II</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      10 27 <a class="title" href="https://nasciiboy.land/post/teo-04/">Teopanzolco 03, un medio y 04</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      10 21 <a class="title" href="https://nasciiboy.land/post/feminascii-ii/">feminascii Ⅱ</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      10 07 <a class="title" href="https://nasciiboy.land/post/ramen-xxiv/">Ramen XXIV</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      10 01 <a class="title" href="https://nasciiboy.land/prog/oxido/">Oxido</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      09 27 <a class="title" href="https://nasciiboy.land/prog/goaccess/">Goaccess</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      09 23 <a class="title" href="https://nasciiboy.land/prog/morgue/">morgue</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      09 20 <a class="title" href="https://nasciiboy.land/emacs/temax/">temax</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      09 18 <a class="title" href="https://nasciiboy.land/post/ramen-xxiii/">Ramen XXIII – Hinamatsuri</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      09 16 <a class="title" href="https://nasciiboy.land/post/feminascii/">feminascii</a>
+    </p>
+  </li>
+  
   <li>
     <p>
       09 11 <a class="title" href="https://nasciiboy.land/prog/bps/">BPS</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       09 01 <a class="title" href="https://nasciiboy.land/post/emergente-mex-15/">Emergente Mex 15</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       08 29 <a class="title" href="https://nasciiboy.land/post/teo-02/">Teopanzolco – 02 (Marquis Hill Quartet)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       08 20 <a class="title" href="https://nasciiboy.land/post/ramen-xxii/">Ramen XXII</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       08 12 <a class="title" href="https://nasciiboy.land/prog/sistop/">SistOp</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       08 06 <a class="title" href="https://nasciiboy.land/post/teo-01/">Teopanzolco – 01 (Vuyo Sotashe)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 29 <a class="title" href="https://nasciiboy.land/emacs/elipo/">elipo</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 26 <a class="title" href="https://nasciiboy.land/prog/debone/">Debone</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 18 <a class="title" href="https://nasciiboy.land/post/cedarmill/">Cedar Mill</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 07 <a class="title" href="https://nasciiboy.land/post/pobreotaku/">PobreOtaku</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       06 22 <a class="title" href="https://nasciiboy.land/post/ramen-xxi/">Ramen XXI – TiMorg</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       06 11 <a class="title" href="https://nasciiboy.land/post/mmac/">MMAC</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       05 17 <a class="title" href="https://nasciiboy.land/post/ramen-infinito/">Ramen Infinito</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 26 <a class="title" href="https://nasciiboy.land/emacs/pwds/">pwds</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 21 <a class="title" href="https://nasciiboy.land/post/ramen-xx/">Ramen XX – Communication Breakdown</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 19 <a class="title" href="https://nasciiboy.land/prog/introarm/">IntroARM</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 15 <a class="title" href="https://nasciiboy.land/prog/z80-spectrum/">Z80 Spectrum (tutorial speccy.org)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 14 <a class="title" href="https://nasciiboy.land/prog/please-reinvent-the-whell/">Por favor, reinventa la rueda</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 13 <a class="title" href="https://nasciiboy.land/prog/m8-ii/">LineageOS, Feeds &amp; Feel</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 08 <a class="title" href="https://nasciiboy.land/emacs/keep-regexp/">Keep Regexp</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 08 <a class="title" href="https://nasciiboy.land/emacs/the-holy-war/">The Holy War</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 28 <a class="title" href="https://nasciiboy.land/prog/gdp/">GDP</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 26 <a class="title" href="https://nasciiboy.land/post/ramen-xix/">Ramen XIX</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 23 <a class="title" href="https://nasciiboy.land/prog/cat/">CAT</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 18 <a class="title" href="https://nasciiboy.land/prog/markdown/">Markdown</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 13 <a class="title" href="https://nasciiboy.land/prog/gof/">Desing Patterns (GoF)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 09 <a class="title" href="https://nasciiboy.land/post/ramen-xviii/">Ramen XVIII</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 06 <a class="title" href="https://nasciiboy.land/emacs/miscelanea/">Miscelanea Emacs</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 05 <a class="title" href="https://nasciiboy.land/prog/awk/">AWK</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 02 <a class="title" href="https://nasciiboy.land/post/resonante/">Festival resonante</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       02 09 <a class="title" href="https://nasciiboy.land/post/ramen-xvii/">Ramen XVII – payday</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 25 <a class="title" href="https://nasciiboy.land/post/the-man-from-earth/">The Man From Earth</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 21 <a class="title" href="https://nasciiboy.land/post/ramen-xvi/">Ramen XVI – G¤dZila</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 20 <a class="title" href="https://nasciiboy.land/post/b350m-a/">ASUS Prime B350-A (&#43; AMD A6 9500)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 19 <a class="title" href="https://nasciiboy.land/prog/programming-howto/">Programming Howto (19-01-18)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 15 <a class="title" href="https://nasciiboy.land/prog/morg-table-iii/">TextTable2HtmlTable (Volume Three)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 10 <a class="title" href="https://nasciiboy.land/prog/morg-table-ii/">TextTable2HtmlTable (Volume Two)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 25 <a class="title" href="https://nasciiboy.land/post/ramen-xv/">Ramen XV</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 15 <a class="title" href="https://nasciiboy.land/prog/morg-table/">TextTable2HtmlTable (Volume One)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 08 <a class="title" href="https://nasciiboy.land/prog/morg-mirror/">Morg Mirror</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 06 <a class="title" href="https://nasciiboy.land/post/ramen-xiv/">Ramen XIV – Noise</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       11 23 <a class="title" href="https://nasciiboy.land/prog/m8/">HTC One M8 (flasheo)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       11 16 <a class="title" href="https://nasciiboy.land/prog/the-return-of-f/">The Return Of F</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       11 10 <a class="title" href="https://nasciiboy.land/prog/javame/">Java &amp; Me(h)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       11 09 <a class="title" href="https://nasciiboy.land/prog/ocr/">OCR</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       11 05 <a class="title" href="https://nasciiboy.land/post/ramen-xiii/">Ramen XIII</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       10 30 <a class="title" href="https://nasciiboy.land/apt/ibniz/">ibniz</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       10 27 <a class="title" href="https://nasciiboy.land/prog/blackfriday/">blackfriday</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       10 27 <a class="title" href="https://nasciiboy.land/prog/raptor-down/">Raptor Down</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       10 24 <a class="title" href="https://nasciiboy.land/post/ramen-xii/">Ramen XII – this is it</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       10 22 <a class="title" href="https://nasciiboy.land/prog/lxde-shortcuts/">lxde shortcuts</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       10 15 <a class="title" href="https://nasciiboy.land/prog/morg-redux/">Que es Morg? [Redux]</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       10 14 <a class="title" href="https://nasciiboy.land/prog/the-x86-strikes-back/">The X86 Strikes Back</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       10 08 <a class="title" href="https://nasciiboy.land/post/ramen-xi/">Ramen XI – Spaghetti</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       10 06 <a class="title" href="https://nasciiboy.land/prog/gomark/">benchmarks dentro de un programa en go</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       10 06 <a class="title" href="https://nasciiboy.land/prog/morg-v020/">morg v0.20</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       09 28 <a class="title" href="https://nasciiboy.land/emacs/v-config/">Emacs, configuracion de verano</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       09 14 <a class="title" href="https://nasciiboy.land/prog/sayonara-f/">Sayonara F</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       09 08 <a class="title" href="https://nasciiboy.land/post/ramen-x/">Ramen X – Infierno Mayoi</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       08 20 <a class="title" href="https://nasciiboy.land/emacs/run-scheme/">Run Scheme</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       08 20 <a class="title" href="https://nasciiboy.land/prog/ischeme/">iScheme</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       08 19 <a class="title" href="https://nasciiboy.land/prog/raptorvsworld-ii/">Raptor VS Mundo</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       08 11 <a class="title" href="https://nasciiboy.land/post/ramen-ix/">Ramen IX</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       08 01 <a class="title" href="https://nasciiboy.land/post/ramen-viii/">Ramen VIII</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 27 <a class="title" href="https://nasciiboy.land/prog/stylus-black-translator/">stylus black-translator</a>
     </p>
   </li>
-
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/trickparade/">trickparade</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/witch-of-the-grove/">Witch of the Grove</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/in-your-face-city-trains/">In Your Face City Trains</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/turtle-invaders/">Turtle Invaders</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/trosh/">trosh</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/the-legend-of-zelda---oracle-of-colors/">The Legend of Zelda - Oracle of Colors</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/super-shooter/">Super Shooter</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/splashes/">splashes</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/spaceblocks/">SpaceBlocks</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/sienna/">Sienna</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/safety-blanket/">Safety Blanket</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/rocketbox/">RocketBox</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/red-entity/">Red Entity</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/rakshasa/">Rakshasa</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/panel-attack/">panel attack</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/orthorobot/">orthorobot</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/order-of-twilight/">Order of Twilight</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/nova-pinball/">Nova Pinball</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/nottetris2/">nottetris2</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/notpacman/">notpacman</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/mr.-rescue/">Mr. Rescue</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/mari0/">mari0</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/lua-tower-defense/">LUA Tower Defense</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/love-example-browser/">LOVE Example Browser</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/love-demos/">love-demos</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/logivi/">logivi</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/journey-to-the-center-of-hawkthorne/">Journey to the Center of Hawkthorne</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/impoverished-starfighter/">Impoverished Starfighter</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/hyperplasm/">Hyperplasm</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/grav/">Grav</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/entropipes/">EntroPipes</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/duck-marines/">Duck Marines</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/colums-clone/">Colums clone</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/burrow-down/">Burrow Down</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/anput/">anput</a>
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      07 25 <a class="title" href="https://nasciiboy.land/love2d/90-second-portraits/">90 Second Portraits</a>
+    </p>
+  </li>
+  
   <li>
     <p>
       07 22 <a class="title" href="https://nasciiboy.land/post/ramen-vii/">Ramen VII</a>
     </p>
   </li>
-
+  
   <li>
     <p>
-      07 22 <a class="title" href="https://nasciiboy.land/love2d/docset/">Love, Emacs &amp; Docs</a>
+      07 22 <a class="title" href="https://nasciiboy.land/prog/docset/">Love, Emacs &amp; Docs</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 20 <a class="title" href="https://nasciiboy.land/vg/shooter/">SShooter</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 15 <a class="title" href="https://nasciiboy.land/prog/regexp4-go/">regexp4-go (dia cero)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 13 <a class="title" href="https://nasciiboy.land/post/ramen-vi/">Ramen VI – Commodore</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 10 <a class="title" href="https://nasciiboy.land/prog/webeloper/">Webeloper – El navegador web</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 10 <a class="title" href="https://nasciiboy.land/prog/sicp-contrib/">SICP [es] – Guia para Colaboradores</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 07 <a class="title" href="https://nasciiboy.land/prog/dot-slash-sicp2es/">SICP (proyecto de traduccion)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 04 <a class="title" href="https://nasciiboy.land/prog/morg-d432/">morg [dia 432]</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 02 <a class="title" href="https://nasciiboy.land/emacs/why-emacs/">Por que GNU Emacs?</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       07 01 <a class="title" href="https://nasciiboy.land/post/ramen-v/">Ramen V</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       06 24 <a class="title" href="https://nasciiboy.land/apt/konsole-warrior/">Konsole Warrior</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       06 18 <a class="title" href="https://nasciiboy.land/post/ramen-iv/">Ramen IV</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       06 17 <a class="title" href="https://nasciiboy.land/prog/rainbow/">Crear una paleta de color con solo un indice</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       06 04 <a class="title" href="https://nasciiboy.land/post/ramen-iii/">Ramen III</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       05 30 <a class="title" href="https://nasciiboy.land/post/nasciiboy-inc/">NasciiBoy Inc.</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       05 29 <a class="title" href="https://nasciiboy.land/prog/tgpl/">El Lenguaje De programacion Go</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       05 15 <a class="title" href="https://nasciiboy.land/post/eof-fs/">El fin de la infancia... del Software Libre</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       05 14 <a class="title" href="https://nasciiboy.land/post/ramen-ii/">Ramen II</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       05 02 <a class="title" href="https://nasciiboy.land/vg/ppsspp/">PPSSPP</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 20 <a class="title" href="https://nasciiboy.land/prog/nirvana/">Nirvana</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 11 <a class="title" href="https://nasciiboy.land/prog/pg2ncurses/">Programmer&#39;s Guide to NCurses</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       04 02 <a class="title" href="https://nasciiboy.land/post/ramen-i/">Ramen I</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 14 <a class="title" href="https://nasciiboy.land/prog/yorozuya/">yorozuya</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 12 <a class="title" href="https://nasciiboy.land/prog/morg-howto/">morg: como usar</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 05 <a class="title" href="https://nasciiboy.land/post/mugen-no-junin/">Mugen no jūnin</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       03 02 <a class="title" href="https://nasciiboy.land/prog/morg/">morg</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       02 22 <a class="title" href="https://nasciiboy.land/post/kuzu-no-honkai/">Kuzu no Honkai</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       02 13 <a class="title" href="https://nasciiboy.land/prog/inbo/">INBO</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       02 12 <a class="title" href="https://nasciiboy.land/emacs/notabs-for-gomode/">no mas tabs en go-mode</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       02 11 <a class="title" href="https://nasciiboy.land/prog/regexp3-go/">regexp3-go (dia cero)</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 31 <a class="title" href="https://nasciiboy.land/emacs/org-mode/">org mode</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 31 <a class="title" href="https://nasciiboy.land/post/samuraichamploo/">Samurai Champloo ♪</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 20 <a class="title" href="https://nasciiboy.land/post/workspace/">la forma en que trabajo</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 18 <a class="title" href="https://nasciiboy.land/prog/gnome-keys/">Gnome Keys</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 18 <a class="title" href="https://nasciiboy.land/emacs/rsspluseww/">Emacs web y noticias en modo texto</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 16 <a class="title" href="https://nasciiboy.land/post/shin-godzilla/">Shin Godzilla</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 11 <a class="title" href="https://nasciiboy.land/prog/raptor-book/">Raptor-Book</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 07 <a class="title" href="https://nasciiboy.land/emacs/keychords/">Definir atajos en Emacs</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 04 <a class="title" href="https://nasciiboy.land/prog/2017challenges/">2017Challenges</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       01 01 <a class="title" href="https://nasciiboy.land/vg/solarus/">Zelda solarus</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 30 <a class="title" href="https://nasciiboy.land/post/krautrock-albums/">Krautrock Albums</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 28 <a class="title" href="https://nasciiboy.land/emacs/first-theme/">first theme</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 25 <a class="title" href="https://nasciiboy.land/emacs/first-blood/">Emacs - first blood</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 24 <a class="title" href="https://nasciiboy.land/apt/fish/">fish</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 23 <a class="title" href="https://nasciiboy.land/emacs/que-es-emacs/">Que es GNU Emacs?</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 22 <a class="title" href="https://nasciiboy.land/apt/moc/">moc</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 22 <a class="title" href="https://nasciiboy.land/apt/shnsplit/">Como dividir un album contenido en una sola pista flac</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 19 <a class="title" href="https://nasciiboy.land/prog/ncurses/">Ncurses</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 19 <a class="title" href="https://nasciiboy.land/vg/nxengine/">nxEngine</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 17 <a class="title" href="https://nasciiboy.land/vg/h-craft/">H Craft Championship</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 16 <a class="title" href="https://nasciiboy.land/prog/performance-comparison-of-regular-expression-engines/">Performance comparison of regular expression engines</a>
     </p>
   </li>
-
+  
   <li>
     <p>
       12 16 <a class="title" href="https://nasciiboy.land/post/rei/">Rei</a>
     </p>
   </li>
-
+  
   </ul>
 
 
 </main>
 
     <aside>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="https://nasciiboy.land/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="https://nasciiboy.land/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="https://nasciiboy.land/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="https://nasciiboy.land/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="https://nasciiboy.land/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
 
+      
       <section class="sidebar">
         <header class="key"><b>CATEGORIES</b></header>
         <div>
           <ul class="terms">
-            <li><a href="https://nasciiboy.land/categories/prog">prog(51)</a></li><li><a href="https://nasciiboy.land/categories/post">post(42)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(15)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(1)</a></li>
+            <li><a href="https://nasciiboy.land/categories/prog">prog(58)</a></li><li><a href="https://nasciiboy.land/categories/post">post(55)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
           </ul>
         </div>
       </section>
-
+      
       <section class="sidebar">
         <header class="key"><b>TAGS</b></header>
         <div>
           <ul class="terms">
-            <li><a href="https://nasciiboy.land/tags/fonos">fonos(26)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(20)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(18)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(17)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(14)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(7)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/go">go(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li>
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(35)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(25)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(22)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(8)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(7)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
           </ul>
         </div>
       </section>
+      
 
     </aside>
     <footer>
@@ -1020,7 +1498,7 @@ img:hover { border: 0.05em solid #fff; }
 <b>Feed <a href="https://nasciiboy.land/index.xml">RSS</a><b>.
  Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
 <b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
-<b> Donar <a href="https://liberapay.com/nasciiboy/donate">liberapay</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
 
 
 

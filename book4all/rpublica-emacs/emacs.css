@@ -1,0 +1,303 @@
+/* Hoja de Estilo de manuales de rpublica.net*//*Elementos*/
+
+body { font-family: Arial, Verdana, Tahoma, sans-serif; }
+
+img { border:5px solid #000000;}
+
+/* Clases */
+
+.marcado {color:#db4b2a;}
+
+.encab {color:#375b72;}
+
+.img { color:#000000; font-weight:800; font-size:14px;
+       background-color:#cfcfcf; padding:10px;}
+
+.Ref { color:#a6a6a6; text-decoration:none;}
+
+h6 a:hover { color:#375b72; background-color:#ffffff;
+             border-bottom:1px solid #375b72;}
+
+.navInf { color:#ffffff; text-decoration:none;}
+
+.navInf1{ color:#FF6355;}
+
+ul.comandos { list-style-type:none; padding-top:10px;
+              padding-bottom:10px; background-color:#feffdd;}
+
+.comandos { padding-top:10px; padding-bottom:10px;background-color:#feffdd;}
+
+/*INDEX*/
+
+#bodyr { background-color:#ffffff;}
+
+.inicio {text-decoration:none; margin:2px;padding:2px;}
+
+.inicio:link, .inicio:visited { font-size:9px; color:#375b72;}
+
+.inicio:hover {background-color:#375b72; color:#ffffff;}
+
+/* Index General */ 
+
+#indiceg_0 { position:absolute; top:1000px; right:185px; width:575px;
+             border:1px solid #375b72; background-color:#ffffff;}
+
+#indiceg_0 h2 { text-align:center; color:#375b72;}
+
+#indiceg_0 h4 { text-align:center;}
+
+#indiceg_0 h4 a {text-decoration:none; margin:2px;padding:2px;}
+
+#indiceg_0 h4 a:link, #indiceg_0 h4 a:visited { font-size:9px; color:#375b72;}
+
+#indiceg_0 h4 a:hover {background-color:#375b72; color:#ffffff;}
+
+#indiceg {list-style-type:none; font-size:14px; font-weight:600;
+           line-height:20px;}
+
+#indiceg li a:link, #indiceg li a:visited {color:#375b72;}
+
+#indiceg li a:hover {background-color:#375b72; color:#ffffff;}
+
+#indiceg li a {text-decoration:none;}
+
+.subindex {list-style-type:none; font-size:12px;}
+
+/*Index Resumido*/
+
+#index_res {position:absolute; top:185px;right:175px; width:575px;
+             height:600px; background-color:#ffffff;}
+
+
+#index_res_1 {position:absolute;top:100px;right:287px; width:288px;
+               height:600px;background-color:#ffffff; }
+
+#index_res_2 {position:absolute;top:100px;right:0px;width:287px;height:600px;background-color:#ffffff;
+  }
+
+#index_res {font-size:12px; font-weight:400;}
+
+#index_res h2 {text-align:center;}
+
+#index_res h4 {text-align:center;}
+
+#index_res h4 a {text-decoration:none;margin:2px;padding:2px;}
+
+#index_res h4 a:link, #index_res h4 a:visited {
+                                                font-size:9px;color:#375b72;}
+
+#index_res h4 a:hover {background-color:#ff6355;color:#ffffff;}
+
+#index_res_1 p a {text-decoration:none;margin:2px;padding:2px;}
+
+#index_res_1 p a:link, #index_res_1 p a:visited {
+                                                  font-size:9px;color:#375b72;}
+
+#index_res_1 p a:hover {background-color:#ff6355;color:#ffffff;}
+
+#index_res_1 h2 { text-align:center;}
+
+#index_res_1 h4 { text-align:center;}
+
+#index_res_1 h4 a {text-decoration:none;margin:2px;padding:2px;}
+
+#index_res_1 h4 a:link, #index_res_1 h4 a:visited {
+                                                    font-size:9px;color:#375b72;}
+
+#index_res_1 h4 a:hover {background-color:#ff6355;color:#ffffff;}
+
+#index_res_2 p a {text-decoration:none;margin:2px;padding:2px;}
+
+#index_res_2 p a:link, #index_res_2 p a:visited {
+                                                  font-size:9px;color:#375b72;}
+
+#index_res_2 p a:hover {background-color:#ff6355;color:#ffffff;}
+
+#index_res_2 h2 { text-align:center;}
+
+#index_res_2 h4 { text-align:center;}
+
+#index_res_2 h4 a {text-decoration:none;margin:2px;padding:2px;}
+
+#index_res_2 h4 a:link, #index_res_2 h4 a:visited {
+                                                    font-size:9px;color:#375b72;}
+
+#index_res_2 h4 a:hover {background-color:#ff6355;color:#ffffff;}
+
+/* Identificadores*/#contenidor0 {position: absolute; top:0px;
+                                   right:125px; width:750px; background-color:#ffffff;}
+
+#rotulo { position:absolute;top:0px; right:0px; width:175px;
+          height:60px; background-color:/*#44708c*/#375b72;}
+
+#r {position:absolute;top:1px; right:5px; width:90px; height:60px;
+     font-size:45px; line-height:45px; font-weight:800; color:#ff6355;}
+
+/* MENU GLOBAL
+   
+   */ #globalNav {position:absolute;top:60px; right:0px; width:175px;
+                   height:100px; background-color:#ffffff;}
+
+#credits {display:block;position:absolute; top:5px;left:20px;
+           font-size:10px;font-weight:400; line-height:12px;
+           color:#375b72;background-color:#ffffff;margin:0; padding:0;}
+
+#credits li {list-style-type:none;}
+
+#credits a:link, #credits a:visited {text-decoration:none;
+                                      color:#ff6355;}
+
+#credits a:hover {background-color:#ff6355; color:#ffffff;}
+
+#credits i {color:#7b7b7b;}
+
+/* ROTULO INDICE  */
+#logo1
+{position:absolute;top:160px;right:0px;width:175px;height:25px;
+  text-align:center;
+  line-height:25px;background-color:#375b72;color:#ffffff;}
+
+#margen0000{width:155px; height:15px; background-color: #375b72;
+             color:#ffffff;font-size:12px;text-align:center; line-height:15px;}
+
+#margen00000 {width:155px; height:100px;background-color:
+               #ffffff;font-size:10px; font-wwight:600; color:#666666;
+               #text-align:center;}
+
+#margen00{width:145px; height:15px; background-color: #375b72;
+           color:#ffffff;font-size:12px;text-align:center; line-height:15px;}
+
+#margen000 {width:155px; height:50px; background-color:
+             #ffffff;font-size:10px; font-wwight:600; color:#666666;
+             #text-align:center;}
+
+#margen000 p {text-align:center;}
+
+/*
+   
+   *//* INDICE
+        
+        */#indice {position:absolute;top:185px; right:0px; width:155px;
+                    height:500px;padding:5px; background-color:#ffffff;}
+
+#indice1 { position:absolute; top:10px; left:10px; margin: 0; padding:
+           0 0 20px 10px; border-bottom: 0px solid #fff; }
+
+#indice1 li { margin: 0; padding: 0; list-style-type: none;
+              text-align:left; }
+
+#indice1 a:link, #indice1 a:visited { /*float: left;*/ font-size:
+                                      10px; line-height: 14px; font-weight: bold; margin: 0 10px 4px 10px;
+                                      text-decoration: none; color: #000000; }
+
+#indice1 li.active a:link, #indice1 li.active a:visited, #indice1
+a:hover { border-bottom: 2px solid #375b72; padding-bottom: 2px;
+          background: #fff; color: #375b72; }
+
+#indice1 a:hover { color: #375b72; }
+
+#subindex1, #subindex2, #subindex3 { margin: 0; padding: 0 0 5px 20px;
+                                     border-bottom: 0px solid #696; /*se ha eliminado el border inferior*/
+                                     }
+
+#subindex1 li, #subindex2 li, #subindex3 li { margin: 0; padding: 0;
+                                              list-style-type: none; }
+
+#subindex1 a:link, #subindex1 a:visited, #subindex2 a:link, #subindex2
+a:visited, #subindex3 a:link, #subindex3 a:visited { font-size: 6px;
+                                                     line-height: 14px; font-weight: bold; margin: 0 10px 2px 10px;
+                                                     text-decoration: none; color: #000000; }
+
+#subindex1 li.active a:link, #subindex1 li.active a:visited, subindex1
+#a:hover, #subindex2 li.active a:link, #subindex2 li.active
+#a:visited, #subindex2 a:hover, #subindex3 li.active a:link,
+#subindex3 li.active a:visited, #subindex3 a:hover { border-bottom:
+                                                     #2px solid #375b72; padding-bottom: 2px; background: #ffffff; color:
+                                                     #375b72; }
+
+#subindex1 a:hover, #subindex2 a:hover, #subindex3 a:hover { color:
+                                                             #375b72; }
+
+/* -------------------------------INDICE ALTERNATIVO
+   */ #indice1 { position:absolute;
+                 top:10px; left:10px; margin: 0; padding: 0 0 20px 10px; border-bottom:
+                 0px solid #fff; }
+
+#indice1 p { margin: 0; padding: 0; list-style-type: none;
+             text-align:left; }
+
+#indice1 a:link, #indice1 a:visited { /*float: left;*/ font-size: 9px;
+                                      line-height: 20px; font-weight: bold; margin: 0 10px 4px 10px;
+                                      text-decoration: none; color: #c3c3c3; }
+
+#indice1 p.active a:link, #indice1 p.active a:visited, #indice1
+a:hover { border-bottom: 2px solid #375b72; padding-bottom: 2px;
+          background: #fff; color: #375b72; }
+
+#indice1 a:hover { color: #375b72; }
+
+/*
+   
+   */ /* FRONTAL
+         
+         */ #nav0 { position:absolute; top:60px; right:175px;
+                    width:575px;height:100px; background-color:#375b72;}
+
+#logo { position:absolute; bottom:10px; left:5px; width:90px;
+        height:25px; font-size:24px; font-stretch:small;
+        color:#ffffff;padding-right:5px; border-right:2px solid #ffffff; }
+
+#logo_index0 { position:absolute; bottom:10px; left:5px; width:150px;
+               height:30px; font-size:26px; font-stretch:small;
+               color:#ffffff;padding-right:5px; border-right:2px solid #ffffff; }
+
+#logo_index1 {position:absolute; bottom:10px; left:205px; width:300px;
+               height:30px; font-size:20px; font-stretch:small;
+               color:#ffffff;padding-right:5px; border-right:2px solid #ffffff;}
+
+/*
+   
+   *//* BARRA DE SITUACION
+        */ #guia
+{position:absolute;top:160px; right:175px; width:575px; height:25px;
+  line-height:25px;color:#375b72;background-color:#ffffff;}
+
+/* ESTILO DE LAS PESTA�S DE NAVEGACION*/ #tabnav { position:absolute;
+                                                   top:5px; left:10px; margin: 0; padding: 0 0 20px 10px; border-bottom:
+                                                   0px solid #696; /*se ha eliminado el border inferior*/ }
+
+#tabnav li { margin: 0; padding: 0; display: inline; list-style-type:
+             none; }
+
+#tabnav a:link, #tabnav a:visited { float: left; font-size: 10px;
+                                    line-height: 14px; font-weight: bold; margin: 0 10px 4px 10px;
+                                    text-decoration: none; color: #000000; }
+
+#tabnav li.active a:link, #tabnav li.active a:visited, #tabnav a:hover
+{ border-bottom: 4px solid #375b72; padding-bottom: 2px; background:
+  #fff; color: #375b72; }
+
+#tabnav a:hover { color: #375b72; }
+
+/*
+   
+   *//* CONTENEDOR GENERAL DE TEXTO
+        */ #texto
+{position:absolute;top:185px;right:175px; width:575px;
+  background-color:#ffffff;}
+
+/* TITULO DEL CAP�ULO ------------------------------------------ */
+#titulo {position:absolute;top:0px;right:0px; width:575px;
+          height:50px;text-align:left;background-color:#ffffff;color:#375b72;}
+
+/* CONTENIDO ----------------------------------------------------*/
+#contenido {position:absolute;top:50px;right:0px; width:575px;
+             font-size:16px; text-align:left;
+             color:#3b3b3b;background-color:#ffffff;}
+
+/*
+   
+   */ .margenInf { width:575px; height:25px; background-color:#ffffff;}
+
+#pie { width:575px; height:75px; background-color:#375b72;
+       color:#ffffff; text-align:center; line-height:25px; color:#ffffff;}

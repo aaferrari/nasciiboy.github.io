@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head><title>Emacs: 10. Marcos </title>
+<link title="rpublica.net Estilo" href="../emacs.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="author" content="Antoni Serra Devecchi" />
+<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, Español"/>
+<meta name="description" content="manual de introduccion a emacs." />
+
+</head>
+<body>
+<div id="contenidor0">
+	
+	<div id="rotulo">
+	
+	<span id="r">rp</span>
+	
+	</div>
+	
+	<div id="globalNav">
+<!--	
+	<ul id="credits"><li></li>
+<li>Antoni Serra Devecchi</li>
+
+<li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
+<li><i>Versión no definitiva.</i></li>
+<li><i> En proceso de redacción.</i></li>
+<li><i>Últ.Actual.: 01/04/2006</i></li></ul>		
+-->
+	</div>
+
+	<div id="nav0">
+	<span id="logo">Emacs</span>
+	</div>
+
+	<div id="guia">
+
+	<ul id="tabnav">
+     <li ><a href="../../index.html">RPublica.net</a></li>
+     <li><a href="../emacs.html">Emacs</a></li>
+     <li class="active"><a href="marcos.html#100">10. Marcos  </a></li>
+     <!--<li><a href="#">XXXXX</a></li>
+     <li><a href="#">XXXXX</a></li> -->
+
+</ul>
+
+	</div>
+<div id="logo1">
+Referéncia
+</div>
+
+<div id="indice">
+
+<div id="indice1">
+
+<p ><a href="../emacs.html">0. Indice General</a></p>
+
+<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>		
+<p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
+		
+<p ><a href="../modos/modos.html#III">III.Modos</a></p>
+		
+<p ><a href="../start/start.html#IV">IV.La Pantalla de Emacs</a></p>
+		
+				
+			
+<p><a href="../abrir/abrir.html#10">1.Abrir Archivos</a></p>
+		
+				
+
+<p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
+		
+
+<p ><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
+		
+
+
+<p ><a href="../movimientos/movimientos.html#40">4.Movimientos del cursor</a></p>
+		
+			
+<p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
+		
+<p ><a href="../buscar/buscar.html#60">6.Búsquedas</a></p>
+		
+<p ><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
+		
+
+
+<p ><a href="../xbuffers/xbuffers.html#80">8.Buffers múltiples</a></p>
+		
+
+
+<p ><a href="../ventanas/ventanas.html#90">9.Ventanas</a></p>
+		
+<p class="active"><a href="marcos.html#100">10.Marcos</a></p>
+		
+
+<p><a href="../bookmarks/bookmarks.html#110">11.Bookmarks</a></p>
+		
+
+<p><a href="../consola/consola.html#120">12.Emacs y la Shell</a></p>
+		
+
+<p><a href="../dired/dired.html#130">13.Dired</a></p>
+		
+
+
+<p><a href="../perso/perso.html#140">14.Personalización </a></p>
+		
+
+<p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
+		
+<p><a href="../formato/formato.html#160">16.Formato de texto </a></p>
+		
+
+<p><a href="../imprimir/imprimir.html#170">17.Imprimir </a></p>
+
+
+<p><a href="../help/help.html#180">18.El Sistema de Ayuda </a></p>
+		
+
+
+<p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
+		
+<p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
+<p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
+<p><a href="http://www.rpublica.net/emacs/recursos/recursos.html#A">A.Recursos Emacs</a></p>
+<p><a href="http://www.rpublica.net/emacs/paquetes/paquetes.html#B">B.Paquetes Emacs</a></p>
+<p><a href="http://www.rpublica.net/emacs/referencia/referencia.html#C">C.Referencia de comandos</a></p>
+<p><a href="http://www.rpublica.net/emacs/biblio/biblio.html#D">D.Bibliografia</a></p><br/>
+
+<div id="margen00">&nbsp;<span>Contacto</span></div><br/>
+<div id="margen000"><span>A.Serra Devecchi<br/>
+<a href="mailto:rpublica@gmail.com">Mail: rpublica</a>
+<br/>Versión no definitiva<br/>
+Últ.Actual.: 01/04/2006<br/>
+
+</span>&nbsp;</div><br/>
+
+<div id="margen00000"><!--Creative Commons License-->
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">
+<img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>Esta obra est&#225; bajo una <br/>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">licencia de Creative Commons</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> --></div>
+
+
+</div>	
+
+
+
+</div>
+
+
+	<div id="texto">
+		<div id="titulo">
+		<h2 class="encab" id="100">10. Marcos </h2> 
+		</div>
+
+	<div id="contenido">
+
+	<h6><a class="Ref" href="../ventanas/ventanas.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a><!--&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../bookmarks/bookmarks.html"> Pág.Siguente</a></h6>
+
+	<p>Como se dijo en el anterior capítulo, cuando trabajamos con ventanas, 
+	múltiples buffers se visualizan en múltiples porciones diferentes de una misma GUI. </p>
+	<p>En cambio, trabajando con <b>marcos</b>, múltiples buffers se visualizarán en múltiples GUI,s independientes.</p>
+
+	
+	<h3 class="encab" id="101" > 10.1 Creación de un nuevo marco.</h3>
+	 <h6><a class="Ref" href="../ventanas/ventanas.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="marcos.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../bookmarks/bookmarks.html"> Pág.Siguente</a></h6>
+	
+	<p>El comando para la creación de un nuevo marco es:</p>
+	
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;5 &nbsp;2</b></li>
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">File--> New Frame</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;make-frame&nbsp;&lt;Enter&gt;</i></li>
+	<li>Abre un nuevo marco, conteniendo el buffer activo.</li>
+	</ul><br/>
+	
+	
+	<p>El siguiente gráfico es el resultado de aplicar el anterior comando sobre un buffer abierto, 
+	&nbsp;<i style="font-weight:300 ">buffer1</i> :</p>
+
+	<div class="img">
+	<table><tr><td><img src="marcos1.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+	<p>Podemos observar como el título del marco, señalado en rojo, coincide con el título del buffer.</p>
+	</div>
+
+
+	<p> Si deseamos abrir un nuevo buffer  en un nuevo marco, el comando a considerar será:</p>
+
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;5 &nbsp;f</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;find-file-other-frame&nbsp;&lt;Enter&gt;</i></li>
+	<li>Abre un nuevo buffer, en un nuevo marco.</li>
+	</ul><br/>
+	<p>Veamos el funcionamiento de este comando:</p>
+
+	<div class="img">
+	<p>Tras teclear el comando, en el mini-buffer aparece el mensaje &nbsp; <i style="font-weight:300 ">Find file in other frame:</i>,
+	&nbsp; solicitándonos la introducción del nombre del nuevo archivo.</p>
+	
+	<table><tr><td><img src="marcos2.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+
+	<p>Tras introducir el nombre del nuevo archivo, &nbsp; <i style="font-weight:300 ">buffer2</i>,
+	&nbsp; éste es abierto y mostrado en un segundo marco independiente.</p>
+
+	<table><tr><td><img src="marcos3.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+	</div><br/>
+
+	<p>Si el buffer que desemos abrir en un nuevo marco queremos que sea de <b>solo-lectura</b>, el comando a usar sería :</p>
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;5 &nbsp;r</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;find-file-read-only-other-frame&nbsp;&lt;Enter&gt;</i></li>
+	</ul><br/>
+
+	<p>Como se vió en <a href="../xbuffers/xbuffers.html#82" style="text-decoration:none">8.Buffers Múltiples [8.2]</a>, 
+	mediante el comando &nbsp;<i class="marcado">C-x b</i>&nbsp; cambiábamos de buffer activo.</p>
+
+	<p>Pués bién, Emacs nos ofrece la posibilidad de realizar el anterior cambio, pero visualizando el nuevo buffer activo
+	en un nuevo marco. En comando para realizar esta operación es:</p>
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;5 &nbsp;b</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;switch-to-buffer-other-frame&nbsp;&lt;Enter&gt;</i></li>
+	</ul><br/>
+
+	<h3 class="encab" id="102" > 10.2 Moverse entre marcos.</h3>
+	 <h6><a class="Ref" href="../ventanas/ventanas.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="marcos.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../bookmarks/bookmarks.html"> Pág.Siguente</a></h6>
+
+	<p>El medio más cómodo para movernos entre marcos es, en interfaces gráficas, mediante el ratón.</p>
+	<p>Sin embargo, Emacs nos ofrece un comando para esta función, útil en versiones no gráficas o , incluso en versiones      gráficas, cuando tenemos muchos marcos abiertos.</p>
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;5 &nbsp;o</b></li>
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<b class="marcado">Buffers-->Frames</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;other-frame&nbsp;&lt;Enter&gt;</i></li></ul>
+
+	<p>Tanto el <b>comando</b> como el <b>comando "largo"</b> provocan el desplazamiento del cursor al marco anterior</p>
+	<p>En cambio, mediante la <b>opción de menú</b> tenemos acceso a una <b>Lista de marcos</b>, lo que nos permite desplazarnos directamente al marco deseado.</p>
+	<br/>
+
+	<h3 class="encab" id="103" > 10.3 Cerrar marcos.</h3>
+	 <h6><a class="Ref" href="../ventanas/ventanas.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="marcos.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../bookmarks/bookmarks.html"> Pág.Siguente</a></h6>
+
+	<p>Como en el caso de las ventanas, tenemos dos comandos para cerrar marcos:</p>
+
+	<p>Con este comando cerramos el <b>marco activo:</b> </p>
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;5 &nbsp;0</b></li>
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<b class="marcado">File-->Delete Frame</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;delete-frame&nbsp;&lt;Enter&gt;</i></li></ul>
+	
+	<p>Con este comando cerramos todos los marcos <b>excepto el marco activo</b>. </p>
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;5 &nbsp;1</b></li>
+	</ul>	<br/>
+
+	<p>Cabe recordar que con el comando &nbsp;<b class="marcado">C-z</b>&nbsp; se minimiza ( iconifica) el marco activo.</p>
+
+
+
+
+
+
+
+
+
+		<div class="margenInf">&nbsp;</div>
+
+
+		<div id="pie"> <h6><a class="Ref" href="../ventanas/ventanas.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; 
+		<a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="marcos.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;
+		<a class="Ref" href="../bookmarks/bookmarks.html"> Pág.Siguente</a></h6> 
+
+		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
+		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">10.Marcos</span>&nbsp;&#124;&nbsp;</h6> 
+		 </div>
+		<div class="margenInf">&nbsp;</div> 
+		
+	</div>
+	
+</div>
+
+</body>
+	
+</html>

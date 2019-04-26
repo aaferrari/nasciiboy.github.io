@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head><title>Emacs: 9. Ventanas </title>
+<link title="rpublica.net Estilo" href="../emacs.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="author" content="Antoni Serra Devecchi" />
+<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, Español"/>
+<meta name="description" content="manual de introduccion a emacs." />
+
+</head>
+<body>
+<div id="contenidor0">
+	
+	<div id="rotulo">
+	
+	<span id="r">rp</span>
+	
+	</div>
+	
+	<div id="globalNav">
+	
+	<ul id="credits"><li></li>
+<li>Antoni Serra Devecchi</li>
+
+<li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
+<li><i>Versión no definitiva.</i></li>
+<li><i> En proceso de redacción.</i></li>
+<li><i>Últ.Actual.: 01/04/2006</i></li></ul>		
+
+	</div>
+
+	<div id="nav0">
+	<span id="logo">Emacs</span>
+	</div>
+
+	<div id="guia">
+
+	<ul id="tabnav">
+     <li ><a href="../../index.html">RPublica.net</a></li>
+     <li><a href="http://www.rpublica.net/emacs/ventanas/..emacs.html">Emacs</a></li>
+     <li class="active"><a href="ventanas.html#90">9. Ventanas  </a></li>
+     <!--<li><a href="#">XXXXX</a></li>
+     <li><a href="#">XXXXX</a></li> -->
+
+</ul>
+
+	</div>
+<div id="logo1">
+Referéncia
+</div>
+
+<div id="indice">
+
+<div id="indice1">
+
+<p ><a href="../emacs.html">0. Indice General</a></p>
+
+<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>		
+<p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
+		
+<p ><a href="../modos/modos.html#III">III.Modos</a></p>
+		
+<p ><a href="../start/start.html#IV">IV.La Pantalla de Emacs</a></p>
+		
+				
+			
+<p><a href="../abrir/abrir.html#10">1.Abrir Archivos</a></p>
+		
+				
+
+<p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
+		
+
+<p ><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
+		
+
+
+<p ><a href="../movimientos/movimientos.html#40">4.Movimientos del cursor</a></p>
+		
+			
+<p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
+		
+<p ><a href="../buscar/buscar.html#60">6.Búsquedas</a></p>
+		
+<p ><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
+		
+
+
+<p ><a href="../xbuffers/xbuffers.html#80">8.Buffers múltiples</a></p>
+		
+
+
+<p class="active"><a href="ventanas.html#90">9.Ventanas</a></p>
+		
+<p><a href="../marcos/marcos.html#100">10.Marcos</a></p>
+		
+
+<p><a href="../bookmarks/bookmarks.html#110">11.Bookmarks</a></p>
+		
+
+<p><a href="../consola/consola.html#120">12.Emacs y la Shell</a></p>
+		
+
+<p><a href="../dired/dired.html#130">13.Dired</a></p>
+		
+
+
+<p><a href="../perso/perso.html#140">14.Personalización </a></p>
+		
+
+<p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
+		
+<p><a href="../formato/formato.html#160">16.Formato de texto </a></p>
+		
+
+<p><a href="../imprimir/imprimir.html#170">17.Imprimir </a></p>
+
+
+<p><a href="../help/help.html#180">18.El Sistema de Ayuda </a></p>
+		
+
+
+<p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
+		
+<p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
+<p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
+<p><a href="http://www.rpublica.net/emacs/recursos/recursos.html#A">A.Recursos Emacs</a></p>
+<p><a href="http://www.rpublica.net/emacs/paquetes/paquetes.html#B">B.Paquetes Emacs</a></p>
+<p><a href="http://www.rpublica.net/emacs/referencia/referencia.html#C">C.Referencia de comandos</a></p>
+<p><a href="http://www.rpublica.net/emacs/biblio/biblio.html#D">D.Bibliografia</a></p>
+
+
+</div>	
+
+
+
+</div>
+
+
+	<div id="texto">
+		<div id="titulo">
+		<h2 class="encab" id="90">9. Ventanas </h2> 
+		</div>
+
+	<div id="contenido">
+
+	 <h6><a class="Ref" href="../xbuffers/xbuffers.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a><!--&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../marcos/marcos.html"> Pág.Siguente</a></h6> 
+
+	<p>Como vimos en el capítulo anterior, &nbsp; <a  href="../xbuffers/xbuffers.html" style="text-decoration:none">&#091;8.Buffers Múltiples&#093;</a>,&nbsp; con Emacs se puede tener abierto más de un buffer al mismo tiempo. Dichos buffers pueden visualizarse en pantalla através de múltiples <b>ventanas</b> y <b>marcos</b>.</p>
+
+	<p>Antes de seguir se impone una precisión terminológica: Para Emacs, <b>ventanas</b> son <b>porciones de ventana de Emacs</b>. En otros términos, cada ventana es una porción de la <b>GIU</b> ( Interfaz Gráfica de Usuario ).</p>
+
+	<p>En cambio, los <b>marcos</b> son <b>ventanas de Emacs (GIU,s) independientes</b>.</p>
+
+	<p>Tanto las <b>ventanas</b> como los <b>marcos</b> son medios de visualizar un buffer, pudiendo contener o no un archivo.</p>
+
+	<p>Veamos un ejempo de dos buffers,&nbsp;<i style="font-weight:300">buffer1</i>&nbsp; y &nbsp;<i style="font-weight:300">buffer2</i>&nbsp; mostrados en dos <b>ventanas</b> y en dos <b>marcos</b> :</p>
+
+
+	<div class="img">
+
+	<p>Los citados buffers mostrados en dos &nbsp;<i style="font-weight:300">buffer1</i>&nbsp; y &nbsp;<i style="font-weight:300">buffer2</i>&nbsp;: Cada uno de ellos ocupa una porción de la pantalla, (GUI),  de Emacs.</p>
+
+	<table><tr><td><img src="ventana1.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+
+	<p>Los mismos buffers mostrados através de &nbsp;<i style="font-weight:300" class="marcado">marcos</i>&nbsp;: Cada uno de ellos ocupa una pantalla, (GUI), de Emacs independiente.</p>
+
+	<table><tr><td><img src="ventana2.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+
+	</div>
+
+	
+	<p>Cuando se esté trabajando con varios buffers a la vez, la decisión de disponerlos en <b>ventanas</b> y/o en <b>marcos</b> dependerá, esencialmente, de las preferencias individuales.</p><br/>
+
+	<h3 class="encab" id="91" > 9.1 Ventanas: Introducción.</h3>
+	 <h6><a class="Ref" href="../xbuffers/xbuffers.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="ventanas.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../marcos/marcos.html"> Pág.Siguente</a></h6> 
+
+	<p>Como se comentó más arriba, las <b>ventanas</b> son porciones de la GUI de Emacs através de la cual se muestra el contenido de buffers abiertos.</p>
+
+	<p>No debe confundirse <b>ventana</b> con <b>buffer</b>. Un mismo buffer puede mostrarse en más de una ventana
+	al mismo tiempo, lo que puede ser muy útil para trabajar con  partes distintas de un mismo buffer.</p>
+	
+	<p>Podemos tener múltiples ventanas abiertas, mostrando cada una de ellas el contenido de un buffer diferente o bién
+	diferentes partes del contenido de un mismo buffer. Por supuesto, cuantas más ventanas dispongamos, más pequeñas serán, ya que Emacs no es capaz de superponer ventanas.</p>
+
+	<p>Las ventanas pueden disponerse horizontalmente, verticalmente o combinando las anteriores disposiciones.</p>
+
+	<p>Cada ventana tiene su propia <b>linea de modo</b> con los datos del buffer que muestra.</p>
+
+	<p>Podemos tener <b>múltiples ventanas</b>, pero disponemos de  <b>un solo cursor</b>. La ventana en la que se encuentre el cursor en un momento dado es la denominada  <b>ventana activa</b> y es la <b>ventana editable</b> en éste momento.</p>
+	<p>Moviendo el <b>cursor</b> de una ventana a otra es como iremos cambiando de <b>ventana activa</b>.</p>
+
+	<p>En las <b>ventanas no activas</b> podemos observar la presencia de un "cursor no activo", denominado <b>punto</b>, &nbsp;<i style="font-weight:300" >Point</i>&nbsp; de la ventana. Cuando traslademos el cursor a esta ventana, se situará en el <b>punto</b> de la ventana destino, quedando como  <b>punto</b> de la ventana origen la última posición del cursor antes de abandonarla.</p><br/>
+
+	<h3 class="encab" id="92" > 9.2 Creación de ventanas.</h3>
+	 <h6><a class="Ref" href="../xbuffers/xbuffers.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="ventanas.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../marcos/marcos.html"> Pág.Siguente</a></h6> 
+
+	
+	<p>El comando para la división de la ventana actual en dos es:</p>
+	
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;2</b></li>
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">File--> Split Window</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;split-window-vertically&nbsp;&lt;Enter&gt;</i></li>
+	<li>Divide la actual ventana en dos, horizontalmente (una encima de otra).</li>
+	</ul><br/>
+	
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;3</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;split-window-horizontally&nbsp;&lt;Enter&gt;</i></li>
+	<li>Divide la actual ventana en dos, verticalmente (una al lado de  de otra).</li>
+	</ul>
+	<p>Veamos, gráficamente, el efecto de estos comandos:</p>
+
+	<div class="img">
+
+	<p>Con &nbsp;<i style="font-weight:300" class="marcado">C-x &nbsp;2</i>&nbsp; se provoca una división horizontal:.</p>
+
+	<table><tr><td><img src="ventana3.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+
+	<p>Con &nbsp;<i style="font-weight:300" class="marcado">C-x &nbsp;3</i>&nbsp; se provoca una división vertical:.</p>
+
+	<table><tr><td><img src="ventana4.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
+
+	<p>Repitiendo los comandos se van produciendo sucesivas divisiones (horizontales o verticales) de la &nbsp;<i style="font-weight:300" >ventana activa</i>&nbsp;.</p>
+
+	</div>
+
+
+	
+
+	<p>Cuando se inicia Emacs desde la linea de comandos, especificando varios nombres de archivo:</p>
+
+	<ul class="comandos">
+	<li><i class="marcado">user@linux:~> emacs archivo1 archivo2</i></li>
+	<li>Emacs los abre en ventanas separadas dispuestas horizontalmente.</li>
+	</ul>
+
+	<p>Como hemos podido observar, los anteriores comandos provocan una división de la <b>ventana activa</b>; las ventanas resultantes muestran el mismo buffer.</p>
+
+	<p>Cuando se desee <b>ejecutar un comando en otra ventana</b>, insertaremos el número <b class="marcado">4</b> en el comando en cuestión:</p>
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;4 &nbsp;C-f</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;find-file-other-window&nbsp;</i></li>
+	<li>Abre el buffer que especifiquemos en otra ventana.</li>
+	</ul>
+
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;4 &nbsp;b</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;switch-to-buffer-other-window&nbsp;</i></li>
+	<li>Seleccionar un buffer diferente, en otra ventana.</li>
+	</ul>
+
+	<p>Cuando hay sólo una ventana abierta, se divide verticalmente. Si hay más de una ventana abierta, se sustituye el contenido de la 
+	ventana no activa mas reciente.</p>
+
+	<p>A partir de éste momento operaremos sólo con ventanas dispuestas horizontalmente, siendo todo lo que se exponga aplicable a la disposición vertical.</p><br/>
+	
+	<h3 class="encab" id="93" > 9.3 Ventanas: Moverse entre ventanas.</h3>
+	 <h6><a class="Ref" href="../xbuffers/xbuffers.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="ventanas.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../marcos/marcos.html"> Pág.Siguente</a></h6> 
+
+	<p>Cuando estamos trabajando con varias ventanas, el paso de una ventana a otra, esto es, el <b>cambio de ventana activa</b>
+	 es una de las actividades más frecuentes. </p>
+	 <p>La forma más sencilla de realizar el </b>cambio de ventana activa </b> es mediante el ratón: llevando el puntero y clicando sobre la 
+	 ventana que deseamos activar. El <b>cursor</b> se emplazará en el lugar ocupado, hasta este momento, por el <b>punto</b></p>
+	 <p>Pero, como no podia ser de otra manera, en Emacs disponemos de un comando para realizar esta función:</p>
+	 <ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;o</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;other-window&nbsp;&lt;Enter&gt;</i></li>
+	<li>Realiza el cambio de ventana activa</li>
+	</ul>
+	
+	<p>Cuando hay más de dos ventanas abiertas, el comando pasa el cursor de una ventana a la anterior. No existe un modo, 
+	através de comandos, de llevar el cursor directamente desde una ventana a otra no adyacente. 
+	Debe teclearse repetidamente el comando hasta llegar a la ventana deseada.......... En estos casos,  en entornos gráficos, el ratón es 
+	la opción a considerar.</p>
+	<p>El orden el que Emacs realiza los cambios de <b>ventana activa</b> coincide con el orden normal de lectura: 
+	de izquierda a derecha y luego abajo, para seguir de nuevo de izquierda a derecha.</p>
+	
+	<p>Cuando se esté operando con varias ventanas, un comado útil es el siguiente:</p>
+	
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-C&nbsp;v</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;scroll-other-window&nbsp;&lt;Enter&gt;</i></li>
+	<li>Desplaza (scroll) la ventana no sactiva, sin cambiar el cursor</li>
+	</ul><br/>
+	
+	<h3 class="encab" id="94" > 9.4  Cerrar ventanas.</h3>
+	 <h6><a class="Ref" href="../xbuffers/xbuffers.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="ventanas.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../marcos/marcos.html"> Pág.Siguente</a></h6> 
+
+	<p>Cuando se cierra una ventana, no se cierra el buffer corerspondiente. tan solo se suspende su "visualización".</p>
+	<p>Disponemos de dos formas de cerrar ventanas:</p>
+	
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;0</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;delete-window&nbsp;&lt;Enter&gt;</i></li>
+	<li>Cierra la  <b>ventana activa</b></li>
+	</ul>
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;1</b></li>
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">File--> Split Unsplit Windows</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;delete-other-windows&nbsp;&lt;Enter&gt;</i></li>
+	<li>Cierra todas las  <b>ventanas no activas</b>. Deja una sóla ventana abierta: la <b>ventana activa</b>.</li>
+	</ul>
+	
+	<p>Otro comando a tener en cuenta es el que nos permite <b>cerrar todas las ventanas de un determinado buffer</b>:</p>
+	<ul class="comandos">
+	<li><b class="marcado">M-x&nbsp;delete-windows-on&nbsp;&lt;Enter&gt;</b>&nbsp;
+	<i style="font-weight:300">nombre_buffer</i>&nbsp;<b class="marcado">&lt;Enter&gt;</b></li>
+	</ul>
+	
+	<h3 class="encab" id="95" > 9.5 Control del tamaño de las ventanas.</h3>
+	 <h6><a class="Ref" href="../xbuffers/xbuffers.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="ventanas.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../marcos/marcos.html"> Pág.Siguente</a></h6>
+	  
+	<p>Cuando estemos trabajando con varias ventanas abiertas, el control de su tamaño puede ser importante ya que, por ejemplo,
+	 nos puede interesar que la ventana activa sea en cada momento la de mayor tamaño.</p>
+	 <p>Debemos conocer también que las ventanas tienen un límite mínimo de altura, especifoicado por la variable &nbsp;&nbsp;
+	 <i class="marcado">window-min-height</i>&nbsp;&nbsp; y un límite mínimo de anchura, especificado por la  variable
+	 &nbsp;&nbsp;<i class="marcado">window-min-width</i>.&nbsp;&nbsp;Por defecto, los valores de estas variables son: </p>
+	 	<ul style="list-style-type:none">
+		<li><b>altura</b>: cuatro líneas.</li>
+		<li><b>anchura</b>: diez caracteres</li>
+		</ul>
+		
+		<p>Emacs nos proporciona una serie de comandos que nos permiten controlar el tamaño de la ventana activa:</p>
+		
+		<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp; +</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;balance-windows&nbsp;</i></li>
+	<li>Hace que todas las ventanas tengan el mismo tamaño.</li>
+	</ul>
+		
+		<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp; ^</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;enlarge-window&nbsp;</i></li>
+	<li>La ventana se alarga en una linea, a expensas de la ventana de debajo.</li>
+	</ul>
+	
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-u&nbsp;C-x&nbsp; ^</b></li>
+	<li>La ventana se alarga en 4 lineas, a expensas de la ventana de debajo.</li>
+	</ul>
+	
+ 
+ 		<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp; }</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;enlarge-window-horizontally&nbsp;</i></li>
+	<li>La ventana se ensancha  en una columna, a expensas de la ventana de al lado.</li>
+	</ul>
+	
+
+		<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-u&nbsp C-x &nbsp; }</b></li>
+	<li>La ventana se ensancha  en una 4 columnas, a expensas de la ventana de al lado.</li>
+	</ul>
+
+		<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp; C-{</b></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;shrink-window-horizontally&nbsp;</i></li>
+	<li>La ventana se encoge  en una columna.</li>
+	</ul>
+		<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-u&nbsp; C-{</b></li>
+	<li>La ventana se encoge  en 4 columnas.</li>
+	</ul>
+	<ul class="comandos">
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;shrink-window&nbsp;</i></li>
+	<li>La ventana se encoge en una linea.</li>
+	</ul></br>
+
+
+	<h3 class="encab" id="96" > 9.6 Comparación de archivos entre ventanas.</h3>
+	 <h6><a class="Ref" href="../xbuffers/xbuffers.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="ventanas.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../marcos/marcos.html"> Pág.Siguente</a></h6> 
+ 
+	<p>Emacs nos ofrece un comando muy útil a la hora de buscar diferencias entre dos archivos que se muestran en
+	diferentes ventanas:</p>
+
+	<ul class="comandos">
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Tools-->Compare (Ediff)-->This Window and Next Window</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;compare-windows&nbsp;</i></li>
+	<li>Compara la ventana el archivo de la ventana activa con el de la ventana adyacente, mostrando la primera diferencia.</li>
+	</ul>
+
+	<p>Este comando actua sólo si el <b>punto</b> , en ambos buffers, se encuentra exactamente en el mismo lugar.</p>
+	<p>Para buscar más diferencias entre los dos buffers, situar los respectivos <b>puntos</b> tras la  diferencia encontrada y repetir el comando.</p>
+
+
+
+ 
+	<h3 class="encab" id="97" > 9.7 Lista de buffers.</h3>
+	 <h6><a class="Ref" href="../xbuffers/xbuffers.html">Pág.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="ventanas.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../marcos/marcos.html"> Pág.Siguente</a></h6> 
+ 
+ 	<p>En el capítulo anterior&nbsp;, <a href="../xbuffers/xbuffers.html#82" style="text-decoration:none">8.Buffers Múltiples [8.2]  </a>, &nbsp;pudimos ver como movernos 
+	por múltiples buffers abiertos.</p>
+
+	<p>Mediante el comando:</p>
+	<ul class="comandos">
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;C-b</b></li>
+	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Buffers->List All Buffers</i></li>
+	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;list-buffers&nbsp;&lt;Enter&gt;</i></li>
+	<li>Se muestra,en una nueva ventana, el buffer &nbsp;<i style="font-weight:300">*Buffer List*</i>,
+	 que contiene la relación de los buffers abiertos.</li>
+	</ul>
+	
+	<table><tr><td><img src="xbuffer6.png" alt="Comando C-x b" width="450"  align="middle" hspace="10" vspace="10"/></td>
+	</tr></table>
+	<p>En determinadas versiones de Emacs, el buffer &nbsp;<i style="font-weight:300">*Buffer List*</i>, no se nos muestra
+	en una nueva ventana :</p>
+	
+	<table><tr><td><img src="xbuffer7.png" alt="Buffer List" width="450"  align="middle" hspace="10" vspace="10"/></td>
+	</tr></table> 
+
+	<p>Sea cual fuere la forma en que se nos muestre la <b>Lista de buffers</b>, nos ofrece una completa información , 
+	dispuesta en columnas, sobre los buffers abiertos.</p>
+	<p>La información que se ofrece, de izquierda a  derecha es:</p>
+
+	<table class="comandos">
+	<tr><td><b>C</b>&nbsp;&nbsp;</td><td>Marca con un punto,  &nbsp;(<b>.</b>)&nbsp; ,el buffer activo</td></tr>
+	<tr><td><b>M</b>&nbsp;&nbsp;</td><td>Marca con un arterisco, &nbsp;(<b>*</b>)&nbsp; ,los buffers modificados.</td></tr>
+	<tr><td><b>R</b>&nbsp;&nbsp;</td><td>Marca con un arterisco, &nbsp;(<b>*</b>)&nbsp; ,los buffers <b>solo-lectura</b>&nbsp;&nbsp;</td></tr>
+	<tr><td><b>Buffer</b>&nbsp;&nbsp;</td><td>Nombre del buffer.</td></tr>
+	<tr><td><b>Size</b>&nbsp;&nbsp;</td><td>Tamaño, en bytes, del buffer.</td></tr>
+	<tr><td><b>Mode</b>&nbsp;&nbsp;</td><td>Modo mayor del buffer.</td></tr>
+	<tr><td><b>File</b>&nbsp;&nbsp;</td><td>Nombre del archivo (con path).</td></tr>
+	</table>
+	
+	<p><i style="font-weight:200">En algunas versiones de Emacs, la primena columna presenta una cabecera en blanco.</i></p>
+	<p>Para pasar desde la ventana del buffer activo a la <b>Lista de Buffers</b> puede utilizarse el comando 
+	&nbsp;<b class="marcado">C-x&nbsp;o</b>&nbsp; o , sencillamente, el ratón.</p>
+	<p>Para movernos dentro de la lista de buffers, las <b>teclas de flecha</b> y el ratón son las opciones más útiles,
+	 aunque pueden usarse los siguientes comandos:</p>
+	<ul class="comandos">
+	<li><b>Bajar una linea.</b> Cualquiera de los siguientes comandos:</li>
+	<li><ul class="comandos">
+		<li><b class="marcado">n</b></li>
+		<li><b class="marcado">C-n</b></li>
+		<li><b class="marcado">&lt;Space&gt;</b></li>
+		<li><b class="marcado">&lt;Flecha-abajo&gt;</b></li>
+		</ul></li>
+	<li><b>Subir una linea.</b> Cualquiera de los siguientes comandos:</li>
+	<li><ul class="comandos">
+		<li><b class="marcado">p</b></li>
+		<li><b class="marcado">C-p</b></li>
+		<li><b class="marcado">&lt;BackDel&gt;</b></li>
+		<li><b class="marcado">&lt;Flecha-arriba&gt;</b></li>
+		</ul></li>
+	</ul>
+
+	<p>Más interesantes son los comandos que nos permiten <b>gestionar</b> los buffers abiertos desde la <b>Lista de Buffers</b> :</p>
+
+	<table>
+	<tr><td><b class="marcado">d</b>&nbsp;:&nbsp;</td><td  class="comandos"  >Marca un buffer para su eliminación.<br/> En la primera columna aparece el signo <b>D</b></td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">k</b>&nbsp;:&nbsp;</td><td  class="comandos" >Marca un buffer para su eliminación.<br/> En la primera columna aparece el signo <b>D</b></td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">s</b>&nbsp;:&nbsp;</td><td  class="comandos" >Marca un buffer para guardarlo.<br/> En la primera columna aparece el signo <b>S</b></td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">x</b>&nbsp;:&nbsp;</td><td  class="comandos" >Elimina los buffers marcados con <i class="marcado" style="font-weight:300">d</i> y <i class="marcado" style="font-weight:300">k</i>. Guarda los marcados con <i class="marcado" style="font-weight:300">s</i></td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">u</b>&nbsp;:&nbsp;</td><td  class="comandos" >Desmarca los buffers marcados con <i class="marcado" style="font-weight:300">d</i> y <i class="marcado" style="font-weight:300">k</i> y <i class="marcado" style="font-weight:300">s</i></td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">~</b>&nbsp;:&nbsp;</td><td  class="comandos" >Pasa el  buffer a inmodificado.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">%</b>&nbsp;:&nbsp;</td><td  class="comandos" >Pasa el  buffer de <b>lectura-escritura</b> a <b>solo-lectura</b> y viceversa.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">1</b>&nbsp;:&nbsp;</td><td  class="comandos" >Muestra el buffer a pantalla completa.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">2</b>&nbsp;:&nbsp;</td><td  class="comandos" >Muestra el buffer y el siguiente en  pantalla ventanas horizontales.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">f</b>&nbsp;:&nbsp;</td><td  class="comandos" >Reemplaza la <b>Lista de buffers</b> por este buffer</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">o</b>&nbsp;:&nbsp;</td><td  class="comandos" >Reemplaza el buffer mostrado en otra ventana por este buffer.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">m</b>&nbsp;:&nbsp;</td><td  class="comandos" >Marca buffers para ser visualizados en ventanas.<br/>En la primera columna aparece el signo <b></b></td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">v</b>&nbsp;:&nbsp;</td><td  class="comandos" >Ejecuta la marca <i class="marcado" style="font-weight:300">m</i>.</td></tr>
+	<tr><td></td></tr>
+
+	<tr><td><b class="marcado">q</b>&nbsp;:&nbsp;</td><td  class="comandos" >Sale de la <b>Lista de buffers</b>.</td></tr>
+	</table>
+
+	<p>Hay dos teclas útiles en la gestión de buffers:</p>
+
+	<ul class="comandos"><li><b class="marcado">&lt;Supr&gt;</b></li>
+	<li>Realiza las funciones de <i class="marcado" style="font-weight:300">d</i> y <i class="marcado" style="font-weight:300">k</i></li></ul>
+
+	<ul class="comandos"><li><b class="marcado">&lt;BackDel &gt;</b></li>
+	<li>Desmarca el buffer inmediatamente anterior marcado con <i class="marcado" style="font-weight:300">d</i> , <i class="marcado" style="font-weight:300">k</i> o <i class="marcado" style="font-weight:300">s</i></li></ul>
+
+			
+		<div class="margenInf">&nbsp;</div>
+
+
+		<div id="pie"> <h6><a class="Ref" href="../xbuffers/xbuffers.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; 
+		<a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="ventanas.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;
+		<a class="Ref" href="../marcos/marcos.html"> Pág.Siguente</a></h6> 
+
+		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
+		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">9.Ventanas y Marcos</span>&nbsp;&#124;&nbsp;</h6> 
+		 </div>
+		<div class="margenInf">&nbsp;</div> 
+		
+	</div>
+	
+</div>
+
+</body>
+	
+</html>
