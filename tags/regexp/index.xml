@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Regexp on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/regexp/</link>
+    <link>http://nasciiboy.land/tags/regexp/</link>
     <description>Recent content in Regexp on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 08 Apr 2018 11:50:44 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://nasciiboy.land/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Keep Regexp</title>
-      <link>https://nasciiboy.land/emacs/keep-regexp/</link>
+      <link>http://nasciiboy.land/emacs/keep-regexp/</link>
       <pubDate>Sun, 08 Apr 2018 11:50:44 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/keep-regexp/</guid>
+      <guid>http://nasciiboy.land/emacs/keep-regexp/</guid>
       <description>
 
 &lt;p&gt;es muy vergonZoSo sentirse capaz y al enfrentar un reto quedarse congelado al
 borde del fracaso&lt;/p&gt;
 
-&lt;p&gt;El asunto es el siguiente, tenemos &lt;a href=&#34;https://nasciiboy.land/data/lista_correos.txt&#34;&gt;un fichero&lt;/a&gt; con
+&lt;p&gt;El asunto es el siguiente, tenemos &lt;a href=&#34;http://nasciiboy.land/data/lista_correos.txt&#34;&gt;un fichero&lt;/a&gt; con
 correos (muchos correos, 79 exactamente). El fichero ademas de los correos
 incluye nombres y comas y la meta es obtener unicamene los correos.&lt;/p&gt;
 
@@ -73,7 +73,7 @@ en C&amp;hellip;.&lt;/p&gt;
 # $ awk -f a.awk lista_correos.txt
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://nasciiboy.land/data/emailtor.zip&#34;&gt;aca&lt;/a&gt; la solucion con C. Compilar con &lt;code&gt;gcc a.c
+&lt;p&gt;&lt;a href=&#34;http://nasciiboy.land/data/emailtor.zip&#34;&gt;aca&lt;/a&gt; la solucion con C. Compilar con &lt;code&gt;gcc a.c
 regexp4.c&lt;/code&gt; y ejecutar con &lt;code&gt;$ a.out lista_correos.txt&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Un dia despues, con la agonia mental aun fresca, llego la solucion en emacs&lt;/p&gt;
@@ -390,13 +390,13 @@ isearch(+) con un yank&lt;/p&gt;
     
     <item>
       <title>Raptor Down</title>
-      <link>https://nasciiboy.land/prog/raptor-down/</link>
+      <link>http://nasciiboy.land/prog/raptor-down/</link>
       <pubDate>Fri, 27 Oct 2017 16:58:55 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/raptor-down/</guid>
+      <guid>http://nasciiboy.land/prog/raptor-down/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/rocky.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/rocky.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;el-conteo-final&#34;&gt;El Conteo Final&lt;/h2&gt;
 
@@ -497,13 +497,13 @@ mas da!&lt;/p&gt;
     
     <item>
       <title>Ramen X – Infierno Mayoi</title>
-      <link>https://nasciiboy.land/post/ramen-x/</link>
+      <link>http://nasciiboy.land/post/ramen-x/</link>
       <pubDate>Fri, 08 Sep 2017 11:53:17 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/post/ramen-x/</guid>
+      <guid>http://nasciiboy.land/post/ramen-x/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/gatari.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/gatari.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;bitacora de abordo: ha pasado casi un mes desde el ultimo &amp;ldquo;encuentro&amp;rdquo;, muchas
 cosas sabrosas, informaticas y otros echos hilarantes (a nivel personal) podrian
@@ -742,10 +742,10 @@ sus descendientes&lt;/p&gt;
     
     <item>
       <title>Raptor VS Mundo</title>
-      <link>https://nasciiboy.land/prog/raptorvsworld-ii/</link>
+      <link>http://nasciiboy.land/prog/raptorvsworld-ii/</link>
       <pubDate>Sat, 19 Aug 2017 14:20:56 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/raptorvsworld-ii/</guid>
+      <guid>http://nasciiboy.land/prog/raptorvsworld-ii/</guid>
       <description>
 
 &lt;p&gt;(Ya que la forma en que presenta github los readme&amp;rsquo;s no es apropiada para una
@@ -764,7 +764,7 @@ pruebas, y al no tener C &amp;ldquo;namespaces&amp;rdquo;, tenia conflictos con 
 la libreria, ademas de limitar los lenguajes que podian participar en la prueba
 solo a C y C++.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/Computer-Guy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/Computer-Guy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Como pues organizar el asunto para incluir las pruebas? deberian tener un
 &amp;ldquo;formato&amp;rdquo; unificado para aceptar datos de entrada y entregar datos de salida de
@@ -898,11 +898,11 @@ estandar en el resto, espero no terminar frustrado&lt;/p&gt;
     
     <item>
       <title>regexp4-go (dia cero)</title>
-      <link>https://nasciiboy.land/prog/regexp4-go/</link>
+      <link>http://nasciiboy.land/prog/regexp4-go/</link>
       <pubDate>Sat, 15 Jul 2017 21:36:03 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/regexp4-go/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/regexp4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+      <guid>http://nasciiboy.land/prog/regexp4-go/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/regexp4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;regexp4&lt;/strong&gt; es un &amp;ldquo;motor&amp;rdquo; de expresiones regulares de la familia de los motores
 regulares &lt;em&gt;Recursive Regexp Raptor&lt;/em&gt;, o expresado de otra forma: una libreria de
@@ -973,10 +973,10 @@ el 3 por 4&lt;/p&gt;
     
     <item>
       <title>regexp3-go (dia cero)</title>
-      <link>https://nasciiboy.land/prog/regexp3-go/</link>
+      <link>http://nasciiboy.land/prog/regexp3-go/</link>
       <pubDate>Sat, 11 Feb 2017 10:26:04 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/regexp3-go/</guid>
+      <guid>http://nasciiboy.land/prog/regexp3-go/</guid>
       <description>&lt;p&gt;Hace un año, luego de &amp;ldquo;maquetar&amp;rdquo; algunos libros en org-mode, decidi crear mi
 propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar
 un substituto del comando man/info y aniquilar a html/latex como sistema de
@@ -1053,10 +1053,10 @@ simplificada del lenguaje de marcas ligeras.&lt;/p&gt;
     
     <item>
       <title>Raptor-Book</title>
-      <link>https://nasciiboy.land/prog/raptor-book/</link>
+      <link>http://nasciiboy.land/prog/raptor-book/</link>
       <pubDate>Wed, 11 Jan 2017 10:03:58 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/raptor-book/</guid>
+      <guid>http://nasciiboy.land/prog/raptor-book/</guid>
       <description>&lt;p&gt;Solo queria programar un juego similar a &lt;strong&gt;Megaman 2&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;../MegaMan2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -1099,10 +1099,10 @@ libro segun esten listas, intentare ser constante.&lt;/p&gt;
     
     <item>
       <title>Performance comparison of regular expression engines</title>
-      <link>https://nasciiboy.land/prog/performance-comparison-of-regular-expression-engines/</link>
+      <link>http://nasciiboy.land/prog/performance-comparison-of-regular-expression-engines/</link>
       <pubDate>Fri, 16 Dec 2016 20:22:03 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/performance-comparison-of-regular-expression-engines/</guid>
+      <guid>http://nasciiboy.land/prog/performance-comparison-of-regular-expression-engines/</guid>
       <description>&lt;p&gt;Hola gente, hace unos meses tome el codigo de &lt;strong&gt;dark100&lt;/strong&gt; &amp;ldquo;Performance
 comparison of regular expression engines&amp;rdquo; (pueden ver el orginal
 &lt;a href=&#34;http://sljit.sourceforge.net/regex_perf.html&#34;&gt;aqui&lt;/a&gt;) para hacer algunas pruebas

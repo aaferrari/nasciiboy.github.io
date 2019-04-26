@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vgs on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/vg/</link>
+    <link>http://nasciiboy.land/vg/</link>
     <description>Recent content in Vgs on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 20 Jul 2017 22:21:43 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/vg/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://nasciiboy.land/vg/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SShooter</title>
-      <link>https://nasciiboy.land/vg/shooter/</link>
+      <link>http://nasciiboy.land/vg/shooter/</link>
       <pubDate>Thu, 20 Jul 2017 22:21:43 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/vg/shooter/</guid>
+      <guid>http://nasciiboy.land/vg/shooter/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -47,7 +47,7 @@ hay que pueden (o no) existir en el software libre, son de los mejores&lt;/p&gt;
 
 &lt;h2 id=&#34;tumiki-fighters&#34;&gt;tumiki fighters&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/tumiki.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/tumiki.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Creo que esto tiene licencia mit, y creo que podia jugarse con el mando. El
 primer encuetro con el fue en los repositorios de debian, y espero que
@@ -68,7 +68,7 @@ cuanto a dificultad&amp;hellip; no es para lisiados, nunca pase del tercer escen
 
 &lt;h2 id=&#34;garden-of-coloured-lights&#34;&gt;garden of coloured lights&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/garden.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/garden.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Este juego tambien nacio en winbugs, pero a diferencia del anterior es GPL3 y
 esta programado en C, pese a esto tampoco lo pude compilar, no busque la web que
@@ -81,7 +81,7 @@ repos), de los tres, el tercero en mi listado de buenos juegos libertarios de di
 
 &lt;h2 id=&#34;blue-revolver&#34;&gt;Blue Revolver&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/blue-5.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/blue-5.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hecho con &lt;a href=&#34;https://love2d.org/&#34;&gt;love2d&lt;/a&gt;, aunque no por ello precisamente
 software libre&amp;hellip; sus creadores lo distribuyen ademas de ejecutable, como un
@@ -127,7 +127,7 @@ cd love-0.9.1
 ./src/love ruta-a-juego.love
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/blue-7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/blue-7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;el juego es una pasada, el unico inconveniente es la resolucion, no se si
 modificando la posicion del monitor, aparescan nuevas resoluciones, en cualquier
@@ -140,10 +140,10 @@ rollmantica) llamado &lt;em&gt;ScoreVG&lt;/em&gt;, disfruit!&lt;/p&gt;
     
     <item>
       <title>PPSSPP</title>
-      <link>https://nasciiboy.land/vg/ppsspp/</link>
+      <link>http://nasciiboy.land/vg/ppsspp/</link>
       <pubDate>Tue, 02 May 2017 20:02:37 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/vg/ppsspp/</guid>
+      <guid>http://nasciiboy.land/vg/ppsspp/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../fs.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -251,10 +251,10 @@ nativo &lt;a href=&#34;../nxEngine/index.html&#34;&gt;nxEngine&lt;/a&gt;&lt;/p&g
     
     <item>
       <title>Zelda solarus</title>
-      <link>https://nasciiboy.land/vg/solarus/</link>
+      <link>http://nasciiboy.land/vg/solarus/</link>
       <pubDate>Sun, 01 Jan 2017 14:56:59 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/vg/solarus/</guid>
+      <guid>http://nasciiboy.land/vg/solarus/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../solarus_logo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -362,10 +362,10 @@ de &lt;a href=&#34;http://forum.solarus-games.org/index.php/board,5.0.html?PHPSE
     
     <item>
       <title>nxEngine</title>
-      <link>https://nasciiboy.land/vg/nxengine/</link>
+      <link>http://nasciiboy.land/vg/nxengine/</link>
       <pubDate>Mon, 19 Dec 2016 11:29:56 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/vg/nxengine/</guid>
+      <guid>http://nasciiboy.land/vg/nxengine/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../Dokutsu.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Dōkutsu Monogatari mejor conocido en oxidente como Cave Story (La historia de la
@@ -418,10 +418,10 @@ dispone de varios finales, como minimo pasatelo 2 veces.&lt;/p&gt;
     
     <item>
       <title>H Craft Championship</title>
-      <link>https://nasciiboy.land/vg/h-craft/</link>
+      <link>http://nasciiboy.land/vg/h-craft/</link>
       <pubDate>Sat, 17 Dec 2016 08:29:18 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/vg/h-craft/</guid>
+      <guid>http://nasciiboy.land/vg/h-craft/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../hcraft01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;

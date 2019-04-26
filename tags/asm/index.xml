@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Asm on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/asm/</link>
+    <link>http://nasciiboy.land/tags/asm/</link>
     <description>Recent content in Asm on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 19 Apr 2018 18:36:32 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/asm/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://nasciiboy.land/tags/asm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>IntroARM</title>
-      <link>https://nasciiboy.land/prog/introarm/</link>
+      <link>http://nasciiboy.land/prog/introarm/</link>
       <pubDate>Thu, 19 Apr 2018 18:36:32 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/introarm/</guid>
+      <guid>http://nasciiboy.land/prog/introarm/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&amp;ldquo;Introducción a la arquitectura de computadores con QtARMSim y Arduino&amp;rdquo;&lt;/strong&gt; es
 un libro que encontre (el año pasado) en &lt;a href=&#34;https://openlibra.com/es/book/introduccion-a-la-arquitectura-de-computadores-con-qtarmsim-y-arduino&#34;&gt;openlibra&lt;/a&gt;
 cuya insulsa portada (como casi todo lo de openlibra) oculta un material
@@ -31,7 +31,7 @@ aplicando (mas o menos) practicamete los conocimentos sobre la placa
 &lt;a href=&#34;https://www.arduino.cc/en/Guide/ArduinoDue&#34;&gt;Arduino Due&lt;/a&gt; [ATSAM3X8E]&amp;hellip; para
 encender y apagar un led! (esto es si es un &amp;ldquo;hello word&amp;rdquo; bien rudo!)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/ArduinoDue.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/ArduinoDue.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;En realidad, ni el asm, ni la placa arduino tienen mucha importancia pues no
 dejan de ser un conducto para mostrar los entresijos y filosofias relacionadas
@@ -98,7 +98,7 @@ travesia.&lt;/p&gt;
 &lt;p&gt;Los ejercicios en ensamblador son pequeños, claros y lo suficientemente
 explicados como para no perderse. Hecho en falta que en la pagina oficial, no se
 incluya un comprimido con el codigo en ensamblador del libro, asi que
-&lt;a href=&#34;https://nasciiboy.land/data/asm-code.zip&#34;&gt;aqui&lt;/a&gt; esta una compilacion en zip.&lt;/p&gt;
+&lt;a href=&#34;http://nasciiboy.land/data/asm-code.zip&#34;&gt;aqui&lt;/a&gt; esta una compilacion en zip.&lt;/p&gt;
 
 &lt;p&gt;A diferencia de lo que comentaba sobre el post del tutorial del
 &lt;a href=&#34;../z80-spectrum/&#34;&gt;z80-speccy&lt;/a&gt; en este material se dedican varias secciones a
@@ -160,10 +160,10 @@ ARM.&lt;/p&gt;
     
     <item>
       <title>Z80 Spectrum (tutorial speccy.org)</title>
-      <link>https://nasciiboy.land/prog/z80-spectrum/</link>
+      <link>http://nasciiboy.land/prog/z80-spectrum/</link>
       <pubDate>Sun, 15 Apr 2018 21:36:36 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/z80-spectrum/</guid>
+      <guid>http://nasciiboy.land/prog/z80-spectrum/</guid>
       <description>
 
 &lt;p&gt;Entre aprender diseño de software, administracion de sistemas, elisp, ingles,
@@ -406,10 +406,10 @@ amigable y un sistema de proteccion inexistente (ja, ja, ja) o almenos tan
 sencillo como para ignorarlo.&lt;/p&gt;
 
 &lt;p&gt;&amp;hellip; hoooooOOO, si! hay un programa que emula la lluvia de matrix en el Spectrum,
-su codigo esta &lt;a href=&#34;https://nasciiboy.land/data/matrix-rain.asm&#34;&gt;aqui&lt;/a&gt; y lo encontre por &lt;a href=&#34;http://www.retroprogramming.com/&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
+su codigo esta &lt;a href=&#34;http://nasciiboy.land/data/matrix-rain.asm&#34;&gt;aqui&lt;/a&gt; y lo encontre por &lt;a href=&#34;http://www.retroprogramming.com/&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;https://nasciiboy.land/img/matrix-rain-z80.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://nasciiboy.land/img/matrix-rain-z80.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Bye, Bye&lt;/p&gt;

@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ag on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/ag/</link>
+    <link>http://nasciiboy.land/tags/ag/</link>
     <description>Recent content in Ag on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 26 Apr 2018 16:07:39 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/ag/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://nasciiboy.land/tags/ag/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>pwds</title>
-      <link>https://nasciiboy.land/emacs/pwds/</link>
+      <link>http://nasciiboy.land/emacs/pwds/</link>
       <pubDate>Thu, 26 Apr 2018 16:07:39 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/pwds/</guid>
+      <guid>http://nasciiboy.land/emacs/pwds/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/kn1u1lt5t0dz.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/kn1u1lt5t0dz.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Por lo habitual, mi uso de Emacs va emparejado con una terminal y auxiliado por
 el navegador de ficheros (y firefox). Asi que lo mas conveniente seria poder
@@ -172,7 +172,7 @@ que no, &lt;code&gt;grep&lt;/code&gt;!&lt;/p&gt;
 
 &lt;p&gt;(&lt;code&gt;M-x compile RET grep -Rn package ~/nconf/emacsRocks/&lt;/code&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/emacs-grep.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/emacs-grep.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;sorprendente!&lt;/p&gt;
 

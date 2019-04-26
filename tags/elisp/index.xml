@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elisp on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/elisp/</link>
+    <link>http://nasciiboy.land/tags/elisp/</link>
     <description>Recent content in Elisp on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 29 Jul 2018 12:19:36 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/elisp/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://nasciiboy.land/tags/elisp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>elipo</title>
-      <link>https://nasciiboy.land/emacs/elipo/</link>
+      <link>http://nasciiboy.land/emacs/elipo/</link>
       <pubDate>Sun, 29 Jul 2018 12:19:36 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/elipo/</guid>
+      <guid>http://nasciiboy.land/emacs/elipo/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/elipopl.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/elipopl.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Recuerda, “No tiene que gustarte Emacs para que te guste”––Emacs puede tener
@@ -139,7 +139,7 @@ pobres estandares.&lt;/p&gt;
 las versiones web y en &lt;em&gt;morg&lt;/em&gt;, tienen un acabado de puta madre. Ha quedado
 bien chido y &amp;ldquo;profecional&amp;rdquo;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/elipo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/elipo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Sin embargo, la parte de la traduccion que no se como inicio, pero creo
 fue obra del traductor de google (y en un inico continue con la tradicion hasta
@@ -296,10 +296,10 @@ exportadores de texinfo a morg, los tenedores, monitores 2K y sobre todo, el suc
     
     <item>
       <title>Miscelanea Emacs</title>
-      <link>https://nasciiboy.land/emacs/miscelanea/</link>
+      <link>http://nasciiboy.land/emacs/miscelanea/</link>
       <pubDate>Tue, 06 Mar 2018 18:00:06 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/miscelanea/</guid>
+      <guid>http://nasciiboy.land/emacs/miscelanea/</guid>
       <description>
 
 &lt;p&gt;aqui una serie de pequeños trucos y apaños recientes&lt;/p&gt;

@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sicp on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/sicp/</link>
+    <link>http://nasciiboy.land/tags/sicp/</link>
     <description>Recent content in Sicp on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 20 Aug 2017 15:59:03 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://nasciiboy.land/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>iScheme</title>
-      <link>https://nasciiboy.land/prog/ischeme/</link>
+      <link>http://nasciiboy.land/prog/ischeme/</link>
       <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/ischeme/</guid>
+      <guid>http://nasciiboy.land/prog/ischeme/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/lambda.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/lambda.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La traduccion del SICP se esta poniendo matemagicamente densa, casi hostil para
 mi escaso saber, por su parte los conceptos programacionales con Scheme solo los
@@ -141,10 +141,10 @@ todos los &amp;ldquo;atajos&amp;rdquo; de edicion.&lt;/p&gt;
     
     <item>
       <title>SICP [es] – Guia para Colaboradores</title>
-      <link>https://nasciiboy.land/prog/sicp-contrib/</link>
+      <link>http://nasciiboy.land/prog/sicp-contrib/</link>
       <pubDate>Mon, 10 Jul 2017 17:57:10 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/sicp-contrib/</guid>
+      <guid>http://nasciiboy.land/prog/sicp-contrib/</guid>
       <description>
 
 &lt;p&gt;Bienvenidos los contribuidores a la traduccion No oficial de libro SICP al
@@ -418,13 +418,13 @@ insulto, en &lt;a href=&#34;https://www.reddit.com/r/SICP_ES/&#34;&gt;https://ww
     
     <item>
       <title>SICP (proyecto de traduccion)</title>
-      <link>https://nasciiboy.land/prog/dot-slash-sicp2es/</link>
+      <link>http://nasciiboy.land/prog/dot-slash-sicp2es/</link>
       <pubDate>Fri, 07 Jul 2017 18:27:56 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/dot-slash-sicp2es/</guid>
+      <guid>http://nasciiboy.land/prog/dot-slash-sicp2es/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/jelly.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/jelly.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;o en otras palabras dadme pasta! (no en galletas)&lt;/p&gt;
 
@@ -503,9 +503,9 @@ en &lt;a href=&#34;https://github.com/nasciiboy/sicp/&#34;&gt;este repo&lt;/a&gt
 ingles. Probe la version html con firefox y con un spin de chromium, sin
 aparente problema&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/sicp-screeshot-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/sicp-screeshot-a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/sicp-screeshot-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/sicp-screeshot-b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;extenso el material es, asi que probablemente contenga algunos errores&lt;/p&gt;
 

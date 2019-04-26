@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Server on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/server/</link>
+    <link>http://nasciiboy.land/tags/server/</link>
     <description>Recent content in Server on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sat, 24 Nov 2018 19:31:31 -0600</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/server/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://nasciiboy.land/tags/server/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>∞.nasciiboy.land</title>
-      <link>https://nasciiboy.land/prog/inf-domain/</link>
+      <link>http://nasciiboy.land/prog/inf-domain/</link>
       <pubDate>Sat, 24 Nov 2018 19:31:31 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/inf-domain/</guid>
+      <guid>http://nasciiboy.land/prog/inf-domain/</guid>
       <description>
 
 &lt;p&gt;en experimentos improvisados acompañado de cereal remojado, habia estado probando &amp;ldquo;montar
@@ -96,7 +96,7 @@ variando &amp;ldquo;el punto&amp;rdquo; seria posible la anelada configuracion&l
 &lt;p&gt;de momento he limitado la prueba solo al &amp;ldquo;punto git&amp;rdquo;: registro &lt;code&gt;CNAME&lt;/code&gt;, de nombre &lt;code&gt;git&lt;/code&gt;
 apuntando al valor &lt;code&gt;@&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/dns.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/cname/dns.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;nginx&#34;&gt;nginx&lt;/h2&gt;
 
@@ -196,7 +196,7 @@ o menos mejorable. Solo puedo estar seguro que se optiene el resultado!&lt;/p&gt
 &lt;p&gt;Para evitar el anterior comando, podriamos realizar la comprobacion desde el
 firefox a &lt;code&gt;git.mi-sitio.dominio&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/krakatoa.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/cname/krakatoa.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;ssl&#34;&gt;ssl&lt;/h2&gt;
 
@@ -346,11 +346,11 @@ modificamos &lt;code&gt;location&lt;/code&gt; de la siguiente forma&lt;/p&gt;
 gitea escucha en el puerto 3000. Si cambiara el puerto o para experimentar sin
 modificar nginx, visitar &lt;code&gt;mi-dominio.algo:3000&lt;/code&gt; o el puerto que este de moda&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/gitea.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/cname/gitea.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;para configurar gitea vamos a &lt;code&gt;git.mi-dominio.algo/install&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/gitea-config.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/cname/gitea-config.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;aqui he colocado lo siguiente&lt;/p&gt;
 
@@ -366,7 +366,7 @@ contraseñå del administrador&lt;/p&gt;
 
 &lt;p&gt;luego podremos visitar nuestro perfil y crear repositorios&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/zorro.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/cname/zorro.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;sorprendentemente la interfaz web funciona! incluso la clonacion por el
 protocolo https!&lt;/p&gt;
@@ -390,16 +390,16 @@ es una prueba de concepto)&lt;/p&gt;
 laptop (de 32 bits) y con 500MB, con nginx, ssh, git-daemon, ddns y el gitea
 corriendo es mas que aceptable&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/htop.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/cname/htop.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>git@nasciiboy.land</title>
-      <link>https://nasciiboy.land/prog/gitatnasciiboy-land/</link>
+      <link>http://nasciiboy.land/prog/gitatnasciiboy-land/</link>
       <pubDate>Sun, 04 Nov 2018 13:39:27 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/gitatnasciiboy-land/</guid>
+      <guid>http://nasciiboy.land/prog/gitatnasciiboy-land/</guid>
       <description>
 
 &lt;p&gt;Desde la posecion del vps entoy ansioso de montarle chismes, pero no tengo muy
@@ -747,10 +747,10 @@ maquina con 8GB de ram y 8GiB de swap no puede con tal encargo&amp;hellip;&lt;/p
     
     <item>
       <title>Goaccess</title>
-      <link>https://nasciiboy.land/prog/goaccess/</link>
+      <link>http://nasciiboy.land/prog/goaccess/</link>
       <pubDate>Thu, 27 Sep 2018 09:20:41 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/goaccess/</guid>
+      <guid>http://nasciiboy.land/prog/goaccess/</guid>
       <description>
 
 &lt;p&gt;esta &amp;ldquo;bitacora&amp;rdquo; no incluye galletas, ni js (de mierda) y aunque tiene
@@ -797,16 +797,16 @@ mejor persona&lt;/p&gt;
 &lt;p&gt;se abrira un menu para indicar el formato de log, fecha y tiempo que vamos a
 utilizar, porque, aunque el programa sea eficaz, no es magico&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/goaccess-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;basta con presionar &lt;code&gt;Espacio&lt;/code&gt; en una de las opciones y lugo dar un &lt;code&gt;Enter&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/goaccess-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Si la opcion que hemos elegido no es valida para el log, nos lo informara y
 podremos probar otra hasta que funcione&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/goaccess-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;con la informacion de esta pantalla, mas tarde podriamos configurar el programa
 para ingresar directamente en la interfaz de texto. Dentro de las opcciones que
@@ -852,7 +852,7 @@ log-format %h %^[%d:%t %^] &amp;quot;%r&amp;quot; %s %b &amp;quot;%R&amp;quot; &
 
 &lt;p&gt;entrariamos directamente en la interfaz de texto (&lt;code&gt;q&lt;/code&gt; para salir)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/goaccess-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;podriamos ademas indicar cual es exactamente el fichero que vamos a utilizar
 como datos de entrada&lt;/p&gt;
@@ -899,7 +899,7 @@ static-file .zip
 &lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | goaccess
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/goaccess-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;veremos que tiene unos datos principales (como peticiones totales, visitantes
 unicos, ficheros estaticos, etc) y (moviendo las frechas arriba y abajo) las
@@ -924,7 +924,7 @@ resaltado, por iniciar con el signo &lt;code&gt;&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Para entrar en dicha seccion, presionamos bien &lt;code&gt;Espacio&lt;/code&gt;, o bien &lt;code&gt;Enter&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/goaccess-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ya dentro, podemos movernos por &amp;ldquo;las filas&amp;rdquo; mediante &lt;code&gt;j&lt;/code&gt; (abajo) y &lt;code&gt;k&lt;/code&gt; (arriba),
 &lt;code&gt;g&lt;/code&gt; inicio y &lt;code&gt;G&lt;/code&gt; fin. Tambien, (de una manera un poco rara) ajustar lo que
@@ -937,16 +937,16 @@ saltar a la ultima seccion &lt;code&gt;G&lt;/code&gt; y a la primera &lt;code&gt
 
 &lt;p&gt;podemos alterar el tema de colores con &lt;code&gt;c&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/goaccess-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;y ver el resto de la ayuda con &lt;code&gt;F1&lt;/code&gt; o &lt;code&gt;h&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/goaccess-07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;otra manera menos &amp;ldquo;rudimentaria&amp;rdquo; de ver las metricas seria crear un fichero
 html, Waaalaa!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/goaccess-08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para eso, solamente es necesario rediriguir la salida de la
 siguiente forma&lt;/p&gt;
@@ -1074,13 +1074,13 @@ de las ventanas y los demas votan como Unix Like&lt;/p&gt;
 
 &lt;p&gt;aunque el sitio no esta contemplado para verse desde un movil&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/movil.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/movil.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;casi un 5% lo hace asi. Puede que no incluya mierdas web, pero las imagenes si
 las incluyo en sus resoluciones originales y aveces en png! Mmm, si se
 preguntaban yo la veo asi en el navegador&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/web.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/goaccess/web.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La hora preferida por los huespedes son las 05. El trafico en su mayoria
 proviene de&lt;/p&gt;
@@ -1116,10 +1116,10 @@ por mi mismo)&lt;/p&gt;
     
     <item>
       <title>BPS</title>
-      <link>https://nasciiboy.land/prog/bps/</link>
+      <link>http://nasciiboy.land/prog/bps/</link>
       <pubDate>Tue, 11 Sep 2018 09:47:52 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/bps/</guid>
+      <guid>http://nasciiboy.land/prog/bps/</guid>
       <description>
 
 &lt;p&gt;sehhh, BPS! (&lt;a href=&#34;https://es.wikipedia.org/wiki/Battle_Programmer_Shirase&#34;&gt;Battle Programmer Shirase&lt;/a&gt;)
@@ -1551,12 +1551,12 @@ Nmap done: 255 IP addresses (5 hosts up) scanned in 14.53 seconds
 
 &lt;p&gt;o tambien dentro del router &lt;strong&gt;Estado &amp;gt; Lista de dispositivos LAN&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/bps/bps-r0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;luego, para conocer nuestra ip publica, el modelo de router que me da la compañia
 lo proporciona dentro de &lt;strong&gt;Estado &amp;gt; PPPoE&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/bps/bps-r1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;otras eficaces formas de conococer la ip publica sin movernos del terminal&lt;/p&gt;
 
@@ -1574,7 +1574,7 @@ nuestro router&lt;/p&gt;
 LAN&lt;/strong&gt; ponemos la direccion fija de nuestro servidor apuntando al puerto 80, abriendo tambien el puerto
 80 en la ip publica. Repetimos el proceso para el puerto 443 (https)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/bps/bps-r2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;ddns&#34;&gt;ddns&lt;/h2&gt;
 
@@ -1617,7 +1617,7 @@ no-muy-feo&lt;/p&gt;
 tuyo, pero aun no es momento para ello), el que escogi fue
 nasciiboy.myddns.rocks (casi, nunca en linea)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-d0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/bps/bps-d0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;tras el registro y demas, deberiamos tener un metodo para desde nuestro servidor
 reportar periodicamente nuestra ip (por ejemplo, cada minuto) y con ello
@@ -1756,7 +1756,7 @@ seguridad por-defecto.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;gt; mtr nasciiboy.myddns.rocks
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/bps/bps-r3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;asta aqui los pasos con respecto al servidar local. Cuando adquiera la plaquita
 ideal con un chilion de ram, teras y nucleos ya colocare una guia mas rigurosa&lt;/p&gt;
@@ -1879,11 +1879,11 @@ para que escuche en el puerto 443. Coloco mi fichero entero:&lt;/p&gt;
 
 &lt;p&gt;por supuesto el navegador se quejo&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-e0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/bps/bps-e0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;mirar la info del certificado&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-e1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/bps/bps-e1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;certbot-strikes-back&#34;&gt;certbot strikes back&lt;/h3&gt;
 
