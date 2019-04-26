@@ -1,0 +1,1908 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Server on ⋲ᴹ∧cₛ ℜø∁κ§</title>
+    <link>https://nasciiboy.land/tags/server/</link>
+    <description>Recent content in Server on ⋲ᴹ∧cₛ ℜø∁κ§</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL v3.0</copyright>
+    <lastBuildDate>Sat, 24 Nov 2018 19:31:31 -0600</lastBuildDate>
+    
+        <atom:link href="https://nasciiboy.land/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>∞.nasciiboy.land</title>
+      <link>https://nasciiboy.land/prog/inf-domain/</link>
+      <pubDate>Sat, 24 Nov 2018 19:31:31 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/inf-domain/</guid>
+      <description>
+
+&lt;p&gt;en experimentos improvisados acompañado de cereal remojado, habia estado probando &amp;ldquo;montar
+servicios&amp;rdquo; en el dominio &amp;ldquo;con diagonales&amp;rdquo; mas o menos asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; nasciiboy.land           # dominio
+ nasciiboy.land/mail      # el correo
+ nasciiboy.land/git       # el git
+ nasciiboy.land/gitea     # el gitea
+ nasciiboy.land/xxx       # el sexual
+ nasciiboy.land/podcast   # el audio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero cuando veia sitios con &amp;ldquo;los servicios&amp;rdquo; montados &amp;ldquo;con puntos&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;         nasciiboy.land  # dominio
+     www.nasciiboy.land  # con el www
+    mail.nasciiboy.land  # el correo
+     git.nasciiboy.land  # el git
+   gitea.nasciiboy.land  # el gitea
+     xxx.nasciiboy.land  # el sexual
+ podcast.nasciiboy.land  # el audio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;algo en mi interior se retorcia de envidia y me preguntaba si los
+administradores contaban con fortunas incalculables como para contratar tantos
+dominios&amp;hellip; o, habia una magia especial que permitiera tal configuracion sin
+incurrir en gastos economicos&lt;/p&gt;
+
+&lt;p&gt;Como no encontre demaciado sobre el asunto y ni de nginx o dns se casi nada, me
+disponia a contratar un nuevo dominio (con los restos del paypal).&lt;/p&gt;
+
+&lt;p&gt;Asi pues pase una bonita mañana evaluando entre los precios y lo gracioso que
+pudiera ser el nuevo dominio destinado a las pruebas y tambien especulando con
+lo rentable (o problematico) de comprar un nombre no registrado de alguna marca
+conocida (&lt;em&gt;casio.xyz&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;Cuando estaba seguro que el elegido seria, digamos, &lt;code&gt;chrøma.me&lt;/code&gt; llego la
+experimentacion colocando &lt;code&gt;git.chrøma.me&lt;/code&gt;. La sospecha de que la configuracion
+&amp;ldquo;con puntos&amp;rdquo; recaia sobre el dns o el servidor fue clara cuando en el resultado
+estos se eliminaban para siempre mostrar &lt;code&gt;gitchroma.me&lt;/code&gt;. Resumiendo, nada de
+puntos en el nombre si no es para el dominio mismo&lt;/p&gt;
+
+&lt;h2 id=&#34;cname&#34;&gt;CNAME&lt;/h2&gt;
+
+&lt;p&gt;el primer paso fue acudir al gestor de registros DNS (para el caso,
+contratado con goddady (#no-es-publicidad))&lt;/p&gt;
+
+&lt;p&gt;La configuracion que tiene mi dominio es mas o menos asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;| Tipo  | Nombre | Valor                | TTL          |
+|-------+--------+----------------------+--------------|
+| A     | @      | mi.ip-v4.publica.asi | 600 segundos |
+| CNAME | www    | @                    | 1 hora       |
+| NS    | @      | nameserver1.algo     | 1 hora       |
+| NS    | @      | nameserver2.algo     | 1 hora       |
+| NS    | @      | nameserver3.algo     | 1 hora       |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el campo &lt;strong&gt;CNAME&lt;/strong&gt; con nombre &lt;strong&gt;www&lt;/strong&gt; hace pensar que ese &lt;code&gt;www&lt;/code&gt; en
+&lt;code&gt;www.mydominio.algo&lt;/code&gt; como que sobra y al servidor dns solo le importan las
+palabras antes y despues del ultimo punto en el dominio (&lt;code&gt;nombre.dominio&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;entonces supuse que agregando campos CNAME clonando la info para &lt;code&gt;www&lt;/code&gt; pero
+variando &amp;ldquo;el punto&amp;rdquo; seria posible la anelada configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;         nasciiboy.land  # dominio
+     www.nasciiboy.land  # con el www
+    mail.nasciiboy.land  # el correo
+     git.nasciiboy.land  # el git
+   gitea.nasciiboy.land  # el gitea
+     xxx.nasciiboy.land  # el sexual
+ podcast.nasciiboy.land  # el audio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de momento he limitado la prueba solo al &amp;ldquo;punto git&amp;rdquo;: registro &lt;code&gt;CNAME&lt;/code&gt;, de nombre &lt;code&gt;git&lt;/code&gt;
+apuntando al valor &lt;code&gt;@&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/dns.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;nginx&#34;&gt;nginx&lt;/h2&gt;
+
+&lt;p&gt;pero la verdadera magia, no esta (completamente) en los registros DNS, supongo
+que el peso de dicernir entre cual &amp;ldquo;subdominio&amp;rdquo; servir, corre por parte del
+servidor web y la informacion extra nesesaria (la ip corre por el DNS) viene
+incluida en algun campo de la peticion al servidor, aunque esto lo dejare en
+suposicion por no encontrar (preguntandole al internet) un comando para extraer
+integra toda la informacion de la peticion. (El libro de Go traia un programita,
+que permitia estraer dicha informacion, pero no voy a poner temas &amp;ldquo;tan tecnicos&amp;rdquo;
+aqui)&lt;/p&gt;
+
+&lt;p&gt;asi pues si el servidor dns no es el responsable (ultimo) de &amp;ldquo;la magia de los
+puntos&amp;rdquo;, el experimento podria montarse en nuestra red local con el
+navegador de costumbre, la linea de comandos y nginx. Solo aclarar que
+todo esto es mas sencillo (en cuanto a configuracion) de lo que
+este preludio (o la pesima redaccion) haga parecer&lt;/p&gt;
+
+&lt;p&gt;tenemos un servidor nginx configurado por defecto sin php (ni nahh). La web esta
+alojada en &lt;code&gt;/var/www/html&lt;/code&gt; y su fichero de configuracion esta en
+&lt;code&gt;/etc/nginx/sites-available/default&lt;/code&gt;. Veamos pues si ademas de nuestro
+&lt;code&gt;dominio.algo&lt;/code&gt; encontramos la forma de que &lt;code&gt;git.dominio.algo&lt;/code&gt; nos muestre una
+pagina totalmente distinta&lt;/p&gt;
+
+&lt;p&gt;primero creamos una carpeta raiz para &amp;ldquo;el nuevo sitio&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir /var/www/git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;agregamos la pagina de inicio. Con nuestro editor&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;emacs /var/www/git/index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;copiamos lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;krakatoa&amp;lt;/title&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;krakatoa!&amp;lt;/h1&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora agregamos un &lt;em&gt;virtual host&lt;/em&gt; en la configuracion de nginx&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;emacs /etc/nginx/sites-available/git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pegamos lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server {
+	listen 80;
+	listen [::]:80;
+
+	# cambiar mi-sitio.dominio por el pertinente
+	server_name git.mi-sitio.dominio;
+
+	root /var/www/git;
+	index index.html;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;habilitamos nuestro sitio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ln -s /etc/nginx/sites-available/git /etc/nginx/sites-enabled/git
+systemctl reload nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;comprobamos que se sirva la pagina del &amp;ldquo;subdominio&amp;rdquo;. (Este comando lo corri en mi
+red local)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ curl 192.168.1.177 -H &amp;quot;Host: git.mi-sitio.dominio&amp;quot;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;krakatoa&amp;lt;/title&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+&amp;lt;h1&amp;gt;krakatoa!&amp;lt;/h1&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mmm, el comando funcionar, funciona&amp;hellip; pero no se por que&amp;hellip; ni si pueda ser mas
+o menos mejorable. Solo puedo estar seguro que se optiene el resultado!&lt;/p&gt;
+
+&lt;p&gt;Para evitar el anterior comando, podriamos realizar la comprobacion desde el
+firefox a &lt;code&gt;git.mi-sitio.dominio&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/krakatoa.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ssl&#34;&gt;ssl&lt;/h2&gt;
+
+&lt;p&gt;comprobado el exito de la configuracion &amp;ldquo;por puntos&amp;rdquo; solo faltaria agregar el
+https al &amp;ldquo;nuevo sitio&amp;rdquo; mediante lets-encript&lt;/p&gt;
+
+&lt;p&gt;en caso de no tener instalado previamente certbot&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install python-certbot-nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; certbot --authenticator webroot --installer nginx
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+Which names would you like to activate HTTPS for?
+-------------------------------------------------------------------------------
+1: nasciiboy.land
+2: git.nasciiboy.land
+3: www.nasciiboy.land
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos preguntara para cual dominio habilitar HTTPS. Con un numero o varios
+(separados por comas) especificamos el sitio. Al dejar en blanco (directamente
+con un enter) se habilitara https para todos los sitios&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;blank to select all options shown (Enter &#39;c&#39; to cancel):
+Obtaining a new certificate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego nos pregunta uno a uno donde esta el directorio raiz de cada sitio. Si es
+la primera vez que se ejecuta certbot solo se presenta una opcion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Select the webroot for nasciiboy.land:
+-------------------------------------------------------------------------------
+1: Enter a new webroot
+-------------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ingresamos &lt;code&gt;1&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Press 1 [enter] to confirm the selection (press &#39;c&#39; to cancel): 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y luego el directorio raiz del sitio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input the webroot for nasciiboy.land: (Enter &#39;c&#39; to cancel):/var/www/html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si son varios los dominios a habilitar, repetimos: primero un numero &lt;code&gt;1&lt;/code&gt; para nuevo
+directorio raiz y luego ingresamos el directorio raiz. En caso de que ya este
+presente el directorio, solo ingresamos el numero&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Select the webroot for git.nasciiboy.land:
+-------------------------------------------------------------------------------
+1: Enter a new webroot
+2: /var/www/html
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press &#39;c&#39; to cancel): 1
+Input the webroot for git.nasciiboy.land: (Enter &#39;c&#39; to cancel):/var/www/git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;finalmente nos pregunta si queremos que solo se permita https o ambos (http y
+https). Prefiero ambas opciones, si es asi ingresar &lt;code&gt;1&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Please choose whether HTTPS access is required or optional.
+-------------------------------------------------------------------------------
+1: Easy - Allow both HTTP and HTTPS access to these sites
+2: Secure - Make all requests redirect to secure HTTPS access
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press &#39;c&#39; to cancel): 1
+...
+Congratulations! You have successfully enabled https://nasciiboy.land,
+https://git.nasciiboy.land, and https://www.nasciiboy.land
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y congratulations!&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;certbot&lt;/code&gt; ha modificado la configuracion de nuestros sitios, habilitando el
+puerto &lt;code&gt;443&lt;/code&gt; para https y recargando la configuracion de nginx (creo). Podemos
+ver que el fichero de configuracion del sitio git fue modificado agregando lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /etc/nginx/available-sites/git
+...
+listen 443 ssl; # managed by Certbot
+ssl_certificate /etc/letsencrypt/live/nasciiboy.land/fullchain.pem; # managed by Certbot
+ssl_certificate_key /etc/letsencrypt/live/nasciiboy.land/privkey.pem; # managed by Certbot
+ssl_session_cache shared:le_nginx_SSL:1m; # managed by Certbot
+ssl_session_timeout 1440m; # managed by Certbot
+
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # managed by Certbot
+ssl_prefer_server_ciphers on; # managed by Certbot
+
+ssl_ciphers &amp;quot;ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-SHA384 DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES128-SHA DHE-RSA-AES256-SHA DHE-RSA-AES128-SHA256 DHE-RSA-AES256-SHA256 EDH-RSA-DES-CBC3-SHA&amp;quot;; # managed by Certbot
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;gitea&#34;&gt;gitea&lt;/h2&gt;
+
+&lt;p&gt;finalmente, poco he experimentado con esto y la verdad dudo que llegue a colacarlo en el
+vps, pero todo esto de tener &amp;ldquo;subdominios por punto&amp;rdquo; no era solo para tener
+&amp;ldquo;distintas webs&amp;rdquo;, sino mas bien para montar servicios completos. Para el caso
+en concreto, una interfaz web para git, que es de lo que va gitea&lt;/p&gt;
+
+&lt;p&gt;Tambien podrian ser gitlab u otras, pero gitea se anuncia como ligerito, esta
+hecho con go-lang y si se usa con SQLite3 como base de datos, pues no requiere
+dependencias o extenuantes configuraciones&lt;/p&gt;
+
+&lt;p&gt;primero crear un usuario (o no) para el experimento (la &lt;a href=&#34;https://docs.gitea.io/en-us/install-from-binary/&#34;&gt;documentacion
+oficial&lt;/a&gt; propone una mejor
+configuracion)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# como root
+su
+# agregar usuario
+useradd -c &amp;quot;repos de nascii - nasciiboy@gmail.com&amp;quot; git -m
+# cambiar al usuario git
+su git
+cd
+wget -O gitea https://dl.gitea.io/gitea/1.6.0/gitea-1.6.0-linux-amd64
+chmod +x gitea
+./gitea
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora redirigimos con nginx &lt;strong&gt;git.mi-dominio.algo&lt;/strong&gt; al servidor de gitea. En &lt;code&gt;/etc/nginx/sites-available/git&lt;/code&gt;
+modificamos &lt;code&gt;location&lt;/code&gt; de la siguiente forma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        # location / {
+        #       try_files $uri $uri/ =404;
+        # }
+
+        location / {
+                proxy_pass http://localhost:3000/;
+        }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;recargamos la configuracion de nginx&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;systemctl reload nginx&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;y visitamos nuestra direccion &lt;code&gt;git.mi-dominio.algo&lt;/code&gt;. Por defecto el servidor de
+gitea escucha en el puerto 3000. Si cambiara el puerto o para experimentar sin
+modificar nginx, visitar &lt;code&gt;mi-dominio.algo:3000&lt;/code&gt; o el puerto que este de moda&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/gitea.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;para configurar gitea vamos a &lt;code&gt;git.mi-dominio.algo/install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/gitea-config.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;aqui he colocado lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;typo de base de datos    &amp;gt; SQLite3
+Titulo del Sitio         &amp;gt; &amp;quot;zzz.. zZZzz.. ZzzzZ&amp;quot;
+Dominio del servidor SSH &amp;gt; git.nasciiboy.land
+Gitea HTTP ListenPort    &amp;gt; 3000
+Gitea Base URL           &amp;gt; https://git.nasciiboy.land
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de preferencia tambien en &lt;strong&gt;Administrator Accont Settings&lt;/strong&gt; registrar nombre y
+contraseñå del administrador&lt;/p&gt;
+
+&lt;p&gt;luego podremos visitar nuestro perfil y crear repositorios&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/zorro.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;sorprendentemente la interfaz web funciona! incluso la clonacion por el
+protocolo https!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone https://git.nasciiboy.land/zorro/187.git
+Cloning into &#39;187&#39;...
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (4/4), done.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero en el clonado con protocolo git aparecio el error &lt;strong&gt;Permission denied
+(publickey)&lt;/strong&gt;. Curioso detalle a revizar, por que precisamente el servidor ssh
+solo esta habilitado para funcionar con llaves&lt;/p&gt;
+
+&lt;p&gt;(nota: no ir a la pagina git (gitea) en nasciiboy.land, por que no esta habilitada&amp;hellip; solo
+es una prueba de concepto)&lt;/p&gt;
+
+&lt;p&gt;para terminar, el rendimiento y consumo en una maqunita con un procesador de
+laptop (de 32 bits) y con 500MB, con nginx, ssh, git-daemon, ddns y el gitea
+corriendo es mas que aceptable&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/htop.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>git@nasciiboy.land</title>
+      <link>https://nasciiboy.land/prog/gitatnasciiboy-land/</link>
+      <pubDate>Sun, 04 Nov 2018 13:39:27 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/gitatnasciiboy-land/</guid>
+      <description>
+
+&lt;p&gt;Desde la posecion del vps entoy ansioso de montarle chismes, pero no tengo muy
+claro cuales, para que, o como hacelo bajo un mismo dominio&lt;/p&gt;
+
+&lt;p&gt;mmm, segun veo por las pruebas, cada &amp;ldquo;servicio&amp;rdquo; tienen un puerto predeterminado
+y funciona mas o menos de manera automagica. Por ejemplo al activar el demonio
+ssh inmediatamente funciona de la manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh usuario@dominio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh -p numero-puerto usuario@dominio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en caso de haber modificado el puerto por defecto que es el 22&lt;/p&gt;
+
+&lt;p&gt;para el caso de las paginas web el puerto es el 80 y el 443 para
+el https, pero tambien se puede cambiar este puerto por uno arbitrario como en&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; elinks http://dominio.algo:numero-puerto/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;intentando comprender estas magias de los dominios, los dns y los puertos (y
+protocolos&amp;hellip; o no) ocurrioseme que ya que venia de las paginas gratuitas de
+gitlab y github donde no se permite la subida de ficheros &amp;ldquo;sospechosamente
+grandes&amp;rdquo; (como un album musical) seria interesante ademas de tener el repo para
+el funcionamiento de la pagina, permitir su clonacion y que quien quiera
+almacene, modifique o &amp;ldquo;plagie&amp;rdquo; lo que le venga en gana&lt;/p&gt;
+
+&lt;p&gt;ya en plena investigacion (mas alla de los 4 comandos que utilizo en git) me
+entero que este tiene diversos &lt;a href=&#34;https://git-scm.com/book/es/v2/Git-en-el-Servidor-Los-Protocolos&#34;&gt;protocolos&lt;/a&gt;
+por los cuales se puede utilizar (aunque ya los habia empleado sin
+razonar sobre ello), son los siguientes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone ruta                             # clonar desde el propio equipo
+git clone file://ruta                      # clonar desde el propio equipo
+git clone usuario-ssh@dominio:ruta         # clonar utilizando una conexion ssh
+git clone git://dominio/repositorio-o-ruta # clonar utilizando el &amp;quot;protocolo git&amp;quot;
+git clone http://dominio/repositorio       # clonar utilizando &amp;quot;http inteligente&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ignorando las dos primeras opciones por ser para &amp;ldquo;el autoconsumo&amp;rdquo; y la ultima
+que encontre &amp;ldquo;demasiado&amp;rdquo; complicada y &amp;ldquo;poco documentada&amp;rdquo; para nginx (que es el
+servidor que estoy utilizando), las maneras simples de compartir el repositorio serian
+dos: mediante SSH que ya lo estaba utilizando y pocos miesterios encierra o
+utilizar el &amp;ldquo;protocolo git&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;al rollo pues =&amp;gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;git-daemon&#34;&gt;git daemon&lt;/h2&gt;
+
+&lt;p&gt;El &amp;ldquo;protocolo git&amp;rdquo; no es otra cosa mas que un pequeño servidor escuchando en el
+&lt;strong&gt;puerto 9418&lt;/strong&gt; al que se le asigna un directorio raiz desde el cual explorara
+el nombre de las carpetas en el, vera si son o no repositorios, si estan
+&amp;ldquo;habilitados&amp;rdquo; y que se puede hacer o no con ellos&lt;/p&gt;
+
+&lt;p&gt;su funcionamiento es tan sencillo como lanzar lo siguiente en consola&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git daemon --reuseaddr --verbose --base-path=/ruta-a-repositorios/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aqui el programa es &lt;code&gt;git&lt;/code&gt; con el comando &lt;code&gt;daemon&lt;/code&gt; para que entre en el modo servidor, &lt;code&gt;--reuseraddr&lt;/code&gt;
+por que aparecio en algun post, &lt;code&gt;--verbose&lt;/code&gt; para que lance toda la informacion
+que se pueda y &lt;code&gt;--base-path=/ruta-a-repositorios&lt;/code&gt; es la carpeta raiz desde donde
+trabajara. Para mas informacion &lt;code&gt;git help daemon&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;podriamos poner a prueba esto de la sigiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir /tmp/roma
+cd /tmp/roma
+
+# creamos un repo de pruebas
+mkdir rama
+cd rama
+git init
+echo &amp;quot;algo&amp;quot; &amp;gt; txt
+git add txt
+git commit -m &amp;quot;primer commit&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;listos nuestro directorio (&lt;code&gt;roma&lt;/code&gt;) y repo de pruebas (&lt;code&gt;rama&lt;/code&gt;) lanzamos el git demonizado&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git daemon --reuseaddr --verbose --base-path=/tmp/roma/
+[12618] Ready to rumble
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y luego desde otra secion (&lt;strong&gt;y ruta&lt;/strong&gt;) de terminal ponemos a prueba el invento&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://localhost/rama
+Clonando en &#39;rama&#39;...
+fatal: error remoto: access denied or repository not exported: /rama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;he? que fallo aqui? &lt;code&gt;git daemon&lt;/code&gt; revisa en los repositorios si existe un fichero
+expecial llamado &lt;code&gt;git-daemon-export-ok&lt;/code&gt;. Este fichero actua a modo de &amp;ldquo;bandera&amp;rdquo;
+para permitir las &amp;ldquo;cosas&amp;rdquo; que hace el servidor. Pero un dato que es importante,
+&lt;code&gt;git-daemon-export-ok&lt;/code&gt; debe estar dentro del repositorio, dentro del directorio &lt;code&gt;.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Creamos la &amp;ldquo;bandera&amp;rdquo; para dar permiso a &lt;code&gt;git daemon&lt;/code&gt; tal que asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; touch /tmp/roma/rama/.git/git-daemon-export-ok
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y volvemos a intentar la clonacion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://localhost/rama
+Clonando en &#39;rama&#39;...
+remote: Enumerando objetos: 3, listo.
+remote: Contando objetos: 100% (3/3), listo.
+remote: Total 3 (delta 0), reusado 3 (delta 0)
+Recibiendo objetos: 100% (3/3), listo.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;puag! magia!&lt;/p&gt;
+
+&lt;p&gt;ahora hagamos un pequeño experimento, ¿nos permitira subir modificaciones del
+clon recien hecho?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# recordar, esto es el repo clonado en alguna ruta
+# distinta a `--base-path=/tmp/roma/` de `git daemon`
+&amp;gt; cd rama
+&amp;gt; echo &amp;quot;algo mas&amp;quot; &amp;gt;&amp;gt; txt
+&amp;gt; git commit -a -m &amp;quot;nuevo commit&amp;quot;
+&amp;gt; git push
+fatal: error remoto: access denied or repository not exported: /rama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;del lado de nuestro servidor git, nos arroja lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[13117] Request receive-pack for &#39;/rama&#39;
+[13117] &#39;receive-pack&#39;: service not enabled for &#39;/tmp/roma//rama/.git&#39;
+[12618] [13117] Disconnected (with error)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos informa que tenemos una peticion &lt;code&gt;receive-pack&lt;/code&gt; para &lt;code&gt;/rama&lt;/code&gt; pero que el servicio
+&lt;code&gt;receive-pack&lt;/code&gt; no esta habilitado para este repo. Solucionamos esto aniquilando
+el servidor git con &lt;code&gt;Ctrl-C&lt;/code&gt; y volviendolo a lanzar con una nueva opcion
+&lt;code&gt;--enable=receive-pack&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git daemon --reuseaddr --verbose --base-path=/tmp/roma/ --enable=receive-pack
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;intentemos de nuevo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (3/3), 244 bytes | 244.00 KiB/s, listo.
+Total 3 (delta 0), reusado 0 (delta 0)
+remote: error: refusing to update checked out branch: refs/heads/master
+remote: error: Por defecto, actualizar la rama actual en un repositorio no vacío
+...
+To git://localhost/rama
+ ! [remote rejected] master -&amp;gt; master (branch is currently checked o
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;que paso? pues que necesitamos un tipo de repositorio especial llamado &lt;code&gt;git
+bare&lt;/code&gt; que no es otra cosa que la carpeta &lt;code&gt;.git&lt;/code&gt; que esta en cada repo pero con
+otra &amp;ldquo;bandera especial&amp;rdquo; habilitada.&lt;/p&gt;
+
+&lt;p&gt;Tenemos dos opciones. Convertir nuestro repositorio en un &lt;code&gt;git bare&lt;/code&gt; de la
+siguiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cp -R /tmp/roma/rama/.git /tmp/roma/remo.git
+&amp;gt; cd /tmp/roma/remo.git
+&amp;gt; git config --bool core.bare true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora cambiemos la fuente remota de nuestro repo modificado e intentemos
+subir la modificacion al nuevo repositorio &amp;ldquo;remoto&amp;rdquo; &lt;code&gt;remo&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# de nuevo, esto es el repo clonado en alguna ruta aleatoria
+&amp;gt; git remote set-url origin git://localhost/remo
+&amp;gt; git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (3/3), 244 bytes | 244.00 KiB/s, listo.
+Total 3 (delta 0), reusado 0 (delta 0)
+To git://localhost/remo
+   9f6cd12..262a37b  master -&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;puag! como mola!&lt;/p&gt;
+
+&lt;p&gt;La otra opcion era crear un repositor &lt;code&gt;bare&lt;/code&gt; vacio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git init --bare /tmp/roma/remi.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;agregar la &amp;ldquo;bandera&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; touch /tmp/roma/remi.git/git-daemon-export-ok
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;agregar el nuevo destino a nuestro repo modificado (o no)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git remote add remi git://localhost/remi
+&amp;gt; git push remi master
+Enumerando objetos: 6, listo.
+Contando objetos: 100% (6/6), listo.
+Compresión delta usando hasta 2 hilos
+Comprimiendo objetos: 100% (2/2), listo.
+Escribiendo objetos: 100% (6/6), 416 bytes | 416.00 KiB/s, listo.
+Total 6 (delta 0), reusado 3 (delta 0)
+To git://localhost/remi
+ * [new branch]      master -&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;puag! que gusto!&lt;/p&gt;
+
+&lt;h2 id=&#34;vps&#34;&gt;vps&lt;/h2&gt;
+
+&lt;p&gt;Conocemos la teoria del (servidor) git demonizado, pero falta que lo pongamos a
+funcionar en nuestra maquina donde estara (en teoria) funcionando y sirviendo
+clones a todo el mundo. Como proceder?&lt;/p&gt;
+
+&lt;p&gt;Segun parece, deberiamos crear un nuevo usuario en la maquina y un unico
+directorio bajo su custodia que contendra los repos y sera a su vez la ruta raiz
+para &lt;code&gt;git daemon&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Como root&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; useradd -c &amp;quot;repos de nascii - nasciiboy@gmail.com&amp;quot; git -m
+# -c  : comentario
+# git : nombre de usuario
+# -m  : crear directorio en /home
+&amp;gt; passwd git
+# mi !super contraseña¡ del usuario git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en varias &lt;a href=&#34;https://git-scm.com/book/es/v2/Git-en-el-Servidor-Configurando-el-servidor&#34;&gt;fuentes&lt;/a&gt;
+parece que lo recomendable es establecer un directorio raiz en un lugar que no
+sea la &lt;code&gt;home&lt;/code&gt; del usuario (como &lt;code&gt;/opt/git&lt;/code&gt; o &lt;code&gt;/var/repo&lt;/code&gt;), y de hecho que el usuario no tenga &lt;code&gt;home&lt;/code&gt;&amp;hellip; pero,
+paque complicarnos? que sea persona y tenga su home (de hay el parametro &lt;code&gt;-m&lt;/code&gt; en
+&lt;code&gt;adduser&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;ahora solo restaria que el sistema operativo se encargue de levantar nuestro
+git demonizado en cada arranque. Segun &lt;a href=&#34;https://serverfault.com/questions/912899/how-to-start-git-daemon-at-boot#912914&#34;&gt;un sitio de consultas&lt;/a&gt;
+y puesto que hice esto en debian y tiene &lt;code&gt;systemd&lt;/code&gt; y hay que copiar y pegar.
+Colocamos lo siguiente dentro del fichero &lt;code&gt;/etc/systemd/system/git-daemon.service&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=Git Daemon
+Documentation=man:git-daemon(1)
+ConditionPathExists=/home/git/
+
+[Service]
+# no permite recibir cambios
+ExecStart=/usr/bin/git daemon --reuseaddr --verbose --base-path=/home/git/
+# permite recibir cambios
+# ExecStart=/usr/bin/git daemon --reuseaddr --enable=receive-pack --verbose --base-path=/home/git/
+User=git
+Group=git
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(adaptar en caso de ser necesario las rutas)&lt;/p&gt;
+
+&lt;p&gt;para habilitar el servicio por los siglos de los siglos y los reinicios&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl enable git-daemon
+&amp;gt; systemctl start  git-daemon
+&amp;gt; systemctl status git-daemon
+● git-daemon.service - Git Daemon
+   Loaded: loaded (/etc/systemd/system/git-daemon.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2018-11-03 17:43:42 CST; 21s ago
+     Docs: man:git-daemon(1)
+ Main PID: 46787 (git)
+    Tasks: 2 (limit: 4915)
+   CGroup: /system.slice/git-daemon.service
+           ├─46787 /usr/bin/git daemon --reuseaddr --verbose --base-path=/home/git/
+           └─46790 git-daemon --reuseaddr --verbose --base-path=/home/git/
+
+Nov 03 17:43:42 tachikoma systemd[1]: Started Git Daemon.
+Nov 03 17:43:42 tachikoma git[26758]: [26762] Ready to rumble
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(&lt;code&gt;systemctl&lt;/code&gt; + (&lt;code&gt;stop&lt;/code&gt;|&lt;code&gt;disable&lt;/code&gt;) &lt;code&gt;git-daemon&lt;/code&gt; para&amp;hellip; se entiende por si mismo)&lt;/p&gt;
+
+&lt;p&gt;listo y facilmente! Ya pueden copiar nuestros repositorios (sin registro o
+contraseñas) tal que asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://mi-dominio.algo/repo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ho, quiza olvide mencionarlo, pero al demonio de git, cuando nuestro repositorio
+se llama &lt;code&gt;repo.git&lt;/code&gt; le es indiferente si lo mencionamos con o sin el
+&lt;code&gt;.git&lt;/code&gt;. Lo nombramos asi para permitir ambas opciones, por que lo contrario
+(hacer tareas en un &lt;code&gt;repo-sin-punto-git&lt;/code&gt;) agregando el &lt;code&gt;.git&lt;/code&gt; no funciona&lt;/p&gt;
+
+&lt;p&gt;Antes de terminar con los detalles configuratorios, me preguntaba por que o como
+permitir que alguien tenga acceso al repositorio para modificarlo. Para esto
+pues la mejor manera seria agregar su clave publica en
+&lt;code&gt;~git/.ssh/authorized_keys&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;tambien podriamos habilitar para el usuario git el acceso mediante contraseña agregardo al final del
+fichero &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Match User git
+    PasswordAuthentication yes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si se diera el caso de tener colaboradores &amp;ldquo;quiza&amp;rdquo; no querriamos que hicieran
+nada no relacionado con git. En tal situacion y solo de esta manera deberiamos
+substituir la shell del usuario git por una shell que no permita hacer
+absolutamente nada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; chsh git -s /usr/bin/git-shell
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pero esta es solo una medida extrema, unicamente aplicable si no confiamos en
+quien tenga acceso. Al hacer esto tambien nosotros tendriamos que sufrir
+incomodidades inecesarios, pues ni un &lt;code&gt;scp&lt;/code&gt; funciona si la shell es &lt;code&gt;git-shell&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Asi pues, bajo el supuesto que usamos &amp;ldquo;ssh con llaves&amp;rdquo;, pues no veo por que
+implementar ninguna medida adicional&lt;/p&gt;
+
+&lt;h2 id=&#34;nasciiboy-land&#34;&gt;nasciiboy-land&lt;/h2&gt;
+
+&lt;p&gt;y llegado a este punto, ya podeis clonar el repo que da vida a esta web&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://nasciiboy.land/nasciiboy-land
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;son algo mas de 2GiB! Como el vps esta bastante corto tanto en ram como en
+procesador hacerlo solo una vez por persona multiplicando el minuto actual de su
+reloc por la hora y sumando 3 y tomando el resultado como los segundos de
+espera. La comprecion que realiza git pone al 100% al procesador y el GB de ram
+se satura (tube que agregar un ficherito swap de 2 GB mas para que sea posible)&lt;/p&gt;
+
+&lt;p&gt;si quieren construir la web, entran a la copia del repo y ejecutan el programa
+&lt;code&gt;hugo&lt;/code&gt;. El resultado estara en el directorio &lt;code&gt;public&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;se supone que &lt;code&gt;hugo serve&lt;/code&gt; te permite ver y modificar el sitio al vuelo, pero mi
+maquina con 8GB de ram y 8GiB de swap no puede con tal encargo&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Goaccess</title>
+      <link>https://nasciiboy.land/prog/goaccess/</link>
+      <pubDate>Thu, 27 Sep 2018 09:20:41 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/goaccess/</guid>
+      <description>
+
+&lt;p&gt;esta &amp;ldquo;bitacora&amp;rdquo; no incluye galletas, ni js (de mierda) y aunque tiene
+casi dos añitos de existir, hasta hace poco no tenia idea de cuantas personas (o
+cosas) se pasan por aqui o para que&lt;/p&gt;
+
+&lt;p&gt;uno de los cambios que vino tras (parte de) el exilio de github fue que ahora
+los logs del servidor son mios, para como todos los demas, &amp;ldquo;recoger
+estadisticas&amp;rdquo;. Sin embargo las consultas se limitaban a ver un conteo de visitas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 15)&#39; | awk &#39;{ tot+=$2 }; END { print &amp;quot;TOTAL &amp;quot; tot }&#39;
+TOTAL 16352
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o graficar las ip mas frecuentes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | tail | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 20)&#39;
+188.40.107.254  228     ▄▄▄▄▄▄▄▄▄▄
+192.3.177.102   231     ▄▄▄▄▄▄▄▄▄▄
+23.237.4.26     301     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+92.185.168.114  315     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+5.45.207.58     346     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+78.46.161.81    355     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+216.244.66.228  693     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+94.130.18.77    697     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+104.248.193.105 724     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+187.225.125.52  1234    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hasta que una nueva busqueda llevo a conocer un programito que puede hacer mas
+cosas con los logs de acceso de nginx (de apache y otros). No solo eso, ademas
+viene en los repositorios de debian 9, esta escrito en C, no requiere procesos en
+segundo plano, demonios, js o ninguna mierda extrabagante y nos hara sentir
+mejor persona&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si lo lanzamos de la siguiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess -f /var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se abrira un menu para indicar el formato de log, fecha y tiempo que vamos a
+utilizar, porque, aunque el programa sea eficaz, no es magico&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;basta con presionar &lt;code&gt;Espacio&lt;/code&gt; en una de las opciones y lugo dar un &lt;code&gt;Enter&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si la opcion que hemos elegido no es valida para el log, nos lo informara y
+podremos probar otra hasta que funcione&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;con la informacion de esta pantalla, mas tarde podriamos configurar el programa
+para ingresar directamente en la interfaz de texto. Dentro de las opcciones que
+he podido probar y funcionan para mi servidor (nginx) con una sola pagina sin
+&amp;ldquo;Virtual Host&amp;rdquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NCSA Combined Log Format&lt;/li&gt;
+&lt;li&gt;Common Log Format (CLF)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;las opcciones que son invalidas&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NCSA Combined Log Format with Virtual Host&lt;/li&gt;
+&lt;li&gt;Common Log Format (CLF) with Virtual Host&lt;/li&gt;
+&lt;li&gt;W3C&lt;/li&gt;
+&lt;li&gt;CloudFront (Download Distribution)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;con estos datos ya podemos acceder a la configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; emacs /etc/goaccess.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y descomentar las siguientes lineas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+time-format %H:%M:%S
+...
+date-format %d/%b/%Y
+...
+# NCSA Combined Log Format
+#
+log-format %h %^[%d:%t %^] &amp;quot;%r&amp;quot; %s %b &amp;quot;%R&amp;quot; &amp;quot;%u&amp;quot;
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tras esto, ejecutando de nuevo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess -f /var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;entrariamos directamente en la interfaz de texto (&lt;code&gt;q&lt;/code&gt; para salir)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;podriamos ademas indicar cual es exactamente el fichero que vamos a utilizar
+como datos de entrada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Specify the path to the input log file. If set, it will take
+# priority over -f from the command line.
+#
+#log-file /var/log/apache2/access.log
+log-file /var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de esta manera solo bastaria ejecutar &lt;code&gt;goaccess&lt;/code&gt; sin ningun argumento extra.
+Pero y basado en mis pruebas, algunos parametros de linea de comandos, cuando se
+establecen en la configuracion (como &lt;code&gt;log-file&lt;/code&gt; o &lt;code&gt;log-format&lt;/code&gt;) parecen ser
+totalmente ignorados si se utiliza &lt;code&gt;goaccess&lt;/code&gt; luego de una tuberia. Me explico,
+si tras la configuracion lanzamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess -f /var/log/nginx/access.log -c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos permite cambiar el fichero de entrada, tambien modificar el formato de log,
+fecha y hora. Sin embargo, utilizado en una tuberia&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | goaccess -c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;goaccess&lt;/code&gt; se pasara por el forro los datos de la tuberia y tambien los parametros que
+agreguemos (&lt;code&gt;-c&lt;/code&gt;). Solamente hace caso del contenido en su fichero de configuracion. Por
+esta razon, para hacer una metrica de un &amp;ldquo;bulto de logs&amp;rdquo; (como en el comando
+anterior) o de logs distintos, recomiendo no configurar &lt;code&gt;log-file&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;adicionalmente he incluido las siguientes lineas para indicar que algunas
+extensiones se consideren como ficheros estaticos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static-file .mkv
+static-file .webm
+static-file .mp4
+static-file .xz
+static-file .zip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;veamos ahora el uso de este programito, haciendo un&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;veremos que tiene unos datos principales (como peticiones totales, visitantes
+unicos, ficheros estaticos, etc) y (moviendo las frechas arriba y abajo) las
+&amp;ldquo;secciones&amp;rdquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 - Unique visitors per day - Including spiders&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2 - Top requests (URLs)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;3 - Top static requests (e.g. jpg, png, js, css&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;4 - HTTP 404 Not Found URLs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;5 - Visitor hostnames and IPs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;6 - Operating Systems&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;7 - Browsers&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;8 - Time Distribution&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;10 - Referring Sites&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;12 - Geo Location&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;13 - HTTP Status Codes&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;de las cuales una es la seccion &amp;ldquo;activa&amp;rdquo;. Esto se indica ademas de por un
+resaltado, por iniciar con el signo &lt;code&gt;&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para entrar en dicha seccion, presionamos bien &lt;code&gt;Espacio&lt;/code&gt;, o bien &lt;code&gt;Enter&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ya dentro, podemos movernos por &amp;ldquo;las filas&amp;rdquo; mediante &lt;code&gt;j&lt;/code&gt; (abajo) y &lt;code&gt;k&lt;/code&gt; (arriba),
+&lt;code&gt;g&lt;/code&gt; inicio y &lt;code&gt;G&lt;/code&gt; fin. Tambien, (de una manera un poco rara) ajustar lo que
+aparece en pantalla con arriba y abajo&lt;/p&gt;
+
+&lt;p&gt;para salir de &amp;ldquo;la seccion&amp;rdquo; precionamos &lt;code&gt;q&lt;/code&gt;. Para saltar a la siguiente seccion
+&lt;code&gt;TAB&lt;/code&gt; para saltar a la seccion anterior &lt;code&gt;Shift-TAB&lt;/code&gt; y para ir a una seccion
+especifica mediante su numero del 1-9. (No me pregunten como ir a la seccion 1X). Para
+saltar a la ultima seccion &lt;code&gt;G&lt;/code&gt; y a la primera &lt;code&gt;g&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;podemos alterar el tema de colores con &lt;code&gt;c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y ver el resto de la ayuda con &lt;code&gt;F1&lt;/code&gt; o &lt;code&gt;h&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;otra manera menos &amp;ldquo;rudimentaria&amp;rdquo; de ver las metricas seria crear un fichero
+html, Waaalaa!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para eso, solamente es necesario rediriguir la salida de la
+siguiente forma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | goaccess &amp;gt; mis-metricas.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en la &lt;a href=&#34;https://goaccess.io/faq&#34;&gt;documentacion&lt;/a&gt; mencionan un parametro para hacer
+que las metricas en formato web funcionen en tiempo real&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess /var/log/nginx/access.log -o /var/www/html/report.html --real-time-html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aunque en la vercion incluida en debian, dicho parametro no esta disponible. Por lo demas,
+consultar la pagina &lt;a href=&#34;https://goaccess.io/get-started&#34;&gt;web del proyecto&lt;/a&gt;, su man
+y darles ★★★★★ en &lt;a href=&#34;https://github.com/allinurl/goaccess/&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;.&lt;/p&gt;
+
+&lt;p&gt;tras &amp;ldquo;un buen&amp;rdquo; uso de &lt;code&gt;goacces&lt;/code&gt; sin necesitar de un reemplazo a la herramienta,
+(pero no por ello ignorar &amp;ldquo;lo torpe&amp;rdquo; de la interfaz de linea de comandos),
+encontre que se puede filtrar el rango de dias a consultar utilizando (como no)
+las tipicas herramientas de &amp;ldquo;la filosofia unix&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Para ello dos sencillos ejemplos. Primero consultar el dia actual&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# en bash
+&amp;gt; zcat -f /var/log/nginx/access.log* | grep -i $(date &#39;+%d/%b/%Y&#39;) | goaccess
+
+# en fish
+&amp;gt; zcat -f /var/log/nginx/access.log* | grep -i (date &#39;+%d/%b/%Y&#39;) | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y (simplificando lo anterior) consultar las visitas del ultimo mes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | grep -i $(date &#39;+/%b/%Y&#39;) | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tambien, pero esta vez con &lt;code&gt;fish&lt;/code&gt; consultar las visitas de hoy y ayer&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# en fish
+&amp;gt; zcat -f /var/log/nginx/access.log* | awk (printf &amp;quot;/%s/; /%s/&amp;quot; (date -d &amp;quot;yesterday&amp;quot; &#39;+%d\\/%b\\/%Y&#39;) (date &#39;+%d\\/%b\\/%Y&#39;)) | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;logrotate&#34;&gt;logrotate&lt;/h2&gt;
+
+&lt;p&gt;y ahora veamos que con el buen log de nginx.&lt;/p&gt;
+
+&lt;p&gt;en debian cuando instalamos nginx desde los repos, misteriozamente comienzan a
+brotar ficheros &lt;code&gt;access.log.1&lt;/code&gt;, &lt;code&gt;access.log.2&lt;/code&gt;, &lt;code&gt;access.log.3&lt;/code&gt;, …, a razon de
+uno por dia. Este comportamiento se debe a un programa que corre una vez por dia
+de nombre &lt;code&gt;logrotate&lt;/code&gt;, que rota los ficheros &lt;code&gt;access&lt;/code&gt; y &lt;code&gt;error&lt;/code&gt; todos los
+dias&amp;hellip;  bien podria considerarse una copia de seguridad de los sucesos del
+servidor, o bien una molestia innecesaria, segun cada quien.&lt;/p&gt;
+
+&lt;p&gt;En un post de &lt;a href=&#34;https://www.linuxito.com/gnu-linux/nivel-medio/927-como-instalar-logrotate-y-configurar-la-rotacion-de-logs-de-nginx&#34;&gt;linuxito&lt;/a&gt;
+el nos comentaba como instalar y configurar &lt;code&gt;logrotate&lt;/code&gt;, pero como ya en debian
+funciona por defecto sin que hagamos nada, me he limitado a modificar el
+comportamiento, de forma que los registros roten solo una vez por mes&lt;/p&gt;
+
+&lt;p&gt;mediante nuestro editor faborito&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; emacs /etc/logrotate.d/nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aparece lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/var/log/nginx/*.log {
+        daily
+        missingok
+        rotate 14
+        compress
+        delaycompress
+        notifempty
+        create 0640 www-data adm
+        sharedscripts
+        prerotate
+                if [ -d /etc/logrotate.d/httpd-prerotate ]; then \
+                        run-parts /etc/logrotate.d/httpd-prerotate; \
+                fi \
+        endscript
+        postrotate
+                invoke-rc.d nginx rotate &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+        endscript
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;lo he dejado asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/var/log/nginx/*.log {
+	monthly
+	missingok
+	rotate 14
+	compress
+	notifempty
+	create 0640 www-data adm
+	sharedscripts
+	prerotate
+		if [ -d /etc/logrotate.d/httpd-prerotate ]; then \
+			run-parts /etc/logrotate.d/httpd-prerotate; \
+		fi \
+	endscript
+	postrotate
+		invoke-rc.d nginx rotate &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+	endscript
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;nascii-results&#34;&gt;nascii-results&lt;/h2&gt;
+
+&lt;p&gt;y bueno, ya que estoy por que no hacer un analisis de los logs y obtener
+informacion que no influira de ninguna manera el futuro de este diario&amp;hellip; amenos
+no de momento y solo contemplando la posivilidad de colocar anuncios
+de hardware y de porno. A todo mundo le gusta el porno y el harware, no?&lt;/p&gt;
+
+&lt;p&gt;si quieren acompañarme con sus propias deducciones coloco el resultado
+&lt;a href=&#34;http://nasciiboy.land/goaccess.html&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El servidor inicio con los resgistros hace 17 dias con un total de 17XXX
+visitas, que serian una media aproximada de 1k por dia y segun la seccion
+&lt;strong&gt;Browsers&lt;/strong&gt; el 27% se identifica con el genero no binario grissexual
+&lt;em&gt;Crawlers&lt;/em&gt;. Otro buen habido 26% son firefoxxexual y el resto, las minorias
+oprimidas que no importan. 47% prefiere no informar que OS utiliza, 23% procede
+de las ventanas y los demas votan como Unix Like&lt;/p&gt;
+
+&lt;p&gt;aunque el sitio no esta contemplado para verse desde un movil&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/movil.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;casi un 5% lo hace asi. Puede que no incluya mierdas web, pero las imagenes si
+las incluyo en sus resoluciones originales y aveces en png! Mmm, si se
+preguntaban yo la veo asi en el navegador&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/web.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La hora preferida por los huespedes son las 05. El trafico en su mayoria
+proviene de&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;40% USA&lt;/li&gt;
+&lt;li&gt;10% Mexico&lt;/li&gt;
+&lt;li&gt;26% de europa, con un atemorizante 9% de alemania (que buscaran?)
+y otro razonable 5% de Espania&lt;/li&gt;
+&lt;li&gt;14% de asia&lt;/li&gt;
+&lt;li&gt;4% de america del sur&lt;/li&gt;
+&lt;li&gt;1% de africa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;la mayoria de trafico se genera internamente (8%) una vez que vienen al sitio y
+el resto esta lidereado por planet.emacs-es.org, mi anterior blog en
+github-pages cuyo contenido apunta aca, unas pocas busquedas en google, bing,
+duckduck y alguna que otra de redit y &amp;ldquo;sitios raros&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;La mayoria solo ve la pagina de inicio. Otros tantos se sienten atraidos por las
+cosas de emacs y/o su curiosadad por los titulos compactos y poco intiutivos
+puede haceles creer que estan escritos en english.  Tambien hay numerosas
+consultas al servidor por cosas que terminan en &lt;code&gt;.php&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;una ves dentro del sitio, poco interesa por que no todos las entradas tienen
+trafico (o por que ya son habituales del sitio que consultan la novedad). Las
+novedades rondan 30 visitas, siendo lo mas consultado el feed (imagino que
+por mi mismo)&lt;/p&gt;
+
+&lt;p&gt;En resumen, deberia hacer caso a los crawlers y poner cosas en php!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BPS</title>
+      <link>https://nasciiboy.land/prog/bps/</link>
+      <pubDate>Tue, 11 Sep 2018 09:47:52 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/bps/</guid>
+      <description>
+
+&lt;p&gt;sehhh, BPS! (&lt;a href=&#34;https://es.wikipedia.org/wiki/Battle_Programmer_Shirase&#34;&gt;Battle Programmer Shirase&lt;/a&gt;)
+ese anime que no nos hace sentir mejor persona y gira en torno a las prodigiosas
+habilidades del buen Akira Shirase (programador/sysadmin/cracker/animal-o-cosa y
+mejor persona) y sus situaciones comprometidas medio ecchi (con chicas de edad
+&amp;ldquo;no especificada&amp;rdquo;) que situan en un dilema moral a aquellos que le solicitan
+algun favor&lt;/p&gt;
+
+&lt;p&gt;Por supuesto que Akira nunca tiene que consultar documentacion, copiar y pegar
+errores en el navegador y los unicos fallos que se atreven a presentarsele, son
+desde luego, los que el mismo provoca. Para el resto de desgraciados que
+inmerecidamente habitamos la misma dimension, solo nos queda revolcarnos en la
+podredumbre y anotar &amp;ldquo;recetas&amp;rdquo; nada elegantes, concretas, ni profundas
+sobre configuraciones que apenas se entienden y desde luego, no nos haran ser
+&amp;ldquo;programadores&amp;rdquo;, &amp;ldquo;expertos&amp;rdquo; o populares. Ha, Ha, Ha, Ha&lt;/p&gt;
+
+&lt;p&gt;y? nahh, habia estado revisando algunos vps(s)&amp;hellip; unas maquinas (virtuales) que
+rentas con una cantidad pactada de cpu, disco, ram e internete que no deberia de
+apagarse a ninguna hora y en la que puedes poner tus mierdas, en particular un
+servidor web gestionado &amp;ldquo;a mano&amp;rdquo;. Esto por supuesto, (paleando las limitaciones
+de almacenamiento casi igual de costoso que la tinta de impresora) sera tan
+bueno y satisfactorio como los tutoriales copy-paste de internet (y un monton de
+nesedad) te permitan realizar&lt;/p&gt;
+
+&lt;p&gt;mientras hacia dichas pruebas &amp;ldquo;gratuitas&amp;rdquo; que forzosamente necesitaron varias
+busquedas por &amp;ldquo;el mejor&amp;rdquo; tutorial para &amp;ldquo;XXXXXX&amp;rdquo; version &amp;ldquo;YYYYYY&amp;rdquo;, se acumularon una
+cantidad considerable de enlaces asi como ficheros de configuracion que
+para la siguiente &amp;ldquo;reinstalacion&amp;rdquo; seguramente no recuerde. Por ello mejor
+dejarlo medio organizado para el yo del futuro.&lt;/p&gt;
+
+&lt;p&gt;debo aclarar que es solo un primer intento al que se combino (por mi constante
+insatisfaccion) el proyecto de tener un servidor en casa autogestionado
+(torrente &lt;sup&gt;24&lt;/sup&gt;&amp;frasl;&lt;sub&gt;7&lt;/sub&gt;, ftp, stream de videos/musica, etc, etc). Asi que el resultado es
+medio uno y medio otro, pero (imaginariamente) centrado en poner en
+funcionamiento el servidor en casa.&lt;/p&gt;
+
+&lt;p&gt;Je, eso de rentar un vps con internete a velocidad de primer mundo mola un
+guevo, aunque si quieres hacerte de unos buenos TeraBytes de almacenamiento
+deberias ir buscando una buena hipoteca&amp;hellip; si es que tienes casa&amp;hellip; ignorando ese aspecto, el precio
+por lo que ofertan es razonable, aunque la tranquilidad y &amp;ldquo;el placer&amp;rdquo; de
+tener tu propia infraestructura, viendole parpadear los leds directamente es
+mucho mayor, supongo.&lt;/p&gt;
+
+&lt;p&gt;mientras me hago con una rapsberry/micro-server/nuc/mini-itx-de-bajo-consumo-24x7x∞
+tocara conservar (y pagar dentro de un par de meses) el vps. Temporalmente hice las pruebas
+en una media-laptop con 12 años de antiguedad, 512MB de ram, 40GB HDD con debian
+estable 9.5 sin entorno grafico. Al final consume ~30MiB de ram y casi sin
+movimiento del procesador y, es necesario remarcar que su procesador mono nucleo
+va mas fluido que el procesador virtual del vps. Tambien, el contar con el
+equipo en la red local hace que la conexion via ssh no tenga nada de retraso.&lt;/p&gt;
+
+&lt;p&gt;al lio, pues!&lt;/p&gt;
+
+&lt;h2 id=&#34;red&#34;&gt;Red&lt;/h2&gt;
+
+&lt;p&gt;el hardware en cuestion trae un adaptador wifi (intel) que funciona sin instalar
+drivers privativos. No me gusta conectar el cable de red, por que creo que
+inesperadamente algun relampago podria cegar la vida del aparato. Asi pues, mientras menos
+cables (un ups, interruptores magneticos y un multicontacto de interruptor con
+&amp;ldquo;luz roja&amp;rdquo;) de por medio, mayor tranquilidad mental&lt;/p&gt;
+
+&lt;p&gt;si bien antes habia visto eso de configurar la red con ip fija, nunca lo habia
+llebado a cabo, encima varios comandos se han vuelto obsoletos y systemd
+extiende sus tentaculos por todos los sitios.&lt;/p&gt;
+
+&lt;p&gt;Haciendo caso a la &lt;a href=&#34;https://wiki.debian.org/WiFi/HowToUse&#34;&gt;wiki&lt;/a&gt; de debian
+lo primero seria colocar los permisos apropiados al fichero de configuracion de
+las interfaces de red&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; chmod 0600 /etc/network/interfaces
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;despues, como en mi caso con un wifi cifrado con WPA2 tendriamos que obtener unos digitos
+hexadeci-magicos, con el comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; wpa_passphrase ssid contraseña
+network={
+        ssid=&amp;quot;ssid&amp;quot;
+        #psk=&amp;quot;contraseña&amp;quot;
+        psk=ccb290fd4fe6b22935cbae31449e050edd02ad44627b16ce0151668f5f53c01b
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;ssid&lt;/code&gt; = nombre de wifi. El campo &lt;code&gt;psk&lt;/code&gt; tendria despues que agregarse dentro de
+la configuracion (&lt;code&gt;/etc/network/interfaces&lt;/code&gt;). Para evitar erorres, mejor
+redireccionar la salida a dicho fichero. Ya dentro de este, se podra editar con
+mayor comodidad&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; wpa_passphrase mi-ssid mi-contraseña &amp;gt;&amp;gt; /etc/network/interfaces
+&amp;gt; emacs /etc/network/interfaces
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y bueno&amp;hellip; en este punto el tutorial copy-pasteable suguiere configurar la red con
+conexion automatica, nos dejan este ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;auto wlan0
+iface wlan0 inet dhcp
+        wpa-ssid mi-ssid
+        wpa-psk ccb290fd4fe6b2293cbae351449e050edd2ad044627b16ce1510a48bb7c7c01b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde deberiamos substituir &lt;code&gt;wlan0&lt;/code&gt; por el nombre de nuestra interfaz de red
+wifi, que podemos obtener con el comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ip a
+1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: enp6s7: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 00:0a:e4:f6:20:5b brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.177/24 brd 192.168.1.255 scope global enp6s7
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20a:e4ff:fef6:205b/64 scope link
+       valid_lft forever preferred_lft forever
+3: wlp6s5: &amp;lt;BROADCAST,MULTICAST&amp;gt; mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:16:ce:63:f0:e2 brd ff:ff:ff:ff:ff:ff
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mmm, no se que sea &lt;code&gt;lo&lt;/code&gt;, pero &lt;code&gt;enp*&lt;/code&gt; (&lt;code&gt;enp6s7&lt;/code&gt;) seria la interfaz &amp;ldquo;por
+cable&amp;rdquo;. &lt;code&gt;wlp*&lt;/code&gt; (&lt;code&gt;wlp6s5&lt;/code&gt;) la interfaz inalambrica. Asi que substuimos &lt;code&gt;wlan0&lt;/code&gt; por &lt;code&gt;wlp6s5&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;y para arrancar la red, bastaria con:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ifup mi-interfaz-inalambrica
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(puede que si tenemos otra red ya habilitada, sea necesario antes hacer &lt;code&gt;ifdown mi-interfaz-habilitada&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; luego intente con la configuracion &lt;a href=&#34;https://wiki.debian.org/WiFi/AdHoc&#34;&gt;estatica&lt;/a&gt;
+agregando/mezclando algunos campos, tal que asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;auto wlp6s5
+iface wlp6s5 inet static
+        address 192.168.1.66
+        netmask 255.255.255.0
+        wireless-channel 1
+        wireless-mode ad-hoc
+        wpa-ssid mi-ssid
+        wpa-psk ccb290fd4fe6b22935cbae31449e050edd02ad44627b16ce0151668f5f53c01b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se suponia que &lt;code&gt;address&lt;/code&gt; seria la ip estatica, pero esta configuracion no me
+daba internet, aunque si permitia conectar en la red local.&lt;/p&gt;
+
+&lt;p&gt;Ante el fracazo de lograr la ip estatica por wifi, ademas de escuchar que el
+tio de un conocido que salia con la prima de una prima de un amigo sobre que
+en los servidores web no se permite la conexion por wifi, conecte el cable y por suerte, esta
+ocacion la configuracion si fue satisfactoria, quedando tal que asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+allow-hotplug enp6s5
+iface enp6s5 inet static
+      address 192.168.1.177
+      netmask 255.255.255.0
+      gateway 192.168.1.254
+
+# auto wlp6s5
+# iface wlp6s5 inet dhcp
+#       wpa-ssid mi-ssid
+#       wpa-psk ccb290fd4fe6b2293cbae351449e050edd2ad044627b16ce1510a48bb7c7c01b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se comento la parte referente al wifi, por lo demas &lt;code&gt;enp6s5&lt;/code&gt; es la interfaz
+cableada&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gateway&lt;/code&gt; es la &amp;ldquo;direccion&amp;rdquo; del router/modem (la caja del internet). Para
+haberiguar esta direccion ejecutamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ip r
+default via 192.168.1.254 dev enp6s5 onlink
+169.254.0.0/16 dev enp6s5 scope link metric 1000
+192.168.1.0/24 dev enp6s5 proto kernel scope link src 192.168.1.177
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(la &amp;ldquo;puerta de enlace&amp;rdquo; (o &lt;em&gt;gateway&lt;/em&gt;) esta despues de &lt;code&gt;default via&lt;/code&gt;, en este caso
+&lt;code&gt;192.168.1.254&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;address&lt;/code&gt; (supongo) tendria que iniciar con los primeros tres rangos del
+&lt;code&gt;gateway&lt;/code&gt; y terminar con el numero que queremos para la ip fija, en mi caso
+&lt;code&gt;177&lt;/code&gt; por-que-si&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;netmask&lt;/code&gt; es un numero que nos permite enmascarar que consultas son filtradas
+hacia &amp;ldquo;algun sitio&amp;rdquo; (o algo asi). Segun varios post del internete, el numero
+magico es &lt;code&gt;255.255.255.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ssh&#34;&gt;SSH&lt;/h2&gt;
+
+&lt;p&gt;con la ip fija, el siguiente paso logico por comodidad como tambien para
+economizar en monitores, vendria a ser conectar via ssh. Primero instalamos el
+servidor ssh en nuestro server-de-pruebas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install openssh-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto deberia poner operativo el servidor, podriamos corroborarlo con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl status sshd
+● sshd.service - OpenSSH server daemon
+...
+   Active: active (running) since Mon 20XX-YY-YY
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;apareceria el &lt;code&gt;●&lt;/code&gt; en color verde al igual que &lt;code&gt;active (running)&lt;/code&gt;, si no fuera
+asi quiza&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl enable sshd
+&amp;gt; systemctl start  sshd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;desde ahora continuaremos toda la interaccion desde la maquina donde vamos a
+conectar hacia el servidor&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh nasciiboy@192.168.1.177
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;cambiar &lt;code&gt;nasciiboy&lt;/code&gt; por el usuario de vuestra maquina, colocar la &lt;code&gt;@&lt;/code&gt; y luego la
+ip. En caso de tener un puerto distinto al establecido por defecto (22), agregar &lt;code&gt;-p numero-puerto&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;ahora bien, para hacer mas seguro (y comodo) conectar con el servidor,
+deberiamos configurar &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/como-configurar-las-llaves-ssh-en-ubuntu-18-04-es&#34;&gt;un par de llaves&lt;/a&gt;
+desde la maquina donde conectaremos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh-keygen
+&amp;gt; cd ~/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego copiamos la &lt;strong&gt;llave publica&lt;/strong&gt; al servidor. A mano seria asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; scp id_rsa.pub nasciiboy@192.168.1.67:.ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o, &amp;ldquo;sin saber ni como&amp;rdquo;, con el comando dedicado &lt;code&gt;ssh-copy-id&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh-copy-id nasciiboy@192.168.1.67
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;finalmente deberiamos configurar el demonio (&lt;code&gt;sshd&lt;/code&gt;) para que no permita la
+conexion por contraseña, solo mediante llaves. Modificamos dentro de
+&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PubkeyAuthentication yes
+...
+PermitEmptyPasswords no
+...
+PasswordAuthentication no
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tambien podriamos modificar el parametro&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PermitRootLogin yes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;cambiando &lt;code&gt;yes&lt;/code&gt; a &lt;code&gt;no&lt;/code&gt;, p-e-r-o, creo que la conexion por llave es
+suficientemente segura y si la contraseña de root es demaciado compleja como
+para ni saberla o se tiene paranoia de escribirla, dejar esta opcion encendida
+igual y no es mala idea&lt;/p&gt;
+
+&lt;p&gt;recargamos la configuracion del daemon ssh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl reload sshd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;probamos que la sesion ssh mediante llaves funcione e instalamos/configuramos
+las comodidades que creamos convenientes (&lt;code&gt;htop&lt;/code&gt;, &lt;code&gt;dfc&lt;/code&gt;, &lt;code&gt;emacs&lt;/code&gt;, etc, etc)&lt;/p&gt;
+
+&lt;h2 id=&#34;nginx&#34;&gt;nginx&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-8&#34;&gt;basicamente&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego desde nuestra red local podriamos confirmar si esta arriba el servidor web&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; elinks 192.168.1.177
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por el momento, un servidor sin comentarios, php, javascript, ni ninguna mierda
+mas, es todo lo que necesito. Como mi web se genera estaticamente, podria
+copiarse directamente todo el contenido dentro de &lt;code&gt;/var/www/http&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; rsync -avz --delete ~/nasciiboy.land/public/ /var/www/html/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;he copiado el directorio que contiene mi web dentro de la home de root. Desde
+hay genero el sitio estatico con &lt;code&gt;hugo&lt;/code&gt; que a su vez crea el directorio &lt;code&gt;public&lt;/code&gt;
+el cual finalmente se sincroniza con el directorio por defecto del contenido del
+servidor &lt;code&gt;/var/www/html&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;importante&lt;/strong&gt; si acaso al visitar el sitio reciben como bienvenida &lt;strong&gt;403
+Forbiden&lt;/strong&gt;, seguramente el sitio no tenga los permisos de lectura apropiados. La
+solucion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; chmod -R 755 /var/www/html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en este punto bien podemos configurar (solo) un poco el servidor&lt;/p&gt;
+
+&lt;p&gt;Dentro de &lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt; (dentro del bloque de configuracion &lt;code&gt;http { ... }&lt;/code&gt;) creo que es buena
+idea no mostrarle la version particular que se esta ejecutando a los
+malintencionados. Basta colocar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+server_tokens off;
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(los punto y coma son importantes, tenerlos en mente)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;nginx&lt;/code&gt; tiene unos logs (&lt;code&gt;/var/log/nginx&lt;/code&gt;) donde pone cosas como las ips de quien
+accede a nuestro flamante sitio. Estos ficheros se reescribiran si hacemos cosas
+como apagar-encerder el servidor. Para mantener estas preciadas metricas, lo mas
+sensato es hacer un&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl reload nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y ver si todo fue bien con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl status nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero&amp;hellip; nada es tan sencillo. El servidor no volvia a encender, segun &lt;a href=&#34;https://stackoverflow.com/questions/42078674/nginx-service-failed-to-read-pid-from-file-run-nginx-pid-invalid-argument&#34;&gt;stackoverflow&lt;/a&gt;
+nginx tenia un bug en debian (se ve al consultar con &lt;code&gt;systemctl status nginx&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+nginx.service: Failed to read PID from file /run/nginx.pid: Invalid argument
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;la solucion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; mkdir /etc/systemd/system/nginx.service.d
+&amp;gt; printf &amp;quot;[Service]\nExecStartPost=/bin/sleep 0.1\n&amp;quot; &amp;gt; /etc/systemd/system/nginx.service.d/override.conf
+&amp;gt; systemctl daemon-reload
+&amp;gt; systemctl restart nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mmm, por unos dias dude sobre la forma correcta de actualizar el contenido en
+&lt;code&gt;/var/www/html&lt;/code&gt;, si habia que parar y encender el servidor o si hacer un
+&lt;code&gt;reload&lt;/code&gt;. Segun parece no es necesario&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Aun no se muy bien como es esto de ver &amp;ldquo;las metricas&amp;rdquo; del servidor. Modificando
+un one-liner visto en el blog de &lt;a href=&#34;https://www.ochobitshacenunbyte.com/2018/07/04/que-comando-de-terminal-usas-mas-veces-en-linux/&#34;&gt;davidochobits&lt;/a&gt;
+que a su vez lo vio en reddit, lanzo el siguiente comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | tail | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 10)&#39;
+66.249.79.87    15  ▄
+181.95.155.18   16  ▄
+66.249.79.254   18  ▄
+17.58.97.53     21  ▄▄
+40.77.167.24    21  ▄▄
+66.249.79.252   23  ▄▄
+179.6.202.53    24  ▄▄
+18.234.114.96   60  ▄▄▄▄▄▄
+150.109.59.181  139 ▄▄▄▄▄▄▄▄▄▄▄▄▄
+90.162.220.89   163 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ja, ja, que rastrero, y para contabilizar las visitas totales pues se filtra
+(sin &lt;code&gt;tail&lt;/code&gt;) y suma la segunda columna con &lt;code&gt;awk&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 10)&#39; | awk &#39;{ tot+=$2 }; END { print &amp;quot;TOTAL &amp;quot; tot }&#39;
+TOTAL 625
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si quisieramos ver a quien pertenece una ip (o dominio):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; whois 90.162.220.89
+...
+role:           Hostmaster Administrator FTE
+address:        Parque Empresarial La Finca
+address:        Edificio 9
+address:        Paseo del Club Deportivo, 1
+address:        28223 Pozuelo de Alarcon
+address:        Madrid, Spain
+admin-c:        HA1066-RIPE
+admin-c:        HA1067-RIPE
+tech-c:         HA1066-RIPE
+tech-c:         HA1067-RIPE
+nic-hdl:        HAF10-RIPE
+remarks:        spam, abuse reports....mailto:abuse@orange.es
+abuse-mailbox:  abuse@orange.es
+mnt-by:         UNI2-MNT
+created:        2005-08-19T10:24:55Z
+last-modified:  2013-01-17T16:47:17Z
+source:         RIPE # Filtered
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;entre estos, Tencent, Baidu y Google se concentran casi todas las consultas&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;router&#34;&gt;router&lt;/h2&gt;
+
+&lt;p&gt;en este punto (o quiza antes (o despues&amp;hellip;)) nos vendria bien conocer algunas cosas
+medianamente importantes, como cual es nuestra ip publica y que dispositivos hay
+en nuestra red local (como en caso de hacer un ssh a un dispositivo sin ip
+fija). Para lo segundo segun un &lt;a href=&#34;https://nideaderedes.urlansoft.com/2013/12/23/linux-como-puedo-saber-que-maquinas-hay-conectadas-en-mi-red-local/&#34;&gt;post&lt;/a&gt;
+y corroborado en el mundo real, podemos conocer los dispositivos en la red local
+con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; nmap -sP 192.168.1.1-255
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-09-09 22:09 CDT
+Nmap scan report for 192.168.1.66                            # movil
+Host is up (0.21s latency).
+Nmap scan report for nasciiboy.myddns.rocks (192.168.1.177)  # server (luego explico mas)
+Host is up (0.00050s latency).
+Nmap scan report for 192.168.1.214                           # mi pc
+Host is up (0.00043s latency).
+Nmap scan report for 192.168.1.253                           # un &amp;quot;repetidor&amp;quot;
+Host is up (0.00093s latency).
+Nmap scan report for rga.ip (192.168.1.254)                  # router
+Host is up (0.0022s latency).
+Nmap done: 255 IP addresses (5 hosts up) scanned in 14.53 seconds
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o tambien dentro del router &lt;strong&gt;Estado &amp;gt; Lista de dispositivos LAN&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;luego, para conocer nuestra ip publica, el modelo de router que me da la compañia
+lo proporciona dentro de &lt;strong&gt;Estado &amp;gt; PPPoE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;otras eficaces formas de conococer la ip publica sin movernos del terminal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; curl ifconfig.co # mas rapido que la opcion &#39;.me&#39;
+187.225.125.52
+&amp;gt; curl ifconfig.me
+187.225.125.52
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;recordar que esta ip (amenos que tengamos un acuerdo con el proveedor) puede
+cambiar entre un apagon a otro. Mientras tanto pasemos a abrir los puertos de
+nuestro router&lt;/p&gt;
+
+&lt;p&gt;vamos a &lt;strong&gt;NAT &amp;gt; Mapeo de puertos&lt;/strong&gt;, luego &lt;strong&gt;Agregar&lt;/strong&gt;, &lt;strong&gt;Servidor web&lt;/strong&gt;. En &lt;strong&gt;IP
+LAN&lt;/strong&gt; ponemos la direccion fija de nuestro servidor apuntando al puerto 80, abriendo tambien el puerto
+80 en la ip publica. Repetimos el proceso para el puerto 443 (https)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ddns&#34;&gt;ddns&lt;/h2&gt;
+
+&lt;p&gt;tenemos encendido el servidor, abiertos los puertos y podemos hacer una &lt;strong&gt;&amp;ldquo;consulta
+local&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; elinks 192.168.1.177
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero? podemos contactar con nuestra ip publica, darsela a nuestros amigos y ser populares?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; elinks 187.225.125.52
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;NO&lt;/strong&gt; y ni en firefox funciona! Segun parece, algun &amp;ldquo;mecanismo de conexion de
+no se que, que es muy complicado&amp;rdquo; impide contactar desde nuestra red local consultando
+nuestra ip publica. Por que? ni idea, una consulta decia que era muuuhhh
+complicado y le creere&lt;/p&gt;
+
+&lt;p&gt;ja, ja, sucede que anteriormente probe esto de consultar desde la red local la
+ip publica&amp;hellip; y al no tener resultado, considere que era un puto truño! Haaa,
+por que nadie lo explico?&lt;/p&gt;
+
+&lt;p&gt;con aquello de las pruebas que estoi haciendo con el vps rentado, conencte a el
+(en Frankfurt) via ssh y desde aya el &lt;code&gt;elinks&lt;/code&gt; aputando a mi ip publica funcionaba a la
+perfeccion!&lt;/p&gt;
+
+&lt;p&gt;la solucion? ni idea, monta tus mierdas y prueba desde fuera como puedas&lt;/p&gt;
+
+&lt;p&gt;y bueno, como mencionaba previamente, si tenemos un contrato estandar con el
+proveedor de internet, la ip publica puede que cambie. Como es mas confortable pasar un
+dominio que una ip, la idea es recurrir a un servicio de terceros para que le
+siga la pista a los cambios en nuestra ip y de preferencia nos de un dominio
+no-muy-feo&lt;/p&gt;
+
+&lt;p&gt;entre las (dos) opciones que busque estaban &lt;a href=&#34;https://www.noip.com/&#34;&gt;no-ip&lt;/a&gt; y
+&lt;a href=&#34;https://www.dynu.com/&#34;&gt;dynu&lt;/a&gt;. No recuerdo la causa, pero preferi dynu.&lt;/p&gt;
+
+&lt;p&gt;Hay que crearse una cuenta y te dan a elegir entre varios dominios (o colocar el
+tuyo, pero aun no es momento para ello), el que escogi fue
+nasciiboy.myddns.rocks (casi, nunca en linea)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-d0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;tras el registro y demas, deberiamos tener un metodo para desde nuestro servidor
+reportar periodicamente nuestra ip (por ejemplo, cada minuto) y con ello
+actualizar la informacion en dynu y de ser posible automaticamente.&lt;/p&gt;
+
+&lt;p&gt;ellos tienen un programa para descargar en debian&amp;hellip; je, je, si, ahorita me lo
+instalo, como no. Para los desconfiados ofrecen una serie de opciones de
+configuracion diversas, en mi caso con &lt;code&gt;ddclient&lt;/code&gt; que ya viene en los repositorios&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install ddclient
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en el proceso de instalacion, saltara una TUI para configurar la direccion a
+donde llamar, la contraseña, cuenta, etc. Pero esto no funciona del todo
+bien. Lo recomendable es siguiendo el &lt;a href=&#34;https://www.dynu.com/DynamicDNS/IPUpdateClient/DDClient&#34;&gt;tutorial&lt;/a&gt;
+de la propia dynu, modificar el fichero &lt;code&gt;/etc/ddclient.conf&lt;/code&gt; de la siguiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# ddclient configuration for Dynu
+#
+# /etc/ddclient.conf
+daemon=60                                                    # Check every 60 seconds.
+syslog=yes                                                   # Log update msgs to syslog.
+mail=root                                                    # Mail all msgs to root.
+mail-failure=root                                            # Mail failed update msgs to root.
+pid=/var/run/ddclient.pid                                    # Record PID in file.
+use=web, web=checkip.dynu.com/, web-skip=&#39;IP Address&#39;        # Get ip from server.
+server=api.dynu.com                                          # IP update server.
+protocol=dyndns2
+login=myusername                                             # Your username.
+password=YOURPASSWORD                                        # Password or MD5/SHA256 of password.
+MYDOMAIN.DYNU.COM                                            # List one or more hostnames one on each line.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;es muy importante colocar la linea de pid, de lo contrario el programita este,
+hara consultas a lo bestia. Por lo demas solo cambiar &lt;code&gt;login&lt;/code&gt;, &lt;code&gt;password&lt;/code&gt; y &lt;code&gt;MYDOMAIN.DYNU.COM&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;ahora si, podemos contactar desde fuera de casa con el &amp;ldquo;dominio provicional&amp;rdquo;, o,
+en busca de algun falso sentimento de tranquilidad agregar nuestro dominio a los
+hosts locales &lt;code&gt;/etc/hosts&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;192.168.1.177 nasciiboy.myddns.rocks
+127.0.0.1     localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1           localhost localhost.localdomain localhost6 localhost6.localdomain6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;con esto escribiendo &lt;code&gt;nasciiboy.myddns.rocks&lt;/code&gt; en firefox accederiamos al sitio
+local con el &amp;ldquo;dominio&amp;rdquo;. No se por que, pero con &lt;code&gt;elinks&lt;/code&gt; esto no funciona&lt;/p&gt;
+
+&lt;h2 id=&#34;cosas&#34;&gt;cosas&lt;/h2&gt;
+
+&lt;p&gt;entre varias consultas y post ajenos que me da peresa enlazar, hay varios
+comandos interesantes para conocer &amp;ldquo;¡¿que?!&amp;rdquo; sobre ips, dns y puertos&lt;/p&gt;
+
+&lt;p&gt;(aqui una combinacion de salidas mezcladas de mi sitio en el vps y de las
+pruebas con el servidor local)&lt;/p&gt;
+
+&lt;p&gt;listar puertos abiertos TCP y UDP&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; netstat -lntu
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:9418            0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN
+tcp6       0      0 :::9418                 :::*                    LISTEN
+tcp6       0      0 :::80                   :::*                    LISTEN
+tcp6       0      0 :::22                   :::*                    LISTEN
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(listar todos los puertos en escucha, con &lt;code&gt;netstat -l&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;con &lt;code&gt;dig&lt;/code&gt; podemos ver la configuracion del dns y tambien conocer la ip&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; dig nasciiboy.land
+
+; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.10.3-P4-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; nasciiboy.land
+;; global options: +cmd
+;; Got answer:
+;; -&amp;gt;&amp;gt;HEADER&amp;lt;&amp;lt;- opcode: QUERY, status: NOERROR, id: 56488
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;nasciiboy.land.			IN	A
+
+;; ANSWER SECTION:
+nasciiboy.land.		600	IN	A	46.101.138.205
+
+;; Query time: 27 msec
+;; SERVER: 67.207.67.2#53(67.207.67.2)
+;; WHEN: Mon Sep 10 03:24:43 UTC 2018
+;; MSG SIZE  rcvd: 59
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;nslookup&lt;/code&gt; para conocer la ip del servidor (aqui una prueba desde la red local)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; nslookup nasciiboy.myddns.rocks
+Server:		192.168.1.254
+Address:	192.168.1.254#53
+
+Non-authoritative answer:
+Name:	nasciiboy.myddns.rocks
+Address: 187.225.125.52
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;siguiedo un post &lt;a href=&#34;http://www.cursodehackers.com/nmap.html&#34;&gt;&amp;ldquo;para ser hacker&amp;rdquo;&lt;/a&gt;
+la receta para escanear todos los puertos&lt;/p&gt;
+
+&lt;p&gt;consultando (desde frankfurt) mi ip hogareña&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; nmap -sS 187.225.125.52
+Starting Nmap 7.40 ( https://nmap.org ) at 2018-09-10 14:01 UTC
+Nmap scan report for dsl-187-225-125-52-dyn.prod-infinitum.com.mx (187.225.125.52)
+Host is up (0.25s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 45.50 seconds
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;solo estan abiertos los puertos del servidor. Tenia dudas sobre la seguridad de
+poner este tipo de servicio en digamos &amp;ldquo;la maquina de uso principal&amp;rdquo;, desde
+luego ignorando posibles inconvenientes como que tu equipo se quede congelado
+por algun programa, probar un codigo de recursividad desatada o si se queda
+sin ram/swap. Luego de todas estas pruebas, no parece algo especialmente
+inseguro. Por supuesto, si alguien te quiere joder, allara la forma, mientras
+ese dia llega, supondre que todo funciona como es debido y con la suficiente
+seguridad por-defecto.&lt;/p&gt;
+
+&lt;p&gt;otro comando mas nos permite ver los saltos entre los routers hasta el destino&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; mtr nasciiboy.myddns.rocks
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-r3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;asta aqui los pasos con respecto al servidar local. Cuando adquiera la plaquita
+ideal con un chilion de ram, teras y nucleos ya colocare una guia mas rigurosa&lt;/p&gt;
+
+&lt;h2 id=&#34;https&#34;&gt;https&lt;/h2&gt;
+
+&lt;h3 id=&#34;ca-error&#34;&gt;CA error&lt;/h3&gt;
+
+&lt;p&gt;cuando estaba alojada la pagina en github-pages ellos se encargaban de
+proporcionar el https. Al mover el dns al vps intente mediante los comandos que
+varios post muestran instalar &lt;em&gt;let&amp;rsquo;s encrypt&lt;/em&gt;, entre &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/como-asegurar-nginx-con-let-s-encrypt-en-ubuntu-18-04-es&#34;&gt;uno&lt;/a&gt;
+de ellos, sugieren lo siguiente:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install python-certbot-nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego configurar &lt;code&gt;/etc/nginx/sites-available/default&lt;/code&gt; cambiando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;. . .
+server_name _;
+. . .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;. . .
+server_name mi-dominio www.mi-dominio;
+. . .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego, lanzar los siguientes comandos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; nginx -t
+&amp;gt; systemctl reload nginx
+&amp;gt; certbot --nginx -d mi-sitio.com -d www.mi-sitio.com
+
+# en este punto se supone ya esta listo el certificado
+# y esto es para actualizarlo automaticamente
+&amp;gt; certbot renew --dry-run
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero ejecutar &lt;code&gt;certbot&lt;/code&gt; no sirvio de mucho&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Obtaining a new certificate
+Performing the following challenges:
+Client with the currently selected authenticator does not support any combination of challenges that will satisfy the CA.
+Client with the currently selected authenticator does not support any combination of challenges that will satisfy the CA.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si ese es el caso, seguramente &lt;code&gt;certbot&lt;/code&gt; habra dejado algunos inutiles timers y
+demonios de &lt;code&gt;systemd&lt;/code&gt;. Para deshabilitar tales regalos, le avente lo siguiente
+al terminal (aunque no se si sea lo correcto)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl stop    certbot.timer
+&amp;gt; systemctl stop    certbot
+&amp;gt; systemctl disable certbot.timer
+&amp;gt; systemctl disable certbot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;auto-certificado&#34;&gt;auto-certificado&lt;/h3&gt;
+
+&lt;p&gt;ante el fallo de certbot, mi primera opcion para no dejar que los buscadores
+ignoraran la opcion con https, fue crear mis propios certificados con casinos y
+colegilas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; mkdir /etc/nginx/ssl
+&amp;gt; openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;a las preguntas que se sucedian respondi en el nombre de la organizacion como
+&lt;em&gt;nascii-corp&lt;/em&gt;, para el correo mi correo regular (como seña de buena
+voluntad). El resto lo deje en blanco.&lt;/p&gt;
+
+&lt;p&gt;tras esto deberiamos modificar la configuracion de nginx (&lt;code&gt;/etc/nginx/sites-available/default&lt;/code&gt;)
+para que escuche en el puerto 443. Coloco mi fichero entero:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        listen 443 ssl;
+
+        # SSL configuration
+        #
+        # listen 443 ssl default_server;
+        # listen [::]:443 ssl default_server;
+        #
+        # Note: You should disable gzip for SSL traffic.
+        # See: https://bugs.debian.org/773332
+        #
+        # Read up on ssl_ciphers to ensure a secure configuration.
+        # See: https://bugs.debian.org/765782
+        #
+        # Self signed certs generated by the ssl-cert package
+        # Don&#39;t use them in a production server!
+        #
+        # include snippets/snakeoil.conf;
+
+        root /var/www/html;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm;
+
+        server_name nasciiboy.land www.nasciiboy.land;
+        ssl_certificate     /etc/nginx/ssl/nginx.crt;
+        ssl_certificate_key /etc/nginx/ssl/nginx.key;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+
+        error_page 404 /404.html;
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;poner bien los punto y coma&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;por supuesto el navegador se quejo&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-e0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;mirar la info del certificado&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bps/bps-e1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;certbot-strikes-back&#34;&gt;certbot strikes back&lt;/h3&gt;
+
+&lt;p&gt;tras muchos intentos lanzando &lt;code&gt;certbot&lt;/code&gt; (esperando sin razon un resultado
+distinto) y leyendo unos post de &lt;a href=&#34;https://www.linuxito.com/seguridad/842-como-generar-un-certificado-ssl-tls-gratis-con-certbot&#34;&gt;linuxito&lt;/a&gt;,
+pero sobre todo de la &lt;a href=&#34;https://certbot.eff.org/lets-encrypt/debianstretch-nginx&#34;&gt;eff&lt;/a&gt;
+el certificado se materializo ejecutando lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; certbot --authenticator webroot --installer nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;los certificados funcionaron automagicamente, ja, ja, ja, no guarde el orden de
+lo que puse, para la proxima&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;y eso es todo por este aglutinado de cosas, happy hacking!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

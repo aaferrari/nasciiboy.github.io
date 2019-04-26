@@ -7,10 +7,1497 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Tue, 11 Sep 2018 09:47:52 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 24 Nov 2018 19:31:31 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.land/prog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>∞.nasciiboy.land</title>
+      <link>https://nasciiboy.land/prog/inf-domain/</link>
+      <pubDate>Sat, 24 Nov 2018 19:31:31 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/inf-domain/</guid>
+      <description>
+
+&lt;p&gt;en experimentos improvisados acompañado de cereal remojado, habia estado probando &amp;ldquo;montar
+servicios&amp;rdquo; en el dominio &amp;ldquo;con diagonales&amp;rdquo; mas o menos asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; nasciiboy.land           # dominio
+ nasciiboy.land/mail      # el correo
+ nasciiboy.land/git       # el git
+ nasciiboy.land/gitea     # el gitea
+ nasciiboy.land/xxx       # el sexual
+ nasciiboy.land/podcast   # el audio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero cuando veia sitios con &amp;ldquo;los servicios&amp;rdquo; montados &amp;ldquo;con puntos&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;         nasciiboy.land  # dominio
+     www.nasciiboy.land  # con el www
+    mail.nasciiboy.land  # el correo
+     git.nasciiboy.land  # el git
+   gitea.nasciiboy.land  # el gitea
+     xxx.nasciiboy.land  # el sexual
+ podcast.nasciiboy.land  # el audio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;algo en mi interior se retorcia de envidia y me preguntaba si los
+administradores contaban con fortunas incalculables como para contratar tantos
+dominios&amp;hellip; o, habia una magia especial que permitiera tal configuracion sin
+incurrir en gastos economicos&lt;/p&gt;
+
+&lt;p&gt;Como no encontre demaciado sobre el asunto y ni de nginx o dns se casi nada, me
+disponia a contratar un nuevo dominio (con los restos del paypal).&lt;/p&gt;
+
+&lt;p&gt;Asi pues pase una bonita mañana evaluando entre los precios y lo gracioso que
+pudiera ser el nuevo dominio destinado a las pruebas y tambien especulando con
+lo rentable (o problematico) de comprar un nombre no registrado de alguna marca
+conocida (&lt;em&gt;casio.xyz&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;Cuando estaba seguro que el elegido seria, digamos, &lt;code&gt;chrøma.me&lt;/code&gt; llego la
+experimentacion colocando &lt;code&gt;git.chrøma.me&lt;/code&gt;. La sospecha de que la configuracion
+&amp;ldquo;con puntos&amp;rdquo; recaia sobre el dns o el servidor fue clara cuando en el resultado
+estos se eliminaban para siempre mostrar &lt;code&gt;gitchroma.me&lt;/code&gt;. Resumiendo, nada de
+puntos en el nombre si no es para el dominio mismo&lt;/p&gt;
+
+&lt;h2 id=&#34;cname&#34;&gt;CNAME&lt;/h2&gt;
+
+&lt;p&gt;el primer paso fue acudir al gestor de registros DNS (para el caso,
+contratado con goddady (#no-es-publicidad))&lt;/p&gt;
+
+&lt;p&gt;La configuracion que tiene mi dominio es mas o menos asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;| Tipo  | Nombre | Valor                | TTL          |
+|-------+--------+----------------------+--------------|
+| A     | @      | mi.ip-v4.publica.asi | 600 segundos |
+| CNAME | www    | @                    | 1 hora       |
+| NS    | @      | nameserver1.algo     | 1 hora       |
+| NS    | @      | nameserver2.algo     | 1 hora       |
+| NS    | @      | nameserver3.algo     | 1 hora       |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el campo &lt;strong&gt;CNAME&lt;/strong&gt; con nombre &lt;strong&gt;www&lt;/strong&gt; hace pensar que ese &lt;code&gt;www&lt;/code&gt; en
+&lt;code&gt;www.mydominio.algo&lt;/code&gt; como que sobra y al servidor dns solo le importan las
+palabras antes y despues del ultimo punto en el dominio (&lt;code&gt;nombre.dominio&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;entonces supuse que agregando campos CNAME clonando la info para &lt;code&gt;www&lt;/code&gt; pero
+variando &amp;ldquo;el punto&amp;rdquo; seria posible la anelada configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;         nasciiboy.land  # dominio
+     www.nasciiboy.land  # con el www
+    mail.nasciiboy.land  # el correo
+     git.nasciiboy.land  # el git
+   gitea.nasciiboy.land  # el gitea
+     xxx.nasciiboy.land  # el sexual
+ podcast.nasciiboy.land  # el audio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de momento he limitado la prueba solo al &amp;ldquo;punto git&amp;rdquo;: registro &lt;code&gt;CNAME&lt;/code&gt;, de nombre &lt;code&gt;git&lt;/code&gt;
+apuntando al valor &lt;code&gt;@&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/dns.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;nginx&#34;&gt;nginx&lt;/h2&gt;
+
+&lt;p&gt;pero la verdadera magia, no esta (completamente) en los registros DNS, supongo
+que el peso de dicernir entre cual &amp;ldquo;subdominio&amp;rdquo; servir, corre por parte del
+servidor web y la informacion extra nesesaria (la ip corre por el DNS) viene
+incluida en algun campo de la peticion al servidor, aunque esto lo dejare en
+suposicion por no encontrar (preguntandole al internet) un comando para extraer
+integra toda la informacion de la peticion. (El libro de Go traia un programita,
+que permitia estraer dicha informacion, pero no voy a poner temas &amp;ldquo;tan tecnicos&amp;rdquo;
+aqui)&lt;/p&gt;
+
+&lt;p&gt;asi pues si el servidor dns no es el responsable (ultimo) de &amp;ldquo;la magia de los
+puntos&amp;rdquo;, el experimento podria montarse en nuestra red local con el
+navegador de costumbre, la linea de comandos y nginx. Solo aclarar que
+todo esto es mas sencillo (en cuanto a configuracion) de lo que
+este preludio (o la pesima redaccion) haga parecer&lt;/p&gt;
+
+&lt;p&gt;tenemos un servidor nginx configurado por defecto sin php (ni nahh). La web esta
+alojada en &lt;code&gt;/var/www/html&lt;/code&gt; y su fichero de configuracion esta en
+&lt;code&gt;/etc/nginx/sites-available/default&lt;/code&gt;. Veamos pues si ademas de nuestro
+&lt;code&gt;dominio.algo&lt;/code&gt; encontramos la forma de que &lt;code&gt;git.dominio.algo&lt;/code&gt; nos muestre una
+pagina totalmente distinta&lt;/p&gt;
+
+&lt;p&gt;primero creamos una carpeta raiz para &amp;ldquo;el nuevo sitio&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir /var/www/git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;agregamos la pagina de inicio. Con nuestro editor&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;emacs /var/www/git/index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;copiamos lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;krakatoa&amp;lt;/title&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;krakatoa!&amp;lt;/h1&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora agregamos un &lt;em&gt;virtual host&lt;/em&gt; en la configuracion de nginx&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;emacs /etc/nginx/sites-available/git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pegamos lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server {
+	listen 80;
+	listen [::]:80;
+
+	# cambiar mi-sitio.dominio por el pertinente
+	server_name git.mi-sitio.dominio;
+
+	root /var/www/git;
+	index index.html;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;habilitamos nuestro sitio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ln -s /etc/nginx/sites-available/git /etc/nginx/sites-enabled/git
+systemctl reload nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;comprobamos que se sirva la pagina del &amp;ldquo;subdominio&amp;rdquo;. (Este comando lo corri en mi
+red local)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ curl 192.168.1.177 -H &amp;quot;Host: git.mi-sitio.dominio&amp;quot;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;krakatoa&amp;lt;/title&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+&amp;lt;h1&amp;gt;krakatoa!&amp;lt;/h1&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mmm, el comando funcionar, funciona&amp;hellip; pero no se por que&amp;hellip; ni si pueda ser mas
+o menos mejorable. Solo puedo estar seguro que se optiene el resultado!&lt;/p&gt;
+
+&lt;p&gt;Para evitar el anterior comando, podriamos realizar la comprobacion desde el
+firefox a &lt;code&gt;git.mi-sitio.dominio&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/krakatoa.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ssl&#34;&gt;ssl&lt;/h2&gt;
+
+&lt;p&gt;comprobado el exito de la configuracion &amp;ldquo;por puntos&amp;rdquo; solo faltaria agregar el
+https al &amp;ldquo;nuevo sitio&amp;rdquo; mediante lets-encript&lt;/p&gt;
+
+&lt;p&gt;en caso de no tener instalado previamente certbot&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install python-certbot-nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; certbot --authenticator webroot --installer nginx
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+Which names would you like to activate HTTPS for?
+-------------------------------------------------------------------------------
+1: nasciiboy.land
+2: git.nasciiboy.land
+3: www.nasciiboy.land
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos preguntara para cual dominio habilitar HTTPS. Con un numero o varios
+(separados por comas) especificamos el sitio. Al dejar en blanco (directamente
+con un enter) se habilitara https para todos los sitios&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;blank to select all options shown (Enter &#39;c&#39; to cancel):
+Obtaining a new certificate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luego nos pregunta uno a uno donde esta el directorio raiz de cada sitio. Si es
+la primera vez que se ejecuta certbot solo se presenta una opcion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Select the webroot for nasciiboy.land:
+-------------------------------------------------------------------------------
+1: Enter a new webroot
+-------------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ingresamos &lt;code&gt;1&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Press 1 [enter] to confirm the selection (press &#39;c&#39; to cancel): 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y luego el directorio raiz del sitio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input the webroot for nasciiboy.land: (Enter &#39;c&#39; to cancel):/var/www/html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si son varios los dominios a habilitar, repetimos: primero un numero &lt;code&gt;1&lt;/code&gt; para nuevo
+directorio raiz y luego ingresamos el directorio raiz. En caso de que ya este
+presente el directorio, solo ingresamos el numero&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Select the webroot for git.nasciiboy.land:
+-------------------------------------------------------------------------------
+1: Enter a new webroot
+2: /var/www/html
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press &#39;c&#39; to cancel): 1
+Input the webroot for git.nasciiboy.land: (Enter &#39;c&#39; to cancel):/var/www/git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;finalmente nos pregunta si queremos que solo se permita https o ambos (http y
+https). Prefiero ambas opciones, si es asi ingresar &lt;code&gt;1&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Please choose whether HTTPS access is required or optional.
+-------------------------------------------------------------------------------
+1: Easy - Allow both HTTP and HTTPS access to these sites
+2: Secure - Make all requests redirect to secure HTTPS access
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press &#39;c&#39; to cancel): 1
+...
+Congratulations! You have successfully enabled https://nasciiboy.land,
+https://git.nasciiboy.land, and https://www.nasciiboy.land
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y congratulations!&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;certbot&lt;/code&gt; ha modificado la configuracion de nuestros sitios, habilitando el
+puerto &lt;code&gt;443&lt;/code&gt; para https y recargando la configuracion de nginx (creo). Podemos
+ver que el fichero de configuracion del sitio git fue modificado agregando lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /etc/nginx/available-sites/git
+...
+listen 443 ssl; # managed by Certbot
+ssl_certificate /etc/letsencrypt/live/nasciiboy.land/fullchain.pem; # managed by Certbot
+ssl_certificate_key /etc/letsencrypt/live/nasciiboy.land/privkey.pem; # managed by Certbot
+ssl_session_cache shared:le_nginx_SSL:1m; # managed by Certbot
+ssl_session_timeout 1440m; # managed by Certbot
+
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # managed by Certbot
+ssl_prefer_server_ciphers on; # managed by Certbot
+
+ssl_ciphers &amp;quot;ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-SHA384 DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES128-SHA DHE-RSA-AES256-SHA DHE-RSA-AES128-SHA256 DHE-RSA-AES256-SHA256 EDH-RSA-DES-CBC3-SHA&amp;quot;; # managed by Certbot
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;gitea&#34;&gt;gitea&lt;/h2&gt;
+
+&lt;p&gt;finalmente, poco he experimentado con esto y la verdad dudo que llegue a colacarlo en el
+vps, pero todo esto de tener &amp;ldquo;subdominios por punto&amp;rdquo; no era solo para tener
+&amp;ldquo;distintas webs&amp;rdquo;, sino mas bien para montar servicios completos. Para el caso
+en concreto, una interfaz web para git, que es de lo que va gitea&lt;/p&gt;
+
+&lt;p&gt;Tambien podrian ser gitlab u otras, pero gitea se anuncia como ligerito, esta
+hecho con go-lang y si se usa con SQLite3 como base de datos, pues no requiere
+dependencias o extenuantes configuraciones&lt;/p&gt;
+
+&lt;p&gt;primero crear un usuario (o no) para el experimento (la &lt;a href=&#34;https://docs.gitea.io/en-us/install-from-binary/&#34;&gt;documentacion
+oficial&lt;/a&gt; propone una mejor
+configuracion)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# como root
+su
+# agregar usuario
+useradd -c &amp;quot;repos de nascii - nasciiboy@gmail.com&amp;quot; git -m
+# cambiar al usuario git
+su git
+cd
+wget -O gitea https://dl.gitea.io/gitea/1.6.0/gitea-1.6.0-linux-amd64
+chmod +x gitea
+./gitea
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora redirigimos con nginx &lt;strong&gt;git.mi-dominio.algo&lt;/strong&gt; al servidor de gitea. En &lt;code&gt;/etc/nginx/sites-available/git&lt;/code&gt;
+modificamos &lt;code&gt;location&lt;/code&gt; de la siguiente forma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        # location / {
+        #       try_files $uri $uri/ =404;
+        # }
+
+        location / {
+                proxy_pass http://localhost:3000/;
+        }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;recargamos la configuracion de nginx&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;systemctl reload nginx&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;y visitamos nuestra direccion &lt;code&gt;git.mi-dominio.algo&lt;/code&gt;. Por defecto el servidor de
+gitea escucha en el puerto 3000. Si cambiara el puerto o para experimentar sin
+modificar nginx, visitar &lt;code&gt;mi-dominio.algo:3000&lt;/code&gt; o el puerto que este de moda&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/gitea.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;para configurar gitea vamos a &lt;code&gt;git.mi-dominio.algo/install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/gitea-config.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;aqui he colocado lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;typo de base de datos    &amp;gt; SQLite3
+Titulo del Sitio         &amp;gt; &amp;quot;zzz.. zZZzz.. ZzzzZ&amp;quot;
+Dominio del servidor SSH &amp;gt; git.nasciiboy.land
+Gitea HTTP ListenPort    &amp;gt; 3000
+Gitea Base URL           &amp;gt; https://git.nasciiboy.land
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de preferencia tambien en &lt;strong&gt;Administrator Accont Settings&lt;/strong&gt; registrar nombre y
+contraseñå del administrador&lt;/p&gt;
+
+&lt;p&gt;luego podremos visitar nuestro perfil y crear repositorios&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/zorro.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;sorprendentemente la interfaz web funciona! incluso la clonacion por el
+protocolo https!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone https://git.nasciiboy.land/zorro/187.git
+Cloning into &#39;187&#39;...
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (4/4), done.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pero en el clonado con protocolo git aparecio el error &lt;strong&gt;Permission denied
+(publickey)&lt;/strong&gt;. Curioso detalle a revizar, por que precisamente el servidor ssh
+solo esta habilitado para funcionar con llaves&lt;/p&gt;
+
+&lt;p&gt;(nota: no ir a la pagina git (gitea) en nasciiboy.land, por que no esta habilitada&amp;hellip; solo
+es una prueba de concepto)&lt;/p&gt;
+
+&lt;p&gt;para terminar, el rendimiento y consumo en una maqunita con un procesador de
+laptop (de 32 bits) y con 500MB, con nginx, ssh, git-daemon, ddns y el gitea
+corriendo es mas que aceptable&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/cname/htop.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>git@nasciiboy.land</title>
+      <link>https://nasciiboy.land/prog/gitatnasciiboy-land/</link>
+      <pubDate>Sun, 04 Nov 2018 13:39:27 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/gitatnasciiboy-land/</guid>
+      <description>
+
+&lt;p&gt;Desde la posecion del vps entoy ansioso de montarle chismes, pero no tengo muy
+claro cuales, para que, o como hacelo bajo un mismo dominio&lt;/p&gt;
+
+&lt;p&gt;mmm, segun veo por las pruebas, cada &amp;ldquo;servicio&amp;rdquo; tienen un puerto predeterminado
+y funciona mas o menos de manera automagica. Por ejemplo al activar el demonio
+ssh inmediatamente funciona de la manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh usuario@dominio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh -p numero-puerto usuario@dominio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en caso de haber modificado el puerto por defecto que es el 22&lt;/p&gt;
+
+&lt;p&gt;para el caso de las paginas web el puerto es el 80 y el 443 para
+el https, pero tambien se puede cambiar este puerto por uno arbitrario como en&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; elinks http://dominio.algo:numero-puerto/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;intentando comprender estas magias de los dominios, los dns y los puertos (y
+protocolos&amp;hellip; o no) ocurrioseme que ya que venia de las paginas gratuitas de
+gitlab y github donde no se permite la subida de ficheros &amp;ldquo;sospechosamente
+grandes&amp;rdquo; (como un album musical) seria interesante ademas de tener el repo para
+el funcionamiento de la pagina, permitir su clonacion y que quien quiera
+almacene, modifique o &amp;ldquo;plagie&amp;rdquo; lo que le venga en gana&lt;/p&gt;
+
+&lt;p&gt;ya en plena investigacion (mas alla de los 4 comandos que utilizo en git) me
+entero que este tiene diversos &lt;a href=&#34;https://git-scm.com/book/es/v2/Git-en-el-Servidor-Los-Protocolos&#34;&gt;protocolos&lt;/a&gt;
+por los cuales se puede utilizar (aunque ya los habia empleado sin
+razonar sobre ello), son los siguientes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone ruta                             # clonar desde el propio equipo
+git clone file://ruta                      # clonar desde el propio equipo
+git clone usuario-ssh@dominio:ruta         # clonar utilizando una conexion ssh
+git clone git://dominio/repositorio-o-ruta # clonar utilizando el &amp;quot;protocolo git&amp;quot;
+git clone http://dominio/repositorio       # clonar utilizando &amp;quot;http inteligente&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ignorando las dos primeras opciones por ser para &amp;ldquo;el autoconsumo&amp;rdquo; y la ultima
+que encontre &amp;ldquo;demasiado&amp;rdquo; complicada y &amp;ldquo;poco documentada&amp;rdquo; para nginx (que es el
+servidor que estoy utilizando), las maneras simples de compartir el repositorio serian
+dos: mediante SSH que ya lo estaba utilizando y pocos miesterios encierra o
+utilizar el &amp;ldquo;protocolo git&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;al rollo pues =&amp;gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;git-daemon&#34;&gt;git daemon&lt;/h2&gt;
+
+&lt;p&gt;El &amp;ldquo;protocolo git&amp;rdquo; no es otra cosa mas que un pequeño servidor escuchando en el
+&lt;strong&gt;puerto 9418&lt;/strong&gt; al que se le asigna un directorio raiz desde el cual explorara
+el nombre de las carpetas en el, vera si son o no repositorios, si estan
+&amp;ldquo;habilitados&amp;rdquo; y que se puede hacer o no con ellos&lt;/p&gt;
+
+&lt;p&gt;su funcionamiento es tan sencillo como lanzar lo siguiente en consola&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git daemon --reuseaddr --verbose --base-path=/ruta-a-repositorios/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aqui el programa es &lt;code&gt;git&lt;/code&gt; con el comando &lt;code&gt;daemon&lt;/code&gt; para que entre en el modo servidor, &lt;code&gt;--reuseraddr&lt;/code&gt;
+por que aparecio en algun post, &lt;code&gt;--verbose&lt;/code&gt; para que lance toda la informacion
+que se pueda y &lt;code&gt;--base-path=/ruta-a-repositorios&lt;/code&gt; es la carpeta raiz desde donde
+trabajara. Para mas informacion &lt;code&gt;git help daemon&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;podriamos poner a prueba esto de la sigiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir /tmp/roma
+cd /tmp/roma
+
+# creamos un repo de pruebas
+mkdir rama
+cd rama
+git init
+echo &amp;quot;algo&amp;quot; &amp;gt; txt
+git add txt
+git commit -m &amp;quot;primer commit&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;listos nuestro directorio (&lt;code&gt;roma&lt;/code&gt;) y repo de pruebas (&lt;code&gt;rama&lt;/code&gt;) lanzamos el git demonizado&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git daemon --reuseaddr --verbose --base-path=/tmp/roma/
+[12618] Ready to rumble
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y luego desde otra secion (&lt;strong&gt;y ruta&lt;/strong&gt;) de terminal ponemos a prueba el invento&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://localhost/rama
+Clonando en &#39;rama&#39;...
+fatal: error remoto: access denied or repository not exported: /rama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;he? que fallo aqui? &lt;code&gt;git daemon&lt;/code&gt; revisa en los repositorios si existe un fichero
+expecial llamado &lt;code&gt;git-daemon-export-ok&lt;/code&gt;. Este fichero actua a modo de &amp;ldquo;bandera&amp;rdquo;
+para permitir las &amp;ldquo;cosas&amp;rdquo; que hace el servidor. Pero un dato que es importante,
+&lt;code&gt;git-daemon-export-ok&lt;/code&gt; debe estar dentro del repositorio, dentro del directorio &lt;code&gt;.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Creamos la &amp;ldquo;bandera&amp;rdquo; para dar permiso a &lt;code&gt;git daemon&lt;/code&gt; tal que asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; touch /tmp/roma/rama/.git/git-daemon-export-ok
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y volvemos a intentar la clonacion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://localhost/rama
+Clonando en &#39;rama&#39;...
+remote: Enumerando objetos: 3, listo.
+remote: Contando objetos: 100% (3/3), listo.
+remote: Total 3 (delta 0), reusado 3 (delta 0)
+Recibiendo objetos: 100% (3/3), listo.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;puag! magia!&lt;/p&gt;
+
+&lt;p&gt;ahora hagamos un pequeño experimento, ¿nos permitira subir modificaciones del
+clon recien hecho?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# recordar, esto es el repo clonado en alguna ruta
+# distinta a `--base-path=/tmp/roma/` de `git daemon`
+&amp;gt; cd rama
+&amp;gt; echo &amp;quot;algo mas&amp;quot; &amp;gt;&amp;gt; txt
+&amp;gt; git commit -a -m &amp;quot;nuevo commit&amp;quot;
+&amp;gt; git push
+fatal: error remoto: access denied or repository not exported: /rama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;del lado de nuestro servidor git, nos arroja lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[13117] Request receive-pack for &#39;/rama&#39;
+[13117] &#39;receive-pack&#39;: service not enabled for &#39;/tmp/roma//rama/.git&#39;
+[12618] [13117] Disconnected (with error)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos informa que tenemos una peticion &lt;code&gt;receive-pack&lt;/code&gt; para &lt;code&gt;/rama&lt;/code&gt; pero que el servicio
+&lt;code&gt;receive-pack&lt;/code&gt; no esta habilitado para este repo. Solucionamos esto aniquilando
+el servidor git con &lt;code&gt;Ctrl-C&lt;/code&gt; y volviendolo a lanzar con una nueva opcion
+&lt;code&gt;--enable=receive-pack&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git daemon --reuseaddr --verbose --base-path=/tmp/roma/ --enable=receive-pack
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;intentemos de nuevo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (3/3), 244 bytes | 244.00 KiB/s, listo.
+Total 3 (delta 0), reusado 0 (delta 0)
+remote: error: refusing to update checked out branch: refs/heads/master
+remote: error: Por defecto, actualizar la rama actual en un repositorio no vacío
+...
+To git://localhost/rama
+ ! [remote rejected] master -&amp;gt; master (branch is currently checked o
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;que paso? pues que necesitamos un tipo de repositorio especial llamado &lt;code&gt;git
+bare&lt;/code&gt; que no es otra cosa que la carpeta &lt;code&gt;.git&lt;/code&gt; que esta en cada repo pero con
+otra &amp;ldquo;bandera especial&amp;rdquo; habilitada.&lt;/p&gt;
+
+&lt;p&gt;Tenemos dos opciones. Convertir nuestro repositorio en un &lt;code&gt;git bare&lt;/code&gt; de la
+siguiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cp -R /tmp/roma/rama/.git /tmp/roma/remo.git
+&amp;gt; cd /tmp/roma/remo.git
+&amp;gt; git config --bool core.bare true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora cambiemos la fuente remota de nuestro repo modificado e intentemos
+subir la modificacion al nuevo repositorio &amp;ldquo;remoto&amp;rdquo; &lt;code&gt;remo&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# de nuevo, esto es el repo clonado en alguna ruta aleatoria
+&amp;gt; git remote set-url origin git://localhost/remo
+&amp;gt; git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (3/3), 244 bytes | 244.00 KiB/s, listo.
+Total 3 (delta 0), reusado 0 (delta 0)
+To git://localhost/remo
+   9f6cd12..262a37b  master -&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;puag! como mola!&lt;/p&gt;
+
+&lt;p&gt;La otra opcion era crear un repositor &lt;code&gt;bare&lt;/code&gt; vacio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git init --bare /tmp/roma/remi.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;agregar la &amp;ldquo;bandera&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; touch /tmp/roma/remi.git/git-daemon-export-ok
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;agregar el nuevo destino a nuestro repo modificado (o no)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git remote add remi git://localhost/remi
+&amp;gt; git push remi master
+Enumerando objetos: 6, listo.
+Contando objetos: 100% (6/6), listo.
+Compresión delta usando hasta 2 hilos
+Comprimiendo objetos: 100% (2/2), listo.
+Escribiendo objetos: 100% (6/6), 416 bytes | 416.00 KiB/s, listo.
+Total 6 (delta 0), reusado 3 (delta 0)
+To git://localhost/remi
+ * [new branch]      master -&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;puag! que gusto!&lt;/p&gt;
+
+&lt;h2 id=&#34;vps&#34;&gt;vps&lt;/h2&gt;
+
+&lt;p&gt;Conocemos la teoria del (servidor) git demonizado, pero falta que lo pongamos a
+funcionar en nuestra maquina donde estara (en teoria) funcionando y sirviendo
+clones a todo el mundo. Como proceder?&lt;/p&gt;
+
+&lt;p&gt;Segun parece, deberiamos crear un nuevo usuario en la maquina y un unico
+directorio bajo su custodia que contendra los repos y sera a su vez la ruta raiz
+para &lt;code&gt;git daemon&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Como root&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; useradd -c &amp;quot;repos de nascii - nasciiboy@gmail.com&amp;quot; git -m
+# -c  : comentario
+# git : nombre de usuario
+# -m  : crear directorio en /home
+&amp;gt; passwd git
+# mi !super contraseña¡ del usuario git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en varias &lt;a href=&#34;https://git-scm.com/book/es/v2/Git-en-el-Servidor-Configurando-el-servidor&#34;&gt;fuentes&lt;/a&gt;
+parece que lo recomendable es establecer un directorio raiz en un lugar que no
+sea la &lt;code&gt;home&lt;/code&gt; del usuario (como &lt;code&gt;/opt/git&lt;/code&gt; o &lt;code&gt;/var/repo&lt;/code&gt;), y de hecho que el usuario no tenga &lt;code&gt;home&lt;/code&gt;&amp;hellip; pero,
+paque complicarnos? que sea persona y tenga su home (de hay el parametro &lt;code&gt;-m&lt;/code&gt; en
+&lt;code&gt;adduser&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;ahora solo restaria que el sistema operativo se encargue de levantar nuestro
+git demonizado en cada arranque. Segun &lt;a href=&#34;https://serverfault.com/questions/912899/how-to-start-git-daemon-at-boot#912914&#34;&gt;un sitio de consultas&lt;/a&gt;
+y puesto que hice esto en debian y tiene &lt;code&gt;systemd&lt;/code&gt; y hay que copiar y pegar.
+Colocamos lo siguiente dentro del fichero &lt;code&gt;/etc/systemd/system/git-daemon.service&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=Git Daemon
+Documentation=man:git-daemon(1)
+ConditionPathExists=/home/git/
+
+[Service]
+# no permite recibir cambios
+ExecStart=/usr/bin/git daemon --reuseaddr --verbose --base-path=/home/git/
+# permite recibir cambios
+# ExecStart=/usr/bin/git daemon --reuseaddr --enable=receive-pack --verbose --base-path=/home/git/
+User=git
+Group=git
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(adaptar en caso de ser necesario las rutas)&lt;/p&gt;
+
+&lt;p&gt;para habilitar el servicio por los siglos de los siglos y los reinicios&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl enable git-daemon
+&amp;gt; systemctl start  git-daemon
+&amp;gt; systemctl status git-daemon
+● git-daemon.service - Git Daemon
+   Loaded: loaded (/etc/systemd/system/git-daemon.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2018-11-03 17:43:42 CST; 21s ago
+     Docs: man:git-daemon(1)
+ Main PID: 46787 (git)
+    Tasks: 2 (limit: 4915)
+   CGroup: /system.slice/git-daemon.service
+           ├─46787 /usr/bin/git daemon --reuseaddr --verbose --base-path=/home/git/
+           └─46790 git-daemon --reuseaddr --verbose --base-path=/home/git/
+
+Nov 03 17:43:42 tachikoma systemd[1]: Started Git Daemon.
+Nov 03 17:43:42 tachikoma git[26758]: [26762] Ready to rumble
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(&lt;code&gt;systemctl&lt;/code&gt; + (&lt;code&gt;stop&lt;/code&gt;|&lt;code&gt;disable&lt;/code&gt;) &lt;code&gt;git-daemon&lt;/code&gt; para&amp;hellip; se entiende por si mismo)&lt;/p&gt;
+
+&lt;p&gt;listo y facilmente! Ya pueden copiar nuestros repositorios (sin registro o
+contraseñas) tal que asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://mi-dominio.algo/repo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ho, quiza olvide mencionarlo, pero al demonio de git, cuando nuestro repositorio
+se llama &lt;code&gt;repo.git&lt;/code&gt; le es indiferente si lo mencionamos con o sin el
+&lt;code&gt;.git&lt;/code&gt;. Lo nombramos asi para permitir ambas opciones, por que lo contrario
+(hacer tareas en un &lt;code&gt;repo-sin-punto-git&lt;/code&gt;) agregando el &lt;code&gt;.git&lt;/code&gt; no funciona&lt;/p&gt;
+
+&lt;p&gt;Antes de terminar con los detalles configuratorios, me preguntaba por que o como
+permitir que alguien tenga acceso al repositorio para modificarlo. Para esto
+pues la mejor manera seria agregar su clave publica en
+&lt;code&gt;~git/.ssh/authorized_keys&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;tambien podriamos habilitar para el usuario git el acceso mediante contraseña agregardo al final del
+fichero &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Match User git
+    PasswordAuthentication yes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si se diera el caso de tener colaboradores &amp;ldquo;quiza&amp;rdquo; no querriamos que hicieran
+nada no relacionado con git. En tal situacion y solo de esta manera deberiamos
+substituir la shell del usuario git por una shell que no permita hacer
+absolutamente nada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; chsh git -s /usr/bin/git-shell
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pero esta es solo una medida extrema, unicamente aplicable si no confiamos en
+quien tenga acceso. Al hacer esto tambien nosotros tendriamos que sufrir
+incomodidades inecesarios, pues ni un &lt;code&gt;scp&lt;/code&gt; funciona si la shell es &lt;code&gt;git-shell&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Asi pues, bajo el supuesto que usamos &amp;ldquo;ssh con llaves&amp;rdquo;, pues no veo por que
+implementar ninguna medida adicional&lt;/p&gt;
+
+&lt;h2 id=&#34;nasciiboy-land&#34;&gt;nasciiboy-land&lt;/h2&gt;
+
+&lt;p&gt;y llegado a este punto, ya podeis clonar el repo que da vida a esta web&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://nasciiboy.land/nasciiboy-land
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;son algo mas de 2GiB! Como el vps esta bastante corto tanto en ram como en
+procesador hacerlo solo una vez por persona multiplicando el minuto actual de su
+reloc por la hora y sumando 3 y tomando el resultado como los segundos de
+espera. La comprecion que realiza git pone al 100% al procesador y el GB de ram
+se satura (tube que agregar un ficherito swap de 2 GB mas para que sea posible)&lt;/p&gt;
+
+&lt;p&gt;si quieren construir la web, entran a la copia del repo y ejecutan el programa
+&lt;code&gt;hugo&lt;/code&gt;. El resultado estara en el directorio &lt;code&gt;public&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;se supone que &lt;code&gt;hugo serve&lt;/code&gt; te permite ver y modificar el sitio al vuelo, pero mi
+maquina con 8GB de ram y 8GiB de swap no puede con tal encargo&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Oxido</title>
+      <link>https://nasciiboy.land/prog/oxido/</link>
+      <pubDate>Mon, 01 Oct 2018 20:59:05 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/oxido/</guid>
+      <description>
+
+&lt;p&gt;Ultimamente pocas cosas de las que hago al dia logran clasificar como
+&amp;ldquo;productivas&amp;rdquo; o &amp;ldquo;divertidas&amp;rdquo;. Sumado (o restado) a esto, por razones externas, me vi forzado
+a buscar un material interesante con el cual aparentar alguna labor frente al
+monitor con el extra de que fuera de interes y evitara en lo posible la somnolencia&lt;/p&gt;
+
+&lt;p&gt;Toquetear &lt;a href=&#34;https://www.rust-lang.org/es-ES/&#34;&gt;rust&lt;/a&gt; fue la ocupacion que logro
+mantener las apariecias los ultimos 2 dias. Uno de ellos fue
+satisfactorio e divertido, y el otro&amp;hellip; algo decepcionante (spoiler).&lt;/p&gt;
+
+&lt;p&gt;Pero, por que Rust?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;es FOSS,&lt;/li&gt;
+&lt;li&gt;no es de microsoft,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dtrace.org/blogs/bmc/2018/09/18/falling-in-love-with-rust/&#34;&gt;propaganda&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;compilacion estatica,&lt;/li&gt;
+&lt;li&gt;se promociona como rapido y seguro,&lt;/li&gt;
+&lt;li&gt;no apesta en lentitud como &lt;s&gt;Python&lt;/s&gt;,&lt;/li&gt;
+&lt;li&gt;en apariencia tiene una saludable comunidad que crea herramientas y librerias,&lt;/li&gt;
+&lt;li&gt;no es TAB-indentado,&lt;/li&gt;
+&lt;li&gt;tiene bloques de alcance delimitados por &lt;code&gt;{ }&lt;/code&gt; y no por TABS o &lt;code&gt;end&lt;/code&gt;s, y&lt;/li&gt;
+&lt;li&gt;su libro es de libre difusion y ademas cuenta con traducciones al español&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;comentare un poco sobre las traducciones, y el libro oficial.&lt;/p&gt;
+
+&lt;p&gt;Primero, la &lt;a href=&#34;https://goyox86.github.io/elpr/&#34;&gt;version uno del libro traducida al español&lt;/a&gt;
+esta buena (creo). El libro en si, es un paseo por las caracteristicas del
+lenguaje. Esto viene a significar, que si consideras que sabes programar y
+vienes de un lenguaje tipo C++ seria suficiente para conocer el catalogo de
+posibilidades. Aun con esto, lo considero muy, muy basico y falto de la
+claridad suficiente para aquellos que requerimos manuales para dummys&lt;/p&gt;
+
+&lt;p&gt;Por su parte la &lt;a href=&#34;https://github.com/ManRR/rust-book-es/&#34;&gt;version dos traducida al español&lt;/a&gt;
+fue algo dificil de encotrar. Si, esta completa. No es del todo precisa o
+revisada, aunque es lo suficientemente entendible, pero sus defectos resaltan a
+simple vista. Por ejemplo, que una funcion este traducida y en el siguiente
+parrafo se presente en ingles, o que el palabro sea traducible al español, pero
+se quede en ingles. Esta traduccion esta en un git y por lo que se, no tiene
+version web&lt;/p&gt;
+
+&lt;p&gt;las intrucciones para generar la version web, son estas:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/ManRR/rust-book-es/
+cd rust-book-es/second-edition/es
+cargo install mdbook
+mdbook build
+mi-navegador-web book/index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el unico sitio donde he visto señas de esta traduccion es un issue en el
+repositorio en english del libro&amp;hellip; un issue sin respuestas ni atencion, como el
+repo mismo. Si no pueden o no quieren generar la version web, la he colocado en,
+&lt;a href=&#34;https://nasciiboy.land/book4all/rust-2nd/&#34;&gt;aqui&lt;/a&gt;. Esta tal cual se genera
+(excepto por que cambie el tamaño y ancho del texto). Por lo demas, tiene
+fuentes de google y js que le permite ocultar cosas y cambiar el tema (me gusta
+el &lt;em&gt;ayu&lt;/em&gt;). Si son rust-fancys pasar por el repo, darle like y colaborar.&lt;/p&gt;
+
+&lt;p&gt;Segun su repositorio, la ultima vez que se toco fue hace 4 meses. Parece algo
+desfasada de la version en ingles, pese a ello, es mas extensa y detallada que
+lo contenido en la version uno. Esta es la que recomendaria para hispanos.&lt;/p&gt;
+
+&lt;p&gt;(el colega tiene otra traduccion &lt;a href=&#34;https://github.com/ManRR/rust-ffi-omnibus-es&#34;&gt;https://github.com/ManRR/rust-ffi-omnibus-es&lt;/a&gt;
+que parece ser una github-wiki, no estoy seguro que sea o si este terminada, ni
+como hacer una exportacion a html)&lt;/p&gt;
+
+&lt;p&gt;(el camarada no tiene web o correo. Dejando de lado las licencias, le deje una issue pidiendo permiso para
+colgarla en este antro. Tres dias despues, ante el silencio asumo un si)&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Finalmente, tenemos la &lt;a href=&#34;https://doc.rust-lang.org/book/second-edition/index.html&#34;&gt;version en englis de la version dos&lt;/a&gt;
+la mas completa, extensa y actualizada si te entiendes con el lenguaje.&lt;/p&gt;
+
+&lt;p&gt;(En el manual oficial en ingles, por alguna razon colocan el repo &lt;a href=&#34;https://github.com/thecodix/book&#34;&gt;https://github.com/thecodix/book&lt;/a&gt;
+como la version traducida al español&amp;hellip; zzzz, apenas y esta traducida la introduccion&amp;hellip;)&lt;/p&gt;
+
+&lt;h2 id=&#34;rust-vs-go&#34;&gt;rust VS go&lt;/h2&gt;
+
+&lt;p&gt;(&amp;hellip; Recordar que solo lo he sobrevolado el lenguaje por dos dias)&lt;/p&gt;
+
+&lt;p&gt;me preguntaba si rust contaria con mejores herramientas para plasmar mi codigo
+de manera mas &amp;ldquo;organica&amp;rdquo; y (spoiler) he descubierto que cuenta con mas y
+complejas construcciones, pero me costaria decir que son mejores. Interesantes?
+si, Armoniosas? n-o-p, Cripticas? segun quien.&lt;/p&gt;
+
+&lt;p&gt;Haber, que tenga punto y coma al final de las declaraciones a lo C se puede
+olvidar facilmente y el compilador te lo recordara, ja, ja,
+ja. Sorprendentemente, cuando no pones los punto y comas las declaraciones se
+comportan como lisp, y eso, eso mola!&lt;/p&gt;
+
+&lt;p&gt;La declaracion de variables, por otro lado es fastidiosa, go es mucho mas
+compacto y agradable&lt;/p&gt;
+
+&lt;p&gt;mmm, el manejo de memoria con dueños, pertenecias y prestamos, esta interesante,
+parece fastidioso, pero me gustaria ver un Go sin recolector de basura
+implementando este concepto&lt;/p&gt;
+
+&lt;p&gt;La forma de dividir el codigo en librerias, modulos y determinar el acceso a
+metodos/cosas, me corto totalmente el buen rollo inicial con rust, (・_・ヾ es muy
+confuso. Dividir el codigo en modulos, que pueden estar en ficheros o dentro del
+mismo modulo, cada uno con acceso publico o no, y como acceder a estos modulos
+desde codigo dentro del mismo proyecto y/o carpeta fue algo que no pude
+hacer. En verdad es bastante confuso y molesto, parece una chapuza a medio hacer.&lt;/p&gt;
+
+&lt;p&gt;la dinamica del mono-repo de go es mas clara y sencilla, que tu &amp;ldquo;modulo&amp;rdquo; se
+aplique a la carpeta actual y puedas invocarla de manera sencilla con su mera ruta y
+a su vez se comporte como un (pseudo) obejeto, mola un webo. Rust, aun saliendo
+un añito mas tarde no tiene algo tan bonico.&lt;/p&gt;
+
+&lt;p&gt;slices y vectores&amp;hellip; mierda, por que rust? por que se parecen tanto a C++/Java
+(lo de los modulos tambien esta muy java). El acceso a metodos/cosas en modulos
+tambien muy java&amp;hellip; y los limites de lo que incluyen las macros por defecto o la
+libreria estandar tampoco es claro. Ni hablar del &lt;code&gt;&amp;amp;self&lt;/code&gt; en las estructuras o el
+&lt;code&gt;&amp;amp;mod self&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;interfaces&amp;rdquo; en lugar de herencia, bien. Lo de las &lt;code&gt;&amp;lt;T&amp;gt;&lt;/code&gt;, las enumeraciones
+&amp;ldquo;raras&amp;rdquo; y los &lt;code&gt;match&lt;/code&gt; no lo termino de tener claro&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;documentar las funciones con &lt;strong&gt;markdown&lt;/strong&gt;, jo, jo, jo, que cagada. Dejalos
+sueltos y te ponen etiquetas html a lo burro&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;convertir funciones en funciones de prueba junto al codigo simplemente agregando
+indicaciones &lt;code&gt;#[test]&lt;/code&gt;, fabuloso! Tener que incluir estas declaraciones dentro
+de un modulo con otra indicacion extraña &lt;code&gt;#[cfg(test)]&lt;/code&gt; y seguir colocando el
+&lt;code&gt;#[test]&lt;/code&gt; a cada prueba para que el compilador no las incluya en el binario
+final&amp;hellip; una mierda!&lt;/p&gt;
+
+&lt;p&gt;mmmm. esta bien que tengas bonitos poderes configuratorios para el compilador,
+pero tienes un monton de posibilidades cripticas que con nada se pueden ir de
+madre o ser utilizadas para acallar al compilador, por que? en serio, por que?&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;cargo&lt;/code&gt;, mehhh, regular. &lt;code&gt;go&lt;/code&gt; mola mas&lt;/p&gt;
+
+&lt;p&gt;documentacion, supongo que configurando bien el editor con autocompletado y
+ayudas debe ser sencillo. Pero &lt;code&gt;go doc&lt;/code&gt; ya solo por mostrarte los prototipos de
+las funciones, variables y constantes en una libreria sin recurir a versiones
+web es infinitamente mas comodo, ademas funciona sin &amp;ldquo;compilaciones&amp;rdquo; ni
+naah. Esto junto a lo java/raro de la organizacion de librerias mataron mis
+ansias por el oxido&lt;/p&gt;
+
+&lt;p&gt;como conclusion, rust tiene muchas, muchas muchas herramientas, un lenguaje mas
+a los que dare el calificativo de &lt;em&gt;katamari&lt;/em&gt;, un pegote de caracteristicas de
+lisp, C++ y &amp;ldquo;cosas&amp;rdquo; que se sienten faltas de una coherencia planificada, como si
+lo es Go, donde puedo visitar codigo ajeno casi con la certesa de comprender lo
+que sucede&lt;/p&gt;
+
+&lt;p&gt;pero no terminare totalmente desilucionado, me gustaron los comportamientos a lo
+lisp y que sea de &amp;ldquo;estilo libre&amp;rdquo; en su escritura. Me jode que no tenga
+operadores de (pre|pos)(in|de)cremento, tambien que no tenga &lt;code&gt;for&lt;/code&gt;s de dos/tres
+campos y que las cosas distintas a cero no sean siempre verdadero. Oh, los valores
+de 128 bits aprueban. No termine de enterarme sobre sus cadenas unicode 8, los
+char y si estos son o no runas&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Goaccess</title>
+      <link>https://nasciiboy.land/prog/goaccess/</link>
+      <pubDate>Thu, 27 Sep 2018 09:20:41 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/goaccess/</guid>
+      <description>
+
+&lt;p&gt;esta &amp;ldquo;bitacora&amp;rdquo; no incluye galletas, ni js (de mierda) y aunque tiene
+casi dos añitos de existir, hasta hace poco no tenia idea de cuantas personas (o
+cosas) se pasan por aqui o para que&lt;/p&gt;
+
+&lt;p&gt;uno de los cambios que vino tras (parte de) el exilio de github fue que ahora
+los logs del servidor son mios, para como todos los demas, &amp;ldquo;recoger
+estadisticas&amp;rdquo;. Sin embargo las consultas se limitaban a ver un conteo de visitas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 15)&#39; | awk &#39;{ tot+=$2 }; END { print &amp;quot;TOTAL &amp;quot; tot }&#39;
+TOTAL 16352
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o graficar las ip mas frecuentes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | tail | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 20)&#39;
+188.40.107.254  228     ▄▄▄▄▄▄▄▄▄▄
+192.3.177.102   231     ▄▄▄▄▄▄▄▄▄▄
+23.237.4.26     301     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+92.185.168.114  315     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+5.45.207.58     346     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+78.46.161.81    355     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+216.244.66.228  693     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+94.130.18.77    697     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+104.248.193.105 724     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+187.225.125.52  1234    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hasta que una nueva busqueda llevo a conocer un programito que puede hacer mas
+cosas con los logs de acceso de nginx (de apache y otros). No solo eso, ademas
+viene en los repositorios de debian 9, esta escrito en C, no requiere procesos en
+segundo plano, demonios, js o ninguna mierda extrabagante y nos hara sentir
+mejor persona&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si lo lanzamos de la siguiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess -f /var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se abrira un menu para indicar el formato de log, fecha y tiempo que vamos a
+utilizar, porque, aunque el programa sea eficaz, no es magico&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;basta con presionar &lt;code&gt;Espacio&lt;/code&gt; en una de las opciones y lugo dar un &lt;code&gt;Enter&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si la opcion que hemos elegido no es valida para el log, nos lo informara y
+podremos probar otra hasta que funcione&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;con la informacion de esta pantalla, mas tarde podriamos configurar el programa
+para ingresar directamente en la interfaz de texto. Dentro de las opcciones que
+he podido probar y funcionan para mi servidor (nginx) con una sola pagina sin
+&amp;ldquo;Virtual Host&amp;rdquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NCSA Combined Log Format&lt;/li&gt;
+&lt;li&gt;Common Log Format (CLF)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;las opcciones que son invalidas&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NCSA Combined Log Format with Virtual Host&lt;/li&gt;
+&lt;li&gt;Common Log Format (CLF) with Virtual Host&lt;/li&gt;
+&lt;li&gt;W3C&lt;/li&gt;
+&lt;li&gt;CloudFront (Download Distribution)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;con estos datos ya podemos acceder a la configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; emacs /etc/goaccess.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y descomentar las siguientes lineas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+time-format %H:%M:%S
+...
+date-format %d/%b/%Y
+...
+# NCSA Combined Log Format
+#
+log-format %h %^[%d:%t %^] &amp;quot;%r&amp;quot; %s %b &amp;quot;%R&amp;quot; &amp;quot;%u&amp;quot;
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tras esto, ejecutando de nuevo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess -f /var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;entrariamos directamente en la interfaz de texto (&lt;code&gt;q&lt;/code&gt; para salir)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;podriamos ademas indicar cual es exactamente el fichero que vamos a utilizar
+como datos de entrada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Specify the path to the input log file. If set, it will take
+# priority over -f from the command line.
+#
+#log-file /var/log/apache2/access.log
+log-file /var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de esta manera solo bastaria ejecutar &lt;code&gt;goaccess&lt;/code&gt; sin ningun argumento extra.
+Pero y basado en mis pruebas, algunos parametros de linea de comandos, cuando se
+establecen en la configuracion (como &lt;code&gt;log-file&lt;/code&gt; o &lt;code&gt;log-format&lt;/code&gt;) parecen ser
+totalmente ignorados si se utiliza &lt;code&gt;goaccess&lt;/code&gt; luego de una tuberia. Me explico,
+si tras la configuracion lanzamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess -f /var/log/nginx/access.log -c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos permite cambiar el fichero de entrada, tambien modificar el formato de log,
+fecha y hora. Sin embargo, utilizado en una tuberia&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | goaccess -c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;goaccess&lt;/code&gt; se pasara por el forro los datos de la tuberia y tambien los parametros que
+agreguemos (&lt;code&gt;-c&lt;/code&gt;). Solamente hace caso del contenido en su fichero de configuracion. Por
+esta razon, para hacer una metrica de un &amp;ldquo;bulto de logs&amp;rdquo; (como en el comando
+anterior) o de logs distintos, recomiendo no configurar &lt;code&gt;log-file&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;adicionalmente he incluido las siguientes lineas para indicar que algunas
+extensiones se consideren como ficheros estaticos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static-file .mkv
+static-file .webm
+static-file .mp4
+static-file .xz
+static-file .zip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;veamos ahora el uso de este programito, haciendo un&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;veremos que tiene unos datos principales (como peticiones totales, visitantes
+unicos, ficheros estaticos, etc) y (moviendo las frechas arriba y abajo) las
+&amp;ldquo;secciones&amp;rdquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 - Unique visitors per day - Including spiders&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2 - Top requests (URLs)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;3 - Top static requests (e.g. jpg, png, js, css&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;4 - HTTP 404 Not Found URLs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;5 - Visitor hostnames and IPs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;6 - Operating Systems&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;7 - Browsers&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;8 - Time Distribution&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;10 - Referring Sites&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;12 - Geo Location&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;13 - HTTP Status Codes&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;de las cuales una es la seccion &amp;ldquo;activa&amp;rdquo;. Esto se indica ademas de por un
+resaltado, por iniciar con el signo &lt;code&gt;&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para entrar en dicha seccion, presionamos bien &lt;code&gt;Espacio&lt;/code&gt;, o bien &lt;code&gt;Enter&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ya dentro, podemos movernos por &amp;ldquo;las filas&amp;rdquo; mediante &lt;code&gt;j&lt;/code&gt; (abajo) y &lt;code&gt;k&lt;/code&gt; (arriba),
+&lt;code&gt;g&lt;/code&gt; inicio y &lt;code&gt;G&lt;/code&gt; fin. Tambien, (de una manera un poco rara) ajustar lo que
+aparece en pantalla con arriba y abajo&lt;/p&gt;
+
+&lt;p&gt;para salir de &amp;ldquo;la seccion&amp;rdquo; precionamos &lt;code&gt;q&lt;/code&gt;. Para saltar a la siguiente seccion
+&lt;code&gt;TAB&lt;/code&gt; para saltar a la seccion anterior &lt;code&gt;Shift-TAB&lt;/code&gt; y para ir a una seccion
+especifica mediante su numero del 1-9. (No me pregunten como ir a la seccion 1X). Para
+saltar a la ultima seccion &lt;code&gt;G&lt;/code&gt; y a la primera &lt;code&gt;g&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;podemos alterar el tema de colores con &lt;code&gt;c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y ver el resto de la ayuda con &lt;code&gt;F1&lt;/code&gt; o &lt;code&gt;h&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;otra manera menos &amp;ldquo;rudimentaria&amp;rdquo; de ver las metricas seria crear un fichero
+html, Waaalaa!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para eso, solamente es necesario rediriguir la salida de la
+siguiente forma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | goaccess &amp;gt; mis-metricas.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en la &lt;a href=&#34;https://goaccess.io/faq&#34;&gt;documentacion&lt;/a&gt; mencionan un parametro para hacer
+que las metricas en formato web funcionen en tiempo real&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess /var/log/nginx/access.log -o /var/www/html/report.html --real-time-html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aunque en la vercion incluida en debian, dicho parametro no esta disponible. Por lo demas,
+consultar la pagina &lt;a href=&#34;https://goaccess.io/get-started&#34;&gt;web del proyecto&lt;/a&gt;, su man
+y darles ★★★★★ en &lt;a href=&#34;https://github.com/allinurl/goaccess/&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;.&lt;/p&gt;
+
+&lt;p&gt;tras &amp;ldquo;un buen&amp;rdquo; uso de &lt;code&gt;goacces&lt;/code&gt; sin necesitar de un reemplazo a la herramienta,
+(pero no por ello ignorar &amp;ldquo;lo torpe&amp;rdquo; de la interfaz de linea de comandos),
+encontre que se puede filtrar el rango de dias a consultar utilizando (como no)
+las tipicas herramientas de &amp;ldquo;la filosofia unix&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Para ello dos sencillos ejemplos. Primero consultar el dia actual&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# en bash
+&amp;gt; zcat -f /var/log/nginx/access.log* | grep -i $(date &#39;+%d/%b/%Y&#39;) | goaccess
+
+# en fish
+&amp;gt; zcat -f /var/log/nginx/access.log* | grep -i (date &#39;+%d/%b/%Y&#39;) | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y (simplificando lo anterior) consultar las visitas del ultimo mes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | grep -i $(date &#39;+/%b/%Y&#39;) | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tambien, pero esta vez con &lt;code&gt;fish&lt;/code&gt; consultar las visitas de hoy y ayer&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# en fish
+&amp;gt; zcat -f /var/log/nginx/access.log* | awk (printf &amp;quot;/%s/; /%s/&amp;quot; (date -d &amp;quot;yesterday&amp;quot; &#39;+%d\\/%b\\/%Y&#39;) (date &#39;+%d\\/%b\\/%Y&#39;)) | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;logrotate&#34;&gt;logrotate&lt;/h2&gt;
+
+&lt;p&gt;y ahora veamos que con el buen log de nginx.&lt;/p&gt;
+
+&lt;p&gt;en debian cuando instalamos nginx desde los repos, misteriozamente comienzan a
+brotar ficheros &lt;code&gt;access.log.1&lt;/code&gt;, &lt;code&gt;access.log.2&lt;/code&gt;, &lt;code&gt;access.log.3&lt;/code&gt;, …, a razon de
+uno por dia. Este comportamiento se debe a un programa que corre una vez por dia
+de nombre &lt;code&gt;logrotate&lt;/code&gt;, que rota los ficheros &lt;code&gt;access&lt;/code&gt; y &lt;code&gt;error&lt;/code&gt; todos los
+dias&amp;hellip;  bien podria considerarse una copia de seguridad de los sucesos del
+servidor, o bien una molestia innecesaria, segun cada quien.&lt;/p&gt;
+
+&lt;p&gt;En un post de &lt;a href=&#34;https://www.linuxito.com/gnu-linux/nivel-medio/927-como-instalar-logrotate-y-configurar-la-rotacion-de-logs-de-nginx&#34;&gt;linuxito&lt;/a&gt;
+el nos comentaba como instalar y configurar &lt;code&gt;logrotate&lt;/code&gt;, pero como ya en debian
+funciona por defecto sin que hagamos nada, me he limitado a modificar el
+comportamiento, de forma que los registros roten solo una vez por mes&lt;/p&gt;
+
+&lt;p&gt;mediante nuestro editor faborito&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; emacs /etc/logrotate.d/nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aparece lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/var/log/nginx/*.log {
+        daily
+        missingok
+        rotate 14
+        compress
+        delaycompress
+        notifempty
+        create 0640 www-data adm
+        sharedscripts
+        prerotate
+                if [ -d /etc/logrotate.d/httpd-prerotate ]; then \
+                        run-parts /etc/logrotate.d/httpd-prerotate; \
+                fi \
+        endscript
+        postrotate
+                invoke-rc.d nginx rotate &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+        endscript
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;lo he dejado asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/var/log/nginx/*.log {
+	monthly
+	missingok
+	rotate 14
+	compress
+	notifempty
+	create 0640 www-data adm
+	sharedscripts
+	prerotate
+		if [ -d /etc/logrotate.d/httpd-prerotate ]; then \
+			run-parts /etc/logrotate.d/httpd-prerotate; \
+		fi \
+	endscript
+	postrotate
+		invoke-rc.d nginx rotate &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+	endscript
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;nascii-results&#34;&gt;nascii-results&lt;/h2&gt;
+
+&lt;p&gt;y bueno, ya que estoy por que no hacer un analisis de los logs y obtener
+informacion que no influira de ninguna manera el futuro de este diario&amp;hellip; amenos
+no de momento y solo contemplando la posivilidad de colocar anuncios
+de hardware y de porno. A todo mundo le gusta el porno y el harware, no?&lt;/p&gt;
+
+&lt;p&gt;si quieren acompañarme con sus propias deducciones coloco el resultado
+&lt;a href=&#34;http://nasciiboy.land/goaccess.html&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El servidor inicio con los resgistros hace 17 dias con un total de 17XXX
+visitas, que serian una media aproximada de 1k por dia y segun la seccion
+&lt;strong&gt;Browsers&lt;/strong&gt; el 27% se identifica con el genero no binario grissexual
+&lt;em&gt;Crawlers&lt;/em&gt;. Otro buen habido 26% son firefoxxexual y el resto, las minorias
+oprimidas que no importan. 47% prefiere no informar que OS utiliza, 23% procede
+de las ventanas y los demas votan como Unix Like&lt;/p&gt;
+
+&lt;p&gt;aunque el sitio no esta contemplado para verse desde un movil&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/movil.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;casi un 5% lo hace asi. Puede que no incluya mierdas web, pero las imagenes si
+las incluyo en sus resoluciones originales y aveces en png! Mmm, si se
+preguntaban yo la veo asi en el navegador&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/web.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La hora preferida por los huespedes son las 05. El trafico en su mayoria
+proviene de&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;40% USA&lt;/li&gt;
+&lt;li&gt;10% Mexico&lt;/li&gt;
+&lt;li&gt;26% de europa, con un atemorizante 9% de alemania (que buscaran?)
+y otro razonable 5% de Espania&lt;/li&gt;
+&lt;li&gt;14% de asia&lt;/li&gt;
+&lt;li&gt;4% de america del sur&lt;/li&gt;
+&lt;li&gt;1% de africa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;la mayoria de trafico se genera internamente (8%) una vez que vienen al sitio y
+el resto esta lidereado por planet.emacs-es.org, mi anterior blog en
+github-pages cuyo contenido apunta aca, unas pocas busquedas en google, bing,
+duckduck y alguna que otra de redit y &amp;ldquo;sitios raros&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;La mayoria solo ve la pagina de inicio. Otros tantos se sienten atraidos por las
+cosas de emacs y/o su curiosadad por los titulos compactos y poco intiutivos
+puede haceles creer que estan escritos en english.  Tambien hay numerosas
+consultas al servidor por cosas que terminan en &lt;code&gt;.php&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;una ves dentro del sitio, poco interesa por que no todos las entradas tienen
+trafico (o por que ya son habituales del sitio que consultan la novedad). Las
+novedades rondan 30 visitas, siendo lo mas consultado el feed (imagino que
+por mi mismo)&lt;/p&gt;
+
+&lt;p&gt;En resumen, deberia hacer caso a los crawlers y poner cosas en php!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>morgue</title>
+      <link>https://nasciiboy.land/prog/morgue/</link>
+      <pubDate>Sun, 23 Sep 2018 14:07:26 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/morgue/</guid>
+      <description>&lt;p&gt;hace como cuatro meses, habia hecho la siguiente divagacion sobre &amp;ldquo;datos&amp;rdquo; y lenguajes de marcas ligeras
+para solicitar una asistencia que no tuvo respuesta&amp;hellip; eso llevo un tiempo y ademas lo
+habia escrito con &amp;ldquo;el morg&amp;rdquo;. Mis deseo era publicarlo aqui tambien, pero por
+lo &amp;ldquo;simplote&amp;rdquo; que es el parser de markdown de hugo, se ropia al tomar la
+exportacion html y colocarla directamente.&lt;/p&gt;
+
+&lt;p&gt;No fue hasta hace un par de dias que me pregunte si aun estaba esta divagacion
+en el disco, y si, lo estaba. Tenia pereza de reescribirlo en markdown, y dudas
+de dejarlo suelto dentro de algun directorio. Aunque olvide el por que, su
+escritura me genero sierta satisfaccion.&lt;/p&gt;
+
+&lt;p&gt;Sin mas le ayude al parser, quitando lineas en blanco en los bloques de codigo,
+hasta que dio el siguiente resultado&lt;/p&gt;
+
+&lt;p&gt;&lt;h2 id=&#34;estrutura-de-datos-para-almacenar-un-documento&#34; &gt;Estrutura de datos para almacenar un documento&lt;/h2&gt;
+&lt;div class=&#34;hBody-2&#34; &gt;
+&lt;p&gt;los documentos basados en el lenguaje de marcado &lt;a href=&#34;https://es.wikipedia.org/wiki/SGML&#34; &gt;SGML&lt;/a&gt; como lo son &lt;a href=&#34;https://es.wikipedia.org/wiki/HTML&#34; &gt;html&lt;/a&gt; utilizan un sistema de etiquetas (balanceadas), jerarquicas y con un orden especifico segun el significado y contexto de la etiqueta&lt;/p&gt;&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;etiqueta&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hijo-etiqueta&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;attr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;un-atributo&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;attr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;otro-atributo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;texto&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;otro texto&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hijo-etiqueta&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;etiqueta&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;encajar los elementos de un documento (parrafos, encabezados, listas, definiciones, ...) a esta uniformidad permite tanto extender el lenguaje con nuevas etiquetas, como agregar mucha meta informacion sobre cada uno de sus componentes y a su vez da indicios de como crear una estructura de datos sencilla para almacenar cada elemento. Por ejemplo, &lt;a href=&#34;https://es.wikipedia.org/wiki/Go_(lenguaje_de_programaci%C3%B3n)&#34; &gt;El lenguaje de programacion Go&lt;/a&gt; en el paquete &lt;a href=&#34;https://github.com/golang/net/blob/master/html/node.go&#34; &gt;x/net/html&lt;/a&gt; provee funcionalidades para analizar un documento html y almacenarlo en la siguiente estructura:&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Node&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Parent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;FirstChild&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;LastChild&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;PrevSibling&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;NextSibling&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Node&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Type&lt;/span&gt;      &lt;span class=&#34;nx&#34;&gt;NodeType&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt;      &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Namespace&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Attr&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Attribute&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;existe un nodo inicial del que descienden todos los elementos del documento, organizados sengun su nivel de anidamiento. Cada nodo puede tener un numero de hijos indefinido (almenos para la estructura y la logica del marcado SGML). Tambien puede tener hermanos, que son etiquetas en el mismo nivel de anidamiento dentro de una etiqueta. Pueden tener un padre, que es la etiqueta de la que desciende el nodo actual, un numero indefinido de Atributos y finalmente almacenar datos en forma de cadena de texto, que en ultima instancia seria el contenido del documento en si.&lt;/p&gt;
+&lt;p&gt;Recorrer y analizar el fichero de texto para almacenar la informacion en tal estructura &lt;b&gt;siempre que las etiquetas esten balanceadas&lt;/b&gt;, aunque tiene varias dificultades, no es una tarea demaciado compleja y la estructura jerarquia resultante es relativamente sencilla de recorrer.&lt;/p&gt;
+&lt;p&gt;Pero, por otro lado, encajar los elementos de un documento en la logica de las etiquetas en no pocas ocaciones pudiera resultar en algo forzado y siempre se corre con el riesgo (sobre todo si el que escribe el documento es un humano) de no balancear las etiquetas en el lugar apropiado, lo cual en el caso mas optimista puede pasar desapersivido y en el peor resultar en una estructura de los datos incorrejiblemente incorrecta.&lt;/p&gt;
+&lt;p&gt;quiza entonces, no solo por la complejidad para un humano de escribir texto con etiquetas balanceadas, sino tambien por lo exigente de conocer a fondo un sin numero de etiquetas, atributos, ordenes y jerarquias de anidamiento, seria pues una mejor alternativa extraer las construcciones fundamentales del lenguaje escrito (utilizado en libros, documentos tecnicos, novelas y documentacion en general) para dar forma tanto a un nuevo lenguaje de documentacion, como a su programa adjunto que lo haga funcional.&lt;/p&gt;
+&lt;p&gt;En este momento, el desinformado diria: &lt;q&gt;con lo sencillo que es, por que no utilizar word para escribir documentacion&lt;/q&gt; y el entendido, reponderia: &lt;q&gt;por que word es un &lt;em&gt;programa de dibujo&lt;/em&gt;, ineficiente, obscuro, torpe y un sin fin de sinsentidos mas que no vale la pena ni mencionar&lt;/q&gt;.&lt;/p&gt;
+&lt;p&gt;(Por la extension y en buena parte desconocimiento de puntos concretos de algunas otras alternativas para escribir documentacion, como son &lt;a href=&#34;https://es.wikipedia.org/wiki/Groff&#34; &gt;Groff&lt;/a&gt; o &lt;a href=&#34;https://es.wikipedia.org/wiki/TeX&#34; &gt;TeX&lt;/a&gt; omitire comentarlos, asi como tambien su acercamiento hacia la forma de abordar la escritura de documentacion. Las ideas posteriores suponen que se cuenta con alguna nocion en &lt;a href=&#34;https://es.wikipedia.org/wiki/Lenguaje_de_marcas_ligero&#34; &gt;lenguajes de marcas ligeras&lt;/a&gt;. Se puede indagar en los siguientes enlaces: &lt;a href=&#34;https://en.wikipedia.org/wiki/Comparison_of_document_markup_languages&#34; &gt;https://en.wikipedia.org/wiki/Comparison_of_document_markup_languages&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Lightweight_markup_language&#34; &gt;https://en.wikipedia.org/wiki/Lightweight_markup_language&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;Supongamos que se cuenta con un formato de documentacion mas proximo a lo que un humano puede escribir e interpretar con &lt;q&gt;naturalidad&lt;/q&gt; y que se tiene un conjunto limitado y bien definido de elementos posibles, no seria una alternativa mas apropiada almacenar (una vez analizado el documento) los elementos directamente como sus estructuras (&lt;q&gt;Datos&lt;/q&gt;, o sengun el lenguaje de implementacion objetos o interfaces) y ademas (y solo cuando resulte conveniente) aprobechar la &lt;q&gt;composicion jerargica descendiente&lt;/q&gt;?&lt;/p&gt;
+&lt;p&gt;me aclaro (espero) y pongo un ejemplo. En el lenguaje Go podria implementarse de la sigiente manera:&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;DataType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Node&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Parent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;FirstChild&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;LastChild&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;PrevSibling&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;NextSibling&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Node&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aqui &lt;code&gt;Node&lt;/code&gt; es la estructura en si, &lt;code&gt;Data&lt;/code&gt; es un artilugio para incrustar cualquier estructura (que tenga un metodo &lt;code&gt;DataType&lt;/code&gt;) dentro de ella. En cuanto al resto se conserva la jerarquia de hijos, hermanos y padre... en caso de que la alla. Mas tarde, al recorrer la jerarquia, bastaria con hacer un &lt;q&gt;cast&lt;/q&gt; a &lt;code&gt;Data&lt;/code&gt; para tratar con el elemento de cada nodo directamente&lt;/p&gt;
+&lt;p&gt;bueno... estube probando dicha estructura preeliminarmente, es bueno que los elementos anidados de la estructura sean punteros por que asi el asignar memoria para cada nodo es poco exigente con la pila de memoria.&lt;/p&gt;
+&lt;p&gt;Sin embargo, por la naturaleza del lenguaje Go (donde no se pueden comparar punteros), en adicion de que para algunos elementos es importante conocer la cantidad de elementos anidados (hijos), lo engorroso que seria contabilizarlos dentro de listas enlazadas y la poco elegante forma de iterar sobre la estructura descendente&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;docNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;FirstChild&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;NextSibling&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// ...
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;FirstChild&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;NextSibling&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// ...
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// ...
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;me llebaron a la conclusion de que en general tener punteros al padre y hermanos, es de poca utilidad y, es mas util substituir los punteros de listas enlazadas por un slice (&lt;dfn&gt;un arreglo con crecimiento dinamico&lt;/dfn&gt;), como puede verse en la siguiente version&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;DataType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;DocNode&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;DocNode&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;quedando la iteracion por los elementos anidados de la siguiente manera&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;docNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// ...
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// ...
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// ...
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se utilizan punteros a los nodos para evitar la sobrecarga en las copias con cada expansion del slice (&lt;code&gt;Cont&lt;/code&gt;). Se asume tambien para evitar comprobaciones de tipo (&lt;code&gt;i != nil&lt;/code&gt;) que el parser del lenguaje de marcas nunca entregue ningun elemento dentro de un slice &lt;code&gt;Cont&lt;/code&gt; (no &lt;code&gt;nil&lt;/code&gt;) o &lt;code&gt;Data&lt;/code&gt; que sea un puntero nulo (a menos que la especificacion indique lo contrario). Una ventaja adicional de utilizar un slice es que se conocen el numero de elementos anidados y ademas como con cualquier arreglo es posibre acceder a uno en especifico sin la iteracion entre los punteros.&lt;/p&gt;
+&lt;p&gt;Las desventajas (o no) de utilizar este acercamiento, es que los objetos &lt;code&gt;Data&lt;/code&gt; deben tener bien definida su estructura, que el programador la conoce y que en ocaciones podria utilizarse el elemento &lt;code&gt;Cont&lt;/code&gt; como una extension natural de &lt;code&gt;Data&lt;/code&gt; si el elemento del documento se ajusta naturalmente a ello, como lo porian ser el caso de las listas, encabezados y tablas.&lt;/p&gt;
+&lt;p&gt;Pero bueno, no conosco todo lo que existe y en el campo de las estruturas de datos aun soy un novato, por lo que no puedo evitar preguntar si existe una alternativa mejor.&lt;/p&gt;
+&lt;p&gt;De hecho, en una indagacion sobre patrones de diseño por un momento crei que se podria llegar a almacenar directamente la estructura en objetos aplicando una especie de Command/Composite.&lt;/p&gt;
+&lt;p&gt;A modo de ejemplo utilizare el elemento &lt;code&gt;@&lt;/code&gt; del lenguaje de marcas supuesto.&lt;/p&gt;
+&lt;p&gt;el elemento &lt;code&gt;@&lt;/code&gt; puede tener las siguientes variantes&lt;/p&gt;
+
+&lt;div class=&#34;pre-block&#34; &gt;
+&lt;pre class=&#34;pre&#34; &gt;@c(texto)                              // comando y texto
+@abc(texto)                            // comandos concatenados y texto
+@c(texto @d(u) algo)                   // comando que contiene texto y comandos
+@abc(texto @d(u) algo)                 // comandos concatenados que cotienen texto y comandos
+@c(texto&amp;lt;&amp;gt;@d(comando)&amp;lt;&amp;gt;texto-3)        // comando con &amp;#34;ramas&amp;#34; donde cada una puede contener
+                                       // texto, un comando o ambos
+@abc(t&amp;lt;&amp;gt;@d(u)&amp;lt;&amp;gt;v)                      // comandos concatenados con &amp;#34;ramas&amp;#34; donde cada una
+                                       // puede contener texto, otro comando o ambos
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Cada objeto contiene solo lo minimo necesario y se encargara unicamente de ejecutar su funcion:&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;nx&#34;&gt;tipe&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Do&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Exec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Text&lt;/span&gt;     &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Txt&lt;/span&gt;   &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;next&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// solo se encarga del texto
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Comand&lt;/span&gt;   &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Type&lt;/span&gt;    &lt;span class=&#34;kt&#34;&gt;rune&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;next&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// para un comando uni-tipo
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Commands&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Types&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;rune&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;next&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// para comandos concatenados
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Rama&lt;/span&gt;     &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Dos&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Do&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;next&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// para la mezcla de texto/comando
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Ramas&lt;/span&gt;    &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Dos&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Do&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;next&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// para la division de ramas &amp;#34;&amp;lt;&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Text&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Exect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* ... */&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Comand&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Exect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* ... */&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Commands&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Exect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* ... */&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Rama&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Exect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* ... */&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Ramas&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Exect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* ... */&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(este codigo es solo una aproximacion, ya no me acuerdo como lo habia implementado)&lt;/p&gt;
+&lt;p&gt;estube explorando la opcion de que los &lt;code&gt;Data&lt;/code&gt; (o almenos este elemento) echara mano de patrones de diseño para generalizar la estructura del documento y quiza presindir de la estructura jerarquica... para terminar descubriendo que los patrones de diseño y las estructuras de datos poco tiene que ver unos con otros, pues al aplicar este razonamiento tendrian que ligarse tanto el analizador del documento como su &lt;q&gt;renderizador/exportador/modificador&lt;/q&gt;, es decir, se tendria que crear una version dedicada paca cada funcionalidad a aplicar y comunicar una funcionalidad con la de otro renderizador/exportador/modificador seria por lo menos complejo... o si se opta por un aglutinar todo en un sitio, cada nodo estaria copado de if-elses o switches extensos, o bueno, esa fue la conclusion a la que llegue. De momento no he encontrado una reconsiliacion entre tener una estructura de datos y la aplicacion de patrones de diseño&lt;/p&gt;
+&lt;p&gt;tras el fiasco anterior, llegue a la conclusion de que la forma optima de ajustar la idea del elemento &lt;q&gt;&lt;code&gt;@&lt;/code&gt;&lt;/q&gt; dentro de la estructura &lt;code&gt;DocNode&lt;/code&gt;, es la siguiente&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;kd&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;NodeMarkupCero&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;iota&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;NodeMarkupVerse&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupCero&lt;/span&gt;  &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Str&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupVerse&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Type&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;rune&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Brace&lt;/span&gt;  &lt;span class=&#34;kt&#34;&gt;rune&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Forest&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupCero&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;DataType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;NodeMarkupCero&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupVerse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;DataType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;NodeMarkupVerse&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;donde &lt;code&gt;MarkupCero&lt;/code&gt; seria exclusivo para almacenar el texto y &lt;code&gt;MarkupVerse&lt;/code&gt; se utiliza para indicar (dentro de la estructura &lt;code&gt;DocNode&lt;/code&gt;) el tipo(s) de comando(s) y de una forma un poco criptica (con la variable &lt;code&gt;Forest&lt;/code&gt;) si su &lt;code&gt;Cont&lt;/code&gt; es una mezcla de texto/comando o una consecucion de ramas que almacenan texto/comando.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, &lt;code&gt;&amp;#34;texto&amp;#34;&lt;/code&gt;, se representaria como la estructura&lt;/p&gt;
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;DocNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupCero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;texto&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;es decir, la &lt;code&gt;Data&lt;/code&gt; principal del nodo es simple texto y no tiene ningun elemento anidado&lt;/p&gt;
+&lt;p&gt;para &lt;code&gt;&amp;#34;@abc(texto y un @i(comando con texto))&amp;#34;&lt;/code&gt;, seria:&lt;/p&gt;
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;DocNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupVerse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;rune&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Forest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;DocNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;DocNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupCero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;texto y un &amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;DocNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupVerse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;rune&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39;i&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Forest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+                                 &lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Docnode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Docnode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupCero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;comando con texto&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+                                                             &lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                                           &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+                                 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;heee, bueno, no tan sencillo... asi que omitire el ejemplo de una estructura de contiene &lt;q&gt;ramas&lt;/q&gt;.&lt;/p&gt;
+&lt;p&gt;El recorrido, por otro lado es bastante trivial. He aqui el codigo necesario para reconstruir apartir de la estructura el documento de entrada&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;DocNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Rebuild&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;switch&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupVerse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Sprintf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;@%s%c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Brace&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Forest&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Rebuild&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;lt;&amp;gt;&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Cont&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Rebuild&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Brace&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Sprintf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;%c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;comBrace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Brace&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MarkupCero&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Str&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y bueno, despues de todo este lio mental sobre la forma ideal para almacenar un documento, vuelvo a plantear (si no lo hice anteriormente) la duda principal: es buena idea relegar la carga de cada elemento en el programador y encomendarle conocer tanto la estructura como la forma en que se aprobecha (o no) &lt;code&gt;DocNode&lt;/code&gt;, o por el contrario, es mejor continuar las enseñansas de SGML ajustando los elementos a un flujo de etiquetas con significado y jerarquia especifico. O quiza, con un poco de paciencia y suerte esperar una nueva y audaz propuesta, quiza una que conjugue patrones y estructuras de datos&lt;/p&gt;
+&lt;p&gt;para terminar esta divagacion, aqui el boceto de como ha de ser la estructura global del documento analizado&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class=&#34;code&#34; &gt;&lt;code class=&#34;chroma&#34; &gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Doc&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Toc&lt;/span&gt;         &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;DocNode&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Title&lt;/span&gt;         &lt;span class=&#34;nx&#34;&gt;Markup&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Subtitle&lt;/span&gt;      &lt;span class=&#34;nx&#34;&gt;Markup&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Lang&lt;/span&gt;          &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Licence&lt;/span&gt;       &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Date&lt;/span&gt;          &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;ID&lt;/span&gt;            &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Description&lt;/span&gt;   &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Author&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Translator&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Source&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Style&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;Tags&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;HShift&lt;/span&gt;        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;BoolOptions&lt;/span&gt;   &lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;// as ==&amp;gt; someOption || someOption()
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;TextOptions&lt;/span&gt;   &lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;// as ==&amp;gt; someOption(&amp;#34;text&amp;#34;)
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;NumbOptions&lt;/span&gt;   &lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;// as ==&amp;gt; someOption( numb )
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;MultOptions&lt;/span&gt;   &lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][]&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Arg&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;// as ==&amp;gt; someOption( numb, &amp;#34;text&amp;#34;, float, bool, ident, &amp;hellip; )
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;MoreConfigs&lt;/span&gt;   &lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// as ==&amp;gt; ..whatever &amp;gt; whatever
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;basicamente &lt;code&gt;Toc&lt;/code&gt; es el documento en si, donde cada elemento del slice es un encabezado y cada uno de estos contiene sus listas, parrados, bloques de codigo, etc, etc.&lt;/p&gt;
+&lt;p&gt;El resto son la configuracion y &lt;q&gt;meta&lt;/q&gt; ofresidas de una manera mas o menos conveniente.&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>BPS</title>
@@ -262,7 +1749,7 @@ desde la maquina donde conectaremos&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;gt; scp id_rsa.pub nasciiboy@192.168.1.67:.ssh/authorized_keys
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;o, &amp;ldquo;sin saber ni como&amp;rdquo;, con el comando dedicado `ssh-copy-id:&lt;/p&gt;
+&lt;p&gt;o, &amp;ldquo;sin saber ni como&amp;rdquo;, con el comando dedicado &lt;code&gt;ssh-copy-id&lt;/code&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;gt; ssh-copy-id nasciiboy@192.168.1.67
 &lt;/code&gt;&lt;/pre&gt;
@@ -305,14 +1792,14 @@ las comodidades que creamos convenientes (&lt;code&gt;htop&lt;/code&gt;, &lt;cod
 
 &lt;p&gt;luego desde nuestra red local podriamos confirmar si esta arriba el servidor web&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;elinks 192.168.1.177
+&lt;pre&gt;&lt;code&gt;&amp;gt; elinks 192.168.1.177
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;por el momento, un servidor sin comentarios, php, javascript, ni ninguna mierda
 mas, es todo lo que necesito. Como mi web se genera estaticamente, podria
 copiarse directamente todo el contenido dentro de &lt;code&gt;/var/www/http&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;rsync -avz --delete ~/nasciiboy.land/public/ /var/www/html/
+&lt;pre&gt;&lt;code&gt;&amp;gt; rsync -avz --delete ~/nasciiboy.land/public/ /var/www/html/
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;he copiado el directorio que contiene mi web dentro de la home de root. Desde
@@ -571,6 +2058,22 @@ comandos interesantes para conocer &amp;ldquo;¡¿que?!&amp;rdquo; sobre ips, dn
 
 &lt;p&gt;(aqui una combinacion de salidas mezcladas de mi sitio en el vps y de las
 pruebas con el servidor local)&lt;/p&gt;
+
+&lt;p&gt;listar puertos abiertos TCP y UDP&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; netstat -lntu
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:9418            0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN
+tcp6       0      0 :::9418                 :::*                    LISTEN
+tcp6       0      0 :::80                   :::*                    LISTEN
+tcp6       0      0 :::22                   :::*                    LISTEN
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(listar todos los puertos en escucha, con &lt;code&gt;netstat -l&lt;/code&gt;)&lt;/p&gt;
 
 &lt;p&gt;con &lt;code&gt;dig&lt;/code&gt; podemos ver la configuracion del dns y tambien conocer la ip&lt;/p&gt;
 
@@ -2396,7 +3899,7 @@ hippiosos caer por completo en las garras de alphabet? puaghh&lt;/p&gt;
 &lt;p&gt;solo debemos ir a &lt;a href=&#34;https://www.youtube.com/subscription_manager&#34;&gt;https://www.youtube.com/subscription_manager&lt;/a&gt;, seguir hasta el fondo de
 la pagina y darle a &lt;strong&gt;Exportar Subcripciones&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;https://nasciiboy.land/media/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
+&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;https://nasciiboy.land/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
 (le he cambiado la extencion, agregando &lt;code&gt;.xml&lt;/code&gt; al final).&lt;/p&gt;
 
 &lt;p&gt;A continuacion un desglose. La clasificacion es dificil de encajar para varios
@@ -9378,7 +10881,7 @@ html { background-color: #000; }
 
 .gb_R { display: none; }
 
-.gb_Of .gb_Rg {
+.gb_Pf .gb_Sg {
     display: none;
 }
 
@@ -10209,6 +11712,176 @@ un principio, quitandole mierda-script y cosas externas, asi que bloquear js si
 es que por confianza o curiosadad le dieron privilegios a esta direccion, pronto
 hare un tema nuevo, digno, reformado y en abismal color negro, jo, jo, jo.
 (disculpar si momentaneamente se rompe el feed, enlaces o algo asi)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Love, Emacs &amp; Docs</title>
+      <link>https://nasciiboy.land/prog/docset/</link>
+      <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/docset/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;Love2d&lt;/em&gt; es un framework &amp;ldquo;open source&amp;rdquo; para crear videojuegos 2D multiplataforma
+con el lenguaje de programacion Lua y que aparentemente es muy facil de
+utilizar, al menos tan facil como para practicamente no tener documentacion mas alla de
+las funciones que proporciona el framework&lt;/p&gt;
+
+&lt;p&gt;Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos
+de funciones y sus parametros, deberiamos contar con un medio practico para consultar dicha
+documentacion&lt;/p&gt;
+
+&lt;p&gt;Desde la pagina ofrecen una wiki&amp;hellip; tambien disponible en modo offline, asi que
+en un ataque de creatividad, abri dos emacs en modo eww uno en cada monitor,
+grabe un marcador y a triunfar&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/love-wiki.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;luego de un rato&amp;hellip; fue obvio que no era la mejor forma de consultar la
+documentacion, y como no hay un maldito estandar para hacer documentacion
+decente (hasta ahora) recurri a un viejo conocido&lt;/p&gt;
+
+&lt;h2 id=&#34;zeal&#34;&gt;zeal&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/zeal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;que es &lt;a href=&#34;https://zealdocs.org/&#34;&gt;Zeal&lt;/a&gt;? es la implentacion libre y sin un tema
+obscuro de dash, que aunque a primera vista pareciera ser el nombre de un shell,
+mas bien es una &lt;em&gt;app&lt;/em&gt; visual para gestionar documentacion. En realidad es
+un visor web, con un buscador integrado que trabaja con bases de datos
+sqlite3&amp;hellip; o eso creo entender&lt;/p&gt;
+
+&lt;p&gt;Confirmando mis suposiciones de que tener abierto el navegador para leer de
+internet la documentacion es lento y doloroso, una buena persona hiso un
+&lt;em&gt;docset&lt;/em&gt; de las funciones de love2d, que es el formato con el que trabaja zeal&lt;/p&gt;
+
+&lt;p&gt;instalamos zeal (en freidora)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnf -y install zeal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;abrimos zeal y agregamos el feed de la documentacion (&lt;a href=&#34;https://github.com/ChrisJan00/love2d_docset&#34;&gt;no oficial&lt;/a&gt;) de love2d&lt;/p&gt;
+
+&lt;p&gt;con el raton &lt;em&gt;Tools -&amp;gt; Docsets -&amp;gt; Add feed&lt;/em&gt; y pegamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dash-feed://http%3A%2F%2Fchrisjan00.github.io%2Flove2d_docset%2FLove2d.xml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;por degracia, dicha documentacion corresponde a la version 0.9.1. Para
+no dejar de estar a la moda, vamos a crean nuestra propia documentacion, para
+esto necesitamos tener instado sqlite (no estoy seguro si 3, ya lo tenia
+instalado asi que no hice nada) y seguir
+&lt;a href=&#34;https://kapeli.com/docsets#setUpFolderStructure&#34;&gt;esta&lt;/a&gt; guia (en ingles) o
+basado en (lo que entendi de) ella seguir la sugiente receta y tener instalado
+Go (vee aceptandolo, ese lenguaje va a ser muy popular) para instalar
+&lt;a href=&#34;https://github.com/technosophos/dashing&#34;&gt;dashing&lt;/a&gt; que hara un poco mas sencilla
+la tarea. Empecemos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mv /tmp                           # para evitar &amp;quot;limpiar&amp;quot; al terminar
+wget https://love2d.org/docs.zip  # optenemos la &amp;quot;wiki&amp;quot; offline
+unzip docs.zip                    # descomprimir
+cd wiki                           # ir al directorio descomprimido
+
+go get -u github.com/technosophos/dashing  # optener dashing
+dashing create                             # crea una &amp;quot;plantilla&amp;quot;
+emacs -nw -q dashing.json                  # editamos la plantilla
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Modificamos la plantilla para que se paresca a esto:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;name&amp;quot;: &amp;quot;love2d&amp;quot;,
+    &amp;quot;package&amp;quot;: &amp;quot;love2d&amp;quot;,
+    &amp;quot;index&amp;quot;: &amp;quot;index.html&amp;quot;,
+    &amp;quot;selectors&amp;quot;: {
+        &amp;quot;h1&amp;quot;: &amp;quot;firstHeading&amp;quot;
+    },
+    &amp;quot;ignore&amp;quot;: [
+        &amp;quot;ABOUT&amp;quot;
+    ],
+    &amp;quot;icon32x32&amp;quot;: &amp;quot;favicon.png&amp;quot;,
+    &amp;quot;allowJS&amp;quot;: false,
+    &amp;quot;ExternalURL&amp;quot;: &amp;quot;https://love2d.org/wiki/Main_Page&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;name&lt;/code&gt; == nombre&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;package&lt;/code&gt; == paquete&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;index&lt;/code&gt; == tiene que apuntar al inicio de la wiki&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;selectors&lt;/code&gt; == etiuetas y atributos html que seran agregados a la base de
+datos. No encontre una estructura clara en el html y tampoco entiendo las
+posibilidades de esta etiqueta. En el resultado se repiten 2 veces algunas
+cosas, pero es funcional&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;icon32x32&lt;/code&gt; == el icono de la documentacion. La wiki ya trae un icono de love2d asi
+que ponemos el nombre del fichero&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ExternalURL&lt;/code&gt; == pense en abrir un repo con la documentacion actualizada, pero
+no&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;dashing build # crear docset
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esto crea la carpeta love2d.docset, la movemos a donde zeal tiene su
+documentacion (en freidora seria):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mv love2d.docset  ~/.local/share/Zeal/Zeal/docsets/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;abrimos zeal y buscamos si aparece la documentacion&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/zeal-love.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;zeal funciona como el navegador, con C-k buscamos cosas (poner prefijo de la
+documentocion, en este caso &lt;code&gt;love2d:&lt;/code&gt;), tiene un bonito autocompletado, nos movemos
+con las flechas arriba, abajo, C-u para borrar. Con C-f podemos buscar dentro de la &amp;ldquo;pagina&amp;rdquo; con
+la documentacion&lt;/p&gt;
+
+&lt;h2 id=&#34;soporte-de-lua-en-emacs&#34;&gt;Soporte de Lua en Emacs&lt;/h2&gt;
+
+&lt;p&gt;Podemos instalar &lt;em&gt;lua-mode&lt;/em&gt; desde la paqueteria, si desconfias de las cosas
+automagicas clonamos el repositorio a donde tenemos nuestras extenciones, por
+ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ~/.emacs.d/plugins/
+git clone https://github.com/immerrr/lua-mode.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;abrimos el init.el y copiamos lo suguiente en algun lugar&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;;; source: git clone https://github.com/immerrr/lua-mode.git
+(add-to-list &#39;load-path &amp;quot;~/.emacs.d/plugins/lua-mode&amp;quot;)
+(autoload &#39;lua-mode &amp;quot;lua-mode&amp;quot; &amp;quot;Lua editing mode.&amp;quot; t)
+(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.lua$&amp;quot; . lua-mode))
+(add-to-list &#39;interpreter-mode-alist &#39;(&amp;quot;lua&amp;quot; . lua-mode))
+(setq lua-indent-level 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;listo tenemos el lua-mode, para el autocompletado&amp;hellip; esperar a que sepa programar en
+elisp y extender company&amp;hellip; si quereis adelantarme &lt;a href=&#34;https://github.com/company-mode/company-mode/wiki/Writing-backends&#34;&gt;uno&lt;/a&gt; y &lt;a href=&#34;http://sixty-north.com/blog/writing-the-simplest-emacs-company-mode-backend&#34;&gt;dos&lt;/a&gt; links&lt;/p&gt;
+
+&lt;h2 id=&#34;enlaces&#34;&gt;+ Enlaces&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://love2d.org/wiki/examples.love&#34;&gt;https://love2d.org/wiki/examples.love&lt;/a&gt;, ejemplos basicos-practicos y sin
+consideracion para los deviles de voluntad&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/love2d-community/awesome-love2d&#34;&gt;https://github.com/love2d-community/awesome-love2d&lt;/a&gt;, recopilacion de recursos
+para programacion&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://love2d-community.github.io/love-api/&#34;&gt;http://love2d-community.github.io/love-api/&lt;/a&gt; pagina con la api en html&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://sheepolution.com/learn/book/contents&#34;&gt;http://sheepolution.com/learn/book/contents&lt;/a&gt;, un tutorial con obejas, desde las
+bases hasta lo basico&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/SSYGEA/blog/&#34;&gt;https://github.com/SSYGEA/blog/&lt;/a&gt;, no lo he leido, parace interesante&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.lua.org/manual/5.1/es/manual.html&#34;&gt;http://www.lua.org/manual/5.1/es/manual.html&lt;/a&gt;, el manual de lua en español, no te
+dejes engañar, es mas extenso de lo que aparenta&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://love2d.org/wiki/Category:Games&#34;&gt;https://love2d.org/wiki/Category:Games&lt;/a&gt;, recopilacion de bastantes videojuegos&lt;/p&gt;
+
+&lt;p&gt;Eso es todo por esta sesion, happy hacking!&lt;/p&gt;
 </description>
     </item>
     

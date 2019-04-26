@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2018</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style> :root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 80%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 20%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/post">post</a></div>
+
+  <h1>2018</h1>
+  
+
+<p>que tal, varios sitios han subido su &ldquo;resumen anual&rdquo;, asi que me dije: &ldquo;yo
+tambien quiero escribir una entrada facilota y convencional&rdquo;&hellip; como si el resto
+que cosas que subo fueran difucultisimas y especiales. Mientras la escribo me va
+dando pereza pero ya inicie esto, asi que a terminarlo</p>
+
+<p>primero con lo facil, las estadisticas (provenientes unica y exclusivamente de
+los logs de nginx). Arrancan el 12 de septiembre y llegan al final del año. Un
+acumulado de 111 dias.</p>
+
+<p>llegaron 116,575 &ldquo;visitas validas&rdquo; de las cuales 27,673 fueron visitas unicas de
+personas (o cosas).</p>
+
+<p>haciendo un promedio de las visitas tocarian 1050 por dia (3291 el maximo vs 510
+el minimo) y aqui es donde las visitas se distancian de las lecturas, pues el
+&ldquo;articulo&rdquo; mas visitado (sobre goaccess) tiene 215 visitas (1098 hits). En
+promedio 91 visitas por publicacion (y 100 hits, sea lo que sea eso signifique).</p>
+
+<p>Como sistema operativo reino Unknown con el 40%, seguido del windows con 32% y
+GNU con 16%. Aunque la pagina no esta pensada para verse en movil un 5% accedio
+desde aquellos dispositivos</p>
+
+<p>En cuanto a visitantes: 27% se identifican como arañas, 22% utiliza firefox
+y 17% chrome</p>
+
+<p>Nuevamente la mayoria del trafico se origina una vez dentro del sitio, le siguen
+los enviados por el planet de emacs-es, google y el antiguo dominio de github.io</p>
+
+<p>el 36% de visitas proviene de USA, 11% china (?), 6% por mexico, 6% Alemania (?), ~6% Espania</p>
+
+<p>(el resumen de los logs completo por <a href="https://nasciiboy.land/goaccess-2018.html">aca</a>)</p>
+
+<p>finalmente y para terminar, los banners de juicyads (que requirieron la inclusion
+de JS) en 3 semanas fueron vistos en 215 ocaciones, aunque ninguna de ellas
+culmino en un clic&hellip; contando el precio de 0.010 centavos de dolar por clic,
+requeriria de 100 clicks diarios y miles de impreciones.</p>
+
+<p>Viendo que el periodo de prueba para recolectar dinero mediante publicidad
+termino con cero ingresos, me lleva a quitarla y regresar a los buenos tiempos
+sin JS</p>
+
+<h2 id="ranger">ranger</h2>
+
+<p><img src="https://nasciiboy.land/img/2018/2018-01.jpg" alt="" /></p>
+
+<p>con motivo de las festividades y evento conclusivo, ocurrioseme al medio dia
+realizar una visita al sitio donde la extrangerada acude para ver el pueblo
+magico de tepoztlan y de paso (ademas de consumir una delicioso helado) intentar
+llegar mas aya de donde en la ocacion pasada un colectivo de abejas se avalanso
+mortalmente en mi contra</p>
+
+<p>Traz el siempre extenuante ascenso hasta donde inician las instalaciones que
+llevan a una piramide, segui por la desviacion que lleva a la ruta
+alternativa. En esa zona se habia colocado una parejita &ldquo;folclorica&rdquo; a tocar
+instrumentos &ldquo;folcloricos&rdquo; y tambien un par de emprendedores a ofrecer
+chocolates y bebidas.</p>
+
+<p>Una vez alcanzado el record anterior, prosegui ascendiendo por un terreno rocoso
+que no prometia llevar a ningun lado. De regresar por la misma ruta se
+convertiria en momentos tensos y manos sudorosas bajo la amenasa de darme
+completamente en la madre y terminar lastimadito hasta que algun otro explorador
+me alcanzara o los zopilotes se dieran un festin</p>
+
+<p>En la subida, me tope con una pareja intrepida y con ropa ajustada y
+calzado (igualmente que el mio) no apto para la escalada. Estaban abriendo
+camino, facilitando en unos cientos o miles de iteraciones mas piedras solidas
+a manera de escaleras</p>
+
+<p>tras unos minutos, la pareja me cedio el paso y supongo que ante lo incierto del
+destino regresaron sobre sus pasos, pues ya no los volvi a encontrar. Un par de
+minutos despues el escenario se transformaba de un cerrito con diversidad
+plantil a una especie de bosque</p>
+
+<p><img src="https://nasciiboy.land/img/2018/2018-02.jpg" alt="" /></p>
+
+<p>unos dies minutos mas tarde crei alcanzar el punto mas alto posible</p>
+
+<p><img src="https://nasciiboy.land/img/2018/2018-03.jpg" alt="" /></p>
+
+<p>la vista del angulo mas cercano al abismo</p>
+
+<p><img src="https://nasciiboy.land/img/2018/2018-04.jpg" alt="" />
+<img src="https://nasciiboy.land/img/2018/2018-05.jpg" alt="" />
+<img src="https://nasciiboy.land/img/2018/2018-06.jpg" alt="" /></p>
+
+<p>y lo que quedaba por arriba&hellip;</p>
+
+<p><img src="https://nasciiboy.land/img/2018/2018-07.jpg" alt="" /></p>
+
+<p>continuando mas alla otro par de minutos, aparecia un pequeño y ultimo punto
+mas a alcanzar. Para llegar a ese lugar se requeria mas audacia y estamina
+de la que tenia. Se acercaba el ocaso, habia que descender!</p>
+
+<p>De regreso, habia un individuo solitario que tambien iba en descenso y al verme
+comenzo a huir e incluso llego a tomarme una foto. Cuando su estamina se
+termino y lo alcanse le di los buenos dias <del>y lo lance al vacio</del></p>
+
+<p>Cada aventura suele contar con su particular banda sonora. Por lo general el
+ultimo album descubierto. Para la ocacion casi como un regalo, acompañaron
+durante el transporte, ascenso y desenso los eruditos compadres de <strong>ScoreVG</strong> en
+su ultimo numero el 125. Seguramente su podcast sea en la actualidad y desde hace
+varios años el mas apreciado de mi lista&hellip; aunque sigo sin tener un respaldo
+de sus episodios. Casi todos ellos con una duracion superior a las 5hrs</p>
+
+<p>llegado a la plazuela consumi un pulque de nuez (con nueces) y al terminarse el
+episodio cambie el OST por <strong>Katamari Fortissimo Damacy</strong> (por recomendacion de
+los scores</p>
+
+<pre><code>magnet:?xt=urn:btih:7859b532f942e540d23978cc918c87fd2dea648a&amp;dn=Katamari%20Fortissimo%20Damacy&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
+</code></pre>
+
+<p>Es una japonada con variedad. tiene sus piezas curiosas como <em>Que Sera Sera</em>
+(#12), Crimson Rose And Gin Tonic (#10) jazz retro, Katamany Stars (#15) que
+suena zeldoso, Katamari Mambo (#8), Wanda Wanda (#11) re-electronico, la popera
+<em>Lonely Rolling Start</em> (#6) y tambien <em>Katamaritaino</em> quiza la que mas he
+repitido por ninguna razon en especial</p>
+
+<h2 id="tank-your">tank-your</h2>
+
+<p>&ldquo;las festividades decembrinas&rdquo;, cuando tu patron va al baratero, se trae unos
+sobrantes y los rifan entre los despojos humanos que manejan sus maquinas. Te
+dan un par de dias libres y piensas que igual y no es tan hijo de puta</p>
+
+<p>Haciendo resumen de este bonico ciclo solar:</p>
+
+<ul>
+<li><p>inicio con dudas y la unica y poca labor del morg, que luego fue detenida
+indefinidamente.</p></li>
+
+<li><p>Me uni al grupo de estudio para ser sysadmin del rancho electronico.</p></li>
+
+<li><p>Aprendi (o no) sobre patrones de diseño.</p></li>
+
+<li><p>Toquetee ensamblador para Z80 Spectrum y game boy&hellip; que luego termino en nahh</p></li>
+
+<li><p>Di por terminada la correccion/traduccion del manual de introduccion a emacs
+lisp</p></li>
+
+<li><p>Adquiri el dominio y un VPS para toquetear un poco</p></li>
+
+<li><p>Cambie de hardware sin buscarlo y se agregaron 2 equipos &ldquo;retro&rdquo; mas</p></li>
+
+<li><p>la libreria del raptor recivio mas estellas y visitas (de chinos) y una
+pequeña tarea escolar pagada</p></li>
+
+<li><p>di una charla y un taller en el rancho electronico</p></li>
+
+<li><p>llegaron dos mensajes al correo sobre el blog. Uno de buen rollo y un
+performanse juanker, XDDDDD</p></li>
+</ul>
+
+<p>en lo mas personal ya cercano a cumplir los 30 y apestando cada vez mas a
+tierra, corrobore aquel dicho de</p>
+
+<blockquote>
+<p>Si a los 20 años no eres comunista, no tienes corazón, y si a los 30 años
+sigues siendo comunista, lo que no tienes es cerebro</p>
+</blockquote>
+
+<p>no con ciertas disonancias internas, digo, he trabajado desde los 15 (y &ldquo;sido un
+parasito&rdquo; a tiempo parcial por 3 años) y nunca he tenido dinero para hacer nada
+o comprar algo bonito como una motocicleta &ldquo;decente&rdquo;, menos aspirar a casa o
+estabilidad de ningun tipo.</p>
+
+<p>pero, toparme desde hace unos meses con los femi-progres te obliga a rechasar
+sus lloriqueos y pensar (parcialmente) que tal vez no todo es tan malo&hellip; Je&hellip;</p>
+
+<p>mmm, en la dispercion estubieron las visitas a eventos jazzeros, la perfeccion
+hecha animacion llamada <strong>Isla de perros</strong>, en anime <strong>Asobi Asobase</strong>,
+<strong>Osomatsu San</strong>, <strong>Kizumonogatari</strong>, <em>Amagi Brilliant Park</em>, <strong>Kono-Suba</strong> y
+<strong>Hinamatsuri</strong> y un monton de albums mas agregados a la coleccion!</p>
+
+<p>Para terminar con los mensajes oficiales, mi eterno reconocimiento y gratitud
+a los blogueros de la comunidad FOSS y dispersa que sigue manteniendo,
+documentando y traduciendo cosas al español. En especial a</p>
+
+<ul>
+<li><a href="https://asm86.wordpress.com/">https://asm86.wordpress.com/</a></li>
+<li><a href="https://autodefensainformatica.radioalmaina.org">https://autodefensainformatica.radioalmaina.org</a></li>
+<li><a href="https://avpodcast.net/podcastlinux/">https://avpodcast.net/podcastlinux/</a></li>
+<li><a href="https://birrasybits.wordpress.com/">https://birrasybits.wordpress.com/</a></li>
+<li><a href="https://blog.adrianistan.eu/">https://blog.adrianistan.eu/</a></li>
+<li><a href="https://compilando.audio/">https://compilando.audio/</a></li>
+<li><a href="https://computernewage.com/">https://computernewage.com/</a></li>
+<li><a href="https://distritotux.blogspot.mx/">https://distritotux.blogspot.mx/</a></li>
+<li><a href="https://elbinario.net/">https://elbinario.net/</a></li>
+<li><a href="https://eldesarmador.org/">https://eldesarmador.org/</a></li>
+<li><a href="https://geekland.eu/">https://geekland.eu/</a></li>
+<li><a href="https://ladecadence.net/">https://ladecadence.net/</a></li>
+<li><a href="https://lamiradadelreplicante.com/">https://lamiradadelreplicante.com/</a></li>
+<li><a href="https://liberaturadio.org/">https://liberaturadio.org/</a></li>
+<li><a href="https://maslinux.es/">https://maslinux.es/</a></li>
+<li><a href="https://mierda.tv/">https://mierda.tv/</a></li>
+<li><a href="https://notxor.nueva-actitud.org/">https://notxor.nueva-actitud.org/</a></li>
+<li><a href="https://ondahostil.wordpress.com/">https://ondahostil.wordpress.com/</a></li>
+<li><a href="https://pfctelepathy.wordpress.com/">https://pfctelepathy.wordpress.com/</a></li>
+<li><a href="https://picandocodigo.net/">https://picandocodigo.net/</a></li>
+<li><a href="https://picodotdev.github.io/blog-bitix/">https://picodotdev.github.io/blog-bitix/</a></li>
+<li><a href="https://poesiabinaria.net/">https://poesiabinaria.net/</a></li>
+<li><a href="https://quijotelibre.com/feed/">https://quijotelibre.com/feed/</a></li>
+<li><a href="https://radioslibres.net/">https://radioslibres.net/</a></li>
+<li><a href="https://ranchoelectronico.org/">https://ranchoelectronico.org/</a></li>
+<li><a href="https://victorhckinthefreeworld.com/">https://victorhckinthefreeworld.com/</a></li>
+<li><a href="https://www.atareao.es/">https://www.atareao.es/</a></li>
+<li><a href="https://www.linuxito.com/">https://www.linuxito.com/</a></li>
+<li><a href="https://www.ochobitshacenunbyte.com/">https://www.ochobitshacenunbyte.com/</a></li>
+<li><a href="http://www.blackhats.es/">http://www.blackhats.es/</a></li>
+<li><a href="http://www.hackplayers.com/">http://www.hackplayers.com/</a></li>
+<li><a href="http://www.kdeblog.com/">http://www.kdeblog.com/</a></li>
+<li><a href="http://www.lapipaplena.net/">http://www.lapipaplena.net/</a></li>
+<li><a href="http://www.linuxhispano.net/">http://www.linuxhispano.net/</a> (la tira de Danigm)</li>
+<li><a href="http://www.maxxcan.com/">http://www.maxxcan.com/</a></li>
+<li><a href="http://www.radioela.org/">http://www.radioela.org/</a></li>
+<li><a href="http://www.tomatesasesinos.com/">http://www.tomatesasesinos.com/</a></li>
+</ul>
+
+<p>agradecimientos tambien a los usuarios de emacs en irc, telegram y el <a href="http://planet.emacs-es.org/">planet</a>.</p>
+
+<p>A los podcast, en especial a ScoreVG, al Sr. Cine, Desde el sul Explorando el
+Cosmos, Ciencia-es, Reality Cracking y todos los demas que me da pereza escribir</p>
+
+<p>A los youtubers como el tio blanco hetero, el bueno del Gordo Otaku, Jhodyhar,
+Ezquizofrenia Natural, Mireda Producciones, Letras Libres, Jordi Maquiavello,
+Como Deberia Haber terminado, PeterCarter y Modo Protegido</p>
+
+<p>Gracias al buen Marciano, que aunque sabe mi nombre entero y cuenta de deposito,
+desconoce quien demonios soy.</p>
+
+<p>Gracias a camel, por aguantar mis paranoias continuas, persistentes e
+irremediables y al bueno de floyd que aunque ya es un hombre serio, sigue manteniendo
+la acides</p>
+
+<p>Gracias a los fansubers y todo aquel que comparta material por el internete y el torrente!</p>
+
+<p><img src="https://nasciiboy.land/img/evaXnichijou.jpg" alt="" /></p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.land/post/teo-05/">◀ Teopanzolco 05 – Billy Hart and Ethan Iverson Quartet</a>
+    
+    
+    <a class="next" href="https://nasciiboy.land/post/ramen-xxviii/"> Ramen XXVIII – Free as a Bird ▶</a>
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/post">post</a></div>
+</main>
+
+    <aside>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="https://nasciiboy.land/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="https://nasciiboy.land/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="https://nasciiboy.land/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="https://nasciiboy.land/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="https://nasciiboy.land/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
+
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/categories/prog">prog(57)</a></li><li><a href="https://nasciiboy.land/categories/post">post(55)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(35)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(25)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(22)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(8)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(6)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

@@ -423,5 +423,380 @@ una consumo superior de recursos&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title>regexp4-go (dia cero)</title>
+      <link>https://nasciiboy.land/prog/regexp4-go/</link>
+      <pubDate>Sat, 15 Jul 2017 21:36:03 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/regexp4-go/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/regexp4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;regexp4&lt;/strong&gt; es un &amp;ldquo;motor&amp;rdquo; de expresiones regulares de la familia de los motores
+regulares &lt;em&gt;Recursive Regexp Raptor&lt;/em&gt;, o expresado de otra forma: una libreria de
+expresiones regulares hecha desde cero, reinventando la rueda (o no) de la
+manera (que para mi es la) mas simple posible. sin arboles de evaluacion, ni
+liberacion de memoria, ni cosas raras o esa es la intencion, almenos de las
+versiones en &lt;strong&gt;C&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;cual es entonces la necesidad de que exista esta version en go, podrias
+preguntar. Pues segun mi escasa educacion programacional, la simplesa de los
+motores raptor es tal, que pueden implementarse en cualquier lenguaje sin recurrir
+a ninguna caracteristica no implementada en el lenguaje en si, es decir, sin
+recurrir a ninguna libreria, incluyendo a las librerias estandar.&lt;/p&gt;
+
+&lt;p&gt;Siguiendo esta creencia (quiza sin fundamentos) y a modo de prueba de las
+caracteristicas de un lenguaje de programacion supongo que hare una costumbre
+programar un raptor en cada ocacion que pueda. Ademas el modelo raptor aunque
+bastante desarrollado no es perfecto, asi pues, con cada nuevo concepto
+aprendido, logro profundizar un poco en busca de una mejor implementacion o el
+incremento de caracteristicas segun las facilidades que otorgue el lenguaje&lt;/p&gt;
+
+&lt;p&gt;existen dos versiones de la libreria las regexp3 donde a cada iteracion
+valiendose de la recursividad, la expresion regular se convierte en
+instrucciones que pueden evaluarse. En las regexp4 en lugar de interpretar la
+regexp a cada paso primero se &amp;ldquo;compila&amp;rdquo;&amp;hellip; lo que la hace comporativamente mas
+eficiente&lt;/p&gt;
+
+&lt;p&gt;la libreria parte de la version en C y la sintaxis es compatible con esta
+version en Go, pero por algunas facilidades que proporciona nativamente este
+ultimo lenguaje y por su orientacion a objetos esta no tiene limitacion (que no
+sean de hardware) del numero de capturas, la longitud y complejidad de la
+expresion y ademas es concurrentemente segura&lt;/p&gt;
+
+&lt;p&gt;bueno, bueno, vamos con los detalles morbosos&amp;hellip; esta version adapta sin mucho
+empeño la regexp3 (go) a la version 4. Fueron necesarios varios dias con poco
+enfoque donde los momentos de lucides escaceaban, primero aparecio un bicho por no
+incrementar un indice del que tarde dos &lt;s&gt;dias&lt;/s&gt; sesiones en darme cuenta y
+luego por otras 4 seciones las pruebas que contenian &amp;ldquo;conjuntos&amp;rdquo; (&lt;code&gt;[...]&lt;/code&gt;) se
+resistian a funcionar, jo, el problema fue no colocar las constantes correctas
+dentro de un &lt;code&gt;switch&lt;/code&gt;, je, por un momento me planteee hacer pruebas de cada
+una de las funciones hasta asegurar que todas hicieran lo que se suponia deberia
+de hacer&amp;hellip; lo cual no es trivial&lt;/p&gt;
+
+&lt;p&gt;aunque en apariencia sencilla, cada uno de los componentes esta obscuramente
+relacionado, y debe realizar su tarea en perfecta armonia con los demas, por
+ello es necesario ponerse en serio con el asunto, y ya que esto escapaba un poco
+de mi control, solo me limite a ejecutar las pruebas preexistentes y tambien a
+comprobar el funcionamiento con &lt;em&gt;morg&lt;/em&gt;, asi pues una vez superadas las pruebas,
+pese a no estar muy seguro de como &amp;ldquo;interactuava&amp;rdquo; la maquinaria, confie en las
+muchas horas invertidas en la version en C y otras tantas en regexp3 en Go,
+luego subi el repositorio a modo de respaldo&lt;/p&gt;
+
+&lt;p&gt;Como antes mencione la sistaxis de la regexp es uniforme en todas las versiones,
+ademas regexp3 (Go) y la presente compartiran la misma &amp;ldquo;&lt;em&gt;API&lt;/em&gt;&amp;rdquo;, mas esta version
+sera extendida con un par de funciones mas (tentativamente) &lt;code&gt;Compile&lt;/code&gt; y
+&lt;code&gt;TextMatch&lt;/code&gt; (o algo asi), aprovechando las capacidades de &amp;ldquo;compilacion&amp;rdquo; (tambien
+programado de cero) en una forma singular a la que nombre &amp;ldquo;&lt;em&gt;tabla de
+instrucciones&lt;/em&gt;&amp;rdquo; y en esta ocacion pretenciosamente las instrucciones de la tabla
+lleban el prefijo &lt;code&gt;asm&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;en fin, &lt;a href=&#34;https://github.com/nasciiboy/regexp4/&#34;&gt;aqui&lt;/a&gt; encontraran el
+repositorio, los &lt;em&gt;readmes&lt;/em&gt; son un copia y pega de la version regexp3 cambiando
+el 3 por 4&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>El Lenguaje De programacion Go</title>
+      <link>https://nasciiboy.land/prog/tgpl/</link>
+      <pubDate>Mon, 29 May 2017 22:02:43 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/tgpl/</guid>
+      <description>
+
+&lt;p&gt;golang, el lenguaje de &lt;q&gt;programacion de sistemas&lt;/q&gt; de la gente de google con
+el que planea llebar a cabo sus mas retorcidos y stalkerosos deseos.&lt;/p&gt;
+
+&lt;p&gt;Hoy y tras pocos meses de programacion y muchas horas de investigacion
+linguistica intentando entender el english, les traigo una reseña de la biblia
+de golang (Go para los amigos) &lt;em&gt;The Go Programming Language&lt;/em&gt; (en adelante
+TGPL o GPL(?))&lt;/p&gt;
+
+&lt;h2 id=&#34;el-libro&#34;&gt;el libro&lt;/h2&gt;
+
+&lt;p&gt;los usa-americanos tinen sus medidas extravagantes, siguiendo su ejemplo, yo
+mido la extencion de un documento en las lineas (de 80 columnas indentadas) que
+abarca, por ejemplo, 7000-10000 lineas suelen ser la extencion regular de una
+novela, debajo de esta cantidad es un trabajo corto, superior de esta es extenso
+y superior a las 20000 lineas ya es &lt;em&gt;muy extenso&lt;/em&gt;, aunque &lt;em&gt;Dune&lt;/em&gt;
+utiliza (y muy bien) la friolera y descomunal cantidad de 34150 lineas.&lt;/p&gt;
+
+&lt;p&gt;Pues bien TGPL son 21426 lineas, repartidas a partes iguales entre explicaciones
+y codigo fuente, si quieres la extencion en paginas cerca de 400, aunque yo no
+confiaria en esta medida&lt;/p&gt;
+
+&lt;p&gt;La mayor parte del libro se utiliza para mostrar la forma de hacer las cosas en
+Go, sintaxis, ideologia y paquetes. Haciendo un simil con C seria algo asi como
+que te enseñåran a hacer muchas herramientas del sistema, mas una guia de gcc,
+make y alguna cosa mas.&lt;/p&gt;
+
+&lt;p&gt;Se asume que ya conoces al menos un lenguaje de programacion, particularmente C o
+alguno de su descendencia, y aunque no es necesario, que manejes programacion
+orientada a objetos y/o concurrencia es deseable, antes de iniciar esta aventura&lt;/p&gt;
+
+&lt;p&gt;No es un manual para no iniciados, es decir, para quien no tenga ya asumido en
+su ser lo que es programar, resultara hostil, diria que es apto como tercer o
+cuarto libro de programacion&lt;/p&gt;
+
+&lt;p&gt;Se enseña a construir aplicaciones no triviales, utilzando la rica libreria
+estandar del lenguaje, aunque la mayoria encaminadas al tema web, ninguna es
+despreciable, incluso se propone la construccion de un parser de espreciones-S y
+un pequeño interprete para un lenguaje de programacion, aunque no se llega a
+profundizar veraderamente en ningun tema, se da lo suficiente como para
+enfrentar cualquier propuesta sin temor (jo, lo dice quien no ha hecho mas de 4
+ejericios, en serio, eso es lo mas denso, ni en la vastedad de internet he
+localizado a un intrepido programador que alla concluido tal mision)&lt;/p&gt;
+
+&lt;p&gt;Lo mismo se aplica para las secciones que explican la herramienta principal del
+lenguaje, que es compilador, perfilador (primera ves que utilizo algo asi),
+administador de paquetes, &amp;ldquo;visor&amp;rdquo; de documentacion y muchas cosas mas. Nos dicen
+de que va el tema y luego saltan al sugiente punto&amp;hellip; es este caso aunque
+suficiente para iniciar, si hecho en falta mayor detalle, pues varios comandos
+requieren un orden y sintaxis nada evidentes, siendo mas bien conjuros o trucos
+misteriosos&lt;/p&gt;
+
+&lt;p&gt;en resumen, recomendo su lectura a cualquiera, en particular si se biene de C o
+C++ y se aspira a lenguajes mas desapegados de la maquina, sin topar de lleno en
+abstracciones incomprensibles&lt;/p&gt;
+
+&lt;h2 id=&#34;el-lengueje&#34;&gt;el lengueje&lt;/h2&gt;
+
+&lt;p&gt;el libro esta muy bien!, que tal el lenguaje?&lt;/p&gt;
+
+&lt;p&gt;bueno, desde la perspectiva de un aficionado a C, que ha pasado por C++, bash y
+un ligero viaje por lisp, el lenguaje me gusta mucho, aunque no puedo perdonarle
+que inponga un estilo arbitrario de como han de indentarse y separarse las
+sintrucciones, es decir el formateo, biniendo de C tener llaves para
+instrucciones sencillas (una instruccion) me parece atroz, por no decir forzar la
+posicion de apertura y cierre de las demas llaves, sobre todo en intstrucciones
+&lt;code&gt;else&lt;/code&gt;, no lo soporto esteticamente!, hooo y utilizar tabs para indentar, deben
+arder en la hogera, y como te obligan a esto, simple si no cumples su mierda
+formato no compila&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;dejando atras este no precisamente poco importante aspecto, tenemos el
+inmobiliacio habitual de los descendientes de C, ifs, elses, else ifs,
+funciones, arreglos, switches, return, gotos y bucles for, caresiendo de bucles
+while y do while, pero sumando slices, que son una especie de arreglo con
+crecimiento dinamico automagico (el lenguaje tien recolector de basura), mapas
+hash, una funcion llamada &lt;code&gt;defer&lt;/code&gt;, &lt;code&gt;gorutinas&lt;/code&gt; para programacion concurrente,
+&lt;q&gt;canales&lt;/q&gt; para pasar datos a las gorutinas y asegurar que completen su
+ciclo, pero sobre todo y quiza lo mas interesante del lenguaje su orientacion a
+objetos no evidente&lt;/p&gt;
+
+&lt;p&gt;claro, el lenguaje tiene una forma &lt;q&gt;peculiar&lt;/q&gt; de organizar sus parametros
+(al revez) que no pocas veces me ha causado transtornos cuando regreso a tocar
+C, pero lo que mas me gusta es que no intenta ser innecesariamente complejo en
+ningun aspecto, es mas, los programas son casi imperativos, la orientacion a
+objetos aparece por si sola, aunque lo &amp;ldquo;metodos&amp;rdquo; requieren un poquito mas&lt;/p&gt;
+
+&lt;p&gt;por defecto utiliza codificacion unicode utf-8, incorporando una utilidad
+llamada &lt;code&gt;range&lt;/code&gt; que nos entrega los caracteres unicode sin tener que recurrir a
+esotericas librerias, a si como convecion automagica de entre &lt;code&gt;runas&lt;/code&gt; unicode 32
+a cadenas de caracteres utf-8, si necesitamos mas ya toca recurrir a la libreria
+estandar&lt;/p&gt;
+
+&lt;p&gt;por cierto, aunque el nucleo del lenguaje es compacto (bravo) la libreria
+estandar es muy rica, te da un servidor web, analisis en cadenas, codificadores,
+compresores y otro monton de cosas&lt;/p&gt;
+
+&lt;p&gt;es sencillo crear programas relativamente complejos con estas facilidades,
+aunque encuentro incomoda la herramienta de documentacion para linea de comandos&lt;/p&gt;
+
+&lt;p&gt;no te voy a mentir, la libreria estandar es amplia, pero carece de librerias
+nativas para graficos y esto es un punto flaco, tomando en cuenta que si te
+apegas a la libreria estandar tus programas son multiplataforma y que el
+costructor de programas es por naturaleza multiplataforma. Lamentablemente, veo
+poco probable que algun dia llegue a tener librerias nativas para estos
+menesteres&amp;hellip; a menos que el gestor de paquetes pueda meter sus manos en el
+gestor de paquetes del sistema en si (apt, dnf, yum, etc)&lt;/p&gt;
+
+&lt;p&gt;sobre esto, me encanta como administra las &amp;ldquo;librerias&amp;rdquo;/paquetes externos, nada
+de buscar por internet, ni compilar a mano, ni naaah, el solito busca las
+dependencias y las enlaza. Nunca perdonare al comite de los estandares de C y
+C++, por no copiar este aspecto y evolucionarlos de forma razonable, si hicieran
+su labor no tendria que aparecen Go&lt;/p&gt;
+
+&lt;p&gt;respecto a la concurrencia, no tenia ninguna experiencia previa, era un tema
+mistico, magico y misterioso y sin embargo he podido implementar un tipo
+concurrente, aunque no se, encuentro un poco criptica las formas en que esta
+implementada, aunque como digo desconosco como se haga esto en otros lenguajes,
+de momento la puedo usar sin muchos complejos ingorando una parte que tenia que
+ver con bucles for, captura de variables y cosas concurrentes que no me quedo
+muy clara en el libro&lt;/p&gt;
+
+&lt;h3 id=&#34;cosas-feas&#34;&gt;cosas feas&lt;/h3&gt;
+
+&lt;p&gt;ademas del jodido formateo? cast, cast, cast por todas partes, y si no aplicas
+cast, he?, creas una varible extra con el cast apropiado al inicio de la funcion&amp;hellip;
+teniendo que asignar memoria extra&amp;hellip;?&lt;/p&gt;
+
+&lt;p&gt;tan dificil y peligroso es asumir que el programador sabe que es lo que hace con
+los tipos que escoge y en consonancia hacer conversion automatica de tipos, digo
+con tener conversion autamatica en llamadas a fuciones seria un gran alivio,
+pero no, ademas ni ellos resepetan su estricto y seguro tipado (ironia), pues
+aveces hacen convesiones automaticas para ciertas tareas, a sabiendas de lo poco
+practico de tal tipado, quedando mas que evinciado en su elecion de regresar
+&lt;code&gt;int&lt;/code&gt;s aun en valores que deverian ser unsigned&lt;/p&gt;
+
+&lt;p&gt;no le haria mal separar la herramienta en varias utilidades, en particular para
+la documentacion, pruebas y perfilado&lt;/p&gt;
+
+&lt;p&gt;tener un solo paquete por directorio es bueno, pero en paquetes conseptualmente
+extensos puede ser dificil averiguar la procedencia de una funcion, no es grave
+y es principalmente un problema del programador no distribuir el codigo de forma
+coherente, pero aun asi se vuelve dificil seguir la logica de un programa extenso&lt;/p&gt;
+
+&lt;h3 id=&#34;conclucion&#34;&gt;conclucion&lt;/h3&gt;
+
+&lt;p&gt;Me gusta y lo recomiendo como lenguaje secundario, si bien es cierto que tiene
+un fuerte enfoque para aplicaciones web, es un lenguaje de proposito general,
+con un rendimiento aceptable&lt;/p&gt;
+
+&lt;p&gt;segun pruebas mias, su rendimiento esta entre 3 a 4 veces mas lento que su
+homologo en C, es decir, si un pragrama demora 1, en Go, demora 4 o 5, bueno no?
+si, eheemee, aun tengo conflictos psicologicos al saber que va 3 o 4 veces mas
+lento que C, pero bueno al menos no es 100 veces mas lento como el
+&lt;q&gt;fabulosisimo&lt;/q&gt; python o JS&lt;/p&gt;
+
+&lt;p&gt;momento, tengo que sacarlo de mi sistema, no programes con python, ni JS, no lo
+hagas, por fabor, no son lenguajes poro programar por mas (falsamente) simples o
+elgentes que sean, los lenguajes interpretados son para extender programas o
+para servir como prompts, no para crear algo de cero. Sirve de algo tardar unas
+horas menos programando en esos lenguajes cuando pasaras la eternidad
+ejecutandolos lentamente? hay lo dejo&lt;/p&gt;
+
+&lt;p&gt;Go apenas se encuentra en los limites que considero un rendiminto aceptable.&lt;/p&gt;
+
+&lt;p&gt;Entre 7 y 10 veces mas lento que C, sin importar el paradigma, solo podre
+considerar al lenguaje una &lt;q&gt;curiosidad&lt;/q&gt; intelectual&lt;/p&gt;
+
+&lt;h2 id=&#34;porg&#34;&gt;porg&lt;/h2&gt;
+
+&lt;p&gt;durante el ultimo mes, he estado traduciendo o mas bien dando sentido a la
+traduccion de las maquinas sobre el libro en cuestion, pueden optener el codigo
+con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/nasciiboy/TGPL.git
+cd TGPL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;abren los ficheros &lt;code&gt;html&lt;/code&gt; en su navegador de confianza (pista: el que tiene un
+sufijo &lt;code&gt;es&lt;/code&gt;, es el que esta en español&lt;/p&gt;
+
+&lt;p&gt;para crear el material desde el codigo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go get -u https://github.com/nasciiboy/morg
+morg toHtml The-Go-Programming-Language.morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;morg toHtml The-Go-Programming-Language_es.morg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para ver el fichero directamente en su terminal, utilice &lt;code&gt;morg tui fichero.morg&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;si quiere colorizar el codigo en la exportacion a html, necesita tener instalado
+&lt;code&gt;pygmentize&lt;/code&gt; (python pygments), y agregar &lt;code&gt;pygments&lt;/code&gt; a &lt;code&gt;options&lt;/code&gt; (dentro del
+documento), asi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;..options &amp;gt; pygments
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en fin, una labor estandar de traduccion a mi estilo sin acentos.&lt;/p&gt;
+
+&lt;p&gt;apenas es lo suficientemente entendible, y apenas dare mi primer lectura seria
+al libro y de paso corrijo algunas cosas.&lt;/p&gt;
+
+&lt;p&gt;tuve problemas al localizar muchas cosas, pero si quieres colaborar a mejorar un
+manual que nunca iba a aparecer en españøl, tienes mi correo y clave gpg abajo&lt;/p&gt;
+
+&lt;p&gt;happy hacking, en la proxima entrega nasciiboy inc. por cierto si retiran este
+sitio de internete, dadle asilo&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>regexp3-go (dia cero)</title>
+      <link>https://nasciiboy.land/prog/regexp3-go/</link>
+      <pubDate>Sat, 11 Feb 2017 10:26:04 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/regexp3-go/</guid>
+      <description>&lt;p&gt;Hace un año, luego de &amp;ldquo;maquetar&amp;rdquo; algunos libros en org-mode, decidi crear mi
+propio lenguaje de marcas ligeras, con casinos y colegialas japonesas, programar
+un substituto del comando man/info y aniquilar a html/latex como sistema de
+documentacion.&lt;/p&gt;
+
+&lt;p&gt;Un mes mas tarde fruto de la necesidad de &lt;em&gt;parsear&lt;/em&gt; el texto del nuevo lenguaje
+y mi incapacidad de entender como utilizar una libreria de expresiones
+regulares, nacio Recursive Regexp Raptor (alias regexp3) que es un motor de
+expresiones regulares para C, otro mes mas tarde salio a la web la primer
+version en forma de repositorio
+en &lt;a href=&#34;https://github.com/nasciiboy/RecursiveRegexpRaptor/&#34;&gt;github&lt;/a&gt; y ahora&amp;hellip; ni
+hay un nuevo lenguaje, ni un substituto de man/info, ni ha muerto html y he
+dedicado mas horas de las que jamas pense en regexp3 (y regexp4 &amp;ldquo;el sucesor&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;Por un mes (entero) intente programar el interprete del lenguaje de marcas
+ligero y fracase, asi que pase al plan de emergencia, ver como estaban hechos
+otros interpretes como el de &lt;em&gt;org-mode&lt;/em&gt; o el de &lt;em&gt;reStructured Text&lt;/em&gt;, lo que trajo
+un nuevo problema: aprender (e)lisp o aprender python(2|3).&lt;/p&gt;
+
+&lt;p&gt;Lo primero implicaba aprender ingles, encortrar un buen libro y ponerme a
+traducir cosas, lo segundo encontrar un buen libro (e intentar por segunda vez
+con python), termine llendo por la primer opcion y cuando llego la desesperacion
+se mezclo con la segunda.&lt;/p&gt;
+
+&lt;p&gt;Lisp es interesante, asombroso en su simplesa e incomodo en su escritura&lt;/p&gt;
+
+&lt;p&gt;Python&amp;hellip; no puedo con python, lo encuentro aburrido, un pegote de muchas cosas
+en un mismo lenguaje e indentar a mano pelada por ahorrar unas llaves es un
+sufrimiento carente de toda elegancia&lt;/p&gt;
+
+&lt;p&gt;en fin, que no aprendi mucho de nada&amp;hellip; cerca de octubre del año pasado con la
+inquietud de hacer un blog (de nuevo) y tras probar algunos cms llege a &lt;em&gt;&lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;hugo&lt;/a&gt;&lt;/em&gt;,
+me parecio que era sencillo y digno de investigacion, luego de un par de semanas
+nacio este blog y decidi aprender algo de su motor de renderizado markdown
+llamado &lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;blackfriday&lt;/a&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;entonces? habia que aprender go&lt;/p&gt;
+
+&lt;p&gt;entonces? mas ingles (solo hay una pequeña guia traducida al
+español &lt;a href=&#34;https://github.com/karlseguin/the-little-go-book&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;y haci, pase a buscar un pdf en la web, aparecio &lt;em&gt;The way to go&lt;/em&gt;, luego de unas
+semanas viendo ejemplos y como no hay mejor manera de apreder algo que ponerlo
+en practica, comenzo el port de lo unico que entiendo a la perfeccion y estoy
+orgulloso, asi es, el motor de expresiones regulares (terminen con mi
+sufrimiento)&lt;/p&gt;
+
+&lt;p&gt;De momento funciona, aunque no es mas que una copia medio usable de C a Go, sin
+ninguna orientacion a objetos.&lt;/p&gt;
+
+&lt;p&gt;Hace ya unos años que di un recorrido ninja por sdl 1.2 y C++ (deitel y como
+pensar en c++) medio aprendi algo de OO, pero di media vuelta hacia atras, tome
+el C de k&amp;amp;r (+ deitel), algo de ncurses y prometi no programar nada hasta no
+dominar C.&lt;/p&gt;
+
+&lt;p&gt;asi que? no me acuerdo de como programar OO&lt;/p&gt;
+
+&lt;p&gt;y que con go? podria ser un buen sucesor de C, si tubiese punteros de verdad,
+cadenas de caracteres de verdad, un tipado menos estricto, pero sobre todo, si
+presindiera de su estupido autoformateo, guia de estilo y llaves para
+instrucciones simples, te maldigo &lt;code&gt;gofmt&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;y &lt;em&gt;regexp3-go&lt;/em&gt; que? &lt;a href=&#34;https://github.com/nasciiboy/regexp3/&#34;&gt;aqui&lt;/a&gt;, algo mas de
+informacion en el readme&lt;/p&gt;
+
+&lt;p&gt;que sigue? transitar la aleatoriedad.&lt;/p&gt;
+
+&lt;p&gt;Bueno hasta aqui con mis cosas, pronto (una semana, un mes o mas) una version
+simplificada del lenguaje de marcas ligeras.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../gotor.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

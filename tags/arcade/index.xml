@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arcade on ⋲ᴹ∧cₛ ℜø∁κ§</title>
+    <link>https://nasciiboy.land/tags/arcade/</link>
+    <description>Recent content in Arcade on ⋲ᴹ∧cₛ ℜø∁κ§</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL v3.0</copyright>
+    <lastBuildDate>Tue, 25 Jul 2017 01:28:00 -0500</lastBuildDate>
+    
+        <atom:link href="https://nasciiboy.land/tags/arcade/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>trickparade</title>
+      <link>https://nasciiboy.land/love2d/trickparade/</link>
+      <pubDate>Tue, 25 Jul 2017 01:28:00 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/trickparade/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone --recursive https://github.com/SimonLarsen/trickparade.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Witch of the Grove</title>
+      <link>https://nasciiboy.land/love2d/witch-of-the-grove/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:55 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/witch-of-the-grove/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone --recursive https://github.com/SimonLarsen/wotg.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>In Your Face City Trains</title>
+      <link>https://nasciiboy.land/love2d/in-your-face-city-trains/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:54 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/in-your-face-city-trains/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/SimonLarsen/iyfct.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>trosh</title>
+      <link>https://nasciiboy.land/love2d/trosh/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:51 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/trosh/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Stabyourself/trosh.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Red Entity</title>
+      <link>https://nasciiboy.land/love2d/red-entity/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:36 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/red-entity/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/tinydanbo/Ludum-Dare-30.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nova Pinball</title>
+      <link>https://nasciiboy.land/love2d/nova-pinball/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:25 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/nova-pinball/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone --recursive https://github.com/wesleywerner/nova-pinball.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>notpacman</title>
+      <link>https://nasciiboy.land/love2d/notpacman/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:21 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/notpacman/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Stabyourself/notpacman.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mr. Rescue</title>
+      <link>https://nasciiboy.land/love2d/mr.-rescue/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:19 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/mr.-rescue/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/SimonLarsen/mrrescue.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Burrow Down</title>
+      <link>https://nasciiboy.land/love2d/burrow-down/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:51 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/burrow-down/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/tinydanbo/Burrow-Down.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>90 Second Portraits</title>
+      <link>https://nasciiboy.land/love2d/90-second-portraits/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:45 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/90-second-portraits/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone --recursive https://github.com/SimonLarsen/rakshasa.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

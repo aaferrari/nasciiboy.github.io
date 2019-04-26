@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>4096-RGB</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style> :root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 80%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 20%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
+
+  <h1>4096-RGB</h1>
+  <p>una imagen que contenga todas las combinaciones en el esquema RGB
+producida por un &ldquo;programa de ordenador&rdquo;, puede ser <em>«ARTE»</em>? &hellip; puesta en una
+exposicion, cualquier mierda es arte</p>
+
+<p>una nuevo pro(mesa|puesta) para revivir al intento de programador (artistico y
+conceptual) que pretendia ser. El problema parecia sencillo, parece ser
+fuente de nuevos y desconcertantes misterios matemagicians, perceptivos que
+tienen (o no) relacion con las representaciones digitales de aspectos de mundo
+real, como el c-o-l-o-u-r</p>
+
+<p>primero lo fundamental, cuantos colores se supone pueden representarse con tres
+valores enteros sin signo de 8 bits?</p>
+
+<pre><code>(2^8)^3
+
+# 2 por los valores que pueder almacenar cada bit (0 y 1)
+# ^8 por los 8 bits
+# ^3 de cada valor, es decir R (2^8) * G (2^8) * B (2^8)
+
+# que es igual a
+== 16,777,216
+</code></pre>
+
+<p>ahora de que dimenciones debe ser una imagen que contenga los dieciseis como
+siete millones de pixeles del rango RGB? &hellip; a saber, por mera casualidad probe
+con 2048 * 2048 = 4,194,304. Luego con 4096 * 4096 y&hellip; <strong>16,777,216</strong>, puhaa!
+la pura magia de la casualidad binaria&hellip; 8*3 == 12&hellip; 2^12 == 4096&hellip; La
+verdad, no tengo idea de por que esto funciona</p>
+
+<p>pues ya esta, a establecer los pixeles de un rectangulo de 4096*4096, pero como
+demonios hacer esto?</p>
+
+<p>la primer idea en aparecer, fue dentro de un bucle establecer un indice a cero e
+iterar sumando 1 por ciclo hasta llegar a 16,777,216, algo asi</p>
+
+<pre><code>for i := uint32(0); i &lt; 16777216; i++ {
+  // hacer cosas con i
+}
+</code></pre>
+
+<p>para cortar el entero y optener los colores, se recortaria el indice en sus tres
+octetos de bits menos significativos</p>
+
+<pre><code>[00000000][00000000][00000000][00000000] // i := uint32
+             AZUL      VERDE     ROJO
+</code></pre>
+
+<p>esto usando &ldquo;movimientos a nivel de bits&rdquo; y &ldquo;truncamiento por cast&rdquo;, por supueto</p>
+
+<pre><code>r, g, b = uint8(i), uint8(i &gt;&gt; 8), uint8(i &gt;&gt; 16)
+</code></pre>
+
+<p>aunque enfrentado directamente el problemo y tras varias iteraciones el codigo
+adquirio esta forma estilizada y mas o menos conpacta</p>
+
+<pre><code>package main
+
+import( &quot;image&quot;; &quot;image/color&quot;; &quot;image/png&quot;; &quot;os&quot; )
+
+func main() {
+  const width, height = 4096, 4096
+  i, r, g, b := uint32(0), uint8(0), uint8(0), uint8(0)
+  img := image.NewRGBA(image.Rect(0, 0, width, height))
+
+  for   py := 0; py &lt; height; py++ {
+    for px := 0; px &lt;  width; px++ {
+      r, g, b = uint8(i), uint8(i &gt;&gt; 8), uint8(i &gt;&gt; 16)
+      img.Set(px, py, color.RGBA{ r, g, b, 255 })
+      i++
+    }
+  }
+
+  png.Encode(os.Stdout, img);
+}
+</code></pre>
+
+<p>unas constantes que establecen el ancho de la imagen. Variables para el indice,
+campos r, g, b y &ldquo;la imagen&rdquo;</p>
+
+<p>dos bucles for para moverse de arriba a abajo de izquierda a derecha de la
+imagen estableciendo pixel a pixel y al final codificando la imagen en la salida
+estandar</p>
+
+<p>para ejecutar esto, copiar el <a href="https://nasciiboy.land/data/4096-RGB/rgb.go">codigo</a> y luego con el go
+ejecutar asi</p>
+
+<pre><code>&gt; go run rgb.go &gt; arte-RGB.png
+</code></pre>
+
+<p>se produce una imagen de 176KiB a-s-i -&gt;</p>
+
+<p><center>
+<img src="https://nasciiboy.land/data/4096-RGB/4096-RGB.png" alt="" />
+</center></p>
+
+<p>interesante la distribucion del color, similar al que produce una oblea de
+silicio&hellip;</p>
+
+<p>mientras tanto, me preguntaba como demonios organizar de mejor forma la
+produccion de tonalidades y de ser posible patrones de lo mas extravagantes y
+pseudo fractales, o algo similar. (Nota: averiguar como&hellip;)</p>
+
+<p>en otro breve lapsus, parecia mejor idea organizar la grabacion de pixeles con
+respeto a su suma rgb, es decir, de 0 a 767 (<strong>256 + 256 + 256 == 768</strong>)</p>
+
+<p>(nota segunda: es facil liarse y por familiaridad pensar en cosas como 255*3 o
+255^3, no caigais en el error mas viejo del mundo, el desplazamiento en
+uno&hellip; como yo)</p>
+
+<p>me encontraba divagando si un programa que generara todos los valores RGB (cada
+color con 256 valores disponibles y almacenado cada uno en enteros sin signos de
+8 bits, es decir 0-255)</p>
+
+<pre><code>package main
+
+import( &quot;image&quot;;&quot;image/color&quot;;&quot;image/png&quot;;&quot;os&quot; )
+
+func main() {
+  const width, height = 4096, 4096
+  var colors [768][]color.RGBA
+  var r, g, b uint8
+
+  for i, sum := uint32(0), 0; i &lt; 16777216; i++ {
+    r, g, b = uint8(i), uint8(i &gt;&gt; 8), uint8(i &gt;&gt; 16)
+    sum = int(r) + int(g) + int(b)
+    colors[sum] = append( colors[sum], color.RGBA{ r, g, b, 255 } )
+  }
+
+  img := image.NewRGBA( image.Rect(0, 0, width, height) )
+  for i, y, x := 0, 0, 0; i &lt; 766; i++ {
+    for _, rgb := range colors[i] {
+      if x == width { x = 0; y++ }
+      img.Set(x, y, rgb )
+      x++
+    }
+  }
+
+  png.Encode(os.Stdout, img);
+}
+</code></pre>
+
+<p><center>
+<img src="https://nasciiboy.land/data/4096-RGB/q.png" alt="" />
+</center></p>
+
+<p>esta ves se utiliza un arreglo de <em><code>slices</code></em> (arreglo redimencionable). Contiene
+768 (256*3) slices, donde la posicion 0 es la suma (RGB) de 0 + 0 + 0 y 765
+(255*3) 255 + 255 + 255&hellip; (este dezplazamiento en uno es muy confuso). El resto
+de valores intermedios, vedria a ser una combianacion de todos los valores para
+tal suma</p>
+
+<p>para establecer los pixeles basta con recorrer el arreglo &ldquo;trozo a trozo&rdquo; (ha,
+ha, ha, que humor tan sofisticado)</p>
+
+<p>el resultado, con apariencia mas aleatoria, parece tener cierto orden aplicando
+un acercamiento (gThumb)</p>
+
+<p><center>
+<img src="https://nasciiboy.land/data/4096-RGB/q-zoom.png" alt="" />
+</center></p>
+
+<p>por si las moscas, revizando con el programa para manipular imagenes de GNOME
+(alias &ldquo;gimp&rdquo;) parace que en efecto los 253^3 colores distintos estan hay</p>
+
+<p><center>
+<img src="https://nasciiboy.land/data/4096-RGB/gimp-check.png" alt="" />
+</center></p>
+
+<p>(CLICK IZQUIERDO -&gt; colores -&gt; info -&gt; analisis del cubo de color)</p>
+
+<p>y para terminar otra vercion de ordenamiento, pero esta ocacion (tambien) de
+arriba a bajo, pero el recorrido de izquierda a derecha continua por la derecha
+y luego sigue por la izquierda &ldquo;serpenteando&rdquo;</p>
+
+<p><center>
+<img src="https://nasciiboy.land/data/4096-RGB/r.png" alt="" />
+</center></p>
+
+<p>mientras tanto pensaba como precindir del (tramposo y poco eficiente) arreglo de
+slices y ocurrioseme que habiendo un indice de 1 a n, se troza para optener de
+esto tres valores (r, g, y b) y a su vez a estos se les aplican todas las
+posibles rotaciones, por ejemplo</p>
+
+<pre><code>indice  R   G   B      rotaciones
+ ...   ... ... ...       5  0  0
+  5     5   0   0        0  5  0
+ ...   ... ... ...       0  0  5
+</code></pre>
+
+<p>y luego, o mejor planteado al indice inicial encontrar sus variaciones</p>
+
+<pre><code>indice  R   G   B   /-&gt;  variaciones   /-&gt; rotaciones
+ ...   ... ... ... /       5  0  0  --/      5  0  0
+  5     5   0   0 /        4  1  0           0  5  0
+ ...   ... ... ...         3  1  1           0  0  5
+                           3  2  0
+                           2  2  1
+</code></pre>
+
+<p>preliminarmente en el codigo</p>
+
+<pre><code>package main
+
+func main() {
+  var r, g, b uint8
+
+  for i := uint32(0); r + g + b == 765; i++ {
+    // nuevo valor
+    r, g, b = uint8(i), uint8(i &gt;&gt; 8), uint8(i &gt;&gt; 16)
+
+    for _, variaciones := range variar( r, g, b ) {
+      for _, rotaciones := range rotar( r, g, b ) {
+        // establecer variaciones o hacer algo
+      }
+    }
+  }
+}
+
+func variar(r, g, b uint8) []rgbS {
+  var variados = [] rgbS { { r, g, b },};
+  // cosas
+  return variados
+}
+
+func rotar(r, g, b uint8) []rgbS {
+  var rotados = [] rgbS { { r, g, b },};
+  // cosas
+  return rotados
+}
+</code></pre>
+
+<p>pero luego de darle varias vueltas, parece que ese indice (el 255 255 255) tiene
+que forzosamente y de todas maneras pasar uno a uno los valores hasta el
+2^24. Ademas, el solo analicis de un &ldquo;metodo&rdquo; para generar las &ldquo;variaciones&rdquo; es
+extenuante.</p>
+
+<p>parece que en matematicas hay algo llamado combinaciones y permutaciones, pero
+no encontre aquello exacto que buscaba. Te dicen como calcular el total de
+variaciones posibles, pero no como generarlas y menos distribuirlas en un grupo
+de &ldquo;conjuntos&rdquo;</p>
+
+<p>en fin, si tienes las soluciones a estas preguntas, o un patron de recorido por
+el arreglo rgb, una tecnica molona para ordenar los colores o insultar por hacer
+perder el tiempo, contactar al correo&hellip; no prometo responder o tener internet,
+pero seguro que se lee</p>
+
+<p>&hellip;</p>
+
+<p>como no podia ser una excepcion, ya antes alguien conjuro los colores RGB</p>
+
+<p><a href="https://www.reddit.com/r/woahdude/comments/200uvn/all_16777216_rgb_colors_in_one_picture_with_no/">https://www.reddit.com/r/woahdude/comments/200uvn/all_16777216_rgb_colors_in_one_picture_with_no/</a></p>
+
+<p>al menos el mio incluye un poco de codigo mediacre, je</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.land/prog/inf-domain/">◀ ∞.nasciiboy.land</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
+</main>
+
+    <aside>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="https://nasciiboy.land/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="https://nasciiboy.land/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="https://nasciiboy.land/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="https://nasciiboy.land/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="https://nasciiboy.land/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
+
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/categories/prog">prog(58)</a></li><li><a href="https://nasciiboy.land/categories/post">post(55)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(35)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(25)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(22)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(8)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(7)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

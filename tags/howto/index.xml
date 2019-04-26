@@ -7,10 +7,730 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Tue, 11 Sep 2018 09:47:52 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 04 Nov 2018 13:39:27 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.land/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git@nasciiboy.land</title>
+      <link>https://nasciiboy.land/prog/gitatnasciiboy-land/</link>
+      <pubDate>Sun, 04 Nov 2018 13:39:27 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/gitatnasciiboy-land/</guid>
+      <description>
+
+&lt;p&gt;Desde la posecion del vps entoy ansioso de montarle chismes, pero no tengo muy
+claro cuales, para que, o como hacelo bajo un mismo dominio&lt;/p&gt;
+
+&lt;p&gt;mmm, segun veo por las pruebas, cada &amp;ldquo;servicio&amp;rdquo; tienen un puerto predeterminado
+y funciona mas o menos de manera automagica. Por ejemplo al activar el demonio
+ssh inmediatamente funciona de la manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh usuario@dominio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ssh -p numero-puerto usuario@dominio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en caso de haber modificado el puerto por defecto que es el 22&lt;/p&gt;
+
+&lt;p&gt;para el caso de las paginas web el puerto es el 80 y el 443 para
+el https, pero tambien se puede cambiar este puerto por uno arbitrario como en&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; elinks http://dominio.algo:numero-puerto/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;intentando comprender estas magias de los dominios, los dns y los puertos (y
+protocolos&amp;hellip; o no) ocurrioseme que ya que venia de las paginas gratuitas de
+gitlab y github donde no se permite la subida de ficheros &amp;ldquo;sospechosamente
+grandes&amp;rdquo; (como un album musical) seria interesante ademas de tener el repo para
+el funcionamiento de la pagina, permitir su clonacion y que quien quiera
+almacene, modifique o &amp;ldquo;plagie&amp;rdquo; lo que le venga en gana&lt;/p&gt;
+
+&lt;p&gt;ya en plena investigacion (mas alla de los 4 comandos que utilizo en git) me
+entero que este tiene diversos &lt;a href=&#34;https://git-scm.com/book/es/v2/Git-en-el-Servidor-Los-Protocolos&#34;&gt;protocolos&lt;/a&gt;
+por los cuales se puede utilizar (aunque ya los habia empleado sin
+razonar sobre ello), son los siguientes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone ruta                             # clonar desde el propio equipo
+git clone file://ruta                      # clonar desde el propio equipo
+git clone usuario-ssh@dominio:ruta         # clonar utilizando una conexion ssh
+git clone git://dominio/repositorio-o-ruta # clonar utilizando el &amp;quot;protocolo git&amp;quot;
+git clone http://dominio/repositorio       # clonar utilizando &amp;quot;http inteligente&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ignorando las dos primeras opciones por ser para &amp;ldquo;el autoconsumo&amp;rdquo; y la ultima
+que encontre &amp;ldquo;demasiado&amp;rdquo; complicada y &amp;ldquo;poco documentada&amp;rdquo; para nginx (que es el
+servidor que estoy utilizando), las maneras simples de compartir el repositorio serian
+dos: mediante SSH que ya lo estaba utilizando y pocos miesterios encierra o
+utilizar el &amp;ldquo;protocolo git&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;al rollo pues =&amp;gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;git-daemon&#34;&gt;git daemon&lt;/h2&gt;
+
+&lt;p&gt;El &amp;ldquo;protocolo git&amp;rdquo; no es otra cosa mas que un pequeño servidor escuchando en el
+&lt;strong&gt;puerto 9418&lt;/strong&gt; al que se le asigna un directorio raiz desde el cual explorara
+el nombre de las carpetas en el, vera si son o no repositorios, si estan
+&amp;ldquo;habilitados&amp;rdquo; y que se puede hacer o no con ellos&lt;/p&gt;
+
+&lt;p&gt;su funcionamiento es tan sencillo como lanzar lo siguiente en consola&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git daemon --reuseaddr --verbose --base-path=/ruta-a-repositorios/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aqui el programa es &lt;code&gt;git&lt;/code&gt; con el comando &lt;code&gt;daemon&lt;/code&gt; para que entre en el modo servidor, &lt;code&gt;--reuseraddr&lt;/code&gt;
+por que aparecio en algun post, &lt;code&gt;--verbose&lt;/code&gt; para que lance toda la informacion
+que se pueda y &lt;code&gt;--base-path=/ruta-a-repositorios&lt;/code&gt; es la carpeta raiz desde donde
+trabajara. Para mas informacion &lt;code&gt;git help daemon&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;podriamos poner a prueba esto de la sigiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir /tmp/roma
+cd /tmp/roma
+
+# creamos un repo de pruebas
+mkdir rama
+cd rama
+git init
+echo &amp;quot;algo&amp;quot; &amp;gt; txt
+git add txt
+git commit -m &amp;quot;primer commit&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;listos nuestro directorio (&lt;code&gt;roma&lt;/code&gt;) y repo de pruebas (&lt;code&gt;rama&lt;/code&gt;) lanzamos el git demonizado&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git daemon --reuseaddr --verbose --base-path=/tmp/roma/
+[12618] Ready to rumble
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y luego desde otra secion (&lt;strong&gt;y ruta&lt;/strong&gt;) de terminal ponemos a prueba el invento&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://localhost/rama
+Clonando en &#39;rama&#39;...
+fatal: error remoto: access denied or repository not exported: /rama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;he? que fallo aqui? &lt;code&gt;git daemon&lt;/code&gt; revisa en los repositorios si existe un fichero
+expecial llamado &lt;code&gt;git-daemon-export-ok&lt;/code&gt;. Este fichero actua a modo de &amp;ldquo;bandera&amp;rdquo;
+para permitir las &amp;ldquo;cosas&amp;rdquo; que hace el servidor. Pero un dato que es importante,
+&lt;code&gt;git-daemon-export-ok&lt;/code&gt; debe estar dentro del repositorio, dentro del directorio &lt;code&gt;.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Creamos la &amp;ldquo;bandera&amp;rdquo; para dar permiso a &lt;code&gt;git daemon&lt;/code&gt; tal que asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; touch /tmp/roma/rama/.git/git-daemon-export-ok
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y volvemos a intentar la clonacion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://localhost/rama
+Clonando en &#39;rama&#39;...
+remote: Enumerando objetos: 3, listo.
+remote: Contando objetos: 100% (3/3), listo.
+remote: Total 3 (delta 0), reusado 3 (delta 0)
+Recibiendo objetos: 100% (3/3), listo.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;puag! magia!&lt;/p&gt;
+
+&lt;p&gt;ahora hagamos un pequeño experimento, ¿nos permitira subir modificaciones del
+clon recien hecho?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# recordar, esto es el repo clonado en alguna ruta
+# distinta a `--base-path=/tmp/roma/` de `git daemon`
+&amp;gt; cd rama
+&amp;gt; echo &amp;quot;algo mas&amp;quot; &amp;gt;&amp;gt; txt
+&amp;gt; git commit -a -m &amp;quot;nuevo commit&amp;quot;
+&amp;gt; git push
+fatal: error remoto: access denied or repository not exported: /rama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;del lado de nuestro servidor git, nos arroja lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[13117] Request receive-pack for &#39;/rama&#39;
+[13117] &#39;receive-pack&#39;: service not enabled for &#39;/tmp/roma//rama/.git&#39;
+[12618] [13117] Disconnected (with error)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos informa que tenemos una peticion &lt;code&gt;receive-pack&lt;/code&gt; para &lt;code&gt;/rama&lt;/code&gt; pero que el servicio
+&lt;code&gt;receive-pack&lt;/code&gt; no esta habilitado para este repo. Solucionamos esto aniquilando
+el servidor git con &lt;code&gt;Ctrl-C&lt;/code&gt; y volviendolo a lanzar con una nueva opcion
+&lt;code&gt;--enable=receive-pack&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git daemon --reuseaddr --verbose --base-path=/tmp/roma/ --enable=receive-pack
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;intentemos de nuevo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (3/3), 244 bytes | 244.00 KiB/s, listo.
+Total 3 (delta 0), reusado 0 (delta 0)
+remote: error: refusing to update checked out branch: refs/heads/master
+remote: error: Por defecto, actualizar la rama actual en un repositorio no vacío
+...
+To git://localhost/rama
+ ! [remote rejected] master -&amp;gt; master (branch is currently checked o
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;que paso? pues que necesitamos un tipo de repositorio especial llamado &lt;code&gt;git
+bare&lt;/code&gt; que no es otra cosa que la carpeta &lt;code&gt;.git&lt;/code&gt; que esta en cada repo pero con
+otra &amp;ldquo;bandera especial&amp;rdquo; habilitada.&lt;/p&gt;
+
+&lt;p&gt;Tenemos dos opciones. Convertir nuestro repositorio en un &lt;code&gt;git bare&lt;/code&gt; de la
+siguiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cp -R /tmp/roma/rama/.git /tmp/roma/remo.git
+&amp;gt; cd /tmp/roma/remo.git
+&amp;gt; git config --bool core.bare true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ahora cambiemos la fuente remota de nuestro repo modificado e intentemos
+subir la modificacion al nuevo repositorio &amp;ldquo;remoto&amp;rdquo; &lt;code&gt;remo&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# de nuevo, esto es el repo clonado en alguna ruta aleatoria
+&amp;gt; git remote set-url origin git://localhost/remo
+&amp;gt; git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (3/3), 244 bytes | 244.00 KiB/s, listo.
+Total 3 (delta 0), reusado 0 (delta 0)
+To git://localhost/remo
+   9f6cd12..262a37b  master -&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;puag! como mola!&lt;/p&gt;
+
+&lt;p&gt;La otra opcion era crear un repositor &lt;code&gt;bare&lt;/code&gt; vacio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git init --bare /tmp/roma/remi.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;agregar la &amp;ldquo;bandera&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; touch /tmp/roma/remi.git/git-daemon-export-ok
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;agregar el nuevo destino a nuestro repo modificado (o no)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git remote add remi git://localhost/remi
+&amp;gt; git push remi master
+Enumerando objetos: 6, listo.
+Contando objetos: 100% (6/6), listo.
+Compresión delta usando hasta 2 hilos
+Comprimiendo objetos: 100% (2/2), listo.
+Escribiendo objetos: 100% (6/6), 416 bytes | 416.00 KiB/s, listo.
+Total 6 (delta 0), reusado 3 (delta 0)
+To git://localhost/remi
+ * [new branch]      master -&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;puag! que gusto!&lt;/p&gt;
+
+&lt;h2 id=&#34;vps&#34;&gt;vps&lt;/h2&gt;
+
+&lt;p&gt;Conocemos la teoria del (servidor) git demonizado, pero falta que lo pongamos a
+funcionar en nuestra maquina donde estara (en teoria) funcionando y sirviendo
+clones a todo el mundo. Como proceder?&lt;/p&gt;
+
+&lt;p&gt;Segun parece, deberiamos crear un nuevo usuario en la maquina y un unico
+directorio bajo su custodia que contendra los repos y sera a su vez la ruta raiz
+para &lt;code&gt;git daemon&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Como root&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; useradd -c &amp;quot;repos de nascii - nasciiboy@gmail.com&amp;quot; git -m
+# -c  : comentario
+# git : nombre de usuario
+# -m  : crear directorio en /home
+&amp;gt; passwd git
+# mi !super contraseña¡ del usuario git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en varias &lt;a href=&#34;https://git-scm.com/book/es/v2/Git-en-el-Servidor-Configurando-el-servidor&#34;&gt;fuentes&lt;/a&gt;
+parece que lo recomendable es establecer un directorio raiz en un lugar que no
+sea la &lt;code&gt;home&lt;/code&gt; del usuario (como &lt;code&gt;/opt/git&lt;/code&gt; o &lt;code&gt;/var/repo&lt;/code&gt;), y de hecho que el usuario no tenga &lt;code&gt;home&lt;/code&gt;&amp;hellip; pero,
+paque complicarnos? que sea persona y tenga su home (de hay el parametro &lt;code&gt;-m&lt;/code&gt; en
+&lt;code&gt;adduser&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;ahora solo restaria que el sistema operativo se encargue de levantar nuestro
+git demonizado en cada arranque. Segun &lt;a href=&#34;https://serverfault.com/questions/912899/how-to-start-git-daemon-at-boot#912914&#34;&gt;un sitio de consultas&lt;/a&gt;
+y puesto que hice esto en debian y tiene &lt;code&gt;systemd&lt;/code&gt; y hay que copiar y pegar.
+Colocamos lo siguiente dentro del fichero &lt;code&gt;/etc/systemd/system/git-daemon.service&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=Git Daemon
+Documentation=man:git-daemon(1)
+ConditionPathExists=/home/git/
+
+[Service]
+# no permite recibir cambios
+ExecStart=/usr/bin/git daemon --reuseaddr --verbose --base-path=/home/git/
+# permite recibir cambios
+# ExecStart=/usr/bin/git daemon --reuseaddr --enable=receive-pack --verbose --base-path=/home/git/
+User=git
+Group=git
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(adaptar en caso de ser necesario las rutas)&lt;/p&gt;
+
+&lt;p&gt;para habilitar el servicio por los siglos de los siglos y los reinicios&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; systemctl enable git-daemon
+&amp;gt; systemctl start  git-daemon
+&amp;gt; systemctl status git-daemon
+● git-daemon.service - Git Daemon
+   Loaded: loaded (/etc/systemd/system/git-daemon.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2018-11-03 17:43:42 CST; 21s ago
+     Docs: man:git-daemon(1)
+ Main PID: 46787 (git)
+    Tasks: 2 (limit: 4915)
+   CGroup: /system.slice/git-daemon.service
+           ├─46787 /usr/bin/git daemon --reuseaddr --verbose --base-path=/home/git/
+           └─46790 git-daemon --reuseaddr --verbose --base-path=/home/git/
+
+Nov 03 17:43:42 tachikoma systemd[1]: Started Git Daemon.
+Nov 03 17:43:42 tachikoma git[26758]: [26762] Ready to rumble
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(&lt;code&gt;systemctl&lt;/code&gt; + (&lt;code&gt;stop&lt;/code&gt;|&lt;code&gt;disable&lt;/code&gt;) &lt;code&gt;git-daemon&lt;/code&gt; para&amp;hellip; se entiende por si mismo)&lt;/p&gt;
+
+&lt;p&gt;listo y facilmente! Ya pueden copiar nuestros repositorios (sin registro o
+contraseñas) tal que asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://mi-dominio.algo/repo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ho, quiza olvide mencionarlo, pero al demonio de git, cuando nuestro repositorio
+se llama &lt;code&gt;repo.git&lt;/code&gt; le es indiferente si lo mencionamos con o sin el
+&lt;code&gt;.git&lt;/code&gt;. Lo nombramos asi para permitir ambas opciones, por que lo contrario
+(hacer tareas en un &lt;code&gt;repo-sin-punto-git&lt;/code&gt;) agregando el &lt;code&gt;.git&lt;/code&gt; no funciona&lt;/p&gt;
+
+&lt;p&gt;Antes de terminar con los detalles configuratorios, me preguntaba por que o como
+permitir que alguien tenga acceso al repositorio para modificarlo. Para esto
+pues la mejor manera seria agregar su clave publica en
+&lt;code&gt;~git/.ssh/authorized_keys&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;tambien podriamos habilitar para el usuario git el acceso mediante contraseña agregardo al final del
+fichero &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Match User git
+    PasswordAuthentication yes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si se diera el caso de tener colaboradores &amp;ldquo;quiza&amp;rdquo; no querriamos que hicieran
+nada no relacionado con git. En tal situacion y solo de esta manera deberiamos
+substituir la shell del usuario git por una shell que no permita hacer
+absolutamente nada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; chsh git -s /usr/bin/git-shell
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pero esta es solo una medida extrema, unicamente aplicable si no confiamos en
+quien tenga acceso. Al hacer esto tambien nosotros tendriamos que sufrir
+incomodidades inecesarios, pues ni un &lt;code&gt;scp&lt;/code&gt; funciona si la shell es &lt;code&gt;git-shell&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Asi pues, bajo el supuesto que usamos &amp;ldquo;ssh con llaves&amp;rdquo;, pues no veo por que
+implementar ninguna medida adicional&lt;/p&gt;
+
+&lt;h2 id=&#34;nasciiboy-land&#34;&gt;nasciiboy-land&lt;/h2&gt;
+
+&lt;p&gt;y llegado a este punto, ya podeis clonar el repo que da vida a esta web&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git clone git://nasciiboy.land/nasciiboy-land
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;son algo mas de 2GiB! Como el vps esta bastante corto tanto en ram como en
+procesador hacerlo solo una vez por persona multiplicando el minuto actual de su
+reloc por la hora y sumando 3 y tomando el resultado como los segundos de
+espera. La comprecion que realiza git pone al 100% al procesador y el GB de ram
+se satura (tube que agregar un ficherito swap de 2 GB mas para que sea posible)&lt;/p&gt;
+
+&lt;p&gt;si quieren construir la web, entran a la copia del repo y ejecutan el programa
+&lt;code&gt;hugo&lt;/code&gt;. El resultado estara en el directorio &lt;code&gt;public&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;se supone que &lt;code&gt;hugo serve&lt;/code&gt; te permite ver y modificar el sitio al vuelo, pero mi
+maquina con 8GB de ram y 8GiB de swap no puede con tal encargo&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;happy hacking!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Goaccess</title>
+      <link>https://nasciiboy.land/prog/goaccess/</link>
+      <pubDate>Thu, 27 Sep 2018 09:20:41 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/goaccess/</guid>
+      <description>
+
+&lt;p&gt;esta &amp;ldquo;bitacora&amp;rdquo; no incluye galletas, ni js (de mierda) y aunque tiene
+casi dos añitos de existir, hasta hace poco no tenia idea de cuantas personas (o
+cosas) se pasan por aqui o para que&lt;/p&gt;
+
+&lt;p&gt;uno de los cambios que vino tras (parte de) el exilio de github fue que ahora
+los logs del servidor son mios, para como todos los demas, &amp;ldquo;recoger
+estadisticas&amp;rdquo;. Sin embargo las consultas se limitaban a ver un conteo de visitas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 15)&#39; | awk &#39;{ tot+=$2 }; END { print &amp;quot;TOTAL &amp;quot; tot }&#39;
+TOTAL 16352
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o graficar las ip mas frecuentes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cat /var/log/nginx/access.log | awk &#39;{ print $1 }&#39; | sort | uniq -c | sort -n | tail | perl -lane &#39;print $F[1], &amp;quot;\t&amp;quot;, $F[0], &amp;quot;\t&amp;quot;, &amp;quot;▄&amp;quot; x ($F[0] / 20)&#39;
+188.40.107.254  228     ▄▄▄▄▄▄▄▄▄▄
+192.3.177.102   231     ▄▄▄▄▄▄▄▄▄▄
+23.237.4.26     301     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+92.185.168.114  315     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+5.45.207.58     346     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+78.46.161.81    355     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+216.244.66.228  693     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+94.130.18.77    697     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+104.248.193.105 724     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+187.225.125.52  1234    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hasta que una nueva busqueda llevo a conocer un programito que puede hacer mas
+cosas con los logs de acceso de nginx (de apache y otros). No solo eso, ademas
+viene en los repositorios de debian 9, esta escrito en C, no requiere procesos en
+segundo plano, demonios, js o ninguna mierda extrabagante y nos hara sentir
+mejor persona&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; apt install goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si lo lanzamos de la siguiente manera&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess -f /var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;se abrira un menu para indicar el formato de log, fecha y tiempo que vamos a
+utilizar, porque, aunque el programa sea eficaz, no es magico&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;basta con presionar &lt;code&gt;Espacio&lt;/code&gt; en una de las opciones y lugo dar un &lt;code&gt;Enter&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si la opcion que hemos elegido no es valida para el log, nos lo informara y
+podremos probar otra hasta que funcione&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;con la informacion de esta pantalla, mas tarde podriamos configurar el programa
+para ingresar directamente en la interfaz de texto. Dentro de las opcciones que
+he podido probar y funcionan para mi servidor (nginx) con una sola pagina sin
+&amp;ldquo;Virtual Host&amp;rdquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NCSA Combined Log Format&lt;/li&gt;
+&lt;li&gt;Common Log Format (CLF)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;las opcciones que son invalidas&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NCSA Combined Log Format with Virtual Host&lt;/li&gt;
+&lt;li&gt;Common Log Format (CLF) with Virtual Host&lt;/li&gt;
+&lt;li&gt;W3C&lt;/li&gt;
+&lt;li&gt;CloudFront (Download Distribution)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;con estos datos ya podemos acceder a la configuracion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; emacs /etc/goaccess.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y descomentar las siguientes lineas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+time-format %H:%M:%S
+...
+date-format %d/%b/%Y
+...
+# NCSA Combined Log Format
+#
+log-format %h %^[%d:%t %^] &amp;quot;%r&amp;quot; %s %b &amp;quot;%R&amp;quot; &amp;quot;%u&amp;quot;
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tras esto, ejecutando de nuevo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess -f /var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;entrariamos directamente en la interfaz de texto (&lt;code&gt;q&lt;/code&gt; para salir)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;podriamos ademas indicar cual es exactamente el fichero que vamos a utilizar
+como datos de entrada&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Specify the path to the input log file. If set, it will take
+# priority over -f from the command line.
+#
+#log-file /var/log/apache2/access.log
+log-file /var/log/nginx/access.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;de esta manera solo bastaria ejecutar &lt;code&gt;goaccess&lt;/code&gt; sin ningun argumento extra.
+Pero y basado en mis pruebas, algunos parametros de linea de comandos, cuando se
+establecen en la configuracion (como &lt;code&gt;log-file&lt;/code&gt; o &lt;code&gt;log-format&lt;/code&gt;) parecen ser
+totalmente ignorados si se utiliza &lt;code&gt;goaccess&lt;/code&gt; luego de una tuberia. Me explico,
+si tras la configuracion lanzamos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess -f /var/log/nginx/access.log -c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nos permite cambiar el fichero de entrada, tambien modificar el formato de log,
+fecha y hora. Sin embargo, utilizado en una tuberia&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | goaccess -c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;goaccess&lt;/code&gt; se pasara por el forro los datos de la tuberia y tambien los parametros que
+agreguemos (&lt;code&gt;-c&lt;/code&gt;). Solamente hace caso del contenido en su fichero de configuracion. Por
+esta razon, para hacer una metrica de un &amp;ldquo;bulto de logs&amp;rdquo; (como en el comando
+anterior) o de logs distintos, recomiendo no configurar &lt;code&gt;log-file&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;adicionalmente he incluido las siguientes lineas para indicar que algunas
+extensiones se consideren como ficheros estaticos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static-file .mkv
+static-file .webm
+static-file .mp4
+static-file .xz
+static-file .zip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;veamos ahora el uso de este programito, haciendo un&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;veremos que tiene unos datos principales (como peticiones totales, visitantes
+unicos, ficheros estaticos, etc) y (moviendo las frechas arriba y abajo) las
+&amp;ldquo;secciones&amp;rdquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 - Unique visitors per day - Including spiders&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2 - Top requests (URLs)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;3 - Top static requests (e.g. jpg, png, js, css&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;4 - HTTP 404 Not Found URLs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;5 - Visitor hostnames and IPs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;6 - Operating Systems&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;7 - Browsers&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;8 - Time Distribution&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;10 - Referring Sites&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;12 - Geo Location&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;13 - HTTP Status Codes&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;de las cuales una es la seccion &amp;ldquo;activa&amp;rdquo;. Esto se indica ademas de por un
+resaltado, por iniciar con el signo &lt;code&gt;&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para entrar en dicha seccion, presionamos bien &lt;code&gt;Espacio&lt;/code&gt;, o bien &lt;code&gt;Enter&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ya dentro, podemos movernos por &amp;ldquo;las filas&amp;rdquo; mediante &lt;code&gt;j&lt;/code&gt; (abajo) y &lt;code&gt;k&lt;/code&gt; (arriba),
+&lt;code&gt;g&lt;/code&gt; inicio y &lt;code&gt;G&lt;/code&gt; fin. Tambien, (de una manera un poco rara) ajustar lo que
+aparece en pantalla con arriba y abajo&lt;/p&gt;
+
+&lt;p&gt;para salir de &amp;ldquo;la seccion&amp;rdquo; precionamos &lt;code&gt;q&lt;/code&gt;. Para saltar a la siguiente seccion
+&lt;code&gt;TAB&lt;/code&gt; para saltar a la seccion anterior &lt;code&gt;Shift-TAB&lt;/code&gt; y para ir a una seccion
+especifica mediante su numero del 1-9. (No me pregunten como ir a la seccion 1X). Para
+saltar a la ultima seccion &lt;code&gt;G&lt;/code&gt; y a la primera &lt;code&gt;g&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;podemos alterar el tema de colores con &lt;code&gt;c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y ver el resto de la ayuda con &lt;code&gt;F1&lt;/code&gt; o &lt;code&gt;h&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;otra manera menos &amp;ldquo;rudimentaria&amp;rdquo; de ver las metricas seria crear un fichero
+html, Waaalaa!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/goaccess-08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para eso, solamente es necesario rediriguir la salida de la
+siguiente forma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | goaccess &amp;gt; mis-metricas.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en la &lt;a href=&#34;https://goaccess.io/faq&#34;&gt;documentacion&lt;/a&gt; mencionan un parametro para hacer
+que las metricas en formato web funcionen en tiempo real&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; goaccess /var/log/nginx/access.log -o /var/www/html/report.html --real-time-html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aunque en la vercion incluida en debian, dicho parametro no esta disponible. Por lo demas,
+consultar la pagina &lt;a href=&#34;https://goaccess.io/get-started&#34;&gt;web del proyecto&lt;/a&gt;, su man
+y darles ★★★★★ en &lt;a href=&#34;https://github.com/allinurl/goaccess/&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;.&lt;/p&gt;
+
+&lt;p&gt;tras &amp;ldquo;un buen&amp;rdquo; uso de &lt;code&gt;goacces&lt;/code&gt; sin necesitar de un reemplazo a la herramienta,
+(pero no por ello ignorar &amp;ldquo;lo torpe&amp;rdquo; de la interfaz de linea de comandos),
+encontre que se puede filtrar el rango de dias a consultar utilizando (como no)
+las tipicas herramientas de &amp;ldquo;la filosofia unix&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Para ello dos sencillos ejemplos. Primero consultar el dia actual&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# en bash
+&amp;gt; zcat -f /var/log/nginx/access.log* | grep -i $(date &#39;+%d/%b/%Y&#39;) | goaccess
+
+# en fish
+&amp;gt; zcat -f /var/log/nginx/access.log* | grep -i (date &#39;+%d/%b/%Y&#39;) | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y (simplificando lo anterior) consultar las visitas del ultimo mes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; zcat -f /var/log/nginx/access.log* | grep -i $(date &#39;+/%b/%Y&#39;) | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tambien, pero esta vez con &lt;code&gt;fish&lt;/code&gt; consultar las visitas de hoy y ayer&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# en fish
+&amp;gt; zcat -f /var/log/nginx/access.log* | awk (printf &amp;quot;/%s/; /%s/&amp;quot; (date -d &amp;quot;yesterday&amp;quot; &#39;+%d\\/%b\\/%Y&#39;) (date &#39;+%d\\/%b\\/%Y&#39;)) | goaccess
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;logrotate&#34;&gt;logrotate&lt;/h2&gt;
+
+&lt;p&gt;y ahora veamos que con el buen log de nginx.&lt;/p&gt;
+
+&lt;p&gt;en debian cuando instalamos nginx desde los repos, misteriozamente comienzan a
+brotar ficheros &lt;code&gt;access.log.1&lt;/code&gt;, &lt;code&gt;access.log.2&lt;/code&gt;, &lt;code&gt;access.log.3&lt;/code&gt;, …, a razon de
+uno por dia. Este comportamiento se debe a un programa que corre una vez por dia
+de nombre &lt;code&gt;logrotate&lt;/code&gt;, que rota los ficheros &lt;code&gt;access&lt;/code&gt; y &lt;code&gt;error&lt;/code&gt; todos los
+dias&amp;hellip;  bien podria considerarse una copia de seguridad de los sucesos del
+servidor, o bien una molestia innecesaria, segun cada quien.&lt;/p&gt;
+
+&lt;p&gt;En un post de &lt;a href=&#34;https://www.linuxito.com/gnu-linux/nivel-medio/927-como-instalar-logrotate-y-configurar-la-rotacion-de-logs-de-nginx&#34;&gt;linuxito&lt;/a&gt;
+el nos comentaba como instalar y configurar &lt;code&gt;logrotate&lt;/code&gt;, pero como ya en debian
+funciona por defecto sin que hagamos nada, me he limitado a modificar el
+comportamiento, de forma que los registros roten solo una vez por mes&lt;/p&gt;
+
+&lt;p&gt;mediante nuestro editor faborito&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; emacs /etc/logrotate.d/nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aparece lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/var/log/nginx/*.log {
+        daily
+        missingok
+        rotate 14
+        compress
+        delaycompress
+        notifempty
+        create 0640 www-data adm
+        sharedscripts
+        prerotate
+                if [ -d /etc/logrotate.d/httpd-prerotate ]; then \
+                        run-parts /etc/logrotate.d/httpd-prerotate; \
+                fi \
+        endscript
+        postrotate
+                invoke-rc.d nginx rotate &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+        endscript
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;lo he dejado asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/var/log/nginx/*.log {
+	monthly
+	missingok
+	rotate 14
+	compress
+	notifempty
+	create 0640 www-data adm
+	sharedscripts
+	prerotate
+		if [ -d /etc/logrotate.d/httpd-prerotate ]; then \
+			run-parts /etc/logrotate.d/httpd-prerotate; \
+		fi \
+	endscript
+	postrotate
+		invoke-rc.d nginx rotate &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+	endscript
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;nascii-results&#34;&gt;nascii-results&lt;/h2&gt;
+
+&lt;p&gt;y bueno, ya que estoy por que no hacer un analisis de los logs y obtener
+informacion que no influira de ninguna manera el futuro de este diario&amp;hellip; amenos
+no de momento y solo contemplando la posivilidad de colocar anuncios
+de hardware y de porno. A todo mundo le gusta el porno y el harware, no?&lt;/p&gt;
+
+&lt;p&gt;si quieren acompañarme con sus propias deducciones coloco el resultado
+&lt;a href=&#34;http://nasciiboy.land/goaccess.html&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El servidor inicio con los resgistros hace 17 dias con un total de 17XXX
+visitas, que serian una media aproximada de 1k por dia y segun la seccion
+&lt;strong&gt;Browsers&lt;/strong&gt; el 27% se identifica con el genero no binario grissexual
+&lt;em&gt;Crawlers&lt;/em&gt;. Otro buen habido 26% son firefoxxexual y el resto, las minorias
+oprimidas que no importan. 47% prefiere no informar que OS utiliza, 23% procede
+de las ventanas y los demas votan como Unix Like&lt;/p&gt;
+
+&lt;p&gt;aunque el sitio no esta contemplado para verse desde un movil&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/movil.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;casi un 5% lo hace asi. Puede que no incluya mierdas web, pero las imagenes si
+las incluyo en sus resoluciones originales y aveces en png! Mmm, si se
+preguntaban yo la veo asi en el navegador&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/goaccess/web.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La hora preferida por los huespedes son las 05. El trafico en su mayoria
+proviene de&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;40% USA&lt;/li&gt;
+&lt;li&gt;10% Mexico&lt;/li&gt;
+&lt;li&gt;26% de europa, con un atemorizante 9% de alemania (que buscaran?)
+y otro razonable 5% de Espania&lt;/li&gt;
+&lt;li&gt;14% de asia&lt;/li&gt;
+&lt;li&gt;4% de america del sur&lt;/li&gt;
+&lt;li&gt;1% de africa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;la mayoria de trafico se genera internamente (8%) una vez que vienen al sitio y
+el resto esta lidereado por planet.emacs-es.org, mi anterior blog en
+github-pages cuyo contenido apunta aca, unas pocas busquedas en google, bing,
+duckduck y alguna que otra de redit y &amp;ldquo;sitios raros&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;La mayoria solo ve la pagina de inicio. Otros tantos se sienten atraidos por las
+cosas de emacs y/o su curiosadad por los titulos compactos y poco intiutivos
+puede haceles creer que estan escritos en english.  Tambien hay numerosas
+consultas al servidor por cosas que terminan en &lt;code&gt;.php&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;una ves dentro del sitio, poco interesa por que no todos las entradas tienen
+trafico (o por que ya son habituales del sitio que consultan la novedad). Las
+novedades rondan 30 visitas, siendo lo mas consultado el feed (imagino que
+por mi mismo)&lt;/p&gt;
+
+&lt;p&gt;En resumen, deberia hacer caso a los crawlers y poner cosas en php!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>BPS</title>
@@ -262,7 +982,7 @@ desde la maquina donde conectaremos&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;gt; scp id_rsa.pub nasciiboy@192.168.1.67:.ssh/authorized_keys
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;o, &amp;ldquo;sin saber ni como&amp;rdquo;, con el comando dedicado `ssh-copy-id:&lt;/p&gt;
+&lt;p&gt;o, &amp;ldquo;sin saber ni como&amp;rdquo;, con el comando dedicado &lt;code&gt;ssh-copy-id&lt;/code&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;gt; ssh-copy-id nasciiboy@192.168.1.67
 &lt;/code&gt;&lt;/pre&gt;
@@ -305,14 +1025,14 @@ las comodidades que creamos convenientes (&lt;code&gt;htop&lt;/code&gt;, &lt;cod
 
 &lt;p&gt;luego desde nuestra red local podriamos confirmar si esta arriba el servidor web&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;elinks 192.168.1.177
+&lt;pre&gt;&lt;code&gt;&amp;gt; elinks 192.168.1.177
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;por el momento, un servidor sin comentarios, php, javascript, ni ninguna mierda
 mas, es todo lo que necesito. Como mi web se genera estaticamente, podria
 copiarse directamente todo el contenido dentro de &lt;code&gt;/var/www/http&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;rsync -avz --delete ~/nasciiboy.land/public/ /var/www/html/
+&lt;pre&gt;&lt;code&gt;&amp;gt; rsync -avz --delete ~/nasciiboy.land/public/ /var/www/html/
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;he copiado el directorio que contiene mi web dentro de la home de root. Desde
@@ -571,6 +1291,22 @@ comandos interesantes para conocer &amp;ldquo;¡¿que?!&amp;rdquo; sobre ips, dn
 
 &lt;p&gt;(aqui una combinacion de salidas mezcladas de mi sitio en el vps y de las
 pruebas con el servidor local)&lt;/p&gt;
+
+&lt;p&gt;listar puertos abiertos TCP y UDP&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; netstat -lntu
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:9418            0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN
+tcp6       0      0 :::9418                 :::*                    LISTEN
+tcp6       0      0 :::80                   :::*                    LISTEN
+tcp6       0      0 :::22                   :::*                    LISTEN
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(listar todos los puertos en escucha, con &lt;code&gt;netstat -l&lt;/code&gt;)&lt;/p&gt;
 
 &lt;p&gt;con &lt;code&gt;dig&lt;/code&gt; podemos ver la configuracion del dns y tambien conocer la ip&lt;/p&gt;
 
@@ -873,7 +1609,7 @@ hippiosos caer por completo en las garras de alphabet? puaghh&lt;/p&gt;
 &lt;p&gt;solo debemos ir a &lt;a href=&#34;https://www.youtube.com/subscription_manager&#34;&gt;https://www.youtube.com/subscription_manager&lt;/a&gt;, seguir hasta el fondo de
 la pagina y darle a &lt;strong&gt;Exportar Subcripciones&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;https://nasciiboy.land/media/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
+&lt;p&gt;para mi cuenta se genero el siguiente fichero &lt;a href=&#34;https://nasciiboy.land/data/subscription_manager.xml&#34;&gt;subscription_manager.xml&lt;/a&gt;
 (le he cambiado la extencion, agregando &lt;code&gt;.xml&lt;/code&gt; al final).&lt;/p&gt;
 
 &lt;p&gt;A continuacion un desglose. La clasificacion es dificil de encajar para varios

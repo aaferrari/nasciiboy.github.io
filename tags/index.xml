@@ -7,15 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Mon, 20 Aug 2018 20:57:27 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2019 23:37:20 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.land/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title></title>
+      <link>https://nasciiboy.land/tags/</link>
+      <pubDate>Fri, 01 Mar 2019 23:37:20 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>4k</title>
       <link>https://nasciiboy.land/tags/4k/</link>
-      <pubDate>Mon, 20 Aug 2018 20:57:27 -0500</pubDate>
+      <pubDate>Fri, 26 Apr 2019 01:06:03 -0500</pubDate>
       
       <guid>https://nasciiboy.land/tags/4k/</guid>
       <description></description>
@@ -51,9 +60,18 @@
     <item>
       <title>Apt</title>
       <link>https://nasciiboy.land/tags/apt/</link>
-      <pubDate>Sun, 20 Aug 2017 15:59:03 -0500</pubDate>
+      <pubDate>Thu, 20 Sep 2018 14:03:02 -0500</pubDate>
       
       <guid>https://nasciiboy.land/tags/apt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arcade</title>
+      <link>https://nasciiboy.land/tags/arcade/</link>
+      <pubDate>Tue, 25 Jul 2017 01:28:00 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/arcade/</guid>
       <description></description>
     </item>
     
@@ -78,7 +96,7 @@
     <item>
       <title>Docu</title>
       <link>https://nasciiboy.land/tags/docu/</link>
-      <pubDate>Fri, 10 Nov 2017 14:57:41 -0600</pubDate>
+      <pubDate>Mon, 01 Oct 2018 20:59:05 -0500</pubDate>
       
       <guid>https://nasciiboy.land/tags/docu/</guid>
       <description></description>
@@ -112,11 +130,29 @@
     </item>
     
     <item>
+      <title>Example</title>
+      <link>https://nasciiboy.land/tags/example/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:46 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Fastboot</title>
       <link>https://nasciiboy.land/tags/fastboot/</link>
       <pubDate>Thu, 23 Nov 2017 16:26:40 -0600</pubDate>
       
       <guid>https://nasciiboy.land/tags/fastboot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Feminascii</title>
+      <link>https://nasciiboy.land/tags/feminascii/</link>
+      <pubDate>Sun, 16 Dec 2018 15:11:59 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/feminascii/</guid>
       <description></description>
     </item>
     
@@ -141,9 +177,18 @@
     <item>
       <title>Fonos</title>
       <link>https://nasciiboy.land/tags/fonos/</link>
-      <pubDate>Sat, 01 Sep 2018 10:41:05 -0500</pubDate>
+      <pubDate>Fri, 26 Apr 2019 01:06:03 -0500</pubDate>
       
       <guid>https://nasciiboy.land/tags/fonos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://nasciiboy.land/tags/git/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:10 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/git/</guid>
       <description></description>
     </item>
     
@@ -166,6 +211,15 @@
     </item>
     
     <item>
+      <title>Gourmet</title>
+      <link>https://nasciiboy.land/tags/gourmet/</link>
+      <pubDate>Sat, 09 Mar 2019 22:57:31 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/gourmet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hardware</title>
       <link>https://nasciiboy.land/tags/hardware/</link>
       <pubDate>Thu, 26 Jul 2018 13:45:16 -0500</pubDate>
@@ -177,7 +231,7 @@
     <item>
       <title>Howto</title>
       <link>https://nasciiboy.land/tags/howto/</link>
-      <pubDate>Tue, 11 Sep 2018 09:47:52 -0500</pubDate>
+      <pubDate>Sun, 04 Nov 2018 13:39:27 -0600</pubDate>
       
       <guid>https://nasciiboy.land/tags/howto/</guid>
       <description></description>
@@ -211,6 +265,24 @@
     </item>
     
     <item>
+      <title>Loly</title>
+      <link>https://nasciiboy.land/tags/loly/</link>
+      <pubDate>Wed, 02 Jan 2019 10:59:03 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/loly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Love2d</title>
+      <link>https://nasciiboy.land/tags/love2d/</link>
+      <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/love2d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Lxde</title>
       <link>https://nasciiboy.land/tags/lxde/</link>
       <pubDate>Sun, 22 Oct 2017 12:36:18 -0500</pubDate>
@@ -229,6 +301,15 @@
     </item>
     
     <item>
+      <title>Maze</title>
+      <link>https://nasciiboy.land/tags/maze/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:49 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/maze/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Moc</title>
       <link>https://nasciiboy.land/tags/moc/</link>
       <pubDate>Thu, 22 Dec 2016 11:56:44 -0600</pubDate>
@@ -240,7 +321,7 @@
     <item>
       <title>Morg</title>
       <link>https://nasciiboy.land/tags/morg/</link>
-      <pubDate>Mon, 15 Jan 2018 14:31:33 -0600</pubDate>
+      <pubDate>Sun, 23 Sep 2018 14:07:26 -0500</pubDate>
       
       <guid>https://nasciiboy.land/tags/morg/</guid>
       <description></description>
@@ -265,6 +346,24 @@
     </item>
     
     <item>
+      <title>Physics</title>
+      <link>https://nasciiboy.land/tags/physics/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:38 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/physics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Platformer</title>
+      <link>https://nasciiboy.land/tags/platformer/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:42 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/platformer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pobreotaku</title>
       <link>https://nasciiboy.land/tags/pobreotaku/</link>
       <pubDate>Sat, 07 Jul 2018 21:59:27 -0500</pubDate>
@@ -274,11 +373,29 @@
     </item>
     
     <item>
+      <title>Procedural</title>
+      <link>https://nasciiboy.land/tags/procedural/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:49 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/procedural/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Prog</title>
       <link>https://nasciiboy.land/tags/prog/</link>
       <pubDate>Fri, 23 Mar 2018 21:41:50 -0600</pubDate>
       
       <guid>https://nasciiboy.land/tags/prog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Puzzle</title>
+      <link>https://nasciiboy.land/tags/puzzle/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:44 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/puzzle/</guid>
       <description></description>
     </item>
     
@@ -294,7 +411,7 @@
     <item>
       <title>Ramen</title>
       <link>https://nasciiboy.land/tags/ramen/</link>
-      <pubDate>Mon, 26 Mar 2018 22:01:05 -0600</pubDate>
+      <pubDate>Sun, 16 Dec 2018 15:11:59 -0600</pubDate>
       
       <guid>https://nasciiboy.land/tags/ramen/</guid>
       <description></description>
@@ -306,6 +423,15 @@
       <pubDate>Sun, 08 Apr 2018 11:50:44 -0500</pubDate>
       
       <guid>https://nasciiboy.land/tags/regexp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rpg</title>
+      <link>https://nasciiboy.land/tags/rpg/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:49 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/rpg/</guid>
       <description></description>
     </item>
     
@@ -328,11 +454,29 @@
     </item>
     
     <item>
+      <title>Server</title>
+      <link>https://nasciiboy.land/tags/server/</link>
+      <pubDate>Sat, 24 Nov 2018 19:31:31 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Shntool</title>
       <link>https://nasciiboy.land/tags/shntool/</link>
       <pubDate>Thu, 22 Dec 2016 09:56:05 -0600</pubDate>
       
       <guid>https://nasciiboy.land/tags/shntool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shooter</title>
+      <link>https://nasciiboy.land/tags/shooter/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:53 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/shooter/</guid>
       <description></description>
     </item>
     
@@ -355,6 +499,33 @@
     </item>
     
     <item>
+      <title>Sushi</title>
+      <link>https://nasciiboy.land/tags/sushi/</link>
+      <pubDate>Sat, 09 Mar 2019 22:57:31 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/sushi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tool</title>
+      <link>https://nasciiboy.land/tags/tool/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:10 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tower Defense</title>
+      <link>https://nasciiboy.land/tags/tower-defense/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:16 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/tags/tower-defense/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Trl</title>
       <link>https://nasciiboy.land/tags/trl/</link>
       <pubDate>Sat, 14 Apr 2018 22:26:41 -0500</pubDate>
@@ -366,7 +537,7 @@
     <item>
       <title>Txt</title>
       <link>https://nasciiboy.land/tags/txt/</link>
-      <pubDate>Mon, 20 Aug 2018 20:57:27 -0500</pubDate>
+      <pubDate>Fri, 26 Apr 2019 01:06:03 -0500</pubDate>
       
       <guid>https://nasciiboy.land/tags/txt/</guid>
       <description></description>
@@ -384,7 +555,7 @@
     <item>
       <title>Zero</title>
       <link>https://nasciiboy.land/tags/zero/</link>
-      <pubDate>Tue, 11 Sep 2018 13:14:35 -0500</pubDate>
+      <pubDate>Fri, 16 Dec 2016 17:19:32 -0600</pubDate>
       
       <guid>https://nasciiboy.land/tags/zero/</guid>
       <description></description>

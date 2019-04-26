@@ -35,8 +35,11 @@ defecto. {AItPiEL}&lt;/p&gt;
 git clone https://notabug.org/nasciiboy/elipo.git
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;para descarga en formato &lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.zip&#34;&gt;zip&lt;/a&gt;
-y en &lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.tar&#34;&gt;tar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;para descarga en formato &lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.zip&#34;&gt;zip&lt;/a&gt;,
+&lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.tar&#34;&gt;tar&lt;/a&gt;,
+o bien visionar directamente en version web en
+&lt;a href=&#34;https://nasciiboy.land/book4all/elipo/emacs-lisp-intro.html&#34;&gt;ingles&lt;/a&gt; y
+&lt;a href=&#34;https://nasciiboy.land/book4all/elipo/emacs-lisp-intro_es.html&#34;&gt;español&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&amp;ldquo;Una introducción a la programación en Emacs Lisp&amp;rdquo;&lt;/strong&gt; es una guia turistica por
 los conceptos basicos de la programacion, recorriendo las entrañas mas

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Puzzle on ⋲ᴹ∧cₛ ℜø∁κ§</title>
+    <link>https://nasciiboy.land/tags/puzzle/</link>
+    <description>Recent content in Puzzle on ⋲ᴹ∧cₛ ℜø∁κ§</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL v3.0</copyright>
+    <lastBuildDate>Tue, 25 Jul 2017 01:27:44 -0500</lastBuildDate>
+    
+        <atom:link href="https://nasciiboy.land/tags/puzzle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SpaceBlocks</title>
+      <link>https://nasciiboy.land/love2d/spaceblocks/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:44 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/spaceblocks/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/son-link/SpaceBlocks.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Safety Blanket</title>
+      <link>https://nasciiboy.land/love2d/safety-blanket/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:40 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/safety-blanket/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/SimonLarsen/safetyblanket.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>panel attack</title>
+      <link>https://nasciiboy.land/love2d/panel-attack/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:32 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/panel-attack/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/sharpobject/panel-attack.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>orthorobot</title>
+      <link>https://nasciiboy.land/love2d/orthorobot/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:28 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/orthorobot/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Stabyourself/orthorobot.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>nottetris2</title>
+      <link>https://nasciiboy.land/love2d/nottetris2/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:23 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/nottetris2/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Stabyourself/nottetris2.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>EntroPipes</title>
+      <link>https://nasciiboy.land/love2d/entropipes/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:59 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/entropipes/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/son-link/EntroPipes.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Duck Marines</title>
+      <link>https://nasciiboy.land/love2d/duck-marines/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:57 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/duck-marines/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/SimonLarsen/duckmarines.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Colums clone</title>
+      <link>https://nasciiboy.land/love2d/colums-clone/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:55 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/colums-clone/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Xkeeper0/columns-clone.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

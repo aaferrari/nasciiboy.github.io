@@ -7,178 +7,547 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Sat, 22 Jul 2017 09:06:44 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 25 Jul 2017 01:28:00 -0500</lastBuildDate>
     
         <atom:link href="https://nasciiboy.land/categories/love2d/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Love, Emacs &amp; Docs</title>
-      <link>https://nasciiboy.land/love2d/docset/</link>
-      <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
+      <title>trickparade</title>
+      <link>https://nasciiboy.land/love2d/trickparade/</link>
+      <pubDate>Tue, 25 Jul 2017 01:28:00 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/love2d/docset/</guid>
+      <guid>https://nasciiboy.land/love2d/trickparade/</guid>
       <description>
 
-&lt;p&gt;&lt;em&gt;Love2d&lt;/em&gt; es un framework &amp;ldquo;open source&amp;rdquo; para crear videojuegos 2D multiplataforma
-con el lenguaje de programacion Lua y que aparentemente es muy facil de
-utilizar, al menos tan facil como para practicamente no tener documentacion mas alla de
-las funciones que proporciona el framework&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;p&gt;Y bueno, para los que no tenemos una memoria privilegiada para memorisar cientos
-de funciones y sus parametros, deberiamos contar con un medio practico para consultar dicha
-documentacion&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone --recursive https://github.com/SimonLarsen/trickparade.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Witch of the Grove</title>
+      <link>https://nasciiboy.land/love2d/witch-of-the-grove/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:55 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/witch-of-the-grove/</guid>
+      <description>
 
-&lt;p&gt;Desde la pagina ofrecen una wiki&amp;hellip; tambien disponible en modo offline, asi que
-en un ataque de creatividad, abri dos emacs en modo eww uno en cada monitor,
-grabe un marcador y a triunfar&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/love-wiki.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone --recursive https://github.com/SimonLarsen/wotg.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>In Your Face City Trains</title>
+      <link>https://nasciiboy.land/love2d/in-your-face-city-trains/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:54 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/in-your-face-city-trains/</guid>
+      <description>
 
-&lt;p&gt;luego de un rato&amp;hellip; fue obvio que no era la mejor forma de consultar la
-documentacion, y como no hay un maldito estandar para hacer documentacion
-decente (hasta ahora) recurri a un viejo conocido&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;h2 id=&#34;zeal&#34;&gt;zeal&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/SimonLarsen/iyfct.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turtle Invaders</title>
+      <link>https://nasciiboy.land/love2d/turtle-invaders/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:53 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/turtle-invaders/</guid>
+      <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/zeal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;p&gt;que es &lt;a href=&#34;https://zealdocs.org/&#34;&gt;Zeal&lt;/a&gt;? es la implentacion libre y sin un tema
-obscuro de dash, que aunque a primera vista pareciera ser el nombre de un shell,
-mas bien es una &lt;em&gt;app&lt;/em&gt; visual para gestionar documentacion. En realidad es
-un visor web, con un buscador integrado que trabaja con bases de datos
-sqlite3&amp;hellip; o eso creo entender&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/TurtleP/Turtle_Invaders.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>trosh</title>
+      <link>https://nasciiboy.land/love2d/trosh/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:51 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/trosh/</guid>
+      <description>
 
-&lt;p&gt;Confirmando mis suposiciones de que tener abierto el navegador para leer de
-internet la documentacion es lento y doloroso, una buena persona hiso un
-&lt;em&gt;docset&lt;/em&gt; de las funciones de love2d, que es el formato con el que trabaja zeal&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;p&gt;instalamos zeal (en freidora)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Stabyourself/trosh.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Legend of Zelda - Oracle of Colors</title>
+      <link>https://nasciiboy.land/love2d/the-legend-of-zelda---oracle-of-colors/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:49 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/the-legend-of-zelda---oracle-of-colors/</guid>
+      <description>
 
-&lt;pre&gt;&lt;code&gt;dnf -y install zeal
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/superzazu/zelda-ooc.git
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;abrimos zeal y agregamos el feed de la documentacion (&lt;a href=&#34;https://github.com/ChrisJan00/love2d_docset&#34;&gt;no oficial&lt;/a&gt;) de love2d&lt;/p&gt;
+&lt;hr /&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Super Shooter</title>
+      <link>https://nasciiboy.land/love2d/super-shooter/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:47 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/super-shooter/</guid>
+      <description>
 
-&lt;p&gt;con el raton &lt;em&gt;Tools -&amp;gt; Docsets -&amp;gt; Add feed&lt;/em&gt; y pegamos&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;dash-feed://http%3A%2F%2Fchrisjan00.github.io%2Flove2d_docset%2FLove2d.xml
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/camchenry/super_shooter.git
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>splashes</title>
+      <link>https://nasciiboy.land/love2d/splashes/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:46 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/splashes/</guid>
+      <description>
 
-&lt;p&gt;por degracia, dicha documentacion corresponde a la version 0.9.1. Para
-no dejar de estar a la moda, vamos a crean nuestra propia documentacion, para
-esto necesitamos tener instado sqlite (no estoy seguro si 3, ya lo tenia
-instalado asi que no hice nada) y seguir
-&lt;a href=&#34;https://kapeli.com/docsets#setUpFolderStructure&#34;&gt;esta&lt;/a&gt; guia (en ingles) o
-basado en (lo que entendi de) ella seguir la sugiente receta y tener instalado
-Go (vee aceptandolo, ese lenguaje va a ser muy popular) para instalar
-&lt;a href=&#34;https://github.com/technosophos/dashing&#34;&gt;dashing&lt;/a&gt; que hara un poco mas sencilla
-la tarea. Empecemos&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;mv /tmp                           # para evitar &amp;quot;limpiar&amp;quot; al terminar
-wget https://love2d.org/docs.zip  # optenemos la &amp;quot;wiki&amp;quot; offline
-unzip docs.zip                    # descomprimir
-cd wiki                           # ir al directorio descomprimido
-
-go get -u github.com/technosophos/dashing  # optener dashing
-dashing create                             # crea una &amp;quot;plantilla&amp;quot;
-emacs -nw -q dashing.json                  # editamos la plantilla
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/love2d-community/splashes.git
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SpaceBlocks</title>
+      <link>https://nasciiboy.land/love2d/spaceblocks/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:44 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/spaceblocks/</guid>
+      <description>
 
-&lt;p&gt;Modificamos la plantilla para que se paresca a esto:&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;name&amp;quot;: &amp;quot;love2d&amp;quot;,
-    &amp;quot;package&amp;quot;: &amp;quot;love2d&amp;quot;,
-    &amp;quot;index&amp;quot;: &amp;quot;index.html&amp;quot;,
-    &amp;quot;selectors&amp;quot;: {
-        &amp;quot;h1&amp;quot;: &amp;quot;firstHeading&amp;quot;
-    },
-    &amp;quot;ignore&amp;quot;: [
-        &amp;quot;ABOUT&amp;quot;
-    ],
-    &amp;quot;icon32x32&amp;quot;: &amp;quot;favicon.png&amp;quot;,
-    &amp;quot;allowJS&amp;quot;: false,
-    &amp;quot;ExternalURL&amp;quot;: &amp;quot;https://love2d.org/wiki/Main_Page&amp;quot;
-}
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/son-link/SpaceBlocks.git
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sienna</title>
+      <link>https://nasciiboy.land/love2d/sienna/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:42 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/sienna/</guid>
+      <description>
 
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;name&lt;/code&gt; == nombre&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;package&lt;/code&gt; == paquete&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;index&lt;/code&gt; == tiene que apuntar al inicio de la wiki&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;selectors&lt;/code&gt; == etiuetas y atributos html que seran agregados a la base de
-datos. No encontre una estructura clara en el html y tampoco entiendo las
-posibilidades de esta etiqueta. En el resultado se repiten 2 veces algunas
-cosas, pero es funcional&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;icon32x32&lt;/code&gt; == el icono de la documentacion. La wiki ya trae un icono de love2d asi
-que ponemos el nombre del fichero&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ExternalURL&lt;/code&gt; == pense en abrir un repo con la documentacion actualizada, pero
-no&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;dashing build # crear docset
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/SimonLarsen/sienna.git
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Safety Blanket</title>
+      <link>https://nasciiboy.land/love2d/safety-blanket/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:40 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/safety-blanket/</guid>
+      <description>
 
-&lt;p&gt;esto crea la carpeta love2d.docset, la movemos a donde zeal tiene su
-documentacion (en freidora seria):&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;mv love2d.docset  ~/.local/share/Zeal/Zeal/docsets/
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/SimonLarsen/safetyblanket.git
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RocketBox</title>
+      <link>https://nasciiboy.land/love2d/rocketbox/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:38 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/rocketbox/</guid>
+      <description>
 
-&lt;p&gt;abrimos zeal y buscamos si aparece la documentacion&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/zeal-love.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;zeal funciona como el navegador, con C-k buscamos cosas (poner prefijo de la
-documentocion, en este caso &lt;code&gt;love2d:&lt;/code&gt;), tiene un bonito autocompletado, nos movemos
-con las flechas arriba, abajo, C-u para borrar. Con C-f podemos buscar dentro de la &amp;ldquo;pagina&amp;rdquo; con
-la documentacion&lt;/p&gt;
-
-&lt;h2 id=&#34;soporte-de-lua-en-emacs&#34;&gt;Soporte de Lua en Emacs&lt;/h2&gt;
-
-&lt;p&gt;Podemos instalar &lt;em&gt;lua-mode&lt;/em&gt; desde la paqueteria, si desconfias de las cosas
-automagicas clonamos el repositorio a donde tenemos nuestras extenciones, por
-ejemplo&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd ~/.emacs.d/plugins/
-git clone https://github.com/immerrr/lua-mode.git
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Beezlebub/RocketBox.git
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Red Entity</title>
+      <link>https://nasciiboy.land/love2d/red-entity/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:36 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/red-entity/</guid>
+      <description>
 
-&lt;p&gt;abrimos el init.el y copiamos lo suguiente en algun lugar&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;;; source: git clone https://github.com/immerrr/lua-mode.git
-(add-to-list &#39;load-path &amp;quot;~/.emacs.d/plugins/lua-mode&amp;quot;)
-(autoload &#39;lua-mode &amp;quot;lua-mode&amp;quot; &amp;quot;Lua editing mode.&amp;quot; t)
-(add-to-list &#39;auto-mode-alist &#39;(&amp;quot;\\.lua$&amp;quot; . lua-mode))
-(add-to-list &#39;interpreter-mode-alist &#39;(&amp;quot;lua&amp;quot; . lua-mode))
-(setq lua-indent-level 2)
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/tinydanbo/Ludum-Dare-30.git
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rakshasa</title>
+      <link>https://nasciiboy.land/love2d/rakshasa/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:34 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/rakshasa/</guid>
+      <description>
 
-&lt;p&gt;listo tenemos el lua-mode, para el autocompletado&amp;hellip; esperar a que sepa programar en
-elisp y extender company&amp;hellip; si quereis adelantarme &lt;a href=&#34;https://github.com/company-mode/company-mode/wiki/Writing-backends&#34;&gt;uno&lt;/a&gt; y &lt;a href=&#34;http://sixty-north.com/blog/writing-the-simplest-emacs-company-mode-backend&#34;&gt;dos&lt;/a&gt; links&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;h2 id=&#34;enlaces&#34;&gt;+ Enlaces&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone --recursive https://github.com/SimonLarsen/rakshasa.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>panel attack</title>
+      <link>https://nasciiboy.land/love2d/panel-attack/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:32 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/panel-attack/</guid>
+      <description>
 
-&lt;p&gt;&lt;a href=&#34;https://love2d.org/wiki/examples.love&#34;&gt;https://love2d.org/wiki/examples.love&lt;/a&gt;, ejemplos basicos-practicos y sin
-consideracion para los deviles de voluntad&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/love2d-community/awesome-love2d&#34;&gt;https://github.com/love2d-community/awesome-love2d&lt;/a&gt;, recopilacion de recursos
-para programacion&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/sharpobject/panel-attack.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>orthorobot</title>
+      <link>https://nasciiboy.land/love2d/orthorobot/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:28 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/orthorobot/</guid>
+      <description>
 
-&lt;p&gt;&lt;a href=&#34;http://love2d-community.github.io/love-api/&#34;&gt;http://love2d-community.github.io/love-api/&lt;/a&gt; pagina con la api en html&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://sheepolution.com/learn/book/contents&#34;&gt;http://sheepolution.com/learn/book/contents&lt;/a&gt;, un tutorial con obejas, desde las
-bases hasta lo basico&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Stabyourself/orthorobot.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Order of Twilight</title>
+      <link>https://nasciiboy.land/love2d/order-of-twilight/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:26 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/order-of-twilight/</guid>
+      <description>
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/SSYGEA/blog/&#34;&gt;https://github.com/SSYGEA/blog/&lt;/a&gt;, no lo he leido, parace interesante&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.lua.org/manual/5.1/es/manual.html&#34;&gt;http://www.lua.org/manual/5.1/es/manual.html&lt;/a&gt;, el manual de lua en español, no te
-dejes engañar, es mas extenso de lo que aparenta&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Stabyourself/orderoftwilight.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nova Pinball</title>
+      <link>https://nasciiboy.land/love2d/nova-pinball/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:25 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/nova-pinball/</guid>
+      <description>
 
-&lt;p&gt;&lt;a href=&#34;https://love2d.org/wiki/Category:Games&#34;&gt;https://love2d.org/wiki/Category:Games&lt;/a&gt;, recopilacion de bastantes videojuegos&lt;/p&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
 
-&lt;p&gt;Eso es todo por esta sesion, happy hacking!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone --recursive https://github.com/wesleywerner/nova-pinball.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>nottetris2</title>
+      <link>https://nasciiboy.land/love2d/nottetris2/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:23 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/nottetris2/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Stabyourself/nottetris2.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>notpacman</title>
+      <link>https://nasciiboy.land/love2d/notpacman/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:21 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/notpacman/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Stabyourself/notpacman.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mr. Rescue</title>
+      <link>https://nasciiboy.land/love2d/mr.-rescue/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:19 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/mr.-rescue/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/SimonLarsen/mrrescue.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mari0</title>
+      <link>https://nasciiboy.land/love2d/mari0/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:17 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/mari0/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Stabyourself/mari0.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LUA Tower Defense</title>
+      <link>https://nasciiboy.land/love2d/lua-tower-defense/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:16 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/lua-tower-defense/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/tobspr/LUATowerDefense.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LOVE Example Browser</title>
+      <link>https://nasciiboy.land/love2d/love-example-browser/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:14 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/love-example-browser/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/love2d-community/LOVE-Example-Browser.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>love-demos</title>
+      <link>https://nasciiboy.land/love2d/love-demos/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:12 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/love-demos/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://bitbucket.org/rude/love/downloads/love-demos-0.8.0.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>logivi</title>
+      <link>https://nasciiboy.land/love2d/logivi/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:10 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/logivi/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/rm-code/logivi.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Journey to the Center of Hawkthorne</title>
+      <link>https://nasciiboy.land/love2d/journey-to-the-center-of-hawkthorne/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:08 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/journey-to-the-center-of-hawkthorne/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/hawkthorne/hawkthorne-journey.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Impoverished Starfighter</title>
+      <link>https://nasciiboy.land/love2d/impoverished-starfighter/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:06 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/impoverished-starfighter/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/tinydanbo/Impoverished-Starfighter.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hyperplasm</title>
+      <link>https://nasciiboy.land/love2d/hyperplasm/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:04 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/hyperplasm/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Grav</title>
+      <link>https://nasciiboy.land/love2d/grav/</link>
+      <pubDate>Tue, 25 Jul 2017 01:27:02 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/grav/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Nuthen/Grav.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>EntroPipes</title>
+      <link>https://nasciiboy.land/love2d/entropipes/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:59 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/entropipes/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/son-link/EntroPipes.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Duck Marines</title>
+      <link>https://nasciiboy.land/love2d/duck-marines/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:57 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/duck-marines/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/SimonLarsen/duckmarines.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Colums clone</title>
+      <link>https://nasciiboy.land/love2d/colums-clone/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:55 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/colums-clone/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/Xkeeper0/columns-clone.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Burrow Down</title>
+      <link>https://nasciiboy.land/love2d/burrow-down/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:51 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/burrow-down/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/tinydanbo/Burrow-Down.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>anput</title>
+      <link>https://nasciiboy.land/love2d/anput/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:49 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/anput/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/andmatand/anput.git
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>90 Second Portraits</title>
+      <link>https://nasciiboy.land/love2d/90-second-portraits/</link>
+      <pubDate>Tue, 25 Jul 2017 01:26:45 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/love2d/90-second-portraits/</guid>
+      <description>
+
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone --recursive https://github.com/SimonLarsen/rakshasa.git
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

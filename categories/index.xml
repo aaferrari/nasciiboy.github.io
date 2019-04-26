@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Mon, 30 Oct 2017 15:45:27 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2019 23:37:20 -0600</lastBuildDate>
     
         <atom:link href="https://nasciiboy.land/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://nasciiboy.land/categories/</link>
+      <pubDate>Fri, 01 Mar 2019 23:37:20 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/categories/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Apt</title>
@@ -24,7 +33,7 @@
     <item>
       <title>Emacs</title>
       <link>https://nasciiboy.land/categories/emacs/</link>
-      <pubDate>Sun, 29 Jul 2018 12:19:36 -0500</pubDate>
+      <pubDate>Thu, 20 Sep 2018 14:03:02 -0500</pubDate>
       
       <guid>https://nasciiboy.land/categories/emacs/</guid>
       <description></description>
@@ -33,7 +42,7 @@
     <item>
       <title>Love2d</title>
       <link>https://nasciiboy.land/categories/love2d/</link>
-      <pubDate>Sat, 22 Jul 2017 09:06:44 -0500</pubDate>
+      <pubDate>Tue, 25 Jul 2017 01:28:00 -0500</pubDate>
       
       <guid>https://nasciiboy.land/categories/love2d/</guid>
       <description></description>
@@ -42,7 +51,7 @@
     <item>
       <title>Post</title>
       <link>https://nasciiboy.land/categories/post/</link>
-      <pubDate>Tue, 11 Sep 2018 13:14:35 -0500</pubDate>
+      <pubDate>Fri, 26 Apr 2019 01:06:03 -0500</pubDate>
       
       <guid>https://nasciiboy.land/categories/post/</guid>
       <description></description>
@@ -51,7 +60,7 @@
     <item>
       <title>Prog</title>
       <link>https://nasciiboy.land/categories/prog/</link>
-      <pubDate>Tue, 11 Sep 2018 09:47:52 -0500</pubDate>
+      <pubDate>Sat, 24 Nov 2018 19:31:31 -0600</pubDate>
       
       <guid>https://nasciiboy.land/categories/prog/</guid>
       <description></description>

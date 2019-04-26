@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>∞.nasciiboy.land</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style> :root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 80%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 20%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
+
+  <h1>∞.nasciiboy.land</h1>
+  
+
+<p>en experimentos improvisados acompañado de cereal remojado, habia estado probando &ldquo;montar
+servicios&rdquo; en el dominio &ldquo;con diagonales&rdquo; mas o menos asi</p>
+
+<pre><code> nasciiboy.land           # dominio
+ nasciiboy.land/mail      # el correo
+ nasciiboy.land/git       # el git
+ nasciiboy.land/gitea     # el gitea
+ nasciiboy.land/xxx       # el sexual
+ nasciiboy.land/podcast   # el audio
+</code></pre>
+
+<p>pero cuando veia sitios con &ldquo;los servicios&rdquo; montados &ldquo;con puntos&rdquo;</p>
+
+<pre><code>         nasciiboy.land  # dominio
+     www.nasciiboy.land  # con el www
+    mail.nasciiboy.land  # el correo
+     git.nasciiboy.land  # el git
+   gitea.nasciiboy.land  # el gitea
+     xxx.nasciiboy.land  # el sexual
+ podcast.nasciiboy.land  # el audio
+</code></pre>
+
+<p>algo en mi interior se retorcia de envidia y me preguntaba si los
+administradores contaban con fortunas incalculables como para contratar tantos
+dominios&hellip; o, habia una magia especial que permitiera tal configuracion sin
+incurrir en gastos economicos</p>
+
+<p>Como no encontre demaciado sobre el asunto y ni de nginx o dns se casi nada, me
+disponia a contratar un nuevo dominio (con los restos del paypal).</p>
+
+<p>Asi pues pase una bonita mañana evaluando entre los precios y lo gracioso que
+pudiera ser el nuevo dominio destinado a las pruebas y tambien especulando con
+lo rentable (o problematico) de comprar un nombre no registrado de alguna marca
+conocida (<em>casio.xyz</em>)</p>
+
+<p>Cuando estaba seguro que el elegido seria, digamos, <code>chrøma.me</code> llego la
+experimentacion colocando <code>git.chrøma.me</code>. La sospecha de que la configuracion
+&ldquo;con puntos&rdquo; recaia sobre el dns o el servidor fue clara cuando en el resultado
+estos se eliminaban para siempre mostrar <code>gitchroma.me</code>. Resumiendo, nada de
+puntos en el nombre si no es para el dominio mismo</p>
+
+<h2 id="cname">CNAME</h2>
+
+<p>el primer paso fue acudir al gestor de registros DNS (para el caso,
+contratado con goddady (#no-es-publicidad))</p>
+
+<p>La configuracion que tiene mi dominio es mas o menos asi</p>
+
+<pre><code>| Tipo  | Nombre | Valor                | TTL          |
+|-------+--------+----------------------+--------------|
+| A     | @      | mi.ip-v4.publica.asi | 600 segundos |
+| CNAME | www    | @                    | 1 hora       |
+| NS    | @      | nameserver1.algo     | 1 hora       |
+| NS    | @      | nameserver2.algo     | 1 hora       |
+| NS    | @      | nameserver3.algo     | 1 hora       |
+</code></pre>
+
+<p>el campo <strong>CNAME</strong> con nombre <strong>www</strong> hace pensar que ese <code>www</code> en
+<code>www.mydominio.algo</code> como que sobra y al servidor dns solo le importan las
+palabras antes y despues del ultimo punto en el dominio (<code>nombre.dominio</code>)</p>
+
+<p>entonces supuse que agregando campos CNAME clonando la info para <code>www</code> pero
+variando &ldquo;el punto&rdquo; seria posible la anelada configuracion</p>
+
+<pre><code>         nasciiboy.land  # dominio
+     www.nasciiboy.land  # con el www
+    mail.nasciiboy.land  # el correo
+     git.nasciiboy.land  # el git
+   gitea.nasciiboy.land  # el gitea
+     xxx.nasciiboy.land  # el sexual
+ podcast.nasciiboy.land  # el audio
+</code></pre>
+
+<p>de momento he limitado la prueba solo al &ldquo;punto git&rdquo;: registro <code>CNAME</code>, de nombre <code>git</code>
+apuntando al valor <code>@</code></p>
+
+<p><img src="https://nasciiboy.land/img/cname/dns.png" alt="" /></p>
+
+<h2 id="nginx">nginx</h2>
+
+<p>pero la verdadera magia, no esta (completamente) en los registros DNS, supongo
+que el peso de dicernir entre cual &ldquo;subdominio&rdquo; servir, corre por parte del
+servidor web y la informacion extra nesesaria (la ip corre por el DNS) viene
+incluida en algun campo de la peticion al servidor, aunque esto lo dejare en
+suposicion por no encontrar (preguntandole al internet) un comando para extraer
+integra toda la informacion de la peticion. (El libro de Go traia un programita,
+que permitia estraer dicha informacion, pero no voy a poner temas &ldquo;tan tecnicos&rdquo;
+aqui)</p>
+
+<p>asi pues si el servidor dns no es el responsable (ultimo) de &ldquo;la magia de los
+puntos&rdquo;, el experimento podria montarse en nuestra red local con el
+navegador de costumbre, la linea de comandos y nginx. Solo aclarar que
+todo esto es mas sencillo (en cuanto a configuracion) de lo que
+este preludio (o la pesima redaccion) haga parecer</p>
+
+<p>tenemos un servidor nginx configurado por defecto sin php (ni nahh). La web esta
+alojada en <code>/var/www/html</code> y su fichero de configuracion esta en
+<code>/etc/nginx/sites-available/default</code>. Veamos pues si ademas de nuestro
+<code>dominio.algo</code> encontramos la forma de que <code>git.dominio.algo</code> nos muestre una
+pagina totalmente distinta</p>
+
+<p>primero creamos una carpeta raiz para &ldquo;el nuevo sitio&rdquo;</p>
+
+<pre><code>mkdir /var/www/git
+</code></pre>
+
+<p>agregamos la pagina de inicio. Con nuestro editor</p>
+
+<pre><code>emacs /var/www/git/index.html
+</code></pre>
+
+<p>copiamos lo siguiente</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;krakatoa&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;krakatoa!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>ahora agregamos un <em>virtual host</em> en la configuracion de nginx</p>
+
+<pre><code>emacs /etc/nginx/sites-available/git
+</code></pre>
+
+<p>pegamos lo siguiente</p>
+
+<pre><code>server {
+	listen 80;
+	listen [::]:80;
+
+	# cambiar mi-sitio.dominio por el pertinente
+	server_name git.mi-sitio.dominio;
+
+	root /var/www/git;
+	index index.html;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
+</code></pre>
+
+<p>habilitamos nuestro sitio</p>
+
+<pre><code>ln -s /etc/nginx/sites-available/git /etc/nginx/sites-enabled/git
+systemctl reload nginx
+</code></pre>
+
+<p>comprobamos que se sirva la pagina del &ldquo;subdominio&rdquo;. (Este comando lo corri en mi
+red local)</p>
+
+<pre><code>$ curl 192.168.1.177 -H &quot;Host: git.mi-sitio.dominio&quot;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;krakatoa&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;h1&gt;krakatoa!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>mmm, el comando funcionar, funciona&hellip; pero no se por que&hellip; ni si pueda ser mas
+o menos mejorable. Solo puedo estar seguro que se optiene el resultado!</p>
+
+<p>Para evitar el anterior comando, podriamos realizar la comprobacion desde el
+firefox a <code>git.mi-sitio.dominio</code></p>
+
+<p><img src="https://nasciiboy.land/img/cname/krakatoa.png" alt="" /></p>
+
+<h2 id="ssl">ssl</h2>
+
+<p>comprobado el exito de la configuracion &ldquo;por puntos&rdquo; solo faltaria agregar el
+https al &ldquo;nuevo sitio&rdquo; mediante lets-encript</p>
+
+<p>en caso de no tener instalado previamente certbot</p>
+
+<pre><code>&gt; apt install python-certbot-nginx
+</code></pre>
+
+<p>luego</p>
+
+<pre><code>&gt; certbot --authenticator webroot --installer nginx
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+Which names would you like to activate HTTPS for?
+-------------------------------------------------------------------------------
+1: nasciiboy.land
+2: git.nasciiboy.land
+3: www.nasciiboy.land
+...
+</code></pre>
+
+<p>nos preguntara para cual dominio habilitar HTTPS. Con un numero o varios
+(separados por comas) especificamos el sitio. Al dejar en blanco (directamente
+con un enter) se habilitara https para todos los sitios</p>
+
+<pre><code>blank to select all options shown (Enter 'c' to cancel):
+Obtaining a new certificate
+</code></pre>
+
+<p>luego nos pregunta uno a uno donde esta el directorio raiz de cada sitio. Si es
+la primera vez que se ejecuta certbot solo se presenta una opcion</p>
+
+<pre><code>Select the webroot for nasciiboy.land:
+-------------------------------------------------------------------------------
+1: Enter a new webroot
+-------------------------------------------------------------------------------
+</code></pre>
+
+<p>ingresamos <code>1</code></p>
+
+<pre><code>Press 1 [enter] to confirm the selection (press 'c' to cancel): 1
+</code></pre>
+
+<p>y luego el directorio raiz del sitio</p>
+
+<pre><code>Input the webroot for nasciiboy.land: (Enter 'c' to cancel):/var/www/html
+</code></pre>
+
+<p>si son varios los dominios a habilitar, repetimos: primero un numero <code>1</code> para nuevo
+directorio raiz y luego ingresamos el directorio raiz. En caso de que ya este
+presente el directorio, solo ingresamos el numero</p>
+
+<pre><code>Select the webroot for git.nasciiboy.land:
+-------------------------------------------------------------------------------
+1: Enter a new webroot
+2: /var/www/html
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+Input the webroot for git.nasciiboy.land: (Enter 'c' to cancel):/var/www/git
+</code></pre>
+
+<p>finalmente nos pregunta si queremos que solo se permita https o ambos (http y
+https). Prefiero ambas opciones, si es asi ingresar <code>1</code></p>
+
+<pre><code>Please choose whether HTTPS access is required or optional.
+-------------------------------------------------------------------------------
+1: Easy - Allow both HTTP and HTTPS access to these sites
+2: Secure - Make all requests redirect to secure HTTPS access
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+...
+Congratulations! You have successfully enabled https://nasciiboy.land,
+https://git.nasciiboy.land, and https://www.nasciiboy.land
+...
+</code></pre>
+
+<p>y congratulations!</p>
+
+<p><code>certbot</code> ha modificado la configuracion de nuestros sitios, habilitando el
+puerto <code>443</code> para https y recargando la configuracion de nginx (creo). Podemos
+ver que el fichero de configuracion del sitio git fue modificado agregando lo siguiente</p>
+
+<pre><code>&gt; cat /etc/nginx/available-sites/git
+...
+listen 443 ssl; # managed by Certbot
+ssl_certificate /etc/letsencrypt/live/nasciiboy.land/fullchain.pem; # managed by Certbot
+ssl_certificate_key /etc/letsencrypt/live/nasciiboy.land/privkey.pem; # managed by Certbot
+ssl_session_cache shared:le_nginx_SSL:1m; # managed by Certbot
+ssl_session_timeout 1440m; # managed by Certbot
+
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # managed by Certbot
+ssl_prefer_server_ciphers on; # managed by Certbot
+
+ssl_ciphers &quot;ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-SHA384 DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES128-SHA DHE-RSA-AES256-SHA DHE-RSA-AES128-SHA256 DHE-RSA-AES256-SHA256 EDH-RSA-DES-CBC3-SHA&quot;; # managed by Certbot
+...
+</code></pre>
+
+<h2 id="gitea">gitea</h2>
+
+<p>finalmente, poco he experimentado con esto y la verdad dudo que llegue a colacarlo en el
+vps, pero todo esto de tener &ldquo;subdominios por punto&rdquo; no era solo para tener
+&ldquo;distintas webs&rdquo;, sino mas bien para montar servicios completos. Para el caso
+en concreto, una interfaz web para git, que es de lo que va gitea</p>
+
+<p>Tambien podrian ser gitlab u otras, pero gitea se anuncia como ligerito, esta
+hecho con go-lang y si se usa con SQLite3 como base de datos, pues no requiere
+dependencias o extenuantes configuraciones</p>
+
+<p>primero crear un usuario (o no) para el experimento (la <a href="https://docs.gitea.io/en-us/install-from-binary/">documentacion
+oficial</a> propone una mejor
+configuracion)</p>
+
+<pre><code># como root
+su
+# agregar usuario
+useradd -c &quot;repos de nascii - nasciiboy@gmail.com&quot; git -m
+# cambiar al usuario git
+su git
+cd
+wget -O gitea https://dl.gitea.io/gitea/1.6.0/gitea-1.6.0-linux-amd64
+chmod +x gitea
+./gitea
+</code></pre>
+
+<p>ahora redirigimos con nginx <strong>git.mi-dominio.algo</strong> al servidor de gitea. En <code>/etc/nginx/sites-available/git</code>
+modificamos <code>location</code> de la siguiente forma</p>
+
+<pre><code>        # location / {
+        #       try_files $uri $uri/ =404;
+        # }
+
+        location / {
+                proxy_pass http://localhost:3000/;
+        }
+</code></pre>
+
+<p>recargamos la configuracion de nginx</p>
+
+<blockquote>
+<p>systemctl reload nginx</p>
+</blockquote>
+
+<p>y visitamos nuestra direccion <code>git.mi-dominio.algo</code>. Por defecto el servidor de
+gitea escucha en el puerto 3000. Si cambiara el puerto o para experimentar sin
+modificar nginx, visitar <code>mi-dominio.algo:3000</code> o el puerto que este de moda</p>
+
+<p><img src="https://nasciiboy.land/img/cname/gitea.png" alt="" /></p>
+
+<p>para configurar gitea vamos a <code>git.mi-dominio.algo/install</code></p>
+
+<p><img src="https://nasciiboy.land/img/cname/gitea-config.png" alt="" /></p>
+
+<p>aqui he colocado lo siguiente</p>
+
+<pre><code>typo de base de datos    &gt; SQLite3
+Titulo del Sitio         &gt; &quot;zzz.. zZZzz.. ZzzzZ&quot;
+Dominio del servidor SSH &gt; git.nasciiboy.land
+Gitea HTTP ListenPort    &gt; 3000
+Gitea Base URL           &gt; https://git.nasciiboy.land
+</code></pre>
+
+<p>de preferencia tambien en <strong>Administrator Accont Settings</strong> registrar nombre y
+contraseñå del administrador</p>
+
+<p>luego podremos visitar nuestro perfil y crear repositorios</p>
+
+<p><img src="https://nasciiboy.land/img/cname/zorro.png" alt="" /></p>
+
+<p>sorprendentemente la interfaz web funciona! incluso la clonacion por el
+protocolo https!</p>
+
+<pre><code>&gt; git clone https://git.nasciiboy.land/zorro/187.git
+Cloning into '187'...
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (4/4), done.
+</code></pre>
+
+<p>pero en el clonado con protocolo git aparecio el error <strong>Permission denied
+(publickey)</strong>. Curioso detalle a revizar, por que precisamente el servidor ssh
+solo esta habilitado para funcionar con llaves</p>
+
+<p>(nota: no ir a la pagina git (gitea) en nasciiboy.land, por que no esta habilitada&hellip; solo
+es una prueba de concepto)</p>
+
+<p>para terminar, el rendimiento y consumo en una maqunita con un procesador de
+laptop (de 32 bits) y con 500MB, con nginx, ssh, git-daemon, ddns y el gitea
+corriendo es mas que aceptable</p>
+
+<p><img src="https://nasciiboy.land/img/cname/htop.png" alt="" /></p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.land/prog/gitatnasciiboy-land/">◀ git@nasciiboy.land</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
+</main>
+
+    <aside>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="https://nasciiboy.land/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="https://nasciiboy.land/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="https://nasciiboy.land/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="https://nasciiboy.land/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="https://nasciiboy.land/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
+
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/categories/prog">prog(57)</a></li><li><a href="https://nasciiboy.land/categories/post">post(55)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(35)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(25)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(22)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(8)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(6)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

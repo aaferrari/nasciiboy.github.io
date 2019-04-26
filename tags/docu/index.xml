@@ -7,10 +7,612 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Fri, 10 Nov 2017 14:57:41 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 01 Oct 2018 20:59:05 -0500</lastBuildDate>
     
         <atom:link href="https://nasciiboy.land/tags/docu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Oxido</title>
+      <link>https://nasciiboy.land/prog/oxido/</link>
+      <pubDate>Mon, 01 Oct 2018 20:59:05 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/oxido/</guid>
+      <description>
+
+&lt;p&gt;Ultimamente pocas cosas de las que hago al dia logran clasificar como
+&amp;ldquo;productivas&amp;rdquo; o &amp;ldquo;divertidas&amp;rdquo;. Sumado (o restado) a esto, por razones externas, me vi forzado
+a buscar un material interesante con el cual aparentar alguna labor frente al
+monitor con el extra de que fuera de interes y evitara en lo posible la somnolencia&lt;/p&gt;
+
+&lt;p&gt;Toquetear &lt;a href=&#34;https://www.rust-lang.org/es-ES/&#34;&gt;rust&lt;/a&gt; fue la ocupacion que logro
+mantener las apariecias los ultimos 2 dias. Uno de ellos fue
+satisfactorio e divertido, y el otro&amp;hellip; algo decepcionante (spoiler).&lt;/p&gt;
+
+&lt;p&gt;Pero, por que Rust?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;es FOSS,&lt;/li&gt;
+&lt;li&gt;no es de microsoft,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dtrace.org/blogs/bmc/2018/09/18/falling-in-love-with-rust/&#34;&gt;propaganda&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;compilacion estatica,&lt;/li&gt;
+&lt;li&gt;se promociona como rapido y seguro,&lt;/li&gt;
+&lt;li&gt;no apesta en lentitud como &lt;s&gt;Python&lt;/s&gt;,&lt;/li&gt;
+&lt;li&gt;en apariencia tiene una saludable comunidad que crea herramientas y librerias,&lt;/li&gt;
+&lt;li&gt;no es TAB-indentado,&lt;/li&gt;
+&lt;li&gt;tiene bloques de alcance delimitados por &lt;code&gt;{ }&lt;/code&gt; y no por TABS o &lt;code&gt;end&lt;/code&gt;s, y&lt;/li&gt;
+&lt;li&gt;su libro es de libre difusion y ademas cuenta con traducciones al español&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;comentare un poco sobre las traducciones, y el libro oficial.&lt;/p&gt;
+
+&lt;p&gt;Primero, la &lt;a href=&#34;https://goyox86.github.io/elpr/&#34;&gt;version uno del libro traducida al español&lt;/a&gt;
+esta buena (creo). El libro en si, es un paseo por las caracteristicas del
+lenguaje. Esto viene a significar, que si consideras que sabes programar y
+vienes de un lenguaje tipo C++ seria suficiente para conocer el catalogo de
+posibilidades. Aun con esto, lo considero muy, muy basico y falto de la
+claridad suficiente para aquellos que requerimos manuales para dummys&lt;/p&gt;
+
+&lt;p&gt;Por su parte la &lt;a href=&#34;https://github.com/ManRR/rust-book-es/&#34;&gt;version dos traducida al español&lt;/a&gt;
+fue algo dificil de encotrar. Si, esta completa. No es del todo precisa o
+revisada, aunque es lo suficientemente entendible, pero sus defectos resaltan a
+simple vista. Por ejemplo, que una funcion este traducida y en el siguiente
+parrafo se presente en ingles, o que el palabro sea traducible al español, pero
+se quede en ingles. Esta traduccion esta en un git y por lo que se, no tiene
+version web&lt;/p&gt;
+
+&lt;p&gt;las intrucciones para generar la version web, son estas:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/ManRR/rust-book-es/
+cd rust-book-es/second-edition/es
+cargo install mdbook
+mdbook build
+mi-navegador-web book/index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;el unico sitio donde he visto señas de esta traduccion es un issue en el
+repositorio en english del libro&amp;hellip; un issue sin respuestas ni atencion, como el
+repo mismo. Si no pueden o no quieren generar la version web, la he colocado en,
+&lt;a href=&#34;https://nasciiboy.land/book4all/rust-2nd/&#34;&gt;aqui&lt;/a&gt;. Esta tal cual se genera
+(excepto por que cambie el tamaño y ancho del texto). Por lo demas, tiene
+fuentes de google y js que le permite ocultar cosas y cambiar el tema (me gusta
+el &lt;em&gt;ayu&lt;/em&gt;). Si son rust-fancys pasar por el repo, darle like y colaborar.&lt;/p&gt;
+
+&lt;p&gt;Segun su repositorio, la ultima vez que se toco fue hace 4 meses. Parece algo
+desfasada de la version en ingles, pese a ello, es mas extensa y detallada que
+lo contenido en la version uno. Esta es la que recomendaria para hispanos.&lt;/p&gt;
+
+&lt;p&gt;(el colega tiene otra traduccion &lt;a href=&#34;https://github.com/ManRR/rust-ffi-omnibus-es&#34;&gt;https://github.com/ManRR/rust-ffi-omnibus-es&lt;/a&gt;
+que parece ser una github-wiki, no estoy seguro que sea o si este terminada, ni
+como hacer una exportacion a html)&lt;/p&gt;
+
+&lt;p&gt;(el camarada no tiene web o correo. Dejando de lado las licencias, le deje una issue pidiendo permiso para
+colgarla en este antro. Tres dias despues, ante el silencio asumo un si)&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Finalmente, tenemos la &lt;a href=&#34;https://doc.rust-lang.org/book/second-edition/index.html&#34;&gt;version en englis de la version dos&lt;/a&gt;
+la mas completa, extensa y actualizada si te entiendes con el lenguaje.&lt;/p&gt;
+
+&lt;p&gt;(En el manual oficial en ingles, por alguna razon colocan el repo &lt;a href=&#34;https://github.com/thecodix/book&#34;&gt;https://github.com/thecodix/book&lt;/a&gt;
+como la version traducida al español&amp;hellip; zzzz, apenas y esta traducida la introduccion&amp;hellip;)&lt;/p&gt;
+
+&lt;h2 id=&#34;rust-vs-go&#34;&gt;rust VS go&lt;/h2&gt;
+
+&lt;p&gt;(&amp;hellip; Recordar que solo lo he sobrevolado el lenguaje por dos dias)&lt;/p&gt;
+
+&lt;p&gt;me preguntaba si rust contaria con mejores herramientas para plasmar mi codigo
+de manera mas &amp;ldquo;organica&amp;rdquo; y (spoiler) he descubierto que cuenta con mas y
+complejas construcciones, pero me costaria decir que son mejores. Interesantes?
+si, Armoniosas? n-o-p, Cripticas? segun quien.&lt;/p&gt;
+
+&lt;p&gt;Haber, que tenga punto y coma al final de las declaraciones a lo C se puede
+olvidar facilmente y el compilador te lo recordara, ja, ja,
+ja. Sorprendentemente, cuando no pones los punto y comas las declaraciones se
+comportan como lisp, y eso, eso mola!&lt;/p&gt;
+
+&lt;p&gt;La declaracion de variables, por otro lado es fastidiosa, go es mucho mas
+compacto y agradable&lt;/p&gt;
+
+&lt;p&gt;mmm, el manejo de memoria con dueños, pertenecias y prestamos, esta interesante,
+parece fastidioso, pero me gustaria ver un Go sin recolector de basura
+implementando este concepto&lt;/p&gt;
+
+&lt;p&gt;La forma de dividir el codigo en librerias, modulos y determinar el acceso a
+metodos/cosas, me corto totalmente el buen rollo inicial con rust, (・_・ヾ es muy
+confuso. Dividir el codigo en modulos, que pueden estar en ficheros o dentro del
+mismo modulo, cada uno con acceso publico o no, y como acceder a estos modulos
+desde codigo dentro del mismo proyecto y/o carpeta fue algo que no pude
+hacer. En verdad es bastante confuso y molesto, parece una chapuza a medio hacer.&lt;/p&gt;
+
+&lt;p&gt;la dinamica del mono-repo de go es mas clara y sencilla, que tu &amp;ldquo;modulo&amp;rdquo; se
+aplique a la carpeta actual y puedas invocarla de manera sencilla con su mera ruta y
+a su vez se comporte como un (pseudo) obejeto, mola un webo. Rust, aun saliendo
+un añito mas tarde no tiene algo tan bonico.&lt;/p&gt;
+
+&lt;p&gt;slices y vectores&amp;hellip; mierda, por que rust? por que se parecen tanto a C++/Java
+(lo de los modulos tambien esta muy java). El acceso a metodos/cosas en modulos
+tambien muy java&amp;hellip; y los limites de lo que incluyen las macros por defecto o la
+libreria estandar tampoco es claro. Ni hablar del &lt;code&gt;&amp;amp;self&lt;/code&gt; en las estructuras o el
+&lt;code&gt;&amp;amp;mod self&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;interfaces&amp;rdquo; en lugar de herencia, bien. Lo de las &lt;code&gt;&amp;lt;T&amp;gt;&lt;/code&gt;, las enumeraciones
+&amp;ldquo;raras&amp;rdquo; y los &lt;code&gt;match&lt;/code&gt; no lo termino de tener claro&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;documentar las funciones con &lt;strong&gt;markdown&lt;/strong&gt;, jo, jo, jo, que cagada. Dejalos
+sueltos y te ponen etiquetas html a lo burro&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;convertir funciones en funciones de prueba junto al codigo simplemente agregando
+indicaciones &lt;code&gt;#[test]&lt;/code&gt;, fabuloso! Tener que incluir estas declaraciones dentro
+de un modulo con otra indicacion extraña &lt;code&gt;#[cfg(test)]&lt;/code&gt; y seguir colocando el
+&lt;code&gt;#[test]&lt;/code&gt; a cada prueba para que el compilador no las incluya en el binario
+final&amp;hellip; una mierda!&lt;/p&gt;
+
+&lt;p&gt;mmmm. esta bien que tengas bonitos poderes configuratorios para el compilador,
+pero tienes un monton de posibilidades cripticas que con nada se pueden ir de
+madre o ser utilizadas para acallar al compilador, por que? en serio, por que?&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;cargo&lt;/code&gt;, mehhh, regular. &lt;code&gt;go&lt;/code&gt; mola mas&lt;/p&gt;
+
+&lt;p&gt;documentacion, supongo que configurando bien el editor con autocompletado y
+ayudas debe ser sencillo. Pero &lt;code&gt;go doc&lt;/code&gt; ya solo por mostrarte los prototipos de
+las funciones, variables y constantes en una libreria sin recurir a versiones
+web es infinitamente mas comodo, ademas funciona sin &amp;ldquo;compilaciones&amp;rdquo; ni
+naah. Esto junto a lo java/raro de la organizacion de librerias mataron mis
+ansias por el oxido&lt;/p&gt;
+
+&lt;p&gt;como conclusion, rust tiene muchas, muchas muchas herramientas, un lenguaje mas
+a los que dare el calificativo de &lt;em&gt;katamari&lt;/em&gt;, un pegote de caracteristicas de
+lisp, C++ y &amp;ldquo;cosas&amp;rdquo; que se sienten faltas de una coherencia planificada, como si
+lo es Go, donde puedo visitar codigo ajeno casi con la certesa de comprender lo
+que sucede&lt;/p&gt;
+
+&lt;p&gt;pero no terminare totalmente desilucionado, me gustaron los comportamientos a lo
+lisp y que sea de &amp;ldquo;estilo libre&amp;rdquo; en su escritura. Me jode que no tenga
+operadores de (pre|pos)(in|de)cremento, tambien que no tenga &lt;code&gt;for&lt;/code&gt;s de dos/tres
+campos y que las cosas distintas a cero no sean siempre verdadero. Oh, los valores
+de 128 bits aprueban. No termine de enterarme sobre sus cadenas unicode 8, los
+char y si estos son o no runas&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SistOp</title>
+      <link>https://nasciiboy.land/prog/sistop/</link>
+      <pubDate>Sun, 12 Aug 2018 20:00:08 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/sistop/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Este libro busca brindar a estudiantes y docentes de las carreras de
+ingeniería en computación, informática, Ciencias de la Computación y similares
+un material completo, general y autocontenido sobre la materia de sistemas
+operativos. No se asume conocimiento previo sobre la temática, aunque se
+utilizarán conceptos de estructuras de datos y algoritmos básicos &amp;ndash;systop&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;fundamentos-de-sistemas-operativos&#34;&gt;Fundamentos De Sistemas Operativos&lt;/h2&gt;
+
+&lt;p&gt;A diferencia de otras entregas con infriccion de &lt;strong&gt;&amp;ldquo;¢ø-π →&amp;rdquo;&lt;/strong&gt; incluido, esta
+ocacion he hojeado un material libre como la libertad de tintes
+marcadamente a-c-a-d-e-m-i-c-o-s (sin chistes, jocosidad y definitiamente poca
+diversion&amp;hellip; exepto cuando es divertido).&lt;/p&gt;
+
+&lt;p&gt;El material ademas de incitar a la copia explicitamente, por su licencia y libre
+descarga, tambien tiene un repo desde donde se puede optener el codigo fuente
+horneado con una base de org-mode sasonado con LaTeX&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/gwolf/sistop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aunque tambien es recomendable asistir a su website (&lt;a href=&#34;http://sistop.org/&#34;&gt;http://sistop.org/&lt;/a&gt;) para
+descargar una version en PDF, el codigo fuente de algunos ejercicios (aunque no
+es necesario) y/o comprar el libro en formato de arbol muerto o de manera digital.&lt;/p&gt;
+
+&lt;h2 id=&#34;temario&#34;&gt;Temario&lt;/h2&gt;
+
+&lt;p&gt;El texto esta divido en 7 temas principales&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1. Punto de partida.&lt;/li&gt;
+&lt;li&gt;2. Relación con el hardware.&lt;/li&gt;
+&lt;li&gt;3. Administración de procesos.&lt;/li&gt;
+&lt;li&gt;4. Planificación de procesos.&lt;/li&gt;
+&lt;li&gt;5. Administración de memoria.&lt;/li&gt;
+&lt;li&gt;6. Organización de archivos.&lt;/li&gt;
+&lt;li&gt;7. Sistemas de archivos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;y tres apendices con contenido concentrado&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A. Software libre y licenciamiento&lt;/li&gt;
+&lt;li&gt;B. Virtualizacion&lt;/li&gt;
+&lt;li&gt;C. El medio fisico y el almacenamiento.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;pero podrian considerarse tambien como temas principales&lt;/p&gt;
+
+&lt;p&gt;Los primeros dos apartados, fueron leer un poco el rollo de siempre: &amp;ldquo;la pc&amp;rdquo;, la
+evolucion del hardware, interfaces y esas cosas habituales.&lt;/p&gt;
+
+&lt;p&gt;Con el tema 3 inicio lo interesante, pero eche de menos codigo jugoso,
+divertido y funcional para ver de que hablaban, quiza por esto y por tratar &amp;ldquo;en
+exceso&amp;rdquo; de la concurrencia me parecio pesado. Mas o menos sucedio lo mismo con
+el tema 4.&lt;/p&gt;
+
+&lt;p&gt;La divercion llego con la &lt;em&gt;Planificacion de Procesos&lt;/em&gt;, donde la cache, la ram y
+cosas de &amp;ldquo;paginacion&amp;rdquo; eran las palabras habituales. No me quedo una vision clara
+o precisa de como era aquello, aunque sirvio para ampliar el panorama visto en
+incursiones anteriores al asm y sus instrucciones PC, LD, PUSH, POP pero ahora
+en sistemas concurrentes tecnicolor!&lt;/p&gt;
+
+&lt;p&gt;Me hubiera gustado una descripcion dedicadaa a exponer la interaccion del sistema
+operativo, el juego de las caches y el SMT, con programitas y programitas
+concurrentes en paralelo.&lt;/p&gt;
+
+&lt;p&gt;es bastante bonito observar que el esquema de bibliotecas compartidas tiene
+buenas y bastantes conveniencias, que me recuerdan a una camiseta&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/country-unix.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(una de las razones por las que tome C como primer lenguaje y por las que pese a
+no hacer nada relevante o complejo en ese lenguaje, sus alumnos escupen en
+precencia de las otras corrientes &amp;ldquo;filosoficas del silicio&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;un lenguaje y utilidades de codigo en forma de librerias compartidas! &amp;hellip; pero,
+aunque los cimientos siguen siendo esos, las paredes de python, js, javas, &amp;hellip;,
+hechas de unicel me siguen generando repulsion cada vez que pienso en esos
+lenguejes y sus modas. Todos esos framewors, engines y librerias que se perderan
+como lagrimas en la lluvia, aprovechan (aunque sea mediante sucios bindings) las
+librerias basicas del sistema? acaso alguno los nuevos lenguajes con sus
+&lt;code&gt;packages&lt;/code&gt; e &lt;code&gt;imports&lt;/code&gt; funcionan de manera analoga a las librerias compartidas o
+son un monton de instrucciones libertinas sin restricciones ni temor del sistema?
+alguna vez surgira un lenguaje que modernice C (sin apaños) que sea base de un
+nuevo unix (Go tiene defectirijillos&amp;hellip;) o la complejidad, en colaboracion con
+la evolucion del hardware ocultaran los niveles de abstraccion y
+heterogeniedades del software de manera &amp;ldquo;organica&amp;rdquo; como dice hacerlo lisp? o, el
+navegador son las nuevas &amp;ldquo;librerias compartidas&amp;rdquo;?&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Los ultimos dos temas tambien son un poco rollo y los apendices, estan
+bien&amp;hellip; bueno, todo esta bien, es un libro serio, a un cuarto del camino entre
+un acercamiento y consultar la especificacion de un tema concreto.&lt;/p&gt;
+
+&lt;p&gt;Como recomendacion, conocer es mejor que memorizar, la mejor manera de
+memorizar es con el uso habitual y si es demaciado especifico como para no
+utilizarlo nunca, mejor ir saltando de encabezado en encabezado.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IntroARM</title>
+      <link>https://nasciiboy.land/prog/introarm/</link>
+      <pubDate>Thu, 19 Apr 2018 18:36:32 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/introarm/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&amp;ldquo;Introducción a la arquitectura de computadores con QtARMSim y Arduino&amp;rdquo;&lt;/strong&gt; es
+un libro que encontre (el año pasado) en &lt;a href=&#34;https://openlibra.com/es/book/introduccion-a-la-arquitectura-de-computadores-con-qtarmsim-y-arduino&#34;&gt;openlibra&lt;/a&gt;
+cuya insulsa portada (como casi todo lo de openlibra) oculta un material
+bastante didactico (je, esto ultimo a consideracion&amp;hellip; respecto a los otros
+titulos de openlibra), ameno, directo e
+interesante sobre la arquitectura de computadoras.&lt;/p&gt;
+
+&lt;p&gt;El libro centra su atencion en la arquitectura ARM de 32 bits desplegando
+ejemplos en ensamblador (instrucciones Thumb Cortex-M0 estilo GNU) y luego
+aplicando (mas o menos) practicamete los conocimentos sobre la placa
+&lt;a href=&#34;https://www.arduino.cc/en/Guide/ArduinoDue&#34;&gt;Arduino Due&lt;/a&gt; [ATSAM3X8E]&amp;hellip; para
+encender y apagar un led! (esto es si es un &amp;ldquo;hello word&amp;rdquo; bien rudo!)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/ArduinoDue.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En realidad, ni el asm, ni la placa arduino tienen mucha importancia pues no
+dejan de ser un conducto para mostrar los entresijos y filosofias relacionadas
+con el funcionamiento conceptual de los procesadores, su programacion y luego
+mas tarde su interaccion y gestion con dispositivos de entrada y salida
+varios. De hecho, y aunque el ensamblador que nos muestra el libro es bastante
+bonito (quitando su manera extrabagante de pasar datos de memoria a los registros y
+viceversa), en todo el libro, no se expone ninguna razon para utilizar
+ensamblador, mas alla (claro esta) de poder ver su funcionamiento en vivo y a
+todo c-o-l-o-r.&lt;/p&gt;
+
+&lt;p&gt;y bueno, el libro, codigo y herramientas necesarias para su estudio se
+encuentran en la siguiente direccion (oficial): &lt;a href=&#34;http://lorca.act.uji.es/libro/introARM/&#34;&gt;http://lorca.act.uji.es/libro/introARM/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;para que la programacion en asm no quede como un ejercicio autista donde
+tenemos que imaginar que esta pasando, se propone utilizar una interfaz grafica
+de un emulador de arm (&lt;code&gt;spim&lt;/code&gt;) llamada &lt;a href=&#34;http://lorca.act.uji.es/project/qtarmsim/&#34;&gt;QtARMSim&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;segun las intrucciones de la pagina tendriamos que seguir los siguientes pasos
+para hacernos con &amp;ldquo;los programas&amp;rdquo;(, o asi los hice yo):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt install gcc-arm-linux-gnueabi
+apt install python3-pyside python3-pip ruby spin
+pip3 install qtarmsim
+
+# si se quiere actualizar
+# pip3 install --upgrade qtarmsim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;hellip; es curioso, como un libro centrado en asm y que en sus propias paginas
+expone la necesidad de hacer que la interaccion del usuario con un programa
+tiene que ser practica, tubieron la brilante idea de implementar el entorno
+grafico utilizando (asqueroso) python&amp;hellip; no es que la interfaz sea fea, cargada
+o innecesaria ni mucho menos (mi mas sincera alabanza), sino que a la hora de interactuar con el editor de
+texto incorporado, el lag puede ser insufrible (puto python). Otra cosa curiosa
+del p-y-t-h-o-n, ocurre cuando instalas sus mierdas y luego al ejecutarlas en lugar de
+&amp;ldquo;interpretar&amp;rdquo; los programas, te aparecen sendos mensajes de error, como me
+sucedio en freidora 27. Tras varios intentos, apaños y busquedas por internet,
+la solucion menos dolorosa fue utilizar una maquina virtual con debian e ir a
+probar suerte&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;no veia muy claro eso de instalar virtualbox, asi que por mera investigacion
+prove con &lt;code&gt;gnome-boxes&lt;/code&gt; (que ya venia instalada). Baje la iso estable
+(DVD|torrent) de debian 9.4.0 y segui la sujerencia de gnome-cajas en hacer una
+instalacion rapida (o algo asi). Aproximadamente 15 minutos mas tarde,
+unicamente ingresando el nombre de usuario, contraseña y dimencion de la
+particion, tenia un debian fluido y eficiente corriento con 2 procesadores,
+21GiB de disco y 1GiB de ram (con Gnome Shell) consumiendo ~500MiB de ram y muy
+poco consumo de procesador&amp;hellip; hasta mover-una-ventana-con-el-raton-a-lo-loco!&lt;/p&gt;
+
+&lt;p&gt;me sorprendio lo rapido que arranca una maquina virtual en (quemu) boxes, lo
+ligerita que va, e igualmente lo rapido que se apaga. Como puntos negativos dire
+que la captura del teclado nunca se hizo presente y que fue necesario
+reconfigurar el teclado en la maquina virtual (a programmer dvorak), porque
+venia en ingles; asi que todo lo ingresado estaba mal, mas al contar con un
+portapapeles (de texto) compartido se puede escribir en la maquina anfitrion
+e ir a pegar (con tecla de opciones(?)) en cualquier lado.&lt;/p&gt;
+
+&lt;p&gt;pero bueno, todo esto no era sobre gnome-boxes, era sobre el libro. Tras probar
+que el entorno funcionaba sin inconveniente alguno sobre debian y que el entorno era
+intuitivo y despliga la informacion suficiente y de manera comoda, continuemos con la
+travesia.&lt;/p&gt;
+
+&lt;p&gt;Los ejercicios en ensamblador son pequeños, claros y lo suficientemente
+explicados como para no perderse. Hecho en falta que en la pagina oficial, no se
+incluya un comprimido con el codigo en ensamblador del libro, asi que
+&lt;a href=&#34;https://nasciiboy.land/data/asm-code.zip&#34;&gt;aqui&lt;/a&gt; esta una compilacion en zip.&lt;/p&gt;
+
+&lt;p&gt;A diferencia de lo que comentaba sobre el post del tutorial del
+&lt;a href=&#34;../z80-spectrum/&#34;&gt;z80-speccy&lt;/a&gt; en este material se dedican varias secciones a
+explicar estrategias y convenciones sobre el paso de parametros entre las
+subrutinas. Ademas, como no podia ser de otra manera, el procesador y su
+capacidades tambien evolucionaron. En este procesador tenemos 16 registros
+ortogonales de 32 bits&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;r0-r3  &amp;gt; paso y recivo de parametros a subrutinas&lt;/li&gt;
+&lt;li&gt;r4-r12 &amp;gt; libres para el programador&lt;/li&gt;
+&lt;li&gt;r13    &amp;gt; SP (puntero de pila)&lt;/li&gt;
+&lt;li&gt;r14    &amp;gt; LR (registro enlace)&lt;/li&gt;
+&lt;li&gt;r15    &amp;gt; PC (putero del programa)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;las instrucciones son menos complejas que las del z80, vastante mas comodas como
+&lt;code&gt;add rn, rn, rn&lt;/code&gt; donde se pasan dos registros a sumar y un registro donde
+depositar el resultado. Otro ejemplo seria la intruccion de uso de la pila &lt;code&gt;push
+{rn, rn, rn-rn}&lt;/code&gt; y su complemento &lt;code&gt;pull {rn, rn, rn-rn}&lt;/code&gt; que no solo puede pasar
+mas de un registro, tambien un rango entero de registros, wouau puro rock-and-roll!&lt;/p&gt;
+
+&lt;p&gt;como comentaba al inicio, aun tomando la lectura sin intenciones de aplicar sus
+enseñansas codificadoras, el enfoque didactico es muy estimulante para el que
+tenga interes en conocer los entresijos rugosos de un &amp;ldquo;computador&amp;rdquo;, que por aca
+ni se mitifica, ni se espanta al lector con leyendas medievales de complejidades
+imposibles (como muchos hacen con los niñatos y les dicen que p-y-t-h-o-n &amp;ldquo;es
+bonito y facil&amp;rdquo;, ha, una guerra es lo que les hace falta)&lt;/p&gt;
+
+&lt;p&gt;La segunda parte del material continua su labor didactica ahora mostrando como
+interactua el procesador con el mundo. Tambien pasa bastante tiempo liandola con
+el ensamblador y el arduino, mas, no termino de enterarme a cuenta de
+que. Aunque me parece genial que se pongan a educar sobre el asm, el arduino y
+su entorno no tienen pinta de estar prestos a liarse a programar en otra cosa
+que no sea C/C++, pero bueno, tampoco es que me enoje ni nada similar&amp;hellip; (por
+que, no tomar una consola de videojuegos arm como conducto?&amp;hellip; si la hay&amp;hellip; o
+es que no&amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;de esta parte del libro, destaco las secciones de interrupciones y conocer al
+(voz cavernosa y con eco) &lt;strong&gt;DMA&lt;/strong&gt; (/voz cavernosa y con eco) (Direct Memory Access)&lt;/p&gt;
+
+&lt;p&gt;finalmente, el ultimo tercio del liblo, esta formado por una referencia (muy)
+tecnica de las E/S, el reloc e interrupciones disponibles en el arduino. Luego
+un par de resumenes del asm y tambien la infaltable seccion de sistemas de
+numeracion, para finalmente cerrar con indices y cosas de libros&lt;/p&gt;
+
+&lt;p&gt;Ahora, como con el tutorial del z80, muestran como declarar if&amp;rsquo;s, else&amp;rsquo;s, for&amp;rsquo;s y
+while&amp;rsquo;s, pero donde esta el siempre amado y necesario &lt;strong&gt;&lt;code&gt;switch&lt;/code&gt;&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;p&gt;Para terminar, en open libra hay un material mas o menos relacionado, con un
+temario algo similar &lt;a href=&#34;https://openlibra.com/es/book/arm-cortex-m-practico-introduccion-a-los-microcontroladores-stm32-de-st&#34;&gt;ARM Cortex-M práctico: Introducción a los microcontroladores STM32 de St&lt;/a&gt;
+que va mas de C. Tiene el pecado de aplicar sus enseñansas sobre aplicaciones
+ventaneras, pero rescato su explicacion sobre las ramas de los procesadores
+ARM.&lt;/p&gt;
+
+&lt;p&gt;Si os gustan los libros, ir a openlibra, poner 5 estrellas, like &amp;amp; subscribe&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Desing Patterns (GoF)</title>
+      <link>https://nasciiboy.land/prog/gof/</link>
+      <pubDate>Tue, 13 Mar 2018 20:55:49 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/gof/</guid>
+      <description>
+
+&lt;p&gt;Cuando era &amp;ldquo;pequeño&amp;rdquo;, al oir &lt;em&gt;Patrones de diseño&lt;/em&gt;, lo unico que mi diminuta mente
+consebia era a un grupo de programadores a tope de egocentrismo, gozosos de
+inventarse terminos rimbombantes y pretenciosos, que solo ellos pudieran
+entender mientras reian y con una mano sujetaban sus monoculos y con la otra
+un a-y-h-p-a-d&lt;/p&gt;
+
+&lt;p&gt;En aquella epoca de ignorancia, cada vez que iniciaba a programar algo
+medianamente complejo, siempre me preguntaba si no existia algun escrito
+perdido que proporcionara las herramientas para extructurar el codigo de forma
+organica, audaz e inteligente, como si de diseñar un organismo se tratara, donde
+todo funcionara en una armonica melodia y cada segmento de codigo tomara el
+lugar de un instrumento musical identificable, a la vez que se mezclaba con
+todos los demas.&lt;/p&gt;
+
+&lt;p&gt;Resulta pues, que sin proponermelo, fuera por la disposicion del codigo de
+ejemplo en los libros, por el uso de comandos del sistema o por necesidad y
+cabezoneria de resolver ciertos problemas, algunas de estas formas misticas de
+estructurar el codigo fueron apareciendo e incorporandose en forma de
+experiencia practica, no muy racionalizada, pero aun asi interiorizada en los musculos&lt;/p&gt;
+
+&lt;p&gt;mas sorprendente aun, fue descubrir, que estas &amp;ldquo;tecnicas para organizar codigo&amp;rdquo;
+ya existian y no estaban ocultas. Resulta que aquella palabra extravagante
+&lt;em&gt;Patron de diseño&lt;/em&gt; era eso mismo que estube buscando desde el inicio, &amp;ldquo;el metodo
+para estructurar el codigo de una forma razonable, inteligente (y en ocaciones organica)&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; y el material donde se presentaron a sociedad los patrones lleba por nombre
+&lt;em&gt;Desing Patterns: Elements of Reusable Object-Oriented Software&lt;/em&gt; o tambien
+apodado como &lt;em&gt;GoF&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; y la mejor manera que encuentro para presentar el material, no es otra que
+dejar unos extractos:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Los estudios de programadores expertos de lenguajes convencionales muestran
+ que el conocimiento y la experiencia no se organizan simplemente en torno a la
+ sintaxis, sino en estructuras conceptuales mayores, tales como algoritmos,
+ estructuras de datos y modismos, asi como en maneras de lograr un determinado
+ objetivo. Los diseñadores probablemente no piensan en la notacion
+ que estan usando para documentar su diseño, sino que intentan comparar la
+ situacion actual de diseño con planos, algoritmos, estructuras de datos y
+ modismos que han aprendido en el pasado.&lt;/p&gt;
+
+&lt;p&gt;Los informaticos nominan y catalogan las estructuras de datos y algoritmos,
+ pero no suelen dar nombre a otros tipos de patrones. Los patrones de diseño
+ proporcionan un vocabulario comun que los diseñadores usan para comunicar,
+ documentar y explorar alternativas de diseño. Los patrones de diseño hacen que
+ un sistema parezca menos complejo, permitiendonos hablar de el con un mayor
+ nivel de abstraccion del que permite una notacion de diseño o un lenguaje de
+ programacion. Los patrones de diseño elevan el nivel en el que diseñamos y
+ discutimos diseños con nuestros colegas.&lt;/p&gt;
+
+&lt;p&gt;Una vez que haya absorbido los patrones de diseño, su
+ vocabulario de diseño cambiara casi con toda seguridad. Hablara directamente
+ en terminos de los nombres de los patronesde diseño. Se oira asi mismo decir
+ cosas como &amp;ldquo;aqui deberiamos usar el patron Observer&amp;rdquo;, o &amp;ldquo;extraigamos una
+ estrategia de estas clases&amp;rdquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;tambien:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Una de las mejores cosas de los patrones es que apartan las decisiones de
+diseño del reino de la mera intuicion. Permiten que los autores sean
+explicitos sobre las ventajas e inconvenientes que proporcionan, lo que
+facilita ver los fallos de sus patrones y discutir con ellos.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;y finalmente la definicion misma de los patrones ::&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Un patron de diseño nomina, da los motivos y explica sistematicamente un
+diseño general que resuelve un problema de diseño recurrente en los sistemas
+orientados a objetos. Describe el problema, la solucion, cuando aplicar este
+y sus consecuencias. Tambien ofrece trucos de implementacion y ejemplos. La
+solucion es una disposicion general de clases y objetos que resuelven el
+problema. Esta adaptada e implementada para resolver el problema en un
+determinado contexto.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;imposible explicarlo mejor!&lt;/p&gt;
+
+&lt;p&gt;Solo unas breves anotaciones personales para el yo del pasado:&lt;/p&gt;
+
+&lt;p&gt;Primero, al libro le hace falta codigo &amp;ldquo;real&amp;rdquo; (almenos en la vercion que poseo.
+La vercion en ingles menciona un CD con material, pero desconosco su alcance).
+Se presentan fragmentos de codigo solo lo suficientemente desarrollados
+como para (si se presta atencion y se guarda dicho codigo con avaricia) poder
+crear una implementacion &amp;ldquo;basada en&amp;rdquo; y hacerla funcionar. Esto no cumple
+demaciado con mis estadares didacticos para subnormal, pero es mejor que nada.&lt;/p&gt;
+
+&lt;p&gt;Segundo, se utilizan diagramas algo cripticos con una sintaxis &amp;ldquo;inventada y
+vieja&amp;rdquo;, asi que revisar el apendice que habla de ello, para darle algo de
+sentido. Ademas para el codigo utilizan un C++ &amp;ldquo;primitivo&amp;rdquo; y algo de otro
+lenguaje llamado smalltalk, que aunque sencillo (en el caso de tener un bagaje
+minimo con C++) seguramente no sera donde termines aplicando los patrones&lt;/p&gt;
+
+&lt;p&gt;y finalmente, La secciones de Implementacion, Codigo de Ejemplo y Usos Conocidos
+de cada patron, en una primer lectura pueden abrumar y/o quedar en nada. Son
+muchos patrones (aunque varios con aplicaciones &amp;ldquo;similares&amp;rdquo;), lo mas sensato es
+enterarse donde, como y para que aplicarlos, asociarlos con su nombre y luego ya
+si se da la oportunidad, investigar como implementar una vercion en codigo
+practico y de ser posible, implementarla en el lenguaje donde te sientas comodo&lt;/p&gt;
+
+&lt;p&gt;y ya esta, este jodido año estara en su mayoria dedicado a conocer, implementar
+y adaptar patrones. Chahh, con esto y dominar las interfaces/composicion (y
+canales) de Go sera mas que suficiente&amp;hellip; si no se cuela otro hobbie por
+medio&amp;hellip; asm para gameboy (love2d, rust, (e)lisp, asm de arduino, haskell,
+educacion escolarisada, trabajo(???)), no te acerces, alejate, a-l-e-j-a-t-e&lt;/p&gt;
+
+&lt;h2 id=&#34;cobaya&#34;&gt;cobaya&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/nasciiboy/GoF_Desing-Patterns
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Como cualquier material que me importe un poco, Patrones de Diseño (GoF) ha
+valido una adaptacion al formato de marcas (siempre en desarrollo, lento, lento
+desarrollo del) morg (patrones == mas-desarrollo).&lt;/p&gt;
+
+&lt;p&gt;La mision comenzo a principios de noviembre (&amp;hellip; supongo, porque el primer commit
+es del 2 de diciembre). El material de referencia fue un pdf
+infecto en español de aquellos que traen &amp;ldquo;fotocopias&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Lo primero fue transcribir a mano alzada palabra a palabra. Al principio probe a
+aplicar un ocr, pero la tecnologia esa aun entrega resultados bastante jodidos,
+sobre todo si como en este caso el texto no se ve y esta dispuesto de forma
+optima. Lo mas dificultoso, fueron las secciones finales del PDF, pues tenia paginas en
+desorden, asi como algunos bordes de texto desaparecido.&lt;/p&gt;
+
+&lt;p&gt;Luego de la mecanografiada vino una revision superficial, y al mismo tiempo (con
+otro pdf algo infecto) la adaptacion del material en ingles al morg,
+que es de donde se extraen las imagenes en el producto final. Al principio la
+idea era hacer una version en SVGs de las imagenes, tanto para la version en
+ingles como en español&amp;hellip; pero es mucho, mucho trabajo y en este momento no
+tengo el interes (o necesidad) para hacerlo.&lt;/p&gt;
+
+&lt;p&gt;ya terminada tanto la adaptacion en ingles (sin correccion alguna y apenas
+uno que otro enfasis del texto, solo adaptacion) como la primer revision
+del texto en español, llego el momento de leer a detalle el material y aprender
+formalmente, o esa era la idea. En la segunda revision, se corrigieron muchas
+distografias, algunas tan aberrantes como &lt;strong&gt;patrnose&lt;/strong&gt; (patrones), lol, como es
+posible escribir de esa manera? digo, entiendo substituir un caracter por alguno
+en su cercania en el teclado, pero cambiar varias letras de posicion unicamente
+puede revelar desordenes cognitivos exacervados &amp;hellip; ademas de eso, se corrigieron &amp;ldquo;lineas
+repetidas&amp;rdquo;, palabras &amp;ldquo;inventadas&amp;rdquo; y oraciones no incluidas.&lt;/p&gt;
+
+&lt;p&gt;No todos los errores los inclui, algunos ya estaban presentes en el material
+traducido y los deje tal cual.&lt;/p&gt;
+
+&lt;p&gt;Para las regiones en el PDF que no estaban visibles, utilice el traductor y la
+version en ingles&lt;/p&gt;
+
+&lt;p&gt;Finalmente el repositorio cuenta con versiones en html de los materiales, solo
+por que el exportador del morg lo permite y para que quien no concuerde con mi
+vision de documentacion en texto plano disponible directamente en el &amp;ldquo;editor&amp;rdquo; de
+texto (emacs (por el momento como apaño) y con un marcador de por medio) tambien pueda aprovecharlo.&lt;/p&gt;
+
+&lt;p&gt;si te es de utilidad y ademas corriges algunos palabros y encima quieres
+agregarlos al repo pero sin que quede registrado, puedes enviarme el texto
+corregido tal cual por correo (ademas de la cuenta habitual (ver el fondo),
+tengo cuenta en protonmail, tambien como nasciiboy), cifrar y tomar
+consideraciones extra&amp;hellip; claro, solo si se considera que difundir la cultura (en
+todas sus formas) es incorrecto.&lt;/p&gt;
+
+&lt;p&gt;El resto, como revisar, enfatizar y corregir la version en ingles, asi como todo
+lo relacionado con las imagenes, lo dejo en manos de las generaciones por venir&lt;/p&gt;
+
+&lt;p&gt;(o coloque un mandelbrot como &amp;ldquo;caratula&amp;rdquo; del libro, porque no se&amp;hellip; hay algo que
+diga mas patron y diseño que un mandelbrot?)&lt;/p&gt;
+
+&lt;p&gt;happy typping!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Java &amp; Me(h)</title>

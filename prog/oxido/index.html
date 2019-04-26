@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oxido</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style> :root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 80%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 20%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
+
+  <h1>Oxido</h1>
+  
+
+<p>Ultimamente pocas cosas de las que hago al dia logran clasificar como
+&ldquo;productivas&rdquo; o &ldquo;divertidas&rdquo;. Sumado (o restado) a esto, por razones externas, me vi forzado
+a buscar un material interesante con el cual aparentar alguna labor frente al
+monitor con el extra de que fuera de interes y evitara en lo posible la somnolencia</p>
+
+<p>Toquetear <a href="https://www.rust-lang.org/es-ES/">rust</a> fue la ocupacion que logro
+mantener las apariecias los ultimos 2 dias. Uno de ellos fue
+satisfactorio e divertido, y el otro&hellip; algo decepcionante (spoiler).</p>
+
+<p>Pero, por que Rust?</p>
+
+<ul>
+<li>es FOSS,</li>
+<li>no es de microsoft,</li>
+<li><a href="http://dtrace.org/blogs/bmc/2018/09/18/falling-in-love-with-rust/">propaganda</a>,</li>
+<li>compilacion estatica,</li>
+<li>se promociona como rapido y seguro,</li>
+<li>no apesta en lentitud como <s>Python</s>,</li>
+<li>en apariencia tiene una saludable comunidad que crea herramientas y librerias,</li>
+<li>no es TAB-indentado,</li>
+<li>tiene bloques de alcance delimitados por <code>{ }</code> y no por TABS o <code>end</code>s, y</li>
+<li>su libro es de libre difusion y ademas cuenta con traducciones al español</li>
+</ul>
+
+<p>comentare un poco sobre las traducciones, y el libro oficial.</p>
+
+<p>Primero, la <a href="https://goyox86.github.io/elpr/">version uno del libro traducida al español</a>
+esta buena (creo). El libro en si, es un paseo por las caracteristicas del
+lenguaje. Esto viene a significar, que si consideras que sabes programar y
+vienes de un lenguaje tipo C++ seria suficiente para conocer el catalogo de
+posibilidades. Aun con esto, lo considero muy, muy basico y falto de la
+claridad suficiente para aquellos que requerimos manuales para dummys</p>
+
+<p>Por su parte la <a href="https://github.com/ManRR/rust-book-es/">version dos traducida al español</a>
+fue algo dificil de encotrar. Si, esta completa. No es del todo precisa o
+revisada, aunque es lo suficientemente entendible, pero sus defectos resaltan a
+simple vista. Por ejemplo, que una funcion este traducida y en el siguiente
+parrafo se presente en ingles, o que el palabro sea traducible al español, pero
+se quede en ingles. Esta traduccion esta en un git y por lo que se, no tiene
+version web</p>
+
+<p>las intrucciones para generar la version web, son estas:</p>
+
+<pre><code>git clone https://github.com/ManRR/rust-book-es/
+cd rust-book-es/second-edition/es
+cargo install mdbook
+mdbook build
+mi-navegador-web book/index.html
+</code></pre>
+
+<p>el unico sitio donde he visto señas de esta traduccion es un issue en el
+repositorio en english del libro&hellip; un issue sin respuestas ni atencion, como el
+repo mismo. Si no pueden o no quieren generar la version web, la he colocado en,
+<a href="https://nasciiboy.land/book4all/rust-2nd/">aqui</a>. Esta tal cual se genera
+(excepto por que cambie el tamaño y ancho del texto). Por lo demas, tiene
+fuentes de google y js que le permite ocultar cosas y cambiar el tema (me gusta
+el <em>ayu</em>). Si son rust-fancys pasar por el repo, darle like y colaborar.</p>
+
+<p>Segun su repositorio, la ultima vez que se toco fue hace 4 meses. Parece algo
+desfasada de la version en ingles, pese a ello, es mas extensa y detallada que
+lo contenido en la version uno. Esta es la que recomendaria para hispanos.</p>
+
+<p>(el colega tiene otra traduccion <a href="https://github.com/ManRR/rust-ffi-omnibus-es">https://github.com/ManRR/rust-ffi-omnibus-es</a>
+que parece ser una github-wiki, no estoy seguro que sea o si este terminada, ni
+como hacer una exportacion a html)</p>
+
+<p>(el camarada no tiene web o correo. Dejando de lado las licencias, le deje una issue pidiendo permiso para
+colgarla en este antro. Tres dias despues, ante el silencio asumo un si)</p>
+
+<p>&hellip;</p>
+
+<p>Finalmente, tenemos la <a href="https://doc.rust-lang.org/book/second-edition/index.html">version en englis de la version dos</a>
+la mas completa, extensa y actualizada si te entiendes con el lenguaje.</p>
+
+<p>(En el manual oficial en ingles, por alguna razon colocan el repo <a href="https://github.com/thecodix/book">https://github.com/thecodix/book</a>
+como la version traducida al español&hellip; zzzz, apenas y esta traducida la introduccion&hellip;)</p>
+
+<h2 id="rust-vs-go">rust VS go</h2>
+
+<p>(&hellip; Recordar que solo lo he sobrevolado el lenguaje por dos dias)</p>
+
+<p>me preguntaba si rust contaria con mejores herramientas para plasmar mi codigo
+de manera mas &ldquo;organica&rdquo; y (spoiler) he descubierto que cuenta con mas y
+complejas construcciones, pero me costaria decir que son mejores. Interesantes?
+si, Armoniosas? n-o-p, Cripticas? segun quien.</p>
+
+<p>Haber, que tenga punto y coma al final de las declaraciones a lo C se puede
+olvidar facilmente y el compilador te lo recordara, ja, ja,
+ja. Sorprendentemente, cuando no pones los punto y comas las declaraciones se
+comportan como lisp, y eso, eso mola!</p>
+
+<p>La declaracion de variables, por otro lado es fastidiosa, go es mucho mas
+compacto y agradable</p>
+
+<p>mmm, el manejo de memoria con dueños, pertenecias y prestamos, esta interesante,
+parece fastidioso, pero me gustaria ver un Go sin recolector de basura
+implementando este concepto</p>
+
+<p>La forma de dividir el codigo en librerias, modulos y determinar el acceso a
+metodos/cosas, me corto totalmente el buen rollo inicial con rust, (・_・ヾ es muy
+confuso. Dividir el codigo en modulos, que pueden estar en ficheros o dentro del
+mismo modulo, cada uno con acceso publico o no, y como acceder a estos modulos
+desde codigo dentro del mismo proyecto y/o carpeta fue algo que no pude
+hacer. En verdad es bastante confuso y molesto, parece una chapuza a medio hacer.</p>
+
+<p>la dinamica del mono-repo de go es mas clara y sencilla, que tu &ldquo;modulo&rdquo; se
+aplique a la carpeta actual y puedas invocarla de manera sencilla con su mera ruta y
+a su vez se comporte como un (pseudo) obejeto, mola un webo. Rust, aun saliendo
+un añito mas tarde no tiene algo tan bonico.</p>
+
+<p>slices y vectores&hellip; mierda, por que rust? por que se parecen tanto a C++/Java
+(lo de los modulos tambien esta muy java). El acceso a metodos/cosas en modulos
+tambien muy java&hellip; y los limites de lo que incluyen las macros por defecto o la
+libreria estandar tampoco es claro. Ni hablar del <code>&amp;self</code> en las estructuras o el
+<code>&amp;mod self</code></p>
+
+<p>&ldquo;interfaces&rdquo; en lugar de herencia, bien. Lo de las <code>&lt;T&gt;</code>, las enumeraciones
+&ldquo;raras&rdquo; y los <code>match</code> no lo termino de tener claro&hellip;</p>
+
+<p>documentar las funciones con <strong>markdown</strong>, jo, jo, jo, que cagada. Dejalos
+sueltos y te ponen etiquetas html a lo burro&hellip;</p>
+
+<p>convertir funciones en funciones de prueba junto al codigo simplemente agregando
+indicaciones <code>#[test]</code>, fabuloso! Tener que incluir estas declaraciones dentro
+de un modulo con otra indicacion extraña <code>#[cfg(test)]</code> y seguir colocando el
+<code>#[test]</code> a cada prueba para que el compilador no las incluya en el binario
+final&hellip; una mierda!</p>
+
+<p>mmmm. esta bien que tengas bonitos poderes configuratorios para el compilador,
+pero tienes un monton de posibilidades cripticas que con nada se pueden ir de
+madre o ser utilizadas para acallar al compilador, por que? en serio, por que?</p>
+
+<p><code>cargo</code>, mehhh, regular. <code>go</code> mola mas</p>
+
+<p>documentacion, supongo que configurando bien el editor con autocompletado y
+ayudas debe ser sencillo. Pero <code>go doc</code> ya solo por mostrarte los prototipos de
+las funciones, variables y constantes en una libreria sin recurir a versiones
+web es infinitamente mas comodo, ademas funciona sin &ldquo;compilaciones&rdquo; ni
+naah. Esto junto a lo java/raro de la organizacion de librerias mataron mis
+ansias por el oxido</p>
+
+<p>como conclusion, rust tiene muchas, muchas muchas herramientas, un lenguaje mas
+a los que dare el calificativo de <em>katamari</em>, un pegote de caracteristicas de
+lisp, C++ y &ldquo;cosas&rdquo; que se sienten faltas de una coherencia planificada, como si
+lo es Go, donde puedo visitar codigo ajeno casi con la certesa de comprender lo
+que sucede</p>
+
+<p>pero no terminare totalmente desilucionado, me gustaron los comportamientos a lo
+lisp y que sea de &ldquo;estilo libre&rdquo; en su escritura. Me jode que no tenga
+operadores de (pre|pos)(in|de)cremento, tambien que no tenga <code>for</code>s de dos/tres
+campos y que las cosas distintas a cero no sean siempre verdadero. Oh, los valores
+de 128 bits aprueban. No termine de enterarme sobre sus cadenas unicode 8, los
+char y si estos son o no runas&hellip;</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.land/prog/goaccess/">◀ Goaccess</a>
+    
+    
+    <a class="next" href="https://nasciiboy.land/prog/gitatnasciiboy-land/"> git@nasciiboy.land ▶</a>
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
+</main>
+
+    <aside>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="https://nasciiboy.land/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="https://nasciiboy.land/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="https://nasciiboy.land/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="https://nasciiboy.land/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="https://nasciiboy.land/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
+
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/categories/prog">prog(57)</a></li><li><a href="https://nasciiboy.land/categories/post">post(55)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(35)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(25)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(22)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(8)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(6)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

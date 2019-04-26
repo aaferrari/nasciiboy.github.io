@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>feminascii</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style> :root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 80%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 20%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/post">post</a></div>
+
+  <h1>feminascii</h1>
+  <blockquote>
+<p>no podemos pasar por alto que el XXXXX tambien puede ser enfermizo, utilizado
+para crear lastima, fingir dolor y obtener una ganancia</p>
+</blockquote>
+
+<p>El internet es como la televicion (o el cine, o los mangas, el anime, o la
+radio) o las drogas. Un escaparate de la realidad, magnificador de logros y
+miserias. Ademas de entretenimiento, puede cumplir las funciones de estandarizar
+comportamientos, marcar aspiraciones, esparcir tendencias&hellip; tendencias que al
+igual que las mutaciones en las bacterias son muchas, aunque solo un
+puñado de estas son favorecidas por las circunstancias y pueden consolidarse en
+sus decendientes</p>
+
+<p>el feminismo (como otras corrientes ideologicas) no es un tema del que conosca.
+Si acaso y apenas veo en la cotidianedad, alguna manifestacion que se identifique
+como tal, p-e-r-o, algunos <a href="https://lasindias.blog/que-es-feminismo">blogs</a>
+(ahora no disponible, solo leible la descripcion en <a href="https://web.archive.org/web/20170719083621/http://lasindias.net">archive</a>) me
+comentan que es &ldquo;«la lucha de la mujer» por tener los mismos «privilegios» que
+los hombres (en y remarcado) de su misma clase social&rdquo;.</p>
+
+<p>en mi parecer, si, en la generacion de mis abuelos la mujer era marginada y/o
+oprimida por convencion social, mas no puedo ni criticar, justificar, intervenir
+o aplicar una vision actual a sus circunstancias, como tampoco siento ninguna
+necesidad de identificacion (ya sea en forma de horgullo, complejo o
+indignacion) con el color de mi piel, procedencia racial o invaciones
+territoriales cientos de años atras</p>
+
+<p>&ldquo;la abuela&rdquo; tubo como 10 hijos y 5, 6 (o mas) parejas, de las que supongo con su
+muerte (si es que tenian) adquirio algunas propiedades. Por su parte en la
+generacion de mis padres, en mis vivencias dire que eran ambos imbeciles y poco
+mas. Siempre fue un matrimonio de mierda que vio frustradas sus aspiraciones de
+ser como la gente bonita de la televicion. Se autosaboteaban y tenian bastantes
+y variados complejos sexuales, religiosos y moralinos</p>
+
+<p>ya en mi generacion, las chicas &ldquo;eran chicas&rdquo;, los chicos &ldquo;eran chicos&rdquo;, aun que
+las mierdas aspiracionales de la televicion seguian siendo relevantes (y la
+mayoria se ajusto a ellas con mas o menos precariedad), poca o ninguna
+imposicion &ldquo;de genero&rdquo; pude percibir, las cosas eran como eran. Nunca observe
+que ninguno de sus padres odiara a sus hijas por ser mujer, o no tubiera afecto
+a su mujer por ser mujer&hellip; tampoco creo que los ancestros primigenios lanzaran
+a sus hijas a los perros o sintieran gozo con la muerte de sus parejas tras la
+labor de parto o por infecciones, y viceversa. Lo que si, es que los imbeciles
+(de ambos generos) y los ejemplares defectuosos&hellip; imbeciles y defectuosos lo son
+siempre y con quien sea.</p>
+
+<p>no vengo a declarar buenos o malos, ni es como si creyera que los humanos no son
+&ldquo;maquinas&rdquo; con una luz (divina) unica, inexplicable e irreprobucible (jamas) por
+ciencia alguna. Mi intencion es solo comentar que estoy hasta los webos de las
+<em>femi-cosas del internet</em>, que si bien, permean en las mujeres a mi alrededor
+poderosas, autosuficientes y liberadas (que nunca te diran que les gustas y se
+sentiran ofendidas y/o feas por tu indeferencia) o en malestar para los hombres,
+tienen otras prioridades, como el (des)empleo o los dramas telenovelisticos donde
+son el centro del universo y cualquier hecho (por su puesto) es relevante y
+e-p-i-c-o</p>
+
+<p>que pienso yo un marginado social que rechazo la academia, cortarse la melena, el
+servicio militar o las exigencias irracionales del mercado laboral (y que de
+igual forma ha aceptado las terribles consecuencias de ello) sobre las mujeres?
+primero, preguntandole al traductor sobre que es lo femenino y lo masculino y
+que encuentro neutro a la vez que objetivo:</p>
+
+<pre><code>femenino = &quot;Que tiene órganos para ser fecundado&quot; # != &quot;a que le guste lo roza&quot;
+masculino = &quot;Que tiene órganos para fecundar&quot;     # != &quot;a que le guste lo azul&quot;
+</code></pre>
+
+<p>la mayoria de las mujeres son &ldquo;tontas&rdquo;, aburridas y disfruto viendo como sus
+anelos por encontrar a su principe encantador que les de la vida que se merecen,
+les causa sufrimiento e impotencia. Como contrarrestan esta situacion? quitando
+toda vellocidad de sus cuerpos (incluso cejas) (pero excluyendo la melena, que exponen con mas o
+menos horgullo), espolvoreandose colores en sus caras que en lo general las
+hacen ver extrañas, pintando sus uñas con los diseños mas llamativos posibles,
+ocultando su olor corporal (esto lo hacen todas) y en ultima instancia resaltar
+su figura mas alla de lo que sus compañeras de batalla luzcan</p>
+
+<p>ja, ja, no digo que los hombres sean mas listos, (la humanidad en su conjunto me
+ha dado los suficientes motivos como para no tener en ella alguna esperanza)
+solo que ese calectivo me parece asi. Tampoco es que carezcan de potencial
+(aunque sus hormonas y las &ldquo;nuestras&rdquo; nos diferencien), mas bien que dichas
+caracteristicas son la norma, no la excepcion.</p>
+
+<p>Mas las excepciones existen (hace mucho convivi con una), aquellas que no son
+quejumbrosas, hacen lo que les gusta (cuando las circunstancias lo permiten) sin
+guardar apariencias, despreocupadas, comodas (tenis, no tacones) y que se
+aceptan en su &ldquo;condicion de mujer&rdquo; (o humano, o peor aun &ldquo;ser biologico que
+caga, orina, huele mal, se cansa, se aburre, sufre, rie, etc&rdquo;). Como japon para
+los otakos, puede que por ese precedente (aun no se si desgraciadamente temprano
+o tarde) y tambien por los inalcancables estandares de chicas anime, tengo un
+&ldquo;entandar de calidad&rdquo; demaciado alto para mi entorno actual.</p>
+
+<p>y? existe el patriarcado machista, violador, asesino y opresor? si lo
+hay, me cuesta verlo. Hay opresion, si y bastente, desigualdad economica, hambre, estres,
+aislamiento, asecinatos y otros tantos y tontos males sociales, pero no se limitan a un
+genero particular. El mundo ideal donde la realizacion (no consumista) del
+individuo como meta principal, al menos en mi pueblo no existe. Se pelea por
+tener mas, ser superior y el &ldquo;derecho a trabajar&rdquo;, aun cuando la mayoria de trabajos apenas y den para
+substistir, peor aun, carescan de aporte real y necesario al bienestar general y
+peor aun, la raza entera se dirija derecho y sin freno a su extincion&hellip; puede
+que estas batallas separatistas, logren que la natalidad baje lo suficiente&hellip;?!</p>
+
+<p>Derecho a trabajar? no deberiamos enfocarnos por el derecho a no necesitar
+hacerlo? que los trabajos sean dignos, los necesarios, valorados y
+gratificantes?</p>
+
+<p>Opresion educativa? Internet aunque no ha llegado a todo el mundo es vasto y
+generoso, si quieres aprender algo seguramente tienes el material para
+hacerlo. Si quieres material que &ldquo;te represente (o lo que sea)&rdquo; pues haslos tu,
+si no esta en tu idioma, aprende (ingles) o mejor aun traducelo y ayuda a los
+demas, sentirte marginado, quejarte y exigirle al mundo que cambie por ti, no sirve de nada, mas
+que para crear un rechazo frontal de igual magnitud</p>
+
+<p>Violencia sexual? desde cuando las feminas no ofrecen y aseptan peticiones
+sexuales para alcanzar sus propositos?</p>
+
+<p>Aborto? por supuesto, 100% preferible a joderle la vida a nuevos seres, pero si
+toman las medidas necesarias para evitarlo, mejor&hellip; para el cuerpo masturbarse
+es igual que coger, solo deben convencer a la mente. Pero, el aborto es muy poquito,
+tambien incluiria el suicidio asistido o &ldquo; eutanacia&rdquo; (para los viejitos/enfermos), e incluso y
+siendo generoso el derecho a asistencia psicologica</p>
+
+<p>En el mundo del software, esta la queja sobre que no hay mujeres informaticas
+(por que informaticas, y no ayudantes de chalan, con lo satisfatorio y nada,
+nada jodido que es hacer sanjas en el barro dejandote la espalda al sacar piedras
+mas pesadas que tu), pero luego sus participaciones en sitios afines a la
+tecnologia se limitan a adoctritar con sus femi-cosas, en lugar de cultivar sus
+habilidades con la pc y dar ellas tambien sus charlas</p>
+
+<p>y bueno, ya me he aburrido, fuuuaggg, que cansado es quejarse. Mientras tanto, algunos
+enlaces y videos que espero encuentren interesantes y por su puesto se acoplan,
+extienden, influyen y explican mejor mi agenda ideologica</p>
+
+<p>Compartir, Darle like y Ponerle ★★★★★</p>
+
+<p>Debajo (dentro, arriba o al lado, para evitar la opresion) los enlaces para su
+descarga, por si acazo la intolerancia los borrara de la web</p>
+
+<p><a href="https://nasciiboy.land/mirror/fem/YA-NO-SE-PUEDE-LIGAR.-EL-MATRIARCADO.-paZymNJWMyM.mp4">YA NO SE PUEDE LIGAR. EL MATRIARCADO</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/paZymNJWMyM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><a href="https://nasciiboy.land/mirror/fem/AL-FINAL-LA-CULPA-ES-DE-LAS-MUJERES-E18tybUbYzs.mp4">AL FINAL LA CULPA ES DE LAS MUJERES, NO DEL PATRIARCADO</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/E18tybUbYzs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><a href="https://nasciiboy.land/mirror/fem/La-izquierda-a-la-deriva-qZfDX8F0fB0.mkv">Ovejas Eléctricas-  La izquierda a la deriva (Parte 2 - Los restos del naufragio)</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/qZfDX8F0fB0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><a href="https://nasciiboy.land/mirror/fem/Tiene-sentido-el-Lenguaje-inclusivo-UY7V8n8cjWs.mkv">¿Tiene sentido el Lenguaje inclusivo?</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/UY7V8n8cjWs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><a href="https://nasciiboy.land/mirror/fem/RESPUESTA-A-DAYO-QkHV4dFTO2g.mkv">RESPUESTA A DAYO _ ¿Qué pasa con el ANTI feminismo en el videojuego?</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/QkHV4dFTO2g" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>por aca el <a href="https://youtu.be/LZ2XKgFtU1U">origen</a> de la replica y su <a href="https://nasciiboy.land/mirror/fem/Qué-pasa-con-el-feminismo-en-el-videojuego-LZ2XKgFtU1U.mkv">backup</a>,
+pero es una castaña.</p>
+
+<p>kombustible podcast – <a href="http://www.ivoox.com/kombustible-261-igualdad-genero_mf_28339659_feed_1.mp3">#261 igualdad de genero</a>
+(<a href="https://nasciiboy.land/mirror/fem/kombustible-261-igualdad-genero_mf_28339659_feed_1.mp3">backup</a>)</p>
+
+<p><a href="https://www.linuxjournal.com/content/girls-and-software">Girls and Software</a></p>
+
+<p><a href="http://esr.ibiblio.org/?p=8114">Slaves to speech suppression are masters of nothing</a></p>
+
+<p><a href="https://nasciiboy.land/mirror/fem/Micromachismos-y-macrogilipolleces.mkv">Micromachismos y macrogilipolleces</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/iEcV4I7IXdA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><a href="https://nasciiboy.land/mirror/fem/El-buen-aliado-feminista.mkv">El buen aliado feminista - El Pagafantas de Katarsis - Coto de Caza Progre 12</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/H1chFcRbG84" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><a href="https://nasciiboy.land/mirror/fem/Gaming-Ladies_espacios-seguros_y_cry-bullies.webm">Gaming Ladies, espacios seguros y “cry bullies”</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/o7kkneA3EbQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>La mentira feminista del genero</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/7-_NQyBmZTE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>En algun podcast de ciencia-es decian que acabar con la gripe esta jodido por
+que las aves migratorias son un reservorio del virus. Donde tiene el patriarcado
+(segun las feministas) su reservorio? en los hombres? en las mujeres?? en los
+niños? en el sol y las demas estrellas, el hidrogeno ancestral y los seres del
+mar?</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.land/post/emergente-mex-15/">◀ Emergente Mex 15</a>
+    
+    
+    <a class="next" href="https://nasciiboy.land/post/ramen-xxiii/"> Ramen XXIII – Hinamatsuri ▶</a>
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/post">post</a></div>
+</main>
+
+    <aside>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="https://nasciiboy.land/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="https://nasciiboy.land/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="https://nasciiboy.land/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="https://nasciiboy.land/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="https://nasciiboy.land/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
+
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/categories/prog">prog(57)</a></li><li><a href="https://nasciiboy.land/categories/post">post(55)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(35)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(25)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(22)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(8)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(6)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

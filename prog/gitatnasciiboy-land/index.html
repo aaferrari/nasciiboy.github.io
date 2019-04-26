@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>git@nasciiboy.land</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style> :root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 80%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 20%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
+
+  <h1>git@nasciiboy.land</h1>
+  
+
+<p>Desde la posecion del vps entoy ansioso de montarle chismes, pero no tengo muy
+claro cuales, para que, o como hacelo bajo un mismo dominio</p>
+
+<p>mmm, segun veo por las pruebas, cada &ldquo;servicio&rdquo; tienen un puerto predeterminado
+y funciona mas o menos de manera automagica. Por ejemplo al activar el demonio
+ssh inmediatamente funciona de la manera</p>
+
+<pre><code>&gt; ssh usuario@dominio
+</code></pre>
+
+<p>y</p>
+
+<pre><code>&gt; ssh -p numero-puerto usuario@dominio
+</code></pre>
+
+<p>en caso de haber modificado el puerto por defecto que es el 22</p>
+
+<p>para el caso de las paginas web el puerto es el 80 y el 443 para
+el https, pero tambien se puede cambiar este puerto por uno arbitrario como en</p>
+
+<pre><code>&gt; elinks http://dominio.algo:numero-puerto/
+</code></pre>
+
+<p>intentando comprender estas magias de los dominios, los dns y los puertos (y
+protocolos&hellip; o no) ocurrioseme que ya que venia de las paginas gratuitas de
+gitlab y github donde no se permite la subida de ficheros &ldquo;sospechosamente
+grandes&rdquo; (como un album musical) seria interesante ademas de tener el repo para
+el funcionamiento de la pagina, permitir su clonacion y que quien quiera
+almacene, modifique o &ldquo;plagie&rdquo; lo que le venga en gana</p>
+
+<p>ya en plena investigacion (mas alla de los 4 comandos que utilizo en git) me
+entero que este tiene diversos <a href="https://git-scm.com/book/es/v2/Git-en-el-Servidor-Los-Protocolos">protocolos</a>
+por los cuales se puede utilizar (aunque ya los habia empleado sin
+razonar sobre ello), son los siguientes</p>
+
+<pre><code>git clone ruta                             # clonar desde el propio equipo
+git clone file://ruta                      # clonar desde el propio equipo
+git clone usuario-ssh@dominio:ruta         # clonar utilizando una conexion ssh
+git clone git://dominio/repositorio-o-ruta # clonar utilizando el &quot;protocolo git&quot;
+git clone http://dominio/repositorio       # clonar utilizando &quot;http inteligente&quot;
+</code></pre>
+
+<p>ignorando las dos primeras opciones por ser para &ldquo;el autoconsumo&rdquo; y la ultima
+que encontre &ldquo;demasiado&rdquo; complicada y &ldquo;poco documentada&rdquo; para nginx (que es el
+servidor que estoy utilizando), las maneras simples de compartir el repositorio serian
+dos: mediante SSH que ya lo estaba utilizando y pocos miesterios encierra o
+utilizar el &ldquo;protocolo git&rdquo;</p>
+
+<p>al rollo pues =&gt;</p>
+
+<h2 id="git-daemon">git daemon</h2>
+
+<p>El &ldquo;protocolo git&rdquo; no es otra cosa mas que un pequeño servidor escuchando en el
+<strong>puerto 9418</strong> al que se le asigna un directorio raiz desde el cual explorara
+el nombre de las carpetas en el, vera si son o no repositorios, si estan
+&ldquo;habilitados&rdquo; y que se puede hacer o no con ellos</p>
+
+<p>su funcionamiento es tan sencillo como lanzar lo siguiente en consola</p>
+
+<pre><code>&gt; git daemon --reuseaddr --verbose --base-path=/ruta-a-repositorios/
+</code></pre>
+
+<p>aqui el programa es <code>git</code> con el comando <code>daemon</code> para que entre en el modo servidor, <code>--reuseraddr</code>
+por que aparecio en algun post, <code>--verbose</code> para que lance toda la informacion
+que se pueda y <code>--base-path=/ruta-a-repositorios</code> es la carpeta raiz desde donde
+trabajara. Para mas informacion <code>git help daemon</code></p>
+
+<p>podriamos poner a prueba esto de la sigiente manera</p>
+
+<pre><code>mkdir /tmp/roma
+cd /tmp/roma
+
+# creamos un repo de pruebas
+mkdir rama
+cd rama
+git init
+echo &quot;algo&quot; &gt; txt
+git add txt
+git commit -m &quot;primer commit&quot;
+</code></pre>
+
+<p>listos nuestro directorio (<code>roma</code>) y repo de pruebas (<code>rama</code>) lanzamos el git demonizado</p>
+
+<pre><code>&gt; git daemon --reuseaddr --verbose --base-path=/tmp/roma/
+[12618] Ready to rumble
+</code></pre>
+
+<p>y luego desde otra secion (<strong>y ruta</strong>) de terminal ponemos a prueba el invento</p>
+
+<pre><code>&gt; git clone git://localhost/rama
+Clonando en 'rama'...
+fatal: error remoto: access denied or repository not exported: /rama
+</code></pre>
+
+<p>he? que fallo aqui? <code>git daemon</code> revisa en los repositorios si existe un fichero
+expecial llamado <code>git-daemon-export-ok</code>. Este fichero actua a modo de &ldquo;bandera&rdquo;
+para permitir las &ldquo;cosas&rdquo; que hace el servidor. Pero un dato que es importante,
+<code>git-daemon-export-ok</code> debe estar dentro del repositorio, dentro del directorio <code>.git</code></p>
+
+<p>Creamos la &ldquo;bandera&rdquo; para dar permiso a <code>git daemon</code> tal que asi</p>
+
+<pre><code>&gt; touch /tmp/roma/rama/.git/git-daemon-export-ok
+</code></pre>
+
+<p>y volvemos a intentar la clonacion</p>
+
+<pre><code>&gt; git clone git://localhost/rama
+Clonando en 'rama'...
+remote: Enumerando objetos: 3, listo.
+remote: Contando objetos: 100% (3/3), listo.
+remote: Total 3 (delta 0), reusado 3 (delta 0)
+Recibiendo objetos: 100% (3/3), listo.
+</code></pre>
+
+<p>puag! magia!</p>
+
+<p>ahora hagamos un pequeño experimento, ¿nos permitira subir modificaciones del
+clon recien hecho?</p>
+
+<pre><code># recordar, esto es el repo clonado en alguna ruta
+# distinta a `--base-path=/tmp/roma/` de `git daemon`
+&gt; cd rama
+&gt; echo &quot;algo mas&quot; &gt;&gt; txt
+&gt; git commit -a -m &quot;nuevo commit&quot;
+&gt; git push
+fatal: error remoto: access denied or repository not exported: /rama
+</code></pre>
+
+<p>del lado de nuestro servidor git, nos arroja lo siguiente</p>
+
+<pre><code>[13117] Request receive-pack for '/rama'
+[13117] 'receive-pack': service not enabled for '/tmp/roma//rama/.git'
+[12618] [13117] Disconnected (with error)
+</code></pre>
+
+<p>nos informa que tenemos una peticion <code>receive-pack</code> para <code>/rama</code> pero que el servicio
+<code>receive-pack</code> no esta habilitado para este repo. Solucionamos esto aniquilando
+el servidor git con <code>Ctrl-C</code> y volviendolo a lanzar con una nueva opcion
+<code>--enable=receive-pack</code></p>
+
+<pre><code>&gt; git daemon --reuseaddr --verbose --base-path=/tmp/roma/ --enable=receive-pack
+</code></pre>
+
+<p>intentemos de nuevo</p>
+
+<pre><code>&gt; git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (3/3), 244 bytes | 244.00 KiB/s, listo.
+Total 3 (delta 0), reusado 0 (delta 0)
+remote: error: refusing to update checked out branch: refs/heads/master
+remote: error: Por defecto, actualizar la rama actual en un repositorio no vacío
+...
+To git://localhost/rama
+ ! [remote rejected] master -&gt; master (branch is currently checked o
+</code></pre>
+
+<p>que paso? pues que necesitamos un tipo de repositorio especial llamado <code>git
+bare</code> que no es otra cosa que la carpeta <code>.git</code> que esta en cada repo pero con
+otra &ldquo;bandera especial&rdquo; habilitada.</p>
+
+<p>Tenemos dos opciones. Convertir nuestro repositorio en un <code>git bare</code> de la
+siguiente manera</p>
+
+<pre><code>&gt; cp -R /tmp/roma/rama/.git /tmp/roma/remo.git
+&gt; cd /tmp/roma/remo.git
+&gt; git config --bool core.bare true
+</code></pre>
+
+<p>ahora cambiemos la fuente remota de nuestro repo modificado e intentemos
+subir la modificacion al nuevo repositorio &ldquo;remoto&rdquo; <code>remo</code></p>
+
+<pre><code># de nuevo, esto es el repo clonado en alguna ruta aleatoria
+&gt; git remote set-url origin git://localhost/remo
+&gt; git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (3/3), 244 bytes | 244.00 KiB/s, listo.
+Total 3 (delta 0), reusado 0 (delta 0)
+To git://localhost/remo
+   9f6cd12..262a37b  master -&gt; master
+</code></pre>
+
+<p>puag! como mola!</p>
+
+<p>La otra opcion era crear un repositor <code>bare</code> vacio</p>
+
+<pre><code>&gt; git init --bare /tmp/roma/remi.git
+</code></pre>
+
+<p>agregar la &ldquo;bandera&rdquo;</p>
+
+<pre><code>&gt; touch /tmp/roma/remi.git/git-daemon-export-ok
+</code></pre>
+
+<p>agregar el nuevo destino a nuestro repo modificado (o no)</p>
+
+<pre><code>&gt; git remote add remi git://localhost/remi
+&gt; git push remi master
+Enumerando objetos: 6, listo.
+Contando objetos: 100% (6/6), listo.
+Compresión delta usando hasta 2 hilos
+Comprimiendo objetos: 100% (2/2), listo.
+Escribiendo objetos: 100% (6/6), 416 bytes | 416.00 KiB/s, listo.
+Total 6 (delta 0), reusado 3 (delta 0)
+To git://localhost/remi
+ * [new branch]      master -&gt; master
+</code></pre>
+
+<p>puag! que gusto!</p>
+
+<h2 id="vps">vps</h2>
+
+<p>Conocemos la teoria del (servidor) git demonizado, pero falta que lo pongamos a
+funcionar en nuestra maquina donde estara (en teoria) funcionando y sirviendo
+clones a todo el mundo. Como proceder?</p>
+
+<p>Segun parece, deberiamos crear un nuevo usuario en la maquina y un unico
+directorio bajo su custodia que contendra los repos y sera a su vez la ruta raiz
+para <code>git daemon</code></p>
+
+<p>Como root</p>
+
+<pre><code>&gt; useradd -c &quot;repos de nascii - nasciiboy@gmail.com&quot; git -m
+# -c  : comentario
+# git : nombre de usuario
+# -m  : crear directorio en /home
+&gt; passwd git
+# mi !super contraseña¡ del usuario git
+</code></pre>
+
+<p>en varias <a href="https://git-scm.com/book/es/v2/Git-en-el-Servidor-Configurando-el-servidor">fuentes</a>
+parece que lo recomendable es establecer un directorio raiz en un lugar que no
+sea la <code>home</code> del usuario (como <code>/opt/git</code> o <code>/var/repo</code>), y de hecho que el usuario no tenga <code>home</code>&hellip; pero,
+paque complicarnos? que sea persona y tenga su home (de hay el parametro <code>-m</code> en
+<code>adduser</code>)</p>
+
+<p>ahora solo restaria que el sistema operativo se encargue de levantar nuestro
+git demonizado en cada arranque. Segun <a href="https://serverfault.com/questions/912899/how-to-start-git-daemon-at-boot#912914">un sitio de consultas</a>
+y puesto que hice esto en debian y tiene <code>systemd</code> y hay que copiar y pegar.
+Colocamos lo siguiente dentro del fichero <code>/etc/systemd/system/git-daemon.service</code></p>
+
+<pre><code>[Unit]
+Description=Git Daemon
+Documentation=man:git-daemon(1)
+ConditionPathExists=/home/git/
+
+[Service]
+# no permite recibir cambios
+ExecStart=/usr/bin/git daemon --reuseaddr --verbose --base-path=/home/git/
+# permite recibir cambios
+# ExecStart=/usr/bin/git daemon --reuseaddr --enable=receive-pack --verbose --base-path=/home/git/
+User=git
+Group=git
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<p>(adaptar en caso de ser necesario las rutas)</p>
+
+<p>para habilitar el servicio por los siglos de los siglos y los reinicios</p>
+
+<pre><code>&gt; systemctl enable git-daemon
+&gt; systemctl start  git-daemon
+&gt; systemctl status git-daemon
+● git-daemon.service - Git Daemon
+   Loaded: loaded (/etc/systemd/system/git-daemon.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2018-11-03 17:43:42 CST; 21s ago
+     Docs: man:git-daemon(1)
+ Main PID: 46787 (git)
+    Tasks: 2 (limit: 4915)
+   CGroup: /system.slice/git-daemon.service
+           ├─46787 /usr/bin/git daemon --reuseaddr --verbose --base-path=/home/git/
+           └─46790 git-daemon --reuseaddr --verbose --base-path=/home/git/
+
+Nov 03 17:43:42 tachikoma systemd[1]: Started Git Daemon.
+Nov 03 17:43:42 tachikoma git[26758]: [26762] Ready to rumble
+</code></pre>
+
+<p>(<code>systemctl</code> + (<code>stop</code>|<code>disable</code>) <code>git-daemon</code> para&hellip; se entiende por si mismo)</p>
+
+<p>listo y facilmente! Ya pueden copiar nuestros repositorios (sin registro o
+contraseñas) tal que asi</p>
+
+<pre><code>&gt; git clone git://mi-dominio.algo/repo
+</code></pre>
+
+<p>ho, quiza olvide mencionarlo, pero al demonio de git, cuando nuestro repositorio
+se llama <code>repo.git</code> le es indiferente si lo mencionamos con o sin el
+<code>.git</code>. Lo nombramos asi para permitir ambas opciones, por que lo contrario
+(hacer tareas en un <code>repo-sin-punto-git</code>) agregando el <code>.git</code> no funciona</p>
+
+<p>Antes de terminar con los detalles configuratorios, me preguntaba por que o como
+permitir que alguien tenga acceso al repositorio para modificarlo. Para esto
+pues la mejor manera seria agregar su clave publica en
+<code>~git/.ssh/authorized_keys</code>.</p>
+
+<p>tambien podriamos habilitar para el usuario git el acceso mediante contraseña agregardo al final del
+fichero <code>/etc/ssh/sshd_config</code></p>
+
+<pre><code>Match User git
+    PasswordAuthentication yes
+</code></pre>
+
+<p>Si se diera el caso de tener colaboradores &ldquo;quiza&rdquo; no querriamos que hicieran
+nada no relacionado con git. En tal situacion y solo de esta manera deberiamos
+substituir la shell del usuario git por una shell que no permita hacer
+absolutamente nada</p>
+
+<pre><code>&gt; chsh git -s /usr/bin/git-shell
+</code></pre>
+
+<p>Pero esta es solo una medida extrema, unicamente aplicable si no confiamos en
+quien tenga acceso. Al hacer esto tambien nosotros tendriamos que sufrir
+incomodidades inecesarios, pues ni un <code>scp</code> funciona si la shell es <code>git-shell</code></p>
+
+<p>Asi pues, bajo el supuesto que usamos &ldquo;ssh con llaves&rdquo;, pues no veo por que
+implementar ninguna medida adicional</p>
+
+<h2 id="nasciiboy-land">nasciiboy-land</h2>
+
+<p>y llegado a este punto, ya podeis clonar el repo que da vida a esta web</p>
+
+<pre><code>&gt; git clone git://nasciiboy.land/nasciiboy-land
+</code></pre>
+
+<p>son algo mas de 2GiB! Como el vps esta bastante corto tanto en ram como en
+procesador hacerlo solo una vez por persona multiplicando el minuto actual de su
+reloc por la hora y sumando 3 y tomando el resultado como los segundos de
+espera. La comprecion que realiza git pone al 100% al procesador y el GB de ram
+se satura (tube que agregar un ficherito swap de 2 GB mas para que sea posible)</p>
+
+<p>si quieren construir la web, entran a la copia del repo y ejecutan el programa
+<code>hugo</code>. El resultado estara en el directorio <code>public</code></p>
+
+<p>se supone que <code>hugo serve</code> te permite ver y modificar el sitio al vuelo, pero mi
+maquina con 8GB de ram y 8GiB de swap no puede con tal encargo&hellip;</p>
+
+<p>happy hacking!</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.land/prog/oxido/">◀ Oxido</a>
+    
+    
+    <a class="next" href="https://nasciiboy.land/prog/inf-domain/"> ∞.nasciiboy.land ▶</a>
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
+</main>
+
+    <aside>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="https://nasciiboy.land/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="https://nasciiboy.land/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="https://nasciiboy.land/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="https://nasciiboy.land/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="https://nasciiboy.land/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
+
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/categories/prog">prog(57)</a></li><li><a href="https://nasciiboy.land/categories/post">post(55)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(35)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(25)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(22)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(8)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(6)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XXV – Payday II</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style> :root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 80%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 20%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/post">post</a></div>
+
+  <h1>Ramen XXV – Payday II</h1>
+  
+
+<blockquote>
+<p>debian sigue naturalmente las reglas de una «meritocracia» (el gobierno de los
+que hacen) en el software libre: <strong>es aquél que hace las cosas el que decide cómo hacerlas</strong></p>
+</blockquote>
+
+<p><img src="https://nasciiboy.land/img/evaXnichijou.jpg" alt="" /></p>
+
+<p>que?-tal! por fin a llegado el primer pago del vps y no sabia si este seria como
+cuando vas a comer y pagas al final, o al contrario, como un servicio sexual con
+pago por adelantado aunque no te guste lo ofrecido&hellip; asi que por un dia
+nasciiboy.land dejo de prestar sus servicios hasta abonar 10 dolares via paypal</p>
+
+<p>aunque tenia reservado presupuesto en una targeta de debito (maizoro), el pago mediante
+esta creo que demora unos dias. por fortuna, un heroe anonimo me deposito 9.54
+eurasos que por lo menos pagaron los proximos dos meses de alojamiento, tras los
+cuales vere si es posible hacerme con una plaquita o es mas conveniente seguir
+pagando por el servidor</p>
+
+<p>la aportacion economica a la causa de nasciiboy.land implico retomar la libreria
+del raptor en c y modificarla un poquito. tenia temor de retomar c y la libreria
+depues de muchos, muchos meses sin practica, pero con un buen acompañamiento
+musical los dedos se movieron por su cuenta sobre el teclado de un lado a otro
+entre emacses, terminales y nombres de funciones. tengo que admitir que los
+momentos de modificacion del codigo a cambio de remuneracion y despues de tanto
+tiempo sin practica fueron muy satisfactorios</p>
+
+<p>mientras tanto, ingrese al mercado laboral y revivi las diferencias entre ser un
+desempleado (sin presupuesto, respeto, pero con mas o menos tiempo libre) y la vida de
+esclavo (sin prespuesto, con sueñø, respeto a nivel medio, cansado y sin tiempo
+ni ganas de hacer nada)</p>
+
+<p>tras una primer semana donde la maquinacion de ideas (sobre el entorno, el
+proposito de la existencia, la interaccion y evaluar y ser evaluado como
+candidato sexual) era insesante, la mente se aplaco con el sonido estruendoso y
+constante de la maquinaria (<strong>heavy metal thunder</strong>), hasta que el piloto automatico se hiso cargo de la
+mayoria de funciones motrices</p>
+
+<p>definitivamente soy una buena maquina de produccion, voy al empleo por lo
+minimo, hago lo mejor posible el encargo, me adapto rapidamente y prefiero hacer
+cualquier labor con algun indicador de progreso a socializar por que es
+aburridisimo.</p>
+
+<p>de donde vienes? que hacias antes? casado o juntado? hijos? pasatiempos?
+adicciones?</p>
+
+<p>la interaccion habitual entre maquinas, solicitud y respuesta de
+especificaciones y servicios. evaluacion de rendimiento, olor, estatura, peso,
+caracter y recursos economicos, que en caso de aprobacion desencadenaran una
+peticion de &ldquo;acoplamiento&rdquo;, o por el contrario sera justificante suficiente para
+encontrar una razon mas para sentirse desafortunados</p>
+
+<p>por cierto, hay unas señoras (que no chicas) todas entre 30 y 40 añitos. la
+seccion donde fui requirido cuenta con dos feminas cuyas charlas interminables
+de escaneo colateral han revelado datos curiosos, entre ellos que se saben
+con el poder de la agresion fisica e impune hacia los hombres (que novedad),
+pues ellas son mujeres y se da por hecho que de inflingir uno de los mas grandes
+tabues sociales el pobre diablo que lo haga &ldquo;no se la va a acabar&rdquo;. tambien
+conocen y no les extraña que mediente acusaciones falsas te puedan mandar un fin
+de semana tras las rejas</p>
+
+<p>mmm, unas charlas sobre que buscan relaciones sexuales de al menos una hora
+(rico), sobre lo irresitibles y asediadas por pretendientes que estan (diria que
+en su puto mundo alreves, pero no, el perreo es inversamente proporcional al
+numero de hombres en el entorno), etc, etc.</p>
+
+<p>un aspecto interesante e incomprensible a la vez, son los tipos que toman como
+estrategia vestir, actuar y hablar a lo maricon por simpatizar a las chicas. mas
+que como consecuencia directa de las hormonas, una adaptacion conciente al medio
+ambiente, pues ante la primer oportunidad lanzaran una advertencia visual de &ldquo;este es
+mi territorio, andate con cuidado&rdquo;</p>
+
+<p>nunca me he considerado particularmente brillante o superior en casi
+nada (aunque sea brillante por natulareza (excepto para entender el mundo, los
+negocios, &ldquo;las letras&rdquo; o socialisar)) aun asi me sigue pareciendo misterioso como las habilidades y
+carencias particulares de cada cual se adaptan de la forma mas eficiente dentro
+de lo ineficiente de la situacion</p>
+
+<p>ja, ja, que raros son los automatas humanos.</p>
+
+<h2 id="4k">4k</h2>
+
+<p>en los ultimos dos ramen, por lo glorioso de los animes hasta me olvide de poner
+que peliculas habia visto asi que ahora corrijo ese detalle y pongo las que
+recuerde</p>
+
+<p><strong>misión: imposible - fallout</strong> persecucion en coche, persecucion a pie,
+persecucion en helicoptero, persecucion dentro de la persecucion, bluhhhhffg, aburrida</p>
+
+<p><strong>la monja</strong> buena-regular. sustos faciles y otros elaborados</p>
+
+<p><strong>upgrade</strong> buenas sensaciones, entretenida y recomendable para los que gusten
+de la eiencia ficcion &ldquo;con madrasos&rdquo;. aunque al terminar, la premisa es una
+completa tontaah</p>
+
+<p>la fui a ver por la <a href="https://www.youtube.com/watch?v=t-hkSwK5I7Y">recomendable recomendacion</a> (&lt;-seguir este enlace
+si no sirve el video incrustado) del canal letras libres, amo a esa mujer!</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/t-hkSwK5I7Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><strong>the reader</strong> el compa camello me recomendo esta peli por contar con desnudos
+de la chica titanic. si primer cuarto de cinta es humedo y divertido. el resto
+se convierten en un drama sobre un juicio natzii. entretenida, cortante pero
+entretenida. (Esta en youtube)</p>
+
+<p><strong>el depredador</strong> mehhh, pide ser amada por sus gracias forzosas pero no cuela,
+(aunque no la he vista) que demonios es esto, suicide squad?</p>
+
+<p><strong>hataraku maou-sama!</strong> o la la, recuerdo haber visto esta serie antes pero ya
+habia pasado el tiempo suficiente para olvidarla. de que va?</p>
+
+<p>satan (sama) es derrotado por la heroe legendaria, asi que se ve forzado a
+abrir un portal a otra dimencion mientras recupera sus poderes demoniacos. para
+su infortunio, llega al japon del mundo actual y como en este mundo la magia no
+existe pues tiene que apañarse como pueda, es decir, conseguir empleo en un
+mcronals</p>
+
+<p>luego lo buscan la heroe, antiguos colegas y hay algunas batallitas y algunos
+rollmances y comedia ligera</p>
+
+<p>en su momento la habia borrado del disco y esta vez si hay necesidad la volvere
+a borrar. esta decente pero no es magnifica 22.<sup>5</sup>&frasl;<sub>29</sub>.9</p>
+
+<pre><code>magnet:?xt=urn:btih:21d6cb7b16e734fedc9fccb73af786ef98936835&amp;dn=%5bjpu%5d%20hataraku%20maou-sama!%20%5bhdtv%5d%20%5b720p%5d%20%5bhi10p%5d&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.publicbt.com%3a80%2fannounce&amp;tr=http%3a%2f%2fopen.nyaatorrents.info%3a6544%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce
+</code></pre>
+
+<p><strong>mary y la flor de la hechiceria</strong> vamos a ver, si hay pelis de animacion
+japonera y estan en cartelera por lo general me las arreglo para ir a verlas, y
+esta no fue la exepcion.</p>
+
+<p>cuando voy a estas contadas proyecciones no es que espere que me cambien la
+vida, pero almenos si encontrar un entretenimiento decente. que algunas
+decepciones me he llevado como la primer peli de gintama (por que la 2 es gloria
+pura) o galaxy express 999. pero en general han sido buenas sensaciones</p>
+
+<p>que tal esta mary? un mehhhhhhhh con muchas haches, lenta, sin gracia, tension, musica,
+historia ni animacion destacable, un vil clonico.</p>
+
+<p>curioso el momento en la peli donde se mensiona que &ldquo;ya no necesitan de la
+magia&rdquo;, por que me parecio una brabuconada como diciendo &ldquo;lo que hemos hecho ha
+alcanzado un grado de genialidad valido por si mismo&rdquo;, puntos suspensivos</p>
+
+<p>iba a decir que la animacion no le llega ni a nausica, pero revisando puede que
+si. sin embargo estoy haciendo un visionado de las cintas ghibli (como un
+proyecto que genere alguna satisfaccion a mediano plazo) y he de decir que a
+la animacion de kiki no le llega. en fin, no todas las inversiones son rentables</p>
+
+<p><strong>atomic blondie</strong> ufff, al final me gusto. que tenemos aqui? una peli sobria de
+espionaje y disparos ambientada en berlin del 89 con mucho neon punky. a medio
+camino entre john wick y (la pal perro) gorrion rojo.</p>
+
+<p>hasta el tercer tercio no inicia lo que uno busca que son disparos y batallas
+continuas. por el mientras van generando su ambientacion y monstrando a los
+personajes</p>
+
+<p>umm, la rubia aguanta bien los madrasos y los combantes son todo lo reales que
+se le pueden pedir, casi acordes al fisico de la prota.</p>
+
+<p>tiene una escenita lesbica entretenida y no me molestaria ver una segunda parte,
+aunque tampoco muero de necesidad. de nuevo, lo bueno llega en el
+ultimo tercio, auque no la recomendaria como necesaria como si haria como en la
+peli de don neo, si buscan una &ldquo;raresa&rdquo; con una tia como protagonista, esto
+es de lo mejor que me he topado hasta el momento.</p>
+
+<p><strong>iya na kao sare nagara opantsu misete moraitai</strong> pantsus! una curiosidad de
+las que habitan silenciosas tras un enlace magnet, solo es una variedad de chicas mostrando
+sus bragitas mientras te miran con desprecio. no me emociona, pero valoro las
+cosas extrañas</p>
+
+<p><strong>halloween (2018)</strong> tras cuarenta años del estreno de una cinta que si vi ya no
+recuerdo, llega su secuela directa (que ignora las anteriores continuaciones)
+para contarnos el tipo de creatura en la que se convierte la unica sobreviviente
+de un asesino casi sobrenatural (o eso dicen los promocionales)</p>
+
+<p>buena? mala? o&hellip; magnifica? pues si atribuye (usted) algo de credibilidad a estos
+apuntes la calificare como brillante: tiene humor, gore, alguna
+tetaza, creatividad asustadil y todas las anteriores pero con META
+antecediendolas. La obra sabe que es dificil sorprender a esta altura, pero
+lejos de claudicar, asume el reto y construlle junto con el bagaje del
+espectador escenarios precisamente potenciados por este. La insertidumbre se
+presenta entonces en lo siguiente: en verdad tenia el bagaje o es que la peli
+juega con los gatillos mentales y te hace creer que contabas con ellos?</p>
+
+<p>Sea como fuere, aunque asisiti algo mosqueado por el precio del cine (que con las
+veces que voy ultimamente serian suficiente para pagar el servidor o un
+estreaming con DRM) y mas tarde por tener a una panda de subnormales en la fila
+superior, la proyeccion no me dejo nada indiferente dandome lo que mas me gusta
+que me hagan reir con ecenas violentas y al mismo tiempo me sienta como un ser
+retorcido (y especial)</p>
+
+<p>Totalmente recomendable y a la espera del torrente para volverla a ver con mayor detenimiento</p>
+
+<p><strong>Grand Blue</strong> Y finalmente el ultimo anime que he visto completo.</p>
+
+<p>Por el camino han pasado varias series que &ldquo;estan bien&rdquo;, pero que no terminan de
+engancharme como Cutie Honey Universe, Yuri on ice, Rozen Maiden, dame x Prince, Ojisan To
+Marshmallow, Saredo Tsumbito Wa Ryuu to Odoru, o (la segunda temporada de)
+Nogizaka&hellip; pero de que va esto?</p>
+
+<p>Un universitario ingresa a la universidad&hellip; le dan piso sus familiares (donde
+viven dos de sus primas una de las cuales tiene fetiche por la otra) que a su
+vez tienen un negocio de buseo y es sede de un grupo de ebrios que aprovechan
+para desnudarse ante la minima oportunidad. Ehem, es como un intento de comedia
+borde y escatologico, medio ecchi, con mucho contenido didactico sobre buceo</p>
+
+<p>Los primeros 5 episodios fueron dificiles, luego te adaptas y la disfrutas (pero
+no mucho). En resumen, no te exige y si la dejas tampoco te pierdes de nada,
+pero si continuas te acostumbras a este gusto adquirido</p>
+
+<pre><code>magnet:?xt=urn:btih:0fc08e6785f0c0e94c6e0d661e62471a6b6569ca&amp;dn=%5bHakoniwa%5d%20Grand%20Blue%20%5bBatch%5d&amp;tr=http%3a%2f%2ftracker.frozen-layer.net%3a6969%2fannounce&amp;tr=http%3a%2f%2ftracker.frozen-layer.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=http%3a%2f%2fanidex.moe%3a6969%2fannounce&amp;tr=http%3a%2f%2fnyaa.tracker.wf%3a7777%2fannounce
+</code></pre>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.land/post/teo-04/">◀ Teopanzolco 03, un medio y 04</a>
+    
+    
+    <a class="next" href="https://nasciiboy.land/post/ramen-xxvi/"> Ramen XXVI – Banners ▶</a>
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/post">post</a></div>
+</main>
+
+    <aside>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="https://nasciiboy.land/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="https://nasciiboy.land/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="https://nasciiboy.land/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="https://nasciiboy.land/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="https://nasciiboy.land/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
+
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/categories/prog">prog(57)</a></li><li><a href="https://nasciiboy.land/categories/post">post(55)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(35)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(25)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(22)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(8)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(6)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
