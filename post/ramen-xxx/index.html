@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ramen XXX</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style> :root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('http://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('http://nasciiboy.land/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 80%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 20%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="http://nasciiboy.land">/</a></span> <span><a href="http://nasciiboy.land/post">post</a></div>
+
+  <h1>Ramen XXX</h1>
+  
+
+<h2 id="ramen-xxx-sayonara-zetsubou-sensei">Ramen XXX – Sayonara! (Zetsubou Sensei)</h2>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/rc.jpg" alt="" /></center></p>
+
+<blockquote>
+<p>Estaba viendo la television por la noche
+porque no tenia nada mas que hacer.</p>
+
+<p>Estaba viendo como alababan a la gente con exito.</p>
+
+<p>Esa gente no es retorcida. ¡Maravilloso!</p>
+
+<p>Sabia la razon por la que no me recompensaban.</p>
+
+<p>Soy una persona retorcida.</p>
+
+<p>En ese caso, ¡me pondre firme! Soy&hellip;
+rotorcido, retorcido, retorcido, retorcido.</p>
+
+<p>Soy una persona retorcida pero si estas aqui, ¿cambiare?</p>
+
+<p>Tienes que darte cuenta, estoy aqui.</p>
+
+<p>–– SZS</p>
+
+<p>Ha sido causa de sufrimiento humano el hecho de que muchos de nosotros no
+pueden comprender que las palabras son sólo herramientas para nuestro uso, y
+que la mera presencia en el diccionario de una palabra como @«(viviente) no
+quiere decir, necesariamente, que deba referirse a algo definitivo en el mundo
+real.</p>
+
+<p>––Egoista</p>
+</blockquote>
+
+<p>hey! hey! hey! cuando enfermo estas, es malo no tomar tu medicina</p>
+
+<p>el numero 30 es ya y en una fecha especial (supuse) lo habria de publicar (o
+no), aunque en el futuro en el feed aparecera. La calidad no aumentara, tampoco
+incluira ninguna cosa valiosa en particular. Solo un monton de
+capturas, algun gif o video (s,S,Z) se sumara (n) a la cantidad de megas que habra
+que descargar</p>
+
+<p>Sayonara al rss diras?</p>
+
+<p>&hellip;.</p>
+
+<p>a finales del mes pasado tocaba renovar o no el dominio <em>nasciiboy.land</em> no por
+su belleza o encanto dudaba en hacerlo, mas bien por el costo, pues aunque el
+primer año no fue lo que cosideraria precisamente barato, el segundo y
+siguientes si que son el triple de caros en comparacion a los habituales <code>.net</code>
+o <code>.com</code>. Mas luego de realizar una busqueda en varios motores sobre el lenguaje
+de programacion go (agregando &ldquo;libro&rdquo; al final) y viendo que un patetico post de
+este sitio (y no es ninguna falsa modestia) aparecia siempre como primer
+resultado, no pude privar al mundo de ese vinculo</p>
+
+<p>asi pues no sin sufrir un importante desembolso y sentir culpa y verguenza por
+unos dias, se garantiza si no un host apropiado, si el dominio por un año
+mas. Cabe agregar que ante la vacilacion y el &ldquo;despretigio&rdquo; de volver al dominio
+<em>github.io.nasciiboy</em> adquiri un nuevo nombre <strong>nascii.club</strong>, como no, a un
+coste ricible y con una renovacion mas accesible. Ya que no se que hacer con
+este, de momento solo redirecciona al <code>.land</code>.</p>
+
+<p>&hellip;.</p>
+
+<p>solo por que me hace particular gracia, algunas fotos</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/ixca-01.jpg" alt="" /></center></p>
+
+<p>(arriba un paraje de &ldquo;taxco&rdquo;)</p>
+
+<p>en el trabajo mas por conveniencia que por mandato, acompañe como copiloto en un
+reparto foraneo. Debido a ineptutudes y malentendidos evitables, terminamos
+haciendo &ldquo;la ruta de los pueblos magicos&rdquo; en una camioneta de 3½ &ldquo;luchando&rdquo;
+contra calles estrechas y cableado bajo</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/ixca-08.jpg" alt="" /></center></p>
+
+<p>los habitantes de este sitio peculiar (bajos en altura, de tez morena y con
+ropajes extrabagantes) decidieron un dia &ldquo;asi nomas&rdquo; montarse calles
+delicadamente empedradas</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/ixca-06.jpg" alt="" /></center></p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/ixca-10.jpg" alt="" /></center></p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/ixca-19.jpg" alt="" /></center></p>
+
+<p>como no tenian suficiente con las calles o bien por exceso de piedras, tambien
+montaron una little piramide</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/ixca-05.jpg" alt="" /></center></p>
+
+<p>llegar al sitio no fue sencillo, seguramente para estos momentos se encuentre
+aislado del resto de la humanidad pues el trayecto solitario en medio de la nada
+era una carretera de dos carriles acechada por deslaves, bichos salvajes y
+pandillas de niños perdidos que solocitaban dinero o refresco a manera de peage</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/ixca-05.jpg" alt="" /></center></p>
+
+<p>como las fotos demuestran, los habitantes huyen donde las camaras no puedan
+captarlos. Cuesta creer que saliesemos con vida y aun mas poder contar con
+evidencia visual de aquel sitio</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/ixca-11.jpg" alt="" /></center></p>
+
+<p>Si alguna reflexion obtuve de ver en su mayoria espacios verdes interminables,
+fue que en verdad tenemos difil cargarnos &ldquo;EL ECO-sistema&rdquo;, somos muy pequeños
+aunque por otro lado no dejamos de ser jodidamente &ldquo;chingones&rdquo;. Demostramos
+tenazidad e inteligencia construyendo para nuestra comodidad y bienestar miles
+de kilomentros de carreteras que retan a diario a la interperie y no solo eso,
+tambien construimos vehiculos soprendentes capaces de recorrerlas a una velocidad
+considerable con cargas alucinantes</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/ixca-11.jpg" alt="" /></center></p>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>Arslan Senki</strong> El principe Arslan ve como su reino es invadido por una nacion
+(catolica) vecina. Su padre el rey es vuelto pricionero y su madre pretendida
+por uno de los invasores.</p>
+
+<p>El joven principe parece forzado a avandonar su territorio, mas lejos de ser una
+derrota definitiva planea recuperar el estatus cuo (necesitecen los cadaveres
+que hagan falta).</p>
+
+<p>Luego de convencer a un antiguo estratega (o algo) con un carisma nivel 99,
+ingenio platinum y valentia(?) dopada, arslan se alia con la nacion vecina y va
+reconquistando territorio. No solo eso, se aburre y llega a preguntarse si es el
+indicado para recuperar lo que por derecho (o no) le pertenece&hellip; aunque dice
+que sus acciones son por el bien de la gente, yehhh!!!&hellip;</p>
+
+<p>pasables 25 episodios con batallitas y un poquillo de drama personal. A destacar
+que el trato sobre que hacer con los esclavos es mas profundizado de lo que la
+daenerys la loca hace en GoT. Termina antes de la batalla final, parece contar
+con segunda temporada, pero no llegue a verla, aunque cuando caiga por el
+torrente tendra su espacio de hdd</p>
+
+<p><strong>Kaguya-sama wa Kokurasetai - Tensai-tachi no Renai Zunousen</strong></p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/KswK-TtnRZ-5.jpg" alt="" /></center></p>
+
+<blockquote>
+<p>Las mujeres se enojan por cosas raras.
+Quizas sea arrogante que un hombre intente entenderlas.
+Al final lo mejor es esperar a que pase la tormenta.
+Si el chico no tenia malas intenciones, no necesita disculparse.</p>
+
+<p>Malas intencones, ¿eh?</p>
+</blockquote>
+
+<p>La puta batalla (rollmantica) del siglo con un comentarista narrador cual si se
+tratara de una lucha pujilistica (o de shogi). Un guion lleno de poesia urbana rebosante de
+umami, misiquita acorde y momentos visuales brillantes. Se puede pedir mas al
+anime? NOPE</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/nope.jpg" alt="" /></center></p>
+
+<p>Por casual despiste (apesar de realizar siempre una revicion previa) el primer
+capitulo que vi de esta serie fue el cuarto&hellip; aun sin sin conocer a los protas me
+enamore!!!</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/KswK-TtnRZ.gif" alt="" /></center></p>
+
+<p>Temeroso ante tanta maravilla, uno se pregunta cuanto puede durar el extasis
+continuo, un episodio mas? dos? todos los restantes? hay relleno? si, si, si y tambien</p>
+
+<p>una droga pastelosa, donde al igual que en otras series la parejita nunca va a
+salir (pero daran pequeños avances). El asunto es ver como concientemente ambos
+de su enamoramiento juegan a obligar al otro a ser el que declare primero sus
+sentimentos</p>
+
+<p>&ldquo;vivimos en un pais indecente&rdquo;, buaAAHHH!! glorioso el ending del episodio 03!</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/KswK-TtnRZ-4.jpg" alt="" /></center></p>
+
+<p>el intro musical en perfecto en japañol tambien rifa &ldquo;la besuoh, la besuoh, la besuoh&rdquo;</p>
+
+<p>Lo que a simple vista podria parecer una comedia &ldquo;bien hecha&rdquo; se vuelve meta
+cuando una y otra vez demuestra su absotuta comprencion de la conducta humana
+(sin mierda identitaria, de genero o feminista(s(s)))</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/KswK-TtnRZ-6.jpg" alt="" /></center></p>
+
+<p>Me ha encantado en particular la resolucion de un conflicto: La chica en un
+momento de &ldquo;vulneravilidad&rdquo; invita al chico a dormir a su cama, el utiliza toda
+su voluntad para no tocarla/aprovecharse/hacer-un-shinji, tras una
+siesta de ambos ella despierta y se indigna con su enamorado (secreto) y le
+pregunta si ha mancillado su honor de alguna manera y el responde que
+n-o-p-e, tras lo que la doncella se indigna nuevamente</p>
+
+<p>la resolucion del enojo se presenta cuando la princesa acepta que el motivo de
+su ofensa es no ser lo sufientemente atractiva para que el chico se resistiera a
+tocarla ni tan solo un poquito&hellip; y cuando el chico entiende esto y le comunica
+(para poner las cosas en paz) que en efecto la toco un poquito se recupera el
+estatus quo</p>
+
+<p>que demuestra esto? pues que los japos si que son inteligentes!</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/KswK-TtnRZ-7.jpg" alt="" /></center></p>
+
+<p>vamos, como cuando estas atrapado en la multitud y los gluteos de una sabrosa se
+rosan contra tu cuerpo reiteradamente, la adrenalina comienza a subir, pero te
+cuestionas si la etiqueta apropiada es mostrar o no una ereccion, aun si esta es
+absolutamente involuntaria, peor aun la tia en cuestion voltea a verte y es
+imposible dicernir si piensa &ldquo;un full caballero!?&rdquo;, &ldquo;que no?&rdquo;, &ldquo;puf inche
+aburrido&rdquo; o &ldquo;de toda la multitud toco el joto&rdquo; y no sabes si es una loca
+esperando a hacer una escena con denuncia incluida o sera una noche sudorosa</p>
+
+<p><strong>Hellboy (2019)</strong> El Hellboy? bien. La Milla Jovovich? Sabrox. El resto? un
+cruze raro entre deadpoll y scary movie&hellip;??? tiene aroma a serie B, con algunos
+efectos de triple A. Un perfecto desastre!</p>
+
+<p>Cuando inicia el &ldquo;apocallipsis&rdquo; los bichos molan un monton. Pese a todo, su
+peor error es no ser tan mala como para ser buena. Quiza, algun dia la vuelva a
+ver</p>
+
+<p><strong>Takunomi</strong> hay distintos animes con transfondo &ldquo;educativo&rdquo; o que al menos
+intentan ser divulgativos. Algunos que encantaron a la mayoria, como <em>Silver
+Spoon</em> (como ser un granjero, tener una mascota y comertela), <em>Maoyuu Maou
+Yuusha</em> (economia para torpes), <em>Golden Kamuy</em> (te mostramos a los ainu como en
+un wenster), chihayafuru (cuando te dicen &ldquo;tienes instinto de jugador karuta&rdquo; y
+tu ni idea de que mierdas es eso). A diferencia de estos, takunomi (te muestra a
+preparar bebidas alcolicas contado por unas chicas cahondas)&hellip; lo malo? satura
+y aburre a los pocos segundos</p>
+
+<p><strong>Yakusoku no Neverland</strong> Pollitos en fuga (edgi) con niñatos jinius XD-D-D-D-D. Mehh, se puede
+ver y luego borrar del HDD&hellip; o consultar el: Ahorrate 3 dias</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/AjhiAfYv4qE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><strong>Sayonara Zetsubou Sensei</strong></p>
+
+<p><center><img src="http://nasciiboy.land/img/szs/SZS-161.jpg" alt="" /></center></p>
+
+<blockquote>
+<p>esta sociedad numerica me desespera</p>
+
+<p>Pronto sabreis lo vacia que es la esperanza
+y lo real que es la desesperacion</p>
+
+<p>He escrito cosas al azar con la mano izquierda mientras veia la televicion.</p>
+</blockquote>
+
+<p>Seria grocero colocar las 164 capturas que realice a la serie&hellip; he! que
+demonios!</p>
+
+<p><center><img src="http://nasciiboy.land/img/szs/SZS-069.jpg" alt="" /></center></p>
+
+<p><center><img src="http://nasciiboy.land/img/szs/SZS-049.jpg" alt="" /></center></p>
+
+<p><center><img src="http://nasciiboy.land/img/szs/SZS-025.jpg" alt="" /></center></p>
+
+<p>gure, gure, gure, que esta pasando?</p>
+
+<p>je, je, bueno un <a href="http://nasciiboy.land/img/szs/SZS.zip">zip</a> para quien este interezado en dicho
+material</p>
+
+<p>pero, que mierdas es esta japonada harem de chicas retorcidas con fanservice
+experimental random, humor rudo, problematicas turbias, banda sonora llena de
+adrenalina y hecho por el estudio con animacion de cuellos chuecos audazes
+favorito de niños y adultos, chan, chan, chan: <strong>Shaft</strong></p>
+
+<p><center><img src="http://nasciiboy.land/img/szs/SZS-164.jpg" alt="" /></center></p>
+
+<p><center><img src="http://nasciiboy.land/img/szs/SZS-148.jpg" alt="" /></center></p>
+
+<p>tiene ovas, una segunda temporada y otras cosas que no vere hasta encontrar un
+torrent decente&hellip; tambien tiene &ldquo;material electrico!&rdquo;</p>
+
+<p><center><img src="http://nasciiboy.land/img/szs/SZS-083.jpg" alt="" /></center></p>
+
+<p>en resumen&hellip; Me Enamore!!! Material de obligado vicionado</p>
+
+<p>calificacion? ∞/10</p>
+
+<p><strong>John Wick 3 PArabellum_3</strong></p>
+
+<p>My name is Keanu Reeves. You killed my 🐕. Prepare to die!</p>
+
+<p>mi reseña? Un (casi) perfecto ballet violento con armas.</p>
+
+<p>La primer entrega estubo muy bien. La segunda un mas y mejor en toda regla y
+sobre todo con mucho corazon y esta tercera&hellip; mas espectacular, mas estilizada
+y mas bestia. Me parece que la segunda entrega es mas redonda, pero, esta es
+deliciosa y salvajemente violenta</p>
+
+<p>Tuve problemas con la peli, da-caskos, &ldquo;el moro&rdquo; o los ninjas?</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/nOpe.jpg" alt="" /></center></p>
+
+<p>Cosidero que podria mejorar la siguiente entrega en algun aspecto? si,
+eliminando los dialogos!</p>
+
+<p>Ya que me gusto tanto, una serie de videos sobre el tema ===&gt;</p>
+
+<p><em>Mierda producciones::John Wick y la violencia
+en el cine</em> (Para descargar y guardar permanentemente en el disco)</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/jKmW1Sqj2GE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>John Fake</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/oTPQ9SZXno4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>y John Fake 2</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/MQCbJYsXI-8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>como no podia(n) faltar, el <strong>TeLoResumoAsiNomas</strong> (Vol. 1)</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/iNCoYmuAo44" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>y <strong>TeLoResumoAsiNomas</strong> (Vol. 2)</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/-jOvntF2hg4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>luego unas reseñas varias para quien quiera auto-confirmar su percepcion</p>
+
+<p>Critica JOHN WICK 3: PArabellum (AccionCine)</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/28zM8EW_oeg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>James Wallestein</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/vwFTrY7gKzI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>Nestor Cine desde Hollywood</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/eJ9068Jf4MY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>You Rocket (todo bien)</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/3vjBelDvCsY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>SensaCine</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/DY2BUTL183c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>Jiger (No spoilers)</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/pcWDpaMfdD8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><strong>Godzilla II</strong> Repugnantemente mala.</p>
+
+<p>por?</p>
+
+<ul>
+<li><p>camara borracha</p></li>
+
+<li><p>ambientaciones neon que al contrario de Jhon Wick_3 lejos
+de ser elegantes parecieran de un bar cutre</p></li>
+
+<li><p>en medio de las batallas te ponen las jetas llenas de asombro de los humanos
+en lugar de mostrarte lo que putas esta pasando</p></li>
+
+<li><p>ningun bicho le da un apachurron a la mocosa</p></li>
+
+<li><p>los humanos y la forma en que se desarrolla todo en general</p></li>
+</ul>
+
+<p>lo bueno? mothra.jpg saliendo en la cascada y tambien mothra-2.jpg cuando llega
+al mar buscando al godzilla-trompa-chata</p>
+
+<p><strong>The Watch (2012)</strong> (Vecinos cercanos del 3er tipo) Me encontre esta peli en el
+tianguis, parecia una comedia guarra americana con el negro de IT Crow y Ben
+Stiller&hellip; en efecto era una americanada &ldquo;comica&rdquo;. Mehh puede verse, es como la
+&ldquo;vercion (Muy, muy) china&rdquo; de THE WORLD&rsquo;S END (2013). Si hay oportunidad, mejor
+ir por THE WORLD&rsquo;S END</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/TWE.jpg" alt="" /></center></p>
+
+<p><strong>Dexter S01</strong></p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/dex-1.png" alt="" /></center></p>
+
+<p>Haa, una serie mas de criminales. Serena, contenida, pero morbosa! Va
+desarrollandose a fuego lento y en los minutos finales da un subidon
+justificante de todos los episodios previos</p>
+
+<p>segun nos cuentan el bueno de Dexter Morgan es un sociopata, aunque diria mas
+que es un acesino converso bien entrenado que utiliza sus habilidades (al igual
+que kira) para hacer &ldquo;un mundo mejor&rdquo; descuartizando a aquellos que escapan de
+la justicia legal</p>
+
+<p>pese a que no se muestra el punto de vista del hermano de dexter (spoiler!!!) su
+actuar si que coincide con el ideal de lo que un sociapata (y asecino) debe ser</p>
+
+<p>Me parece curioso como muestran a la hermana, la teniente o el poli como los
+sencibles/empaticos/normales cuando ellos no dejan tampoco de actuar bajo el
+principio de la satisfaccion egoista</p>
+
+<p>Que puedo decir, dudo cuando alguien se muestra bondadoso, servicial y sumiso
+sin esperar n-a-d-a. Para mi todos carecemos de (&ldquo;verdadera&rdquo;) empatia. Las
+relaciones solo se consideran buenas, cuando proporcionan veneficios
+apreciables, nadie actua por bondad o quiza expresado de otra forma nos valen
+verga los demas</p>
+
+<p>wuoooo! Go!</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/dex-2.png" alt="" /></center></p>
+
+<p>Go! Go! Dexter!</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/dex-3.png" alt="" /></center></p>
+
+<p><strong>OPM S02</strong> (alias: donde quedo el resto de la temporada?)</p>
+
+<p>La comparacion y espectativas venian a nublar el juicio, sin aceptar nada
+inferior a lo mostrado con la primer temporada.</p>
+
+<p>El reparto de protagonismo entre el monstruo humano y luego con el bruce-lee
+moreno hacian crack-crack ¿que esta pasando con esta temporada?</p>
+
+<p>Es verdad que la calidad de la animacion da un bajon apreciable&hellip; sin ello
+significar que esta sea mala, solo es que MadHouse es muy MadHouse y eso no
+cualquier estudio lo acanza dentro de la industria japonesa actual</p>
+
+<p>pese a todo, el temor se fue despejado, los capitulos fueron llegando al final y
+uno se queda en un coitus interruptus, deseando mas epica saitamaisina</p>
+
+<p>en resumen, lo mas epico esta por venir. Se desarrolla mas el cosmos de
+personajes y se recorre un camino distinto para no aburrir al fan, osea: DIGNA!
+Tanto que ya la he visto dos veces!</p>
+
+<p><strong>Spiderman: Fhar from home</strong> &ldquo;Locas haventuras en Europa (con Spidy)&rdquo;, asi
+hubiese llamado a esta entrega.</p>
+
+<p>Como las etiquetas en el XXX, esto es <code>Teen</code>, <code>Interracial</code>, <code>no-buli(?)</code>,
+<code>empoderador</code>, xddd&hellip; entences? no aburre, ni es objetivamente mala, pero este
+(aun) no es mi spidy, no, no es Spiderman 2 (edicion S.R.) ni se le espera.</p>
+
+<p>Con que disfrute? la rubita es mona, su relacion con el hawallano es tambien
+mona. La primer confrontacion Misterio-Spidy es lo mejor, aunque no se si en
+verdad es factible con tanto pinche dron, mas, cuando nos muestran que es un
+&ldquo;render&rdquo; pre-grabado</p>
+
+<p>Lo peor? la vercion femenina de Sheldon Cooper alias Em-Yei. Que listilla mas grimosa.
+Si le hubiesen teñido el pelo de azul con un parche en el ojo (opcional),
+entenderia la referencia al anime y seria m-e-t-a. Sin ello solo es muuu pesado</p>
+
+<h3 id="yu-2-random">YU-2 random</h3>
+
+<p>Re:Zero</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/CeOrE2d0poE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>Mob Psycho 100 opening Parodia!</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/OuntkrexllQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>DERP NOTE</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/8sfxlrooO9w" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>DERP NOTE 2</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/ZSaga9e0AiE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>&ldquo;el algoritmo&rdquo; me mando una china (<strong>Liziqi</strong> ) que se pone a chambiar en su mundo
+retro-rural, carga, corta, cocina y todo lo demas sin dejar de ser &ldquo;femenina&rdquo; y
+sin quejarse del mundo, simplemente hace lo que debe hacer y ya esta</p>
+
+<p>je, no hay que ser inocentes, parece producido por el amado lider. Sin
+olvidar esto, hay por hay mujeres como liziqi que no esperan a que les resuelvan
+la vida pensando que su mero cuerpo es suficiente para sostener una relacion
+(&hellip; bueno, bueno)</p>
+
+<p>Using bamboo to make some sophisticated old furniture</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/LTejJnrzGPM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>Ancient Oriental methods of the Sericulture, the solution to the cold</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/OrXiXDUQia8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>Various techniques for a NYE dinner for a happy reunion with family and friends</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/LiE4DSfJnk0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p><strong>Elephant Gym</strong> una bandita con una chinita</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/saccx5dTmKU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>70s Japanese Jazz Mix Vol.2</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/kNRIFhkYONc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>meditaçao brasileiro &ldquo;del bueno&rdquo;</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/ltCULQ-e6tc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>una reseña de un sujeto recien descubierto y con el que en general comparto la
+misma opinion, solo que aquel sabe expresarse. <strong>macroreview Spiderman-2</strong></p>
+
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/8PPwNqlzkis" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+ #</p>
+
+<h3 id="feminazcii">feminazcii</h3>
+
+<p>Y para aquellos chicos (chiques?) y grandes (grand@s?) SJW con retrazo mental
+termine por topar con unos videos que les ban a reventar sus tolerancias
+inclusivas arcoiris&hellip; je, je, je los MIGTOW</p>
+
+<p>Ha, tampoco es que los migtow me parescan muy distintos a las feminazciis. Ambos
+grupos tienen sesgos que les favorecen y justifican, ambos distorcionan la
+realidad con sus ideologias hasta que encagen y expliquen el mundo&hellip; y si no lo
+hacen es desde lugo una IN-JUSTICIA. Pero mira, no es extraño topar a un grupo
+de niñatas cuchicheando de lo estupidos que son los hombres y esto del migtow no
+deja de ser el mismo cuchicheo pero con las hembras como objeto de estudio</p>
+
+<p>Que mas puedo agregar, al menos escuchar esto me hace gracia y&hellip; tienen sus
+puntos sobre mucho del comportamiento de la mujer. Muchas otras teorias son de
+betas resentidos por falta de sexo y envidia del alfa. Para mis interiores me
+considero un alfa&hellip;</p>
+
+<p>Empezar por algo no migtow y continuar como reto hacia adelante</p>
+
+<p>Las lecturas de ElVaronDomado, no tienen desperdicio, ja, ja, ja</p>
+
+<p>Las 5 DESIGUALDADES de la MUJER</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/65Dw-Tdi-q8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>El feminismo hegemonico es machista</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/8lLSXpeLwZ8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>La maravilla del género fеmеnino</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/teCSBAdsYyQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>ElVaronDomado que es el varon que es la mujer</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/nD6NHvk7I20" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>Todas las mujeres son (PUTAS)</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/yNW4-kVj8Qs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>ElVaronDomado [Las mujeres tienen poco sentimiento - El sexo en cuanto recompensa]</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/OzK35MA4yoQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<h2 id="xxx">xxx</h2>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/NOPE.jpg" alt="" /></center></p>
+
+<p>Por ser una ocacion especial agregare unos videos ricolinos y ya que estamos de
+aniversario conceptual si tienen alguien cerca, no se contengan de pedir (o
+rentar) unos abrazos sin ropa !</p>
+
+<p>Divagando en el porno-verso entre buscar japonesas que se dan amor, packs de
+dudosa legalidad, ex-novias y maduras tocandose en coches, encontre a una medio
+filipina y medio blanca (eso dice en
+<a href="https://old.reddit.com/r/DelightfulHug/">reedit</a>, aunque seria apropiado
+llamarle morena) de nombre clave <em>DelightfulHug</em></p>
+
+<p>En el video donde la conoci (presuntamente) se va a un parque a fumar marihuana y
+se manosea hasta quedarse agusto. Me enamore!</p>
+
+<pre><code>youtube-dl https://www.xnxx.com/video-h1pbtef/who_is_she_where_can_i_find_more_of_here_videos
+
+youtube-dl 'http://www.xnxx.com/video-jnp7jef/public_bathroom_squirt'
+
+youtube-dl 'http://www.xnxx.com/video-fszsl7c/novinha_masturbando_a_bucetinha_gostosa'
+
+youtube-dl 'http://www.xnxx.com/video-bderrd4/daring_asians_masturbating_in_public_-_fatbootycams.com
+</code></pre>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/me.gif" alt="" /></center></p>
+
+<p>seguramente esta mini-seccion se incorpore en siguientes entregas</p>
+
+<h2 id="txt">txt</h2>
+
+<p><a href="https://lapastillaroja.net/2019/04/como-mostrar-empatia-sin-tenerla-realmente/">https://lapastillaroja.net/2019/04/como-mostrar-empatia-sin-tenerla-realmente/</a></p>
+
+<p><a href="https://lapastillaroja.net/2019/05/el-fracaso-de-las-redes-sociales-y-el-pivotaje-de-facebook-hacia-la-invasion-mas-absoluta-de-la-privacidad/">https://lapastillaroja.net/2019/05/el-fracaso-de-las-redes-sociales-y-el-pivotaje-de-facebook-hacia-la-invasion-mas-absoluta-de-la-privacidad/</a></p>
+
+<p><a href="http://esr.ibiblio.org/?p=8310">ESR: Spotting the wild fascist</a></p>
+
+<h2 id="fonos">fonos</h2>
+
+<p>Para terminar, he encontrado nuevo material de ese que se puede escuchar una y
+otra vez y otra vez</p>
+
+<p>Un tal <strong>Sugizo</strong> con una recopilacion del 2008 llamada <em>Cosmoscape</em>, de la cual
+destaco las pistas 14 (Voice), 2 (Tell Me Why?), 7 (Deliver), 8 (Elan Vital) y 10 (Rise)</p>
+
+<p><strong>Hope Sandoval &amp; The Warm Inventions - Until the Hunter</strong> que tambien esta full-sabrox</p>
+
+<p><strong>The Legend Of Zelda Concert 2018</strong> una belleza deliciosa y eficaz</p>
+
+<p><strong>Pom Poko – Birthday</strong> que clasificaria como female noisy pop</p>
+
+<p>El buscador arrojo una <a href="https://sungenre.com/review/pom-poko-birthday/">reseña en englis</a>
+que pseudo traducida es dice algo mas o menos asi:</p>
+
+<blockquote>
+<p>Birthday es el tan esperado álbum debut de la Noruega <em>Pom Poko</em>. Después de
+haber conocido y estudiado jazz en el Conservatorio de Música de Trondheim, uno
+podría esperar un álbum llamativo e inaccesible como resultado. En su lugar, en
+el acertadamente llamado <em>Birthday</em> presentan un conjunto de melodías pop
+vanguardistas increíblemente pegadizas, magistralmente entregadas con delicadeza
+y moderación en su interpretación. Rasca la superficie y encontrarás los sellos
+del entrenamiento formal, pero en su mayor parte las canciones contienen una
+calidad visceral y una energía cruda que le debe más al punk de los 70 que a
+cualquier gran maestro del jazz. &ldquo;Lo que tocamos no es jazz, pero realmente
+siento que uso mi formación jazzística, porque siento que soy libre de tomar
+decisiones en tiempo real cuando tocamos&rdquo;, nos cuenta el baterista Ola Djupvik
+en una entrevista reciente.</p>
+</blockquote>
+
+<p>y tambien dos albums hermosos de una serie de igual belleza <strong>Shingetsutan
+Tsukihime</strong></p>
+
+<ul>
+<li><p>(2003) Moonlit archives - Original Sound Track 1</p></li>
+
+<li><p>(2003) Moonlit Memoirs - Original Soundtrack 2</p></li>
+
+<li><p>y un single (2003) Rinne No Hate Ni</p></li>
+</ul>
+
+<p>El torrente que los incorporaba, tenia mas material. Solo estos me parecieron sobervios</p>
+
+<p>Sayonara Cocodrilo!</p>
+
+<p><center><img src="http://nasciiboy.land/img/ramen-xxx/rca.jpg" alt="" /></center></p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="http://nasciiboy.land/post/m-art/">◀ m-art</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="http://nasciiboy.land">/</a></span> <span><a href="http://nasciiboy.land/post">post</a></div>
+</main>
+
+    <aside>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="http://nasciiboy.land/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="http://nasciiboy.land/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="http://nasciiboy.land/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="http://nasciiboy.land/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="http://nasciiboy.land/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
+
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.land/categories/post">post(60)</a></li><li><a href="http://nasciiboy.land/categories/prog">prog(57)</a></li><li><a href="http://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="http://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="http://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="http://nasciiboy.land/categories/vg">vg(5)</a></li><li><a href="http://nasciiboy.land/categories/">(4)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="http://nasciiboy.land/tags/fonos">fonos(36)</a></li><li><a href="http://nasciiboy.land/tags/4k">4k(27)</a></li><li><a href="http://nasciiboy.land/tags/howto">howto(22)</a></li><li><a href="http://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="http://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="http://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="http://nasciiboy.land/tags/txt">txt(9)</a></li><li><a href="http://nasciiboy.land/tags/apt">apt(8)</a></li><li><a href="http://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="http://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="http://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="http://nasciiboy.land/tags/go">go(6)</a></li><li><a href="http://nasciiboy.land/tags/install">install(5)</a></li><li><a href="http://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="http://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="http://nasciiboy.land/tags/">(4)</a></li><li><a href="http://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="http://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="http://nasciiboy.land/tags/server">server(4)</a></li><li><a href="http://nasciiboy.land/tags/example">example(3)</a></li><li><a href="http://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="http://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="http://nasciiboy.land/tags/java">java(3)</a></li><li><a href="http://nasciiboy.land/tags/kameko">kameko(3)</a></li><li><a href="http://nasciiboy.land/tags/pobreotaku">pobreotaku(3)</a></li><li><a href="http://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="http://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="http://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="http://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="http://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="http://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="http://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="http://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="http://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="http://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="http://nasciiboy.land/tags/dancer">dancer(1)</a></li><li><a href="http://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="http://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="http://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="http://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="http://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="http://nasciiboy.land/tags/git">git(1)</a></li><li><a href="http://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="http://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="http://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="http://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="http://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="http://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="http://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="http://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="http://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="http://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="http://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="http://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="http://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="http://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="http://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="http://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="http://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="http://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="http://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="http://nasciiboy.land/tags/xxx">xxx(1)</a></li><li><a href="http://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="http://nasciiboy.land/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
