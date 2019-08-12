@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gnome on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>http://nasciiboy.land/tags/gnome/</link>
+    <link>https://nasciiboy.land/tags/gnome/</link>
     <description>Recent content in Gnome on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 26 Jul 2018 13:45:16 -0500</lastBuildDate>
     
-        <atom:link href="http://nasciiboy.land/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.land/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Debone</title>
-      <link>http://nasciiboy.land/prog/debone/</link>
+      <link>https://nasciiboy.land/prog/debone/</link>
       <pubDate>Thu, 26 Jul 2018 13:45:16 -0500</pubDate>
       
-      <guid>http://nasciiboy.land/prog/debone/</guid>
+      <guid>https://nasciiboy.land/prog/debone/</guid>
       <description>
 
 &lt;p&gt;Inicialmente esta solo seria una receta para poner a punto un equipo &amp;ldquo;retro&amp;rdquo;
@@ -53,7 +53,7 @@ su vida) y otro de 3TB para &amp;ldquo;datos&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;y como complemento especial, incluira una grafica dedicada PCI 2.0 nvidia 210
 silent con 1GB de ram dedicada&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(solo tiene dos conexiones para ventiladores CPU y chasis, el tercero necesario
 por que la grafica se ponte un poco calida al igual que la controladora de la
@@ -83,7 +83,7 @@ utilizando solo el video integrado del procesador&lt;/p&gt;
 &lt;p&gt;La siguiente es una imagen tomada mediante una conexion ssh (de antes de que
 enviara de paseo mi placa principal)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;como puede apreciarse, el gnome 3.22 tal y como nos lo envia debian tiene un
 consumo (casi) despreciable, apenas y llega a los 300MiB! Simplemente fenomenal!
@@ -93,7 +93,7 @@ ligero su entorno de escritorio&lt;/p&gt;
 &lt;p&gt;pero por si queda duda de la captura sobre ssh, la siguiente es una imagen 100%
 real no fake, utilizando tilix (sin configurar) sobre la secion grafica&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;349MiB! Para que ahora salgan los troles del entorno mas hermoso de todos a hablar pestes&amp;hellip;&lt;/p&gt;
 
@@ -102,22 +102,22 @@ ja, asi que vamos a configurarlo hasta dejarlo bonico&lt;/p&gt;
 
 &lt;p&gt;primero abrimos gnome-tweak-tool, que ya viene instalado por defecto&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;se activa el tema obscuro global, &lt;strong&gt;adwaita-dark&lt;/strong&gt; y los iconos en alto contraste&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;mmm, la imagen del escritorio por defecto esta preciosa, pero no refleja nuestra
-verdadera y kawai naturaleza, asi que la &lt;a href=&#34;http://nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34;&gt;cambiamos&lt;/a&gt;&lt;/p&gt;
+verdadera y kawai naturaleza, asi que la &lt;a href=&#34;https://nasciiboy.land/img/clouds_battle_by_arsenixc.png&#34;&gt;cambiamos&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;pasamos a algunas extenciones y vemos que por defecto ya incluye un chilion de
 ellas por aquello de evitar que busquemos en sitios raros, pero de estas solo se
 requieren unas cuantas&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;alternativetab&lt;/strong&gt; para que el tab no se porte &amp;ldquo;raro&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
@@ -145,7 +145,7 @@ y bajada en la red&lt;/p&gt;&lt;/li&gt;
 escritura (global)&amp;rdquo;&lt;/strong&gt; y cuya unica opcion (por que
 los devs de gnome conocen de esto) es &lt;strong&gt;Emacs&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Si utilizas bash, fish o &lt;strong&gt;Emacs&lt;/strong&gt;, encontraras familiares alguos de los
 comandos:&lt;/p&gt;
@@ -169,12 +169,12 @@ comandos:&lt;/p&gt;
 a la ves que establecemos un lugar especifico para cada ventana que lancemos (al
 menos conceptualmente), ponemos las areas de trabajo como estaticas y que sean &lt;strong&gt;11&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/09.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/09.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;y en este punto podemos apreciar la parte mas vistosa de la configuracion
 presionando &lt;code&gt;Super&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;al principio utilizaba 4 areas (mono-pantalla), luego 5, despues 6, 7, 9, 10 y
 finalmente 11 (a pantalla doble).&lt;/p&gt;
@@ -293,7 +293,7 @@ apt -y install aircrack-ng macchanger
 
 &lt;h3 id=&#34;flacon&#34;&gt;flacon&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/flacon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/flacon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;flacon es una bonita utilidad que nos permite partir y renombrar automagicamente
 aquellos albums almacenados en una monopista (&lt;code&gt;.flac&lt;/code&gt; o similar) segun el fichero
@@ -340,7 +340,7 @@ y un enlace, para solucionarlo, cuya correcion se resume en:&lt;/p&gt;
 desde tener multiples seciones en la misma ventana, hasta dejaspojar la interfaz
 de barras de titulo y de desplazamiento, botones y menus&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;algunos de los atajos que mas utilizo y/o he configurado, son:&lt;/p&gt;
 
@@ -397,7 +397,7 @@ aparecio el siguiente enlace&lt;/p&gt;
 
 &lt;p&gt;tras ello, pase a probar supertuxkart y andaba si no perfecto al menos, jugable!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;nvidia&#34;&gt;Nvidia&lt;/h2&gt;
 
@@ -441,7 +441,7 @@ rendimiento es ligeramente mejor&lt;/p&gt;
 
 &lt;p&gt;pasamos a la configuracion basica del entorno&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;primero, habilitar el login automatico. Mi pc no se mueve (de lugar, ni por
 voluntad propia) y espero que nadie se atreva a modificar eso, ademas &amp;ldquo;no tengo nada que
@@ -451,7 +451,7 @@ cada bit de mi sistema (incluido el porno de enanos con holandesas y cabras (es
 mentira, no hay porno tan divertido, hacer de productor y director pornografico esta en
 mi lista de &amp;ldquo;algun dia&amp;rdquo;)).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;hellip;&lt;/p&gt;
 
@@ -459,16 +459,16 @@ mi lista de &amp;ldquo;algun dia&amp;rdquo;)).&lt;/p&gt;
 los ficheros, es limitar la busqueda (eso que aparece cuando presionamos super)
 al &lt;strong&gt;terminal&lt;/strong&gt;, &lt;strong&gt;software&lt;/strong&gt; y &lt;strong&gt;calculadora&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;para este momento (con la grafica nvidia, dos monitores vga y un adaptador dvi-i
 a vga) ya esta funcianal la (imprecindible) configuracion de dos monitores&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;gnome-keys&#34;&gt;gnome-keys&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/17.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/17.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;como mencianaba al principio, gnome es simple por defecto y potente cuando se
 necesita ( ͡° ͜ʖ ͡°)&lt;/p&gt;
@@ -651,7 +651,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys www                  
 &lt;p&gt;no incluidas, pero tambien posibles, se pueden agregar atajos personalizados
 ligados a algun binario&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/18.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/18.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;S-h&lt;/code&gt; tilix &amp;ndash;full-screen&lt;/li&gt;
@@ -666,7 +666,7 @@ ligados a algun binario&lt;/p&gt;
 con la distribucion de teclado programmer dvorak (en ingles) con algunas teclas
 especialmente modificadas!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;eh mencionado alguna vez, el asco que me dan las laptops con sus teclados reducidos, de
 membrana cutre y con su minuscula pantalla?&lt;/p&gt;
@@ -704,27 +704,27 @@ desde &lt;code&gt;gnome-tweak&lt;/code&gt; de la siguiente manera&lt;/p&gt;
 como &lt;code&gt;Alt derecho&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;http://nasciiboy.land/img/debone/g-dvp-1.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://nasciiboy.land/img/debone/g-dvp-1.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;para las versiones apartir del gnome shell 26 (?). Desde &lt;em&gt;Teclado y ratón&lt;/em&gt;
 desactivar la tecla de composicion&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;http://nasciiboy.land/img/debone/g-dvp-2.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://nasciiboy.land/img/debone/g-dvp-2.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;despues presionar en &lt;em&gt;Opciones adicionales de la distribución&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;http://nasciiboy.land/img/debone/g-dvp-3.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://nasciiboy.land/img/debone/g-dvp-3.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;y de nuevo, unica y exclusivamente configurar &lt;em&gt;Tecla para seleccionar el tercer nivel&lt;/em&gt;
 como &lt;code&gt;Alt derecho&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;http://nasciiboy.land/img/debone/g-dvp-4.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://nasciiboy.land/img/debone/g-dvp-4.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;firefox-quantum&#34;&gt;firefox-quantum&lt;/h2&gt;
@@ -778,7 +778,7 @@ funcionaria pero en la version actual cambiaron la ruta del fichero)&lt;/p&gt;
 
 &lt;h3 id=&#34;gestos&#34;&gt;gestos&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/19.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/19.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;he, voy directo a cumplir con el estereotipo de computer guy. Los trackball
 me tentaban y tenia que probar uno. Ademas habia efectivo, uno tiene debilidades
@@ -798,7 +798,7 @@ aparatos (compatibles logitech). En caso de querer gestionar conectar mas
 dispositivos al mismo receptor, hay un programita llamado &lt;code&gt;solaar&lt;/code&gt; (con interfaz
 GTK) disponible en los repos&amp;hellip; supongo que funciona&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/20.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/20.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;como mencionaba, no encontre (ni busque demaciado) como configurar los botones,
 pero, en su lugar aparecio una extencion de firefox para agregar gestos, que al
@@ -937,18 +937,18 @@ cat /proc/sys/vm/swappiness     # comprobar la modificacion
 que controla el teclado RGB: &lt;code&gt;ckb&lt;/code&gt;), probando htop, sobre fish,
 sobre tilix, sobre gnome, de inicio&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/21.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/21.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;arroja un consumo de 468MiB de ram, algo muy aceptable. Mientras tanto a dos
 pantallas con firefox con dos instancias, unos emacs, unos tilix, thunderbird,
 qbittorrent, nautilus y moc, el consumo ronda el 1.5GiB&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/22.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/22.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;en fin, hasta aqui con la configuracion. Para terminar una foto del conjunto
 fisico entero&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/23.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/23.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;actualizacion&#34;&gt;Actualizacion&lt;/h2&gt;
 
@@ -957,25 +957,25 @@ nouveau (que es como viene por defecto), tras una nueva instalacion, ahora
 seleccionando unicamente &lt;code&gt;Gnome&lt;/code&gt; y &lt;code&gt;Utilidades estandar del sistema&lt;/code&gt;, &lt;strong&gt;quitando&lt;/strong&gt;
 &lt;code&gt;servidor de impresion&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/24.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/24.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;el sistema completo al inicio con gnome, tilix y fish esta en 217 MiB!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/25.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/25.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tras todo un dia de batalla (14 Hrs de uptime), cerrando de nuevo todo y corroborando con
 tilix, fish y htop, termina en ~353MiB! Gnome-4-Eve!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/debone/26.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/debone/26.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>la forma en que trabajo</title>
-      <link>http://nasciiboy.land/post/workspace/</link>
+      <link>https://nasciiboy.land/post/workspace/</link>
       <pubDate>Fri, 20 Jan 2017 22:16:06 -0600</pubDate>
       
-      <guid>http://nasciiboy.land/post/workspace/</guid>
+      <guid>https://nasciiboy.land/post/workspace/</guid>
       <description>
 
 &lt;p&gt;Me gusta leer sobre la configuracion de otras personas, ver videos reseñando
@@ -1132,10 +1132,10 @@ tecla &lt;code&gt;Super&lt;/code&gt;, bien, los siguientes atajos no son la exep
     
     <item>
       <title>Gnome Keys</title>
-      <link>http://nasciiboy.land/prog/gnome-keys/</link>
+      <link>https://nasciiboy.land/prog/gnome-keys/</link>
       <pubDate>Wed, 18 Jan 2017 20:57:15 -0600</pubDate>
       
-      <guid>http://nasciiboy.land/prog/gnome-keys/</guid>
+      <guid>https://nasciiboy.land/prog/gnome-keys/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../kp-01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;

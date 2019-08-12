@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Prog on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>http://nasciiboy.land/tags/prog/</link>
+    <link>https://nasciiboy.land/tags/prog/</link>
     <description>Recent content in Prog on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Fri, 23 Mar 2018 21:41:50 -0600</lastBuildDate>
     
-        <atom:link href="http://nasciiboy.land/tags/prog/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.land/tags/prog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CAT</title>
-      <link>http://nasciiboy.land/prog/cat/</link>
+      <link>https://nasciiboy.land/prog/cat/</link>
       <pubDate>Fri, 23 Mar 2018 21:41:50 -0600</pubDate>
       
-      <guid>http://nasciiboy.land/prog/cat/</guid>
+      <guid>https://nasciiboy.land/prog/cat/</guid>
       <description>&lt;p&gt;Hace tiempo, mucho tiempo, cuando iniciaba mis aventuras con C, tenia la urgente
 necesidad de ingresar un &amp;ldquo;grafico&amp;rdquo; dentro de un arreglo de caracteres, el asunto
 es que dicho grafico contenia por supuesto algunos caracteres &amp;ldquo;especiales&amp;rdquo; para
@@ -32,7 +32,7 @@ personaje de dudosas habilidades.&lt;/p&gt;
 &lt;p&gt;Asi pues, no recuerdo muy bien como, llegue a la siguiente solucion, que radica
 en &amp;ldquo;romper&amp;rdquo; las macros del preprocesador de C.&lt;/p&gt;
 
-&lt;p&gt;cortar y pegar en un fichero (digamos &lt;code&gt;CAT.c&lt;/code&gt;) o cliclar &lt;a href=&#34;http://nasciiboy.land/data/CAT.c&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;cortar y pegar en un fichero (digamos &lt;code&gt;CAT.c&lt;/code&gt;) o cliclar &lt;a href=&#34;https://nasciiboy.land/data/CAT.c&#34;&gt;aca&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
 #include &amp;lt;string.h&amp;gt;

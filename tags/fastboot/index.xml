@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fastboot on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>http://nasciiboy.land/tags/fastboot/</link>
+    <link>https://nasciiboy.land/tags/fastboot/</link>
     <description>Recent content in Fastboot on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 23 Nov 2017 16:26:40 -0600</lastBuildDate>
     
-        <atom:link href="http://nasciiboy.land/tags/fastboot/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.land/tags/fastboot/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HTC One M8 (flasheo)</title>
-      <link>http://nasciiboy.land/prog/m8/</link>
+      <link>https://nasciiboy.land/prog/m8/</link>
       <pubDate>Thu, 23 Nov 2017 16:26:40 -0600</pubDate>
       
-      <guid>http://nasciiboy.land/prog/m8/</guid>
+      <guid>https://nasciiboy.land/prog/m8/</guid>
       <description>
 
 &lt;p&gt;sucede que estas tranquilamente con tu dispositivo (un androide 4.4) que se
@@ -141,7 +141,7 @@ correo de &lt;em&gt;HTC-Unlockbootloader@htc.com&lt;/em&gt; con un adjunto &lt;s
 
 &lt;p&gt;se abrira en el movil la sugiente pantalla&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/step13.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/step13.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;movemos con VOLUMEN +/- hacia el Yes y confirmamos con POWER.&lt;/p&gt;
 
@@ -152,7 +152,7 @@ reentramos en el bootloader ahora desploqueado&lt;/p&gt;
 adb reboot bootloader
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://nasciiboy.land/img/bootloader_screen.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/bootloader_screen.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;en este punto ya tenemos el mobil listo para flashear cualquier otro sistema. Si
 desides arrepentirte puedes ingresar&lt;/p&gt;
