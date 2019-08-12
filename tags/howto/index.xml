@@ -68,8 +68,8 @@ tambien por el sobre costo de utilizar un contenedor con sus propias
 dependencias ajenas al sistema y agregar PATHs de ejecucion adicionales&lt;/p&gt;
 
 &lt;p&gt;Ante esta dudosa opccion lo mas razonable y recomendable (ya sea solo por el
-rendieminto) es recurrir a una milenaria practica en todos los sistemas libres
-conocidos: ver si se puede &lt;strong&gt;Compilar&lt;/strong&gt; desde el codigo fuente&lt;/p&gt;
+rendimiento) es recurrir a una milenaria practica en todos los sistemas libres
+conocidos: ver si se puede &lt;strong&gt;compilar&lt;/strong&gt; desde el codigo fuente&lt;/p&gt;
 
 &lt;p&gt;(nota: recomiendo no aplicar mientras se lee, primero ver las &amp;ldquo;alternativas&amp;rdquo; y luego
 aplicar a discrecion)&lt;/p&gt;
@@ -149,7 +149,7 @@ ha dejado la compilacion (recordar estamos en &lt;code&gt;citra/build/bin&lt;/co
 &lt;p&gt;hala, esto ya tiene cuadros de dialogo y menues!&lt;/p&gt;
 
 &lt;p&gt;Hasta aqui se da por satisfactoria la compilacion. Podemos ir a
-&lt;code&gt;citra/build/bin&lt;/code&gt; cada vez que necesitemos jugar o dejarnos de historias e
+&lt;code&gt;citra/build/bin&lt;/code&gt; cada vez que necesitemos jugar, o, dejarnos de historias e
 instalar&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;# como administrador y desde-algun-lugar/citra/build
@@ -229,7 +229,7 @@ mando!&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;yo utilizo en logitech f710 el cual no ha requerido ninguna configuracion para
 que funcionara en ninguna distro, se conecta y funciona. El mando tiene un
-interructor (D o X) ponerlo en D&lt;/p&gt;
+interructor (D o X) ponerlo en X&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/f710.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
@@ -267,7 +267,7 @@ cuestionables), estos son los pasos y enlaces de internete que han servido&lt;/p
 &lt;p&gt;(UNO) Conseguir &lt;strong&gt;Mii Maker&lt;/strong&gt; (&lt;a href=&#34;https://nasciiboy.land/data/citra/Mii-Maker.app&#34;&gt;app&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;(DOS) recomendablemente colocar Mii Maker en la misma carpeta que el resto de
-roms. Dice una leyenda que arrar y soltar este binario en la interfaz de
+roms. Dice una leyenda que arrastrar y soltar este binario en la interfaz de
 citra-qt tambien funciona, pero no es algo que me alla atravido a comprovar&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
@@ -311,7 +311,7 @@ unico proposito de que funcionase &lt;strong&gt;Mii Maker&lt;/strong&gt;. &lt;a 
 aca&lt;/a&gt; el resultado. Si decidis usar este&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;cd tmp
-wget /data/min-dot-citra.zip
+wget https://nasciiboy.land/data/citra/min-dot-citra.zip
 unzip min-dot-citra.zip
 mkdir -p ~/.local/share/citra-emu/nand
 mv min-dot-citra/nand/00000000000000000000000000000000 ~/.local/share/citra-emu/nand/
@@ -372,7 +372,7 @@ ajustando a mano se puede simular el efecto.&lt;/p&gt;
 &lt;h3 id=&#34;algunos-atajos&#34;&gt;Algunos atajos&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;f2&lt;/code&gt; cargar amiibo (una &lt;a href=&#34;https://nasciiboy.land/data/citra/AmiiboBinDump-v2.zip&#34;&gt;captura&lt;/a&gt; de internet&amp;hellip; no se como/con-que/cuando se utuliza)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f2&lt;/code&gt; cargar amiibo (una &lt;a href=&#34;https://nasciiboy.land/data/citra/AmiiboBinDump-v2.zip&#34;&gt;captura&lt;/a&gt; de internet&amp;hellip; no-se como/con-que/cuando se utuliza)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&amp;hellip;.&lt;/p&gt;
