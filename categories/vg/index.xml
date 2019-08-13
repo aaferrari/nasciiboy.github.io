@@ -105,7 +105,7 @@ mkdir build &amp;amp;&amp;amp; cd build
 #
 #
 # La opcion elegida para esta compilacion es la optimizada (Release)
-# sin simbolos de debugueo y con el decodificador HLE AAC activido
+# sin simbolos de debugueo y con el decodificador HLE AAC activado
 # no se si esto sea mejor... pero parese mas molon!
 #
 cmake .. -DCMAKE_BUILD_TYPE=Release -DENABLE_FFMPEG=ON
@@ -133,7 +133,7 @@ ha dejado la compilacion (recordar estamos en &lt;code&gt;citra/build/bin&lt;/co
 18M	tests
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;si intentamos lanzar sin una rom, nos lanza un bonico mensaje y la ejecution finaliza&lt;/p&gt;
+&lt;p&gt;si intentamos lanzar sin una rom, nos regresa un bonico mensaje y la ejecusion finaliza&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;gt; ./citra
 [   0.008365] Frontend &amp;lt;Critical&amp;gt; citra/citra.cpp:main:317: Failed to load ROM: No ROM specified
@@ -227,7 +227,7 @@ desde el sistema&lt;/p&gt;
 &lt;p&gt;pero si en verdad quereis jugar con dignidad, &lt;em&gt;conseguir un puñetero
 mando!&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;yo utilizo en logitech f710 el cual no ha requerido ninguna configuracion para
+&lt;p&gt;yo utilizo el logitech f710 el cual no ha requerido ninguna configuracion para
 que funcionara en ninguna distro, se conecta y funciona. El mando tiene un
 interructor (D o X) ponerlo en X&lt;/p&gt;
 
@@ -291,7 +291,7 @@ nuestra echando mano del navegador de ficheros&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-05.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;En GNU la carpeta con &amp;ldquo;los datos&amp;rdquo; de citra se encuentra en
-&lt;code&gt;~/.local/share/citra-emu/&lt;/code&gt; estos son las carpetas que contiene&lt;/p&gt;
+&lt;code&gt;~/.local/share/citra-emu/&lt;/code&gt; estas son las carpetas que contiene&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;gt; ls ~/.local/share/citra-emu/
 cheats
@@ -321,8 +321,8 @@ mv min-dot-citra/nand/00000000000000000000000000000000 ~/.local/share/citra-emu/
 
 &lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-06.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;parece ser que el editor del 3DS es mas &amp;ldquo;redondo&amp;rdquo; que el web (un poco mas
-preciso). El resultado en el mii maker fue este&lt;/p&gt;
+&lt;p&gt;parece ser que el editor del 3DS es mas &amp;ldquo;redondo&amp;rdquo; que el web (que gana un poco
+mas de precision). El resultado en mii maker fue este&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
