@@ -2653,7 +2653,7 @@ apt -y install love nestopia fceux mupen64plus dosbox stella
 apt -y install tumiki-fighters garden-of-coloured-lights supertuxkart
 
 ## solarus
-apt -y install build-essential cmake libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libvorbis-dev libmodplug-dev qtbase5-dev qttools5-dev qttools5-dev-tools libglm-dev
+apt -y install build-essential cmake pkg-config libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libvorbis-dev libmodplug-dev qtbase5-dev qttools5-dev qttools5-dev-tools libglm-dev
 git clone https://gitlab.com/solarus-games/solarus.git
 cd solarus
 mkdir build
@@ -12987,46 +12987,47 @@ TGPL o GPL(?))&lt;/p&gt;
 
 &lt;h2 id=&#34;el-libro&#34;&gt;el libro&lt;/h2&gt;
 
-&lt;p&gt;los usa-americanos tinen sus medidas extravagantes, siguiendo su ejemplo, yo
+&lt;p&gt;Los usa-americanos tienen sus medidas extravagantes. Siguiendo su ejemplo, yo
 mido la extencion de un documento en las lineas (de 80 columnas indentadas) que
 abarca, por ejemplo, 7000-10000 lineas suelen ser la extencion regular de una
 novela, debajo de esta cantidad es un trabajo corto, superior de esta es extenso
 y superior a las 20000 lineas ya es &lt;em&gt;muy extenso&lt;/em&gt;, aunque &lt;em&gt;Dune&lt;/em&gt;
 utiliza (y muy bien) la friolera y descomunal cantidad de 34150 lineas.&lt;/p&gt;
 
-&lt;p&gt;Pues bien TGPL son 21426 lineas, repartidas a partes iguales entre explicaciones
-y codigo fuente, si quieres la extencion en paginas cerca de 400, aunque yo no
+&lt;p&gt;Pues bien, TGPL son 21426 lineas, repartidas a partes iguales entre explicaciones
+y codigo fuente. Si quieres la extencion en paginas, son cerca de 400, aunque no
 confiaria en esta medida&lt;/p&gt;
 
 &lt;p&gt;La mayor parte del libro se utiliza para mostrar la forma de hacer las cosas en
-Go, sintaxis, ideologia y paquetes. Haciendo un simil con C seria algo asi como
-que te enseñåran a hacer muchas herramientas del sistema, mas una guia de gcc,
-make y alguna cosa mas.&lt;/p&gt;
+Go: sintaxis, ideologia y paquetes. Haciendo un simil con C seria algo asi como
+que te enseñaran a hacer muchas herramientas del sistema, mas una guia de &lt;code&gt;gcc&lt;/code&gt;,
+&lt;code&gt;make&lt;/code&gt; y alguna cosa mas.&lt;/p&gt;
 
-&lt;p&gt;Se asume que ya conoces al menos un lenguaje de programacion, particularmente C o
-alguno de su descendencia, y aunque no es necesario, que manejes programacion
-orientada a objetos y/o concurrencia es deseable, antes de iniciar esta aventura&lt;/p&gt;
+&lt;p&gt;Se asume que ya conoces al menos un lenguaje de programacion, particularmente C
+o alguno de su descendencia y aunque no es necesario que manejes programacion
+orientada a objetos y/o concurrencia es deseable contar con tales saberes antes
+de iniciar la aventura&lt;/p&gt;
 
-&lt;p&gt;No es un manual para no iniciados, es decir, para quien no tenga ya asumido en
-su ser lo que es programar, resultara hostil, diria que es apto como tercer o
-cuarto libro de programacion&lt;/p&gt;
+&lt;p&gt;Repitiendo, no es un manual para no iniciados, es decir, para quien no tenga ya
+asumido en su ser lo que es programar, resultara hostil. Diria que es apto como
+tercer o cuarto libro de programacion&lt;/p&gt;
 
 &lt;p&gt;Se enseña a construir aplicaciones no triviales, utilzando la rica libreria
 estandar del lenguaje, aunque la mayoria encaminadas al tema web, ninguna es
 despreciable, incluso se propone la construccion de un parser de espreciones-S y
-un pequeño interprete para un lenguaje de programacion, aunque no se llega a
-profundizar veraderamente en ningun tema, se da lo suficiente como para
-enfrentar cualquier propuesta sin temor (jo, lo dice quien no ha hecho mas de 4
-ejericios, en serio, eso es lo mas denso, ni en la vastedad de internet he
-localizado a un intrepido programador que alla concluido tal mision)&lt;/p&gt;
+un pequeño interprete para un lenguaje de programacion. No se llega a
+profundizar veraderamente en ningun tema, pero se da lo suficiente como para
+enfrentar lo desconocido sin temor (jo, lo dice quien no ha hecho mas de 4
+ejericios)&lt;/p&gt;
 
-&lt;p&gt;Lo mismo se aplica para las secciones que explican la herramienta principal del
-lenguaje, que es compilador, perfilador (primera ves que utilizo algo asi),
-administador de paquetes, &amp;ldquo;visor&amp;rdquo; de documentacion y muchas cosas mas. Nos dicen
-de que va el tema y luego saltan al sugiente punto&amp;hellip; es este caso aunque
-suficiente para iniciar, si hecho en falta mayor detalle, pues varios comandos
-requieren un orden y sintaxis nada evidentes, siendo mas bien conjuros o trucos
-misteriosos&lt;/p&gt;
+&lt;p&gt;Igualmente poco se indaga sobre la herramienta principal del lenguaje (&lt;code&gt;go&lt;/code&gt;) que
+es a la vez un compilador, perfilador (primera ves que utilizo algo asi),
+administador de paquetes, &amp;ldquo;visor&amp;rdquo; de documentacion y muchas cosas mas. Un par de
+comandos para iniciar a hacer cosas y un par de comandos esotericos. Vamos,
+tampoco es para abrumar, si es bueno y sencillo, es mas del doble de bueno&amp;hellip; o
+eso diria. Siendo suficiente para iniciar, hecho en falta mayor detalle en
+varios comandos que requieren un orden y sintaxis nada evidentes, parecidos mas a
+conjuros misteriosos&lt;/p&gt;
 
 &lt;p&gt;en resumen, recomendo su lectura a cualquiera, en particular si se biene de C o
 C++ y se aspira a lenguajes mas desapegados de la maquina, sin topar de lleno en
@@ -13039,16 +13040,17 @@ abstracciones incomprensibles&lt;/p&gt;
 &lt;p&gt;bueno, desde la perspectiva de un aficionado a C, que ha pasado por C++, bash y
 un ligero viaje por lisp, el lenguaje me gusta mucho, aunque no puedo perdonarle
 que inponga un estilo arbitrario de como han de indentarse y separarse las
-sintrucciones, es decir el formateo, biniendo de C tener llaves para
-instrucciones sencillas (una instruccion) me parece atroz, por no decir forzar la
-posicion de apertura y cierre de las demas llaves, sobre todo en intstrucciones
-&lt;code&gt;else&lt;/code&gt;, no lo soporto esteticamente!, hooo y utilizar tabs para indentar, deben
-arder en la hogera, y como te obligan a esto, simple si no cumples su mierda
-formato no compila&amp;hellip;&lt;/p&gt;
+instrucciones, es decir el formateo. Viniendo de C tener llaves para
+instrucciones sencillas (una instruccion) me parece atroz, por no decir forzar
+la posicion de apertura y cierre de las demas llaves, sobre todo en
+instrucciones &lt;code&gt;else&lt;/code&gt;, no lo soporto esteticamente! Ya por utilizar tabs
+para indentar, deben arder en la hogera&lt;/p&gt;
+
+&lt;p&gt;Como te obligan a seguir su estilo? si no cumples con el formato no compila&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;dejando atras este no precisamente poco importante aspecto, tenemos el
-inmobiliacio habitual de los descendientes de C, ifs, elses, else ifs,
-funciones, arreglos, switches, return, gotos y bucles for, caresiendo de bucles
+inmobiliario habitual de los descendientes de C, ifs, elses, else ifs,
+funciones, arreglos, switches, return, gotos y bucles for, careciendo de bucles
 while y do while, pero sumando slices, que son una especie de arreglo con
 crecimiento dinamico automagico (el lenguaje tien recolector de basura), mapas
 hash, una funcion llamada &lt;code&gt;defer&lt;/code&gt;, &lt;code&gt;gorutinas&lt;/code&gt; para programacion concurrente,
@@ -13056,38 +13058,46 @@ hash, una funcion llamada &lt;code&gt;defer&lt;/code&gt;, &lt;code&gt;gorutinas&
 ciclo, pero sobre todo y quiza lo mas interesante del lenguaje su orientacion a
 objetos no evidente&lt;/p&gt;
 
-&lt;p&gt;claro, el lenguaje tiene una forma &lt;q&gt;peculiar&lt;/q&gt; de organizar sus parametros
-(al revez) que no pocas veces me ha causado transtornos cuando regreso a tocar
-C, pero lo que mas me gusta es que no intenta ser innecesariamente complejo en
-ningun aspecto, es mas, los programas son casi imperativos, la orientacion a
-objetos aparece por si sola, aunque lo &amp;ldquo;metodos&amp;rdquo; requieren un poquito mas&lt;/p&gt;
+&lt;p&gt;el lenguaje tiene una forma &lt;q&gt;peculiar&lt;/q&gt; de organizar sus parametros (al
+revez de C tipo-nombre, aqui es nombre(s)-tipo) que no pocas veces me ha causado
+transtornos cuando regreso a tocar C, p-e-r-o ninguna queja, tambien se ve bien.&lt;/p&gt;
 
-&lt;p&gt;por defecto utiliza codificacion unicode utf-8, incorporando una utilidad
-llamada &lt;code&gt;range&lt;/code&gt; que nos entrega los caracteres unicode sin tener que recurrir a
-esotericas librerias, a si como convecion automagica de entre &lt;code&gt;runas&lt;/code&gt; unicode 32
-a cadenas de caracteres utf-8, si necesitamos mas ya toca recurrir a la libreria
-estandar&lt;/p&gt;
+&lt;p&gt;quiza lo que mas atractivo de Go es tratar de no ser ser innecesariamente
+complejo en ningun aspecto, al grado de que entrar a una libreria sin conocer el
+lenguaje da la imprecion de estar ante un lenguaje imperativo.&lt;/p&gt;
 
-&lt;p&gt;por cierto, aunque el nucleo del lenguaje es compacto (bravo) la libreria
+&lt;p&gt;Fascinante es que la orientacion a objetos surja por si sola. MMMM, no esta
+permitida la sobre carga de operadores, la convercion automatica de tipos ni la
+extencion de una clase fuera de su fichero de definicion. A cambio nos dan
+composicion e interfases&lt;/p&gt;
+
+&lt;p&gt;los ficheros de codigo fuente por defecto utilizan codificacion unicode utf-8,
+que en conjunto con una funcion nativa llamada &lt;code&gt;range&lt;/code&gt; permiten iterar sobre
+cadenas unicode sin tener que recurrir a esotericas librerias. Tambien se
+permite convecion automagica de entre &lt;code&gt;runas&lt;/code&gt; unicode de 32 bits a cadenas de
+caracteres utf-8&lt;/p&gt;
+
+&lt;p&gt;por cierto, aunque el nucleo del lenguaje es compacto la libreria
 estandar es muy rica, te da un servidor web, analisis en cadenas, codificadores,
 compresores y otro monton de cosas&lt;/p&gt;
 
 &lt;p&gt;es sencillo crear programas relativamente complejos con estas facilidades,
 aunque encuentro incomoda la herramienta de documentacion para linea de comandos&lt;/p&gt;
 
-&lt;p&gt;no te voy a mentir, la libreria estandar es amplia, pero carece de librerias
-nativas para graficos y esto es un punto flaco, tomando en cuenta que si te
-apegas a la libreria estandar tus programas son multiplataforma y que el
-costructor de programas es por naturaleza multiplataforma. Lamentablemente, veo
-poco probable que algun dia llegue a tener librerias nativas para estos
-menesteres&amp;hellip; a menos que el gestor de paquetes pueda meter sus manos en el
-gestor de paquetes del sistema en si (apt, dnf, yum, etc)&lt;/p&gt;
+&lt;p&gt;pese a lo amplio de la libreria estandar, carece de librerias nativas para
+graficos y esto es un punto flaco, considerando que si te apegas a la libreria
+estandar tus programas son multiplataforma y que el costructor de programas es
+por naturaleza multiplataforma es triste no contar con herramientas oficiales
+para crear GUIs o al menos TUIs. Lamentablemente, veo poco probable que algun dia
+llegue a tener librerias nativas para estos menesteres&amp;hellip; a menos que el gestor
+de paquetes pueda meter sus manos en el gestor de paquetes del sistema en si
+(apt, dnf, yum, etc)&lt;/p&gt;
 
-&lt;p&gt;sobre esto, me encanta como administra las &amp;ldquo;librerias&amp;rdquo;/paquetes externos, nada
-de buscar por internet, ni compilar a mano, ni naaah, el solito busca las
-dependencias y las enlaza. Nunca perdonare al comite de los estandares de C y
-C++, por no copiar este aspecto y evolucionarlos de forma razonable, si hicieran
-su labor no tendria que aparecen Go&lt;/p&gt;
+&lt;p&gt;me encanta como administra las &amp;ldquo;librerias&amp;rdquo;/paquetes externos, nada de buscar por
+internet, ni compilar a mano, ni naaah, el solito busca las dependencias y las
+enlaza. Nunca perdonare al comite de los estandares de C y C++, por no copiar
+este aspecto y evolucionarlos de forma razonable, si hicieran su labor no
+tendria que aparecen Go&lt;/p&gt;
 
 &lt;p&gt;respecto a la concurrencia, no tenia ninguna experiencia previa, era un tema
 mistico, magico y misterioso y sin embargo he podido implementar un tipo
@@ -13108,11 +13118,11 @@ los tipos que escoge y en consonancia hacer conversion automatica de tipos, digo
 con tener conversion autamatica en llamadas a fuciones seria un gran alivio,
 pero no, ademas ni ellos resepetan su estricto y seguro tipado (ironia), pues
 aveces hacen convesiones automaticas para ciertas tareas, a sabiendas de lo poco
-practico de tal tipado, quedando mas que evinciado en su elecion de regresar
-&lt;code&gt;int&lt;/code&gt;s aun en valores que deverian ser unsigned&lt;/p&gt;
+practico de tal desicion. La evidencia de que comprenden el problema se muestra
+cuando por lo general se regresar &lt;code&gt;int&lt;/code&gt;s aun en valores que deverian ser unsigned&lt;/p&gt;
 
-&lt;p&gt;no le haria mal separar la herramienta en varias utilidades, en particular para
-la documentacion, pruebas y perfilado&lt;/p&gt;
+&lt;p&gt;no le haria mal al lenguaje separar la herramienta &lt;code&gt;go&lt;/code&gt; en varias utilidades, en
+particular para la documentacion, pruebas y perfilado&lt;/p&gt;
 
 &lt;p&gt;tener un solo paquete por directorio es bueno, pero en paquetes conseptualmente
 extensos puede ser dificil averiguar la procedencia de una funcion, no es grave
@@ -13121,9 +13131,9 @@ coherente, pero aun asi se vuelve dificil seguir la logica de un programa extens
 
 &lt;h3 id=&#34;conclucion&#34;&gt;conclucion&lt;/h3&gt;
 
-&lt;p&gt;Me gusta y lo recomiendo como lenguaje secundario, si bien es cierto que tiene
-un fuerte enfoque para aplicaciones web, es un lenguaje de proposito general,
-con un rendimiento aceptable&lt;/p&gt;
+&lt;p&gt;Me gusta y lo recomiendo como lenguaje secundario. Si bien es cierto que tiene
+un fuerte enfoque para aplicaciones web es utilizable como lenguaje de
+proposito general, entregando un rendimiento aceptable&lt;/p&gt;
 
 &lt;p&gt;segun pruebas mias, su rendimiento esta entre 3 a 4 veces mas lento que su
 homologo en C, es decir, si un pragrama demora 1, en Go, demora 4 o 5, bueno no?
@@ -13131,9 +13141,9 @@ si, eheemee, aun tengo conflictos psicologicos al saber que va 3 o 4 veces mas
 lento que C, pero bueno al menos no es 100 veces mas lento como el
 &lt;q&gt;fabulosisimo&lt;/q&gt; python o JS&lt;/p&gt;
 
-&lt;p&gt;momento, tengo que sacarlo de mi sistema, no programes con python, ni JS, no lo
-hagas, por fabor, no son lenguajes poro programar por mas (falsamente) simples o
-elgentes que sean, los lenguajes interpretados son para extender programas o
+&lt;p&gt;alto, tengo que sacarlo de mi sistema, no programes con python, ni JS, no lo
+hagas, por fabor, no son lenguajes paro programar por mas (falsamente) simples o
+elegantes que sean. Los lenguajes interpretados son para extender programas o
 para servir como prompts, no para crear algo de cero. Sirve de algo tardar unas
 horas menos programando en esos lenguajes cuando pasaras la eternidad
 ejecutandolos lentamente? hay lo dejo&lt;/p&gt;
@@ -13146,8 +13156,8 @@ considerar al lenguaje una &lt;q&gt;curiosidad&lt;/q&gt; intelectual&lt;/p&gt;
 &lt;h2 id=&#34;porg&#34;&gt;porg&lt;/h2&gt;
 
 &lt;p&gt;durante el ultimo mes, he estado traduciendo o mas bien dando sentido a la
-traduccion de las maquinas sobre el libro en cuestion, pueden optener el codigo
-con&lt;/p&gt;
+traduccion de las maquinas sobre el libro en cuestion. Pueden optener una copia
+del codigo y resultados con&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/nasciiboy/TGPL.git
 cd TGPL
@@ -13156,36 +13166,32 @@ cd TGPL
 &lt;p&gt;abren los ficheros &lt;code&gt;html&lt;/code&gt; en su navegador de confianza (pista: el que tiene un
 sufijo &lt;code&gt;es&lt;/code&gt;, es el que esta en español&lt;/p&gt;
 
+&lt;p&gt;tambien hay verciones web de una sola pagina del material&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nasciiboy.land/book4all/tgpl/The-Go-Programming-Language_es.html&#34;&gt;https://nasciiboy.land/book4all/tgpl/The-Go-Programming-Language_es.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nasciiboy.land/book4all/tgpl/The-Go-Programming-Language.html&#34;&gt;https://nasciiboy.land/book4all/tgpl/The-Go-Programming-Language.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;para crear el material desde el codigo&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;go get -u https://github.com/nasciiboy/morg
 morg toHtml The-Go-Programming-Language.morg
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;o&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;morg toHtml The-Go-Programming-Language_es.morg
+morg toHtml The-Go-Programming-Language_es.morg
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;para ver el fichero directamente en su terminal, utilice &lt;code&gt;morg tui fichero.morg&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;si quiere colorizar el codigo en la exportacion a html, necesita tener instalado
-&lt;code&gt;pygmentize&lt;/code&gt; (python pygments), y agregar &lt;code&gt;pygments&lt;/code&gt; a &lt;code&gt;options&lt;/code&gt; (dentro del
-documento), asi:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;..options &amp;gt; pygments
-&lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;en fin, una labor estandar de traduccion a mi estilo sin acentos.&lt;/p&gt;
 
 &lt;p&gt;apenas es lo suficientemente entendible, y apenas dare mi primer lectura seria
-al libro y de paso corrijo algunas cosas.&lt;/p&gt;
+al libro y de paso correjir algunas cosas.&lt;/p&gt;
 
 &lt;p&gt;tuve problemas al localizar muchas cosas, pero si quieres colaborar a mejorar un
-manual que nunca iba a aparecer en españøl, tienes mi correo y clave gpg abajo&lt;/p&gt;
+manual que nunca iba a aparecer en españøl (o si) tienes mi correo y clave gpg
+abajo&lt;/p&gt;
 
-&lt;p&gt;happy hacking, en la proxima entrega nasciiboy inc. por cierto si retiran este
-sitio de internete, dadle asilo&lt;/p&gt;
+&lt;p&gt;happy hacking&lt;/p&gt;
 </description>
     </item>
     

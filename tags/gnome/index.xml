@@ -265,7 +265,7 @@ apt -y install love nestopia fceux mupen64plus dosbox stella
 apt -y install tumiki-fighters garden-of-coloured-lights supertuxkart
 
 ## solarus
-apt -y install build-essential cmake libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libvorbis-dev libmodplug-dev qtbase5-dev qttools5-dev qttools5-dev-tools libglm-dev
+apt -y install build-essential cmake pkg-config libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libvorbis-dev libmodplug-dev qtbase5-dev qttools5-dev qttools5-dev-tools libglm-dev
 git clone https://gitlab.com/solarus-games/solarus.git
 cd solarus
 mkdir build
