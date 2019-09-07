@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emu on ⋲ᴹ∧cₛ ℜø∁κ§</title>
+    <link>https://nasciiboy.land/tags/emu/</link>
+    <description>Recent content in Emu on ⋲ᴹ∧cₛ ℜø∁κ§</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL v3.0</copyright>
+    <lastBuildDate>Sat, 03 Aug 2019 11:32:06 -0500</lastBuildDate>
+    
+        <atom:link href="https://nasciiboy.land/tags/emu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Citra</title>
+      <link>https://nasciiboy.land/vg/citra/</link>
+      <pubDate>Sat, 03 Aug 2019 11:32:06 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/vg/citra/</guid>
+      <description>
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Tras probar de primera mano la experiencia de jugar en una 3DS y por ello sufrir
+una epifania de lo que es verdaderamente importante en esta vida&amp;hellip; jugar
+maravillas tecno-informaticas hechas por una compañia que respeta, conoce a su
+audiencia y le vende lo que pide, no pude mas que despreciar todo lo que
+desvia al hombre del buen camino (trabajo duro, lazos familiares, pareja o estudio) e
+iniciar la busqueda de una forma justicialista para llevar hasta el hogar de la
+gente pobre y sin recursos tan grata experiencia, no solo ya por adquirir una
+porcion de necesaria cultura general, tambien para llenar de felicidad y alegria
+las grices vidas de los agotados obreros&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/New3DSXL.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Entre sus &lt;a href=&#34;https://es.wikipedia.org/wiki/Nintendo_3DS#New_Nintendo_3DS_y_New_Nintendo_3DS_XL&#34;&gt;caracteristicas&lt;/a&gt;
+la consola Nintendo 3DS (&lt;em&gt;New 3DS XL&lt;/em&gt; en su ultima iteracion) cuenta con wifi,
+nfs, sensor de movimiento, un led indicador (RGB), ranura de almacenamiento para
+targetas SD, dos camaras en la parte posterior para hacer fotografias estereo,
+una camara en la parte delantera y microfono&lt;/p&gt;
+
+&lt;p&gt;Posee un par de pantallas. La superior (mas apaisada) suele mostrar el
+videojuego con un magnifico bien logrado efecto 3D (esta caracteristica es
+opccional y regulable por el usuario). Por su parte la pantalla inferior se
+utiliza para desplegar mapas, inventarios y en general opciones del juego. La
+caracteristica principal de esta segunda pantalla es ser tactil&lt;/p&gt;
+
+&lt;p&gt;Como mandos (tradicionales) tiene del lado derecho una cruceta junto a un
+joystick y del izquierdo botones &lt;code&gt;Select&lt;/code&gt;, &lt;code&gt;Start&lt;/code&gt;, &lt;code&gt;A&lt;/code&gt;, &lt;code&gt;B&lt;/code&gt;, &lt;code&gt;Y&lt;/code&gt;, &lt;code&gt;X&lt;/code&gt; y un
+joystick adicional llamado C-Stick. En la parte posterior botones &lt;code&gt;L&lt;/code&gt;, &lt;code&gt;R&lt;/code&gt;,
+&lt;code&gt;ZL&lt;/code&gt; y &lt;code&gt;ZR&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dichas peculiaridades parecen dificiles de llevar con comodidad a una
+computadora de proposito general. Mas la comunidad entusiasta y siempre generosa
+de gameeeeeeers &lt;em&gt;y programadores&lt;/em&gt; pone a nuestra disposicion un software de
+emulacion con nombre clave &lt;strong&gt;Citra&lt;/strong&gt;. (Debajo su logo)&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra.svg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Dicho software es GPL v2, multiplataforma y se encuentra tanto para plataformas windows,
+mac y GNU&lt;/p&gt;
+
+&lt;p&gt;Si bien es cierto que caracteristicas como el efecto 3D, la
+resolucion/configuracion de camaras, el led RGB, la conexion con los servicios
+de nintendo e internet, o el sensor de movimiento son caracteristicas
+problematicas de emular, algunas tienen sus apaños chapuceros mas o menos
+salvables/comodos deacuerdo al uso que el videojuego haga de ellas. Bien podria
+terminar en cuelgue o chasheo y/o no pasasar de ser una asumible incomodidad&lt;/p&gt;
+
+&lt;p&gt;En cuanto a la disponivilidad de este software en las amadas distros cuando el
+paquete no se encuentra en los repositorios (como en el caso de debian) nos
+ofrecen un paquete &amp;ldquo;universal&amp;rdquo; flatpack&amp;hellip; el problema? ademas de instalar un
+daemon (flatpack) que este corriendo en nuestro sistema chupando ciclos de
+procesador, ya de primeras nos hace descargar como dependencia ~550MB del
+entorno KDE + &amp;ldquo;otras cosas&amp;rdquo; + citra. Esto no solo es cuestionable por el tamaño
+que ocupara en el sistema un &amp;ldquo;simple&amp;rdquo; emulador, tambien por el sobre costo de
+utilizar un contenedor con sus propias dependencias ajenas al sistema y agregar
+PATHs de ejecucion adicionales&lt;/p&gt;
+
+&lt;p&gt;Ante esta dudosa opccion lo mas razonable y recomendable (ya sea solo por el
+rendimiento) es recurrir a una milenaria practica en todos los sistemas libres
+conocidos: ver si se puede &lt;strong&gt;compilar&lt;/strong&gt; desde el codigo fuente&lt;/p&gt;
+
+&lt;p&gt;(nota: recomiendo no aplicar mientras se lee, primero ver las &amp;ldquo;alternativas&amp;rdquo; y luego
+aplicar a discrecion)&lt;/p&gt;
+
+&lt;h2 id=&#34;compilar-en-debian-10-buster&#34;&gt;Compilar en Debian 10 (Buster)&lt;/h2&gt;
+
+&lt;p&gt;(La siguiente informacion fue extraida de la &lt;a href=&#34;https://github.com/citra-emu/citra/wiki/Building-For-Linux&#34;&gt;wiki de citra&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Primero obtener las librerias de compilacion necesarias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt install libsdl2-dev qtbase5-dev libqt5opengl5-dev qtmultimedia5-dev libfdk-aac-dev build-essential clang libc++-dev cmake
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mientras el sistema instala las dependencias, debemos (de preferencia) como
+usuario no administrador clonar el codigo fuente (~115MB)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone --recursive https://github.com/citra-emu/citra
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Una vez cumplidos ambos requerimentos pasamos a la compilacion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Ingresamos al codigo fuente
+cd citra
+
+# Un paso conocido cuando se compila con cmake
+mkdir build &amp;amp;&amp;amp; cd build
+
+# En la wiki se ofrecen varios modos de configurar la compilacion
+# modo Lo-Ultimo             # &amp;quot;cmake ..&amp;quot;
+# modo Release (optimizado)  # &amp;quot;cmake .. -DCMAKE_BUILD_TYPE=Release&amp;quot;
+# y con opciones o no de simbolos de debugueo (lento)
+#                            # &amp;quot;cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo&amp;quot;
+#
+#
+# La opcion elegida para esta compilacion es la optimizada (Release)
+# sin simbolos de debugueo y con el decodificador HLE AAC activado
+# no se si esto sea mejor... pero parese mas molon!
+#
+cmake .. -DCMAKE_BUILD_TYPE=Release -DENABLE_FFMPEG=ON
+
+# LA COMPILACION
+make
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tras una (muuu lenta) compilacion exitosa, podemos ejecutar el emulador sin
+necesidad de instalarlo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# recomendablemente no lo hagais
+# seguir leyendo y aplicar configuraciones previas
+cd bin
+./citra alguna-rom.3ds
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;hellip; &amp;hellip; &amp;hellip; pero &amp;hellip; &amp;hellip; &amp;hellip; esta manera espartana no nos informa cual es la
+disposicion del teclado para el juego (ademas de que con puro teclado dificil a de
+ser jugar), tampoco nos brinda opcion de utilizar un mando ni ofrece otras
+varias configuraciones basicas. Por ello veamos que binarios (y sus tamaños)
+quedaron tras compilar (recordar estamos en &lt;code&gt;citra/build/bin&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; du -h *
+17M	citra
+19M	citra-qt
+17M	citra-room
+18M	tests
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;si intentamos lanzar sin una rom, nos regresa un bonico mensaje y la ejecusion finaliza&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ./citra
+[   0.008365] Frontend &amp;lt;Critical&amp;gt; citra/citra.cpp:main:317: Failed to load ROM: No ROM specified
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;asi que&amp;hellip; intentemos con&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ./citra-qt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-00.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;hala, esto ya tiene cuadros de dialogo y menues!&lt;/p&gt;
+
+&lt;p&gt;Hasta aqui se da por satisfactoria la compilacion. Podemos ir a
+&lt;code&gt;citra/build/bin&lt;/code&gt; cada vez que necesitemos jugar, o, dejarnos de historias e
+instalar&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# como administrador y desde-algun-lugar/citra/build
+make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;roms&#34;&gt;ROMS ???&lt;/h2&gt;
+
+&lt;p&gt;se pueden adquirir de distintas maneras. Desde citra recomiendan hacer una
+&amp;ldquo;copia de seguridad&amp;rdquo; &amp;hellip; s-e-g-u-r-o &amp;hellip; utilizando la opcion de busqueda en
+qBittorrent aparece una particularmente correcta con el poco descriptivo titulo:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Collection of 250 decrypted 3DS ROMs for Citra Emulator&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;magnet:?xt=urn:btih:3c1d52279c6dcab8b61aa58b6c2574a0be2933e0&amp;amp;dn=Collection%20of%20250%20decrypted%203DS%20ROMs%20for%20Citra%20Emulator&amp;amp;tr=udp%3a%2f%2fopen.demonii.com%3a1337&amp;amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&amp;amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&amp;amp;tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&amp;amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Creo que tiene lo mas destacado. Con esa cantidad y calidad de juegos se tiene
+suficiente para unos cuantos añøs. Copiar y pegar&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Importante&lt;/strong&gt; aun dentro de este torrente dedicado, aclarar que no todos los
+titulos incluidos son compatibles con citra (en segun que vercion o en ninguna
+en general):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lista de compatibilidad ==&amp;gt; &lt;a href=&#34;https://citra-emu.org/game/&#34;&gt;https://citra-emu.org/game/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Por ejemplo, &lt;strong&gt;Donkey Kong Country Returns 3D&lt;/strong&gt; definitivamente no
+arranca. &lt;strong&gt;Luigi&amp;rsquo;s Mansion: Dark Moon&lt;/strong&gt; va tan lento y mal que dificilmente se
+llegara a algun nivel del juego. &lt;strong&gt;Smash Bros&lt;/strong&gt; y &lt;strong&gt;Resident Evil Revelations&lt;/strong&gt;
+tiene ralentizaciones infumables. &lt;strong&gt;Castlevania: Lorfs of Shadow - Mirror of
+Fate&lt;/strong&gt; esta señålado como con mala compativilidad&lt;/p&gt;
+
+&lt;p&gt;Otros titulos marcados como &lt;em&gt;No Tested&lt;/em&gt; posiblemente se ejecuten (o no se
+ejecuten o crasheeeen) como &lt;strong&gt;Professor Layton and the Miracle Mask&lt;/strong&gt; marcado
+tal que asi, pero que corre y con soltura, pero que esta en english.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo mas seria &lt;strong&gt;The Legend of Zelda A Link Between Worlds&lt;/strong&gt; marcado con
+compatibilidad mala y aun asi en la compilacion, prueba y habiendo terminado el
+juego calificaria como (de compativilidad) &amp;ldquo;Casi Perfecta&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Ante la duda, ser necios e intentar por vuestra cuenta. Algunos titulos provados
+a titulo personal y que corren perfecto o son confortablemente jugables y ademas
+estan en español o no importa el idioma&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;New Super Mario Bros 2 (La sublimacion del plataformas)&lt;/li&gt;
+&lt;li&gt;The Legend of Zelda: A Link Between Worlds (exquisites en diseño, mecanicas y corriendo a 60 FPS)&lt;/li&gt;
+&lt;li&gt;Super Mario 3D Land (Como debe ser un plataformero 3D)&lt;/li&gt;
+&lt;li&gt;Animal Crossing: New Leaf (&amp;ldquo;Lo Bonito&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;Pac-Man &amp;amp; Galaga Dimensions&lt;/li&gt;
+&lt;li&gt;Zelda Majora&amp;rsquo;s Mask 3D&lt;/li&gt;
+&lt;li&gt;Zelda Ocarina of Time 3D&lt;/li&gt;
+&lt;li&gt;Pokemon X (para el obseso)&lt;/li&gt;
+&lt;li&gt;VVVVVV&lt;/li&gt;
+&lt;li&gt;Yoshi&amp;rsquo;s New Island&lt;/li&gt;
+&lt;li&gt;Bravely Default&lt;/li&gt;
+&lt;li&gt;Kirby Triple Deluxe&lt;/li&gt;
+&lt;li&gt;Mutant Mudds&lt;/li&gt;
+&lt;li&gt;Kid Icarus: Uprising&lt;/li&gt;
+&lt;li&gt;SteamWorld Dig&lt;/li&gt;
+&lt;li&gt;Shovel Knight (EUR)&lt;/li&gt;
+&lt;li&gt;Star Fox 64 3D (Bonito y cuidado, aunque se siente lento en ejecucion 8X-9X/100 %)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;configs&#34;&gt;Configs&lt;/h2&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Hemos visto que el binario &amp;ldquo;bueno&amp;rdquo; es &lt;code&gt;citra-qt&lt;/code&gt;. Instalado en el sistema
+&lt;code&gt;citra-qt&lt;/code&gt; sera el que aparecera de serie!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;siguiendo la indicacion, damos double-clip para agregar nuestra lista de
+juegasos nintenderos&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-03.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Antes de entregarnos al vicio un par de configuraciones previas. Abrimos la
+ventana de configuracion desde el menu &lt;code&gt;Emulation &amp;gt; Configure&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ya en la ventana de configuracion, ponemos el tema Dark&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;General &amp;gt; UI &amp;gt; Theme: Dark
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-05.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;(No se por que no se muestra la opcion de interfaz en Spanish, pero no importa)&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-06.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;System &amp;gt; System &amp;gt; User name: mi-nick
+System &amp;gt; System &amp;gt; Language: Spanish
+System &amp;gt; System &amp;gt; Play Coins: 300
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;importatisimo&lt;/em&gt; poner &lt;code&gt;Spanish&lt;/code&gt; en &lt;code&gt;Language&lt;/code&gt;. Sin ello los juegos aparecen en
+english&lt;/p&gt;
+
+&lt;p&gt;los &lt;em&gt;Play Coins&lt;/em&gt; parecen ser monedas que da el 3DS por caminar y hacer
+&amp;ldquo;cosas&amp;rdquo;. Aparentemente trecientos es el valor maximo. En el zelda BW son utiles
+para comprar consejos, en &lt;em&gt;Animal Crossing: New Leaf&lt;/em&gt; permiten comprar galletas
+de la fortuna&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;System &amp;gt; Camera &amp;gt; Camera Image Source: Still Image (Image)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Es buena cosa aplicar esta configuracion en la camara si se da el caso que el
+juego/cosa requiera una imagen, (en teoria) podriamos pasar una imagen desde el
+sistema&lt;/p&gt;
+
+&lt;p&gt;y&amp;hellip; lo mas importante la configuracion del teclado&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-08.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;pero si en verdad quereis jugar con dignidad, &lt;em&gt;conseguir un puñetero
+mando!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/f710.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;yo utilizo el logitech f710 el cual no ha requerido ninguna configuracion para
+que funcionara en ninguna distro. Se conecta y funciona. El mando tiene un
+interructor D/X&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/f710_DX.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;importante&lt;/strong&gt; ponerlo en &lt;strong&gt;D&lt;/strong&gt;&amp;hellip; por que? el mando en la parte superior tiene los
+botones &lt;code&gt;LB&lt;/code&gt; y &lt;code&gt;RB&lt;/code&gt; que son propiamente botones, tambien incluye los &amp;ldquo;botones&amp;rdquo;
+&lt;code&gt;LT&lt;/code&gt; y &lt;code&gt;RT&lt;/code&gt; que son fisicamente &amp;ldquo;ejes&amp;rdquo;. Haciendo unas pruebas cuando el
+interruptor esta en &lt;strong&gt;X&lt;/strong&gt;, estos ejes tienen valores iniciales de -32767 y
+conforme se precionan ascienden hasta 32767 (16 bits). Poco mas que decir que
+el 3DS en sus botones posteriores solo tiene botones y no ejes.&lt;/p&gt;
+
+&lt;p&gt;Con el interruptor en &lt;strong&gt;D&lt;/strong&gt; &lt;code&gt;LT&lt;/code&gt; y &lt;code&gt;RT&lt;/code&gt; se comportaran como &amp;ldquo;botones&amp;rdquo;, mientras
+que en posicion &lt;code&gt;X&lt;/code&gt; como &amp;ldquo;ejes&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;siguiendo la distribucion del propio 3DS y la del mando (cruceta, dos joystics,
+select, start, a, b, x, y, l, lt, r, lt) y jugando al Zelda BW, el Mario Kart 7,
+New Super Mario Bros 2, Pokemon X y Animal Crossing New Leaf, parece que esta es
+la distribucion logica y apropiada (&lt;strong&gt;Interruptor en D&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-09.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;importante&lt;/strong&gt; citra crashea si durante la ejecucion se alterna el interruptor
+entre &lt;code&gt;D&lt;/code&gt;y &lt;code&gt;X&lt;/code&gt;. Parece que esto es causado a que el sistema mapea el control de
+formas distintas segun la posicion de este interruptor, no solo para los ejes,
+tambien para los botones. Tenerlo en cuenta, que no tiene por que ser
+precisamente un problema, segun que juego podriamos añadir distintos perfiles de
+control&lt;/p&gt;
+
+&lt;p&gt;una particularidad realmente apreciable del mando es que tiene un botoncito
+llamado &lt;code&gt;mode&lt;/code&gt; la cual permite intercambiar la &amp;ldquo;entrada&amp;rdquo; del joystick izquierdo
+con la cruceta y viceversa, esto sin necesidad de alterar la configuracion de
+teclas del propio emulador/lo-que-sea. En verdad util es para escenarios que
+requieren precision (como en las masmorras del Zelda)&lt;/p&gt;
+
+&lt;p&gt;Para terminar con las configuraciones otras dos cosas importantes mas&lt;/p&gt;
+
+&lt;p&gt;Primero, ya que un (giroscopio/) sensor de movimiento no es nada habitual en el
+computo personal pero para algunos juegos es necesario al menos transmitir
+informacion de inclinacion derecha-izquierda, dentro del perfil de control viene
+una curiosa casilla &lt;code&gt;Motion/Touch&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-10.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Clicando en ella no encotraremos muchas opciones&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-11.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;en esencia basta para informarnos que en la &amp;ldquo;pantalla tactil&amp;rdquo; (donde habitual
+mente se transmite &amp;ldquo;el tactil&amp;rdquo; con el raton precionando el boton izquierdo) si
+precionamos el boton derecho, se transmitira informacion del sensor de movimiento&lt;/p&gt;
+
+&lt;p&gt;En Yoshi&amp;rsquo;s New Island, apenas en el segundo nivel es critico hacer uso del boton
+derecho&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Para terminar, en &lt;code&gt;System &amp;gt; Controls &amp;gt; Hotkeys&lt;/code&gt; podemos modificar algunos atajos
+de teclado del emulador a teclas mas convenientes como a las teclas de funcion
+(F1, F2, F3, &amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-12.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora si al vicio! &amp;hellip; o no &amp;hellip; requerimos de un &lt;strong&gt;mii&lt;/strong&gt; (un avatar) que si bien
+no todos los juegos exigen, pudiera ser necesario para completar la
+experiencia&lt;/p&gt;
+
+&lt;p&gt;los buenasos de nintendo ponen una &lt;a href=&#34;https://studio.mii.nintendo.com/&#34;&gt;herramienta web&lt;/a&gt; para crearnos un mii&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-00.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;mas en este caso y como citra (creo) no tiene la cualidad de conectarse a la
+cuenta nintendera&amp;hellip; (obvio&amp;hellip; ???)&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;no sirve de mucho&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Si habeis caido aqui luego de pasar por el cancer de internet (los niños rata de
+youtube que llaman &amp;ldquo;enlace&amp;rdquo; a los puñeteros acortadores por webs
+cuestionables), estos son los pasos y enlaces de internete que han servido&lt;/p&gt;
+
+&lt;p&gt;(UNO) Conseguir &lt;strong&gt;Mii Maker&lt;/strong&gt; (&lt;a href=&#34;https://nasciiboy.land/data/citra/Mii-Maker.app&#34;&gt;app&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;(DOS) recomendablemente colocar Mii Maker en la misma carpeta que el resto de
+roms. Dice una leyenda que arrastrar y soltar este binario en la interfaz de
+citra-qt tambien funciona, pero no es algo que me alla atravido a comprovar&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Aun no lo ejecuteis u optendrais un error&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-03.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;(TRES) Parece que hay fuentes/dependencias/ficheros-raros/cosas que vienen en el
+3DS para que Mii Maker corra apropiadamente. En youtube hay un
+&lt;a href=&#34;https://youtu.be/SJJheC_mGNA&#34;&gt;video&lt;/a&gt; que comparte (toda) su carpeta de
+configuracion y &amp;ldquo;datos&amp;rdquo; de citra. Nos aconseja mezclar sus carpeta con la
+nuestra echando mano del navegador de ficheros&lt;/p&gt;
+
+&lt;p&gt;primero &lt;strong&gt;mezclar&lt;/strong&gt; (aplicar esta opccion a todos los archivos y carpetas)&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;luego &lt;strong&gt;omitir&lt;/strong&gt; el reemplazo (aplicar esta opccion a todos los archivos y carpetas)&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-05.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;En GNU la carpeta con &amp;ldquo;los datos&amp;rdquo; de citra se encuentra en
+&lt;code&gt;~/.local/share/citra-emu/&lt;/code&gt; estas son las carpetas que contiene&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ls ~/.local/share/citra-emu/
+cheats
+config
+log
+nand
+sdmc
+sysdata
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;p-e-r-o&amp;hellip;&lt;/strong&gt; la carpeta del youtuber trae varios &lt;code&gt;.bin&lt;/code&gt;, &lt;code&gt;.tar&lt;/code&gt; que me ponen
+nervioso. &lt;a href=&#34;https://nasciiboy.land/data/citra/Russ-CitraErrorFix.zip&#34;&gt;Aqui&lt;/a&gt; esta directamente sin trucos ni
+acortadores la carpeta aquella.&lt;/p&gt;
+
+&lt;p&gt;Por parte de este que escribe, fui copiando y probando carpetas al azar con el
+unico proposito de que funcionase &lt;strong&gt;Mii Maker&lt;/strong&gt;. &lt;a href=&#34;https://nasciiboy.land/data/citra/min-dot-citra.zip&#34;&gt;Por
+aca&lt;/a&gt; el resultado. Si decidis usar este&lt;/p&gt;
+
+&lt;p&gt;(investigando mas profundamente &lt;a href=&#34;https://citra-emu.org/wiki/dumping-system-archives-and-the-shared-fonts-from-a-3ds-console/&#34;&gt;la wiki de citra&lt;/a&gt; parece avalar que solo es
+necesaria la carpeta &lt;code&gt;nand/00000000000000000000000000000000&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd tmp
+wget https://nasciiboy.land/data/citra/min-dot-citra.zip
+unzip min-dot-citra.zip
+mkdir -p ~/.local/share/citra-emu/nand
+mv min-dot-citra/nand/00000000000000000000000000000000 ~/.local/share/citra-emu/nand/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;vuala!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-06.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;parece ser que el editor del 3DS es mas &amp;ldquo;redondo&amp;rdquo; que el web (que gana un poco
+mas de precision). El resultado en mii maker fue este&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;y&amp;hellip; por fin ahora si al vicio&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-08.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;.&lt;/p&gt;
+
+&lt;p&gt;Por defecto el juego se presenta de esta manera&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-13.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;i-endo a &lt;code&gt;View &amp;gt; Screen Layout&lt;/code&gt; contamos con diversas distribuciones de visualizacion&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-14.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Segun el juego, numero de monitores y gustos podemos ajustar a nuestra
+conveniencia. Me guastaria que puedesen desacoplarse &amp;ldquo;las pantallas&amp;rdquo; en dos
+ventanas aunque esta opccion no esta disponible. Con un par de monitores y
+ajustando a mano se puede simular el efecto.&lt;/p&gt;
+
+&lt;p&gt;Para esto utilizo la distribucion de pantalla &amp;ldquo;lado a lado&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-15.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, si hago una captura (gnomera) de citra, la imagen se presenta asi&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;(en el &amp;ldquo;mundo real&amp;rdquo;) en modo de pantalla completa veria&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-02.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;pero ajustando la pantalla &amp;ldquo;manualmente&amp;rdquo; lo prefiero asi&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-03.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Con el zelda&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;para verse&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-05.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;algunos-atajos&#34;&gt;Algunos atajos&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;f2&lt;/code&gt; cargar amiibo (una &lt;a href=&#34;https://nasciiboy.land/data/citra/AmiiboBinDump-v2.zip&#34;&gt;captura&lt;/a&gt; de internet&amp;hellip; no-se como/con-que/cuando se utuliza)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;hellip;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;f4&lt;/code&gt; pausar ejecucion de juego&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f5&lt;/code&gt; terminar ejecucion de juego&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f6&lt;/code&gt; reiniciar ejecucion de juego&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;hellip;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;f9&lt;/code&gt; intercambiar pantallas&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f10&lt;/code&gt; screen layouts&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f11&lt;/code&gt; pantalla completa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;path-s&#34;&gt;PATH&amp;rsquo;s&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;.local/share/citra-emu&lt;/code&gt; Partidas, Configuracion, casi-todo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;.config/citra-emu&lt;/code&gt; Ficheros de &amp;ldquo;configuracion suave&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclucion&#34;&gt;Conclucion&lt;/h2&gt;
+
+&lt;p&gt;nah, todo bien&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Contando con un humilde procesador &lt;code&gt;AMD A6-9500&lt;/code&gt; (64 bits, 2 nucleos, 2 hilos,
+2GHz) que es de lo mas bajo de lo mas bajo (tirando a celeron) y sin grafica
+dedicada, el Zelda va (casi, casi) siempre perfecto y estable a 60 FPS y el Mario Kart
+7 (que ha de ser de lo mas exigente del 3DS) aunque con ralentizaciones
+apreciables, no llega a ser molesto o injugable&amp;hellip; suele tirar a un 100% de la
+velocidad con ralentizaciones del 80/85/90%.&lt;/p&gt;
+
+&lt;p&gt;Otra historia seran los exclusivos del New 3DS&amp;hellip; pero su momento aun no ha llegado&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-06.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Como recomendacion final, por ningun motivo en &lt;em&gt;Zelda Between Worlds&lt;/em&gt; en el pueblo
+hablen con el viejo del street pass, hablar con el te regala un arbol de
+manzanas junto a tu casa&amp;hellip; a un precio muy caro, me jodio dos partidas antes de
+evitarlo como a la peste&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -357,24 +357,27 @@ audiencia y le vende lo que pide, no pude mas que despreciar todo lo que
 desvia al hombre del buen camino (trabajo duro, lazos familiares, pareja o estudio) e
 iniciar la busqueda de una forma justicialista para llevar hasta el hogar de la
 gente pobre y sin recursos tan grata experiencia, no solo ya por adquirir una
-porcion de necesaria cultura general, tambien para llevar felicidad y alegria a
+porcion de necesaria cultura general, tambien para llenar de felicidad y alegria
 las grices vidas de los agotados obreros</p>
 
 <p><center><img src="https://nasciiboy.land/img/citra/New3DSXL.jpg" alt="" /></center></p>
 
-<p>Entre su mas destacadas caracteristicas, la consola Nintendo 3DS (<em>New 3DS XL</em>
-en su ultima iteracion) cuenta con un par de pantallas. La superior (mas
-apaisada) suele mostrar el videojuego con un magnifico bien logrado efecto 3D
-(esta caracteristica es opccional y regulable por el usuario). Por su parte la
-pantalla inferior se utiliza para desplegar mapas, inventarios y en general
-opciones del juego. La caracteristica principal de esta segunda pantalla
-es ser tactil.</p>
+<p>Entre sus <a href="https://es.wikipedia.org/wiki/Nintendo_3DS#New_Nintendo_3DS_y_New_Nintendo_3DS_XL">caracteristicas</a>
+la consola Nintendo 3DS (<em>New 3DS XL</em> en su ultima iteracion) cuenta con wifi,
+nfs, sensor de movimiento, un led indicador (RGB), ranura de almacenamiento para
+targetas SD, dos camaras en la parte posterior para hacer fotografias estereo,
+una camara en la parte delantera y microfono</p>
 
-<p>Ademas posee dos camaras en la parte posterior para hacer fotografias estereo,
-una camara en la parte delantera, microfono. Del lado derecho una cruceta junto
-a un joystick y del izquierdo botones <code>Select</code>, <code>Start</code>, <code>A</code>, <code>B</code>, <code>X</code>, <code>Y</code>. En
-la parte posterior botones <code>L</code> y <code>R</code>. En la ultima iteracion se agregaron <code>ZL</code>,
-<code>ZR</code> y un joystick adicional llamado C-Stick</p>
+<p>Posee un par de pantallas. La superior (mas apaisada) suele mostrar el
+videojuego con un magnifico bien logrado efecto 3D (esta caracteristica es
+opccional y regulable por el usuario). Por su parte la pantalla inferior se
+utiliza para desplegar mapas, inventarios y en general opciones del juego. La
+caracteristica principal de esta segunda pantalla es ser tactil</p>
+
+<p>Como mandos (tradicionales) tiene del lado derecho una cruceta junto a un
+joystick y del izquierdo botones <code>Select</code>, <code>Start</code>, <code>A</code>, <code>B</code>, <code>Y</code>, <code>X</code> y un
+joystick adicional llamado C-Stick. En la parte posterior botones <code>L</code>, <code>R</code>,
+<code>ZL</code> y <code>ZR</code>.</p>
 
 <p>Dichas peculiaridades parecen dificiles de llevar con comodidad a una
 computadora de proposito general. Mas la comunidad entusiasta y siempre generosa
@@ -386,14 +389,22 @@ emulacion con nombre clave <strong>Citra</strong>. (Debajo su logo)</p>
 <p>Dicho software es GPL v2, multiplataforma y se encuentra tanto para plataformas windows,
 mac y GNU</p>
 
-<p>Para las amadas distros cuando el paquete no esta disponible en los repositorios
-(como en el caso de debian) nos ofrecen un paquete &ldquo;universal&rdquo; flatpack&hellip; el
-problema? ademas de instalar un daemon (flatpack) que este corriendo en nuestro
-sistema chupando ciclos de procesador, ya de primeras nos hace descargar como
-dependencia ~550MB del entorno KDE + &ldquo;otras cosas&rdquo; + citra. Esto no solo es
-cuestionable por el tamaño que ocupara en el sistema un sencillo emulador,
-tambien por el sobre costo de utilizar un contenedor con sus propias
-dependencias ajenas al sistema y agregar PATHs de ejecucion adicionales</p>
+<p>Si bien es cierto que caracteristicas como el efecto 3D, la
+resolucion/configuracion de camaras, el led RGB, la conexion con los servicios
+de nintendo e internet, o el sensor de movimiento son caracteristicas
+problematicas de emular, algunas tienen sus apaños chapuceros mas o menos
+salvables/comodos deacuerdo al uso que el videojuego haga de ellas. Bien podria
+terminar en cuelgue o chasheo y/o no pasasar de ser una asumible incomodidad</p>
+
+<p>En cuanto a la disponivilidad de este software en las amadas distros cuando el
+paquete no se encuentra en los repositorios (como en el caso de debian) nos
+ofrecen un paquete &ldquo;universal&rdquo; flatpack&hellip; el problema? ademas de instalar un
+daemon (flatpack) que este corriendo en nuestro sistema chupando ciclos de
+procesador, ya de primeras nos hace descargar como dependencia ~550MB del
+entorno KDE + &ldquo;otras cosas&rdquo; + citra. Esto no solo es cuestionable por el tamaño
+que ocupara en el sistema un &ldquo;simple&rdquo; emulador, tambien por el sobre costo de
+utilizar un contenedor con sus propias dependencias ajenas al sistema y agregar
+PATHs de ejecucion adicionales</p>
 
 <p>Ante esta dudosa opccion lo mas razonable y recomendable (ya sea solo por el
 rendimiento) es recurrir a una milenaria practica en todos los sistemas libres
@@ -412,7 +423,7 @@ aplicar a discrecion)</p>
 </code></pre>
 
 <p>mientras el sistema instala las dependencias, debemos (de preferencia) como
-usuario no administrado clonar el codigo fuente (~115MB)</p>
+usuario no administrador clonar el codigo fuente (~115MB)</p>
 
 <pre><code>git clone --recursive https://github.com/citra-emu/citra
 </code></pre>
@@ -425,7 +436,7 @@ cd citra
 # Un paso conocido cuando se compila con cmake
 mkdir build &amp;&amp; cd build
 
-# En la wiki se ofrecen varios modos de compilacion
+# En la wiki se ofrecen varios modos de configurar la compilacion
 # modo Lo-Ultimo             # &quot;cmake ..&quot;
 # modo Release (optimizado)  # &quot;cmake .. -DCMAKE_BUILD_TYPE=Release&quot;
 # y con opciones o no de simbolos de debugueo (lento)
@@ -437,6 +448,9 @@ mkdir build &amp;&amp; cd build
 # no se si esto sea mejor... pero parese mas molon!
 #
 cmake .. -DCMAKE_BUILD_TYPE=Release -DENABLE_FFMPEG=ON
+
+# LA COMPILACION
+make
 </code></pre>
 
 <p>Tras una (muuu lenta) compilacion exitosa, podemos ejecutar el emulador sin
@@ -452,7 +466,7 @@ cd bin
 disposicion del teclado para el juego (ademas de que con puro teclado dificil a de
 ser jugar), tampoco nos brinda opcion de utilizar un mando ni ofrece otras
 varias configuraciones basicas. Por ello veamos que binarios (y sus tamaños)
-ha dejado la compilacion (recordar estamos en <code>citra/build/bin</code>)</p>
+quedaron tras compilar (recordar estamos en <code>citra/build/bin</code>)</p>
 
 <pre><code>&gt; du -h *
 17M	citra
@@ -486,7 +500,8 @@ make install
 
 <h2 id="roms">ROMS ???</h2>
 
-<p>se pueden buscar de distintas maneras&hellip; utilizando la opcion de busqueda en
+<p>se pueden adquirir de distintas maneras. Desde citra recomiendan hacer una
+&ldquo;copia de seguridad&rdquo; &hellip; s-e-g-u-r-o &hellip; utilizando la opcion de busqueda en
 qBittorrent aparece una particularmente correcta con el poco descriptivo titulo:</p>
 
 <p><em>Collection of 250 decrypted 3DS ROMs for Citra Emulator</em></p>
@@ -497,12 +512,58 @@ qBittorrent aparece una particularmente correcta con el poco descriptivo titulo:
 <p>Creo que tiene lo mas destacado. Con esa cantidad y calidad de juegos se tiene
 suficiente para unos cuantos añøs. Copiar y pegar</p>
 
+<p><strong>Importante</strong> aun dentro de este torrente dedicado, aclarar que no todos los
+titulos incluidos son compatibles con citra (en segun que vercion o en ninguna
+en general):</p>
+
+<ul>
+<li>Lista de compatibilidad ==&gt; <a href="https://citra-emu.org/game/">https://citra-emu.org/game/</a></li>
+</ul>
+
+<p>Por ejemplo, <strong>Donkey Kong Country Returns 3D</strong> definitivamente no
+arranca. <strong>Luigi&rsquo;s Mansion: Dark Moon</strong> va tan lento y mal que dificilmente se
+llegara a algun nivel del juego. <strong>Smash Bros</strong> y <strong>Resident Evil Revelations</strong>
+tiene ralentizaciones infumables. <strong>Castlevania: Lorfs of Shadow - Mirror of
+Fate</strong> esta señålado como con mala compativilidad</p>
+
+<p>Otros titulos marcados como <em>No Tested</em> posiblemente se ejecuten (o no se
+ejecuten o crasheeeen) como <strong>Professor Layton and the Miracle Mask</strong> marcado
+tal que asi, pero que corre y con soltura, pero que esta en english.</p>
+
+<p>Un ejemplo mas seria <strong>The Legend of Zelda A Link Between Worlds</strong> marcado con
+compatibilidad mala y aun asi en la compilacion, prueba y habiendo terminado el
+juego calificaria como (de compativilidad) &ldquo;Casi Perfecta&rdquo;</p>
+
+<p>Ante la duda, ser necios e intentar por vuestra cuenta. Algunos titulos provados
+a titulo personal y que corren perfecto o son confortablemente jugables y ademas
+estan en español o no importa el idioma</p>
+
+<ul>
+<li>New Super Mario Bros 2 (La sublimacion del plataformas)</li>
+<li>The Legend of Zelda: A Link Between Worlds (exquisites en diseño, mecanicas y corriendo a 60 FPS)</li>
+<li>Super Mario 3D Land (Como debe ser un plataformero 3D)</li>
+<li>Animal Crossing: New Leaf (&ldquo;Lo Bonito&rdquo;)</li>
+<li>Pac-Man &amp; Galaga Dimensions</li>
+<li>Zelda Majora&rsquo;s Mask 3D</li>
+<li>Zelda Ocarina of Time 3D</li>
+<li>Pokemon X (para el obseso)</li>
+<li>VVVVVV</li>
+<li>Yoshi&rsquo;s New Island</li>
+<li>Bravely Default</li>
+<li>Kirby Triple Deluxe</li>
+<li>Mutant Mudds</li>
+<li>Kid Icarus: Uprising</li>
+<li>SteamWorld Dig</li>
+<li>Shovel Knight (EUR)</li>
+<li>Star Fox 64 3D (Bonito y cuidado, aunque se siente lento en ejecucion 8X-9X/100 %)</li>
+</ul>
+
 <h2 id="configs">Configs</h2>
 
 <p><center><img src="https://nasciiboy.land/img/citra/citra_qt-01.png" alt="" /></center></p>
 
-<p>Hemos visto que el binario &ldquo;bueno&rdquo; es citra-qt. Instalado en el sistema
-citra-qt sera el que aparecera de serie!</p>
+<p>Hemos visto que el binario &ldquo;bueno&rdquo; es <code>citra-qt</code>. Instalado en el sistema
+<code>citra-qt</code> sera el que aparecera de serie!</p>
 
 <p><center><img src="https://nasciiboy.land/img/citra/citra_qt-02.png" alt="" /></center></p>
 
@@ -511,7 +572,7 @@ juegasos nintenderos</p>
 
 <p><center><img src="https://nasciiboy.land/img/citra/citra_qt-03.png" alt="" /></center></p>
 
-<p>Antes de entregarnos al vicio un par de configuraciones adicionales. Abrimos la
+<p>Antes de entregarnos al vicio un par de configuraciones previas. Abrimos la
 ventana de configuracion desde el menu <code>Emulation &gt; Configure</code></p>
 
 <p><center><img src="https://nasciiboy.land/img/citra/citra_qt-04.png" alt="" /></center></p>
@@ -535,9 +596,10 @@ System &gt; System &gt; Play Coins: 300
 <p><em>importatisimo</em> poner <code>Spanish</code> en <code>Language</code>. Sin ello los juegos aparecen en
 english</p>
 
-<p>los <em>Play Coins</em> parecen monedas que da el 3DS por caminar y hacer
-&ldquo;cosas&rdquo;. Trecientos parece ser el valor maximo. En el zelda BW son utiles para
-comprar consejos.</p>
+<p>los <em>Play Coins</em> parecen ser monedas que da el 3DS por caminar y hacer
+&ldquo;cosas&rdquo;. Aparentemente trecientos es el valor maximo. En el zelda BW son utiles
+para comprar consejos, en <em>Animal Crossing: New Leaf</em> permiten comprar galletas
+de la fortuna</p>
 
 <p><center><img src="https://nasciiboy.land/img/citra/citra_qt-07.png" alt="" /></center></p>
 
@@ -545,8 +607,8 @@ comprar consejos.</p>
 </code></pre>
 
 <p>Es buena cosa aplicar esta configuracion en la camara si se da el caso que el
-juego/cosa requiera una imagen, con esta opcion nos permitira pasar una imagen
-desde el sistema</p>
+juego/cosa requiera una imagen, (en teoria) podriamos pasar una imagen desde el
+sistema</p>
 
 <p>y&hellip; lo mas importante la configuracion del teclado&hellip;</p>
 
@@ -555,34 +617,80 @@ desde el sistema</p>
 <p>pero si en verdad quereis jugar con dignidad, <em>conseguir un puñetero
 mando!</em></p>
 
-<p>yo utilizo el logitech f710 el cual no ha requerido ninguna configuracion para
-que funcionara en ninguna distro, se conecta y funciona. El mando tiene un
-interructor (D o X) ponerlo en X</p>
-
 <p><center><img src="https://nasciiboy.land/img/citra/f710.jpeg" alt="" /></center></p>
 
+<p>yo utilizo el logitech f710 el cual no ha requerido ninguna configuracion para
+que funcionara en ninguna distro. Se conecta y funciona. El mando tiene un
+interructor D/X</p>
+
+<p><center><img src="https://nasciiboy.land/img/citra/f710_DX.png" alt="" /></center></p>
+
+<p><strong>importante</strong> ponerlo en <strong>D</strong>&hellip; por que? el mando en la parte superior tiene los
+botones <code>LB</code> y <code>RB</code> que son propiamente botones, tambien incluye los &ldquo;botones&rdquo;
+<code>LT</code> y <code>RT</code> que son fisicamente &ldquo;ejes&rdquo;. Haciendo unas pruebas cuando el
+interruptor esta en <strong>X</strong>, estos ejes tienen valores iniciales de -32767 y
+conforme se precionan ascienden hasta 32767 (16 bits). Poco mas que decir que
+el 3DS en sus botones posteriores solo tiene botones y no ejes.</p>
+
+<p>Con el interruptor en <strong>D</strong> <code>LT</code> y <code>RT</code> se comportaran como &ldquo;botones&rdquo;, mientras
+que en posicion <code>X</code> como &ldquo;ejes&rdquo;</p>
+
 <p>siguiendo la distribucion del propio 3DS y la del mando (cruceta, dos joystics,
-select, start, a, b, x, y, l, lt, r, lt) y jugando al Zelda BW y el Mario Kart
-7, parece que esta es la distribucion logica y apropiada</p>
+select, start, a, b, x, y, l, lt, r, lt) y jugando al Zelda BW, el Mario Kart 7,
+New Super Mario Bros 2, Pokemon X y Animal Crossing New Leaf, parece que esta es
+la distribucion logica y apropiada (<strong>Interruptor en D</strong>)</p>
 
 <p><center><img src="https://nasciiboy.land/img/citra/citra_qt-09.png" alt="" /></center></p>
+
+<p><strong>importante</strong> citra crashea si durante la ejecucion se alterna el interruptor
+entre <code>D</code>y <code>X</code>. Parece que esto es causado a que el sistema mapea el control de
+formas distintas segun la posicion de este interruptor, no solo para los ejes,
+tambien para los botones. Tenerlo en cuenta, que no tiene por que ser
+precisamente un problema, segun que juego podriamos añadir distintos perfiles de
+control</p>
 
 <p>una particularidad realmente apreciable del mando es que tiene un botoncito
 llamado <code>mode</code> la cual permite intercambiar la &ldquo;entrada&rdquo; del joystick izquierdo
 con la cruceta y viceversa, esto sin necesidad de alterar la configuracion de
-&ldquo;teclas&rdquo; del propio emulador/lo-que-sea. En verdad util es para escenarios que requieren
-precision (como en las masmorras del Zelda)</p>
+teclas del propio emulador/lo-que-sea. En verdad util es para escenarios que
+requieren precision (como en las masmorras del Zelda)</p>
 
-<p>Ahora si a vicio! &hellip; o no &hellip; un requerimento de algunos juegos si no
-importante pero si necesario en la experiencia completa es hacerse de un avatar
-llamado <strong>mii</strong>.</p>
+<p>Para terminar con las configuraciones otras dos cosas importantes mas</p>
+
+<p>Primero, ya que un (giroscopio/) sensor de movimiento no es nada habitual en el
+computo personal pero para algunos juegos es necesario al menos transmitir
+informacion de inclinacion derecha-izquierda, dentro del perfil de control viene
+una curiosa casilla <code>Motion/Touch</code></p>
+
+<p><center><img src="https://nasciiboy.land/img/citra/citra_qt-10.png" alt="" /></center></p>
+
+<p>Clicando en ella no encotraremos muchas opciones</p>
+
+<p><center><img src="https://nasciiboy.land/img/citra/citra_qt-11.png" alt="" /></center></p>
+
+<p>en esencia basta para informarnos que en la &ldquo;pantalla tactil&rdquo; (donde habitual
+mente se transmite &ldquo;el tactil&rdquo; con el raton precionando el boton izquierdo) si
+precionamos el boton derecho, se transmitira informacion del sensor de movimiento</p>
+
+<p>En Yoshi&rsquo;s New Island, apenas en el segundo nivel es critico hacer uso del boton
+derecho&hellip;</p>
+
+<p>Para terminar, en <code>System &gt; Controls &gt; Hotkeys</code> podemos modificar algunos atajos
+de teclado del emulador a teclas mas convenientes como a las teclas de funcion
+(F1, F2, F3, &hellip;)</p>
+
+<p><center><img src="https://nasciiboy.land/img/citra/citra_qt-12.png" alt="" /></center></p>
+
+<p>Ahora si al vicio! &hellip; o no &hellip; requerimos de un <strong>mii</strong> (un avatar) que si bien
+no todos los juegos exigen, pudiera ser necesario para completar la
+experiencia</p>
 
 <p>los buenasos de nintendo ponen una <a href="https://studio.mii.nintendo.com/">herramienta web</a> para crearnos un mii</p>
 
 <p><center><img src="https://nasciiboy.land/img/citra/mii_maker-00.png" alt="" /></center></p>
 
 <p>mas en este caso y como citra (creo) no tiene la cualidad de conectarse a la
-cuenta nintnendera&hellip; (obvio&hellip; ???)</p>
+cuenta nintendera&hellip; (obvio&hellip; ???)</p>
 
 <p><center><img src="https://nasciiboy.land/img/citra/mii_maker-01.png" alt="" /></center></p>
 
@@ -638,6 +746,9 @@ acortadores la carpeta aquella.</p>
 unico proposito de que funcionase <strong>Mii Maker</strong>. <a href="https://nasciiboy.land/data/citra/min-dot-citra.zip">Por
 aca</a> el resultado. Si decidis usar este</p>
 
+<p>(investigando mas profundamente <a href="https://citra-emu.org/wiki/dumping-system-archives-and-the-shared-fonts-from-a-3ds-console/">la wiki de citra</a> parece avalar que solo es
+necesaria la carpeta <code>nand/00000000000000000000000000000000</code>)</p>
+
 <pre><code>cd tmp
 wget https://nasciiboy.land/data/citra/min-dot-citra.zip
 unzip min-dot-citra.zip
@@ -662,11 +773,11 @@ mas de precision). El resultado en mii maker fue este</p>
 
 <p>Por defecto el juego se presenta de esta manera</p>
 
-<p><center><img src="https://nasciiboy.land/img/citra/citra_qt-10.png" alt="" /></center></p>
+<p><center><img src="https://nasciiboy.land/img/citra/citra_qt-13.png" alt="" /></center></p>
 
 <p>i-endo a <code>View &gt; Screen Layout</code> contamos con diversas distribuciones de visualizacion</p>
 
-<p><center><img src="https://nasciiboy.land/img/citra/citra_qt-11.png" alt="" /></center></p>
+<p><center><img src="https://nasciiboy.land/img/citra/citra_qt-14.png" alt="" /></center></p>
 
 <p>Segun el juego, numero de monitores y gustos podemos ajustar a nuestra
 conveniencia. Me guastaria que puedesen desacoplarse &ldquo;las pantallas&rdquo; en dos
@@ -675,7 +786,7 @@ ajustando a mano se puede simular el efecto.</p>
 
 <p>Para esto utilizo la distribucion de pantalla &ldquo;lado a lado&rdquo;</p>
 
-<p><center><img src="https://nasciiboy.land/img/citra/citra_qt-12.png" alt="" /></center></p>
+<p><center><img src="https://nasciiboy.land/img/citra/citra_qt-15.png" alt="" /></center></p>
 
 <p>Por ejemplo, si hago una captura (gnomera) de citra, la imagen se presenta asi</p>
 
@@ -753,6 +864,8 @@ evitarlo como a la peste</p>
     <a class="previous" href="https://nasciiboy.land/vg/shooter/">◀ SShooter</a>
     
     
+    <a class="next" href="https://nasciiboy.land/vg/zbw/"> TLoZ: A Link Between Worlds ▶</a>
+    
   </div>
 
 
@@ -781,7 +894,7 @@ evitarlo como a la peste</p>
         <header class="key"><b>CATEGORIES</b></header>
         <div>
           <ul class="terms">
-            <li><a href="https://nasciiboy.land/categories/post">post(61)</a></li><li><a href="https://nasciiboy.land/categories/prog">prog(57)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(6)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
+            <li><a href="https://nasciiboy.land/categories/post">post(61)</a></li><li><a href="https://nasciiboy.land/categories/prog">prog(57)</a></li><li><a href="https://nasciiboy.land/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.land/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.land/categories/vg">vg(7)</a></li><li><a href="https://nasciiboy.land/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.land/categories/">(4)</a></li>
           </ul>
         </div>
       </section>
@@ -790,7 +903,7 @@ evitarlo como a la peste</p>
         <header class="key"><b>TAGS</b></header>
         <div>
           <ul class="terms">
-            <li><a href="https://nasciiboy.land/tags/fonos">fonos(36)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(27)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(23)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(9)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(9)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(6)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/kameko">kameko(4)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/dancer">dancer(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/xxx">xxx(1)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
+            <li><a href="https://nasciiboy.land/tags/fonos">fonos(36)</a></li><li><a href="https://nasciiboy.land/tags/4k">4k(27)</a></li><li><a href="https://nasciiboy.land/tags/howto">howto(23)</a></li><li><a href="https://nasciiboy.land/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.land/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.land/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.land/tags/apt">apt(9)</a></li><li><a href="https://nasciiboy.land/tags/txt">txt(9)</a></li><li><a href="https://nasciiboy.land/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.land/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.land/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.land/tags/go">go(6)</a></li><li><a href="https://nasciiboy.land/tags/install">install(5)</a></li><li><a href="https://nasciiboy.land/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.land/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.land/tags/">(4)</a></li><li><a href="https://nasciiboy.land/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.land/tags/feminascii">feminascii(4)</a></li><li><a href="https://nasciiboy.land/tags/kameko">kameko(4)</a></li><li><a href="https://nasciiboy.land/tags/pobreotaku">pobreotaku(4)</a></li><li><a href="https://nasciiboy.land/tags/server">server(4)</a></li><li><a href="https://nasciiboy.land/tags/example">example(3)</a></li><li><a href="https://nasciiboy.land/tags/gnome">gnome(3)</a></li><li><a href="https://nasciiboy.land/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.land/tags/java">java(3)</a></li><li><a href="https://nasciiboy.land/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.land/tags/3ds">3ds(2)</a></li><li><a href="https://nasciiboy.land/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.land/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.land/tags/ncurses">ncurses(2)</a></li><li><a href="https://nasciiboy.land/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.land/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.land/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.land/tags/zelda">zelda(2)</a></li><li><a href="https://nasciiboy.land/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.land/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.land/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.land/tags/dancer">dancer(1)</a></li><li><a href="https://nasciiboy.land/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.land/tags/emu">emu(1)</a></li><li><a href="https://nasciiboy.land/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.land/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.land/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.land/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.land/tags/git">git(1)</a></li><li><a href="https://nasciiboy.land/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.land/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.land/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.land/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.land/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.land/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.land/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.land/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.land/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.land/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.land/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.land/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.land/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.land/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.land/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.land/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.land/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.land/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.land/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.land/tags/xxx">xxx(1)</a></li><li><a href="https://nasciiboy.land/tags/zero">zero(1)</a></li>
           </ul>
         </div>
       </section>

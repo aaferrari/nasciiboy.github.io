@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nasciiboy.land/vg/zbw/</loc>
+    <lastmod>2019-08-27T00:52:17-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nasciiboy.land/vg/citra/</loc>
     <lastmod>2019-08-03T11:32:06-05:00</lastmod>
   </url>
@@ -944,6 +949,12 @@
   </url>
   
   <url>
+    <loc>https://nasciiboy.land/tags/3ds/</loc>
+    <lastmod>2019-08-27T00:52:17-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nasciiboy.land/tags/4k/</loc>
     <lastmod>2019-07-06T23:48:25-05:00</lastmod>
     <priority>0</priority>
@@ -1042,6 +1053,12 @@
   <url>
     <loc>https://nasciiboy.land/categories/emacs/</loc>
     <lastmod>2018-09-20T14:03:02-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nasciiboy.land/tags/emu/</loc>
+    <lastmod>2019-08-03T11:32:06-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1383,13 +1400,13 @@
   
   <url>
     <loc>https://nasciiboy.land/categories/vg/</loc>
-    <lastmod>2019-08-03T11:32:06-05:00</lastmod>
+    <lastmod>2019-08-27T00:52:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://nasciiboy.land/vg/</loc>
-    <lastmod>2019-08-03T11:32:06-05:00</lastmod>
+    <lastmod>2019-08-27T00:52:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1401,7 +1418,7 @@
   
   <url>
     <loc>https://nasciiboy.land/tags/zelda/</loc>
-    <lastmod>2017-01-01T14:56:59-06:00</lastmod>
+    <lastmod>2019-08-27T00:52:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1413,7 +1430,7 @@
   
   <url>
     <loc>https://nasciiboy.land/</loc>
-    <lastmod>2019-08-03T11:32:06-05:00</lastmod>
+    <lastmod>2019-08-27T00:52:17-05:00</lastmod>
     <priority>0</priority>
   </url>
   
