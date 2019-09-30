@@ -346,14 +346,14 @@ img:hover { border: 0.05em solid #fff; }
   <div class="clear" ><a href="https://nasciiboy.land">/</a></span> <span><a href="https://nasciiboy.land/prog">prog</a></div>
 
   <h1>PDCurses</h1>
-  <p>No pocas veces se ha esctiro sobre la irrelevancia del codigo o su irremediable
+  <p>No pocas veces se ha escrito sobre la irrelevancia del codigo o su irremediable
 destino a ser olvidado, pero, como (aspirantes a) programadores deseamos lo
 mejor para nuestra creacion, que cresca y perdure en el tiempo e incluso
 pueda ser no solo reconocido, tambien reutilizadas las horas dedicadas en
 ingeniar los mecanismos y diseños detras de su funcionamiento.</p>
 
 <p>Asi pues, existiendo gran cantidad de lenguajes de programacion, cada uno con
-sus particularidades y experimentos es dificil decantarse por una opcion, y sin
+sus particularidades y experimentos, es dificil decantarse por una opcion, y sin
 embargo, descartando lo estilizados, comodos o sinceramente superiores que
 puedan parecer, lo cierto es que el ecosistema de estos lenguajes modernos no
 termina de llegar a una &ldquo;madurez nativa&rdquo; en aspectos tan basicos como el area
@@ -387,8 +387,8 @@ aspecto homogeneo en por ejemplo el color y tamaño de fuente. Al no formar part
 de un &ldquo;emulador de terminal&rdquo;, permitiria tambien la asignacion de atajos
 personalizados sin temor y finalmente podria expandirse esta libreria para
 proporcionar acceso homologado a perifericos como gamepads, ignorar las
-limitaciones de la terminal accediendo sin fracaso a paletas de color de 8; 16 y
-256 colores o directamente RGB, ademas de tambien podria estar disponible la
+limitaciones de la terminal accediendo sin fracaso a paletas de color de 8, 16 y
+256 colores o directamente RGB, ademas, tambien podria estar disponible la
 manipulacion directa a nivel de pixel, ventanas (en curses <code>WINDOW</code>) con tamaños
 distintos de fuente, colores y modos todo ello establecido sobre la simplicidad de
 ncurses</p>
@@ -506,7 +506,8 @@ int pdc_font_size =
 #endif
 </code></pre>
 
-<p>las lineas se explican por si mismas</p>
+<p>las lineas se explican por si mismas. Cualquier modificacion, requiere
+recompilar la libreria (<code>make clean</code> + <code>make WIDE=Y</code>)</p>
 
 <p>Dentro del <code>Makefile</code> (<code>PDCurses/sdl2/Makefile</code>) vemos la variable que activa
 estas opciones</p>

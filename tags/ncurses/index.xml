@@ -18,14 +18,14 @@
       <pubDate>Sun, 29 Sep 2019 17:35:09 -0500</pubDate>
       
       <guid>https://nasciiboy.land/prog/pdcurses/</guid>
-      <description>&lt;p&gt;No pocas veces se ha esctiro sobre la irrelevancia del codigo o su irremediable
+      <description>&lt;p&gt;No pocas veces se ha escrito sobre la irrelevancia del codigo o su irremediable
 destino a ser olvidado, pero, como (aspirantes a) programadores deseamos lo
 mejor para nuestra creacion, que cresca y perdure en el tiempo e incluso
 pueda ser no solo reconocido, tambien reutilizadas las horas dedicadas en
 ingeniar los mecanismos y diseños detras de su funcionamiento.&lt;/p&gt;
 
 &lt;p&gt;Asi pues, existiendo gran cantidad de lenguajes de programacion, cada uno con
-sus particularidades y experimentos es dificil decantarse por una opcion, y sin
+sus particularidades y experimentos, es dificil decantarse por una opcion, y sin
 embargo, descartando lo estilizados, comodos o sinceramente superiores que
 puedan parecer, lo cierto es que el ecosistema de estos lenguajes modernos no
 termina de llegar a una &amp;ldquo;madurez nativa&amp;rdquo; en aspectos tan basicos como el area
@@ -59,8 +59,8 @@ aspecto homogeneo en por ejemplo el color y tamaño de fuente. Al no formar part
 de un &amp;ldquo;emulador de terminal&amp;rdquo;, permitiria tambien la asignacion de atajos
 personalizados sin temor y finalmente podria expandirse esta libreria para
 proporcionar acceso homologado a perifericos como gamepads, ignorar las
-limitaciones de la terminal accediendo sin fracaso a paletas de color de 8; 16 y
-256 colores o directamente RGB, ademas de tambien podria estar disponible la
+limitaciones de la terminal accediendo sin fracaso a paletas de color de 8, 16 y
+256 colores o directamente RGB, ademas, tambien podria estar disponible la
 manipulacion directa a nivel de pixel, ventanas (en curses &lt;code&gt;WINDOW&lt;/code&gt;) con tamaños
 distintos de fuente, colores y modos todo ello establecido sobre la simplicidad de
 ncurses&lt;/p&gt;
@@ -178,7 +178,8 @@ int pdc_font_size =
 #endif
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;las lineas se explican por si mismas&lt;/p&gt;
+&lt;p&gt;las lineas se explican por si mismas. Cualquier modificacion, requiere
+recompilar la libreria (&lt;code&gt;make clean&lt;/code&gt; + &lt;code&gt;make WIDE=Y&lt;/code&gt;)&lt;/p&gt;
 
 &lt;p&gt;Dentro del &lt;code&gt;Makefile&lt;/code&gt; (&lt;code&gt;PDCurses/sdl2/Makefile&lt;/code&gt;) vemos la variable que activa
 estas opciones&lt;/p&gt;
