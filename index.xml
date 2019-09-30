@@ -7,10 +7,284 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Fri, 27 Sep 2019 18:10:37 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 29 Sep 2019 17:35:09 -0500</lastBuildDate>
     
         <atom:link href="https://nasciiboy.land/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pdcurses</title>
+      <link>https://nasciiboy.land/prog/pdcurses/</link>
+      <pubDate>Sun, 29 Sep 2019 17:35:09 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/pdcurses/</guid>
+      <description>&lt;p&gt;No pocas veces se ha esctiro sobre la irrelevancia del codigo o su irremediable
+destino a ser olvidado, pero, como (aspirantes a) programadores deseamos lo
+mejor para nuestra creacion, que cresca y perdure en el tiempo e incluso
+pueda ser no solo reconocido, tambien reutilizadas las horas dedicadas en
+ingeniar los mecanismos y diseños detras de su funcionamiento.&lt;/p&gt;
+
+&lt;p&gt;Asi pues, existiendo gran cantidad de lenguajes de programacion, cada uno con
+sus particularidades y experimentos es dificil decantarse por una opcion, y sin
+embargo, descartando lo estilizados, comodos o sinceramente superiores que
+puedan parecer, lo cierto es que el ecosistema de estos lenguajes modernos no
+termina de llegar a una &amp;ldquo;madurez nativa&amp;rdquo; en aspectos tan basicos como el area
+grafica, campo en que las librerias relevantes prevalecen ancladas a C y C++&lt;/p&gt;
+
+&lt;p&gt;Inequivacomente todo nuevo lenguaje para ser tomado en serio se vera forzado a
+ofrecer maneras de incorporar (aprovechar, diria alguno) codigo C/C++ y es
+entonces cuando como exquisitos de la programacion con altos entandares de
+pureza nos preguntamos si vale la pena esta ilusion de modernidad construida sobre
+sucias capas de compativilidad forzada. No valdria mas regresar a las fuentes
+mientras aparece un lenguaje que paracite con gracia a C y C++?&lt;/p&gt;
+
+&lt;p&gt;Es en medio de estos pensamientos desviados, tras toquetear varias librerias
+(TUI) con diseños extraños que la nostalgia me puede y recuerdo a
+ncurses&amp;hellip; pero busco entonces una alternativa menos limitada con aparente buena
+salud y que brinde mayores comodidades en lo inmediato para digamos, la creacion
+de videojuegos&lt;/p&gt;
+
+&lt;p&gt;En esta busqueda apareciose &lt;strong&gt;PDCurses&lt;/strong&gt; una libreria &lt;em&gt;estilo curses&lt;/em&gt; de dominio
+publico para llevar los programas que utilizan (n)curses a entornos graficos
+&amp;ldquo;precindiendo de emulador de terminal&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;comor? se imitan la mayoria de capacidades que ejerce (n)curses sobre una terminal
+pero hechando mano de librerias graficas como X11, SDL1 y SDL2, lo cual
+permitiria crear &amp;ldquo;aplicaciones graficas independientes&amp;rdquo; de herramientas de
+terminal, como por ejemplo htop o mocp&lt;/p&gt;
+
+&lt;p&gt;y? ademas de permitir la portavilidad que el codigo permita por si mismo,
+establece un &amp;ldquo;entorno estandarizado&amp;rdquo; con el cual una aplicacion mantendria un
+aspecto homogeneo en por ejemplo el color y tamaño de fuente. Al no formar parte
+de un &amp;ldquo;emulador de terminal&amp;rdquo;, permitiria tambien la asignacion de atajos
+personalizados sin temor y finalmente podria expandirse esta libreria para
+proporcionar acceso homologado a perifericos como gamepads, ignorar las
+limitaciones de la terminal accediendo sin fracaso a paletas de color de 8; 16 y
+256 colores o directamente RGB, ademas de tambien podria estar disponible la
+manipulacion directa a nivel de pixel, ventanas (en curses &lt;code&gt;WINDOW&lt;/code&gt;) con tamaños
+distintos de fuente, colores y modos todo ello establecido sobre la simplicidad de
+ncurses&lt;/p&gt;
+
+&lt;p&gt;mas tarde, podria ademas de estas convenientes especulaciones portar la libreria
+a un conjunto limitado y saludable de C++, para tener codigo algo mas
+&amp;ldquo;bonito&amp;rdquo;&amp;hellip; pero dejemos las especulaciones y aterricemos esto en habilidades
+concretas&lt;/p&gt;
+
+&lt;p&gt;como menciona la &lt;a href=&#34;https://pdcurses.org/&#34;&gt;pagina&lt;/a&gt; de PDCurses, se proporcionan
+varias verciones que a su ves hechan mano de librerias especificas. Pareciendome
+&lt;strong&gt;SDL2&lt;/strong&gt; la mas relevante y mas o menos familiar, me centrare en
+ella.&lt;/p&gt;
+
+&lt;p&gt;Adquiramos primero las dependencias necesarias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# ncurses estandar para terminal
+apt install libncurses-dev
+
+# solo serian extrictamente necesarias libsdl2-dev y libsdl2-ttf-dev
+# pero ya de paso...
+apt install libsdl2-dev libsdl2-ttf-dev libsdl2-gfx-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-net-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Segun parece PDCurses estubo en inactividad por bastante tiempo, por lo que un
+fork (&lt;a href=&#34;https://github.com/Bill-Gray/PDCurses&#34;&gt;https://github.com/Bill-Gray/PDCurses&lt;/a&gt;) se propuso tomar el relevo. Sin
+embargo, este tambien callo en inactividad y los cambios que intentaba llebar a
+cabo no estan completos asi que preferiblemente es mejor acudir a la vercion oficial&lt;/p&gt;
+
+&lt;p&gt;La vercion oficial, recientemente ha tomado cierto movimiento, asi que tomar
+con cautela este esctiro, podria diferir o ser inutil en un futuro cercato. El
+commit sobre el que se llevaron las pruebas es &lt;code&gt;f407bdbda6e38dfab34f590323a914285bf843dd&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Optecion y compilacion&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/wmcbrine/PDCurses
+cd PDCurses/sdl2
+make
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;con esto tenemos nuestra libreria (&lt;code&gt;pdcurses.a&lt;/code&gt;) con la cual podemos (intentar) compilar
+nuestros programitas&lt;/p&gt;
+
+&lt;p&gt;Sin dejar el directorio &lt;code&gt;PDCurses/sdl2&lt;/code&gt; descargar un pequeño programa de prueba
+y compilar de la siguiente forma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# el programita de prueba
+wget https://nasciiboy.land/data//nasciiboy.c
+
+# Compilar siempre a ejecutables con un nombre familiar
+# ahorra desgaste neuronal, desde tiempos inmemoriales
+# elegi nombrar `test` a los binarios
+#
+# Colocar el fichero a compilar al final de la linea
+# permite cambiar el objetivo con facilidad
+gcc -O2 -Wall -fPIC -I.. -o test.o -c nasciiboy.c
+gcc test.o -o test pdcurses.a -lSDL2
+
+# ejecutar
+./test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hala, optendran algo similar a esto&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/nasciiboy_png.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;experimentando tambien podria compilarse con la libreria ncurses r-e-a-l&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gcc -o test -lncurses nasciiboy.c
+./test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;su ejecucion en mi terminal standar se veria asi&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/nasciiboy_tilix.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;ahora, la libreria por defecto utiliza una fuente (tipografia) de mapa de bits,
+pero, ademas de variar el tamaño en pixeles podemos recurrir tambien a fuentes &lt;code&gt;.ttf&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/nasciiboy_DejaVuSansMono.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Conseguir la preciada fuente &lt;code&gt;.ttf&lt;/code&gt; requiere los siguientes pasos&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# borrar para poder recompilar la libreria
+make clean
+# recompilar con fuente ttf
+make WIDE=Y
+
+gcc -O2 -Wall -fPIC -I.. -o test.o -c nasciiboy.c
+gcc test.o -o test pdcurses.a -lSDL2 -lSDL2_ttf
+
+# ejecutar
+./test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;para  modificar la fuente y su tamaño debemos entrar en el fichero &lt;code&gt;PDCurses/sdl2/pdcscrn.c&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#ifdef PDC_WIDE
+# ifndef PDC_FONT_PATH
+#  ifdef _WIN32
+#   define PDC_FONT_PATH &amp;quot;C:/Windows/Fonts/consola.ttf&amp;quot;
+#  elif defined(__APPLE__)
+#   define PDC_FONT_PATH &amp;quot;/System/Library/Fonts/Menlo.ttc&amp;quot;
+#  else
+#   define PDC_FONT_PATH &amp;quot;/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf&amp;quot;
+#  endif
+# endif
+TTF_Font *pdc_ttffont = NULL;
+int pdc_font_size =
+# ifdef _WIN32
+ 16;
+# else
+ 17;
+# endif
+#endif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;las lineas se explican por si mismas&lt;/p&gt;
+
+&lt;p&gt;Dentro del &lt;code&gt;Makefile&lt;/code&gt; (&lt;code&gt;PDCurses/sdl2/Makefile&lt;/code&gt;) vemos la variable que activa
+estas opciones&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ifeq ($(WIDE),Y)
+	CFLAGS += -DPDC_WIDE
+	SFLAGS += $(TFLAGS)
+	SLIBS  += $(TLIBS)
+endif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;finalmente, para evitar un poco de incomodidad en el proceso de compilacion de
+&lt;code&gt;nasciiboy.c&lt;/code&gt; (o el fichero objetivo de sus practicas), sugiero las siguientes
+modificaciones en el mencionado makefile&lt;/p&gt;
+
+&lt;p&gt;Buscar unas lineas mas o menos asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ifeq ($(OS),Windows_NT)
+    ...
+else
+	RM = rm -f
+
+	SFLAGS = $(shell sdl2-config --cflags)
+	SLIBS = $(shell sdl2-config --libs)
+    ...
+endif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;y agregar una variable &lt;code&gt;RUN&lt;/code&gt; mas o menos asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ifeq ($(OS),Windows_NT)
+    ...
+else
+	RUN=./
+	RM = rm -f
+
+    ...
+endif
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ir al final del makefile y agregar lo siguiente&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;run: test $(SRC)
+	$(RUN)test$(E)
+
+test$(E): test.o
+	$(LINK) $^ -o $@ $(LDFLAGS) $(TLIBS)
+
+test.o: $(LIBCURSES) $(SRC)
+	$(BUILD) -c $(DEMOFLAGS) $(SRC) -o test.o
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(en teoria) ahora podriamos compilar nuestro fichero tanto en GNU, OSX y
+Windows, tal que asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ make run SRC=nasciiboy.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o compilar todo (con fuentes tty) (tras un &lt;code&gt;make clean&lt;/code&gt; + &lt;code&gt;rm test&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ make run WIDE=Y SRC=nasciiboy.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;o realizar cualquier otra modificacion de nuestra conveniencia sobre estas
+rusticas herramientas, XDDD!&lt;/p&gt;
+
+&lt;p&gt;Si buscais documentacion, viene incluida dentro de &lt;code&gt;PDCurses/sdl2/docs&lt;/code&gt;. Cuenta
+tambien con vercion web&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;MANUAL.md: Variables, constantes, funciones, portavilidad (&lt;a href=&#34;https://github.com/wmcbrine/PDCurses/blob/master/docs/MANUAL.md&#34;&gt;web&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;USERS.md: Mas Constantes, atributos y nombre de teclas (&lt;a href=&#34;https://github.com/wmcbrine/PDCurses/blob/master/docs/USERS.md&#34;&gt;web&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;IMPLEMNT.md: algunas utiles funciones especificas de PDCurses (&lt;a href=&#34;https://github.com/wmcbrine/PDCurses/blob/master/docs/IMPLEMNT.md&#34;&gt;web&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Es posible que en el ejemplo no se vea tan marcada la diferencia entre la fuente
+png, la ttf por defecto y una personalizada asi que aqui otro trio mas de
+capturas&lt;/p&gt;
+
+&lt;p&gt;PNG&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/naske_png.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;DejaVuSansMono&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/naske_DejaVuSansMono.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;FreeImbo&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/naske_FreeImbo.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Estoy algo motivado por modificar esta libreria e incursionar en adaptaciones a
+un C++ sanamente restringido para mostrar (superficialmente) la construccion de
+algunos juegos sencillos (snake, tetris, un puzzle y un plataformero) pero no
+lo espereis con ilusion&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;PDCurses, no fue la unica alternativa medianamente interesante, tambien
+surgieron por el camino &lt;a href=&#34;http://foo.wyrd.name/en:bearlibterminal&#34;&gt;BearLib&lt;/a&gt; y
+&lt;a href=&#34;https://bitbucket.org/libtcod/&#34;&gt;Libtcod&lt;/a&gt;. Advertir que no las he probado&lt;/p&gt;
+
+&lt;p&gt;Happy Hacking!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>KonoSuba!</title>
