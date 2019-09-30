@@ -91,7 +91,7 @@ embargo, este tambien callo en inactividad y los cambios que intentaba llebar a
 cabo no estan completos asi que preferiblemente es mejor acudir a la vercion oficial&lt;/p&gt;
 
 &lt;p&gt;La vercion oficial, recientemente ha tomado cierto movimiento, asi que tomar
-con cautela este esctiro, podria diferir o ser inutil en un futuro cercato. El
+con cautela este esctiro, podria diferir o ser inutil en un futuro cercano. El
 commit sobre el que se llevaron las pruebas es &lt;code&gt;f407bdbda6e38dfab34f590323a914285bf843dd&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Optecion y compilacion&lt;/p&gt;
@@ -108,7 +108,7 @@ nuestros programitas&lt;/p&gt;
 y compilar de la siguiente forma&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;# el programita de prueba
-wget https://nasciiboy.land/data//nasciiboy.c
+wget https://nasciiboy.land/data/nasciiboy.c
 
 # Compilar siempre a ejecutables con un nombre familiar
 # ahorra desgaste neuronal, desde tiempos inmemoriales
@@ -133,7 +133,7 @@ gcc test.o -o test pdcurses.a -lSDL2
 ./test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;su ejecucion en mi terminal standar se veria asi&lt;/p&gt;
+&lt;p&gt;asi veo yo la ejucucion en la terminal&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/nasciiboy_tilix.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
