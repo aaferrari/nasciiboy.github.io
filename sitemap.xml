@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nasciiboy.land/vg/tanglewood/</loc>
+    <lastmod>2019-09-30T23:09:42-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nasciiboy.land/prog/pdcurses/</loc>
     <lastmod>2019-09-29T17:35:09-05:00</lastmod>
   </url>
@@ -953,13 +958,13 @@
   </url>
   
   <url>
-    <loc>https://nasciiboy.land/categories/</loc>
+    <loc>https://nasciiboy.land/tags/</loc>
     <lastmod>2019-03-01T23:37:20-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://nasciiboy.land/tags/</loc>
+    <loc>https://nasciiboy.land/categories/</loc>
     <lastmod>2019-03-01T23:37:20-06:00</lastmod>
     <priority>0</priority>
   </url>
@@ -999,14 +1004,14 @@
   </url>
   
   <url>
-    <loc>https://nasciiboy.land/categories/apt/</loc>
-    <lastmod>2017-10-30T15:45:27-06:00</lastmod>
+    <loc>https://nasciiboy.land/tags/apt/</loc>
+    <lastmod>2019-08-03T11:32:06-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://nasciiboy.land/tags/apt/</loc>
-    <lastmod>2019-08-03T11:32:06-05:00</lastmod>
+    <loc>https://nasciiboy.land/categories/apt/</loc>
+    <lastmod>2017-10-30T15:45:27-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1156,7 +1161,7 @@
   
   <url>
     <loc>https://nasciiboy.land/tags/howto/</loc>
-    <lastmod>2019-08-03T11:32:06-05:00</lastmod>
+    <lastmod>2019-09-30T23:09:42-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1191,14 +1196,14 @@
   </url>
   
   <url>
-    <loc>https://nasciiboy.land/categories/love2d/</loc>
-    <lastmod>2017-07-25T01:28:00-05:00</lastmod>
+    <loc>https://nasciiboy.land/tags/love2d/</loc>
+    <lastmod>2017-07-22T09:06:44-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://nasciiboy.land/tags/love2d/</loc>
-    <lastmod>2017-07-22T09:06:44-05:00</lastmod>
+    <loc>https://nasciiboy.land/categories/love2d/</loc>
+    <lastmod>2017-07-25T01:28:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1293,14 +1298,14 @@
   </url>
   
   <url>
-    <loc>https://nasciiboy.land/categories/prog/</loc>
-    <lastmod>2019-09-29T17:35:09-05:00</lastmod>
+    <loc>https://nasciiboy.land/tags/prog/</loc>
+    <lastmod>2018-03-23T21:41:50-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://nasciiboy.land/tags/prog/</loc>
-    <lastmod>2018-03-23T21:41:50-06:00</lastmod>
+    <loc>https://nasciiboy.land/categories/prog/</loc>
+    <lastmod>2019-09-29T17:35:09-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1426,13 +1431,13 @@
   
   <url>
     <loc>https://nasciiboy.land/categories/vg/</loc>
-    <lastmod>2019-08-27T00:52:17-05:00</lastmod>
+    <lastmod>2019-09-30T23:09:42-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://nasciiboy.land/vg/</loc>
-    <lastmod>2019-08-27T00:52:17-05:00</lastmod>
+    <lastmod>2019-09-30T23:09:42-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1456,7 +1461,7 @@
   
   <url>
     <loc>https://nasciiboy.land/</loc>
-    <lastmod>2019-09-29T17:35:09-05:00</lastmod>
+    <lastmod>2019-09-30T23:09:42-05:00</lastmod>
     <priority>0</priority>
   </url>
   

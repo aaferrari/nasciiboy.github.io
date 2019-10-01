@@ -7,10 +7,159 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
-    <lastBuildDate>Tue, 27 Aug 2019 00:52:17 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 30 Sep 2019 23:09:42 -0500</lastBuildDate>
     
         <atom:link href="https://nasciiboy.land/vg/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TANGLEWOOD</title>
+      <link>https://nasciiboy.land/vg/tanglewood/</link>
+      <pubDate>Mon, 30 Sep 2019 23:09:42 -0500</pubDate>
+      
+      <guid>https://nasciiboy.land/vg/tanglewood/</guid>
+      <description>
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ramen-xxxi/FMF-01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A puzzle-platforming game for the SEGA Mega Drive and Genesis, in 68000 assembly&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Un plataformero protagonizado por un astuto zorro (BOOOM!) programado
+por un barbudo de buen corazon en puro y duro ensamblador sobre una pc
+viejuna para la mega-drive, y&amp;hellip; &lt;strong&gt;liberado bajo la GNU GPL V3!&lt;/strong&gt;, denle sus
+billetes a ese hombre!&lt;/p&gt;
+
+&lt;p&gt;No encontro mejor manera de inmortalizar su trabajo que haciendolo para una
+plataforma especifica, sobre un equipo tambien especifico que nunca en la
+eternidad requerira de actualizaciones&lt;/p&gt;
+
+&lt;p&gt;En su &lt;a href=&#34;https://github.com/BigEvilCorporation/EvilEmu&#34;&gt;repositorio&lt;/a&gt; que ya tardan
+en visitar y darle una estrella, pide razonablemente que no se distribuyan los
+binarios (que no contengan modificaciones), nuestras compilaciones son de uso
+personal. En honor a su &lt;strong&gt;Big Evil Corporation&lt;/strong&gt; asi lo hare. Esta guia
+de un dummy para dummys se limitara a mostrar una de entre las infinitas formas
+para generar &amp;ldquo;la rom&amp;rdquo;, bajo el sistema del Ñu, por supuesto.&lt;/p&gt;
+
+&lt;p&gt;Si os echa para atras ensuciarse las manos o tambien son unos barbones de buen
+corazon visitar la &lt;a href=&#34;https://tanglewoodgame.com/index.html&#34;&gt;web oficcial&lt;/a&gt; o
+acudir a su tienda de licencias favorita (&lt;a href=&#34;https://store.steampowered.com/app/837190/TANGLEWOOD/&#34;&gt;steam&lt;/a&gt;,
+&lt;a href=&#34;https://www.gog.com/game/tanglewoodr&#34;&gt;gog&lt;/a&gt;). Que no se diga que los GNUseros
+somos ratas miserables.&lt;/p&gt;
+
+&lt;p&gt;Si primero quereis ver a la bestia en accion =&amp;gt;&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/kTvNuLaAO1c&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;proceso-compilatorio&#34;&gt;Proceso Compilatorio&lt;/h2&gt;
+
+&lt;p&gt;Instalamos las dependencias necesarias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt install git dosbox mednaffe p7zip-full
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;git&lt;/code&gt; para optener el codigo, &lt;code&gt;dosbox&lt;/code&gt; para simular un DOS donde se &amp;ldquo;ensamblara&amp;rdquo; el
+codigo, &lt;code&gt;p7zip&lt;/code&gt; para descomprimir un compilador.exe y &lt;code&gt;mednaffe&lt;/code&gt; es un
+&amp;ldquo;front-end&amp;rdquo; que nos hara mas facil interactuar con &lt;code&gt;mednafen&lt;/code&gt; un emulador
+multiplataforma que entre sus sistemas incluye la Mega Drive donde se ejecutara el videojuego&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# por simplicidad del tutorial
+cd /tmp
+
+# optenemos la fuente
+git clone https://github.com/BigEvilCorporation/TANGLEWOOD
+
+# vamos a una posicion especifica donde depositar el compilador.exe
+cd TANGLEWOOD/bigevilframework/ASSEMBLR/
+
+# optencion de compilador.exe
+wget https://segaretro.org/images/3/33/SNASM68K.7z
+
+# SNASM68K.7z =&amp;gt; SNASM68K.EXE
+p7zip -d SNASM68K.7z
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en este punto las instruccion del compilacion aconsejan modificar a placer
+algunas opciones de configuracion. Por mi parte las he dejado tal cual y han
+funcionado sin aparecente desperfecto. Si por curiosidad gusta ir a ver que contiene&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;emacs /tmp/TANGLEWOOD/bigevilframework/TANGLEWD/BLDCONF.ASM
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pasamos a lo mas complicado, compilar en &lt;code&gt;dosbox&lt;/code&gt;. Lanzamos la aplicacion desde
+nuestro entorno grafico&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/TANGLEWOOD/dosbox_000.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Z:\&amp;gt;mount C /tmp/TANGLEWOOD/bigevilframework/
+Z:\&amp;gt;C:
+Z:\&amp;gt;cd TANGLEWD/
+Z:\&amp;gt;BUILDFIN.BAT
+Z:\&amp;gt;exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/TANGLEWOOD/dosbox_001.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;tras un despreciable tiempo, podemos regresar a nuestra terminal y verificar la
+correcta creacion de los binarios&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ls /tmp/TANGLEWOOD/bigevilframework/TANGLEWD/BIN/FINAL
+README.TXT  TANGLEWD.BIN  TANGLEWD.LST  TANGLEWD.MAP
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si como en mi caso, utilizais una distribucion de teclado exotico el dosbox se
+comportara por defecto como un teclado americano viejuno (supongo). Para evitar
+un poco el desastre, se puede configurar en formato dvorak de barrio, no es el
+que utilizo, pero es mejor que nada&lt;/p&gt;
+
+&lt;p&gt;establecer la varable &lt;code&gt;keyboardlayout&lt;/code&gt; tal que asi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;keyboardlayout=dv103
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;en debian la configuracion habita dentro de &lt;code&gt;~/.dosbox/dosbox-0.74-2.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Para ver otras distribuciones visitar&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dosbox.com/wiki/KEYB&#34;&gt;https://www.dosbox.com/wiki/KEYB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dosbox.com/DOSBoxManual.html#KeyboardLayout&#34;&gt;https://www.dosbox.com/DOSBoxManual.html#KeyboardLayout&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;otras informaciones utiles, pueden conocerse con un &lt;code&gt;man dosbox&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Si teneis prisa por provar el rom&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /tmp/TANGLEWOOD/bigevilframework/TANGLEWD/BIN/FINAL/
+mednafen TANGLEWD.BIN
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;yo en su lugar recomendaria lanzar &lt;code&gt;mednaffe&lt;/code&gt; y configurar-provar distintas
+opciones&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/TANGLEWOOD/mednaffe-00.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;tambien ajustar apropiadamente el gamepad&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/TANGLEWOOD/mednaffe-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;ordenando por su funcion, a = accion, c = salto
+b = planeo&lt;/p&gt;
+
+&lt;p&gt;Para mas informacion sobre mednafen y algunos de sus atajos disponibles&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mednafen.github.io/documentation/#Section_key_assignments&#34;&gt;https://mednafen.github.io/documentation/#Section_key_assignments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Felices trazos!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>TLoZ: A Link Between Worlds</title>
