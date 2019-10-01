@@ -98,9 +98,9 @@ nuestro entorno grafico&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Z:\&amp;gt;mount C /tmp/TANGLEWOOD/bigevilframework/
 Z:\&amp;gt;C:
-Z:\&amp;gt;cd TANGLEWD/
-Z:\&amp;gt;BUILDFIN.BAT
-Z:\&amp;gt;exit
+C:\&amp;gt;cd TANGLEWD/
+C:\&amp;gt;BUILDFIN.BAT
+C:\&amp;gt;exit
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/TANGLEWOOD/dosbox_001.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
