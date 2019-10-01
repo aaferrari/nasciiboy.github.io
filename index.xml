@@ -84,9 +84,9 @@ wget https://segaretro.org/images/3/33/SNASM68K.7z
 p7zip -d SNASM68K.7z
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;en este punto las instruccion del compilacion aconsejan modificar a placer
+&lt;p&gt;en este punto las instruccion de compilacion aconsejan modificar a placer
 algunas opciones de configuracion. Por mi parte las he dejado tal cual y han
-funcionado sin aparecente desperfecto. Si por curiosidad gusta ir a ver que contiene&lt;/p&gt;
+funcionado sin aparente desperfecto. Si por curiosidad gusta ir a ver que contiene&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;emacs /tmp/TANGLEWOOD/bigevilframework/TANGLEWD/BLDCONF.ASM
 &lt;/code&gt;&lt;/pre&gt;
