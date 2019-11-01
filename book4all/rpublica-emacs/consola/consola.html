@@ -1,5 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+
 
 <html>
 <head><title>Emacs: 12. Emacs y la Shell </title>
@@ -12,22 +14,22 @@
 </head>
 <body>
 <div id="contenidor0">
-	
+
 	<div id="rotulo">
-	
+
 	<span id="r">rp</span>
-	
+
 	</div>
-	
+
 	<div id="globalNav">
-<!--	
+<!--
 	<ul id="credits"><li></li>
 <li>Antoni Serra Devecchi</li>
 
 <li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
 <li><i>Versión no definitiva.</i></li>
 <li><i> En proceso de redacción.</i></li>
-<li><i>Últ.Actual.: 01/04/2006</i></li></ul>		
+<li><i>Últ.Actual.: 01/04/2006</i></li></ul>
 -->
 	</div>
 
@@ -56,73 +58,73 @@ Referéncia
 
 <p ><a href="../emacs.html">0. Indice General</a></p>
 
-<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>		
+<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>
 <p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
-		
+
 <p ><a href="../modos/modos.html#III">III.Modos</a></p>
-		
+
 <p ><a href="../start/start.html#IV">IV.La Pantalla de Emacs</a></p>
-		
-				
-			
+
+
+
 <p><a href="../abrir/abrir.html#10">1.Abrir Archivos</a></p>
-		
-				
+
+
 
 <p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
-		
+
 
 <p ><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
-		
+
 
 
 <p ><a href="../movimientos/movimientos.html#40">4.Movimientos del cursor</a></p>
-		
-			
+
+
 <p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
-		
+
 <p ><a href="../buscar/buscar.html#60">6.Búsquedas</a></p>
-		
+
 <p ><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
-		
+
 
 
 <p ><a href="../xbuffers/xbuffers.html#80">8.Buffers múltiples</a></p>
-		
+
 
 
 <p ><a href="../ventanas/ventanas.html#90">9.Ventanas</a></p>
-		
+
 <p ><a href="../marcos/marcos.html#100">10.Marcos</a></p>
-		
+
 
 <p ><a href="../bookmarks/bookmarks.html#110">11.Bookmarks</a></p>
-		
+
 
 <p class="active"><a href="consola.html#120">12.Emacs y la Shell</a></p>
-		
+
 
 <p><a href="../dired/dired.html#130">13.Dired</a></p>
-		
+
 
 
 <p><a href="../perso/perso.html#140">14.Personalización </a></p>
-		
+
 
 <p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
-		
+
 <p><a href="../formato/formato.html#160">16.Formato de texto </a></p>
-		
+
 
 <p><a href="../imprimir/imprimir.html#170">17.Imprimir </a></p>
 
 
 <p><a href="../help/help.html#180">18.El Sistema de Ayuda </a></p>
-		
+
 
 
 <p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
-		
+
 <p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
 <p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
 <p><a href="http://www.rpublica.net/emacs/recursos/recursos.html#A">A.Recursos Emacs</a></p>
@@ -149,7 +151,7 @@ Referéncia
 	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> --></div>
 
 
-</div>	
+</div>
 
 
 </div>
@@ -157,7 +159,7 @@ Referéncia
 
 	<div id="texto">
 		<div id="titulo">
-		<h2 class="encab" id="120">12. Emacs y la Shell </h2> 
+		<h2 class="encab" id="120">12. Emacs y la Shell </h2>
 		</div>
 
 	<div id="contenido">
@@ -176,12 +178,12 @@ Referéncia
 	<li>Ejecución de <b>comandos shell</b> desde una sesión de Emacs. </li>
 	<li>Emacs en <b>modo shell</b>.</li></ul><br/>
 
-	
+
 	<h3 class="encab" id="121" > 12.1 Ejecutar comandos shell desde un buffer.</h3>
 	 <h6><a class="Ref" href="../bookmarks/bookmarks.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
 	 <a class="Ref" href="consola.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../dired/dired.html"> Pág.Siguente</a></h6>
-	
+
 	<p>La posibilidad de ejecutar ccomandos de shell desde un buffer de Emacs es, posiblemente, una de las características
 	más apreciadas de la aplicación.  Y ellos por, entre otras, las siguientes razones:</p>
 
@@ -212,9 +214,9 @@ Referéncia
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-u&nbsp;M-!&nbsp;</b></li>
 	</ul>
 	<p>Con dicho comando , la salida del comando shell no se muestra en  la <i style="font-weight:300">&nbsp;*Shell Command Output* &nbsp;</i>, sino en el buffer activo: Se inserta a partir de la posición del cursor:</p>
-	
+
 	<div class="img"><table>
-	
+
 	<table><tr><td><img src="consola3.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 	<table><tr><td><img src="consola4.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 	</div><br/>
@@ -227,7 +229,7 @@ Referéncia
 	</ul>
 
 	<p>La forma de operar con este comando es la siguiente:</p>
-	
+
 	<div class="img"><table>
 	<p>Seleccionamos la región:</p>
 	<table><tr><td><img src="consola5.png" alt="Ventana" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
@@ -246,7 +248,7 @@ Referéncia
 	<p>Puede abrirse un <b>buffer de shell</b> y trabajar en el como si de una cónsola se tratara. Pero con
 	todas las ventajas que nos proporciona la capacidad de edición de Emacs.</p>
 	<p>Abrir un <b>buffer de shell</b> no es otra cosa que abrir un buffer con el <b>modo mayor </b><i class="marcado">shell-mode</i>. Para ello utilizamos el siguiente comando: </p>
-	
+
 	<ul class="comandos">
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;shell&nbsp;&lt;Enter&gt;</i></li>
 	</ul>
@@ -266,10 +268,10 @@ Referéncia
 	<p>Emacs nos pedirá , mediante un mensaje en el mini-buffer, &nbsp;( <i style="font-weight:300">Non echoed text:</i> ),&nbsp; que introduzcamos el texto que desamos ocultar.</p>
 	<p>A medida que vayamos introduciendo el texto, Emacs lo irá mostrando como una sucesión de carácteres &nbsp;<b>*</b>&nbsp; </p>
 	<img src="consola10.png" alt="Ventana" width="360"  align="middle" hspace="10" vspace="10"/>
-	
+
 	<p>Pulsando &nbsp;&lt;Enter&gt;&nbsp;, el texto se introducirá en la posición del cursor, sin mostrarse en pantalla.</p>
 	<p>Si deseáramos ocultar los passwords cuando los tecleamos, debemos añadir las siguientes dos líneas al archivo <b>.emacs</b>:</p>
-	<p><i style="font-weight:300">(add-hook 'comint-output-filter-functions</i><br/>			
+	<p><i style="font-weight:300">(add-hook 'comint-output-filter-functions</i><br/>
 	<i style="font-weight:300">'comint-watch-for-password-prompt)</i></p>
 	<p>Siempre que aparezca la solicitud ede un password en el prompt, Emacs nos solicitará que introduzcamos el texto en el mini-buffer.</p>
 	</div>
@@ -280,7 +282,7 @@ Referéncia
 	<p> <b class="marcado">M-x &nbsp;rename-uniquely&nbsp;&nbsp;&lt;Enter&gt;.</b></p>
 	<p>Emacs irá numerando los <b>buffers de shell</b>.</p><br/>
 
-	
+
 	<h3 class="encab" id="123" > 12.3 Comandos del entorno shell.</h3>
 	 <h6><a class="Ref" href="../bookmarks/bookmarks.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
@@ -303,7 +305,7 @@ Referéncia
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x &nbsp; comint-interrupt-subjob&nbsp;&lt;Enter&gt;</i></li>
 	<li>Interrumpe la tarea en curso.</li>
 	</ul>
-	
+
 	</div><br/>
 
 	<div class="comandos">
@@ -313,7 +315,7 @@ Referéncia
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x &nbsp; comint-stop-subjob&nbsp;&lt;Enter&gt;</i></li>
 	<li>Suspende o para una tarea en curso.</li>
 	</ul>
-	
+
 	</div><br/>
 
 	<div class="comandos">
@@ -321,7 +323,7 @@ Referéncia
 	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Signals-->CONT</i></li>
 	<li>Reanuda la tarea suspendida.</li>
 	</ul>
-	
+
 	</div><br/>
 
 	<div class="comandos">
@@ -329,7 +331,7 @@ Referéncia
 	<li><b>Opción de menú</b>&nbsp;:&nbsp;<i class="marcado">Signals-->QUIT</i></li>
 	<li>Sale de la tarea iniciada.</li>
 	</ul>
-	
+
 	</div><br/>
 
 	<div class="comandos">
@@ -414,7 +416,7 @@ Referéncia
 	<li>Elimina el output del último comando.</li>
 	</ul>
 	</div><br/>
-	
+
 
 	<div class="comandos">
 	<ul  style="list-style-type:none">
@@ -442,7 +444,7 @@ Referéncia
 	<li>Mueve al siguiente comando.</li>
 	</ul>
 	</div><br/>
-	
+
 
 	<h3 class="encab" id="124" > 12.4 Elección de la shell.</h3>
 	 <h6><a class="Ref" href="../bookmarks/bookmarks.html">Pág.Anterior
@@ -454,7 +456,7 @@ Referéncia
 	archivo <b>.emacs</b>: <i style="font-wight:300" class="marcado"> (setq shell-file-name "/bin/shell")</i></p>
 	<p> En esta línea deberiamos sustituir <i style="font-wight:300">shell</i> por el nombre de la shell a utilizar ( zhs, bash,...etc.</p>
 
-	
+
 
 
 
@@ -463,20 +465,20 @@ Referéncia
 		<div class="margenInf">&nbsp;</div>
 
 
-		<div id="pie"> <h6><a class="Ref" href="../bookmarks/bookmarks.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; 
+		<div id="pie"> <h6><a class="Ref" href="../bookmarks/bookmarks.html">Pág.Anterior</a>&nbsp;&#124;&nbsp;
 		<a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="consola.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;
-		<a class="Ref" href="../dired/dired.html"> Pág.Siguente</a></h6> 
+		<a class="Ref" href="../dired/dired.html"> Pág.Siguente</a></h6>
 
 		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
 		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">
-		12.Emacs y la Shell</span>&nbsp;&#124;&nbsp;</h6> 
+		12.Emacs y la Shell</span>&nbsp;&#124;&nbsp;</h6>
 		 </div>
-		<div class="margenInf">&nbsp;</div> 
-		
+		<div class="margenInf">&nbsp;</div>
+
 	</div>
-	
+
 </div>
 
 </body>
-	
+
 </html>

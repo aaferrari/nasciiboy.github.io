@@ -1,5 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
 
 <html>
 <head><title>Emacs: 8. Buffers Múltiples</title>
@@ -12,22 +13,22 @@
 </head>
 <body>
 <div id="contenidor0">
-	
+
 	<div id="rotulo">
-	
+
 	<span id="r">rp</span>
-	
+
 	</div>
-	
+
 	<div id="globalNav">
-	
+
 	<ul id="credits"><li></li>
 <li>Antoni Serra Devecchi</li>
 
 <li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
 <li><i>Versión no definitiva.</i></li>
 <li><i> En proceso de redacción.</i></li>
-<li><i>Últ.Actual.: 01/04/2006</i></li></ul>		
+<li><i>Últ.Actual.: 01/04/2006</i></li></ul>
 
 	</div>
 
@@ -57,73 +58,73 @@ Referéncia
 
 <p ><a href="../emacs.html">0. Indice General</a></p>
 
-<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>		
+<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>
 <p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
-		
+
 <p ><a href="../modos/modos.html#III">III.Modos</a></p>
-		
+
 <p ><a href="../start/start.html#IV">IV.La Pantalla de Emacs</a></p>
-		
-				
-			
+
+
+
 <p><a href="../abrir/abrir.html#10">1.Abrir Archivos</a></p>
-		
-				
+
+
 
 <p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
-		
+
 
 <p ><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
-		
+
 
 
 <p ><a href="../movimientos/movimientos.html#40">4.Movimientos del cursor</a></p>
-		
-			
+
+
 <p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
-		
+
 <p ><a href="../buscar/buscar.html#60">6.Búsquedas</a></p>
-		
+
 <p ><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
-		
+
 
 
 <p class="active"><a href="xbuffers.html#80">8.Buffers múltiples</a></p>
-		
+
 
 
 <p><a href="../ventanas/ventanas.html#90">9.Ventanas</a></p>
-		
+
 <p><a href="../marcos/marcos.html#100">10.Marcos</a></p>
-		
+
 
 <p><a href="../bookmarks/bookmarks.html#110">11.Bookmarks</a></p>
-		
+
 
 <p><a href="../consola/consola.html#120">12.Emacs y la Shell</a></p>
-		
+
 
 <p><a href="../dired/dired.html#130">13.Dired</a></p>
-		
+
 
 
 <p><a href="../perso/perso.html#140">14.Personalización </a></p>
-		
+
 
 <p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
-		
+
 <p><a href="../formato/formato.html#160">16.Formato de texto </a></p>
-		
+
 
 <p><a href="../imprimir/imprimir.html#170">17.Imprimir </a></p>
 
 
 <p><a href="../help/help.html#180">18.El Sistema de Ayuda </a></p>
-		
+
 
 
 <p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
-		
+
 <p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
 <p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
 <p><a href="http://www.rpublica.net/emacs/recursos/recursos.html#A">A.Recursos Emacs</a></p>
@@ -132,7 +133,7 @@ Referéncia
 <p><a href="http://www.rpublica.net/emacs/biblio/biblio.html#D">D.Bibliografia</a></p>
 
 
-</div>	
+</div>
 
 
 
@@ -141,14 +142,14 @@ Referéncia
 
 	<div id="texto">
 		<div id="titulo">
-		<h2 class="encab" id="80">8. Buffers Múltiples</h2> 
+		<h2 class="encab" id="80">8. Buffers Múltiples</h2>
 		</div>
 
 	<div id="contenido">
 
 	<h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a><!--&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6> 
+	 <a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6>
 
 	<p>Con Emacs puede editarse más de un buffer al mismo tiempo y , como veremos en el siguiente capítulo,
 	visualizarlos en ventana y marcos independientes.</p>
@@ -156,11 +157,11 @@ Referéncia
 	<p>En cada momento estaremos llevando a cabo las tareas de edición en uno de los buffers abiertos, aquel en el que se encuentre el cursor y al que denominaremos &nbsp;<b>buffer activo</b>&nbsp;. Pero debemos tener presente que, en realidad, todos los buffers abiertos durante la sesión están &nbsp;<i style="font-weight:300">activos</i>. </p>
 
 	<p>En esta funcionalidad, posible através de unos pocos y simples comandos, radica uno de los factores que convierten Emacs en una aplicación "adictiva". :-) </p><br/>
-	
+
 	<h3 class="encab" id="81" > 8.1 Abrir y crear nuevos buffers.</h3>
 	 <h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6> 
+	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6>
 
 	<p>Para abrir o crear un nuevo buffer recurriremos al ya conocido comado:</p>
 	<ul class="comandos">
@@ -174,8 +175,8 @@ Referéncia
 	<h3 class="encab" id="82" > 8.2 Moverse entre buffers.</h3>
 	 <h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6> 
-	
+	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6>
+
 	<P>Cada vez que abramos un nuevo archivo con &nbsp;<b class="marcado">C-x&nbsp;C-f</b>,&nbsp;Emacs creará el correspondiente buffer , situando en él el cursor.</P>
 	<p>Para pasar del <b>buffer activo</b> a otro de los buffers que tengamos abiertos, en otras palabras,
 	el cambio de buffer activo, se hacerse de dos maneras:  </p>
@@ -184,9 +185,9 @@ Referéncia
 	<li>Mediante el comando &nbsp;<b class="marcado">C-x&nbsp;b</b></li>
 	<li>Através del menú &nbsp;<i style="font-weight:300" class="marcado">Buffers</i></li>
 	</ol>
-	<p>Mas adelante, en el siguiente capítulo ( <a href="../ventanas/ventanas.html" style="text-decoration:none">Lista de Buffers &#091; 9.7 &#093;</a>), veremos como podemos movernos y gestionar  buffers de otra forma, a través de la <b>Lista de buffers</b>. 
+	<p>Mas adelante, en el siguiente capítulo ( <a href="../ventanas/ventanas.html" style="text-decoration:none">Lista de Buffers &#091; 9.7 &#093;</a>), veremos como podemos movernos y gestionar  buffers de otra forma, a través de la <b>Lista de buffers</b>.
 	 </p><br/>
-	
+
 	<h4>El Comando C-x b</h4>
 
 	<ul class="comandos">
@@ -198,7 +199,7 @@ Referéncia
 	<div class="img">
 	<p>Al teclear el comando&nbsp;<b class="marcado">C-x&nbsp;b</b>,&nbsp; en el mini-buffer nos aparece el siguiente
 	mensaje:</p>
-	
+
 	<table><tr><td><img src="xbuffer1.png" alt="Comando C-x b" width="411"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
 	<p>Se nos pide que introduzcamos el nombre del buffer al que queremos cambiarnos. Introduciendo el nombre y pulsando
@@ -215,8 +216,8 @@ Referéncia
 	</div><br/>
 
 	<h4>El menú Buffers</h4>
-	
-	<p>Tambíen podemos cambiar de buffer activo mediante la  opción de menú:</p> 
+
+	<p>Tambíen podemos cambiar de buffer activo mediante la  opción de menú:</p>
 
 	<p><span class="comandos">&nbsp;<i class="marcado">Buffers</i>&nbsp;</span></p>
 
@@ -234,7 +235,7 @@ Referéncia
 	<h3 class="encab" id="83" > 8.3 Eliminación de buffers.</h3>
 	 <h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6> 
+	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6>
 
 	<p>Debemos aclarar varios conceptos:</p>
 	<ol><li>La eliminación de un buffer no comportará la eliminación del archivo asociado a dicho buffer.</li>
@@ -266,7 +267,7 @@ Referéncia
 
 	<p>Tecleando &nbsp;&nbsp;<b class="marcado">yes</b>&nbsp;&nbsp; se cerrará el buffer sin guardar los cambios.<br/>
 	Si tecleamos &nbsp;&nbsp;<b class="marcado">no</b>&nbsp;&nbsp; no se produce la eliminación del buffer.</p>
-	
+
 	</div>
 
 	<p>Si deseamos eliminar múltiples buffers podemos hacerlo mediante el siguiente comando:</p>
@@ -276,15 +277,15 @@ Referéncia
 	<table><tr><td><img src="xbuffer10.png" alt="Comando kill-some-buffers (1)" width="432"  align="middle" hspace="10" vspace="10"/></td></tr></table>
  	 o si contiene cambios que no han sido guardados ( <i style="font-weight:300">HAS BEEN EDITED</i>): <br/>
 	<table><tr><td><img src="xbuffer11.png" alt="Comando kill-some-buffers (2)" width="420"  align="middle" hspace="10" vspace="10"/></td></tr></table></p></ul><br/>
-	
+
 	<h3 class="encab" id="84" > 8.4 Guardar múltiples buffers.</h3>
 	 <h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6> 
+	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6>
 
 	<p>Como ya se vió en &nbsp;<a style="text-decoration:none" href="../guardar/guardar.html#21">Guardar archivos &#091;2.1&#093;</a>,&nbsp; mediante el comando &nbsp;<i  class="marcado" style="font-weight:300">C-x&nbsp;C-s</i>&nbsp; podemos ir guardando los buffers de forma individual.</p>
 	<p>Pero cuando tenemos abiertos múltiples buffers, tenemos una opción de guardarlos todos de una vez. Es mediante el comando:</p>
-	
+
 	<p><span class="comandos"><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;save-some-buffers&nbsp;&lt;Enter&gt;</i></span></p>
 
 	<p>Emacs nos irá preguntando, para cada buffer asociado a un archivo, si deseamos guardarlo o no.</p>
@@ -297,17 +298,17 @@ Referéncia
 	<tr><td><b class="marcado">.</b></td><td>&nbsp;:&nbsp;Guarda éste buffer y ninguno más.</td></tr>
 	<tr><td><b class="marcado">q</b></td><td>&nbsp;:&nbsp;Cancela el comando sin salvar el actual buffer.</td></tr>
 	<tr><td><b class="marcado">C-r</b></td><td>&nbsp;:&nbsp;Examina el actual buffer (modo vista). Se sale del <b>modo vista</b> tecleando &nbsp;<b class="marcado">q</b></td></tr>
-	
+
 	</table><br/>
 
 
 	<h3 class="encab" id="85" > 8.5 Renombrar buffers.</h3>
 	 <h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6> 
+	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6>
 
 	<p>El comando utilizado para cambiar el nombre de un buffer es:</p>
-	
+
 	<ul class="comandos">
 
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<b class="marcado">M-x&nbsp;rename-buffer</b>.</li>
@@ -322,24 +323,24 @@ Referéncia
 	<h3 class="encab" id="86" > 8.6 Reemplazar el contenido de un buffer.</h3>
 	 <h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6> 
-	
+	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6>
+
 	<p>Para sustituir el contenido de un buffer activo por el de otro archivo, se procede ,como ya se vió en &nbsp;<a style="text-decoration:none" href="../abrir/abrir.html#13">Sustitución de archivos &#091;1.3&#093;</a>,&nbsp; con el comando  &nbsp;<i style="font-weight:300" class="marcado">C-x &nbsp; C-v</i>.&nbsp;</p>
-	<p>Una vez realizada la sustitución de contenido, podemos observar como el nombre del <b>buffer sustituido</b> ha 
+	<p>Una vez realizada la sustitución de contenido, podemos observar como el nombre del <b>buffer sustituido</b> ha
 	sido reemplazado, en la lista de buffers ( menú  &nbsp;<i style="font-weight:300" class="marcado">Buffers</i>),&nbsp; por el del nuevo archivo. </p><br/>
 
 
 	<h3 class="encab" id="87" > 8.7 Buffers de "sólo lectura".</h3>
 	 <h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6> 
+	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6>
 
 
 	<p> En ocasiones puede ser conveniente tener abiertos buffers en modo <b>sólo lectura</b>, evitando la posibilidad de modificación.</p>
-	
+
 	<p>El comando que nos permite conmutar el paso de modo <b>lectura-escritura</b> al modo <b>sólo-lectuta es</b>:</p>
 
-	
+
 	<ul class="comandos">
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;C-q</b></li>
 	</ul>
@@ -357,7 +358,7 @@ Referéncia
 	<h3 class="encab" id="88" > 8.8 Lista de buffers.</h3>
 	 <h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6> 
+	 <a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6>
 
 	<p>Una manera ágil de gestionar buffers es através de la <b>Lista de buffers</b></p>
 	<p>Debido a que para el manejo de la <b>Lista de buffers</b> puede ser conveniente el conocimiento de algunos comandos
@@ -366,26 +367,26 @@ Referéncia
 
 
 
-	
 
 
-			
+
+
 		<div class="margenInf">&nbsp;</div>
 
 
-		<div id="pie"> <h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; 
+		<div id="pie"> <h6><a class="Ref" href="../reemplazar/reemplazar.html">Pág.Anterior</a>&nbsp;&#124;&nbsp;
 		<a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="xbuffers.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;
-		<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6> 
+		<a class="Ref" href="../ventanas/ventanas.html"> Pág.Siguente</a></h6>
 
 		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
-		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">8.Buffers Múltiples</span>&nbsp;&#124;&nbsp;</h6> 
+		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">8.Buffers Múltiples</span>&nbsp;&#124;&nbsp;</h6>
 		 </div>
-		<div class="margenInf">&nbsp;</div> 
-		
+		<div class="margenInf">&nbsp;</div>
+
 	</div>
-	
+
 </div>
 
 </body>
-	
+
 </html>

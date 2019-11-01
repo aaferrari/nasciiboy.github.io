@@ -1,5 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+
 
 <html>
 <head><title>Emacs:Introducción, Convenciones y Comandos</title>
@@ -12,23 +14,23 @@
 </head>
 <body>
 <div id="contenidor0">
-	
+
 	<div id="rotulo">
-	
+
 	<span id="r">rp</span>
-	
+
 	</div>
-	
+
 	<div id="globalNav">
 <!--
-	
+
 	<ul id="credits"><li></li>
 <li>Antoni Serra Devecchi</li>
 
 <li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
 <li><i>Versión no definitiva.</i></li>
 <li><i> En proceso de redacción.</i></li>
-<li><i>Últ.Actual.: 01/04/2006</i></li></ul>		
+<li><i>Últ.Actual.: 01/04/2006</i></li></ul>
 -->
 	</div>
 
@@ -58,73 +60,73 @@ Referéncia
 
 <p ><a href="../emacs.html">0. Indice General</a></p>
 
-<p  class="active"><a href="intro.html#I">I.Introducción</a></p>		
+<p  class="active"><a href="intro.html#I">I.Introducción</a></p>
 <p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
-		
+
 <p ><a href="../modos/modos.html#III">III.Modos</a></p>
-		
+
 <p ><a href="../start/start.html#IV">IV.La Pantalla de Emacs</a></p>
-		
-				
-			
+
+
+
 <p ><a href="../abrir/abrir.html#10">1.Abrir Archivos</a></p>
-		
-				
+
+
 
 <p><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
-		
+
 
 <p><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
-		
+
 
 
 <p><a href="../movimientos/movimientos.html#40">4.Movimientos del cursor</a></p>
-		
-			
+
+
 <p><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
-		
+
 <p><a href="../buscar/buscar.html#60">6.Búsquedas</a></p>
-		
+
 <p><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
-		
+
 
 
 <p><a href="../xbuffers/xbuffers.html#80">8.Buffers múltiples</a></p>
-		
+
 
 
 <p><a href="../ventanas/ventanas.html#90">9.Ventanas</a></p>
-		
+
 <p><a href="../marcos/marcos.html#100">10.Marcos</a></p>
-		
+
 
 <p><a href="../bookmarks/bookmarks.html#110">11.Bookmarks</a></p>
-		
+
 
 <p><a href="../consola/consola.html#120">12.Emacs y la Shell</a></p>
-		
+
 
 <p><a href="../dired/dired.html#130">13.Dired</a></p>
-		
+
 
 
 <p><a href="../perso/perso.html#140">14.Personalización </a></p>
-		
+
 
 <p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
-		
+
 <p><a href="../formato/formato.html#160">16.Formato de texto </a></p>
-		
+
 
 <p><a href="../imprimir/imprimir.html#170">17.Imprimir </a></p>
 
 
 <p><a href="../help/help.html#180">18.El Sistema de Ayuda </a></p>
-		
+
 
 
 <p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
-		
+
 <p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
 <p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
 <p><a href="http://www.rpublica.net/emacs/recursos/recursos.html#A">A.Recursos Emacs</a></p>
@@ -154,20 +156,20 @@ Referéncia
 
 
 
-	
+
 </div>
 
 
 	<div id="texto">
 		<div id="titulo">
-		<h2 class="encab" id="I">I. Introducción, Convenciones y Comandos</h2> 
+		<h2 class="encab" id="I">I. Introducción, Convenciones y Comandos</h2>
 		</div>
 
 	<div id="contenido">
 
 	<h3 class="encab" id="Ii" >I.i. Introducción</h3>
-	 <h6><a class="Ref" href="../emacs.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a><!--&nbsp;&#124;&nbsp;<a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../buffers/buffers.html"> Pág.Siguente</a></h6> 
-	
+	 <h6><a class="Ref" href="../emacs.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a><!--&nbsp;&#124;&nbsp;<a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../buffers/buffers.html"> Pág.Siguente</a></h6>
+
 	<p>Emacs, además de ser uno de los editores de texto más potentes, nos puede proporcionar un entorno de trabajo muy completo.
 	 Con Emacs pueden compilarse programas, gestionar archivos y directorios, ejecutar comandos
 	de shell, enviar y recibir correo...etc. Si a ello unimos su gran flexibilidad y extensibilidad, que nos permitirán adaptar la aplicación a nuestras necesidades concretas, podemos pensar que nos encontramos ante una de las llamadas "aplicaciones indispensables".
@@ -179,10 +181,10 @@ Referéncia
 	 <p>Ésta intentará ser una iniciación a la edición con Emacs,  algo más extensa que el excelente tutorial que el propio Emacs nos proporciona y  dirigida a todo aquel que, conociendo ya las posibilidades de la aplicación, desee iniciarse en su uso.</br>
 	 Pretende ser una especie de  "manual general" , centrado en las  tareas de edición, limitándose  a apuntar, sin entrar en ellas, otras posibilidades que Emacs nos ofrece para tareas más especializadas. </p>
 
-	 
+
 	 <h3 class="encab" id="Iii" >I.ii. Convenciones</h3>
 	 <h6><a class="Ref" href="../emacs.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="intro.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;
-	<a class="Ref" href="../buffers/buffers.html"> Pág.Siguente</a></h6> 
+	<a class="Ref" href="../buffers/buffers.html"> Pág.Siguente</a></h6>
 
 	 <p>Se seguirán las siguientes convenciones generales:</p>
 
@@ -191,7 +193,7 @@ Referéncia
 	 <ul class="comandos" >
 	<li><span class="marcado"><b>C</b></span>&nbsp;: Tecla <b>Control.</b> Se corresponde con la tecla  <b>Ctrl</b></li><br/>
 		<li></li>
-	 	<li><span class="marcado"><b>M</b></span>&nbsp;: Tecla <b>Meta.</b> Se corresponde con la tecla <b>Alt</b>. En teclados Apple, con la tecla 
+	 	<li><span class="marcado"><b>M</b></span>&nbsp;: Tecla <b>Meta.</b> Se corresponde con la tecla <b>Alt</b>. En teclados Apple, con la tecla
 		<b>Apple</b> </li></br>
 		<li></li>
 		<li><span class="marcado"><b>Tecla1-Tecla2</b></span>&nbsp;: Pulsar <b>Tecla1</b>&nbsp; y, sin soltarla, pulsar <b>Tecla2</b></li></br>
@@ -206,7 +208,7 @@ Referéncia
 	<h4>Representación de teclas:</h4>
 
 	<table>
-	
+
 	<tr><td><b class="marcado">&lt;Enter&gt;</b></td><td>&nbsp;&nbsp;</td> <td><b>Enter</b></td></tr>
 	<tr><td><b class="marcado">&lt;Space&gt;</b></td><td>&nbsp;&nbsp;</td><td><b>Espacio</b></td></tr>
 	<tr><td><b class="marcado">&lt;Back&gt;</b></td><td>&nbsp;&nbsp;</td><td><b>Retroceso</b></td></tr>
@@ -218,10 +220,10 @@ Referéncia
 	<tr><td></td></tr>
 	</table>
 	<p> En general, el nombre de una tecla encerrado entre <b>&lt; &gt;</b> indicará la acción de pulsar dicha tecla.</p><br/>
-	
+
 
 	<h3 class="encab" id="1iii" >I.iii. Comandos</h3>
-	 <h6><a class="Ref" href="../emacs.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="intro.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../buffers/buffers.html"> Pág.Siguente</a></h6> 
+	 <h6><a class="Ref" href="../emacs.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="intro.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../buffers/buffers.html"> Pág.Siguente</a></h6>
 
 	<p>En Emacs todos los comandos tienen un nombre, del tipo  &nbsp;&nbsp;<span class="marcado">find-file</span>,&nbsp; que corresponde al comando que abre (o crea) archivos, &nbsp;&nbsp;<span class="marcado">save-buffers-kill-emacs</span>,&nbsp; usado para abandonar Emacs...etc. Como puede intuirse, introducir comandos por su nombre puede resultar una tarea bastante fastidiosa. </p>
 
@@ -236,7 +238,7 @@ Referéncia
 
 	<p>A primera vista , la ejecución de comandos mediante la pulsación de una determinada secuencia de teclas puede parecer una complicación innecesaria, disponiendo de la posibilidad de realizar la misma operación através de las opciones del menú de Emacs.</P>
 
-	<P>A medida que uno va adentrándose en la utilización de Emacs  se va dando cuenta de la ventaja que supone, en cuanto a productividad, este modo de introducir los comandos. Sobre todo en los comandos de utilización más frecuente.</P> 
+	<P>A medida que uno va adentrándose en la utilización de Emacs  se va dando cuenta de la ventaja que supone, en cuanto a productividad, este modo de introducir los comandos. Sobre todo en los comandos de utilización más frecuente.</P>
 	<P>De todas formas, qué comandos acaberemos ejecutando através del teclado y cuales através de las opciones del menú vendrá determinado, en gran medida, por hábitos y/o preferencias personales. </p>
 
 	<p>Debemos tener en cuenta que algunos comandos no disponen de una opción de menú que nos permita su ejecución. Otros, menos, tampoco tienen una secuencia de caracteres asociada, por lo que solo podrán ser ejecutados mediante su nombre. Por fortuna, estos últimos son una minoria. </p>
@@ -251,9 +253,9 @@ Referéncia
 	<p><span class="marcado">C-&lt;caracter&gt;</span>: Son los comandos más habituales. Para su introducción se sigue la siguiente secuencia:</p>
 
 		<ol><li>Pulsar la tecla <b>C</b> y, sin soltarla,....</li>
-		<li>... pulsar la tecla correspondiente al <b>&lt;caracter&gt;</b>.</li> 
+		<li>... pulsar la tecla correspondiente al <b>&lt;caracter&gt;</b>.</li>
 		<li>Soltar ambas.</li></ol><br/>
-	
+
 	<p><span class="marcado">M-&lt;caracter&gt;</span>: Igual que en el caso anterior , pero con la tecla <b>Meta</b> en lugar de la tecla <b>Control</b>.<br/>
 
 	Como alternativa a <b>M</b> tenemos la tecla <span class="marcado">Esc</span>. En este caso la secuencia será:</p>
@@ -280,26 +282,26 @@ Referéncia
 		<li>.... pulsar <b>x</b></li>
 		<li>Soltar ambas.</li>
 		<li>Introducir el <b>nombre_del_comando</b> en el mini-buffer.</li>
-		<li><b>&lt;Enter&gt;</b></li></ol> 
-	
+		<li><b>&lt;Enter&gt;</b></li></ol>
+
 	</div>
 
 	<p>A medida que avencemos en el conocimiento de Emacs veremos como, sin darnos cuenta, iremos "automatizando" todas estas secuencias. Nos daremos cuenta, también, de la lógica en que se sustenta la asignación de una determinada secuencia de teclas a un comando.  </p>
-	 
-	 
-    
-	
-	
-	
+
+
+
+
+
+
 
 		<div class="margenInf">&nbsp;</div>
-		<div id="pie"> <h6><a class="Ref" href="../emacs.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="intro.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../buffers/buffers.html"> Pág.Siguente</a></h6> 
-		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">I. Introducción, Convenciones y Comandos</span>&nbsp;&#124;&nbsp;</h6> 
+		<div id="pie"> <h6><a class="Ref" href="../emacs.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="intro.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../buffers/buffers.html"> Pág.Siguente</a></h6>
+		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">I. Introducción, Convenciones y Comandos</span>&nbsp;&#124;&nbsp;</h6>
 		 </div>
-		<div class="margenInf">&nbsp;</div> 
-		
+		<div class="margenInf">&nbsp;</div>
+
 	</div>
-	
+
 </div>
 
 </body>

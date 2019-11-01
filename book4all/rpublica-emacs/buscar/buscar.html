@@ -1,5 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+
 
 <html>
 <head><title>Emacs: 6. Búsquedas</title>
@@ -12,22 +14,22 @@
 </head>
 <body>
 <div id="contenidor0">
-	
+
 	<div id="rotulo">
-	
+
 	<span id="r">rp</span>
-	
+
 	</div>
-	
+
 	<div id="globalNav">
-<!--	
+<!--
 	<ul id="credits"><li></li>
 <li>Antoni Serra Devecchi</li>
 
 <li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
 <li><i>Versión no definitiva.</i></li>
 <li><i> En proceso de redacción.</i></li>
-<li><i>Últ.Actual.: 01/04/2006</i></li></ul>		
+<li><i>Últ.Actual.: 01/04/2006</i></li></ul>
 -->
 	</div>
 
@@ -58,73 +60,73 @@ Referéncia
 
 <p ><a href="../emacs.html">0. Indice General</a></p>
 
-<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>		
+<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>
 <p ><a href="../xbuffers/xbuffers.html#II">II.Buffers y Archivos</a></p>
-		
+
 <p ><a href="../modos/modos.html#III">III.Modos</a></p>
-		
+
 <p ><a href="../start/start.html#IV">IV.La Pantalla de Emacs</a></p>
-		
-				
-			
+
+
+
 <p><a href="../abrir/abrir.html#10">1.Abrir Archivos</a></p>
-		
-				
+
+
 
 <p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
-		
+
 
 <p ><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
-		
+
 
 
 <p ><a href="../movimientos/movimientos.html#40">4.Movimientos del cursor</a></p>
-		
-			
+
+
 <p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
-		
+
 <p class="active"><a href="buscar.html#60">6.Búsquedas</a></p>
-		
+
 <p><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
-		
+
 
 
 <p><a href="../buffers/buffers.html#80">8.Buffers múltiples</a></p>
-		
+
 
 
 <p><a href="../ventanas/ventanas.html#90">9.Ventanas</a></p>
-		
+
 <p><a href="../marcos/marcos.html#100">10.Marcos</a></p>
-		
+
 
 <p><a href="../bookmarks/bookmarks.html#110">11.Bookmarks</a></p>
-		
+
 
 <p><a href="../consola/consola.html#120">12.Emacs y la Shell</a></p>
-		
+
 
 <p><a href="../dired/dired.html#130">13.Dired</a></p>
-		
+
 
 
 <p><a href="../perso/perso.html#140">14.Personalización </a></p>
-		
+
 
 <p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
-		
+
 <p><a href="../formato/formato.html#160">16.Formato de texto </a></p>
-		
+
 
 <p><a href="../imprimir/imprimir.html#170">17.Imprimir </a></p>
 
 
 <p><a href="../help/help.html#180">18.El Sistema de Ayuda </a></p>
-		
+
 
 
 <p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
-		
+
 <p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
 <p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
 <p><a href="http://www.rpublica.net/emacs/recursos/recursos.html#A">A.Recursos Emacs</a></p>
@@ -150,7 +152,7 @@ Referéncia
 	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> --></div>
 
 
-</div>	
+</div>
 
 
 </div>
@@ -158,38 +160,38 @@ Referéncia
 
 	<div id="texto">
 		<div id="titulo">
-		<h2 class="encab" id="60">6. Búsquedas</h2> 
+		<h2 class="encab" id="60">6. Búsquedas</h2>
 		</div>
 
 	<div id="contenido">
 
 	<h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a><!--&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6> 
+	 <a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6>
 
 	<p>Si utilizamos Emacs para la edición de contenidos extensos, la funcionalidad de <b>buscar</b> y <b>buscar-y-reemplazar</b>>
 	pueden facilitarnos la tarea de una forma considerable.</p>
 	<p> Centrándonos en la funcionalidad de <b>búsqueda</b>, podemos considerar varias tipos :</p>
-	<ul style="list-style-type:none"><li><b>Búsqueda simple:</b> Sencillamente, se proporciona una cadena y Emacs busca la primera 
+	<ul style="list-style-type:none"><li><b>Búsqueda simple:</b> Sencillamente, se proporciona una cadena y Emacs busca la primera
 	ocurrencia.</li><br/>
-	<li><b>Búsqueda incremental</b>: En Emacs, el comando de búsquedas de cadenas es <i>incremental</i>; 
+	<li><b>Búsqueda incremental</b>: En Emacs, el comando de búsquedas de cadenas es <i>incremental</i>;
 	la búsqueda ocurre a medida que se va tecleando la cadena.</li><br/>
 	<li><b>Búsqueda por palabras:</b> En este tipo de búsquedas Emacs localiza <b>exactamente</b> la cadena introducida. Así, si la cadena
-	introducida es &nbsp; <i>la</i>,&nbsp;  nos buscara el artículo  &nbsp;<i>la</i>,&nbsp; pero no palabras que contengan la secuencia <i>la</i>, como, por ejemplo, 
+	introducida es &nbsp; <i>la</i>,&nbsp;  nos buscara el artículo  &nbsp;<i>la</i>,&nbsp; pero no palabras que contengan la secuencia <i>la</i>, como, por ejemplo,
 	&nbsp;<i>cola</i>,&nbsp; <i>lazo</i>&nbsp; o <i>alambique</i>.<br/>
 	En realidad, este tipo de búsqueda es una búsqueda no incremental que ignora saltos de línea, espacios en blanco y puntuaciones.
 	</li></ul><br/>
-	
+
 	<p>Más adelante se tratará de la utilización de <b>expresiones regulares</b> en las búsquedas.</p>
 
 	<h3 class="encab" id="61" >6.1. Búsquedas Incrementales</h3>
 	 <h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6> 
-	
+	 <a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6>
+
 	<p>En Emacs, los comandos de búsqueda son, por defecto, incrementales. Como se ha dicho anteriormente, la <b>búsqueda incremental</b>
 	comienza desde el momento en que se introduce el primer caracter de la cadena de búsqueda.</p>
-	<p>A medida que se van tecleando caracteres, Emacs va destacando las coincidencias encontradas en el texto. El modo de destacar 
+	<p>A medida que se van tecleando caracteres, Emacs va destacando las coincidencias encontradas en el texto. El modo de destacar
 	las coincidencias encontradas puede variar de una plataforma a otra.</p>
 	<p>El comando básico de la <b>búsqueda incremental</b> es:</p>
 
@@ -199,8 +201,8 @@ Referéncia
 	<li><b>Comando "largo":</b> <b class="marcado">M-x isearch-backward  &lt;Enter&gt;</b></li>
 	</ul><br/>
 	<p>Veamos, gráficamente, el comando <b class="marcado">C-s</b> en acción:</p>
-	
-	
+
+
 		<div class="img">
 		<p>Vamos a iniciar la búsqueda de la cadena &nbsp;<i style="font-weight:300 ">mota</i>&nbsp;.</p>
 		<p>Tecleamos el comando <i class="marcado">C-s</i>&nbsp;: Vemos como en la &nbsp;<i>linea de modo</i>&nbsp; aparece la palabra
@@ -210,7 +212,7 @@ Referéncia
 		<table><tr><td><img src="incremental1.png" alt="Busqueda incremental 1" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
 		<p> Tecleamos el primer caracter de la cadema de búsqueda: &nbsp;<i style="font-weight:300 ">m</i>&nbsp;.</p>
-		<p>Podemos observar como se van destacando las coincidencias, en azul en el texto y 
+		<p>Podemos observar como se van destacando las coincidencias, en azul en el texto y
 		en violeta en la palabra en la que se encuentra el cursor.</p>
 
 		<table><tr><td><img src="incremental2.png" alt="Busqueda incremental 2" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
@@ -223,13 +225,13 @@ Referéncia
 		<p>Cuando hemos introducido la cadena que que estamos buscando, Emacs situa el cursor en la primera de las coincidencia. Para localizar otras coincidencias posterioresen el texto, ir tecleando <i class="marcado">C-s</i>&nbsp;.Cada vez que tecleemos el comando el cursor se irá situando en la siguiente coincidencia. Para retroceder en la secuencia de coincidencias, ir pulsando  &nbsp;<i style="font-weight:300 ">&lt;DelBack&gt;</i>&nbsp;. </p>
 
 		<table><tr><td><img src="incremental4.png" alt="Busqueda incremental 4" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
-		
+
 		<p>Finalizamos la búsqueda con &nbsp;<i style="font-weight:300 ">&lt;Enter&gt;</i>&nbsp;.</p>
 		<table><tr><td><img src="incremental5.png" alt="Busqueda incremental 5" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
 		<p>La búsqueda se cancela con <i style="font-weight:300 ">&lt;Enter&gt;</i>&nbsp; o con <i class="marcado">C-g</i>.</p>
 		</div>
-		
+
 		<p>Visto el modo de funcionamiento de la <b>búsqueda incremental</b> con el comando básico, es el momento de
 		presentar otras opciones: </p>
 
@@ -265,7 +267,7 @@ Referéncia
 		<h3 class="encab" id="62" >6.2. Búsquedas Simples (No Incrementales)</h3>
 	 <h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6> 
+	 <a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6>
 
 		<p>Para la realización de <b>búsquedas no incrementales</b>, utilizaremos los mismos comandos ,&nbsp;<b class="marcado" >C-s</b>&nbsp; y  &nbsp;<b class="marcado" >C-r</b>&nbsp;, pero en la siguiente secuencia:</p>
 		<h4>Para la búsqueda hacia adelante:</h4>
@@ -281,7 +283,7 @@ Referéncia
 		<li><b>Opción de menú:</b>&nbsp;<i class="marcado">Edit-->Search--> Search Backward...</i></li></ul>
 
 		<p>Veamos gráficamente esta secuencia:</p>
-		
+
 		<div class="img">
 		<p>Tecleamos el comando &nbsp;<b class="marcado">C-s</b>. En la pantalla aparecen los mismos mensajes
 		que en una &nbsp;&nbsp;<i style="font-weight:300 ">búsqueda incremental</i>&nbsp;:  </p>
@@ -308,9 +310,9 @@ Referéncia
 		<h3 class="encab" id="63" >6.3. Búsquedas por palabras</h3>
 	 	<h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior
 	 	</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 	<a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6> 
+	 	<a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6>
 		<p>Como se ha comentado anteriormente, este tipo de búsqueda nos localiza <b>exactamente</b> la cadena que introduzcamos.</p>
-		<p>Se basa también en los comandos &nbsp;<b class="marcado">C-s</b>&nbsp; y &nbsp;<b class="marcado">C-r</b>&nbsp;, 
+		<p>Se basa también en los comandos &nbsp;<b class="marcado">C-s</b>&nbsp; y &nbsp;<b class="marcado">C-r</b>&nbsp;,
 		combinados con el comando &nbsp;<b class="marcado">C-w</b>&nbsp; en la siguiente secuencia:</p>
 
 		<h4>Para la búsqueda hacia adelante:</h4>
@@ -324,29 +326,29 @@ Referéncia
 		<ul class="comandos"><li><b>Comando:</b>&nbsp;<b class="marcado">C-r</b>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;
 		</b>&nbsp;&nbsp; </b>&nbsp;<b class="marcado">C-w</b>&nbsp;&nbsp;<i style="font-weight:300 ">cadena_de_búsqueda</i>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; </li></ul>
 
-		<p>Tras teclear &nbsp;<b class="marcado">C-w</b>&nbsp;, en el mini-buffer aperece el mensaje &nbsp;&nbsp; 
+		<p>Tras teclear &nbsp;<b class="marcado">C-w</b>&nbsp;, en el mini-buffer aperece el mensaje &nbsp;&nbsp;
 		<i style="font-weight:300 ">Word Search:</i>&nbsp;&nbsp;, solicitándonos que tecleemos la cadena de búsqueda.</p>
 		<p>El proceso es similar al de &nbsp;<b>búsqueda no incremental</b>&nbsp;</p>
-		<p>Estos comandos de búsquedas por palabras son extremadamente útiles cuando deseamos buscar palabras, frases... etc, 
+		<p>Estos comandos de búsquedas por palabras son extremadamente útiles cuando deseamos buscar palabras, frases... etc,
 		en definitiva, cadenas, divididas por saltos de linea. Como también ya se comentó mas arriba, en la <b>busqueda por palabras</b>
 		se ignoran signos de puntuación, saltos de linea y espacios en blanco.</p>
 
 		<div class="margenInf">&nbsp;</div>
 
 
-		<div id="pie"> <h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; 
+		<div id="pie"> <h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior</a>&nbsp;&#124;&nbsp;
 		<a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;
-		<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6> 
+		<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6>
 
 		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
-		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">6.Búsquedas</span>&nbsp;&#124;&nbsp;</h6> 
+		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">6.Búsquedas</span>&nbsp;&#124;&nbsp;</h6>
 		 </div>
-		<div class="margenInf">&nbsp;</div> 
-		
+		<div class="margenInf">&nbsp;</div>
+
 	</div>
-	
+
 </div>
 
 </body>
-	
+
 </html>

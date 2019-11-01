@@ -1,5 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
 
 <html>
 <head><title>Emacs: 14. Personalización de Emacs </title>
@@ -12,22 +13,22 @@
 </head>
 <body>
 <div id="contenidor0">
-	
+
 	<div id="rotulo">
-	
+
 	<span id="r">rp</span>
-	
+
 	</div>
-	
+
 	<div id="globalNav">
-<!--	
+<!--
 	<ul id="credits"><li></li>
 <li>Antoni Serra Devecchi</li>
 
 <li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
 <li><i>Versión no definitiva.</i></li>
 <li><i> En proceso de redacción.</i></li>
-<li><i>Últ.Actual.: 01/04/2006</i></li></ul>		
+<li><i>Últ.Actual.: 01/04/2006</i></li></ul>
 -->
 	</div>
 
@@ -58,73 +59,73 @@ Referéncia
 
 <p ><a href="../emacs.html">0. Indice General</a></p>
 
-<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>		
+<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>
 <p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
-		
+
 <p ><a href="../modos/modos.html#III">III.Modos</a></p>
-		
+
 <p ><a href="../start/start.html#IV">IV.La Pantalla de Emacs</a></p>
-		
-				
-			
+
+
+
 <p><a href="../abrir/abrir.html#10">1.Abrir Archivos</a></p>
-		
-				
+
+
 
 <p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
-		
+
 
 <p ><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
-		
+
 
 
 <p ><a href="../movimientos/movimientos.html#40">4.Movimientos del cursor</a></p>
-		
-			
+
+
 <p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
-		
+
 <p ><a href="../buscar/buscar.html#60">6.Búsquedas</a></p>
-		
+
 <p ><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
-		
+
 
 
 <p ><a href="../xbuffers/xbuffers.html#80">8.Buffers múltiples</a></p>
-		
+
 
 
 <p ><a href="../ventanas/ventanas.html#90">9.Ventanas</a></p>
-		
+
 <p ><a href="../marcos/marcos.html#100">10.Marcos</a></p>
-		
+
 
 <p ><a href="../bookmarks/bookmarks.html#110">11.Bookmarks</a></p>
-		
+
 
 <p><a href="../consola/consola.html#120">12.Emacs y la Shell</a></p>
-		
+
 
 <p  ><a href="../dired/dired.html#130">13.Dired</a></p>
-		
+
 
 
 <p class="active"><a href="perso.html#140">14.Personalización </a></p>
-		
+
 
 <p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
-		
+
 <p><a href="../formato/formato.html#160">16.Formato de texto </a></p>
-		
+
 
 <p><a href="../imprimir/imprimir.html#170">17.Imprimir </a></p>
 
 
 <p><a href="../help/help.html#180">18.El Sistema de Ayuda </a></p>
-		
+
 
 
 <p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
-		
+
 <p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
 <p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
 <p><a href="http://www.rpublica.net/emacs/recursos/recursos.html#A">A.Recursos Emacs</a></p>
@@ -151,7 +152,7 @@ Referéncia
 	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> --></div>
 
 
-</div>	
+</div>
 
 
 </div>
@@ -159,7 +160,7 @@ Referéncia
 
 	<div id="texto">
 		<div id="titulo">
-		<h2 class="encab" id="140">14. Personalización de Emacs </h2> 
+		<h2 class="encab" id="140">14. Personalización de Emacs </h2>
 		</div>
 
 	<div id="contenido">
@@ -179,7 +180,7 @@ Referéncia
 	<i>Mediante las opciones de menú <b>Options</b></i>
 	<li>Editando directamente el archivo de configuración <b>.emacs</b></li></ol>
 
-	
+
 	<p>Sea cual sea el medio utilizado, el resultado final es siempre una modificación del archivo <b>.emacs</b></p>
 
 	<p>Debemos decir también que el método más rápido de personalizar Emacs es mediante las opciones del  menú <b>Options</b>, guardando los cambios realizados con :  <i class="marcado">Options -->Save Options</i>.</p>
@@ -194,7 +195,7 @@ Referéncia
 	 <h6><a class="Ref" href="../dired/dired.html">Pág.Anterior
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
 	 <a class="Ref" href="perso.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../modificar/modificar.html"> Pág.Siguente</a></h6>
-	
+
 	<p>Custom es una interfaz semi-gráfica que nos permite personalizar numerosos aspectos de Emacs con una relativa sencillez.</p>
 
 	<p>Se puede acceder a Custom de dos formas:</p>
@@ -203,7 +204,7 @@ Referéncia
 	<li><b>Barra de herramientas</b>&nbsp;:&nbsp;<i class="marcado">Activando el icono </i>
 	<img src="perso1.png" width="150" align="middle" hspace="10" vspace="10"/></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;custom&nbsp;&lt;Enter&gt;</i></li>
-	
+
 	</ul><br/>
 
 
@@ -231,7 +232,7 @@ Referéncia
 
 	<p>Al inicio de la pantalla de Custom nos encontramos con un grupo de opciones que afectan a todo el buffer:</p>
 
-	
+
 	<table><tr><td><img src="perso3.png" alt="" width="380"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
 	<div  class="comandos">
@@ -248,7 +249,7 @@ Referéncia
 	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
 	 <a class="Ref" href="perso.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../modificar/modificar.html"> Pág.Siguente</a></h6>
 
-	
+
 	<p><b>Custom</b> agrupa las opciones en los denominados <b>Grupos</b>, organizados jerarquicamente en <b>Grupos Padre</b> y en <b>Grupos Hijos</b></p>
 
 	<p>Para acceder al <b>grupo padre</b> del grupo en que nos encontremos, debemos hacerlo activando el botón que aparece a continuación de &nbsp;&nbsp;<i style="font-weight:300"> Go to Parent Group :</i></li>   </p>
@@ -273,14 +274,14 @@ Referéncia
 
 	<div class="img">
 
-	
+
 
 	<p>Esta es la ventana de meú que aparece al activar &nbsp;&nbsp;<i style="font-weight:300" class="marcado"> State </i>&nbsp;&nbsp; con el ratón.:</p>
 
 	<table><tr><td><img src="perso6.png" alt="" width="186"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
 	<p>Cuando activamos &nbsp;&nbsp;<i style="font-weight:300" class="marcado"> State </i>&nbsp;&nbsp; con el cursor nos aparece un buffer como éste:</p>
-	
+
 	<table><tr><td><img src="perso7.png" alt="" width="429"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 	</div><br/>
 
@@ -307,7 +308,7 @@ Referéncia
  	<p>Si en nuestra versión de Emacs no se dispone de esta opción, no tendremos mas remedio que personalizar estas caracteristicas de Emacs mediante
  	<b>Customize</b> o modificando el archivo de configuración  <b>.emacs</b> </p>
 	<p>El menú &nbsp;&nbsp;<i style="font-weight:300" class="marcado"> Options</i>&nbsp;&nbsp; , en <b>Emacs 21.4.1</b> presenta el siguiente aspecto:</p>
-	
+
 	<table><tr><td><img src="perso8.png" alt="" width="323"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
 	<p>Es muy recomendable ir explorando las opciones que nos ofrece &nbsp;&nbsp;<i style="font-weight:300" class="marcado"> Options</i>&nbsp;&nbsp;. Destacaremos dos de sus opciones:</p>
@@ -336,7 +337,7 @@ Referéncia
 
 	<table><tr><td><img src="perso11.png" alt="" width="425"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
-	
+
 	<p>Para localizar la variable que deseamos personalizar podemos utilizar también la <b>función de auto-completado</b>
 	que nos proporciona la tecla &nbsp;<i class="marcado">&lt;Tab&gt;</i>.</p>
 	<p>Para ello procederemos de la siguiente manera:</p>
@@ -400,8 +401,8 @@ Referéncia
 
 	<code>;; Asegura que se usarán espacios en el sangrado del código</code><br/>
 	<code>(setq-default indent-tabs-mode nil)</code><br/>
-	
-	
+
+
 	</div>
 
 	<p>Las lineas que comienzan con &nbsp;<b>;;</b>&nbsp; son comentarios. Cada línea de comentario debe comenzar con &nbsp;<b>;;</b>&nbsp;</p>
@@ -429,20 +430,20 @@ Referéncia
 		<div class="margenInf">&nbsp;</div>
 
 
-		<div id="pie"> <h6><a class="Ref" href="../dired/dired.html">Pág.Anterior</a>&nbsp;&#124;&nbsp; 
+		<div id="pie"> <h6><a class="Ref" href="../dired/dired.html">Pág.Anterior</a>&nbsp;&#124;&nbsp;
 		<a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="perso.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;
-		<a class="Ref" href="../modificar/modificar.html"> Pág.Siguente</a></h6> 
+		<a class="Ref" href="../modificar/modificar.html"> Pág.Siguente</a></h6>
 
 		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
 		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">
-		14.Personalización de Emacs</span>&nbsp;&#124;&nbsp;</h6> 
+		14.Personalización de Emacs</span>&nbsp;&#124;&nbsp;</h6>
 		 </div>
-		<div class="margenInf">&nbsp;</div> 
-		
+		<div class="margenInf">&nbsp;</div>
+
 	</div>
-	
+
 </div>
 
 </body>
-	
+
 </html>
