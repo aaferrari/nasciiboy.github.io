@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
-
-
-<html>
-<head><title>Emacs: 6. Búsquedas</title>
+<head><title>Emacs: 6. BÃºsquedas</title>
 <link title="rpublica.net Estilo" href="../emacs.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="author" content="Antoni Serra Devecchi" />
-<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, Español"/>
+<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, EspaÃ±ol"/>
 <meta name="description" content="manual de introduccion a emacs." />
 
 </head>
@@ -27,9 +24,9 @@
 <li>Antoni Serra Devecchi</li>
 
 <li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
-<li><i>Versión no definitiva.</i></li>
-<li><i> En proceso de redacción.</i></li>
-<li><i>Últ.Actual.: 01/04/2006</i></li></ul>
+<li><i>VersiÃ³n no definitiva.</i></li>
+<li><i> En proceso de redacciÃ³n.</i></li>
+<li><i>Ãšlt.Actual.: 01/04/2006</i></li></ul>
 -->
 	</div>
 
@@ -42,7 +39,7 @@
 	<ul id="tabnav">
      <li ><a href="../../index.html">RPublica.net</a></li>
      <li><a href="../emacs.html">Emacs</a></li>
-     <li class="active"><a href="buscar.html#10">6.Búsquedas</a></li>
+     <li class="active"><a href="buscar.html#10">6.BÃºsquedas</a></li>
      <!--<li><a href="#">XXXXX</a></li>
      <li><a href="#">XXXXX</a></li> -->
 
@@ -50,7 +47,7 @@
 
 	</div>
 <div id="logo1">
-Referéncia
+ReferÃ©ncia
 </div>
 
 <div id="indice">
@@ -60,7 +57,7 @@ Referéncia
 
 <p ><a href="../emacs.html">0. Indice General</a></p>
 
-<p  ><a href="../intro/intro.html#I">I.Introducción</a></p>
+<p  ><a href="../intro/intro.html#I">I.IntroducciÃ³n</a></p>
 <p ><a href="../xbuffers/xbuffers.html#II">II.Buffers y Archivos</a></p>
 
 <p ><a href="../modos/modos.html#III">III.Modos</a></p>
@@ -76,7 +73,7 @@ Referéncia
 <p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
 
 
-<p ><a href="../editando/editando.html#30">3.Lineas y Párrafos</a></p>
+<p ><a href="../editando/editando.html#30">3.Lineas y PÃ¡rrafos</a></p>
 
 
 
@@ -85,13 +82,13 @@ Referéncia
 
 <p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
 
-<p class="active"><a href="buscar.html#60">6.Búsquedas</a></p>
+<p class="active"><a href="buscar.html#60">6.BÃºsquedas</a></p>
 
 <p><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
 
 
 
-<p><a href="../buffers/buffers.html#80">8.Buffers múltiples</a></p>
+<p><a href="../buffers/buffers.html#80">8.Buffers mÃºltiples</a></p>
 
 
 
@@ -110,7 +107,7 @@ Referéncia
 
 
 
-<p><a href="../perso/perso.html#140">14.Personalización </a></p>
+<p><a href="../perso/perso.html#140">14.PersonalizaciÃ³n </a></p>
 
 
 <p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
@@ -125,7 +122,7 @@ Referéncia
 
 
 
-<p><a href="../documenta/documenta.html#190">19.Documentación </a></p>
+<p><a href="../documenta/documenta.html#190">19.DocumentaciÃ³n </a></p>
 
 <p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
 <p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
@@ -136,8 +133,8 @@ Referéncia
 <div id="margen00">&nbsp;<span>Contacto</span></div><br/>
 <div id="margen000"><span>A.Serra Devecchi<br/>
 <a href="mailto:rpublica@gmail.com">Mail: rpublica</a>
-<br/>Versión no definitiva<br/>
-Últ.Actual.: 01/04/2006<br/>
+<br/>VersiÃ³n no definitiva<br/>
+Ãšlt.Actual.: 01/04/2006<br/>
 
 </span>&nbsp;</div><br/>
 
@@ -160,96 +157,96 @@ Referéncia
 
 	<div id="texto">
 		<div id="titulo">
-		<h2 class="encab" id="60">6. Búsquedas</h2>
+		<h2 class="encab" id="60">6. BÃºsquedas</h2>
 		</div>
 
 	<div id="contenido">
 
-	<h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a><!--&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="#logo">Inicio Página</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6>
+	<h6><a class="Ref" href="../rectificar/rectificar.html">PÃ¡g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Ãndice</a><!--&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="#logo">Inicio PÃ¡gina</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> PÃ¡g.Siguente</a></h6>
 
-	<p>Si utilizamos Emacs para la edición de contenidos extensos, la funcionalidad de <b>buscar</b> y <b>buscar-y-reemplazar</b>>
+	<p>Si utilizamos Emacs para la ediciÃ³n de contenidos extensos, la funcionalidad de <b>buscar</b> y <b>buscar-y-reemplazar</b>>
 	pueden facilitarnos la tarea de una forma considerable.</p>
-	<p> Centrándonos en la funcionalidad de <b>búsqueda</b>, podemos considerar varias tipos :</p>
-	<ul style="list-style-type:none"><li><b>Búsqueda simple:</b> Sencillamente, se proporciona una cadena y Emacs busca la primera
+	<p> CentrÃ¡ndonos en la funcionalidad de <b>bÃºsqueda</b>, podemos considerar varias tipos :</p>
+	<ul style="list-style-type:none"><li><b>BÃºsqueda simple:</b> Sencillamente, se proporciona una cadena y Emacs busca la primera
 	ocurrencia.</li><br/>
-	<li><b>Búsqueda incremental</b>: En Emacs, el comando de búsquedas de cadenas es <i>incremental</i>;
-	la búsqueda ocurre a medida que se va tecleando la cadena.</li><br/>
-	<li><b>Búsqueda por palabras:</b> En este tipo de búsquedas Emacs localiza <b>exactamente</b> la cadena introducida. Así, si la cadena
-	introducida es &nbsp; <i>la</i>,&nbsp;  nos buscara el artículo  &nbsp;<i>la</i>,&nbsp; pero no palabras que contengan la secuencia <i>la</i>, como, por ejemplo,
+	<li><b>BÃºsqueda incremental</b>: En Emacs, el comando de bÃºsquedas de cadenas es <i>incremental</i>;
+	la bÃºsqueda ocurre a medida que se va tecleando la cadena.</li><br/>
+	<li><b>BÃºsqueda por palabras:</b> En este tipo de bÃºsquedas Emacs localiza <b>exactamente</b> la cadena introducida. AsÃ­, si la cadena
+	introducida es &nbsp; <i>la</i>,&nbsp;  nos buscara el artÃ­culo  &nbsp;<i>la</i>,&nbsp; pero no palabras que contengan la secuencia <i>la</i>, como, por ejemplo,
 	&nbsp;<i>cola</i>,&nbsp; <i>lazo</i>&nbsp; o <i>alambique</i>.<br/>
-	En realidad, este tipo de búsqueda es una búsqueda no incremental que ignora saltos de línea, espacios en blanco y puntuaciones.
+	En realidad, este tipo de bÃºsqueda es una bÃºsqueda no incremental que ignora saltos de lÃ­nea, espacios en blanco y puntuaciones.
 	</li></ul><br/>
 
-	<p>Más adelante se tratará de la utilización de <b>expresiones regulares</b> en las búsquedas.</p>
+	<p>MÃ¡s adelante se tratarÃ¡ de la utilizaciÃ³n de <b>expresiones regulares</b> en las bÃºsquedas.</p>
 
-	<h3 class="encab" id="61" >6.1. Búsquedas Incrementales</h3>
-	 <h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6>
+	<h3 class="encab" id="61" >6.1. BÃºsquedas Incrementales</h3>
+	 <h6><a class="Ref" href="../rectificar/rectificar.html">PÃ¡g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Ãndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="buscar.html#logo">Inicio PÃ¡gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> PÃ¡g.Siguente</a></h6>
 
-	<p>En Emacs, los comandos de búsqueda son, por defecto, incrementales. Como se ha dicho anteriormente, la <b>búsqueda incremental</b>
-	comienza desde el momento en que se introduce el primer caracter de la cadena de búsqueda.</p>
+	<p>En Emacs, los comandos de bÃºsqueda son, por defecto, incrementales. Como se ha dicho anteriormente, la <b>bÃºsqueda incremental</b>
+	comienza desde el momento en que se introduce el primer caracter de la cadena de bÃºsqueda.</p>
 	<p>A medida que se van tecleando caracteres, Emacs va destacando las coincidencias encontradas en el texto. El modo de destacar
 	las coincidencias encontradas puede variar de una plataforma a otra.</p>
-	<p>El comando básico de la <b>búsqueda incremental</b> es:</p>
+	<p>El comando bÃ¡sico de la <b>bÃºsqueda incremental</b> es:</p>
 
 	<ul class="comandos"><li><b>Comando:</b>&nbsp;<b  class="marcado">C-s</b></li>
-	<li><b>Opción de menú:</b><i class="marcado">&nbsp;Edit-->Search-->Incremental Search-->Forward String</i><br />
-	<i> Algunas versiones de Emacs no disponen de esta opción de menú.</i></li>
+	<li><b>OpciÃ³n de menÃº:</b><i class="marcado">&nbsp;Edit-->Search-->Incremental Search-->Forward String</i><br />
+	<i> Algunas versiones de Emacs no disponen de esta opciÃ³n de menÃº.</i></li>
 	<li><b>Comando "largo":</b> <b class="marcado">M-x isearch-backward  &lt;Enter&gt;</b></li>
 	</ul><br/>
-	<p>Veamos, gráficamente, el comando <b class="marcado">C-s</b> en acción:</p>
+	<p>Veamos, grÃ¡ficamente, el comando <b class="marcado">C-s</b> en acciÃ³n:</p>
 
 
 		<div class="img">
-		<p>Vamos a iniciar la búsqueda de la cadena &nbsp;<i style="font-weight:300 ">mota</i>&nbsp;.</p>
+		<p>Vamos a iniciar la bÃºsqueda de la cadena &nbsp;<i style="font-weight:300 ">mota</i>&nbsp;.</p>
 		<p>Tecleamos el comando <i class="marcado">C-s</i>&nbsp;: Vemos como en la &nbsp;<i>linea de modo</i>&nbsp; aparece la palabra
 		 &nbsp;<i style="font-weight:300 ">Isearch</i>&nbsp; tras el modo mayor activo.<br/>
 		 En el mini-buffer aparece el mensaje &nbsp;<i style="font-weight:300 ">I-Search:</i>&nbsp; </p>
 
 		<table><tr><td><img src="incremental1.png" alt="Busqueda incremental 1" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
-		<p> Tecleamos el primer caracter de la cadema de búsqueda: &nbsp;<i style="font-weight:300 ">m</i>&nbsp;.</p>
+		<p> Tecleamos el primer caracter de la cadema de bÃºsqueda: &nbsp;<i style="font-weight:300 ">m</i>&nbsp;.</p>
 		<p>Podemos observar como se van destacando las coincidencias, en azul en el texto y
 		en violeta en la palabra en la que se encuentra el cursor.</p>
 
 		<table><tr><td><img src="incremental2.png" alt="Busqueda incremental 2" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
-		<p>A medida que vamos tecleando caracteres van marcándose las coincidencias encontradas.</p>
+		<p>A medida que vamos tecleando caracteres van marcÃ¡ndose las coincidencias encontradas.</p>
 		<p>Mediante las teclas <i style="font-weight:300 ">&lt;Supr&gt;</i>&nbsp; o <i style="font-weight:300 ">&lt;BackDel&gt;</i>&nbsp; podemos ir rectificando los errores que hayamos podido cometer al introducir la cadena en el mini-buffer.</p>
 
 		<table><tr><td><img src="incremental3.png" alt="Busqueda incremental 3" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
-		<p>Cuando hemos introducido la cadena que que estamos buscando, Emacs situa el cursor en la primera de las coincidencia. Para localizar otras coincidencias posterioresen el texto, ir tecleando <i class="marcado">C-s</i>&nbsp;.Cada vez que tecleemos el comando el cursor se irá situando en la siguiente coincidencia. Para retroceder en la secuencia de coincidencias, ir pulsando  &nbsp;<i style="font-weight:300 ">&lt;DelBack&gt;</i>&nbsp;. </p>
+		<p>Cuando hemos introducido la cadena que que estamos buscando, Emacs situa el cursor en la primera de las coincidencia. Para localizar otras coincidencias posterioresen el texto, ir tecleando <i class="marcado">C-s</i>&nbsp;.Cada vez que tecleemos el comando el cursor se irÃ¡ situando en la siguiente coincidencia. Para retroceder en la secuencia de coincidencias, ir pulsando  &nbsp;<i style="font-weight:300 ">&lt;DelBack&gt;</i>&nbsp;. </p>
 
 		<table><tr><td><img src="incremental4.png" alt="Busqueda incremental 4" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
-		<p>Finalizamos la búsqueda con &nbsp;<i style="font-weight:300 ">&lt;Enter&gt;</i>&nbsp;.</p>
+		<p>Finalizamos la bÃºsqueda con &nbsp;<i style="font-weight:300 ">&lt;Enter&gt;</i>&nbsp;.</p>
 		<table><tr><td><img src="incremental5.png" alt="Busqueda incremental 5" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
-		<p>La búsqueda se cancela con <i style="font-weight:300 ">&lt;Enter&gt;</i>&nbsp; o con <i class="marcado">C-g</i>.</p>
+		<p>La bÃºsqueda se cancela con <i style="font-weight:300 ">&lt;Enter&gt;</i>&nbsp; o con <i class="marcado">C-g</i>.</p>
 		</div>
 
-		<p>Visto el modo de funcionamiento de la <b>búsqueda incremental</b> con el comando básico, es el momento de
+		<p>Visto el modo de funcionamiento de la <b>bÃºsqueda incremental</b> con el comando bÃ¡sico, es el momento de
 		presentar otras opciones: </p>
 
 		<ul class="comandos"><li><b>Comando:</b>&nbsp;<b  class="marcado">C-r</b></li>
-		<li><b>Opción de menú:</b><b class="marcado">&nbsp;Edit-->Search-->Incremental Search-->Backward String</b><br/>
-		<i> Algunas versiones de Emacs no disponen de esta opción de menú.</i></li>
+		<li><b>OpciÃ³n de menÃº:</b><b class="marcado">&nbsp;Edit-->Search-->Incremental Search-->Backward String</b><br/>
+		<i> Algunas versiones de Emacs no disponen de esta opciÃ³n de menÃº.</i></li>
 		<li><b>Comando "largo":</b> <b class="marcado">M-x isearch-backward  &lt;Enter&gt;</b></li>
-		<li>El funcionamiento es el mismo que con <i class="marcado">C-s</i>&nbsp;, pero en este caso la búsqueda se realiza hacia atrás. </li></ul>
+		<li>El funcionamiento es el mismo que con <i class="marcado">C-s</i>&nbsp;, pero en este caso la bÃºsqueda se realiza hacia atrÃ¡s. </li></ul>
 
 
 		<ul class="comandos" ><li><b>Comando:</b>&nbsp;<b  class="marcado">C-s C-s</b></li>
 		<li><b>Comando "largo":</b> <b class="marcado">M-x isearch-repeat-forward  &lt;Enter&gt;</b></li>
-		<li>Repite la anterior búsqueda, iniciada con &nbsp; <i class="marcado">C-s</i>&nbsp;. </li></ul>
+		<li>Repite la anterior bÃºsqueda, iniciada con &nbsp; <i class="marcado">C-s</i>&nbsp;. </li></ul>
 
 
 		<ul class="comandos" ><li><b>Comando:</b>&nbsp;<b  class="marcado">C-r C-r</b></li>
 		<li><b>Comando "largo":</b> <b class="marcado">M-x isearch-repeat-backward  &lt;Enter&gt;</b></li>
-		<li>Repite la anterior búsqueda, iniciada con &nbsp; <i class="marcado">C-r</i>&nbsp;. </li></ul>
+		<li>Repite la anterior bÃºsqueda, iniciada con &nbsp; <i class="marcado">C-r</i>&nbsp;. </li></ul>
 
 		<ul class="comandos" ><li><b>Comando:</b>&nbsp;<b  class="marcado">C-s C-w</b></li>
 		<li><b>Comando "largo":</b> <b class="marcado">M-x isearch-yank-word  &lt;Enter&gt;</b></li>
@@ -258,90 +255,90 @@ Referéncia
 
 		<ul class="comandos" ><li><b>Comando:</b>&nbsp;<b  class="marcado">C-s C-y</b></li>
 		<li><b>Comando "largo":</b> <b class="marcado">M-x isearch-yank-line  &lt;Enter&gt;</b></li>
-		<li>Inicia la <b>busqueda incremental</b> tomando como cadena el texto comprendido entre la palabra sobre la que se encuentra situado el cursor y el final de la línea. </li></ul>
+		<li>Inicia la <b>busqueda incremental</b> tomando como cadena el texto comprendido entre la palabra sobre la que se encuentra situado el cursor y el final de la lÃ­nea. </li></ul>
 
 		<ul class="comandos" ><li><b>Comando:</b>&nbsp;<b  class="marcado">C-s M-y</b></li>
 		<li><b>Comando "largo":</b> <b class="marcado">M-x isearch-yank-kill  &lt;Enter&gt;</b></li>
 		<li>Inicia la <b>busqueda incremental</b> tomando como cadena el texto  situado en el <b>kill ring</b> </li></ul><br/>
 
-		<h3 class="encab" id="62" >6.2. Búsquedas Simples (No Incrementales)</h3>
-	 <h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6>
+		<h3 class="encab" id="62" >6.2. BÃºsquedas Simples (No Incrementales)</h3>
+	 <h6><a class="Ref" href="../rectificar/rectificar.html">PÃ¡g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Ãndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="buscar.html#logo">Inicio PÃ¡gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> PÃ¡g.Siguente</a></h6>
 
-		<p>Para la realización de <b>búsquedas no incrementales</b>, utilizaremos los mismos comandos ,&nbsp;<b class="marcado" >C-s</b>&nbsp; y  &nbsp;<b class="marcado" >C-r</b>&nbsp;, pero en la siguiente secuencia:</p>
-		<h4>Para la búsqueda hacia adelante:</h4>
-		<ul class="comandos"><li><b>Comando:</b>&nbsp;<b class="marcado">C-s</b>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; <i style="font-weight:300 ">cadena_de_búsqueda</i>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; </li>
-		<li><b>Opción de menú:</b>&nbsp;<i class="marcado">Edit-->Search--> Search Forward...</i></li></ul>
+		<p>Para la realizaciÃ³n de <b>bÃºsquedas no incrementales</b>, utilizaremos los mismos comandos ,&nbsp;<b class="marcado" >C-s</b>&nbsp; y  &nbsp;<b class="marcado" >C-r</b>&nbsp;, pero en la siguiente secuencia:</p>
+		<h4>Para la bÃºsqueda hacia adelante:</h4>
+		<ul class="comandos"><li><b>Comando:</b>&nbsp;<b class="marcado">C-s</b>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; <i style="font-weight:300 ">cadena_de_bÃºsqueda</i>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; </li>
+		<li><b>OpciÃ³n de menÃº:</b>&nbsp;<i class="marcado">Edit-->Search--> Search Forward...</i></li></ul>
 
-		<p>En la <b>barra de herramientas</b> tenemos un icono para las <b>búsquedas simples</b>:</p>
+		<p>En la <b>barra de herramientas</b> tenemos un icono para las <b>bÃºsquedas simples</b>:</p>
 		<table><tr><td><img src="buscar.png" alt="Busqueda incremental 5" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
-		<h4>Para la búsqueda hacia atrás:</h4>
+		<h4>Para la bÃºsqueda hacia atrÃ¡s:</h4>
 		<ul class="comandos">
-		<li><b class="marcado">C-r</b>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; <i style="font-weight:300 ">cadena_de_búsqueda</i>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; </li>
-		<li><b>Opción de menú:</b>&nbsp;<i class="marcado">Edit-->Search--> Search Backward...</i></li></ul>
+		<li><b class="marcado">C-r</b>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; <i style="font-weight:300 ">cadena_de_bÃºsqueda</i>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; </li>
+		<li><b>OpciÃ³n de menÃº:</b>&nbsp;<i class="marcado">Edit-->Search--> Search Backward...</i></li></ul>
 
-		<p>Veamos gráficamente esta secuencia:</p>
+		<p>Veamos grÃ¡ficamente esta secuencia:</p>
 
 		<div class="img">
 		<p>Tecleamos el comando &nbsp;<b class="marcado">C-s</b>. En la pantalla aparecen los mismos mensajes
-		que en una &nbsp;&nbsp;<i style="font-weight:300 ">búsqueda incremental</i>&nbsp;:  </p>
+		que en una &nbsp;&nbsp;<i style="font-weight:300 ">bÃºsqueda incremental</i>&nbsp;:  </p>
 		<table><tr><td><img src="busca1.png" alt="Busqueda simple 1" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 		<p>Pulsamos &nbsp;&nbsp;<i style="font-weight:300 ">&lt;Enter&gt;</i>&nbsp;:</p>
 		<table><tr><td><img src="busca2.png" alt="Busqueda simple 2" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
-		<p>Si la búsqueda se hubiera iniciado mediante la &nbsp;&nbsp;<i style="font-weight:300 ">opción de menú</i>&nbsp; o el &nbsp;&nbsp;<i style="font-weight:300 ">icono </i>&nbsp;de la barra de herramientas, el mensaje que apereceria en el mini-buffer seria directamente el que nos pide una cadena de
-		 búsqueda :<img src="busca5.png" alt="Busqueda simple 3" width="300"  align="middle" hspace="10" vspace="10"/></p>
-		<p>Introducimos la cadena de búsqueda:</p>
+		<p>Si la bÃºsqueda se hubiera iniciado mediante la &nbsp;&nbsp;<i style="font-weight:300 ">opciÃ³n de menÃº</i>&nbsp; o el &nbsp;&nbsp;<i style="font-weight:300 ">icono </i>&nbsp;de la barra de herramientas, el mensaje que apereceria en el mini-buffer seria directamente el que nos pide una cadena de
+		 bÃºsqueda :<img src="busca5.png" alt="Busqueda simple 3" width="300"  align="middle" hspace="10" vspace="10"/></p>
+		<p>Introducimos la cadena de bÃºsqueda:</p>
 		<table><tr><td><img src="busca3.png" alt="Busqueda simple 3" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
-		<p>Al pulsar &nbsp;&nbsp;<i style="font-weight:300 ">&lt;Enter&gt;</i>&nbsp; el cursor se sitúa justo después de la primera coincidencia.</p>
+		<p>Al pulsar &nbsp;&nbsp;<i style="font-weight:300 ">&lt;Enter&gt;</i>&nbsp; el cursor se sitÃºa justo despuÃ©s de la primera coincidencia.</p>
 		<table><tr><td><img src="busca4.png" alt="Busqueda simple 4" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
-		<p>En el caso de una &nbsp;&nbsp;<i style="font-weight:300 ">búsqueda hacia atrás</i>&nbsp; se procederia de la misma forma, con la salvedad de que no dispone de &nbsp;&nbsp;<i style="font-weight:300 ">icono </i>&nbsp; en la barra de herramientas.</p>
+		<p>En el caso de una &nbsp;&nbsp;<i style="font-weight:300 ">bÃºsqueda hacia atrÃ¡s</i>&nbsp; se procederia de la misma forma, con la salvedad de que no dispone de &nbsp;&nbsp;<i style="font-weight:300 ">icono </i>&nbsp; en la barra de herramientas.</p>
 		</div>
 
-		<p>Como en el caso de la <b>búsqueda incremental</b>, con &nbsp;<b class="marcado">C-s</b>&nbsp; y &nbsp;<b class="marcado">C-r</b>&nbsp;, se repite la búsqueda.</p>
-		<p>Tenemos dos <b>opciones de menú </b> para las repeticiones de búsqueda:</p>
+		<p>Como en el caso de la <b>bÃºsqueda incremental</b>, con &nbsp;<b class="marcado">C-s</b>&nbsp; y &nbsp;<b class="marcado">C-r</b>&nbsp;, se repite la bÃºsqueda.</p>
+		<p>Tenemos dos <b>opciones de menÃº </b> para las repeticiones de bÃºsqueda:</p>
 		<ul style="list-style-type:none"><li> <b class="marcado">Edit -->Search-->Repeat Search...</b></li>
-		<li>Para las búsquedas hacia a delante</li></ul>
+		<li>Para las bÃºsquedas hacia a delante</li></ul>
 
 		<ul style="list-style-type:none"><li> <b class="marcado">Edit -->Search-->Repeat Backwards...</b></li>
-		<li>Para las búsquedas hacia a atrás</li></ul><br/>
+		<li>Para las bÃºsquedas hacia a atrÃ¡s</li></ul><br/>
 
-		<h3 class="encab" id="63" >6.3. Búsquedas por palabras</h3>
-	 	<h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior
-	 	</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;
-	 	<a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6>
-		<p>Como se ha comentado anteriormente, este tipo de búsqueda nos localiza <b>exactamente</b> la cadena que introduzcamos.</p>
-		<p>Se basa también en los comandos &nbsp;<b class="marcado">C-s</b>&nbsp; y &nbsp;<b class="marcado">C-r</b>&nbsp;,
+		<h3 class="encab" id="63" >6.3. BÃºsquedas por palabras</h3>
+	 	<h6><a class="Ref" href="../rectificar/rectificar.html">PÃ¡g.Anterior
+	 	</a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Ãndice</a>&nbsp;&#124;&nbsp;
+	 	<a class="Ref" href="buscar.html#logo">Inicio PÃ¡gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../reemplazar/reemplazar.html"> PÃ¡g.Siguente</a></h6>
+		<p>Como se ha comentado anteriormente, este tipo de bÃºsqueda nos localiza <b>exactamente</b> la cadena que introduzcamos.</p>
+		<p>Se basa tambiÃ©n en los comandos &nbsp;<b class="marcado">C-s</b>&nbsp; y &nbsp;<b class="marcado">C-r</b>&nbsp;,
 		combinados con el comando &nbsp;<b class="marcado">C-w</b>&nbsp; en la siguiente secuencia:</p>
 
-		<h4>Para la búsqueda hacia adelante:</h4>
+		<h4>Para la bÃºsqueda hacia adelante:</h4>
 
 		<ul class="comandos"><li><b>Comando:</b>&nbsp;<b class="marcado">C-s</b>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>
-		&nbsp;&nbsp; </b>&nbsp;<b class="marcado">C-w</b>&nbsp;&nbsp;<i style="font-weight:300 ">cadena_de_búsqueda</i>&nbsp;&nbsp;
+		&nbsp;&nbsp; </b>&nbsp;<b class="marcado">C-w</b>&nbsp;&nbsp;<i style="font-weight:300 ">cadena_de_bÃºsqueda</i>&nbsp;&nbsp;
 		<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; </li></ul>
 
-		<h4>Para la búsqueda hacia atrás:</h4>
+		<h4>Para la bÃºsqueda hacia atrÃ¡s:</h4>
 
 		<ul class="comandos"><li><b>Comando:</b>&nbsp;<b class="marcado">C-r</b>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;
-		</b>&nbsp;&nbsp; </b>&nbsp;<b class="marcado">C-w</b>&nbsp;&nbsp;<i style="font-weight:300 ">cadena_de_búsqueda</i>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; </li></ul>
+		</b>&nbsp;&nbsp; </b>&nbsp;<b class="marcado">C-w</b>&nbsp;&nbsp;<i style="font-weight:300 ">cadena_de_bÃºsqueda</i>&nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp;&nbsp; </li></ul>
 
 		<p>Tras teclear &nbsp;<b class="marcado">C-w</b>&nbsp;, en el mini-buffer aperece el mensaje &nbsp;&nbsp;
-		<i style="font-weight:300 ">Word Search:</i>&nbsp;&nbsp;, solicitándonos que tecleemos la cadena de búsqueda.</p>
-		<p>El proceso es similar al de &nbsp;<b>búsqueda no incremental</b>&nbsp;</p>
-		<p>Estos comandos de búsquedas por palabras son extremadamente útiles cuando deseamos buscar palabras, frases... etc,
-		en definitiva, cadenas, divididas por saltos de linea. Como también ya se comentó mas arriba, en la <b>busqueda por palabras</b>
-		se ignoran signos de puntuación, saltos de linea y espacios en blanco.</p>
+		<i style="font-weight:300 ">Word Search:</i>&nbsp;&nbsp;, solicitÃ¡ndonos que tecleemos la cadena de bÃºsqueda.</p>
+		<p>El proceso es similar al de &nbsp;<b>bÃºsqueda no incremental</b>&nbsp;</p>
+		<p>Estos comandos de bÃºsquedas por palabras son extremadamente Ãºtiles cuando deseamos buscar palabras, frases... etc,
+		en definitiva, cadenas, divididas por saltos de linea. Como tambiÃ©n ya se comentÃ³ mas arriba, en la <b>busqueda por palabras</b>
+		se ignoran signos de puntuaciÃ³n, saltos de linea y espacios en blanco.</p>
 
 		<div class="margenInf">&nbsp;</div>
 
 
-		<div id="pie"> <h6><a class="Ref" href="../rectificar/rectificar.html">Pág.Anterior</a>&nbsp;&#124;&nbsp;
-		<a class="Ref" href="../emacs.html">Índice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="buscar.html#logo">Inicio Página</a>&nbsp;&#124;&nbsp;
-		<a class="Ref" href="../reemplazar/reemplazar.html"> Pág.Siguente</a></h6>
+		<div id="pie"> <h6><a class="Ref" href="../rectificar/rectificar.html">PÃ¡g.Anterior</a>&nbsp;&#124;&nbsp;
+		<a class="Ref" href="../emacs.html">Ãndice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="buscar.html#logo">Inicio PÃ¡gina</a>&nbsp;&#124;&nbsp;
+		<a class="Ref" href="../reemplazar/reemplazar.html"> PÃ¡g.Siguente</a></h6>
 
 		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
-		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">6.Búsquedas</span>&nbsp;&#124;&nbsp;</h6>
+		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">6.BÃºsquedas</span>&nbsp;&#124;&nbsp;</h6>
 		 </div>
 		<div class="margenInf">&nbsp;</div>
 

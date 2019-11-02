@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
-
-<html>
 <head><title>Emacs: 7. Buscar y Reemplazar</title>
 <link title="rpublica.net Estilo" href="../emacs.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="author" content="Antoni Serra Devecchi" />
-<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, EspaÒol"/>
+<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, Espa√±ol"/>
 <meta name="description" content="manual de introduccion a emacs." />
 
 </head>
@@ -26,9 +24,9 @@
 <li>Antoni Serra Devecchi</li>
 
 <li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
-<li><i>VersiÛn no definitiva.</i></li>
-<li><i> En proceso de redacciÛn.</i></li>
-<li><i>⁄lt.Actual.: 01/04/2006</i></li></ul>
+<li><i>Versi√≥n no definitiva.</i></li>
+<li><i> En proceso de redacci√≥n.</i></li>
+<li><i>√ölt.Actual.: 01/04/2006</i></li></ul>
 -->
 	</div>
 
@@ -49,7 +47,7 @@
 
 	</div>
 <div id="logo1">
-ReferÈncia
+Refer√©ncia
 </div>
 
 <div id="indice">
@@ -57,7 +55,7 @@ ReferÈncia
 
 <p ><a href="../emacs.html">0. Indice General</a></p>
 
-<p  ><a href="../intro/intro.html#I">I.IntroducciÛn</a></p>
+<p  ><a href="../intro/intro.html#I">I.Introducci√≥n</a></p>
 <p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
 
 <p ><a href="../modos/modos.html#III">III.Modos</a></p>
@@ -73,7 +71,7 @@ ReferÈncia
 <p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
 
 
-<p ><a href="../editando/editando.html#30">3.Lineas y P·rrafos</a></p>
+<p ><a href="../editando/editando.html#30">3.Lineas y P√°rrafos</a></p>
 
 
 
@@ -82,13 +80,13 @@ ReferÈncia
 
 <p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
 
-<p ><a href="../buscar/buscar.html#60">6.B˙squedas</a></p>
+<p ><a href="../buscar/buscar.html#60">6.B√∫squedas</a></p>
 
 <p class="active"><a href="reemplazar.html#70">7.Buscar y Reemplazar</a></p>
 
 
 
-<p><a href="../xbuffers/xbuffers.html#80">8.Buffers m˙ltiples</a></p>
+<p><a href="../xbuffers/xbuffers.html#80">8.Buffers m√∫ltiples</a></p>
 
 
 
@@ -107,7 +105,7 @@ ReferÈncia
 
 
 
-<p><a href="../perso/perso.html#140">14.PersonalizaciÛn </a></p>
+<p><a href="../perso/perso.html#140">14.Personalizaci√≥n </a></p>
 
 
 <p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
@@ -122,7 +120,7 @@ ReferÈncia
 
 
 
-<p><a href="../documenta/documenta.html#190">19.DocumentaciÛn </a></p>
+<p><a href="../documenta/documenta.html#190">19.Documentaci√≥n </a></p>
 
 <p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
 <p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
@@ -134,8 +132,8 @@ ReferÈncia
 <div id="margen00">&nbsp;<span>Contacto</span></div><br/>
 <div id="margen000"><span>A.Serra Devecchi<br/>
 <a href="mailto:rpublica@gmail.com">Mail: rpublica</a>
-<br/>VersiÛn no definitiva<br/>
-⁄lt.Actual.: 01/04/2006<br/>
+<br/>Versi√≥n no definitiva<br/>
+√ölt.Actual.: 01/04/2006<br/>
 
 </span>&nbsp;</div><br/>
 
@@ -163,72 +161,72 @@ ReferÈncia
 
 	<div id="contenido">
 
-	<h6><a class="Ref" href="../buscar/buscar.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a><!--&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="#logo">Inicio P·gina</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../xbuffers/xbuffers.html"> P·g.Siguente</a></h6>
+	<h6><a class="Ref" href="../buscar/buscar.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a><!--&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="#logo">Inicio P√°gina</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../xbuffers/xbuffers.html"> P√°g.Siguente</a></h6>
 
-	<p>En el capÌtulo anterior hemos visto como buscar cadenas en un buffer que estamos editando. Con mucha frecuencia las b˙squedas de una cadena no tienen otra finalidad que la de reemplazarla por otra.Es por ello que la funcionalidad de &nbsp;<b>buscar-y-reemplazar</b>&nbsp; se nos presenta como la combinaciÛn ideal a este propÛsito.</p>
-	<p>Vamos a considerar tres formas de realizar la operaciÛn de b˙squeda y reemplazo de cadenas:</p>
+	<p>En el cap√≠tulo anterior hemos visto como buscar cadenas en un buffer que estamos editando. Con mucha frecuencia las b√∫squedas de una cadena no tienen otra finalidad que la de reemplazarla por otra.Es por ello que la funcionalidad de &nbsp;<b>buscar-y-reemplazar</b>&nbsp; se nos presenta como la combinaci√≥n ideal a este prop√≥sito.</p>
+	<p>Vamos a considerar tres formas de realizar la operaci√≥n de b√∫squeda y reemplazo de cadenas:</p>
 	<ul style="list-style-type:none">
 
-	<li><b>Buscar y Reemplazar; OperaciÛn b·sica</b>&nbsp;: Se limita a reemplazar todas las cadenas de b˙squeda por otras predeterminadas.</li><br/>
+	<li><b>Buscar y Reemplazar; Operaci√≥n b√°sica</b>&nbsp;: Se limita a reemplazar todas las cadenas de b√∫squeda por otras predeterminadas.</li><br/>
 
-	<li><b>Buscar y Reemplazar previa confirmaciÛn </b>&nbsp;<i>&#040;Query-Replace&#041;</i>&nbsp;: B˙squeda las cadenas pero, antes de proceder al su reemplazo, nos pide confirmaciÛn.</li><br/>
+	<li><b>Buscar y Reemplazar previa confirmaci√≥n </b>&nbsp;<i>&#040;Query-Replace&#041;</i>&nbsp;: B√∫squeda las cadenas pero, antes de proceder al su reemplazo, nos pide confirmaci√≥n.</li><br/>
 
-	<li><b>Modo de EdiciÛn recursivo</b>&nbsp;: Puede considerarse una variante de la anterior. Con &nbsp;<b>query-replace</b>&nbsp; en acciÛn, activando el &nbsp;<b>modo de ediciÛn recursivo</b>,&nbsp; se nos permitir· editar el texto de las ocurrencias encontradas, manteniendo &nbsp;<b>query-replace</b>&nbsp; suspendido. Finalizada la ediciÛn y desactivado el &nbsp;<b>modo recursivo</b>,&nbsp; <b>query-replace</b>&nbsp; retomar· el proceso de b˙squeda y sustituciÛn desde el punto en que lo dejÛ.</li>
+	<li><b>Modo de Edici√≥n recursivo</b>&nbsp;: Puede considerarse una variante de la anterior. Con &nbsp;<b>query-replace</b>&nbsp; en acci√≥n, activando el &nbsp;<b>modo de edici√≥n recursivo</b>,&nbsp; se nos permitir√° editar el texto de las ocurrencias encontradas, manteniendo &nbsp;<b>query-replace</b>&nbsp; suspendido. Finalizada la edici√≥n y desactivado el &nbsp;<b>modo recursivo</b>,&nbsp; <b>query-replace</b>&nbsp; retomar√° el proceso de b√∫squeda y sustituci√≥n desde el punto en que lo dej√≥.</li>
 	</ul>
 
 
 
 
-	<h3 class="encab" id="71" > 7.1 Buscar y Reemplazar: OperaciÛn b·sica.</h3>
-	 <h6><a class="Ref" href="../buscar/buscar.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="reemplazar.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../xbuffers/xbuffers.html"> P·g.Siguente</a></h6>
+	<h3 class="encab" id="71" > 7.1 Buscar y Reemplazar: Operaci√≥n b√°sica.</h3>
+	 <h6><a class="Ref" href="../buscar/buscar.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="reemplazar.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../xbuffers/xbuffers.html"> P√°g.Siguente</a></h6>
 
-	<p>Para reemplazar todas las cadenas de b˙squeda por otra predeterminada, desde la posiciÛn del cursor hasta el final de buffer, se proceder· de la siguiente manera: </p>
+	<p>Para reemplazar todas las cadenas de b√∫squeda por otra predeterminada, desde la posici√≥n del cursor hasta el final de buffer, se proceder√° de la siguiente manera: </p>
 
 
 	<ul class="comandos">
 	<li><b>Ejecutar el comando</b>&nbsp;:&nbsp;<b  class="marcado">M-x replace-string&nbsp;&lt;Enter&gt;</b>. </li>
-	<li>En el mini-buffer aparecer· el mensaje&nbsp;<i>Replace string:</i>&nbsp;</li><br/>
-	<li><b>Teclear en el mini-buffer la </b>&nbsp;&nbsp;<i class="marcado">cadena_de_b˙squeda</i>&nbsp; y pulsar &nbsp;<b class="marcado">&lt;Enter&gt;</b></li>
-	<li>Aparecer· el mensaje&nbsp;: &nbsp;<i>Replace string</i>&nbsp;<i class="marcado">cadena_de_b˙squeda</i>&nbsp;<i>with:</i></li><br/>
+	<li>En el mini-buffer aparecer√° el mensaje&nbsp;<i>Replace string:</i>&nbsp;</li><br/>
+	<li><b>Teclear en el mini-buffer la </b>&nbsp;&nbsp;<i class="marcado">cadena_de_b√∫squeda</i>&nbsp; y pulsar &nbsp;<b class="marcado">&lt;Enter&gt;</b></li>
+	<li>Aparecer√° el mensaje&nbsp;: &nbsp;<i>Replace string</i>&nbsp;<i class="marcado">cadena_de_b√∫squeda</i>&nbsp;<i>with:</i></li><br/>
 	<li><b>Teclear en el mini-buffer la </b>&nbsp;&nbsp;<i class="marcado">cadena_de_reemplazo</i>&nbsp; y pulsar &nbsp;<b class="marcado">&lt;Enter&gt;</b></li>
-	<li>Se reemplazar·n todas las &nbsp;<i class="marcado">cadena_de_b˙squeda</i>&nbsp; encontradas por la &nbsp;<i class="marcado">cadena_de_reemplazo</i>&nbsp; introducida; desde la posiciÛn del cursor hasta el final del buffer.</li>
+	<li>Se reemplazar√°n todas las &nbsp;<i class="marcado">cadena_de_b√∫squeda</i>&nbsp; encontradas por la &nbsp;<i class="marcado">cadena_de_reemplazo</i>&nbsp; introducida; desde la posici√≥n del cursor hasta el final del buffer.</li>
 
 	</ul><br/>
-	<p>Veamos, gr·ficamente, el comando <b class="marcado">C-s</b> en acciÛn:</p>
+	<p>Veamos, gr√°ficamente, el comando <b class="marcado">C-s</b> en acci√≥n:</p>
 
 
-	<h3 class="encab" id="72" > 7.2 Buscar y Reemplazar previa confirmaciÛn.&#040; Query Replace&#041;</h3>
-	 <h6><a class="Ref" href="../buscar/buscar.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="reemplazar.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../xbuffers/xbuffers.html"> P·g.Siguente</a></h6>
+	<h3 class="encab" id="72" > 7.2 Buscar y Reemplazar previa confirmaci√≥n.&#040; Query Replace&#041;</h3>
+	 <h6><a class="Ref" href="../buscar/buscar.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="reemplazar.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../xbuffers/xbuffers.html"> P√°g.Siguente</a></h6>
 
 
-	<p>Nos puede interesar no realizar un reemplazo global de todas las cadenas de b˙squeda encontradas, sino poder decidir, en cada ocurrencia encontrada, si proceder o no a su sustituciÛn.</p>
+	<p>Nos puede interesar no realizar un reemplazo global de todas las cadenas de b√∫squeda encontradas, sino poder decidir, en cada ocurrencia encontrada, si proceder o no a su sustituci√≥n.</p>
 	<p>Para realizar los reemplazos de esta forma: </p>
 
 	<ul class="comandos">
 	<li><b>Ejecutar el comando</b>&nbsp;:&nbsp;<b  class="marcado">M-% </b>; o la  &nbsp;
-	 <b>OpciÛn de men˙</b>&nbsp;:&nbsp;<b class="marcado">Edit&#045;&#045;&#062;Replace</b>. </li>
+	 <b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<b class="marcado">Edit&#045;&#045;&#062;Replace</b>. </li>
 	<li>&#040;<i>En algunas vesiones;&nbsp;&nbsp;<i class="marcado">Edit&#045;&#045;&#062;Replace&#045;&#045;&#062;Replace String</i> &#041;</i></li>
-	<li>En el mini-buffer aparecer· el mensaje&nbsp;<i>Query replace:</i>&nbsp;</li><br/>
-	<li><b>Teclear en el mini-buffer la </b>&nbsp;&nbsp;<i class="marcado">cadena_de_b˙squeda</i>&nbsp; y pulsar &nbsp;<b class="marcado">&lt;Enter&gt;</b></li>
-	<li>Aparecer· el mensaje&nbsp;: &nbsp;<i>Query replace</i>&nbsp;<i class="marcado">cadena_de_b˙squeda</i>&nbsp;<i>with:</i></li><br/>
+	<li>En el mini-buffer aparecer√° el mensaje&nbsp;<i>Query replace:</i>&nbsp;</li><br/>
+	<li><b>Teclear en el mini-buffer la </b>&nbsp;&nbsp;<i class="marcado">cadena_de_b√∫squeda</i>&nbsp; y pulsar &nbsp;<b class="marcado">&lt;Enter&gt;</b></li>
+	<li>Aparecer√° el mensaje&nbsp;: &nbsp;<i>Query replace</i>&nbsp;<i class="marcado">cadena_de_b√∫squeda</i>&nbsp;<i>with:</i></li><br/>
 	<li><b>Teclear en el mini-buffer la </b>&nbsp;&nbsp;<i class="marcado">cadena_de_reemplazo</i>&nbsp; y pulsar &nbsp;<b class="marcado">&lt;Enter&gt;</b></li><br />
-	<li>A partir de este momento se iniciar· la b˙squeda y, en cada cadena encontrada Emacs nos preguntar· si deseamos realizar o no la sustituciÛn, mediante el siguiente mensaje en el mini-buffer:</li>
-	<li><i>Query replacing</i>&nbsp;<i class="marcado">cadena_de_b˙squeda</i>&nbsp; with ;&nbsp;<i class="marcado">cadena_de_reemplazo</i>&nbsp; <i>&#040;? for help&#041;</i></li>
+	<li>A partir de este momento se iniciar√° la b√∫squeda y, en cada cadena encontrada Emacs nos preguntar√° si deseamos realizar o no la sustituci√≥n, mediante el siguiente mensaje en el mini-buffer:</li>
+	<li><i>Query replacing</i>&nbsp;<i class="marcado">cadena_de_b√∫squeda</i>&nbsp; with ;&nbsp;<i class="marcado">cadena_de_reemplazo</i>&nbsp; <i>&#040;? for help&#041;</i></li>
 	<li>Las posibles respuestas son:
 		<ul class="comandos">
-		<li><b class="marcado">y</b>&nbsp;&nbsp;:&nbsp; Procede al reemplazo. TambiÈn puede utilizarse <i class="marcado">&lt;Space&gt;.</i></li><br/>
-		<li><b class="marcado">n</b>&nbsp;&nbsp;:&nbsp;No proceder al reemplazo. TambiÈn puede utilizarse <i class="marcado">&lt;Supr.&gt;</i>.</li><br/>
+		<li><b class="marcado">y</b>&nbsp;&nbsp;:&nbsp; Procede al reemplazo. Tambi√©n puede utilizarse <i class="marcado">&lt;Space&gt;.</i></li><br/>
+		<li><b class="marcado">n</b>&nbsp;&nbsp;:&nbsp;No proceder al reemplazo. Tambi√©n puede utilizarse <i class="marcado">&lt;Supr.&gt;</i>.</li><br/>
 		<li><b class="marcado">.</b>&nbsp;&nbsp;:&nbsp; Reemplazar esta cadena y salir.</li><br/>
 		<li><b class="marcado">,</b>&nbsp;&nbsp;:&nbsp; Reemplazar y mostrar el resultado antes de seguir,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pulsando&nbsp;<i class="marcado">y</i> o <i class="marcado">&lt;Space&gt;.</i>.</li><br/>
 		<li><b class="marcado">&#033;</b>&nbsp;&nbsp;:&nbsp;Reemplazar el resto sin preguntar.</li><br/>
 		<li><b class="marcado">&#094;</b>&nbsp;&nbsp;:&nbsp;Regresa a la anterior ocurrencia.</li><br/>
-		<li><b class="marcado">q</b>&nbsp;&nbsp;:&nbsp;Abandonar&nbsp;<i>Query replacing</i>&nbsp;.TambiÈn puede utilizarse <i class="marcado">&lt;Enter&gt;</i>.</li><br/>
+		<li><b class="marcado">q</b>&nbsp;&nbsp;:&nbsp;Abandonar&nbsp;<i>Query replacing</i>&nbsp;.Tambi√©n puede utilizarse <i class="marcado">&lt;Enter&gt;</i>.</li><br/>
 		<li><b class="marcado">E</b>&nbsp;&nbsp;:&nbsp;Modificar la &nbsp;<i class="marcado">cadena_de_reemplazo</i></li><br/>
 		</ul>
 
@@ -242,105 +240,105 @@ ReferÈncia
 
 		<div class="img">
 
-		<p>Vamos a iniciar la b˙squeda  de la cadena &nbsp;<i style="font-weight:300 ">el antÌlope</i>&nbsp; y su reemplazo por la cadena.&nbsp;<i style="font-weight:300 ">la gacela</i>&nbsp;</p>
+		<p>Vamos a iniciar la b√∫squeda  de la cadena &nbsp;<i style="font-weight:300 ">el ant√≠lope</i>&nbsp; y su reemplazo por la cadena.&nbsp;<i style="font-weight:300 ">la gacela</i>&nbsp;</p>
 
 		<p>Tecleamos el comando &nbsp;<i class="marcado">M-%</i>&nbsp; o, alternativamente, ejecutamos la
-		opciÛn de men˙ &nbsp;<i class="marcado ">Edit&#045;&#045;&#062;Replace</i>&nbsp;</p>
+		opci√≥n de men√∫ &nbsp;<i class="marcado ">Edit&#045;&#045;&#062;Replace</i>&nbsp;</p>
 
 		<p>En el mini-buffer aparece el mensaje &nbsp;<i style="font-weight:300 ">Query replace:</i>&nbsp; </p>
 
-		 <p>Introducimos la cadena de b˙squeda &nbsp;<i style="font-weight:300 ">el antÌlope</i>&nbsp; .</p>
+		 <p>Introducimos la cadena de b√∫squeda &nbsp;<i style="font-weight:300 ">el ant√≠lope</i>&nbsp; .</p>
 
 		<table><tr><td><img src="query1.png" alt="query 1" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
-		<p>Tras pulsar &nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp; aparece el mensaje &nbsp;<i style="font-weight:300">Query replace el antÌlope with:</i>&nbsp;&nbsp; en el mini-buffer.</p>
+		<p>Tras pulsar &nbsp;&nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp; aparece el mensaje &nbsp;<i style="font-weight:300">Query replace el ant√≠lope with:</i>&nbsp;&nbsp; en el mini-buffer.</p>
 
-		<p>Introducimos la cadena de b˙squeda &nbsp;<i style="font-weight:300 ">la gacela</i>&nbsp; .</p>
+		<p>Introducimos la cadena de b√∫squeda &nbsp;<i style="font-weight:300 ">la gacela</i>&nbsp; .</p>
 
 		<table><tr><td><img src="query2.png" alt="query 2" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
 		<p>Tras pulsar &nbsp;<b class="marcado">&lt;Enter&gt;</b>&nbsp; vemos como el cursor se coloca
-		inmediatamente desp˙es de la primera ocurrencia, resaltada en color lila. El resto de las ocurrencias son resaltadas en color azul. </p>
+		inmediatamente desp√∫es de la primera ocurrencia, resaltada en color lila. El resto de las ocurrencias son resaltadas en color azul. </p>
 
-		<p>Aparece el mensaje:&nbsp;&nbsp;<i style="font-weight:300 ">Query replace el antÌlope with la gacela: &#040;? for help)</i>&nbsp; </p>
+		<p>Aparece el mensaje:&nbsp;&nbsp;<i style="font-weight:300 ">Query replace el ant√≠lope with la gacela: &#040;? for help)</i>&nbsp; </p>
 
 		<table><tr><td><img src="query3.png" alt="query 3" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
 		<p>Tras confirmar el reemplazo de la cadena de la primera ocurrencia  tecleando &nbsp;<b class="marcado">y</b>&nbsp;
-		o mediante la tecla &nbsp;&nbsp;<i class="marcado">&lt;Space&gt;</i>&nbsp;&nbsp;,se realiza la sustituciÛn de cadenas y el cursor pasa
+		o mediante la tecla &nbsp;&nbsp;<i class="marcado">&lt;Space&gt;</i>&nbsp;&nbsp;,se realiza la sustituci√≥n de cadenas y el cursor pasa
 		a la segunda ocurrencia.</p>
 
 		<table><tr><td><img src="query4.png" alt="query 4" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
-		<p>En caso de recurrir a la ayuda, pulsando &nbsp;<b class="marcado">?</b>&nbsp;, aparecer· el buffer
-		&nbsp;&nbsp;<i style="font-weight:300 ">&#042;Help&#042;</i>&nbsp;&nbsp;con las posibles "respuestas" al mensaje de solicitud de confirmaciÛn del reemplazo de cadenas.&nbsp;<i style="font-weight:300 ">&#040;Incluye las opciones correspondientes al</i>&nbsp;Modo de ediciÛn recursivo&nbsp;,<i style="font-weight:300 "> que se tratar· en el siguiente apartado&#041; </i>i></p>
+		<p>En caso de recurrir a la ayuda, pulsando &nbsp;<b class="marcado">?</b>&nbsp;, aparecer√° el buffer
+		&nbsp;&nbsp;<i style="font-weight:300 ">&#042;Help&#042;</i>&nbsp;&nbsp;con las posibles "respuestas" al mensaje de solicitud de confirmaci√≥n del reemplazo de cadenas.&nbsp;<i style="font-weight:300 ">&#040;Incluye las opciones correspondientes al</i>&nbsp;Modo de edici√≥n recursivo&nbsp;,<i style="font-weight:300 "> que se tratar√° en el siguiente apartado&#041; </i>i></p>
 		<table><tr><td><img src="query5.png" alt="query 5" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 		</div>
 
 
 
-		<h3 class="encab" id="73"> 7.3 Modo de EdiciÛn recursivo</h3>
-	 	<h6><a class="Ref" href="../buscar/buscar.html">P·g.Anterior
-		 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-		 <a class="Ref" href="reemplazar.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../xbuffers/xbuffers.html"> P·g.Siguente</a></h6>
+		<h3 class="encab" id="73"> 7.3 Modo de Edici√≥n recursivo</h3>
+	 	<h6><a class="Ref" href="../buscar/buscar.html">P√°g.Anterior
+		 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+		 <a class="Ref" href="reemplazar.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../xbuffers/xbuffers.html"> P√°g.Siguente</a></h6>
 
-		<p>Como ya se comentÛ  al principio de Èste capÌtulo, el <b>modo de ediciÛn recursivo</b> puede considerarse una variedad de <b>Query replace</b>, ya que sÛlo podremos activarlo en el curso de una b˙squeda-reemplazo de este tipo.</p>
+		<p>Como ya se coment√≥  al principio de √©ste cap√≠tulo, el <b>modo de edici√≥n recursivo</b> puede considerarse una variedad de <b>Query replace</b>, ya que s√≥lo podremos activarlo en el curso de una b√∫squeda-reemplazo de este tipo.</p>
 		<p>Cuando estemos en  <b>modo recursivo</b>, podremos desplazar el cursor a las ocurrencias encontradas y editarlas. </p>
 
-		<p>Los comandos implicados en el <b>modo de ediciÛn recursivo</b> son:</p>
+		<p>Los comandos implicados en el <b>modo de edici√≥n recursivo</b> son:</p>
 		<ul class="comandos">
 	<li><b class="marcado">C-r</b>&nbsp;:&nbsp; Activa el <b>modo recursivo</b>. En la <b>linea de modo</b>&nbsp;aparece el modo
-	de ediciÛn activo entre <b>[&nbsp;]</b>&nbsp;:</li>
+	de edici√≥n activo entre <b>[&nbsp;]</b>&nbsp;:</li>
 	<li><img src="recursivo1.png" alt="query 3" width="300"  align="middle" hspace="10" vspace="10"/></li><br/>
 	<li><b class="marcado">C-M-c</b>&nbsp;:&nbsp; Sale del <b>modo recursivo</b> y reinicia el <b>query replace</b>. </li><br/>
 	<li><b class="marcado">C-]</b>&nbsp;:&nbsp; Sale del <b>modo recursivo</b> y de <b>query replace</b>. </li><br/>
 	<li><b class="marcado">C-w</b>&nbsp;:&nbsp; Elimina la presente ocurrencia y entra en <b>modo recursivo</b>.
-	En un comando ˙til si se desea personalizar la sustituciÛn.</li><br/>
-	<p><b>Recordar que estos comandos solo actuar·n de la forma descrita si se ejecutan cuando se esta operando en </b>
+	En un comando √∫til si se desea personalizar la sustituci√≥n.</li><br/>
+	<p><b>Recordar que estos comandos solo actuar√°n de la forma descrita si se ejecutan cuando se esta operando en </b>
 	<i style="font-weight:300 ">query replace</i></b></p>
 	</ul><br/>
 	<p>Como podemos observar, los citados comandos se encuentran , en el buffer <i style="font-weight:300 ">*Help*</i>&nbsp; como opciones de &nbsp; <i style="font-weight:300 ">query replace</i>.</p>
 
-	<h3 class="encab" id="74" > 7.4 B˙squedas y Reemplazos: Sensibilidad a la caja tipogr·fica</h3>
-	 	<h6><a class="Ref" href="../buscar/buscar.html">P·g.Anterior
-		 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-		 <a class="Ref" href="reemplazar.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../xbuffers/xbuffers.html"> P·g.Siguente</a></h6>
+	<h3 class="encab" id="74" > 7.4 B√∫squedas y Reemplazos: Sensibilidad a la caja tipogr√°fica</h3>
+	 	<h6><a class="Ref" href="../buscar/buscar.html">P√°g.Anterior
+		 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+		 <a class="Ref" href="reemplazar.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../xbuffers/xbuffers.html"> P√°g.Siguente</a></h6>
 
 
-		<p>Por defecto, las b·squedas en Emacs no distinguen entre may˙sculas y min˙sculas. Es decir, <b>no son sensibles a la caja tipogr·fica</b>.</p>
-		<p>Esto es debido a que, por defecto, la opciÛn de men˙&nbsp;&nbsp; <i class="marcado">Options&#045;&#045;&#062;Case Insensitive Search</i>&nbsp; se encuentra activada.</p>
-		<p>Comp puede facilmente deducirse, desactivando la citada opciÛn pasaremos a un modo de b˙squeda en el que se distinguir· entre may˙sculas y min˙sculas : &nbsp;<b>sensible a la caja tipogr·fica</b>.</p>
-		<p>La sensibilidad a la caja de las <b>b˙squedas</b> viene determinada por la variable <b>case-fold-search</b>.&nbsp; Por defecto, dicha variable est· ajustada al valor &nbsp;<b>t</b>&nbsp; &#040;<i>true</i>&#041;&nbsp; que viene a significar: <i  style=" font-style-weight:300"> Ignora la caja excepto si el usuario utiliza combinaciÛn de may˙sculas y min˙sculas, o todo en may˙sculas, en la cadena de b˙squeda.</i>&nbsp; Como se ha comentado mas arriba, esta es la opciÛn que se presenta por defecto</p><br/>
-		<p>La sensibilidad a la caja de la acciÛn de <b>reemplazo</b> tambiÈn  puede ajustarse, en este caso atravÈs de la variable &nbsp;<b>case-replace</b>&nbsp;.Dicha variable viene, por defecto, ajustada al valor  &nbsp;<b>t</b>&nbsp; que, como en el caso de las b˙squedas, condiciona la sensibilidad a la caja de los reemplazos al formato de las palabras en la cadena original.</p>
-		<p>No existe una opciÛn de men˙ para cambiar el valor de esta variable, por lo que, para cambiar el valor de &nbsp;<b>t</b>&nbsp; a &nbsp;<b>nil</b>&nbsp;, deber· procederse de la siguiente forma:</p>
+		<p>Por defecto, las b√°squedas en Emacs no distinguen entre may√∫sculas y min√∫sculas. Es decir, <b>no son sensibles a la caja tipogr√°fica</b>.</p>
+		<p>Esto es debido a que, por defecto, la opci√≥n de men√∫&nbsp;&nbsp; <i class="marcado">Options&#045;&#045;&#062;Case Insensitive Search</i>&nbsp; se encuentra activada.</p>
+		<p>Comp puede facilmente deducirse, desactivando la citada opci√≥n pasaremos a un modo de b√∫squeda en el que se distinguir√° entre may√∫sculas y min√∫sculas : &nbsp;<b>sensible a la caja tipogr√°fica</b>.</p>
+		<p>La sensibilidad a la caja de las <b>b√∫squedas</b> viene determinada por la variable <b>case-fold-search</b>.&nbsp; Por defecto, dicha variable est√° ajustada al valor &nbsp;<b>t</b>&nbsp; &#040;<i>true</i>&#041;&nbsp; que viene a significar: <i  style=" font-style-weight:300"> Ignora la caja excepto si el usuario utiliza combinaci√≥n de may√∫sculas y min√∫sculas, o todo en may√∫sculas, en la cadena de b√∫squeda.</i>&nbsp; Como se ha comentado mas arriba, esta es la opci√≥n que se presenta por defecto</p><br/>
+		<p>La sensibilidad a la caja de la acci√≥n de <b>reemplazo</b> tambi√©n  puede ajustarse, en este caso atrav√©s de la variable &nbsp;<b>case-replace</b>&nbsp;.Dicha variable viene, por defecto, ajustada al valor  &nbsp;<b>t</b>&nbsp; que, como en el caso de las b√∫squedas, condiciona la sensibilidad a la caja de los reemplazos al formato de las palabras en la cadena original.</p>
+		<p>No existe una opci√≥n de men√∫ para cambiar el valor de esta variable, por lo que, para cambiar el valor de &nbsp;<b>t</b>&nbsp; a &nbsp;<b>nil</b>&nbsp;, deber√° procederse de la siguiente forma:</p>
 
 		<ul class="comandos">
 		<li><b>Ejecutar el comando</b>&nbsp;:&nbsp;<b class="marcado">M-x</b></li><br/>
 
 		<li>Teclear&nbsp;&nbsp;<b class="marcado">set-variable</b>&nbsp; en el mini-buffer y pulsar &nbsp;<b  class="marcado">&lt;Enter&gt;</b></li>
-		<li>En el mini-buffer aparecer· el mensaje&nbsp;&nbsp;<i  style=" font-style-weight:300">Set variable:</i></li><br/>
+		<li>En el mini-buffer aparecer√° el mensaje&nbsp;&nbsp;<i  style=" font-style-weight:300">Set variable:</i></li><br/>
 
 		<li>Introducir el nombre de la variable, &nbsp;&nbsp;<b class="marcado">case-replace</b>&nbsp;&nbsp;,
 		 y pulsar &nbsp;<b class="marcado">&lt;Enter&gt;</b>.</li>
-		<li>En el mini-buffer aparecer· el mensaje &nbsp;&nbsp;<i  style=" font-style-weight:300">Set case-replace to value:</i>.</li><br/>
+		<li>En el mini-buffer aparecer√° el mensaje &nbsp;&nbsp;<i  style=" font-style-weight:300">Set case-replace to value:</i>.</li><br/>
 
 		<li>Introducir el nuevo valor que deseemos dar a la variable, en nuestro caso, &nbsp;<b class="marcado">nil</b>&nbsp;&nbsp;, y pulsar &nbsp;<b class="marcado">&lt;Enter&gt;</b>.</li>
 
 		</ul>
 
-		<p>Este procedimiento descrito,es el procedimiento general de asignaciÛn de valores a una variable, aplicable tambiÈn al cambio de valor de &nbsp;<b class="marcado">case-fold-search</b>&nbsp;, si no deseamos utilizar el men˙ &nbsp;<i class="marcado">Options</i>&nbsp;.</p>
-		<p>Debemos tener en cuenta que los cambios realizados, sea atravÈs del men˙ &nbsp;<i class="marcado">Options</i>&nbsp; o biÈn mediante &nbsp;<b class="marcado">set-variable</b>&nbsp;
-		no son permanentes sino que afectar·n solo a la sesiÛn en curso. Cada nueva sesiÛn de Emacs se iniciar·
+		<p>Este procedimiento descrito,es el procedimiento general de asignaci√≥n de valores a una variable, aplicable tambi√©n al cambio de valor de &nbsp;<b class="marcado">case-fold-search</b>&nbsp;, si no deseamos utilizar el men√∫ &nbsp;<i class="marcado">Options</i>&nbsp;.</p>
+		<p>Debemos tener en cuenta que los cambios realizados, sea atrav√©s del men√∫ &nbsp;<i class="marcado">Options</i>&nbsp; o bi√©n mediante &nbsp;<b class="marcado">set-variable</b>&nbsp;
+		no son permanentes sino que afectar√°n solo a la sesi√≥n en curso. Cada nueva sesi√≥n de Emacs se iniciar√°
 		con los valores por defecto. </p>
-		<p>Si dese·ramos hacer permanentes los cambios realizados deberiamos :</p>
+		<p>Si dese√°ramos hacer permanentes los cambios realizados deberiamos :</p>
 
 		<ul style="list-style-type:none">
 		<li>
-		Si se realizaron atravÈs del men˙ &nbsp;<i class="marcado">Options</i>&nbsp;, guardarlos
+		Si se realizaron atrav√©s del men√∫ &nbsp;<i class="marcado">Options</i>&nbsp;, guardarlos
 		mediante &nbsp;<i class="marcado">Options&#045;&#045;&#062;Save Options</i>&nbsp;</li><br/>
 
 		<li>
-		Modificando el archivo &nbsp; <b>&#046;emacs</b>&nbsp; mediante la adiciÛn de las
+		Modificando el archivo &nbsp; <b>&#046;emacs</b>&nbsp; mediante la adici√≥n de las
 		siguientes lineas: </li><br/>
 			<li><ul>
 				<li>En el caso de &nbsp;<b>case-fold-search</b>&nbsp;: &nbsp; <i  style=" font-style-weight:200">&#040;setq-default case-fold-search nil ; require exact matches&#041;</i></li><br/>
@@ -356,9 +354,9 @@ ReferÈncia
 		<div class="margenInf">&nbsp;</div>
 
 
-		<div id="pie"> <h6><a class="Ref" href="../buscar/buscar.html">P·g.Anterior</a>&nbsp;&#124;&nbsp;
-		<a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="reemplazar.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;
-		<a class="Ref" href="../xbuffers/xbuffers.html"> P·g.Siguente</a></h6>
+		<div id="pie"> <h6><a class="Ref" href="../buscar/buscar.html">P√°g.Anterior</a>&nbsp;&#124;&nbsp;
+		<a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="reemplazar.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;
+		<a class="Ref" href="../xbuffers/xbuffers.html"> P√°g.Siguente</a></h6>
 
 		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
 		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">7.Bucar y Reemplazar</span>&nbsp;&#124;&nbsp;</h6>

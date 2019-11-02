@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
-
-
-<html>
-<head><title>Emacs: 13. Dired: EdiciÛn de direcorios </title>
+<head><title>Emacs: 13. Dired: Edici√≥n de direcorios </title>
 <link title="rpublica.net Estilo" href="../emacs.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="author" content="Antoni Serra Devecchi" />
-<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, EspaÒol"/>
+<meta name="KEYWORDS" content="Emacs, Manual, Tutorial, Espa√±ol"/>
 <meta name="description" content="manual de introduccion a emacs." />
 
 </head>
@@ -27,9 +24,9 @@
 <li>Antoni Serra Devecchi</li>
 
 <li><a href="mailto:rpublica@gmail.com">mail:&nbsp;[&nbsp;rpublica.net&nbsp;]</a></li>
-<li><i>VersiÛn no definitiva.</i></li>
-<li><i> En proceso de redacciÛn.</i></li>
-<li><i>⁄lt.Actual.: 01/04/2006</i></li></ul>
+<li><i>Versi√≥n no definitiva.</i></li>
+<li><i> En proceso de redacci√≥n.</i></li>
+<li><i>√ölt.Actual.: 01/04/2006</i></li></ul>
 -->
 	</div>
 
@@ -42,7 +39,7 @@
 	<ul id="tabnav">
      <li ><a href="../../index.html">RPublica.net</a></li>
      <li><a href="../emacs.html">Emacs</a></li>
-     <li class="active"><a href="dired.html#130">13. Dired:EdiciÛn de directorios  </a></li>
+     <li class="active"><a href="dired.html#130">13. Dired:Edici√≥n de directorios  </a></li>
      <!--<li><a href="#">XXXXX</a></li>
      <li><a href="#">XXXXX</a></li> -->
 
@@ -50,7 +47,7 @@
 
 	</div>
 <div id="logo1">
-ReferÈncia
+Refer√©ncia
 </div>
 
 <div id="indice">
@@ -60,7 +57,7 @@ ReferÈncia
 
 <p ><a href="../emacs.html">0. Indice General</a></p>
 
-<p  ><a href="../intro/intro.html#I">I.IntroducciÛn</a></p>
+<p  ><a href="../intro/intro.html#I">I.Introducci√≥n</a></p>
 <p ><a href="../buffers/buffers.html#II">II.Buffers y Archivos</a></p>
 
 <p ><a href="../modos/modos.html#III">III.Modos</a></p>
@@ -76,7 +73,7 @@ ReferÈncia
 <p  ><a href="../guardar/guardar.html#20">2.Guardar y Salir</a></p>
 
 
-<p ><a href="../editando/editando.html#30">3.Lineas y P·rrafos</a></p>
+<p ><a href="../editando/editando.html#30">3.Lineas y P√°rrafos</a></p>
 
 
 
@@ -85,13 +82,13 @@ ReferÈncia
 
 <p ><a href="../rectificar/rectificar.html#50">5.Rectificar</a></p>
 
-<p ><a href="../buscar/buscar.html#60">6.B˙squedas</a></p>
+<p ><a href="../buscar/buscar.html#60">6.B√∫squedas</a></p>
 
 <p ><a href="../reemplazar/reemplazar.html#70">7.Buscar y Reemplazar</a></p>
 
 
 
-<p ><a href="../xbuffers/xbuffers.html#80">8.Buffers m˙ltiples</a></p>
+<p ><a href="../xbuffers/xbuffers.html#80">8.Buffers m√∫ltiples</a></p>
 
 
 
@@ -110,7 +107,7 @@ ReferÈncia
 
 
 
-<p><a href="../perso/perso.html#140">14.PersonalizaciÛn </a></p>
+<p><a href="../perso/perso.html#140">14.Personalizaci√≥n </a></p>
 
 
 <p><a href="../modificar/modificar.html#150">15.Ejemplos </a></p>
@@ -125,7 +122,7 @@ ReferÈncia
 
 
 
-<p><a href="../documenta/documenta.html#190">19.DocumentaciÛn </a></p>
+<p><a href="../documenta/documenta.html#190">19.Documentaci√≥n </a></p>
 
 <p><a href="http://www.rpublica.net/emacs/macro/macro.html#200">20.Macros </a></p>
 <p><a href="http://www.rpublica.net/emacs/expreg/expreg.html#210">21.Expresiones Regulares </a></p>
@@ -137,8 +134,8 @@ ReferÈncia
 <div id="margen00">&nbsp;<span>Contacto</span></div><br/>
 <div id="margen000"><span>A.Serra Devecchi<br/>
 <a href="mailto:rpublica@gmail.com">Mail: rpublica</a>
-<br/>VersiÛn no definitiva<br/>
-⁄lt.Actual.: 01/04/2006<br/>
+<br/>Versi√≥n no definitiva<br/>
+√ölt.Actual.: 01/04/2006<br/>
 
 </span>&nbsp;</div><br/>
 
@@ -161,33 +158,33 @@ ReferÈncia
 
 	<div id="texto">
 		<div id="titulo">
-		<h2 class="encab" id="130">13. Dired:EdiciÛn de directorios </h2>
+		<h2 class="encab" id="130">13. Dired:Edici√≥n de directorios </h2>
 		</div>
 
 	<div id="contenido">
 
-	<h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a><!--&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="#logo">Inicio P·gina</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	<h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a><!--&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="#logo">Inicio P√°gina</a>-->&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
 
-	<p><b>Dired</b> es una de las caracterÌsticas mas interesantes de Emacs.</p>
-	<p>Con  <b>Dired</b> pueden buscarse archivos en los directorios, eliminarlos, renombrarlos, copiarlos, comprimirlos.... En definitiva, llevar una completa gestiÛn de archivos y directorios sin moverse de Emacs.</p><br/>
+	<p><b>Dired</b> es una de las caracter√≠sticas mas interesantes de Emacs.</p>
+	<p>Con  <b>Dired</b> pueden buscarse archivos en los directorios, eliminarlos, renombrarlos, copiarlos, comprimirlos.... En definitiva, llevar una completa gesti√≥n de archivos y directorios sin moverse de Emacs.</p><br/>
 
 
 
 	<h3 class="encab" id="131" > 13.1 Activar Dired.</h3>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6><br/>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6><br/>
 
-	<p>Podemos activar el editor de directorios de varias formas. AtravÈs de los comandos :</p>
+	<p>Podemos activar el editor de directorios de varias formas. Atrav√©s de los comandos :</p>
 
 
 	<div class="comandos">
 	<ul style="list-style-type:none">
 	<li><b>Barra de Herramientas</b>&nbsp;:&nbsp;<i class="marcado">Seleccionando el icono correspondiente.</i><img src="dired1.png" alt="Dired" width="278"  align="middle" hspace="10" vspace="10"/></li>
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">File--> Open Directory</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">File--> Open Directory</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C-x&nbsp;d</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired&nbsp;&lt;Enter&gt;</i></li>
 	</ul>
@@ -206,24 +203,24 @@ ReferÈncia
 
 	<img src="dired2.png" alt="Dired" width="450"  align="middle" hspace="10" vspace="10"/>
 
-	<p>Podemos observar como en la <b>barra de men˙s</b> de la ventana de <b>Dired</b> aparecen las nuenas opciones:
+	<p>Podemos observar como en la <b>barra de men√∫s</b> de la ventana de <b>Dired</b> aparecen las nuenas opciones:
 	<i style="font-weight:300">Operate</i>, <i style="font-weight:300">Mark</i>, <i style="font-weight:300">Regexp</i>,   <i style="font-weight:300">Immediate</i> y <i style="font-weight:300">Subdir</i> .</p>
 
-	<p>Para activar ( o desactivar, si est· activada) la funciÛn de color en la presentaciÛn de <b>Dired</b>, se ejecuta el siguiente comando:&nbsp; </p>
+	<p>Para activar ( o desactivar, si est√° activada) la funci√≥n de color en la presentaci√≥n de <b>Dired</b>, se ejecuta el siguiente comando:&nbsp; </p>
 
 	<ul class="comandos"><li><i class="marcado">M-x font-lock-mode&nbsp;&lt;Enter&gt;</i></li></ul>
 
-	<p>Por defecto, los archivos se listan por orden de <b>nombre</b>. Si deseamos cambiar el criterio de ordenaciÛn lo haremos mediante el comando:</p>
+	<p>Por defecto, los archivos se listan por orden de <b>nombre</b>. Si deseamos cambiar el criterio de ordenaci√≥n lo haremos mediante el comando:</p>
 
 	<ul class="comandos">
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">s</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-sort-toggle-or-edit&nbsp;&lt;Enter&gt;</i></li>
 	</ul>
-	<p>El comando <b class="marcado">s</b> actua de la siguiente manera ( partiendo de ordenaciÛn por <b>nombre</b>:</p>
+	<p>El comando <b class="marcado">s</b> actua de la siguiente manera ( partiendo de ordenaci√≥n por <b>nombre</b>:</p>
 	<p  class="comandos">&nbsp;&nbsp;Nombre--<b class="marcado">s</b>-->Fecha Descendente--<b class="marcado">s</b>-->Fecha Ascentente--<b class="marcado">s</b>-->Nombre</p>
-	<p>En la <b>linea de modo</b>, al lado de <b>Dired</b> podr· verse la informaciÛn sobre el criterio de ordenaciÛn: <i style="font-weight:300">by date</i> o  <i style="font-weight:300">by name</i>.</p>
+	<p>En la <b>linea de modo</b>, al lado de <b>Dired</b> podr√° verse la informaci√≥n sobre el criterio de ordenaci√≥n: <i style="font-weight:300">by date</i> o  <i style="font-weight:300">by name</i>.</p>
 
-	<p>Para movernos dentros de la ventana de <b>Dired</b>, el ratÛn , las <b>teclas de flecha</b> y las teclas <b>&lt;AvP·g.&gt;</b> y <b>&lt;ReP·g.&gt;</b> son las  opciones m·s f·ciles. TambiÈn pueden utilizarse los siguientes comandos:</p>
+	<p>Para movernos dentros de la ventana de <b>Dired</b>, el rat√≥n , las <b>teclas de flecha</b> y las teclas <b>&lt;AvP√°g.&gt;</b> y <b>&lt;ReP√°g.&gt;</b> son las  opciones m√°s f√°ciles. Tambi√©n pueden utilizarse los siguientes comandos:</p>
 	<ul class="comandos">
 	<li><b>Para ir al siguiente archivo de la lista:</b></li>
 	<li><b class="marcado">n</b>&nbsp;;&nbsp;<b class="marcado">C-n</b> o la tecla <b class="marcado">&lt;Space&gt;</b></li>
@@ -231,7 +228,7 @@ ReferÈncia
 	<li><b class="marcado">p</b>&nbsp;;&nbsp;<b class="marcado">C-p</b> o la tecla <b class="marcado">&lt;BackDel&gt;</b></li>
 	</ul>
 
-	<p>Tras esta visiÛn global de <b>Dired</b> vamos a pasar a describir las principales operaciones que pueden realizarse en este entorno:</p>
+	<p>Tras esta visi√≥n global de <b>Dired</b> vamos a pasar a describir las principales operaciones que pueden realizarse en este entorno:</p>
 
 	<ul class="comandos">
 	<li><b>Ver y editar archivos</b></li>
@@ -247,17 +244,17 @@ ReferÈncia
 
 
 	<h3 class="encab" id="132" > 13.2 Dired: Ver y Editar archivos.</h3>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
 	<p>El comando que vamos a utilizar para <b>ver archivos</b> son:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Immediate--> View This File</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Immediate--> View This File</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">v</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-view-file&nbsp;&lt;Enter&gt;</i></li>
-	<li>Nos muestra el archivo ,sobre el que est· el cursor, en <b>modo solo-lectura.</b></li>
+	<li>Nos muestra el archivo ,sobre el que est√° el cursor, en <b>modo solo-lectura.</b></li>
 	</ul>
 	<p>Tecleando <b class="marcado">q</b> o  <b class="marcado">C-c</b>, regresamos a la ventana del listado de archivos.</p>
 
@@ -265,43 +262,43 @@ ReferÈncia
 
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Immediate--> Find This File</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Immediate--> Find This File</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">e</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-find-file&nbsp;&lt;Enter&gt;</i></li>
-	<li>Edita el archivo ,sobre el que est· el cursor.</li>
+	<li>Edita el archivo ,sobre el que est√° el cursor.</li>
 	</ul>
 
 	<ul  class="comandos">
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">f</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-advertised-find-file&nbsp;&lt;Enter&gt;</i></li>
-	<li>Edita el archivo ,sobre el que est· el cursor.</li>
+	<li>Edita el archivo ,sobre el que est√° el cursor.</li>
 	</ul>
 
 	<ul  class="comandos">
 	<li><b class="marcado">&lt;Enter&gt;</b></li>
-	<li>Edita el archivo ,sobre el que est· el cursor.</li>
+	<li>Edita el archivo ,sobre el que est√° el cursor.</li>
 	</ul>
 
-	<p>En todos los casos,se abre un buffer en el que pueden utilizarse todas las opciones de ediciÛn que nos ofrece Emac.</p>
+	<p>En todos los casos,se abre un buffer en el que pueden utilizarse todas las opciones de edici√≥n que nos ofrece Emac.</p>
 	<p>Dicho buffer aparece en el listado de buffers, con el nombre del archivo abierto.</p><br/>
 
 
 	<h3 class="encab" id="133" > 13.3 Dired: Eliminar archivos.</h3>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
-	<p>Los comandos implicados en el proceso de eliminaciÛn de archivos son:</p>
+	<p>Los comandos implicados en el proceso de eliminaci√≥n de archivos son:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark--> Flag</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark--> Flag</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">d</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-flag-file-delection&nbsp;&lt;Enter&gt;</i></li>
-	<li>Marca el archivo para su eliminaciÛn. En la primera columna aparece el car·cter <b>D</b> .</li>
+	<li>Marca el archivo para su eliminaci√≥n. En la primera columna aparece el car√°cter <b>D</b> .</li>
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Unmark</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Unmark</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">u</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-unmark&nbsp;&lt;Enter&gt;</i></li>
 	<li>Elimina la marca. </li>
@@ -320,58 +317,58 @@ ReferÈncia
 
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Delete</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Delete</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">D</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-do-delete&nbsp;&lt;Enter&gt;</i></li>
-	<li>EliminaciÛn inmediata. Sin previo marcado. </li>
+	<li>Eliminaci√≥n inmediata. Sin previo marcado. </li>
 	</ul>
 
-	<p>Para eliminar un archivo desde <b>Dired</b> es preciso marcarlo previamente ( Excepto cuando se utiliza el comando de eliminaciÛn inmediata). Emacs  seÒala  a los archivos marcados para su eliminaciÛn colocando una letra <b>D</b> en su primera columna. </p>
+	<p>Para eliminar un archivo desde <b>Dired</b> es preciso marcarlo previamente ( Excepto cuando se utiliza el comando de eliminaci√≥n inmediata). Emacs  se√±ala  a los archivos marcados para su eliminaci√≥n colocando una letra <b>D</b> en su primera columna. </p>
 
-	<p>Pueden marcarse m˙ltiples archivos para ser eliminados.</p>
+	<p>Pueden marcarse m√∫ltiples archivos para ser eliminados.</p>
 
-	<p>Antes de proceder a la eliminaciÛn de un archivo, Emacs nos pedir· confirmaciÛn, para cada uno de los archivos marcados,  mediante el siguiente mensaje en el mini-buffer: <i style="font-weight:300">Delete nombre_archivo (yes or no):</i>.<br/>
-	 Cuando se utiliza el comando de eliminaciÛn inmediata, tambiÈn se pedir· confirmaciÛn antes de proceder a la eliminaciÛn.</p>
+	<p>Antes de proceder a la eliminaci√≥n de un archivo, Emacs nos pedir√° confirmaci√≥n, para cada uno de los archivos marcados,  mediante el siguiente mensaje en el mini-buffer: <i style="font-weight:300">Delete nombre_archivo (yes or no):</i>.<br/>
+	 Cuando se utiliza el comando de eliminaci√≥n inmediata, tambi√©n se pedir√° confirmaci√≥n antes de proceder a la eliminaci√≥n.</p>
 
 	<p>Es interesante mencionar una serie de comandos que nos permiten marcar todos los archivos de un determinado tipo:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Flag Auto-save Files</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Flag Auto-save Files</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">#</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-flag-autosave-files&nbsp;&lt;Enter&gt;</i></li>
 	<li>Marca todos los archivos de <b>auto-guardado</b>. </li>
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Flag Backup Files</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Flag Backup Files</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">~</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-flag-backup-files&nbsp;&lt;Enter&gt;</i></li>
 	<li>Marca todos los archivos de <b>backup</b>. </li>
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Mark Executables</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Mark Executables</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">**</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-mark-executables&nbsp;&lt;Enter&gt;</i></li>
 	<li>Marca todos los archivos de <b>ejecutables</b>. </li>
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Mark Directories</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Mark Directories</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">*/</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-mark-directories&nbsp;&lt;Enter&gt;</i></li>
 	<li>Marca todos los  <b>directorios</b>. </li>
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Mark Symlinks</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Mark Symlinks</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">*@</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-mark-symlinks&nbsp;&lt;Enter&gt;</i></li>
-	<li>Marca todos los  <b>enlaces simbÛlicos</b>. </li>
+	<li>Marca todos los  <b>enlaces simb√≥licos</b>. </li>
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Mark Old Backups</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Mark Old Backups</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">.</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-clean-directory&nbsp;&lt;Enter&gt;</i></li>
 	<li>Marca todos los  <b>backups numerados</b>. </li>
@@ -379,40 +376,40 @@ ReferÈncia
 
 
 	<h3 class="encab" id="134" > 13.4 Dired: Copiar archivos.</h3>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
 	<p>El comando utilizado en <b>Dired</b> para copiar archivos es:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Copy to</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Copy to</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">C</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-do-copy&nbsp;&lt;Enter&gt;</i></li>
-	<li>Copiar el archivo sobre el que est· el cursor en la localizaciÛn que especifiquemos. </li>
+	<li>Copiar el archivo sobre el que est√° el cursor en la localizaci√≥n que especifiquemos. </li>
 	</ul>
 
 	<p>Para copiar un archivo, situamos el cursor en su linea y ejecutamos el comando anterior.</p>
 
-	<p>Emacs nos pedir·, mediante un mensaje en el mini-buffer que especifiquemos la localizaciÛn en que queremos situar la cÛpia. <i style="font-weight:300">Copy nombre_archivo to:</i></p>
+	<p>Emacs nos pedir√°, mediante un mensaje en el mini-buffer que especifiquemos la localizaci√≥n en que queremos situar la c√≥pia. <i style="font-weight:300">Copy nombre_archivo to:</i></p>
 
-	<p>Para copiar a la vez varios archivos, situados en lineas consecutivas, podemos preceder el comando de cÛpia, <b class="marcado">C</b>,  de un n˙mero, <i class="marcado">n∫</i>&nbsp; : Emacs copiar· a la vez el archivo de la lÌnea en que se encuentra el cursor y los &nbsp;<b>n∫-1</b>&nbsp; archivos siguientes.</p>
+	<p>Para copiar a la vez varios archivos, situados en lineas consecutivas, podemos preceder el comando de c√≥pia, <b class="marcado">C</b>,  de un n√∫mero, <i class="marcado">n¬∫</i>&nbsp; : Emacs copiar√° a la vez el archivo de la l√≠nea en que se encuentra el cursor y los &nbsp;<b>n¬∫-1</b>&nbsp; archivos siguientes.</p>
 
-	<p> Por ejemplo, <b class="marcado">5C</b>, copiaria el archivo de la linea del cursor m·s los cuatro siguientes.</p><br/>
+	<p> Por ejemplo, <b class="marcado">5C</b>, copiaria el archivo de la linea del cursor m√°s los cuatro siguientes.</p><br/>
 
 
 	<h3 class="encab" id="135" > 13.5 Dired: Renombrar  archivos.</h3>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
 	<p>El comando usado para <b>renombrar</b> archivos en Dired es:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Rename to</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Rename to</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">R</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-do-rename&nbsp;&lt;Enter&gt;</i></li>
-	<li>Cambia el nombre del archivo sobre el que est· el cursor . </li>
+	<li>Cambia el nombre del archivo sobre el que est√° el cursor . </li>
 	</ul>
 
 	<p> Es conveniente detallar el comportamiento de este comando, ya que se comporta de forma similar a como lo hace el comando Unix &nbsp;<b>mv</b>&nbsp;: puede renombrar o mover archivos.</p>
@@ -420,20 +417,20 @@ ReferÈncia
 	<div class="img">
 	<p>Vamos a aplicar el comando <b class="marcado">R</b> sobre el archivo <i class="marcado" style="font-weight:30">informe1</i>, situado en el directorio <i class="marcado" style="font-weight:30">~/informes/</i></p>
 	<p>Cuando ejecutamos el comando , Emacs nos pide, mediante el mensaje en el mini-buffer <i class="marcado" style="font-weight:30"> Rename nombre_archivo to:</i>&nbsp; que especifiquemos un nuevo nombre para el archivo. </p>
-	<p>Podemos observar que en el mensaje del mini-buffer se mantiene el directorio de ubicaciÛn del archivo; en el caso del ejemplo, &nbsp;<i class="marcado" style="font-weight:30">~/informes/</i>.</p>
+	<p>Podemos observar que en el mensaje del mini-buffer se mantiene el directorio de ubicaci√≥n del archivo; en el caso del ejemplo, &nbsp;<i class="marcado" style="font-weight:30">~/informes/</i>.</p>
 
 	<table><tr><td><img src="dired5.png" alt="Dired" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 
-	<p>Introducimos el nuevo nombre, <i class="marcado" style="font-weight:30">dossier1</i>,&nbsp; manteniendo el directorio original como localizaciÛn del archivo.</p>
+	<p>Introducimos el nuevo nombre, <i class="marcado" style="font-weight:30">dossier1</i>,&nbsp; manteniendo el directorio original como localizaci√≥n del archivo.</p>
 	<table><tr><td><img src="dired6.png" alt="Dired" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
 	<p>Tras pulsar <b class="marcado">&lt;Enter&gt;</b>,&nbsp; podemos ver como en la lista de archivos del directorio &nbsp;<i class="marcado" style="font-weight:30">informes</i>&nbsp; se ha producido el cambio de nombre.</p>
 	<table><tr><td><img src="dired7.png" alt="Dired" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
-	<p>Ahora, en lugar de mantener la localizaciÛn original del archivo la cambiamos por otra, por ejemplo, cambiando el directorio <i class="marcado" style="font-weight:30">~/informes/</i>,&nbsp; por el directorio <i class="marcado" style="font-weight:30">~/dossiers/</i>,&nbsp; </p>
+	<p>Ahora, en lugar de mantener la localizaci√≥n original del archivo la cambiamos por otra, por ejemplo, cambiando el directorio <i class="marcado" style="font-weight:30">~/informes/</i>,&nbsp; por el directorio <i class="marcado" style="font-weight:30">~/dossiers/</i>,&nbsp; </p>
 	<table><tr><td><img src="dired8.png" alt="Dired" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
-	<p>Al ejecutar el comando <b class="marcado">R</b>, el archivo se  <b class="marcado">mover·</b> al nuevo directorio especificado. Si le hemos asignado un nuevo nombre, aparecer· en el directorio destino con este nuevo nombre. Si no le hemos asignado ning˙n nuevo nombre, en el directorio destino aparecer· con el mismo nombre que tenia en el directorio origen. En el mini-buffer de la ventana de <b class="marcado">Dired</b> aparecer· el mensaje <i class="marcado" style="font-weight:30">Move: 1 file</i>,&nbsp;</p>
+	<p>Al ejecutar el comando <b class="marcado">R</b>, el archivo se  <b class="marcado">mover√°</b> al nuevo directorio especificado. Si le hemos asignado un nuevo nombre, aparecer√° en el directorio destino con este nuevo nombre. Si no le hemos asignado ning√∫n nuevo nombre, en el directorio destino aparecer√° con el mismo nombre que tenia en el directorio origen. En el mini-buffer de la ventana de <b class="marcado">Dired</b> aparecer√° el mensaje <i class="marcado" style="font-weight:30">Move: 1 file</i>,&nbsp;</p>
 	<table><tr><td><img src="dired9.png" alt="Dired" width="450"  align="middle" hspace="10" vspace="10"/></td></tr></table>
-	<p> En definitiva, si no cambiamos la ruta de acceso (path) al archivo, el comando <b class="marcado">R</b> cambiar· el nombre del archivo por el especificado.<br/>
-	Si cambiamos la ruta de acceso (path) al archivo, lo mover· a la nueva localizaciÛn, hayamos o no asignado unnuevo nombre al archivo.</p>
+	<p> En definitiva, si no cambiamos la ruta de acceso (path) al archivo, el comando <b class="marcado">R</b> cambiar√° el nombre del archivo por el especificado.<br/>
+	Si cambiamos la ruta de acceso (path) al archivo, lo mover√° a la nueva localizaci√≥n, hayamos o no asignado unnuevo nombre al archivo.</p>
 	<p>El caso presentado como ejemplo podria resumirse en la siguiente tabla:</p>
 	<table style="border:solid 1px">
 	<tr style="border:solid 1px"><td style="border:solid 1px">~/informes/dossier1</td><td style="border:solid 1px ; padding-left:10px">Cambia el nombre de <i class="marcado" style="font-weight:30">informe1</i> por del de <i class="marcado" style="font-weight:30">dossier1</i>, manteniendo el archivo en el directorio <i class="marcado" style="font-weight:30">~/informes/</i></td></tr>
@@ -448,147 +445,147 @@ ReferÈncia
 
 
 
-	<h3 class="encab" id="136" > 13.6 Dired: CompresiÛn y DescompresiÛn de  archivos.</h3>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	<h3 class="encab" id="136" > 13.6 Dired: Compresi√≥n y Descompresi√≥n de  archivos.</h3>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
-	<p>Emacs utiliza el mismo comando tanto para la <b>compresiÛn</b> como para la <b>descompresiÛn</b> de archivos:</p>
+	<p>Emacs utiliza el mismo comando tanto para la <b>compresi√≥n</b> como para la <b>descompresi√≥n</b> de archivos:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Compress</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Compress</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">Z</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-do-compress&nbsp;&lt;Enter&gt;</i></li>
 	<li>Comprime o descomprime archivos . </li>
 	</ul>
 	<p>Aplicando el comando a un archivo no comprimido, lo comprime. Cuando se aplica a un archivo comprimido, lo descomprime.</p>
-	<p>Para la <b>compresiÛn</b>, Emacs utiliza <b>gzip</b>, por lo que los archivos comprimidos llevar·n la extensiÛn <b>.gz</b></p>
-	<p>Los formatos de compresiÛn que reconoce son <b>compress</b> (extensiones, <b>.z</b>&nbsp; o &nbsp;<b>.Z</b>) y el formato <b>gzip</b>, (extensiÛn, <b>.gz</b>)</p>
+	<p>Para la <b>compresi√≥n</b>, Emacs utiliza <b>gzip</b>, por lo que los archivos comprimidos llevar√°n la extensi√≥n <b>.gz</b></p>
+	<p>Los formatos de compresi√≥n que reconoce son <b>compress</b> (extensiones, <b>.z</b>&nbsp; o &nbsp;<b>.Z</b>) y el formato <b>gzip</b>, (extensi√≥n, <b>.gz</b>)</p>
 
-	<p>Antes de proceder a la <b>compresiÛn</b> o a la <b>descompresiÛn</b> de un archivo, Emacs nos pedir· confirmaciÛn.</p>
+	<p>Antes de proceder a la <b>compresi√≥n</b> o a la <b>descompresi√≥n</b> de un archivo, Emacs nos pedir√° confirmaci√≥n.</p>
 
-	<p> Emacs dispone de la posibilidad de activar un <b>modo de compresiÛn / descompresiÛn autom·tica</b>, lo que puede facilitarnos la ediciÛn de archivos comprimidos.</p>
-	<p>Para activar ( o desactivar) el <b>modo de compresiÛn / descompresiÛn autom·tica</b> para una determinada sesiÛn:</p>
+	<p> Emacs dispone de la posibilidad de activar un <b>modo de compresi√≥n / descompresi√≥n autom√°tica</b>, lo que puede facilitarnos la edici√≥n de archivos comprimidos.</p>
+	<p>Para activar ( o desactivar) el <b>modo de compresi√≥n / descompresi√≥n autom√°tica</b> para una determinada sesi√≥n:</p>
 
 	<ul  class="comandos">
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;auto-compress-mode&nbsp;&lt;Enter&gt;</i></li>
-	<li>Activa/Desactiva el modo de autocompresiÛn . </li>
+	<li>Activa/Desactiva el modo de autocompresi√≥n . </li>
 	</ul>
 
-	<p>Si deseamos configurar el <b>auto-compress-mode</b> de forma permanente, deberemos aÒadir la siguiente lÌnea al fichero <b>.emacs</b> : </p>
+	<p>Si deseamos configurar el <b>auto-compress-mode</b> de forma permanente, deberemos a√±adir la siguiente l√≠nea al fichero <b>.emacs</b> : </p>
 	<ul class="comandos"><li class="marcado">(auto-compress-mode 1)</li></ul><br/>
 
 
 
-	<h3 class="encab" id="137" > 13.7 Dired: ComparaciÛn de  archivos.</h3>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	<h3 class="encab" id="137" > 13.7 Dired: Comparaci√≥n de  archivos.</h3>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
 	<p><b>Dired</b> nos ofrece la posibilidad de utilizar el comando Unix,  <b>diff</b>. Lo haremos mediante los siguientes comandos:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Immediate-->Diff</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Immediate-->Diff</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">=</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-diff&nbsp;&lt;Enter&gt;</i></li>
-	<li>Compara el archivo en el que tenemos situado el cursor con otro que deber· especificarse. </li>
+	<li>Compara el archivo en el que tenemos situado el cursor con otro que deber√° especificarse. </li>
 	</ul>
-	<p>Cuando ejecutamos el comando, Emacs nos pide que especifiquemos el nombre del archivo con el que queremos realizar la comparaciÛn.</p>
-	<p>Emacs comparar· ambos archivos , abriendo un buffer, &nbsp;&nbsp;<i  style="font-weight:30">*diff*</i>&nbsp;&nbsp; con el output.</p>
+	<p>Cuando ejecutamos el comando, Emacs nos pide que especifiquemos el nombre del archivo con el que queremos realizar la comparaci√≥n.</p>
+	<p>Emacs comparar√° ambos archivos , abriendo un buffer, &nbsp;&nbsp;<i  style="font-weight:30">*diff*</i>&nbsp;&nbsp; con el output.</p>
 
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Immediate-->Compare with Backup</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Immediate-->Compare with Backup</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">M-=</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-backup-diff&nbsp;&lt;Enter&gt;</i></li>
 	<li>Compara el archivo en el que tenemos situado el cursor con su backup. </li></br>
 	</ul><br/>
 
 	<h3 class="encab" id="138" > 13.8 Dired: Ejecutar comandos shell en archivos.</h3>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
 	<p> En general, podemos ejecutar cualquier comando shell ( <b> chmod, grep, find, sort ...etc.</b>) sobre cualquier archivo de la ventana <b>Dired</b>. Para ello utilizaremos el siguiente comando:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Shell Command</i></li>
-	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">!</b> o, tambiÈn &nbsp;<b class="marcado">X</b></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Shell Command</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">!</b> o, tambi√©n &nbsp;<b class="marcado">X</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-do-shell-command&nbsp;&lt;Enter&gt;</i></li>
-	<li>EjecuciÛn de comando shell en el archivo en el que est· situado el cursor. </li>
+	<li>Ejecuci√≥n de comando shell en el archivo en el que est√° situado el cursor. </li>
 	</ul>
 
-	<p>Tras ejecutar el comando, Emacs nos solicitar· que introduzcamos el comando shell que deseamos ejecutar mediante el mensaje &nbsp;&nbsp;<i  style="font-weight:30">On nombre_archivo:</i>&nbsp;&nbsp;.</p>
-	<p>Los outputs que pueda generar el comando shell aplicado se mostrar·n en una nueva ventana; &nbsp;&nbsp;<i  style="font-weight:30">*Shell Command Output*</i>&nbsp;&nbsp;</p><br/>
+	<p>Tras ejecutar el comando, Emacs nos solicitar√° que introduzcamos el comando shell que deseamos ejecutar mediante el mensaje &nbsp;&nbsp;<i  style="font-weight:30">On nombre_archivo:</i>&nbsp;&nbsp;.</p>
+	<p>Los outputs que pueda generar el comando shell aplicado se mostrar√°n en una nueva ventana; &nbsp;&nbsp;<i  style="font-weight:30">*Shell Command Output*</i>&nbsp;&nbsp;</p><br/>
 
 	<h3 class="encab" id="139" > 13.9 Dired: Trabajar con grupos de archivos.</h3>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
-	<p><b>Dired</b> nos ofrece la posibilidad de actuar sobre m·s de un archivo a la vez.</p>
-	<p>Para ello deber·n crearse previamente los grupos de archivos sobre los que deseamos actuar. </p><br/>
+	<p><b>Dired</b> nos ofrece la posibilidad de actuar sobre m√°s de un archivo a la vez.</p>
+	<p>Para ello deber√°n crearse previamente los grupos de archivos sobre los que deseamos actuar. </p><br/>
 
 
-	<h4 class="encab" id="1391" > 13.9.1 CreaciÛn de grupos de archivos.</h4>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	<h4 class="encab" id="1391" > 13.9.1 Creaci√≥n de grupos de archivos.</h4>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
-	<p>La creaciÛn de un grupo de archivos se realiza <b>marcando</b> los archivos que queremos agrupar.</p>
+	<p>La creaci√≥n de un grupo de archivos se realiza <b>marcando</b> los archivos que queremos agrupar.</p>
 	<p>Los comandos implicados en las tareas de marcado son:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Mark</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Mark</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">m</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-mark&nbsp;&lt;Enter&gt;</i></li>
-	<li><b>Marca</b>  el archivo en el que est· situado el cursor. Lo seÒala colocando el sÌmbolo &nbsp;<b>*</b>&nbsp; en la primera columna de su lÌnea.</li>
+	<li><b>Marca</b>  el archivo en el que est√° situado el cursor. Lo se√±ala colocando el s√≠mbolo &nbsp;<b>*</b>&nbsp; en la primera columna de su l√≠nea.</li>
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Unmark</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Unmark</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">u</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-unmark&nbsp;&lt;Enter&gt;</i></li>
-	<li><b>Desmarca</b>  el archivo en el que est· situado el cursor. Elimina el sÌmbolo &nbsp;<b>*</b>&nbsp; de la primera columna de su lÌnea.</li>
+	<li><b>Desmarca</b>  el archivo en el que est√° situado el cursor. Elimina el s√≠mbolo &nbsp;<b>*</b>&nbsp; de la primera columna de su l√≠nea.</li>
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Unmark All</i></li>
-	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">*!</b> o, tambiÈn, &nbsp;<b class="marcado">M-&lt;BackDel&gt;</b></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Unmark All</i></li>
+	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">*!</b> o, tambi√©n, &nbsp;<b class="marcado">M-&lt;BackDel&gt;</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-unmark-all-files&nbsp;&lt;Enter&gt;</i></li>
-	<li><b>Desmarca</b>  todos los archivos marcados. Elimina los sÌmbolos &nbsp;<b>*</b>&nbsp; de la primera columna de sus lÌneas.</li>
+	<li><b>Desmarca</b>  todos los archivos marcados. Elimina los s√≠mbolos &nbsp;<b>*</b>&nbsp; de la primera columna de sus l√≠neas.</li>
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Toggle Marks</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Mark-->Toggle Marks</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">t</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-toggle-marks&nbsp;&lt;Enter&gt;</i></li>
 	<li>Marca todos los archivos desmarcados y desmarca los marcados.</li><br/>
 	</ul><br/>
 
 	<h4 class="encab" id="1392" > 13.9.2 Acciones sobre  grupos de archivos.</h4>
-	 <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior
-	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;
-	 <a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+	 <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior
+	 </a>&nbsp;&#124;&nbsp; <a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;
+	 <a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
 
-	<p>Seguidamente vamos a resumir las acciones m·s frecuentes que suelen llevarse a cabo sobre grupos de archivos:</p>
+	<p>Seguidamente vamos a resumir las acciones m√°s frecuentes que suelen llevarse a cabo sobre grupos de archivos:</p>
 
 
-	<h4>CreaciÛn de directorios:</h4>
+	<h4>Creaci√≥n de directorios:</h4>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Immediate-->Create Directory</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Immediate-->Create Directory</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">+</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-create-directory&nbsp;&lt;Enter&gt;</i></li>
-	<li>Crea un nuevo directorio. Emacs nos solicitar· la intrducciÛn del nombre del nuevo directorio..</li>
+	<li>Crea un nuevo directorio. Emacs nos solicitar√° la intrducci√≥n del nombre del nuevo directorio..</li>
 	</ul><br/>
 
 	<h4>Mover archivos a un nuevo directorio:</h4>
 
 	<p>Utilizaremos el mismo comando que en <a href="dired.html#135" style="text-decoration:none">13.5 Dired:Renombrar archivos.</a></p>
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Rename to</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Rename to</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">R</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-do-rename&nbsp;&lt;Enter&gt;</i></li>
 	</ul>
@@ -598,16 +595,16 @@ ReferÈncia
 	<ol>
 	<li>Marcar los archivos que desean moverse.</li>
 	<li>Ejecutar el comando <b class="marcado">R</b></li>
-	<li>Emacs nos preguntar· donde queremos mover los archivos marcados: Introducimos la ruta al directorio destino.</li>
-	<li>Tras pulsar <i class="marcado">&lt;Enter&gt;</i>, se llevr· a cabo el traslado.</li></ol><br/>
+	<li>Emacs nos preguntar√° donde queremos mover los archivos marcados: Introducimos la ruta al directorio destino.</li>
+	<li>Tras pulsar <i class="marcado">&lt;Enter&gt;</i>, se llevr√° a cabo el traslado.</li></ol><br/>
 
 
 	<h4>Buscar y reemplazar:</h4>
 
-	<p>En <b>Dired</b> se nos ofrece la oportunidad de poder realizar la operaciÛn de <b>buscar-y-reemplazar</b> sobre un conjunto de archivos en lugar de hacerlo individualmente sobre cada uno de los archivos. El comando implicado es:</p>
+	<p>En <b>Dired</b> se nos ofrece la oportunidad de poder realizar la operaci√≥n de <b>buscar-y-reemplazar</b> sobre un conjunto de archivos en lugar de hacerlo individualmente sobre cada uno de los archivos. El comando implicado es:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Query replace in Files</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Query replace in Files</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">Q</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-do-query-replace&nbsp;&lt;Enter&gt;</i></li>
 	<li>Busca y reemplaza en un conjunto de archivos marcados.</li>
@@ -618,23 +615,23 @@ ReferÈncia
 	<ol>
 	<li>Marcar los archivos sobre los que deseamos actuar. </li>
 	<li>Ejecutar el comando <b class="marcado">Q</b></li>
-	<li>Emacs nos pedira la introducciÛn de la cadena de b˙squeda y, despuÈs, la de sustituciÛn. </li>
-	<li>Introducidas ambas cadenas, pulsar <i class="marcado">&lt;Enter&gt;</i> para que se lleve a cabo la operaciÛn.</li></ol>
+	<li>Emacs nos pedira la introducci√≥n de la cadena de b√∫squeda y, despu√©s, la de sustituci√≥n. </li>
+	<li>Introducidas ambas cadenas, pulsar <i class="marcado">&lt;Enter&gt;</i> para que se lleve a cabo la operaci√≥n.</li></ol>
 
-	<p> Una posibilidad que se nos ofrece es la de realizar una b˙squeda mediante una <b>expresiÛn regular</b>:</p>
+	<p> Una posibilidad que se nos ofrece es la de realizar una b√∫squeda mediante una <b>expresi√≥n regular</b>:</p>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Search Files</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Operate-->Search Files</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">A</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-do-search&nbsp;&lt;Enter&gt;</i></li>
-	<li>Busca en un conjunto de archivos marcados mediante una expresiÛn regular.</li>
+	<li>Busca en un conjunto de archivos marcados mediante una expresi√≥n regular.</li>
 	</ul>
-	<p>La b˙squeda se detendr· al encontrar la primera coincidencia. Con el comando <b class="marcado">M-</b> iremos pasando a las sucesivas coincidencias.</p><br/>
+	<p>La b√∫squeda se detendr√° al encontrar la primera coincidencia. Con el comando <b class="marcado">M-</b> iremos pasando a las sucesivas coincidencias.</p><br/>
 
 	<h4>Navegar por los directorios:</h4>
 
 
-	<p>Los siguientes comandos nos permiten navegar atravÈs de los directorios de la ventana de <b>Dired</b>:</p>
+	<p>Los siguientes comandos nos permiten navegar atrav√©s de los directorios de la ventana de <b>Dired</b>:</p>
 
 
 	<ul  class="comandos">
@@ -645,21 +642,21 @@ ReferÈncia
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Subdir-->Prev Dirline</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Subdir-->Prev Dirline</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">&#060;</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-prev-dirline&nbsp;&lt;Enter&gt;</i></li>
 	<li>Nos lleva al directorio previo del actual.</li>
 	</ul>
 
 	<ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Subdir-->Next Dirline</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Subdir-->Next Dirline</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">&#062;</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-next-dirline&nbsp;&lt;Enter&gt;</i></li>
 	<li>Nos lleva al directorio siguiente del actual.</li>
 	</ul>
 
 	ul  class="comandos">
-	<li><b>OpciÛn de men˙</b>&nbsp;:&nbsp;<i class="marcado">Subdir-->Insert This Subdir...</i></li>
+	<li><b>Opci√≥n de men√∫</b>&nbsp;:&nbsp;<i class="marcado">Subdir-->Insert This Subdir...</i></li>
 	<li><b>Comando</b>&nbsp;:&nbsp;<b class="marcado">&#161;</b></li>
 	<li><b>Comando "largo"</b>&nbsp;:&nbsp;<i class="marcado">M-x&nbsp;dired-maybe-insert-subdir&nbsp;&lt;Enter&gt;</i></li>
 	<li>Inserta la lista del subdirectorio en el que se encuentra el cursor al final del buffer Dired.</li>
@@ -671,13 +668,13 @@ ReferÈncia
 		<div class="margenInf">&nbsp;</div>
 
 
-		<div id="pie"> <h6><a class="Ref" href="../consola/consola.html">P·g.Anterior</a>&nbsp;&#124;&nbsp;
-		<a class="Ref" href="../emacs.html">Õndice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="dired.html#logo">Inicio P·gina</a>&nbsp;&#124;&nbsp;
-		<a class="Ref" href="../perso/perso.html"> P·g.Siguente</a></h6>
+		<div id="pie"> <h6><a class="Ref" href="../consola/consola.html">P√°g.Anterior</a>&nbsp;&#124;&nbsp;
+		<a class="Ref" href="../emacs.html">√çndice</a>&nbsp;&#124;&nbsp;<a class="Ref" href="dired.html#logo">Inicio P√°gina</a>&nbsp;&#124;&nbsp;
+		<a class="Ref" href="../perso/perso.html"> P√°g.Siguente</a></h6>
 
 		<h6><a class="navInf" href="../../index.html">RPublica</a>&nbsp;&#062;&nbsp;
 		<a class="navInf" href="../emacs.html">Emacs</a>&nbsp;&#062;&nbsp;&nbsp;&#124;&nbsp;<span class="navInf1">
-		13.Dired:EdiciÛn de directorios</span>&nbsp;&#124;&nbsp;</h6>
+		13.Dired:Edici√≥n de directorios</span>&nbsp;&#124;&nbsp;</h6>
 		 </div>
 		<div class="margenInf">&nbsp;</div>
 
