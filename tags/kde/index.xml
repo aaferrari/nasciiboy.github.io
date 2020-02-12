@@ -260,6 +260,16 @@ hecha no se con que, ni como con las que no pude &amp;ldquo;ajustar&amp;rdquo; e
 
 &lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-color.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
+&lt;p&gt;Otro mas y esta vez sin imagen. KDE permite mover ventanas entre pantallas y
+escritorios como debe hacerse, sin embargo cuando mandas una ventana a otro
+escritorio esta se envia pero tu te quedas donde estavas, no te mueves con el
+escritorio y tampoco hay ninguna indicacion visual de que has movido la ventana.&lt;/p&gt;
+
+&lt;p&gt;En Ñome cuando envias una ventana a otro escritorio te vas junto a la ventana,
+que es digo yo el comportamiento esperado y deseado o almenos el que utilizo e
+igualmente se usa en navegadores web y de ficheros. Cuando mueves una pestaña te
+mueves con la pestaña.&lt;/p&gt;
+
 &lt;p&gt;Por concluir con el asunto y evitar indignacion si no lo menciono, hablare del
 consumo. Utiliza KDE tan poca memoria que sonroja a XFCE, LXDE que oscilan en
 debian 10 aproximadamente en ~150MiB? no, pero sus ~500MiB estan muy bien,
