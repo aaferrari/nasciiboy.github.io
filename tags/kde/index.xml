@@ -38,7 +38,7 @@ permanentemente&lt;/p&gt;
 &lt;p&gt;Ahora, para mi mientras el entorno no interfiera y brinde las caracteristicas
 necesarias dire que es poco relevante, pero dentro de su poca relevancia me
 quedare con aquel que de serie se acerque mas al uso personal y de no ser
-asi permita con facilidar alcanzar dicho objetivos&lt;/p&gt;
+asi permita con facilidar alcanzar dicho objetivo&lt;/p&gt;
 
 &lt;p&gt;Que necesita hacer el entorno pues?&lt;/p&gt;
 
@@ -133,10 +133,11 @@ lanzable hasta escribir &lt;code&gt;em&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;en el caso de krunner el atajo es una combinacion distinta a &lt;code&gt;Super&lt;/code&gt; (dicen las
 leyendas que se puede hacer el cambio, pero ya hay que buscarse la vida y
 toquetear configuraciones misticas en un fichero). Establecerlo en &lt;code&gt;Super + ESP&lt;/code&gt;
-es la recomendacion&lt;/p&gt;
+es la recomendacion&amp;hellip; pero resulta que yo hago (abitualmente) la tabulacion de
+ventanas justo, justo con esa combinacion&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;para este caso con la sola &lt;code&gt;e&lt;/code&gt; precenta el autocompletado automagico y con un
-&lt;code&gt;enter&lt;/code&gt; adicional se lanza la aplicacion&lt;/p&gt;
+&lt;code&gt;enter&lt;/code&gt; adicional se lanza la aplicacion, fabuloso!&lt;/p&gt;
 
 &lt;p&gt;Podemos ver ya que el comportamiento no es igual y krunner es superior, ademas
 de menos intrusivo pero no hay opcion (grafica) disponible para hacer la
@@ -194,7 +195,7 @@ escritorios y tabulador de ventanas glorificado&lt;/p&gt;
 
 &lt;p&gt;podemos ver que si bien reduce el tamaño de las ventanas segun la cantidad,
 primeramente las muestra o-r-d-e-n-a-d-a-s y segundamente &lt;strong&gt;no interfiere con su
-contenido&lt;/strong&gt;, malditasea! lo segimos viendo!&lt;/p&gt;
+contenido&lt;/strong&gt;, malditasea! lo seguimos viendo!&lt;/p&gt;
 
 &lt;p&gt;como otros entornos (y kde,) gnome tiene tambien un &amp;ldquo;lanzador de comandos&amp;rdquo;&lt;/p&gt;
 
@@ -280,7 +281,7 @@ dichas distros.&lt;/p&gt;
 
 &lt;p&gt;Por quedarme agusto, dire (de nuevo) que en un PC Pentium 4 con 2GB de ram en
 &lt;strong&gt;Gnome Debian 9&lt;/strong&gt; por magicos conjuros misticos &lt;strong&gt;consume 280MiB de ram&lt;/strong&gt; y eso
-si me deja toooh loco, voy a mover ese equipo de Debian 9? nope, vivira sus
+si me deja toooh loco. Voy a mover ese equipo de Debian 9? nope, vivira sus
 ultimos dias con ella&amp;hellip; a no ser que Gnome 4 sea igual de chulo que el 3 con un
 consumo ridiculo&lt;/p&gt;
 
