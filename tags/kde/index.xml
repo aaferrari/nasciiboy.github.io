@@ -44,14 +44,14 @@ asi permita con facilidar alcanzar dicho objetivo&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;lanzar aplicaciones&lt;/li&gt;
-&lt;li&gt;contar con multiples escritorios (10 o 11 en especifico)&lt;/li&gt;
+&lt;li&gt;contar con multiples escritorios (10 u 11 en especifico)&lt;/li&gt;
 &lt;li&gt;mover aplicaciones entre pantallas y escritorios&lt;/li&gt;
 &lt;li&gt;configuracion de hardware grafica, sencilla y automagica (monitores, red, wifi, bluetooth, teclado, etc)&lt;/li&gt;
 &lt;li&gt;establecer un fondo de escritorio sin nada o una imagen&lt;/li&gt;
 &lt;li&gt;tener un portapapeles (aunque sea de un solo contenido)&lt;/li&gt;
 &lt;li&gt;incluir un conjunto de utilidades basicas (ver imagenes, video, correo,
 navegador de ficheros, terminal, etc) homogeneo y similar a programas de uso intensivo (p.e. firefox o emacs)&lt;/li&gt;
-&lt;li&gt;arrastras carpetas/ficheros con el mouse&lt;/li&gt;
+&lt;li&gt;arrastrar carpetas/ficheros con el mouse&lt;/li&gt;
 &lt;li&gt;y todo lo anterior interfiriendo el flujo de trabajo (casi) nada&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -79,7 +79,7 @@ contraseñas en modo cifrado (o algo asi) y si no ingresas la contraseña en cad
 inicio no tienes internete wifi. Si pongo el inicio automatico y luego tengo que
 ingresar una puñetera contraseña que sentido tiene y si es que me quiero
 conectar via remota y he de esperar a que el aparato arranque para ingresar el
-codigo, menos aun. Tras buscar en configuracion esta la opcion de apagar la
+codigo, menos aun. Tras buscar en configuracion, esta la opcion de apagar la
 caracteristica y luego ha de abrirse las preferencias de red ingresar el
 password y decirle que lo guarde.&lt;/p&gt;
 
@@ -133,7 +133,7 @@ lanzable hasta escribir &lt;code&gt;em&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;en el caso de krunner el atajo es una combinacion distinta a &lt;code&gt;Super&lt;/code&gt; (dicen las
 leyendas que se puede hacer el cambio, pero ya hay que buscarse la vida y
 toquetear configuraciones misticas en un fichero). Establecerlo en &lt;code&gt;Super + ESP&lt;/code&gt;
-es la recomendacion&amp;hellip; pero resulta que yo hago (abitualmente) la tabulacion de
+es la recomendacion&amp;hellip; pero resulta que yo hago (habitualmente) la tabulacion de
 ventanas justo, justo con esa combinacion&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;para este caso con la sola &lt;code&gt;e&lt;/code&gt; precenta el autocompletado automagico y con un
@@ -162,8 +162,8 @@ alternativa razonable&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Pasemos a otro punto &amp;ldquo;sobrevuelo de escritorios&amp;rdquo;. Particularmente utilizo un
 &amp;ldquo;teclado puro&amp;rdquo; con su panel numerico para moverme entre escritorios y tengo
 (conseptualmente) establecido para que utilizar cada uno. El sobrevuelo (junto a
-la proxima caracteristica a ver) cumple la funcion de ubicar una ventana lanzada
-y olvidada por alguna razon&amp;hellip;&lt;/p&gt;
+la proxima caracteristica a ver, aunque la siguiente sea superior) cumple la
+funcion de ubicar una ventana lanzada y olvidada por alguna razon&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-overview.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
@@ -182,7 +182,15 @@ las ventanas de todos los escritorios. Se ve tal que asi&lt;/p&gt;
 &lt;strong&gt;tiene su propio atajo desvinculado con &lt;code&gt;Super&lt;/code&gt;&lt;/strong&gt;, no deseparece hasta
 aplicar el comando de invocacion o seleccionar otra ventana o con un enter.&lt;/p&gt;
 
-&lt;p&gt;Son estas levedades sutiles? si, pero unas que realizo todo el tiempo&lt;/p&gt;
+&lt;p&gt;Son estas levedades sutiles? si, pero unas que realizo todo el tiempo, ademas
+que (me) dejan claro la falta de comprencion de tales funciones por parte de los
+kdeeros, es como si lo vieran de reojo implementado en gnome, para luego
+imitarlo burdamente. No es solo un efecto visual, cumplen una necesaria funcion.&lt;/p&gt;
+
+&lt;p&gt;Por que la tabulacion entre ventanas (de un escritorio) y la tabulacion entre
+todas las ventanas en ejecucion no mantienen un mismo esquema? por que los
+atajos utilizados entre el lanzador por defecto (&lt;code&gt;Super&lt;/code&gt;) el sobrevuelo, la
+tabulacion y tabulacion por todas las ventanas es torpe sin atajos relacionados?&lt;/p&gt;
 
 &lt;p&gt;Pasemos con el rival Gnomero a ver su acercamiento del asunto&lt;/p&gt;
 
@@ -246,14 +254,13 @@ que es digo yo el comportamiento esperado y deseado o almenos el que utilizo e
 igualmente se usa en navegadores web y de ficheros. Cuando mueves una pestaña te
 mueves con la pestaña.&lt;/p&gt;
 
-&lt;p&gt;Y asi amigos y amigues (amiges, amijes, amihez?) concluimos que: Gnome es mil por
+&lt;p&gt;Y asi amigos y amigues (amiges, amijes, amihez, amijejes?) concluimos que: Gnome es mil por
 ciento superior a KDE Plasma. Esto significa que voy a &lt;code&gt;rm -Rf / --no-preserve-root&lt;/code&gt;
 en la laptopsita? nope, si bien intullo que los desarrolladores de este
 escritorio pocas ventanas abren y con pocos escritorios trabajan y son mucho de
 laptops sin &amp;ldquo;teclados de verdad&amp;rdquo; (aunque la lap en cuestion si traiga un pad
 numerico) no es que la utilise demaciado (por que se calienta, dura poco la pila
-y mi teclado entero no lo cambio por uno gomoso, plasticoso) y para eso con kde
-es suficiente.&lt;/p&gt;
+y mi teclado entero no lo cambio por uno gomoso, plasticoso), kde es suficiente.&lt;/p&gt;
 
 &lt;p&gt;ademas tiene una caracteristica que si es superior en Plasma, que es modificar
 el perfil de color de la pantalla y siendo una laptop es importante que sea
@@ -266,7 +273,7 @@ pantallas modernosas con compativilidad 100% RGB este &amp;ldquo;ajuste&amp;rdqu
 Es lo que tiene ser un vago sin pasta&lt;/p&gt;
 
 &lt;p&gt;gnome trae una opcion, pero limitada a escojer en una lista predeterminada y
-hecha no se con que, ni como con las que no pude &amp;ldquo;ajustar&amp;rdquo; el color a mi agrado&lt;/p&gt;
+hecha no se con que, ni como, con la que no pude &amp;ldquo;ajustar&amp;rdquo; el color a mi agrado&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-color.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
@@ -275,12 +282,14 @@ consumo. Utiliza KDE tan poca memoria que sonroja a XFCE, LXDE que oscilan en
 debian 10 aproximadamente en ~150MiB? no, pero sus ~500MiB estan muy bien,
 desactivando varios asuntos quedo en ~480MiB (La laptop tiene una grafica con
 256MiB VRAM). No son espectaculares 200MiB pero no esta mal, ademas a diferencia
-de lo que creia el consumo no aumenta con el tiempo, se mantiene simpre reducido
-y estable. Bien por KDE Neon!&lt;/p&gt;
+de lo que creia el consumo no aumenta con el tiempo, se mantiene siempre reducido
+y estable. Bien por KDE Neon! (Duda: al cerrar un programa se deshacen de las
+librerias que utiliza, es decir no quedan cargadas por si otro pragrama las
+utiliza, o si vuelve a lanzarce el programa?)&lt;/p&gt;
 
 &lt;p&gt;Es cierto que el consumo variara entre una distro y otra, en buena medida por las
 extenciones, servicios, paja y mierda snaps/flatpaks incluya, teniendo como
-muestra a debian Gnome que (en mi caso) (sin grafica dedicada) inicia en ~580MiB
+muestra a Debian Gnome que (en mi caso) (sin grafica dedicada) inicia en ~580MiB
 y luego de 6 horas de traqueteo no regresa a la misma cantidad, cierra en
 ~900MiB, excesivo? no me lo parece, mi PC de escritorio tiene 8GB de ram y en la
 laptop &lt;strong&gt;modelo 2010&lt;/strong&gt; hay sobrados 6GB&lt;/p&gt;
