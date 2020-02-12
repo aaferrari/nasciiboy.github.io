@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kde on ⋲ᴹ∧cₛ ℜø∁κ§</title>
+    <link>https://nasciiboy.land/tags/kde/</link>
+    <description>Recent content in Kde on ⋲ᴹ∧cₛ ℜø∁κ§</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL v3.0</copyright>
+    <lastBuildDate>Tue, 11 Feb 2020 19:49:20 -0600</lastBuildDate>
+    
+        <atom:link href="https://nasciiboy.land/tags/kde/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>KDE NEON v Gnome Shell</title>
+      <link>https://nasciiboy.land/prog/kde-neon/</link>
+      <pubDate>Tue, 11 Feb 2020 19:49:20 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/prog/kde-neon/</guid>
+      <description>&lt;p&gt;(Spoiler: KDE Neon LTS 5.18 &amp;lt; Gnome 3.30.2 Debian 10)&lt;/p&gt;
+
+&lt;p&gt;A pesar de ser Gnome Shell el entorno por defecto en la gran mayoria de distros
+y ser (desde la personal opinion) el mas agil escritorio minimalista hecho para
+pasar inadvertido y pensado en un uso de teclado intensivo, hay un grupusculo
+que odia a muerte este escritorio alegando una superioridad que deveria
+favorecer a KDE Plasma y bla-bla-bla&lt;/p&gt;
+
+&lt;p&gt;Dejando un poco de lado el corazon gnomero y con algo de indignacion, me dispuse
+a comprobar las virtudes de Plasma (en un equipo secundario) con expectativa y
+no sin temor a vivir en el error, de la mano de la &amp;ldquo;meta distro&amp;rdquo; KDE Neon&lt;/p&gt;
+
+&lt;p&gt;No es que fuera el primer contacto con kde u otros escritorios que
+apropiadamente configurados pueden utilizarse de manera mas o menos similar,
+sino que por ves primera instalo Plasma con intenciones de dejarlo
+permanentemente&lt;/p&gt;
+
+&lt;p&gt;Ahora, para mi mientras el entorno no interfiera y brinde las caracteristicas
+necesarias dire que es poco relevante, pero dentro de su poca relevancia me
+quedare con aquel que de serie se acerque mas al uso personal y de no ser
+asi permita con facilidar alcanzar dicho objetivos&lt;/p&gt;
+
+&lt;p&gt;Que necesita hacer el entorno pues?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lanzar aplicaciones&lt;/li&gt;
+&lt;li&gt;contar con multiples escritorios (10 o 11 en especifico)&lt;/li&gt;
+&lt;li&gt;mover aplicaciones entre pantallas y escritorios&lt;/li&gt;
+&lt;li&gt;configuracion de hardware grafica, sencilla y automagica (monitores, red, wifi, bluetooth, teclado, etc)&lt;/li&gt;
+&lt;li&gt;establecer un fondo de escritorio sin nada o una imagen&lt;/li&gt;
+&lt;li&gt;tener un portapapeles (aunque sea de un solo contenido)&lt;/li&gt;
+&lt;li&gt;incluir un conjunto de utilidades basicas (ver imagenes, video, correo,
+navegador de ficheros, terminal, etc) homogeneo y similar a programas de uso intensivo (p.e. firefox o emacs)&lt;/li&gt;
+&lt;li&gt;arrastras carpetas/ficheros con el mouse&lt;/li&gt;
+&lt;li&gt;y todo lo anterior interfiriendo el flujo de trabajo (casi) nada&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Antes de la instalacion me cargue con gracia el Debian que tenia configurado&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/rm-rf.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;y tras toquetear fuentes, fondo de pantalla, probar iconos, inicio automatico,
+esquemas de color, atajos de teclado ya solo quedo encontrar las sutiles
+diferencias en el acercamiento kde-ero&lt;/p&gt;
+
+&lt;p&gt;Inconveniente cero (o no) fue el escritorio. No soy de plagar el escritorio con
+accesos ni carpetas, eso es de windowseros&amp;hellip; y por extrañas razones al pinchar
+en una carpeta siempre se abria VLC, por que? no se, se podia arreglar? supongo,
+pero yo me carge las carpetas y deje solo una imagen, que es como la gente bien
+hace las cosas&lt;/p&gt;
+
+&lt;p&gt;Primer inconveniente, los dos esquemas de color global darky por defecto son
+feeeos, no se distinguen con claridad los elementos. Regrese al blanco nuclear
+(que te deja ciego) y me aguante estoicamente, je, je. Si, se pueden buscar
+esquemas externos pero los 5 que vi parecian feos y paso de ponerme a toquetear.&lt;/p&gt;
+
+&lt;p&gt;Segundo inconveniente kwallet (o creo que asi se llamaba). Esa cosa guarda las
+contraseñas en modo cifrado (o algo asi) y si no ingresas la contraseña en cada
+inicio no tienes internete wifi. Si pongo el inicio automatico y luego tengo que
+ingresar una puñetera contraseña que sentido tiene y si es que me quiero
+conectar via remota y he de esperar a que el aparato arranque para ingresar el
+codigo, menos aun. Tras buscar en configuracion esta la opcion de apagar la
+caracteristica y luego ha de abrirse las preferencias de red ingresar el
+password y decirle que lo guarde.&lt;/p&gt;
+
+&lt;p&gt;(gnome trae tambien una peticion de contraseña post inicio automatico, mas solo
+se me ha activado en algo relevante como es desbloquear las claves ssh)&lt;/p&gt;
+
+&lt;p&gt;Tercero: La pantalla (de la laptop) se suspende cuando no quiero que lo haga.
+Voy a configuracion &amp;gt; energia, digo que no se apague la pantalla por nada nunca
+y&amp;hellip; se apaga, arrrg! salvame internete! Hay una configuracion adicional
+&amp;ldquo;Bloquear pantalla&amp;rdquo; haaaaa bueno, no te bloquees pantalla y&amp;hellip; no se bloquea
+never jamas. Pero por que cuando bloqueo la pantalla, efectivamente se bloquea
+la pantalla pero sigue encendida eternamente? quien sabe.&lt;/p&gt;
+
+&lt;p&gt;le di la pocion de apagar pantalla al cerrar el equipo, ja, ja, solucion chapucera&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Cuarto: muestrame una animacion al cerrar las ventanas, que si no, no estoy seguro
+de haberlo hecho. Gnome lo muestra con una animacion y aqui nada? Solucion, en
+el apartado de animaciones esta una opcion para desintegrar la ventana en
+cuadritos y me vale&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-close.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Listo! Todo vien? &lt;strong&gt;nope!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;voy lento, aqui es donde estan las sutilesas inperceptibles entre un diseño
+refinado conseguido en el uso diario y contar con configuraciones amplias sin un
+consepto claro. He, he, me pongo quisquilloso pero es lo que hay&lt;/p&gt;
+
+&lt;p&gt;Primero vamos con el lanzador alias boton &lt;strong&gt;Super&lt;/strong&gt; (o Windows). Por que te
+esfuerzas en llamarlo &lt;em&gt;&amp;ldquo;meta&amp;rdquo;&lt;/em&gt; kde, por que? si desde tiempos inmemoriales los
+emacseros llaman &lt;strong&gt;Meta&lt;/strong&gt; a &lt;code&gt;Alt&lt;/code&gt; o &lt;code&gt;Esc&lt;/code&gt;, explicamelo?&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/klaunch.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;uhhh, que hace el gigantesco menu ese tapandome la pantalla?&lt;/p&gt;
+
+&lt;p&gt;bueno, ellos saben que es horrendo asi que ofrecen una opcion discreta nombrada krunner&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/krunner-empty.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;mejor! Pero se comportan igual? Son igual de accesibles desde el teclado? haber
+busquemos &lt;code&gt;e&lt;/code&gt; por &lt;code&gt;emacs&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/klaunch-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;el menu esta atado a la tecla &lt;code&gt;Super&lt;/code&gt;, con la &lt;code&gt;e&lt;/code&gt; aparece (&lt;code&gt;emacs&lt;/code&gt;) en el menu pero no es
+lanzable hasta escribir &lt;code&gt;em&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/krunner-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;en el caso de krunner el atajo es una combinacion distinta a &lt;code&gt;Super&lt;/code&gt; (dicen las
+leyendas que se puede hacer el cambio, pero ya hay que buscarse la vida y
+toquetear configuraciones misticas en un fichero). Establecerlo en &lt;code&gt;Super + ESP&lt;/code&gt;
+es la recomendacion&lt;/p&gt;
+
+&lt;p&gt;para este caso con la sola &lt;code&gt;e&lt;/code&gt; precenta el autocompletado automagico y con un
+&lt;code&gt;enter&lt;/code&gt; adicional se lanza la aplicacion&lt;/p&gt;
+
+&lt;p&gt;Podemos ver ya que el comportamiento no es igual y krunner es superior, ademas
+de menos intrusivo pero no hay opcion (grafica) disponible para hacer la
+adecuacion asignacion en &lt;code&gt;Super&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Gueno, vamos con lo fuerte, las ventanas que para eso esta el entorno grafico
+para administrar ventanas&lt;/p&gt;
+
+&lt;p&gt;Que tal &lt;code&gt;Alt + Tab&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-tab.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Uhhh, que es eso, por que me invade asi salvajemente la ventana, si es que se
+parece a la interpretacion de &amp;ldquo;ventanas&amp;rdquo; que utiliza &lt;code&gt;tilix&lt;/code&gt; (donde se ve bien,
+pero nunca jamas la utilizo)&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/tilix.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;creo que se puede desactivar, aunque no estoy del todo seguro que tenga una
+alternativa razonable&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Pasemos a otro punto &amp;ldquo;sobrevuelo de escritorios&amp;rdquo;. Particularmente utilizo un
+&amp;ldquo;teclado puro&amp;rdquo; con su panel numerico para moverme entre escritorios y tengo
+(conseptualmente) establecido para que utilizar cada uno. El sobrevuelo (junto a
+la proxima caracteristica a ver) cumple la funcion de ubicar una ventana lanzada
+y olvidada por alguna razon&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-overview.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;uhhh, usable aunque muy diminuto. Problema? requiere su propio comando distinto
+a &lt;code&gt;Super&lt;/code&gt; y no desaparece hasta precionar &lt;code&gt;Enter&lt;/code&gt; o la combinacion que lo lanzo
+y esto si que es importante. Ese &lt;code&gt;-&lt;/code&gt; y &lt;code&gt;+&lt;/code&gt; en la parte inferior son una opcion
+redundante para agregar/quitar escritorios&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;junto al sobrevuelo esta lo que en los atajos de kde se conoce como
+&lt;em&gt;conmutar las ventanas precentes (todos los escritorios)&lt;/em&gt; que debe mostrar todas
+las ventanas de todos los escritorios. Se ve tal que asi&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-SBAW.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;bueno&amp;hellip; no es demaciado atractivo y a mas ventanas lo es menos y de nuevo
+&lt;strong&gt;tiene su propio atajo desvinculado con &lt;code&gt;Super&lt;/code&gt;&lt;/strong&gt;, no deseparece hasta
+aplicar el comando de invocacion o seleccionar otra ventana o con un enter.&lt;/p&gt;
+
+&lt;p&gt;Son estas levedades sutiles? si, pero unas que realizo todo el tiempo&lt;/p&gt;
+
+&lt;p&gt;Pasemos con el rival Gnomero a ver su acercamiento del asunto&lt;/p&gt;
+
+&lt;p&gt;Gnome ya inicia bien llamando a las cosas por su nombre &lt;code&gt;Super&lt;/code&gt; se
+llama &amp;ldquo;Super&amp;rdquo; G-e-n-i-a-l! Utiliza ademas esta unica tecla para unificar varias
+funciones en una sola. Sirve de lanzador de aplicaciones, dock, sobrevuelo de
+escritorios y tabulador de ventanas glorificado&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-overview.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;podemos ver que si bien reduce el tamaño de las ventanas segun la cantidad,
+primeramente las muestra o-r-d-e-n-a-d-a-s y segundamente &lt;strong&gt;no interfiere con su
+contenido&lt;/strong&gt;, malditasea! lo segimos viendo!&lt;/p&gt;
+
+&lt;p&gt;como otros entornos (y kde,) gnome tiene tambien un &amp;ldquo;lanzador de comandos&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-comm.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;aunque muy limitado, sin sugerencias y con autompletado a lo bash. Veamos las
+diferencias intentando de nuevo con la &lt;code&gt;e&lt;/code&gt; de &lt;code&gt;emacs&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-overview-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;wow! wow! al comenzar a escribir desaparecen los escritorios y ventanas para
+centrarse en la busqueda a pantalla completa y ya con la sola &lt;code&gt;e&lt;/code&gt; esta
+seleccionado &lt;code&gt;emacs&lt;/code&gt; para invocarlo con &lt;code&gt;Enter&lt;/code&gt;. Simplemente brillante!&lt;/p&gt;
+
+&lt;p&gt;Pasemos al lanzador de comandos&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-comm-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;ja, ja, que triste. No aparece nada hasta utilizar el tab o escribir el comando
+entero (o una combinacion entre ambos). Quiza, solo quiza me atrevo a pensar que
+el esfuerzo y manera de comportamiento de &lt;code&gt;Super&lt;/code&gt; es la manera por defecto y
+esta opcion es meramente por cumplir con quien tenga esta arcaica forma en su entorno&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Vamos con las ventanas. Puesto que el sobrevuelo esta resuelto empezamos con el
+&lt;code&gt;Alt + Tab&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-tab.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Mira que bonito! interfiere? si, lo minimo y Genialmente? tambien&lt;/p&gt;
+
+&lt;p&gt;Y que tal &lt;em&gt;conmutar las ventanas precentes (todos los escritorios)&lt;/em&gt; que gnome
+llama como &lt;em&gt;Cambiar entre ventanas de una aplicacion&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-SBAW.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Jo, jo, jo, si es que las ventanas estan agrupadas por programa, se precenta de
+forma comprensible y si bien tiene un comando propio (&lt;code&gt;Super + Inicio&lt;/code&gt; en mi
+caso) cuando dejo de precionar el &lt;code&gt;Super&lt;/code&gt; el selector este desaparece, no se
+queda hay hasta precionar el comando que lo invoco&lt;/p&gt;
+
+&lt;p&gt;Y asi amigos y amigues (amiges, amijes, amihez?) concluimos que: Gnome es mil por
+ciento superior a KDE Plasma. Esto significa que voy a &lt;code&gt;rm -Rf / --no-preserve-root&lt;/code&gt;
+en la laptopsita? nope, si bien intullo que los desarrolladores de este
+escritorio pocas ventanas abren y con pocos escritorios trabajan y son mucho de
+laptops sin &amp;ldquo;teclados de verdad&amp;rdquo; (aunque la lap en cuestion si traiga un pad
+numerico) no es que la utilise demaciado (por que se calienta, dura poco la pila
+y mi teclado entero no lo cambio por uno gomoso, plasticoso) y para eso con kde
+es suficiente.&lt;/p&gt;
+
+&lt;p&gt;ademas tiene una caracteristica que si es superior en Plasma, que es modificar
+el perfil de color de la pantalla y siendo una laptop es importante que sea
+sencillo de hacer con unos efectivos deslizadores&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-color.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;La pantalla que trae la laptop le da por tirarse a lo blancusco. Seguramente en
+pantallas modernosas con compativilidad 100% RGB este &amp;ldquo;ajuste&amp;rdquo; no sea necesario.
+Es lo que tiene ser un vago sin pasta&lt;/p&gt;
+
+&lt;p&gt;gnome trae una opcion, pero limitada a escojer en una lista predeterminada y
+hecha no se con que, ni como con las que no pude &amp;ldquo;ajustar&amp;rdquo; el color a mi agrado&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-color.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Por concluir con el asunto y evitar indignacion si no lo menciono, hablare del
+consumo. Utiliza KDE tan poca memoria que sonroja a XFCE, LXDE que oscilan en
+debian 10 aproximadamente en ~150MiB? no, pero sus ~500MiB estan muy bien,
+desactivando varios asuntos quedo en ~480MiB (La laptop tiene una grafica con
+256MiB VRAM). No son espectaculares 200MiB pero no esta mal, ademas a diferencia
+de lo que creia el consumo no aumenta con el tiempo, se mantiene simpre reducido
+y estable. Bien por KDE Neon!&lt;/p&gt;
+
+&lt;p&gt;Es cierto que el consumo variara entre una distro y otra, en buena medida por las
+extenciones, servicios, paja y mierda snaps/flatpaks incluya, teniendo como
+muestra a debian Gnome que (en mi caso) (sin grafica dedicada) inicia en ~580MiB
+y luego de 6 horas de traqueteo no regresa a la misma cantidad, cierra en
+~900MiB, excesivo? no me lo parece, mi PC de escritorio tiene 8GB de ram y en la
+laptop &lt;strong&gt;modelo 2010&lt;/strong&gt; hay sobrados 6GB&lt;/p&gt;
+
+&lt;p&gt;Escandaloso es lo que hacen fedora o ubuntu ya arrancando encima del GiB y
+cercanos a 2GiB de consumo, ya es asunto de que se lo hagan mirar quien elige
+dichas distros.&lt;/p&gt;
+
+&lt;p&gt;Por quedarme agusto, dire (de nuevo) que en un PC Pentium 4 con 2GB de ram en
+&lt;strong&gt;Gnome Debian 9&lt;/strong&gt; por magicos conjuros misticos &lt;strong&gt;consume 280MiB de ram&lt;/strong&gt; y eso
+si me deja toooh loco, voy a mover ese equipo de Debian 9? nope, vivira sus
+ultimos dias con ella&amp;hellip; a no ser que Gnome 4 sea igual de chulo que el 3 con un
+consumo ridiculo&lt;/p&gt;
+
+&lt;p&gt;en fin, Felices Jueves!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
