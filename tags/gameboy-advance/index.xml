@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gameboy Advance on ⋲ᴹ∧cₛ ℜø∁κ§</title>
+    <link>https://nasciiboy.land/tags/gameboy-advance/</link>
+    <description>Recent content in Gameboy Advance on ⋲ᴹ∧cₛ ℜø∁κ§</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>GPL v3.0</copyright>
+    <lastBuildDate>Wed, 01 Apr 2020 09:24:55 -0600</lastBuildDate>
+    
+        <atom:link href="https://nasciiboy.land/tags/gameboy-advance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TLoZ: The Minish Cap</title>
+      <link>https://nasciiboy.land/vg/zmc/</link>
+      <pubDate>Wed, 01 Apr 2020 09:24:55 -0600</pubDate>
+      
+      <guid>https://nasciiboy.land/vg/zmc/</guid>
+      <description>&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/mc.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Luego de terminar &amp;ldquo;TLoZ: The Wind Waker&amp;rdquo; continuaba de animo Zeldero, pero antes
+de tirarme de lleno en las reediciones hechas para 3DS de OoT y MM, o terminar &amp;ldquo;A
+Link to the Past&amp;rdquo; o &amp;ldquo;Link&amp;rsquo;s Awakening&amp;rdquo;, acudi a la lista zeldera y ya que este
+juego seguia el estilo visual &amp;ldquo;Wind Waker&amp;rdquo; lo elegi inmediatamente&lt;/p&gt;
+
+&lt;p&gt;Y&amp;hellip;? Que pinche adictivo y bonito es!&lt;/p&gt;
+
+&lt;p&gt;Comentaba anteriormente que el 3D (a mi parecer) entorpece las mecanicas
+jugables y con este titulo reafirmo este hecho, ademas que en en buena parte en
+3D se pasa mas tiempo en caminatas y rodeando construcciones, que en batalla o
+siguiendo la historia&lt;/p&gt;
+
+&lt;p&gt;Tenia dudas sobre la capacidad visual del hardware original limitada a una
+resolucion de 240x160 pixeles y tambien (habiendo toqueteado Links&amp;rsquo; Awakening)
+sobre los controles&lt;/p&gt;
+
+&lt;p&gt;Ejecutando la &lt;a href=&#34;https://nasciiboy.land/data/The Legend of Zelda - The Minish Cap (E).gba&#34;&gt;ROM&lt;/a&gt; con
+&lt;code&gt;Mednafen&lt;/code&gt; (previamente configurado mediante &lt;code&gt;Mednaffe&lt;/code&gt; su front-end &amp;ldquo;amigable&amp;rdquo;)
+queda evidenciado un majestuoso arte pixelado, que sin ningun complejo se
+ejecuta a pantalla completa&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;La configuracion no es nada compleja, estableciendo unicamente dos valores clave
+&lt;em&gt;Stretch to Full screen&lt;/em&gt; como &lt;code&gt;aspect&lt;/code&gt; y &lt;em&gt;Special video scaler&lt;/em&gt; en &lt;code&gt;hq4x&lt;/code&gt; que es
+el maximo ofrecido&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/mednaffe.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;nuevamente monitorizando las capacidades de nuestro hardware mediante &lt;code&gt;htop&lt;/code&gt; y
+&lt;code&gt;radeontop&lt;/code&gt; (si es AMD, en caso de otra marca de grafica, buscar su equivalente).
+Aclarar que los requerimientos no son apenas exigentes&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/hp.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;el por que de utilizar este sobre otros varios emuladores, no hay una razon
+objetiva o tecnica, mas alla de estar incluido dentro de los repositorios de
+debian, servir para multiples plataformas sin problemas evidentes y contar con
+una interfaz sencilla&lt;/p&gt;
+
+&lt;p&gt;auque he de comentar que ya en la mazmorra final el juego me mando a la
+pantalla de inicio a saber por que motivo. Es el unico incidente que se precento
+dentro de las aproximadas 15 horas de juego que requirio la aventura&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-stats.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Por el lado del control, el GameBoy Advance cuenta con cruzeta, &lt;code&gt;A&lt;/code&gt;, &lt;code&gt;B&lt;/code&gt;, &lt;code&gt;L&lt;/code&gt;, &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Select&lt;/code&gt; y &lt;code&gt;Start&lt;/code&gt;. Se echa de
+menos el patron diamante (&lt;code&gt;A&lt;/code&gt;,&lt;code&gt;B&lt;/code&gt;,&lt;code&gt;X&lt;/code&gt;,&lt;code&gt;Y&lt;/code&gt;) con el que podriamos asignar las armas en dos
+botones propios a diferencia de simplificarlo (con destacada eficacia)
+en &lt;code&gt;A&lt;/code&gt; (arma|accion), &lt;code&gt;B&lt;/code&gt; (arma) y &lt;code&gt;R&lt;/code&gt; para &amp;ldquo;rodar&amp;rdquo;. Sin embargo, el acceso continuo al inventario (&lt;code&gt;Start&lt;/code&gt;)
+para cambiar de armas y que este mismo almacene el mapa se vuelve tortuoso.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/i.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Mucho hubiera agradecido dedicar &lt;code&gt;Selec&lt;/code&gt; a alguna funcion, bien sea para el
+mapa o el inventario, o en su defecto hacer un uso mejor de &lt;code&gt;L&lt;/code&gt;. En fin, aqui es
+donde concentraria el peor defecto del titulo y ante el continuo acceso al
+mapa/inventario asigne en el control (con patron diamante) &lt;code&gt;Start&lt;/code&gt; a &lt;code&gt;X&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Paso pues a la adictiva aventura. Me resulto comprencible de inicio a fin,
+buenas mazmorras con enemigos y jefes que sin ser demaciado dificultosos
+generan constantemente una sensacion de satisfacion y poder&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-06.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Aunque el mapeado en si, no es demaciado extenso, los escenarios son
+suficientemente variados y coherentes. Tomando en cuenta que estamos
+representando a un pequeño link no hace mas que agregar epica y es curioso que
+en cierto sentido ello contrasta con la permanente sensacion de que todo es
+unicamente la fantastica fantacia de un crio y que ocurre entre el
+desayuno y el almuerso&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Se nos cuenta que hay unos duendecillos diminutos llamados &amp;ldquo;minish&amp;rdquo; que
+forjaron una espada para ayudar a la humanidad a derrotar el mal. Se desconoce
+concretamente si estos seres son reales o no, aunque algunos aseguran haberlos
+visto y se dice que solo los niños buenos tienen tal capacidad&lt;/p&gt;
+
+&lt;p&gt;Asi pues, una buena mañana la princesa acude a nuestra casa para llevarnos a la celebracion
+minish, nos compra un escudo para que la protejamos si hace falta y de camino al
+castillo aparece un villano que pese a nuestra intervencion la convierte en
+piedra, destrulle la espada magica y por si fuera poco invoca enemigos por todo
+el mapa&lt;/p&gt;
+
+&lt;p&gt;Asi pues, no le queda mas remedio al rey que mandar al pequeño link en busca de
+los minish con la intencion de restaurar la dichosa espada para asi
+despetrificar a la princesa. Mientras hacemos de recadero, destructor de
+jarrones e invasor de viviendas, adquirimos la capacidad de variar de tamaño en
+puntos especificos, al tiempo que vamos adquiriendo herramientas indispensables
+para derrotar enemigos y pasar masmorras y llevamos un gorro parlanchin que nos
+recordara algun que otro chiste con ganzos&amp;hellip; ganzo? tienes un ganzo!?&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-13.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;je, je, je, que onda con esos enemigos con forma falica? Es una metafora a lo
+dificil (por no decir duro) que es el tramo final, tanto en la mazmorra como las
+tres transformaciones del jefe?&lt;/p&gt;
+
+&lt;p&gt;Bueno, es bien conocido que nintendo trata de distinguir cada juego con una
+mecanica especifica, como por ejemplo mario mapache, mario galaxia, zelda
+pinturita, zelda navegante, etc, etc, y en este la caracteristica es volverse
+diminuto&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc_02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;en la mayor parte del mapa es un hecho al que no hay que tener en demaciada
+consideracion por resultar inevitable, pero en la plaza del pueblo el diseño se toma
+de forma mas elaborada y tambien se va desbloqueando segun el porsentaje del juego&lt;/p&gt;
+
+&lt;p&gt;Orgullozamente termine sin videos, ni guias (o no)&amp;hellip; cuando no tenia claro a
+donde ir, luego de una pequeño paseo encontraba la pista, p-e-r-o hubo una exepcion
+que me obligo a ensuciar el registro y fue que, si llenamos un frasco con agua
+podemos apagar el fuego en las chimeneas&amp;hellip; si entramos por una chimenea
+llegamos al tejado&amp;hellip; hay lo dejo&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-24.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Tambien hay una mecanica de encontrar piedras misteriosas he ir probando suerte
+con los npc. Si nuestra y su parte son complementarias, se puede añadir un bicho
+mega fuerte, volver accesible una zona o colocar nuevos cofres. Nah, creo hacen
+mas entretido el juego&lt;/p&gt;
+
+&lt;p&gt;En un inicio podria parecer que este zelda va muy escaso en tecnicas, pero de
+eso nada, iremos encontrando dojos que nos enseñaran una de ocho tecnicas para
+la espada. Desde el clasico ataque circular, a un salto con estocada hacia el suelo&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc_04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;tambien podemos encargar leciones por correo&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc_01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;ostigar a las señoritas&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;y adquirir figurillas de todos los personajes como en Wind Waker, mecanica que
+es demaciado tediosa&amp;hellip; como en Wind Waker&lt;/p&gt;
+
+&lt;p&gt;En fin, entre este &amp;ldquo;The Minish Cap&amp;rdquo; y &amp;ldquo;Between Worlds&amp;rdquo; teneis dos zeldas
+la mar de buenos!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/s.gif&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
