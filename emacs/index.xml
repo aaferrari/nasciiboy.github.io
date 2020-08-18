@@ -414,8 +414,8 @@ git clone https://notabug.org/nasciiboy/elipo.git
 &lt;p&gt;para descarga en formato &lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.zip&#34;&gt;zip&lt;/a&gt;,
 &lt;a href=&#34;https://gitlab.com/nasciiboy/elipo/-/archive/master/elipo-master.tar&#34;&gt;tar&lt;/a&gt;,
 o bien visionar directamente en version web en
-&lt;a href=&#34;https://nasciiboy.land/book4all/elipo/emacs-lisp-intro.html&#34;&gt;ingles&lt;/a&gt; y
-&lt;a href=&#34;https://nasciiboy.land/book4all/elipo/emacs-lisp-intro_es.html&#34;&gt;español&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://nasciiboy.github.io/book4all/elipo/emacs-lisp-intro.html&#34;&gt;ingles&lt;/a&gt; y
+&lt;a href=&#34;https://nasciiboy.github.io/book4all/elipo/emacs-lisp-intro_es.html&#34;&gt;español&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&amp;ldquo;Una introducción a la programación en Emacs Lisp&amp;rdquo;&lt;/strong&gt; es una guia turistica por
 los conceptos basicos de la programacion, recorriendo las entrañas mas
@@ -569,7 +569,7 @@ estan en proceso de migracion hacia gitlab&lt;/p&gt;
 
 &lt;p&gt;Para quien desee intervenir el material, recomendaria primero leer acerca del
 (cambiante y experimental) lenguaje de marcas ligeras &lt;a href=&#34;https://github.com/nasciiboy/morg/&#34;&gt;morg&lt;/a&gt; y si se quiere
-profundizar mas, seguir la etiqueta morg en &lt;strong&gt;este&lt;/strong&gt; &lt;a href=&#34;https://www.nasciiboy.land&#34;&gt;blog&lt;/a&gt;.&lt;/p&gt;
+profundizar mas, seguir la etiqueta morg en &lt;strong&gt;este&lt;/strong&gt; &lt;a href=&#34;https://www.nasciiboy.github.io&#34;&gt;blog&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;El fichero donde deben realizarce las modificaciones tanto en español, como en
 ingles es &lt;code&gt;emacs-lisp-intro_es.porg&lt;/code&gt;&lt;/p&gt;
@@ -1513,7 +1513,7 @@ a la brava y sin tener ni idea de como&lt;/p&gt;
 con el tema &lt;em&gt;nascii&lt;/em&gt;, primero instala emacs, y luego crea una carpeta en tu
 &lt;code&gt;home&lt;/code&gt; con&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://nasciiboy.land/data/init-dot-el.zip
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://nasciiboy.github.io/data/init-dot-el.zip
 unzip init-dot-el.zip -d ~/.emacs.d
 rm init-dot-el.zip
 emacs
@@ -2025,7 +2025,7 @@ rutas correspondientes&lt;/p&gt;
       <guid>https://nasciiboy.github.io/emacs/run-scheme/</guid>
       <description>
 
-&lt;p&gt;En el &lt;a href=&#34;https://nasciiboy.land/prog/ischeme/&#34;&gt;anterior&lt;/a&gt; post (cronologico del blog) comente algunos interpretes de
+&lt;p&gt;En el &lt;a href=&#34;https://nasciiboy.github.io/prog/ischeme/&#34;&gt;anterior&lt;/a&gt; post (cronologico del blog) comente algunos interpretes de
 Scheme. Ya que en Emacs tenemos un interprete de elisp nativo, supuse que habria un
 metodo sencillo, para correr Scheme, pero, por que correr todo un interprete
 cuando se puede echar mano del interprete del sistema de turno y powerizarlo con el

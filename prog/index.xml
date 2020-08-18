@@ -1382,7 +1382,7 @@ mi-navegador-web book/index.html
 &lt;p&gt;el unico sitio donde he visto señas de esta traduccion es un issue en el
 repositorio en english del libro&amp;hellip; un issue sin respuestas ni atencion, como el
 repo mismo. Si no pueden o no quieren generar la version web, la he colocado en,
-&lt;a href=&#34;https://nasciiboy.land/book4all/rust-2nd/&#34;&gt;aqui&lt;/a&gt;. Esta tal cual se genera
+&lt;a href=&#34;https://nasciiboy.github.io/book4all/rust-2nd/&#34;&gt;aqui&lt;/a&gt;. Esta tal cual se genera
 (excepto por que cambie el tamaño y ancho del texto). Por lo demas, tiene
 fuentes de google y js que le permite ocultar cosas y cambiar el tema (me gusta
 el &lt;em&gt;ayu&lt;/em&gt;). Si son rust-fancys pasar por el repo, darle like y colaborar.&lt;/p&gt;
@@ -1803,7 +1803,7 @@ no de momento y solo contemplando la posivilidad de colocar anuncios
 de hardware y de porno. A todo mundo le gusta el porno y el harware, no?&lt;/p&gt;
 
 &lt;p&gt;si quieren acompañarme con sus propias deducciones coloco el resultado
-&lt;a href=&#34;http://nasciiboy.land/goaccess.html&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://nasciiboy.github.io/goaccess.html&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;El servidor inicio con los resgistros hace 17 dias con un total de 17XXX
 visitas, que serian una media aproximada de 1k por dia y segun la seccion
@@ -5334,7 +5334,7 @@ cada linea, separando el texto con una linea en blanco al inicio y al final&lt;/
 &lt;li&gt;&lt;a href=&#34;http://joedicastro.com/pages/markdown.html&#34;&gt;http://joedicastro.com/pages/markdown.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://joedicastro.com/markdown-la-mejor-opcion-para-crear-contenidos-web.html&#34;&gt;http://joedicastro.com/markdown-la-mejor-opcion-para-crear-contenidos-web.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html&#34;&gt;http://joedicastro.com/comparativa-de-lenguajes-de-marcado-ligero.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://nasciiboy.land/emacs/org-mode/&#34;&gt;https://nasciiboy.land/emacs/org-mode/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nasciiboy.github.io/emacs/org-mode/&#34;&gt;https://nasciiboy.github.io/emacs/org-mode/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -6094,7 +6094,7 @@ te des cuenta&amp;hellip;)&lt;/p&gt;
   momento, esto te ayudara a afirmar los conocimientos.&lt;/p&gt;
 
 &lt;p&gt;Si lo que te interesa son los videojuegos, programa algo en
-  &lt;a href=&#34;https://github.com/nasciiboy/NCURSES-Programming-HOWTO&#34;&gt;ncurses&lt;/a&gt; (&lt;a href=&#34;http://nasciiboy.land/prog/cobaya.zip&#34;&gt;tambien relacianado&lt;/a&gt;)&lt;/p&gt;
+  &lt;a href=&#34;https://github.com/nasciiboy/NCURSES-Programming-HOWTO&#34;&gt;ncurses&lt;/a&gt; (&lt;a href=&#34;http://nasciiboy.github.io/prog/cobaya.zip&#34;&gt;tambien relacianado&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;luego, quiza lee superficialmente el resto del libro de Deitel
   para colocar en tu cerebro de que va eso del POO (o OOP), ademas de conocer
@@ -8498,7 +8498,7 @@ como algo que tiene que ser sencillo y con belleza o al menos intentar aproximar
 
 &lt;p&gt;un tanto desilucionado, regrese a mi motor y lo despoje de la caracteristica
 esoterica &lt;code&gt;#!&lt;/code&gt;, con lo cual se redujo la complejidad a su expresion mas simple y
-gano algo de rendimiento en las &lt;a href=&#34;https://nasciiboy.land/raptorVSworld/index.html&#34;&gt;pruebas&lt;/a&gt;,
+gano algo de rendimiento en las &lt;a href=&#34;https://nasciiboy.github.io/raptorVSworld/index.html&#34;&gt;pruebas&lt;/a&gt;,
 entre 500 y 1000 milisegundos en cada competencia, y en algunos
 casos aislados, el tiempo se redujo a la mitad, hubo que renunciar a dos
 expresiones donde ahora aparece un &lt;strong&gt;N/A&lt;/strong&gt;, pero aun asi, el rendimiento en
@@ -11247,7 +11247,7 @@ todos los &amp;ldquo;atajos&amp;rdquo; de edicion.&lt;/p&gt;
 
 &lt;p&gt;(Ya que la forma en que presenta github los readme&amp;rsquo;s no es apropiada para una
 extensa tabla, he agregado la comparativa como una pagina (oculta e
-independentista) del blog: &lt;a href=&#34;https://nasciiboy.land/raptorVSworld/&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
+independentista) del blog: &lt;a href=&#34;https://nasciiboy.github.io/raptorVSworld/&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;Hace tiempo que no actualizaba la &lt;strong&gt;&amp;ldquo;Performance comparison of regular
 expression engines&amp;rdquo;&lt;/strong&gt;, una prueba que tome prestada de &lt;em&gt;dark100&lt;/em&gt; (nick de
@@ -13745,8 +13745,8 @@ sufijo &lt;code&gt;es&lt;/code&gt;, es el que esta en español&lt;/p&gt;
 &lt;p&gt;tambien hay verciones web de una sola pagina del material&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://nasciiboy.land/book4all/tgpl/The-Go-Programming-Language_es.html&#34;&gt;tgpl-es&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://nasciiboy.land/book4all/tgpl/The-Go-Programming-Language.html&#34;&gt;tgpl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nasciiboy.github.io/book4all/tgpl/The-Go-Programming-Language_es.html&#34;&gt;tgpl-es&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nasciiboy.github.io/book4all/tgpl/The-Go-Programming-Language.html&#34;&gt;tgpl&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;para crear el material desde el codigo&lt;/p&gt;
@@ -14018,7 +14018,7 @@ tarifa&amp;hellip; bienvenidos los encargos!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../yorozuya.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;bueno, bueno, matizando un poco y conectado con la saga de post
-sobre &lt;a href=&#34;https://nasciiboy.land/tags/morg&#34;&gt;morg&lt;/a&gt;, me encontraba aprendiendo
+sobre &lt;a href=&#34;https://nasciiboy.github.io/tags/morg&#34;&gt;morg&lt;/a&gt;, me encontraba aprendiendo
 golang y para tener una referencia rapida del lenguaje, pase el libro oficial
 (apartir de un pdf) a morg (&lt;a href=&#34;../tgpl.zip&#34;&gt;AQUI&lt;/a&gt; el material, fuente, resultado e
 imagenes). Aun le falta una revision &lt;q&gt;fina&lt;/q&gt; que ire realizando a medida que

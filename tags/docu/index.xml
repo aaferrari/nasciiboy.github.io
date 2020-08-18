@@ -73,7 +73,7 @@ mi-navegador-web book/index.html
 &lt;p&gt;el unico sitio donde he visto señas de esta traduccion es un issue en el
 repositorio en english del libro&amp;hellip; un issue sin respuestas ni atencion, como el
 repo mismo. Si no pueden o no quieren generar la version web, la he colocado en,
-&lt;a href=&#34;https://nasciiboy.land/book4all/rust-2nd/&#34;&gt;aqui&lt;/a&gt;. Esta tal cual se genera
+&lt;a href=&#34;https://nasciiboy.github.io/book4all/rust-2nd/&#34;&gt;aqui&lt;/a&gt;. Esta tal cual se genera
 (excepto por que cambie el tamaño y ancho del texto). Por lo demas, tiene
 fuentes de google y js que le permite ocultar cosas y cambiar el tema (me gusta
 el &lt;em&gt;ayu&lt;/em&gt;). Si son rust-fancys pasar por el repo, darle like y colaborar.&lt;/p&gt;
@@ -1289,8 +1289,8 @@ sufijo &lt;code&gt;es&lt;/code&gt;, es el que esta en español&lt;/p&gt;
 &lt;p&gt;tambien hay verciones web de una sola pagina del material&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://nasciiboy.land/book4all/tgpl/The-Go-Programming-Language_es.html&#34;&gt;tgpl-es&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://nasciiboy.land/book4all/tgpl/The-Go-Programming-Language.html&#34;&gt;tgpl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nasciiboy.github.io/book4all/tgpl/The-Go-Programming-Language_es.html&#34;&gt;tgpl-es&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nasciiboy.github.io/book4all/tgpl/The-Go-Programming-Language.html&#34;&gt;tgpl&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;para crear el material desde el codigo&lt;/p&gt;

@@ -469,7 +469,7 @@ como algo que tiene que ser sencillo y con belleza o al menos intentar aproximar
 
 &lt;p&gt;un tanto desilucionado, regrese a mi motor y lo despoje de la caracteristica
 esoterica &lt;code&gt;#!&lt;/code&gt;, con lo cual se redujo la complejidad a su expresion mas simple y
-gano algo de rendimiento en las &lt;a href=&#34;https://nasciiboy.land/raptorVSworld/index.html&#34;&gt;pruebas&lt;/a&gt;,
+gano algo de rendimiento en las &lt;a href=&#34;https://nasciiboy.github.io/raptorVSworld/index.html&#34;&gt;pruebas&lt;/a&gt;,
 entre 500 y 1000 milisegundos en cada competencia, y en algunos
 casos aislados, el tiempo se redujo a la mitad, hubo que renunciar a dos
 expresiones donde ahora aparece un &lt;strong&gt;N/A&lt;/strong&gt;, pero aun asi, el rendimiento en
@@ -750,7 +750,7 @@ sus descendientes&lt;/p&gt;
 
 &lt;p&gt;(Ya que la forma en que presenta github los readme&amp;rsquo;s no es apropiada para una
 extensa tabla, he agregado la comparativa como una pagina (oculta e
-independentista) del blog: &lt;a href=&#34;https://nasciiboy.land/raptorVSworld/&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
+independentista) del blog: &lt;a href=&#34;https://nasciiboy.github.io/raptorVSworld/&#34;&gt;aqui&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;Hace tiempo que no actualizaba la &lt;strong&gt;&amp;ldquo;Performance comparison of regular
 expression engines&amp;rdquo;&lt;/strong&gt;, una prueba que tome prestada de &lt;em&gt;dark100&lt;/em&gt; (nick de

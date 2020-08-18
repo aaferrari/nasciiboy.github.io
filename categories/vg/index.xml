@@ -1173,7 +1173,7 @@ aca&lt;/a&gt; el resultado. Si decidis usar este&lt;/p&gt;
 necesaria la carpeta &lt;code&gt;nand/00000000000000000000000000000000&lt;/code&gt;)&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;cd tmp
-wget https://nasciiboy.land/data/citra/min-dot-citra.zip
+wget https://nasciiboy.github.io/data/citra/min-dot-citra.zip
 unzip min-dot-citra.zip
 mkdir -p ~/.local/share/citra-emu/nand
 mv min-dot-citra/nand/00000000000000000000000000000000 ~/.local/share/citra-emu/nand/

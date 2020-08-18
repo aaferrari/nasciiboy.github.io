@@ -571,7 +571,7 @@ aca&lt;/a&gt; el resultado. Si decidis usar este&lt;/p&gt;
 necesaria la carpeta &lt;code&gt;nand/00000000000000000000000000000000&lt;/code&gt;)&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;cd tmp
-wget https://nasciiboy.land/data/citra/min-dot-citra.zip
+wget https://nasciiboy.github.io/data/citra/min-dot-citra.zip
 unzip min-dot-citra.zip
 mkdir -p ~/.local/share/citra-emu/nand
 mv min-dot-citra/nand/00000000000000000000000000000000 ~/.local/share/citra-emu/nand/
@@ -1350,7 +1350,7 @@ no de momento y solo contemplando la posivilidad de colocar anuncios
 de hardware y de porno. A todo mundo le gusta el porno y el harware, no?&lt;/p&gt;
 
 &lt;p&gt;si quieren acompañarme con sus propias deducciones coloco el resultado
-&lt;a href=&#34;http://nasciiboy.land/goaccess.html&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://nasciiboy.github.io/goaccess.html&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;El servidor inicio con los resgistros hace 17 dias con un total de 17XXX
 visitas, que serian una media aproximada de 1k por dia y segun la seccion
@@ -3300,7 +3300,7 @@ te des cuenta&amp;hellip;)&lt;/p&gt;
   momento, esto te ayudara a afirmar los conocimientos.&lt;/p&gt;
 
 &lt;p&gt;Si lo que te interesa son los videojuegos, programa algo en
-  &lt;a href=&#34;https://github.com/nasciiboy/NCURSES-Programming-HOWTO&#34;&gt;ncurses&lt;/a&gt; (&lt;a href=&#34;http://nasciiboy.land/prog/cobaya.zip&#34;&gt;tambien relacianado&lt;/a&gt;)&lt;/p&gt;
+  &lt;a href=&#34;https://github.com/nasciiboy/NCURSES-Programming-HOWTO&#34;&gt;ncurses&lt;/a&gt; (&lt;a href=&#34;http://nasciiboy.github.io/prog/cobaya.zip&#34;&gt;tambien relacianado&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;luego, quiza lee superficialmente el resto del libro de Deitel
   para colocar en tu cerebro de que va eso del POO (o OOP), ademas de conocer
@@ -4853,7 +4853,7 @@ a la brava y sin tener ni idea de como&lt;/p&gt;
 con el tema &lt;em&gt;nascii&lt;/em&gt;, primero instala emacs, y luego crea una carpeta en tu
 &lt;code&gt;home&lt;/code&gt; con&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://nasciiboy.land/data/init-dot-el.zip
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://nasciiboy.github.io/data/init-dot-el.zip
 unzip init-dot-el.zip -d ~/.emacs.d
 rm init-dot-el.zip
 emacs

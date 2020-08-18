@@ -45,7 +45,7 @@ a la brava y sin tener ni idea de como&lt;/p&gt;
 con el tema &lt;em&gt;nascii&lt;/em&gt;, primero instala emacs, y luego crea una carpeta en tu
 &lt;code&gt;home&lt;/code&gt; con&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://nasciiboy.land/data/init-dot-el.zip
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://nasciiboy.github.io/data/init-dot-el.zip
 unzip init-dot-el.zip -d ~/.emacs.d
 rm init-dot-el.zip
 emacs

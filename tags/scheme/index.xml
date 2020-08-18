@@ -20,7 +20,7 @@
       <guid>https://nasciiboy.github.io/emacs/run-scheme/</guid>
       <description>
 
-&lt;p&gt;En el &lt;a href=&#34;https://nasciiboy.land/prog/ischeme/&#34;&gt;anterior&lt;/a&gt; post (cronologico del blog) comente algunos interpretes de
+&lt;p&gt;En el &lt;a href=&#34;https://nasciiboy.github.io/prog/ischeme/&#34;&gt;anterior&lt;/a&gt; post (cronologico del blog) comente algunos interpretes de
 Scheme. Ya que en Emacs tenemos un interprete de elisp nativo, supuse que habria un
 metodo sencillo, para correr Scheme, pero, por que correr todo un interprete
 cuando se puede echar mano del interprete del sistema de turno y powerizarlo con el
