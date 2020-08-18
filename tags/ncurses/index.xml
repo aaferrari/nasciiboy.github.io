@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ncurses on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/ncurses/</link>
+    <link>https://nasciiboy.github.io/tags/ncurses/</link>
     <description>Recent content in Ncurses on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 29 Sep 2019 17:35:09 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/ncurses/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/ncurses/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>PDCurses</title>
-      <link>https://nasciiboy.land/prog/pdcurses/</link>
+      <link>https://nasciiboy.github.io/prog/pdcurses/</link>
       <pubDate>Sun, 29 Sep 2019 17:35:09 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/pdcurses/</guid>
+      <guid>https://nasciiboy.github.io/prog/pdcurses/</guid>
       <description>&lt;p&gt;No pocas veces se ha escrito sobre la irrelevancia del codigo o su irremediable
 destino a ser olvidado, pero, como (aspirantes a) programadores deseamos lo
 mejor para nuestra creacion, que cresca y perdure en el tiempo e incluso
@@ -125,7 +125,7 @@ gcc test.o -o test pdcurses.a -lSDL2
 
 &lt;p&gt;hala, optendran algo similar a esto&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/nasciiboy_png.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/PDCurses/nasciiboy_png.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;experimentando tambien podria compilarse con la libreria ncurses r-e-a-l&lt;/p&gt;
 
@@ -135,12 +135,12 @@ gcc test.o -o test pdcurses.a -lSDL2
 
 &lt;p&gt;asi veo yo la ejucucion en la terminal&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/nasciiboy_tilix.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/PDCurses/nasciiboy_tilix.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;ahora, la libreria por defecto utiliza una fuente (tipografia) de mapa de bits,
 pero, ademas de variar el tamaño en pixeles podemos recurrir tambien a fuentes &lt;code&gt;.ttf&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/nasciiboy_DejaVuSansMono.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/PDCurses/nasciiboy_DejaVuSansMono.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Conseguir la preciada fuente &lt;code&gt;.ttf&lt;/code&gt; requiere los siguientes pasos&lt;/p&gt;
 
@@ -264,15 +264,15 @@ capturas&lt;/p&gt;
 
 &lt;p&gt;PNG&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/naske_png.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/PDCurses/naske_png.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;DejaVuSansMono&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/naske_DejaVuSansMono.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/PDCurses/naske_DejaVuSansMono.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;FreeImbo&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/PDCurses/naske_FreeImbo.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/PDCurses/naske_FreeImbo.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Estoy algo motivado por modificar esta libreria e incursionar en adaptaciones a
 un C++ sanamente restringido para mostrar (superficialmente) la construccion de
@@ -289,10 +289,10 @@ surgieron por el camino &lt;a href=&#34;http://foo.wyrd.name/en:bearlibterminal&
     
     <item>
       <title>Programmer&#39;s Guide to NCurses</title>
-      <link>https://nasciiboy.land/prog/pg2ncurses/</link>
+      <link>https://nasciiboy.github.io/prog/pg2ncurses/</link>
       <pubDate>Tue, 11 Apr 2017 12:38:06 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/prog/pg2ncurses/</guid>
+      <guid>https://nasciiboy.github.io/prog/pg2ncurses/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../gumy.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -424,10 +424,10 @@ del viento, no dejen de sintonizar la proxima entrega (/narrador)&lt;/p&gt;
     
     <item>
       <title>Ncurses</title>
-      <link>https://nasciiboy.land/prog/ncurses/</link>
+      <link>https://nasciiboy.github.io/prog/ncurses/</link>
       <pubDate>Mon, 19 Dec 2016 21:45:05 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/ncurses/</guid>
+      <guid>https://nasciiboy.github.io/prog/ncurses/</guid>
       <description>
 
 &lt;h2 id=&#34;que-es-ncurses&#34;&gt;Que es Ncurses&lt;/h2&gt;

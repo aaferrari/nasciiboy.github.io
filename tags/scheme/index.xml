@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scheme on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/scheme/</link>
+    <link>https://nasciiboy.github.io/tags/scheme/</link>
     <description>Recent content in Scheme on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sun, 20 Aug 2017 18:42:53 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/scheme/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/scheme/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Run Scheme</title>
-      <link>https://nasciiboy.land/emacs/run-scheme/</link>
+      <link>https://nasciiboy.github.io/emacs/run-scheme/</link>
       <pubDate>Sun, 20 Aug 2017 18:42:53 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/run-scheme/</guid>
+      <guid>https://nasciiboy.github.io/emacs/run-scheme/</guid>
       <description>
 
 &lt;p&gt;En el &lt;a href=&#34;https://nasciiboy.land/prog/ischeme/&#34;&gt;anterior&lt;/a&gt; post (cronologico del blog) comente algunos interpretes de
@@ -83,7 +83,7 @@ scheme-program-name &amp;quot;scm&amp;quot;)&lt;/code&gt; (remplazar &lt;em&gt;s
 pulse &lt;code&gt;C-x C-e&lt;/code&gt;, de esta forma puede probar un interprete distinto, luego de
 cerrar la secion previa escribiendo &lt;code&gt;(exit)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/ischeme.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ischeme.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para volver a la ventana inicial, presione &lt;code&gt;C-x o&lt;/code&gt;.&lt;/p&gt;
 

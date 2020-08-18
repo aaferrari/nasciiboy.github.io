@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Moc on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/moc/</link>
+    <link>https://nasciiboy.github.io/tags/moc/</link>
     <description>Recent content in Moc on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 22 Dec 2016 11:56:44 -0600</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/moc/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/moc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>moc</title>
-      <link>https://nasciiboy.land/apt/moc/</link>
+      <link>https://nasciiboy.github.io/apt/moc/</link>
       <pubDate>Thu, 22 Dec 2016 11:56:44 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/apt/moc/</guid>
+      <guid>https://nasciiboy.github.io/apt/moc/</guid>
       <description>&lt;p&gt;En GNU existe una cantidad ridicula de &lt;strong&gt;reproductores de audio&lt;/strong&gt;, por
 participar hasta el vlc o video (gnome) se meten en esos temas.&lt;/p&gt;
 

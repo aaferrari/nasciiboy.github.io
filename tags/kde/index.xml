@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kde on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/kde/</link>
+    <link>https://nasciiboy.github.io/tags/kde/</link>
     <description>Recent content in Kde on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Tue, 11 Feb 2020 19:49:20 -0600</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/kde/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/kde/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>KDE NEON v Gnome Shell</title>
-      <link>https://nasciiboy.land/prog/kde-neon/</link>
+      <link>https://nasciiboy.github.io/prog/kde-neon/</link>
       <pubDate>Tue, 11 Feb 2020 19:49:20 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/prog/kde-neon/</guid>
+      <guid>https://nasciiboy.github.io/prog/kde-neon/</guid>
       <description>&lt;p&gt;(Spoiler: KDE Neon LTS 5.18 &amp;lt; Gnome 3.30.2 Debian 10)&lt;/p&gt;
 
 &lt;p&gt;A pesar de ser Gnome Shell el entorno por defecto en la gran mayoria de distros
@@ -57,7 +57,7 @@ navegador de ficheros, terminal, etc) homogeneo y similar a programas de uso int
 
 &lt;p&gt;Antes de la instalacion me cargue con gracia el Debian que tenia configurado&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/rm-rf.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/rm-rf.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;y tras toquetear fuentes, fondo de pantalla, probar iconos, inicio automatico,
 esquemas de color, atajos de teclado ya solo quedo encontrar las sutiles
@@ -100,7 +100,7 @@ de haberlo hecho. Gnome lo muestra con una animacion y aqui nada? Solucion, en
 el apartado de animaciones esta una opcion para desintegrar la ventana en
 cuadritos y me vale&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-close.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/k-close.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Listo! Todo vien? &lt;strong&gt;nope!&lt;/strong&gt;&lt;/p&gt;
 
@@ -112,23 +112,23 @@ consepto claro. He, he, me pongo quisquilloso pero es lo que hay&lt;/p&gt;
 esfuerzas en llamarlo &lt;em&gt;&amp;ldquo;meta&amp;rdquo;&lt;/em&gt; kde, por que? si desde tiempos inmemoriales los
 emacseros llaman &lt;strong&gt;Meta&lt;/strong&gt; a &lt;code&gt;Alt&lt;/code&gt; o &lt;code&gt;Esc&lt;/code&gt;, explicamelo?&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/klaunch.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/klaunch.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;uhhh, que hace el gigantesco menu ese tapandome la pantalla?&lt;/p&gt;
 
 &lt;p&gt;bueno, ellos saben que es horrendo asi que ofrecen una opcion discreta nombrada krunner&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/krunner-empty.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/krunner-empty.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;mejor! Pero se comportan igual? Son igual de accesibles desde el teclado? haber
 busquemos &lt;code&gt;e&lt;/code&gt; por &lt;code&gt;emacs&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/klaunch-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/klaunch-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;el menu esta atado a la tecla &lt;code&gt;Super&lt;/code&gt;, con la &lt;code&gt;e&lt;/code&gt; aparece (&lt;code&gt;emacs&lt;/code&gt;) en el menu pero no es
 lanzable hasta escribir &lt;code&gt;em&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/krunner-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/krunner-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;en el caso de krunner el atajo es una combinacion distinta a &lt;code&gt;Super&lt;/code&gt; (dicen las
 leyendas que se puede hacer el cambio, pero ya hay que buscarse la vida y
@@ -148,13 +148,13 @@ para administrar ventanas&lt;/p&gt;
 
 &lt;p&gt;Que tal &lt;code&gt;Alt + Tab&lt;/code&gt;?&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-tab.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/k-tab.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Uhhh, que es eso, por que me invade asi salvajemente la ventana, si es que se
 parece a la interpretacion de &amp;ldquo;ventanas&amp;rdquo; que utiliza &lt;code&gt;tilix&lt;/code&gt; (donde se ve bien,
 pero nunca jamas la utilizo)&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/tilix.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/tilix.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;creo que se puede desactivar, aunque no estoy del todo seguro que tenga una
 alternativa razonable&amp;hellip;&lt;/p&gt;
@@ -165,7 +165,7 @@ alternativa razonable&amp;hellip;&lt;/p&gt;
 la proxima caracteristica a ver, aunque la siguiente sea superior) cumple la
 funcion de ubicar una ventana lanzada y olvidada por alguna razon&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-overview.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/k-overview.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;uhhh, usable aunque muy diminuto. Problema? requiere su propio comando distinto
 a &lt;code&gt;Super&lt;/code&gt; y no desaparece hasta precionar &lt;code&gt;Enter&lt;/code&gt; o la combinacion que lo lanzo
@@ -176,7 +176,7 @@ redundante para agregar/quitar escritorios&amp;hellip;&lt;/p&gt;
 &lt;em&gt;conmutar las ventanas precentes (todos los escritorios)&lt;/em&gt; que debe mostrar todas
 las ventanas de todos los escritorios. Se ve tal que asi&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-SBAW.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/k-SBAW.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;bueno&amp;hellip; no es demaciado atractivo y a mas ventanas lo es menos y de nuevo
 &lt;strong&gt;tiene su propio atajo desvinculado con &lt;code&gt;Super&lt;/code&gt;&lt;/strong&gt;, no deseparece hasta
@@ -195,7 +195,7 @@ tabulacion y tabulacion por todas las ventanas es torpe sin atajos relacionados?
 &lt;p&gt;telita que hasta firefox (&lt;code&gt;Ctl + Tab&lt;/code&gt;) tiene un sistema de tabulacion (sospechosamente
 gnomero&amp;hellip;) mas agradecido&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/f-tab.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/f-tab.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Pasemos con el rival Gnomero a ver su acercamiento del asunto&lt;/p&gt;
 
@@ -204,7 +204,7 @@ llama &amp;ldquo;Super&amp;rdquo; G-e-n-i-a-l! Utiliza ademas esta unica tecla p
 funciones en una sola. Sirve de lanzador de aplicaciones, dock, sobrevuelo de
 escritorios y tabulador de ventanas glorificado&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-overview.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/g-overview.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;podemos ver que si bien reduce el tamaño de las ventanas segun la cantidad,
 primeramente las muestra o-r-d-e-n-a-d-a-s y segundamente &lt;strong&gt;no interfiere con su
@@ -212,12 +212,12 @@ contenido&lt;/strong&gt;, malditasea! lo seguimos viendo!&lt;/p&gt;
 
 &lt;p&gt;como otros entornos (y kde,) gnome tiene tambien un &amp;ldquo;lanzador de comandos&amp;rdquo;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-comm.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/g-comm.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;aunque muy limitado, sin sugerencias y con autompletado a lo bash. Veamos las
 diferencias intentando de nuevo con la &lt;code&gt;e&lt;/code&gt; de &lt;code&gt;emacs&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-overview-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/g-overview-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;wow! wow! al comenzar a escribir desaparecen los escritorios y ventanas para
 centrarse en la busqueda a pantalla completa y ya con la sola &lt;code&gt;e&lt;/code&gt; esta
@@ -225,7 +225,7 @@ seleccionado &lt;code&gt;emacs&lt;/code&gt; para invocarlo con &lt;code&gt;Enter
 
 &lt;p&gt;Pasemos al lanzador de comandos&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-comm-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/g-comm-e.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;ja, ja, que triste. No aparece nada hasta utilizar el tab o escribir el comando
 entero (o una combinacion entre ambos). Quiza, solo quiza me atrevo a pensar que
@@ -235,14 +235,14 @@ esta opcion es meramente por cumplir con quien tenga esta arcaica forma en su en
 &lt;p&gt;Vamos con las ventanas. Puesto que el sobrevuelo esta resuelto empezamos con el
 &lt;code&gt;Alt + Tab&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-tab.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/g-tab.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Mira que bonito! interfiere? si, lo minimo y Genialmente? tambien&lt;/p&gt;
 
 &lt;p&gt;Y que tal &lt;em&gt;conmutar las ventanas precentes (todos los escritorios)&lt;/em&gt; que gnome
 llama como &lt;em&gt;Cambiar entre ventanas de una aplicacion&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-SBAW.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/g-SBAW.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Jo, jo, jo, si es que las ventanas estan agrupadas por programa, se precenta de
 forma comprensible y si bien tiene un comando propio (&lt;code&gt;Super + Inicio&lt;/code&gt; en mi
@@ -271,7 +271,7 @@ y mi teclado entero no lo cambio por uno gomoso, plasticoso), kde es suficiente.
 el perfil de color de la pantalla y siendo una laptop es importante que sea
 sencillo de hacer con unos efectivos deslizadores&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/k-color.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/k-color.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;La pantalla que trae la laptop le da por tirarse a lo blancusco. Seguramente en
 pantallas modernosas con compativilidad 100% RGB este &amp;ldquo;ajuste&amp;rdquo; no sea necesario.
@@ -280,7 +280,7 @@ Es lo que tiene ser un vago sin pasta&lt;/p&gt;
 &lt;p&gt;gnome trae una opcion, pero limitada a escojer en una lista predeterminada y
 hecha no se con que, ni como, con la que no pude &amp;ldquo;ajustar&amp;rdquo; el color a mi agrado&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/kde-neon/g-color.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kde-neon/g-color.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Por concluir con el asunto y evitar indignacion si no lo menciono, hablare del
 consumo. Utiliza KDE tan poca memoria que sonroja a XFCE, LXDE que oscilan en

@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zelda on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/zelda/</link>
+    <link>https://nasciiboy.github.io/tags/zelda/</link>
     <description>Recent content in Zelda on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Wed, 01 Apr 2020 09:24:55 -0600</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/zelda/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/zelda/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>TLoZ: The Minish Cap</title>
-      <link>https://nasciiboy.land/vg/zmc/</link>
+      <link>https://nasciiboy.github.io/vg/zmc/</link>
       <pubDate>Wed, 01 Apr 2020 09:24:55 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/vg/zmc/</guid>
-      <description>&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/mc.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+      <guid>https://nasciiboy.github.io/vg/zmc/</guid>
+      <description>&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/mc.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Luego de terminar &amp;ldquo;TLoZ: The Wind Waker&amp;rdquo; continuaba de animo Zeldero, pero antes
 de tirarme de lleno en las reediciones hechas para 3DS de OoT y MM, o terminar &amp;ldquo;A
@@ -36,24 +36,24 @@ siguiendo la historia&lt;/p&gt;
 resolucion de 240x160 pixeles y tambien (habiendo toqueteado Links&amp;rsquo; Awakening)
 sobre los controles&lt;/p&gt;
 
-&lt;p&gt;Ejecutando la &lt;a href=&#34;https://nasciiboy.land/data/The Legend of Zelda - The Minish Cap (E).gba&#34;&gt;ROM&lt;/a&gt; con
+&lt;p&gt;Ejecutando la &lt;a href=&#34;https://nasciiboy.github.io/data/The Legend of Zelda - The Minish Cap (E).gba&#34;&gt;ROM&lt;/a&gt; con
 &lt;code&gt;Mednafen&lt;/code&gt; (previamente configurado mediante &lt;code&gt;Mednaffe&lt;/code&gt; su front-end &amp;ldquo;amigable&amp;rdquo;)
 queda evidenciado un majestuoso arte pixelado, que sin ningun complejo se
 ejecuta a pantalla completa&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/ztmc-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;La configuracion no es nada compleja, estableciendo unicamente dos valores clave
 &lt;em&gt;Stretch to Full screen&lt;/em&gt; como &lt;code&gt;aspect&lt;/code&gt; y &lt;em&gt;Special video scaler&lt;/em&gt; en &lt;code&gt;hq4x&lt;/code&gt; que es
 el maximo ofrecido&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/mednaffe.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/mednaffe.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;nuevamente monitorizando las capacidades de nuestro hardware mediante &lt;code&gt;htop&lt;/code&gt; y
 &lt;code&gt;radeontop&lt;/code&gt; (si es AMD, en caso de otra marca de grafica, buscar su equivalente).
 Aclarar que los requerimientos no son apenas exigentes&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/hp.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/hp.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;el por que de utilizar este sobre otros varios emuladores, no hay una razon
 objetiva o tecnica, mas alla de estar incluido dentro de los repositorios de
@@ -64,7 +64,7 @@ una interfaz sencilla&lt;/p&gt;
 pantalla de inicio a saber por que motivo. Es el unico incidente que se precento
 dentro de las aproximadas 15 horas de juego que requirio la aventura&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-stats.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/ztmc-stats.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Por el lado del control, el GameBoy Advance cuenta con cruzeta, &lt;code&gt;A&lt;/code&gt;, &lt;code&gt;B&lt;/code&gt;, &lt;code&gt;L&lt;/code&gt;, &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Select&lt;/code&gt; y &lt;code&gt;Start&lt;/code&gt;. Se echa de
 menos el patron diamante (&lt;code&gt;A&lt;/code&gt;,&lt;code&gt;B&lt;/code&gt;,&lt;code&gt;X&lt;/code&gt;,&lt;code&gt;Y&lt;/code&gt;) con el que podriamos asignar las armas en dos
@@ -72,7 +72,7 @@ botones propios a diferencia de simplificarlo (con destacada eficacia)
 en &lt;code&gt;A&lt;/code&gt; (arma|accion), &lt;code&gt;B&lt;/code&gt; (arma) y &lt;code&gt;R&lt;/code&gt; para &amp;ldquo;rodar&amp;rdquo;. Sin embargo, el acceso continuo al inventario (&lt;code&gt;Start&lt;/code&gt;)
 para cambiar de armas y que este mismo almacene el mapa se vuelve tortuoso.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/i.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/i.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Mucho hubiera agradecido dedicar &lt;code&gt;Selec&lt;/code&gt; a alguna funcion, bien sea para el
 mapa o el inventario, o en su defecto hacer un uso mejor de &lt;code&gt;L&lt;/code&gt;. En fin, aqui es
@@ -83,7 +83,7 @@ mapa/inventario asigne en el control (con patron diamante) &lt;code&gt;Start&lt;
 buenas mazmorras con enemigos y jefes que sin ser demaciado dificultosos
 generan constantemente una sensacion de satisfacion y poder&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-06.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/ztmc-06.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Aunque el mapeado en si, no es demaciado extenso, los escenarios son
 suficientemente variados y coherentes. Tomando en cuenta que estamos
@@ -92,7 +92,7 @@ en cierto sentido ello contrasta con la permanente sensacion de que todo es
 unicamente la fantastica fantacia de un crio y que ocurre entre el
 desayuno y el almuerso&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/ztmc-02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Se nos cuenta que hay unos duendecillos diminutos llamados &amp;ldquo;minish&amp;rdquo; que
 forjaron una espada para ayudar a la humanidad a derrotar el mal. Se desconoce
@@ -113,7 +113,7 @@ puntos especificos, al tiempo que vamos adquiriendo herramientas indispensables
 para derrotar enemigos y pasar masmorras y llevamos un gorro parlanchin que nos
 recordara algun que otro chiste con ganzos&amp;hellip; ganzo? tienes un ganzo!?&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-13.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/ztmc-13.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;je, je, je, que onda con esos enemigos con forma falica? Es una metafora a lo
 dificil (por no decir duro) que es el tramo final, tanto en la mazmorra como las
@@ -124,7 +124,7 @@ mecanica especifica, como por ejemplo mario mapache, mario galaxia, zelda
 pinturita, zelda navegante, etc, etc, y en este la caracteristica es volverse
 diminuto&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc_02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/ztmc_02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;en la mayor parte del mapa es un hecho al que no hay que tener en demaciada
 consideracion por resultar inevitable, pero en la plaza del pueblo el diseño se toma
@@ -136,7 +136,7 @@ que me obligo a ensuciar el registro y fue que, si llenamos un frasco con agua
 podemos apagar el fuego en las chimeneas&amp;hellip; si entramos por una chimenea
 llegamos al tejado&amp;hellip; hay lo dejo&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-24.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/ztmc-24.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Tambien hay una mecanica de encontrar piedras misteriosas he ir probando suerte
 con los npc. Si nuestra y su parte son complementarias, se puede añadir un bicho
@@ -147,15 +147,15 @@ mas entretido el juego&lt;/p&gt;
 eso nada, iremos encontrando dojos que nos enseñaran una de ocho tecnicas para
 la espada. Desde el clasico ataque circular, a un salto con estocada hacia el suelo&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc_04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/ztmc_04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;tambien podemos encargar leciones por correo&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc_01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/ztmc_01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;ostigar a las señoritas&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/ztmc-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/ztmc-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;y adquirir figurillas de todos los personajes como en Wind Waker, mecanica que
 es demaciado tediosa&amp;hellip; como en Wind Waker&lt;/p&gt;
@@ -163,17 +163,17 @@ es demaciado tediosa&amp;hellip; como en Wind Waker&lt;/p&gt;
 &lt;p&gt;En fin, entre este &amp;ldquo;The Minish Cap&amp;rdquo; y &amp;ldquo;Between Worlds&amp;rdquo; teneis dos zeldas
 la mar de buenos!&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZTMC/s.gif&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZTMC/s.gif&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>TLoZ: The Wind Waker</title>
-      <link>https://nasciiboy.land/vg/zww/</link>
+      <link>https://nasciiboy.github.io/vg/zww/</link>
       <pubDate>Tue, 31 Mar 2020 17:29:24 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/vg/zww/</guid>
-      <description>&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-30.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+      <guid>https://nasciiboy.github.io/vg/zww/</guid>
+      <description>&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-30.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Dentro de &amp;ldquo;las listas&amp;rdquo; zelderas, no pocos colocan a &amp;ldquo;The Wind Waker&amp;rdquo; en
 los primeros &lt;s&gt;cinco&lt;/s&gt; tres puestos, cuando no directamente el mejor. Y es que dentro del
@@ -187,7 +187,7 @@ respeto por &amp;ldquo;TLoZ: A Link Between Worlds&amp;rdquo; que mejor opcion d
 desapego por el 3D (sin incluir los juegos de carreras). Me disgusta que la
 camara sea tambien un enemigo.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-03.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-03.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;El titulo salio en el lejanisimo 13-12-2002 alla en Japon y puesto que en su
 momento tuve felizmente una 64 con tres titulos (Star Fox, Star Wars Racing y
@@ -198,7 +198,7 @@ para atras siempre que la jugabilidad fuera entretenida&lt;/p&gt;
 con controles groseramente solidos, no sin ello encontrando dificultades con la
 camara, aunque achaco de ello a la falta de costumbre&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;En cuanto a la jugabilidad la aprecio correcta, con un claro desarrollo de
 habilidad que crece a la par de los retos propuestos, pero sigo creyendo
@@ -225,14 +225,14 @@ recurrir a un &amp;ldquo;gameplay&amp;rdquo; si no queria dejar eternamente inco
 
 &lt;p&gt;Los momentos que me dejaron crudo fueron&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-16.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-16.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;En el castillo demoniaco hay que pegarse literalmente a la pared para cruzar
 un &amp;ldquo;abismo&amp;rdquo;. Habia descubierto accidentalmente la habilidad de pegarse a la
 pared, mas descubrir que el minusculo borde en el &amp;ldquo;abismo&amp;rdquo; era el camino y lugar
 de su aplicacion, no me resulto evidente&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-17.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-17.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;El primer jefe en la isla del dragon no tuve ni idea de como derrotarlo. Si, la
 camara muestra la cola ganchuda del dragon y tu traes un gancho colgante
@@ -241,7 +241,7 @@ muestra, sufri una muerte y casi otra para lograrlo&lt;/p&gt;
 
 &lt;p&gt;¿Como dices que se utiliza la batuta?&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;El poder del bommerang lo vi en video antes de ponerlo en prueba. Al jefe de
 la mision del bosque obscuro lograba dañarlo pero no estaba seguro de si era
@@ -252,7 +252,7 @@ me fue evidente que pudiera realizarla o no. Ja, ja, mi amigo el floyd dice
 que cuento con &amp;ldquo;pensamiento elevado&amp;rdquo; pero aca sobresalen sin disimulo mis
 taras&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-19.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-19.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Me dio pereza ponerme a buscar los 8 mapas de la trifuerza. Contaba con tres
 hayados por el camino, pero no tenia intencion de revisitar el mapa isla a isla,
@@ -265,27 +265,27 @@ preciso lugar. Despues de dos horas sin resultados, cedi a yutube&lt;/p&gt;
 &lt;p&gt;Je, je, je, pase las transformaciones de Ganon solito en tres dificultosos
 intentos, pero como demonios subir por la cuerda? no pude&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-33.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-33.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Al final, pase buenos momentos, tome muchas capturas&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-14.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-14.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Pasee con la pollita&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-22.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-22.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;haber?&amp;hellip; sostuve con segundas intenciones a la chiquilla alada&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-21.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-21.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;mientras, veia con sospecha a una morena&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-18.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-18.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;que al descubrir su realeza se blanquea, cual michael jackson&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-20.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-20.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;algo me quiere decir este juego?&lt;/p&gt;
 
@@ -293,21 +293,21 @@ intentos, pero como demonios subir por la cuerda? no pude&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;Stalkee a una morra que pensaba salir de pobre robando en su trabajo&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-27.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-27.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Pase honorablemente atravez de 50 niveles llenos de montruos.&lt;/p&gt;
 
 &lt;p&gt;Di una muerte muy gore&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-35.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-35.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Y finalmente, luego de (por lo menos) 40 horas llegue al final&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/zww-37.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/zww-37.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;un final que me recordo mucho a aquel anime, llamado betterman-gelion&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/betterman.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/betterman.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;En conclucion, me la pase bien sin enamorarme pero con la convicion y gusto de
 terminar la historia.&lt;/p&gt;
@@ -333,11 +333,11 @@ perfecta, quitando algun ligero bajon en las cinematicas&lt;/p&gt;
 &lt;p&gt;Para establecer el nivel de graficos que era capaz de soportar tal hardware, tire
 de &lt;code&gt;htop&lt;/code&gt; (cpu) y &lt;code&gt;radeontop&lt;/code&gt; (igpu)&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/hp.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/hp.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;con las siguientes opciones&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/dolphin-v.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/dolphin-v.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;recomiendo activar la opcion &lt;code&gt;Disable Fog&lt;/code&gt; y a mas antialiasing/resolucion
 mejor, siempre haciendo caso de lo holgado que valla el hardware, aunque si el
@@ -348,7 +348,7 @@ nada puede hacerse&lt;/p&gt;
 &lt;p&gt;En cuanto a control, sigo con el siempre confiable Logitech F710 en modo &lt;code&gt;D&lt;/code&gt;
 configurado tal que asi&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZWW/dolphin-c.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZWW/dolphin-c.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;prestar particular atencion a la opcion &lt;code&gt;Radius&lt;/code&gt; en los sticks, que es donde surge
 la precision/sensivilidad en el arco y flecha&lt;/p&gt;
@@ -362,17 +362,17 @@ incomodidad, compensada con seciones de una o mas horas posteriores&lt;/p&gt;
     
     <item>
       <title>TLoZ: A Link Between Worlds</title>
-      <link>https://nasciiboy.land/vg/zbw/</link>
+      <link>https://nasciiboy.github.io/vg/zbw/</link>
       <pubDate>Tue, 27 Aug 2019 00:52:17 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/vg/zbw/</guid>
+      <guid>https://nasciiboy.github.io/vg/zbw/</guid>
       <description>
 
 &lt;p&gt;Aquí está el Adversario, Destructor de Arbustos, Ángel del Pozo sin Fondo,
 Bestia teñida de Verde, Príncipe de Este Mundo, Padre de la aventura, Vástago de
 Mazmorra y Señor de las Rupias&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/zbw.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/zbw.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Bien podria abordar esta (pseudo) reseña siguiendo ejemplo de algunos
 &amp;ldquo;compañeros&amp;rdquo; del medio blogueril&lt;/p&gt;
@@ -410,7 +410,7 @@ absolutamente inutil&lt;/p&gt;
 
 &lt;p&gt;Hoyga Señør Dr. me siento tentado al fap interespecie&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/princess_hilda___a_link_between_worlds_by_flying4freedom-d85gs7v.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/princess_hilda___a_link_between_worlds_by_flying4freedom-d85gs7v.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Es de sobra conocido, hasta el punto de ser innecesario mantener en el sub-mundo
 nuestras referencias patriarcales y opresoras de la mujer. Si nuestros
@@ -419,7 +419,7 @@ evidentes, es momento de despejar no ya ese velo&amp;hellip; si no mas bien la t
 de plastico transparente que cubre algunos de los mitos fundacionales de
 occidente&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/ugh.gif&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/ugh.gif&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Por que es motivo de orgullo hablar de nuestras tradiciones que nos vuelven la
 mejor cultura del mundo mundial, hoy les voy a hablar de un pilar imprecindible
@@ -431,7 +431,7 @@ empoderadas vuchonas unicas y detergentes, un sandwidch mandelas a
 preparar. Pongale este (aparentemente inocuo) videojuego a sus cachorros y sea
 un pinche buen ciudadano&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/tumblr_n3vvp7xoCp1scgdeto4_1280.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/tumblr_n3vvp7xoCp1scgdeto4_1280.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;(si alguna radical esquizoide cambia el nombre, sexo e incluso modelos de los
 personajes de tal forma que coincidan con el cancer progre social, ponga ejemplo
@@ -452,13 +452,13 @@ pasar por las recreativas, fumar un poco de hierba mala e inventarse un cuento
 para menos laborar y completo cobrar, mas aprendera que el constructo biologico
 se impondra. Aprendiendo su lugar, el ahorro y trabajo duruh&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/zbw-4.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/zbw-4.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Intentaran aprovechares de su trabajo (las mujeres en particular) prometiendo a
 cambio tesoros sin igual, casa, fama, honor, eg-su-basuis y tierras. Su
 inmadures las rechazara y cuando llegue a viejo lo lamentara (o no)&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/zbw-3.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/zbw-3.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Por la tierra destruira todo arbusto y contra los arboles se inpactara, buscando
 una rupia adicional. En las casas irrupira, tus vasijas contra el suelo
@@ -470,11 +470,11 @@ a mi pueblo que aquella princesa no estaba tan mal&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;La trifuerza es por aqui, por aqui, por aqui sonrojada te dira&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/zdep-b.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/zdep-b.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;si sigues sus ordenes nunca aprendera&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/zdep-a.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/zdep-a.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Do you want my blood, do you want my tears?&lt;/p&gt;
@@ -484,14 +484,14 @@ a mi pueblo que aquella princesa no estaba tan mal&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;What do you want from me?&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/bal.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/bal.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;anotaciones&#34;&gt;anotaciones&lt;/h2&gt;
 
 &lt;p&gt;Si jugais bajo el software de emulacion Citra, bajo ninguna circunstancia
 activeis StreetPass hablando con el viejo del StreetPass&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/nasp.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/nasp.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;seguramente charlar con el viejo no corrompa el archivo de guardado, pero por
 alguna razon en este juego le es muy dificil a citra levantar una partida con
@@ -499,7 +499,7 @@ streetpass activado. Perdi tres partidas al acerlo, una ya con 4 Sabios, otra co
 sabios y la ultima luego de adquirir la espada antes de culpar definitivamente
 al anciano. &lt;strong&gt;No activeis Street Pass&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/eh-a.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/eh-a.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Resto bastante entuciasmo la repeticion del juego al punto de pasar de dialogar
 con los npc especialmente con la señora Esposa del herrero, pinche fastidiosa.
@@ -507,7 +507,7 @@ Casi al final de la ultima aventura, al seguir con solo un slot para el arma, me
 preguntaba donde estaba la condicion para activar el otro espacio, y&amp;hellip; era
 necesario hacer caso de la señora&amp;hellip; hablar con ella aunque sea pesada&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/ZBW/eh-b.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ZBW/eh-b.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Suelo recorrer todas las esquinas y rutas de los juegos, aun que no complete
 todos los corazones (18 &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;) y una hada se resintio a entregar un
@@ -526,10 +526,10 @@ historia del videojuego, por ello le doy 5 卐, 2 ☐ y un #&lt;/p&gt;
     
     <item>
       <title>Zelda solarus</title>
-      <link>https://nasciiboy.land/vg/solarus/</link>
+      <link>https://nasciiboy.github.io/vg/solarus/</link>
       <pubDate>Sun, 01 Jan 2017 14:56:59 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/vg/solarus/</guid>
+      <guid>https://nasciiboy.github.io/vg/solarus/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../solarus_logo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;

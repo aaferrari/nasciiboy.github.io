@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emacs on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/emacs/</link>
+    <link>https://nasciiboy.github.io/emacs/</link>
     <description>Recent content in Emacs on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Thu, 20 Sep 2018 14:03:02 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/emacs/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/emacs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>temax</title>
-      <link>https://nasciiboy.land/emacs/temax/</link>
+      <link>https://nasciiboy.github.io/emacs/temax/</link>
       <pubDate>Thu, 20 Sep 2018 14:03:02 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/temax/</guid>
+      <guid>https://nasciiboy.github.io/emacs/temax/</guid>
       <description>
 
 &lt;p&gt;sucede que haciendo una prueba con el vps conectado via &lt;code&gt;ssh&lt;/code&gt; queria dejar
@@ -36,7 +36,7 @@ sesion y si la sesion se muere, el padre mata a todo mundo. Ja, ja, ja, ha&lt;/p
 &lt;p&gt;Como solucionar esto? pues teniendo un shell que sea &amp;ldquo;hijo de un demonio😈&amp;rdquo;  que
 ande a su bola, e &lt;em&gt;invocarlo&lt;/em&gt; cuando nos venga en gana&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/daemon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/daemon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;y todo esto que suena tan complicado y misterioso, es mas facil de lo que parece
 (creo). Encima podemos hacerlo con emacs, aunque igual, segun la situacion
@@ -82,22 +82,22 @@ simplificarla a dos opciones utiles&lt;/p&gt;
 &lt;p&gt;dejemos una marca en dicho buffer para identificar nuestros pasos.
 Colocando por ejemplo, la frase &lt;code&gt;&amp;quot;hola soy emacsclient uno&amp;quot;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/emacsclient-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/emacsclient-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;bien, terminemos emacs como se haria habitualmente &lt;code&gt;C-x C-c&lt;/code&gt; e invoquemos de
 nuevo a nuestro emacs-demonio &lt;code&gt;emacsclient -c -nw&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/emacsclient-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/emacsclient-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;hala, nuestro mensaje sigue hay!&lt;/p&gt;
 
 &lt;p&gt;ahora en nuestra terminal (tilix) dividida, lanzamos de nuevo &lt;code&gt;emacsclient -c -nw&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/emacsclient-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/emacsclient-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;de nuevo lo mismo&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/emacsclient-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/emacsclient-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;y si cerramos uno o todos los &lt;code&gt;emacsclient&lt;/code&gt; da igual,
 lo que en ellos hagamos permanecera mientras no se apague el sistema o cerremos
@@ -114,7 +114,7 @@ ponemos el comando a ejecutar, salimos (&lt;code&gt;C-x C-c&lt;/code&gt;), cerra
 regresamos cuando lo creamos conveniente. El demonio de emacs con todos
 sus buffers y demas cosas, seguira realizando su labor!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/emacsclient-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/emacsclient-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;y ahora? pues para terminar con el modo demonio, desde un &lt;code&gt;emacsclient&lt;/code&gt;&lt;/p&gt;
 
@@ -166,12 +166,12 @@ en su distribucion) y lanzarlo por primera vez&lt;/p&gt;
 
 &lt;p&gt;nos resivira con un bonito mensaje&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/screen-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;tras presionar &lt;code&gt;espacio&lt;/code&gt;, aparecera el prompt de nuestra shell de siempre, donde
 lanzar los comandos de siempre&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/screen-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;bien no? pues si&amp;hellip; a-u-n-q-u-e, cuando salimos de la terminal, no salimos de la
 terminal, saldremos de la terminal en &lt;code&gt;screen&lt;/code&gt;&lt;/p&gt;
@@ -239,21 +239,21 @@ There are screens on:
 &lt;p&gt;y? pues ahora un par de cosas medio chulas, primero podemos dividir la pantalla
 ¡en dos! presionando &lt;code&gt;C-a S&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/screen-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;luego puedes saltar a esta nueva division con &lt;code&gt;C-a TAB&lt;/code&gt;. Ver el cursor en esta nueva
 seccion, apretar los botones a lo loco y ver que no pasa nada&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/screen-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;hasta que invoques una shell en este espacio con el comando magico &lt;code&gt;C-a c&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/screen-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;dividir nuevamente la ventana (ahora en vertical) &lt;code&gt;C-a |&lt;/code&gt;, saltar a esta &lt;code&gt;C-a
 TAB&lt;/code&gt;, nueva shell &lt;code&gt;C-a c&lt;/code&gt; y sonreir locamente&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/screen-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/screen-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ahora como cerrar este conjunto, si salimos de la shell (&lt;code&gt;C-d&lt;/code&gt; o con &lt;code&gt;exit&lt;/code&gt;) la
 seccion no desaparecera, seguira hay hasta que presionemos &lt;code&gt;C-a X&lt;/code&gt;&lt;/p&gt;
@@ -292,7 +292,7 @@ vs &lt;a href=&#34;https://en.wikipedia.org/wiki/tmux&#34;&gt;2007&lt;/a&gt;) au
 &lt;pre&gt;&lt;code&gt;&amp;gt; tmux
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/tmux-00.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;como vemos, a diferencia de &lt;code&gt;screen&lt;/code&gt;, &lt;code&gt;tmux&lt;/code&gt; se nos comera una fila al final de
 la pantalla, muy a lo &lt;code&gt;emacs&lt;/code&gt;. Otra diferencia particular, empieza por el
@@ -306,7 +306,7 @@ Ademas de eso al dividir la pantalla en sus diferentes formas&lt;/p&gt;
 
 &lt;p&gt;aparecera una shell sin hacer nada mas&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/tmux-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;podemos deambular por las &amp;ldquo;divisiones&amp;rdquo; con&lt;/p&gt;
 
@@ -322,24 +322,24 @@ Ademas de eso al dividir la pantalla en sus diferentes formas&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;C-b C-↓&lt;/code&gt; redimencionar hacia abajo&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/tmux-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;tambien centrar la atension en la shell actual &lt;em&gt;sin romper la distribucion&lt;/em&gt; de las ventanas con
 &lt;code&gt;C-b z&lt;/code&gt; (zoom) y luego restaurar con otro &lt;code&gt;C-b z&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/tmux-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;o incluso y mas locochon, hacer que las shells cambien de sitio con &lt;code&gt;C-b C-o&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/tmux-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;o hacer aparecer un reloc ascii gigante con &lt;code&gt;C-b t&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/tmux-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;u otras cosas mas chulas como agregar &amp;ldquo;nuevos escritorios&amp;rdquo; con &lt;code&gt;C-b c&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/tmux-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;e ir y venir entre escritorios con&lt;/p&gt;
 
@@ -351,7 +351,7 @@ Ademas de eso al dividir la pantalla en sus diferentes formas&lt;/p&gt;
 
 &lt;p&gt;o &lt;code&gt;C-b w&lt;/code&gt;, que nos permite elegir visualmente&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/tmux-07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;salir de esta secion &lt;em&gt;sin cerrarla&lt;/em&gt; con &lt;code&gt;C-b d&lt;/code&gt; y recuperarla con
 &lt;code&gt;tmux attach&lt;/code&gt;&lt;/p&gt;
@@ -359,7 +359,7 @@ Ademas de eso al dividir la pantalla en sus diferentes formas&lt;/p&gt;
 &lt;p&gt;tambien, podriamos no salir de dicha sesion e ingresar en ella desde otra
 terminal, repitiendo &lt;code&gt;tmux attach&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/temax/tmux-08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/temax/tmux-08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;que hace una cosa muy chula; adaptarse y limitar lo que se ve en la sesion
 con las dimenciones de la mas pequeña. Ademas, como en &lt;code&gt;screen&lt;/code&gt; podemos darle un
@@ -390,13 +390,13 @@ prolongado tiempo y tambien para ejecutar &lt;a href=&#34;https://weechat.org&#3
     
     <item>
       <title>elipo</title>
-      <link>https://nasciiboy.land/emacs/elipo/</link>
+      <link>https://nasciiboy.github.io/emacs/elipo/</link>
       <pubDate>Sun, 29 Jul 2018 12:19:36 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/elipo/</guid>
+      <guid>https://nasciiboy.github.io/emacs/elipo/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/elipopl.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/elipopl.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Recuerda, “No tiene que gustarte Emacs para que te guste”––Emacs puede tener
@@ -515,7 +515,7 @@ pobres estandares.&lt;/p&gt;
 las versiones web y en &lt;em&gt;morg&lt;/em&gt;, tienen un acabado de puta madre. Ha quedado
 bien chido y &amp;ldquo;profecional&amp;rdquo;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/elipo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/elipo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Sin embargo, la parte de la traduccion que no se como inicio, pero creo
 fue obra del traductor de google (y en un inico continue con la tradicion hasta
@@ -672,13 +672,13 @@ exportadores de texinfo a morg, los tenedores, monitores 2K y sobre todo, el suc
     
     <item>
       <title>pwds</title>
-      <link>https://nasciiboy.land/emacs/pwds/</link>
+      <link>https://nasciiboy.github.io/emacs/pwds/</link>
       <pubDate>Thu, 26 Apr 2018 16:07:39 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/pwds/</guid>
+      <guid>https://nasciiboy.github.io/emacs/pwds/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/kn1u1lt5t0dz.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/kn1u1lt5t0dz.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Por lo habitual, mi uso de Emacs va emparejado con una terminal y auxiliado por
 el navegador de ficheros (y firefox). Asi que lo mas conveniente seria poder
@@ -830,7 +830,7 @@ que no, &lt;code&gt;grep&lt;/code&gt;!&lt;/p&gt;
 
 &lt;p&gt;(&lt;code&gt;M-x compile RET grep -Rn package ~/nconf/emacsRocks/&lt;/code&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/emacs-grep.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/emacs-grep.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;sorprendente!&lt;/p&gt;
 
@@ -867,16 +867,16 @@ siguiente a nuestro init:&lt;/p&gt;
     
     <item>
       <title>Keep Regexp</title>
-      <link>https://nasciiboy.land/emacs/keep-regexp/</link>
+      <link>https://nasciiboy.github.io/emacs/keep-regexp/</link>
       <pubDate>Sun, 08 Apr 2018 11:50:44 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/keep-regexp/</guid>
+      <guid>https://nasciiboy.github.io/emacs/keep-regexp/</guid>
       <description>
 
 &lt;p&gt;es muy vergonZoSo sentirse capaz y al enfrentar un reto quedarse congelado al
 borde del fracaso&lt;/p&gt;
 
-&lt;p&gt;El asunto es el siguiente, tenemos &lt;a href=&#34;https://nasciiboy.land/data/lista_correos.txt&#34;&gt;un fichero&lt;/a&gt; con
+&lt;p&gt;El asunto es el siguiente, tenemos &lt;a href=&#34;https://nasciiboy.github.io/data/lista_correos.txt&#34;&gt;un fichero&lt;/a&gt; con
 correos (muchos correos, 79 exactamente). El fichero ademas de los correos
 incluye nombres y comas y la meta es obtener unicamene los correos.&lt;/p&gt;
 
@@ -926,7 +926,7 @@ en C&amp;hellip;.&lt;/p&gt;
 # $ awk -f a.awk lista_correos.txt
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://nasciiboy.land/data/emailtor.zip&#34;&gt;aca&lt;/a&gt; la solucion con C. Compilar con &lt;code&gt;gcc a.c
+&lt;p&gt;&lt;a href=&#34;https://nasciiboy.github.io/data/emailtor.zip&#34;&gt;aca&lt;/a&gt; la solucion con C. Compilar con &lt;code&gt;gcc a.c
 regexp4.c&lt;/code&gt; y ejecutar con &lt;code&gt;$ a.out lista_correos.txt&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Un dia despues, con la agonia mental aun fresca, llego la solucion en emacs&lt;/p&gt;
@@ -1243,10 +1243,10 @@ isearch(+) con un yank&lt;/p&gt;
     
     <item>
       <title>The Holy War</title>
-      <link>https://nasciiboy.land/emacs/the-holy-war/</link>
+      <link>https://nasciiboy.github.io/emacs/the-holy-war/</link>
       <pubDate>Sun, 08 Apr 2018 10:35:54 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/the-holy-war/</guid>
+      <guid>https://nasciiboy.github.io/emacs/the-holy-war/</guid>
       <description>&lt;p&gt;Post original (04/12/2001) -&amp;gt; &lt;a href=&#34;https://www.linux.com/news/emacs-vs-vi-endless-geek-holy-war&#34;&gt;https://www.linux.com/news/emacs-vs-vi-endless-geek-holy-war&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&#34;hBody-1&#34; &gt;
@@ -1351,10 +1351,10 @@ isearch(+) con un yank&lt;/p&gt;
     
     <item>
       <title>Miscelanea Emacs</title>
-      <link>https://nasciiboy.land/emacs/miscelanea/</link>
+      <link>https://nasciiboy.github.io/emacs/miscelanea/</link>
       <pubDate>Tue, 06 Mar 2018 18:00:06 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/miscelanea/</guid>
+      <guid>https://nasciiboy.github.io/emacs/miscelanea/</guid>
       <description>
 
 &lt;p&gt;aqui una serie de pequeños trucos y apaños recientes&lt;/p&gt;
@@ -1482,10 +1482,10 @@ gente de &lt;a href=&#34;https://redd.it/82k4ym&#34;&gt;r/emacs&lt;/a&gt;!.&lt;/
     
     <item>
       <title>Emacs, configuracion de verano</title>
-      <link>https://nasciiboy.land/emacs/v-config/</link>
+      <link>https://nasciiboy.github.io/emacs/v-config/</link>
       <pubDate>Thu, 28 Sep 2017 19:47:50 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/v-config/</guid>
+      <guid>https://nasciiboy.github.io/emacs/v-config/</guid>
       <description>
 
 &lt;p&gt;todo empezo una tarde calida cuando cambie de distro a manjaro, abri el emacs
@@ -1507,7 +1507,7 @@ a la brava y sin tener ni idea de como&lt;/p&gt;
 
 &lt;p&gt;por lo tanto si quieres replicar mi configuracion&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/morg-verano.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/morg-verano.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;por ejemplo para programar en go, c, tener un lector de rss, o iniciar en emacs
 con el tema &lt;em&gt;nascii&lt;/em&gt;, primero instala emacs, y luego crea una carpeta en tu
@@ -1519,7 +1519,7 @@ rm init-dot-el.zip
 emacs
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://nasciiboy.land/data/init-dot-el.zip&#34;&gt;el comprimido&lt;/a&gt; con forma de zip, almacena dos ficheros:
+&lt;p&gt;&lt;a href=&#34;https://nasciiboy.github.io/data/init-dot-el.zip&#34;&gt;el comprimido&lt;/a&gt; con forma de zip, almacena dos ficheros:
 &lt;code&gt;init.el&lt;/code&gt;, que es donde se coloca toda configuracion de emacs y pondre a
 continuacion casi tal cual y &lt;code&gt;nascii-theme.el&lt;/code&gt; mi &lt;em&gt;tema&lt;/em&gt; de colores personal,
 baraje el subirlo a melpa para que tambien forme parte de la instalacion magica,
@@ -2019,10 +2019,10 @@ rutas correspondientes&lt;/p&gt;
     
     <item>
       <title>Run Scheme</title>
-      <link>https://nasciiboy.land/emacs/run-scheme/</link>
+      <link>https://nasciiboy.github.io/emacs/run-scheme/</link>
       <pubDate>Sun, 20 Aug 2017 18:42:53 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/run-scheme/</guid>
+      <guid>https://nasciiboy.github.io/emacs/run-scheme/</guid>
       <description>
 
 &lt;p&gt;En el &lt;a href=&#34;https://nasciiboy.land/prog/ischeme/&#34;&gt;anterior&lt;/a&gt; post (cronologico del blog) comente algunos interpretes de
@@ -2088,7 +2088,7 @@ scheme-program-name &amp;quot;scm&amp;quot;)&lt;/code&gt; (remplazar &lt;em&gt;s
 pulse &lt;code&gt;C-x C-e&lt;/code&gt;, de esta forma puede probar un interprete distinto, luego de
 cerrar la secion previa escribiendo &lt;code&gt;(exit)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/ischeme.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/ischeme.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para volver a la ventana inicial, presione &lt;code&gt;C-x o&lt;/code&gt;.&lt;/p&gt;
 
@@ -2117,10 +2117,10 @@ presione &lt;code&gt;C-h m&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Por que GNU Emacs?</title>
-      <link>https://nasciiboy.land/emacs/why-emacs/</link>
+      <link>https://nasciiboy.github.io/emacs/why-emacs/</link>
       <pubDate>Sun, 02 Jul 2017 12:26:47 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/why-emacs/</guid>
+      <guid>https://nasciiboy.github.io/emacs/why-emacs/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -2280,11 +2280,11 @@ Emacs-hispana&lt;/p&gt;
 &lt;strong&gt;rpublica.net&lt;/strong&gt;, sitio donde existia un exelente y aun vigente curso de
 iniciacion a emacs, al que por su calidad realice un &lt;code&gt;wget&lt;/code&gt; y por bagancia no he
 &amp;ldquo;limpiado&amp;rdquo; para rendirle tributo, podeis descargar un zip con su
-contenido &lt;a href=&#34;https://nasciiboy.land/data/rpublica-emacs.zip&#34;&gt;aqui&lt;/a&gt;, descomprimir y abrir el fichero
+contenido &lt;a href=&#34;https://nasciiboy.github.io/data/rpublica-emacs.zip&#34;&gt;aqui&lt;/a&gt;, descomprimir y abrir el fichero
 &lt;code&gt;emacs.html&lt;/code&gt; con el navegador&lt;/p&gt;
 
 &lt;p&gt;tambien dejo una pequeña chuleta que hice en mis primeros dias y aun me sigue siendo
-util &lt;a href=&#34;https://nasciiboy.land/data/chuleta-emacs.txt&#34;&gt;chuleta-emacs&lt;/a&gt;, puedes ponerla en un
+util &lt;a href=&#34;https://nasciiboy.github.io/data/chuleta-emacs.txt&#34;&gt;chuleta-emacs&lt;/a&gt;, puedes ponerla en un
 marcador, por ejemplo de nombre &lt;em&gt;keys&lt;/em&gt; y darle una exencion org y conquistar el
 mundo&lt;/p&gt;
 
@@ -2292,7 +2292,7 @@ mundo&lt;/p&gt;
 tengo una configuracion customizada del mapeo programmer dvorak-en, en un teclado
 con distribucion en ingles&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://nasciiboy.land/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/nascii-dvorak.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;si no has aprendido mecanografia haslo, y si ya sabes y es con qwerty, cambiar
 vale cada hora requerida. Modificar la posicion de Ctrl, evita extraños
@@ -2307,10 +2307,10 @@ la ñ, y con comilla simple, pones acentos&lt;/p&gt;
     
     <item>
       <title>no mas tabs en go-mode</title>
-      <link>https://nasciiboy.land/emacs/notabs-for-gomode/</link>
+      <link>https://nasciiboy.github.io/emacs/notabs-for-gomode/</link>
       <pubDate>Sun, 12 Feb 2017 21:52:24 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/notabs-for-gomode/</guid>
+      <guid>https://nasciiboy.github.io/emacs/notabs-for-gomode/</guid>
       <description>&lt;p&gt;Go tiene una ridicula guia de estilo para formatear codigo que no me agrada, de
 no seguir algunas reglas el compilador/interprete simplemente se niega a hacer
 nada. Otras reglas, son menos rigurosas, como la indentacion o colocar o no
@@ -2379,10 +2379,10 @@ si seleccione todo + tab (&lt;code&gt;C-x h tab&lt;/code&gt;).&lt;/p&gt;
     
     <item>
       <title>org mode</title>
-      <link>https://nasciiboy.land/emacs/org-mode/</link>
+      <link>https://nasciiboy.github.io/emacs/org-mode/</link>
       <pubDate>Tue, 31 Jan 2017 14:40:54 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/org-mode/</guid>
+      <guid>https://nasciiboy.github.io/emacs/org-mode/</guid>
       <description>
 
 &lt;p&gt;&lt;code&gt;org-mode&lt;/code&gt; es un lenguaje de marcas ligeras nacido de, por, y para &lt;code
@@ -2978,10 +2978,10 @@ calidad e intento de adaptar el manual de org-mode a org-mode&lt;/p&gt;&lt;/li&g
     
     <item>
       <title>Emacs web y noticias en modo texto</title>
-      <link>https://nasciiboy.land/emacs/rsspluseww/</link>
+      <link>https://nasciiboy.github.io/emacs/rsspluseww/</link>
       <pubDate>Wed, 18 Jan 2017 09:29:17 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/rsspluseww/</guid>
+      <guid>https://nasciiboy.github.io/emacs/rsspluseww/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../reunian-fieles-huespedes-cocinaban-asistentes.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -3177,10 +3177,10 @@ porno, escribir un blog o lo que sea&amp;hellip; &lt;code&gt;¯\_(ツ)_/¯&lt;/c
     
     <item>
       <title>Definir atajos en Emacs</title>
-      <link>https://nasciiboy.land/emacs/keychords/</link>
+      <link>https://nasciiboy.github.io/emacs/keychords/</link>
       <pubDate>Sat, 07 Jan 2017 09:38:46 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/keychords/</guid>
+      <guid>https://nasciiboy.github.io/emacs/keychords/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../kara.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -3355,10 +3355,10 @@ el terminal no reconosca las teclas Super o Hyper.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>first theme</title>
-      <link>https://nasciiboy.land/emacs/first-theme/</link>
+      <link>https://nasciiboy.github.io/emacs/first-theme/</link>
       <pubDate>Wed, 28 Dec 2016 17:17:04 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/first-theme/</guid>
+      <guid>https://nasciiboy.github.io/emacs/first-theme/</guid>
       <description>
 
 &lt;h2 id=&#34;crear-un-tema-en-emacs&#34;&gt;Crear un Tema en Emacs&lt;/h2&gt;
@@ -3545,10 +3545,10 @@ presiona &lt;code&gt;C-c C-o&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Emacs - first blood</title>
-      <link>https://nasciiboy.land/emacs/first-blood/</link>
+      <link>https://nasciiboy.github.io/emacs/first-blood/</link>
       <pubDate>Sun, 25 Dec 2016 15:13:24 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/first-blood/</guid>
+      <guid>https://nasciiboy.github.io/emacs/first-blood/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../first-blood.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -3666,10 +3666,10 @@ ubicacion de las rutas en&lt;/strong&gt; &lt;code&gt;init.el&lt;/code&gt;)&lt;/p
     
     <item>
       <title>Que es GNU Emacs?</title>
-      <link>https://nasciiboy.land/emacs/que-es-emacs/</link>
+      <link>https://nasciiboy.github.io/emacs/que-es-emacs/</link>
       <pubDate>Fri, 23 Dec 2016 20:43:19 -0600</pubDate>
       
-      <guid>https://nasciiboy.land/emacs/que-es-emacs/</guid>
+      <guid>https://nasciiboy.github.io/emacs/que-es-emacs/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;../Emacs-logo.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;

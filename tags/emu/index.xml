@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emu on ⋲ᴹ∧cₛ ℜø∁κ§</title>
-    <link>https://nasciiboy.land/tags/emu/</link>
+    <link>https://nasciiboy.github.io/tags/emu/</link>
     <description>Recent content in Emu on ⋲ᴹ∧cₛ ℜø∁κ§</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>GPL v3.0</copyright>
     <lastBuildDate>Sat, 03 Aug 2019 11:32:06 -0500</lastBuildDate>
     
-        <atom:link href="https://nasciiboy.land/tags/emu/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nasciiboy.github.io/tags/emu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Citra</title>
-      <link>https://nasciiboy.land/vg/citra/</link>
+      <link>https://nasciiboy.github.io/vg/citra/</link>
       <pubDate>Sat, 03 Aug 2019 11:32:06 -0500</pubDate>
       
-      <guid>https://nasciiboy.land/vg/citra/</guid>
+      <guid>https://nasciiboy.github.io/vg/citra/</guid>
       <description>
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/ss.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Tras probar de primera mano la experiencia de jugar en una 3DS y por ello sufrir
 una epifania de lo que es verdaderamente importante en esta vida&amp;hellip; jugar
@@ -32,7 +32,7 @@ gente pobre y sin recursos tan grata experiencia, no solo ya por adquirir una
 porcion de necesaria cultura general, tambien para llenar de felicidad y alegria
 las grices vidas de los agotados obreros&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/New3DSXL.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/New3DSXL.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Entre sus &lt;a href=&#34;https://es.wikipedia.org/wiki/Nintendo_3DS#New_Nintendo_3DS_y_New_Nintendo_3DS_XL&#34;&gt;caracteristicas&lt;/a&gt;
 la consola Nintendo 3DS (&lt;em&gt;New 3DS XL&lt;/em&gt; en su ultima iteracion) cuenta con wifi,
@@ -56,7 +56,7 @@ computadora de proposito general. Mas la comunidad entusiasta y siempre generosa
 de gameeeeeeers &lt;em&gt;y programadores&lt;/em&gt; pone a nuestra disposicion un software de
 emulacion con nombre clave &lt;strong&gt;Citra&lt;/strong&gt;. (Debajo su logo)&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra.svg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra.svg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Dicho software es GPL v2, multiplataforma y se encuentra tanto para plataformas windows,
 mac y GNU&lt;/p&gt;
@@ -158,7 +158,7 @@ quedaron tras compilar (recordar estamos en &lt;code&gt;citra/build/bin&lt;/code
 &lt;pre&gt;&lt;code&gt;&amp;gt; ./citra-qt
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-00.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-00.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;hala, esto ya tiene cuadros de dialogo y menues!&lt;/p&gt;
 
@@ -232,33 +232,33 @@ estan en español o no importa el idioma&lt;/p&gt;
 
 &lt;h2 id=&#34;configs&#34;&gt;Configs&lt;/h2&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Hemos visto que el binario &amp;ldquo;bueno&amp;rdquo; es &lt;code&gt;citra-qt&lt;/code&gt;. Instalado en el sistema
 &lt;code&gt;citra-qt&lt;/code&gt; sera el que aparecera de serie!&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;siguiendo la indicacion, damos double-clip para agregar nuestra lista de
 juegasos nintenderos&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-03.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-03.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Antes de entregarnos al vicio un par de configuraciones previas. Abrimos la
 ventana de configuracion desde el menu &lt;code&gt;Emulation &amp;gt; Configure&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Ya en la ventana de configuracion, ponemos el tema Dark&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;General &amp;gt; UI &amp;gt; Theme: Dark
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-05.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-05.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;(No se por que no se muestra la opcion de interfaz en Spanish, pero no importa)&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-06.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-06.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;System &amp;gt; System &amp;gt; User name: mi-nick
 System &amp;gt; System &amp;gt; Language: Spanish
@@ -273,7 +273,7 @@ english&lt;/p&gt;
 para comprar consejos, en &lt;em&gt;Animal Crossing: New Leaf&lt;/em&gt; permiten comprar galletas
 de la fortuna&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;System &amp;gt; Camera &amp;gt; Camera Image Source: Still Image (Image)
 &lt;/code&gt;&lt;/pre&gt;
@@ -284,18 +284,18 @@ sistema&lt;/p&gt;
 
 &lt;p&gt;y&amp;hellip; lo mas importante la configuracion del teclado&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-08.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-08.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;pero si en verdad quereis jugar con dignidad, &lt;em&gt;conseguir un puñetero
 mando!&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/f710.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/f710.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;yo utilizo el logitech f710 el cual no ha requerido ninguna configuracion para
 que funcionara en ninguna distro. Se conecta y funciona. El mando tiene un
 interructor D/X&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/f710_DX.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/f710_DX.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;importante&lt;/strong&gt; ponerlo en &lt;strong&gt;D&lt;/strong&gt;&amp;hellip; por que? el mando en la parte superior tiene los
 botones &lt;code&gt;LB&lt;/code&gt; y &lt;code&gt;RB&lt;/code&gt; que son propiamente botones, tambien incluye los &amp;ldquo;botones&amp;rdquo;
@@ -312,7 +312,7 @@ select, start, a, b, x, y, l, lt, r, lt) y jugando al Zelda BW, el Mario Kart 7,
 New Super Mario Bros 2, Pokemon X y Animal Crossing New Leaf, parece que esta es
 la distribucion logica y apropiada (&lt;strong&gt;Interruptor en D&lt;/strong&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-09.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-09.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;importante&lt;/strong&gt; citra crashea si durante la ejecucion se alterna el interruptor
 entre &lt;code&gt;D&lt;/code&gt;y &lt;code&gt;X&lt;/code&gt;. Parece que esto es causado a que el sistema mapea el control de
@@ -334,11 +334,11 @@ computo personal pero para algunos juegos es necesario al menos transmitir
 informacion de inclinacion derecha-izquierda, dentro del perfil de control viene
 una curiosa casilla &lt;code&gt;Motion/Touch&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-10.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-10.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Clicando en ella no encotraremos muchas opciones&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-11.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-11.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;en esencia basta para informarnos que en la &amp;ldquo;pantalla tactil&amp;rdquo; (donde habitual
 mente se transmite &amp;ldquo;el tactil&amp;rdquo; con el raton precionando el boton izquierdo) si
@@ -351,7 +351,7 @@ derecho&amp;hellip;&lt;/p&gt;
 de teclado del emulador a teclas mas convenientes como a las teclas de funcion
 (F1, F2, F3, &amp;hellip;)&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-12.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-12.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora si al vicio! &amp;hellip; o no &amp;hellip; requerimos de un &lt;strong&gt;mii&lt;/strong&gt; (un avatar) que si bien
 no todos los juegos exigen, pudiera ser necesario para completar la
@@ -359,12 +359,12 @@ experiencia&lt;/p&gt;
 
 &lt;p&gt;los buenasos de nintendo ponen una &lt;a href=&#34;https://studio.mii.nintendo.com/&#34;&gt;herramienta web&lt;/a&gt; para crearnos un mii&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-00.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/mii_maker-00.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;mas en este caso y como citra (creo) no tiene la cualidad de conectarse a la
 cuenta nintendera&amp;hellip; (obvio&amp;hellip; ???)&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/mii_maker-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;no sirve de mucho&amp;hellip;&lt;/p&gt;
 
@@ -372,17 +372,17 @@ cuenta nintendera&amp;hellip; (obvio&amp;hellip; ???)&lt;/p&gt;
 youtube que llaman &amp;ldquo;enlace&amp;rdquo; a los puñeteros acortadores por webs
 cuestionables), estos son los pasos y enlaces de internete que han servido&lt;/p&gt;
 
-&lt;p&gt;(UNO) Conseguir &lt;strong&gt;Mii Maker&lt;/strong&gt; (&lt;a href=&#34;https://nasciiboy.land/data/citra/Mii-Maker.app&#34;&gt;app&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;(UNO) Conseguir &lt;strong&gt;Mii Maker&lt;/strong&gt; (&lt;a href=&#34;https://nasciiboy.github.io/data/citra/Mii-Maker.app&#34;&gt;app&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;(DOS) recomendablemente colocar Mii Maker en la misma carpeta que el resto de
 roms. Dice una leyenda que arrastrar y soltar este binario en la interfaz de
 citra-qt tambien funciona, pero no es algo que me alla atravido a comprovar&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/mii_maker-02.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Aun no lo ejecuteis u optendrais un error&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-03.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/mii_maker-03.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;(TRES) Parece que hay fuentes/dependencias/ficheros-raros/cosas que vienen en el
 3DS para que Mii Maker corra apropiadamente. En youtube hay un
@@ -392,11 +392,11 @@ nuestra echando mano del navegador de ficheros&lt;/p&gt;
 
 &lt;p&gt;primero &lt;strong&gt;mezclar&lt;/strong&gt; (aplicar esta opccion a todos los archivos y carpetas)&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/mii_maker-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;luego &lt;strong&gt;omitir&lt;/strong&gt; el reemplazo (aplicar esta opccion a todos los archivos y carpetas)&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-05.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/mii_maker-05.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;En GNU la carpeta con &amp;ldquo;los datos&amp;rdquo; de citra se encuentra en
 &lt;code&gt;~/.local/share/citra-emu/&lt;/code&gt; estas son las carpetas que contiene&lt;/p&gt;
@@ -411,11 +411,11 @@ sysdata
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;p-e-r-o&amp;hellip;&lt;/strong&gt; la carpeta del youtuber trae varios &lt;code&gt;.bin&lt;/code&gt;, &lt;code&gt;.tar&lt;/code&gt; que me ponen
-nervioso. &lt;a href=&#34;https://nasciiboy.land/data/citra/Russ-CitraErrorFix.zip&#34;&gt;Aqui&lt;/a&gt; esta directamente sin trucos ni
+nervioso. &lt;a href=&#34;https://nasciiboy.github.io/data/citra/Russ-CitraErrorFix.zip&#34;&gt;Aqui&lt;/a&gt; esta directamente sin trucos ni
 acortadores la carpeta aquella.&lt;/p&gt;
 
 &lt;p&gt;Por parte de este que escribe, fui copiando y probando carpetas al azar con el
-unico proposito de que funcionase &lt;strong&gt;Mii Maker&lt;/strong&gt;. &lt;a href=&#34;https://nasciiboy.land/data/citra/min-dot-citra.zip&#34;&gt;Por
+unico proposito de que funcionase &lt;strong&gt;Mii Maker&lt;/strong&gt;. &lt;a href=&#34;https://nasciiboy.github.io/data/citra/min-dot-citra.zip&#34;&gt;Por
 aca&lt;/a&gt; el resultado. Si decidis usar este&lt;/p&gt;
 
 &lt;p&gt;(investigando mas profundamente &lt;a href=&#34;https://citra-emu.org/wiki/dumping-system-archives-and-the-shared-fonts-from-a-3ds-console/&#34;&gt;la wiki de citra&lt;/a&gt; parece avalar que solo es
@@ -430,26 +430,26 @@ mv min-dot-citra/nand/00000000000000000000000000000000 ~/.local/share/citra-emu/
 
 &lt;p&gt;vuala!!!&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-06.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/mii_maker-06.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;parece ser que el editor del 3DS es mas &amp;ldquo;redondo&amp;rdquo; que el web (que gana un poco
 mas de precision). El resultado en mii maker fue este&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/mii_maker-07.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;y&amp;hellip; por fin ahora si al vicio&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/mii_maker-08.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/mii_maker-08.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;hellip;.&lt;/p&gt;
 
 &lt;p&gt;Por defecto el juego se presenta de esta manera&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-13.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-13.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;i-endo a &lt;code&gt;View &amp;gt; Screen Layout&lt;/code&gt; contamos con diversas distribuciones de visualizacion&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-14.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-14.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Segun el juego, numero de monitores y gustos podemos ajustar a nuestra
 conveniencia. Me guastaria que puedesen desacoplarse &amp;ldquo;las pantallas&amp;rdquo; en dos
@@ -458,32 +458,32 @@ ajustando a mano se puede simular el efecto.&lt;/p&gt;
 
 &lt;p&gt;Para esto utilizo la distribucion de pantalla &amp;ldquo;lado a lado&amp;rdquo;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/citra_qt-15.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/citra_qt-15.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Por ejemplo, si hago una captura (gnomera) de citra, la imagen se presenta asi&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/ss-01.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;(en el &amp;ldquo;mundo real&amp;rdquo;) en modo de pantalla completa veria&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-02.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/ss-02.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;pero ajustando la pantalla &amp;ldquo;manualmente&amp;rdquo; lo prefiero asi&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-03.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/ss-03.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Con el zelda&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/ss-04.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;para verse&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-05.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/ss-05.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;algunos-atajos&#34;&gt;Algunos atajos&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;f2&lt;/code&gt; cargar amiibo (una &lt;a href=&#34;https://nasciiboy.land/data/citra/AmiiboBinDump-v2.zip&#34;&gt;captura&lt;/a&gt; de internet&amp;hellip; no-se como/con-que/cuando se utuliza)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f2&lt;/code&gt; cargar amiibo (una &lt;a href=&#34;https://nasciiboy.github.io/data/citra/AmiiboBinDump-v2.zip&#34;&gt;captura&lt;/a&gt; de internet&amp;hellip; no-se como/con-que/cuando se utuliza)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&amp;hellip;.&lt;/p&gt;
@@ -523,7 +523,7 @@ velocidad con ralentizaciones del 80/85/90%.&lt;/p&gt;
 
 &lt;p&gt;Otra historia seran los exclusivos del New 3DS&amp;hellip; pero su momento aun no ha llegado&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.land/img/citra/ss-06.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://nasciiboy.github.io/img/citra/ss-06.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Como recomendacion final, por ningun motivo en &lt;em&gt;Zelda Between Worlds&lt;/em&gt; en el pueblo
 hablen con el viejo del street pass, hablar con el te regala un arbol de
