@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ramen xxxiv – les pangolin 🇪🇦</title>
+    <link href="" rel="alternate" title="⋲ᴹ∧cₛ ℜø∁κ§" type="application/atom+xml">
+    <style> :root {
+
+    --BGC      : #000000;
+    --FGC      : #ffffff;
+    --BGClogo  : #222222;
+    --FGClogo  : #ffffff;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #98fb98;  /* **            */
+    --FGCstart3 : #dd2300;  /* ***           */
+    --FGCstart4 : #b0c4de;  /* ****          */
+    --FGCstart5 : #7fffd4;  /* *****         */
+    --FGCstart6 : #00dddd;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext  : #ffffff;
+    --FGCemph  : #ffffff;
+    --FGCbtcode: #333333;
+    --FGCftcode: #ffffff;
+    --FGCbcode : #b3b3b3;
+    --FGCtcomm : #ff4500;
+    --FGCtcode : #bfbfff;
+    --FGCfile  : #eedd82;
+    --FGCmath  : #98fb98;
+    --FGClink  : #00ffff;
+    --BGClinkh : #556b2f;
+    --FGClinkh : #ffffff;
+    --BGCdt    : #b3b3b3;
+    --FGCdt    : #ffffff;
+    --FGCthead : #ff7f24;
+    --BGCthead : #000000;
+    --FGCtbody : #87cefa;
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'   ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'   ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'      );                     }
+@font-face { font-family: heatline;       src: local('cursive'      );                     }
+@font-face { font-family: codetext;       src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: codeblock;      src: url('https://nasciiboy.github.io/DejaVuSansMono.ttf'); }
+@font-face { font-family: description_dt; src: local('cursive'      );                     }
+@font-face { font-family: description_dd; src: local('sans'         );                     }
+
+html { background: var( --BGC ); color: var( --FGC );
+       margin: 0; padding: 0;
+       font-size: 1.3em;
+       line-height: 1.5em;
+       box-sizing: border-box;
+     }
+
+html body { margin: 1em 0em 1em 1em;
+            font-size: 1.0em;
+            font-family: text;
+          }
+
+html body main {font-size: 1.0em;
+                font-family: text;
+                box-sizing:border-box;
+                padding: 1em 1em 1em 1.5em
+                ;
+                width: 80%;
+                float: left;
+               }
+
+html body main article { padding-right: 1em; }
+
+html body main div.thumb {font-size: 1.0em;
+                font-family: text;
+                box-sizing: border-box;
+                padding: 1em;
+                width: 48%;
+                float: left;
+               }
+
+ul.article { list-style: none; line-height: 1em; padding-top: .5em; }
+
+h1 { font-size: 1.8em; font-family:    title; } /* *        */
+h2 { font-size: 1.7em; font-family: heatline; } /* **       */
+h3 { font-size: 1.6em; font-family: heatline; } /* ***      */
+h4 { font-size: 1.5em; font-family: heatline; } /* ****     */
+h5 { font-size: 1.5em; font-family: heatline; } /* *****    */
+h6 { font-size: 1.5em; font-family: heatline; } /* ******   */
+h7 { font-size: 1.5em; font-family: heatline; } /* *******  */
+h8 { font-size: 1.5em; font-family: heatline; } /* ******** */
+
+h2 { text-align: center; color: var( --FGCstart1 ); }
+h3 { text-align: center; color: var( --FGCstart2 ); }
+h4 { text-align: center; color: var( --FGCstart3 ); }
+h5 { text-align: center; color: var( --FGCstart4 ); }
+h6 { text-align: center; color: var( --FGCstart5 ); }
+h7 { text-align: center; color: var( --FGCstart6 ); }
+h8 { text-align: center; color: var( --FGCstart7 ); }
+h9 { text-align: center; color: var( --FGCstart8 ); }
+
+h2::before { content: "卐 ";                       }
+h3::before { content: "卍卍 ";                      }
+h4::before { content: "卐卐卐 ";                     }
+h5::before { content: "卍卍卍卍 ";                    }
+h6::before { content: "卐卐卐卐卐 ";                   }
+h7::before { content: "卍卍卍卍卍卍 ";                  }
+h8::before { content: "卐卐卐卐卐卐卐 ";                 }
+h9::before { content: "卍卍卍卍卍卍卍卍 ";                }
+
+h1 { line-height: 1.5em; text-align: center; }
+
+ul.meta { list-style: none; padding-left: 0.8em; margin: 0em; }
+ul.meta li { line-height: 1.5em; }
+
+.taxonomies { color: green; clear: both; }
+
+.summary {
+  max-height: 8.7rem;
+  overflow: hidden;
+}
+
+div.thumb-sm {font-size: 0.7em;
+                font-family: text;
+             }
+
+.thumb-sm header h2 { margin: 0em; padding: 0.3em 0em 0em 0em; }
+
+html body aside {
+    font-size: 1.0em;
+    font-family: text;
+    box-sizing:border-box;
+    width: 20%;
+    float: left;
+    padding-left: 1em;
+}
+
+header.key { color: black; }
+
+aside div ul { padding-left: 0em; margin: 0em; }
+
+html body footer {
+    font-size: 0.7em;
+    clear: both;
+}
+
+nav.p-paging { clear: both; padding-top: 2em; text-align: center; }
+
+.footer-title { clear: both; }
+
+.footer-title a { list-style: none; text-decoration: none; color: red; }
+
+.path li { display: inline; list-style:none; padding: 0em 0.1em; margin:0em; }
+.path li a { text-decoration: none; color: #87cefa; }
+.path-pwd { color: yellow; }
+
+pre {
+    background-color: var( --FGCbtcode ); color: white;
+    font-size: 1em; text-align: left; font-family: codeblock;
+    box-sizing:border-box; padding: 1.0em; border: 0.05em solid #ddd;
+    overflow: auto;
+}
+
+pre code { background-color: var( --FGCbtcode );
+           color: var( --FGCftcode );
+           font-size: 1em;  font-family: codetext;
+           padding: 0em;
+}
+
+ul.nav { list-style-type: none; }
+ul.nav li { display: inline-block; list-style: none; }
+ul.nav li a { color: white; background-color: black; text-decoration: none; padding: 0.5em .5em; border: 3px solid white; }
+ul.nav li a:hover { color: #ea316e; background-color: white; text-decoration: none; padding: 0.2em .5em; border-radius: 1em; }
+
+
+b    { font-family: text_bold; }
+i    { font-family: text_italic; }
+u    { text-decoration: underline; }
+em   { color: var( --FGCemph ); font-weight: 600; }
+code { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file { color: var( --FGCfile ); font-family: codetext; }
+.math { color: var( --FGCmath ); font-family: codetext; }
+blockquote { font-family: text_verse; color: #bbddbb; font-style: italic; }
+blockquote blockquote { font-family: text_verse; color: #aabbdd; font-style: italic; }
+
+a { color: #00ffff; text-decoration: underline; }
+a:hover { background-color: #556b2f; color: #ffffff; text-decoration: none; }
+
+li { color: #fff; font-size: 1em; }
+li b { font-weight: bold; }
+li p { color: #fff; font-size: 1em; }
+
+
+dl { padding-bottom: 2em; }
+dl dt { color: #daa520;
+                                  font-size: 1.2em; font-family: description_dt;
+                                  margin-left: 0.6em; }
+dd { color: #ffffff;
+                                  font-size: 1.0em; font-family: description_dd; font-style: bold;
+                                  margin-left: 0.6em; }
+img { border: none; max-width: 100%;
+    }
+img:hover { border: 0.05em solid #fff; }
+
+.separador { padding: 2em; }
+.banner { padding: 0em .5em;
+          clear: both;
+          margin: 0em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+        }
+.clear  { clear: both; }
+.center { display: flex;
+          justify-content: center;
+        }
+.previous { float: left; }
+.next { float: right; }
+
+/* #### Dark Matter #### */
+.dark-matter {
+    margin-left: auto;
+    margin-right: auto;
+    font: .3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.dark-matter h1 {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 1em;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: .7em;
+}
+.dark-matter label {
+    display: block;
+}
+.dark-matter label>span {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 2em;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+.dark-matter input[type="text"],
+.dark-matter input[type="email"],
+.dark-matter textarea {
+    border: none;
+    color: #525252;
+    margin: .5em;
+    padding:.3em;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+.submit {
+    background: #222;
+    color: white;
+    margin-top: .7em;
+    padding: .5em 1.5em;
+}
+
+.submit:hover {
+    color: green;
+}
+
+/* ==fanciCode== pygments compatible */
+.hll { background-color: #ffffcc }
+.c { color: #99968b; font-style: italic} /* Comment */
+.err { color: #f6f3e8} /* Error */
+.g { color: #f6f3e8} /* Generic */
+.k { color: #8ac6f2} /* Keyword */
+.l { color: #f6f3e8} /* Literal */
+.n { color: #f6f3e8} /* Name */
+.o { color: #f6f3e8} /* Operator */
+.x { color: #f6f3e8} /* Other */
+.p { color: #f6f3e8} /* Punctuation */
+.cm { color: #99968b; font-style: italic} /* Comment.Multiline */
+.cp { color: #e5786d} /* Comment.Preproc */
+.c1 { color: #99968b; font-style: italic} /* Comment.Single */
+.cs { color: #99968b; font-style: italic} /* Comment.Special */
+.gd { color: #f6f3e8} /* Generic.Deleted */
+.ge { color: #f6f3e8} /* Generic.Emph */
+.gr { color: #f6f3e8} /* Generic.Error */
+.gh { color: #f6f3e8; font-weight: bold} /* Generic.Heading */
+.gi { color: #f6f3e8} /* Generic.Inserted */
+.go { color: #808080; background-color: #303030 } /* Generic.Output */
+.gp { color: #f6f3e8} /* Generic.Prompt */
+.gs { color: #f6f3e8} /* Generic.Strong */
+.gu { color: #f6f3e8; font-weight: bold} /* Generic.Subheading */
+.gt { color: #f6f3e8} /* Generic.Traceback */
+.kc { color: #8ac6f2} /* Keyword.Constant */
+.kd { color: #8ac6f2} /* Keyword.Declaration */
+.kn { color: #8ac6f2} /* Keyword.Namespace */
+.kp { color: #8ac6f2} /* Keyword.Pseudo */
+.kr { color: #8ac6f2} /* Keyword.Reserved */
+.kt { color: #cae682} /* Keyword.Type */
+.ld { color: #f6f3e8} /* Literal.Date */
+.m { color: #e5786d} /* Literal.Number */
+.s { color: #95e454; font-style: italic} /* Literal.String */
+.na { color: #cae682} /* Name.Attribute */
+.nb { color: #f6f3e8} /* Name.Builtin */
+.nc { color: #f6f3e8} /* Name.Class */
+.no { color: #e5786d} /* Name.Constant */
+.nd { color: #f6f3e8} /* Name.Decorator */
+.ni { color: #e7f6da} /* Name.Entity */
+.ne { color: #f6f3e8} /* Name.Exception */
+.nf { color: #cae682} /* Name.Function */
+.nl { color: #f6f3e8} /* Name.Label */
+.nn { color: #f6f3e8} /* Name.Namespace */
+.nx { color: #f6f3e8} /* Name.Other */
+.py { color: #f6f3e8} /* Name.Property */
+.nt { color: #8ac6f2} /* Name.Tag */
+.nv { color: #cae682} /* Name.Variable */
+.ow { color: #f6f3e8} /* Operator.Word */
+.w { color: #f6f3e8} /* Text.Whitespace */
+.mf { color: #e5786d} /* Literal.Number.Float */
+.mh { color: #e5786d} /* Literal.Number.Hex */
+.mi { color: #e5786d} /* Literal.Number.Integer */
+.mo { color: #e5786d} /* Literal.Number.Oct */
+.sb { color: #95e454; font-style: italic} /* Literal.String.Backtick */
+.sc { color: #95e454; font-style: italic} /* Literal.String.Char */
+.sd { color: #95e454; font-style: italic} /* Literal.String.Doc */
+.s2 { color: #95e454; font-style: italic} /* Literal.String.Double */
+.se { color: #95e454; font-style: italic} /* Literal.String.Escape */
+.sh { color: #95e454; font-style: italic} /* Literal.String.Heredoc */
+.si { color: #95e454; font-style: italic} /* Literal.String.Interpol */
+.sx { color: #95e454; font-style: italic} /* Literal.String.Other */
+.sr { color: #95e454; font-style: italic} /* Literal.String.Regex */
+.s1 { color: #95e454; font-style: italic} /* Literal.String.Single */
+.ss { color: #95e454; font-style: italic} /* Literal.String.Symbol */
+.bp { color: #f6f3e8} /* Name.Builtin.Pseudo */
+.vc { color: #cae682} /* Name.Variable.Class */
+.vg { color: #cae682} /* Name.Variable.Global */
+.vi { color: #cae682} /* Name.Variable.Instance */
+.il { color: #e5786d} /* Literal.Number.Integer.Long */
+</style>
+  </head>
+  <body>
+    
+<main>
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/post">post</a></div>
+
+  <h1>ramen xxxiv – les pangolin 🇪🇦</h1>
+  
+
+<blockquote>
+<p>Las mujeres de hoy tienen que estudiar, trabajar, espiar el móvil de su pareja,
+sentirse atractivas y empoderadas&hellip; ¡Qué tiempos aquellos en que sólo tenían
+que fregar!</p>
+</blockquote>
+
+<p>hola chikes! &hellip; ja, ja, pinche gente inclusiva ridicula de mierda</p>
+
+<p>hola a todos, este es nasciiboy el encargado principal de este blog durante los
+ultimos&hellip; bueno, durante siempre, entendiendo siempre por los ultimos meses (o
+mas).</p>
+
+<p>Hoy quiero agradecer al pueblo español por todo el entretenimiento que me han
+brindado desde hace un par de años con su politica feminista de bailes
+lesbianos, y no es por inventarla, mas bien por implementarla a webo y sin
+vacelina, haciendome expectador a distancia de sus involuntariamente comicas
+consecuencias sociales en sus pequeños reinos independientes de lenguas galimatias rarunas,
+o, eso es al menos lo que desde la distancia parece</p>
+
+<p>ademas, si no fuera suficiente con lo anterior que no es sino una pequeña parte
+del ideario progresista social-comunista en el poder desde diciembre del año
+pasado, tambien se agradece la serie bien sea bi-semanal y aveces diaria de
+interminables escandalos politicos que aveces son grotescamente ridiculos, como
+aquello de combatir las señales de trafico del heteropatriarcado, el aire
+acondicionado opresor, esa frace de &ldquo;sola y borracha quiero llegar a casa&rdquo; y
+otras tanto comicas como criminales, como cuando una tal delcy llego en medio de
+la noche con maletines, el &ldquo;de quien depende&rdquo;, &ldquo;nos va la vida&rdquo;, &ldquo;informacion
+vaginal! exito asegurado!&rdquo; o &ldquo;viva el 8M&rdquo;</p>
+
+<p>en tiempos recientes me he vuelto un tipo decepcionante con estadisticas
+cercanas al cero, que desde lejos no se sabria decir si ve al mundo desde la
+posicion de un gobernante donde nadie merece su atencion, o, tiene tan poco en
+cuenta su existencia que es incapas de encontrar el valor de contaminar a los
+demas con su lamentable presensia, o, una mezcla de ambas. Si no fuera por esas
+noticias espagñolas que logran encerder la indignacion en mi existencia
+alimentando una antigua hostilidad bestial, creo que no podria disfrutar de las
+muchachas extrovertidas del nopor, del anime, algun videojuego o las novelas
+chinosas</p>
+
+<p>je, je</p>
+
+<p>&hellip;.</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/kam.jpg" alt="" /></center></p>
+
+<p>je, je, es raro leer esto pasados unos meses, ya que sin el contexto que me
+motivo a escribirlo (el cual siempre es desconocido al lector) llega a ser como
+me dijo una creatura uplodeadora del internete algo &ldquo;rudo&rdquo; (y gilipollas)</p>
+
+<p>me he estado dedicando al vicio y aunque proporciona material para estas
+insustanciales entradas, entre dedicarme a terminar los mario galaxy (logro desbloqueado), concluir
+con las misiones &ldquo;the mercenaries&rdquo; en el resident 4 (logro desbloqueado), descubrir nuevos juegos,
+ver animu con constancia o simplemente cascarmela alegremente, escribir estas
+cosas esta fuera del top de prioridades</p>
+
+<p>&hellip; ademas ver cercana la renovacion del dominio sin demaciado presupuesto o
+eligiendo dedicar el efectivo a algo mas palpable como conseguir complementos
+para mi amado wii, restaban tiempo a este proyecto</p>
+
+<p>En fin, si es que pueden leer de este sitio sin el habitual dominio y sin haber
+corregido los enlaces (o no), disfrut!</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/gccf.jpg" alt="" /></center></p>
+
+<h2 id="4k">4k</h2>
+
+<p><strong>Boku No Hero Academia (S04)</strong> Que suaves fueron las primeras dos temporadas,
+sin embargo para la tercera ya costo un poco aunque el final de esa terminara
+en todo lo alto, esta cuarta sesion si a sido pesada de llevar sin desear
+acelerar los videos</p>
+
+<p>no encontre nada a lo que llamar emocionante y los poderes coloridos con
+rashos de deku chan empezaron a cargarme un tanto, asi como la batallita final
+de endevour al final, pero no fue suficente para llegar al humbral de dropeo</p>
+
+<p>Espero que la siguiente secion sea mas interesante o que se tiren a los brasos
+del fancervise de comedia romantica con la ranita, la chica ligera, la melomana
+o la niña rica o mejor aun la buenorra que se cosplerea de oficial</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/bnh.jpg" alt="" /></center></p>
+
+<p><strong>NiNoKuni</strong> puff, que flojo, casi 10GB descargados con los datos del movil para
+una historieta tan apresurada como simplona, igual que su guanga animacion. Puff</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/NiNoKuni.jpg" alt="" /></center></p>
+
+<p><strong>Eizouken ni wa Te wo Dasu na!</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/ek-01.jpg" alt="" /></center></p>
+
+<p>Habia escuchado muy buenas referencias de esta animacion, tanto por el seguidor
+canino de evangelion (EvilDoge) como por otra referencia que ya no recuerdo,
+ademas de que el director tiene un aura de produccion &ldquo;desconocida
+mega-mamadora&rdquo; por &ldquo;the tatami galaxy&rdquo;, &ldquo;Devilman Crybaby&rdquo; y &ldquo;ping-pong the
+animation&rdquo; que le di una oportunidad. Aun no haber encontrado nada revelador en
+tatami galaxy y no haber catado aun las otras dos producciones, al final me la
+pase bien con esa cursi peliculilla titulada &ldquo;el amor esta en el agua&rdquo;</p>
+
+<p>que tenemos aqui? tres chicas bien por gusto, oportunidad de negocio o cultura
+emprededora japonesa se dedican a explorar los turbios y exclavisantes senderos
+de crear sus propias producciones de animacion</p>
+
+<p>explora tanto las complejidades y tecnicas de la produccion
+como la parte imaginativa y empresarial del asunto. No es demaciado profunda
+como para ser un documental educativo de referencia, pero si llega a ser lo
+suficientemente emocional y eficaz para reservarle un espacio en las listas de
+nuestro amado anime</p>
+
+<p>si bien, encontre sabrosos los episodios y en particular los encargos que
+presentaban las chicas en la serie, tambien he de mencionar que me costo
+terminarla. No me llego a enganchar o crear necesidad de ver el proximo
+capitulo, es decir, me gusto pero no fue amor</p>
+
+<p>calificacion ◉◉◉○○</p>
+
+<p><strong>Dragon Ball Super LGBT Broly Plus Ultra</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/LGBTSuper-06.png" alt="" /></center></p>
+
+<p>Si la televicion fue mi madre, Dragon Ball fue mi padre&hellip; hasta que asisti a
+una sala de cine a ver Dragon Ball Evolution y le perdi todo el respeto tanto a
+toriyama como a la obra&hellip; aunque nunca renegare del pasado, ni del original en
+la que sin (mucha) pena incluyo a GT, si que le escupo al paso de la modernidad, a
+sus ejecutores y quien sea que preste su nombre a las basofias que vinieron con
+y despues de Evolution</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/LGBTSuper-07.png" alt="" /></center></p>
+
+<p>y&hellip; no es por no darle una oportunidad al material siguiente, que fue Goku VS
+Conejo Trix, o Goku VS Conejo Trix la serie (alias DB Super) al menos sus
+primeros ~13 capitulos hasta ver a Vegeta gritar &ldquo;Mi Bulma&rdquo; cuando casi se me
+caen los guevos de la indignacion, aunque entre eso e idiotizar a todos los
+personajes, principalmente Kokun, puedo dividir mi desprecio en partes
+similares</p>
+
+<p>y&hellip; bueno, ya no le di oportunidad al invento ese de Frezer, mas, por las
+reiteradas buenas palabras de mi brother el camel sobre unas batallitas en super y un no se que
+episodio del maestro roshi, tras varia reiteracion y un torrente, cedi dando una ultimisima y final
+prueba a Dragon Ball Super Broly RGB LGBT Plus Ultra que auna las peores
+inclusiones de Super junto con la cancerigena corriente buenista progre (de
+mierda)</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/LGBTSuper-03.png" alt="" /></center></p>
+
+<p>Comor? Pues revisionando aquellas miticas historias de Bardok y Broly (el
+&ldquo;legitimo&rdquo; Super Saiyan) untando en el coctel a un jugueton frigorifico y su panda de minions</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/LGBTSuper-02.png" alt="" /></center></p>
+
+<p>Kokun, Vegeto, La Bulma, el Conejo Trix y su novio estan disfrutando del mar
+otra vez&hellip; y no continuo con mas por que me va a salir una ulsera, si el
+siguiente extracto de uno de sus fondos musicales no les revuelve el estomago es
+que no son persona</p>
+
+<blockquote>
+<p>Oh Oh Oh Oh. Mi meta es ser yo mismo.</p>
+
+<p>Break the ice, break the ice, break the ice now</p>
+</blockquote>
+
+<p>puaaaahhaggg!</p>
+
+<p><strong>First Squad The Moment of Truth</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/fs-2.jpg" alt="" /></center></p>
+
+<p>durante la segunda guerra los rusos y alemanes se enfrentaron extraoficialmente con grupos
+mistico-ocultistas-satanicos (o algo asi)</p>
+
+<p>nadya una chica con capacidades premonitorias debe erradicar a un espiritu de
+700 años y sus huestes, para lo que necesita reunir a los espiritus del &ldquo;primer
+escuadron&rdquo; que eran un grupo experimental paranormal de la cual ella fue el
+unico sobreviviente y ademas estaba enrollada con uno de ellos&hellip;</p>
+
+<p>que mas, katanas, peleas de artes marciales, maquinas para ir al inframundo,</p>
+
+<p>mmm&hellip; realmente es menos de lo que promete y aburre una vez te cuentan de que
+va, pero como apenas dura 50 minutos&hellip; bueno, no deja de ser curiosa aunque
+totalmente precindible</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/fs-4.jpg" alt="" /></center></p>
+
+<p><strong>What We do in the shadows</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/WhatWeDoInTheShadows.jpg" alt="" /></center></p>
+
+<p>Nada, el primer visionado de esta peli que cuenta el dia a dia en la vida de uno
+vampiros &ldquo;blanditos&rdquo; me dejo algo indiferente, mas como el bueno de taika (el
+director) a ido ascendiendo en mi ranking hasta llegar al nivel de pagar una
+entrada solo por incluir su direccion pues&hellip; senti la necesidad de revisionar
+esto, encontrar algo interesante y sentirme re-sabiondo-conocedor</p>
+
+<p>je, je, ta ligerita y un tanto&hellip; que sera?? rarita, blandilla o independiente?
+creo que un poquillo de cada, pero ya sabiendo a lo que iba la he encontrado mas
+disfrutable. Aun no alcanza el estatus como para tener mi sello de recomendable,
+pero tampoco es como que sea un desperdicio darle su chance</p>
+
+<p><strong>birth</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/birth-03.jpg" alt="" /></center></p>
+
+<p>Dentro de las descargas aleatoreas por descubrir del disco duro, algun
+uploader coloco esta grata sorpresa vintage, descolocadora, pachecosa y japonesamente
+juguetona</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/birth-04.jpg" alt="" /></center></p>
+
+<p>El acabado visual es muy interesante, a veces sencillote y a veces elaborado con
+necesario crunch (ha, ha, pinches milenials) surgido del amor por el trabajo</p>
+
+<p>la musica tampoco se queda atras y ademas como curiosidad e intuicion supuse
+que era algo en lo que el hideaki habria trabajado, y segun la <a href="https://en.wikipedia.org/wiki/Birth_(anime)">wiki</a>
+es asi.</p>
+
+<p>Por si os interesa mas encontre una reseña sobre el anime en la siguiente
+interesante web -&gt; <a href="https://classicanimemuseum.com/2016/08/04/dyr-4-birth/">https://classicanimemuseum.com/2016/08/04/dyr-4-birth/</a></p>
+
+<p><strong>Karakai Jouzu no Takagi-san 2</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/Takagi-san_2.png" alt="" /></center></p>
+
+<p>Y regresa la calienta webos de takagi! con 15% mas de bulling, 10% mas de zorreo,
+un final con 1,000%+ de romance y sin gluten</p>
+
+<p>nada, si habeis visto la primer temporada de la chica frentona esto es igual de bueno!</p>
+
+<p><strong>Murenase! Seton Gakuen</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/MuSeG.jpg" alt="" /></center></p>
+
+<p>Una serie harem medio furry. Si se ve para pasar el tiempo, es hasta divertida&hellip;
+&hellip; ..</p>
+
+<p><strong>Hi Score Girl</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/HSG.jpg" alt="" /></center></p>
+
+<p>Romance, Un triangulo y videojuegos. Simplemente iresistible y perfectamente
+compatible conmigo</p>
+
+<p>Ja, ja, que rara es esa chica cashada</p>
+
+<p><strong>Isekai Quartet</strong> Nada, una de esas cosas a las que llaman &ldquo;spin off&rdquo;, pero de
+los isekais de referencia, es decir, konosuba, overlord, la niña militar y
+(aunque no excluyendo otras incorporaciones) re:zero</p>
+
+<p>ahh, entretiene</p>
+
+<p><strong>Rambo Last Blood</strong> Me caga la excusa de la pelicula, pero el segmento final de
+la cinta esta muy bien.</p>
+
+<p>dire que le falta algo mas de rambo a la peli y el rostro
+plasticoso de stalone distrae</p>
+
+<p><strong>Sucker Punch</strong> Que rara cosa. Sentia curiosidad por la disparidad de opiniones
+respecto a esta peli y despues de verla entiendo o creo entender la razon.</p>
+
+<p>visualmente es &ldquo;bonita&rdquo;, muy &ldquo;otaku&rdquo; incluso. Pero creo que no deja de ser una
+produccion para satisfacer los fetiches del director amparandose en una historia
+(supuestamente) de venganza? superacion? e-m-p-o-d-e-r-a-m-i-e-n-t-o?</p>
+
+<p>no negare que viendola a tramos es entretenida, pero tampoco da para enarbolarda
+como una obra incomprendida, menos para sentirse especial encontrando gusto por
+ella, de echo no tengo ningun interes en volverla a ver&hellip; je, je</p>
+
+<p><strong>Kami no Tou</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/Kami-no-Tou.jpg" alt="" /></center></p>
+
+<p>si encuentras decepcionante esas series que basan su inpacto en su ultimo
+capitulo luego de pasar toda la serie preguntandote donde esta el atractivo, esta
+serie cumple plenamente ese objetivo</p>
+
+<p>el primer capitulo hasta esta bien, pero el resto incluyendo el &ldquo;giro
+inesperado&rdquo; son a-b-u-r-r-i-d-o-s</p>
+
+<p><strong>Koi Kaze</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/KK.jpg" alt="" /></center></p>
+
+<p>Sin mucho esfuerzo se puede agregar esto en la lista de japonesadas
+perturbantes, blasfemas, interesantes o divertidas&hellip; sugun quien y a que edad lo vea</p>
+
+<p>a mis edades fue divertida, algo estimulante y con un final poco trabajado</p>
+
+<p>de que trata? un currante conoce y se encuentra con una chica apenas entrada en
+la adolecencia de la que se enamora y el sentimiento es silenciosamente
+correspondido, no conforme con eso, un capitulo mas tarde nos enteramos que la
+chica es su, (chan, chan, chan) hermana! y aun insatisfecho con ello se ven
+forzados a convivir bajo el mismo techo, eh? comor?</p>
+
+<p>como lidia un adulto con su insestuosa atraccion junto al sentimiento de culpa
+que combina con un poco de autoflajelacion? como enfrenta la chica sus alocados sentimientos
+juveniles? como es resivida desde el exterior tal situacion? como enfrentar a
+los familiares? japoneses, son. Obviamente suicidandose!</p>
+
+<p>bueno, todo fue emocionante y cumbre hasta el planteamiento del suicidio que no
+llega a ocurrir y despues parece que la pareja se conforma con la
+clandestinidad, cosa que encuentro desepcionante. En una obra cuando te dicen
+que si el jefe final se apodera del trilobite de adamantita jugueton sera capaz
+de someter a la humanidad, es por que inevitablemente se hara con el trilobite
+de adamantita jugueton, asi que cuando te preparan para una escandalosa repuesta
+de los cercanos a esta relacion (digamos) poco convencional, uno quiere y
+necesita ver esa escandalosa respuesta y al no concretarse pues resulta
+desepcionante</p>
+
+<p>ignorando el final, pues que puedo agregar, plenamente recomendable, aunque sea
+solo para satisfacer la indigacion de señora que pueda (o no) habitar en ti o en
+tus cercanos</p>
+
+<p><strong>Steins;Gate</strong></p>
+
+<blockquote>
+<p>¿Conoces a&hellip; Hououn Kyouma?</p>
+
+<blockquote>
+<p>¿Hououn?</p>
+</blockquote>
+
+<p>Es un cientifico&hellip; pero no uno cualquiera.
+Es mas bien un cientifico loco, uno de los mejores en su categoria.
+Su compartamiento es totalmente irracional y por eso estan siempre riendose de
+el.</p>
+
+<p>Nadie creia en su investigacion, ni en sus inventos ni en nada de lo que
+decia.
+Pero ¿sabes que? Encontro algo que nadie mas veia. Algo que solo el era capaz
+de ver.
+Se dio cuenta de que era algo que podria hacer sufrir a la gente, les haria
+daño e incluso podria acabar con el mundo. Y por eso, intento proteger el
+mundo entero con todas sus fuerzas. Y continuo luchando para salvar el mundo.</p>
+
+<p>Al final, fue capaz de proteger a las personas que mas queria. Pero&hellip; nadie
+lo sabe. Para ellos, no fue mas que un cientifico loco del que siempre
+siguieron riendose.</p>
+
+<blockquote>
+<p>Es una historia muy triste.</p>
+</blockquote>
+
+<p>¿De verdad? Yo creo que es una historia muy bonita.</p>
+
+<p>¡Venga, vete! Seguro que hay personas que te estan esperando.</p>
+</blockquote>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/SG-03.jpg" alt="" /></center></p>
+
+<p>Quien no se ha enamorado de esa KRIS-TEEHNA que gusta de corromper a los menores
+de edad</p>
+
+<p>junto a <strong>Steins Gate – Fuka Ryouiki no Deja vu</strong> que se la considero &ldquo;su otra
+mitad&rdquo; se merece incondicionalmente un <sup>100</sup>&frasl;<sub>10</sub></p>
+
+<p>ya es la tercer vez que veo esta serie y aunque pueda para algun ingrato no
+enganchar, creo que luego del episodio 11 los capitulos se van uno tras de otro
+sin moderacion</p>
+
+<p><strong>Steins;Gate 0</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/SG-05.jpg" alt="" /></center></p>
+
+<p>Cuando aparece una derivacion de aquella obra que tanto disfrutas, es razonable
+desconfiar y dudar sobre consumir o no hacerlo, pues no es dificil incumplir las
+espectativas contaminando amargamente el cariño por la obra primigenia</p>
+
+<p>asi pues, esta continuacion se mantuvo varios años como pendiente de ver aun
+teniendola en el hdd</p>
+
+<p>las reseñas eras favorables, incluso mas entusiastas sobre la base original
+justificando el visionado de la primera para disfrutar con esta continuacion.
+Wuau! dijo el perro</p>
+
+<p>Puesto asi, no tenia motivos para postergar este compromiso, pero cuando a los
+que les gusta tanto esta derivada, achacaban quejas sobre el original, no podia
+hacer mas que dudar de sus comentarios</p>
+
+<p>para el dubitativo aqui un breve resumen por que personalmente me
+enconraba confuso respecto a donde se situaba especificamente esta historia</p>
+
+<p>en una de las tantas lineas temporales Kyouma se rinde en alcanzar la
+steins;gate (que es esa realidad donde tanto Mayuri como Kristina sobreviven al
+evento con el cern), optanto por preservar a Mayuri y respentando el sacrificio
+de Kristina. Tras esto Kyouma renuncia a ser Kyouma (como cuando spidy deja de
+ser spidy), viviendo una normaloide vida universitaria. Pero, pero, pero el
+futuro lo arrincona junto a una serie relacionada con eventos familiares,
+incorporando dos nuevos personajes</p>
+
+<p>Proximos a los capitulos finales, se descubre que esto no es sino la linea desde
+donde se origina el plan para motivar a Kyouma en aquel episodio 23 de la serie primordial</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/SG-06.jpg" alt="" /></center></p>
+
+<p>Mentiria al decir que me encanto, por que no fue asi, aunque tampoco puedo decir
+que la rechaso. Es secamente digna y puede (o no) que aumente el aprecio a
+futuro</p>
+
+<p>Si he de señalar alguna queja, pues necesitaba a una Kristina 3D (XD&hellip;), amo a
+esa peliroja tsundere y&hellip; las nuevas incorporaciones (tanto la adulta &ldquo;loly&rdquo;
+como la fake Kristina) no forman parte de mis preferencias, ademas no encontre
+sentido a algunas cosas como que pinche interes tuvo encontrar la fuente de la
+cancion aquella?</p>
+
+<p>o&hellip; dudas a posteriori en <em>Fuka Ryouiki no Deja vu</em>, desde cuando el poder de
+Rintaro le permite saltar fisicamente entre dimenciones? bueno, a esa peli se lo
+perdono por ser un recurso artistico&hellip;.</p>
+
+<p>En resumen, ir con spoilers es mejor, reduce la incertidumbre</p>
+
+<p>Me gusto eso de darle su confesion a Mayuri y tambien vislumbrar el futuro aquel</p>
+
+<p><strong>Somali to Mori no Kamisama</strong></p>
+
+<p>Aca tenemos una historietita ligera sobre un viaje en un mundo de fantasia
+tambien ligero</p>
+
+<p>En un ambiente donde se suponen que los seres magicos han acabado con los
+humanos y no tienen reparo en cogerlos como refrigerio de media noche, una cria
+humana es encontrada por un automata cuidador del bosque identificado como
+&ldquo;golem&rdquo; cullo tiempo de funcionamiento esta apunto de expirar por lo que se
+propone como mision ultima encontrar a los esquivos humanos juntando a la
+chiquilla con su rebaño mientras aflora una bonita y clicherosa historia de
+padre e hija</p>
+
+<p>resulta agradable y no exige nada para visionarla. Tampoco es como para irla
+recomendando pero se puede ver sin mas</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/somali.jpg" alt="" /></center></p>
+
+<p><strong>Extraction</strong> Aca tenemos una copia de John Wick aunque protagonizada por el
+bueno del Thor-tas</p>
+
+<p>Es una copia en tanto intenta ser una peli de accion y balasos &ldquo;reales&rdquo;
+agradables a la vista y sin extravagantes movimientos de camara que distraigan
+y/o confundan la misma accion</p>
+
+<p>El protagonista es un mercenario de corazon suave supuestamente suicida
+(o algo asi) que se encapricha con su cafecito protegido por alguna razon
+aleatoria</p>
+
+<p>El protegido y las excusas son algo desagradables, pero la accion es buena
+y a ello es lo que uno espera de una peli de accion</p>
+
+<p>Es recomendable aunque la sombra de John Wick es demaciado alargada</p>
+
+<p><strong>Ip Man 4</strong></p>
+
+<p>Uh, uh, luego de un esperadisimo cierre de esta saga tengo que decir que fue
+arto floja aunque no tanto como para renegar de ella. La primer y en particular
+la secuela le merecieron un sitio en el olimpo de las pelis de kung fu y esta
+esta muy suavecita</p>
+
+<p>De nuevo hay militares vs Ip Man, mas un fatidico cancer, un hijo revelde,
+humillacion del gran, injustamente incomprendido, bello e ilustre pueblo chino
+(kof, kof), una nueva pelea contra otros viejos maestros y una china colegiala</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/ip.jpg" alt="" /></center></p>
+
+<p>sobre los puntos fuertes pues es suficiente con la colegiala y las necesarias
+coreagrafias de batalla. Por lo demas, meh</p>
+
+<p><strong>Hunter X Hunter</strong> (2011)</p>
+
+<p>En el misterioso mundo del anime a pesar de ser (o parecer) una serie
+ampliamente aclamada, no es extraño toparse con historietas normalitas e incluso
+truños infumables bien sea por que el que la realsaba se toma como personal el
+asunto, quiere sentirse un profeta autorizado por el mismisimo dios, ignorancia
+o a saber por que puñetera razon, y&hellip; <em>Hunter • Hunter</em> junto a <em>Fullmetal
+alchemist</em> suelen estar en los primeros lugares. (<em>Evangelion</em> como todo mundo
+sabe ocupara por la eternidad la posicion numero uno.)</p>
+
+<p>A FMA pues yo la encuentro chidita y hasta hay y sobre HxH (2011) intente en el
+pasado visualizarla, abortando en los primeros 5 episodios por encontrar al
+prota demaciado &ldquo;gohan&rdquo;. Ante la constante necesidad de liberar espacio inicie el
+serio proyecto de ir viendo episodios para despues borrarlos y ahora me gustaria
+no haberlo hecho&hellip; lo de borrarlos por que HxH esta bien vergas!</p>
+
+<p>por que? pues por que te presentan personajes secundarios que en un futuro seran
+aparentemente mas importantes para terminar siendo alimento de unos bichos. Por
+que a pesar de que los protas tienen una &ldquo;moralidad estandar&rdquo; tampoco estan para
+hacer sacrificios sin interes propio o por que simplemente se pueden portar
+culeros. Por que el que en un principio es el prota luminoso, en realidad
+almacena una bestia oscura y el que aparente es un despiadado secundaro asesino
+termina siendo un principal mas bueno que el pan&hellip; sin dejar el asesinato. Por
+que la muerte y las desgracias lejos de esconderse se muestran con una
+naturalidad poco vista, por que las peleas son concisas y estrategicas y por que
+tiene un morrillo inexplicablemente versado sobre los intereses de las mujeres
+maduras</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/HxH-03.jpg" alt="" /></center></p>
+
+<p>tambien tienen a un pervertido cuyo fetiche explicitamente sexual es pelear con
+oponentes fuertes sin importar genero o edad, pero eso no es algo que me
+entusiasme capturar en una imagen, aunque es uno mas de los asuntos particulares
+de esta serie. Lo mismo se puede decir sobre el bromance entre los protas cuya
+admiracion mutua llega a ponerse incomoda</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/HxH-02.jpg" alt="" /></center></p>
+
+<p>y aunque el estilo pueda repeler a mucha audiencia, luego del episodio 15 (tal
+vez) comienza a interesar la historia, siendo mas adictiva para el 60 y
+definitivamente inpausable cuando llega la ultima y definitiva saga (hasta el
+momento adaptada y casi que escrita) de las hormigas kimera que lleva el shonen
+a los mas altos estandares del buen arte</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/HxH-01.jpg" alt="" /></center></p>
+
+<p>siendo particularmente interesante la resolucion sobre como es que muere el jefe
+final fuera de una batalla &ldquo;justa&rdquo; a pesar de ser un enemigo incomparable</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/HxH-05.jpg" alt="" /></center></p>
+
+<p>Si bien el material original quiza nunca sea terminada y apesar del tiempo
+trancurrido apenas y ha avanzado unos pocos capitulos, creo que son 148
+episodios animados con un final a mi gusto satisfactorio, aunque sigo
+preguntandome por que puñetas &ldquo;restauran&rdquo; al prota con la &ldquo;magia&rdquo; de nanika? no
+habia mejor solucion?</p>
+
+<p>para finalizar Killua y su familia rokean, je, je, me recuerdan a la familia Tao
+de Shaman King. Arco con muchas similitudes en ambas series&hellip;</p>
+
+<p><strong>Nihon Chinbotsu</strong> Se acercan las olimpiadas y japon sufre un mega
+terremoto y&hellip; se hunde (ja, ja, ja)</p>
+
+<p>Pero en esta serie no hay drama, es como aquella pelicula titulada 2012 donde
+ocurre una consecucion de locos acontecimientos uno detras de otro y hasta hay un
+refugio hippioso con sembradios de mota, eh??? mota y en japon??? eso si es pura ficcion</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/NC.jpg" alt="" /></center></p>
+
+<p>tiene un toque muy raruro que no sabria identificar con dejades, exigencia en
+tiempo de entrega, cosas culturales o algun capricho del encargado y&hellip; es por
+ese misma falta de reflexion que encontre esta mierda interesante, punto.</p>
+
+<p><strong>Princess Connect!</strong> decian &ldquo;la copia de konosuba&rdquo;</p>
+
+<p>vi tres episodios con exeptisismo, luego vi otros dos con dudas mayores y luego
+tres mas solo para estar seguro y no encontre ni suba, ni kono, por lo que pude
+borrar sus bytes sin remordimiento</p>
+
+<p>Para mis adentros solo me preguntaba como es que el protagonista no se convertia
+en una verdadera bestia salvaje o perdia su rostro entre las piernas de sus
+compañeras, y/o por que en lugar de ser este un desefrenado nuevo hito del
+hentai preferia ser un soporifero y soso dia a dia de unos dibujos bonitos sin alma</p>
+
+<p><strong>Dr. Stone</strong> Ja, ja, ja, que bueno y facil de ver.</p>
+
+<p>Tenia alguna duda, por que se le publicitaba con contenidos cientificos. Pero, que
+mas da, si cada capitulo te pide continuar con el siguiente hasta terminar o
+posponerlo a peticion del sueño inpostergable.</p>
+
+<p>muy bueno! y completamente recomendable</p>
+
+<p><strong>Chihayafuru S03</strong> Existe una leyenda de que madhouse nunca produce secuelas&hellip;
+pero parece que la historia romantico &ldquo;deportiva&rdquo; de chihaya a pesar de estar en
+pausa por muchos, muchos, muchos, muchos años, merece continuar su animacion</p>
+
+<p>Je, je, chihayafuru estaba entre mis series que tenia mayor necesidad de su
+continuacion y cuando aparecio no la vi por que tras ver el primer episodio me
+aburri y sufri del temor de despreciar a sus antecesores</p>
+
+<p>mas hay una etapa existencial del meh, cuando todo da igual, propicia para
+enfrentar por mero aburrimiento las dudas pasadas</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/A-team.jpg" alt="" /></center></p>
+
+<p>y es en esta continuista y bella temporada cuando por fin llegan las
+confeciones amorosas para chihaya, yeeeeee!</p>
+
+<p>Que mas puedo decir que esta chida y el team Arata merece respeto! Aunque la
+Chihaya sea una tontuela facil de convencer o tenga complejo de enfermera, ese pinche
+Taichi codicioso y traumado nomas quiere &ldquo;ensuciar&rdquo; el cuerpo de jade de la chihaya</p>
+
+<p><strong>Robot on the Road</strong> Aca tenemos uno de esos cortos de la Japan Animator Expo</p>
+
+<p>una historia sencillita sobre un robot pervertido y exibicionista de redes sociales</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/eRobot.jpg" alt="" /></center></p>
+
+<p>Si bien es divertido y sin arrastrar el tema a polemicas buenistas, encuentro
+reconfortante que se respete y mantengan los principios traviesos y
+heteropatriacales del anime en la actualidad&hellip;</p>
+
+<p>Solo por &ldquo;defender&rdquo; las señas de identidad que hacen que el &ldquo;anime&rdquo; sea una rama
+aparte en la animacion merece mis halagos, eso, las tetas y los loles!</p>
+
+<p><strong>Kaguya Sama S02</strong></p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/kaguya-01.jpg" alt="" /></center></p>
+
+<p>En el transcurso de este ramen revisione la primer temporada, asi que tengo
+bastante fresco el estilo de esta serie, digamos 70% comica y 30% romantica. Por ello
+esperaba ansiosamente disfrutar de unas buenas carcajadas con una sonrisa
+tontorra con un poco de sonrojo</p>
+
+<p>Que ofrese esta nueva sesion? Iregularidad, una incosistente superposicion de
+capas bastante diferenciadas que podria resumir como 35% romance, 30% desarrollo
+&ldquo;serio&rdquo; y 35% comedia</p>
+
+<p>Los primeros capitulos se tiran directamente por expandir la trama rollmantica
+del ultimo capitulo de la primer temporada. Continuan sin ajustar el toque
+comico con la disolucion y reeleccion del consejo estudiantil y no es hasta
+concluir esta fase que se retoma con mas cercania el balance comico de la primer
+secion hasta que se celebra el festival (?) estudiantil al que se dedican los
+ultimos dos episodios, siendo el penultimo creo inesesariamente serio</p>
+
+<p>En la web surgia un rumoreado &ldquo;god ishigami&rdquo; supongo que tiene que ver con el
+cambio de actitud que se muestra y &ldquo;respalda&rdquo; con ese penultimo capitulo,
+prefiero pensar que su momento aun no ha llegado.</p>
+
+<p>finalmente en el ultimo episodio se lo dedican a la triste vida de kaguyita
+teniendo que actualizar su dispositivo por motivos involuntarios y finaliza el
+episodio con un buen ambiente para esperar la tercer temporada</p>
+
+<p>Si bien me a gustado, no puedo negar que recivo esta temporada con 20% de
+desilusion principalmente por la falta de risas.</p>
+
+<p>Veo con buena voluntad el cambio de estilo debido al avance del romance que
+ademas puede hasta estar justificado por la edad de los protagonistas que en
+un futuro cercano servirian para situaciones mas suculentas, p-e-r-o, si
+necesitaba un momento chika &ldquo;dontayoh!&rdquo;, algun heredero del chika dance o un
+intro-ending a la altura del &ldquo;love is war&rdquo; de la primer temporada</p>
+
+<p>La animacion a estado a la altura de la primer temporada y estoy seguro que la
+he de revisionar a lo largo de los años con placer, esperando que me convensa
+con cada nueva visita</p>
+
+<p>En fin, no es lo que pedia, p-e-r-o, no es como para decirle que no, tambien se
+merece su dosis de amor</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/kaguya-02.jpg" alt="" /></center></p>
+
+<p><strong>Amor de Gata</strong> Una peliculilla que sin ser impresionante ni reveladora,
+entretiene sanamente como y al nivel de las pelis &ldquo;buenas&rdquo; (a secas) de ghibli</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/adg.jpg" alt="" /></center></p>
+
+<p><strong>Kanojo, Okarishimasu</strong> (Novia de Alquiler)</p>
+
+<p>puuf, un pajero lloron sin talento para el ligue, tras ser rechazado renta una
+&ldquo;novia de alquiler&rdquo; y ella y el se terminan enamorando, y dos de las compañeras
+de profecion de la chica alquilada tambien sienten atraccion por el despojo ese
+y la chica que lo rechaza al principio tambien se returce en celos, por que&hellip; anime</p>
+
+<p><center><img src="https://nasciiboy.github.io/img/ramen-xxxiv/NdA.jpg" alt="" /></center></p>
+
+<p>esta serie es una pendejada del monton, poco estimulante, aunque si estas muerto
+por dentro &ldquo;se puede ver&rdquo;. No descarto ver una segunda temporada&hellip;</p>
+
+<p>Casi seria divertido que explotaran un poquito mas el tema &ldquo;protitutivo&rdquo; de
+fondo, no solo endulsarlo como un servicio social&hellip; como si las prostitutas
+no hicieran un servicio a la sociedad&hellip;</p>
+
+<h2 id="txt">txt</h2>
+
+<p>Entre lagrimas, risas y sin una waifu definitiva, la novela de KonoSuba llego a
+su &ldquo;fin&rdquo;</p>
+
+<p><a href="https://chunchunmaru-translations.blogspot.com/">https://chunchunmaru-translations.blogspot.com/</a></p>
+
+<p>ke pasa con ese shipeo con aqua? que pasa con la declaracion de Lord Kazuma de
+formar su harem?</p>
+
+<p>&hellip;.</p>
+
+<p>En otras historias, me he estado escuchando unas cuantas novelas chinosas y
+japoneras.</p>
+
+<p>Dos de ellas lamentosamente inconclusas, aunque suficientemente divertidas sin
+tener que innovar en las tramas tradicionales</p>
+
+<p>En <strong>Soy el Lord Malvado de una nacion intergalactica!</strong> (I&rsquo;m the Evil Lord of
+an Intergalactic Empire) hay mas comedia involuntaria, con chicas lamentables,
+amantes sinteticas, batallas mecha, toques de kung fusion y scooby doo y &ldquo;juego
+de tronos&rdquo; (comillas, comillas)</p>
+
+<p>ja, ja, es muy gratificante esta historia, la encontre en audio loquendero en
+<a href="https://youtu.be/vvyn3tTu4BM">yutube</a> (no confiar demaciado del enlace, que
+yutube ya se sabe que borra videos sin compasion)</p>
+
+<p>La otra tambien esta en yutube, mas por la lentitud de sus publicadores (cap
+200) me fuy a buscarla en ingles. Por alla del cap 500 la pagina de donde leia
+tenia fallos groseros como apenas tener dos parrafos del cap y fue hai donde
+indignado recopile y envie todo de golpe al traductor para satisfacer mis ancias</p>
+
+<p>el <a href="https://nasciiboy.github.io/book4all/silver-overlord/silver-overlord_es.html">resultado</a> es
+entendible&hellip; ja, ja, aunque solo lei desde como el cap 5XX al 688 que fue el
+ultimo que encontre</p>
+
+<p>Esta novela, va un poco mas de venganza, conquista, cultivacion y reconstruccion
+(contar con conocimientos tecnicos avanzados e implementarlos en una sociedad
+primitiva)</p>
+
+<p>Tiene harem, pero los asuntos deliciosos apenas y se exploran.</p>
+
+<p>El prota es el tipico mostruo de la cultivacion chetado al que el nivel de
+dificultad se eleva segun su estado y hasta tiene (de momento) una vida extra</p>
+
+<p>La he encontrado adictiva (sin llegar ni de cerca a ATG o Coiling Dragon)
+pero buena</p>
+
+<p>Otra mas, que no se si este finalizada pero tambien en curso y con
+<a href="https://nasciiboy.github.io/book4all/mago-versatil/mago-versatil_es.html">traduccion forzada</a>
+y hasta en version <a href="https://nasciiboy.github.io/book4all/mago-versatil/mago.epub">epub</a> es <strong>Mago
+Versatil</strong> apenas pasando los primeros 1K de capitulos</p>
+
+<p>Esta va de magia o mejor dicho de cultivacion magica con elementos (fuego,
+tierra, agua, oscuridad, luz, bendicion, maldicion, invocacion, etc), coqueteo con
+tendencias harem sin alcanzar descripciones suculentas aunque si jocosas y
+desarrollado en un mundo &ldquo;paralelo&rdquo; bastante similar donde no existe la ciencia
+pero si la&hellip; magia, y&hellip; el prota tambien esta chetado pero no tanto</p>
+
+<p>Tambien esta bueno, en particular los primeros 200 caps hasta la primer
+mision con la maestra suculenta</p>
+
+<p>En el punto actual empieso a cansarme de la estructura ciclica de la serie, pero
+aun necesitaria unos cientos de caps mas para hartarme</p>
+
+<p>Parece que tampoco esta completa y de momento esta hasta el 1550</p>
+
+<h2 id="fonos">fonos</h2>
+
+<p>Aunque han sido fructiferos dias de escucha, con agrables descubrimientos
+retratados en la cifra <strong><sup>28113</sup>&frasl;<sub>63324</sub></strong> que representa la cantidad de pistas
+escuchadas del total, solamente y por coincidencia me tope con uno de los
+albunes de produccion local incluidos en mi biblioteca y posecion particular en
+fisico, por lo que deseaba compartir el enlace</p>
+
+<p><a href="http://morelosmusica.com/artista/cuarteto-magatama/">http://morelosmusica.com/artista/cuarteto-magatama/</a></p>
+
+<p>no esta dentro de mis fundamentales, pero al ser parte de mi coleccion es
+digna de ser escuchada bien por buena, o&hellip; particular</p>
+
+
+  <div class="clear" class="center">
+    
+    <a class="previous" href="https://nasciiboy.github.io/post/ramen-xxxiii/">◀ Ramen XXXIII</a>
+    
+    
+  </div>
+
+
+  <div class="clear" ><a href="https://nasciiboy.github.io">/</a></span> <span><a href="https://nasciiboy.github.io/post">post</a></div>
+</main>
+
+    <aside>
+      <div class="banner" >
+      <a href="https://fsforce.noblogs.org/">
+        <p style="font-size: .9em; font-weight: 800; color: white;">Apoya a RMS<p/>
+      </a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.gnome.org/"> <img src="https://nasciiboy.github.io/banner/friends-of-gnome.png" alt="Become a Friend of GNOME" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.debian.org/"><img src="https://nasciiboy.github.io/banner/nascii_mod-debian-logo.png" alt="Debian The universal operating system" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <a href="https://www.fsf.org/"   ><img src="https://nasciiboy.github.io/banner/behroze-gnu-button1.png" alt="Join FSF now" border="0" /></a>
+      </div>
+      <div class="banner" >
+      <img src="https://nasciiboy.github.io/banner/RAmen.png" alt="RAmen" border="0" />
+      </div>
+      <div class="banner" >
+      <a href="https://youtu.be/esRzKRWzhq4"><img src="https://nasciiboy.github.io/banner/sfm.png" alt="+espacios inseguros" border="0" /></a>
+      </div>
+
+      
+      <section class="sidebar">
+        <header class="key"><b>CATEGORIES</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/categories/post">post(72)</a></li><li><a href="https://nasciiboy.github.io/categories/prog">prog(59)</a></li><li><a href="https://nasciiboy.github.io/categories/love2d">love2d(36)</a></li><li><a href="https://nasciiboy.github.io/categories/emacs">emacs(16)</a></li><li><a href="https://nasciiboy.github.io/categories/vg">vg(11)</a></li><li><a href="https://nasciiboy.github.io/categories/apt">apt(5)</a></li><li><a href="https://nasciiboy.github.io/categories/">(4)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar">
+        <header class="key"><b>TAGS</b></header>
+        <div>
+          <ul class="terms">
+            <li><a href="https://nasciiboy.github.io/tags/fonos">fonos(37)</a></li><li><a href="https://nasciiboy.github.io/tags/4k">4k(32)</a></li><li><a href="https://nasciiboy.github.io/tags/howto">howto(25)</a></li><li><a href="https://nasciiboy.github.io/tags/ramen">ramen(20)</a></li><li><a href="https://nasciiboy.github.io/tags/morg">morg(15)</a></li><li><a href="https://nasciiboy.github.io/tags/txt">txt(15)</a></li><li><a href="https://nasciiboy.github.io/tags/arcade">arcade(10)</a></li><li><a href="https://nasciiboy.github.io/tags/apt">apt(9)</a></li><li><a href="https://nasciiboy.github.io/tags/puzzle">puzzle(8)</a></li><li><a href="https://nasciiboy.github.io/tags/regexp">regexp(8)</a></li><li><a href="https://nasciiboy.github.io/tags/docu">docu(7)</a></li><li><a href="https://nasciiboy.github.io/tags/go">go(6)</a></li><li><a href="https://nasciiboy.github.io/tags/kameko">kameko(6)</a></li><li><a href="https://nasciiboy.github.io/tags/feminascii">feminascii(5)</a></li><li><a href="https://nasciiboy.github.io/tags/install">install(5)</a></li><li><a href="https://nasciiboy.github.io/tags/platformer">platformer(5)</a></li><li><a href="https://nasciiboy.github.io/tags/shooter">shooter(5)</a></li><li><a href="https://nasciiboy.github.io/tags/">(4)</a></li><li><a href="https://nasciiboy.github.io/tags/anime">anime(4)</a></li><li><a href="https://nasciiboy.github.io/tags/gnome">gnome(4)</a></li><li><a href="https://nasciiboy.github.io/tags/pobreotaku">pobreotaku(4)</a></li><li><a href="https://nasciiboy.github.io/tags/server">server(4)</a></li><li><a href="https://nasciiboy.github.io/tags/zelda">zelda(4)</a></li><li><a href="https://nasciiboy.github.io/tags/3ds">3ds(3)</a></li><li><a href="https://nasciiboy.github.io/tags/example">example(3)</a></li><li><a href="https://nasciiboy.github.io/tags/hardware">hardware(3)</a></li><li><a href="https://nasciiboy.github.io/tags/java">java(3)</a></li><li><a href="https://nasciiboy.github.io/tags/ncurses">ncurses(3)</a></li><li><a href="https://nasciiboy.github.io/tags/sicp">sicp(3)</a></li><li><a href="https://nasciiboy.github.io/tags/asm">asm(2)</a></li><li><a href="https://nasciiboy.github.io/tags/elisp">elisp(2)</a></li><li><a href="https://nasciiboy.github.io/tags/physics">physics(2)</a></li><li><a href="https://nasciiboy.github.io/tags/rss">rss(2)</a></li><li><a href="https://nasciiboy.github.io/tags/trl">trl(2)</a></li><li><a href="https://nasciiboy.github.io/tags/adb">adb(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ag">ag(1)</a></li><li><a href="https://nasciiboy.github.io/tags/arduino">arduino(1)</a></li><li><a href="https://nasciiboy.github.io/tags/dancer">dancer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/elfeed">elfeed(1)</a></li><li><a href="https://nasciiboy.github.io/tags/emu">emu(1)</a></li><li><a href="https://nasciiboy.github.io/tags/eww">eww(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fastboot">fastboot(1)</a></li><li><a href="https://nasciiboy.github.io/tags/fish">fish(1)</a></li><li><a href="https://nasciiboy.github.io/tags/flac">flac(1)</a></li><li><a href="https://nasciiboy.github.io/tags/gameboy-advance">gameboy-advance(1)</a></li><li><a href="https://nasciiboy.github.io/tags/gamecube">gamecube(1)</a></li><li><a href="https://nasciiboy.github.io/tags/git">git(1)</a></li><li><a href="https://nasciiboy.github.io/tags/gourmet">gourmet(1)</a></li><li><a href="https://nasciiboy.github.io/tags/ibniz">ibniz(1)</a></li><li><a href="https://nasciiboy.github.io/tags/kde">kde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/loly">loly(1)</a></li><li><a href="https://nasciiboy.github.io/tags/love2d">love2d(1)</a></li><li><a href="https://nasciiboy.github.io/tags/lxde">lxde(1)</a></li><li><a href="https://nasciiboy.github.io/tags/manga">manga(1)</a></li><li><a href="https://nasciiboy.github.io/tags/maze">maze(1)</a></li><li><a href="https://nasciiboy.github.io/tags/moc">moc(1)</a></li><li><a href="https://nasciiboy.github.io/tags/nxengine">nxengine(1)</a></li><li><a href="https://nasciiboy.github.io/tags/procedural">procedural(1)</a></li><li><a href="https://nasciiboy.github.io/tags/prog">prog(1)</a></li><li><a href="https://nasciiboy.github.io/tags/racer">racer(1)</a></li><li><a href="https://nasciiboy.github.io/tags/rms">rms(1)</a></li><li><a href="https://nasciiboy.github.io/tags/rpg">rpg(1)</a></li><li><a href="https://nasciiboy.github.io/tags/scheme">scheme(1)</a></li><li><a href="https://nasciiboy.github.io/tags/shntool">shntool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/solarus">solarus(1)</a></li><li><a href="https://nasciiboy.github.io/tags/sushi">sushi(1)</a></li><li><a href="https://nasciiboy.github.io/tags/tool">tool(1)</a></li><li><a href="https://nasciiboy.github.io/tags/tower-defense">tower-defense(1)</a></li><li><a href="https://nasciiboy.github.io/tags/xxx">xxx(1)</a></li><li><a href="https://nasciiboy.github.io/tags/zero">zero(1)</a></li>
+          </ul>
+        </div>
+      </section>
+      
+
+    </aside>
+    <footer>
+  <p>Licence: <em>GFDL 1.3</em>.
+          Powered by <a href="https://gohugo.io/">Hugo</a>.
+
+ Contact <a href="mailto:nasciiboy@gmail.com">nasciiboy@gmail.com</a><b>.
+<b> GPG <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x7A4E2DDE14D7AD94">0x7A4E2DDE14D7AD94</a><b>.
+<b> Donar <a href="https://paypal.me/nasciicorp">paypal</a><b>.
+
+
+
+</p>
+</footer>
+
+  </body>
+</html>
