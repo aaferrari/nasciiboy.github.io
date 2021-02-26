@@ -5408,10 +5408,19 @@ necesarias, exepto o &lt;strong&gt;sdl2&lt;/strong&gt; o algo de &lt;strong&gt;q
 si en el proceso de compilacion te dice que hace falta una libreria la buscas y
 la instalas)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/hrydgard/ppsspp.git
+&lt;pre&gt;&lt;code&gt;su
+apt install build-essential cmake libgl1-mesa-dev libsdl2-dev libvulkan-dev
+exit
+git clone https://github.com/hrydgard/ppsspp.git
 cd ppsspp
 git submodule update --init --recursive
-./b.sh
+cmake .
+make
+
+# este comando es alternativo a `cmake . &amp;amp;&amp;amp; make`
+# en mi caso no funciono
+# ./b.sh
+
 cd build
 &lt;/code&gt;&lt;/pre&gt;
 
